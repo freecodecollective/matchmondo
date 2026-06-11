@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Cup 2026 Schedule</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <h1>⚽ World Cup 2026</h1>
+    <p class="subtitle">June 11 – July 19, 2026 · USA, Canada &amp; Mexico · 104 matches</p>
+  </div>
+</header>
+
+<section class="controls no-print">
+  <div class="control-group tz-group">
+    <label for="tz-input">Time zone</label>
+    <div class="combo" id="tz-combo">
+      <input type="text" id="tz-input" autocomplete="off" spellcheck="false"
+             role="combobox" aria-expanded="false" aria-autocomplete="list"
+             aria-controls="tz-listbox" placeholder="Search time zone…">
+      <ul class="combo-list" id="tz-listbox" role="listbox" hidden></ul>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label for="stage-filter">Stage</label>
+    <select id="stage-filter">
+      <option value="all">All stages</option>
+    </select>
+  </div>
+
+  <div class="control-group">
+    <label for="team-filter">Team</label>
+    <select id="team-filter">
+      <option value="all">All teams</option>
+    </select>
+  </div>
+
+  <div class="control-group toggles">
+    <label class="toggle">
+      <input type="checkbox" id="show-scores" checked>
+      <span>Show scores</span>
+    </label>
+  </div>
+
+  <div class="control-group actions">
+    <button id="print-btn" class="btn primary">🖨 Print / Save PDF</button>
+    <label class="toggle print-option">
+      <input type="checkbox" id="print-blanks">
+      <span>Print with blank score boxes (fill in by hand)</span>
+    </label>
+  </div>
+
+  <div class="control-group actions">
+    <button id="subscribe-btn" class="btn primary" type="button">📅 Subscribe in Google Calendar</button>
+    <button id="download-ics-btn" class="btn" type="button">⬇ Download .ics (import / Apple / Outlook)</button>
+  </div>
+</section>
+
+<dialog id="gcal-dialog" class="no-print">
+  <h2>Subscribe in Google Calendar</h2>
+  <p>Subscribing adds <strong>“World Cup 2026”</strong> as its own calendar in your list. You can
+     <strong>show or hide it any time with its checkbox</strong>, and it refreshes automatically as
+     scores come in — no re-importing.</p>
+
+  <ol>
+    <li>Click <strong>Open Google Calendar</strong> below (or copy the calendar URL and add it manually).</li>
+    <li>Confirm <em>“Add calendar?”</em> when Google asks.</li>
+    <li>It appears under <strong>Other calendars</strong> on the left — toggle its checkbox to select / unselect it.</li>
+  </ol>
+
+  <label class="url-label" for="ics-url">Calendar URL</label>
+  <div class="url-row">
+    <input id="ics-url" readonly>
+    <button id="copy-url" class="btn" type="button">Copy</button>
+  </div>
+
+  <p class="dialog-actions">
+    <a id="subscribe-link" class="btn primary" target="_blank" rel="noopener">Open Google Calendar →</a>
+  </p>
+
+  <p class="small">Manual route: Google Calendar → <strong>Other calendars</strong> → <strong>+</strong> →
+     <strong>From URL</strong> → paste the URL above. Events are stored in UTC, so every kickoff shows in
+     <em>your</em> local time automatically.</p>
+
+  <p class="small" id="local-warning" hidden>⚠️ <strong>This page is running locally</strong>, so Google can't
+     reach the calendar URL yet. Subscription works once the site is hosted at a public web address. For now,
+     use <strong>Download .ics</strong> → import it into a calendar instead.</p>
+
+  <form method="dialog"><button class="btn">Close</button></form>
+</dialog>
+
+<main>
+  <div id="match-count" class="match-count"></div>
+  <div id="schedule"></div>
+</main>
+
+<footer class="site-footer">
+  <p>Unofficial fan schedule. Kickoff times shown in <span id="tz-label"></span>.</p>
+</footer>
+
+<script src="data/matches.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
