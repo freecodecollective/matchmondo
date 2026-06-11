@@ -286,6 +286,33 @@
     }[c]));
   }
 
+  // Team name -> ISO 3166-1 code (flagcdn). England/Scotland use GB sub-national flags.
+  const FLAGS = {
+    "Algeria": "dz", "Argentina": "ar", "Australia": "au", "Austria": "at", "Belgium": "be",
+    "Bosnia and Herzegovina": "ba", "Brazil": "br", "Cabo Verde": "cv", "Canada": "ca",
+    "Colombia": "co", "Congo DR": "cd", "Croatia": "hr", "Curaçao": "cw", "Czechia": "cz",
+    "Côte d'Ivoire": "ci", "Ecuador": "ec", "Egypt": "eg", "England": "gb-eng", "France": "fr",
+    "Germany": "de", "Ghana": "gh", "Haiti": "ht", "IR Iran": "ir", "Iraq": "iq", "Japan": "jp",
+    "Jordan": "jo", "Korea Republic": "kr", "Mexico": "mx", "Morocco": "ma", "Netherlands": "nl",
+    "New Zealand": "nz", "Norway": "no", "Panama": "pa", "Paraguay": "py", "Portugal": "pt",
+    "Qatar": "qa", "Saudi Arabia": "sa", "Scotland": "gb-sct", "Senegal": "sn", "South Africa": "za",
+    "Spain": "es", "Sweden": "se", "Switzerland": "ch", "Tunisia": "tn", "Türkiye": "tr",
+    "USA": "us", "Uruguay": "uy", "Uzbekistan": "uz",
+  };
+  function flagImg(team) {
+    const code = FLAGS[team];
+    if (!code) return `<span class="flag flag-tbd" aria-hidden="true"></span>`;
+    return `<img class="flag" src="https://flagcdn.com/${code}.svg" alt="" width="22" height="16" loading="lazy">`;
+  }
+
+  // Stage -> slug for the colored left-edge accent.
+  function stageSlug(stage) {
+    return ({
+      "Group Stage": "group", "Round of 32": "r32", "Round of 16": "r16",
+      "Quarter-finals": "qf", "Semi-finals": "sf", "Third-place Match": "third", "Final": "final",
+    })[stage] || "group";
+  }
+
   function hasScore(m) {
     return m.scoreH != null && m.scoreA != null;
   }
@@ -317,25 +344,34 @@
     const groups = new Map();
     visible.forEach((m) => {
       const key = fmtDayKey(m.utc, tz);
-      if (!groups.has(key)) groups.set(key, { heading: fmtDayHeading(m.utc, tz), items: [] });
+      if (!groups.has(key)) groups.set(key, { key, heading: fmtDayHeading(m.utc, tz), items: [] });
       groups.get(key).items.push(m);
     });
 
+    const todayKey = fmtDayKey(new Date().toISOString(), tz);
+
     let html = "";
     for (const [, g] of [...groups.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
-      html += `<section class="day-group"><h2 class="day-heading">${esc(g.heading)}</h2>`;
+      const isToday = g.key === todayKey;
+      const todayPill = isToday ? `<span class="today-pill">Today</span>` : "";
+      html += `<section class="day-group${isToday ? " is-today" : ""}">` +
+        `<h2 class="day-heading">${esc(g.heading)}${todayPill}</h2>`;
       for (const m of g.items) {
-        const groupLabel = m.group ? ` · ${esc(m.group)}` : "";
+        const label = m.group || m.stage;
+        const trophy = m.stage === "Final" ? "🏆 " : "";
+        const played = opts.showScores && hasScore(m);
+        const homeWin = played && Number(m.scoreH) > Number(m.scoreA);
+        const awayWin = played && Number(m.scoreA) > Number(m.scoreH);
         html += `
-        <article class="match-card" data-blanks-slot data-match="${m.n}">
+        <article class="match-card stage-${stageSlug(m.stage)}" data-blanks-slot data-match="${m.n}">
           <div>
             <div class="match-time">${esc(fmtTime(m.utc, tz))}</div>
-            <div class="match-stage">Match ${m.n}${groupLabel}</div>
+            <div class="match-stage">Match ${m.n} · ${trophy}${esc(label)}</div>
           </div>
           <div class="match-teams">
-            <span class="team">${esc(m.home)}</span>
+            <span class="team${homeWin ? " winner" : ""}">${flagImg(m.home)}<span class="team-name">${esc(m.home)}</span></span>
             <span class="score-slot">${scoreHtml(m, opts)}</span>
-            <span class="team">${esc(m.away)}</span>
+            <span class="team${awayWin ? " winner" : ""}">${flagImg(m.away)}<span class="team-name">${esc(m.away)}</span></span>
           </div>
           <div class="match-meta">
             <span class="match-venue">${esc(m.venue)}</span> · ${esc(m.city)}
@@ -455,6 +491,17 @@
   els.subscribeBtn.addEventListener("click", openSubscribeDialog);
   els.downloadIcsBtn.addEventListener("click", downloadIcs);
   els.copyUrlBtn.addEventListener("click", copyIcsUrl);
+
+  // If a flag image can't load (e.g. offline), swap to the neutral placeholder so no broken icon shows.
+  els.schedule.addEventListener("error", (e) => {
+    const img = e.target;
+    if (img.tagName === "IMG" && img.classList.contains("flag")) {
+      const span = document.createElement("span");
+      span.className = "flag flag-tbd";
+      span.setAttribute("aria-hidden", "true");
+      img.replaceWith(span);
+    }
+  }, true);
 
   // ---------- Init ----------
   initTzCombo();
