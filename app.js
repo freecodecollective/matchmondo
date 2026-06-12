@@ -35,6 +35,9 @@
     standings: document.getElementById("standings"),
     rules: document.getElementById("rules"),
     main: document.querySelector("main"),
+    upcoming: document.getElementById("upcoming"),
+    upcomingCount: document.getElementById("upcoming-count"),
+    upcomingBody: document.getElementById("upcoming-body"),
     printBtn: document.getElementById("print-btn"),
     printBlanks: document.getElementById("print-blanks"),
     subscribeBtn: document.getElementById("subscribe-btn"),
@@ -64,6 +67,7 @@
       showPlayers: els.showPlayers.checked,
       showStandings: els.showStandings.checked,
       showRules: els.showRules.checked,
+      upcomingOpen: els.upcoming.open,
       printBlanks: els.printBlanks.checked,
     }));
   }
@@ -442,6 +446,52 @@
     return `<span class="vs">vs</span>`;
   }
 
+  // One match card — shared by the schedule and the Today/Tomorrow panel.
+  function matchCardHTML(m, tz, opts) {
+    const label = m.group || m.stage;
+    const trophy = m.stage === "Final" ? "🏆 " : "";
+    const played = opts.showScores && hasScore(m);
+    const homeWin = played && Number(m.scoreH) > Number(m.scoreA);
+    const awayWin = played && Number(m.scoreA) > Number(m.scoreH);
+    return `
+        <article class="match-card stage-${stageSlug(m.stage)}" data-blanks-slot data-match="${m.n}">
+          <div>
+            <div class="match-time">${esc(fmtTime(m.utc, tz))}</div>
+            <div class="match-stage">Match ${m.n} · ${trophy}${esc(label)}</div>
+          </div>
+          <div class="match-teams">
+            <span class="team${homeWin ? " winner" : ""}">${flagImg(m.home)}<span class="team-name">${esc(m.home)}</span>${rankBadge(m.home)}</span>
+            <span class="score-slot">${scoreHtml(m, opts)}</span>
+            <span class="team${awayWin ? " winner" : ""}">${flagImg(m.away)}<span class="team-name">${esc(m.away)}</span>${rankBadge(m.away)}</span>
+          </div>
+          <div class="match-meta">
+            <span class="match-venue">${esc(m.venue)}</span> · ${esc(m.city)}
+          </div>
+        </article>`;
+  }
+
+  // Today / Tomorrow quick-glance panel (screen only). Respects the active filters.
+  function renderUpcoming(list, tz, opts) {
+    const now = new Date();
+    const todayKey = fmtDayKey(now.toISOString(), tz);
+    const tomorrowKey = fmtDayKey(new Date(now.getTime() + 86400000).toISOString(), tz);
+    const today = list.filter((m) => fmtDayKey(m.utc, tz) === todayKey);
+    const tomorrow = list.filter((m) => fmtDayKey(m.utc, tz) === tomorrowKey);
+    const n = today.length + tomorrow.length;
+    els.upcomingCount.textContent = n ? `${n} match${n === 1 ? "" : "es"}` : "no matches";
+
+    if (!n) {
+      els.upcomingBody.innerHTML = `<p class="upcoming-empty">No matches today or tomorrow${
+        list.length !== matches.length ? " with the current filters" : ""}.</p>`;
+      return;
+    }
+    const block = (label, arr) => arr.length
+      ? `<h3 class="upcoming-day">${esc(label)} — ${esc(fmtDayHeading(arr[0].utc, tz))}</h3>` +
+        arr.map((m) => matchCardHTML(m, tz, opts)).join("")
+      : "";
+    els.upcomingBody.innerHTML = block("Today", today) + block("Tomorrow", tomorrow);
+  }
+
   function render() {
     const tz = currentTz;
     const stageFilter = els.stage.value;
@@ -474,33 +524,19 @@
       const todayPill = isToday ? `<span class="today-pill">Today</span>` : "";
       html += `<section class="day-group${isToday ? " is-today" : ""}">` +
         `<h2 class="day-heading">${esc(g.heading)}${todayPill}</h2>`;
-      for (const m of g.items) {
-        const label = m.group || m.stage;
-        const trophy = m.stage === "Final" ? "🏆 " : "";
-        const played = opts.showScores && hasScore(m);
-        const homeWin = played && Number(m.scoreH) > Number(m.scoreA);
-        const awayWin = played && Number(m.scoreA) > Number(m.scoreH);
-        html += `
-        <article class="match-card stage-${stageSlug(m.stage)}" data-blanks-slot data-match="${m.n}">
-          <div>
-            <div class="match-time">${esc(fmtTime(m.utc, tz))}</div>
-            <div class="match-stage">Match ${m.n} · ${trophy}${esc(label)}</div>
-          </div>
-          <div class="match-teams">
-            <span class="team${homeWin ? " winner" : ""}">${flagImg(m.home)}<span class="team-name">${esc(m.home)}</span>${rankBadge(m.home)}</span>
-            <span class="score-slot">${scoreHtml(m, opts)}</span>
-            <span class="team${awayWin ? " winner" : ""}">${flagImg(m.away)}<span class="team-name">${esc(m.away)}</span>${rankBadge(m.away)}</span>
-          </div>
-          <div class="match-meta">
-            <span class="match-venue">${esc(m.venue)}</span> · ${esc(m.city)}
-          </div>
-        </article>`;
-      }
+      for (const m of g.items) html += matchCardHTML(m, tz, opts);
       html += `</section>`;
     }
 
     els.schedule.innerHTML = html || `<p>No matches found for this filter.</p>`;
-    els.count.textContent = `${visible.length} match${visible.length === 1 ? "" : "es"}`;
+    renderUpcoming(visible, tz, opts);
+    const total = matches.length;
+    const played = matches.filter(hasScore).length;
+    const filterActive = stageFilter !== "all" || teamFilterActive ||
+      selectedVenues.size !== ALL_VENUES.length;
+    els.count.textContent = filterActive
+      ? `${visible.length} shown · ${played} of ${total} matches played`
+      : `${played} of ${total} matches played`;
     els.tzLabel.textContent = labelFor(tz);
   }
 
@@ -851,8 +887,11 @@
   els.downloadIcsBtn.addEventListener("click", downloadIcs);
   els.copyUrlBtn.addEventListener("click", copyIcsUrl);
 
+  // Persist the Today/Tomorrow panel's open/closed state.
+  els.upcoming.addEventListener("toggle", savePrefs);
+
   // If a flag image can't load (e.g. offline), swap to the neutral placeholder so no broken icon shows.
-  els.schedule.addEventListener("error", (e) => {
+  els.main.addEventListener("error", (e) => {
     const img = e.target;
     if (img.tagName === "IMG" && img.classList.contains("flag")) {
       const span = document.createElement("span");
@@ -872,6 +911,7 @@
   if (prefs.showPlayers != null) els.showPlayers.checked = prefs.showPlayers;
   if (prefs.showStandings != null) els.showStandings.checked = prefs.showStandings;
   if (prefs.showRules != null) els.showRules.checked = prefs.showRules;
+  if (prefs.upcomingOpen != null) els.upcoming.open = prefs.upcomingOpen;
   render();
   applyLocation();
   applyPlayersToggle();
