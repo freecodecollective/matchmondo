@@ -15,6 +15,8 @@
     stage: document.getElementById("stage-filter"),
     team: document.getElementById("team-filter"),
     showScores: document.getElementById("show-scores"),
+    showPlayers: document.getElementById("show-players"),
+    players: document.getElementById("players"),
     printBtn: document.getElementById("print-btn"),
     printBlanks: document.getElementById("print-blanks"),
     subscribeBtn: document.getElementById("subscribe-btn"),
@@ -38,6 +40,7 @@
     localStorage.setItem(PREFS_KEY, JSON.stringify({
       tz: currentTz,
       showScores: els.showScores.checked,
+      showPlayers: els.showPlayers.checked,
       printBlanks: els.printBlanks.checked,
     }));
   }
@@ -397,6 +400,56 @@
     });
   }
 
+  // ---------- Player guide ----------
+  let playersRendered = false;
+  function renderPlayers() {
+    if (playersRendered) return;
+    const data = window.WC_PLAYERS || { rank: {}, teams: {} };
+    const teams = Object.keys(data.teams || {});
+    if (!teams.length) {
+      els.players.innerHTML = `<h2 class="players-title">Player Guide</h2>` +
+        `<p class="players-intro">Player research is being compiled — check back shortly.</p>`;
+      return;
+    }
+
+    // Order: top-ranked teams first (by rank), then the rest alphabetically.
+    const ranked = teams
+      .filter((t) => data.rank[t])
+      .sort((a, b) => data.rank[a] - data.rank[b]);
+    const rest = teams.filter((t) => !data.rank[t]).sort((a, b) => a.localeCompare(b));
+    const ordered = [...ranked, ...rest];
+
+    let html = `<h2 class="players-title">⭐ Player Guide — Top Players by Team</h2>` +
+      `<p class="players-intro">The standout players to watch on every team — top 5 for the tournament favorites, top 3 for everyone else. ` +
+      `Clubs and details reflect the 2025–26 season.</p>`;
+
+    for (const team of ordered) {
+      const rank = data.rank[team];
+      const rankBadge = rank ? `<span class="team-rank">Top&nbsp;${rank}</span>` : "";
+      html += `<div class="team-block">` +
+        `<h3 class="team-block-head">${flagImg(team)}<span>${esc(team)}</span>${rankBadge}</h3>` +
+        `<div class="player-grid">`;
+      for (const p of data.teams[team]) {
+        html += `
+        <div class="player-card">
+          <div class="player-name">${esc(p.name)}</div>
+          <div class="player-pos">${esc(p.position)} · <span class="player-club">${esc(p.club)}</span></div>
+          <div class="player-from">📍 ${esc(p.hometown)}</div>
+          <p class="player-why">${esc(p.why)}</p>
+        </div>`;
+      }
+      html += `</div></div>`;
+    }
+    els.players.innerHTML = html;
+    playersRendered = true;
+  }
+
+  function applyPlayersToggle() {
+    const on = els.showPlayers.checked;
+    if (on) renderPlayers();
+    els.players.hidden = !on;
+  }
+
   // ---------- ICS generation ----------
   function icsEscape(s) {
     return String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
@@ -478,6 +531,7 @@
   els.stage.addEventListener("change", render);
   els.team.addEventListener("change", render);
   els.showScores.addEventListener("change", () => { savePrefs(); render(); });
+  els.showPlayers.addEventListener("change", () => { savePrefs(); applyPlayersToggle(); });
   els.printBlanks.addEventListener("change", savePrefs);
 
   els.printBtn.addEventListener("click", () => {
@@ -508,5 +562,7 @@
   buildFilters();
   if (prefs.showScores != null) els.showScores.checked = prefs.showScores;
   if (prefs.printBlanks != null) els.printBlanks.checked = prefs.printBlanks;
+  if (prefs.showPlayers != null) els.showPlayers.checked = prefs.showPlayers;
   render();
+  applyPlayersToggle();
 })();

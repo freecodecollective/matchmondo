@@ -44,6 +44,10 @@
       <input type="checkbox" id="show-scores">
       <span>Show scores</span>
     </label>
+    <label class="toggle">
+      <input type="checkbox" id="show-players">
+      <span>Include player guide</span>
+    </label>
   </div>
 
   <div class="control-group actions">
@@ -96,6 +100,7 @@
 <main>
   <div id="match-count" class="match-count"></div>
   <div id="schedule"></div>
+  <section id="players" class="players-section" hidden></section>
 </main>
 
 <footer class="site-footer">
@@ -103,6 +108,7 @@
 </footer>
 
 <script src="data/matches.js"></script>
+<script src="data/players.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
