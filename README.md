@@ -1,4 +1,4 @@
-# World Cup 2026 Fan Schedule
+# MatchMondo — World Cup 2026
 
 A single-page, no-build static website with the full FIFA World Cup 2026 schedule (June 11 – July 19, 2026 · 104 matches).
 

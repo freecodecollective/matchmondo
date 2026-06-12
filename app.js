@@ -567,7 +567,7 @@
       "PRODID:-//WC2026 Fan Schedule//EN",
       "CALSCALE:GREGORIAN",
       "METHOD:PUBLISH",
-      "X-WR-CALNAME:World Cup 2026",
+      "X-WR-CALNAME:MatchMondo — World Cup 2026",
       "X-WR-CALDESC:FIFA World Cup 2026 — all 104 matches (times in UTC; your calendar shows them in your local time zone)",
     ];
     matches.forEach((m) => {
