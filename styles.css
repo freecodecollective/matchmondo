@@ -75,7 +75,7 @@ body {
   border-radius: 8px;
   font-size: 0.9rem;
   background: #fff;
-  width: 260px;
+  width: 210px;
   max-width: 80vw;
 }
 .combo input:focus { outline: 2px solid var(--green); outline-offset: -1px; }
@@ -129,7 +129,7 @@ body {
   border-radius: 8px;
   font-size: 0.9rem;
   background: #fff;
-  width: 200px;
+  width: 150px;
   max-width: 80vw;
   text-align: left;
   cursor: pointer;
