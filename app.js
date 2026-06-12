@@ -27,8 +27,14 @@
     venueSearch: document.getElementById("venue-search"),
     showScores: document.getElementById("show-scores"),
     showRanking: document.getElementById("show-ranking"),
+    showLocation: document.getElementById("show-location"),
     showPlayers: document.getElementById("show-players"),
+    showStandings: document.getElementById("show-standings"),
+    showRules: document.getElementById("show-rules"),
     players: document.getElementById("players"),
+    standings: document.getElementById("standings"),
+    rules: document.getElementById("rules"),
+    main: document.querySelector("main"),
     printBtn: document.getElementById("print-btn"),
     printBlanks: document.getElementById("print-blanks"),
     subscribeBtn: document.getElementById("subscribe-btn"),
@@ -54,7 +60,10 @@
       tz: currentTz,
       showScores: els.showScores.checked,
       showRanking: els.showRanking.checked,
+      showLocation: els.showLocation.checked,
       showPlayers: els.showPlayers.checked,
+      showStandings: els.showStandings.checked,
+      showRules: els.showRules.checked,
       printBlanks: els.printBlanks.checked,
     }));
   }
@@ -553,6 +562,140 @@
     els.players.hidden = !on;
   }
 
+  // ---------- Location (stadium + city) show/hide ----------
+  function applyLocation() {
+    els.main.classList.toggle("hide-location", !els.showLocation.checked);
+  }
+
+  // ---------- Group standings ----------
+  function computeStandings() {
+    const groups = {};
+    matches.forEach((m) => {
+      if (!/^Group /.test(m.group || "")) return;
+      const g = (groups[m.group] ||= {});
+      for (const t of [m.home, m.away]) {
+        if (FLAGS[t] && !g[t]) g[t] = { team: t, P: 0, W: 0, D: 0, L: 0, GF: 0, GA: 0, Pts: 0 };
+      }
+      if (m.scoreH != null && m.scoreA != null && g[m.home] && g[m.away]) {
+        const h = g[m.home], a = g[m.away], sh = Number(m.scoreH), sa = Number(m.scoreA);
+        h.P++; a.P++; h.GF += sh; h.GA += sa; a.GF += sa; a.GA += sh;
+        if (sh > sa) { h.W++; a.L++; h.Pts += 3; }
+        else if (sh < sa) { a.W++; h.L++; a.Pts += 3; }
+        else { h.D++; a.D++; h.Pts++; a.Pts++; }
+      }
+    });
+    return groups;
+  }
+
+  function renderStandings() {
+    const groups = computeStandings();
+    const names = Object.keys(groups).sort();
+    let html = `<h2 class="section-title">📊 Group Standings</h2>` +
+      `<p class="section-intro">Live points and goal difference, updated as scores come in. The top 2 of each group ` +
+      `advance, plus the 8 best third-placed teams. Rows are sorted by points → goal difference → goals for; ` +
+      `the official <button type="button" class="linklike" data-open-rules>tiebreakers</button> add head-to-head and fair-play.</p>` +
+      `<div class="standings-grid">`;
+    for (const g of names) {
+      const rows = Object.values(groups[g]).sort((a, b) =>
+        b.Pts - a.Pts || (b.GF - b.GA) - (a.GF - a.GA) || b.GF - a.GF || a.team.localeCompare(b.team));
+      html += `<div class="standings-group"><h3 class="standings-head">${esc(g)}</h3>` +
+        `<table class="standings-table"><thead><tr>` +
+        `<th>#</th><th class="st-team">Team</th><th title="Played">P</th><th>W</th><th>D</th><th>L</th>` +
+        `<th title="Goals for">GF</th><th title="Goals against">GA</th><th title="Goal difference">GD</th><th>Pts</th>` +
+        `</tr></thead><tbody>`;
+      rows.forEach((r, i) => {
+        const gd = r.GF - r.GA, pos = i + 1;
+        const cls = pos <= 2 ? "q1" : pos === 3 ? "q3" : "";
+        html += `<tr class="${cls}"><td class="st-pos">${pos}</td>` +
+          `<td class="st-team">${flagImg(r.team)}<span>${esc(r.team)}</span></td>` +
+          `<td>${r.P}</td><td>${r.W}</td><td>${r.D}</td><td>${r.L}</td>` +
+          `<td>${r.GF}</td><td>${r.GA}</td><td>${gd > 0 ? "+" : ""}${gd}</td><td class="st-pts">${r.Pts}</td></tr>`;
+      });
+      html += `</tbody></table></div>`;
+    }
+    html += `</div><p class="standings-legend"><span class="swatch q1"></span> Advances (top 2) ` +
+      `<span class="swatch q3"></span> In the hunt for a best-third-place spot</p>`;
+    els.standings.innerHTML = html;
+  }
+
+  function applyStandingsToggle() {
+    const on = els.showStandings.checked;
+    if (on) renderStandings();
+    els.standings.hidden = !on;
+  }
+
+  // ---------- Rules ----------
+  let rulesRendered = false;
+  function renderRules() {
+    if (rulesRendered) return;
+    els.rules.innerHTML = `
+      <h2 class="section-title">📋 Rules &amp; How It Works</h2>
+      <p class="section-intro">A fan's guide to the laws and tournament rules you'll see most during the 2026 World Cup.</p>
+      <div class="rules-grid">
+
+        <div class="rule-card">
+          <h3>⏱️ Match format</h3>
+          <p>Two 45-minute halves plus stoppage (added) time. Group-stage matches can end in a draw.
+          From the Round of 32 on, a tie after 90 minutes goes to <strong>two 15-minute periods of extra time</strong>,
+          and if still level, a <strong>penalty shootout</strong> decides it.</p>
+        </div>
+
+        <div class="rule-card">
+          <h3>🟨 Yellow card (caution)</h3>
+          <p>A warning for offenses such as unsporting behavior, dissent, persistent fouling,
+          <strong>delaying the restart of play / time-wasting</strong>, not respecting the required distance at a
+          free kick or corner, or entering/leaving the field without permission.</p>
+        </div>
+
+        <div class="rule-card">
+          <h3>🟥 Red card (sending-off)</h3>
+          <p>Shown for serious foul play, violent conduct, spitting, denying an obvious goal-scoring opportunity,
+          offensive language, or <strong>two yellow cards in the same match</strong>. The player leaves and
+          <strong>cannot be replaced</strong> — the team plays a player short — and is suspended for at least the next match.</p>
+        </div>
+
+        <div class="rule-card">
+          <h3>🔁 Suspensions &amp; yellow-card amnesty</h3>
+          <ul>
+            <li><strong>Two yellows in different matches</strong> → a one-match suspension.</li>
+            <li><strong>Two yellows in one match</strong> (a red) → miss the next match.</li>
+            <li><strong>Single yellows are wiped after the group stage</strong>, so no one carries cautions into the Round of 32.</li>
+            <li>They're wiped <strong>again after the quarter-finals</strong>, so an early yellow can't cause a player to miss the final.</li>
+          </ul>
+        </div>
+
+        <div class="rule-card">
+          <h3>📊 Group tiebreakers</h3>
+          <p>If teams are level on points, they're ranked by:</p>
+          <ol>
+            <li>Goal difference (all group matches)</li>
+            <li>Goals scored (all group matches)</li>
+            <li>Head-to-head: points among the tied teams</li>
+            <li>Head-to-head: goal difference</li>
+            <li>Head-to-head: goals scored</li>
+            <li>Fair-play score (fewest yellow/red cards)</li>
+            <li>Drawing of lots by FIFA</li>
+          </ol>
+        </div>
+
+        <div class="rule-card">
+          <h3>➡️ Who advances</h3>
+          <p>This is a 48-team, 12-group tournament. The <strong>top two from each group</strong> (24 teams) advance,
+          plus the <strong>8 best third-placed teams</strong> across all groups — 32 teams into the Round of 32.
+          Third-place teams are ranked by points, then goal difference, then goals scored, then fair-play score.</p>
+        </div>
+
+      </div>
+      <p class="rules-note">Unofficial summary for fans. The full Laws of the Game and FIFA regulations are the official source.</p>`;
+    rulesRendered = true;
+  }
+
+  function applyRulesToggle() {
+    const on = els.showRules.checked;
+    if (on) renderRules();
+    els.rules.hidden = !on;
+  }
+
   // ---------- ICS generation ----------
   function icsEscape(s) {
     return String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
@@ -660,6 +803,7 @@
         applyMatches(arr);
         lastSig = sig;
         render();
+        if (els.showStandings.checked) renderStandings();
         els.updateNote.textContent = `Scores updated at ${fmtClock()}. Refreshes automatically.`;
       } else {
         els.updateNote.textContent = `Scores up to date (checked ${fmtClock()}). Refreshes automatically.`;
@@ -677,9 +821,23 @@
     savePrefs();
     render();
     if (els.showPlayers.checked) renderPlayers();
+    if (els.showStandings.checked) renderStandings();
   });
+  els.showLocation.addEventListener("change", () => { savePrefs(); applyLocation(); });
   els.showPlayers.addEventListener("change", () => { savePrefs(); applyPlayersToggle(); });
+  els.showStandings.addEventListener("change", () => { savePrefs(); applyStandingsToggle(); });
+  els.showRules.addEventListener("change", () => { savePrefs(); applyRulesToggle(); });
   els.printBlanks.addEventListener("change", savePrefs);
+
+  // "tiebreakers" link inside the standings intro opens the Rules section.
+  els.standings.addEventListener("click", (e) => {
+    if (e.target.closest("[data-open-rules]")) {
+      els.showRules.checked = true;
+      savePrefs();
+      applyRulesToggle();
+      els.rules.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
 
   els.printBtn.addEventListener("click", () => {
     if (els.printBlanks.checked) applyPrintBlanks(true);
@@ -709,10 +867,16 @@
   buildFilters();
   if (prefs.showScores != null) els.showScores.checked = prefs.showScores;
   if (prefs.showRanking != null) els.showRanking.checked = prefs.showRanking;
+  if (prefs.showLocation != null) els.showLocation.checked = prefs.showLocation;
   if (prefs.printBlanks != null) els.printBlanks.checked = prefs.printBlanks;
   if (prefs.showPlayers != null) els.showPlayers.checked = prefs.showPlayers;
+  if (prefs.showStandings != null) els.showStandings.checked = prefs.showStandings;
+  if (prefs.showRules != null) els.showRules.checked = prefs.showRules;
   render();
+  applyLocation();
   applyPlayersToggle();
+  applyStandingsToggle();
+  applyRulesToggle();
 
   // Kick off live score polling: once shortly after load, then every 5 minutes,
   // plus an immediate check whenever the tab is refocused (if it's been a couple minutes).

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MatchMondo — World Cup 2026</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='92'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="styles.css?v=7">
+<link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
 <header class="site-header">
@@ -78,8 +78,26 @@
         <span>FIFA ranking</span>
       </label>
       <label class="toggle">
+        <input type="checkbox" id="show-location" checked>
+        <span>Location</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="controls-row">
+    <span class="row-label">Pages</span>
+    <div class="control-group toggles">
+      <label class="toggle">
+        <input type="checkbox" id="show-standings">
+        <span>Group standings</span>
+      </label>
+      <label class="toggle">
         <input type="checkbox" id="show-players">
         <span>Player guide</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="show-rules">
+        <span>Rules</span>
       </label>
     </div>
   </div>
@@ -136,7 +154,9 @@
 <main>
   <div id="match-count" class="match-count"></div>
   <div id="schedule"></div>
+  <section id="standings" class="standings-section" hidden></section>
   <section id="players" class="players-section" hidden></section>
+  <section id="rules" class="rules-section" hidden></section>
 </main>
 
 <footer class="site-footer">
@@ -147,6 +167,6 @@
 <script src="data/matches.js"></script>
 <script src="data/rankings.js"></script>
 <script src="data/players.js"></script>
-<script src="app.js?v=7"></script>
+<script src="app.js?v=8"></script>
 </body>
 </html>
