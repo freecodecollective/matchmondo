@@ -41,6 +41,7 @@
     schedule: document.getElementById("schedule"),
     count: document.getElementById("match-count"),
     tzLabel: document.getElementById("tz-label"),
+    updateNote: document.getElementById("update-note"),
   };
 
   // ---------- Preferences (persisted) ----------
@@ -629,6 +630,46 @@
     }
   }
 
+  // ---------- Live score auto-refresh ----------
+  // The page loads data/matches.js for the initial paint, then polls data/matches.json
+  // (kept current by the scheduled GitHub Action) so an open tab updates without a reload.
+  function matchesSig(arr) {
+    return arr.slice().sort((a, b) => a.n - b.n)
+      .map((m) => `${m.n}:${m.scoreH}:${m.scoreA}:${m.home}:${m.away}`).join("|");
+  }
+  let lastSig = matchesSig(matches);
+  let lastCheck = 0;
+
+  function applyMatches(arr) {
+    arr.sort((a, b) => new Date(a.utc) - new Date(b.utc) || a.n - b.n);
+    matches.length = 0;
+    arr.forEach((m) => matches.push(m));
+  }
+  function fmtClock() {
+    return new Intl.DateTimeFormat(undefined, { hour: "numeric", minute: "2-digit", timeZone: currentTz }).format(new Date());
+  }
+  async function refreshScores() {
+    lastCheck = Date.now();
+    try {
+      const res = await fetch(`data/matches.json?t=${Date.now()}`, { cache: "no-store" });
+      if (!res.ok) throw new Error("fetch failed");
+      const arr = await res.json();
+      if (!Array.isArray(arr) || !arr.length) throw new Error("bad data");
+      const sig = matchesSig(arr);
+      if (sig !== lastSig) {
+        applyMatches(arr);
+        lastSig = sig;
+        render();
+        els.updateNote.textContent = `Scores updated at ${fmtClock()}. Refreshes automatically.`;
+      } else {
+        els.updateNote.textContent = `Scores up to date (checked ${fmtClock()}). Refreshes automatically.`;
+      }
+    } catch {
+      // Offline or opened as a local file — keep whatever is already shown.
+      els.updateNote.textContent = "Scores update automatically when online.";
+    }
+  }
+
   // ---------- Events ----------
   els.stage.addEventListener("change", render);
   els.showScores.addEventListener("change", () => { savePrefs(); render(); });
@@ -672,4 +713,12 @@
   if (prefs.showPlayers != null) els.showPlayers.checked = prefs.showPlayers;
   render();
   applyPlayersToggle();
+
+  // Kick off live score polling: once shortly after load, then every 5 minutes,
+  // plus an immediate check whenever the tab is refocused (if it's been a couple minutes).
+  setTimeout(refreshScores, 1500);
+  setInterval(refreshScores, 5 * 60 * 1000);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && Date.now() - lastCheck > 120000) refreshScores();
+  });
 })();

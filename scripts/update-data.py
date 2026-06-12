@@ -15,6 +15,7 @@ from pathlib import Path
 FEED = "https://fixturedownload.com/feed/json/fifa-world-cup-2026"
 SITE_ROOT = Path(__file__).resolve().parent.parent
 OUT = SITE_ROOT / "data" / "matches.js"
+OUT_JSON = SITE_ROOT / "data" / "matches.json"  # polled by the page for live score updates
 OUT_ICS = SITE_ROOT / "world-cup-2026.ics"  # static file people subscribe to in Google Calendar
 
 # Venue/location cleanup: feed location string -> (stadium, city). Unknown keys pass through as-is.
@@ -115,6 +116,10 @@ def main() -> None:
         f"window.WC_MATCHES = {body};\n"
     )
     print(f"Wrote {len(rows)} matches to {OUT}")
+
+    # Same data as plain JSON, for the page to poll for live score updates (same-origin, no CORS).
+    OUT_JSON.write_text(body + "\n")
+    print(f"Wrote {len(rows)} matches to {OUT_JSON}")
 
     OUT_ICS.write_text(build_ics(rows))
     print(f"Wrote {len(rows)} events to {OUT_ICS}")
