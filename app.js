@@ -15,6 +15,7 @@
     stage: document.getElementById("stage-filter"),
     team: document.getElementById("team-filter"),
     showScores: document.getElementById("show-scores"),
+    showRanking: document.getElementById("show-ranking"),
     showPlayers: document.getElementById("show-players"),
     players: document.getElementById("players"),
     printBtn: document.getElementById("print-btn"),
@@ -40,6 +41,7 @@
     localStorage.setItem(PREFS_KEY, JSON.stringify({
       tz: currentTz,
       showScores: els.showScores.checked,
+      showRanking: els.showRanking.checked,
       showPlayers: els.showPlayers.checked,
       printBlanks: els.printBlanks.checked,
     }));
@@ -308,6 +310,18 @@
     return `<img class="flag" src="https://flagcdn.com/${code}.svg" alt="" width="22" height="16" loading="lazy">`;
   }
 
+  // FIFA world ranking lookup (data/rankings.js).
+  const RANKINGS = (window.WC_RANKINGS && window.WC_RANKINGS.ranks) || {};
+  function rankOf(team) {
+    return RANKINGS[team] || null;
+  }
+  // Small "#N" badge shown next to a team when the ranking toggle is on.
+  function rankBadge(team) {
+    if (!els.showRanking.checked) return "";
+    const r = rankOf(team);
+    return r ? `<span class="rank-badge" title="FIFA world ranking (${(window.WC_RANKINGS || {}).asOf || ""})">#${r}</span>` : "";
+  }
+
   // Stage -> slug for the colored left-edge accent.
   function stageSlug(stage) {
     return ({
@@ -372,9 +386,9 @@
             <div class="match-stage">Match ${m.n} · ${trophy}${esc(label)}</div>
           </div>
           <div class="match-teams">
-            <span class="team${homeWin ? " winner" : ""}">${flagImg(m.home)}<span class="team-name">${esc(m.home)}</span></span>
+            <span class="team${homeWin ? " winner" : ""}">${flagImg(m.home)}<span class="team-name">${esc(m.home)}</span>${rankBadge(m.home)}</span>
             <span class="score-slot">${scoreHtml(m, opts)}</span>
-            <span class="team${awayWin ? " winner" : ""}">${flagImg(m.away)}<span class="team-name">${esc(m.away)}</span></span>
+            <span class="team${awayWin ? " winner" : ""}">${flagImg(m.away)}<span class="team-name">${esc(m.away)}</span>${rankBadge(m.away)}</span>
           </div>
           <div class="match-meta">
             <span class="match-venue">${esc(m.venue)}</span> · ${esc(m.city)}
@@ -401,10 +415,8 @@
   }
 
   // ---------- Player guide ----------
-  let playersRendered = false;
   function renderPlayers() {
-    if (playersRendered) return;
-    const data = window.WC_PLAYERS || { rank: {}, teams: {} };
+    const data = window.WC_PLAYERS || { teams: {} };
     const teams = Object.keys(data.teams || {});
     if (!teams.length) {
       els.players.innerHTML = `<h2 class="players-title">Player Guide</h2>` +
@@ -412,22 +424,22 @@
       return;
     }
 
-    // Order: top-ranked teams first (by rank), then the rest alphabetically.
-    const ranked = teams
-      .filter((t) => data.rank[t])
-      .sort((a, b) => data.rank[a] - data.rank[b]);
-    const rest = teams.filter((t) => !data.rank[t]).sort((a, b) => a.localeCompare(b));
-    const ordered = [...ranked, ...rest];
+    // Order by FIFA world ranking (best first); any unranked teams fall to the end alphabetically.
+    const ordered = teams.slice().sort((a, b) => {
+      const ra = rankOf(a), rb = rankOf(b);
+      if (ra && rb) return ra - rb;
+      if (ra) return -1;
+      if (rb) return 1;
+      return a.localeCompare(b);
+    });
 
     let html = `<h2 class="players-title">⭐ Player Guide — Top Players by Team</h2>` +
-      `<p class="players-intro">The standout players to watch on every team — top 5 for the tournament favorites, top 3 for everyone else. ` +
-      `Clubs and details reflect the 2025–26 season.</p>`;
+      `<p class="players-intro">The standout players to watch on every team — 5 for the FIFA top-10 sides, 3 for everyone else, ` +
+      `ordered by FIFA world ranking. Clubs and details reflect the 2025–26 season.</p>`;
 
     for (const team of ordered) {
-      const rank = data.rank[team];
-      const rankBadge = rank ? `<span class="team-rank">Top&nbsp;${rank}</span>` : "";
       html += `<div class="team-block">` +
-        `<h3 class="team-block-head">${flagImg(team)}<span>${esc(team)}</span>${rankBadge}</h3>` +
+        `<h3 class="team-block-head">${flagImg(team)}<span>${esc(team)}</span>${rankBadge(team)}</h3>` +
         `<div class="player-grid">`;
       for (const p of data.teams[team]) {
         html += `
@@ -441,7 +453,6 @@
       html += `</div></div>`;
     }
     els.players.innerHTML = html;
-    playersRendered = true;
   }
 
   function applyPlayersToggle() {
@@ -531,6 +542,11 @@
   els.stage.addEventListener("change", render);
   els.team.addEventListener("change", render);
   els.showScores.addEventListener("change", () => { savePrefs(); render(); });
+  els.showRanking.addEventListener("change", () => {
+    savePrefs();
+    render();
+    if (els.showPlayers.checked) renderPlayers();
+  });
   els.showPlayers.addEventListener("change", () => { savePrefs(); applyPlayersToggle(); });
   els.printBlanks.addEventListener("change", savePrefs);
 
@@ -561,6 +577,7 @@
   initTzCombo();
   buildFilters();
   if (prefs.showScores != null) els.showScores.checked = prefs.showScores;
+  if (prefs.showRanking != null) els.showRanking.checked = prefs.showRanking;
   if (prefs.printBlanks != null) els.printBlanks.checked = prefs.printBlanks;
   if (prefs.showPlayers != null) els.showPlayers.checked = prefs.showPlayers;
   render();

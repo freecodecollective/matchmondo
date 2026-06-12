@@ -211,6 +211,18 @@ main { max-width: 1000px; margin: 0 auto; padding: 12px 20px 40px; }
 .team .team-name { transition: color 0.15s; }
 .team.winner .team-name { color: var(--green-dark); font-weight: 800; }
 
+/* FIFA world-ranking badge */
+.rank-badge {
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  background: #eef4f1;
+  border-radius: 999px;
+  padding: 1px 6px;
+  font-variant-numeric: tabular-nums;
+  flex: 0 0 auto;
+}
+
 /* Country flags */
 .flag {
   width: 22px;
@@ -264,17 +276,7 @@ main { max-width: 1000px; margin: 0 auto; padding: 12px 20px 40px; }
   border-bottom: 3px solid var(--gold);
 }
 .team-block-head .flag, .team-block-head .flag-tbd { width: 28px; height: 20px; }
-.team-rank {
-  margin-left: auto;
-  background: var(--green);
-  color: #fff;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  padding: 3px 9px;
-  border-radius: 999px;
-}
+.team-block-head .rank-badge { margin-left: auto; font-size: 0.78rem; padding: 2px 10px; }
 
 .player-grid {
   display: grid;
@@ -366,7 +368,7 @@ main { max-width: 1000px; margin: 0 auto; padding: 12px 20px 40px; }
   .team-block { margin-bottom: 10px; }
   .team-block-head { font-size: 0.9rem; border-bottom-width: 2px; margin-bottom: 6px; }
   .team-block-head .flag { width: 20px; height: 14px; }
-  .team-rank { background: none; color: var(--green-dark); border: 1px solid var(--green-dark); }
+  .rank-badge { background: none; color: var(--green-dark); border: 1px solid var(--green-dark); padding: 0 4px; font-size: 0.64rem; }
   .player-grid { display: block; }
   .player-card {
     border: none;

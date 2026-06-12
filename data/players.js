@@ -1,19 +1,7 @@
 // FIFA World Cup 2026 — top players per team. Compiled from agent web research (June 2026).
-// Top-10 favorites: 5 players each; all other teams: 3. Clubs reflect the 2025-26 season.
-// 48 teams, 164 players. Do not hand-edit; regenerate from the research workflow.
+// FIFA top-10 teams: 5 players each; all other teams: 3. Clubs reflect the 2025-26 season.
+// 48 teams, 164 players. Team order/rank come from data/rankings.js.
 window.WC_PLAYERS = {
-  "rank": {
-    "Argentina": 1,
-    "Spain": 2,
-    "France": 3,
-    "England": 4,
-    "Brazil": 5,
-    "Portugal": 6,
-    "Netherlands": 7,
-    "Belgium": 8,
-    "Germany": 9,
-    "Croatia": 10
-  },
   "teams": {
     "Algeria": [
       {
@@ -331,20 +319,6 @@ window.WC_PLAYERS = {
         "club": "Manchester City (Premier League, England)",
         "hometown": "Linz, Austria (family roots near Šibenik, Dalmatia)",
         "why": "A multiple Champions League winner with Real Madrid and Chelsea, Kovačić is the engine of Croatia's midfield alongside Modrić. He excels at carrying the ball through pressure, recycling possession and breaking lines with his close control and balance. He is central to Croatia's possession-based identity and a leadership bridge to the post-Modrić era."
-      },
-      {
-        "name": "Ivan Perišić",
-        "position": "Winger / Forward",
-        "club": "PSV Eindhoven (Eredivisie, Netherlands)",
-        "hometown": "Split (Dalmatia region)",
-        "why": "A talismanic big-game performer who scored in both the 2018 semi-final win over England and the final loss to France, and remains Croatia's go-to attacking threat in major tournaments. The veteran winger offers power, directness, a fierce left foot and aerial menace from wide areas. His tournament experience and stamina make him a recurring difference-maker for the Vatreni."
-      },
-      {
-        "name": "Petar Sučić",
-        "position": "Central midfielder",
-        "club": "Inter Milan (Serie A, Italy)",
-        "hometown": "Zagreb",
-        "why": "The standout of Croatia's new generation, Sučić earned a high-profile move to Inter Milan after impressing at Dinamo Zagreb. A press-resistant, technically polished midfielder, he is being groomed as the long-term heir to Modrić and Kovačić in central midfield. His emergence gives Croatia continuity and creativity for the years beyond this tournament."
       }
     ],
     "Curaçao": [
@@ -761,23 +735,37 @@ window.WC_PLAYERS = {
       {
         "name": "Achraf Hakimi",
         "position": "Right-back",
-        "club": "Paris Saint-Germain (Ligue 1, France)",
-        "hometown": "Born in Madrid, Spain to Moroccan parents originally from the Casablanca region",
-        "why": "Captain and talisman of Morocco, he is widely regarded as one of the best full-backs in the world and won the 2025 UEFA Champions League with PSG. An attacking, two-way right-back, he registered around 3 goals and 9 assists across the 2025-26 club season and was a finalist for Africa's best player. He was a driving force in Morocco's historic 2022 World Cup semifinal run and remains the team's most experienced and decisive player."
+        "club": "Paris Saint-Germain (France, Ligue 1)",
+        "hometown": "Born in Madrid, Spain to Moroccan parents (father from the Rif region); raised in Getafe",
+        "why": "Morocco's captain and most-capped current player, widely regarded as one of the best right-backs in the world. He was integral to PSG's Champions League success and finished 6th in the 2025 Ballon d'Or — the highest ever by a Moroccan — while also winning the African Ballon d'Or. His blistering pace, attacking output and two-way play down the right define Morocco's system."
       },
       {
         "name": "Brahim Díaz",
         "position": "Attacking midfielder",
-        "club": "Real Madrid (La Liga, Spain)",
-        "hometown": "Born in Málaga, Spain; his father's family are Riffian Moroccans (Rif region)",
-        "why": "A creative attacking midfielder and winger for Real Madrid, he switched allegiance from Spain to Morocco and starred as top scorer of the 2025 Africa Cup of Nations with five goals. His close control, dribbling and ability to play between the lines give Morocco a high-quality creative spark. He has won multiple trophies at Real Madrid and brings elite club pedigree to the national side."
+        "club": "Real Madrid (Spain, La Liga)",
+        "hometown": "Born in Málaga, Spain to a Moroccan-Riffian father; switched allegiance from Spain to Morocco in 2024",
+        "why": "The creative spark of the side and a breakout star of Morocco's AFCON 2025 title run, finishing as the tournament's top scorer. A nimble, press-resistant playmaker who carries the ball through tight spaces and links Morocco's midfield to its attack. His dribbling and goal threat give Morocco an extra dimension in the final third."
       },
       {
-        "name": "Youssef En-Nesyri",
-        "position": "Forward",
-        "club": "Al-Ittihad (Saudi Pro League); joined from Fenerbahçe in February 2026",
-        "hometown": "Fès (Fez), Morocco",
-        "why": "Morocco's most reliable centre-forward and a powerful aerial threat, famous for the towering header that knocked Portugal out of the 2022 World Cup. A strong, mobile striker who finishes well with both feet and his head, he is the team's go-to No. 9 and one of its all-time leading scorers. His physical presence and penalty-box instincts make him central to Morocco's attack."
+        "name": "Yassine Bounou",
+        "position": "Goalkeeper",
+        "club": "Al-Hilal (Saudi Arabia, Saudi Pro League)",
+        "hometown": "Born in Montreal, Canada to Moroccan parents; grew up in Casablanca",
+        "why": "Morocco's penalty-saving hero from the 2022 World Cup semi-final run and a reigning CAF Goalkeeper of the Year. He won the Golden Glove at AFCON 2025 with five clean sheets in seven matches as Morocco conceded just twice en route to the title. A commanding, big-moment goalkeeper who anchors the defence."
+      },
+      {
+        "name": "Bilal El Khannouss",
+        "position": "Attacking midfielder",
+        "club": "VfB Stuttgart (Germany, Bundesliga)",
+        "hometown": "Born in Strombeek-Bever, Belgium to a Moroccan family; chose Morocco at youth level",
+        "why": "A gifted young playmaker who has become one of the most exciting creators in the squad after a strong spell at Stuttgart. Known for exceptional close control, vision and defence-splitting passes, he gives Morocco a technical, line-breaking option in midfield. He represents the next generation of the team's creative core."
+      },
+      {
+        "name": "Noussair Mazraoui",
+        "position": "Right-back / Full-back",
+        "club": "Manchester United (England, Premier League)",
+        "hometown": "Born in Leiderdorp, Netherlands to Moroccan parents with Rif roots; chose Morocco over the Netherlands",
+        "why": "A versatile, Premier League-tested full-back who can play either flank and is a pillar of Morocco's defensive solidity. An Ajax academy product who won trophies at Bayern Munich before moving to Manchester United, he was part of the 2022 World Cup semi-final defence and the AFCON 2025-winning squad. His positional flexibility and composure on the ball make him a key cog."
       }
     ],
     "Netherlands": [
