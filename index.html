@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>World Cup 2026 Schedule</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 <header class="site-header">
@@ -15,79 +15,87 @@
 </header>
 
 <section class="controls no-print">
-  <div class="control-group tz-group">
-    <label for="tz-input">Time zone</label>
-    <div class="combo" id="tz-combo">
-      <input type="text" id="tz-input" autocomplete="off" spellcheck="false"
-             role="combobox" aria-expanded="false" aria-autocomplete="list"
-             aria-controls="tz-listbox" placeholder="Search time zone…">
-      <ul class="combo-list" id="tz-listbox" role="listbox" hidden></ul>
+  <div class="controls-row">
+    <span class="row-label">Filter</span>
+    <div class="control-group tz-group">
+      <label for="tz-input">Time zone</label>
+      <div class="combo" id="tz-combo">
+        <input type="text" id="tz-input" autocomplete="off" spellcheck="false"
+               role="combobox" aria-expanded="false" aria-autocomplete="list"
+               aria-controls="tz-listbox" placeholder="Search time zone…">
+        <ul class="combo-list" id="tz-listbox" role="listbox" hidden></ul>
+      </div>
     </div>
-  </div>
 
-  <div class="control-group">
-    <label for="stage-filter">Stage</label>
-    <select id="stage-filter">
-      <option value="all">All stages</option>
-    </select>
-  </div>
+    <div class="control-group">
+      <label for="stage-filter">Stage</label>
+      <select id="stage-filter">
+        <option value="all">All stages</option>
+      </select>
+    </div>
 
-  <div class="control-group">
-    <label for="team-btn">Team</label>
-    <div class="combo" id="team-combo">
-      <button type="button" id="team-btn" class="venue-btn" aria-haspopup="true" aria-expanded="false" aria-controls="team-list">All teams</button>
-      <div class="combo-list venue-list" id="team-list" hidden role="dialog" aria-label="Filter by team">
-        <div class="filter-search"><input type="text" id="team-search" placeholder="Search teams…" autocomplete="off" spellcheck="false"></div>
-        <div class="venue-actions">
-          <button type="button" id="team-all" class="btn link">Select all</button>
-          <button type="button" id="team-none" class="btn link">Clear all</button>
+    <div class="control-group">
+      <label for="team-btn">Team</label>
+      <div class="combo" id="team-combo">
+        <button type="button" id="team-btn" class="venue-btn" aria-haspopup="true" aria-expanded="false" aria-controls="team-list">All teams</button>
+        <div class="combo-list venue-list" id="team-list" hidden role="dialog" aria-label="Filter by team">
+          <div class="filter-search"><input type="text" id="team-search" placeholder="Search teams…" autocomplete="off" spellcheck="false"></div>
+          <div class="venue-actions">
+            <button type="button" id="team-all" class="btn link">Select all</button>
+            <button type="button" id="team-none" class="btn link">Clear all</button>
+          </div>
+          <ul id="team-options"></ul>
         </div>
-        <ul id="team-options"></ul>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label for="venue-btn">Venues</label>
+      <div class="combo" id="venue-combo">
+        <button type="button" id="venue-btn" class="venue-btn" aria-haspopup="true" aria-expanded="false" aria-controls="venue-list">All venues</button>
+        <div class="combo-list venue-list" id="venue-list" hidden role="dialog" aria-label="Filter by venue">
+          <div class="filter-search"><input type="text" id="venue-search" placeholder="Search venues…" autocomplete="off" spellcheck="false"></div>
+          <div class="venue-actions">
+            <button type="button" id="venue-all" class="btn link">Select all</button>
+            <button type="button" id="venue-none" class="btn link">Clear all</button>
+          </div>
+          <ul id="venue-options"></ul>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="control-group">
-    <label for="venue-btn">Venues</label>
-    <div class="combo" id="venue-combo">
-      <button type="button" id="venue-btn" class="venue-btn" aria-haspopup="true" aria-expanded="false" aria-controls="venue-list">All venues</button>
-      <div class="combo-list venue-list" id="venue-list" hidden role="dialog" aria-label="Filter by venue">
-        <div class="filter-search"><input type="text" id="venue-search" placeholder="Search venues…" autocomplete="off" spellcheck="false"></div>
-        <div class="venue-actions">
-          <button type="button" id="venue-all" class="btn link">Select all</button>
-          <button type="button" id="venue-none" class="btn link">Clear all</button>
-        </div>
-        <ul id="venue-options"></ul>
-      </div>
+  <div class="controls-row">
+    <span class="row-label">Show</span>
+    <div class="control-group toggles">
+      <label class="toggle">
+        <input type="checkbox" id="show-scores">
+        <span>Scores</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="show-ranking">
+        <span>FIFA ranking</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="show-players">
+        <span>Player guide</span>
+      </label>
     </div>
   </div>
 
-  <div class="control-group toggles">
-    <label class="toggle">
-      <input type="checkbox" id="show-scores">
-      <span>Show scores</span>
-    </label>
-    <label class="toggle">
-      <input type="checkbox" id="show-ranking">
-      <span>Show FIFA ranking</span>
-    </label>
-    <label class="toggle">
-      <input type="checkbox" id="show-players">
-      <span>Include player guide</span>
-    </label>
-  </div>
-
-  <div class="control-group actions">
-    <button id="print-btn" class="btn primary">🖨 Print / Save PDF</button>
-    <label class="toggle print-option">
-      <input type="checkbox" id="print-blanks">
-      <span>Print with blank score boxes (fill in by hand)</span>
-    </label>
-  </div>
-
-  <div class="control-group actions">
-    <button id="subscribe-btn" class="btn primary" type="button">📅 Subscribe in Google Calendar</button>
-    <button id="download-ics-btn" class="btn" type="button">⬇ Download .ics (import / Apple / Outlook)</button>
+  <div class="controls-row">
+    <span class="row-label">Export</span>
+    <div class="control-group actions">
+      <button id="print-btn" class="btn primary">🖨 Print / Save PDF</button>
+      <label class="toggle print-option">
+        <input type="checkbox" id="print-blanks">
+        <span>Blank score boxes (fill in by hand)</span>
+      </label>
+    </div>
+    <div class="control-group actions">
+      <button id="subscribe-btn" class="btn primary" type="button">📅 Subscribe in Google Calendar</button>
+      <button id="download-ics-btn" class="btn" type="button">⬇ Download .ics</button>
+    </div>
   </div>
 </section>
 
@@ -138,6 +146,6 @@
 <script src="data/matches.js"></script>
 <script src="data/rankings.js"></script>
 <script src="data/players.js"></script>
-<script src="app.js"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>
