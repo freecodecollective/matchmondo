@@ -13,12 +13,18 @@
     tzInput: document.getElementById("tz-input"),
     tzList: document.getElementById("tz-listbox"),
     stage: document.getElementById("stage-filter"),
-    team: document.getElementById("team-filter"),
+    teamBtn: document.getElementById("team-btn"),
+    teamList: document.getElementById("team-list"),
+    teamOptions: document.getElementById("team-options"),
+    teamAll: document.getElementById("team-all"),
+    teamNone: document.getElementById("team-none"),
+    teamSearch: document.getElementById("team-search"),
     venueBtn: document.getElementById("venue-btn"),
     venueList: document.getElementById("venue-list"),
     venueOptions: document.getElementById("venue-options"),
     venueAll: document.getElementById("venue-all"),
     venueNone: document.getElementById("venue-none"),
+    venueSearch: document.getElementById("venue-search"),
     showScores: document.getElementById("show-scores"),
     showRanking: document.getElementById("show-ranking"),
     showPlayers: document.getElementById("show-players"),
@@ -253,6 +259,71 @@
   }
 
   // ---------- Filters ----------
+  let ALL_VENUES = [], ALL_TEAMS = [];
+  const selectedVenues = new Set();
+  const selectedTeams = new Set();
+
+  // Generic multi-select checklist dropdown: search box + Select all / Clear all + per-item checkboxes.
+  function createChecklistFilter(cfg) {
+    const { btn, list, optionsEl, allBtn, noneBtn, searchEl, comboId, items, selected, noun, onChange } = cfg;
+    const total = items.length;
+    function label() {
+      const n = selected.size;
+      btn.textContent = n === total ? `All ${noun}` : n === 0 ? `No ${noun}` : `${n} of ${total} ${noun}`;
+    }
+    optionsEl.innerHTML = items.map((it) =>
+      `<li data-search="${esc((it.name + " " + (it.sub || "")).toLowerCase())}">` +
+      `<label class="venue-opt"><input type="checkbox" value="${esc(it.value)}" checked>` +
+      `<span class="venue-opt-text"><span class="venue-opt-name">${it.icon || ""}${esc(it.name)}</span>` +
+      (it.sub ? `<span class="venue-opt-city">${esc(it.sub)}</span>` : "") +
+      `</span></label></li>`
+    ).join("");
+    selected.clear();
+    items.forEach((it) => selected.add(it.value));
+    label();
+
+    optionsEl.addEventListener("change", (e) => {
+      const cb = e.target;
+      if (cb.type !== "checkbox") return;
+      if (cb.checked) selected.add(cb.value); else selected.delete(cb.value);
+      label();
+      onChange();
+    });
+    function setAll(on) {
+      optionsEl.querySelectorAll('input[type="checkbox"]').forEach((cb) => { cb.checked = on; });
+      selected.clear();
+      if (on) items.forEach((it) => selected.add(it.value));
+      label();
+      onChange();
+    }
+    allBtn.addEventListener("click", () => setAll(true));
+    noneBtn.addEventListener("click", () => setAll(false));
+    if (searchEl) {
+      searchEl.addEventListener("input", () => {
+        const q = searchEl.value.trim().toLowerCase();
+        optionsEl.querySelectorAll("li").forEach((li) => {
+          li.hidden = q && !li.dataset.search.includes(q);
+        });
+      });
+    }
+    btn.addEventListener("click", () => {
+      const open = list.hidden;
+      list.hidden = !open;
+      btn.setAttribute("aria-expanded", String(open));
+      if (open && searchEl) {
+        searchEl.value = "";
+        optionsEl.querySelectorAll("li").forEach((li) => { li.hidden = false; });
+        setTimeout(() => searchEl.focus(), 0);
+      }
+    });
+    document.addEventListener("click", (e) => {
+      if (!document.getElementById(comboId).contains(e.target)) {
+        list.hidden = true;
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
   function buildFilters() {
     const stages = [...new Set(matches.map((m) => m.stage))];
     stages.forEach((s) => {
@@ -262,63 +333,26 @@
       els.stage.appendChild(o);
     });
 
-    const teams = [...new Set(matches.flatMap((m) => [m.home, m.away]))]
-      .filter((t) => t && !/^(Winner|Runner|Loser|1[A-L]|2[A-L]|3rd)/i.test(t))
-      .sort();
-    teams.forEach((t) => {
-      const o = document.createElement("option");
-      o.value = t;
-      o.textContent = t;
-      els.team.appendChild(o);
+    // Venue filter
+    ALL_VENUES = [...new Set(matches.map((m) => m.venue))].sort((a, b) => a.localeCompare(b));
+    const venueCity = {};
+    matches.forEach((m) => { if (!venueCity[m.venue]) venueCity[m.venue] = m.city; });
+    createChecklistFilter({
+      btn: els.venueBtn, list: els.venueList, optionsEl: els.venueOptions,
+      allBtn: els.venueAll, noneBtn: els.venueNone, searchEl: els.venueSearch, comboId: "venue-combo",
+      items: ALL_VENUES.map((v) => ({ value: v, name: v, sub: venueCity[v] })),
+      selected: selectedVenues, noun: "venues", onChange: render,
     });
-  }
 
-  // ---------- Venue filter (multi-select) ----------
-  const ALL_VENUES = [...new Set(matches.map((m) => m.venue))].sort((a, b) => a.localeCompare(b));
-  const venueCity = {};
-  matches.forEach((m) => { if (!venueCity[m.venue]) venueCity[m.venue] = m.city; });
-  const selectedVenues = new Set(ALL_VENUES); // default: all selected
-
-  function updateVenueLabel() {
-    const sel = selectedVenues.size, total = ALL_VENUES.length;
-    els.venueBtn.textContent = sel === total ? "All venues" : sel === 0 ? "No venues" : `${sel} of ${total} venues`;
-  }
-
-  function buildVenueFilter() {
-    els.venueOptions.innerHTML = ALL_VENUES.map((v) =>
-      `<li><label class="venue-opt"><input type="checkbox" value="${esc(v)}" checked>` +
-      `<span class="venue-opt-text"><span class="venue-opt-name">${esc(v)}</span>` +
-      `<span class="venue-opt-city">${esc(venueCity[v])}</span></span></label></li>`
-    ).join("");
-    updateVenueLabel();
-
-    els.venueOptions.addEventListener("change", (e) => {
-      const cb = e.target;
-      if (cb.type !== "checkbox") return;
-      if (cb.checked) selectedVenues.add(cb.value); else selectedVenues.delete(cb.value);
-      updateVenueLabel();
-      render();
-    });
-    function setAll(on) {
-      els.venueOptions.querySelectorAll('input[type="checkbox"]').forEach((cb) => { cb.checked = on; });
-      selectedVenues.clear();
-      if (on) ALL_VENUES.forEach((v) => selectedVenues.add(v));
-      updateVenueLabel();
-      render();
-    }
-    els.venueAll.addEventListener("click", () => setAll(true));
-    els.venueNone.addEventListener("click", () => setAll(false));
-
-    els.venueBtn.addEventListener("click", () => {
-      const open = els.venueList.hidden;
-      els.venueList.hidden = !open;
-      els.venueBtn.setAttribute("aria-expanded", String(open));
-    });
-    document.addEventListener("click", (e) => {
-      if (!document.getElementById("venue-combo").contains(e.target)) {
-        els.venueList.hidden = true;
-        els.venueBtn.setAttribute("aria-expanded", "false");
-      }
+    // Team filter — real teams only (present in the flag map), so knockout placeholders
+    // like "1A", "3ABCDF" and "To be announced" are excluded.
+    ALL_TEAMS = [...new Set(matches.flatMap((m) => [m.home, m.away]))]
+      .filter((t) => FLAGS[t]).sort((a, b) => a.localeCompare(b));
+    createChecklistFilter({
+      btn: els.teamBtn, list: els.teamList, optionsEl: els.teamOptions,
+      allBtn: els.teamAll, noneBtn: els.teamNone, searchEl: els.teamSearch, comboId: "team-combo",
+      items: ALL_TEAMS.map((t) => ({ value: t, name: t, icon: flagImg(t) })),
+      selected: selectedTeams, noun: "teams", onChange: render,
     });
   }
 
@@ -401,7 +435,9 @@
   function render() {
     const tz = currentTz;
     const stageFilter = els.stage.value;
-    const teamFilter = els.team.value;
+    // Team filter only narrows when the user has deselected some teams (all selected = show everything,
+    // including knockout matches whose teams are still TBD).
+    const teamFilterActive = selectedTeams.size !== ALL_TEAMS.length;
     const opts = {
       showScores: els.showScores.checked,
       blanks: false,
@@ -409,7 +445,7 @@
 
     const visible = matches.filter((m) =>
       (stageFilter === "all" || m.stage === stageFilter) &&
-      (teamFilter === "all" || m.home === teamFilter || m.away === teamFilter) &&
+      (!teamFilterActive || selectedTeams.has(m.home) || selectedTeams.has(m.away)) &&
       selectedVenues.has(m.venue)
     );
 
@@ -595,7 +631,6 @@
 
   // ---------- Events ----------
   els.stage.addEventListener("change", render);
-  els.team.addEventListener("change", render);
   els.showScores.addEventListener("change", () => { savePrefs(); render(); });
   els.showRanking.addEventListener("change", () => {
     savePrefs();
@@ -631,7 +666,6 @@
   // ---------- Init ----------
   initTzCombo();
   buildFilters();
-  buildVenueFilter();
   if (prefs.showScores != null) els.showScores.checked = prefs.showScores;
   if (prefs.showRanking != null) els.showRanking.checked = prefs.showRanking;
   if (prefs.printBlanks != null) els.printBlanks.checked = prefs.printBlanks;

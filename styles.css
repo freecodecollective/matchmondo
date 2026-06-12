@@ -122,19 +122,27 @@ body {
 }
 .venue-btn:hover { background: #f0f1ee; }
 .venue-btn[aria-expanded="true"] { outline: 2px solid var(--green); outline-offset: -1px; }
-.venue-list { width: 300px; padding: 0; }
+.venue-list { width: 300px; padding: 0; max-height: none; overflow: visible; }
+.filter-search { padding: 8px 8px 0; }
+.filter-search input {
+  width: 100%;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+.filter-search input:focus { outline: 2px solid var(--green); outline-offset: -1px; }
 .venue-actions {
   display: flex;
   gap: 6px;
   padding: 8px 10px;
   border-bottom: 1px solid var(--line);
-  position: sticky;
-  top: 0;
   background: #fff;
   border-radius: 8px 8px 0 0;
 }
 .venue-actions .btn.link { padding: 2px 4px; font-size: 0.82rem; }
-.venue-list ul { list-style: none; margin: 0; padding: 4px; }
+.venue-list ul { list-style: none; margin: 0; padding: 4px; max-height: 240px; overflow-y: auto; }
+.venue-opt-name .flag, .venue-opt-name .flag-tbd { margin-right: 7px; vertical-align: -2px; }
 .venue-opt {
   display: flex;
   align-items: center;

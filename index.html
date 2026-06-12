@@ -33,10 +33,18 @@
   </div>
 
   <div class="control-group">
-    <label for="team-filter">Team</label>
-    <select id="team-filter">
-      <option value="all">All teams</option>
-    </select>
+    <label for="team-btn">Team</label>
+    <div class="combo" id="team-combo">
+      <button type="button" id="team-btn" class="venue-btn" aria-haspopup="true" aria-expanded="false" aria-controls="team-list">All teams</button>
+      <div class="combo-list venue-list" id="team-list" hidden role="dialog" aria-label="Filter by team">
+        <div class="filter-search"><input type="text" id="team-search" placeholder="Search teams…" autocomplete="off" spellcheck="false"></div>
+        <div class="venue-actions">
+          <button type="button" id="team-all" class="btn link">Select all</button>
+          <button type="button" id="team-none" class="btn link">Clear all</button>
+        </div>
+        <ul id="team-options"></ul>
+      </div>
+    </div>
   </div>
 
   <div class="control-group">
@@ -44,6 +52,7 @@
     <div class="combo" id="venue-combo">
       <button type="button" id="venue-btn" class="venue-btn" aria-haspopup="true" aria-expanded="false" aria-controls="venue-list">All venues</button>
       <div class="combo-list venue-list" id="venue-list" hidden role="dialog" aria-label="Filter by venue">
+        <div class="filter-search"><input type="text" id="venue-search" placeholder="Search venues…" autocomplete="off" spellcheck="false"></div>
         <div class="venue-actions">
           <button type="button" id="venue-all" class="btn link">Select all</button>
           <button type="button" id="venue-none" class="btn link">Clear all</button>
