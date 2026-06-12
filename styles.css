@@ -58,6 +58,38 @@ body {
   border: 1px solid var(--line);
   border-radius: 12px;
 }
+.controls-summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-weight: 800;
+  color: var(--green-dark);
+  background: #eef4f1;
+  border-radius: 12px 12px 0 0;
+}
+.controls-summary::-webkit-details-marker { display: none; }
+.controls-summary::after { content: "▸"; margin-left: auto; color: var(--muted); transition: transform 0.15s; }
+.controls[open] .controls-summary::after { transform: rotate(90deg); }
+.controls:not([open]) .controls-summary { border-radius: 12px; }
+.controls-summary + .controls-row { border-top: 1px solid var(--line); }
+
+/* Section jump-nav */
+.section-nav {
+  max-width: 1000px;
+  margin: 10px auto 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px 12px;
+  flex-wrap: wrap;
+}
+.section-nav .nav-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 700; }
+.section-nav a { color: var(--green-dark); text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 4px 9px; border-radius: 6px; }
+.section-nav a:hover { background: #eef4f1; }
+
 .controls-row {
   display: flex;
   flex-wrap: wrap;
@@ -243,7 +275,7 @@ dialog .small { font-size: 0.82rem; color: var(--muted); }
 main { max-width: 1000px; margin: 0 auto; padding: 12px 20px 40px; }
 .match-count { color: var(--muted); font-size: 0.85rem; margin: 10px 2px; }
 
-.day-group { margin-top: 26px; }
+.day-group { margin-top: 16px; }
 .day-heading {
   font-size: 1.05rem;
   font-weight: 700;
@@ -272,14 +304,22 @@ main { max-width: 1000px; margin: 0 auto; padding: 12px 20px 40px; }
   border: 1px solid var(--line);
   border-left: 4px solid var(--stage, var(--green));
   border-radius: 10px;
-  padding: 12px 16px 12px 14px;
-  margin-bottom: 8px;
+  padding: 7px 14px;
+  margin-bottom: 6px;
   display: grid;
-  grid-template-columns: 96px 1fr auto;
-  gap: 6px 16px;
+  grid-template-columns: 76px 1fr auto;
+  grid-template-areas:
+    "time teams stage"
+    "time meta  meta";
+  column-gap: 14px;
+  row-gap: 0;
   align-items: center;
   transition: box-shadow 0.15s, transform 0.15s;
 }
+.match-card > .match-time { grid-area: time; }
+.match-card > .match-teams { grid-area: teams; }
+.match-card > .match-stage { grid-area: stage; justify-self: end; align-self: start; text-align: right; white-space: nowrap; }
+.match-card > .match-meta { grid-area: meta; text-align: left; }
 .match-card:hover { box-shadow: 0 4px 16px rgba(11,110,79,0.13); transform: translateY(-1px); }
 
 /* Stage color accents (left edge + the small match-stage label) */
@@ -344,8 +384,7 @@ main { max-width: 1000px; margin: 0 auto; padding: 12px 20px 40px; }
 .match-venue { font-weight: 600; color: var(--ink); }
 
 @media (max-width: 640px) {
-  .match-card { grid-template-columns: 1fr; }
-  .match-meta { text-align: left; }
+  .match-card { grid-template-columns: 56px 1fr auto; }
 }
 
 /* ---------- Location show/hide ---------- */
@@ -378,7 +417,8 @@ main.hide-location .match-meta { display: none; }
 }
 .upcoming[open] .upcoming-summary::after { transform: rotate(90deg); }
 .upcoming-title { font-weight: 800; color: var(--green-dark); }
-.upcoming-count { font-size: 0.85rem; color: var(--muted); }
+.upcoming-note { font-size: 0.72rem; color: var(--muted); font-weight: 400; }
+.upcoming-count { font-size: 0.85rem; color: var(--muted); margin-left: auto; }
 .upcoming-body { padding: 6px 16px 14px; }
 .upcoming-day { font-size: 0.9rem; margin: 12px 0 6px; }
 .upcoming-empty { color: var(--muted); margin: 8px 0; }

@@ -25,9 +25,12 @@
     venueAll: document.getElementById("venue-all"),
     venueNone: document.getElementById("venue-none"),
     venueSearch: document.getElementById("venue-search"),
+    controls: document.getElementById("controls"),
+    sectionNav: document.getElementById("section-nav"),
     showScores: document.getElementById("show-scores"),
     showRanking: document.getElementById("show-ranking"),
     showLocation: document.getElementById("show-location"),
+    showPast: document.getElementById("show-past"),
     showPlayers: document.getElementById("show-players"),
     showStandings: document.getElementById("show-standings"),
     showRules: document.getElementById("show-rules"),
@@ -64,10 +67,12 @@
       showScores: els.showScores.checked,
       showRanking: els.showRanking.checked,
       showLocation: els.showLocation.checked,
+      showPast: els.showPast.checked,
       showPlayers: els.showPlayers.checked,
       showStandings: els.showStandings.checked,
       showRules: els.showRules.checked,
       upcomingOpen: els.upcoming.open,
+      controlsOpen: els.controls.open,
       printBlanks: els.printBlanks.checked,
     }));
   }
@@ -455,10 +460,8 @@
     const awayWin = played && Number(m.scoreA) > Number(m.scoreH);
     return `
         <article class="match-card stage-${stageSlug(m.stage)}" data-blanks-slot data-match="${m.n}">
-          <div>
-            <div class="match-time">${esc(fmtTime(m.utc, tz))}</div>
-            <div class="match-stage">Match ${m.n} · ${trophy}${esc(label)}</div>
-          </div>
+          <div class="match-time">${esc(fmtTime(m.utc, tz))}</div>
+          <div class="match-stage">Match ${m.n} · ${trophy}${esc(label)}</div>
           <div class="match-teams">
             <span class="team${homeWin ? " winner" : ""}">${flagImg(m.home)}<span class="team-name">${esc(m.home)}</span>${rankBadge(m.home)}</span>
             <span class="score-slot">${scoreHtml(m, opts)}</span>
@@ -502,11 +505,15 @@
       showScores: els.showScores.checked,
       blanks: false,
     };
+    // "Past games" off → hide matches that have almost certainly finished (kicked off > 2.5h ago).
+    const hidePast = !els.showPast.checked;
+    const pastCutoff = Date.now() - 2.5 * 60 * 60 * 1000;
 
     const visible = matches.filter((m) =>
       (stageFilter === "all" || m.stage === stageFilter) &&
       (!teamFilterActive || selectedTeams.has(m.home) || selectedTeams.has(m.away)) &&
-      selectedVenues.has(m.venue)
+      selectedVenues.has(m.venue) &&
+      (!hidePast || new Date(m.utc).getTime() >= pastCutoff)
     );
 
     const groups = new Map();
@@ -533,7 +540,7 @@
     const total = matches.length;
     const played = matches.filter(hasScore).length;
     const filterActive = stageFilter !== "all" || teamFilterActive ||
-      selectedVenues.size !== ALL_VENUES.length;
+      selectedVenues.size !== ALL_VENUES.length || hidePast;
     els.count.textContent = filterActive
       ? `${visible.length} shown · ${played} of ${total} matches played`
       : `${played} of ${total} matches played`;
@@ -860,6 +867,8 @@
     if (els.showStandings.checked) renderStandings();
   });
   els.showLocation.addEventListener("change", () => { savePrefs(); applyLocation(); });
+  els.showPast.addEventListener("change", () => { savePrefs(); render(); });
+  els.controls.addEventListener("toggle", savePrefs);
   els.showPlayers.addEventListener("change", () => { savePrefs(); applyPlayersToggle(); });
   els.showStandings.addEventListener("change", () => { savePrefs(); applyStandingsToggle(); });
   els.showRules.addEventListener("change", () => { savePrefs(); applyRulesToggle(); });
@@ -890,6 +899,20 @@
   // Persist the Today/Tomorrow panel's open/closed state.
   els.upcoming.addEventListener("toggle", savePrefs);
 
+  // Section nav: enable the target section's toggle (if off), then smooth-scroll to it.
+  els.sectionNav.addEventListener("click", (e) => {
+    const a = e.target.closest("a[data-jump]");
+    if (!a) return;
+    e.preventDefault();
+    const togId = a.dataset.toggle;
+    if (togId) {
+      const cb = document.getElementById(togId);
+      if (cb && !cb.checked) { cb.checked = true; cb.dispatchEvent(new Event("change")); }
+    }
+    const target = document.getElementById(a.dataset.jump);
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
   // If a flag image can't load (e.g. offline), swap to the neutral placeholder so no broken icon shows.
   els.main.addEventListener("error", (e) => {
     const img = e.target;
@@ -907,11 +930,13 @@
   if (prefs.showScores != null) els.showScores.checked = prefs.showScores;
   if (prefs.showRanking != null) els.showRanking.checked = prefs.showRanking;
   if (prefs.showLocation != null) els.showLocation.checked = prefs.showLocation;
+  if (prefs.showPast != null) els.showPast.checked = prefs.showPast;
   if (prefs.printBlanks != null) els.printBlanks.checked = prefs.printBlanks;
   if (prefs.showPlayers != null) els.showPlayers.checked = prefs.showPlayers;
   if (prefs.showStandings != null) els.showStandings.checked = prefs.showStandings;
   if (prefs.showRules != null) els.showRules.checked = prefs.showRules;
   if (prefs.upcomingOpen != null) els.upcoming.open = prefs.upcomingOpen;
+  if (prefs.controlsOpen != null) els.controls.open = prefs.controlsOpen;
   render();
   applyLocation();
   applyPlayersToggle();
