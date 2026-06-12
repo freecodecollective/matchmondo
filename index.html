@@ -39,6 +39,20 @@
     </select>
   </div>
 
+  <div class="control-group">
+    <label for="venue-btn">Venues</label>
+    <div class="combo" id="venue-combo">
+      <button type="button" id="venue-btn" class="venue-btn" aria-haspopup="true" aria-expanded="false" aria-controls="venue-list">All venues</button>
+      <div class="combo-list venue-list" id="venue-list" hidden role="dialog" aria-label="Filter by venue">
+        <div class="venue-actions">
+          <button type="button" id="venue-all" class="btn link">Select all</button>
+          <button type="button" id="venue-none" class="btn link">Clear all</button>
+        </div>
+        <ul id="venue-options"></ul>
+      </div>
+    </div>
+  </div>
+
   <div class="control-group toggles">
     <label class="toggle">
       <input type="checkbox" id="show-scores">

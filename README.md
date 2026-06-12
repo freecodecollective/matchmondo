@@ -5,7 +5,7 @@ A single-page, no-build static website with the full FIFA World Cup 2026 schedul
 ## Features
 
 - **Time zone picker** — every kickoff is stored in UTC and rendered in whatever zone you choose (defaults to your device's zone). Choice is remembered.
-- **Full schedule** — grouped by day, with stage/group, match number, opponents, venue, and city. Filter by stage or by team.
+- **Full schedule** — grouped by day, with stage/group, match number, opponents, venue, and city. Filter by stage, by team, or by **venue** (multi-select checklist with Select all / Clear all — e.g. pick just the stadiums near you).
 - **Show / hide scores** — toggle scores on or off (e.g., if you're avoiding spoilers while catching up on a recorded match).
 - **Show FIFA ranking** — optional toggle that adds each team's current FIFA world-ranking position (`#N`) next to its name on every match and in the player guide. Data in `data/rankings.js`.
 - **Show / hide US TV channel** — optional 📺 line per match for U.S. viewers.

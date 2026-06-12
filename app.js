@@ -14,6 +14,11 @@
     tzList: document.getElementById("tz-listbox"),
     stage: document.getElementById("stage-filter"),
     team: document.getElementById("team-filter"),
+    venueBtn: document.getElementById("venue-btn"),
+    venueList: document.getElementById("venue-list"),
+    venueOptions: document.getElementById("venue-options"),
+    venueAll: document.getElementById("venue-all"),
+    venueNone: document.getElementById("venue-none"),
     showScores: document.getElementById("show-scores"),
     showRanking: document.getElementById("show-ranking"),
     showPlayers: document.getElementById("show-players"),
@@ -268,6 +273,55 @@
     });
   }
 
+  // ---------- Venue filter (multi-select) ----------
+  const ALL_VENUES = [...new Set(matches.map((m) => m.venue))].sort((a, b) => a.localeCompare(b));
+  const venueCity = {};
+  matches.forEach((m) => { if (!venueCity[m.venue]) venueCity[m.venue] = m.city; });
+  const selectedVenues = new Set(ALL_VENUES); // default: all selected
+
+  function updateVenueLabel() {
+    const sel = selectedVenues.size, total = ALL_VENUES.length;
+    els.venueBtn.textContent = sel === total ? "All venues" : sel === 0 ? "No venues" : `${sel} of ${total} venues`;
+  }
+
+  function buildVenueFilter() {
+    els.venueOptions.innerHTML = ALL_VENUES.map((v) =>
+      `<li><label class="venue-opt"><input type="checkbox" value="${esc(v)}" checked>` +
+      `<span class="venue-opt-text"><span class="venue-opt-name">${esc(v)}</span>` +
+      `<span class="venue-opt-city">${esc(venueCity[v])}</span></span></label></li>`
+    ).join("");
+    updateVenueLabel();
+
+    els.venueOptions.addEventListener("change", (e) => {
+      const cb = e.target;
+      if (cb.type !== "checkbox") return;
+      if (cb.checked) selectedVenues.add(cb.value); else selectedVenues.delete(cb.value);
+      updateVenueLabel();
+      render();
+    });
+    function setAll(on) {
+      els.venueOptions.querySelectorAll('input[type="checkbox"]').forEach((cb) => { cb.checked = on; });
+      selectedVenues.clear();
+      if (on) ALL_VENUES.forEach((v) => selectedVenues.add(v));
+      updateVenueLabel();
+      render();
+    }
+    els.venueAll.addEventListener("click", () => setAll(true));
+    els.venueNone.addEventListener("click", () => setAll(false));
+
+    els.venueBtn.addEventListener("click", () => {
+      const open = els.venueList.hidden;
+      els.venueList.hidden = !open;
+      els.venueBtn.setAttribute("aria-expanded", String(open));
+    });
+    document.addEventListener("click", (e) => {
+      if (!document.getElementById("venue-combo").contains(e.target)) {
+        els.venueList.hidden = true;
+        els.venueBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
   // ---------- Rendering ----------
   function fmtTime(iso, tz) {
     return new Intl.DateTimeFormat(undefined, {
@@ -355,7 +409,8 @@
 
     const visible = matches.filter((m) =>
       (stageFilter === "all" || m.stage === stageFilter) &&
-      (teamFilter === "all" || m.home === teamFilter || m.away === teamFilter)
+      (teamFilter === "all" || m.home === teamFilter || m.away === teamFilter) &&
+      selectedVenues.has(m.venue)
     );
 
     const groups = new Map();
@@ -576,6 +631,7 @@
   // ---------- Init ----------
   initTzCombo();
   buildFilters();
+  buildVenueFilter();
   if (prefs.showScores != null) els.showScores.checked = prefs.showScores;
   if (prefs.showRanking != null) els.showRanking.checked = prefs.showRanking;
   if (prefs.printBlanks != null) els.printBlanks.checked = prefs.printBlanks;
