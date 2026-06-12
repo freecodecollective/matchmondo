@@ -1,5 +1,5 @@
 // FIFA World Cup 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-12 15:07 UTC by scripts/update-data.py
+// Regenerated 2026-06-12 16:24 UTC by scripts/update-data.py
 window.WC_MATCHES = [
   {
     "n": 1,
