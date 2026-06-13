@@ -219,6 +219,75 @@ body {
 }
 .header-tabs button .tab-icon { font-size: 0.95rem; }
 
+/* ===== Live score banner ===== */
+.live-banner {
+  background: linear-gradient(135deg, var(--green-dark), var(--green));
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.18);
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  animation: live-pulse 2s ease-in-out infinite;
+}
+.live-dot {
+  width: 8px; height: 8px;
+  background: #ff4444;
+  border-radius: 50%;
+  animation: dot-blink 1.2s ease-in-out infinite;
+  box-shadow: 0 0 6px #ff4444, 0 0 12px rgba(255,68,68,0.4);
+}
+.live-score {
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.6),
+    0 0 20px rgba(255,255,255,0.3),
+    0 0 40px rgba(255,255,255,0.15);
+  letter-spacing: 0.04em;
+}
+.live-score .score-num {
+  font-size: 1.5rem;
+  text-shadow:
+    0 0 12px rgba(255,255,255,0.8),
+    0 0 24px rgba(255,255,255,0.4),
+    0 0 48px rgba(255,255,255,0.2);
+}
+.live-teams {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.live-minute {
+  font-size: 0.78rem;
+  opacity: 0.8;
+  font-weight: 400;
+  font-style: italic;
+}
+@keyframes live-pulse {
+  0%, 100% { background: rgba(255,255,255,0.18); }
+  50% { background: rgba(255,255,255,0.28); }
+}
+@keyframes dot-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
 /* Description callouts */
 .option-desc {
   max-width: 1000px; margin: 16px auto 0;
@@ -252,6 +321,15 @@ body {
   <button onclick="showMockup('b')">B: Sidebar</button>
   <button onclick="showMockup('c')">C: Pill Tabs</button>
   <button onclick="showMockup('d')">D: In-Header Tabs</button>
+</div>
+
+<!-- Live score banner -->
+<div class="live-banner">
+  <span class="live-badge"><span class="live-dot"></span> Live</span>
+  <div class="live-teams">
+    <span class="live-score">&#127477;&#127481; Portugal <span class="score-num">2</span> &ndash; <span class="score-num">1</span> &#127474;&#127462; Morocco</span>
+  </div>
+  <span class="live-minute">63&prime;</span>
 </div>
 
 <!-- ===== OPTION A: Horizontal Top Tabs ===== -->
