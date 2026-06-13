@@ -472,9 +472,11 @@
     const played = opts.showScores && hasScore(m);
     const homeWin = played && Number(m.scoreH) > Number(m.scoreA);
     const awayWin = played && Number(m.scoreA) > Number(m.scoreH);
+    const live = m._live;
+    const liveTag = live ? `<span class="live-badge">${esc(m._detail || "LIVE")}</span>` : "";
     return `
-        <article class="match-card stage-${stageSlug(m.stage)}" data-blanks-slot data-match="${m.n}">
-          <div class="match-time">${esc(fmtTime(m.utc, tz))}</div>
+        <article class="match-card stage-${stageSlug(m.stage)}${live ? " is-live" : ""}" data-blanks-slot data-match="${m.n}">
+          <div class="match-time">${esc(fmtTime(m.utc, tz))}${liveTag}</div>
           <div class="match-stage">Match ${m.n} · ${trophy}${esc(label)}</div>
           <div class="match-teams">
             <span class="team${homeWin ? " winner" : ""}">${flagImg(m.home)}<a class="team-name" data-team-link="${esc(m.home)}">${esc(m.home)}</a>${rankBadge(m.home)}</span>
@@ -850,44 +852,88 @@
     }
   }
 
-  // ---------- Live score auto-refresh ----------
-  // The page loads data/matches.js for the initial paint, then polls data/matches.json
-  // (kept current by the scheduled GitHub Action) so an open tab updates without a reload.
-  function matchesSig(arr) {
-    return arr.slice().sort((a, b) => a.n - b.n)
-      .map((m) => `${m.n}:${m.scoreH}:${m.scoreA}:${m.home}:${m.away}`).join("|");
-  }
-  let lastSig = matchesSig(matches);
+  // ---------- Live score auto-refresh (ESPN public API) ----------
+  const ESPN_API = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard";
+  const ESPN_TEAMS = {
+    "South Korea": "Korea Republic", "United States": "USA",
+    "Bosnia-Herzegovina": "Bosnia and Herzegovina", "Cape Verde": "Cabo Verde",
+    "Ivory Coast": "Côte d'Ivoire", "Iran": "IR Iran",
+  };
+
+  let anyLive = false;
   let lastCheck = 0;
 
-  function applyMatches(arr) {
-    arr.sort((a, b) => new Date(a.utc) - new Date(b.utc) || a.n - b.n);
-    matches.length = 0;
-    arr.forEach((m) => matches.push(m));
-  }
   function fmtClock() {
     return new Intl.DateTimeFormat(undefined, { hour: "numeric", minute: "2-digit", timeZone: currentTz }).format(new Date());
   }
+
   async function refreshScores() {
     lastCheck = Date.now();
     try {
-      const res = await fetch(`data/matches.json?t=${Date.now()}`, { cache: "no-store" });
-      if (!res.ok) throw new Error("fetch failed");
-      const arr = await res.json();
-      if (!Array.isArray(arr) || !arr.length) throw new Error("bad data");
-      const sig = matchesSig(arr);
-      if (sig !== lastSig) {
-        applyMatches(arr);
-        lastSig = sig;
+      const res = await fetch(ESPN_API, { signal: AbortSignal.timeout(8000) });
+      if (!res.ok) throw new Error("espn");
+      const data = await res.json();
+      const events = data.events || [];
+
+      let changed = false;
+      anyLive = false;
+
+      for (const event of events) {
+        const comp = event.competitions[0];
+        const statusName = comp.status.type.name;
+        const statusDetail = comp.status.type.shortDetail;
+        const teams = comp.competitors;
+        const home = teams.find(t => t.homeAway === "home");
+        const away = teams.find(t => t.homeAway === "away");
+        if (!home || !away) continue;
+
+        const kickoff = new Date(event.date).getTime();
+        const match = matches.find(m => Math.abs(new Date(m.utc).getTime() - kickoff) < 120000);
+        if (!match) continue;
+
+        const isLive = /IN_PROGRESS|HALF|EXTRA|PENALT/.test(statusName);
+        const isFinished = statusName === "STATUS_FULL_TIME";
+        if (isLive) anyLive = true;
+
+        let newH = null, newA = null;
+        if (isLive || isFinished) {
+          newH = parseInt(home.score); newA = parseInt(away.score);
+          if (isNaN(newH)) newH = null; if (isNaN(newA)) newA = null;
+        }
+
+        const newDetail = isLive ? statusDetail : null;
+        if (match.scoreH !== newH || match.scoreA !== newA || match._live !== isLive || match._detail !== newDetail) {
+          match.scoreH = newH; match.scoreA = newA;
+          match._live = isLive; match._detail = newDetail;
+          changed = true;
+        }
+      }
+
+      if (changed) {
         render();
         if (activeTab === "standings") renderStandings();
-        els.updateNote.textContent = `Scores updated at ${fmtClock()}. Refreshes automatically.`;
-      } else {
-        els.updateNote.textContent = `Scores up to date (checked ${fmtClock()}). Refreshes automatically.`;
       }
+      els.updateNote.textContent = anyLive
+        ? `⚡ Live scores (${fmtClock()})`
+        : `Scores up to date (${fmtClock()})`;
     } catch {
-      // Offline or opened as a local file — keep whatever is already shown.
-      els.updateNote.textContent = "Scores update automatically when online.";
+      try {
+        const res = await fetch(`data/matches.json?t=${Date.now()}`, { cache: "no-store" });
+        if (!res.ok) throw new Error("static");
+        const arr = await res.json();
+        if (!Array.isArray(arr) || !arr.length) throw new Error("bad");
+        let changed = false;
+        for (const fresh of arr) {
+          const m = matches.find(x => x.n === fresh.n);
+          if (m && fresh.scoreH != null && (m.scoreH !== fresh.scoreH || m.scoreA !== fresh.scoreA)) {
+            m.scoreH = fresh.scoreH; m.scoreA = fresh.scoreA; changed = true;
+          }
+        }
+        if (changed) { render(); if (activeTab === "standings") renderStandings(); }
+        els.updateNote.textContent = `Scores checked (${fmtClock()})`;
+      } catch {
+        els.updateNote.textContent = "Scores update when online";
+      }
     }
   }
 
@@ -976,11 +1022,17 @@
   applyLocation();
   if (prefs.activeTab) switchTab(prefs.activeTab);
 
-  // Kick off live score polling: once shortly after load, then every 5 minutes,
-  // plus an immediate check whenever the tab is refocused (if it's been a couple minutes).
-  setTimeout(refreshScores, 1500);
-  setInterval(refreshScores, 5 * 60 * 1000);
+  // Smart polling: 30s during live matches, 2min otherwise. Re-check on tab focus.
+  let pollTimer = null;
+  function schedulePoll() {
+    clearTimeout(pollTimer);
+    pollTimer = setTimeout(async () => { await refreshScores(); schedulePoll(); },
+      anyLive ? 30000 : 120000);
+  }
+  setTimeout(() => { refreshScores().then(schedulePoll); }, 1500);
   document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "visible" && Date.now() - lastCheck > 120000) refreshScores();
+    if (document.visibilityState === "visible" && Date.now() - lastCheck > 20000) {
+      refreshScores().then(schedulePoll);
+    }
   });
 })();

@@ -390,7 +390,29 @@ main { max-width: none; margin: 0; padding: 12px 0 40px 16px; }
 .stage-third  { --stage: #64748b; }
 .stage-final  { --stage: #d4a017; }
 .match-card:not(.stage-group) .match-stage { color: var(--stage); font-weight: 700; }
-.match-time { font-weight: 700; font-size: 0.95rem; }
+.match-time { font-weight: 700; font-size: 0.95rem; display: flex; align-items: center; gap: 6px; }
+
+/* Live match badge */
+.live-badge {
+  display: inline-block;
+  background: var(--live);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  animation: live-pulse 1.5s ease-in-out infinite;
+}
+.match-card.is-live {
+  border-left-color: var(--live);
+  box-shadow: 0 0 0 1px rgba(214,40,40,0.15), 0 2px 8px rgba(214,40,40,0.08);
+}
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
 .match-stage { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
 
 .match-teams { display: flex; align-items: center; gap: 10px; font-size: 1.02rem; flex-wrap: wrap; }
