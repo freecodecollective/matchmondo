@@ -287,6 +287,25 @@ body {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
 }
+@keyframes score-flash {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.35); text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px rgba(255,255,255,0.6); }
+  100% { transform: scale(1); }
+}
+.score-num.flash {
+  display: inline-block;
+  animation: score-flash 0.8s ease-out;
+}
+.live-event {
+  font-size: 0.72rem;
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 0.5s;
+  background: rgba(255,255,255,0.15);
+  padding: 2px 10px;
+  border-radius: 999px;
+}
+.live-event.show { opacity: 1; }
 
 /* Description callouts */
 .option-desc {
@@ -329,7 +348,8 @@ body {
   <div class="live-teams">
     <span class="live-score">&#127477;&#127481; Portugal <span class="score-num">2</span> &ndash; <span class="score-num">1</span> &#127474;&#127462; Morocco</span>
   </div>
-  <span class="live-minute">63&prime;</span>
+  <span class="live-minute" id="live-min">63&prime;</span>
+  <span class="live-event" id="live-event"></span>
 </div>
 
 <!-- ===== OPTION A: Horizontal Top Tabs ===== -->
@@ -552,6 +572,44 @@ function showMockup(id) {
   document.getElementById('mockup-' + id).classList.add('active');
   event.target.classList.add('active');
 }
+
+// Live score ticker simulation
+(function() {
+  var minute = 63;
+  var homeScore = 2, awayScore = 1;
+  var minEl = document.getElementById('live-min');
+  var eventEl = document.getElementById('live-event');
+  var scoreNums = document.querySelectorAll('.live-score .score-num');
+  var events = [
+    {min: 67, text: "⚽ GOAL! Bernardo Silva"},
+    {min: 71, text: "🟨 Yellow card — Hakimi"},
+    {min: 78, text: "⚽ GOAL! Achraf Dari"},
+    {min: 82, text: "🔄 Sub: Leao ➡ João Félix"},
+    {min: 88, text: "🟨 Yellow card — Palhinha"},
+  ];
+  var goalAt = {67: 'home', 78: 'away'};
+  var nextEvent = 0;
+
+  setInterval(function() {
+    minute++;
+    if (minute > 93) { minute = 45; homeScore = 1; awayScore = 0; nextEvent = 0; }
+    var suffix = minute > 90 ? "90+" + (minute - 90) : minute;
+    minEl.textContent = suffix + "′";
+
+    if (goalAt[minute]) {
+      if (goalAt[minute] === 'home') { homeScore++; scoreNums[0].textContent = homeScore; scoreNums[0].classList.add('flash'); }
+      else { awayScore++; scoreNums[1].textContent = awayScore; scoreNums[1].classList.add('flash'); }
+      setTimeout(function() { scoreNums[0].classList.remove('flash'); scoreNums[1].classList.remove('flash'); }, 900);
+    }
+
+    if (nextEvent < events.length && minute >= events[nextEvent].min) {
+      eventEl.textContent = events[nextEvent].text;
+      eventEl.classList.add('show');
+      nextEvent++;
+      setTimeout(function() { eventEl.classList.remove('show'); }, 4000);
+    }
+  }, 3000);
+})();
 </script>
 </body>
 </html>
