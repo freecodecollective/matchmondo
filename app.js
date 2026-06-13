@@ -32,6 +32,7 @@
     showLocation: document.getElementById("show-location"),
     showPast: document.getElementById("show-past"),
     showPlayers: document.getElementById("show-players"),
+    showRoster: document.getElementById("show-roster"),
     showStandings: document.getElementById("show-standings"),
     showRules: document.getElementById("show-rules"),
     players: document.getElementById("players"),
@@ -69,6 +70,7 @@
       showLocation: els.showLocation.checked,
       showPast: els.showPast.checked,
       showPlayers: els.showPlayers.checked,
+      showRoster: els.showRoster.checked,
       showStandings: els.showStandings.checked,
       showRules: els.showRules.checked,
       upcomingOpen: els.upcoming.open,
@@ -484,8 +486,7 @@
     els.upcomingCount.textContent = n ? `${n} match${n === 1 ? "" : "es"}` : "no matches";
 
     if (!n) {
-      els.upcomingBody.innerHTML = `<p class="upcoming-empty">No matches today or tomorrow${
-        list.length !== matches.length ? " with the current filters" : ""}.</p>`;
+      els.upcomingBody.innerHTML = `<p class="upcoming-empty">No matches today or tomorrow.</p>`;
       return;
     }
     const block = (label, arr) => arr.length
@@ -536,7 +537,7 @@
     }
 
     els.schedule.innerHTML = html || `<p>No matches found for this filter.</p>`;
-    renderUpcoming(visible, tz, opts);
+    renderUpcoming(matches, tz, opts);
     const total = matches.length;
     const played = matches.filter(hasScore).length;
     const filterActive = stageFilter !== "all" || teamFilterActive ||
@@ -561,12 +562,16 @@
   // ---------- Player guide ----------
   function renderPlayers() {
     const data = window.WC_PLAYERS || { teams: {} };
+    const rosters = window.WC_ROSTERS || {};
     const teams = Object.keys(data.teams || {});
     if (!teams.length) {
       els.players.innerHTML = `<h2 class="players-title">Player Guide</h2>` +
         `<p class="players-intro">Player research is being compiled — check back shortly.</p>`;
       return;
     }
+
+    const showRoster = els.showRoster.checked;
+    const hasRosters = Object.keys(rosters).length > 0;
 
     // Order by FIFA world ranking (best first); any unranked teams fall to the end alphabetically.
     const ordered = teams.slice().sort((a, b) => {
@@ -586,15 +591,38 @@
         `<h3 class="team-block-head">${flagImg(team)}<span>${esc(team)}</span>${rankBadge(team)}</h3>` +
         `<div class="player-grid">`;
       for (const p of data.teams[team]) {
+        const numBadge = p.number ? `<span class="jersey-num">#${p.number}</span> ` : "";
         html += `
         <div class="player-card">
-          <div class="player-name">${esc(p.name)}</div>
+          <div class="player-name">${numBadge}${esc(p.name)}</div>
           <div class="player-pos">${esc(p.position)} · <span class="player-club">${esc(p.club)}</span></div>
           <div class="player-from">📍 ${esc(p.hometown)}</div>
           <p class="player-why">${esc(p.why)}</p>
         </div>`;
       }
-      html += `</div></div>`;
+      html += `</div>`;
+
+      // Full roster table (toggleable)
+      if (showRoster && rosters[team] && rosters[team].length) {
+        const roster = rosters[team].slice().sort((a, b) => {
+          const posOrder = { GK: 0, DF: 1, MF: 2, FW: 3 };
+          const pa = posOrder[a.position] ?? 9, pb = posOrder[b.position] ?? 9;
+          return pa - pb || a.number - b.number;
+        });
+        html += `<table class="roster-table">` +
+          `<thead><tr><th class="rt-num">#</th><th class="rt-name">Name</th><th>Pos</th><th>Age</th><th>Club</th></tr></thead><tbody>`;
+        for (const r of roster) {
+          html += `<tr>` +
+            `<td class="rt-num">${r.number}</td>` +
+            `<td class="rt-name">${esc(r.name)}</td>` +
+            `<td class="rt-pos">${esc(r.position)}</td>` +
+            `<td class="rt-age">${r.age}</td>` +
+            `<td class="rt-club">${esc(r.club)}</td>` +
+            `</tr>`;
+        }
+        html += `</tbody></table>`;
+      }
+      html += `</div>`;
     }
     els.players.innerHTML = html;
   }
@@ -870,6 +898,15 @@
   els.showPast.addEventListener("change", () => { savePrefs(); render(); });
   els.controls.addEventListener("toggle", savePrefs);
   els.showPlayers.addEventListener("change", () => { savePrefs(); applyPlayersToggle(); });
+  els.showRoster.addEventListener("change", () => {
+    // Turning on "Full rosters" auto-enables "Player guide" if it's off.
+    if (els.showRoster.checked && !els.showPlayers.checked) {
+      els.showPlayers.checked = true;
+      applyPlayersToggle();
+    }
+    savePrefs();
+    if (els.showPlayers.checked) renderPlayers();
+  });
   els.showStandings.addEventListener("change", () => { savePrefs(); applyStandingsToggle(); });
   els.showRules.addEventListener("change", () => { savePrefs(); applyRulesToggle(); });
   els.printBlanks.addEventListener("change", savePrefs);
@@ -933,6 +970,7 @@
   if (prefs.showPast != null) els.showPast.checked = prefs.showPast;
   if (prefs.printBlanks != null) els.printBlanks.checked = prefs.printBlanks;
   if (prefs.showPlayers != null) els.showPlayers.checked = prefs.showPlayers;
+  if (prefs.showRoster != null) els.showRoster.checked = prefs.showRoster;
   if (prefs.showStandings != null) els.showStandings.checked = prefs.showStandings;
   if (prefs.showRules != null) els.showRules.checked = prefs.showRules;
   if (prefs.upcomingOpen != null) els.upcoming.open = prefs.upcomingOpen;

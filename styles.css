@@ -516,6 +516,58 @@ main.hide-location .match-meta { display: none; }
 .player-club { color: var(--green-dark); font-weight: 600; }
 .player-from { font-size: 0.8rem; color: var(--muted); margin-bottom: 6px; }
 .player-why { font-size: 0.86rem; margin: 0; line-height: 1.45; }
+.jersey-num {
+  display: inline-block;
+  background: var(--green);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.72rem;
+  border-radius: 4px;
+  padding: 1px 5px;
+  margin-right: 4px;
+  font-variant-numeric: tabular-nums;
+  vertical-align: 1px;
+}
+
+/* Full roster table */
+.roster-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  margin-top: 10px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.roster-table thead { background: #eef4f1; }
+.roster-table th {
+  font-weight: 700;
+  color: var(--muted);
+  text-align: left;
+  padding: 6px 10px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid var(--line);
+}
+.roster-table td {
+  padding: 5px 10px;
+  border-top: 1px solid var(--line);
+}
+.roster-table tr:first-child td { border-top: none; }
+.roster-table tr:hover { background: #f9faf8; }
+.rt-num { text-align: center; font-weight: 700; color: var(--green-dark); width: 36px; font-variant-numeric: tabular-nums; }
+.rt-name { font-weight: 600; }
+.rt-pos {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  width: 40px;
+}
+.rt-age { text-align: center; width: 36px; font-variant-numeric: tabular-nums; }
+.rt-club { color: var(--green-dark); }
 
 /* ---------- Footer ---------- */
 .site-footer { max-width: 1000px; margin: 0 auto; padding: 0 20px 30px; color: var(--muted); font-size: 0.8rem; }
@@ -604,6 +656,11 @@ main.hide-location .match-meta { display: none; }
   .player-name { font-size: 0.82rem; }
   .player-pos, .player-from { font-size: 0.68rem; margin: 0; }
   .player-why { font-size: 0.72rem; line-height: 1.3; margin-top: 2px; }
+  .jersey-num { background: none; color: var(--green-dark); border: 1px solid var(--green-dark); padding: 0 3px; font-size: 0.64rem; }
+  .roster-table { font-size: 0.7rem; margin-top: 4px; border: 1px solid #ddd; break-inside: avoid; }
+  .roster-table th { font-size: 0.62rem; padding: 3px 5px; }
+  .roster-table td { padding: 2px 5px; }
+  .roster-table thead { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
   /* Standings & Rules each print on their own page; hide when toggled off. */
   .standings-section[hidden], .rules-section[hidden] { display: none !important; }
