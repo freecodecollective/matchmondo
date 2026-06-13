@@ -555,7 +555,7 @@
     const filterActive = stageFilter !== "all" || teamFilterActive ||
       selectedVenues.size !== ALL_VENUES.length || hidePast;
     els.count.textContent = filterActive
-      ? `${visible.length} shown · ${played} of ${total} matches played`
+      ? `${visible.length} of ${total} matches shown · ${played} played`
       : `${played} of ${total} matches played`;
     els.tzLabel.textContent = labelFor(tz);
   }
