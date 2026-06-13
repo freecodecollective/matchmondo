@@ -2,3 +2,5 @@
 __pycache__/
 *.pyc
 .claude/
+MatchMondo/MatchMondo.xcodeproj/project.xcworkspace/
+MatchMondo/MatchMondo.xcodeproj/xcuserdata/
