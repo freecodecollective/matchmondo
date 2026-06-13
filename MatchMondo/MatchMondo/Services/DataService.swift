@@ -48,6 +48,9 @@ final class DataService: ObservableObject {
             if let eqRange = text.range(of: "= ") {
                 text = String(text[eqRange.upperBound...])
             }
+            if text.hasSuffix(";\n") || text.hasSuffix(";") {
+                text = String(text.dropLast(text.hasSuffix(";\n") ? 2 : 1))
+            }
             let jsonData = Data(text.utf8)
             let response = try JSONDecoder().decode(PlayersResponse.self, from: jsonData)
             players = response.teams
@@ -65,6 +68,9 @@ final class DataService: ObservableObject {
             guard var text = String(data: data, encoding: .utf8) else { return }
             if let eqRange = text.range(of: "= ") {
                 text = String(text[eqRange.upperBound...])
+            }
+            if text.hasSuffix(";\n") || text.hasSuffix(";") {
+                text = String(text.dropLast(text.hasSuffix(";\n") ? 2 : 1))
             }
             let jsonData = Data(text.utf8)
             rosters = try JSONDecoder().decode([String: [RosterPlayer]].self, from: jsonData)
