@@ -36,6 +36,10 @@ struct Match: Codable, Identifiable {
     }
 }
 
+struct PlayersResponse: Codable {
+    let teams: [String: [Player]]
+}
+
 struct Player: Codable, Identifiable {
     var id: String { "\(name)-\(club)" }
     let name: String

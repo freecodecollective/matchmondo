@@ -8,33 +8,86 @@ final class DataService: ObservableObject {
     @Published var isLoading = true
     @Published var lastUpdated: Date?
 
-    private let jsonURL = URL(string: "https://raw.githubusercontent.com/freecodecollective/world-cup-2026/main/data/matches.json")!
+    private let baseURL = "https://raw.githubusercontent.com/freecodecollective/world-cup-2026/main/data/"
+    private var refreshTimer: Timer?
 
     func load() async {
         isLoading = true
+        await fetchMatches()
+        await fetchPlayers()
+        await fetchRosters()
+        isLoading = false
+        startAutoRefresh()
+    }
+
+    func refresh() async {
+        await fetchMatches()
+    }
+
+    private func fetchMatches() async {
+        guard let url = cacheBustedURL("matches.json") else { return }
         do {
-            let (data, _) = try await URLSession.shared.data(from: jsonURL)
+            var request = URLRequest(url: url)
+            request.cachePolicy = .reloadIgnoringLocalCacheData
+            let (data, _) = try await URLSession.shared.data(for: request)
             let decoded = try JSONDecoder().decode([Match].self, from: data)
             matches = decoded.sorted { $0.kickoff < $1.kickoff }
             lastUpdated = Date()
         } catch {
             print("Failed to load matches: \(error)")
         }
-        isLoading = false
     }
 
-    func refresh() async {
+    private func fetchPlayers() async {
+        guard let url = cacheBustedURL("players.js") else { return }
         do {
-            let (data, _) = try await URLSession.shared.data(from: jsonURL)
-            let decoded = try JSONDecoder().decode([Match].self, from: data)
-            matches = decoded.sorted { $0.kickoff < $1.kickoff }
-            lastUpdated = Date()
+            var request = URLRequest(url: url)
+            request.cachePolicy = .reloadIgnoringLocalCacheData
+            let (data, _) = try await URLSession.shared.data(for: request)
+            guard var text = String(data: data, encoding: .utf8) else { return }
+            if let eqRange = text.range(of: "= ") {
+                text = String(text[eqRange.upperBound...])
+            }
+            let jsonData = Data(text.utf8)
+            let response = try JSONDecoder().decode(PlayersResponse.self, from: jsonData)
+            players = response.teams
         } catch {
-            print("Refresh failed: \(error)")
+            print("Failed to load players: \(error)")
         }
     }
 
-    // Group standings computed from match scores
+    private func fetchRosters() async {
+        guard let url = cacheBustedURL("rosters.js") else { return }
+        do {
+            var request = URLRequest(url: url)
+            request.cachePolicy = .reloadIgnoringLocalCacheData
+            let (data, _) = try await URLSession.shared.data(for: request)
+            guard var text = String(data: data, encoding: .utf8) else { return }
+            if let eqRange = text.range(of: "= ") {
+                text = String(text[eqRange.upperBound...])
+            }
+            let jsonData = Data(text.utf8)
+            rosters = try JSONDecoder().decode([String: [RosterPlayer]].self, from: jsonData)
+        } catch {
+            print("Failed to load rosters: \(error)")
+        }
+    }
+
+    private func cacheBustedURL(_ file: String) -> URL? {
+        let ts = Int(Date().timeIntervalSince1970)
+        return URL(string: "\(baseURL)\(file)?t=\(ts)")
+    }
+
+    private func startAutoRefresh() {
+        refreshTimer?.invalidate()
+        refreshTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
+            guard let self else { return }
+            Task { @MainActor in
+                await self.fetchMatches()
+            }
+        }
+    }
+
     func standings() -> [String: [GroupStanding]] {
         var groups: [String: [String: GroupStanding]] = [:]
 
@@ -86,7 +139,6 @@ final class DataService: ObservableObject {
         return result
     }
 
-    // Matches grouped by day in user's local timezone
     func matchesByDay() -> [(date: Date, dayString: String, matches: [Match])] {
         let cal = Calendar.current
         var grouped: [DateComponents: [Match]] = [:]
@@ -112,6 +164,10 @@ final class DataService: ObservableObject {
     func tomorrowMatches() -> [Match] {
         let cal = Calendar.current
         return matches.filter { cal.isDateInTomorrow($0.kickoff) }
+    }
+
+    func teamMatches(for team: String) -> [Match] {
+        matches.filter { $0.home == team || $0.away == team }
     }
 
     var playedCount: Int { matches.filter(\.hasScore).count }
