@@ -477,9 +477,9 @@
           <div class="match-time">${esc(fmtTime(m.utc, tz))}</div>
           <div class="match-stage">Match ${m.n} · ${trophy}${esc(label)}</div>
           <div class="match-teams">
-            <span class="team${homeWin ? " winner" : ""}">${flagImg(m.home)}<span class="team-name">${esc(m.home)}</span>${rankBadge(m.home)}</span>
+            <span class="team${homeWin ? " winner" : ""}">${flagImg(m.home)}<a class="team-name" data-team-link="${esc(m.home)}">${esc(m.home)}</a>${rankBadge(m.home)}</span>
             <span class="score-slot">${scoreHtml(m, opts)}</span>
-            <span class="team${awayWin ? " winner" : ""}">${flagImg(m.away)}<span class="team-name">${esc(m.away)}</span>${rankBadge(m.away)}</span>
+            <span class="team${awayWin ? " winner" : ""}">${flagImg(m.away)}<a class="team-name" data-team-link="${esc(m.away)}">${esc(m.away)}</a>${rankBadge(m.away)}</span>
           </div>
           <div class="match-meta">
             <span class="match-venue">${esc(m.venue)}</span> · ${esc(m.city)}
@@ -687,7 +687,7 @@
       rows.forEach((r, i) => {
         const gd = r.GF - r.GA, pos = i + 1;
         const cls = pos <= 2 ? "q1" : pos === 3 ? "q3" : "";
-        html += `<tr class="${cls}"><td class="st-pos">${pos}</td>` +
+        html += `<tr class="${cls}" data-team="${esc(r.team)}"><td class="st-pos">${pos}</td>` +
           `<td class="st-team">${flagImg(r.team)}<span>${esc(r.team)}</span></td>` +
           `<td>${r.P}</td><td>${r.W}</td><td>${r.D}</td><td>${r.L}</td>` +
           `<td>${r.GF}</td><td>${r.GA}</td><td>${gd > 0 ? "+" : ""}${gd}</td><td class="st-pts">${r.Pts}</td></tr>`;
@@ -916,6 +916,23 @@
 
   els.standings.addEventListener("click", (e) => {
     if (e.target.closest("[data-open-rules]")) switchTab("rules");
+  });
+
+  // Clicking a team name on the schedule switches to standings and scrolls to that team's group.
+  els.main.addEventListener("click", (e) => {
+    const link = e.target.closest("[data-team-link]");
+    if (!link) return;
+    e.preventDefault();
+    const team = link.dataset.teamLink;
+    switchTab("standings");
+    requestAnimationFrame(() => {
+      const row = els.standings.querySelector(`tr[data-team="${CSS.escape(team)}"]`);
+      if (row) {
+        row.scrollIntoView({ behavior: "smooth", block: "center" });
+        row.classList.add("highlight");
+        setTimeout(() => row.classList.remove("highlight"), 2000);
+      }
+    });
   });
 
   els.printBtn.addEventListener("click", () => {

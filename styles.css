@@ -395,7 +395,8 @@ main { max-width: none; margin: 0; padding: 12px 0 40px 16px; }
 
 .match-teams { display: flex; align-items: center; gap: 10px; font-size: 1.02rem; flex-wrap: wrap; }
 .team { font-weight: 600; display: inline-flex; align-items: center; gap: 7px; }
-.team .team-name { transition: color 0.15s; }
+.team .team-name { transition: color 0.15s; cursor: pointer; text-decoration: none; color: inherit; }
+.team .team-name:hover { color: var(--green-dark); text-decoration: underline; }
 .team.winner .team-name { color: var(--green-dark); font-weight: 800; }
 
 /* FIFA world-ranking badge */
@@ -547,6 +548,8 @@ main.hide-location .match-meta { display: none; }
 .standings-legend .swatch { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: -2px; margin-right: -2px; }
 .standings-legend .swatch.q1 { background: #cfe5db; }
 .standings-legend .swatch.q3 { background: #f3e2b0; }
+.standings-table tr.highlight td { background: #d4edda; transition: background 0.3s; }
+.standings-table tr.highlight .st-team { font-weight: 800; }
 
 /* ---------- Rules ---------- */
 .rules-section { margin-top: 34px; }
