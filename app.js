@@ -26,15 +26,12 @@
     venueNone: document.getElementById("venue-none"),
     venueSearch: document.getElementById("venue-search"),
     controls: document.getElementById("controls"),
-    sectionNav: document.getElementById("section-nav"),
     showScores: document.getElementById("show-scores"),
     showRanking: document.getElementById("show-ranking"),
     showLocation: document.getElementById("show-location"),
     showPast: document.getElementById("show-past"),
-    showPlayers: document.getElementById("show-players"),
     showRoster: document.getElementById("show-roster"),
-    showStandings: document.getElementById("show-standings"),
-    showRules: document.getElementById("show-rules"),
+    sidebar: document.getElementById("sidebar"),
     players: document.getElementById("players"),
     standings: document.getElementById("standings"),
     rules: document.getElementById("rules"),
@@ -69,10 +66,8 @@
       showRanking: els.showRanking.checked,
       showLocation: els.showLocation.checked,
       showPast: els.showPast.checked,
-      showPlayers: els.showPlayers.checked,
       showRoster: els.showRoster.checked,
-      showStandings: els.showStandings.checked,
-      showRules: els.showRules.checked,
+      activeTab: activeTab,
       upcomingOpen: els.upcoming.open,
       controlsOpen: els.controls.open,
       printBlanks: els.printBlanks.checked,
@@ -277,6 +272,23 @@
     document.addEventListener("click", (e) => {
       if (!document.getElementById("tz-combo").contains(e.target)) closeTzList();
     });
+  }
+
+  // ---------- Sidebar tabs ----------
+  let activeTab = "schedule";
+
+  function switchTab(tab) {
+    activeTab = tab;
+    document.querySelectorAll(".sidebar-tab").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.tab === tab);
+    });
+    document.querySelectorAll(".tab-panel").forEach(panel => {
+      panel.classList.toggle("active", panel.id === "panel-" + tab);
+    });
+    if (tab === "standings") renderStandings();
+    if (tab === "rules") renderRules();
+    if (tab === "players") renderPlayers();
+    savePrefs();
   }
 
   // ---------- Filters ----------
@@ -628,9 +640,7 @@
   }
 
   function applyPlayersToggle() {
-    const on = els.showPlayers.checked;
-    if (on) renderPlayers();
-    els.players.hidden = !on;
+    if (activeTab === "players") renderPlayers();
   }
 
   // ---------- Location (stadium + city) show/hide ----------
@@ -690,9 +700,7 @@
   }
 
   function applyStandingsToggle() {
-    const on = els.showStandings.checked;
-    if (on) renderStandings();
-    els.standings.hidden = !on;
+    if (activeTab === "standings") renderStandings();
   }
 
   // ---------- Rules ----------
@@ -762,9 +770,7 @@
   }
 
   function applyRulesToggle() {
-    const on = els.showRules.checked;
-    if (on) renderRules();
-    els.rules.hidden = !on;
+    if (activeTab === "rules") renderRules();
   }
 
   // ---------- ICS generation ----------
@@ -874,7 +880,7 @@
         applyMatches(arr);
         lastSig = sig;
         render();
-        if (els.showStandings.checked) renderStandings();
+        if (activeTab === "standings") renderStandings();
         els.updateNote.textContent = `Scores updated at ${fmtClock()}. Refreshes automatically.`;
       } else {
         els.updateNote.textContent = `Scores up to date (checked ${fmtClock()}). Refreshes automatically.`;
@@ -891,34 +897,25 @@
   els.showRanking.addEventListener("change", () => {
     savePrefs();
     render();
-    if (els.showPlayers.checked) renderPlayers();
-    if (els.showStandings.checked) renderStandings();
+    if (activeTab === "players") renderPlayers();
+    if (activeTab === "standings") renderStandings();
   });
   els.showLocation.addEventListener("change", () => { savePrefs(); applyLocation(); });
   els.showPast.addEventListener("change", () => { savePrefs(); render(); });
   els.controls.addEventListener("toggle", savePrefs);
-  els.showPlayers.addEventListener("change", () => { savePrefs(); applyPlayersToggle(); });
   els.showRoster.addEventListener("change", () => {
-    // Turning on "Full rosters" auto-enables "Player guide" if it's off.
-    if (els.showRoster.checked && !els.showPlayers.checked) {
-      els.showPlayers.checked = true;
-      applyPlayersToggle();
-    }
+    if (els.showRoster.checked && activeTab !== "players") switchTab("players");
     savePrefs();
-    if (els.showPlayers.checked) renderPlayers();
+    if (activeTab === "players") renderPlayers();
   });
-  els.showStandings.addEventListener("change", () => { savePrefs(); applyStandingsToggle(); });
-  els.showRules.addEventListener("change", () => { savePrefs(); applyRulesToggle(); });
+  els.sidebar.addEventListener("click", (e) => {
+    const btn = e.target.closest(".sidebar-tab");
+    if (btn) switchTab(btn.dataset.tab);
+  });
   els.printBlanks.addEventListener("change", savePrefs);
 
-  // "tiebreakers" link inside the standings intro opens the Rules section.
   els.standings.addEventListener("click", (e) => {
-    if (e.target.closest("[data-open-rules]")) {
-      els.showRules.checked = true;
-      savePrefs();
-      applyRulesToggle();
-      els.rules.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    if (e.target.closest("[data-open-rules]")) switchTab("rules");
   });
 
   els.printBtn.addEventListener("click", () => {
@@ -935,20 +932,6 @@
 
   // Persist the Today/Tomorrow panel's open/closed state.
   els.upcoming.addEventListener("toggle", savePrefs);
-
-  // Section nav: enable the target section's toggle (if off), then smooth-scroll to it.
-  els.sectionNav.addEventListener("click", (e) => {
-    const a = e.target.closest("a[data-jump]");
-    if (!a) return;
-    e.preventDefault();
-    const togId = a.dataset.toggle;
-    if (togId) {
-      const cb = document.getElementById(togId);
-      if (cb && !cb.checked) { cb.checked = true; cb.dispatchEvent(new Event("change")); }
-    }
-    const target = document.getElementById(a.dataset.jump);
-    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
 
   // If a flag image can't load (e.g. offline), swap to the neutral placeholder so no broken icon shows.
   els.main.addEventListener("error", (e) => {
@@ -969,17 +952,12 @@
   if (prefs.showLocation != null) els.showLocation.checked = prefs.showLocation;
   if (prefs.showPast != null) els.showPast.checked = prefs.showPast;
   if (prefs.printBlanks != null) els.printBlanks.checked = prefs.printBlanks;
-  if (prefs.showPlayers != null) els.showPlayers.checked = prefs.showPlayers;
   if (prefs.showRoster != null) els.showRoster.checked = prefs.showRoster;
-  if (prefs.showStandings != null) els.showStandings.checked = prefs.showStandings;
-  if (prefs.showRules != null) els.showRules.checked = prefs.showRules;
   if (prefs.upcomingOpen != null) els.upcoming.open = prefs.upcomingOpen;
   if (prefs.controlsOpen != null) els.controls.open = prefs.controlsOpen;
   render();
   applyLocation();
-  applyPlayersToggle();
-  applyStandingsToggle();
-  applyRulesToggle();
+  if (prefs.activeTab) switchTab(prefs.activeTab);
 
   // Kick off live score polling: once shortly after load, then every 5 minutes,
   // plus an immediate check whenever the tab is refocused (if it's been a couple minutes).

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MatchMondo — World Cup 2026</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='92'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="styles.css?v=11">
+<link rel="stylesheet" href="styles.css?v=12">
 </head>
 <body>
 <header class="site-header">
@@ -90,28 +90,6 @@
   </div>
 
   <div class="controls-row">
-    <span class="row-label">Pages</span>
-    <div class="control-group toggles">
-      <label class="toggle">
-        <input type="checkbox" id="show-standings">
-        <span>Group standings</span>
-      </label>
-      <label class="toggle">
-        <input type="checkbox" id="show-rules">
-        <span>Rules</span>
-      </label>
-      <label class="toggle">
-        <input type="checkbox" id="show-players">
-        <span>Player guide</span>
-      </label>
-      <label class="toggle">
-        <input type="checkbox" id="show-roster">
-        <span>Full rosters</span>
-      </label>
-    </div>
-  </div>
-
-  <div class="controls-row">
     <span class="row-label">Export</span>
     <div class="control-group actions">
       <button id="print-btn" class="btn primary">🖨 Print / Save PDF</button>
@@ -126,14 +104,6 @@
     </div>
   </div>
 </details>
-
-<nav id="section-nav" class="section-nav no-print" aria-label="Jump to section">
-  <span class="nav-label">Jump to</span>
-  <a href="#schedule" data-jump="schedule">Schedule</a>
-  <a href="#standings" data-jump="standings" data-toggle="show-standings">Standings</a>
-  <a href="#rules" data-jump="rules" data-toggle="show-rules">Rules</a>
-  <a href="#players" data-jump="players" data-toggle="show-players">Player guide</a>
-</nav>
 
 <dialog id="gcal-dialog" class="no-print">
   <h2>Subscribe in Google Calendar</h2>
@@ -168,21 +138,42 @@
   <form method="dialog"><button class="btn">Close</button></form>
 </dialog>
 
+<div class="app-layout">
+<nav class="sidebar no-print" id="sidebar">
+  <button class="sidebar-tab active" data-tab="schedule"><span class="tab-icon">📅</span> Schedule</button>
+  <button class="sidebar-tab" data-tab="standings"><span class="tab-icon">📊</span> Standings</button>
+  <button class="sidebar-tab" data-tab="rules"><span class="tab-icon">📋</span> Rules</button>
+  <button class="sidebar-tab" data-tab="players"><span class="tab-icon">⭐</span> Players</button>
+  <div class="sidebar-spacer"></div>
+  <label class="sidebar-option">
+    <input type="checkbox" id="show-roster">
+    <span>Full rosters</span>
+  </label>
+</nav>
 <main>
-  <details id="upcoming" class="upcoming no-print" open>
-    <summary class="upcoming-summary">
-      <span class="upcoming-title">⚽ Preview: Today &amp; Tomorrow</span>
-      <span class="upcoming-note">web only — not on the printable PDF</span>
-      <span id="upcoming-count" class="upcoming-count"></span>
-    </summary>
-    <div id="upcoming-body" class="upcoming-body"></div>
-  </details>
-  <div id="match-count" class="match-count"></div>
-  <div id="schedule"></div>
-  <section id="standings" class="standings-section" hidden></section>
-  <section id="rules" class="rules-section" hidden></section>
-  <section id="players" class="players-section" hidden></section>
+  <div class="tab-panel active" id="panel-schedule">
+    <details id="upcoming" class="upcoming no-print" open>
+      <summary class="upcoming-summary">
+        <span class="upcoming-title">⚽ Preview: Today &amp; Tomorrow</span>
+        <span class="upcoming-note">web only — not on the printable PDF</span>
+        <span id="upcoming-count" class="upcoming-count"></span>
+      </summary>
+      <div id="upcoming-body" class="upcoming-body"></div>
+    </details>
+    <div id="match-count" class="match-count"></div>
+    <div id="schedule"></div>
+  </div>
+  <div class="tab-panel" id="panel-standings">
+    <section id="standings" class="standings-section"></section>
+  </div>
+  <div class="tab-panel" id="panel-rules">
+    <section id="rules" class="rules-section"></section>
+  </div>
+  <div class="tab-panel" id="panel-players">
+    <section id="players" class="players-section"></section>
+  </div>
 </main>
+</div>
 
 <footer class="site-footer">
   <p>Unofficial fan schedule. Kickoff times shown in <span id="tz-label"></span>.</p>
@@ -193,6 +184,6 @@
 <script src="data/rankings.js"></script>
 <script src="data/players.js"></script>
 <script src="data/rosters.js"></script>
-<script src="app.js?v=11"></script>
+<script src="app.js?v=12"></script>
 </body>
 </html>
