@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MatchMondo — Tab Layout Mockups</title>
+<style>
+:root {
+  --green: #0b6e4f;
+  --green-dark: #07523b;
+  --gold: #e8b923;
+  --ink: #1a1a2e;
+  --muted: #6b7280;
+  --bg: #f6f7f4;
+  --card: #ffffff;
+  --line: #e5e7eb;
+}
+* { box-sizing: border-box; margin: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: #e9f0e9;
+  background-image: repeating-linear-gradient(90deg, rgba(11,110,79,0.045) 0 80px, rgba(11,110,79,0.015) 80px 160px);
+}
+
+/* Mockup selector at top */
+.mockup-chooser {
+  position: sticky; top: 0; z-index: 100;
+  background: #1a1a2e;
+  color: #fff;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.mockup-chooser h2 { font-size: 1rem; font-weight: 400; opacity: 0.7; }
+.mockup-chooser button {
+  padding: 8px 18px;
+  border: 2px solid rgba(255,255,255,0.25);
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.mockup-chooser button:hover { border-color: var(--gold); color: var(--gold); }
+.mockup-chooser button.active { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+
+.mockup { display: none; }
+.mockup.active { display: block; }
+
+/* ===== Shared header ===== */
+.site-header {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--green-dark), var(--green));
+  color: #fff; padding: 24px 20px;
+}
+.site-header::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    radial-gradient(circle at 84% 50%, transparent 47px, rgba(255,255,255,0.18) 48px, rgba(255,255,255,0.18) 50px, transparent 51px),
+    linear-gradient(90deg, transparent calc(84% - 1px), rgba(255,255,255,0.18) calc(84% - 1px), rgba(255,255,255,0.18) calc(84% + 1px), transparent calc(84% + 1px)),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.06) 0 46px, rgba(255,255,255,0) 46px 92px);
+}
+.header-inner { position: relative; z-index: 1; max-width: 1000px; margin: 0 auto; }
+.site-header h1 { margin: 0 0 4px; font-size: 1.7rem; }
+.subtitle { margin: 0; opacity: 0.85; font-size: 0.9rem; }
+
+/* ===== Shared content placeholders ===== */
+.content-area { max-width: 1000px; margin: 0 auto; padding: 16px 20px 40px; }
+.placeholder-card {
+  background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--green);
+  border-radius: 10px; padding: 10px 14px; margin-bottom: 8px;
+}
+.placeholder-card .pc-time { font-weight: 700; font-size: 0.9rem; color: var(--ink); }
+.placeholder-card .pc-teams { font-size: 0.95rem; margin: 3px 0; }
+.placeholder-card .pc-meta { font-size: 0.78rem; color: var(--muted); }
+.day-heading {
+  font-size: 1rem; font-weight: 700; padding-bottom: 5px;
+  border-bottom: 3px solid var(--gold); margin: 16px 0 10px;
+  display: flex; align-items: center; gap: 8px;
+}
+.day-heading::before { content: "\26BD"; font-size: 0.9rem; }
+.section-placeholder {
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  padding: 20px; margin-top: 14px; min-height: 120px;
+}
+.section-placeholder h3 { margin: 0 0 8px; font-size: 1.1rem; }
+.section-placeholder p { color: var(--muted); font-size: 0.85rem; margin: 0; }
+
+/* Filter bar (compact version for mockups) */
+.filter-bar {
+  max-width: 1000px; margin: 0 auto;
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  padding: 10px 16px; margin-top: 12px;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  font-size: 0.82rem; color: var(--muted);
+}
+.filter-bar span { font-weight: 600; }
+
+/* ========================================
+   OPTION A: Horizontal top tabs
+   ======================================== */
+.htabs {
+  max-width: 1000px; margin: 10px auto 0;
+  display: flex; gap: 0;
+  border-bottom: 3px solid var(--line);
+  padding: 0 20px;
+}
+.htabs button {
+  padding: 12px 22px;
+  border: none; background: none;
+  font-size: 0.95rem; font-weight: 600;
+  color: var(--muted); cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+  transition: all 0.15s;
+  display: flex; align-items: center; gap: 7px;
+}
+.htabs button:hover { color: var(--green-dark); }
+.htabs button.active {
+  color: var(--green-dark);
+  border-bottom-color: var(--green);
+}
+.htabs button .tab-icon { font-size: 1.05rem; }
+
+/* ========================================
+   OPTION B: Vertical sidebar tabs
+   ======================================== */
+.sidebar-layout {
+  max-width: 1100px; margin: 12px auto 0;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0;
+  min-height: 500px;
+}
+.vtabs {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 12px 0 12px 12px;
+}
+.vtabs button {
+  padding: 12px 18px;
+  border: none;
+  background: transparent;
+  font-size: 0.9rem; font-weight: 600;
+  color: var(--muted); cursor: pointer;
+  text-align: left;
+  border-radius: 10px 0 0 10px;
+  transition: all 0.15s;
+  display: flex; align-items: center; gap: 9px;
+  border-right: 3px solid transparent;
+}
+.vtabs button:hover { color: var(--green-dark); background: #eef4f1; }
+.vtabs button.active {
+  color: var(--green-dark);
+  background: var(--card);
+  border-right-color: var(--green);
+  box-shadow: 2px 0 0 var(--card);
+}
+.vtabs button .tab-icon { font-size: 1.05rem; }
+.sidebar-content {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+  min-height: 460px;
+}
+
+/* ========================================
+   OPTION C: Horizontal pill tabs (modern)
+   ======================================== */
+.pill-tabs {
+  max-width: 1000px; margin: 12px auto 0;
+  display: flex; gap: 6px;
+  padding: 0 20px;
+}
+.pill-tabs button {
+  padding: 9px 20px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  font-size: 0.88rem; font-weight: 600;
+  color: var(--muted); cursor: pointer;
+  transition: all 0.15s;
+  display: flex; align-items: center; gap: 7px;
+}
+.pill-tabs button:hover { border-color: var(--green); color: var(--green-dark); }
+.pill-tabs button.active {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+.pill-tabs button .tab-icon { font-size: 0.95rem; }
+
+/* ========================================
+   OPTION D: Header-integrated tabs (tabs inside header)
+   ======================================== */
+.header-tabs {
+  display: flex; gap: 0;
+  margin-top: 16px;
+}
+.header-tabs button {
+  padding: 10px 20px;
+  border: none; background: rgba(255,255,255,0.12);
+  font-size: 0.9rem; font-weight: 600;
+  color: rgba(255,255,255,0.7); cursor: pointer;
+  border-radius: 10px 10px 0 0;
+  transition: all 0.15s;
+  display: flex; align-items: center; gap: 7px;
+}
+.header-tabs button:hover { background: rgba(255,255,255,0.2); color: #fff; }
+.header-tabs button.active {
+  background: #e9f0e9;
+  color: var(--green-dark);
+}
+.header-tabs button .tab-icon { font-size: 0.95rem; }
+
+/* Description callouts */
+.option-desc {
+  max-width: 1000px; margin: 16px auto 0;
+  padding: 14px 20px;
+  background: #fffbeb;
+  border: 1px solid #f0d28a;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+.option-desc strong { color: var(--ink); }
+.option-desc .tag {
+  display: inline-block;
+  background: var(--green);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  vertical-align: 1px;
+}
+</style>
+</head>
+<body>
+
+<!-- Mockup chooser -->
+<div class="mockup-chooser">
+  <h2>Tab layout options:</h2>
+  <button class="active" onclick="showMockup('a')">A: Top Tabs</button>
+  <button onclick="showMockup('b')">B: Sidebar</button>
+  <button onclick="showMockup('c')">C: Pill Tabs</button>
+  <button onclick="showMockup('d')">D: In-Header Tabs</button>
+</div>
+
+<!-- ===== OPTION A: Horizontal Top Tabs ===== -->
+<div class="mockup active" id="mockup-a">
+  <div class="option-desc">
+    <span class="tag">OPTION A</span>
+    <strong>Horizontal top tabs</strong> — Classic underlined tabs below the header. Clean separation. Filters stay above the tabs (always visible). Each tab replaces the content below; only one section visible at a time. The "Schedule" tab can include the Today/Tomorrow preview at the top.
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>&#9917; MatchMondo</h1>
+      <p class="subtitle">World Cup 2026 &middot; June 11 &ndash; July 19 &middot; USA, Canada &amp; Mexico &middot; 104 matches</p>
+    </div>
+  </header>
+
+  <div class="filter-bar">
+    <span>&#9881; Filters:</span>
+    Time zone &middot; Stage &middot; Team &middot; Venues &nbsp;|&nbsp;
+    <span>Show:</span> Scores &middot; FIFA ranking &middot; Location &middot; Past games &nbsp;|&nbsp;
+    <span>Export:</span> Print &middot; Calendar
+  </div>
+
+  <nav class="htabs">
+    <button class="active"><span class="tab-icon">&#128197;</span> Schedule</button>
+    <button><span class="tab-icon">&#128202;</span> Standings</button>
+    <button><span class="tab-icon">&#128203;</span> Rules</button>
+    <button><span class="tab-icon">&#11088;</span> Players</button>
+  </nav>
+
+  <div class="content-area">
+    <h3 class="day-heading">Thursday, June 11, 2026</h3>
+    <div class="placeholder-card">
+      <span class="pc-time">5:00 PM</span> &nbsp; Match 1 &middot; Group A
+      <div class="pc-teams">&#127474;&#127485; Mexico vs &#127462;&#127479; Argentina</div>
+      <div class="pc-meta">Estadio Azteca &middot; Mexico City, Mexico</div>
+    </div>
+    <div class="placeholder-card">
+      <span class="pc-time">8:00 PM</span> &nbsp; Match 2 &middot; Group A
+      <div class="pc-teams">&#127468;&#127469; Ghana vs &#127475;&#127487; New Zealand</div>
+      <div class="pc-meta">AT&amp;T Stadium &middot; Arlington (Dallas), TX</div>
+    </div>
+    <h3 class="day-heading">Friday, June 12, 2026</h3>
+    <div class="placeholder-card">
+      <span class="pc-time">12:00 PM</span> &nbsp; Match 3 &middot; Group B
+      <div class="pc-teams">&#127477;&#127481; Portugal vs &#127474;&#127462; Morocco</div>
+      <div class="pc-meta">MetLife Stadium &middot; East Rutherford, NJ</div>
+    </div>
+    <div class="placeholder-card">
+      <span class="pc-time">3:00 PM</span> &nbsp; Match 4 &middot; Group B
+      <div class="pc-teams">&#127466;&#127464; Ecuador vs &#127480;&#127466; Sweden</div>
+      <div class="pc-meta">SoFi Stadium &middot; Inglewood (Los Angeles), CA</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== OPTION B: Vertical Sidebar Tabs ===== -->
+<div class="mockup" id="mockup-b">
+  <div class="option-desc">
+    <span class="tag">OPTION B</span>
+    <strong>Vertical sidebar tabs</strong> — Tabs stack on the left as a sidebar. Content fills the right panel. Gives more room for tab labels and could include sub-items (e.g., group links under Standings). Filters sit above the whole layout. Works well on wide screens; on mobile, could collapse to horizontal.
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>&#9917; MatchMondo</h1>
+      <p class="subtitle">World Cup 2026 &middot; June 11 &ndash; July 19 &middot; USA, Canada &amp; Mexico &middot; 104 matches</p>
+    </div>
+  </header>
+
+  <div class="filter-bar">
+    <span>&#9881; Filters:</span>
+    Time zone &middot; Stage &middot; Team &middot; Venues &nbsp;|&nbsp;
+    <span>Show:</span> Scores &middot; FIFA ranking &middot; Location &middot; Past games &nbsp;|&nbsp;
+    <span>Export:</span> Print &middot; Calendar
+  </div>
+
+  <div class="sidebar-layout">
+    <nav class="vtabs">
+      <button class="active"><span class="tab-icon">&#128197;</span> Schedule</button>
+      <button><span class="tab-icon">&#128202;</span> Standings</button>
+      <button><span class="tab-icon">&#128203;</span> Rules</button>
+      <button><span class="tab-icon">&#11088;</span> Players</button>
+      <button><span class="tab-icon">&#128101;</span> Full Rosters</button>
+    </nav>
+    <div class="sidebar-content">
+      <h3 class="day-heading">Thursday, June 11, 2026</h3>
+      <div class="placeholder-card">
+        <span class="pc-time">5:00 PM</span> &nbsp; Match 1 &middot; Group A
+        <div class="pc-teams">&#127474;&#127485; Mexico vs &#127462;&#127479; Argentina</div>
+        <div class="pc-meta">Estadio Azteca &middot; Mexico City, Mexico</div>
+      </div>
+      <div class="placeholder-card">
+        <span class="pc-time">8:00 PM</span> &nbsp; Match 2 &middot; Group A
+        <div class="pc-teams">&#127468;&#127469; Ghana vs &#127475;&#127487; New Zealand</div>
+        <div class="pc-meta">AT&amp;T Stadium &middot; Arlington (Dallas), TX</div>
+      </div>
+      <h3 class="day-heading">Friday, June 12, 2026</h3>
+      <div class="placeholder-card">
+        <span class="pc-time">12:00 PM</span> &nbsp; Match 3 &middot; Group B
+        <div class="pc-teams">&#127477;&#127481; Portugal vs &#127474;&#127462; Morocco</div>
+        <div class="pc-meta">MetLife Stadium &middot; East Rutherford, NJ</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== OPTION C: Pill Tabs ===== -->
+<div class="mockup" id="mockup-c">
+  <div class="option-desc">
+    <span class="tag">OPTION C</span>
+    <strong>Pill tabs</strong> — Rounded capsule buttons, modern and friendly. Active tab fills with green. Feels lighter than classic tabs. Could also work as a sticky bar that follows you as you scroll. Same behavior as Option A (one section at a time).
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>&#9917; MatchMondo</h1>
+      <p class="subtitle">World Cup 2026 &middot; June 11 &ndash; July 19 &middot; USA, Canada &amp; Mexico &middot; 104 matches</p>
+    </div>
+  </header>
+
+  <div class="filter-bar">
+    <span>&#9881; Filters:</span>
+    Time zone &middot; Stage &middot; Team &middot; Venues &nbsp;|&nbsp;
+    <span>Show:</span> Scores &middot; FIFA ranking &middot; Location &middot; Past games &nbsp;|&nbsp;
+    <span>Export:</span> Print &middot; Calendar
+  </div>
+
+  <nav class="pill-tabs">
+    <button class="active"><span class="tab-icon">&#128197;</span> Schedule</button>
+    <button><span class="tab-icon">&#128202;</span> Standings</button>
+    <button><span class="tab-icon">&#128203;</span> Rules</button>
+    <button><span class="tab-icon">&#11088;</span> Players</button>
+    <button><span class="tab-icon">&#128101;</span> Rosters</button>
+  </nav>
+
+  <div class="content-area">
+    <h3 class="day-heading">Thursday, June 11, 2026</h3>
+    <div class="placeholder-card">
+      <span class="pc-time">5:00 PM</span> &nbsp; Match 1 &middot; Group A
+      <div class="pc-teams">&#127474;&#127485; Mexico vs &#127462;&#127479; Argentina</div>
+      <div class="pc-meta">Estadio Azteca &middot; Mexico City, Mexico</div>
+    </div>
+    <div class="placeholder-card">
+      <span class="pc-time">8:00 PM</span> &nbsp; Match 2 &middot; Group A
+      <div class="pc-teams">&#127468;&#127469; Ghana vs &#127475;&#127487; New Zealand</div>
+      <div class="pc-meta">AT&amp;T Stadium &middot; Arlington (Dallas), TX</div>
+    </div>
+    <h3 class="day-heading">Friday, June 12, 2026</h3>
+    <div class="placeholder-card">
+      <span class="pc-time">12:00 PM</span> &nbsp; Match 3 &middot; Group B
+      <div class="pc-teams">&#127477;&#127481; Portugal vs &#127474;&#127462; Morocco</div>
+      <div class="pc-meta">MetLife Stadium &middot; East Rutherford, NJ</div>
+    </div>
+    <div class="placeholder-card">
+      <span class="pc-time">3:00 PM</span> &nbsp; Match 4 &middot; Group B
+      <div class="pc-teams">&#127466;&#127464; Ecuador vs &#127480;&#127466; Sweden</div>
+      <div class="pc-meta">SoFi Stadium &middot; Inglewood (Los Angeles), CA</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== OPTION D: In-Header Tabs ===== -->
+<div class="mockup" id="mockup-d">
+  <div class="option-desc">
+    <span class="tag">OPTION D</span>
+    <strong>Header-integrated tabs</strong> — Tabs sit inside the green header bar itself, acting as seamless extensions of the header. The active tab "opens" into the page below. Saves a line of vertical space and gives a strong visual connection between header and content. Filters move inside a collapsible drawer or below the tabs.
+  </div>
+
+  <header class="site-header" style="padding-bottom: 0;">
+    <div class="header-inner">
+      <h1>&#9917; MatchMondo</h1>
+      <p class="subtitle">World Cup 2026 &middot; June 11 &ndash; July 19 &middot; USA, Canada &amp; Mexico &middot; 104 matches</p>
+      <nav class="header-tabs">
+        <button class="active"><span class="tab-icon">&#128197;</span> Schedule</button>
+        <button><span class="tab-icon">&#128202;</span> Standings</button>
+        <button><span class="tab-icon">&#128203;</span> Rules</button>
+        <button><span class="tab-icon">&#11088;</span> Players</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="filter-bar" style="border-radius: 0 0 10px 10px; margin-top: 0; border-top: none;">
+    <span>&#9881; Filters:</span>
+    Time zone &middot; Stage &middot; Team &middot; Venues &nbsp;|&nbsp;
+    <span>Show:</span> Scores &middot; FIFA ranking &middot; Location &middot; Past games &nbsp;|&nbsp;
+    <span>Export:</span> Print &middot; Calendar
+  </div>
+
+  <div class="content-area">
+    <h3 class="day-heading">Thursday, June 11, 2026</h3>
+    <div class="placeholder-card">
+      <span class="pc-time">5:00 PM</span> &nbsp; Match 1 &middot; Group A
+      <div class="pc-teams">&#127474;&#127485; Mexico vs &#127462;&#127479; Argentina</div>
+      <div class="pc-meta">Estadio Azteca &middot; Mexico City, Mexico</div>
+    </div>
+    <div class="placeholder-card">
+      <span class="pc-time">8:00 PM</span> &nbsp; Match 2 &middot; Group A
+      <div class="pc-teams">&#127468;&#127469; Ghana vs &#127475;&#127487; New Zealand</div>
+      <div class="pc-meta">AT&amp;T Stadium &middot; Arlington (Dallas), TX</div>
+    </div>
+    <h3 class="day-heading">Friday, June 12, 2026</h3>
+    <div class="placeholder-card">
+      <span class="pc-time">12:00 PM</span> &nbsp; Match 3 &middot; Group B
+      <div class="pc-teams">&#127477;&#127481; Portugal vs &#127474;&#127462; Morocco</div>
+      <div class="pc-meta">MetLife Stadium &middot; East Rutherford, NJ</div>
+    </div>
+    <div class="placeholder-card">
+      <span class="pc-time">3:00 PM</span> &nbsp; Match 4 &middot; Group B
+      <div class="pc-teams">&#127466;&#127464; Ecuador vs &#127480;&#127466; Sweden</div>
+      <div class="pc-meta">SoFi Stadium &middot; Inglewood (Los Angeles), CA</div>
+    </div>
+  </div>
+</div>
+
+<script>
+function showMockup(id) {
+  document.querySelectorAll('.mockup').forEach(m => m.classList.remove('active'));
+  document.querySelectorAll('.mockup-chooser button').forEach(b => b.classList.remove('active'));
+  document.getElementById('mockup-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
