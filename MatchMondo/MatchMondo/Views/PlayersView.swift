@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct PlayersView: View {
+struct TeamsView: View {
     @EnvironmentObject var data: DataService
     @EnvironmentObject var appSettings: AppSettings
     @State private var searchText = ""
@@ -37,19 +37,11 @@ struct PlayersView: View {
                 if data.isLoading {
                     ProgressView("Loading...")
                         .padding(.top, 60)
-                } else if data.players.isEmpty {
-                    VStack(spacing: 12) {
-                        ProgressView()
-                        Text("Loading player data...")
-                            .font(.system(size: 14))
-                            .foregroundStyle(.secondary)
-                    }
-                    .padding(.top, 60)
                 } else {
                     VStack(spacing: 0) {
                         Text(appSettings.showFIFARankings
-                            ? "Top players to watch on every team, ordered by FIFA ranking."
-                            : "Top players to watch on every team.")
+                            ? "All 48 teams, ordered by FIFA ranking."
+                            : "All 48 teams competing in the 2026 World Cup.")
                             .font(.system(size: 13))
                             .foregroundStyle(.secondary)
                             .padding(.horizontal, 16)
@@ -66,13 +58,17 @@ struct PlayersView: View {
                 }
             }
             .background(Color(red: 0.91, green: 0.94, blue: 0.91))
-            .navigationTitle("Players")
+            .navigationTitle("Teams")
             .searchable(text: $searchText, prompt: "Search teams or players...")
+            .navigationDestination(for: Match.self) { match in
+                MatchDetailView(match: match)
+            }
         }
     }
 
+    // MARK: - Team Section
+
     private func teamSection(team: String) -> some View {
-        let players = data.players[team] ?? []
         let isExpanded = expandedTeam == team
 
         return VStack(spacing: 0) {
@@ -88,9 +84,15 @@ struct PlayersView: View {
                         .foregroundStyle(.primary)
                     Spacer()
                     RankBadge(team: team)
-                    Text("\(players.count)")
-                        .font(.system(size: 12, weight: .semibold, design: .rounded))
-                        .foregroundStyle(.secondary)
+                    if let group = teamGroup(team) {
+                        Text(group)
+                            .font(.system(size: 11, weight: .semibold))
+                            .foregroundStyle(.secondary)
+                            .padding(.horizontal, 6)
+                            .padding(.vertical, 2)
+                            .background(Color(.systemGray5))
+                            .clipShape(Capsule())
+                    }
                     Image(systemName: "chevron.right")
                         .font(.system(size: 12, weight: .semibold))
                         .foregroundStyle(.secondary)
@@ -107,14 +109,8 @@ struct PlayersView: View {
 
             if isExpanded {
                 teamStats(team: team)
-
-                ForEach(Array(players.enumerated()), id: \.element.id) { index, player in
-                    playerCard(player: player)
-                    if index < players.count - 1 {
-                        Divider().padding(.leading, 14)
-                    }
-                }
-
+                scheduleSection(team: team)
+                playersSection(team: team)
                 rosterLink(team: team)
             }
         }
@@ -125,6 +121,8 @@ struct PlayersView: View {
                 .stroke(Color(.separator).opacity(0.3), lineWidth: 1)
         )
     }
+
+    // MARK: - Team Stats
 
     private func teamStats(team: String) -> some View {
         let teamMatches = data.teamMatches(for: team)
@@ -153,6 +151,122 @@ struct PlayersView: View {
         .padding(.horizontal, 14)
         .padding(.vertical, 8)
         .background(green.opacity(0.04))
+    }
+
+    // MARK: - Schedule
+
+    private func scheduleSection(team: String) -> some View {
+        let teamMatches = data.teamMatches(for: team).sorted { $0.kickoff < $1.kickoff }
+
+        return VStack(alignment: .leading, spacing: 0) {
+            HStack(spacing: 6) {
+                Image(systemName: "calendar")
+                    .font(.system(size: 12))
+                    .foregroundStyle(green)
+                Text("Schedule")
+                    .font(.system(size: 13, weight: .bold))
+            }
+            .padding(.horizontal, 14)
+            .padding(.top, 10)
+            .padding(.bottom, 6)
+
+            ForEach(teamMatches) { match in
+                NavigationLink(value: match) {
+                    scheduleRow(match: match, team: team)
+                }
+                .buttonStyle(.plain)
+            }
+        }
+    }
+
+    private func scheduleRow(match: Match, team: String) -> some View {
+        let opponent = match.home == team ? match.away : match.home
+        let isHome = match.home == team
+        let result = matchResult(match: match, team: team)
+
+        return HStack(spacing: 8) {
+            Text(matchDateShort(match.kickoff))
+                .font(.system(size: 11, weight: .semibold, design: .rounded))
+                .foregroundStyle(.secondary)
+                .frame(width: 44, alignment: .leading)
+
+            if match.isLive {
+                LiveBadge(detail: nil)
+                    .frame(width: 14)
+            } else if let result {
+                Text(result.letter)
+                    .font(.system(size: 11, weight: .heavy, design: .rounded))
+                    .foregroundStyle(.white)
+                    .frame(width: 18, height: 18)
+                    .background(result.color)
+                    .clipShape(Circle())
+            } else {
+                Circle()
+                    .fill(Color(.systemGray4))
+                    .frame(width: 18, height: 18)
+                    .overlay(
+                        Text("–")
+                            .font(.system(size: 10, weight: .bold))
+                            .foregroundStyle(.secondary)
+                    )
+            }
+
+            FlagView(team: opponent, size: 18)
+
+            Text("\(isHome ? "vs" : "at") \(opponent)")
+                .font(.system(size: 13, weight: .medium))
+                .foregroundStyle(.primary)
+                .lineLimit(1)
+
+            Spacer()
+
+            if match.hasScore {
+                Text("\(match.scoreH!)–\(match.scoreA!)")
+                    .font(.system(size: 13, weight: .bold, design: .rounded))
+                    .foregroundStyle(match.isLive ? green : .primary)
+            } else {
+                Text(match.kickoff.smartTime())
+                    .font(.system(size: 12, weight: .medium))
+                    .foregroundStyle(.secondary)
+            }
+
+            Image(systemName: "chevron.right")
+                .font(.system(size: 10, weight: .semibold))
+                .foregroundStyle(.tertiary)
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 7)
+    }
+
+    // MARK: - Players
+
+    private func playersSection(team: String) -> some View {
+        let players = data.players[team] ?? []
+        guard !players.isEmpty else { return AnyView(EmptyView()) }
+
+        return AnyView(
+            VStack(alignment: .leading, spacing: 0) {
+                Divider().padding(.leading, 14)
+
+                HStack(spacing: 6) {
+                    Image(systemName: "star.fill")
+                        .font(.system(size: 12))
+                        .foregroundStyle(green)
+                    Text("Key Players")
+                        .font(.system(size: 13, weight: .bold))
+                }
+                .padding(.horizontal, 14)
+                .padding(.top, 10)
+                .padding(.bottom, 6)
+
+                ForEach(Array(players.enumerated()), id: \.element.id) { index, player in
+                    playerCard(player: player)
+                    if index < players.count - 1 {
+                        Divider().padding(.leading, 14)
+                    }
+                }
+            }
+        )
     }
 
     private func playerCard(player: Player) -> some View {
@@ -193,9 +307,13 @@ struct PlayersView: View {
         .padding(.vertical, 10)
     }
 
+    // MARK: - Roster Link
+
     private func rosterLink(team: String) -> some View {
         Group {
             if let roster = data.rosters[team], !roster.isEmpty {
+                Divider().padding(.leading, 14)
+
                 NavigationLink {
                     RosterView(team: team, roster: roster)
                 } label: {
@@ -215,6 +333,29 @@ struct PlayersView: View {
                 }
             }
         }
+    }
+
+    // MARK: - Helpers
+
+    private func teamGroup(_ team: String) -> String? {
+        data.matches.first(where: {
+            ($0.home == team || $0.away == team) && $0.group != nil
+        })?.group?.replacingOccurrences(of: "Group ", with: "Grp ")
+    }
+
+    private func matchResult(match: Match, team: String) -> (letter: String, color: Color)? {
+        guard match.hasScore, !match.isLive else { return nil }
+        let scored = match.home == team ? match.scoreH! : match.scoreA!
+        let conceded = match.home == team ? match.scoreA! : match.scoreH!
+        if scored > conceded { return ("W", .green) }
+        if scored < conceded { return ("L", .red) }
+        return ("D", .orange)
+    }
+
+    private func matchDateShort(_ date: Date) -> String {
+        let f = DateFormatter()
+        f.dateFormat = "M/d"
+        return f.string(from: date)
     }
 
     private func statPill(label: String, value: String) -> some View {

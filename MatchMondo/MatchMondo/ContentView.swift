@@ -20,9 +20,9 @@ struct ContentView: View {
                     Label("Standings", systemImage: "chart.bar.fill")
                 }
 
-            PlayersView()
+            TeamsView()
                 .tabItem {
-                    Label("Players", systemImage: "star.fill")
+                    Label("Teams", systemImage: "flag.fill")
                 }
 
             MoreView()
