@@ -251,6 +251,11 @@ final class DataService: ObservableObject {
         }.sorted { $0.date < $1.date }
     }
 
+    func yesterdayMatches() -> [Match] {
+        let cal = Calendar.current
+        return matches.filter { cal.isDateInYesterday($0.kickoff) }
+    }
+
     func todayMatches() -> [Match] {
         let cal = Calendar.current
         return matches.filter { cal.isDateInToday($0.kickoff) }

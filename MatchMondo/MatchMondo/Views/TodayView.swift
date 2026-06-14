@@ -3,6 +3,7 @@ import SwiftUI
 struct TodayView: View {
     @EnvironmentObject var data: DataService
     @EnvironmentObject var scoreVisibility: ScoreVisibility
+    @State private var expandedSections: Set<String> = ["Yesterday", "Today", "Tomorrow"]
 
     private let green = Color(red: 0.043, green: 0.431, blue: 0.310)
     private let greenDark = Color(red: 0.027, green: 0.322, blue: 0.231)
@@ -18,13 +19,17 @@ struct TodayView: View {
                         ProgressView("Loading matches...")
                             .padding(.top, 60)
                     } else {
+                        let yesterday = data.yesterdayMatches()
                         let today = data.todayMatches()
                         let tomorrow = data.tomorrowMatches()
 
-                        if today.isEmpty && tomorrow.isEmpty {
+                        if yesterday.isEmpty && today.isEmpty && tomorrow.isEmpty {
                             noMatchesView
                         } else {
-                            VStack(spacing: 16) {
+                            VStack(spacing: 12) {
+                                if !yesterday.isEmpty {
+                                    daySection(title: "Yesterday", matches: yesterday)
+                                }
                                 if !today.isEmpty {
                                     daySection(title: "Today", matches: today)
                                 }
@@ -99,25 +104,46 @@ struct TodayView: View {
     }
 
     private func daySection(title: String, matches: [Match]) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack {
-                Text(title)
-                    .font(.system(size: 18, weight: .bold))
-                Text("\u{2014} \(formattedDate(matches.first!.kickoff))")
-                    .font(.system(size: 14))
-                    .foregroundStyle(.secondary)
-                Spacer()
-                Text("\(matches.count) match\(matches.count == 1 ? "" : "es")")
-                    .font(.system(size: 12, weight: .medium))
-                    .foregroundStyle(.secondary)
-            }
-            .padding(.horizontal, 4)
-
-            ForEach(matches) { match in
-                NavigationLink(value: match) {
-                    MatchCardView(match: match, showScore: scoreVisibility.shouldShowScore(for: match))
+        VStack(alignment: .leading, spacing: 0) {
+            Button {
+                withAnimation(.easeInOut(duration: 0.25)) {
+                    if expandedSections.contains(title) {
+                        expandedSections.remove(title)
+                    } else {
+                        expandedSections.insert(title)
+                    }
                 }
-                .buttonStyle(.plain)
+            } label: {
+                HStack {
+                    Text(title)
+                        .font(.system(size: 18, weight: .bold))
+                        .foregroundStyle(.primary)
+                    Text("\u{2014} \(formattedDate(matches.first!.kickoff))")
+                        .font(.system(size: 14))
+                        .foregroundStyle(.secondary)
+                    Spacer()
+                    Text("\(matches.count) match\(matches.count == 1 ? "" : "es")")
+                        .font(.system(size: 12, weight: .medium))
+                        .foregroundStyle(.secondary)
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundStyle(.secondary)
+                        .rotationEffect(.degrees(expandedSections.contains(title) ? 90 : 0))
+                }
+                .padding(.horizontal, 4)
+                .padding(.bottom, 8)
+            }
+            .buttonStyle(.plain)
+
+            if expandedSections.contains(title) {
+                VStack(spacing: 8) {
+                    ForEach(matches) { match in
+                        NavigationLink(value: match) {
+                            MatchCardView(match: match, showScore: scoreVisibility.shouldShowScore(for: match))
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
             }
         }
     }
@@ -127,7 +153,7 @@ struct TodayView: View {
             Image(systemName: "sportscourt")
                 .font(.system(size: 40))
                 .foregroundStyle(.secondary)
-            Text("No matches today or tomorrow")
+            Text("No matches in the next 3 days")
                 .font(.system(size: 16, weight: .medium))
                 .foregroundStyle(.secondary)
 

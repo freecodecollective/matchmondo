@@ -7,7 +7,7 @@ struct ContentView: View {
         TabView {
             TodayView()
                 .tabItem {
-                    Label("Today", systemImage: "clock.fill")
+                    Label("3-Day", systemImage: "clock.fill")
                 }
 
             ScheduleView()
