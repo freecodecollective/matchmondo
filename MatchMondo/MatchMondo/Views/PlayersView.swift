@@ -2,6 +2,7 @@ import SwiftUI
 
 struct PlayersView: View {
     @EnvironmentObject var data: DataService
+    @EnvironmentObject var appSettings: AppSettings
     @State private var searchText = ""
     @State private var expandedTeam: String?
 
@@ -46,7 +47,9 @@ struct PlayersView: View {
                     .padding(.top, 60)
                 } else {
                     VStack(spacing: 0) {
-                        Text("Top players to watch on every team, ordered by FIFA ranking.")
+                        Text(appSettings.showFIFARankings
+                            ? "Top players to watch on every team, ordered by FIFA ranking."
+                            : "Top players to watch on every team.")
                             .font(.system(size: 13))
                             .foregroundStyle(.secondary)
                             .padding(.horizontal, 16)
@@ -139,7 +142,7 @@ struct PlayersView: View {
             statPill(label: "Played", value: "\(gamesPlayed)")
             statPill(label: "GF", value: "\(goalsScored)")
             statPill(label: "GA", value: "\(goalsConceded)")
-            if let rank = Rankings.rank(for: team) {
+            if appSettings.showFIFARankings, let rank = Rankings.rank(for: team) {
                 statPill(label: "FIFA", value: "#\(rank)")
             }
             if let roster = data.rosters[team] {

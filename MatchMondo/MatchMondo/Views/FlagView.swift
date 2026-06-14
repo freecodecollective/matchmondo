@@ -40,9 +40,10 @@ struct FlagView: View {
 
 struct RankBadge: View {
     let team: String
+    @EnvironmentObject var appSettings: AppSettings
 
     var body: some View {
-        if let rank = Rankings.rank(for: team) {
+        if appSettings.showFIFARankings, let rank = Rankings.rank(for: team) {
             Text("#\(rank)")
                 .font(.system(size: 10, weight: .bold))
                 .foregroundStyle(Color(red: 0.043, green: 0.431, blue: 0.310))

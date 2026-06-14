@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct MoreView: View {
+    @EnvironmentObject var appSettings: AppSettings
+
     private let green = Color(red: 0.043, green: 0.431, blue: 0.310)
     private let greenDark = Color(red: 0.027, green: 0.322, blue: 0.231)
 
@@ -9,6 +11,7 @@ struct MoreView: View {
             ScrollView {
                 VStack(spacing: 16) {
                     aboutSection
+                    settingsSection
                     rulesLink
                     supportSection
                     feedbackSection
@@ -36,6 +39,34 @@ struct MoreView: View {
                 .font(.system(size: 14))
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(16)
+        .background(Color(.systemBackground))
+        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .overlay(
+            RoundedRectangle(cornerRadius: 12)
+                .stroke(Color(.separator).opacity(0.3), lineWidth: 1)
+        )
+        .padding(.horizontal, 16)
+    }
+
+    private var settingsSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Label("Settings", systemImage: "gearshape.fill")
+                .font(.system(size: 16, weight: .bold))
+                .foregroundStyle(green)
+
+            Toggle(isOn: $appSettings.showFIFARankings) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Show FIFA Rankings")
+                        .font(.system(size: 15, weight: .medium))
+                    Text("Display ranking badges next to team names")
+                        .font(.system(size: 12))
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .tint(green)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(16)
