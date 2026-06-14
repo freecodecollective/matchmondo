@@ -78,6 +78,9 @@ struct ScheduleView: View {
                 .navigationDestination(for: Match.self) { match in
                     MatchDetailView(match: match)
                 }
+                .navigationDestination(for: String.self) { team in
+                    TeamDetailView(team: team)
+                }
                 .background(Color(red: 0.91, green: 0.94, blue: 0.91))
                 .onAppear {
                     scrollToToday(proxy: proxy)

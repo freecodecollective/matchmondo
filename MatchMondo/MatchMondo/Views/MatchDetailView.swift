@@ -37,6 +37,9 @@ struct MatchDetailView: View {
         .background(Color(red: 0.91, green: 0.94, blue: 0.91))
         .navigationTitle("Match \(match.n)")
         .navigationBarTitleDisplayMode(.inline)
+        .navigationDestination(for: String.self) { team in
+            TeamDetailView(team: team)
+        }
         .task {
             await data.fetchMatchDetail(for: match)
         }
@@ -52,12 +55,16 @@ struct MatchDetailView: View {
                 .foregroundStyle(.secondary)
 
             HStack(spacing: 0) {
-                VStack(spacing: 6) {
-                    FlagView(team: match.home, size: 44)
-                    Text(match.home)
-                        .font(.system(size: 15, weight: .bold))
-                    RankBadge(team: match.home)
+                NavigationLink(value: match.home) {
+                    VStack(spacing: 6) {
+                        FlagView(team: match.home, size: 44)
+                        Text(match.home)
+                            .font(.system(size: 15, weight: .bold))
+                            .foregroundStyle(.primary)
+                        RankBadge(team: match.home)
+                    }
                 }
+                .buttonStyle(.plain)
                 .frame(maxWidth: .infinity)
 
                 if match.hasScore {
@@ -93,12 +100,16 @@ struct MatchDetailView: View {
                     }
                 }
 
-                VStack(spacing: 6) {
-                    FlagView(team: match.away, size: 44)
-                    Text(match.away)
-                        .font(.system(size: 15, weight: .bold))
-                    RankBadge(team: match.away)
+                NavigationLink(value: match.away) {
+                    VStack(spacing: 6) {
+                        FlagView(team: match.away, size: 44)
+                        Text(match.away)
+                            .font(.system(size: 15, weight: .bold))
+                            .foregroundStyle(.primary)
+                        RankBadge(team: match.away)
+                    }
                 }
+                .buttonStyle(.plain)
                 .frame(maxWidth: .infinity)
             }
 

@@ -25,6 +25,7 @@
 		AA000016 /* ScoreFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100016 /* ScoreFilterBar.swift */; };
 		AA000017 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100017 /* MoreView.swift */; };
 		AA000018 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100018 /* AppSettings.swift */; };
+		AA000019 /* TeamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100019 /* TeamDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		AA100016 /* ScoreFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreFilterBar.swift; sourceTree = "<group>"; };
 		AA100017 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
 		AA100018 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		AA100019 /* TeamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailView.swift; sourceTree = "<group>"; };
 		AA200001 /* MatchMondo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchMondo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 				AA100011 /* RulesView.swift */,
 				AA100009 /* FlagView.swift */,
 				AA100013 /* MatchDetailView.swift */,
+				AA100019 /* TeamDetailView.swift */,
 				AA100015 /* YouTubePlayerView.swift */,
 				AA100016 /* ScoreFilterBar.swift */,
 				AA100017 /* MoreView.swift */,
@@ -206,6 +209,7 @@
 				AA000011 /* RulesView.swift in Sources */,
 				AA000012 /* TodayView.swift in Sources */,
 				AA000013 /* MatchDetailView.swift in Sources */,
+				AA000019 /* TeamDetailView.swift in Sources */,
 				AA000014 /* ScoreVisibility.swift in Sources */,
 				AA000015 /* YouTubePlayerView.swift in Sources */,
 				AA000016 /* ScoreFilterBar.swift in Sources */,
@@ -332,7 +336,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = MatchMondo;
+				INFOPLIST_KEY_CFBundleDisplayName = "MatchMondo: World Cup 2026";
 				INFOPLIST_KEY_CFBundleIconName = AppIcon;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -363,7 +367,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MatchMondo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = MatchMondo;
+				INFOPLIST_KEY_CFBundleDisplayName = "MatchMondo: World Cup 2026";
 				INFOPLIST_KEY_CFBundleIconName = AppIcon;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -56,6 +56,9 @@ struct TodayView: View {
             .navigationDestination(for: Match.self) { match in
                 MatchDetailView(match: match)
             }
+            .navigationDestination(for: String.self) { team in
+                TeamDetailView(team: team)
+            }
         }
     }
 

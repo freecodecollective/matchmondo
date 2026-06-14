@@ -8,16 +8,22 @@ struct MoreView: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(spacing: 16) {
-                    aboutSection
-                    supportSection
-                    settingsSection
-                    rulesLink
-                    feedbackSection
-                    appInfoSection
+            ScrollViewReader { proxy in
+                ScrollView {
+                    VStack(spacing: 16) {
+                        aboutSection
+                        supportSection
+                        settingsSection
+                        rulesLink
+                        feedbackSection
+                        appInfoSection
+                    }
+                    .padding(.vertical, 12)
+                    .id("moreTop")
                 }
-                .padding(.vertical, 12)
+                .onAppear {
+                    proxy.scrollTo("moreTop", anchor: .top)
+                }
             }
             .background(Color(red: 0.91, green: 0.94, blue: 0.91))
             .navigationTitle("More")
@@ -104,14 +110,10 @@ struct MoreView: View {
                 .font(.system(size: 16, weight: .bold))
                 .foregroundStyle(green)
 
-            Text("MatchMondo is free and always will be. If you'd like to give back, consider donating to Soccer without Borders — a nonprofit that uses soccer to help refugee and immigrant youth build community and opportunity.")
+            Text("MatchMondo is free and always will be — no ads, no subscriptions. If you'd like to give back, consider donating to Soccer without Borders — a nonprofit that uses soccer to help refugee and immigrant youth build community and opportunity.")
                 .font(.system(size: 14))
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
-
-            Text("Suggested donation: $1–$5")
-                .font(.system(size: 13, weight: .semibold))
-                .foregroundStyle(.secondary)
 
             Link(destination: URL(string: "https://www.soccerwithoutborders.org/donate")!) {
                 HStack {
@@ -125,6 +127,27 @@ struct MoreView: View {
                 .background(green)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             }
+
+            Text("Or tip the developers via Venmo:")
+                .font(.system(size: 13))
+                .foregroundStyle(.secondary)
+
+            Link(destination: URL(string: "venmo://paycharge?txn=pay&recipients=busselle&note=MatchMondo%20tip")!) {
+                HStack {
+                    Image(systemName: "dollarsign.circle")
+                    Text("Tip via Venmo (@busselle)")
+                        .font(.system(size: 14, weight: .semibold))
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 10)
+                .foregroundStyle(green)
+                .background(Color(.systemGray6))
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+            }
+
+            Text("Last 4 digits to confirm: 2515")
+                .font(.system(size: 11))
+                .foregroundStyle(.tertiary)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(16)

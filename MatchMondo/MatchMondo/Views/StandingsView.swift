@@ -10,6 +10,7 @@ struct StandingsView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
+
                 if data.isLoading {
                     ProgressView("Loading...")
                         .padding(.top, 60)
@@ -44,6 +45,9 @@ struct StandingsView: View {
             }
             .background(Color(red: 0.91, green: 0.94, blue: 0.91))
             .navigationTitle("Standings")
+            .navigationDestination(for: String.self) { team in
+                TeamDetailView(team: team)
+            }
             .refreshable {
                 await data.refresh()
             }
@@ -135,36 +139,41 @@ struct StandingsView: View {
             ? green.opacity(0.06)
             : position == 3 ? gold.opacity(0.06) : .clear
 
-        return HStack(spacing: 0) {
-            Text("\(position)")
-                .frame(width: 24)
-                .font(.system(size: 12, weight: position <= 2 ? .bold : .regular))
-                .foregroundStyle(position <= 2 ? green : position == 3 ? gold : .secondary)
+        return NavigationLink(value: standing.team) {
+            HStack(spacing: 0) {
+                Text("\(position)")
+                    .frame(width: 24)
+                    .font(.system(size: 12, weight: position <= 2 ? .bold : .regular))
+                    .foregroundStyle(position <= 2 ? green : position == 3 ? gold : .secondary)
 
-            HStack(spacing: 6) {
-                FlagView(team: standing.team, size: 20)
-                Text(standing.team)
-                    .font(.system(size: 13, weight: .semibold))
-                    .lineLimit(1)
+                HStack(spacing: 6) {
+                    FlagView(team: standing.team, size: 20)
+                    Text(standing.team)
+                        .font(.system(size: 13, weight: .semibold))
+                        .foregroundStyle(.primary)
+                        .lineLimit(1)
+                }
+
+                Spacer()
+
+                Group {
+                    Text("\(standing.played)").frame(width: 26)
+                    Text("\(standing.won)").frame(width: 26)
+                    Text("\(standing.drawn)").frame(width: 26)
+                    Text("\(standing.lost)").frame(width: 26)
+                    Text(standing.goalDifference > 0 ? "+\(standing.goalDifference)" : "\(standing.goalDifference)")
+                        .frame(width: 30)
+                    Text("\(standing.points)")
+                        .frame(width: 30)
+                        .fontWeight(.heavy)
+                }
+                .font(.system(size: 13, design: .rounded))
+                .foregroundStyle(.primary)
             }
-
-            Spacer()
-
-            Group {
-                Text("\(standing.played)").frame(width: 26)
-                Text("\(standing.won)").frame(width: 26)
-                Text("\(standing.drawn)").frame(width: 26)
-                Text("\(standing.lost)").frame(width: 26)
-                Text(standing.goalDifference > 0 ? "+\(standing.goalDifference)" : "\(standing.goalDifference)")
-                    .frame(width: 30)
-                Text("\(standing.points)")
-                    .frame(width: 30)
-                    .fontWeight(.heavy)
-            }
-            .font(.system(size: 13, design: .rounded))
+            .padding(.horizontal, 14)
+            .padding(.vertical, 8)
+            .background(bgColor)
         }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 8)
-        .background(bgColor)
+        .buttonStyle(.plain)
     }
 }
