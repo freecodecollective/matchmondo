@@ -37,46 +37,48 @@ struct ScheduleView: View {
     var body: some View {
         NavigationStack {
             ScrollViewReader { proxy in
-                List {
-                    ScoreFilterBar()
-                        .listRowInsets(EdgeInsets())
-                        .listRowSeparator(.hidden)
-                        .listRowBackground(Color.clear)
-                    ForEach(filteredDays, id: \.dayString) { day in
-                        Section {
-                            ForEach(day.matches) { match in
-                                NavigationLink(value: match) {
-                                    MatchCardView(match: match, showScore: scoreVisibility.shouldShowScore(for: match))
+                ScrollView {
+                    LazyVStack(spacing: 0, pinnedViews: []) {
+                        ScoreFilterBar()
+
+                        ForEach(filteredDays, id: \.dayString) { day in
+                            Section {
+                                ForEach(day.matches) { match in
+                                    NavigationLink(value: match) {
+                                        MatchCardView(match: match, showScore: scoreVisibility.shouldShowScore(for: match))
+                                    }
+                                    .buttonStyle(.plain)
+                                    .padding(.horizontal, 12)
+                                    .padding(.vertical, 4)
                                 }
-                                .listRowInsets(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12))
-                                .listRowSeparator(.hidden)
-                                .listRowBackground(Color.clear)
-                            }
-                        } header: {
-                            HStack(spacing: 8) {
-                                Text(day.dayString)
-                                    .font(.system(size: 14, weight: .bold))
-                                if Calendar.current.isDateInToday(day.date) {
-                                    Text("Today")
-                                        .font(.system(size: 10, weight: .bold))
-                                        .textCase(.uppercase)
-                                        .foregroundStyle(.white)
-                                        .padding(.horizontal, 8)
-                                        .padding(.vertical, 2)
-                                        .background(green)
-                                        .clipShape(Capsule())
+                            } header: {
+                                HStack(spacing: 8) {
+                                    Text(day.dayString)
+                                        .font(.system(size: 14, weight: .bold))
+                                    if Calendar.current.isDateInToday(day.date) {
+                                        Text("Today")
+                                            .font(.system(size: 10, weight: .bold))
+                                            .textCase(.uppercase)
+                                            .foregroundStyle(.white)
+                                            .padding(.horizontal, 8)
+                                            .padding(.vertical, 2)
+                                            .background(green)
+                                            .clipShape(Capsule())
+                                    }
+                                    Spacer()
                                 }
+                                .padding(.horizontal, 16)
+                                .padding(.top, 12)
+                                .padding(.bottom, 4)
+                                .id(day.dayString)
                             }
-                            .id(day.dayString)
                         }
                     }
                 }
                 .navigationDestination(for: Match.self) { match in
                     MatchDetailView(match: match)
                 }
-                .listStyle(.plain)
                 .background(Color(red: 0.91, green: 0.94, blue: 0.91))
-                .scrollContentBackground(.hidden)
                 .onAppear {
                     scrollToToday(proxy: proxy)
                 }
