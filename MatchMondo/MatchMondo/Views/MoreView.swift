@@ -21,11 +21,6 @@ struct MoreView: View {
             }
             .background(Color(red: 0.91, green: 0.94, blue: 0.91))
             .navigationTitle("More")
-            .navigationDestination(for: String.self) { dest in
-                if dest == "rules" {
-                    RulesView()
-                }
-            }
         }
     }
 
@@ -80,7 +75,9 @@ struct MoreView: View {
     }
 
     private var rulesLink: some View {
-        NavigationLink(value: "rules") {
+        NavigationLink {
+            RulesView()
+        } label: {
             HStack {
                 Label("Tournament Rules", systemImage: "list.clipboard.fill")
                     .font(.system(size: 15, weight: .semibold))
