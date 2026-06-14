@@ -2,6 +2,7 @@ import SwiftUI
 
 struct StandingsView: View {
     @EnvironmentObject var data: DataService
+    @State private var includeLive = false
 
     private let green = Color(red: 0.043, green: 0.431, blue: 0.310)
     private let gold = Color(red: 0.91, green: 0.725, blue: 0.137)
@@ -24,7 +25,7 @@ struct StandingsView: View {
                             .padding(.horizontal, 16)
                             .padding(.bottom, 4)
 
-                        let standings = data.standings()
+                        let standings = data.standings(includeLive: includeLive)
                         let sortedGroups = standings.keys.sorted()
 
                         ForEach(sortedGroups, id: \.self) { group in
@@ -36,6 +37,34 @@ struct StandingsView: View {
             }
             .background(Color(red: 0.91, green: 0.94, blue: 0.91))
             .navigationTitle("Standings")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Menu {
+                        Button {
+                            includeLive = true
+                        } label: {
+                            HStack {
+                                Text("Include scores from in-progress games")
+                                if includeLive {
+                                    Image(systemName: "checkmark")
+                                }
+                            }
+                        }
+                        Button {
+                            includeLive = false
+                        } label: {
+                            HStack {
+                                Text("Exclude scores from in-progress games")
+                                if !includeLive {
+                                    Image(systemName: "checkmark")
+                                }
+                            }
+                        }
+                    } label: {
+                        Image(systemName: "line.3.horizontal.decrease.circle")
+                    }
+                }
+            }
             .refreshable {
                 await data.refresh()
             }

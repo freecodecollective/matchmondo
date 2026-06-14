@@ -183,7 +183,7 @@ final class DataService: ObservableObject {
         }
     }
 
-    func standings() -> [String: [GroupStanding]] {
+    func standings(includeLive: Bool = false) -> [String: [GroupStanding]] {
         var groups: [String: [String: GroupStanding]] = [:]
 
         for m in matches {
@@ -196,7 +196,7 @@ final class DataService: ObservableObject {
                 }
             }
 
-            if let sh = m.scoreH, let sa = m.scoreA, !m.isLive,
+            if let sh = m.scoreH, let sa = m.scoreA, (includeLive || !m.isLive),
                groups[group]?[m.home] != nil, groups[group]?[m.away] != nil {
                 groups[group]?[m.home]?.played += 1
                 groups[group]?[m.away]?.played += 1
