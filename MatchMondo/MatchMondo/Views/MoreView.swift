@@ -11,9 +11,9 @@ struct MoreView: View {
             ScrollView {
                 VStack(spacing: 16) {
                     aboutSection
+                    supportSection
                     settingsSection
                     rulesLink
-                    supportSection
                     feedbackSection
                     appInfoSection
                 }
