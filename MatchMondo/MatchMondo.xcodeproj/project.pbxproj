@@ -21,6 +21,7 @@
 		AA000012 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100012 /* TodayView.swift */; };
 		AA000013 /* MatchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100013 /* MatchDetailView.swift */; };
 		AA000014 /* ScoreVisibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100014 /* ScoreVisibility.swift */; };
+		AA000015 /* YouTubePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100015 /* YouTubePlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AA100012 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		AA100013 /* MatchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailView.swift; sourceTree = "<group>"; };
 		AA100014 /* ScoreVisibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreVisibility.swift; sourceTree = "<group>"; };
+		AA100015 /* YouTubePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubePlayerView.swift; sourceTree = "<group>"; };
 		AA200001 /* MatchMondo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchMondo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 				AA100011 /* RulesView.swift */,
 				AA100009 /* FlagView.swift */,
 				AA100013 /* MatchDetailView.swift */,
+				AA100015 /* YouTubePlayerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				AA000012 /* TodayView.swift in Sources */,
 				AA000013 /* MatchDetailView.swift in Sources */,
 				AA000014 /* ScoreVisibility.swift in Sources */,
+				AA000015 /* YouTubePlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

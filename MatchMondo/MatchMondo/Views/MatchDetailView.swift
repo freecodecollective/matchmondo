@@ -3,6 +3,8 @@ import SwiftUI
 struct MatchDetailView: View {
     let match: Match
     @EnvironmentObject var data: DataService
+    @State private var activeVideoId: String?
+    @State private var activeVideoTitle: String = ""
 
     private let green = Color(red: 0.043, green: 0.431, blue: 0.310)
 
@@ -24,6 +26,12 @@ struct MatchDetailView: View {
         .background(Color(red: 0.91, green: 0.94, blue: 0.91))
         .navigationTitle("Match \(match.n)")
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(item: Binding(
+            get: { activeVideoId.map { VideoPresentation(id: $0, title: activeVideoTitle) } },
+            set: { activeVideoId = $0?.id }
+        )) { video in
+            YouTubePlayerSheet(videoId: video.id, title: video.title)
+        }
     }
 
     private var scoreHeader: some View {
@@ -149,9 +157,8 @@ struct MatchDetailView: View {
 
     private func highlightCard(videoId: String, label: String, icon: String) -> some View {
         Button {
-            if let url = URL(string: "https://www.youtube.com/watch?v=\(videoId)") {
-                UIApplication.shared.open(url)
-            }
+            activeVideoTitle = "\(match.home) vs \(match.away)"
+            activeVideoId = videoId
         } label: {
             ZStack(alignment: .bottomLeading) {
                 AsyncImage(url: URL(string: "https://img.youtube.com/vi/\(videoId)/mqdefault.jpg")) { phase in
@@ -220,4 +227,9 @@ struct MatchDetailView: View {
         f.dateFormat = "EEEE, MMMM d 'at' h:mm a"
         return f.string(from: match.kickoff)
     }
+}
+
+private struct VideoPresentation: Identifiable {
+    let id: String
+    let title: String
 }
