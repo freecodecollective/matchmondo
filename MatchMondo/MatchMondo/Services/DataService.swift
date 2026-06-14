@@ -5,6 +5,7 @@ final class DataService: ObservableObject {
     @Published var matches: [Match] = []
     @Published var players: [String: [Player]] = [:]
     @Published var rosters: [String: [RosterPlayer]] = [:]
+    @Published var highlights: [String: Highlight] = [:]
     @Published var isLoading = true
     @Published var lastUpdated: Date?
 
@@ -23,6 +24,7 @@ final class DataService: ObservableObject {
         await fetchMatches()
         await fetchPlayers()
         await fetchRosters()
+        await fetchHighlights()
         isLoading = false
         await refreshScoresFromESPN()
         startAutoRefresh()
@@ -87,6 +89,22 @@ final class DataService: ObservableObject {
         }
     }
 
+    private func fetchHighlights() async {
+        guard let url = cacheBustedURL("highlights.json") else { return }
+        do {
+            var request = URLRequest(url: url)
+            request.cachePolicy = .reloadIgnoringLocalCacheData
+            let (data, _) = try await URLSession.shared.data(for: request)
+            highlights = try JSONDecoder().decode([String: Highlight].self, from: data)
+        } catch {
+            print("Failed to load highlights: \(error)")
+        }
+    }
+
+    func highlight(for matchNumber: Int) -> Highlight? {
+        highlights[String(matchNumber)]
+    }
+
     private func cacheBustedURL(_ file: String) -> URL? {
         let ts = Int(Date().timeIntervalSince1970)
         return URL(string: "\(baseURL)\(file)?t=\(ts)")
@@ -142,6 +160,7 @@ final class DataService: ObservableObject {
 
             anyLive = liveNow
             if changed { lastUpdated = Date() }
+            await fetchHighlights()
         } catch {
             print("ESPN refresh failed: \(error)")
             await fetchMatches()

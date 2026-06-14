@@ -1,6 +1,6 @@
 import Foundation
 
-struct Match: Codable, Identifiable {
+struct Match: Codable, Identifiable, Hashable {
     var id: Int { n }
     let n: Int
     let utc: String
@@ -64,6 +64,11 @@ struct RosterPlayer: Codable, Identifiable {
     let age: Int
     let position: String
     let club: String
+}
+
+struct Highlight: Codable {
+    let short: String?
+    let extended: String?
 }
 
 struct GroupStanding: Identifiable {

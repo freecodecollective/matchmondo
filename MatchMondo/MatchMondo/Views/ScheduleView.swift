@@ -41,10 +41,12 @@ struct ScheduleView: View {
                     ForEach(filteredDays, id: \.dayString) { day in
                         Section {
                             ForEach(day.matches) { match in
-                                MatchCardView(match: match, showScores: showScores)
-                                    .listRowInsets(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12))
-                                    .listRowSeparator(.hidden)
-                                    .listRowBackground(Color.clear)
+                                NavigationLink(value: match) {
+                                    MatchCardView(match: match, showScores: showScores)
+                                }
+                                .listRowInsets(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12))
+                                .listRowSeparator(.hidden)
+                                .listRowBackground(Color.clear)
                             }
                         } header: {
                             HStack(spacing: 8) {
@@ -64,6 +66,9 @@ struct ScheduleView: View {
                             .id(day.dayString)
                         }
                     }
+                }
+                .navigationDestination(for: Match.self) { match in
+                    MatchDetailView(match: match)
                 }
                 .listStyle(.plain)
                 .background(Color(red: 0.91, green: 0.94, blue: 0.91))

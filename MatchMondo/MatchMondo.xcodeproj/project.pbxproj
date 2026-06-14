@@ -19,6 +19,7 @@
 		AA000010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA100010 /* Assets.xcassets */; };
 		AA000011 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100011 /* RulesView.swift */; };
 		AA000012 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100012 /* TodayView.swift */; };
+		AA000013 /* MatchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100013 /* MatchDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		AA100010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA100011 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
 		AA100012 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		AA100013 /* MatchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailView.swift; sourceTree = "<group>"; };
 		AA200001 /* MatchMondo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchMondo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 				AA100007 /* PlayersView.swift */,
 				AA100011 /* RulesView.swift */,
 				AA100009 /* FlagView.swift */,
+				AA100013 /* MatchDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				AA000009 /* FlagView.swift in Sources */,
 				AA000011 /* RulesView.swift in Sources */,
 				AA000012 /* TodayView.swift in Sources */,
+				AA000013 /* MatchDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

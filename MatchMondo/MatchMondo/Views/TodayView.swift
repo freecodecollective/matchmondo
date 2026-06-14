@@ -46,6 +46,9 @@ struct TodayView: View {
                 await data.refresh()
             }
             .navigationTitle("MatchMondo")
+            .navigationDestination(for: Match.self) { match in
+                MatchDetailView(match: match)
+            }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Toggle(isOn: $showScores) {
@@ -104,7 +107,10 @@ struct TodayView: View {
             .padding(.horizontal, 4)
 
             ForEach(matches) { match in
-                MatchCardView(match: match, showScores: showScores)
+                NavigationLink(value: match) {
+                    MatchCardView(match: match, showScores: showScores)
+                }
+                .buttonStyle(.plain)
             }
         }
     }
