@@ -19,13 +19,16 @@ struct MatchDetailView: View {
             VStack(spacing: 16) {
                 scoreHeader
                 if let detail, !detail.events.isEmpty {
-                    eventsTimeline(detail.events)
+                    goalsAndCards(detail.events)
                 }
+                highlightsSection
                 if let detail, detail.homeStats != nil, detail.awayStats != nil {
                     statsSection(detail)
                 }
+                if let detail, !detail.events.isEmpty {
+                    substitutions(detail.events)
+                }
                 matchInfo
-                highlightsSection
             }
             .padding(.horizontal, 16)
             .padding(.top, 8)
@@ -124,21 +127,28 @@ struct MatchDetailView: View {
 
     // MARK: - Events Timeline
 
-    private func eventsTimeline(_ events: [MatchEvent]) -> some View {
+    @ViewBuilder
+    private func goalsAndCards(_ events: [MatchEvent]) -> some View {
         let goals = events.filter { [.goal, .penaltyGoal, .ownGoal].contains($0.type) }
         let cards = events.filter { [.yellowCard, .redCard, .secondYellow].contains($0.type) }
-        let subs = events.filter { $0.type == .substitution }
 
-        return VStack(spacing: 12) {
-            if !goals.isEmpty {
-                eventGroup(title: "Goals", icon: "sportscourt.fill", events: goals)
+        if !goals.isEmpty || !cards.isEmpty {
+            VStack(spacing: 12) {
+                if !goals.isEmpty {
+                    eventGroup(title: "Goals", icon: "sportscourt.fill", events: goals)
+                }
+                if !cards.isEmpty {
+                    eventGroup(title: "Cards", icon: "rectangle.portrait.fill", events: cards)
+                }
             }
-            if !cards.isEmpty {
-                eventGroup(title: "Cards", icon: "rectangle.portrait.fill", events: cards)
-            }
-            if !subs.isEmpty {
-                eventGroup(title: "Substitutions", icon: "arrow.left.arrow.right", events: subs)
-            }
+        }
+    }
+
+    @ViewBuilder
+    private func substitutions(_ events: [MatchEvent]) -> some View {
+        let subs = events.filter { $0.type == .substitution }
+        if !subs.isEmpty {
+            eventGroup(title: "Substitutions", icon: "arrow.left.arrow.right", events: subs)
         }
     }
 
@@ -389,7 +399,7 @@ struct MatchDetailView: View {
     @ViewBuilder
     private var highlightsSection: some View {
         if let hl = highlight, (hl.short != nil || hl.extended != nil) {
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: 10) {
                 HStack(spacing: 6) {
                     Image(systemName: "play.rectangle.fill")
                         .font(.system(size: 13))
@@ -399,22 +409,41 @@ struct MatchDetailView: View {
                 }
                 .padding(.leading, 4)
 
-                if let videoId = hl.short {
+                if hl.short != nil && hl.extended != nil {
+                    HStack(spacing: 10) {
+                        highlightCard(
+                            videoId: hl.short!,
+                            label: "Highlights",
+                            icon: "play.rectangle.fill"
+                        )
+                        highlightCard(
+                            videoId: hl.extended!,
+                            label: "Extended",
+                            icon: "film.fill"
+                        )
+                    }
+                } else if let videoId = hl.short {
                     highlightCard(
                         videoId: videoId,
                         label: "Highlights",
                         icon: "play.rectangle.fill"
                     )
-                }
-
-                if let videoId = hl.extended {
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: 240)
+                } else if let videoId = hl.extended {
                     highlightCard(
                         videoId: videoId,
-                        label: "Extended Highlights",
+                        label: "Extended",
                         icon: "film.fill"
                     )
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: 240)
                 }
             }
+            .padding(14)
+            .background(Color(.systemBackground))
+            .clipShape(RoundedRectangle(cornerRadius: 14))
+            .shadow(color: .black.opacity(0.05), radius: 4, y: 2)
         } else if match.hasScore && !match.isLive {
             VStack(spacing: 8) {
                 Image(systemName: "film.stack")
@@ -449,31 +478,30 @@ struct MatchDetailView: View {
                         Rectangle()
                             .fill(Color.gray.opacity(0.15))
                             .aspectRatio(16/9, contentMode: .fill)
-                            .overlay(
-                                ProgressView()
-                            )
+                            .overlay(ProgressView())
                     }
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .clipShape(RoundedRectangle(cornerRadius: 10))
 
                 LinearGradient(
                     colors: [.black.opacity(0.7), .clear],
                     startPoint: .bottom,
                     endPoint: .center
                 )
-                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .clipShape(RoundedRectangle(cornerRadius: 10))
 
-                HStack(spacing: 6) {
+                HStack(spacing: 4) {
                     Image(systemName: icon)
-                        .font(.system(size: 14, weight: .bold))
+                        .font(.system(size: 11, weight: .bold))
                     Text(label)
-                        .font(.system(size: 14, weight: .bold))
+                        .font(.system(size: 11, weight: .bold))
+                        .lineLimit(1)
                 }
                 .foregroundStyle(.white)
-                .padding(12)
+                .padding(8)
 
                 Image(systemName: "play.circle.fill")
-                    .font(.system(size: 44))
+                    .font(.system(size: 30))
                     .foregroundStyle(.white.opacity(0.9))
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
