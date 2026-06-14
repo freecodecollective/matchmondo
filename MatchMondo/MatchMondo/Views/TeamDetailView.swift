@@ -78,10 +78,17 @@ struct TeamDetailView: View {
             let conceded = m.home == team ? m.scoreA! : m.scoreH!
             return scored > conceded
         }.count
+        let draws = teamMatches.filter { m in
+            guard m.hasScore else { return false }
+            return (m.home == team ? m.scoreH! : m.scoreA!) == (m.home == team ? m.scoreA! : m.scoreH!)
+        }.count
+        let losses = played - wins - draws
 
         return HStack(spacing: 16) {
             statPill(label: "Played", value: "\(played)")
             statPill(label: "W", value: "\(wins)")
+            statPill(label: "D", value: "\(draws)")
+            statPill(label: "L", value: "\(losses)")
             statPill(label: "GF", value: "\(gf)")
             statPill(label: "GA", value: "\(ga)")
             if let roster = data.rosters[team] {

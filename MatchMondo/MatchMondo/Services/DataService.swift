@@ -342,15 +342,18 @@ final class DataService: ObservableObject {
                 let participants = ke.participants ?? []
 
                 let eventType: MatchEventType?
-                switch ke.type.type {
-                case "goal":
+                let typeKey = ke.type.type
+                switch typeKey {
+                case "own-goal":
+                    eventType = .ownGoal
+                case "penalty-scored", "penalty---scored":
+                    eventType = .penaltyGoal
+                case _ where typeKey == "goal" || typeKey.hasPrefix("goal---"):
                     if typeName.lowercased().contains("own goal") {
                         eventType = .ownGoal
                     } else {
                         eventType = .goal
                     }
-                case "penalty-scored":
-                    eventType = .penaltyGoal
                 case "yellow-card":
                     eventType = .yellowCard
                 case "red-card":
