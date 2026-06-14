@@ -196,7 +196,7 @@ final class DataService: ObservableObject {
                 }
             }
 
-            if let sh = m.scoreH, let sa = m.scoreA,
+            if let sh = m.scoreH, let sa = m.scoreA, !m.isLive,
                groups[group]?[m.home] != nil, groups[group]?[m.away] != nil {
                 groups[group]?[m.home]?.played += 1
                 groups[group]?[m.away]?.played += 1

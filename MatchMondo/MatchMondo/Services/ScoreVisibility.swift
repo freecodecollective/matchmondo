@@ -1,16 +1,32 @@
 import Foundation
 import Combine
 
+enum ScoreMode: Equatable {
+    case hideAll
+    case completedOnly
+    case all
+}
+
 @MainActor
 final class ScoreVisibility: ObservableObject {
-    @Published var showScores = false
+    @Published var mode: ScoreMode = .hideAll
 
     private var hideTimer: Timer?
     private static let autoHideInterval: TimeInterval = 5 * 60
 
-    func toggle() {
-        showScores.toggle()
-        if showScores {
+    var showScores: Bool { mode != .hideAll }
+
+    func shouldShowScore(for match: Match) -> Bool {
+        switch mode {
+        case .hideAll: return false
+        case .completedOnly: return match.hasScore && !match.isLive
+        case .all: return true
+        }
+    }
+
+    func setMode(_ newMode: ScoreMode) {
+        mode = newMode
+        if newMode != .hideAll {
             startAutoHide()
         } else {
             cancelAutoHide()
@@ -18,7 +34,7 @@ final class ScoreVisibility: ObservableObject {
     }
 
     func hide() {
-        showScores = false
+        mode = .hideAll
         cancelAutoHide()
     }
 
@@ -26,7 +42,7 @@ final class ScoreVisibility: ObservableObject {
         cancelAutoHide()
         hideTimer = Timer.scheduledTimer(withTimeInterval: Self.autoHideInterval, repeats: false) { [weak self] _ in
             Task { @MainActor [weak self] in
-                self?.showScores = false
+                self?.mode = .hideAll
             }
         }
     }

@@ -52,12 +52,14 @@ struct TodayView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        scoreVisibility.toggle()
+                        if scoreVisibility.mode == .hideAll {
+                            scoreVisibility.setMode(.all)
+                        } else {
+                            scoreVisibility.hide()
+                        }
                     } label: {
-                        Label(
-                            scoreVisibility.showScores ? "Hide scores" : "Show live scores",
-                            systemImage: scoreVisibility.showScores ? "eye.fill" : "eye.slash"
-                        )
+                        Text(scoreVisibility.mode != .hideAll ? "Hide live scores" : "Show live scores")
+                            .font(.system(size: 13, weight: .semibold))
                     }
                     .tint(green)
                 }
@@ -113,7 +115,7 @@ struct TodayView: View {
 
             ForEach(matches) { match in
                 NavigationLink(value: match) {
-                    MatchCardView(match: match, showScores: scoreVisibility.showScores)
+                    MatchCardView(match: match, showScore: scoreVisibility.shouldShowScore(for: match))
                 }
                 .buttonStyle(.plain)
             }

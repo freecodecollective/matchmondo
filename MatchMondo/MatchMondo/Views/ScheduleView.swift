@@ -42,7 +42,7 @@ struct ScheduleView: View {
                         Section {
                             ForEach(day.matches) { match in
                                 NavigationLink(value: match) {
-                                    MatchCardView(match: match, showScores: scoreVisibility.showScores)
+                                    MatchCardView(match: match, showScore: scoreVisibility.shouldShowScore(for: match))
                                 }
                                 .listRowInsets(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12))
                                 .listRowSeparator(.hidden)
@@ -98,12 +98,36 @@ struct ScheduleView: View {
                         Divider()
 
                         Button {
-                            scoreVisibility.toggle()
+                            scoreVisibility.setMode(.all)
                         } label: {
-                            Label(
-                                scoreVisibility.showScores ? "Hide scores" : "Show live scores",
-                                systemImage: scoreVisibility.showScores ? "eye.fill" : "eye.slash"
-                            )
+                            HStack {
+                                Text("Show live scores")
+                                if scoreVisibility.mode == .all {
+                                    Image(systemName: "checkmark")
+                                }
+                            }
+                        }
+
+                        Button {
+                            scoreVisibility.setMode(.completedOnly)
+                        } label: {
+                            HStack {
+                                Text("Show completed game scores")
+                                if scoreVisibility.mode == .completedOnly {
+                                    Image(systemName: "checkmark")
+                                }
+                            }
+                        }
+
+                        Button {
+                            scoreVisibility.hide()
+                        } label: {
+                            HStack {
+                                Text("Hide all scores")
+                                if scoreVisibility.mode == .hideAll {
+                                    Image(systemName: "checkmark")
+                                }
+                            }
                         }
                     } label: {
                         Image(systemName: "line.3.horizontal.decrease.circle")

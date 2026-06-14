@@ -2,7 +2,7 @@ import SwiftUI
 
 struct MatchCardView: View {
     let match: Match
-    var showScores: Bool = true
+    var showScore: Bool = true
     var compact: Bool = false
 
     private var stageColor: Color {
@@ -11,11 +11,11 @@ struct MatchCardView: View {
     }
 
     private var homeWin: Bool {
-        showScores && match.hasScore && match.scoreH! > match.scoreA!
+        showScore && match.hasScore && match.scoreH! > match.scoreA!
     }
 
     private var awayWin: Bool {
-        showScores && match.hasScore && match.scoreA! > match.scoreH!
+        showScore && match.hasScore && match.scoreA! > match.scoreH!
     }
 
     private var timeString: String {
@@ -49,7 +49,7 @@ struct MatchCardView: View {
 
                 Spacer()
 
-                if showScores && match.hasScore {
+                if showScore && match.hasScore {
                     let scoreBg = match.isLive
                         ? Color(red: 0.15, green: 0.55, blue: 0.2)
                         : Color(red: 0.1, green: 0.1, blue: 0.18)
