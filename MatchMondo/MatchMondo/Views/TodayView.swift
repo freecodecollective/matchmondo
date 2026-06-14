@@ -13,7 +13,9 @@ struct TodayView: View {
             ScrollView {
                 VStack(spacing: 0) {
                     headerBanner
-                        .padding(.bottom, 8)
+
+                    ScoreFilterBar()
+                        .padding(.bottom, 4)
 
                     if data.isLoading {
                         ProgressView("Loading matches...")
@@ -53,21 +55,6 @@ struct TodayView: View {
             .navigationTitle("MatchMondo")
             .navigationDestination(for: Match.self) { match in
                 MatchDetailView(match: match)
-            }
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        if scoreVisibility.mode == .hideAll {
-                            scoreVisibility.setMode(.all)
-                        } else {
-                            scoreVisibility.hide()
-                        }
-                    } label: {
-                        Text(scoreVisibility.mode != .hideAll ? "Hide scores" : "Show scores")
-                            .font(.system(size: 13, weight: .semibold))
-                    }
-                    .tint(green)
-                }
             }
         }
     }

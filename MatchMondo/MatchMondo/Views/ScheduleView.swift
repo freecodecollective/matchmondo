@@ -94,45 +94,14 @@ struct ScheduleView: View {
                                 }
                             }
                         }
-
-                        Divider()
-
-                        Button {
-                            scoreVisibility.setMode(.all)
-                        } label: {
-                            HStack {
-                                Text("Show live & completed game scores")
-                                if scoreVisibility.mode == .all {
-                                    Image(systemName: "checkmark")
-                                }
-                            }
-                        }
-
-                        Button {
-                            scoreVisibility.setMode(.completedOnly)
-                        } label: {
-                            HStack {
-                                Text("Show completed game scores")
-                                if scoreVisibility.mode == .completedOnly {
-                                    Image(systemName: "checkmark")
-                                }
-                            }
-                        }
-
-                        Button {
-                            scoreVisibility.hide()
-                        } label: {
-                            HStack {
-                                Text("Hide all scores")
-                                if scoreVisibility.mode == .hideAll {
-                                    Image(systemName: "checkmark")
-                                }
-                            }
-                        }
                     } label: {
                         Image(systemName: "line.3.horizontal.decrease.circle")
                     }
                 }
+            }
+            .safeAreaInset(edge: .top) {
+                ScoreFilterBar()
+                    .background(Color(red: 0.91, green: 0.94, blue: 0.91))
             }
             .refreshable {
                 await data.refresh()

@@ -17,7 +17,7 @@ struct MatchMondoApp: App {
         }
         .onChange(of: scenePhase) { _, phase in
             if phase == .background {
-                scoreVisibility.hide()
+                scoreVisibility.hideAll()
             }
         }
     }
