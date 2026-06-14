@@ -11,8 +11,15 @@ struct Match: Codable, Identifiable {
     let venue: String
     let city: String
     let tv: String?
-    let scoreH: Int?
-    let scoreA: Int?
+    var scoreH: Int?
+    var scoreA: Int?
+
+    var isLive: Bool = false
+    var liveDetail: String?
+
+    enum CodingKeys: String, CodingKey {
+        case n, utc, stage, group, home, away, venue, city, tv, scoreH, scoreA
+    }
 
     var kickoff: Date {
         ISO8601DateFormatter().date(from: utc) ?? Date.distantPast

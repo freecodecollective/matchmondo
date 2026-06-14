@@ -27,9 +27,13 @@ struct MatchCardView: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack {
-                Text(timeString)
-                    .font(.system(size: 13, weight: .bold, design: .rounded))
-                    .foregroundStyle(.secondary)
+                if match.isLive {
+                    LiveBadge(detail: match.liveDetail)
+                } else {
+                    Text(timeString)
+                        .font(.system(size: 13, weight: .bold, design: .rounded))
+                        .foregroundStyle(.secondary)
+                }
 
                 Spacer()
 
@@ -46,12 +50,15 @@ struct MatchCardView: View {
                 Spacer()
 
                 if showScores && match.hasScore {
+                    let scoreBg = match.isLive
+                        ? Color(red: 0.15, green: 0.55, blue: 0.2)
+                        : Color(red: 0.1, green: 0.1, blue: 0.18)
                     HStack(spacing: 6) {
                         Text("\(match.scoreH!)")
                             .font(.system(size: 18, weight: .heavy, design: .rounded))
                             .foregroundStyle(.white)
                             .frame(width: 32, height: 28)
-                            .background(Color(red: 0.1, green: 0.1, blue: 0.18))
+                            .background(scoreBg)
                             .clipShape(RoundedRectangle(cornerRadius: 6))
 
                         Text("–")
@@ -62,7 +69,7 @@ struct MatchCardView: View {
                             .font(.system(size: 18, weight: .heavy, design: .rounded))
                             .foregroundStyle(.white)
                             .frame(width: 32, height: 28)
-                            .background(Color(red: 0.1, green: 0.1, blue: 0.18))
+                            .background(scoreBg)
                             .clipShape(RoundedRectangle(cornerRadius: 6))
                     }
                 } else {
@@ -107,5 +114,25 @@ struct MatchCardView: View {
                 .stroke(Color(.separator).opacity(0.3), lineWidth: 1)
         )
         .shadow(color: .black.opacity(0.04), radius: 3, y: 1)
+    }
+}
+
+struct LiveBadge: View {
+    let detail: String?
+
+    @State private var pulse = false
+
+    var body: some View {
+        HStack(spacing: 5) {
+            Circle()
+                .fill(.red)
+                .frame(width: 7, height: 7)
+                .opacity(pulse ? 0.4 : 1)
+                .animation(.easeInOut(duration: 0.8).repeatForever(autoreverses: true), value: pulse)
+                .onAppear { pulse = true }
+            Text(detail ?? "LIVE")
+                .font(.system(size: 12, weight: .bold, design: .rounded))
+                .foregroundStyle(.red)
+        }
     }
 }

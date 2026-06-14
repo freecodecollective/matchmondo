@@ -85,12 +85,7 @@ struct TodayView: View {
     }
 
     private var hasLiveMatches: Bool {
-        let now = Date()
-        return data.todayMatches().contains { m in
-            let start = m.kickoff
-            let end = m.kickoff.addingTimeInterval(7200)
-            return now >= start && now <= end
-        }
+        data.anyLive
     }
 
     private func daySection(title: String, matches: [Match]) -> some View {
