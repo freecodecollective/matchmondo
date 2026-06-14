@@ -125,6 +125,45 @@ enum Rankings {
     static func rank(for team: String) -> Int? { ranks[team] }
 }
 
+// MARK: - Match Detail (from ESPN Summary API)
+
+struct MatchDetail {
+    let events: [MatchEvent]
+    let homeStats: TeamStats?
+    let awayStats: TeamStats?
+    let attendance: Int?
+    let referee: String?
+}
+
+struct MatchEvent: Identifiable {
+    let id = UUID()
+    let minute: String
+    let type: MatchEventType
+    let teamName: String
+    let playerName: String
+    let assistName: String?
+    let playerOut: String?
+    let description: String
+}
+
+enum MatchEventType {
+    case goal, penaltyGoal, ownGoal, yellowCard, redCard, secondYellow, substitution
+}
+
+struct TeamStats {
+    let teamName: String
+    let possession: String?
+    let shots: String?
+    let shotsOnGoal: String?
+    let corners: String?
+    let fouls: String?
+    let yellowCards: String?
+    let redCards: String?
+    let offsides: String?
+    let saves: String?
+    let passAccuracy: String?
+}
+
 struct StageColor {
     static func color(for slug: String) -> (r: Double, g: Double, b: Double) {
         switch slug {

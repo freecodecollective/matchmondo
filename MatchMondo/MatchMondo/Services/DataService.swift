@@ -18,6 +18,8 @@ final class DataService: ObservableObject {
     ]
     private var refreshTimer: Timer?
     @Published var anyLive = false
+    private var espnEventIDs: [Int: String] = [:]
+    @Published var matchDetails: [Int: MatchDetail] = [:]
 
     func load() async {
         isLoading = true
@@ -27,6 +29,7 @@ final class DataService: ObservableObject {
         await fetchHighlights()
         isLoading = false
         await refreshScoresFromESPN()
+        await buildESPNEventIDMap()
         startAutoRefresh()
     }
 
@@ -110,6 +113,37 @@ final class DataService: ObservableObject {
         return URL(string: "\(baseURL)\(file)?t=\(ts)")
     }
 
+    private func buildESPNEventIDMap() async {
+        let cal = Calendar.current
+        let today = cal.startOfDay(for: Date())
+        let fmt = DateFormatter()
+        fmt.dateFormat = "yyyyMMdd"
+
+        let matchDates = Set(matches.filter(\.hasScore).map { cal.startOfDay(for: $0.kickoff) })
+            .union(Set(matches.filter { $0.isLive }.map { cal.startOfDay(for: $0.kickoff) }))
+            .union([today])
+
+        for date in matchDates {
+            let dateStr = fmt.string(from: date)
+            guard let url = URL(string: "\(espnAPI)?dates=\(dateStr)") else { continue }
+            do {
+                var request = URLRequest(url: url)
+                request.cachePolicy = .reloadIgnoringLocalCacheData
+                request.timeoutInterval = 8
+                let (data, _) = try await URLSession.shared.data(for: request)
+                let response = try JSONDecoder().decode(ESPNResponse.self, from: data)
+                for event in response.events {
+                    let kickoff = Self.parseESPNDate(event.date)?.timeIntervalSince1970 ?? 0
+                    if let idx = matches.firstIndex(where: { abs($0.kickoff.timeIntervalSince1970 - kickoff) < 120 }) {
+                        espnEventIDs[matches[idx].n] = event.id
+                    }
+                }
+            } catch {
+                continue
+            }
+        }
+    }
+
     private func refreshScoresFromESPN() async {
         guard let url = URL(string: espnAPI) else { return }
         do {
@@ -134,6 +168,8 @@ final class DataService: ObservableObject {
                 guard let idx = matches.firstIndex(where: {
                     abs($0.kickoff.timeIntervalSince1970 - kickoff) < 120
                 }) else { continue }
+
+                espnEventIDs[matches[idx].n] = event.id
 
                 let isLive = statusName.contains("IN_PROGRESS") || statusName.contains("HALF")
                     || statusName.contains("EXTRA") || statusName.contains("PENALT")
@@ -283,6 +319,114 @@ final class DataService: ObservableObject {
         df.locale = Locale(identifier: "en_US_POSIX")
         return df.date(from: str)
     }
+
+    func fetchMatchDetail(for match: Match) async {
+        guard (matchDetails[match.n] == nil || match.isLive),
+              let eventID = espnEventIDs[match.n],
+              let url = URL(string: "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/summary?event=\(eventID)")
+        else { return }
+
+        do {
+            var request = URLRequest(url: url)
+            request.cachePolicy = .reloadIgnoringLocalCacheData
+            request.timeoutInterval = 10
+            let (data, _) = try await URLSession.shared.data(for: request)
+            let summary = try JSONDecoder().decode(ESPNSummary.self, from: data)
+
+            var events: [MatchEvent] = []
+
+            for ke in summary.keyEvents {
+                let typeName = ke.type.text
+                let minute = ke.clock?.displayValue ?? ""
+                let teamName = ke.team?.displayName ?? ""
+                let participants = ke.participants ?? []
+
+                let eventType: MatchEventType?
+                switch ke.type.type {
+                case "goal":
+                    if typeName.lowercased().contains("own goal") {
+                        eventType = .ownGoal
+                    } else {
+                        eventType = .goal
+                    }
+                case "penalty-scored":
+                    eventType = .penaltyGoal
+                case "yellow-card":
+                    eventType = .yellowCard
+                case "red-card":
+                    if typeName.lowercased().contains("second yellow") {
+                        eventType = .secondYellow
+                    } else {
+                        eventType = .redCard
+                    }
+                case "substitution":
+                    eventType = .substitution
+                default:
+                    eventType = nil
+                }
+
+                guard let type = eventType else { continue }
+
+                let playerName = participants.first?.athlete.displayName ?? ""
+                var assistName: String? = nil
+                var playerOut: String? = nil
+
+                if type == .goal || type == .penaltyGoal || type == .ownGoal {
+                    if participants.count > 1 {
+                        assistName = participants[1].athlete.displayName
+                    }
+                } else if type == .substitution {
+                    if participants.count > 1 {
+                        playerOut = participants[1].athlete.displayName
+                    }
+                }
+
+                events.append(MatchEvent(
+                    minute: minute,
+                    type: type,
+                    teamName: teamName,
+                    playerName: playerName,
+                    assistName: assistName,
+                    playerOut: playerOut,
+                    description: ke.text ?? ""
+                ))
+            }
+
+            let boxscore = summary.boxscore
+            func parseStats(_ teamData: ESPNBoxscoreTeam?) -> TeamStats? {
+                guard let t = teamData else { return nil }
+                let map = Dictionary(uniqueKeysWithValues: t.statistics.map { ($0.label, $0.displayValue) })
+                return TeamStats(
+                    teamName: t.team.displayName,
+                    possession: map["Possession"],
+                    shots: map["SHOTS"],
+                    shotsOnGoal: map["ON GOAL"],
+                    corners: map["Corner Kicks"],
+                    fouls: map["Fouls"],
+                    yellowCards: map["Yellow Cards"],
+                    redCards: map["Red Cards"],
+                    offsides: map["Offsides"],
+                    saves: map["Saves"],
+                    passAccuracy: map["Pass Completion %"]
+                )
+            }
+
+            let homeTeam = boxscore?.teams.first
+            let awayTeam: ESPNBoxscoreTeam? = (boxscore?.teams.count ?? 0) > 1 ? boxscore?.teams[1] : nil
+
+            let detail = MatchDetail(
+                events: events,
+                homeStats: parseStats(homeTeam),
+                awayStats: parseStats(awayTeam),
+                attendance: summary.gameInfo?.attendance,
+                referee: summary.gameInfo?.officials?.first?.fullName
+            )
+
+            matchDetails[match.n] = detail
+        } catch {
+            print("Failed to fetch match detail: \(error)")
+        }
+    }
 }
 
 // MARK: - ESPN API Models
@@ -292,6 +436,7 @@ private struct ESPNResponse: Decodable {
 }
 
 private struct ESPNEvent: Decodable {
+    let id: String
     let date: String
     let competitions: [ESPNCompetition]
 }
@@ -313,4 +458,64 @@ private struct ESPNStatus: Decodable {
 private struct ESPNStatusType: Decodable {
     let name: String
     let shortDetail: String
+}
+
+// MARK: - ESPN Summary Models
+
+private struct ESPNSummary: Decodable {
+    let keyEvents: [ESPNKeyEvent]
+    let boxscore: ESPNBoxscore?
+    let gameInfo: ESPNGameInfo?
+}
+
+private struct ESPNKeyEvent: Decodable {
+    let type: ESPNEventType
+    let text: String?
+    let clock: ESPNClock?
+    let team: ESPNTeamRef?
+    let participants: [ESPNParticipant]?
+}
+
+private struct ESPNEventType: Decodable {
+    let text: String
+    let type: String
+}
+
+private struct ESPNClock: Decodable {
+    let displayValue: String
+}
+
+private struct ESPNTeamRef: Decodable {
+    let displayName: String
+}
+
+private struct ESPNParticipant: Decodable {
+    let athlete: ESPNAthlete
+}
+
+private struct ESPNAthlete: Decodable {
+    let displayName: String
+}
+
+private struct ESPNBoxscore: Decodable {
+    let teams: [ESPNBoxscoreTeam]
+}
+
+private struct ESPNBoxscoreTeam: Decodable {
+    let team: ESPNTeamRef
+    let statistics: [ESPNStatistic]
+}
+
+private struct ESPNStatistic: Decodable {
+    let label: String
+    let displayValue: String
+}
+
+private struct ESPNGameInfo: Decodable {
+    let attendance: Int?
+    let officials: [ESPNOfficial]?
+}
+
+private struct ESPNOfficial: Decodable {
+    let fullName: String
 }
