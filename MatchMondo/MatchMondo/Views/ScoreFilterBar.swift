@@ -7,14 +7,14 @@ struct ScoreFilterBar: View {
 
     var body: some View {
         HStack(spacing: 6) {
+            chip("Hide all scores", isOn: scoreVisibility.isHideAll) {
+                scoreVisibility.hideAll()
+            }
             chip("Completed", isOn: scoreVisibility.showCompleted) {
                 scoreVisibility.toggleCompleted()
             }
             chip("Live", isOn: scoreVisibility.showLive) {
                 scoreVisibility.toggleLive()
-            }
-            chip("Hide all", isOn: scoreVisibility.isHideAll) {
-                scoreVisibility.hideAll()
             }
         }
         .padding(.horizontal, 16)
