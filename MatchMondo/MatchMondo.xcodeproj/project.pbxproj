@@ -20,6 +20,7 @@
 		AA000011 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100011 /* RulesView.swift */; };
 		AA000012 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100012 /* TodayView.swift */; };
 		AA000013 /* MatchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100013 /* MatchDetailView.swift */; };
+		AA000014 /* ScoreVisibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100014 /* ScoreVisibility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		AA100011 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
 		AA100012 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		AA100013 /* MatchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailView.swift; sourceTree = "<group>"; };
+		AA100014 /* ScoreVisibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreVisibility.swift; sourceTree = "<group>"; };
 		AA200001 /* MatchMondo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchMondo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				AA100004 /* DataService.swift */,
+				AA100014 /* ScoreVisibility.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				AA000011 /* RulesView.swift in Sources */,
 				AA000012 /* TodayView.swift in Sources */,
 				AA000013 /* MatchDetailView.swift in Sources */,
+				AA000014 /* ScoreVisibility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct TodayView: View {
     @EnvironmentObject var data: DataService
-    @State private var showScores = true
+    @EnvironmentObject var scoreVisibility: ScoreVisibility
 
     private let green = Color(red: 0.043, green: 0.431, blue: 0.310)
     private let greenDark = Color(red: 0.027, green: 0.322, blue: 0.231)
@@ -51,8 +51,13 @@ struct TodayView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Toggle(isOn: $showScores) {
-                        Image(systemName: showScores ? "eye.fill" : "eye.slash")
+                    Button {
+                        scoreVisibility.toggle()
+                    } label: {
+                        Label(
+                            scoreVisibility.showScores ? "Hide scores" : "Show live scores",
+                            systemImage: scoreVisibility.showScores ? "eye.fill" : "eye.slash"
+                        )
                     }
                     .tint(green)
                 }
@@ -108,7 +113,7 @@ struct TodayView: View {
 
             ForEach(matches) { match in
                 NavigationLink(value: match) {
-                    MatchCardView(match: match, showScores: showScores)
+                    MatchCardView(match: match, showScores: scoreVisibility.showScores)
                 }
                 .buttonStyle(.plain)
             }

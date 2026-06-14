@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ScheduleView: View {
     @EnvironmentObject var data: DataService
-    @State private var showScores = true
+    @EnvironmentObject var scoreVisibility: ScoreVisibility
     @State private var stageFilter = "All stages"
     @State private var searchText = ""
 
@@ -42,7 +42,7 @@ struct ScheduleView: View {
                         Section {
                             ForEach(day.matches) { match in
                                 NavigationLink(value: match) {
-                                    MatchCardView(match: match, showScores: showScores)
+                                    MatchCardView(match: match, showScores: scoreVisibility.showScores)
                                 }
                                 .listRowInsets(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12))
                                 .listRowSeparator(.hidden)
@@ -97,7 +97,14 @@ struct ScheduleView: View {
 
                         Divider()
 
-                        Toggle("Show Scores", isOn: $showScores)
+                        Button {
+                            scoreVisibility.toggle()
+                        } label: {
+                            Label(
+                                scoreVisibility.showScores ? "Hide scores" : "Show live scores",
+                                systemImage: scoreVisibility.showScores ? "eye.fill" : "eye.slash"
+                            )
+                        }
                     } label: {
                         Image(systemName: "line.3.horizontal.decrease.circle")
                     }
