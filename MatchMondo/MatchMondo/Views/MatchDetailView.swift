@@ -19,11 +19,14 @@ struct MatchDetailView: View {
             VStack(spacing: 16) {
                 scoreHeader
                 if let detail, !detail.events.isEmpty {
-                    goalsAndCards(detail.events)
+                    goalsSummary(detail.events)
                 }
                 highlightsSection
                 if let detail, detail.homeStats != nil, detail.awayStats != nil {
                     statsSection(detail)
+                }
+                if let detail, !detail.events.isEmpty {
+                    cardsSection(detail.events)
                 }
                 if let detail, !detail.events.isEmpty {
                     substitutions(detail.events)
@@ -62,7 +65,6 @@ struct MatchDetailView: View {
                             .font(.system(size: 15, weight: .bold))
                             .foregroundStyle(.primary)
                         RankBadge(team: match.home)
-                        goalScorers(for: match.home)
                     }
                 }
                 .buttonStyle(.plain)
@@ -108,20 +110,10 @@ struct MatchDetailView: View {
                             .font(.system(size: 15, weight: .bold))
                             .foregroundStyle(.primary)
                         RankBadge(team: match.away)
-                        goalScorers(for: match.away)
                     }
                 }
                 .buttonStyle(.plain)
                 .frame(maxWidth: .infinity)
-            }
-
-            if let detail {
-                if let ref = detail.referee {
-                    Label(ref, systemImage: "person.badge.shield.checkmark")
-                        .font(.system(size: 11))
-                        .foregroundStyle(.secondary)
-                        .padding(.top, 4)
-                }
             }
         }
         .padding(.vertical, 16)
@@ -134,19 +126,18 @@ struct MatchDetailView: View {
     // MARK: - Events Timeline
 
     @ViewBuilder
-    private func goalsAndCards(_ events: [MatchEvent]) -> some View {
+    private func goalsSummary(_ events: [MatchEvent]) -> some View {
         let goals = events.filter { [.goal, .penaltyGoal, .ownGoal].contains($0.type) }
-        let cards = events.filter { [.yellowCard, .redCard, .secondYellow].contains($0.type) }
+        if !goals.isEmpty {
+            eventGroup(title: "Goals", icon: "sportscourt.fill", events: goals)
+        }
+    }
 
-        if !goals.isEmpty || !cards.isEmpty {
-            VStack(spacing: 12) {
-                if !goals.isEmpty {
-                    eventGroup(title: "Goals", icon: "sportscourt.fill", events: goals)
-                }
-                if !cards.isEmpty {
-                    eventGroup(title: "Cards", icon: "rectangle.portrait.fill", events: cards)
-                }
-            }
+    @ViewBuilder
+    private func cardsSection(_ events: [MatchEvent]) -> some View {
+        let cards = events.filter { [.yellowCard, .redCard, .secondYellow].contains($0.type) }
+        if !cards.isEmpty {
+            eventGroup(title: "Cards", icon: "rectangle.portrait.fill", events: cards)
         }
     }
 
@@ -392,6 +383,14 @@ struct MatchDetailView: View {
             infoRow(icon: "clock.fill", label: kickoffDateString)
             if let tv = match.tv {
                 infoRow(icon: "tv.fill", label: tv)
+            }
+            if let detail {
+                if let ref = detail.referee {
+                    infoRow(icon: "person.badge.shield.checkmark", label: ref)
+                }
+                if let att = detail.attendance {
+                    infoRow(icon: "person.3.fill", label: "\(formatNumber(att)) attendance")
+                }
             }
         }
         .padding(14)
