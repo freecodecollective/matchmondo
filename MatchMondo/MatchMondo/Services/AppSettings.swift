@@ -14,7 +14,7 @@ final class AppSettings: ObservableObject {
     }
 
     func checkForReviewPrompt() {
-        guard launchCount >= 5, !reviewDismissedForever else { return }
+        guard launchCount >= 10, !reviewDismissedForever else { return }
         if reviewSnoozedUntil > 0 && Date().timeIntervalSince1970 < reviewSnoozedUntil { return }
         showReviewPrompt = true
     }
