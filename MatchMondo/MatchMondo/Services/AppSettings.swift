@@ -3,7 +3,7 @@ import StoreKit
 
 @MainActor
 final class AppSettings: ObservableObject {
-    @AppStorage("showFIFARankings") var showFIFARankings = true
+    @AppStorage("showFIFARankings") var showFIFARankings = false
     @AppStorage("launchCount") private(set) var launchCount = 0
     @AppStorage("reviewDismissedForever") var reviewDismissedForever = false
     @AppStorage("reviewSnoozedUntil") var reviewSnoozedUntil: Double = 0

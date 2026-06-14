@@ -40,17 +40,14 @@ struct FlagView: View {
 
 struct RankBadge: View {
     let team: String
+    var fontSize: CGFloat = 11
     @EnvironmentObject var appSettings: AppSettings
 
     var body: some View {
         if appSettings.showFIFARankings, let rank = Rankings.rank(for: team) {
-            Text("#\(rank)")
-                .font(.system(size: 10, weight: .bold))
-                .foregroundStyle(Color(red: 0.043, green: 0.431, blue: 0.310))
-                .padding(.horizontal, 6)
-                .padding(.vertical, 1)
-                .background(Color(red: 0.043, green: 0.431, blue: 0.310).opacity(0.1))
-                .clipShape(Capsule())
+            Text("(\(rank))")
+                .font(.system(size: fontSize, weight: .medium))
+                .foregroundStyle(Color(.systemGray))
         }
     }
 }
@@ -58,13 +55,17 @@ struct RankBadge: View {
 struct TeamNameView: View {
     let team: String
     var isWinner: Bool = false
+    @EnvironmentObject var appSettings: AppSettings
 
     var body: some View {
         HStack(spacing: 6) {
             FlagView(team: team)
-            Text(team)
-                .font(.system(size: 15, weight: isWinner ? .heavy : .semibold))
-                .foregroundStyle(isWinner ? Color(red: 0.027, green: 0.322, blue: 0.231) : .primary)
+            HStack(spacing: 3) {
+                Text(team)
+                    .font(.system(size: 15, weight: isWinner ? .heavy : .semibold))
+                    .foregroundStyle(isWinner ? Color(red: 0.027, green: 0.322, blue: 0.231) : .primary)
+                RankBadge(team: team, fontSize: 12)
+            }
         }
     }
 }

@@ -148,10 +148,13 @@ struct StandingsView: View {
 
                 HStack(spacing: 6) {
                     FlagView(team: standing.team, size: 20)
-                    Text(standing.team)
-                        .font(.system(size: 13, weight: .semibold))
-                        .foregroundStyle(.primary)
-                        .lineLimit(1)
+                    HStack(spacing: 2) {
+                        Text(standing.team)
+                            .font(.system(size: 13, weight: .semibold))
+                            .foregroundStyle(.primary)
+                            .lineLimit(1)
+                        RankBadge(team: standing.team, fontSize: 10)
+                    }
                 }
 
                 Spacer()
