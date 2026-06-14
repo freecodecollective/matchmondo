@@ -48,27 +48,28 @@ struct MatchCardView: View {
                 Spacer()
 
                 if showScore && match.hasScore {
-                    let scoreBg = match.isLive
-                        ? Color(red: 0.15, green: 0.55, blue: 0.2)
-                        : Color(red: 0.1, green: 0.1, blue: 0.18)
+                    let h = match.scoreH!
+                    let a = match.scoreA!
+                    let homeColor: Color = match.isLive ? Color(red: 0.15, green: 0.55, blue: 0.2)
+                        : h > a ? Color(red: 0.15, green: 0.55, blue: 0.2)
+                        : h < a ? Color(red: 0.8, green: 0.15, blue: 0.15)
+                        : Color(red: 0.35, green: 0.35, blue: 0.38)
+                    let awayColor: Color = match.isLive ? Color(red: 0.15, green: 0.55, blue: 0.2)
+                        : a > h ? Color(red: 0.15, green: 0.55, blue: 0.2)
+                        : a < h ? Color(red: 0.8, green: 0.15, blue: 0.15)
+                        : Color(red: 0.35, green: 0.35, blue: 0.38)
                     HStack(spacing: 6) {
-                        Text("\(match.scoreH!)")
-                            .font(.system(size: 18, weight: .heavy, design: .rounded))
-                            .foregroundStyle(.white)
-                            .frame(width: 32, height: 28)
-                            .background(scoreBg)
-                            .clipShape(RoundedRectangle(cornerRadius: 6))
+                        Text("\(h)")
+                            .font(.system(size: 20, weight: .heavy, design: .rounded))
+                            .foregroundStyle(homeColor)
 
                         Text("–")
                             .font(.system(size: 14, weight: .medium))
                             .foregroundStyle(.secondary)
 
-                        Text("\(match.scoreA!)")
-                            .font(.system(size: 18, weight: .heavy, design: .rounded))
-                            .foregroundStyle(.white)
-                            .frame(width: 32, height: 28)
-                            .background(scoreBg)
-                            .clipShape(RoundedRectangle(cornerRadius: 6))
+                        Text("\(a)")
+                            .font(.system(size: 20, weight: .heavy, design: .rounded))
+                            .foregroundStyle(awayColor)
                     }
                 } else {
                     Text("vs")
