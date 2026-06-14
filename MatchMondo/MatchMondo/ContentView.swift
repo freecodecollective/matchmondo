@@ -25,9 +25,9 @@ struct ContentView: View {
                     Label("Players", systemImage: "star.fill")
                 }
 
-            RulesView()
+            MoreView()
                 .tabItem {
-                    Label("Rules", systemImage: "list.clipboard.fill")
+                    Label("More", systemImage: "ellipsis.circle.fill")
                 }
         }
         .tint(Color(red: 0.043, green: 0.431, blue: 0.310))
