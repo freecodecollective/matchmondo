@@ -68,8 +68,8 @@ struct StandingsView: View {
                     .font(.system(size: 11))
                     .foregroundStyle(.secondary)
             }
-            Spacer()
         }
+        .frame(maxWidth: .infinity)
     }
 
     private func groupCard(group: String, teams: [GroupStanding]) -> some View {
