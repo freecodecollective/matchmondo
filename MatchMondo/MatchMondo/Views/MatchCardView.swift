@@ -19,9 +19,7 @@ struct MatchCardView: View {
     }
 
     private var timeString: String {
-        let f = DateFormatter()
-        f.dateFormat = "h:mm a"
-        return f.string(from: match.kickoff)
+        match.kickoff.smartTime()
     }
 
     var body: some View {

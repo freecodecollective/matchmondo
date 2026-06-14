@@ -217,15 +217,11 @@ struct MatchDetailView: View {
     }
 
     private var kickoffString: String {
-        let f = DateFormatter()
-        f.dateFormat = "h:mm a"
-        return f.string(from: match.kickoff)
+        match.kickoff.smartTime()
     }
 
     private var kickoffDateString: String {
-        let f = DateFormatter()
-        f.dateFormat = "EEEE, MMMM d 'at' h:mm a"
-        return f.string(from: match.kickoff)
+        match.kickoff.smartDateTime()
     }
 }
 

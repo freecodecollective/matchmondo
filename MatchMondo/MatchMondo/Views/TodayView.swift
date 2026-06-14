@@ -169,8 +169,6 @@ struct TodayView: View {
     }
 
     private func nextMatchDate(_ date: Date) -> String {
-        let f = DateFormatter()
-        f.dateFormat = "EEEE, MMMM d 'at' h:mm a"
-        return f.string(from: date)
+        date.smartDateTime()
     }
 }

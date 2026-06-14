@@ -139,3 +139,20 @@ struct StageColor {
         }
     }
 }
+
+extension Date {
+    func smartTime() -> String {
+        let cal = Calendar.current
+        let f = DateFormatter()
+        f.dateFormat = cal.component(.minute, from: self) == 0 ? "h a" : "h:mm a"
+        return f.string(from: self)
+    }
+
+    func smartDateTime() -> String {
+        let cal = Calendar.current
+        let f = DateFormatter()
+        let timePart = cal.component(.minute, from: self) == 0 ? "h a" : "h:mm a"
+        f.dateFormat = "EEEE, MMMM d 'at' \(timePart)"
+        return f.string(from: self)
+    }
+}
