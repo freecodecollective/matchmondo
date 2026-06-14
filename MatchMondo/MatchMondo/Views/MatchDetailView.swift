@@ -62,6 +62,7 @@ struct MatchDetailView: View {
                             .font(.system(size: 15, weight: .bold))
                             .foregroundStyle(.primary)
                         RankBadge(team: match.home)
+                        goalScorers(for: match.home)
                     }
                 }
                 .buttonStyle(.plain)
@@ -107,6 +108,7 @@ struct MatchDetailView: View {
                             .font(.system(size: 15, weight: .bold))
                             .foregroundStyle(.primary)
                         RankBadge(team: match.away)
+                        goalScorers(for: match.away)
                     }
                 }
                 .buttonStyle(.plain)
@@ -114,19 +116,12 @@ struct MatchDetailView: View {
             }
 
             if let detail {
-                HStack(spacing: 16) {
-                    if let ref = detail.referee {
-                        Label(ref, systemImage: "person.badge.shield.checkmark")
-                            .font(.system(size: 11))
-                            .foregroundStyle(.secondary)
-                    }
-                    if let att = detail.attendance {
-                        Label(formatNumber(att), systemImage: "person.3.fill")
-                            .font(.system(size: 11))
-                            .foregroundStyle(.secondary)
-                    }
+                if let ref = detail.referee {
+                    Label(ref, systemImage: "person.badge.shield.checkmark")
+                        .font(.system(size: 11))
+                        .foregroundStyle(.secondary)
+                        .padding(.top, 4)
                 }
-                .padding(.top, 4)
             }
         }
         .padding(.vertical, 16)
@@ -521,6 +516,27 @@ struct MatchDetailView: View {
     }
 
     // MARK: - Helpers
+
+    @ViewBuilder
+    private func goalScorers(for team: String) -> some View {
+        if let detail {
+            let goals = detail.events.filter {
+                [.goal, .penaltyGoal, .ownGoal].contains($0.type) && $0.teamName == team
+            }
+            if !goals.isEmpty {
+                VStack(spacing: 2) {
+                    ForEach(goals) { goal in
+                        let suffix = goal.type == .penaltyGoal ? " (P)" : goal.type == .ownGoal ? " (OG)" : ""
+                        Text("\(goal.playerName) \(goal.minute)'\(suffix)")
+                            .font(.system(size: 11))
+                            .foregroundStyle(.secondary)
+                            .multilineTextAlignment(.center)
+                    }
+                }
+                .padding(.top, 2)
+            }
+        }
+    }
 
     private func infoRow(icon: String, label: String) -> some View {
         HStack(spacing: 10) {
