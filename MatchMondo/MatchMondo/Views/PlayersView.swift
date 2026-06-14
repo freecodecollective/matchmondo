@@ -71,11 +71,13 @@ struct TeamsView: View {
         NavigationLink(value: team) {
             HStack(spacing: 8) {
                 FlagView(team: team, size: 28)
-                Text(team)
-                    .font(.system(size: 18, weight: .bold))
-                    .foregroundStyle(.primary)
+                HStack(spacing: 4) {
+                    Text(team)
+                        .font(.system(size: 18, weight: .bold))
+                        .foregroundStyle(.primary)
+                    RankBadge(team: team)
+                }
                 Spacer()
-                RankBadge(team: team)
                 if let group = teamGroup(team) {
                     Text(group)
                         .font(.system(size: 11, weight: .semibold))
