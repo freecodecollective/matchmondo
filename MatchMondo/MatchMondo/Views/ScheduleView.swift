@@ -38,6 +38,10 @@ struct ScheduleView: View {
         NavigationStack {
             ScrollViewReader { proxy in
                 List {
+                    ScoreFilterBar()
+                        .listRowInsets(EdgeInsets())
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(Color.clear)
                     ForEach(filteredDays, id: \.dayString) { day in
                         Section {
                             ForEach(day.matches) { match in
@@ -98,10 +102,6 @@ struct ScheduleView: View {
                         Image(systemName: "line.3.horizontal.decrease.circle")
                     }
                 }
-            }
-            .safeAreaInset(edge: .top) {
-                ScoreFilterBar()
-                    .background(Color(red: 0.91, green: 0.94, blue: 0.91))
             }
             .refreshable {
                 await data.refresh()
