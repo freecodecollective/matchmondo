@@ -41,13 +41,22 @@ struct TeamDetailView: View {
                 HStack(spacing: 8) {
                     RankBadge(team: team)
                     if let group = teamGroup {
-                        Text(group)
-                            .font(.system(size: 12, weight: .semibold))
+                        NavigationLink {
+                            StandingsDetailView(scrollToGroup: group)
+                        } label: {
+                            HStack(spacing: 4) {
+                                Text(group)
+                                    .font(.system(size: 12, weight: .semibold))
+                                Image(systemName: "chevron.right")
+                                    .font(.system(size: 9, weight: .semibold))
+                            }
                             .foregroundStyle(.secondary)
                             .padding(.horizontal, 8)
                             .padding(.vertical, 3)
                             .background(Color(.systemGray5))
                             .clipShape(Capsule())
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
             }
