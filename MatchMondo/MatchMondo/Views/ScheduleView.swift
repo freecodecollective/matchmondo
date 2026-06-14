@@ -101,7 +101,7 @@ struct ScheduleView: View {
                             scoreVisibility.setMode(.all)
                         } label: {
                             HStack {
-                                Text("Show live scores")
+                                Text("Show live & completed game scores")
                                 if scoreVisibility.mode == .all {
                                     Image(systemName: "checkmark")
                                 }

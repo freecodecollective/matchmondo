@@ -58,7 +58,7 @@ struct TodayView: View {
                             scoreVisibility.hide()
                         }
                     } label: {
-                        Text(scoreVisibility.mode != .hideAll ? "Hide live scores" : "Show live scores")
+                        Text(scoreVisibility.mode != .hideAll ? "Hide scores" : "Show scores")
                             .font(.system(size: 13, weight: .semibold))
                     }
                     .tint(green)
