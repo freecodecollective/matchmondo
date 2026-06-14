@@ -193,11 +193,11 @@ struct MatchDetailView: View {
                         Text(event.playerName)
                             .font(.system(size: 14, weight: .bold))
                         if event.type == .penaltyGoal {
-                            Text("(pen)")
+                            Text("(penalty)")
                                 .font(.system(size: 11, weight: .semibold))
                                 .foregroundStyle(.secondary)
                         } else if event.type == .ownGoal {
-                            Text("(og)")
+                            Text("(own goal)")
                                 .font(.system(size: 11, weight: .semibold))
                                 .foregroundStyle(.red)
                         }
