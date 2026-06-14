@@ -15,6 +15,13 @@ struct StandingsView: View {
                         .padding(.top, 60)
                 } else {
                     VStack(spacing: 4) {
+                        HStack(spacing: 6) {
+                            chip("Exclude in-progress", isOn: !includeLive) { includeLive = false }
+                            chip("Include in-progress", isOn: includeLive) { includeLive = true }
+                        }
+                        .padding(.horizontal, 16)
+                        .padding(.top, 8)
+
                         Text("Top 2 advance + 8 best third-placed teams")
                             .font(.system(size: 12))
                             .foregroundStyle(.secondary)
@@ -37,34 +44,6 @@ struct StandingsView: View {
             }
             .background(Color(red: 0.91, green: 0.94, blue: 0.91))
             .navigationTitle("Standings")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Menu {
-                        Button {
-                            includeLive = true
-                        } label: {
-                            HStack {
-                                Text("Include scores from in-progress games")
-                                if includeLive {
-                                    Image(systemName: "checkmark")
-                                }
-                            }
-                        }
-                        Button {
-                            includeLive = false
-                        } label: {
-                            HStack {
-                                Text("Exclude scores from in-progress games")
-                                if !includeLive {
-                                    Image(systemName: "checkmark")
-                                }
-                            }
-                        }
-                    } label: {
-                        Image(systemName: "line.3.horizontal.decrease.circle")
-                    }
-                }
-            }
             .refreshable {
                 await data.refresh()
             }
@@ -136,6 +115,19 @@ struct StandingsView: View {
         )
         .padding(.horizontal, 16)
         .padding(.vertical, 4)
+    }
+
+    private func chip(_ label: String, isOn: Bool, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Text(label)
+                .font(.system(size: 12, weight: .semibold))
+                .padding(.horizontal, 12)
+                .padding(.vertical, 6)
+                .foregroundStyle(isOn ? .white : .primary)
+                .background(isOn ? green : Color(.systemGray5))
+                .clipShape(Capsule())
+        }
+        .buttonStyle(.plain)
     }
 
     private func standingRow(position: Int, standing: GroupStanding) -> some View {
