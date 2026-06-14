@@ -128,14 +128,15 @@ struct MoreView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             }
 
-            Text("Or tip the developers via Venmo:")
+            Text("Or we can donate for you — just Venmo @busselle and we'll pass along the donation to SWB.")
                 .font(.system(size: 13))
                 .foregroundStyle(.secondary)
+                .lineSpacing(2)
 
-            Link(destination: URL(string: "venmo://paycharge?txn=pay&recipients=busselle&note=MatchMondo%20tip")!) {
+            Link(destination: URL(string: "venmo://paycharge?txn=pay&recipients=busselle&note=MatchMondo%20donation%20for%20SWB")!) {
                 HStack {
                     Image(systemName: "dollarsign.circle")
-                    Text("Tip via Venmo (@busselle)")
+                    Text("Donate via Venmo (@busselle, 2515)")
                         .font(.system(size: 14, weight: .semibold))
                 }
                 .frame(maxWidth: .infinity)
@@ -144,10 +145,6 @@ struct MoreView: View {
                 .background(Color(.systemGray6))
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             }
-
-            Text("Last 4 digits to confirm: 2515")
-                .font(.system(size: 11))
-                .foregroundStyle(.tertiary)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(16)
