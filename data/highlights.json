@@ -1,36 +1,52 @@
 {
   "1": {
-    "short": "r1Afsds3ZD0"
+    "short": "r1Afsds3ZD0",
+    "shortDuration": "23:20"
   },
   "10": {
     "extended": "xHtIzadh4Lg",
-    "short": "cGKWqfsRDgo"
+    "extendedDuration": "24:19",
+    "short": "cGKWqfsRDgo",
+    "shortDuration": "8:50"
   },
   "2": {
-    "short": "QWoDfCkh7f8"
+    "short": "QWoDfCkh7f8",
+    "shortDuration": "22:15"
   },
   "3": {
     "extended": "cPwJaA22gWc",
-    "short": "n5qkHOWhFAc"
+    "extendedDuration": "21:02",
+    "short": "n5qkHOWhFAc",
+    "shortDuration": "4:17"
   },
   "4": {
     "extended": "lpDZwAxVkc4",
-    "short": "BXD1_mhODBU"
+    "extendedDuration": "23:23",
+    "short": "BXD1_mhODBU",
+    "shortDuration": "4:47"
   },
   "5": {
     "extended": "J_2Y34vSbBA",
-    "short": "IW2BuhWuTqs"
+    "extendedDuration": "20:22",
+    "short": "IW2BuhWuTqs",
+    "shortDuration": "8:17"
   },
   "6": {
     "extended": "LgT_qQktvjw",
-    "short": "xyKJHekC7io"
+    "extendedDuration": "21:16",
+    "short": "xyKJHekC7io",
+    "shortDuration": "8:19"
   },
   "7": {
     "extended": "0rih2fCaXF4",
-    "short": "DX5wBEslnQI"
+    "extendedDuration": "21:18",
+    "short": "DX5wBEslnQI",
+    "shortDuration": "8:08"
   },
   "8": {
     "extended": "jSJs2nPJeLo",
-    "short": "CUo5J7CUnCo"
+    "extendedDuration": "21:08",
+    "short": "CUo5J7CUnCo",
+    "shortDuration": "8:46"
   }
 }

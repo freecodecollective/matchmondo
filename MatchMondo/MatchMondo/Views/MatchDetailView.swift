@@ -235,7 +235,7 @@ struct MatchDetailView: View {
 
             Spacer()
 
-            FlagView(team: isHome ? match.home : match.away, size: 16)
+            FlagView(team: isHome ? match.home : match.away, size: 22)
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 8)
@@ -419,19 +419,22 @@ struct MatchDetailView: View {
                         highlightCard(
                             videoId: hl.short!,
                             label: "Highlights",
-                            icon: "play.rectangle.fill"
+                            icon: "play.rectangle.fill",
+                            duration: hl.shortDuration
                         )
                         highlightCard(
                             videoId: hl.extended!,
                             label: "Extended",
-                            icon: "film.fill"
+                            icon: "film.fill",
+                            duration: hl.extendedDuration
                         )
                     }
                 } else if let videoId = hl.short {
                     highlightCard(
                         videoId: videoId,
                         label: "Highlights",
-                        icon: "play.rectangle.fill"
+                        icon: "play.rectangle.fill",
+                        duration: hl.shortDuration
                     )
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .frame(maxWidth: 240)
@@ -439,7 +442,8 @@ struct MatchDetailView: View {
                     highlightCard(
                         videoId: videoId,
                         label: "Extended",
-                        icon: "film.fill"
+                        icon: "film.fill",
+                        duration: hl.extendedDuration
                     )
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .frame(maxWidth: 240)
@@ -466,13 +470,13 @@ struct MatchDetailView: View {
         }
     }
 
-    private func highlightCard(videoId: String, label: String, icon: String) -> some View {
+    private func highlightCard(videoId: String, label: String, icon: String, duration: String? = nil) -> some View {
         Button {
             if let url = URL(string: "https://www.youtube.com/watch?v=\(videoId)") {
                 UIApplication.shared.open(url)
             }
         } label: {
-            ZStack(alignment: .bottomLeading) {
+            ZStack {
                 AsyncImage(url: URL(string: "https://img.youtube.com/vi/\(videoId)/mqdefault.jpg")) { phase in
                     switch phase {
                     case .success(let image):
@@ -495,20 +499,36 @@ struct MatchDetailView: View {
                 )
                 .clipShape(RoundedRectangle(cornerRadius: 10))
 
-                HStack(spacing: 4) {
-                    Image(systemName: icon)
-                        .font(.system(size: 11, weight: .bold))
-                    Text(label)
-                        .font(.system(size: 11, weight: .bold))
-                        .lineLimit(1)
-                }
-                .foregroundStyle(.white)
-                .padding(8)
-
                 Image(systemName: "play.circle.fill")
                     .font(.system(size: 30))
                     .foregroundStyle(.white.opacity(0.9))
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+
+                VStack {
+                    Spacer()
+                    HStack {
+                        HStack(spacing: 4) {
+                            Image(systemName: icon)
+                                .font(.system(size: 11, weight: .bold))
+                            Text(label)
+                                .font(.system(size: 11, weight: .bold))
+                                .lineLimit(1)
+                        }
+                        .foregroundStyle(.white)
+
+                        Spacer()
+
+                        if let duration {
+                            Text(duration)
+                                .font(.system(size: 11, weight: .bold, design: .rounded))
+                                .foregroundStyle(.white)
+                                .padding(.horizontal, 5)
+                                .padding(.vertical, 2)
+                                .background(.black.opacity(0.7))
+                                .clipShape(RoundedRectangle(cornerRadius: 4))
+                        }
+                    }
+                    .padding(8)
+                }
             }
         }
         .buttonStyle(.plain)

@@ -69,6 +69,8 @@ struct RosterPlayer: Codable, Identifiable {
 struct Highlight: Codable {
     let short: String?
     let extended: String?
+    let shortDuration: String?
+    let extendedDuration: String?
 }
 
 struct GroupStanding: Identifiable {
