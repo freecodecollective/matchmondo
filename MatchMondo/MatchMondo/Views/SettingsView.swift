@@ -55,7 +55,7 @@ struct SettingsView: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 
-    private func settingToggle(isOn: Binding<Bool>, title: String, subtitle: String) -> some View {
+    private func settingToggle(isOn: Binding<Bool>, title: LocalizedStringKey, subtitle: LocalizedStringKey) -> some View {
         Toggle(isOn: isOn) {
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)

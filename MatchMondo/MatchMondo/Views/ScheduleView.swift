@@ -96,7 +96,7 @@ struct ScheduleView: View {
                                 stageFilter = stage
                             } label: {
                                 HStack {
-                                    Text(stage)
+                                    Text(LocalizedStringKey(stage))
                                     if stage == stageFilter {
                                         Image(systemName: "checkmark")
                                     }

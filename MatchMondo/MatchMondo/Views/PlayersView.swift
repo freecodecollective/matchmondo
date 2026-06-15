@@ -130,7 +130,7 @@ struct RosterView: View {
     var body: some View {
         List {
             ForEach(grouped, id: \.position) { group in
-                Section(group.position) {
+                Section(LocalizedStringKey(group.position)) {
                     ForEach(group.players) { player in
                         HStack(spacing: 10) {
                             Text("\(player.number)")

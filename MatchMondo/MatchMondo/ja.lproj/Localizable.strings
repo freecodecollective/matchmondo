@@ -1,0 +1,155 @@
+/* Japanese localization for MatchMondo */
+
+/* === Tabs === */
+"3-Day" = "3日間";
+"Schedule" = "日程";
+"Standings" = "順位表";
+"Teams" = "チーム";
+"More" = "その他";
+
+/* === App review alert === */
+"Enjoying MatchMondo?" = "MatchMondoはいかがですか？";
+"Leave a Review" = "レビューを書く";
+"Ask me later" = "後で聞いて";
+"Don't ask again" = "もう聞かない";
+"If you like MatchMondo, please spread the love with a quick app review. It would mean a lot to us." = "MatchMondoを気に入っていただけたら、アプリレビューで応援していただけると嬉しいです。";
+
+/* === Today view === */
+"Loading matches..." = "試合を読み込み中...";
+"World Cup 2026" = "ワールドカップ 2026";
+"LIVE" = "LIVE";
+"June 11 \U2013 July 19 \U00b7 USA, Canada & Mexico" = "6月11日〜7月19日 \U00b7 アメリカ・カナダ・メキシコ";
+"Yesterday" = "昨日";
+"Today" = "今日";
+"Tomorrow" = "明日";
+"No matches in the next 3 days" = "今後3日間は試合がありません";
+"Next match" = "次の試合";
+"%@ vs %@" = "%@ vs %@";
+"%lld of %lld played" = "%lld/%lld試合終了";
+"updated_prefix" = "";
+"updated_suffix" = "前に更新";
+"1 match" = "1試合";
+"%lld matches" = "%lld試合";
+
+/* === Schedule view === */
+"Search teams, venues..." = "チーム・会場を検索...";
+"All stages" = "全ステージ";
+"Group Stage" = "グループステージ";
+"Round of 32" = "ベスト32";
+"Round of 16" = "ベスト16";
+"Quarter-finals" = "準々決勝";
+"Semi-finals" = "準決勝";
+"Third-place Match" = "3位決定戦";
+"Final" = "決勝";
+
+/* === Standings view === */
+"Loading..." = "読み込み中...";
+"Exclude in-progress" = "試合中を除く";
+"Include in-progress" = "試合中を含む";
+"Top 2 advance + 8 best third-placed teams" = "各組上位2チーム＋3位最上位8チームが進出";
+"Advances (top 2)" = "進出（上位2）";
+"Best-third contender" = "3位進出候補";
+"#" = "#";
+"Team" = "チーム";
+"P" = "試";
+"W" = "勝";
+"D" = "分";
+"L" = "敗";
+"GD" = "得失";
+"Pts" = "勝点";
+
+/* === Score filter === */
+"Final Scores" = "最終スコア";
+"Live Scores" = "ライブスコア";
+"Scores hidden" = "スコア非表示";
+
+/* === Match detail === */
+"Match %lld" = "第%lld試合";
+"?" = "?";
+"Show Score" = "スコアを表示";
+"Full Time" = "試合終了";
+"vs" = "vs";
+"Goals" = "ゴール";
+"Cards" = "カード";
+"Substitutions" = "交代";
+"(penalty)" = "(PK)";
+"(own goal)" = "(オウンゴール)";
+"Assist: %@" = "アシスト: %@";
+"Match Stats" = "試合統計";
+"Possession" = "ポゼッション";
+"Shots" = "シュート";
+"Shots on Target" = "枠内シュート";
+"Corners" = "コーナーキック";
+"Fouls" = "ファウル";
+"Offsides" = "オフサイド";
+"Saves" = "セーブ";
+"Highlights" = "ハイライト";
+"Extended" = "拡大版";
+"Highlights coming soon" = "ハイライトは近日公開";
+"%@ attendance" = "来場者数 %@";
+"Match %lld \U00b7 %@%@" = "第%lld試合 \U00b7 %@%@";
+
+/* === Teams view === */
+"All 48 teams, ordered by FIFA ranking." = "FIFAランキング順の全48チーム";
+"All 48 teams competing in the 2026 World Cup." = "2026年ワールドカップ出場全48チーム";
+"Search teams or players..." = "チーム・選手を検索...";
+"Goalkeepers" = "ゴールキーパー";
+"Defenders" = "ディフェンダー";
+"Midfielders" = "ミッドフィールダー";
+"Forwards" = "フォワード";
+"Age %lld" = "%lld歳";
+
+/* === Team detail === */
+"Key Players" = "注目選手";
+"View full %lld-player squad" = "全%lld人のスクワッドを見る";
+"vs %@" = "vs %@";
+"at %@" = "@ %@";
+"Played" = "出場";
+"GF" = "得点";
+"GA" = "失点";
+"Squad" = "選手";
+
+/* === Settings === */
+"Settings" = "設定";
+"Show FIFA Rankings" = "FIFAランキングを表示";
+"Display ranking badges next to team names" = "チーム名の横にランキングバッジを表示";
+"Show Match Locations" = "試合会場を表示";
+"Display venue and city on match cards" = "試合カードに会場と都市を表示";
+"Show Country Flags" = "国旗を表示";
+"Display flag icons next to team names" = "チーム名の横に国旗アイコンを表示";
+"Show Game Times" = "試合時間を表示";
+"Display kickoff times on match cards" = "試合カードにキックオフ時間を表示";
+
+/* === More view === */
+"About MatchMondo" = "MatchMondoについて";
+"Built by a group of passionate football fans in California who wanted a better way to follow the 2026 World Cup. We built this app for ourselves \U2014 and we're grateful anyone else has found it useful." = "2026年ワールドカップをもっと楽しみたいカリフォルニアのサッカーファンが作りました。自分たちのために作ったアプリですが、皆さんにもお役に立てれば幸いです。";
+"Tournament Rules" = "大会ルール";
+"Support Genesis Oakland" = "Genesis Oaklandを応援";
+"MatchMondo is free and always will be \U2014 no ads, no subscriptions. If you'd like to give back, consider donating to Genesis Oakland \U2014 a youth soccer club building community and creating opportunity for kids in Oakland through the beautiful game." = "MatchMondoは無料で、広告もサブスクもありません。もしお気に召しましたら、Genesis Oakland（オークランドの少年サッカークラブ）への寄付をご検討ください。サッカーを通じてコミュニティと子どもたちの未来を育てています。";
+"Donate to Genesis Oakland" = "Genesis Oaklandに寄付する";
+"Or we can donate for you \U2014 just Venmo @busselle and we'll pass along the donation to Genesis Oakland." = "代わりに寄付することもできます。Venmo @busselle にお送りいただければ、Genesis Oaklandにお届けします。";
+"Donate via Venmo (@busselle, 2515)" = "Venmoで寄付する（@busselle, 2515）";
+"Feature Requests" = "機能リクエスト";
+"Have an idea to make MatchMondo better? We'd love to hear it." = "MatchMondoをもっと良くするアイデアはありますか？ぜひお聞かせください。";
+"Email us a feature request" = "機能リクエストをメールで送る";
+"MatchMondo v%@" = "MatchMondo v%@";
+"Made with \U2764\Ufe0f in California" = "カリフォルニアで\U2764\Ufe0fを込めて";
+
+/* === Rules === */
+"A fan's guide to the laws and tournament rules for the 2026 World Cup." = "2026年ワールドカップのルールガイド";
+"Match Format" = "試合形式";
+"Two 45-minute halves plus stoppage time. Group-stage matches can end in a draw. From the Round of 32 on, a tie after 90 minutes goes to two 15-minute periods of extra time, and if still level, a penalty shootout decides it." = "前後半各45分＋アディショナルタイム。グループステージは引き分けあり。ベスト32以降、90分で同点の場合は前後半各15分の延長戦、それでも決着がつかなければPK戦。";
+"Yellow Card (Caution)" = "イエローカード（警告）";
+"A warning for unsporting behavior, dissent, persistent fouling, time-wasting, not respecting required distance at free kicks/corners, or entering/leaving the field without permission." = "非スポーツマン行為、異議、繰り返しの反則、時間稼ぎ、フリーキック/コーナーキックでの距離不遵守、無断でのフィールドへの出入りに対する警告。";
+"Red Card (Sending-off)" = "レッドカード（退場）";
+"Shown for serious foul play, violent conduct, spitting, denying an obvious goal-scoring opportunity, offensive language, or two yellow cards in the same match. The player leaves and cannot be replaced \U2014 the team plays short." = "著しく不正なプレー、暴力行為、唾吐き、決定的な得点機会の阻止、侮辱的な言葉、または同一試合で2枚のイエローカード。退場した選手の補充はできず、チームは少人数でプレー。";
+"Suspensions & Amnesty" = "出場停止と累積リセット";
+"Two yellows in different matches = one-match suspension. Single yellows are wiped after the group stage, and wiped again after the quarter-finals, so a player can't miss the final from an early caution." = "異なる試合での累積イエロー2枚で1試合出場停止。グループステージ終了後と準々決勝後にリセットされるため、初期の警告で決勝を欠場することはありません。";
+"Group Tiebreakers" = "グループ順位の決定方法";
+"If teams are level on points: 1) Goal difference, 2) Goals scored, 3) Head-to-head points, 4) Head-to-head GD, 5) Head-to-head goals scored, 6) Fair-play score, 7) Drawing of lots." = "勝点が同じ場合：1) 得失点差、2) 総得点、3) 直接対決の勝点、4) 直接対決の得失点差、5) 直接対決の得点、6) フェアプレーポイント、7) 抽選。";
+"Who Advances" = "進出条件";
+"48 teams in 12 groups. The top two from each group (24 teams) advance, plus the 8 best third-placed teams \U2014 32 teams into the Round of 32." = "12グループ48チーム。各グループ上位2チーム（計24チーム）と3位の中で成績上位の8チーム、合計32チームがベスト32に進出。";
+"Unofficial summary for fans. See FIFA for official regulations." = "ファン向けの非公式まとめです。公式規定はFIFAをご確認ください。";
+
+/* === YouTube sheet === */
+"Done" = "完了";

@@ -175,7 +175,7 @@ struct TeamDetailView: View {
             }
 
             FlagView(team: opponent, size: 18)
-            Text("\(isHome ? "vs" : "at") \(opponent)")
+            (isHome ? Text("vs \(opponent)") : Text("at \(opponent)"))
                 .font(.system(size: 13, weight: .medium))
                 .foregroundStyle(.primary)
                 .lineLimit(1)
@@ -317,7 +317,7 @@ struct TeamDetailView: View {
         return f.string(from: date)
     }
 
-    private func statPill(label: String, value: String) -> some View {
+    private func statPill(label: LocalizedStringKey, value: String) -> some View {
         VStack(spacing: 2) {
             Text(value)
                 .font(.system(size: 16, weight: .bold, design: .rounded))

@@ -192,7 +192,7 @@ struct MatchDetailView: View {
                 Image(systemName: icon)
                     .font(.system(size: 13))
                     .foregroundStyle(green)
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.system(size: 15, weight: .bold))
             }
             .padding(.horizontal, 14)
@@ -387,7 +387,7 @@ struct MatchDetailView: View {
                     .font(.system(size: 13, weight: .bold, design: .rounded))
                     .frame(width: 40, alignment: .leading)
                 Spacer()
-                Text(label)
+                Text(LocalizedStringKey(label))
                     .font(.system(size: 12, weight: .medium))
                     .foregroundStyle(.secondary)
                 Spacer()
@@ -430,7 +430,7 @@ struct MatchDetailView: View {
                     infoRow(icon: "person.badge.shield.checkmark", label: ref)
                 }
                 if let att = detail.attendance {
-                    infoRow(icon: "person.3.fill", label: "\(formatNumber(att)) attendance")
+                    infoRow(icon: "person.3.fill", label: String(localized: "\(formatNumber(att)) attendance"))
                 }
             }
         }

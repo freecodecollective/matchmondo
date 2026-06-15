@@ -121,7 +121,7 @@ struct StandingsView: View {
         .padding(.vertical, 4)
     }
 
-    private func chip(_ label: String, isOn: Bool, action: @escaping () -> Void) -> some View {
+    private func chip(_ label: LocalizedStringKey, isOn: Bool, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Text(label)
                 .font(.system(size: 12, weight: .semibold))

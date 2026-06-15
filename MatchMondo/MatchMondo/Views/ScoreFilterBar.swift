@@ -51,7 +51,7 @@ struct ScoreFilterBar: View {
         .animation(.easeInOut(duration: 0.2), value: scoresOn)
     }
 
-    private func chip(_ label: String, icon: String, isOn: Bool, action: @escaping () -> Void) -> some View {
+    private func chip(_ label: LocalizedStringKey, icon: String, isOn: Bool, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             HStack(spacing: 4) {
                 Image(systemName: icon)

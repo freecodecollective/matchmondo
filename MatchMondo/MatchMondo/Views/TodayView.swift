@@ -105,14 +105,14 @@ struct TodayView: View {
                 }
             } label: {
                 HStack {
-                    Text(title)
+                    Text(LocalizedStringKey(title))
                         .font(.system(size: 18, weight: .bold))
                         .foregroundStyle(.primary)
                     Text("\u{2014} \(formattedDate(matches.first!.kickoff))")
                         .font(.system(size: 14))
                         .foregroundStyle(.secondary)
                     Spacer()
-                    Text("\(matches.count) match\(matches.count == 1 ? "" : "es")")
+                    Text(matchCountLabel(matches.count))
                         .font(.system(size: 12, weight: .medium))
                         .foregroundStyle(.secondary)
                     Image(systemName: "chevron.right")
@@ -170,7 +170,11 @@ struct TodayView: View {
         HStack(spacing: 16) {
             Label("\(data.playedCount) of \(data.totalCount) played", systemImage: "sportscourt.fill")
             if let updated = data.lastUpdated {
-                Label("Updated \(updated, style: .relative) ago", systemImage: "arrow.clockwise")
+                HStack(spacing: 0) {
+                    Image(systemName: "arrow.clockwise")
+                        .padding(.trailing, 4)
+                    Text("updated_prefix") + Text(updated, style: .relative) + Text("updated_suffix")
+                }
             }
         }
         .font(.system(size: 12))
@@ -186,5 +190,11 @@ struct TodayView: View {
 
     private func nextMatchDate(_ date: Date) -> String {
         date.smartDateTime()
+    }
+
+    private func matchCountLabel(_ count: Int) -> String {
+        count == 1
+            ? String(localized: "1 match")
+            : String(localized: "\(count) matches")
     }
 }

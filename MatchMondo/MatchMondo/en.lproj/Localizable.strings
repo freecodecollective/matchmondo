@@ -1,0 +1,4 @@
+/* English base strings — only keys that don't match code literals */
+
+"updated_prefix" = "Updated ";
+"updated_suffix" = " ago";
