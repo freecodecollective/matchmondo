@@ -53,30 +53,26 @@ struct MoreView: View {
     }
 
     private var settingsSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Label("Settings", systemImage: "gearshape.fill")
-                .font(.system(size: 16, weight: .bold))
-                .foregroundStyle(green)
-
-            Toggle(isOn: $appSettings.showFIFARankings) {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Show FIFA Rankings")
-                        .font(.system(size: 15, weight: .medium))
-                    Text("Display ranking badges next to team names")
-                        .font(.system(size: 12))
-                        .foregroundStyle(.secondary)
-                }
+        NavigationLink {
+            SettingsView()
+        } label: {
+            HStack {
+                Label("Settings", systemImage: "gearshape.fill")
+                    .font(.system(size: 15, weight: .semibold))
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundStyle(.tertiary)
             }
-            .tint(green)
+            .padding(16)
+            .background(Color(.systemBackground))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(Color(.separator).opacity(0.3), lineWidth: 1)
+            )
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(16)
-        .background(Color(.systemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
-        .overlay(
-            RoundedRectangle(cornerRadius: 12)
-                .stroke(Color(.separator).opacity(0.3), lineWidth: 1)
-        )
+        .buttonStyle(.plain)
         .padding(.horizontal, 16)
     }
 
@@ -106,19 +102,19 @@ struct MoreView: View {
 
     private var supportSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Label("Support Soccer without Borders", systemImage: "heart.fill")
+            Label("Support Genesis Oakland", systemImage: "heart.fill")
                 .font(.system(size: 16, weight: .bold))
                 .foregroundStyle(green)
 
-            Text("MatchMondo is free and always will be — no ads, no subscriptions. If you'd like to give back, consider donating to Soccer without Borders — a nonprofit that uses soccer to help refugee and immigrant youth build community and opportunity.")
+            Text("MatchMondo is free and always will be — no ads, no subscriptions. If you'd like to give back, consider donating to Genesis Oakland — a youth soccer club building community and creating opportunity for kids in Oakland through the beautiful game.")
                 .font(.system(size: 14))
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
 
-            Link(destination: URL(string: "https://www.soccerwithoutborders.org/donate")!) {
+            Link(destination: URL(string: "https://secure.givelively.org/donate/oakland-genesis-soccer-club-corporation/sobrante-field-a-soccer-sanctuary")!) {
                 HStack {
                     Image(systemName: "arrow.up.right.square")
-                    Text("Donate to Soccer without Borders")
+                    Text("Donate to Genesis Oakland")
                         .font(.system(size: 14, weight: .semibold))
                 }
                 .frame(maxWidth: .infinity)
@@ -128,12 +124,12 @@ struct MoreView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             }
 
-            Text("Or we can donate for you — just Venmo @busselle and we'll pass along the donation to SWB.")
+            Text("Or we can donate for you — just Venmo @busselle and we'll pass along the donation to Genesis Oakland.")
                 .font(.system(size: 13))
                 .foregroundStyle(.secondary)
                 .lineSpacing(2)
 
-            Link(destination: URL(string: "venmo://paycharge?txn=pay&recipients=busselle&note=MatchMondo%20donation%20for%20SWB")!) {
+            Link(destination: URL(string: "venmo://paycharge?txn=pay&recipients=busselle&note=MatchMondo%20donation%20for%20Genesis%20Oakland")!) {
                 HStack {
                     Image(systemName: "dollarsign.circle")
                     Text("Donate via Venmo (@busselle, 2515)")

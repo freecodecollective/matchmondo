@@ -4,6 +4,7 @@ struct MatchDetailView: View {
     let match: Match
     @EnvironmentObject var data: DataService
     @EnvironmentObject var scoreVisibility: ScoreVisibility
+    @EnvironmentObject var appSettings: AppSettings
     @State private var scoreRevealed = false
     private let green = Color(red: 0.043, green: 0.431, blue: 0.310)
     private let gold = Color(red: 0.91, green: 0.725, blue: 0.137)
@@ -414,9 +415,13 @@ struct MatchDetailView: View {
 
     private var matchInfo: some View {
         VStack(spacing: 10) {
-            infoRow(icon: "mappin.circle.fill", label: match.venue)
-            infoRow(icon: "building.2.fill", label: match.city)
-            infoRow(icon: "clock.fill", label: kickoffDateString)
+            if appSettings.showMatchLocations {
+                infoRow(icon: "mappin.circle.fill", label: match.venue)
+                infoRow(icon: "building.2.fill", label: match.city)
+            }
+            if appSettings.showGameTimes {
+                infoRow(icon: "clock.fill", label: kickoffDateString)
+            }
             if let tv = match.tv {
                 infoRow(icon: "tv.fill", label: tv)
             }

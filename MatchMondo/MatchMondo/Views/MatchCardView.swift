@@ -4,6 +4,7 @@ struct MatchCardView: View {
     let match: Match
     var showScore: Bool = true
     var compact: Bool = false
+    @EnvironmentObject var appSettings: AppSettings
 
     private var stageColor: Color {
         let c = StageColor.color(for: match.stageSlug)
@@ -27,7 +28,7 @@ struct MatchCardView: View {
             HStack {
                 if match.isLive {
                     LiveBadge(detail: match.liveDetail)
-                } else {
+                } else if appSettings.showGameTimes {
                     Text(timeString)
                         .font(.system(size: 13, weight: .bold, design: .rounded))
                         .foregroundStyle(.secondary)
@@ -83,7 +84,7 @@ struct MatchCardView: View {
                 TeamNameView(team: match.away, isWinner: awayWin)
             }
 
-            if !compact {
+            if !compact && appSettings.showMatchLocations {
                 HStack(spacing: 4) {
                     Image(systemName: "mappin.circle.fill")
                         .font(.system(size: 11))

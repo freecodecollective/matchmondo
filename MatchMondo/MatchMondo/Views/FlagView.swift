@@ -3,9 +3,12 @@ import SwiftUI
 struct FlagView: View {
     let team: String
     var size: CGFloat = 22
+    @EnvironmentObject var appSettings: AppSettings
 
     var body: some View {
-        if let url = TeamFlags.flagURL(for: team) {
+        if !appSettings.showCountryFlags {
+            EmptyView()
+        } else if let url = TeamFlags.flagURL(for: team) {
             AsyncImage(url: url) { phase in
                 switch phase {
                 case .success(let image):
