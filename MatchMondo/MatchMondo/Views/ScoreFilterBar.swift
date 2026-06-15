@@ -45,8 +45,8 @@ struct ScoreFilterBar: View {
                     .foregroundStyle(.secondary)
             }
 
-            Spacer()
         }
+        .frame(maxWidth: .infinity)
         .padding(.horizontal, 16)
         .padding(.vertical, 8)
         .animation(.easeInOut(duration: 0.2), value: scoresOn)
