@@ -31,5 +31,6 @@ struct ContentView: View {
                 }
         }
         .tint(Color(red: 0.043, green: 0.431, blue: 0.310))
+        .preferredColorScheme(.light)
     }
 }
