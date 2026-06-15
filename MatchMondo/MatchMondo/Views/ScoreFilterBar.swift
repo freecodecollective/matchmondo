@@ -16,7 +16,6 @@ struct ScoreFilterBar: View {
                     scoreVisibility.hideAll()
                 } else {
                     scoreVisibility.showCompleted = true
-                    scoreVisibility.showLive = true
                 }
             } label: {
                 Image(systemName: scoresOn ? "eye" : "eye.slash")
@@ -33,10 +32,10 @@ struct ScoreFilterBar: View {
                     .fill(Color(.separator))
                     .frame(width: 1, height: 18)
 
-                chip("Final", icon: "trophy.fill", isOn: scoreVisibility.showCompleted) {
+                chip("Final Scores", icon: "trophy.fill", isOn: scoreVisibility.showCompleted) {
                     scoreVisibility.toggleCompleted()
                 }
-                chip("Live", icon: "antenna.radiowaves.left.and.right", isOn: scoreVisibility.showLive) {
+                chip("Live Scores", icon: "antenna.radiowaves.left.and.right", isOn: scoreVisibility.showLive) {
                     scoreVisibility.toggleLive()
                 }
             } else {
