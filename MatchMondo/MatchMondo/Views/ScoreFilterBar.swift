@@ -5,31 +5,70 @@ struct ScoreFilterBar: View {
 
     private let green = Color(red: 0.043, green: 0.431, blue: 0.310)
 
+    private var scoresOn: Bool {
+        scoreVisibility.showCompleted || scoreVisibility.showLive
+    }
+
     var body: some View {
-        HStack(spacing: 6) {
-            chip("Hide all scores", isOn: scoreVisibility.isHideAll) {
-                scoreVisibility.hideAll()
+        HStack(spacing: 8) {
+            Button {
+                if scoresOn {
+                    scoreVisibility.hideAll()
+                } else {
+                    scoreVisibility.showCompleted = true
+                    scoreVisibility.showLive = true
+                }
+            } label: {
+                Image(systemName: scoresOn ? "eye" : "eye.slash")
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundStyle(scoresOn ? .white : .secondary)
+                    .frame(width: 32, height: 32)
+                    .background(scoresOn ? green : Color(.systemGray5))
+                    .clipShape(Circle())
             }
-            chip("Completed", isOn: scoreVisibility.showCompleted) {
-                scoreVisibility.toggleCompleted()
+            .buttonStyle(.plain)
+
+            if scoresOn {
+                Rectangle()
+                    .fill(Color(.separator))
+                    .frame(width: 1, height: 18)
+
+                chip("Final", icon: "trophy.fill", isOn: scoreVisibility.showCompleted) {
+                    scoreVisibility.toggleCompleted()
+                }
+                chip("Live", icon: "antenna.radiowaves.left.and.right", isOn: scoreVisibility.showLive) {
+                    scoreVisibility.toggleLive()
+                }
+            } else {
+                Text("Scores hidden")
+                    .font(.system(size: 12, weight: .medium))
+                    .foregroundStyle(.secondary)
             }
-            chip("Live", isOn: scoreVisibility.showLive) {
-                scoreVisibility.toggleLive()
-            }
+
+            Spacer()
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 8)
+        .animation(.easeInOut(duration: 0.2), value: scoresOn)
     }
 
-    private func chip(_ label: String, isOn: Bool, action: @escaping () -> Void) -> some View {
+    private func chip(_ label: String, icon: String, isOn: Bool, action: @escaping () -> Void) -> some View {
         Button(action: action) {
-            Text(label)
-                .font(.system(size: 12, weight: .semibold))
-                .padding(.horizontal, 12)
-                .padding(.vertical, 6)
-                .foregroundStyle(isOn ? .white : .primary)
-                .background(isOn ? green : Color(.systemGray5))
-                .clipShape(Capsule())
+            HStack(spacing: 4) {
+                Image(systemName: icon)
+                    .font(.system(size: 10, weight: .semibold))
+                Text(label)
+                    .font(.system(size: 12, weight: .semibold))
+            }
+            .padding(.horizontal, 10)
+            .padding(.vertical, 5)
+            .foregroundStyle(isOn ? green : .secondary)
+            .background(isOn ? green.opacity(0.12) : Color(.systemGray5))
+            .clipShape(Capsule())
+            .overlay(
+                Capsule()
+                    .stroke(isOn ? green : Color.clear, lineWidth: 1.5)
+            )
         }
         .buttonStyle(.plain)
     }
