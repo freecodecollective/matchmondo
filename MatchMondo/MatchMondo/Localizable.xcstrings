@@ -1,0 +1,1364 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "3-Day" : {
+      "comment" : "Tab label",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3日間"
+          }
+        }
+      }
+    },
+    "Schedule" : {
+      "comment" : "Tab label and section header",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日程"
+          }
+        }
+      }
+    },
+    "Standings" : {
+      "comment" : "Tab label and navigation title",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "順位表"
+          }
+        }
+      }
+    },
+    "Teams" : {
+      "comment" : "Tab label",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チーム"
+          }
+        }
+      }
+    },
+    "More" : {
+      "comment" : "Tab label",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "その他"
+          }
+        }
+      }
+    },
+    "Enjoying MatchMondo?" : {
+      "comment" : "App review alert title",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MatchMondoはいかがですか？"
+          }
+        }
+      }
+    },
+    "Leave a Review" : {
+      "comment" : "App review alert button",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レビューを書く"
+          }
+        }
+      }
+    },
+    "Ask me later" : {
+      "comment" : "App review alert button",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "後で聞いて"
+          }
+        }
+      }
+    },
+    "Don't ask again" : {
+      "comment" : "App review alert button",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もう聞かない"
+          }
+        }
+      }
+    },
+    "If you like MatchMondo, please spread the love with a quick app review. It would mean a lot to us." : {
+      "comment" : "App review alert message",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MatchMondoを気に入っていただけたら、アプリレビューで応援していただけると嬉しいです。"
+          }
+        }
+      }
+    },
+    "Loading matches..." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試合を読み込み中..."
+          }
+        }
+      }
+    },
+    "World Cup 2026" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ワールドカップ 2026"
+          }
+        }
+      }
+    },
+    "LIVE" : {
+      "comment" : "Live match badge — kept in English as universal sports term",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LIVE"
+          }
+        }
+      }
+    },
+    "June 11 – July 19 · USA, Canada & Mexico" : {
+      "comment" : "Tournament dates banner",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "6月11日〜7月19日 · アメリカ・カナダ・メキシコ"
+          }
+        }
+      }
+    },
+    "Yesterday" : {
+      "comment" : "Day section header in 3-Day view",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "昨日"
+          }
+        }
+      }
+    },
+    "Today" : {
+      "comment" : "Day section header and schedule badge",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日"
+          }
+        }
+      }
+    },
+    "Tomorrow" : {
+      "comment" : "Day section header in 3-Day view",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "明日"
+          }
+        }
+      }
+    },
+    "No matches in the next 3 days" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今後3日間は試合がありません"
+          }
+        }
+      }
+    },
+    "Next match" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次の試合"
+          }
+        }
+      }
+    },
+    "%@ vs %@" : {
+      "comment" : "Next match label: home vs away",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ vs %@"
+          }
+        }
+      }
+    },
+    "%lld of %lld played" : {
+      "comment" : "Stats bar: X of Y played",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld試合終了"
+          }
+        }
+      }
+    },
+    "updated_prefix" : {
+      "comment" : "Text before relative time in stats bar. English: 'Updated ', Japanese: empty (time comes first).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updated "
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "updated_suffix" : {
+      "comment" : "Text after relative time in stats bar. English: ' ago', Japanese: '前に更新'.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " ago"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前に更新"
+          }
+        }
+      }
+    },
+    "1 match" : {
+      "comment" : "Singular match count",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1試合"
+          }
+        }
+      }
+    },
+    "%lld matches" : {
+      "comment" : "Plural match count",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld試合"
+          }
+        }
+      }
+    },
+    "Search teams, venues..." : {
+      "comment" : "Schedule search prompt",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チーム・会場を検索..."
+          }
+        }
+      }
+    },
+    "All stages" : {
+      "comment" : "Stage filter: show all",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全ステージ"
+          }
+        }
+      }
+    },
+    "Group Stage" : {
+      "comment" : "Tournament stage name from API",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "グループステージ"
+          }
+        }
+      }
+    },
+    "Round of 32" : {
+      "comment" : "Tournament stage name from API",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ベスト32"
+          }
+        }
+      }
+    },
+    "Round of 16" : {
+      "comment" : "Tournament stage name from API",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ベスト16"
+          }
+        }
+      }
+    },
+    "Quarter-finals" : {
+      "comment" : "Tournament stage name from API",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "準々決勝"
+          }
+        }
+      }
+    },
+    "Semi-finals" : {
+      "comment" : "Tournament stage name from API",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "準決勝"
+          }
+        }
+      }
+    },
+    "Third-place Match" : {
+      "comment" : "Tournament stage name from API",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3位決定戦"
+          }
+        }
+      }
+    },
+    "Final" : {
+      "comment" : "Tournament stage name from API",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "決勝"
+          }
+        }
+      }
+    },
+    "Loading..." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "読み込み中..."
+          }
+        }
+      }
+    },
+    "Exclude in-progress" : {
+      "comment" : "Standings filter chip",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試合中を除く"
+          }
+        }
+      }
+    },
+    "Include in-progress" : {
+      "comment" : "Standings filter chip",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試合中を含む"
+          }
+        }
+      }
+    },
+    "Top 2 advance + 8 best third-placed teams" : {
+      "comment" : "Standings explanation",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "各組上位2チーム＋3位最上位8チームが進出"
+          }
+        }
+      }
+    },
+    "Advances (top 2)" : {
+      "comment" : "Standings legend",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "進出（上位2）"
+          }
+        }
+      }
+    },
+    "Best-third contender" : {
+      "comment" : "Standings legend",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3位進出候補"
+          }
+        }
+      }
+    },
+    "#" : {
+      "comment" : "Standings table: position column header",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "#"
+          }
+        }
+      }
+    },
+    "Team" : {
+      "comment" : "Standings table column header",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チーム"
+          }
+        }
+      }
+    },
+    "P" : {
+      "comment" : "Standings: Played",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試"
+          }
+        }
+      }
+    },
+    "W" : {
+      "comment" : "Standings: Won",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "勝"
+          }
+        }
+      }
+    },
+    "D" : {
+      "comment" : "Standings: Drawn",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分"
+          }
+        }
+      }
+    },
+    "L" : {
+      "comment" : "Standings: Lost",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "敗"
+          }
+        }
+      }
+    },
+    "GD" : {
+      "comment" : "Standings: Goal Difference",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "得失"
+          }
+        }
+      }
+    },
+    "Pts" : {
+      "comment" : "Standings: Points",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "勝点"
+          }
+        }
+      }
+    },
+    "Final Scores" : {
+      "comment" : "Score filter chip",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最終スコア"
+          }
+        }
+      }
+    },
+    "Live Scores" : {
+      "comment" : "Score filter chip",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ライブスコア"
+          }
+        }
+      }
+    },
+    "Scores hidden" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スコア非表示"
+          }
+        }
+      }
+    },
+    "Match %lld" : {
+      "comment" : "Match detail navigation title",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第%lld試合"
+          }
+        }
+      }
+    },
+    "Show Score" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スコアを表示"
+          }
+        }
+      }
+    },
+    "Full Time" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試合終了"
+          }
+        }
+      }
+    },
+    "vs" : {
+      "comment" : "Versus separator between teams",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "vs"
+          }
+        }
+      }
+    },
+    "Goals" : {
+      "comment" : "Match detail event section",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ゴール"
+          }
+        }
+      }
+    },
+    "Cards" : {
+      "comment" : "Match detail event section",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カード"
+          }
+        }
+      }
+    },
+    "Substitutions" : {
+      "comment" : "Match detail event section",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "交代"
+          }
+        }
+      }
+    },
+    "(penalty)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(PK)"
+          }
+        }
+      }
+    },
+    "(own goal)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(オウンゴール)"
+          }
+        }
+      }
+    },
+    "Assist: %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アシスト: %@"
+          }
+        }
+      }
+    },
+    "Match Stats" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試合統計"
+          }
+        }
+      }
+    },
+    "Possession" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ポゼッション"
+          }
+        }
+      }
+    },
+    "Shots" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シュート"
+          }
+        }
+      }
+    },
+    "Shots on Target" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "枠内シュート"
+          }
+        }
+      }
+    },
+    "Corners" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コーナーキック"
+          }
+        }
+      }
+    },
+    "Fouls" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ファウル"
+          }
+        }
+      }
+    },
+    "Offsides" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オフサイド"
+          }
+        }
+      }
+    },
+    "Saves" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "セーブ"
+          }
+        }
+      }
+    },
+    "Highlights" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ハイライト"
+          }
+        }
+      }
+    },
+    "Extended" : {
+      "comment" : "Extended highlights label",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拡大版"
+          }
+        }
+      }
+    },
+    "Highlights coming soon" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ハイライトは近日公開"
+          }
+        }
+      }
+    },
+    "%@ attendance" : {
+      "comment" : "Match detail attendance with formatted number",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "来場者数 %@"
+          }
+        }
+      }
+    },
+    "Match %lld · %@%@" : {
+      "comment" : "Match card header: Match N · stageLabel",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第%lld試合 · %@%@"
+          }
+        }
+      }
+    },
+    "All 48 teams, ordered by FIFA ranking." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "FIFAランキング順の全48チーム"
+          }
+        }
+      }
+    },
+    "All 48 teams competing in the 2026 World Cup." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2026年ワールドカップ出場全48チーム"
+          }
+        }
+      }
+    },
+    "Search teams or players..." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チーム・選手を検索..."
+          }
+        }
+      }
+    },
+    "Goalkeepers" : {
+      "comment" : "Roster position group",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ゴールキーパー"
+          }
+        }
+      }
+    },
+    "Defenders" : {
+      "comment" : "Roster position group",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ディフェンダー"
+          }
+        }
+      }
+    },
+    "Midfielders" : {
+      "comment" : "Roster position group",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ミッドフィールダー"
+          }
+        }
+      }
+    },
+    "Forwards" : {
+      "comment" : "Roster position group",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "フォワード"
+          }
+        }
+      }
+    },
+    "Age %lld" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld歳"
+          }
+        }
+      }
+    },
+    "Key Players" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "注目選手"
+          }
+        }
+      }
+    },
+    "View full %lld-player squad" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全%lld人のスクワッドを見る"
+          }
+        }
+      }
+    },
+    "vs %@" : {
+      "comment" : "Team schedule row: home game",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "vs %@"
+          }
+        }
+      }
+    },
+    "at %@" : {
+      "comment" : "Team schedule row: away game",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "@ %@"
+          }
+        }
+      }
+    },
+    "Played" : {
+      "comment" : "Team detail stat label",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出場"
+          }
+        }
+      }
+    },
+    "GF" : {
+      "comment" : "Team detail: Goals For",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "得点"
+          }
+        }
+      }
+    },
+    "GA" : {
+      "comment" : "Team detail: Goals Against",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "失点"
+          }
+        }
+      }
+    },
+    "Squad" : {
+      "comment" : "Team detail: Squad size label",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選手"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
+        }
+      }
+    },
+    "Show FIFA Rankings" : {
+      "comment" : "Settings toggle",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "FIFAランキングを表示"
+          }
+        }
+      }
+    },
+    "Display ranking badges next to team names" : {
+      "comment" : "Settings toggle subtitle",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チーム名の横にランキングバッジを表示"
+          }
+        }
+      }
+    },
+    "Show Match Locations" : {
+      "comment" : "Settings toggle",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試合会場を表示"
+          }
+        }
+      }
+    },
+    "Display venue and city on match cards" : {
+      "comment" : "Settings toggle subtitle",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試合カードに会場と都市を表示"
+          }
+        }
+      }
+    },
+    "Show Country Flags" : {
+      "comment" : "Settings toggle",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "国旗を表示"
+          }
+        }
+      }
+    },
+    "Display flag icons next to team names" : {
+      "comment" : "Settings toggle subtitle",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チーム名の横に国旗アイコンを表示"
+          }
+        }
+      }
+    },
+    "Show Game Times" : {
+      "comment" : "Settings toggle",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試合時間を表示"
+          }
+        }
+      }
+    },
+    "Display kickoff times on match cards" : {
+      "comment" : "Settings toggle subtitle",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試合カードにキックオフ時間を表示"
+          }
+        }
+      }
+    },
+    "About MatchMondo" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MatchMondoについて"
+          }
+        }
+      }
+    },
+    "Built by a group of passionate football fans in California who wanted a better way to follow the 2026 World Cup. We built this app for ourselves — and we're grateful anyone else has found it useful." : {
+      "comment" : "About section body",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2026年ワールドカップをもっと楽しみたいカリフォルニアのサッカーファンが作りました。自分たちのために作ったアプリですが、皆さんにもお役に立てれば幸いです。"
+          }
+        }
+      }
+    },
+    "Tournament Rules" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大会ルール"
+          }
+        }
+      }
+    },
+    "Support Genesis Oakland" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genesis Oaklandを応援"
+          }
+        }
+      }
+    },
+    "MatchMondo is free and always will be — no ads, no subscriptions. If you'd like to give back, consider donating to Genesis Oakland — a youth soccer club building community and creating opportunity for kids in Oakland through the beautiful game." : {
+      "comment" : "Support section body",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MatchMondoは無料で、広告もサブスクもありません。もしお気に召しましたら、Genesis Oakland（オークランドの少年サッカークラブ）への寄付をご検討ください。サッカーを通じてコミュニティと子どもたちの未来を育てています。"
+          }
+        }
+      }
+    },
+    "Donate to Genesis Oakland" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genesis Oaklandに寄付する"
+          }
+        }
+      }
+    },
+    "Or we can donate for you — just Venmo @busselle and we'll pass along the donation to Genesis Oakland." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代わりに寄付することもできます。Venmo @busselle にお送りいただければ、Genesis Oaklandにお届けします。"
+          }
+        }
+      }
+    },
+    "Donate via Venmo (@busselle, 2515)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Venmoで寄付する（@busselle, 2515）"
+          }
+        }
+      }
+    },
+    "Feature Requests" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "機能リクエスト"
+          }
+        }
+      }
+    },
+    "Have an idea to make MatchMondo better? We'd love to hear it." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MatchMondoをもっと良くするアイデアはありますか？ぜひお聞かせください。"
+          }
+        }
+      }
+    },
+    "Email us a feature request" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "機能リクエストをメールで送る"
+          }
+        }
+      }
+    },
+    "MatchMondo v%@" : {
+      "comment" : "App version display",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MatchMondo v%@"
+          }
+        }
+      }
+    },
+    "Made with ❤️ in California" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カリフォルニアで❤️を込めて"
+          }
+        }
+      }
+    },
+    "A fan's guide to the laws and tournament rules for the 2026 World Cup." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2026年ワールドカップのルールガイド"
+          }
+        }
+      }
+    },
+    "Match Format" : {
+      "comment" : "Rules section title",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試合形式"
+          }
+        }
+      }
+    },
+    "Two 45-minute halves plus stoppage time. Group-stage matches can end in a draw. From the Round of 32 on, a tie after 90 minutes goes to two 15-minute periods of extra time, and if still level, a penalty shootout decides it." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前後半各45分＋アディショナルタイム。グループステージは引き分けあり。ベスト32以降、90分で同点の場合は前後半各15分の延長戦、それでも決着がつかなければPK戦。"
+          }
+        }
+      }
+    },
+    "Yellow Card (Caution)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "イエローカード（警告）"
+          }
+        }
+      }
+    },
+    "A warning for unsporting behavior, dissent, persistent fouling, time-wasting, not respecting required distance at free kicks/corners, or entering/leaving the field without permission." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "非スポーツマン行為、異議、繰り返しの反則、時間稼ぎ、フリーキック/コーナーキックでの距離不遵守、無断でのフィールドへの出入りに対する警告。"
+          }
+        }
+      }
+    },
+    "Red Card (Sending-off)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レッドカード（退場）"
+          }
+        }
+      }
+    },
+    "Shown for serious foul play, violent conduct, spitting, denying an obvious goal-scoring opportunity, offensive language, or two yellow cards in the same match. The player leaves and cannot be replaced — the team plays short." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "著しく不正なプレー、暴力行為、唾吐き、決定的な得点機会の阻止、侮辱的な言葉、または同一試合で2枚のイエローカード。退場した選手の補充はできず、チームは少人数でプレー。"
+          }
+        }
+      }
+    },
+    "Suspensions & Amnesty" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出場停止と累積リセット"
+          }
+        }
+      }
+    },
+    "Two yellows in different matches = one-match suspension. Single yellows are wiped after the group stage, and wiped again after the quarter-finals, so a player can't miss the final from an early caution." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "異なる試合での累積イエロー2枚で1試合出場停止。グループステージ終了後と準々決勝後にリセットされるため、初期の警告で決勝を欠場することはありません。"
+          }
+        }
+      }
+    },
+    "Group Tiebreakers" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "グループ順位の決定方法"
+          }
+        }
+      }
+    },
+    "If teams are level on points: 1) Goal difference, 2) Goals scored, 3) Head-to-head points, 4) Head-to-head GD, 5) Head-to-head goals scored, 6) Fair-play score, 7) Drawing of lots." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "勝点が同じ場合：1) 得失点差、2) 総得点、3) 直接対決の勝点、4) 直接対決の得失点差、5) 直接対決の得点、6) フェアプレーポイント、7) 抽選。"
+          }
+        }
+      }
+    },
+    "Who Advances" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "進出条件"
+          }
+        }
+      }
+    },
+    "48 teams in 12 groups. The top two from each group (24 teams) advance, plus the 8 best third-placed teams — 32 teams into the Round of 32." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12グループ48チーム。各グループ上位2チーム（計24チーム）と3位の中で成績上位の8チーム、合計32チームがベスト32に進出。"
+          }
+        }
+      }
+    },
+    "Unofficial summary for fans. See FIFA for official regulations." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ファン向けの非公式まとめです。公式規定はFIFAをご確認ください。"
+          }
+        }
+      }
+    },
+    "Done" : {
+      "comment" : "YouTube sheet dismiss button",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完了"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

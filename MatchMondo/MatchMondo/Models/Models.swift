@@ -183,9 +183,13 @@ struct StageColor {
 
 extension Date {
     func smartTime() -> String {
-        let cal = Calendar.current
         let f = DateFormatter()
-        f.dateFormat = cal.component(.minute, from: self) == 0 ? "h a" : "h:mm a"
+        let cal = Calendar.current
+        if cal.component(.minute, from: self) == 0 {
+            f.setLocalizedDateFormatFromTemplate("j")
+        } else {
+            f.setLocalizedDateFormatFromTemplate("jmm")
+        }
         return f.string(from: self)
     }
 
