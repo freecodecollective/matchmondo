@@ -3,8 +3,17 @@ import SwiftUI
 struct MatchDetailView: View {
     let match: Match
     @EnvironmentObject var data: DataService
+    @EnvironmentObject var scoreVisibility: ScoreVisibility
+    @State private var scoreRevealed = false
     private let green = Color(red: 0.043, green: 0.431, blue: 0.310)
     private let gold = Color(red: 0.91, green: 0.725, blue: 0.137)
+
+    private var shouldHideScore: Bool {
+        guard match.hasScore, !scoreRevealed else { return false }
+        if scoreVisibility.shouldShowScore(for: match) { return false }
+        let cal = Calendar.current
+        return cal.isDateInToday(match.kickoff) || cal.isDateInYesterday(match.kickoff)
+    }
 
     private var highlight: Highlight? {
         data.highlight(for: match.n)
@@ -18,7 +27,7 @@ struct MatchDetailView: View {
         ScrollView {
             VStack(spacing: 16) {
                 scoreHeader
-                if let detail, !detail.events.isEmpty {
+                if !shouldHideScore, let detail, !detail.events.isEmpty {
                     goalsSummary(detail.events)
                 }
                 highlightsSection
@@ -70,7 +79,34 @@ struct MatchDetailView: View {
                 .buttonStyle(.plain)
                 .frame(maxWidth: .infinity)
 
-                if match.hasScore {
+                if match.hasScore && shouldHideScore {
+                    VStack(spacing: 8) {
+                        HStack(spacing: 8) {
+                            Text("?")
+                                .font(.system(size: 32, weight: .heavy, design: .rounded))
+                                .foregroundStyle(.secondary.opacity(0.4))
+                            Text("–")
+                                .font(.system(size: 20, weight: .medium))
+                                .foregroundStyle(.secondary.opacity(0.4))
+                            Text("?")
+                                .font(.system(size: 32, weight: .heavy, design: .rounded))
+                                .foregroundStyle(.secondary.opacity(0.4))
+                        }
+                        Button {
+                            withAnimation(.easeInOut(duration: 0.2)) {
+                                scoreRevealed = true
+                            }
+                        } label: {
+                            Label("Show Score", systemImage: "eye")
+                                .font(.system(size: 13, weight: .semibold))
+                                .foregroundStyle(.white)
+                                .padding(.horizontal, 14)
+                                .padding(.vertical, 7)
+                                .background(green)
+                                .clipShape(Capsule())
+                        }
+                    }
+                } else if match.hasScore {
                     let isLive = match.isLive
                     VStack(spacing: 4) {
                         HStack(spacing: 8) {
