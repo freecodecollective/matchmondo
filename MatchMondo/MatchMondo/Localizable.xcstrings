@@ -1358,6 +1358,72 @@
           }
         }
       }
+    },
+    "Language" : {
+      "comment" : "Settings: language picker label",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "言語"
+          }
+        }
+      }
+    },
+    "Override your device language for this app" : {
+      "comment" : "Settings: language picker subtitle",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このアプリの言語をデバイス設定と別に変更"
+          }
+        }
+      }
+    },
+    "Restart Required" : {
+      "comment" : "Alert title after language change",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再起動が必要です"
+          }
+        }
+      }
+    },
+    "Please close and reopen MatchMondo to apply the language change." : {
+      "comment" : "Alert message after language change",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "言語の変更を適用するには、MatchMondoを閉じて再度開いてください。"
+          }
+        }
+      }
+    },
+    "Close App" : {
+      "comment" : "Alert button to close app after language change",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリを閉じる"
+          }
+        }
+      }
+    },
+    "Later" : {
+      "comment" : "Alert button to dismiss language change restart prompt",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "後で"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
