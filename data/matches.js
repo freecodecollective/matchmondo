@@ -1,5 +1,5 @@
 // FIFA World Cup 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-15 02:41 UTC by scripts/update-data.py
+// Regenerated 2026-06-15 04:12 UTC by scripts/update-data.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -141,8 +141,8 @@ window.WC_MATCHES = [
     "venue": "Lincoln Financial Field",
     "city": "Philadelphia, PA",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 1,
+    "scoreA": 0
   },
   {
     "n": 12,
@@ -154,8 +154,8 @@ window.WC_MATCHES = [
     "venue": "Estadio BBVA",
     "city": "Monterrey, Mexico",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 5,
+    "scoreA": 1
   },
   {
     "n": 14,
