@@ -6,7 +6,7 @@ struct RulesView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 12) {
-                Text("A fan's guide to the laws and tournament rules for the 2026 World Cup.")
+                Text("A fan's guide to the laws and tournament rules for Football 2026.")
                     .font(.system(size: 13))
                     .foregroundStyle(.secondary)
                     .padding(.horizontal, 16)
@@ -50,7 +50,7 @@ struct RulesView: View {
                     body: "48 teams in 12 groups. The top two from each group (24 teams) advance, plus the 8 best third-placed teams — 32 teams into the Round of 32."
                 )
 
-                Text("Unofficial summary for fans. See FIFA for official regulations.")
+                Text("Unofficial summary for fans. See the official tournament website for regulations.")
                     .font(.system(size: 11))
                     .foregroundStyle(.tertiary)
                     .padding(.horizontal, 16)

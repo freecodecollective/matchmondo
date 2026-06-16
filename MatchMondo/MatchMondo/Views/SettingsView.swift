@@ -36,7 +36,7 @@ struct SettingsView: View {
                 VStack(alignment: .leading, spacing: 16) {
                     settingToggle(
                         isOn: $appSettings.showFIFARankings,
-                        title: "Show FIFA Rankings",
+                        title: "Show World Rankings",
                         subtitle: "Display ranking badges next to team names"
                     )
 

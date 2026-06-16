@@ -39,8 +39,8 @@ struct TeamsView: View {
                 } else {
                     VStack(spacing: 0) {
                         Text(appSettings.showFIFARankings
-                            ? "All 48 teams, ordered by FIFA ranking."
-                            : "All 48 teams competing in the 2026 World Cup.")
+                            ? "All 48 teams, ordered by world ranking."
+                            : "All 48 teams competing in Football 2026.")
                             .font(.system(size: 13))
                             .foregroundStyle(.secondary)
                             .padding(.horizontal, 16)

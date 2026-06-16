@@ -9,7 +9,7 @@ final class DataService: ObservableObject {
     @Published var isLoading = true
     @Published var lastUpdated: Date?
 
-    private let baseURL = "https://raw.githubusercontent.com/freecodecollective/world-cup-2026/main/data/"
+    private let baseURL = "https://raw.githubusercontent.com/freecodecollective/matchmondo/main/data/"
     private let espnAPI = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard"
     private static let espnTeamMap: [String: String] = [
         "South Korea": "Korea Republic", "United States": "USA",

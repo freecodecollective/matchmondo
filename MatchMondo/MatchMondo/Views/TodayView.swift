@@ -65,7 +65,7 @@ struct TodayView: View {
     private var headerBanner: some View {
         VStack(spacing: 4) {
             HStack(spacing: 6) {
-                Text("World Cup 2026")
+                Text("Football 2026")
                     .font(.system(size: 14, weight: .bold))
                     .foregroundStyle(.white.opacity(0.9))
                 if hasLiveMatches {
