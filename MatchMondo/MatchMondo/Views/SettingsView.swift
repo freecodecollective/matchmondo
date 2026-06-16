@@ -9,7 +9,16 @@ struct SettingsView: View {
     private let supportedLanguages: [(code: String, name: String)] = [
         ("system", "System Default"),
         ("en", "English"),
+        ("es", "Español"),
+        ("fr", "Français"),
+        ("pt-BR", "Português (BR)"),
+        ("de", "Deutsch"),
+        ("it", "Italiano"),
         ("ja", "日本語"),
+        ("ko", "한국어"),
+        ("zh-Hans", "中文"),
+        ("ar", "العربية"),
+        ("es-ES", "Español (España)"),
     ]
 
     private var selectedLanguage: String {
@@ -106,7 +115,7 @@ struct SettingsView: View {
                     Text(lang.name).tag(lang.code)
                 }
             }
-            .pickerStyle(.segmented)
+            .pickerStyle(.menu)
             .padding(.top, 4)
         }
     }
