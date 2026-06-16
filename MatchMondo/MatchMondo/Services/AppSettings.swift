@@ -1,5 +1,4 @@
 import SwiftUI
-import StoreKit
 
 @MainActor
 final class AppSettings: ObservableObject {
