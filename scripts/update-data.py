@@ -63,10 +63,25 @@ def stage_for(match_number: int) -> str:
     return "Final"
 
 
+def fetch_feed(url: str, retries: int = 3, backoff: float = 5.0) -> list:
+    """Fetch the JSON feed with retries and exponential backoff."""
+    import time
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "wc2026-fan-schedule"})
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return json.load(resp)
+        except Exception as e:
+            if attempt < retries - 1:
+                wait = backoff * (2 ** attempt)
+                print(f"Attempt {attempt + 1} failed ({e}), retrying in {wait}s...")
+                time.sleep(wait)
+            else:
+                raise
+
+
 def main() -> None:
-    req = urllib.request.Request(FEED, headers={"User-Agent": "wc2026-fan-schedule"})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        feed = json.load(resp)
+    feed = fetch_feed(FEED)
 
     rows = []
     for f in feed:
