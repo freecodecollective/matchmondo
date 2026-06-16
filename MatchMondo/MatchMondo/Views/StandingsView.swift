@@ -149,7 +149,7 @@ struct StandingsView: View {
                 HStack(spacing: 6) {
                     FlagView(team: standing.team, size: 20)
                     HStack(spacing: 2) {
-                        Text(standing.team)
+                        Text(TeamNames.localizedName(for: standing.team))
                             .font(.system(size: 13, weight: .semibold))
                             .foregroundStyle(.primary)
                             .lineLimit(1)
@@ -283,7 +283,7 @@ struct StandingsDetailView: View {
                 HStack(spacing: 6) {
                     FlagView(team: standing.team, size: 20)
                     HStack(spacing: 2) {
-                        Text(standing.team)
+                        Text(TeamNames.localizedName(for: standing.team))
                             .font(.system(size: 13, weight: .semibold))
                             .foregroundStyle(.primary)
                             .lineLimit(1)

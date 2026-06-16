@@ -25,7 +25,7 @@ struct TeamDetailView: View {
             .padding(.vertical, 12)
         }
         .background(Color(red: 0.91, green: 0.94, blue: 0.91))
-        .navigationTitle(team)
+        .navigationTitle(TeamNames.localizedName(for: team))
         .navigationBarTitleDisplayMode(.large)
         .navigationDestination(for: Match.self) { match in
             MatchDetailView(match: match)
@@ -36,7 +36,7 @@ struct TeamDetailView: View {
         HStack(spacing: 12) {
             FlagView(team: team, size: 48)
             VStack(alignment: .leading, spacing: 4) {
-                Text(team)
+                Text(TeamNames.localizedName(for: team))
                     .font(.system(size: 22, weight: .bold))
                 HStack(spacing: 8) {
                     RankBadge(team: team)
@@ -175,7 +175,7 @@ struct TeamDetailView: View {
             }
 
             FlagView(team: opponent, size: 18)
-            (isHome ? Text("vs \(opponent)") : Text("at \(opponent)"))
+            (isHome ? Text("vs \(TeamNames.localizedName(for: opponent))") : Text("at \(TeamNames.localizedName(for: opponent))"))
                 .font(.system(size: 13, weight: .medium))
                 .foregroundStyle(.primary)
                 .lineLimit(1)

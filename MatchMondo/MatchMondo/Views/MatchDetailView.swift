@@ -71,7 +71,7 @@ struct MatchDetailView: View {
                 NavigationLink(value: match.home) {
                     VStack(spacing: 6) {
                         FlagView(team: match.home, size: 44)
-                        Text(match.home)
+                        Text(TeamNames.localizedName(for: match.home))
                             .font(.system(size: 15, weight: .bold))
                             .foregroundStyle(.primary)
                         RankBadge(team: match.home)
@@ -143,7 +143,7 @@ struct MatchDetailView: View {
                 NavigationLink(value: match.away) {
                     VStack(spacing: 6) {
                         FlagView(team: match.away, size: 44)
-                        Text(match.away)
+                        Text(TeamNames.localizedName(for: match.away))
                             .font(.system(size: 15, weight: .bold))
                             .foregroundStyle(.primary)
                         RankBadge(team: match.away)

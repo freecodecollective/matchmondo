@@ -23,6 +23,7 @@ struct TeamsView: View {
         if searchText.isEmpty { return allTeams }
         return allTeams.filter { team in
             team.localizedCaseInsensitiveContains(searchText) ||
+            TeamNames.localizedName(for: team).localizedCaseInsensitiveContains(searchText) ||
             (data.players[team] ?? []).contains { p in
                 p.name.localizedCaseInsensitiveContains(searchText) ||
                 p.club.localizedCaseInsensitiveContains(searchText)
@@ -72,7 +73,7 @@ struct TeamsView: View {
             HStack(spacing: 8) {
                 FlagView(team: team, size: 28)
                 HStack(spacing: 4) {
-                    Text(team)
+                    Text(TeamNames.localizedName(for: team))
                         .font(.system(size: 18, weight: .bold))
                         .foregroundStyle(.primary)
                     RankBadge(team: team)

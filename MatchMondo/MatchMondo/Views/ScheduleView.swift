@@ -26,6 +26,8 @@ struct ScheduleView: View {
                 let searchOk = searchText.isEmpty ||
                     m.home.localizedCaseInsensitiveContains(searchText) ||
                     m.away.localizedCaseInsensitiveContains(searchText) ||
+                    TeamNames.localizedName(for: m.home).localizedCaseInsensitiveContains(searchText) ||
+                    TeamNames.localizedName(for: m.away).localizedCaseInsensitiveContains(searchText) ||
                     m.venue.localizedCaseInsensitiveContains(searchText) ||
                     m.city.localizedCaseInsensitiveContains(searchText)
                 return stageOk && searchOk
