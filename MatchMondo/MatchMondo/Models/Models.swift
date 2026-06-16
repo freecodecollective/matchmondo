@@ -55,6 +55,32 @@ struct Player: Codable, Identifiable {
     let hometown: String
     let why: String
     let number: Int?
+    let why_es: String?
+    let why_fr: String?
+    let why_pt_BR: String?
+    let why_de: String?
+    let why_it: String?
+    let why_ja: String?
+    let why_ko: String?
+    let why_zh_Hans: String?
+    let why_ar: String?
+    let why_es_ES: String?
+
+    var localizedWhy: String {
+        let langs = UserDefaults.standard.array(forKey: "AppleLanguages") as? [String] ?? []
+        let lang = langs.first ?? ""
+        if lang.hasPrefix("es-ES") { return why_es_ES ?? why }
+        if lang.hasPrefix("es") { return why_es ?? why }
+        if lang.hasPrefix("fr") { return why_fr ?? why }
+        if lang.hasPrefix("pt") { return why_pt_BR ?? why }
+        if lang.hasPrefix("de") { return why_de ?? why }
+        if lang.hasPrefix("it") { return why_it ?? why }
+        if lang.hasPrefix("ja") { return why_ja ?? why }
+        if lang.hasPrefix("ko") { return why_ko ?? why }
+        if lang.hasPrefix("zh") { return why_zh_Hans ?? why }
+        if lang.hasPrefix("ar") { return why_ar ?? why }
+        return why
+    }
 }
 
 struct RosterPlayer: Codable, Identifiable {

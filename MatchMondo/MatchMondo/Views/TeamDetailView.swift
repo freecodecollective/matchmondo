@@ -258,7 +258,7 @@ struct TeamDetailView: View {
                     .font(.system(size: 12, weight: .medium))
             }
             .foregroundStyle(green)
-            Text(player.why)
+            Text(player.localizedWhy)
                 .font(.system(size: 13))
                 .foregroundStyle(.secondary)
                 .lineSpacing(2)
