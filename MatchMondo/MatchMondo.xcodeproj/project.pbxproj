@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83B67EB02FE0E98400EFC364 /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 83B67EAF2FE0E98400EFC364 /* Configuration.storekit */; };
+		83B67EB22FE0EA4200EFC364 /* DonationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B67EB12FE0EA4200EFC364 /* DonationStore.swift */; };
 		AA000001 /* MatchMondoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100001 /* MatchMondoApp.swift */; };
 		AA000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100002 /* ContentView.swift */; };
 		AA000003 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100003 /* Models.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83B67EAF2FE0E98400EFC364 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		83B67EB12FE0EA4200EFC364 /* DonationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationStore.swift; sourceTree = "<group>"; };
 		AA100001 /* MatchMondoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchMondoApp.swift; sourceTree = "<group>"; };
 		AA100002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA100003 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 				AA400006 /* Services */,
 				AA100010 /* Assets.xcassets */,
 				AA100023 /* Localizable.xcstrings */,
+				83B67EAF2FE0E98400EFC364 /* Configuration.storekit */,
 			);
 			path = MatchMondo;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 				AA100004 /* DataService.swift */,
 				AA100014 /* ScoreVisibility.swift */,
 				AA100018 /* AppSettings.swift */,
+				83B67EB12FE0EA4200EFC364 /* DonationStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -203,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA000010 /* Assets.xcassets in Resources */,
+				83B67EB02FE0E98400EFC364 /* Configuration.storekit in Resources */,
 				AA000021 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +240,7 @@
 				AA000017 /* MoreView.swift in Sources */,
 				AA000018 /* AppSettings.swift in Sources */,
 				AA000020 /* SettingsView.swift in Sources */,
+				83B67EB22FE0EA4200EFC364 /* DonationStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -51,6 +51,9 @@
             ReferencedContainer = "container:MatchMondo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <StoreKitConfigurationFileReference
+         identifier = "../../MatchMondo/Configuration.storekit">
+      </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
