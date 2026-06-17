@@ -28,6 +28,9 @@ jobs:
       - name: Regenerate data from the live feed
         run: python3 scripts/update-data.py
 
+      - name: Patch scores from ESPN
+        run: python3 scripts/update-espn-scores.py
+
       - name: Update highlight video links
         run: python3 scripts/update-highlights.py
 

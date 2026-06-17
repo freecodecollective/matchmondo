@@ -209,13 +209,12 @@ final class DataService: ObservableObject {
             let isFinished = statusName == "STATUS_FULL_TIME"
             if isLive { liveNow = true }
 
-            var newH: Int? = nil
-            var newA: Int? = nil
-            if isLive || isFinished {
-                newH = Int(home.score ?? "")
-                newA = Int(away.score ?? "")
-            }
+            // Only update scores for live/finished matches — never overwrite
+            // existing scores (from matches.json) with nil for scheduled matches
+            guard isLive || isFinished else { continue }
 
+            let newH = Int(home.score ?? "")
+            let newA = Int(away.score ?? "")
             let newDetail: String? = isLive ? statusDetail : nil
             if matches[idx].scoreH != newH || matches[idx].scoreA != newA
                 || matches[idx].isLive != isLive || matches[idx].liveDetail != newDetail {
