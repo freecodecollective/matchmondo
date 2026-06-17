@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MatchMondo — Header Options</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif; background: #f0f0f0; padding: 20px; }
+  h1 { font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 24px; color: #333; }
+  .grid { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; max-width: 1200px; margin: 0 auto; }
+  .option { width: 375px; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+  .option-label { padding: 10px 14px; font-size: 14px; font-weight: 600; color: #555; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 8px; }
+  .option-num { background: #e6f1fb; color: #185fa5; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 6px; }
+  .option-desc { font-weight: 400; color: #888; }
+
+  .phone-frame { background: #e8ece8; padding: 0; }
+  .nav-bar { background: #f7f7f7; padding: 10px 16px; }
+  .nav-title { font-size: 28px; font-weight: 700; color: #000; }
+
+  .hdr { width: 100%; text-align: center; position: relative; overflow: hidden; }
+  .hdr h3 { margin: 0; font-size: 14px; font-weight: 700; color: #fff; position: relative; z-index: 2; }
+  .hdr p { margin: 4px 0 0; font-size: 12px; color: rgba(255,255,255,0.7); position: relative; z-index: 2; }
+  .live { display: inline-block; font-size: 9px; font-weight: 800; color: #fff; background: #e24b4a; padding: 2px 6px; border-radius: 99px; vertical-align: middle; margin-left: 4px; letter-spacing: 0.5px; }
+
+  .fake-content { padding: 12px 16px; }
+  .fake-bar { height: 10px; background: #d5dad5; border-radius: 4px; margin-bottom: 8px; }
+  .fake-bar.short { width: 60%; }
+  .fake-card { background: #fff; border-radius: 12px; padding: 14px; margin-bottom: 10px; border: 1px solid #ddd; }
+  .fake-row { display: flex; justify-content: space-between; align-items: center; }
+  .fake-team { display: flex; align-items: center; gap: 8px; }
+  .fake-flag { width: 22px; height: 16px; background: #ccc; border-radius: 2px; }
+  .fake-name { height: 10px; width: 80px; background: #bbb; border-radius: 3px; }
+  .fake-score { font-size: 16px; font-weight: 700; color: #333; }
+  .fake-time { font-size: 10px; color: #999; text-align: center; margin: 6px 0; }
+</style>
+</head>
+<body>
+<h1>MatchMondo Header Options</h1>
+<div class="grid">
+
+  <!-- Option 1 -->
+  <div class="option">
+    <div class="option-label"><span class="option-num">1</span> Gradient mesh <span class="option-desc">— deep green to teal</span></div>
+    <div class="phone-frame">
+      <div class="nav-bar"><div class="nav-title">MatchMondo</div></div>
+      <div class="hdr" style="background:linear-gradient(135deg,#0B3D28 0%,#0F6E56 50%,#1D9E75 100%);padding:24px 16px">
+        <h3>Football 2026 <span class="live">LIVE</span></h3>
+        <p>June 11 – July 19 · USA, Canada & Mexico</p>
+      </div>
+      <div class="fake-content">
+        <div class="fake-bar short"></div>
+        <div class="fake-card">
+          <div class="fake-time">Today · 3:00 PM</div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">2</div></div>
+          <div style="height:6px"></div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">1</div></div>
+        </div>
+        <div class="fake-card">
+          <div class="fake-time">Today · 6:00 PM</div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">0</div></div>
+          <div style="height:6px"></div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">0</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 2 -->
+  <div class="option">
+    <div class="option-label"><span class="option-num">2</span> Stadium turf <span class="option-desc">— diagonal grass stripes</span></div>
+    <div class="phone-frame">
+      <div class="nav-bar"><div class="nav-title">MatchMondo</div></div>
+      <div class="hdr" style="background:repeating-linear-gradient(135deg,#0B5234 0px,#0B5234 18px,#0D6040 18px,#0D6040 36px);padding:28px 16px">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.15) 0%,transparent 40%,transparent 60%,rgba(0,0,0,0.1) 100%)"></div>
+        <h3>Football 2026 <span class="live">LIVE</span></h3>
+        <p>June 11 – July 19 · USA, Canada & Mexico</p>
+      </div>
+      <div class="fake-content">
+        <div class="fake-bar short"></div>
+        <div class="fake-card">
+          <div class="fake-time">Today · 3:00 PM</div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">2</div></div>
+          <div style="height:6px"></div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">1</div></div>
+        </div>
+        <div class="fake-card">
+          <div class="fake-time">Today · 6:00 PM</div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">0</div></div>
+          <div style="height:6px"></div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">0</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 3 -->
+  <div class="option">
+    <div class="option-label"><span class="option-num">3</span> Three-nation <span class="option-desc">— colored stripe accents</span></div>
+    <div class="phone-frame">
+      <div class="nav-bar"><div class="nav-title">MatchMondo</div></div>
+      <div class="hdr" style="background:#0B3D28;padding:0">
+        <div style="display:flex;height:4px">
+          <div style="flex:1;background:#B31942"></div>
+          <div style="flex:1;background:#FF0000"></div>
+          <div style="flex:1;background:#FFFFFF"></div>
+        </div>
+        <div style="padding:20px 16px">
+          <h3>Football 2026 <span class="live">LIVE</span></h3>
+          <p>June 11 – July 19 · USA, Canada & Mexico</p>
+        </div>
+      </div>
+      <div class="fake-content">
+        <div class="fake-bar short"></div>
+        <div class="fake-card">
+          <div class="fake-time">Today · 3:00 PM</div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">2</div></div>
+          <div style="height:6px"></div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">1</div></div>
+        </div>
+        <div class="fake-card">
+          <div class="fake-time">Today · 6:00 PM</div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">0</div></div>
+          <div style="height:6px"></div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">0</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 4 -->
+  <div class="option">
+    <div class="option-label"><span class="option-num">4</span> Pitch lines <span class="option-desc">— abstract field markings</span></div>
+    <div class="phone-frame">
+      <div class="nav-bar"><div class="nav-title">MatchMondo</div></div>
+      <div class="hdr" style="background:#0B3D28;padding:28px 16px">
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;border:1.5px solid rgba(255,255,255,0.12);border-radius:50%"></div>
+        <div style="position:absolute;top:0;bottom:0;left:50%;width:1.5px;background:rgba(255,255,255,0.08)"></div>
+        <div style="position:absolute;top:-20px;left:-20px;width:60px;height:60px;border:1.5px solid rgba(255,255,255,0.08);border-radius:50%"></div>
+        <div style="position:absolute;bottom:-20px;right:-20px;width:60px;height:60px;border:1.5px solid rgba(255,255,255,0.08);border-radius:50%"></div>
+        <h3>Football 2026 <span class="live">LIVE</span></h3>
+        <p>June 11 – July 19 · USA, Canada & Mexico</p>
+      </div>
+      <div class="fake-content">
+        <div class="fake-bar short"></div>
+        <div class="fake-card">
+          <div class="fake-time">Today · 3:00 PM</div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">2</div></div>
+          <div style="height:6px"></div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">1</div></div>
+        </div>
+        <div class="fake-card">
+          <div class="fake-time">Today · 6:00 PM</div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">0</div></div>
+          <div style="height:6px"></div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">0</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 5 -->
+  <div class="option">
+    <div class="option-label"><span class="option-num">5</span> Gold accent <span class="option-desc">— elegant dark with gold rule</span></div>
+    <div class="phone-frame">
+      <div class="nav-bar"><div class="nav-title">MatchMondo</div></div>
+      <div class="hdr" style="background:linear-gradient(180deg,#0B3D28,#0A2E1E);padding:0">
+        <div style="padding:22px 16px">
+          <h3>Football 2026 <span class="live">LIVE</span></h3>
+          <p>June 11 – July 19 · USA, Canada & Mexico</p>
+        </div>
+        <div style="height:3px;background:linear-gradient(90deg,transparent 10%,#C9A84C 30%,#E8C96D 50%,#C9A84C 70%,transparent 90%)"></div>
+      </div>
+      <div class="fake-content">
+        <div class="fake-bar short"></div>
+        <div class="fake-card">
+          <div class="fake-time">Today · 3:00 PM</div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">2</div></div>
+          <div style="height:6px"></div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">1</div></div>
+        </div>
+        <div class="fake-card">
+          <div class="fake-time">Today · 6:00 PM</div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">0</div></div>
+          <div style="height:6px"></div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">0</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 6 -->
+  <div class="option">
+    <div class="option-label"><span class="option-num">6</span> Net texture <span class="option-desc">— hexagonal football pattern</span></div>
+    <div class="phone-frame">
+      <div class="nav-bar"><div class="nav-title">MatchMondo</div></div>
+      <div class="hdr" style="background:#0B3D28;padding:28px 16px">
+        <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.07" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="hex" width="28" height="48.5" patternUnits="userSpaceOnUse" patternTransform="scale(1.2)"><polygon points="14,2 25.5,9 25.5,23 14,30 2.5,23 2.5,9" fill="none" stroke="white" stroke-width="1"/><polygon points="14,18.5 25.5,25.5 25.5,39.5 14,46.5 2.5,39.5 2.5,25.5" fill="none" stroke="white" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#hex)"/></svg>
+        <h3>Football 2026 <span class="live">LIVE</span></h3>
+        <p>June 11 – July 19 · USA, Canada & Mexico</p>
+      </div>
+      <div class="fake-content">
+        <div class="fake-bar short"></div>
+        <div class="fake-card">
+          <div class="fake-time">Today · 3:00 PM</div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">2</div></div>
+          <div style="height:6px"></div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">1</div></div>
+        </div>
+        <div class="fake-card">
+          <div class="fake-time">Today · 6:00 PM</div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">0</div></div>
+          <div style="height:6px"></div>
+          <div class="fake-row"><div class="fake-team"><div class="fake-flag"></div><div class="fake-name"></div></div><div class="fake-score">0</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
