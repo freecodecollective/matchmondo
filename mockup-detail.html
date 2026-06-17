@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MatchMondo — Match Detail Mockup</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif; background: #e8e8e8; padding: 24px 0 48px; }
+
+  .page-title { text-align: center; font-size: 18px; font-weight: 600; color: #555; padding: 20px 0 4px; }
+  .page-subtitle { text-align: center; font-size: 13px; color: #999; margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+  .phones { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; padding: 0 20px 40px; }
+
+  .phone {
+    width: 375px;
+    background: #e8ece8;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15), 0 2px 8px rgba(0,0,0,0.1);
+    border: 6px solid #1a1a1a;
+    position: relative;
+  }
+  .phone-label { text-align: center; font-size: 14px; font-weight: 600; color: #555; margin-bottom: 8px; }
+  .phone-wrap { display: flex; flex-direction: column; align-items: center; }
+
+  .status-bar {
+    background: #f7f7f7;
+    padding: 8px 24px 0;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; font-weight: 600; color: #000;
+  }
+  .status-bar .time { font-size: 14px; font-weight: 700; }
+  .status-icons { display: flex; gap: 4px; font-size: 11px; }
+
+  .nav-bar {
+    background: #f7f7f7;
+    padding: 6px 16px 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .nav-back { font-size: 16px; color: #0B6E4F; font-weight: 500; }
+  .nav-title-small { font-size: 16px; font-weight: 600; color: #000; }
+
+  .content { background: #e8ece8; }
+
+  /* Score header */
+  .score-header {
+    background: linear-gradient(135deg, #0B3D28 0%, #0F6E56 50%, #1D9E75 100%);
+    padding: 20px 16px 18px;
+    color: #fff;
+    text-align: center;
+  }
+  .score-header .match-info-top {
+    font-size: 10px;
+    color: rgba(255,255,255,0.65);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+  .score-teams {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  .score-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+  }
+  .score-team .flag {
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .score-team .name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .score-team .rank {
+    font-size: 9px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 2px;
+  }
+  .score-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .score-big {
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    line-height: 1;
+  }
+  .score-status {
+    font-size: 10px;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Goals summary */
+  .goals-summary {
+    background: #fff;
+    margin: 0 12px;
+    border-radius: 10px;
+    margin-top: -8px;
+    position: relative;
+    z-index: 2;
+    padding: 10px 14px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .goals-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 0;
+    font-size: 12px;
+    color: #333;
+  }
+  .goals-row .scorer { font-weight: 600; }
+  .goals-row .minute { color: #888; font-size: 10px; font-weight: 500; }
+  .goal-icon { font-size: 10px; margin: 0 3px; }
+
+  /* Section cards */
+  .section-card {
+    background: #fff;
+    margin: 10px 12px;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .section-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0B6E4F;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+
+  /* Formation / Lineups */
+  .formation-container {
+    display: flex;
+    gap: 0;
+  }
+  .formation-half {
+    flex: 1;
+    position: relative;
+  }
+  .formation-label {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .pitch-half {
+    background: #2d7a4f;
+    border-radius: 6px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+  .formation-half:first-child .pitch-half {
+    border-radius: 6px 0 0 6px;
+    border-right: 1px dashed rgba(255,255,255,0.3);
+  }
+  .formation-half:last-child .pitch-half {
+    border-radius: 0 6px 6px 0;
+    border-left: none;
+  }
+  .pitch-lines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .pitch-center-circle {
+    position: absolute;
+    width: 40px; height: 40px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    top: 50%; transform: translateY(-50%);
+  }
+  .formation-half:first-child .pitch-center-circle { right: -20px; }
+  .formation-half:last-child .pitch-center-circle { left: -20px; }
+
+  .pitch-box {
+    position: absolute;
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+  .formation-half:first-child .pitch-box {
+    left: 0; top: 25%; height: 50%; width: 30%;
+  }
+  .formation-half:last-child .pitch-box {
+    right: 0; top: 25%; height: 50%; width: 30%;
+  }
+
+  .player-dot {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(-50%, -50%);
+  }
+  .player-dot .dot {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 8px; font-weight: 800; color: #fff;
+  }
+  .player-dot .pname {
+    font-size: 6.5px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 1px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    white-space: nowrap;
+  }
+  .home-dot { background: #1a3e78; border: 1.5px solid #fff; }
+  .away-dot { background: #c41e3a; border: 1.5px solid #fff; }
+
+  /* Stats bars */
+  .stat-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .stat-row:last-child { margin-bottom: 0; }
+  .stat-label {
+    font-size: 10px;
+    color: #666;
+    width: 80px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .stat-bars {
+    display: flex;
+    flex: 1;
+    gap: 3px;
+    align-items: center;
+  }
+  .stat-bar-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .stat-bar-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .stat-bar-left .bar-fill {
+    height: 6px;
+    background: #1a3e78;
+    border-radius: 3px;
+    min-width: 4px;
+  }
+  .stat-bar-right .bar-fill {
+    height: 6px;
+    background: #c41e3a;
+    border-radius: 3px;
+    min-width: 4px;
+  }
+  .stat-val {
+    font-size: 10px;
+    font-weight: 700;
+    width: 28px;
+    text-align: center;
+    color: #333;
+  }
+  .stat-val-left { text-align: right; }
+  .stat-val-right { text-align: left; }
+
+  /* Momentum graph */
+  .momentum-container {
+    position: relative;
+  }
+  .momentum-svg {
+    width: 100%;
+    height: 120px;
+    display: block;
+  }
+  .momentum-legend {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    color: #999;
+    margin-top: 4px;
+    padding: 0 4px;
+  }
+  .momentum-team-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    padding: 0 4px;
+  }
+  .momentum-team-labels .home-label { color: #1a3e78; }
+  .momentum-team-labels .away-label { color: #c41e3a; }
+
+  /* Match info */
+  .info-row {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .info-row:last-child { border-bottom: none; }
+  .info-icon {
+    width: 28px;
+    font-size: 14px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .info-content {
+    flex: 1;
+  }
+  .info-label {
+    font-size: 10px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .info-value {
+    font-size: 12px;
+    color: #333;
+    font-weight: 600;
+  }
+
+  /* Cards & Subs */
+  .event-row {
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+    font-size: 11px;
+    color: #333;
+  }
+  .event-minute {
+    width: 32px;
+    font-size: 10px;
+    color: #999;
+    font-weight: 500;
+    text-align: right;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+  .event-icon {
+    width: 18px;
+    font-size: 11px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .event-player {
+    font-weight: 600;
+    margin-left: 4px;
+  }
+  .event-detail {
+    color: #999;
+    font-size: 10px;
+    margin-left: 4px;
+  }
+
+  /* Highlights */
+  .highlights-scroll {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+  .highlight-thumb {
+    width: 120px;
+    height: 68px;
+    background: #ddd;
+    border-radius: 6px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+  .highlight-thumb .play-btn {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    font-size: 20px;
+  }
+  .highlight-thumb .hl-label {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    font-size: 8px;
+    font-weight: 700;
+    color: #fff;
+    background: rgba(0,0,0,0.6);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  /* Bottom safe area */
+  .safe-area { height: 24px; background: #e8ece8; }
+
+  /* Design notes at bottom */
+  .notes {
+    max-width: 600px;
+    margin: 32px auto 0;
+    padding: 0 20px;
+  }
+  .notes h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  .notes ul {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.8;
+    padding-left: 16px;
+  }
+  .notes ul li strong { color: #555; }
+</style>
+</head>
+<body>
+
+<div class="page-title">MatchMondo — Match Detail View</div>
+<div class="page-subtitle">Tapping a match from Schedule or 3-Day view opens this. Showing a completed match (England 4–2 Croatia).</div>
+
+<div class="phones">
+  <!-- Phone 1: Top half (score + goals + lineups) -->
+  <div class="phone-wrap">
+    <div class="phone-label">Match Detail — Top</div>
+    <div class="phone">
+      <div class="status-bar">
+        <div class="time">2:42</div>
+        <div class="status-icons">
+          <span>📶</span><span>📡</span><span>🔋</span>
+        </div>
+      </div>
+      <div class="nav-bar">
+        <span class="nav-back">‹ Schedule</span>
+      </div>
+
+      <!-- Score header -->
+      <div class="score-header">
+        <div class="match-info-top">Group L · Match 22 · June 17, 2026</div>
+        <div class="score-teams">
+          <div class="score-team">
+            <div class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
+            <div class="name">England</div>
+            <div class="rank">#4</div>
+          </div>
+          <div class="score-center">
+            <div class="score-big">4 – 2</div>
+            <div class="score-status">Full Time</div>
+          </div>
+          <div class="score-team">
+            <div class="flag">🇭🇷</div>
+            <div class="name">Croatia</div>
+            <div class="rank">#16</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Goals summary -->
+      <div class="goals-summary">
+        <div class="goals-row">
+          <span><span class="scorer">Bellingham</span> <span class="minute">12'</span></span>
+          <span class="goal-icon">⚽</span>
+          <span></span>
+        </div>
+        <div class="goals-row">
+          <span></span>
+          <span class="goal-icon">⚽</span>
+          <span><span class="scorer">Kramarić</span> <span class="minute">28'</span></span>
+        </div>
+        <div class="goals-row">
+          <span><span class="scorer">Kane</span> <span class="minute">34'</span></span>
+          <span class="goal-icon">⚽</span>
+          <span></span>
+        </div>
+        <div class="goals-row">
+          <span><span class="scorer">Saka</span> <span class="minute">51'</span></span>
+          <span class="goal-icon">⚽</span>
+          <span></span>
+        </div>
+        <div class="goals-row">
+          <span></span>
+          <span class="goal-icon">⚽</span>
+          <span><span class="scorer">Petković</span> <span class="minute">63'</span></span>
+        </div>
+        <div class="goals-row">
+          <span><span class="scorer">Palmer</span> <span class="minute">78'</span></span>
+          <span class="goal-icon">⚽</span>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- Lineups -->
+      <div class="section-card">
+        <div class="section-title">Starting Lineups</div>
+        <div class="formation-container">
+          <!-- England 4-2-3-1 -->
+          <div class="formation-half">
+            <div class="formation-label">England — 4-2-3-1</div>
+            <div class="pitch-half">
+              <div class="pitch-lines">
+                <div class="pitch-center-circle"></div>
+                <div class="pitch-box"></div>
+              </div>
+              <!-- GK -->
+              <div class="player-dot" style="left:10%;top:50%">
+                <div class="dot home-dot">1</div>
+                <div class="pname">Pickford</div>
+              </div>
+              <!-- DEF -->
+              <div class="player-dot" style="left:28%;top:15%">
+                <div class="dot home-dot">2</div>
+                <div class="pname">Walker</div>
+              </div>
+              <div class="player-dot" style="left:28%;top:38%">
+                <div class="dot home-dot">5</div>
+                <div class="pname">Stones</div>
+              </div>
+              <div class="player-dot" style="left:28%;top:62%">
+                <div class="dot home-dot">6</div>
+                <div class="pname">Guéhi</div>
+              </div>
+              <div class="player-dot" style="left:28%;top:85%">
+                <div class="dot home-dot">3</div>
+                <div class="pname">Shaw</div>
+              </div>
+              <!-- DM -->
+              <div class="player-dot" style="left:50%;top:35%">
+                <div class="dot home-dot">4</div>
+                <div class="pname">Rice</div>
+              </div>
+              <div class="player-dot" style="left:50%;top:65%">
+                <div class="dot home-dot">8</div>
+                <div class="pname">Mainoo</div>
+              </div>
+              <!-- AM -->
+              <div class="player-dot" style="left:72%;top:18%">
+                <div class="dot home-dot">7</div>
+                <div class="pname">Saka</div>
+              </div>
+              <div class="player-dot" style="left:72%;top:50%">
+                <div class="dot home-dot">10</div>
+                <div class="pname">Bellingham</div>
+              </div>
+              <div class="player-dot" style="left:72%;top:82%">
+                <div class="dot home-dot">20</div>
+                <div class="pname">Palmer</div>
+              </div>
+              <!-- ST -->
+              <div class="player-dot" style="left:90%;top:50%">
+                <div class="dot home-dot">9</div>
+                <div class="pname">Kane</div>
+              </div>
+            </div>
+          </div>
+          <!-- Croatia 4-3-3 -->
+          <div class="formation-half">
+            <div class="formation-label">Croatia — 4-3-3</div>
+            <div class="pitch-half">
+              <div class="pitch-lines">
+                <div class="pitch-center-circle"></div>
+                <div class="pitch-box"></div>
+              </div>
+              <!-- ST -->
+              <div class="player-dot" style="left:10%;top:50%">
+                <div class="dot away-dot">9</div>
+                <div class="pname">Kramarić</div>
+              </div>
+              <!-- LW/RW -->
+              <div class="player-dot" style="left:18%;top:18%">
+                <div class="dot away-dot">4</div>
+                <div class="pname">Petković</div>
+              </div>
+              <div class="player-dot" style="left:18%;top:82%">
+                <div class="dot away-dot">18</div>
+                <div class="pname">Ivanušec</div>
+              </div>
+              <!-- MID -->
+              <div class="player-dot" style="left:42%;top:25%">
+                <div class="dot away-dot">10</div>
+                <div class="pname">Modrić</div>
+              </div>
+              <div class="player-dot" style="left:42%;top:50%">
+                <div class="dot away-dot">11</div>
+                <div class="pname">Brozović</div>
+              </div>
+              <div class="player-dot" style="left:42%;top:75%">
+                <div class="dot away-dot">8</div>
+                <div class="pname">Kovačić</div>
+              </div>
+              <!-- DEF -->
+              <div class="player-dot" style="left:66%;top:15%">
+                <div class="dot away-dot">22</div>
+                <div class="pname">Juranovič</div>
+              </div>
+              <div class="player-dot" style="left:66%;top:38%">
+                <div class="dot away-dot">6</div>
+                <div class="pname">Šutalo</div>
+              </div>
+              <div class="player-dot" style="left:66%;top:62%">
+                <div class="dot away-dot">21</div>
+                <div class="pname">Gvardiol</div>
+              </div>
+              <div class="player-dot" style="left:66%;top:85%">
+                <div class="dot away-dot">19</div>
+                <div class="pname">Sosa</div>
+              </div>
+              <!-- GK -->
+              <div class="player-dot" style="left:90%;top:50%">
+                <div class="dot away-dot">1</div>
+                <div class="pname">Livaković</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="safe-area"></div>
+    </div>
+  </div>
+
+  <!-- Phone 2: Stats + Momentum + Events -->
+  <div class="phone-wrap">
+    <div class="phone-label">Match Detail — Middle</div>
+    <div class="phone">
+      <div class="status-bar">
+        <div class="time">2:42</div>
+        <div class="status-icons">
+          <span>📶</span><span>📡</span><span>🔋</span>
+        </div>
+      </div>
+      <div class="nav-bar">
+        <span class="nav-back">‹ Schedule</span>
+      </div>
+
+      <div class="content">
+        <!-- Stats -->
+        <div class="section-card">
+          <div class="section-title">Match Stats</div>
+
+          <div class="stat-row">
+            <div class="stat-val stat-val-left">62%</div>
+            <div class="stat-bars">
+              <div class="stat-bar-left"><div class="bar-fill" style="width:62%"></div></div>
+              <div class="stat-label">Possession</div>
+              <div class="stat-bar-right"><div class="bar-fill" style="width:38%"></div></div>
+            </div>
+            <div class="stat-val stat-val-right">38%</div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-val stat-val-left">18</div>
+            <div class="stat-bars">
+              <div class="stat-bar-left"><div class="bar-fill" style="width:72%"></div></div>
+              <div class="stat-label">Shots</div>
+              <div class="stat-bar-right"><div class="bar-fill" style="width:44%"></div></div>
+            </div>
+            <div class="stat-val stat-val-right">11</div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-val stat-val-left">8</div>
+            <div class="stat-bars">
+              <div class="stat-bar-left"><div class="bar-fill" style="width:80%"></div></div>
+              <div class="stat-label">On Target</div>
+              <div class="stat-bar-right"><div class="bar-fill" style="width:40%"></div></div>
+            </div>
+            <div class="stat-val stat-val-right">4</div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-val stat-val-left">89%</div>
+            <div class="stat-bars">
+              <div class="stat-bar-left"><div class="bar-fill" style="width:89%"></div></div>
+              <div class="stat-label">Pass Accuracy</div>
+              <div class="stat-bar-right"><div class="bar-fill" style="width:82%"></div></div>
+            </div>
+            <div class="stat-val stat-val-right">82%</div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-val stat-val-left">7</div>
+            <div class="stat-bars">
+              <div class="stat-bar-left"><div class="bar-fill" style="width:70%"></div></div>
+              <div class="stat-label">Corners</div>
+              <div class="stat-bar-right"><div class="bar-fill" style="width:30%"></div></div>
+            </div>
+            <div class="stat-val stat-val-right">3</div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-val stat-val-left">9</div>
+            <div class="stat-bars">
+              <div class="stat-bar-left"><div class="bar-fill" style="width:50%"></div></div>
+              <div class="stat-label">Fouls</div>
+              <div class="stat-bar-right"><div class="bar-fill" style="width:72%"></div></div>
+            </div>
+            <div class="stat-val stat-val-right">13</div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-val stat-val-left">2</div>
+            <div class="stat-bars">
+              <div class="stat-bar-left"><div class="bar-fill" style="width:40%"></div></div>
+              <div class="stat-label">Offsides</div>
+              <div class="stat-bar-right"><div class="bar-fill" style="width:60%"></div></div>
+            </div>
+            <div class="stat-val stat-val-right">3</div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-val stat-val-left">2</div>
+            <div class="stat-bars">
+              <div class="stat-bar-left"><div class="bar-fill" style="width:33%"></div></div>
+              <div class="stat-label">Saves</div>
+              <div class="stat-bar-right"><div class="bar-fill" style="width:67%"></div></div>
+            </div>
+            <div class="stat-val stat-val-right">4</div>
+          </div>
+        </div>
+
+        <!-- Momentum / Pressure Graph -->
+        <div class="section-card">
+          <div class="section-title">Match Momentum</div>
+          <div class="momentum-container">
+            <div class="momentum-team-labels">
+              <span class="home-label">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</span>
+              <span class="away-label">Croatia 🇭🇷</span>
+            </div>
+            <svg class="momentum-svg" viewBox="0 0 320 120" preserveAspectRatio="none">
+              <!-- Background -->
+              <rect x="0" y="0" width="320" height="60" fill="#1a3e78" opacity="0.05"/>
+              <rect x="0" y="60" width="320" height="60" fill="#c41e3a" opacity="0.05"/>
+              <!-- Center line -->
+              <line x1="0" y1="60" x2="320" y2="60" stroke="#ddd" stroke-width="0.5"/>
+              <!-- HT line -->
+              <line x1="160" y1="0" x2="160" y2="120" stroke="#ccc" stroke-width="0.5" stroke-dasharray="3,3"/>
+              <text x="160" y="10" text-anchor="middle" fill="#bbb" font-size="7" font-family="inherit">HT</text>
+              <!-- Goal markers -->
+              <line x1="42" y1="0" x2="42" y2="120" stroke="#0B6E4F" stroke-width="0.5" opacity="0.3"/>
+              <circle cx="42" cy="18" r="3" fill="#0B6E4F"/>
+              <text x="42" y="116" text-anchor="middle" fill="#0B6E4F" font-size="6" font-family="inherit">12'</text>
+
+              <line x1="100" y1="0" x2="100" y2="120" stroke="#c41e3a" stroke-width="0.5" opacity="0.3"/>
+              <circle cx="100" cy="82" r="3" fill="#c41e3a"/>
+              <text x="100" y="116" text-anchor="middle" fill="#c41e3a" font-size="6" font-family="inherit">28'</text>
+
+              <line x1="121" y1="0" x2="121" y2="120" stroke="#0B6E4F" stroke-width="0.5" opacity="0.3"/>
+              <circle cx="121" cy="15" r="3" fill="#0B6E4F"/>
+              <text x="121" y="116" text-anchor="middle" fill="#0B6E4F" font-size="6" font-family="inherit">34'</text>
+
+              <line x1="182" y1="0" x2="182" y2="120" stroke="#0B6E4F" stroke-width="0.5" opacity="0.3"/>
+              <circle cx="182" cy="22" r="3" fill="#0B6E4F"/>
+              <text x="182" y="116" text-anchor="middle" fill="#0B6E4F" font-size="6" font-family="inherit">51'</text>
+
+              <line x1="224" y1="0" x2="224" y2="120" stroke="#c41e3a" stroke-width="0.5" opacity="0.3"/>
+              <circle cx="224" cy="76" r="3" fill="#c41e3a"/>
+              <text x="224" y="116" text-anchor="middle" fill="#c41e3a" font-size="6" font-family="inherit">63'</text>
+
+              <line x1="278" y1="0" x2="278" y2="120" stroke="#0B6E4F" stroke-width="0.5" opacity="0.3"/>
+              <circle cx="278" cy="20" r="3" fill="#0B6E4F"/>
+              <text x="278" y="116" text-anchor="middle" fill="#0B6E4F" font-size="6" font-family="inherit">78'</text>
+
+              <!-- Momentum line — England positive = upward from center, Croatia positive = downward -->
+              <polyline
+                fill="none"
+                stroke="#1a3e78"
+                stroke-width="2"
+                opacity="0.7"
+                points="
+                  0,60
+                  14,52
+                  28,40
+                  42,25
+                  56,38
+                  70,50
+                  84,55
+                  100,68
+                  114,48
+                  121,30
+                  135,35
+                  149,42
+                  160,50
+                  171,38
+                  182,28
+                  196,32
+                  210,40
+                  224,55
+                  238,42
+                  252,35
+                  266,30
+                  278,22
+                  292,28
+                  306,35
+                  320,40
+                "
+              />
+              <!-- Mirror momentum for Croatia (below center) -->
+              <polyline
+                fill="none"
+                stroke="#c41e3a"
+                stroke-width="2"
+                opacity="0.5"
+                points="
+                  0,60
+                  14,65
+                  28,72
+                  42,78
+                  56,70
+                  70,62
+                  84,58
+                  100,75
+                  114,68
+                  121,72
+                  135,76
+                  149,70
+                  160,62
+                  171,70
+                  182,75
+                  196,72
+                  210,68
+                  224,78
+                  238,72
+                  252,68
+                  266,72
+                  278,76
+                  292,70
+                  306,65
+                  320,62
+                "
+              />
+            </svg>
+            <div class="momentum-legend">
+              <span>0'</span>
+              <span>15'</span>
+              <span>30'</span>
+              <span>45'</span>
+              <span>60'</span>
+              <span>75'</span>
+              <span>90'</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="section-card">
+          <div class="section-title">Cards</div>
+          <div class="event-row">
+            <div class="event-minute">34'</div>
+            <div class="event-icon">🟨</div>
+            <div class="event-player">Šutalo</div>
+            <div class="event-detail">(Croatia)</div>
+          </div>
+          <div class="event-row">
+            <div class="event-minute">56'</div>
+            <div class="event-icon">🟨</div>
+            <div class="event-player">Rice</div>
+            <div class="event-detail">(England)</div>
+          </div>
+          <div class="event-row">
+            <div class="event-minute">72'</div>
+            <div class="event-icon">🟨</div>
+            <div class="event-player">Brozović</div>
+            <div class="event-detail">(Croatia)</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="safe-area"></div>
+    </div>
+  </div>
+
+  <!-- Phone 3: Substitutions + Highlights + Match Info -->
+  <div class="phone-wrap">
+    <div class="phone-label">Match Detail — Bottom</div>
+    <div class="phone">
+      <div class="status-bar">
+        <div class="time">2:42</div>
+        <div class="status-icons">
+          <span>📶</span><span>📡</span><span>🔋</span>
+        </div>
+      </div>
+      <div class="nav-bar">
+        <span class="nav-back">‹ Schedule</span>
+      </div>
+
+      <div class="content">
+        <!-- Substitutions -->
+        <div class="section-card">
+          <div class="section-title">Substitutions</div>
+          <div class="event-row">
+            <div class="event-minute">62'</div>
+            <div class="event-icon" style="color:#0B6E4F">↻</div>
+            <div class="event-player">Foden</div>
+            <div class="event-detail">↔ Saka (ENG)</div>
+          </div>
+          <div class="event-row">
+            <div class="event-minute">62'</div>
+            <div class="event-icon" style="color:#0B6E4F">↻</div>
+            <div class="event-player">Gordon</div>
+            <div class="event-detail">↔ Palmer (ENG)</div>
+          </div>
+          <div class="event-row">
+            <div class="event-minute">68'</div>
+            <div class="event-icon" style="color:#c41e3a">↻</div>
+            <div class="event-player">Budimir</div>
+            <div class="event-detail">↔ Petković (CRO)</div>
+          </div>
+          <div class="event-row">
+            <div class="event-minute">68'</div>
+            <div class="event-icon" style="color:#c41e3a">↻</div>
+            <div class="event-player">Pašalić</div>
+            <div class="event-detail">↔ Brozović (CRO)</div>
+          </div>
+          <div class="event-row">
+            <div class="event-minute">78'</div>
+            <div class="event-icon" style="color:#0B6E4F">↻</div>
+            <div class="event-player">Watkins</div>
+            <div class="event-detail">↔ Kane (ENG)</div>
+          </div>
+          <div class="event-row">
+            <div class="event-minute">82'</div>
+            <div class="event-icon" style="color:#c41e3a">↻</div>
+            <div class="event-player">Majer</div>
+            <div class="event-detail">↔ Modrić (CRO)</div>
+          </div>
+        </div>
+
+        <!-- Highlights -->
+        <div class="section-card">
+          <div class="section-title">Highlights</div>
+          <div class="highlights-scroll">
+            <div class="highlight-thumb" style="background: linear-gradient(135deg, #1a3e78, #2a5e98);">
+              <div class="play-btn">▶</div>
+              <div class="hl-label">Bellingham 12'</div>
+            </div>
+            <div class="highlight-thumb" style="background: linear-gradient(135deg, #c41e3a, #e44e5a);">
+              <div class="play-btn">▶</div>
+              <div class="hl-label">Kramarić 28'</div>
+            </div>
+            <div class="highlight-thumb" style="background: linear-gradient(135deg, #1a3e78, #2a5e98);">
+              <div class="play-btn">▶</div>
+              <div class="hl-label">Kane 34'</div>
+            </div>
+            <div class="highlight-thumb" style="background: linear-gradient(135deg, #1a3e78, #2a5e98);">
+              <div class="play-btn">▶</div>
+              <div class="hl-label">Saka 51'</div>
+            </div>
+            <div class="highlight-thumb" style="background: linear-gradient(135deg, #c41e3a, #e44e5a);">
+              <div class="play-btn">▶</div>
+              <div class="hl-label">Petković 63'</div>
+            </div>
+            <div class="highlight-thumb" style="background: linear-gradient(135deg, #1a3e78, #2a5e98);">
+              <div class="play-btn">▶</div>
+              <div class="hl-label">Palmer 78'</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Match Info -->
+        <div class="section-card">
+          <div class="section-title">Match Info</div>
+          <div class="info-row">
+            <div class="info-icon">🏟️</div>
+            <div class="info-content">
+              <div class="info-label">Venue</div>
+              <div class="info-value">AT&T Stadium</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">📍</div>
+            <div class="info-content">
+              <div class="info-label">Location</div>
+              <div class="info-value">Arlington (Dallas), TX</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">🕐</div>
+            <div class="info-content">
+              <div class="info-label">Kickoff</div>
+              <div class="info-value">4:00 PM ET · June 17, 2026</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">👨‍⚖️</div>
+            <div class="info-content">
+              <div class="info-label">Referee</div>
+              <div class="info-value">Szymon Marciniak (POL)</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">👥</div>
+            <div class="info-content">
+              <div class="info-label">Attendance</div>
+              <div class="info-value">92,967</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="safe-area"></div>
+    </div>
+  </div>
+</div>
+
+<div class="notes">
+  <h3>Design Notes</h3>
+  <ul>
+    <li><strong>Starting Lineups:</strong> Formation layout on a mini pitch. Home team (blue) attacks right, away team (red) attacks left. Jersey numbers in dots, names below.</li>
+    <li><strong>Stats:</strong> Dual-bar style. Home (navy) bars grow left-to-right, away (red) right-to-left. Added Pass Accuracy per request.</li>
+    <li><strong>Momentum Graph:</strong> TV-style pressure chart. England pressure above center line, Croatia below. Goal markers shown with colored dots and minute labels.</li>
+    <li><strong>TV Info:</strong> Removed — all 2026 matches are on the same channels.</li>
+    <li><strong>Stadium:</strong> Venue + location shown prominently in Match Info section with icons.</li>
+    <li><strong>Highlights:</strong> Horizontal scroll of goal clip thumbnails, colored by team.</li>
+    <li><strong>Colors:</strong> England navy (#1a3e78), Croatia red (#c41e3a), app green (#0B6E4F) for section headers.</li>
+  </ul>
+</div>
+
+</body>
+</html>
