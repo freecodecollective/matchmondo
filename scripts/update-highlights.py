@@ -64,8 +64,12 @@ def load_matches() -> dict[str, int]:
 
 def fetch_rss() -> list[dict]:
     req = urllib.request.Request(RSS_URL, headers={"User-Agent": "MatchMondo-highlights/1.0"})
-    with urllib.request.urlopen(req, timeout=15, context=_ssl_ctx) as resp:
-        tree = ET.parse(resp)
+    try:
+        with urllib.request.urlopen(req, timeout=15, context=_ssl_ctx) as resp:
+            tree = ET.parse(resp)
+    except Exception as e:
+        print(f"  RSS feed failed: {e}")
+        return []
     ns = {"atom": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015"}
     entries = []
     for entry in tree.findall(".//atom:entry", ns):

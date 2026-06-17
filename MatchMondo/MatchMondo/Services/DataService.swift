@@ -114,14 +114,16 @@ final class DataService: ObservableObject {
     }
 
     private func buildESPNEventIDMap() async {
-        let cal = Calendar.current
+        var cal = Calendar(identifier: .gregorian)
+        cal.timeZone = TimeZone(identifier: "UTC")!
         let today = cal.startOfDay(for: Date())
         let fmt = DateFormatter()
         fmt.dateFormat = "yyyyMMdd"
+        fmt.timeZone = TimeZone(identifier: "UTC")
 
         let matchDates = Set(matches.filter(\.hasScore).map { cal.startOfDay(for: $0.kickoff) })
             .union(Set(matches.filter { $0.isLive }.map { cal.startOfDay(for: $0.kickoff) }))
-            .union([today])
+            .union([today, cal.date(byAdding: .day, value: -1, to: today)!, cal.date(byAdding: .day, value: 1, to: today)!])
 
         for date in matchDates {
             let dateStr = fmt.string(from: date)
@@ -145,62 +147,89 @@ final class DataService: ObservableObject {
     }
 
     private func refreshScoresFromESPN() async {
-        guard let url = URL(string: espnAPI) else { return }
-        do {
-            var request = URLRequest(url: url)
-            request.cachePolicy = .reloadIgnoringLocalCacheData
-            request.timeoutInterval = 8
-            let (data, _) = try await URLSession.shared.data(for: request)
-            let response = try JSONDecoder().decode(ESPNResponse.self, from: data)
+        // Query yesterday/today/tomorrow UTC to catch matches ESPN groups on adjacent days
+        let fmt = DateFormatter()
+        fmt.dateFormat = "yyyyMMdd"
+        fmt.timeZone = TimeZone(identifier: "UTC")
 
-            var changed = false
-            var liveNow = false
+        let now = Date()
+        let cal = Calendar(identifier: .gregorian)
+        let yesterday = cal.date(byAdding: .day, value: -1, to: now)!
+        let tomorrow = cal.date(byAdding: .day, value: 1, to: now)!
+        let dateStrings = [yesterday, now, tomorrow].map { fmt.string(from: $0) }
 
-            for event in response.events {
-                guard let comp = event.competitions.first else { continue }
-                let statusName = comp.status.type.name
-                let statusDetail = comp.status.type.shortDetail
+        var allEvents: [ESPNEvent] = []
+        var seenIDs = Set<String>()
+        var anySuccess = false
 
-                guard let home = comp.competitors.first(where: { $0.homeAway == "home" }),
-                      let away = comp.competitors.first(where: { $0.homeAway == "away" }) else { continue }
-
-                let kickoff = Self.parseESPNDate(event.date)?.timeIntervalSince1970 ?? 0
-                guard let idx = matches.firstIndex(where: {
-                    abs($0.kickoff.timeIntervalSince1970 - kickoff) < 120
-                }) else { continue }
-
-                espnEventIDs[matches[idx].n] = event.id
-
-                let isLive = statusName.contains("IN_PROGRESS") || statusName.contains("HALF")
-                    || statusName.contains("EXTRA") || statusName.contains("PENALT")
-                let isFinished = statusName == "STATUS_FULL_TIME"
-                if isLive { liveNow = true }
-
-                var newH: Int? = nil
-                var newA: Int? = nil
-                if isLive || isFinished {
-                    newH = Int(home.score ?? "")
-                    newA = Int(away.score ?? "")
+        for dateStr in dateStrings {
+            guard let url = URL(string: "\(espnAPI)?dates=\(dateStr)") else { continue }
+            do {
+                var request = URLRequest(url: url)
+                request.cachePolicy = .reloadIgnoringLocalCacheData
+                request.timeoutInterval = 8
+                let (data, _) = try await URLSession.shared.data(for: request)
+                let response = try JSONDecoder().decode(ESPNResponse.self, from: data)
+                anySuccess = true
+                for event in response.events where !seenIDs.contains(event.id) {
+                    seenIDs.insert(event.id)
+                    allEvents.append(event)
                 }
+            } catch {
+                continue
+            }
+        }
 
-                let newDetail: String? = isLive ? statusDetail : nil
-                if matches[idx].scoreH != newH || matches[idx].scoreA != newA
-                    || matches[idx].isLive != isLive || matches[idx].liveDetail != newDetail {
-                    matches[idx].scoreH = newH
-                    matches[idx].scoreA = newA
-                    matches[idx].isLive = isLive
-                    matches[idx].liveDetail = newDetail
-                    changed = true
-                }
+        guard anySuccess else {
+            print("ESPN refresh failed: all date queries failed")
+            await fetchMatches()
+            return
+        }
+
+        var changed = false
+        var liveNow = false
+
+        for event in allEvents {
+            guard let comp = event.competitions.first else { continue }
+            let statusName = comp.status.type.name
+            let statusDetail = comp.status.type.shortDetail
+
+            guard let home = comp.competitors.first(where: { $0.homeAway == "home" }),
+                  let away = comp.competitors.first(where: { $0.homeAway == "away" }) else { continue }
+
+            let kickoff = Self.parseESPNDate(event.date)?.timeIntervalSince1970 ?? 0
+            guard let idx = matches.firstIndex(where: {
+                abs($0.kickoff.timeIntervalSince1970 - kickoff) < 120
+            }) else { continue }
+
+            espnEventIDs[matches[idx].n] = event.id
+
+            let isLive = statusName.contains("IN_PROGRESS") || statusName.contains("HALF")
+                || statusName.contains("EXTRA") || statusName.contains("PENALT")
+            let isFinished = statusName == "STATUS_FULL_TIME"
+            if isLive { liveNow = true }
+
+            var newH: Int? = nil
+            var newA: Int? = nil
+            if isLive || isFinished {
+                newH = Int(home.score ?? "")
+                newA = Int(away.score ?? "")
             }
 
-            anyLive = liveNow
-            if changed { lastUpdated = Date() }
-            await fetchHighlights()
-        } catch {
-            print("ESPN refresh failed: \(error)")
-            await fetchMatches()
+            let newDetail: String? = isLive ? statusDetail : nil
+            if matches[idx].scoreH != newH || matches[idx].scoreA != newA
+                || matches[idx].isLive != isLive || matches[idx].liveDetail != newDetail {
+                matches[idx].scoreH = newH
+                matches[idx].scoreA = newA
+                matches[idx].isLive = isLive
+                matches[idx].liveDetail = newDetail
+                changed = true
+            }
         }
+
+        anyLive = liveNow
+        if changed { lastUpdated = Date() }
+        await fetchHighlights()
     }
 
     private func startAutoRefresh() {
