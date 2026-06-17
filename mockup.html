@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MatchMondo — UI Mockup</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif; background: #e8e8e8; }
+
+  .page-title { text-align: center; font-size: 18px; font-weight: 600; color: #555; padding: 20px 0 8px; }
+  .page-subtitle { text-align: center; font-size: 13px; color: #999; margin-bottom: 24px; }
+
+  .phones { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; padding: 0 20px 40px; }
+
+  .phone {
+    width: 375px;
+    background: #e8ece8;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15), 0 2px 8px rgba(0,0,0,0.1);
+    border: 6px solid #1a1a1a;
+    position: relative;
+  }
+  .phone-label { text-align: center; font-size: 14px; font-weight: 600; color: #555; margin-bottom: 8px; }
+  .phone-wrap { display: flex; flex-direction: column; align-items: center; }
+
+  .status-bar {
+    background: #f7f7f7;
+    padding: 8px 24px 0;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; font-weight: 600; color: #000;
+  }
+  .status-bar .time { font-size: 14px; font-weight: 700; }
+  .status-icons { display: flex; gap: 4px; font-size: 11px; }
+
+  .nav-bar {
+    background: #f7f7f7;
+    padding: 4px 16px 10px;
+  }
+  .nav-title { font-size: 30px; font-weight: 800; color: #000; letter-spacing: -0.5px; }
+
+  /* Header banner */
+  .header-banner {
+    text-align: center;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg,#0B3D28 0%,#0F6E56 50%,#1D9E75 100%);
+  }
+  .header-banner h2 { font-size: 14px; font-weight: 700; color: #fff; margin: 0; position: relative; z-index: 2; }
+  .header-banner p { font-size: 11px; color: rgba(255,255,255,0.7); margin: 3px 0 0; position: relative; z-index: 2; }
+  .header-banner .live-badge {
+    display: inline-block; font-size: 9px; font-weight: 800; color: #fff;
+    background: #e24b4a; padding: 2px 6px; border-radius: 99px;
+    vertical-align: middle; margin-left: 4px; letter-spacing: 0.5px;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  .banner-shimmer {
+    position: absolute; inset: 0; overflow: hidden; z-index: 1; pointer-events: none;
+  }
+  .banner-shimmer::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.1) 45%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.1) 55%, transparent 70%);
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  /* Filter bar */
+  .filter-bar {
+    display: flex; gap: 8px; padding: 10px 16px;
+    overflow-x: auto;
+  }
+  .filter-pill {
+    font-size: 12px; font-weight: 600; padding: 5px 12px;
+    border-radius: 99px; white-space: nowrap; border: none; cursor: pointer;
+  }
+  .filter-pill.active { background: #0B6E4F; color: #fff; }
+  .filter-pill.inactive { background: #dde2dd; color: #555; }
+
+  /* Day sections */
+  .day-section { padding: 0 16px; margin-bottom: 12px; }
+  .day-header {
+    font-size: 13px; font-weight: 700; color: #0B6E4F;
+    padding: 8px 0 6px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .day-header .chevron { font-size: 10px; color: #999; }
+  .day-count { font-size: 11px; font-weight: 500; color: #999; }
+
+  /* Match cards */
+  .match-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    border: 1px solid #e0e0e0;
+    position: relative;
+    overflow: hidden;
+  }
+  .match-card.completed {
+    background: #f2f3f2;
+  }
+  .match-card.live {
+    border: 2px solid #0B6E4F;
+  }
+
+  @keyframes card-shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(200%); }
+  }
+  .match-card.live .card-shimmer {
+    position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0;
+  }
+  .match-card.live .card-shimmer::after {
+    content: '';
+    position: absolute; top: 0; left: 0; width: 50%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(11,110,79,0.06), transparent);
+    animation: card-shimmer 2.5s ease-in-out infinite;
+  }
+
+  .match-meta {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 8px;
+    position: relative; z-index: 1;
+  }
+  .match-group { font-size: 10px; font-weight: 600; color: #888; }
+  .match-time { font-size: 10px; color: #999; }
+  .match-venue { font-size: 10px; color: #bbb; margin-top: 6px; position: relative; z-index: 1; }
+  .match-live-indicator {
+    font-size: 9px; font-weight: 800; color: #e24b4a;
+    display: flex; align-items: center; gap: 3px;
+  }
+  .match-live-indicator .dot {
+    width: 6px; height: 6px; border-radius: 50%; background: #e24b4a;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .team-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 3px 0;
+    position: relative; z-index: 1;
+  }
+  .team-info { display: flex; align-items: center; gap: 8px; }
+  .flag {
+    width: 24px; height: 17px; border-radius: 2px; overflow: hidden;
+    border: 0.5px solid rgba(0,0,0,0.1);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; line-height: 1;
+  }
+  .team-name { font-size: 15px; font-weight: 600; color: #222; }
+  .team-name.winner { font-weight: 800; color: #000; }
+  .rank { font-size: 11px; font-weight: 500; color: #aaa; }
+
+  .score {
+    font-size: 18px;
+    font-weight: 800;
+    color: #000;
+    min-width: 20px;
+    text-align: center;
+  }
+  .score.live-score { color: #000; }
+  .score.pending { font-size: 13px; font-weight: 500; color: #ccc; }
+
+  .ft-label {
+    font-size: 9px; font-weight: 700; color: #999;
+    text-align: center; margin-top: 4px;
+    position: relative; z-index: 1;
+  }
+  .live-label {
+    font-size: 9px; font-weight: 700; color: #e24b4a;
+    text-align: center; margin-top: 4px;
+    position: relative; z-index: 1;
+  }
+
+  /* Tab bar */
+  .tab-bar {
+    display: flex;
+    background: #f7f7f7;
+    border-top: 0.5px solid #ddd;
+    padding: 6px 0 20px;
+  }
+  .tab {
+    flex: 1; text-align: center; font-size: 10px; font-weight: 500; color: #999;
+    display: flex; flex-direction: column; align-items: center; gap: 2px;
+  }
+  .tab.active { color: #0B6E4F; }
+  .tab-icon { font-size: 20px; }
+
+  /* Schedule-specific */
+  .date-header {
+    font-size: 14px; font-weight: 700; color: #333;
+    padding: 12px 0 6px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 8px;
+  }
+  .date-header span { font-weight: 400; color: #999; font-size: 12px; }
+
+  /* Score filter bar for schedule */
+  .score-toggle {
+    display: flex; align-items: center; justify-content: center;
+    gap: 8px; padding: 8px 16px;
+    font-size: 12px; color: #888;
+  }
+  .toggle-track {
+    width: 36px; height: 20px; border-radius: 10px; background: #0B6E4F;
+    position: relative;
+  }
+  .toggle-thumb {
+    width: 16px; height: 16px; border-radius: 50%; background: #fff;
+    position: absolute; top: 2px; right: 2px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  }
+
+  .highlights-badge {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 10px; font-weight: 600; color: #0B6E4F;
+    background: rgba(11,110,79,0.08);
+    padding: 2px 8px; border-radius: 99px;
+    margin-top: 4px;
+    position: relative; z-index: 1;
+  }
+  .highlights-badge svg { width: 10px; height: 10px; }
+</style>
+</head>
+<body>
+
+<p class="page-title">MatchMondo UI Mockup</p>
+<p class="page-subtitle">Black scores · live shimmer · grey completed cards</p>
+
+<div class="phones">
+
+  <!-- 3-DAY VIEW -->
+  <div class="phone-wrap">
+    <div class="phone-label">3-Day View</div>
+    <div class="phone">
+      <div class="status-bar">
+        <span class="time">7:19</span>
+        <div class="status-icons">
+          <span>&#9679;&#9679;&#9679;&#9679;</span>
+          <span>&#128267;</span>
+        </div>
+      </div>
+      <div class="nav-bar">
+        <div class="nav-title">MatchMondo</div>
+      </div>
+
+      <div class="header-banner">
+        <div class="banner-shimmer"></div>
+        <h2>Football 2026 <span class="live-badge">LIVE</span></h2>
+        <p>June 11 – July 19 · USA, Canada & Mexico</p>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-pill active">All Matches</button>
+        <button class="filter-pill inactive">My Teams</button>
+        <button class="filter-pill inactive">Live</button>
+      </div>
+
+      <!-- YESTERDAY -->
+      <div class="day-section">
+        <div class="day-header">
+          <span class="chevron">&#9660;</span>
+          Yesterday
+          <span class="day-count">· 2 matches</span>
+        </div>
+
+        <div class="match-card completed">
+          <div class="match-meta">
+            <span class="match-group">Group F · Match 17</span>
+            <span class="match-time">12:00 PM</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127467;&#127479;</div>
+              <span class="team-name winner">France</span>
+              <span class="rank">(#2)</span>
+            </div>
+            <span class="score">3</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127480;&#127475;</div>
+              <span class="team-name">Senegal</span>
+              <span class="rank">(#21)</span>
+            </div>
+            <span class="score">1</span>
+          </div>
+          <div class="ft-label">FT</div>
+          <div class="match-venue">MetLife Stadium · East Rutherford, NJ</div>
+          <div class="highlights-badge"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 19,12 8,19"/></svg> Highlights</div>
+        </div>
+
+        <div class="match-card completed">
+          <div class="match-meta">
+            <span class="match-group">Group F · Match 18</span>
+            <span class="match-time">3:00 PM</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127470;&#127478;</div>
+              <span class="team-name">Iraq</span>
+              <span class="rank">(#63)</span>
+            </div>
+            <span class="score">1</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127475;&#127476;</div>
+              <span class="team-name winner">Norway</span>
+              <span class="rank">(#28)</span>
+            </div>
+            <span class="score">4</span>
+          </div>
+          <div class="ft-label">FT</div>
+          <div class="match-venue">Gillette Stadium · Foxborough, MA</div>
+          <div class="highlights-badge"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 19,12 8,19"/></svg> Highlights</div>
+        </div>
+      </div>
+
+      <!-- TODAY -->
+      <div class="day-section">
+        <div class="day-header">
+          <span class="chevron">&#9660;</span>
+          Today
+          <span class="day-count">· 5 matches</span>
+        </div>
+
+        <div class="match-card completed">
+          <div class="match-meta">
+            <span class="match-group">Group G · Match 19</span>
+            <span class="match-time">6:00 PM (Tue)</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127462;&#127479;</div>
+              <span class="team-name winner">Argentina</span>
+              <span class="rank">(#1)</span>
+            </div>
+            <span class="score">3</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127465;&#127487;</div>
+              <span class="team-name">Algeria</span>
+              <span class="rank">(#33)</span>
+            </div>
+            <span class="score">0</span>
+          </div>
+          <div class="ft-label">FT</div>
+          <div class="match-venue">Arrowhead Stadium · Kansas City, MO</div>
+          <div class="highlights-badge"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 19,12 8,19"/></svg> Highlights</div>
+        </div>
+
+        <div class="match-card completed">
+          <div class="match-meta">
+            <span class="match-group">Group G · Match 20</span>
+            <span class="match-time">9:00 PM (Tue)</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127462;&#127481;</div>
+              <span class="team-name winner">Austria</span>
+              <span class="rank">(#22)</span>
+            </div>
+            <span class="score">3</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127471;&#127476;</div>
+              <span class="team-name">Jordan</span>
+              <span class="rank">(#68)</span>
+            </div>
+            <span class="score">1</span>
+          </div>
+          <div class="ft-label">FT</div>
+          <div class="match-venue">Levi's Stadium · Santa Clara, CA</div>
+        </div>
+
+        <div class="match-card completed">
+          <div class="match-meta">
+            <span class="match-group">Group H · Match 23</span>
+            <span class="match-time">10:00 AM</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127477;&#127481;</div>
+              <span class="team-name">Portugal</span>
+              <span class="rank">(#5)</span>
+            </div>
+            <span class="score">1</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127464;&#127465;</div>
+              <span class="team-name">Congo DR</span>
+              <span class="rank">(#56)</span>
+            </div>
+            <span class="score">1</span>
+          </div>
+          <div class="ft-label">FT</div>
+          <div class="match-venue">NRG Stadium · Houston, TX</div>
+        </div>
+
+        <!-- LIVE MATCH -->
+        <div class="match-card live">
+          <div class="card-shimmer"></div>
+          <div class="match-meta">
+            <span class="match-group">Group H · Match 22</span>
+            <div class="match-live-indicator"><div class="dot"></div> 67'</div>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127468;&#127463;</div>
+              <span class="team-name winner">England</span>
+              <span class="rank">(#4)</span>
+            </div>
+            <span class="score live-score">4</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127469;&#127479;</div>
+              <span class="team-name">Croatia</span>
+              <span class="rank">(#15)</span>
+            </div>
+            <span class="score live-score">2</span>
+          </div>
+          <div class="live-label">LIVE</div>
+          <div class="match-venue">AT&T Stadium · Arlington, TX</div>
+        </div>
+
+        <!-- UPCOMING -->
+        <div class="match-card">
+          <div class="match-meta">
+            <span class="match-group">Group H · Match 21</span>
+            <span class="match-time">4:00 PM</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127468;&#127469;</div>
+              <span class="team-name">Ghana</span>
+              <span class="rank">(#44)</span>
+            </div>
+            <span class="score pending">–</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127477;&#127462;</div>
+              <span class="team-name">Panama</span>
+              <span class="rank">(#42)</span>
+            </div>
+            <span class="score pending">–</span>
+          </div>
+          <div class="match-venue">BMO Field · Toronto, Canada</div>
+        </div>
+      </div>
+
+      <!-- TOMORROW -->
+      <div class="day-section">
+        <div class="day-header">
+          <span class="chevron">&#9660;</span>
+          Tomorrow
+          <span class="day-count">· 4 matches</span>
+        </div>
+
+        <div class="match-card">
+          <div class="match-meta">
+            <span class="match-group">Group I · Match 24</span>
+            <span class="match-time">7:00 PM (Wed)</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127482;&#127487;</div>
+              <span class="team-name">Uzbekistan</span>
+              <span class="rank">(#60)</span>
+            </div>
+            <span class="score pending">–</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127464;&#127476;</div>
+              <span class="team-name">Colombia</span>
+              <span class="rank">(#11)</span>
+            </div>
+            <span class="score pending">–</span>
+          </div>
+          <div class="match-venue">Estadio Azteca · Mexico City, Mexico</div>
+        </div>
+
+        <div class="match-card">
+          <div class="match-meta">
+            <span class="match-group">Group A · Match 25</span>
+            <span class="match-time">9:00 AM</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127464;&#127487;</div>
+              <span class="team-name">Czechia</span>
+              <span class="rank">(#36)</span>
+            </div>
+            <span class="score pending">–</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127487;&#127462;</div>
+              <span class="team-name">South Africa</span>
+              <span class="rank">(#59)</span>
+            </div>
+            <span class="score pending">–</span>
+          </div>
+          <div class="match-venue">Mercedes-Benz Stadium · Atlanta, GA</div>
+        </div>
+      </div>
+
+      <div class="tab-bar">
+        <div class="tab active"><span class="tab-icon">&#9917;</span> 3-Day</div>
+        <div class="tab"><span class="tab-icon">&#128197;</span> Schedule</div>
+        <div class="tab"><span class="tab-icon">&#127942;</span> Standings</div>
+        <div class="tab"><span class="tab-icon">&#127988;</span> Teams</div>
+        <div class="tab"><span class="tab-icon">&#8943;</span> More</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHEDULE VIEW -->
+  <div class="phone-wrap">
+    <div class="phone-label">Schedule View</div>
+    <div class="phone">
+      <div class="status-bar">
+        <span class="time">7:19</span>
+        <div class="status-icons">
+          <span>&#9679;&#9679;&#9679;&#9679;</span>
+          <span>&#128267;</span>
+        </div>
+      </div>
+      <div class="nav-bar">
+        <div class="nav-title">Schedule</div>
+      </div>
+
+      <div class="score-toggle">
+        <span>Show scores</span>
+        <div class="toggle-track"><div class="toggle-thumb"></div></div>
+      </div>
+
+      <div class="day-section">
+        <div class="date-header">Monday, June 15 <span>· Day 5</span></div>
+
+        <div class="match-card completed">
+          <div class="match-meta">
+            <span class="match-group">Group E · Match 14</span>
+            <span class="match-time">12:00 PM</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127466;&#127480;</div>
+              <span class="team-name winner">Spain</span>
+              <span class="rank">(#3)</span>
+            </div>
+            <span class="score">3</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127464;&#127484;</div>
+              <span class="team-name">Cura&#231;ao</span>
+              <span class="rank">(#84)</span>
+            </div>
+            <span class="score">0</span>
+          </div>
+          <div class="ft-label">FT</div>
+          <div class="match-venue">Hard Rock Stadium · Miami, FL</div>
+          <div class="highlights-badge"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 19,12 8,19"/></svg> Highlights</div>
+        </div>
+
+        <div class="match-card completed">
+          <div class="match-meta">
+            <span class="match-group">Group E · Match 13</span>
+            <span class="match-time">3:00 PM</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127475;&#127473;</div>
+              <span class="team-name winner">Netherlands</span>
+              <span class="rank">(#7)</span>
+            </div>
+            <span class="score">3</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127468;&#127462;</div>
+              <span class="team-name">Georgia</span>
+              <span class="rank">(#78)</span>
+            </div>
+            <span class="score">0</span>
+          </div>
+          <div class="ft-label">FT</div>
+          <div class="match-venue">Lincoln Financial Field · Philadelphia, PA</div>
+          <div class="highlights-badge"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 19,12 8,19"/></svg> Highlights</div>
+        </div>
+      </div>
+
+      <div class="day-section">
+        <div class="date-header">Tuesday, June 16 <span>· Day 6</span></div>
+
+        <div class="match-card completed">
+          <div class="match-meta">
+            <span class="match-group">Group F · Match 17</span>
+            <span class="match-time">12:00 PM</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127467;&#127479;</div>
+              <span class="team-name winner">France</span>
+              <span class="rank">(#2)</span>
+            </div>
+            <span class="score">3</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127480;&#127475;</div>
+              <span class="team-name">Senegal</span>
+              <span class="rank">(#21)</span>
+            </div>
+            <span class="score">1</span>
+          </div>
+          <div class="ft-label">FT</div>
+          <div class="match-venue">MetLife Stadium · East Rutherford, NJ</div>
+          <div class="highlights-badge"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 19,12 8,19"/></svg> Highlights</div>
+        </div>
+
+        <div class="match-card completed">
+          <div class="match-meta">
+            <span class="match-group">Group F · Match 18</span>
+            <span class="match-time">3:00 PM</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127470;&#127478;</div>
+              <span class="team-name">Iraq</span>
+              <span class="rank">(#63)</span>
+            </div>
+            <span class="score">1</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127475;&#127476;</div>
+              <span class="team-name winner">Norway</span>
+              <span class="rank">(#28)</span>
+            </div>
+            <span class="score">4</span>
+          </div>
+          <div class="ft-label">FT</div>
+          <div class="match-venue">Gillette Stadium · Foxborough, MA</div>
+          <div class="highlights-badge"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 19,12 8,19"/></svg> Highlights</div>
+        </div>
+      </div>
+
+      <div class="day-section">
+        <div class="date-header">Wednesday, June 17 <span>· Day 7 · Today</span></div>
+
+        <div class="match-card completed">
+          <div class="match-meta">
+            <span class="match-group">Group G · Match 19</span>
+            <span class="match-time">6:00 PM (Tue)</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127462;&#127479;</div>
+              <span class="team-name winner">Argentina</span>
+              <span class="rank">(#1)</span>
+            </div>
+            <span class="score">3</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127465;&#127487;</div>
+              <span class="team-name">Algeria</span>
+              <span class="rank">(#33)</span>
+            </div>
+            <span class="score">0</span>
+          </div>
+          <div class="ft-label">FT</div>
+          <div class="match-venue">Arrowhead Stadium · Kansas City, MO</div>
+        </div>
+
+        <!-- LIVE -->
+        <div class="match-card live">
+          <div class="card-shimmer"></div>
+          <div class="match-meta">
+            <span class="match-group">Group H · Match 22</span>
+            <div class="match-live-indicator"><div class="dot"></div> 67'</div>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127468;&#127463;</div>
+              <span class="team-name winner">England</span>
+              <span class="rank">(#4)</span>
+            </div>
+            <span class="score live-score">4</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127469;&#127479;</div>
+              <span class="team-name">Croatia</span>
+              <span class="rank">(#15)</span>
+            </div>
+            <span class="score live-score">2</span>
+          </div>
+          <div class="live-label">LIVE</div>
+          <div class="match-venue">AT&T Stadium · Arlington, TX</div>
+        </div>
+
+        <div class="match-card">
+          <div class="match-meta">
+            <span class="match-group">Group H · Match 21</span>
+            <span class="match-time">4:00 PM</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127468;&#127469;</div>
+              <span class="team-name">Ghana</span>
+              <span class="rank">(#44)</span>
+            </div>
+            <span class="score pending">–</span>
+          </div>
+          <div class="team-row">
+            <div class="team-info">
+              <div class="flag">&#127477;&#127462;</div>
+              <span class="team-name">Panama</span>
+              <span class="rank">(#42)</span>
+            </div>
+            <span class="score pending">–</span>
+          </div>
+          <div class="match-venue">BMO Field · Toronto, Canada</div>
+        </div>
+      </div>
+
+      <div class="tab-bar">
+        <div class="tab"><span class="tab-icon">&#9917;</span> 3-Day</div>
+        <div class="tab active"><span class="tab-icon">&#128197;</span> Schedule</div>
+        <div class="tab"><span class="tab-icon">&#127942;</span> Standings</div>
+        <div class="tab"><span class="tab-icon">&#127988;</span> Teams</div>
+        <div class="tab"><span class="tab-icon">&#8943;</span> More</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- LEGEND -->
+<div style="max-width: 700px; margin: 0 auto 40px; padding: 20px; background: #fff; border-radius: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.1);">
+  <div style="font-size: 15px; font-weight: 700; color: #333; margin-bottom: 12px;">Design Rules</div>
+  <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+    <div style="flex: 1; min-width: 200px;">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+        <div style="width: 32px; height: 22px; background: #f2f3f2; border-radius: 4px; border: 1px solid #ddd;"></div>
+        <span style="font-size: 13px; color: #555;"><b>Completed</b> — grey background</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+        <div style="width: 32px; height: 22px; background: #fff; border-radius: 4px; border: 2px solid #0B6E4F;"></div>
+        <span style="font-size: 13px; color: #555;"><b>Live</b> — green border + shimmer</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <div style="width: 32px; height: 22px; background: #fff; border-radius: 4px; border: 1px solid #e0e0e0;"></div>
+        <span style="font-size: 13px; color: #555;"><b>Upcoming</b> — white, standard</span>
+      </div>
+    </div>
+    <div style="flex: 1; min-width: 200px;">
+      <div style="font-size: 13px; color: #555; margin-bottom: 8px;"><b>Scores</b> — always black, bold</div>
+      <div style="font-size: 13px; color: #555; margin-bottom: 8px;"><b>Winner</b> — extra-heavy weight name</div>
+      <div style="font-size: 13px; color: #555;"><b>Live badge</b> — pulsing red dot + minute</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
