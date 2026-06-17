@@ -1,9 +1,8 @@
 import SwiftUI
-import StoreKit
 
 @MainActor
 final class AppSettings: ObservableObject {
-    @AppStorage("showFIFARankings") var showFIFARankings = true
+    @AppStorage("showWorldRankings") var showWorldRankings = true
     @AppStorage("showMatchLocations") var showMatchLocations = true
     @AppStorage("showCountryFlags") var showCountryFlags = true
     @AppStorage("showGameTimes") var showGameTimes = true

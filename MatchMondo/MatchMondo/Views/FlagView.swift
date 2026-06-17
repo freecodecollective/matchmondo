@@ -47,7 +47,7 @@ struct RankBadge: View {
     @EnvironmentObject var appSettings: AppSettings
 
     var body: some View {
-        if appSettings.showFIFARankings, let rank = Rankings.rank(for: team) {
+        if appSettings.showWorldRankings, let rank = Rankings.rank(for: team) {
             Text("(#\(rank))")
                 .font(.system(size: fontSize, weight: .medium))
                 .foregroundStyle(Color(.systemGray))
