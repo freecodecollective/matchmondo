@@ -1,5 +1,5 @@
 // FIFA World Cup 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-17 06:15 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-06-17 06:16 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
