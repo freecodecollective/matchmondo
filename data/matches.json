@@ -230,8 +230,8 @@
     "venue": "Gillette Stadium",
     "city": "Foxborough (Boston), MA",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 1,
+    "scoreA": 4
   },
   {
     "n": 19,
