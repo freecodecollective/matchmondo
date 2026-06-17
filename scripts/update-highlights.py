@@ -128,6 +128,7 @@ def fetch_youtube_search(query: str) -> list[dict]:
 
 
 def process_entries(entries: list[dict], match_lookup: dict, highlights: dict) -> int:
+    """Process Fox Sports entries — always preferred over fallback sources."""
     added = 0
     for entry in entries:
         m = HIGHLIGHT_RE.match(entry["title"])
@@ -151,9 +152,12 @@ def process_entries(entries: list[dict], match_lookup: dict, highlights: dict) -
 
         field = "extended" if is_extended else "short"
         if highlights[n_str].get(field) != video_id:
+            was_fallback = highlights[n_str].get(f"{field}_fallback", False)
             old = highlights[n_str].get(field)
             highlights[n_str][field] = video_id
-            print(f"  {'UPDATE' if old else 'ADD'}: Match {match_n} {field} = {video_id}")
+            highlights[n_str].pop(f"{field}_fallback", None)
+            label = "UPGRADE" if was_fallback else ("UPDATE" if old else "ADD")
+            print(f"  {label}: Match {match_n} {field} = {video_id}")
             added += 1
     return added
 
@@ -198,10 +202,11 @@ def process_fallback_entries(
             highlights[n_str] = {}
 
         field = "extended" if is_extended else "short"
-        if highlights[n_str].get(field):
+        if highlights[n_str].get(field) and not highlights[n_str].get(f"{field}_fallback"):
             continue
 
         highlights[n_str][field] = video_id
+        highlights[n_str][f"{field}_fallback"] = True
         print(f"  ADD (fallback): Match {match_n} {field} = {video_id}")
         return True
 
@@ -225,13 +230,16 @@ def main() -> None:
     search_entries = fetch_channel_search()
     added += process_entries(search_entries, match_lookup, highlights)
 
-    # Fallback: search YouTube for matches that have scores but no highlights
+    # Fallback: search YouTube for matches missing highlights or only having fallback sources
     missing = []
     for m in all_matches:
         if m["scoreH"] is None:
             continue
         n_str = str(m["n"])
-        if n_str in highlights and (highlights[n_str].get("short") or highlights[n_str].get("extended")):
+        h = highlights.get(n_str, {})
+        has_fox = (h.get("short") and not h.get("short_fallback")) or \
+                  (h.get("extended") and not h.get("extended_fallback"))
+        if has_fox:
             continue
         missing.append(m)
 
