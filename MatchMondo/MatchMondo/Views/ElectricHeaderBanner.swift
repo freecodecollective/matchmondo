@@ -128,7 +128,7 @@ struct ElectricHeaderBanner: View {
                     .rotationEffect(.degrees(ballRotation))
                     .opacity(ballOpacity)
                     .offset(y: ballOffset)
-                Text(title.isEmpty ? "MatchMondo" : title)
+                Text(title.isEmpty ? "MatchMondo 2026" : title)
                     .font(.system(size: 24, weight: .bold))
                     .foregroundStyle(.white)
                 if data.anyLive {
