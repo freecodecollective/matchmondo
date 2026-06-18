@@ -28,6 +28,7 @@
 		AA000019 /* TeamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100019 /* TeamDetailView.swift */; };
 		AA000020 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100020 /* SettingsView.swift */; };
 		AA000021 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AA100023 /* Localizable.xcstrings */; };
+		AA000022 /* ElectricHeaderBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100022 /* ElectricHeaderBanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		AA100018 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		AA100019 /* TeamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailView.swift; sourceTree = "<group>"; };
 		AA100020 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AA100022 /* ElectricHeaderBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricHeaderBanner.swift; sourceTree = "<group>"; };
 		AA100023 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		AA200001 /* MatchMondo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchMondo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				AA100016 /* ScoreFilterBar.swift */,
 				AA100017 /* MoreView.swift */,
 				AA100020 /* SettingsView.swift */,
+				AA100022 /* ElectricHeaderBanner.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				AA000017 /* MoreView.swift in Sources */,
 				AA000018 /* AppSettings.swift in Sources */,
 				AA000020 /* SettingsView.swift in Sources */,
+				AA000022 /* ElectricHeaderBanner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

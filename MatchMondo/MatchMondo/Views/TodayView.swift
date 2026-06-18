@@ -6,7 +6,6 @@ struct TodayView: View {
     @State private var expandedSections: Set<String> = ["Yesterday", "Today", "Tomorrow"]
 
     private let green = Color(red: 0.043, green: 0.431, blue: 0.310)
-    private let greenDark = Color(red: 0.027, green: 0.322, blue: 0.231)
 
     var body: some View {
         NavigationStack {
@@ -53,6 +52,9 @@ struct TodayView: View {
                 await data.refresh()
             }
             .navigationTitle("MatchMondo")
+            .toolbarBackground(Color(red: 0.02, green: 0.082, blue: 0.067), for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarColorScheme(.dark, for: .navigationBar)
             .navigationDestination(for: Match.self) { match in
                 MatchDetailView(match: match)
             }
@@ -63,34 +65,7 @@ struct TodayView: View {
     }
 
     private var headerBanner: some View {
-        VStack(spacing: 4) {
-            HStack(spacing: 6) {
-                Text("Football 2026")
-                    .font(.system(size: 14, weight: .bold))
-                    .foregroundStyle(.white.opacity(0.9))
-                if hasLiveMatches {
-                    Text("LIVE")
-                        .font(.system(size: 9, weight: .black))
-                        .foregroundStyle(.white)
-                        .padding(.horizontal, 6)
-                        .padding(.vertical, 2)
-                        .background(Color.red)
-                        .clipShape(Capsule())
-                }
-            }
-            Text("June 11 \u{2013} July 19 \u{00b7} USA, Canada & Mexico")
-                .font(.system(size: 12))
-                .foregroundStyle(.white.opacity(0.7))
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 12)
-        .background(
-            LinearGradient(colors: [greenDark, green], startPoint: .topLeading, endPoint: .bottomTrailing)
-        )
-    }
-
-    private var hasLiveMatches: Bool {
-        data.anyLive
+        ElectricHeaderBanner()
     }
 
     private func daySection(title: String, matches: [Match]) -> some View {

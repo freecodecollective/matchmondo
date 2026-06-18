@@ -41,6 +41,7 @@ struct ScheduleView: View {
             ScrollViewReader { proxy in
                 ScrollView {
                     LazyVStack(spacing: 0, pinnedViews: []) {
+                        ElectricHeaderBanner()
                         ScoreFilterBar()
 
                         ForEach(filteredDays, id: \.dayString) { day in
@@ -89,6 +90,9 @@ struct ScheduleView: View {
                 }
             }
             .navigationTitle("Schedule")
+            .toolbarBackground(Color(red: 0.02, green: 0.082, blue: 0.067), for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarColorScheme(.dark, for: .navigationBar)
             .searchable(text: $searchText, prompt: "Search teams, venues...")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
