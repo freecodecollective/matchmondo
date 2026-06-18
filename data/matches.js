@@ -1,5 +1,5 @@
 // FIFA World Cup 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-18 02:26 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-06-18 03:50 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -310,8 +310,8 @@ window.WC_MATCHES = [
     "venue": "Estadio Azteca",
     "city": "Mexico City, Mexico",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": 0,
-    "scoreA": 0
+    "scoreH": 1,
+    "scoreA": 2
   },
   {
     "n": 25,
