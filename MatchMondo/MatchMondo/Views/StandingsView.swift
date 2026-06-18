@@ -11,7 +11,7 @@ struct StandingsView: View {
         NavigationStack {
             ScrollView {
 
-                ElectricHeaderBanner()
+                ElectricHeaderBanner(style: .compact)
 
                 if data.isLoading {
                     ProgressView("Loading...")

@@ -10,7 +10,7 @@ struct MoreView: View {
         NavigationStack {
             ScrollViewReader { proxy in
                 ScrollView {
-                    ElectricHeaderBanner()
+                    ElectricHeaderBanner(style: .compact)
                     VStack(spacing: 16) {
                         aboutSection
                         settingsSection

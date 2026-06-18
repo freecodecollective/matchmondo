@@ -65,7 +65,7 @@ struct TodayView: View {
     }
 
     private var headerBanner: some View {
-        ElectricHeaderBanner()
+        ElectricHeaderBanner(style: .full)
     }
 
     private func daySection(title: String, matches: [Match]) -> some View {

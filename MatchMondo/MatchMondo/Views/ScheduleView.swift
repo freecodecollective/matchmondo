@@ -41,7 +41,7 @@ struct ScheduleView: View {
             ScrollViewReader { proxy in
                 ScrollView {
                     LazyVStack(spacing: 0, pinnedViews: []) {
-                        ElectricHeaderBanner()
+                        ElectricHeaderBanner(style: .compact)
                         ScoreFilterBar()
 
                         ForEach(filteredDays, id: \.dayString) { day in
