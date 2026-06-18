@@ -1,4 +1,4 @@
-// FIFA World Cup 2026 — full squad rosters.
+// Football 2026 — full squad rosters.
 // Each team: array of {name, number, age, position, club}.
 // 48 teams, 1248 players. Compiled from web research (June 2026).
 window.WC_ROSTERS = {

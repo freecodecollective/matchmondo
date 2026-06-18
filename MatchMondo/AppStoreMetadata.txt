@@ -4,14 +4,14 @@ APP STORE CONNECT — SUBMISSION METADATA
 APP NAME: MatchMondo
 
 SUBTITLE (30 chars max):
-World Cup 2026 Live Scores
+Football 2026 Live Scores
 
 CATEGORY:
 Primary: Sports
 Secondary: News
 
 DESCRIPTION:
-Follow every match of the FIFA World Cup 2026 with MatchMondo — live scores, full schedule, group standings, player profiles, and tournament rules in one fast, clean app.
+Follow every match of Football 2026 with MatchMondo — live scores, full schedule, group standings, player profiles, and tournament rules in one fast, clean app.
 
 FEATURES:
 • Live scores that update every 60 seconds
@@ -26,10 +26,10 @@ FEATURES:
 Built for fans who want the essential info without the noise.
 
 KEYWORDS (100 chars max):
-world cup,soccer,football,fifa,2026,scores,schedule,standings,live,match
+football,soccer,2026,scores,schedule,standings,live,match,tournament,teams
 
 WHAT'S NEW (Version 1.0):
-Launch edition for the FIFA World Cup 2026. Live scores, full schedule, standings, player profiles, squad rosters, and tournament rules.
+Launch edition for Football 2026. Live scores, full schedule, standings, player profiles, squad rosters, and tournament rules.
 
 SUPPORT URL:
 https://freecodecollective.github.io/world-cup-2026/support.html

@@ -1,4 +1,4 @@
-/* World Cup 2026 schedule app.
+/* Football 2026 schedule app.
  * Match data lives in data/matches.js as window.WC_MATCHES:
  *   { n: matchNumber, utc: "2026-06-11T19:00:00Z", stage, group,
  *     home, away, venue, city, tv, scoreH, scoreA }
@@ -431,7 +431,7 @@
     return `<img class="flag" src="https://flagcdn.com/${code}.svg" alt="" width="22" height="16" loading="lazy">`;
   }
 
-  // FIFA world ranking lookup (data/rankings.js).
+  // World ranking lookup (data/rankings.js).
   const RANKINGS = (window.WC_RANKINGS && window.WC_RANKINGS.ranks) || {};
   function rankOf(team) {
     return RANKINGS[team] || null;
@@ -440,7 +440,7 @@
   function rankBadge(team) {
     if (!els.showRanking.checked) return "";
     const r = rankOf(team);
-    return r ? `<span class="rank-badge" title="FIFA world ranking (${(window.WC_RANKINGS || {}).asOf || ""})">#${r}</span>` : "";
+    return r ? `<span class="rank-badge" title="World ranking (${(window.WC_RANKINGS || {}).asOf || ""})">#${r}</span>` : "";
   }
 
   // Stage -> slug for the colored left-edge accent.
@@ -587,7 +587,7 @@
     const showRoster = els.showRoster.checked;
     const hasRosters = Object.keys(rosters).length > 0;
 
-    // Order by FIFA world ranking (best first); any unranked teams fall to the end alphabetically.
+    // Order by world ranking (best first); any unranked teams fall to the end alphabetically.
     const ordered = teams.slice().sort((a, b) => {
       const ra = rankOf(a), rb = rankOf(b);
       if (ra && rb) return ra - rb;
@@ -597,8 +597,8 @@
     });
 
     let html = `<h2 class="players-title">⭐ Player Guide — Top Players by Team</h2>` +
-      `<p class="players-intro">The standout players to watch on every team — 5 for the FIFA top-10 sides, 3 for everyone else, ` +
-      `ordered by FIFA world ranking. Clubs and details reflect the 2025–26 season.</p>`;
+      `<p class="players-intro">The standout players to watch on every team — 5 for the top-10 sides, 3 for everyone else, ` +
+      `ordered by world ranking. Clubs and details reflect the 2025–26 season.</p>`;
 
     for (const team of ordered) {
       html += `<div class="team-block">` +
@@ -711,7 +711,7 @@
     if (rulesRendered) return;
     els.rules.innerHTML = `
       <h2 class="section-title">📋 Rules &amp; How It Works</h2>
-      <p class="section-intro">A fan's guide to the laws and tournament rules you'll see most during the 2026 World Cup.</p>
+      <p class="section-intro">A fan's guide to the laws and tournament rules you'll see most during Football 2026.</p>
       <div class="rules-grid">
 
         <div class="rule-card">
@@ -755,7 +755,7 @@
             <li>Head-to-head: goal difference</li>
             <li>Head-to-head: goals scored</li>
             <li>Fair-play score (fewest yellow/red cards)</li>
-            <li>Drawing of lots by FIFA</li>
+            <li>Drawing of lots</li>
           </ol>
         </div>
 
@@ -767,7 +767,7 @@
         </div>
 
       </div>
-      <p class="rules-note">Unofficial summary for fans. The full Laws of the Game and FIFA regulations are the official source.</p>`;
+      <p class="rules-note">Unofficial summary for fans. The full Laws of the Game and official tournament regulations are the authoritative source.</p>`;
     rulesRendered = true;
   }
 
@@ -789,8 +789,8 @@
       "PRODID:-//WC2026 Fan Schedule//EN",
       "CALSCALE:GREGORIAN",
       "METHOD:PUBLISH",
-      "X-WR-CALNAME:MatchMondo — World Cup 2026",
-      "X-WR-CALDESC:FIFA World Cup 2026 — all 104 matches (times in UTC; your calendar shows them in your local time zone)",
+      "X-WR-CALNAME:MatchMondo — Football 2026",
+      "X-WR-CALDESC:Football 2026 — all 104 matches (times in UTC; your calendar shows them in your local time zone)",
     ];
     matches.forEach((m) => {
       const start = new Date(m.utc);

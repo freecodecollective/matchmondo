@@ -1,4 +1,4 @@
-// FIFA men's World Ranking positions for the 48 finalists, June 2026 edition.
+// Men's world ranking positions for the 48 finalists, June 2026 edition.
 // Compiled from agent web research; corroborated against the published top-20.
 window.WC_RANKINGS = {
   asOf: "June 2026",
