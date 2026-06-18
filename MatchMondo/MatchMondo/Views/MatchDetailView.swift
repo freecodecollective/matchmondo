@@ -444,7 +444,7 @@ struct MatchDetailView: View {
 
     @ViewBuilder
     private var highlightsSection: some View {
-        if let hl = highlight, (hl.short != nil || hl.extended != nil) {
+        if match.hasScore, let hl = highlight, (hl.validShort != nil || hl.extended != nil) {
             VStack(alignment: .leading, spacing: 10) {
                 HStack(spacing: 6) {
                     Image(systemName: "play.rectangle.fill")
@@ -455,22 +455,22 @@ struct MatchDetailView: View {
                 }
                 .padding(.leading, 4)
 
-                if hl.short != nil && hl.extended != nil {
+                if let shortId = hl.validShort, let extId = hl.extended {
                     HStack(spacing: 10) {
                         highlightCard(
-                            videoId: hl.short!,
+                            videoId: shortId,
                             label: "Highlights",
                             icon: "play.rectangle.fill",
                             duration: hl.shortDuration
                         )
                         highlightCard(
-                            videoId: hl.extended!,
+                            videoId: extId,
                             label: "Extended",
                             icon: "film.fill",
                             duration: hl.extendedDuration
                         )
                     }
-                } else if let videoId = hl.short {
+                } else if let videoId = hl.validShort {
                     highlightCard(
                         videoId: videoId,
                         label: "Highlights",

@@ -97,6 +97,11 @@ struct Highlight: Codable {
     let extended: String?
     let shortDuration: String?
     let extendedDuration: String?
+    let short_fallback: Bool?
+
+    var validShort: String? {
+        short_fallback == true ? nil : short
+    }
 }
 
 struct GroupStanding: Identifiable {
