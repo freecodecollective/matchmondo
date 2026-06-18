@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MatchMondo — Header Mockup</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif; background: #e8e8e8; padding: 24px 0 48px; }
+
+  .page-title { text-align: center; font-size: 18px; font-weight: 600; color: #555; padding: 20px 0 4px; }
+  .page-subtitle { text-align: center; font-size: 13px; color: #999; margin-bottom: 28px; max-width: 550px; margin-left: auto; margin-right: auto; line-height: 1.5; }
+
+  .phones { display: flex; flex-wrap: wrap; gap: 36px; justify-content: center; padding: 0 20px 40px; }
+
+  .phone {
+    width: 375px;
+    background: #e8ece8;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15), 0 2px 8px rgba(0,0,0,0.1);
+    border: 6px solid #1a1a1a;
+    position: relative;
+  }
+  .phone-label { text-align: center; font-size: 14px; font-weight: 600; color: #555; margin-bottom: 8px; }
+  .phone-wrap { display: flex; flex-direction: column; align-items: center; }
+
+  /* Fake content below header */
+  .fake-content { padding: 12px 16px; background: #e8ece8; }
+  .fake-section-header {
+    display: flex; align-items: center; gap: 6px;
+    padding: 4px 0 8px;
+  }
+  .fake-section-title { font-size: 16px; font-weight: 700; color: #222; }
+  .fake-section-date { font-size: 12px; color: #999; }
+  .fake-section-count { margin-left: auto; font-size: 11px; color: #aaa; }
+
+  .fake-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+  .fake-row { display: flex; justify-content: space-between; align-items: center; }
+  .fake-team { display: flex; align-items: center; gap: 8px; }
+  .fake-flag { font-size: 18px; }
+  .fake-name { font-size: 14px; font-weight: 600; color: #333; }
+  .fake-rank { font-size: 8px; font-weight: 800; color: #fff; background: #e8b923; padding: 1px 4px; border-radius: 99px; }
+  .fake-score { font-size: 18px; font-weight: 800; color: #000; }
+  .fake-time { font-size: 10px; color: #888; text-align: center; margin: 4px 0 6px; font-weight: 500; }
+  .fake-venue { font-size: 9px; color: #aaa; text-align: center; margin-top: 4px; }
+
+  /* ========== ELECTRIC HEADER ========== */
+  .electric-header {
+    background: linear-gradient(180deg, #051510 0%, #082a1c 40%, #0B3D28 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Pitch lines */
+  .pitch-lines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  /* Center line */
+  .pitch-lines .center-line {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 50%;
+    width: 1.5px;
+    background: rgba(29,158,117,0.2);
+  }
+  /* Center circle */
+  .pitch-lines .center-circle {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; height: 80px;
+    border: 1.5px solid rgba(29,158,117,0.25);
+    border-radius: 50%;
+  }
+  /* Center dot */
+  .pitch-lines .center-dot {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px; height: 4px;
+    background: rgba(29,158,117,0.35);
+    border-radius: 50%;
+  }
+  /* Outer border */
+  .pitch-lines .outer-border {
+    position: absolute;
+    top: 44px; left: 10px; right: 10px; bottom: 10px;
+    border: 1.5px solid rgba(29,158,117,0.12);
+    border-radius: 3px;
+  }
+  /* Top penalty area */
+  .pitch-lines .penalty-top {
+    position: absolute;
+    top: 44px; left: 50%; transform: translateX(-50%);
+    width: 100px; height: 28px;
+    border: 1.5px solid rgba(29,158,117,0.12);
+    border-top: none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  /* Bottom penalty area */
+  .pitch-lines .penalty-bottom {
+    position: absolute;
+    bottom: 10px; left: 50%; transform: translateX(-50%);
+    width: 100px; height: 28px;
+    border: 1.5px solid rgba(29,158,117,0.12);
+    border-bottom: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  /* Corner arcs */
+  .pitch-lines .corner-tl {
+    position: absolute; top: 42px; left: 8px;
+    width: 12px; height: 12px;
+    border-bottom-right-radius: 12px;
+    border-right: 1px solid rgba(29,158,117,0.1);
+    border-bottom: 1px solid rgba(29,158,117,0.1);
+  }
+  .pitch-lines .corner-tr {
+    position: absolute; top: 42px; right: 8px;
+    width: 12px; height: 12px;
+    border-bottom-left-radius: 12px;
+    border-left: 1px solid rgba(29,158,117,0.1);
+    border-bottom: 1px solid rgba(29,158,117,0.1);
+  }
+  .pitch-lines .corner-bl {
+    position: absolute; bottom: 8px; left: 8px;
+    width: 12px; height: 12px;
+    border-top-right-radius: 12px;
+    border-right: 1px solid rgba(29,158,117,0.1);
+    border-top: 1px solid rgba(29,158,117,0.1);
+  }
+  .pitch-lines .corner-br {
+    position: absolute; bottom: 8px; right: 8px;
+    width: 12px; height: 12px;
+    border-top-left-radius: 12px;
+    border-left: 1px solid rgba(29,158,117,0.1);
+    border-top: 1px solid rgba(29,158,117,0.1);
+  }
+
+  /* Neon glow pulse on lines */
+  @keyframes glowPulse {
+    0%, 100% { opacity: 0.12; }
+    50% { opacity: 0.3; }
+  }
+  .pitch-lines .glow-overlay {
+    position: absolute;
+    inset: 0;
+    animation: glowPulse 4s ease-in-out infinite;
+  }
+  .glow-overlay .center-line {
+    position: absolute; top: 0; bottom: 0; left: 50%; width: 1.5px;
+    background: rgba(29,158,117,0.5);
+    box-shadow: 0 0 8px rgba(29,158,117,0.3);
+  }
+  .glow-overlay .center-circle {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 80px; height: 80px;
+    border: 1.5px solid rgba(29,158,117,0.5);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(29,158,117,0.2);
+  }
+
+  /* Shimmer */
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  .shimmer-layer {
+    position: absolute; inset: 0; overflow: hidden; z-index: 3; pointer-events: none;
+  }
+  .shimmer-layer::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.06) 42%, rgba(255,255,255,0.14) 50%, rgba(255,255,255,0.06) 58%, transparent 70%);
+    animation: shimmer 3.5s ease-in-out infinite;
+  }
+
+  /* Status bar overlaid on dark header */
+  .status-bar-overlay {
+    padding: 10px 24px 0;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.8);
+    position: relative; z-index: 5;
+  }
+  .status-bar-overlay .time { font-size: 14px; font-weight: 700; }
+  .status-icons-w { display: flex; gap: 4px; font-size: 11px; }
+
+  /* Nav title on dark */
+  .nav-title-overlay {
+    padding: 4px 16px 6px;
+    position: relative; z-index: 5;
+  }
+  .nav-title-text {
+    font-size: 30px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+    text-shadow: 0 0 20px rgba(29,158,117,0.35);
+  }
+
+  /* Banner text area */
+  .banner-text {
+    text-align: center;
+    padding: 6px 16px 18px;
+    position: relative;
+    z-index: 5;
+  }
+  .banner-h {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 12px rgba(29,158,117,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .live-badge {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 800;
+    color: #fff;
+    background: #e24b4a;
+    padding: 2px 6px;
+    border-radius: 99px;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+  }
+  .banner-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 3px;
+  }
+  .banner-count {
+    font-size: 10px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 2px;
+  }
+
+  /* Static ball before title */
+  .ball-static {
+    font-size: 26px;
+    display: inline-block;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 8px rgba(29,158,117,0.4));
+    margin-right: 2px;
+  }
+
+  /* Bouncing ball */
+  @keyframes bouncePath {
+    0%   { top: 28%; left: 12%; transform: translate(-50%,-50%) rotate(0deg); }
+    10%  { top: 60%; left: 25%; transform: translate(-50%,-50%) rotate(90deg); }
+    20%  { top: 35%; left: 42%; transform: translate(-50%,-50%) rotate(200deg); }
+    30%  { top: 70%; left: 58%; transform: translate(-50%,-50%) rotate(320deg); }
+    40%  { top: 40%; left: 72%; transform: translate(-50%,-50%) rotate(450deg); }
+    50%  { top: 65%; left: 85%; transform: translate(-50%,-50%) rotate(560deg); }
+    60%  { top: 30%; left: 75%; transform: translate(-50%,-50%) rotate(680deg); }
+    70%  { top: 55%; left: 55%; transform: translate(-50%,-50%) rotate(810deg); }
+    80%  { top: 25%; left: 35%; transform: translate(-50%,-50%) rotate(940deg); }
+    90%  { top: 62%; left: 18%; transform: translate(-50%,-50%) rotate(1050deg); }
+    100% { top: 28%; left: 12%; transform: translate(-50%,-50%) rotate(1080deg); }
+  }
+  .ball-bounce {
+    position: absolute;
+    font-size: 18px;
+    z-index: 4;
+    animation: bouncePath 12s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(29,158,117,0.5)) drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    opacity: 0.7;
+  }
+
+  /* Ball trail glow */
+  @keyframes bounceTrail {
+    0%   { top: 28%; left: 12%; }
+    10%  { top: 60%; left: 25%; }
+    20%  { top: 35%; left: 42%; }
+    30%  { top: 70%; left: 58%; }
+    40%  { top: 40%; left: 72%; }
+    50%  { top: 65%; left: 85%; }
+    60%  { top: 30%; left: 75%; }
+    70%  { top: 55%; left: 55%; }
+    80%  { top: 25%; left: 35%; }
+    90%  { top: 62%; left: 18%; }
+    100% { top: 28%; left: 12%; }
+  }
+  .ball-trail {
+    position: absolute;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(29,158,117,0.25), transparent);
+    z-index: 2;
+    animation: bounceTrail 12s ease-in-out infinite;
+    transform: translate(-50%, -50%);
+    filter: blur(6px);
+  }
+
+  /* Score filter bar below header */
+  .score-filter {
+    display: flex;
+    gap: 6px;
+    padding: 8px 16px;
+    background: #e8ece8;
+  }
+  .filter-pill {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 99px;
+    background: #fff;
+    color: #888;
+    border: 1px solid #ddd;
+  }
+  .filter-pill.active {
+    background: #0B6E4F;
+    color: #fff;
+    border-color: #0B6E4F;
+  }
+
+  /* Design notes */
+  .notes {
+    max-width: 700px;
+    margin: 32px auto 0;
+    padding: 0 20px;
+  }
+  .notes h3 { font-size: 14px; font-weight: 700; color: #555; margin-bottom: 8px; }
+  .notes ul { font-size: 12px; color: #777; line-height: 1.8; padding-left: 16px; }
+  .notes ul li strong { color: #555; }
+</style>
+</head>
+<body>
+
+<div class="page-title">MatchMondo — Electric Header</div>
+<div class="page-subtitle">Full-bleed electric pitch with shimmer, neon field lines, and soccer ball. Two versions: bouncing ball vs. static ball.</div>
+
+<div class="phones">
+
+  <!-- ==================== VERSION A: Bouncing Ball ==================== -->
+  <div class="phone-wrap">
+    <div class="phone-label">A — Bouncing Ball</div>
+    <div class="phone">
+      <div class="electric-header">
+        <div class="pitch-lines">
+          <div class="center-line"></div>
+          <div class="center-circle"></div>
+          <div class="center-dot"></div>
+          <div class="outer-border"></div>
+          <div class="penalty-top"></div>
+          <div class="penalty-bottom"></div>
+          <div class="corner-tl"></div>
+          <div class="corner-tr"></div>
+          <div class="corner-bl"></div>
+          <div class="corner-br"></div>
+          <div class="glow-overlay">
+            <div class="center-line"></div>
+            <div class="center-circle"></div>
+          </div>
+        </div>
+        <div class="shimmer-layer"></div>
+
+        <!-- Bouncing ball -->
+        <div class="ball-trail"></div>
+        <div class="ball-bounce">⚽</div>
+
+        <div class="status-bar-overlay">
+          <div class="time">2:42</div>
+          <div class="status-icons-w">
+            <span>📶</span><span>📡</span><span>🔋</span>
+          </div>
+        </div>
+        <div class="nav-title-overlay">
+          <div class="nav-title-text">MatchMondo</div>
+        </div>
+        <div class="banner-text">
+          <div class="banner-h">
+            Football 2026
+            <span class="live-badge">LIVE</span>
+          </div>
+          <div class="banner-sub">June 11 – July 19 · USA, Canada & Mexico</div>
+          <div class="banner-count">23 of 104 matches played</div>
+        </div>
+      </div>
+
+      <div class="score-filter">
+        <div class="filter-pill active">All</div>
+        <div class="filter-pill">Live</div>
+        <div class="filter-pill">Upcoming</div>
+        <div class="filter-pill">Completed</div>
+      </div>
+
+      <div class="fake-content">
+        <div class="fake-section-header">
+          <span class="fake-section-title">Today</span>
+          <span class="fake-section-date">— June 17</span>
+          <span class="fake-section-count">6 matches ›</span>
+        </div>
+        <div class="fake-card">
+          <div class="fake-time">Group L · AT&T Stadium</div>
+          <div class="fake-row">
+            <div class="fake-team">
+              <span class="fake-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+              <span class="fake-name" style="font-weight:800">England</span>
+              <span class="fake-rank">#4</span>
+            </div>
+            <span class="fake-score">4</span>
+          </div>
+          <div style="height:4px"></div>
+          <div class="fake-row">
+            <div class="fake-team">
+              <span class="fake-flag">🇭🇷</span>
+              <span class="fake-name">Croatia</span>
+              <span class="fake-rank">#16</span>
+            </div>
+            <span class="fake-score">2</span>
+          </div>
+          <div class="fake-venue">Full Time · Highlights ▶</div>
+        </div>
+        <div class="fake-card">
+          <div class="fake-time">Group K · Mercedes-Benz Stadium</div>
+          <div class="fake-row">
+            <div class="fake-team">
+              <span class="fake-flag">🇩🇪</span>
+              <span class="fake-name">Germany</span>
+              <span class="fake-rank">#9</span>
+            </div>
+            <span class="fake-score" style="color:#999">–</span>
+          </div>
+          <div style="height:4px"></div>
+          <div class="fake-row">
+            <div class="fake-team">
+              <span class="fake-flag">🇯🇵</span>
+              <span class="fake-name">Japan</span>
+              <span class="fake-rank">#15</span>
+            </div>
+            <span class="fake-score" style="color:#999">–</span>
+          </div>
+          <div class="fake-venue" style="color:#0B6E4F;font-weight:600">6:00 PM ET</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== VERSION B: Static Ball ==================== -->
+  <div class="phone-wrap">
+    <div class="phone-label">B — Static Ball (before title)</div>
+    <div class="phone">
+      <div class="electric-header">
+        <div class="pitch-lines">
+          <div class="center-line"></div>
+          <div class="center-circle"></div>
+          <div class="center-dot"></div>
+          <div class="outer-border"></div>
+          <div class="penalty-top"></div>
+          <div class="penalty-bottom"></div>
+          <div class="corner-tl"></div>
+          <div class="corner-tr"></div>
+          <div class="corner-bl"></div>
+          <div class="corner-br"></div>
+          <div class="glow-overlay">
+            <div class="center-line"></div>
+            <div class="center-circle"></div>
+          </div>
+        </div>
+        <div class="shimmer-layer"></div>
+
+        <div class="status-bar-overlay">
+          <div class="time">2:42</div>
+          <div class="status-icons-w">
+            <span>📶</span><span>📡</span><span>🔋</span>
+          </div>
+        </div>
+        <div class="nav-title-overlay">
+          <div class="nav-title-text"><span class="ball-static">⚽</span> MatchMondo</div>
+        </div>
+        <div class="banner-text">
+          <div class="banner-h">
+            Football 2026
+            <span class="live-badge">LIVE</span>
+          </div>
+          <div class="banner-sub">June 11 – July 19 · USA, Canada & Mexico</div>
+          <div class="banner-count">23 of 104 matches played</div>
+        </div>
+      </div>
+
+      <div class="score-filter">
+        <div class="filter-pill active">All</div>
+        <div class="filter-pill">Live</div>
+        <div class="filter-pill">Upcoming</div>
+        <div class="filter-pill">Completed</div>
+      </div>
+
+      <div class="fake-content">
+        <div class="fake-section-header">
+          <span class="fake-section-title">Today</span>
+          <span class="fake-section-date">— June 17</span>
+          <span class="fake-section-count">6 matches ›</span>
+        </div>
+        <div class="fake-card">
+          <div class="fake-time">Group L · AT&T Stadium</div>
+          <div class="fake-row">
+            <div class="fake-team">
+              <span class="fake-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+              <span class="fake-name" style="font-weight:800">England</span>
+              <span class="fake-rank">#4</span>
+            </div>
+            <span class="fake-score">4</span>
+          </div>
+          <div style="height:4px"></div>
+          <div class="fake-row">
+            <div class="fake-team">
+              <span class="fake-flag">🇭🇷</span>
+              <span class="fake-name">Croatia</span>
+              <span class="fake-rank">#16</span>
+            </div>
+            <span class="fake-score">2</span>
+          </div>
+          <div class="fake-venue">Full Time · Highlights ▶</div>
+        </div>
+        <div class="fake-card">
+          <div class="fake-time">Group K · Mercedes-Benz Stadium</div>
+          <div class="fake-row">
+            <div class="fake-team">
+              <span class="fake-flag">🇩🇪</span>
+              <span class="fake-name">Germany</span>
+              <span class="fake-rank">#9</span>
+            </div>
+            <span class="fake-score" style="color:#999">–</span>
+          </div>
+          <div style="height:4px"></div>
+          <div class="fake-row">
+            <div class="fake-team">
+              <span class="fake-flag">🇯🇵</span>
+              <span class="fake-name">Japan</span>
+              <span class="fake-rank">#15</span>
+            </div>
+            <span class="fake-score" style="color:#999">–</span>
+          </div>
+          <div class="fake-venue" style="color:#0B6E4F;font-weight:600">6:00 PM ET</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="notes">
+  <h3>Design Notes</h3>
+  <ul>
+    <li><strong>Full-bleed:</strong> Header extends behind the status bar and nav title all the way to the top of the screen — dark background makes white status bar text pop.</li>
+    <li><strong>Electric pitch:</strong> Neon green field lines (center circle, penalty boxes, corner arcs, outer border) on deep dark green. Lines glow/pulse subtly.</li>
+    <li><strong>Shimmer:</strong> Diagonal light sweep across the entire header every 3.5 seconds.</li>
+    <li><strong>Version A (Bouncing Ball):</strong> ⚽ floats around the header background on a looping path with a subtle green glow trail. Ball is slightly transparent so it doesn't compete with the text.</li>
+    <li><strong>Version B (Static Ball):</strong> ⚽ sits before "MatchMondo" in the nav title with a neon green drop-shadow. Clean and simple — matches the HTML site style.</li>
+    <li><strong>Text glow:</strong> "MatchMondo" title has a subtle green text-shadow to feel electric/neon.</li>
+    <li><strong>Match count:</strong> "23 of 104 matches played" added as a third line in lighter opacity.</li>
+  </ul>
+</div>
+
+</body>
+</html>
