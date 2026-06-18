@@ -11,7 +11,7 @@ struct StandingsView: View {
         NavigationStack {
             ScrollView {
 
-                ElectricHeaderBanner(style: .compact)
+                ElectricHeaderBanner(style: .compact, title: "Standings")
 
                 if data.isLoading {
                     ProgressView("Loading...")
@@ -46,8 +46,8 @@ struct StandingsView: View {
                 }
             }
             .background(Color(red: 0.91, green: 0.94, blue: 0.91))
-            .navigationTitle("Standings")
-            .toolbarBackground(Color(red: 0.02, green: 0.082, blue: 0.067), for: .navigationBar)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(ElectricHeaderBanner.bannerColor, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarColorScheme(.dark, for: .navigationBar)
             .navigationDestination(for: String.self) { team in

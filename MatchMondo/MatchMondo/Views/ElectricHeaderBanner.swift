@@ -4,61 +4,35 @@ struct ElectricHeaderBanner: View {
     enum Style { case full, compact }
 
     let style: Style
+    let title: String
     @EnvironmentObject var data: DataService
 
     @State private var shimmerPhase: CGFloat = -1
     @State private var shimmerOpacity: Double = 1.0
-    @State private var ballY: CGFloat = 0.7
+    @State private var ballOffset: CGFloat = 0
     @State private var ballRotation: Double = 0
     @State private var ballOpacity: Double = 0.7
     @State private var glowOpacity: Double = 0.12
 
-    private let darkGreen = Color(red: 0.02, green: 0.082, blue: 0.067)
-    private let midGreen = Color(red: 0.031, green: 0.165, blue: 0.11)
+    static let bannerColor = Color(red: 0.031, green: 0.145, blue: 0.098)
     private let pitchLineColor = Color(red: 0.114, green: 0.62, blue: 0.459)
 
-    init(style: Style = .full) {
+    init(style: Style = .full, title: String = "") {
         self.style = style
+        self.title = title
     }
 
     var body: some View {
         ZStack {
-            LinearGradient(
-                colors: [darkGreen, midGreen, Color(red: 0.043, green: 0.239, blue: 0.157)],
-                startPoint: .top,
-                endPoint: .bottom
-            )
+            Self.bannerColor
 
             pitchLines
             shimmerOverlay
-            bouncingBall
 
             if style == .full {
-                VStack(spacing: 4) {
-                    Spacer()
-                    HStack(spacing: 6) {
-                        Text("Football 2026")
-                            .font(.system(size: 14, weight: .bold))
-                            .foregroundStyle(.white.opacity(0.9))
-                            .shadow(color: pitchLineColor.opacity(0.4), radius: 8)
-                        if data.anyLive {
-                            Text("LIVE")
-                                .font(.system(size: 9, weight: .black))
-                                .foregroundStyle(.white)
-                                .padding(.horizontal, 6)
-                                .padding(.vertical, 2)
-                                .background(Color.red)
-                                .clipShape(Capsule())
-                        }
-                    }
-                    Text("June 11 \u{2013} July 19 \u{00b7} USA, Canada & Mexico")
-                        .font(.system(size: 11))
-                        .foregroundStyle(.white.opacity(0.55))
-                    Text("\(data.playedCount) of \(data.totalCount) matches played")
-                        .font(.system(size: 10))
-                        .foregroundStyle(.white.opacity(0.4))
-                        .padding(.bottom, 12)
-                }
+                fullContent
+            } else {
+                compactContent
             }
         }
         .frame(maxWidth: .infinity)
@@ -67,6 +41,61 @@ struct ElectricHeaderBanner: View {
         .onAppear {
             startAnimations()
         }
+    }
+
+    private var fullContent: some View {
+        VStack(spacing: 4) {
+            Spacer()
+            HStack(spacing: 6) {
+                Text("\u{26bd}")
+                    .font(.system(size: 16))
+                    .rotationEffect(.degrees(ballRotation))
+                    .opacity(ballOpacity)
+                    .offset(y: ballOffset)
+                    .shadow(color: pitchLineColor.opacity(0.5), radius: 8)
+                Text("Football 2026")
+                    .font(.system(size: 14, weight: .bold))
+                    .foregroundStyle(.white.opacity(0.9))
+                    .shadow(color: pitchLineColor.opacity(0.4), radius: 8)
+                if data.anyLive {
+                    liveBadge
+                }
+            }
+            Text("June 11 \u{2013} July 19 \u{00b7} USA, Canada & Mexico")
+                .font(.system(size: 11))
+                .foregroundStyle(.white.opacity(0.55))
+            Text("\(data.playedCount) of \(data.totalCount) matches played")
+                .font(.system(size: 10))
+                .foregroundStyle(.white.opacity(0.4))
+                .padding(.bottom, 12)
+        }
+    }
+
+    private var compactContent: some View {
+        HStack(spacing: 6) {
+            Text("\u{26bd}")
+                .font(.system(size: 12))
+                .rotationEffect(.degrees(ballRotation))
+                .opacity(ballOpacity)
+                .offset(y: ballOffset)
+                .shadow(color: pitchLineColor.opacity(0.5), radius: 8)
+            Text(title)
+                .font(.system(size: 15, weight: .bold))
+                .foregroundStyle(.white.opacity(0.9))
+            if data.anyLive {
+                liveBadge
+            }
+        }
+    }
+
+    private var liveBadge: some View {
+        Text("LIVE")
+            .font(.system(size: 9, weight: .black))
+            .foregroundStyle(.white)
+            .padding(.horizontal, 6)
+            .padding(.vertical, 2)
+            .background(Color.red)
+            .clipShape(Capsule())
     }
 
     private var pitchLines: some View {
@@ -125,22 +154,6 @@ struct ElectricHeaderBanner: View {
         .clipped()
     }
 
-    private var bouncingBall: some View {
-        GeometryReader { geo in
-            let ballX = style == .full ? 0.5 : 0.5
-            Text("⚽")
-                .font(.system(size: style == .full ? 16 : 12))
-                .rotationEffect(.degrees(ballRotation))
-                .opacity(ballOpacity)
-                .shadow(color: pitchLineColor.opacity(0.5), radius: 8)
-                .position(
-                    x: ballX * geo.size.width,
-                    y: ballY * geo.size.height
-                )
-                .allowsHitTesting(false)
-        }
-    }
-
     private func startAnimations() {
         withAnimation(.easeInOut(duration: 3.5).repeatForever(autoreverses: false)) {
             shimmerPhase = 1
@@ -150,25 +163,21 @@ struct ElectricHeaderBanner: View {
             glowOpacity = 0.3
         }
 
-        // Ball: 3 bounces with decreasing height, linear speed
-        let ground: CGFloat = 0.7
-        let heights: [CGFloat] = [0.2, 0.35, 0.5]
-        let stepDur = 0.3
+        let bounceHeights: [CGFloat] = [-18, -11, -6]
+        let stepDur = 0.25
 
         var delay = 0.0
-        for peak in heights {
-            // Go up
+        for height in bounceHeights {
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                 withAnimation(.linear(duration: stepDur)) {
-                    ballY = peak
+                    ballOffset = height
                     ballRotation += 180
                 }
             }
             delay += stepDur
-            // Come down
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                 withAnimation(.linear(duration: stepDur)) {
-                    ballY = ground
+                    ballOffset = 0
                     ballRotation += 180
                 }
             }

@@ -41,7 +41,10 @@ struct ScheduleView: View {
             ScrollViewReader { proxy in
                 ScrollView {
                     LazyVStack(spacing: 0, pinnedViews: []) {
-                        ElectricHeaderBanner(style: .compact)
+                        ElectricHeaderBanner(style: .compact, title: "Schedule")
+
+                        searchField
+
                         ScoreFilterBar()
 
                         ForEach(filteredDays, id: \.dayString) { day in
@@ -89,11 +92,10 @@ struct ScheduleView: View {
                     scrollToToday(proxy: proxy)
                 }
             }
-            .navigationTitle("Schedule")
-            .toolbarBackground(Color(red: 0.02, green: 0.082, blue: 0.067), for: .navigationBar)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(ElectricHeaderBanner.bannerColor, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarColorScheme(.dark, for: .navigationBar)
-            .searchable(text: $searchText, prompt: "Search teams, venues...")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Menu {
@@ -118,6 +120,30 @@ struct ScheduleView: View {
                 await data.refresh()
             }
         }
+    }
+
+    private var searchField: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "magnifyingglass")
+                .foregroundStyle(.secondary)
+                .font(.system(size: 14))
+            TextField("Search teams, venues...", text: $searchText)
+                .font(.system(size: 15))
+            if !searchText.isEmpty {
+                Button {
+                    searchText = ""
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundStyle(.secondary)
+                        .font(.system(size: 14))
+                }
+            }
+        }
+        .padding(10)
+        .background(Color(.systemGray6))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .padding(.horizontal, 16)
+        .padding(.vertical, 8)
     }
 
     private func scrollToToday(proxy: ScrollViewProxy) {

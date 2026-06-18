@@ -34,7 +34,9 @@ struct TeamsView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                ElectricHeaderBanner(style: .compact)
+                ElectricHeaderBanner(style: .compact, title: "Teams")
+
+                searchField
 
                 if data.isLoading {
                     ProgressView("Loading...")
@@ -60,15 +62,38 @@ struct TeamsView: View {
                 }
             }
             .background(Color(red: 0.91, green: 0.94, blue: 0.91))
-            .navigationTitle("Teams")
-            .toolbarBackground(Color(red: 0.02, green: 0.082, blue: 0.067), for: .navigationBar)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(ElectricHeaderBanner.bannerColor, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarColorScheme(.dark, for: .navigationBar)
-            .searchable(text: $searchText, prompt: "Search teams or players...")
             .navigationDestination(for: String.self) { team in
                 TeamDetailView(team: team)
             }
         }
+    }
+
+    private var searchField: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "magnifyingglass")
+                .foregroundStyle(.secondary)
+                .font(.system(size: 14))
+            TextField("Search teams or players...", text: $searchText)
+                .font(.system(size: 15))
+            if !searchText.isEmpty {
+                Button {
+                    searchText = ""
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundStyle(.secondary)
+                        .font(.system(size: 14))
+                }
+            }
+        }
+        .padding(10)
+        .background(Color(.systemGray6))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .padding(.horizontal, 16)
+        .padding(.vertical, 8)
     }
 
     // MARK: - Team Section

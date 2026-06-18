@@ -52,7 +52,8 @@ struct TodayView: View {
                 await data.refresh()
             }
             .navigationTitle("MatchMondo")
-            .toolbarBackground(Color(red: 0.02, green: 0.082, blue: 0.067), for: .navigationBar)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(ElectricHeaderBanner.bannerColor, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarColorScheme(.dark, for: .navigationBar)
             .navigationDestination(for: Match.self) { match in
