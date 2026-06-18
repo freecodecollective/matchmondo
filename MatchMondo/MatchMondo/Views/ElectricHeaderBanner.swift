@@ -87,7 +87,7 @@ struct ElectricHeaderBanner: View {
         Canvas { context, size in
             let centerX = width * 0.84
             let centerY = height * 0.5
-            let circleR: CGFloat = style == .full ? 48 : 32
+            let circleR: CGFloat = 48
             let opacity = glowOpacity
 
             // Center line
