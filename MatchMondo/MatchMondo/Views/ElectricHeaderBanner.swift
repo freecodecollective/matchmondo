@@ -11,7 +11,7 @@ struct ElectricHeaderBanner: View {
     @State private var shimmerOpacity: Double = 1.0
     @State private var ballOffset: CGFloat = 0
     @State private var ballRotation: Double = 0
-    @State private var ballOpacity: Double = 0.7
+    @State private var ballOpacity: Double = 0.9
     @State private var glowOpacity: Double = 0.12
 
     static let bannerColor = Color(red: 0.043, green: 0.373, blue: 0.259)
@@ -120,9 +120,9 @@ struct ElectricHeaderBanner: View {
     // MARK: - Content
 
     private func fullContent(safeTop: CGFloat) -> some View {
-        VStack(alignment: .trailing, spacing: 4) {
+        VStack(alignment: .leading, spacing: 4) {
             Spacer()
-            HStack(spacing: 6) {
+            HStack(spacing: 8) {
                 Text("\u{26bd}")
                     .font(.system(size: 16))
                     .rotationEffect(.degrees(ballRotation))
@@ -139,15 +139,15 @@ struct ElectricHeaderBanner: View {
                 .font(.system(size: 11))
                 .foregroundStyle(.white.opacity(0.7))
         }
-        .frame(maxWidth: .infinity, alignment: .trailing)
-        .padding(.trailing, 20)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.leading, 16)
         .padding(.bottom, 14)
     }
 
     private func compactContent(safeTop: CGFloat) -> some View {
         VStack {
             Spacer()
-            HStack(spacing: 6) {
+            HStack(spacing: 8) {
                 Text("\u{26bd}")
                     .font(.system(size: 13))
                     .rotationEffect(.degrees(ballRotation))
@@ -161,8 +161,8 @@ struct ElectricHeaderBanner: View {
                 }
             }
         }
-        .frame(maxWidth: .infinity, alignment: .trailing)
-        .padding(.trailing, 20)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.leading, 16)
         .padding(.bottom, 10)
     }
 
@@ -228,7 +228,7 @@ struct ElectricHeaderBanner: View {
 
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             withAnimation(.easeOut(duration: 0.6)) {
-                ballOpacity = 0.15
+                ballOpacity = 0.5
                 shimmerOpacity = 0
             }
         }
