@@ -55,7 +55,7 @@ struct ElectricHeaderBanner: View {
                 }
             }
         }
-        .frame(height: style == .full ? 140 : 88)
+        .frame(height: 88)
         .frame(maxWidth: .infinity)
         .clipped()
         .ignoresSafeArea(edges: .top)
@@ -129,7 +129,7 @@ struct ElectricHeaderBanner: View {
                     .opacity(ballOpacity)
                     .offset(y: ballOffset)
                 Text(title.isEmpty ? "MatchMondo" : title)
-                    .font(.system(size: 20, weight: .bold))
+                    .font(.system(size: 24, weight: .bold))
                     .foregroundStyle(.white)
                 if data.anyLive {
                     liveBadge
@@ -154,7 +154,7 @@ struct ElectricHeaderBanner: View {
                     .opacity(ballOpacity)
                     .offset(y: ballOffset)
                 Text(title)
-                    .font(.system(size: 17, weight: .bold))
+                    .font(.system(size: 20, weight: .bold))
                     .foregroundStyle(.white)
                 if data.anyLive {
                     liveBadge
