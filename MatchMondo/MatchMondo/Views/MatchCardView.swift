@@ -23,6 +23,17 @@ struct MatchCardView: View {
         match.kickoff.smartTime()
     }
 
+    private var isCompleted: Bool {
+        showScore && match.hasScore && !match.isLive
+    }
+
+    private var cardBackground: Color {
+        if isCompleted {
+            return Color(red: 0.949, green: 0.953, blue: 0.949)
+        }
+        return Color(.systemBackground)
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             HStack {
@@ -51,18 +62,10 @@ struct MatchCardView: View {
                 if showScore && match.hasScore {
                     let h = match.scoreH!
                     let a = match.scoreA!
-                    let homeColor: Color = match.isLive ? Color(red: 0.15, green: 0.55, blue: 0.2)
-                        : h > a ? Color(red: 0.15, green: 0.55, blue: 0.2)
-                        : h < a ? Color(red: 0.8, green: 0.15, blue: 0.15)
-                        : Color(red: 0.35, green: 0.35, blue: 0.38)
-                    let awayColor: Color = match.isLive ? Color(red: 0.15, green: 0.55, blue: 0.2)
-                        : a > h ? Color(red: 0.15, green: 0.55, blue: 0.2)
-                        : a < h ? Color(red: 0.8, green: 0.15, blue: 0.15)
-                        : Color(red: 0.35, green: 0.35, blue: 0.38)
                     HStack(spacing: 6) {
                         Text("\(h)")
                             .font(.system(size: 20, weight: .heavy, design: .rounded))
-                            .foregroundStyle(homeColor)
+                            .foregroundStyle(.primary)
 
                         Text("–")
                             .font(.system(size: 14, weight: .medium))
@@ -70,7 +73,7 @@ struct MatchCardView: View {
 
                         Text("\(a)")
                             .font(.system(size: 20, weight: .heavy, design: .rounded))
-                            .foregroundStyle(awayColor)
+                            .foregroundStyle(.primary)
                     }
                 } else {
                     Text("vs")
@@ -99,7 +102,7 @@ struct MatchCardView: View {
         }
         .padding(.vertical, 10)
         .padding(.horizontal, 14)
-        .background(Color(.systemBackground))
+        .background(cardBackground)
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .overlay(
             HStack(spacing: 0) {
@@ -111,7 +114,8 @@ struct MatchCardView: View {
         )
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(Color(.separator).opacity(0.3), lineWidth: 1)
+                .stroke(match.isLive ? Color(red: 0.043, green: 0.431, blue: 0.310) : Color(.separator).opacity(0.3),
+                        lineWidth: match.isLive ? 2 : 1)
         )
         .shadow(color: .black.opacity(0.04), radius: 3, y: 1)
     }

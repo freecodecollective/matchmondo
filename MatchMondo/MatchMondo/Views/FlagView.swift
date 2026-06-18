@@ -66,7 +66,7 @@ struct TeamNameView: View {
             HStack(spacing: 3) {
                 Text(TeamNames.localizedName(for: team))
                     .font(.system(size: 15, weight: isWinner ? .heavy : .semibold))
-                    .foregroundStyle(isWinner ? Color(red: 0.027, green: 0.322, blue: 0.231) : .primary)
+                    .foregroundStyle(.primary)
                 RankBadge(team: team, fontSize: 12)
             }
         }
