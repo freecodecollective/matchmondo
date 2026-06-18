@@ -217,7 +217,12 @@ struct TeamDetailView: View {
                 .padding(.bottom, 8)
 
                 ForEach(Array(players.enumerated()), id: \.element.id) { index, player in
-                    playerRow(player: player)
+                    NavigationLink {
+                        PlayerDetailView(player: player, team: team)
+                    } label: {
+                        playerRow(player: player)
+                    }
+                    .buttonStyle(.plain)
                     if index < players.count - 1 {
                         Divider().padding(.leading, 14)
                     }
@@ -251,6 +256,9 @@ struct TeamDetailView: View {
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 11, weight: .semibold))
+                    .foregroundStyle(.tertiary)
             }
             HStack(spacing: 4) {
                 Image(systemName: "building.2")

@@ -29,6 +29,7 @@
 		AA000020 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100020 /* SettingsView.swift */; };
 		AA000021 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AA100023 /* Localizable.xcstrings */; };
 		AA000022 /* ElectricHeaderBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100022 /* ElectricHeaderBanner.swift */; };
+		AA000024 /* PlayerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100024 /* PlayerDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		AA100020 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AA100022 /* ElectricHeaderBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricHeaderBanner.swift; sourceTree = "<group>"; };
 		AA100023 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		AA100024 /* PlayerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailView.swift; sourceTree = "<group>"; };
 		AA200001 /* MatchMondo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchMondo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 				AA100017 /* MoreView.swift */,
 				AA100020 /* SettingsView.swift */,
 				AA100022 /* ElectricHeaderBanner.swift */,
+				AA100024 /* PlayerDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				AA000018 /* AppSettings.swift in Sources */,
 				AA000020 /* SettingsView.swift in Sources */,
 				AA000022 /* ElectricHeaderBanner.swift in Sources */,
+				AA000024 /* PlayerDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
