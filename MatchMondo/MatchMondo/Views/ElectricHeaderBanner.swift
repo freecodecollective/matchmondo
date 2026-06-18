@@ -135,9 +135,12 @@ struct ElectricHeaderBanner: View {
                     liveBadge
                 }
             }
-            Text("Football 2026 \u{00b7} June 11 \u{2013} July 19 \u{00b7} USA, Canada & Mexico \u{00b7} \(data.playedCount) of \(data.totalCount) matches played")
+            Text("Football 2026 \u{00b7} June 11 \u{2013} July 19 \u{00b7} USA, Canada & Mexico")
                 .font(.system(size: 11))
                 .foregroundStyle(.white.opacity(0.7))
+            Text("\(data.playedCount) of \(data.totalCount) matches played")
+                .font(.system(size: 11))
+                .foregroundStyle(.white.opacity(0.5))
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.leading, 16)
