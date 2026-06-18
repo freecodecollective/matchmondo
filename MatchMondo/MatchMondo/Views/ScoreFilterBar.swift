@@ -11,7 +11,7 @@ struct ScoreFilterBar: View {
                 scoreVisibility.hideAll()
             } label: {
                 HStack {
-                    Text("Hidden")
+                    Text("Hide Scores")
                     if scoreVisibility.isHideAll {
                         Image(systemName: "checkmark")
                     }
@@ -35,8 +35,8 @@ struct ScoreFilterBar: View {
                 scoreVisibility.showLive = true
             } label: {
                 HStack {
-                    Text("Live Scores")
-                    if scoreVisibility.showLive {
+                    Text("Final & Live Scores")
+                    if scoreVisibility.showCompleted && scoreVisibility.showLive {
                         Image(systemName: "checkmark")
                     }
                 }
