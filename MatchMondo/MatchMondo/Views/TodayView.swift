@@ -51,11 +51,7 @@ struct TodayView: View {
             .refreshable {
                 await data.refresh()
             }
-            .navigationTitle("MatchMondo")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(ElectricHeaderBanner.bannerColor, for: .navigationBar)
-            .toolbarBackground(.visible, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: Match.self) { match in
                 MatchDetailView(match: match)
             }

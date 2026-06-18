@@ -50,6 +50,7 @@ struct MatchDetailView: View {
         .background(Color(red: 0.91, green: 0.94, blue: 0.91))
         .navigationTitle("Match \(match.n)")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar(.visible, for: .navigationBar)
         .navigationDestination(for: String.self) { team in
             TeamDetailView(team: team)
         }

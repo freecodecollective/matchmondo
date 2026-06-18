@@ -47,6 +47,8 @@ struct ScheduleView: View {
 
                         ScoreFilterBar()
 
+                        stageFilterBar
+
                         ForEach(filteredDays, id: \.dayString) { day in
                             Section {
                                 ForEach(day.matches) { match in
@@ -92,30 +94,7 @@ struct ScheduleView: View {
                     scrollToToday(proxy: proxy)
                 }
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(ElectricHeaderBanner.bannerColor, for: .navigationBar)
-            .toolbarBackground(.visible, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Menu {
-                        ForEach(stages, id: \.self) { stage in
-                            Button {
-                                stageFilter = stage
-                            } label: {
-                                HStack {
-                                    Text(LocalizedStringKey(stage))
-                                    if stage == stageFilter {
-                                        Image(systemName: "checkmark")
-                                    }
-                                }
-                            }
-                        }
-                    } label: {
-                        Image(systemName: "line.3.horizontal.decrease.circle")
-                    }
-                }
-            }
+            .toolbar(.hidden, for: .navigationBar)
             .refreshable {
                 await data.refresh()
             }
@@ -144,6 +123,29 @@ struct ScheduleView: View {
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .padding(.horizontal, 16)
         .padding(.vertical, 8)
+    }
+
+    private var stageFilterBar: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 8) {
+                ForEach(stages, id: \.self) { stage in
+                    Button {
+                        stageFilter = stage
+                    } label: {
+                        Text(LocalizedStringKey(stage))
+                            .font(.system(size: 12, weight: .semibold))
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 6)
+                            .foregroundStyle(stage == stageFilter ? .white : .primary)
+                            .background(stage == stageFilter ? green : Color(.systemGray5))
+                            .clipShape(Capsule())
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+            .padding(.horizontal, 16)
+        }
+        .padding(.bottom, 4)
     }
 
     private func scrollToToday(proxy: ScrollViewProxy) {

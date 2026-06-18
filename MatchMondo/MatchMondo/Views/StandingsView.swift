@@ -46,10 +46,7 @@ struct StandingsView: View {
                 }
             }
             .background(Color(red: 0.91, green: 0.94, blue: 0.91))
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(ElectricHeaderBanner.bannerColor, for: .navigationBar)
-            .toolbarBackground(.visible, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: String.self) { team in
                 TeamDetailView(team: team)
             }
@@ -220,6 +217,7 @@ struct StandingsDetailView: View {
         .background(Color(red: 0.91, green: 0.94, blue: 0.91))
         .navigationTitle("Standings")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar(.visible, for: .navigationBar)
         .navigationDestination(for: String.self) { team in
             TeamDetailView(team: team)
         }

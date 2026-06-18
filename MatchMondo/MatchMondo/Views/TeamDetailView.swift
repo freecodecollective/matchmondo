@@ -27,6 +27,7 @@ struct TeamDetailView: View {
         .background(Color(red: 0.91, green: 0.94, blue: 0.91))
         .navigationTitle(TeamNames.localizedName(for: team))
         .navigationBarTitleDisplayMode(.large)
+        .toolbar(.visible, for: .navigationBar)
         .navigationDestination(for: Match.self) { match in
             MatchDetailView(match: match)
         }
