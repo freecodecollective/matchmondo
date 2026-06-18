@@ -7,6 +7,7 @@ struct ElectricHeaderBanner: View {
     @EnvironmentObject var data: DataService
 
     @State private var shimmerPhase: CGFloat = -1
+    @State private var shimmerOpacity: Double = 1.0
     @State private var ballY: CGFloat = 0.7
     @State private var ballRotation: Double = 0
     @State private var ballOpacity: Double = 0.7
@@ -118,6 +119,7 @@ struct ElectricHeaderBanner: View {
                 )
                 .frame(width: w * 0.6)
                 .offset(x: shimmerPhase * w * 1.3)
+                .opacity(shimmerOpacity)
                 .allowsHitTesting(false)
         }
         .clipped()
@@ -176,6 +178,7 @@ struct ElectricHeaderBanner: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             withAnimation(.easeOut(duration: 0.6)) {
                 ballOpacity = 0.15
+                shimmerOpacity = 0
             }
         }
     }
