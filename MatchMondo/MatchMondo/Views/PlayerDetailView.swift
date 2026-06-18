@@ -92,7 +92,8 @@ struct PlayerDetailView: View {
                         HStack(spacing: 0) {
                             Text(player.position)
                             if let age {
-                                Text(" \u{00b7} Age \(age)")
+                                Text(" \u{00b7} ")
+                                Text("Age \(age)")
                             }
                         }
                         .font(.system(size: 14))
@@ -176,7 +177,7 @@ struct PlayerDetailView: View {
         )
     }
 
-    private func statBox(value: String, label: String) -> some View {
+    private func statBox(value: String, label: LocalizedStringKey) -> some View {
         VStack(spacing: 4) {
             Text(value)
                 .font(.system(size: 22, weight: .bold, design: .rounded))
