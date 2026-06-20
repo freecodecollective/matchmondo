@@ -16,3 +16,8 @@ availableSecrets:
   secretManager:
     - versionName: projects/matchmondo-trivia-proxy/secrets/GITHUB_PAT/versions/latest
       env: 'GITHUB_PAT'
+
+# Required because the trigger runs as a user-specified service account
+# (the compute SA): such builds must direct logs explicitly.
+options:
+  logging: CLOUD_LOGGING_ONLY
