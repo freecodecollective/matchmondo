@@ -700,7 +700,8 @@
       ],
       "answer": 1,
       "explanation": "Pelé was just 17 when he scored twice in the 1958 final against Sweden.",
-      "approved": true
+      "approved": true,
+      "claudeTask": "who was the next youngest? and say how old yamal is in this tournament"
     },
     {
       "id": "p-puskas",
@@ -1835,6 +1836,7 @@
       "answer": 0,
       "explanation": "A brace refers to a player scoring two goals in a single match. Scoring three goals is called a hat-trick.",
       "approved": true,
+      "needsReview": true,
       "claudeTask": "make 3d answer funny"
     }
   ],
