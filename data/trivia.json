@@ -458,7 +458,7 @@
       ],
       "answer": 1,
       "explanation": "Brazil's back-to-back wins in 1958 and 1962 remain the last time any nation successfully defended the title.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "h-1934-italy",
@@ -1709,7 +1709,8 @@
       ],
       "answer": 0,
       "explanation": "A brace refers to a player scoring two goals in a single match. Scoring three goals is called a hat-trick.",
-      "needsReview": true
+      "needsReview": true,
+      "claudeTask": "make answer 3 funny but it needs to relate to scoring."
     }
   ],
   "pendingTasks": [
