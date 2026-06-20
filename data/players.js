@@ -1,6 +1,6 @@
 // Football 2026 — top players per team. Compiled from agent web research (June 2026).
-// Top-10 teams: 5 players each; all other teams: 3. Clubs reflect the 2025-26 season.
-// 48 teams, 164 players.
+// Top-5 teams: 6 players each; next 5 teams: 5 each; all other teams: 3. Clubs reflect the 2025-26 season.
+// 48 teams, 169 players.
 // Team order/rank come from data/rankings.js.
 window.WC_PLAYERS = {
  "teams": {
@@ -458,6 +458,55 @@ window.WC_PLAYERS = {
      "Copa Sudamericana 2020 (Defensa y Justicia)",
      "Argentine Primera División 2021 (River Plate)",
      "Primeira Liga 2022-23 (Benfica)"
+    ]
+   },
+   {
+    "name": "Alexis Mac Allister",
+    "position": "Central midfielder",
+    "club": "Liverpool (Premier League, England)",
+    "hometown": "Santa Rosa, La Pampa",
+    "why": "A key starter in Argentina's 2022 triumph, Mac Allister scored in the final and has since become one of the best midfielders in the Premier League at Liverpool. Technically gifted and composed under pressure, he dictates tempo and links defense to attack with his passing range and positional intelligence. His big-tournament experience and consistent elite form make him indispensable alongside Enzo Fernández in midfield.",
+    "number": 20,
+    "why_es": "Titular clave en el triunfo de Argentina en 2022, Mac Allister marcó en la final y desde entonces se ha convertido en uno de los mejores mediocampistas de la Premier League con Liverpool. Técnicamente dotado y sereno bajo presión, dicta el tempo y conecta la defensa con el ataque con su rango de pases e inteligencia posicional. Su experiencia en grandes torneos y su rendimiento consistente de élite lo hacen indispensable junto a Enzo Fernández en el mediocampo.",
+    "why_fr": "Titulaire clé lors du triomphe de l'Argentine en 2022, Mac Allister a marqué en finale et est depuis devenu l'un des meilleurs milieux de terrain de la Premier League à Liverpool. Doté d'une technique remarquable et d'un calme sous pression, il dicte le tempo et fait le lien entre la défense et l'attaque grâce à sa palette de passes et son intelligence positionnelle. Son expérience des grands tournois et sa régularité au plus haut niveau le rendent indispensable aux côtés d'Enzo Fernández au milieu.",
+    "why_pt_BR": "Titular fundamental no triunfo da Argentina em 2022, Mac Allister marcou na final e desde então se tornou um dos melhores meias da Premier League no Liverpool. Tecnicamente talentoso e sereno sob pressão, ele dita o ritmo e conecta defesa ao ataque com seu alcance de passes e inteligência posicional. Sua experiência em grandes torneios e desempenho consistente de elite o tornam indispensável ao lado de Enzo Fernández no meio-campo.",
+    "why_de": "Als Schlüsselspieler bei Argentiniens Triumph 2022 traf Mac Allister im Finale und hat sich seitdem bei Liverpool zu einem der besten Mittelfeldspieler der Premier League entwickelt. Technisch begabt und unter Druck gelassen, gibt er das Tempo vor und verbindet Defensive und Offensive mit seiner Passqualität und Positionsintelligenz. Seine Erfahrung bei großen Turnieren und seine konstante Weltklasse-Form machen ihn an der Seite von Enzo Fernández im Mittelfeld unverzichtbar.",
+    "why_it": "Titolare chiave nel trionfo dell'Argentina nel 2022, Mac Allister ha segnato in finale e da allora è diventato uno dei migliori centrocampisti della Premier League al Liverpool. Tecnicamente dotato e freddo sotto pressione, detta il ritmo e collega difesa e attacco con la sua gamma di passaggi e intelligenza posizionale. La sua esperienza nei grandi tornei e la costante forma d'élite lo rendono indispensabile accanto a Enzo Fernández a centrocampo.",
+    "why_ja": "2022年のArgentina優勝で主力として決勝でゴールを決めたMac Allisterは、以降Liverpoolでプレミアリーグ最高のミッドフィルダーの一人に成長した。技術に優れプレッシャー下でも冷静で、パスレンジとポジショニングの知性でテンポをコントロールし守備と攻撃をつなぐ。大舞台の経験と安定したエリートレベルのパフォーマンスにより、中盤でEnzo Fernándezと並んで不可欠な存在だ。",
+    "why_ko": "2022년 아르헨티나 우승의 핵심 선발로 결승에서 골을 넣은 맥 알리스터는 이후 리버풀에서 프리미어리그 최고의 미드필더 중 한 명이 되었다. 기술적으로 뛰어나고 압박 속에서도 침착하며, 패스 범위와 위치 선정 지능으로 템포를 조율하고 수비와 공격을 연결한다. 대형 대회 경험과 일관된 최상위 폼으로 엔소 페르난데스와 함께 미드필드에서 없어서는 안 될 존재다.",
+    "why_zh_Hans": "作为阿根廷2022年夺冠的关键首发球员，麦卡利斯特在决赛中进球，此后在利物浦成为英超最优秀的中场之一。技术出色、压力下沉着冷静，他以传球范围和位置感掌控节奏，串联防守和进攻。他的大赛经验和稳定的顶级状态使他成为恩佐·费尔南德斯身旁中场不可或缺的存在。",
+    "why_ar": "لاعب أساسي في فوز الأرجنتين عام 2022 وسجّل في النهائي، أصبح ماك أليستر من أفضل لاعبي خط الوسط في الدوري الإنجليزي مع ليفربول. يتمتع بموهبة تقنية عالية وهدوء تحت الضغط، ويتحكم في إيقاع اللعب ويربط الدفاع بالهجوم بتمريراته الذكية ومعرفته المركزية. خبرته في البطولات الكبرى وأداؤه المتسق على أعلى مستوى يجعلانه لا غنى عنه إلى جانب إنزو فرنانديز في خط الوسط.",
+    "why_es_ES": "Titular indiscutible en el triunfo de Argentina en 2022, Mac Allister marcó en la final y desde entonces se ha convertido en uno de los mejores centrocampistas de la Premier League en el Liverpool. Técnicamente dotado y sereno bajo presión, marca el tempo y conecta la defensa con el ataque gracias a su rango de pases e inteligencia posicional. Su experiencia en grandes torneos y su rendimiento constante al más alto nivel lo hacen imprescindible junto a Enzo Fernández en el centro del campo.",
+    "caps": 53,
+    "intlGoals": 8,
+    "tournaments": [
+     "2022 (Winner)",
+     "Copa America 2024 (Winner)",
+     "Copa America 2021 (Winner)"
+    ],
+    "clubs": [
+     {
+      "team": "Liverpool",
+      "years": "2023–present",
+      "country": "England"
+     },
+     {
+      "team": "Brighton & Hove Albion",
+      "years": "2019–2023",
+      "country": "England"
+     },
+     {
+      "team": "Argentinos Juniors",
+      "years": "2016–2019",
+      "country": "Argentina"
+     }
+    ],
+    "honors": [
+     "2022 (Winner, with Argentina)",
+     "Copa America 2021, 2024 (with Argentina)",
+     "Finalissima 2022 (with Argentina)",
+     "Premier League 2023-24 (Liverpool)",
+     "EFL Cup 2023-24, 2024-25 (Liverpool)"
     ]
    }
   ],
@@ -3740,6 +3789,40 @@ window.WC_PLAYERS = {
      "UEFA Europa League 2018-19 (Chelsea)",
      "U-17 Tournament 2017 (England)"
     ]
+   },
+   {
+    "name": "Kobbie Mainoo",
+    "position": "Central midfielder",
+    "club": "Manchester United (Premier League, England)",
+    "hometown": "Stockport, Greater Manchester",
+    "why": "One of England's most exciting young talents, Mainoo burst onto the international scene at Euro 2024 at just 19, starting in the final and impressing with his composure, dribbling and ability to carry the ball through midfield. He became the youngest English player to start a major tournament final since 1966, and his fearlessness on the ball gives England a progressive passing option alongside Rice. His rapid development at Manchester United has made him a pillar of England's midfield.",
+    "number": 16,
+    "why_es": "Uno de los jóvenes talentos más emocionantes de Inglaterra, Mainoo irrumpió en la escena internacional en la Euro 2024 con apenas 19 años, siendo titular en la final e impresionando con su templanza, regate y capacidad para conducir el balón por el mediocampo. Se convirtió en el jugador inglés más joven en ser titular en una final de un gran torneo desde 1966, y su valentía con el balón le da a Inglaterra una opción de pase progresivo junto a Rice. Su rápido desarrollo en el Manchester United lo ha convertido en un pilar del mediocampo inglés.",
+    "why_fr": "L'un des jeunes talents les plus enthousiasmants d'Angleterre, Mainoo a fait irruption sur la scène internationale à l'Euro 2024 à seulement 19 ans, titulaire lors de la finale et impressionnant par son sang-froid, ses dribbles et sa capacité à porter le ballon au milieu de terrain. Il est devenu le plus jeune joueur anglais à débuter une finale d'un tournoi majeur depuis 1966, et son audace balle au pied donne à l'Angleterre une option de passe progressive aux côtés de Rice. Son développement rapide à Manchester United en a fait un pilier du milieu de terrain anglais.",
+    "why_pt_BR": "Um dos jovens talentos mais empolgantes da Inglaterra, Mainoo surgiu na cena internacional na Euro 2024 com apenas 19 anos, sendo titular na final e impressionando com sua compostura, dribles e capacidade de conduzir a bola pelo meio-campo. Tornou-se o jogador inglês mais jovem a começar uma final de grande torneio desde 1966, e sua destemor com a bola dá à Inglaterra uma opção de passe progressivo ao lado de Rice. Seu desenvolvimento rápido no Manchester United o tornou um pilar do meio-campo inglês.",
+    "why_de": "Eines der aufregendsten jungen Talente Englands, brach Mainoo bei der Euro 2024 mit nur 19 Jahren auf die internationale Bühne ein, stand im Finale in der Startelf und beeindruckte mit seiner Gelassenheit, seinen Dribblings und seiner Fähigkeit, den Ball durch das Mittelfeld zu tragen. Er wurde der jüngste englische Spieler, der seit 1966 in einem großen Turnierfinale in der Startelf stand, und seine Furchtlosigkeit am Ball gibt England neben Rice eine progressive Passoption. Seine rasante Entwicklung bei Manchester United hat ihn zu einer Säule im englischen Mittelfeld gemacht.",
+    "why_it": "Uno dei giovani talenti più entusiasmanti d'Inghilterra, Mainoo ha fatto irruzione sulla scena internazionale a Euro 2024 a soli 19 anni, partendo titolare in finale e colpendo per compostezza, dribbling e capacità di portare palla a centrocampo. È diventato il più giovane inglese a partire titolare in una finale di un grande torneo dal 1966, e la sua sfrontatezza con la palla offre all'Inghilterra un'opzione di passaggio progressivo accanto a Rice. Il suo rapido sviluppo al Manchester United lo ha reso un pilastro del centrocampo inglese.",
+    "why_ja": "Englandで最もエキサイティングな若手才能の一人であるMainooは、わずか19歳でユーロ2024の国際舞台に躍り出て、決勝で先発出場し、その落ち着き、ドリブル、中盤でボールを運ぶ能力で印象を残した。1966年以来、主要大会決勝で先発した最年少のEnglish選手となり、ボールへの恐れ知らずの姿勢がRiceと並んでEnglandに前進的なパスオプションを与える。Manchester Unitedでの急速な成長がEnglandの中盤の柱となっている。",
+    "why_ko": "잉글랜드에서 가장 흥미로운 젊은 재능 중 한 명인 메이누는 불과 19세에 유로 2024에서 국제 무대에 등장하여 결승전에 선발 출전했고, 침착함, 드리블, 미드필드를 통한 볼 운반 능력으로 깊은 인상을 남겼다. 1966년 이후 주요 대회 결승에서 선발 출전한 최연소 잉글랜드 선수가 되었으며, 볼에 대한 과감함이 라이스와 함께 잉글랜드에 전진 패스 옵션을 제공한다. 맨체스터 유나이티드에서의 빠른 성장이 그를 잉글랜드 미드필드의 기둥으로 만들었다.",
+    "why_zh_Hans": "作为英格兰最令人兴奋的年轻天才之一，梅努在仅19岁时就在2024年欧洲杯上一鸣惊人，首发出战决赛，以沉着、盘带和中场推进能力令人印象深刻。他成为自1966年以来在重大赛事决赛中首发的最年轻英格兰球员，他在球场上的无畏为英格兰提供了与赖斯搭档的前进传球选择。他在曼联的快速成长使他成为英格兰中场的支柱。",
+    "why_ar": "أحد أكثر المواهب الشابة إثارة في إنجلترا، انطلق ماينو على الساحة الدولية في يورو 2024 وعمره 19 عاماً فقط حين بدأ أساسياً في النهائي وأبهر الجميع بهدوئه ومراوغاته وقدرته على حمل الكرة عبر خط الوسط. أصبح أصغر لاعب إنجليزي يبدأ أساسياً في نهائي بطولة كبرى منذ عام 1966، وجرأته على الكرة تمنح إنجلترا خياراً تمريرياً تقدمياً إلى جانب رايس. تطوره السريع في مانشستر يونايتد جعله ركيزة أساسية في خط وسط إنجلترا.",
+    "why_es_ES": "Uno de los jóvenes talentos más ilusionantes de Inglaterra, Mainoo irrumpió en la escena internacional en la Euro 2024 con solo 19 años, siendo titular en la final e impresionando por su templanza, regate y capacidad de conducir el balón por el centro del campo. Se convirtió en el futbolista inglés más joven en ser titular en una final de un gran torneo desde 1966, y su desparpajo con el balón da a Inglaterra una opción de pase progresivo junto a Rice. Su fulgurante progresión en el Manchester United lo ha convertido en un pilar del centro del campo inglés.",
+    "caps": 18,
+    "intlGoals": 2,
+    "tournaments": [
+     "Euro 2024 (Final)"
+    ],
+    "clubs": [
+     {
+      "team": "Manchester United",
+      "years": "2023–present",
+      "country": "England"
+     }
+    ],
+    "honors": [
+     "FA Cup 2023-24 (Manchester United)",
+     "Euro 2024 Young Player of the Tournament nominee"
+    ]
    }
   ],
   "France": [
@@ -4006,6 +4089,69 @@ window.WC_PLAYERS = {
      "Supercoppa Italiana 2024–25 (AC Milan)",
      "Ligue 1 2020–21 (Lille)",
      "UEFA Nations League 2020–21 (France)"
+    ]
+   },
+   {
+    "name": "N'Golo Kanté",
+    "position": "Central midfielder",
+    "club": "Fenerbahçe (Süper Lig, Turkey)",
+    "hometown": "Paris (Malian family roots)",
+    "why": "One of the greatest midfielders of his generation, Kanté made a stunning international comeback at Euro 2024 after a year away, earning Man of the Match in multiple games with his trademark tireless pressing and ball-winning. A two-time Premier League champion and Champions League winner, his energy, intelligence and defensive reading of the game remain elite even at 35. He provides invaluable balance and protection to France's midfield.",
+    "number": 13,
+    "why_es": "Uno de los mejores mediocampistas de su generación, Kanté hizo un impresionante regreso internacional en la Euro 2024 tras un año ausente, ganando el premio al Mejor Jugador del Partido en múltiples ocasiones con su incansable pressing y recuperación de balón. Bicampeón de la Premier League y ganador de la Champions League, su energía, inteligencia y lectura defensiva del juego siguen siendo de élite incluso a los 35. Aporta un equilibrio y protección invaluables al mediocampo francés.",
+    "why_fr": "L'un des meilleurs milieux de terrain de sa génération, Kanté a effectué un retour international retentissant à l'Euro 2024 après un an d'absence, étant élu Homme du Match à plusieurs reprises grâce à son pressing infatigable et sa capacité à récupérer les ballons. Double champion de Premier League et vainqueur de la Ligue des Champions, son énergie, son intelligence et sa lecture défensive du jeu restent au sommet même à 35 ans. Il apporte un équilibre et une protection inestimables au milieu de terrain français.",
+    "why_pt_BR": "Um dos maiores meias de sua geração, Kanté fez um retorno internacional surpreendente na Euro 2024 após um ano afastado, conquistando o prêmio de Melhor em Campo em vários jogos com sua marcação incansável e recuperação de bola. Bicampeão da Premier League e campeão da Champions League, sua energia, inteligência e leitura defensiva do jogo permanecem de elite mesmo aos 35 anos. Ele proporciona equilíbrio e proteção inestimáveis ao meio-campo francês.",
+    "why_de": "Einer der größten Mittelfeldspieler seiner Generation kehrte Kanté bei der Euro 2024 nach einem Jahr Abwesenheit eindrucksvoll auf die internationale Bühne zurück und wurde in mehreren Spielen dank seines unermüdlichen Pressings und seiner Balleroberungen zum Spieler des Spiels gewählt. Zweimaliger Premier-League-Meister und Champions-League-Sieger, seine Energie, Intelligenz und defensive Spielübersicht bleiben auch mit 35 Jahren auf Weltklasse-Niveau. Er gibt Frankreichs Mittelfeld unbezahlbare Balance und Absicherung.",
+    "why_it": "Uno dei più grandi centrocampisti della sua generazione, Kanté ha fatto un ritorno internazionale sorprendente a Euro 2024 dopo un anno di assenza, vincendo il premio di Uomo del Match in più partite grazie al suo pressing instancabile e alla capacità di recupero palla. Due volte campione di Premier League e vincitore di Champions League, la sua energia, intelligenza e lettura difensiva del gioco restano di élite anche a 35 anni. Fornisce equilibrio e protezione inestimabili al centrocampo francese.",
+    "why_ja": "自身の世代で最も偉大なミッドフィルダーの一人であるKantéは、1年の不在を経てユーロ2024で見事な代表復帰を果たし、持ち味の不屈のプレスとボール奪取で複数試合のマン・オブ・ザ・マッチを獲得した。プレミアリーグ2度、チャンピオンズリーグ1度の優勝経験を持ち、35歳でもそのエネルギー、インテリジェンス、守備の読みはトップレベルを維持している。Franceの中盤に計り知れないバランスと守護をもたらす。",
+    "why_ko": "그의 세대 최고의 미드필더 중 한 명인 캉테는 1년간의 공백 후 유로 2024에서 놀라운 국제 무대 복귀를 이뤄냈고, 특유의 지칠 줄 모르는 압박과 볼 탈취로 여러 경기에서 맨 오브 더 매치에 선정되었다. 프리미어리그 2회, 챔피언스리그 1회 우승 경험을 지닌 그의 에너지, 지능, 수비 판독 능력은 35세에도 여전히 최정상이다. 프랑스 미드필드에 없어서는 안 될 균형과 보호를 제공한다.",
+    "why_zh_Hans": "坎特是他那一代最伟大的中场球员之一，在缺席一年后于2024年欧洲杯上惊艳回归，凭借标志性的不知疲倦的逼抢和抢断球能力在多场比赛中当选最佳球员。作为两届英超冠军和欧冠冠军得主，他的能量、智慧和防守判断力即使在35岁依然顶级。他为法国中场提供了无价的平衡和保护。",
+    "why_ar": "أحد أعظم لاعبي خط الوسط في جيله، عاد كانتي بشكل مذهل إلى المنتخب في يورو 2024 بعد غياب عام، وحصد جائزة رجل المباراة في أكثر من لقاء بضغطه الدؤوب وقدرته على استخلاص الكرة. بطل الدوري الإنجليزي مرتين والفائز بدوري الأبطال، لا تزال طاقته وذكاؤه وقراءته الدفاعية للمباراة استثنائية حتى في عمر 35 عاماً. يوفر توازناً وحماية لا تُقدَّران بثمن لخط وسط فرنسا.",
+    "why_es_ES": "Uno de los mejores centrocampistas de su generación, Kanté protagonizó un impresionante regreso internacional en la Euro 2024 tras un año ausente, siendo elegido Hombre del Partido en varias ocasiones con su infatigable presión y recuperación de balón. Bicampeón de la Premier League y ganador de la Champions League, su energía, inteligencia y lectura defensiva del juego siguen siendo de élite incluso con 35 años. Aporta un equilibrio y una protección inestimables al centro del campo francés.",
+    "caps": 63,
+    "intlGoals": 2,
+    "tournaments": [
+     "Euro 2024 (Semi-final)",
+     "2022 (Final)",
+     "Euro 2020 (Round of 16)",
+     "2018 (Winner)"
+    ],
+    "clubs": [
+     {
+      "team": "Fenerbahçe",
+      "years": "2025–present",
+      "country": "Turkey"
+     },
+     {
+      "team": "Al-Ittihad",
+      "years": "2023–2025",
+      "country": "Saudi Arabia"
+     },
+     {
+      "team": "Chelsea",
+      "years": "2018–2023",
+      "country": "England"
+     },
+     {
+      "team": "Leicester City",
+      "years": "2015–2018",
+      "country": "England"
+     },
+     {
+      "team": "SM Caen",
+      "years": "2013–2015",
+      "country": "France"
+     }
+    ],
+    "honors": [
+     "2018 (Winner, with France)",
+     "Premier League 2015-16 (Leicester City)",
+     "Premier League 2016-17 (Chelsea)",
+     "FA Cup 2017-18 (Chelsea)",
+     "Europa League 2018-19 (Chelsea)",
+     "Champions League 2020-21 (Chelsea)",
+     "FWA Footballer of the Year 2016-17",
+     "PFA Players' Player of the Year 2016-17"
     ]
    }
   ],
@@ -7268,6 +7414,59 @@ window.WC_PLAYERS = {
      "Liga Portugal (2020–21, with Sporting CP)",
      "Taça da Liga (2020–21, with Sporting CP)"
     ]
+   },
+   {
+    "name": "Bernardo Silva",
+    "position": "Attacking midfielder / Winger",
+    "club": "Manchester City (Premier League, England)",
+    "hometown": "Lisbon",
+    "why": "Portugal's creative maestro and one of the most technically gifted players in the world, Bernardo Silva combines close control, relentless work rate and an ability to operate in tight spaces that few can match. A six-time Premier League champion with Manchester City, he is the engine of Portugal's possession game, capable of unlocking defenses with through balls and dribbles. His consistency at the highest level for nearly a decade makes him essential to Portugal's ambitions.",
+    "number": 10,
+    "why_es": "El maestro creativo de Portugal y uno de los jugadores más talentosos técnicamente del mundo, Bernardo Silva combina un control cercano, una capacidad de trabajo incansable y una habilidad para operar en espacios reducidos que pocos pueden igualar. Hexacampeón de la Premier League con Manchester City, es el motor del juego de posesión de Portugal, capaz de desbloquear defensas con pases filtrados y regates. Su consistencia al más alto nivel durante casi una década lo convierte en esencial para las aspiraciones de Portugal.",
+    "why_fr": "Maestro créatif du Portugal et l'un des joueurs les plus doués techniquement au monde, Bernardo Silva allie contrôle de balle rapproché, taux de travail infatigable et capacité à évoluer dans les espaces réduits comme peu savent le faire. Sextuple champion de Premier League avec Manchester City, il est le moteur du jeu de possession portugais, capable de déverrouiller les défenses par ses passes en profondeur et ses dribbles. Sa régularité au plus haut niveau depuis près d'une décennie en fait un élément essentiel des ambitions du Portugal.",
+    "why_pt_BR": "O maestro criativo de Portugal e um dos jogadores mais talentosos tecnicamente do mundo, Bernardo Silva combina controle de bola, ritmo de trabalho incansável e habilidade para operar em espaços reduzidos como poucos conseguem. Hexacampeão da Premier League com o Manchester City, ele é o motor do jogo de posse de bola de Portugal, capaz de desarmar defesas com passes enfiados e dribles. Sua consistência no mais alto nível por quase uma década o torna essencial para as ambições de Portugal.",
+    "why_de": "Portugals kreativer Maestro und einer der technisch begabtesten Spieler der Welt, Bernardo Silva vereint enge Ballführung, unermüdliche Arbeitsmoral und die Fähigkeit, auf engstem Raum zu agieren, wie es nur wenige können. Als sechsmaliger Premier-League-Meister mit Manchester City ist er der Motor von Portugals Ballbesitzspiel und kann Abwehrreihen mit Steilpässen und Dribblings knacken. Seine Konstanz auf höchstem Niveau seit fast einem Jahrzehnt macht ihn unverzichtbar für Portugals Ambitionen.",
+    "why_it": "Il maestro creativo del Portogallo e uno dei giocatori tecnicamente più dotati al mondo, Bernardo Silva unisce controllo ravvicinato, ritmo di lavoro instancabile e capacità di muoversi negli spazi stretti come pochi sanno fare. Sei volte campione di Premier League con il Manchester City, è il motore del gioco di possesso portoghese, capace di aprire le difese con filtranti e dribbling. La sua costanza ai massimi livelli per quasi un decennio lo rende essenziale per le ambizioni del Portogallo.",
+    "why_ja": "Portugalの創造的マエストロであり世界で最も技術的に優れた選手の一人であるBernardo Silvaは、密接なボールコントロール、たゆまぬ労働量、そして狭いスペースで活動する能力を兼ね備えている。Manchester Cityでプレミアリーグ6回優勝の経験を持ち、Portugalのポゼッションゲームのエンジンとして、スルーパスとドリブルで守備を崩す力がある。約10年にわたる最高レベルでの安定性がPortugalの野望に不可欠だ。",
+    "why_ko": "포르투갈의 창의적 마에스트로이자 세계에서 가장 기술적으로 뛰어난 선수 중 한 명인 베르나르두 실바는 밀착 볼 컨트롤, 끊임없는 활동량, 그리고 좁은 공간에서의 플레이 능력을 겸비하고 있다. 맨체스터 시티에서 프리미어리그 6회 우승한 그는 포르투갈 점유율 축구의 엔진으로, 스루 패스와 드리블로 수비를 무너뜨릴 수 있다. 거의 10년간 최고 수준에서의 꾸준함이 포르투갈의 야망에 필수적이다.",
+    "why_zh_Hans": "贝尔纳多·席尔瓦是葡萄牙的创意大师，也是世界上技术最精湛的球员之一，他将紧密控球、不懈的跑动能力和在狭小空间中运作的天赋融为一体，这种能力鲜有人能匹敌。作为随曼城六次夺得英超冠军的球员，他是葡萄牙控球体系的引擎，能以直塞球和盘带瓦解防线。他在近十年来保持的顶级水准使他成为葡萄牙实现抱负不可或缺的一员。",
+    "why_ar": "مايسترو البرتغال الإبداعي وأحد أكثر اللاعبين موهبةً تقنياً في العالم، يجمع بيرناردو سيلفا بين التحكم القريب ومعدل العمل الدؤوب والقدرة على اللعب في المساحات الضيقة بشكل لا يُضاهى. بطل الدوري الإنجليزي ست مرات مع مانشستر سيتي، وهو محرك لعبة الاستحواذ البرتغالية القادر على فك الدفاعات بالتمريرات العابرة والمراوغات. ثباته على أعلى مستوى لما يقارب عقداً يجعله ركيزة أساسية لطموحات البرتغال.",
+    "why_es_ES": "El maestro creativo de Portugal y uno de los futbolistas más dotados técnicamente del mundo, Bernardo Silva combina un control cercano exquisito, una capacidad de trabajo inagotable y una habilidad para desenvolverse en espacios reducidos al alcance de muy pocos. Hexacampeón de la Premier League con el Manchester City, es el motor del juego de posesión portugués, capaz de desarbolar defensas con pases al hueco y regates. Su regularidad al máximo nivel durante casi una década lo convierte en imprescindible para las aspiraciones de Portugal.",
+    "caps": 97,
+    "intlGoals": 15,
+    "tournaments": [
+     "Euro 2024 (Quarter-final)",
+     "2022 (Quarter-final)",
+     "Euro 2020 (Round of 16)",
+     "2018 (Group stage)",
+     "UEFA Nations League 2019 (Winner)"
+    ],
+    "clubs": [
+     {
+      "team": "Manchester City",
+      "years": "2017–present",
+      "country": "England"
+     },
+     {
+      "team": "AS Monaco",
+      "years": "2014–2017",
+      "country": "France"
+     },
+     {
+      "team": "SL Benfica",
+      "years": "2013–2015",
+      "country": "Portugal"
+     }
+    ],
+    "honors": [
+     "Premier League 2017-18, 2018-19, 2020-21, 2021-22, 2022-23, 2024-25 (Manchester City)",
+     "FA Cup 2018-19, 2022-23 (Manchester City)",
+     "EFL Cup 2019-20, 2020-21 (Manchester City)",
+     "Champions League 2022-23 (Manchester City)",
+     "Club Championship 2023 (Manchester City)",
+     "UEFA Nations League 2019 (Portugal)",
+     "Ligue 1 2016-17 (AS Monaco)"
+    ]
    }
   ],
   "Qatar": [
@@ -8275,6 +8474,56 @@ window.WC_PLAYERS = {
      "UEFA Nations League (2023 with Spain)",
      "Copa del Rey (2020, 2026 with Real Sociedad)",
      "UEFA U-21 Championship (2019 with Spain U-21)"
+    ]
+   },
+   {
+    "name": "Dani Olmo",
+    "position": "Attacking midfielder / Forward",
+    "club": "FC Barcelona (La Liga, Spain)",
+    "hometown": "Terrassa, Catalonia",
+    "why": "Named Player of the Tournament at Euro 2024, Olmo was the creative heartbeat behind Spain's title run, scoring three goals including a crucial strike in the semi-final. A versatile attacker who can play centrally or on the wing, his vision, movement and finishing give Spain a different dimension in attack. After a high-profile move to Barcelona, he has cemented himself as one of Spain's most important players heading into Football 2026.",
+    "number": 10,
+    "why_es": "Nombrado Jugador del Torneo en la Euro 2024, Olmo fue el corazón creativo detrás de la conquista del título de España, marcando tres goles incluyendo uno crucial en la semifinal. Un atacante versátil que puede jugar en el centro o por la banda, su visión, movimiento y definición le dan a España una dimensión diferente en ataque. Tras su mediático fichaje por el Barcelona, se ha consolidado como uno de los jugadores más importantes de España rumbo al Fútbol 2026.",
+    "why_fr": "Élu Joueur du Tournoi à l'Euro 2024, Olmo a été le moteur créatif de la conquête du titre par l'Espagne, inscrivant trois buts dont un but décisif en demi-finale. Attaquant polyvalent capable de jouer dans l'axe ou sur l'aile, sa vision, ses déplacements et sa finition donnent à l'Espagne une dimension différente en attaque. Après un transfert retentissant au FC Barcelone, il s'est imposé comme l'un des joueurs les plus importants de l'Espagne en vue du Football 2026.",
+    "why_pt_BR": "Eleito o Melhor Jogador do Torneio na Euro 2024, Olmo foi o coração criativo por trás da conquista do título pela Espanha, marcando três gols incluindo um crucial na semifinal. Um atacante versátil que pode atuar centralizado ou na ponta, sua visão de jogo, movimentação e finalizações dão à Espanha uma dimensão diferente no ataque. Após a transferência de destaque para o Barcelona, consolidou-se como um dos jogadores mais importantes da Espanha rumo ao Futebol 2026.",
+    "why_de": "Als Spieler des Turniers bei der Euro 2024 ausgezeichnet, war Olmo das kreative Herzstück hinter Spaniens Titelgewinn und erzielte drei Tore, darunter einen entscheidenden Treffer im Halbfinale. Als vielseitiger Angreifer, der zentral oder auf dem Flügel spielen kann, verleihen seine Spielübersicht, sein Bewegungsspiel und sein Abschluss Spaniens Angriff eine andere Dimension. Nach seinem vielbeachteten Wechsel zu Barcelona hat er sich als einer der wichtigsten Spieler Spaniens für den Fußball 2026 etabliert.",
+    "why_it": "Eletto Giocatore del Torneo a Euro 2024, Olmo è stato il cuore creativo dietro la conquista del titolo spagnolo, segnando tre gol tra cui una rete decisiva in semifinale. Attaccante versatile in grado di giocare da trequartista o sull'ala, la sua visione, il suo movimento e la sua finalizzazione danno alla Spagna una dimensione diversa in attacco. Dopo il trasferimento di alto profilo al Barcellona, si è affermato come uno dei giocatori più importanti della Spagna in vista del Calcio 2026.",
+    "why_ja": "ユーロ2024で大会最優秀選手に選ばれたOlmoは、準決勝での重要なゴールを含む3得点を挙げ、Spainのタイトル獲得の創造的な心臓部となった。中央でもサイドでもプレーできる万能なアタッカーで、ビジョン、動き出し、フィニッシュでSpainの攻撃に異なる次元を与える。Barcelonaへの注目の移籍を経て、フットボール2026に向けてSpainで最も重要な選手の一人となった。",
+    "why_ko": "유로 2024 대회 최우수 선수로 선정된 올모는 준결승 결정적 골을 포함한 3골을 넣으며 스페인 우승의 창의적 핵심이었다. 중앙이나 측면 모두에서 뛸 수 있는 다재다능한 공격수로, 시야, 움직임, 마무리로 스페인 공격에 다른 차원을 제공한다. 바르셀로나로의 대형 이적 이후 풋볼 2026을 앞두고 스페인에서 가장 중요한 선수 중 한 명으로 자리 잡았다.",
+    "why_zh_Hans": "在2024年欧洲杯上被评为赛事最佳球员，奥尔莫是西班牙夺冠之路的创意核心，打入三球包括半决赛的关键进球。这位全能攻击手可以担任中场核心或边路位置，他的视野、跑位和终结能力为西班牙的进攻增添了不同维度。在高调转会巴塞罗那后，他已巩固了自己作为西班牙征战2026年足球赛最重要球员之一的地位。",
+    "why_ar": "اختير أفضل لاعب في بطولة يورو 2024، وكان أولمو القلب الإبداعي وراء تتويج إسبانيا باللقب، مسجلاً ثلاثة أهداف منها هدف حاسم في نصف النهائي. مهاجم متعدد المراكز يستطيع اللعب في المحور أو على الجناح، يمنح رؤيته وتحركاته وقدرته على التسجيل بُعداً مختلفاً لهجوم إسبانيا. بعد انتقاله الكبير إلى برشلونة رسّخ نفسه كأحد أهم لاعبي إسبانيا قبيل كرة القدم 2026.",
+    "why_es_ES": "Elegido Jugador del Torneo en la Euro 2024, Olmo fue el corazón creativo detrás de la conquista del título español, anotando tres goles incluido uno decisivo en la semifinal. Un atacante polivalente que puede jugar en la mediapunta o en la banda, su visión, desmarques y definición aportan a España una dimensión diferente en ataque. Tras su fichaje estrella por el FC Barcelona, se ha consolidado como uno de los futbolistas más importantes de España de cara al Fútbol 2026.",
+    "caps": 55,
+    "intlGoals": 14,
+    "tournaments": [
+     "Euro 2024 (Winner, Player of the Tournament)",
+     "2022 (Round of 16)",
+     "Euro 2020 (Semi-final)"
+    ],
+    "clubs": [
+     {
+      "team": "FC Barcelona",
+      "years": "2024–present",
+      "country": "Spain"
+     },
+     {
+      "team": "RB Leipzig",
+      "years": "2020–2024",
+      "country": "Germany"
+     },
+     {
+      "team": "Dinamo Zagreb",
+      "years": "2014–2020",
+      "country": "Croatia"
+     }
+    ],
+    "honors": [
+     "Euro 2024 (with Spain, Player of the Tournament)",
+     "Euro 2024 Joint Top Scorer",
+     "La Liga (2025, 2026 with Barcelona)",
+     "Supercopa de España (2025, 2026 with Barcelona)",
+     "DFB-Pokal (2022, 2023 with RB Leipzig)",
+     "Croatian Football League (2018, 2019, 2020 with Dinamo Zagreb)"
     ]
    }
   ],
