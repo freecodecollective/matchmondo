@@ -1044,7 +1044,7 @@
       ],
       "answer": 1,
       "explanation": "A second yellow in one match becomes a red card, and the player misses the next match.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "p-muller-2010",
