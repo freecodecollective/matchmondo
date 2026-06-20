@@ -851,7 +851,8 @@ function autoSave() {
   saveTimer = setTimeout(syncToGitHub, 2000);
 }
 
-async function syncToGitHub() {
+async function syncToGitHub(retryCount) {
+  retryCount = retryCount || 0;
   const token = getToken();
   if (!token) {
     setSyncStatus('error', 'No token');
@@ -872,7 +873,12 @@ async function syncToGitHub() {
       return;
     }
     if (resp.status === 409) {
-      setSyncStatus('error', 'Conflict — reload');
+      if (retryCount >= 2) {
+        setSyncStatus('error', 'Conflict — reload');
+        return;
+      }
+      setSyncStatus('saving', 'Merging...');
+      await mergeAndRetry(retryCount);
       return;
     }
     if (!resp.ok) throw new Error('save failed');
@@ -881,6 +887,65 @@ async function syncToGitHub() {
     setSyncStatus('saved', 'Synced');
   } catch (e) {
     setSyncStatus('error', 'Sync failed');
+  }
+}
+
+async function mergeAndRetry(retryCount) {
+  try {
+    const resp = await fetch(GH_API, {
+      headers: { 'Authorization': 'token ' + getToken(), 'Accept': 'application/vnd.github.v3+json' }
+    });
+    if (!resp.ok) throw new Error('fetch failed');
+    const gh = await resp.json();
+    const bytes = Uint8Array.from(atob(gh.content.replace(/\n/g, '')), c => c.charCodeAt(0));
+    const remote = JSON.parse(new TextDecoder().decode(bytes));
+    fileSha = gh.sha;
+
+    const localTasks = {};
+    data.questions.forEach(q => { if (q.claudeTask) localTasks[q.id] = q.claudeTask; });
+    const localReview = {};
+    data.questions.forEach(q => { if (q.needsReview) localReview[q.id] = true; });
+    const localEdits = {};
+    data.questions.forEach(q => {
+      localEdits[q.id] = { question: q.question, options: q.options, answer: q.answer, explanation: q.explanation, category: q.category, approved: q.approved, media: q.media };
+    });
+
+    const remoteIds = new Set(remote.questions.map(q => q.id));
+    remote.questions.forEach(q => {
+      if (localTasks[q.id]) q.claudeTask = localTasks[q.id];
+      if (localReview[q.id]) q.needsReview = true;
+      if (localEdits[q.id]) {
+        const e = localEdits[q.id];
+        q.question = e.question;
+        q.options = e.options;
+        q.answer = e.answer;
+        q.explanation = e.explanation;
+        q.category = e.category;
+        if (e.approved) q.approved = true;
+        if (e.media) q.media = e.media;
+      }
+    });
+    data.questions.forEach(q => {
+      if (!remoteIds.has(q.id)) remote.questions.push(q);
+    });
+
+    const localPendingIds = new Set((data.pendingTasks || []).map(t => t.id));
+    const mergedPending = [...(remote.pendingTasks || [])];
+    (data.pendingTasks || []).forEach(t => {
+      if (!mergedPending.some(r => r.id === t.id)) mergedPending.push(t);
+      else {
+        const existing = mergedPending.find(r => r.id === t.id);
+        if (t.status !== existing.status) Object.assign(existing, t);
+      }
+    });
+    remote.pendingTasks = mergedPending;
+
+    data = remote;
+    if (!data.pendingTasks) data.pendingTasks = [];
+    renderAll();
+    await syncToGitHub(retryCount + 1);
+  } catch (e) {
+    setSyncStatus('error', 'Merge failed — reload');
   }
 }
 
