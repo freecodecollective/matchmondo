@@ -1,5 +1,5 @@
 // FIFA World Cup 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-20 16:46 UTC
+// Regenerated 2026-06-20 16:48 UTC by scripts/update-data.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -428,8 +428,7 @@ window.WC_MATCHES = [
     "city": "Houston, TX",
     "tv": "FOX or FS1 · Telemundo (ES)",
     "scoreH": null,
-    "scoreA": null,
-    "preview": "Sweden lead Group F with 3 points after a 5–1 demolition of Tunisia; the Netherlands sit third after a late equalizer from Japan cost them a 2–2 draw. The Dutch have the better squad on paper but looked shaky defensively and need to be sharper at the back. Sweden are expected to name the same XI, with Isak starting despite being managed for minutes after a recent knock. His pace in behind is the biggest threat — the Dutch high line gave up two to Japan and Isak is the fastest player in this fixture. Expect a Dutch win, but a nervy one."
+    "scoreA": null
   },
   {
     "n": 33,
@@ -442,8 +441,7 @@ window.WC_MATCHES = [
     "city": "Toronto, Canada",
     "tv": "FOX or FS1 · Telemundo (ES)",
     "scoreH": null,
-    "scoreA": null,
-    "preview": "Germany announced themselves emphatically with a 7–1 rout of Curaçao — the tournament's biggest win so far — with Kai Havertz scoring twice and Wirtz and Musiala pulling the strings. Côte d'Ivoire ground out a 1–0 win over Ecuador courtesy of Amad Diallo's stoppage-time strike, showing they can be clinical on the counter. The Elephants are organized and athletic enough to make this much tougher than Curaçao did. Germany haven't kept a clean sheet in their last seven tournament games, but the gap in quality should still tell. A win for either side would put them in a commanding position to top the group."
+    "scoreA": null
   },
   {
     "n": 34,
@@ -456,8 +454,7 @@ window.WC_MATCHES = [
     "city": "Kansas City, MO",
     "tv": "FOX or FS1 · Telemundo (ES)",
     "scoreH": null,
-    "scoreA": null,
-    "preview": "Ecuador need to respond after Amad Diallo's last-gasp goal condemned them to a 1–0 loss against Côte d'Ivoire. They created plenty of chances but couldn't convert, and manager Beccacece may shuffle his attack. Curaçao are making their tournament debut and showed spirit against Germany — Livano Comenencia briefly leveled at 1–1 before the dam broke in a 7–1 loss. The Caribbean side will look to stay compact, but Ecuador's technical quality and desperation for three points should see them through comfortably."
+    "scoreA": null
   },
   {
     "n": 36,
@@ -470,8 +467,7 @@ window.WC_MATCHES = [
     "city": "Monterrey, Mexico",
     "tv": "FOX or FS1 · Telemundo (ES)",
     "scoreH": null,
-    "scoreA": null,
-    "preview": "The 1,000th match in tournament history. Japan showed their class against the Netherlands, twice coming from behind before Daichi Kamada's late equalizer earned a point. They'll be without Takefusa Kubo, who picked up a knee injury in that game. Tunisia sacked manager Sabri Lamouchi after a humiliating 5–1 loss to Sweden and have brought in the experienced Hervé Renard for at least their remaining two games. Japan have won five of their last six meetings with Tunisia and are heavy favorites. A win would put them in pole position for the knockouts, while Tunisia are already facing elimination."
+    "scoreA": null
   },
   {
     "n": 38,
@@ -484,8 +480,7 @@ window.WC_MATCHES = [
     "city": "Atlanta, GA",
     "tv": "FOX or FS1 · Telemundo (ES)",
     "scoreH": null,
-    "scoreA": null,
-    "preview": "Group H is wide open — every team sits on one point after a round of draws. Spain were held 0–0 by Cabo Verde in this same stadium on matchday one, struggling to break down a packed defense despite dominant possession. Lamine Yamal and Nico Williams are expected to return to the starting lineup, which should add the cutting edge La Roja lacked. Saudi Arabia earned a creditable 1–1 draw with Uruguay but offered limited attacking threat. Spain's quality should prove decisive here, and they can't afford another slip with Uruguay waiting on matchday three."
+    "scoreA": null
   },
   {
     "n": 39,
@@ -498,8 +493,7 @@ window.WC_MATCHES = [
     "city": "Inglewood (Los Angeles), CA",
     "tv": "FOX or FS1 · Telemundo (ES)",
     "scoreH": null,
-    "scoreA": null,
-    "preview": "All four Group G teams are level on one point after an opening round of draws. Belgium were held 1–1 by Egypt, while Iran drew 2–2 with New Zealand after letting a two-goal lead slip. Kevin De Bruyne and Romelu Lukaku give Belgium the most dangerous attack in this group, and Iran's defensive vulnerability against New Zealand suggests they'll struggle to contain the Red Devils. Iran have never progressed beyond the group stage in six previous tournament appearances. Belgium are expected to have too much quality at SoFi Stadium."
+    "scoreA": null
   },
   {
     "n": 37,
@@ -512,8 +506,7 @@ window.WC_MATCHES = [
     "city": "Miami Gardens, FL",
     "tv": "FOX or FS1 · Telemundo (ES)",
     "scoreH": null,
-    "scoreA": null,
-    "preview": "Uruguay drew 1–1 with Saudi Arabia in their opener and are missing key players, which has dulled their attacking edge. Cabo Verde held European champions Spain to a goalless draw in one of the most remarkable results of the opening round — they defended brilliantly and showed they're not here to make up the numbers. Uruguay are two-time champions and should still have enough to get the job done in Miami, but this could be tighter than the odds suggest. Cabo Verde's discipline and shape will make them tough to break down."
+    "scoreA": null
   },
   {
     "n": 40,
