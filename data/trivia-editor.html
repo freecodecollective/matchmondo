@@ -1208,7 +1208,7 @@ function rejectReview(idx) {
   autoSave();
   renderAll();
   renderClaudeTasksView();
-  toast('Moved to Questions queue');
+  editQuestion(idx);
 }
 
 document.getElementById('addModal').addEventListener('click', e => {
