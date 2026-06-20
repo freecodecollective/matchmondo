@@ -699,9 +699,9 @@
         "Lionel Messi"
       ],
       "answer": 1,
-      "explanation": "Pelé was just 17 when he scored twice in the 1958 final against Sweden.",
+      "explanation": "Pelé was just 17 when he scored twice in the 1958 final against Sweden. The next youngest was Kylian Mbappé, who was 19 when he scored in the 2018 final. Lamine Yamal, born in June 2007, is 19 during Football 2026.",
       "approved": true,
-      "claudeTask": "who was the next youngest? and say how old yamal is in this tournament"
+      "needsReview": true
     },
     {
       "id": "p-puskas",
@@ -756,9 +756,9 @@
         "Pelé"
       ],
       "answer": 1,
-      "explanation": "Ronaldo from Brazil scored at every edition from 2006 to 2022 — five consecutive tournaments, a record no player had achieved before.",
+      "explanation": "Cristiano Ronaldo scored at every edition from 2006 to 2022 — five consecutive tournaments, a record no player had achieved before. The next longest streak is four consecutive editions, held by Miroslav Klose (2002–2014) and Pelé (1958–1970).",
       "approved": true,
-      "claudeTask": "what is the next longest streak? add that to explanation"
+      "needsReview": true
     },
     {
       "id": "p-yashin",
@@ -1831,14 +1831,13 @@
       "options": [
         "They score two goals in the same match",
         "They score three goals in the same match",
-        "They put on actual leg braces and keep playing",
+        "They literally brace themselves for a tackle — feet planted, eyes closed, full clench",
         "They score in two consecutive matches"
       ],
       "answer": 0,
       "explanation": "A brace refers to a player scoring two goals in a single match. Scoring three goals is called a hat-trick.",
       "approved": true,
-      "needsReview": true,
-      "claudeTask": "make 3d answer funny"
+      "needsReview": true
     }
   ],
   "pendingTasks": [
