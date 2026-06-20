@@ -31,9 +31,12 @@ header h1{font-size:18px;font-weight:700;letter-spacing:-.3px}
 .cat-tab.active{background:#1a472a;color:#fff;border-color:#1a472a}
 .cat-count{font-weight:400;opacity:.7;margin-left:2px}
 .search-box{flex:1;min-width:180px;position:relative}
-.search-box input{width:100%;padding:7px 12px 7px 32px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none}
+.search-box input{width:100%;padding:7px 28px 7px 32px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none}
 .search-box input:focus{border-color:#1a472a;box-shadow:0 0 0 2px rgba(26,71,42,.15)}
 .search-box::before{content:"\1F50D";position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:13px;opacity:.5}
+.search-box.active input{border-color:#e8a735;background:#fffbeb;box-shadow:0 0 0 2px rgba(232,167,53,.2)}
+.search-clear{display:none;position:absolute;right:6px;top:50%;transform:translateY(-50%);background:#e8a735;color:#fff;border:none;border-radius:50%;width:20px;height:20px;font-size:14px;line-height:20px;text-align:center;cursor:pointer;padding:0}
+.search-box.active .search-clear{display:block}
 
 .main{max-width:900px;margin:0 auto;padding:16px 24px 80px}
 .question-card{background:#fff;border-radius:12px;margin-bottom:8px;border:1px solid #e0e0e0;overflow:hidden;transition:box-shadow .15s,opacity .15s,transform .15s}
@@ -276,8 +279,9 @@ input[type=file]{display:none}
   </div>
   <div id="questionsToolbar" style="display:contents">
     <div class="category-tabs" id="categoryTabs"></div>
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Search questions..." oninput="renderList()">
+    <div class="search-box" id="searchBox">
+      <input type="text" id="searchInput" placeholder="Search questions..." oninput="updateSearch()">
+      <button class="search-clear" onclick="clearSearch()" title="Clear search">&times;</button>
     </div>
   </div>
 </div>
@@ -480,6 +484,18 @@ function getFilteredQuestions() {
         !q.options.some(o => o.toLowerCase().includes(search))) return false;
     return true;
   });
+}
+
+function updateSearch() {
+  const box = document.getElementById('searchBox');
+  const val = document.getElementById('searchInput').value;
+  box.classList.toggle('active', val.length > 0);
+  renderList();
+}
+
+function clearSearch() {
+  document.getElementById('searchInput').value = '';
+  updateSearch();
 }
 
 function renderList() {
