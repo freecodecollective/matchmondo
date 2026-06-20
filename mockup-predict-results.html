@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Predictions — after the game / spoilers (for Heather)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --green: #0b6e4f; --green-dark: #07523b; --gold: #e8b923;
+    --exact: #0b6e4f; --right: #b8860b; --miss: #8a8a8a; --live: #d62828;
+    --ink: #1a1a2e; --muted: #6b7280; --line: #e3e6e1;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    background: #f4f5f2; color: var(--ink); padding: 24px 20px 60px; -webkit-font-smoothing: antialiased;
+  }
+  .greeting {
+    max-width: 780px; margin: 0 auto 14px; background: #eef5f1; border: 1px solid #cfe4d9;
+    border-radius: 14px; padding: 16px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .greeting h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .greeting p { font-size: 13.5px; color: #3f5a4e; line-height: 1.5; }
+  .greeting p + p { margin-top: 8px; }
+  .greeting strong { color: var(--green); }
+
+  .qrow { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; max-width: 780px; margin: 16px auto 0; }
+  .qcard { flex: 1 1 250px; background: #fff; border-radius: 12px; padding: 13px 15px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); border-left: 3px solid var(--green); }
+  .qcard .q { font-size: 12px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 5px; }
+  .qcard p { font-size: 12.5px; color: #555; line-height: 1.45; }
+  .qcard p strong { color: var(--ink); }
+
+  h2.page-h { font-size: 17px; font-weight: 600; text-align: center; color: #444; margin: 30px auto 4px; }
+  .page-sub { text-align: center; font-size: 13px; color: #999; margin: 0 auto 22px; max-width: 740px; line-height: 1.5; }
+
+  .options { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; max-width: 1200px; margin: 24px auto 0; }
+  .option-wrap { flex: 0 0 330px; }
+  .option-label { text-align: center; margin-bottom: 8px; }
+  .option-label h3 { font-size: 16px; font-weight: 600; color: var(--green); }
+  .option-label p { font-size: 12px; color: #999; margin-top: 2px; line-height: 1.35; min-height: 46px; }
+
+  .phone { width: 330px; background: #e9ece8; border-radius: 36px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06); padding: 12px; }
+  .phone-inner { border-radius: 26px; overflow: hidden; background: #eef2ee; }
+  .status-bar { height: 50px; background: var(--green-dark); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px; }
+  .status-time { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.85); }
+  .header-banner { position: relative; background: linear-gradient(135deg, var(--green-dark), var(--green)); padding: 14px 16px; text-align: center; }
+  .header-banner h3 { color: #fff; font-size: 20px; font-weight: 700; }
+  .back-chev { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.9); font-size: 13px; font-weight: 500; }
+  .content { padding: 12px; background: #eef2ee; height: 600px; overflow-y: auto; }
+  .content::-webkit-scrollbar { width: 0; }
+
+  .sec { font-size: 11px; font-weight: 700; color: #8a8a8a; text-transform: uppercase; letter-spacing: 0.6px; padding: 6px 2px 8px; }
+
+  .card { background: #fff; border-radius: 13px; padding: 12px 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .ctop { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--muted); margin-bottom: 9px; }
+  .ctop .ft { font-weight: 700; color: #444; }
+  .teams { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .team { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 14px; }
+  .team.away { flex-direction: row-reverse; }
+  .flag { width: 24px; height: 17px; border-radius: 2px; object-fit: cover; box-shadow: 0 0 0 0.5px rgba(0,0,0,0.12); }
+  .mid { font-size: 12px; color: var(--muted); font-weight: 600; }
+
+  .yourpick { margin-top: 10px; font-size: 12px; color: #555; display: flex; align-items: center; gap: 6px; }
+  .yourpick b { color: var(--ink); }
+  .pickchip { background: #eef4f1; color: var(--green-dark); font-weight: 700; padding: 2px 8px; border-radius: 10px; font-size: 11.5px; }
+
+  /* the reveal-able result block */
+  .result { position: relative; margin-top: 10px; border-top: 1px solid #f0f1ee; padding-top: 10px; }
+  .result .real { display: flex; align-items: center; justify-content: space-between; transition: filter 0.2s; }
+  .result.hidden .real { filter: blur(7px); user-select: none; pointer-events: none; }
+  .final { font-size: 15px; font-weight: 800; }
+  .grade { font-size: 11px; font-weight: 700; padding: 4px 9px; border-radius: 20px; }
+  .grade.exact { background: rgba(11,110,79,0.14); color: var(--exact); }
+  .grade.right { background: rgba(184,134,11,0.16); color: var(--right); }
+  .grade.miss  { background: rgba(138,138,138,0.16); color: var(--miss); }
+  .veil { position: absolute; inset: 8px 0 0; display: flex; align-items: center; justify-content: center; gap: 6px;
+          background: rgba(255,255,255,0.55); backdrop-filter: blur(1px); cursor: pointer;
+          font-size: 12px; font-weight: 700; color: var(--green-dark); border-radius: 8px; }
+  .result.shown .veil { display: none; }
+
+  .upcard .predline { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; font-size: 13px; color: #555; }
+  .predline .num { font-size: 18px; font-weight: 800; color: var(--ink); }
+  .predline .step { width: 24px; height: 24px; border-radius: 7px; border: 1.5px solid var(--line); background:#fff; color: var(--green-dark); font-weight: 700; display:inline-flex; align-items:center; justify-content:center; }
+
+  .banner { background: #fff; border: 1px solid var(--line); border-radius: 11px; padding: 10px 12px; margin-bottom: 12px; display: flex; align-items: center; gap: 9px; font-size: 12px; color: #555; }
+  .banner .ic { font-size: 16px; }
+  .banner b { color: var(--ink); }
+
+  .toggle-row { background: #fff; border: 1px solid var(--line); border-radius: 11px; padding: 11px 13px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+  .toggle-row .t { flex: 1; }
+  .toggle-row .t h4 { font-size: 13.5px; font-weight: 700; }
+  .toggle-row .t p { font-size: 11px; color: var(--muted); margin-top: 1px; }
+  .switch { width: 46px; height: 28px; border-radius: 16px; background: var(--green); position: relative; cursor: pointer; transition: background .2s; flex-shrink: 0; }
+  .switch.off { background: #cfcabf; }
+  .switch .knob { width: 24px; height: 24px; border-radius: 50%; background: #fff; position: absolute; top: 2px; left: 20px; transition: left .2s; box-shadow: 0 1px 3px rgba(0,0,0,.2); }
+  .switch.off .knob { left: 2px; }
+  .hint { font-size: 10.5px; color: var(--muted); text-align: center; margin: -4px 0 10px; }
+
+  .recommend { max-width: 780px; margin: 40px auto 0; background: #eef5f1; border: 1px solid #cfe4d9; border-radius: 14px; padding: 18px 22px; }
+  .recommend h4 { font-size: 14px; color: var(--green-dark); margin-bottom: 8px; }
+  .recommend p { font-size: 13px; color: #45596b; line-height: 1.55; }
+  .recommend p + p { margin-top: 8px; }
+  .recommend strong { color: var(--green-dark); }
+</style>
+</head>
+<body>
+
+<div class="greeting">
+  <h1>👋 Hi Heather — two questions on Predictions</h1>
+  <p><strong>1) What happens after a game ends?</strong> Right now the pick just disappears (matches drop off once they kick off). The proposal: a finished pick becomes a <strong>graded result</strong> — your prediction vs. the final, marked <em>Exact</em> (nailed the score), <em>Right result</em>, or <em>Missed</em> — shown in a new "Your results" section instead of vanishing.</p>
+  <p><strong>2) Spoilers.</strong> Some people open the app before watching a recorded match. The app <em>already</em> has a global <strong>Scores</strong> setting (hide / show) that the Schedule and Match pages respect. The three options below differ only in how Predictions handles that. Tap the blurred results to reveal; on Option C, flip the toggle.</p>
+</div>
+
+<div class="qrow">
+  <div class="qcard">
+    <div class="q">Shared in all 3</div>
+    <p>After a game, your pick shows openly (your own pick isn't a spoiler) and becomes a graded <strong>result</strong>. Only the <strong>final score + grade</strong> are treated as spoilers.</p>
+  </div>
+  <div class="qcard">
+    <div class="q">The difference</div>
+    <p>How aggressively Predictions hides the final: follow the app-wide setting, always stay safe, or give Predictions its own toggle.</p>
+  </div>
+</div>
+
+<h2 class="page-h">Three options</h2>
+<p class="page-sub">Same fixtures &amp; grades in each — only the spoiler behavior changes. (Illustrative results.)</p>
+
+<div class="options">
+
+  <!-- OPTION A -->
+  <div class="option-wrap">
+    <div class="option-label"><h3>A · Follow the Scores setting</h3><p>Results obey the app-wide Scores toggle — one consistent rule everywhere. Tap any result to peek.</p></div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">12:57</span></div>
+      <div class="header-banner"><span class="back-chev">‹ More</span><h3>Predictions</h3></div>
+      <div class="content">
+        <div class="banner"><span class="ic">🙈</span><div>Scores are set to <b>Hidden</b> — results stay covered. Change in Settings, or tap one to peek.</div></div>
+
+        <div class="sec">Make your picks · upcoming</div>
+        <div class="card upcard">
+          <div class="ctop"><span>Group E</span><span>5:00 PM</span></div>
+          <div class="teams">
+            <span class="team"><img class="flag" src="https://flagcdn.com/w40/ec.png">Ecuador</span>
+            <span class="mid">vs</span>
+            <span class="team away"><img class="flag" src="https://flagcdn.com/w40/cw.png">Curaçao</span>
+          </div>
+          <div class="predline">ECU <span class="step">−</span><span class="num">2</span><span class="step">+</span> : <span class="step">−</span><span class="num">0</span><span class="step">+</span> CUW</div>
+        </div>
+
+        <div class="sec">Your results · today</div>
+        <div class="card">
+          <div class="ctop"><span>Group F</span><span class="ft">FT</span></div>
+          <div class="teams"><span class="team"><img class="flag" src="https://flagcdn.com/w40/nl.png">NED</span><span class="mid"></span><span class="team away"><img class="flag" src="https://flagcdn.com/w40/se.png">SWE</span></div>
+          <div class="yourpick">Your pick <span class="pickchip">NED 2–1</span></div>
+          <div class="result hidden" onclick="reveal(this)">
+            <div class="real"><span class="final">Final 5–1</span><span class="grade right">✓ Right result · +1</span></div>
+            <div class="veil">👁 Tap to reveal result</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ctop"><span>Group C</span><span class="ft">FT</span></div>
+          <div class="teams"><span class="team"><img class="flag" src="https://flagcdn.com/w40/br.png">BRA</span><span class="mid"></span><span class="team away"><img class="flag" src="https://flagcdn.com/w40/ht.png">HAI</span></div>
+          <div class="yourpick">Your pick <span class="pickchip">3–0</span></div>
+          <div class="result hidden" onclick="reveal(this)">
+            <div class="real"><span class="final">Final 3–0</span><span class="grade exact">★ Exact! · +3</span></div>
+            <div class="veil">👁 Tap to reveal result</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ctop"><span>Group D</span><span class="ft">FT</span></div>
+          <div class="teams"><span class="team"><img class="flag" src="https://flagcdn.com/w40/tr.png">TUR</span><span class="mid"></span><span class="team away"><img class="flag" src="https://flagcdn.com/w40/py.png">PAR</span></div>
+          <div class="yourpick">Your pick <span class="pickchip">TUR 1–0</span></div>
+          <div class="result hidden" onclick="reveal(this)">
+            <div class="real"><span class="final">Final 0–1</span><span class="grade miss">✗ Missed · 0</span></div>
+            <div class="veil">👁 Tap to reveal result</div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- OPTION B -->
+  <div class="option-wrap">
+    <div class="option-label"><h3>B · Always spoiler-safe</h3><p>Predictions never shows a final unprompted, regardless of the global setting. You reveal each one yourself.</p></div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">12:57</span></div>
+      <div class="header-banner"><span class="back-chev">‹ More</span><h3>Predictions</h3></div>
+      <div class="content">
+        <div class="sec">Your results · today</div>
+        <div class="hint">Finals stay hidden here — tap a card to see how you did</div>
+        <div class="card">
+          <div class="ctop"><span>Group F</span><span class="ft">FT</span></div>
+          <div class="teams"><span class="team"><img class="flag" src="https://flagcdn.com/w40/nl.png">NED</span><span class="mid"></span><span class="team away"><img class="flag" src="https://flagcdn.com/w40/se.png">SWE</span></div>
+          <div class="yourpick">Your pick <span class="pickchip">NED 2–1</span></div>
+          <div class="result hidden" onclick="reveal(this)">
+            <div class="real"><span class="final">Final 5–1</span><span class="grade right">✓ Right result · +1</span></div>
+            <div class="veil">👁 Tap to reveal result</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ctop"><span>Group C</span><span class="ft">FT</span></div>
+          <div class="teams"><span class="team"><img class="flag" src="https://flagcdn.com/w40/br.png">BRA</span><span class="mid"></span><span class="team away"><img class="flag" src="https://flagcdn.com/w40/ht.png">HAI</span></div>
+          <div class="yourpick">Your pick <span class="pickchip">3–0</span></div>
+          <div class="result hidden" onclick="reveal(this)">
+            <div class="real"><span class="final">Final 3–0</span><span class="grade exact">★ Exact! · +3</span></div>
+            <div class="veil">👁 Tap to reveal result</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ctop"><span>Group D</span><span class="ft">FT</span></div>
+          <div class="teams"><span class="team"><img class="flag" src="https://flagcdn.com/w40/tr.png">TUR</span><span class="mid"></span><span class="team away"><img class="flag" src="https://flagcdn.com/w40/py.png">PAR</span></div>
+          <div class="yourpick">Your pick <span class="pickchip">TUR 1–0</span></div>
+          <div class="result hidden" onclick="reveal(this)">
+            <div class="real"><span class="final">Final 0–1</span><span class="grade miss">✗ Missed · 0</span></div>
+            <div class="veil">👁 Tap to reveal result</div>
+          </div>
+        </div>
+        <div class="banner" style="margin-top:4px"><span class="ic">💡</span><div>"Reveal all" lives in the top corner for when you're caught up.</div></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- OPTION C -->
+  <div class="option-wrap">
+    <div class="option-label"><h3>C · Spoiler-free toggle</h3><p>A switch on the Predictions screen controls it, independent of the app-wide setting. Flip it ↓</p></div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">12:57</span></div>
+      <div class="header-banner"><span class="back-chev">‹ More</span><h3>Predictions</h3></div>
+      <div class="content" id="optC">
+        <div class="toggle-row">
+          <span style="font-size:18px">🛡️</span>
+          <div class="t"><h4>Spoiler-free</h4><p>Hide finals &amp; grades until you tap</p></div>
+          <div class="switch" id="spoilSwitch" onclick="toggleSpoiler(this)"><div class="knob"></div></div>
+        </div>
+
+        <div class="sec">Your results · today</div>
+        <div class="card">
+          <div class="ctop"><span>Group F</span><span class="ft">FT</span></div>
+          <div class="teams"><span class="team"><img class="flag" src="https://flagcdn.com/w40/nl.png">NED</span><span class="mid"></span><span class="team away"><img class="flag" src="https://flagcdn.com/w40/se.png">SWE</span></div>
+          <div class="yourpick">Your pick <span class="pickchip">NED 2–1</span></div>
+          <div class="result hidden" onclick="reveal(this)">
+            <div class="real"><span class="final">Final 5–1</span><span class="grade right">✓ Right result · +1</span></div>
+            <div class="veil">👁 Tap to reveal result</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ctop"><span>Group C</span><span class="ft">FT</span></div>
+          <div class="teams"><span class="team"><img class="flag" src="https://flagcdn.com/w40/br.png">BRA</span><span class="mid"></span><span class="team away"><img class="flag" src="https://flagcdn.com/w40/ht.png">HAI</span></div>
+          <div class="yourpick">Your pick <span class="pickchip">3–0</span></div>
+          <div class="result hidden" onclick="reveal(this)">
+            <div class="real"><span class="final">Final 3–0</span><span class="grade exact">★ Exact! · +3</span></div>
+            <div class="veil">👁 Tap to reveal result</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ctop"><span>Group D</span><span class="ft">FT</span></div>
+          <div class="teams"><span class="team"><img class="flag" src="https://flagcdn.com/w40/tr.png">TUR</span><span class="mid"></span><span class="team away"><img class="flag" src="https://flagcdn.com/w40/py.png">PAR</span></div>
+          <div class="yourpick">Your pick <span class="pickchip">TUR 1–0</span></div>
+          <div class="result hidden" onclick="reveal(this)">
+            <div class="real"><span class="final">Final 0–1</span><span class="grade miss">✗ Missed · 0</span></div>
+            <div class="veil">👁 Tap to reveal result</div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+</div>
+
+<div class="recommend">
+  <h4>My quick take (open to yours)</h4>
+  <p><strong>After a game:</strong> turn the pick into a graded "Your results" entry (Exact / Right result / Missed) so people see how they did instead of the pick silently disappearing — all three options do this.</p>
+  <p><strong>Spoilers — I lean Option A.</strong> The app already has one Scores setting that Schedule and Match detail respect; Predictions should obey the same rule so there's a single, predictable control — plus tap-any-result to peek. A second, separate toggle (Option C) is the most flexible but risks two competing spoiler controls that disagree. Option B is the safest but ignores people who've turned spoilers <em>on</em> on purpose.</p>
+</div>
+
+<script>
+  function reveal(el) { el.classList.remove('hidden'); el.classList.add('shown'); }
+  function toggleSpoiler(sw) {
+    sw.classList.toggle('off');
+    const free = !sw.classList.contains('off');   // ON = spoiler-free = hide
+    document.querySelectorAll('#optC .result').forEach(r => {
+      if (free) { r.classList.add('hidden'); r.classList.remove('shown'); }
+      else { r.classList.remove('hidden'); r.classList.add('shown'); }
+    });
+  }
+</script>
+</body>
+</html>
