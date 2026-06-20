@@ -704,7 +704,7 @@
       ],
       "answer": 1,
       "explanation": "Cristiano Ronaldo scored at every edition from 2006 to 2022 — five consecutive tournaments, a record no player had achieved before. The next longest streak is four consecutive editions, held by Miroslav Klose (2002–2014) and Pelé (1958–1970).",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "p-yashin",
