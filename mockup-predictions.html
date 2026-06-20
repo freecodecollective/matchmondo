@@ -199,6 +199,39 @@
   .recommend p { font-size: 13px; color: #45596b; line-height: 1.55; }
   .recommend p + p { margin-top: 8px; }
   .recommend strong { color: #234e72; }
+
+  /* ---- Invite / groups flow ---- */
+  .field-label { font-size: 11px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin: 2px 2px 7px; }
+  .field { width: 100%; background: #fff; border: 1.5px solid #e2ded5; border-radius: 11px; padding: 12px 13px; font-size: 14px; font-weight: 600; color: #222; margin-bottom: 16px; outline: none; font-family: inherit; }
+  .field:focus { border-color: #3A6F9A; }
+  .code-box { background: #fff; border-radius: 14px; padding: 15px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom: 14px; }
+  .code-box .cap { font-size: 11px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 9px; text-align: center; }
+  .code-val { font-size: 25px; font-weight: 800; color: #3A6F9A; letter-spacing: 0.3px; display: flex; align-items: center; justify-content: center; gap: 9px; }
+  .code-val .reroll { font-size: 16px; cursor: pointer; opacity: 0.5; transition: opacity 0.15s; }
+  .code-val .reroll:hover { opacity: 0.85; }
+  .code-val .reroll:active { transform: rotate(120deg); }
+  .share-row { display: flex; gap: 8px; margin-top: 14px; }
+  .share-btn { flex: 1; background: #f3f1ec; border-radius: 10px; padding: 9px 4px; font-size: 11px; font-weight: 600; color: #555; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; transition: all 0.12s; }
+  .share-btn:active { background: #e8e5de; }
+  .share-btn .si { font-size: 16px; }
+  .share-btn.done { color: #2EA56A; background: rgba(46,165,106,0.12); }
+  .faux-qr { display: block; margin: 2px auto 14px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.07); background: #fff; padding: 9px; }
+  .helper { font-size: 11.5px; color: #999; line-height: 1.45; text-align: center; margin-bottom: 16px; padding: 0 6px; }
+  .primary-btn { background: #3A6F9A; color: #fff; border-radius: 12px; padding: 14px; text-align: center; font-size: 15px; font-weight: 700; cursor: pointer; }
+  .primary-btn:active { background: #335f85; }
+  .or-div { display: flex; align-items: center; gap: 10px; color: #bbb; font-size: 11px; font-weight: 700; margin: 18px 2px; }
+  .or-div::before, .or-div::after { content: ""; flex: 1; height: 1px; background: #e2ded5; }
+  .join-hero { text-align: center; padding: 14px 0 6px; }
+  .join-hero .big-ic { font-size: 44px; }
+  .join-hero h4 { font-size: 18px; font-weight: 700; margin-top: 8px; }
+  .join-hero p { font-size: 12.5px; color: #888; margin-top: 6px; line-height: 1.45; padding: 0 10px; }
+  .group-head { background: linear-gradient(135deg, #3A6F9A, #5A9FC9); color: #fff; border-radius: 16px; padding: 16px; margin-bottom: 12px; box-shadow: 0 3px 12px rgba(58,111,154,0.22); }
+  .group-head h4 { font-size: 17px; font-weight: 700; }
+  .group-head .gsub { font-size: 12px; opacity: 0.85; margin-top: 3px; }
+  .group-head .row2 { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; }
+  .code-chip { font-size: 12.5px; font-weight: 700; color: #fff; background: rgba(255,255,255,0.22); padding: 6px 12px; border-radius: 20px; display: flex; align-items: center; gap: 6px; }
+  .invite-btn { font-size: 12.5px; font-weight: 700; color: #3A6F9A; background: #fff; padding: 7px 15px; border-radius: 20px; cursor: pointer; }
+  .lock-note { background: #f6f5f2; border-radius: 10px; padding: 11px 13px; font-size: 11.5px; color: #888; font-weight: 500; text-align: center; }
 </style>
 </head>
 <body>
@@ -522,6 +555,146 @@
 
 </div>
 
+<h2 class="page-h" style="margin-top:48px">How "invite friends" would work</h2>
+<p class="page-sub">For the Pick'em leaderboard (Option C), and it lives under <strong>More</strong> too. No accounts — one person creates a
+   group, everyone else joins with a two-word code or the invite link. Tap 🔄 to reroll the code; tap "Copy link."</p>
+
+<div class="options">
+
+  <!-- 1 · CREATE -->
+  <div class="option-wrap">
+    <div class="option-label"><h3>1 · Create a group</h3><p>Name it, get a friendly code, share it three ways.</p></div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">12:57</span></div>
+      <div class="header-banner"><span class="back-chev">‹ More</span><h3>New group</h3></div>
+      <div class="content">
+
+        <div class="field-label">Group name</div>
+        <input class="field" value="Busselle Family Pool">
+
+        <div class="code-box">
+          <div class="cap">Your group code</div>
+          <div class="code-val"><span id="codeText">brave-falcon</span><span class="reroll" onclick="reroll()">🔄</span></div>
+          <div class="share-row">
+            <div class="share-btn" id="copyBtn" onclick="copyLink(this)"><span class="si">🔗</span>Copy link</div>
+            <div class="share-btn"><span class="si">📤</span>Share</div>
+            <div class="share-btn"><span class="si">🔳</span>QR code</div>
+          </div>
+        </div>
+
+        <svg class="faux-qr" width="116" height="116" viewBox="0 0 92 92" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+          <rect width="92" height="92" fill="#fff"/>
+          <g fill="#1c2733">
+            <path d="M4 4h22v22h-22z"/><path d="M9 9h12v12h-12z" fill="#fff"/><rect x="12" y="12" width="6" height="6"/>
+            <path d="M66 4h22v22h-22z"/><path d="M71 9h12v12h-12z" fill="#fff"/><rect x="74" y="12" width="6" height="6"/>
+            <path d="M4 66h22v22h-22z"/><path d="M9 71h12v12h-12z" fill="#fff"/><rect x="12" y="74" width="6" height="6"/>
+            <rect x="32" y="6" width="4" height="4"/><rect x="44" y="6" width="4" height="4"/><rect x="56" y="6" width="4" height="4"/>
+            <rect x="38" y="12" width="4" height="4"/><rect x="50" y="12" width="4" height="4"/><rect x="60" y="12" width="4" height="4"/>
+            <rect x="32" y="18" width="4" height="4"/><rect x="44" y="18" width="4" height="4"/><rect x="56" y="18" width="4" height="4"/>
+            <rect x="6" y="32" width="4" height="4"/><rect x="18" y="32" width="4" height="4"/><rect x="32" y="32" width="4" height="4"/><rect x="44" y="32" width="4" height="4"/><rect x="56" y="32" width="4" height="4"/><rect x="68" y="32" width="4" height="4"/><rect x="82" y="32" width="4" height="4"/>
+            <rect x="12" y="38" width="4" height="4"/><rect x="26" y="38" width="4" height="4"/><rect x="38" y="38" width="4" height="4"/><rect x="50" y="38" width="4" height="4"/><rect x="62" y="38" width="4" height="4"/><rect x="76" y="38" width="4" height="4"/>
+            <rect x="6" y="44" width="4" height="4"/><rect x="20" y="44" width="4" height="4"/><rect x="34" y="44" width="4" height="4"/><rect x="48" y="44" width="4" height="4"/><rect x="60" y="44" width="4" height="4"/><rect x="74" y="44" width="4" height="4"/><rect x="86" y="44" width="4" height="4"/>
+            <rect x="12" y="50" width="4" height="4"/><rect x="26" y="50" width="4" height="4"/><rect x="40" y="50" width="4" height="4"/><rect x="54" y="50" width="4" height="4"/><rect x="68" y="50" width="4" height="4"/><rect x="82" y="50" width="4" height="4"/>
+            <rect x="6" y="56" width="4" height="4"/><rect x="20" y="56" width="4" height="4"/><rect x="32" y="56" width="4" height="4"/><rect x="46" y="56" width="4" height="4"/><rect x="60" y="56" width="4" height="4"/><rect x="74" y="56" width="4" height="4"/>
+            <rect x="34" y="68" width="4" height="4"/><rect x="48" y="68" width="4" height="4"/><rect x="62" y="68" width="4" height="4"/><rect x="76" y="68" width="4" height="4"/><rect x="86" y="68" width="4" height="4"/>
+            <rect x="40" y="74" width="4" height="4"/><rect x="54" y="74" width="4" height="4"/><rect x="68" y="74" width="4" height="4"/><rect x="82" y="74" width="4" height="4"/>
+            <rect x="34" y="80" width="4" height="4"/><rect x="48" y="80" width="4" height="4"/><rect x="62" y="80" width="4" height="4"/><rect x="76" y="80" width="4" height="4"/><rect x="86" y="80" width="4" height="4"/>
+          </g>
+        </svg>
+
+        <div class="helper">Friends tap the link or enter <strong>brave-falcon</strong> to join. You can reroll it anytime before the first kickoff.</div>
+        <div class="primary-btn">Create group</div>
+
+      </div>
+      <div class="tab-bar">
+        <div class="tab"><span class="tab-icon">📅</span>Schedule</div>
+        <div class="tab"><span class="tab-icon">📊</span>Standings</div>
+        <div class="tab"><span class="tab-icon">🏳️</span>Teams</div>
+        <div class="tab active"><span class="tab-icon">🎯</span>More</div>
+      </div>
+      <div class="home-bar"><div class="home-indicator"></div></div>
+    </div></div>
+  </div>
+
+  <!-- 2 · JOIN -->
+  <div class="option-wrap">
+    <div class="option-label"><h3>2 · Join a group</h3><p>Tap the invite link, or type the code. Then pick a name.</p></div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">12:57</span></div>
+      <div class="header-banner"><span class="back-chev">‹ More</span><h3>Join a group</h3></div>
+      <div class="content">
+
+        <div class="join-hero">
+          <div class="big-ic">🎟️</div>
+          <h4>Got an invite link?</h4>
+          <p>Just tap it — you'll drop straight into the group. Nothing to type.</p>
+        </div>
+
+        <div class="or-div">or enter the code</div>
+
+        <div class="field-label">Group code</div>
+        <input class="field" value="brave-falcon" style="text-align:center; letter-spacing:0.5px; font-size:17px; color:#3A6F9A;">
+
+        <div class="field-label">You'll appear as</div>
+        <input class="field" value="Chris">
+
+        <div class="primary-btn">Join group</div>
+        <div class="helper" style="margin-top:14px; margin-bottom:0;">No account needed. Your picks are saved to this phone and shared with the group.</div>
+
+      </div>
+      <div class="tab-bar">
+        <div class="tab"><span class="tab-icon">📅</span>Schedule</div>
+        <div class="tab"><span class="tab-icon">📊</span>Standings</div>
+        <div class="tab"><span class="tab-icon">🏳️</span>Teams</div>
+        <div class="tab active"><span class="tab-icon">🎯</span>More</div>
+      </div>
+      <div class="home-bar"><div class="home-indicator"></div></div>
+    </div></div>
+  </div>
+
+  <!-- 3 · GROUP LEADERBOARD -->
+  <div class="option-wrap">
+    <div class="option-label"><h3>3 · The group</h3><p>Everyone's running totals, plus a one-tap invite for more friends.</p></div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">12:57</span></div>
+      <div class="header-banner"><span class="back-chev">‹ More</span><h3>Pick'em</h3></div>
+      <div class="content">
+
+        <div class="group-head">
+          <h4>Busselle Family Pool</h4>
+          <div class="gsub">6 members · group stage</div>
+          <div class="row2">
+            <span class="code-chip">🔗 brave-falcon</span>
+            <span class="invite-btn">Invite +</span>
+          </div>
+        </div>
+
+        <div class="rule-chip">⚽ Exact score +3 · Correct result +1</div>
+
+        <div class="lb-card">
+          <div class="lb-row"><span class="lb-rank">1</span><span class="lb-av">JM</span><span class="lb-nm">Jordan M.</span><span class="lb-pts">44</span></div>
+          <div class="lb-row"><span class="lb-rank">2</span><span class="lb-av">HK</span><span class="lb-nm">Heather K.</span><span class="lb-pts">41</span></div>
+          <div class="lb-row you"><span class="lb-rank">3</span><span class="lb-av">YO</span><span class="lb-nm">You</span><span class="lb-pts">37</span></div>
+          <div class="lb-row"><span class="lb-rank">4</span><span class="lb-av">JP</span><span class="lb-nm">James P.</span><span class="lb-pts">35</span></div>
+          <div class="lb-row"><span class="lb-rank">5</span><span class="lb-av">CB</span><span class="lb-nm">Chris B.</span><span class="lb-pts">33</span></div>
+          <div class="lb-row"><span class="lb-rank">6</span><span class="lb-av">SD</span><span class="lb-nm">Sam D.</span><span class="lb-pts">29</span></div>
+        </div>
+
+        <div class="lock-note">🔒 Everyone's picks for <strong>GER v CIV</strong> lock in 3h</div>
+
+      </div>
+      <div class="tab-bar">
+        <div class="tab"><span class="tab-icon">📅</span>Schedule</div>
+        <div class="tab"><span class="tab-icon">📊</span>Standings</div>
+        <div class="tab"><span class="tab-icon">🏳️</span>Teams</div>
+        <div class="tab active"><span class="tab-icon">🎯</span>More</div>
+      </div>
+      <div class="home-bar"><div class="home-indicator"></div></div>
+    </div></div>
+  </div>
+
+</div>
+
 <div class="recommend">
   <h4>My quick take (totally open to yours)</h4>
   <p><strong>Where it lives:</strong> I lean toward a <strong>dedicated "Predictions" screen under More (Option A)</strong> as the home for it,
@@ -529,8 +702,10 @@
      <em>shortcut</em> we could add on top — they're not mutually exclusive.</p>
   <p><strong>Score predictions:</strong> the +/− steppers work everywhere and keep it one-tap fast. Scoring (Option C) is what makes scores
      <em>matter</em> — exact score +3, right result +1.</p>
-  <p><strong>Keeping the data:</strong> v1 saves on the phone automatically (no login, picks survive app restarts). The friends leaderboard in
-     Option C is the only piece that needs a tiny account — so that's really a "do we want social?" decision, not a blocker for predictions themselves.</p>
+  <p><strong>Keeping the data:</strong> picks save automatically — no login to play. To join a friends' group (Option C) you just enter a
+     two-word code like <em>brave-falcon</em> or tap the invite link and pick a display name — still no account. The only thing that needs a
+     real login is syncing your own picks across two of your devices. (Shared leaderboards do need a tiny backend, since they're visible to
+     everyone — see the "How invites work" section below.)</p>
 </div>
 
 <script>
@@ -574,6 +749,21 @@
   function pickSeg(el) {
     el.closest('.seg').querySelectorAll('.opt').forEach(o => o.classList.remove('sel'));
     el.classList.add('sel');
+  }
+
+  // ---- Invite flow: reroll the word-pair code + copy link ----
+  const CODES = ['brave-falcon','lucky-panda','swift-otter','golden-tiger','clever-fox','happy-puffin','bold-heron','sunny-marlin'];
+  let codeIdx = 0;
+  function reroll() {
+    codeIdx = (codeIdx + 1) % CODES.length;
+    document.getElementById('codeText').textContent = CODES[codeIdx];
+    const cb = document.getElementById('copyBtn');
+    if (cb) { cb.classList.remove('done'); cb.innerHTML = '<span class="si">🔗</span>Copy link'; }
+  }
+  function copyLink(el) {
+    el.classList.add('done');
+    el.innerHTML = '<span class="si">✓</span>Copied!';
+    setTimeout(() => { el.classList.remove('done'); el.innerHTML = '<span class="si">🔗</span>Copy link'; }, 1600);
   }
 </script>
 </body>
