@@ -21,6 +21,15 @@ MATCHES_JS = SITE_ROOT / "data" / "matches.js"
 
 ESPN_API = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard"
 
+ESPN_TEAM_MAP = {
+    "South Korea": "Korea Republic",
+    "United States": "USA",
+    "Bosnia-Herzegovina": "Bosnia and Herzegovina",
+    "Cape Verde": "Cabo Verde",
+    "Ivory Coast": "Côte d'Ivoire",
+    "Iran": "IR Iran",
+}
+
 
 def fetch_espn(date_str: str) -> list:
     url = f"{ESPN_API}?dates={date_str}"
@@ -89,9 +98,14 @@ def main():
             continue
         kickoff_ts = kickoff.timestamp()
 
+        home_name = ESPN_TEAM_MAP.get(home.get("team", {}).get("displayName", ""), home.get("team", {}).get("displayName", ""))
+        away_name = ESPN_TEAM_MAP.get(away.get("team", {}).get("displayName", ""), away.get("team", {}).get("displayName", ""))
+
         for m in matches:
             m_dt = datetime.strptime(m["utc"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
-            if abs(m_dt.timestamp() - kickoff_ts) < 120:
+            name_match = m["home"] == home_name and m["away"] == away_name
+            time_match = abs(m_dt.timestamp() - kickoff_ts) < 120
+            if name_match or time_match:
                 if m["scoreH"] is None or m["scoreA"] is None:
                     m["scoreH"] = home_score
                     m["scoreA"] = away_score

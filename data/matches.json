@@ -399,8 +399,8 @@
     "venue": "Lincoln Financial Field",
     "city": "Philadelphia, PA",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 3,
+    "scoreA": 0
   },
   {
     "n": 31,
@@ -412,8 +412,8 @@
     "venue": "Levi's Stadium",
     "city": "Santa Clara (SF Bay Area), CA",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 0,
+    "scoreA": 1
   },
   {
     "n": 35,
