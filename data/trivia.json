@@ -1043,7 +1043,8 @@
         "Nothing"
       ],
       "answer": 1,
-      "explanation": "A second yellow in one match becomes a red card, and the player misses the next match."
+      "explanation": "A second yellow in one match becomes a red card, and the player misses the next match.",
+      "claudeTask": "make the 4th answer funny (but keep it soccer related)"
     },
     {
       "id": "p-muller-2010",
