@@ -2977,6 +2977,112 @@ window.WC_PLAYERS = {
      }
     ],
     "honors": []
+   },
+   {
+    "name": "Jhon Arias",
+    "position": "Winger",
+    "club": "Palmeiras (Brazil, Série A)",
+    "hometown": "Quibdó, Chocó",
+    "why": "One of the most productive wide players in South American football, Arias earned a move to the Premier League with Wolves before a €25m transfer to Palmeiras in early 2026. He was a key creator during the 2024 Copa América run to the final and a regular in qualifying, contributing goals and assists from the right flank with his quick feet, crossing and set-piece delivery. His 48 goals and 57 assists in over 250 appearances at Fluminense, where he helped win the 2023 Copa Libertadores, cemented his status as one of Colombia's most dangerous attacking players.",
+    "number": 11,
+    "why_es": "Uno de los extremos más productivos del fútbol sudamericano, Arias se ganó un pase a la Premier League con Wolves antes de una transferencia de 25 millones de euros al Palmeiras a inicios de 2026. Fue un creador clave en la carrera de la Copa América 2024 hasta la final y un habitual en las eliminatorias, aportando goles y asistencias desde la banda derecha con su rapidez, centros y ejecución en jugadas a balón parado. Sus 48 goles y 57 asistencias en más de 250 partidos con Fluminense, donde ayudó a ganar la Copa Libertadores 2023, consolidaron su condición de uno de los atacantes más peligrosos de Colombia.",
+    "why_fr": "L'un des ailiers les plus productifs du football sud-américain, Arias a obtenu un transfert en Premier League avec Wolves avant un passage à Palmeiras pour 25 millions d'euros début 2026. Il a été un créateur essentiel lors du parcours en Copa América 2024 jusqu'à la finale et un habitué des éliminatoires, apportant buts et passes décisives depuis le flanc droit grâce à ses pieds vifs, ses centres et ses coups de pied arrêtés. Ses 48 buts et 57 passes décisives en plus de 250 matchs à Fluminense, où il a aidé à remporter la Copa Libertadores 2023, ont consolidé son statut parmi les joueurs offensifs colombiens les plus redoutables.",
+    "why_pt_BR": "Um dos pontas mais produtivos do futebol sul-americano, Arias conquistou uma transferência para a Premier League com o Wolves antes de assinar com o Palmeiras por €25 milhões no início de 2026. Foi um criador fundamental na campanha da Copa América 2024 até a final e presença constante nas eliminatórias, contribuindo com gols e assistências pela ponta direita com seus pés rápidos, cruzamentos e cobranças de bola parada. Seus 48 gols e 57 assistências em mais de 250 jogos pelo Fluminense, onde ajudou a conquistar a Copa Libertadores 2023, consolidaram seu status como um dos atacantes mais perigosos da Colômbia.",
+    "why_de": "Einer der produktivsten Flügelspieler im südamerikanischen Fußball, Arias verdiente sich einen Wechsel in die Premier League zu Wolves, bevor er Anfang 2026 für 25 Millionen Euro zu Palmeiras wechselte. Er war ein wichtiger Kreativspieler während des Copa-América-Laufs 2024 bis ins Finale und ein Stammgast in der Qualifikation, wo er von der rechten Flanke mit seinen schnellen Füßen, Flanken und Standardsituationen Tore und Vorlagen beisteuerte. Seine 48 Tore und 57 Vorlagen in über 250 Spielen bei Fluminense, wo er zum Gewinn der Copa Libertadores 2023 beitrug, festigten seinen Status als einer der gefährlichsten Angreifer Kolumbiens.",
+    "why_it": "Uno degli esterni più produttivi del calcio sudamericano, Arias ha ottenuto un trasferimento in Premier League al Wolves prima di passare al Palmeiras per 25 milioni di euro all'inizio del 2026. È stato un creatore fondamentale nella corsa alla Copa América 2024 fino alla finale e una presenza fissa nelle qualificazioni, contribuendo con gol e assist dalla fascia destra grazie ai suoi piedi rapidi, ai cross e ai calci piazzati. I suoi 48 gol e 57 assist in oltre 250 partite al Fluminense, dove ha contribuito alla vittoria della Copa Libertadores 2023, hanno consolidato il suo status tra gli attaccanti colombiani più pericolosi.",
+    "why_ja": "南米サッカーで最も生産性の高いウィンガーの一人で、Ariasはプレミアリーグのウルヴスへ移籍後、2026年初頭に2,500万ユーロでパルメイラスに加入した。2024年コパ・アメリカ決勝進出の鍵となるクリエーターで、予選でも右サイドから素早い足技、クロス、セットプレーでゴールとアシストを重ねた。フルミネンセでの250試合超で48ゴール・57アシストを記録し、2023年コパ・リベルタドーレス優勝に貢献、コロンビアで最も危険な攻撃選手の一人としての地位を確立した。",
+    "why_ko": "남미 축구에서 가장 생산적인 윙어 중 하나인 Arias는 Wolves 이적 후 2026년 초 €2,500만에 Palmeiras로 이적했다. 2024 코파 아메리카 결승 진출에서 핵심 창조자였고, 예선에서도 빠른 발놀림, 크로스, 세트피스로 오른쪽 측면에서 골과 어시스트를 기록하는 레귤러였다. Fluminense에서 250경기 이상 48골 57어시스트를 기록하며 2023 코파 리베르타도레스 우승에 기여해 콜롬비아의 가장 위험한 공격 선수 중 하나로 자리매김했다.",
+    "why_zh_Hans": "南美足坛最高产的边锋之一，阿里亚斯先在英超狼队效力，后于2026年初以2500万欧元转会帕尔梅拉斯。他是2024年美洲杯闯入决赛的关键创造者，也是预选赛的常客，凭借灵巧的脚下技术、传中和定位球在右路贡献进球和助攻。他在弗鲁米嫩塞超过250场比赛中贡献48球57助攻，帮助球队赢得2023年南美解放者杯，巩固了其作为哥伦比亚最危险进攻球员之一的地位。",
+    "why_ar": "أحد أكثر الأجنحة إنتاجيةً في كرة القدم الأمريكية الجنوبية، انتقل أرياس إلى الدوري الإنجليزي مع وولفز قبل انتقاله إلى بالميراس مقابل 25 مليون يورو مطلع 2026. كان صانعاً محورياً في مسيرة كولومبيا بكوبا أمريكا 2024 وصولاً للنهائي ومشاركاً ثابتاً في التصفيات، مُساهماً بأهداف وتمريرات حاسمة من الجناح الأيمن بفضل أقدامه السريعة والعرضيات والركلات الثابتة. سجّل 48 هدفاً وصنع 57 في أكثر من 250 مباراة مع فلومينينسي حيث ساهم في الفوز بكوبا ليبرتادوريس 2023، مما عزّز مكانته كأحد أخطر لاعبي كولومبيا الهجوميين.",
+    "why_es_ES": "Uno de los extremos más productivos del fútbol sudamericano, Arias se ganó un traspaso a la Premier League con el Wolves antes de fichar por el Palmeiras por 25 millones de euros a principios de 2026. Fue un creador fundamental en el camino de la Copa América 2024 hasta la final y un fijo en las eliminatorias, aportando goles y asistencias desde la banda derecha con su velocidad de pies, sus centros y su ejecución a balón parado. Sus 48 goles y 57 asistencias en más de 250 partidos con Fluminense, donde contribuyó a ganar la Copa Libertadores 2023, consolidaron su estatus como uno de los atacantes colombianos más peligrosos.",
+    "caps": 37,
+    "intlGoals": 4,
+    "tournaments": [
+     "2024 Copa América (Runner-up)"
+    ],
+    "clubs": [
+     {"team": "Palmeiras", "years": "2026–", "country": "Brazil"},
+     {"team": "Wolverhampton Wanderers", "years": "2025–2026", "country": "England"},
+     {"team": "Fluminense", "years": "2021–2025", "country": "Brazil"},
+     {"team": "América de Cali", "years": "2019–2021", "country": "Colombia"},
+     {"team": "Santa Fe", "years": "2018–2019", "country": "Colombia"},
+     {"team": "Patriotas", "years": "2017–2018", "country": "Colombia"}
+    ],
+    "honors": [
+     "Copa Libertadores 2023 (Fluminense)",
+     "Recopa Sudamericana 2024 (Fluminense)",
+     "Campeonato Carioca 2022, 2023 (Fluminense)",
+     "Campeonato Paulista 2026 (Palmeiras)",
+     "Categoría Primera A 2020 (América de Cali)"
+    ]
+   },
+   {
+    "name": "Richard Ríos",
+    "position": "Central midfielder",
+    "club": "Benfica (Portugal, Primeira Liga)",
+    "hometown": "Vegachí, Antioquia",
+    "why": "A breakout star of the 2024 Copa América, Ríos was named among the tournament's best players after leading all competitors with 18 successful dribbles and scoring a spectacular goal in the 5-0 quarter-final win over Panama. The 25-year-old box-to-box midfielder combines press resistance, ball-carrying dynamism and sharp passing to give Colombia balance between flair and control. His €27m move from Palmeiras to Benfica in 2025 confirmed his status as one of the most sought-after young midfielders in South America.",
+    "number": 6,
+    "why_es": "Estrella revelación de la Copa América 2024, Ríos fue nombrado entre los mejores jugadores del torneo tras liderar a todos los competidores con 18 regates exitosos y anotar un gol espectacular en la goleada 5-0 ante Panamá en cuartos de final. El mediocampista box-to-box de 25 años combina resistencia a la presión, dinamismo con balón y pases precisos para darle equilibrio a Colombia entre talento y control. Su traspaso de 27 millones de euros del Palmeiras al Benfica en 2025 confirmó su condición como uno de los mediocampistas jóvenes más codiciados de Sudamérica.",
+    "why_fr": "Révélation de la Copa América 2024, Ríos a été désigné parmi les meilleurs joueurs du tournoi après avoir mené tous les compétiteurs avec 18 dribbles réussis et inscrit un but spectaculaire lors de la victoire 5-0 en quart de finale contre le Panama. Le milieu relayeur de 25 ans combine résistance au pressing, dynamisme balle au pied et passes acérées pour offrir à la Colombie un équilibre entre flair et contrôle. Son transfert de 27 millions d'euros de Palmeiras à Benfica en 2025 a confirmé son statut parmi les jeunes milieux les plus courtisés d'Amérique du Sud.",
+    "why_pt_BR": "Estrela revelação da Copa América 2024, Ríos foi eleito entre os melhores jogadores do torneio após liderar todos os competidores com 18 dribles bem-sucedidos e marcar um gol espetacular na goleada de 5 a 0 nas quartas de final sobre o Panamá. O volante box-to-box de 25 anos combina resistência à pressão, dinamismo na condução de bola e passes precisos para dar à Colômbia equilíbrio entre talento e controle. Sua transferência de €27 milhões do Palmeiras para o Benfica em 2025 confirmou seu status como um dos jovens meio-campistas mais cobiçados da América do Sul.",
+    "why_de": "Als Durchbruchstar der Copa América 2024 wurde Ríos zu den besten Spielern des Turniers gewählt, nachdem er alle Teilnehmer mit 18 erfolgreichen Dribblings angeführt und ein spektakuläres Tor beim 5:0-Viertelfinal-Sieg über Panama erzielt hatte. Der 25-jährige Box-to-Box-Mittelfeldspieler vereint Pressingresistenz, dynamisches Ballführen und scharfe Pässe, um Kolumbien die Balance zwischen Kreativität und Kontrolle zu geben. Sein 27-Millionen-Euro-Wechsel von Palmeiras zu Benfica 2025 bestätigte seinen Status als einer der begehrtesten jungen Mittelfeldspieler Südamerikas.",
+    "why_it": "Rivelazione della Copa América 2024, Ríos è stato nominato tra i migliori giocatori del torneo dopo aver guidato tutti i partecipanti con 18 dribbling riusciti e segnato un gol spettacolare nella vittoria 5-0 nei quarti di finale contro Panama. Il centrocampista box-to-box di 25 anni unisce resistenza al pressing, dinamismo nella conduzione e passaggi precisi per dare alla Colombia equilibrio tra estro e controllo. Il suo trasferimento da 27 milioni di euro dal Palmeiras al Benfica nel 2025 ha confermato il suo status tra i giovani centrocampisti più ricercati del Sudamerica.",
+    "why_ja": "2024年コパ・アメリカのブレイクスターで、全選手中最多の18成功ドリブルを記録しパナマ戦5-0の準々決勝でスペクタクルなゴールを決め、大会ベストプレーヤーの一人に選出された。25歳のボックス・トゥ・ボックスの中盤はプレス耐性、ボール運搬のダイナミズム、鋭いパスを兼ね備え、コロンビアに創造性とコントロールのバランスをもたらす。パルメイラスからベンフィカへの2,700万ユーロの移籍は南米で最も注目される若手ミッドフィルダーとしての地位を確立した。",
+    "why_ko": "2024 코파 아메리카의 브레이크아웃 스타로, 전 참가자 중 최다인 18회 성공 드리블을 기록하고 파나마전 5-0 8강에서 스펙타클한 골을 넣어 대회 최우수 선수 중 한 명으로 선정됐다. 25세의 박스투박스 미드필더는 프레스 저항력, 볼 캐리 역동성, 날카로운 패스를 결합해 콜롬비아에 창의성과 컨트롤 사이의 균형을 제공한다. 2025년 Palmeiras에서 Benfica로의 €2,700만 이적은 남미에서 가장 탐나는 젊은 미드필더 중 하나로서의 위상을 확인시켰다.",
+    "why_zh_Hans": "2024年美洲杯的突破之星，里奥斯以全场最高的18次成功盘带领跑赛事，并在四分之一决赛5-0大胜巴拿马的比赛中打入精彩进球，被评为赛事最佳球员之一。这位25岁的全能中场集抗压能力、持球推进的活力和精准传球于一身，为哥伦比亚在灵气与控制之间找到平衡。2025年以2700万欧元从帕尔梅拉斯转会本菲卡，确认了他作为南美最受追捧的年轻中场之一的地位。",
+    "why_ar": "نجم اختراق كوبا أمريكا 2024، اختير ريوس ضمن أفضل لاعبي البطولة بعد تصدّره جميع المنافسين بـ18 تسللاً ناجحاً وتسجيله هدفاً مذهلاً في الفوز 5-0 على بنما في ربع النهائي. لاعب الوسط الصندوقي البالغ 25 عاماً يجمع بين مقاومة الضغط والديناميكية في حمل الكرة والتمرير الحاد ليمنح كولومبيا التوازن بين البراعة والسيطرة. انتقاله بـ27 مليون يورو من بالميراس إلى بنفيكا عام 2025 أكّد مكانته كأحد أكثر لاعبي الوسط الشباب طلباً في أمريكا الجنوبية.",
+    "why_es_ES": "Estrella revelación de la Copa América 2024, Ríos fue elegido entre los mejores jugadores del torneo tras liderar a todos los participantes con 18 regates exitosos y marcar un gol espectacular en la goleada 5-0 a Panamá en cuartos de final. El centrocampista todocampista de 25 años combina resistencia a la presión, dinamismo con el balón y pases precisos para dar a Colombia el equilibrio entre creatividad y control. Su traspaso de 27 millones de euros del Palmeiras al Benfica en 2025 confirmó su estatus como uno de los centrocampistas jóvenes más cotizados de Sudamérica.",
+    "caps": 30,
+    "intlGoals": 2,
+    "tournaments": [
+     "2024 Copa América (Runner-up)"
+    ],
+    "clubs": [
+     {"team": "Benfica", "years": "2025–", "country": "Portugal"},
+     {"team": "Palmeiras", "years": "2023–2025", "country": "Brazil"},
+     {"team": "Guarani", "years": "2021–2023", "country": "Brazil"},
+     {"team": "Flamengo", "years": "2019–2021", "country": "Brazil"}
+    ],
+    "honors": [
+     "Supertaça Cândido de Oliveira 2025 (Benfica)",
+     "Campeonato Brasileiro Série A 2023 (Palmeiras)",
+     "Campeonato Paulista 2024 (Palmeiras)"
+    ]
+   },
+   {
+    "name": "Jhon Córdoba",
+    "position": "Centre-forward",
+    "club": "Krasnodar (Russia, Premier League)",
+    "hometown": "Istmina, Chocó",
+    "why": "A powerful, physical striker with pace and aerial presence, Córdoba is Colombia's experienced centre-forward option after prolific seasons in the Bundesliga and Russian Premier League. He has scored 17 league goals and added 6 assists this season at Krasnodar, giving Colombia a proven target man who can hold the ball, run channels and finish with both feet. His 6 international goals in 21 caps and inclusion in the 2024 Copa América squad reflect his standing as the squad's most battle-tested No. 9.",
+    "number": 9,
+    "why_es": "Un delantero potente y físico con velocidad y presencia aérea, Córdoba es la opción experimentada de centrodelantero de Colombia tras temporadas prolíficas en la Bundesliga y la liga rusa. Ha marcado 17 goles en liga y sumado 6 asistencias esta temporada con el Krasnodar, dándole a Colombia un referente probado que puede retener el balón, atacar espacios y definir con ambos pies. Sus 6 goles internacionales en 21 partidos y su inclusión en la plantilla de la Copa América 2024 reflejan su condición como el número 9 más curtido del equipo.",
+    "why_fr": "Un attaquant puissant et physique doté de vitesse et de présence aérienne, Córdoba est l'option expérimentée de l'avant-centre colombien après des saisons prolifiques en Bundesliga et en Premier League russe. Il a inscrit 17 buts en championnat et fourni 6 passes décisives cette saison à Krasnodar, offrant à la Colombie un pivot éprouvé capable de garder le ballon, attaquer les intervalles et conclure des deux pieds. Ses 6 buts internationaux en 21 sélections et sa présence dans le groupe de la Copa América 2024 témoignent de son statut de numéro 9 le plus aguerri de l'effectif.",
+    "why_pt_BR": "Um atacante potente e físico com velocidade e presença aérea, Córdoba é a opção experiente de centroavante da Colômbia após temporadas prolíficas na Bundesliga e no Campeonato Russo. Ele marcou 17 gols no campeonato e deu 6 assistências nesta temporada no Krasnodar, oferecendo à Colômbia um pivô comprovado que consegue segurar a bola, explorar espaços e finalizar com ambos os pés. Seus 6 gols internacionais em 21 convocações e sua inclusão no elenco da Copa América 2024 refletem sua posição como o camisa 9 mais testado do elenco.",
+    "why_de": "Ein kraftvoller, physischer Stürmer mit Tempo und Kopfballstärke, Córdoba ist Kolumbiens erfahrene Mittelstürmer-Option nach torstaken Saisons in der Bundesliga und der russischen Premier Liga. Er hat in dieser Saison 17 Ligatreffer erzielt und 6 Vorlagen bei Krasnodar beigesteuert, was Kolumbien einen bewährten Zielspieler gibt, der Bälle festmachen, in Schnittstellen laufen und beidfüßig abschließen kann. Seine 6 internationalen Tore in 21 Länderspielen und seine Berufung zum Copa-América-Kader 2024 unterstreichen seinen Status als die kampferprobte Nummer 9 des Teams.",
+    "why_it": "Attaccante potente e fisico con velocità e gioco aereo, Córdoba è l'opzione di esperienza come centravanti della Colombia dopo stagioni prolifiche in Bundesliga e nella Premier League russa. Ha segnato 17 gol in campionato e fornito 6 assist in questa stagione al Krasnodar, offrendo alla Colombia un punto di riferimento collaudato in grado di difendere il pallone, attaccare la profondità e concludere con entrambi i piedi. I suoi 6 gol internazionali in 21 presenze e la convocazione per la Copa América 2024 ne testimoniano lo status di numero 9 più navigato della rosa.",
+    "why_ja": "スピードと空中戦に優れた力強いフィジカルストライカーのCórdobaは、ブンデスリーガとロシアプレミアリーグでの得点力あるシーズンを経たコロンビアの経験豊かなセンターフォワードオプションだ。クラスノダールで今シーズンリーグ17ゴール6アシストを記録し、ボールキープ、チャンネルラン、両足でのフィニッシュができる実績あるターゲットマンをコロンビアにもたらす。21試合6ゴールの国際実績と2024年コパ・アメリカの招集は、チームで最も実戦経験あるナンバー9としての地位を反映している。",
+    "why_ko": "스피드와 공중전 능력을 갖춘 강력한 피지컬 스트라이커인 Córdoba는 분데스리가와 러시아 프리미어리그에서의 다득점 시즌 이후 콜롬비아의 경험 많은 센터포워드 옵션이다. 이번 시즌 Krasnodar에서 리그 17골 6어시스트를 기록하며 볼 키핑, 채널 돌파, 양발 마무리가 가능한 검증된 타깃맨을 콜롬비아에 제공한다. 21경기 6골의 국제 기록과 2024 코파 아메리카 스쿼드 포함은 팀에서 가장 실전 경험이 풍부한 9번으로서의 위상을 반영한다.",
+    "why_zh_Hans": "科尔多巴是一名力量与速度兼具、空中对抗能力强的高大前锋，在德甲和俄超均有多产的赛季表现，是哥伦比亚最有经验的中锋人选。本赛季他在克拉斯诺达尔攻入17粒联赛进球并贡献6次助攻，为哥伦比亚提供了一名能够护球、跑位和双脚终结的成熟支点。他在21场国际比赛中打入6球，并入选2024年美洲杯大名单，体现了他作为球队最经受考验的9号球员的地位。",
+    "why_ar": "مهاجم قوي وجسدي يمتلك السرعة والحضور الجوي، كوردوبا هو خيار كولومبيا المخضرم في مركز المهاجم الصريح بعد مواسم غزيرة في الدوري الألماني والدوري الروسي الممتاز. سجّل 17 هدفاً في الدوري وأضاف 6 تمريرات حاسمة هذا الموسم مع كراسنودار، مما يمنح كولومبيا لاعب ارتكاز هجومي مُثبت يستطيع الحفاظ على الكرة واستغلال المساحات والتسديد بكلتا القدمين. أهدافه الستة في 21 مباراة دولية وضمّه لتشكيلة كوبا أمريكا 2024 يعكسان مكانته كرقم 9 الأكثر خبرة في الفريق.",
+    "why_es_ES": "Un delantero potente y físico con velocidad y presencia aérea, Córdoba es la opción de centrodelantero experimentada de Colombia tras temporadas prolíficas en la Bundesliga y la liga rusa. Ha marcado 17 goles ligueros y sumado 6 asistencias esta temporada con el Krasnodar, proporcionándole a Colombia un referente probado que sabe proteger el balón, atacar los espacios y rematar con ambas piernas. Sus 6 goles internacionales en 21 partidos y su inclusión en la plantilla de la Copa América 2024 reflejan su estatus como el nueve más curtido del equipo.",
+    "caps": 21,
+    "intlGoals": 6,
+    "tournaments": [
+     "2024 Copa América (Runner-up)"
+    ],
+    "clubs": [
+     {"team": "Krasnodar", "years": "2021–", "country": "Russia"},
+     {"team": "Hertha BSC", "years": "2020–2021", "country": "Germany"},
+     {"team": "1. FC Köln", "years": "2017–2020", "country": "Germany"},
+     {"team": "Mainz 05", "years": "2015–2017", "country": "Germany"},
+     {"team": "Granada", "years": "2014–2015", "country": "Spain"},
+     {"team": "Espanyol", "years": "2013–2014", "country": "Spain"},
+     {"team": "Chiapas", "years": "2012–2013", "country": "Mexico"},
+     {"team": "Envigado", "years": "2010–2012", "country": "Colombia"}
+    ],
+    "honors": []
    }
   ],
   "Congo DR": [
@@ -5703,6 +5809,105 @@ window.WC_PLAYERS = {
      "Supercopa de España 2020–21 (Athletic Bilbao)",
      "Copa del Rey 2023–24 (Athletic Bilbao)"
     ]
+   },
+   {
+    "name": "Jordan Ayew",
+    "position": "Forward",
+    "club": "Leicester City (England, Championship)",
+    "hometown": "Born in Marseille, France (son of Abedi Pele; family roots in Accra)",
+    "why": "Ghana's captain and most-capped active player with over 120 senior appearances, Ayew delivered seven goals and seven assists during Football 2026 qualifying, the highest combined goal involvement of any player in the global qualifiers. The son of legendary Ghanaian striker Abedi Pele, the 34-year-old is a tireless, versatile forward who presses relentlessly and links play across the front line. His experience at two previous tournaments (2014, 2022) and deep-rooted leadership make him the emotional heartbeat of the Black Stars.",
+    "number": 9,
+    "why_es": "Capitán de Ghana y jugador activo con más partidos internacionales con más de 120 apariciones, Ayew aportó siete goles y siete asistencias durante la clasificación al Fútbol 2026, la mayor participación combinada en goles de cualquier jugador en las eliminatorias globales. Hijo de la leyenda ghanesa Abedi Pelé, el delantero de 34 años es incansable y versátil, presiona sin descanso y conecta el juego en todo el frente de ataque. Su experiencia en dos torneos previos (2014, 2022) y su arraigado liderazgo lo convierten en el corazón emocional de las Black Stars.",
+    "why_fr": "Capitaine du Ghana et joueur en activité le plus capé avec plus de 120 sélections, Ayew a inscrit sept buts et délivré sept passes décisives lors des éliminatoires du Football 2026, soit la plus grande implication dans les buts de tous les joueurs des éliminatoires mondiales. Fils de la légende ghanéenne Abedi Pelé, l'attaquant de 34 ans est infatigable et polyvalent, pressant sans relâche et liant le jeu sur tout le front de l'attaque. Son expérience lors de deux tournois précédents (2014, 2022) et son leadership profond font de lui le cœur émotionnel des Black Stars.",
+    "why_pt_BR": "Capitão de Gana e jogador ativo com mais convocações, com mais de 120 aparições, Ayew registrou sete gols e sete assistências nas eliminatórias do Futebol 2026, a maior participação combinada em gols de qualquer jogador nas eliminatórias mundiais. Filho do lendário atacante ganês Abedi Pelé, o versátil e incansável atacante de 34 anos pressiona incessantemente e conecta o jogo em toda a linha de frente. Sua experiência em dois torneios anteriores (2014, 2022) e liderança profunda fazem dele o coração emocional das Black Stars.",
+    "why_de": "Ghanas Kapitän und der am häufigsten eingesetzte aktive Spieler mit über 120 Länderspielen, Ayew steuerte sieben Tore und sieben Vorlagen in der Fußball-2026-Qualifikation bei – die höchste kombinierte Torbeteiligung aller Spieler weltweit. Der Sohn der ghanaischen Legende Abedi Pelé ist ein unermüdlicher, vielseitiger Stürmer, der unerbittlich presst und das Spiel in der gesamten Angriffsreihe verbindet. Seine Erfahrung bei zwei vorherigen Turnieren (2014, 2022) und seine tiefe Führungsqualität machen ihn zum emotionalen Herzschlag der Black Stars.",
+    "why_it": "Capitano del Ghana e giocatore in attività con più presenze (oltre 120), Ayew ha fornito sette gol e sette assist nelle qualificazioni al Calcio 2026, il più alto coinvolgimento complessivo in gol di qualsiasi giocatore nelle qualificazioni mondiali. Figlio della leggenda ghanese Abedi Pelé, l'attaccante di 34 anni è instancabile e versatile, pressa senza sosta e collega il gioco su tutto il fronte offensivo. La sua esperienza in due tornei precedenti (2014, 2022) e la leadership radicata lo rendono il cuore emotivo delle Black Stars.",
+    "why_ja": "Ghanaのキャプテンで120試合以上の歴代最多キャップを持つ現役選手のAyewは、フットボール2026予選で7ゴール7アシストを記録し、世界予選全体で最も多い合計ゴール関与を見せた。伝説的ガーナ人ストライカーAbedi Peléの息子であるこの34歳の万能フォワードは、絶え間ないプレスと前線全体のプレーを繋ぐ働きを見せる。過去2大会（2014年、2022年）での経験と深いリーダーシップにより、Black Starsの感情的な心臓部となっている。",
+    "why_ko": "가나의 주장이자 120경기 이상의 최다 캡을 보유한 현역 선수인 Ayew는 풋볼 2026 예선에서 7골 7어시스트를 기록하며 전 세계 예선에서 가장 높은 합산 골 기여도를 보여줬다. 전설적인 가나 스트라이커 Abedi Pelé의 아들인 34세 다재다능한 공격수는 끊임없이 압박하고 최전방 전체의 플레이를 연결한다. 이전 두 대회(2014, 2022) 경험과 뿌리 깊은 리더십이 Black Stars의 감정적 심장이 되게 한다.",
+    "why_zh_Hans": "加纳队长，拥有超过120次出场的现役最多国脚，阿耶乌在2026年足球赛资格赛中贡献7球7助攻，是全球预选赛中总参与进球最多的球员。他是传奇加纳球星阿贝迪·贝利的儿子，这位34岁的全能前锋不知疲倦地逼抢并串联前场进攻。他在两届先前赛事（2014年、2022年）中的经验和深厚的领导力使他成为黑星队的情感核心。",
+    "why_ar": "قائد غانا واللاعب الأكثر مشاركةً بين النشطين بأكثر من 120 مباراة دولية، قدّم أيو سبعة أهداف وسبع تمريرات حاسمة خلال تصفيات كرة القدم 2026، وهي أعلى مساهمة إجمالية في الأهداف بين جميع لاعبي التصفيات العالمية. نجل الأسطورة الغانية أبيدي بيليه، المهاجم المتعدد المهام البالغ 34 عاماً لا يكلّ في الضغط ويربط اللعب عبر خط الهجوم بأكمله. خبرته في بطولتين سابقتين (2014، 2022) وقيادته الراسخة تجعلانه النبض العاطفي للنجوم السوداء.",
+    "why_es_ES": "Capitán de Ghana y jugador en activo con más internacionalidades, con más de 120 apariciones, Ayew aportó siete goles y siete asistencias en la clasificación al Fútbol 2026, la mayor participación combinada en goles de cualquier jugador en las eliminatorias mundiales. Hijo de la leyenda ghanesa Abedi Pelé, el delantero de 34 años es incansable y polivalente, presionando sin tregua y engrasando el juego en toda la delantera. Su experiencia en dos torneos previos (2014, 2022) y su liderazgo profundo lo convierten en el alma emocional de las Black Stars.",
+    "caps": 120,
+    "intlGoals": 34,
+    "tournaments": [
+     "2014",
+     "2022",
+     "2026"
+    ],
+    "clubs": [
+     {"team": "Leicester City", "years": "2024–", "country": "England"},
+     {"team": "Crystal Palace", "years": "2019–2024", "country": "England"},
+     {"team": "Swansea City", "years": "2017–2019", "country": "Wales"},
+     {"team": "Aston Villa", "years": "2015–2017", "country": "England"},
+     {"team": "Lorient", "years": "2014–2015", "country": "France"},
+     {"team": "Sochaux (loan)", "years": "2013–2014", "country": "France"},
+     {"team": "Marseille", "years": "2009–2014", "country": "France"}
+    ],
+    "honors": []
+   },
+   {
+    "name": "Abdul Fatawu Issahaku",
+    "position": "Winger",
+    "club": "Leicester City (England, Championship)",
+    "hometown": "Tamale, Northern Region",
+    "why": "Ghana's most electrifying young talent, the 22-year-old Fatawu is a direct, explosive winger whose dribbling and creativity can unlock any defense. He was voted Leicester City's Young Player of the Season after helping the club win the Championship title in 2023-24, and he has continued to be one of the league's standout creators with 9 goals and 7 assists this season. His pace, one-on-one ability and fearless attacking instincts give Ghana a dynamic outlet on the right wing.",
+    "number": 7,
+    "why_es": "El talento joven más electrizante de Ghana, Fatawu de 22 años es un extremo directo y explosivo cuyo regate y creatividad pueden desbloquear cualquier defensa. Fue elegido Joven Jugador de la Temporada del Leicester City tras ayudar al club a ganar el título del Championship en 2023-24, y ha continuado siendo uno de los creadores más destacados de la liga con 9 goles y 7 asistencias esta temporada. Su velocidad, capacidad en el uno contra uno e instintos atacantes intrépidos le dan a Ghana una salida dinámica por la banda derecha.",
+    "why_fr": "Le jeune talent le plus électrisant du Ghana, Fatawu, 22 ans, est un ailier direct et explosif dont les dribbles et la créativité peuvent déverrouiller n'importe quelle défense. Il a été élu Jeune Joueur de la Saison de Leicester City après avoir aidé le club à remporter le titre de Championship en 2023-24, et il continue d'être l'un des créateurs les plus remarquables de la ligue avec 9 buts et 7 passes décisives cette saison. Sa vitesse, sa capacité en un contre un et ses instincts offensifs intrépides offrent au Ghana un débouché dynamique sur l'aile droite.",
+    "why_pt_BR": "O talento jovem mais eletrizante de Gana, Fatawu de 22 anos é um ponta direto e explosivo cujo drible e criatividade podem desbloquear qualquer defesa. Foi eleito Jovem Jogador da Temporada do Leicester City após ajudar o clube a conquistar o título do Championship em 2023-24, e continuou sendo um dos criadores mais destacados da liga com 9 gols e 7 assistências nesta temporada. Sua velocidade, habilidade no um contra um e instintos de ataque destemidos dão a Gana uma saída dinâmica pela ponta direita.",
+    "why_de": "Ghanas elektrisierendstes Nachwuchstalent, der 22-jährige Fatawu ist ein direkter, explosiver Flügelspieler, dessen Dribbling und Kreativität jede Abwehr knacken können. Er wurde zum Nachwuchsspieler der Saison bei Leicester City gewählt, nachdem er dem Verein zum Championship-Titel 2023-24 verholfen hatte, und er ist mit 9 Toren und 7 Vorlagen in dieser Saison weiterhin einer der herausragendsten Kreativspieler der Liga. Sein Tempo, seine Eins-gegen-Eins-Fähigkeit und seine furchtlosen Angriffsinstinkte geben Ghana eine dynamische Option auf dem rechten Flügel.",
+    "why_it": "Il talento giovanile più elettrizzante del Ghana, Fatawu a 22 anni è un esterno diretto ed esplosivo il cui dribbling e la cui creatività possono scardinare qualsiasi difesa. È stato eletto Giovane Giocatore della Stagione del Leicester City dopo aver aiutato il club a vincere il titolo di Championship nel 2023-24, e continua a essere uno dei creatori più in vista della lega con 9 gol e 7 assist in questa stagione. La sua velocità, la capacità nell'uno contro uno e gli istinti offensivi impavidi offrono al Ghana uno sbocco dinamico sulla fascia destra.",
+    "why_ja": "Ghanaで最も電撃的な若い才能で、22歳のFatawuは直接的で爆発力あるウィンガーで、そのドリブルと創造性はどんな守備でも打ち破れる。2023-24年にLeicester Cityのチャンピオンシップ優勝に貢献し年間最優秀若手選手に選出された。今シーズンも9ゴール7アシストでリーグ屈指のクリエーターで有り続けている。そのスピード、1対1の能力、大胆な攻撃的本能がGhanaに右サイドでのダイナミックな選択肢をもたらす。",
+    "why_ko": "가나의 가장 짜릿한 젊은 재능인 22세 Fatawu는 드리블과 창의성으로 어떤 수비도 돌파할 수 있는 직선적이고 폭발적인 윙어다. 2023-24 시즌 Leicester City의 챔피언십 우승에 기여해 올해의 영플레이어에 선정됐으며, 이번 시즌 9골 7어시스트로 리그에서 가장 뛰어난 창조자 중 한 명으로 활약하고 있다. 스피드, 1대1 능력, 겁 없는 공격 본능은 가나에 오른쪽 측면의 역동적인 출구를 제공한다.",
+    "why_zh_Hans": "加纳最令人振奋的年轻天才，22岁的法塔乌是一名直接而具有爆发力的边锋，他的盘带和创造力可以撕开任何防线。他在帮助莱斯特城夺得2023-24赛季英冠冠军后当选俱乐部年度最佳年轻球员，本赛季以9球7助攻继续成为联赛最出色的创造者之一。他的速度、一对一能力和无畏的进攻本能为加纳提供了右路的有力冲击。",
+    "why_ar": "أكثر المواهب الشابة إثارةً في غانا، فاتاوو البالغ 22 عاماً جناح مباشر وانفجاري قادر بتسللاته وإبداعه على فتح أي دفاع. اختير أفضل لاعب شاب في ليستر سيتي بعد مساهمته في فوز النادي بلقب تشامبيونشيب 2023-24 ويواصل كونه أحد أبرز الصنّاع في الدوري بتسعة أهداف وسبع تمريرات حاسمة هذا الموسم. سرعته وقدرته في المواجهات الفردية وغريزته الهجومية الجريئة تمنح غانا منفذاً ديناميكياً على الجناح الأيمن.",
+    "why_es_ES": "El talento joven más electrizante de Ghana, Fatawu de 22 años es un extremo directo y explosivo cuyo regate y creatividad pueden desbloquear cualquier defensa. Fue elegido Joven Jugador de la Temporada del Leicester City tras ayudar al club a ganar el título del Championship en 2023-24 y sigue siendo uno de los creadores más destacados de la liga con 9 goles y 7 asistencias esta campaña. Su velocidad, su capacidad en el mano a mano y sus instintos ofensivos intrépidos dan a Ghana una salida dinámica por la banda derecha.",
+    "caps": 28,
+    "intlGoals": 3,
+    "tournaments": [
+     "2022",
+     "2026"
+    ],
+    "clubs": [
+     {"team": "Leicester City", "years": "2024–", "country": "England"},
+     {"team": "Leicester City (loan)", "years": "2023–2024", "country": "England"},
+     {"team": "Sporting CP", "years": "2022–2024", "country": "Portugal"},
+     {"team": "Steadfast", "years": "2021–2022", "country": "Ghana"}
+    ],
+    "honors": [
+     "Championship 2023–24 (Leicester City)"
+    ]
+   },
+   {
+    "name": "Kamaldeen Sulemana",
+    "position": "Left winger",
+    "club": "Atalanta (Italy, Serie A)",
+    "hometown": "Techiman, Bono East Region",
+    "why": "A pacy, skilful winger known for explosive dribbling and cutting inside from the left flank, Sulemana earned a €17.5m move from Southampton to Atalanta in 2024 and has been a key contributor in Serie A with 3 goals in 37 appearances. The 24-year-old product of the Right to Dream Academy made his breakthrough at Nordsjælland and attracted attention across Europe with his raw pace and ability to beat defenders one-on-one. He is one of Ghana's most technically gifted attacking options.",
+    "number": 22,
+    "why_es": "Un extremo veloz y habilidoso conocido por su regate explosivo y por recortar desde la banda izquierda, Sulemana se ganó un traspaso de 17,5 millones de euros del Southampton al Atalanta en 2024 y ha sido un contribuyente clave en la Serie A con 3 goles en 37 apariciones. El producto de 24 años de la Right to Dream Academy irrumpió en el Nordsjælland y atrajo la atención de toda Europa con su velocidad cruda y su capacidad para superar rivales uno a uno. Es una de las opciones atacantes más talentosas técnicamente de Ghana.",
+    "why_fr": "Un ailier rapide et talentueux connu pour ses dribbles explosifs et ses crochets depuis le flanc gauche, Sulemana a obtenu un transfert de 17,5 millions d'euros de Southampton à l'Atalanta en 2024 et a été un contributeur clé en Serie A avec 3 buts en 37 apparitions. Le produit de 24 ans de la Right to Dream Academy a percé à Nordsjælland et a attiré l'attention de toute l'Europe par sa vitesse brute et sa capacité à battre les défenseurs en un contre un. Il est l'une des options offensives les plus douées techniquement du Ghana.",
+    "why_pt_BR": "Um ponta veloz e habilidoso conhecido por seus dribles explosivos e por cortar para dentro a partir da esquerda, Sulemana conquistou uma transferência de €17,5 milhões do Southampton para a Atalanta em 2024 e tem sido um contribuinte fundamental na Serie A com 3 gols em 37 aparições. O produto de 24 anos da Right to Dream Academy despontou no Nordsjælland e atraiu atenção por toda a Europa com sua velocidade bruta e capacidade de superar defensores no um contra um. É uma das opções ofensivas tecnicamente mais talentosas de Gana.",
+    "why_de": "Ein temporeicher, geschickter Flügelspieler, bekannt für explosives Dribbling und das Einrücken von der linken Flanke, Sulemana verdiente sich 2024 einen 17,5-Millionen-Euro-Transfer von Southampton zu Atalanta und war mit 3 Toren in 37 Einsätzen ein wichtiger Beitragender in der Serie A. Der 24-jährige Absolvent der Right to Dream Academy schaffte seinen Durchbruch bei Nordsjælland und zog mit seiner rohen Geschwindigkeit und Eins-gegen-Eins-Fähigkeit die Aufmerksamkeit in ganz Europa auf sich. Er ist eine von Ghanas technisch begabtesten Angriffsoptionen.",
+    "why_it": "Esterno veloce e abile noto per i dribbling esplosivi e le giocate a rientrare dalla fascia sinistra, Sulemana ha ottenuto un trasferimento da 17,5 milioni di euro dal Southampton all'Atalanta nel 2024 ed è stato un contribuente chiave in Serie A con 3 gol in 37 presenze. Il prodotto ventiquattrenne della Right to Dream Academy si è messo in luce al Nordsjælland e ha attirato l'attenzione di tutta Europa con la sua velocità grezza e la capacità di battere i difensori nell'uno contro uno. È una delle opzioni d'attacco tecnicamente più dotate del Ghana.",
+    "why_ja": "左サイドからカットインする爆発的ドリブルで知られるスピードとスキルを持つウィンガーのSulemanaは、2024年にSouthamptonからAtalantaへ1,750万ユーロで移籍しセリエAで37試合3ゴールを記録した。Right to Dream Academy出身の24歳はNordsjællandで頭角を現し、生のスピードと1対1の突破力でヨーロッパ中の注目を集めた。Ghanaで最も技術的に才能ある攻撃オプションの一人だ。",
+    "why_ko": "왼쪽 측면에서 안으로 컷인하는 폭발적 드리블로 유명한 빠르고 기술적인 윙어 Sulemana는 2024년 Southampton에서 Atalanta로 €1,750만에 이적해 세리에A에서 37경기 3골로 핵심 기여자가 됐다. Right to Dream Academy 출신 24세는 Nordsjælland에서 두각을 나타내며 원초적인 스피드와 1대1 돌파 능력으로 유럽 전역의 관심을 끌었다. 가나에서 기술적으로 가장 재능 있는 공격 옵션 중 하나다.",
+    "why_zh_Hans": "苏莱马纳是一名以爆发力强的盘带和从左路内切闻名的快速技术型边锋，2024年以1750万欧元从南安普顿转会亚特兰大，在意甲37场比赛中攻入3球。这位24岁的Right to Dream学院毕业生在北西兰崭露头角，凭借原始速度和一对一突破能力吸引了全欧洲的关注。他是加纳技术最出色的进攻选择之一。",
+    "why_ar": "جناح سريع وبارع يُعرف بتسللاته الانفجارية والقطع من الجناح الأيسر، نال سوليمانا انتقالاً بـ17.5 مليون يورو من ساوثهامبتون إلى أتالانتا عام 2024 وكان مساهماً رئيسياً في الدوري الإيطالي بثلاثة أهداف في 37 مباراة. خريج أكاديمية Right to Dream البالغ 24 عاماً أطلّ من نوردشيلاند وجذب الأنظار عبر أوروبا بسرعته الخام وقدرته على التغلب على المدافعين فردياً. هو أحد أكثر الخيارات الهجومية موهبةً تكتيكياً في غانا.",
+    "why_es_ES": "Un extremo veloz y habilidoso conocido por su regate explosivo y por recortar desde la banda izquierda, Sulemana protagonizó un traspaso de 17,5 millones de euros del Southampton al Atalanta en 2024 y ha sido un contribuyente clave en la Serie A con 3 goles en 37 apariciones. El producto de 24 años de la Right to Dream Academy despuntó en el Nordsjælland y atrajo la atención de toda Europa con su velocidad pura y su capacidad para desbordar defensores en el mano a mano. Es una de las opciones atacantes más dotadas técnicamente de Ghana.",
+    "caps": 27,
+    "intlGoals": 1,
+    "tournaments": [
+     "2022",
+     "2026"
+    ],
+    "clubs": [
+     {"team": "Atalanta", "years": "2024–", "country": "Italy"},
+     {"team": "Southampton", "years": "2023–2024", "country": "England"},
+     {"team": "Rennes", "years": "2021–2023", "country": "France"},
+     {"team": "Nordsjælland", "years": "2020–2021", "country": "Denmark"}
+    ],
+    "honors": []
    }
   ],
   "Haiti": [
@@ -7189,6 +7394,171 @@ window.WC_PLAYERS = {
      "Liga MX (Guardianes 2021)",
      "Leagues Cup (2019)",
      "Campeón de Campeones (2021)"
+    ]
+   },
+   {
+    "name": "Guillermo Ochoa",
+    "position": "Goalkeeper",
+    "club": "AEL Limassol (First Division, Cyprus)",
+    "hometown": "Guadalajara, Jalisco",
+    "why": "Ochoa is a living legend of Mexican football and the most experienced player in the squad at 40 years old, set to appear at an unprecedented sixth senior tournament. Famous for spectacular saves on the biggest stages, including a heroic performance against Brazil in 2014, he has earned over 140 caps and remains a calming veteran presence in the dressing room. Even as a backup, his leadership and big-game pedigree are invaluable.",
+    "number": 13,
+    "why_es": "Ochoa es una leyenda viviente del fútbol mexicano y el jugador con más experiencia del plantel a los 40 años, listo para participar en un sexto torneo internacional sin precedentes. Famoso por atajadas espectaculares en los grandes escenarios, incluyendo una actuación heroica ante Brasil en 2014, ha acumulado más de 140 partidos internacionales y sigue siendo una presencia veterana y tranquilizadora en el vestidor. Incluso como suplente, su liderazgo y su pedigrí en grandes partidos son invaluables.",
+    "why_fr": "Ochoa est une légende vivante du football mexicain et le joueur le plus expérimenté du groupe à 40 ans, prêt à disputer un sixième tournoi majeur sans précédent. Célèbre pour ses arrêts spectaculaires sur les plus grandes scènes, dont une performance héroïque contre le Brésil en 2014, il compte plus de 140 sélections et demeure une présence vétéran apaisante dans le vestiaire. Même en tant que remplaçant, son leadership et son expérience des grands matchs sont inestimables.",
+    "why_pt_BR": "Ochoa é uma lenda viva do futebol mexicano e o jogador mais experiente do elenco aos 40 anos, prestes a participar de um inédito sexto torneio. Famoso por defesas espetaculares nos maiores palcos, incluindo uma atuação heroica contra o Brasil em 2014, acumula mais de 140 convocações e continua sendo uma presença veterana e serena no vestiário. Mesmo como reserva, sua liderança e experiência em grandes jogos são inestimáveis.",
+    "why_de": "Ochoa ist eine lebende Legende des mexikanischen Fußballs und mit 40 Jahren der erfahrenste Spieler im Kader, der bei einem beispiellosen sechsten großen Turnier antreten wird. Bekannt für spektakuläre Paraden auf den größten Bühnen, darunter eine heroische Leistung gegen Brasilien 2014, hat er über 140 Länderspiele und bleibt eine beruhigende Veteranenpräsenz in der Kabine. Selbst als Ersatz sind seine Führung und sein Ansehen bei großen Spielen unschätzbar.",
+    "why_it": "Ochoa è una leggenda vivente del calcio messicano e il giocatore più esperto della rosa a 40 anni, pronto a partecipare a un sesto torneo senza precedenti. Famoso per le sue parate spettacolari nei palcoscenici più importanti, inclusa una prestazione eroica contro il Brasile nel 2014, ha collezionato oltre 140 presenze e rimane una presenza veterana rassicurante nello spogliatoio. Anche come riserva, la sua leadership e il suo pedigree nelle grandi partite sono inestimabili.",
+    "why_ja": "OchoaはMexicoサッカーの生ける伝説で、40歳のスカッドで最も経験豊かな選手であり、前例のない6度目のシニア大会出場を果たす。2014年のBrazil戦での英雄的なパフォーマンスを含む大舞台での驚異的なセーブで有名で、140キャップ以上を獲得しロッカールームでの落ち着いたベテランの存在感を維持している。バックアップであっても、そのリーダーシップとビッグゲームでの実績は計り知れない。",
+    "why_ko": "Ochoa는 멕시코 축구의 살아있는 전설이자 40세로 스쿼드에서 가장 경험 많은 선수로, 전례 없는 6번째 시니어 대회 출전을 앞두고 있다. 2014년 브라질전 영웅적 선방 등 큰 무대에서의 환상적인 세이브로 유명하며, 140캡 이상을 쌓고 라커룸에서 안정감 있는 베테랑 존재로 남아있다. 백업이더라도 그의 리더십과 빅 게임 경험은 무가치하다.",
+    "why_zh_Hans": "奥乔亚是墨西哥足球的活传奇，以40岁之龄成为阵中最有经验的球员，即将创纪录地第六次参加重大赛事。他以在最大舞台上的惊人扑救闻名，包括2014年对阵巴西的英雄表现，已累积超过140次国际赛帽，在更衣室中仍是沉稳的老将存在。即使作为替补，他的领导力和大赛经验也无价。",
+    "why_ar": "أوتشوا أسطورة حيّة لكرة القدم المكسيكية وأكثر لاعبي الفريق خبرة بعمر 40 عاماً مستعداً للمشاركة في بطولته الكبرى السادسة بشكل غير مسبوق. اشتُهر بتصدياته المذهلة على أكبر المسارح بما فيها أداء بطولي أمام البرازيل في 2014، حصد أكثر من 140 مشاركة دولية ولا يزال حضوراً مخضرماً مُطمئناً في غرفة الملابس. حتى كاحتياطي قيادته وسجله في المباريات الكبيرة لا يُقدّران بثمن.",
+    "why_es_ES": "Ochoa es una leyenda viviente del fútbol mexicano y el jugador con más experiencia de la plantilla a los 40 años, a punto de disputar un sexto torneo de mayores sin precedentes. Famoso por sus paradas espectaculares en los escenarios más grandes, incluyendo una actuación heroica frente a Brasil en 2014, suma más de 140 internacionalidades y sigue siendo una presencia veterana y sosegada en el vestuario. Incluso como suplente, su liderazgo y su pedigrí en las grandes citas resultan impagables.",
+    "caps": 142,
+    "intlGoals": 0,
+    "tournaments": [
+     "2022 (Group stage)",
+     "2018 (Round of 16)",
+     "2014 (Round of 16)",
+     "2010 (Round of 16)",
+     "2006 (Group stage)",
+     "2023 CONCACAF Gold Cup",
+     "2024–25 CONCACAF Nations League (Winner)"
+    ],
+    "clubs": [
+     {
+      "team": "AEL Limassol",
+      "years": "2025–",
+      "country": "Cyprus"
+     },
+     {
+      "team": "Salernitana",
+      "years": "2024–2025",
+      "country": "Italy"
+     },
+     {
+      "team": "Club América",
+      "years": "2019–2024",
+      "country": "Mexico"
+     },
+     {
+      "team": "Standard Liège",
+      "years": "2017–2019",
+      "country": "Belgium"
+     },
+     {
+      "team": "Granada",
+      "years": "2016–2017",
+      "country": "Spain"
+     },
+     {
+      "team": "Málaga",
+      "years": "2014–2016",
+      "country": "Spain"
+     },
+     {
+      "team": "Ajaccio",
+      "years": "2011–2014",
+      "country": "France"
+     },
+     {
+      "team": "Club América",
+      "years": "2004–2011",
+      "country": "Mexico"
+     }
+    ],
+    "honors": [
+     "CONCACAF Gold Cup (2019)",
+     "CONCACAF Nations League (2025)",
+     "Liga MX (Apertura 2005, Clausura 2013, Apertura 2014)",
+     "Olympic Gold Medal (2012)",
+     "CONCACAF Best Goalkeeper (multiple years)"
+    ]
+   },
+   {
+    "name": "Alexis Vega",
+    "position": "Forward / Winger",
+    "club": "Toluca (Liga MX, Mexico)",
+    "hometown": "Irapuato, Guanajuato",
+    "why": "Vega is one of Mexico's most technically gifted attackers, a versatile forward who can play as a second striker, on the wing or behind the front man. A key figure at Toluca in Liga MX, he offers creativity, dribbling and finishing quality. He was a standout at the 2023 Gold Cup and brings international pedigree including Olympic experience to an attack that thrives with his flair.",
+    "number": 10,
+    "why_es": "Vega es uno de los atacantes con más talento técnico de México, un delantero versátil que puede jugar como segundo punta, en la banda o detrás del delantero. Figura clave del Toluca en la Liga MX, ofrece creatividad, regate y calidad en la definición. Se destacó en la Copa de Oro 2023 y aporta experiencia internacional incluyendo participación olímpica a un ataque que prospera con su destreza.",
+    "why_fr": "Vega est l'un des attaquants les plus doués techniquement du Mexique, un avant-centre polyvalent capable de jouer en tant que second attaquant, sur l'aile ou derrière l'avant-centre. Figure clé de Toluca en Liga MX, il offre créativité, dribbles et qualité de finition. Il s'est distingué lors de la Gold Cup 2023 et apporte un pedigree international incluant l'expérience olympique à une attaque qui s'épanouit grâce à son talent.",
+    "why_pt_BR": "Vega é um dos atacantes mais talentosos tecnicamente do México, um atacante versátil que pode jogar como segundo atacante, na ponta ou atrás do centroavante. Peça-chave do Toluca na Liga MX, oferece criatividade, dribles e qualidade de finalização. Destacou-se na Gold Cup de 2023 e traz experiência internacional incluindo participação olímpica para um ataque que prospera com sua habilidade.",
+    "why_de": "Vega ist einer von Mexikos technisch begabtesten Angreifern, ein vielseitiger Stürmer, der als zweiter Stürmer, auf dem Flügel oder hinter der Spitze spielen kann. Eine Schlüsselfigur bei Toluca in der Liga MX, bietet er Kreativität, Dribbling und Abschlussqualität. Er war ein Herausragender beim Gold Cup 2023 und bringt internationales Pedigree einschließlich olympischer Erfahrung in einen Angriff, der von seinem Flair lebt.",
+    "why_it": "Vega è uno degli attaccanti tecnicamente più dotati del Messico, un avanti versatile capace di giocare come seconda punta, sull'ala o alle spalle del centravanti. Figura chiave del Toluca in Liga MX, offre creatività, dribbling e qualità nella finalizzazione. Si è distinto alla Gold Cup 2023 e porta un pedigree internazionale inclusa l'esperienza olimpica a un attacco che si esalta con il suo talento.",
+    "why_ja": "VegaはMexicoで最も技術的に才能があるアタッカーの一人で、セカンドストライカー、ウイング、トップ下でプレーできる万能型フォワードだ。Liga MXのTolucaの主要な選手でクリエイティビティ、ドリブル、フィニッシュの質を提供する。2023年ゴールドカップでの活躍が光り、オリンピック経験を含む国際的な実績はフレアで活きる攻撃陣に力を与える。",
+    "why_ko": "Vega는 멕시코에서 가장 기술적으로 뛰어난 공격수 중 한 명으로, 세컨드 스트라이커, 윙어 또는 공격형 미드필더 역할이 가능한 다재다능한 포워드다. Liga MX Toluca의 핵심 선수로 창의성, 드리블, 마무리 능력을 갖추고 있다. 2023 Gold Cup에서 돋보였으며 올림픽 경험을 포함한 국제 경험을 갖추고 있어 플레어로 빛나는 공격에 필수적이다.",
+    "why_zh_Hans": "维加是墨西哥技术天赋最高的攻击手之一，既可担任影锋、边锋，也能在前场自由人位置发挥。他是Liga MX托卢卡的关键球员，以创造力、盘带和终结质量见长。他在2023年金杯赛中表现突出，加上奥运会经验在内的国际赛事履历，他的灵感和技巧为墨西哥进攻增添了活力。",
+    "why_ar": "فيغا أحد أكثر المهاجمين المكسيكيين موهبةً تقنياً، مهاجم متعدد المراكز يمكنه اللعب مهاجماً ثانياً أو على الجناح أو خلف المهاجم. لاعب محوري في تولوكا بالدوري المكسيكي يُقدم إبداعاً وتسلّلاً وجودة إنهاء. تألّق في كأس الذهب 2023 ويحمل سيرة دولية تشمل خبرة أولمبية لهجوم يزدهر بمهاراته.",
+    "why_es_ES": "Vega es uno de los atacantes con mayor talento técnico de México, un delantero versátil capaz de actuar como mediapunta, en la banda o detrás del delantero centro. Pieza clave del Toluca en la Liga MX, ofrece creatividad, regate y calidad en la definición. Brilló en la Copa de Oro 2023 y aporta pedigrí internacional, incluida la experiencia olímpica, a un ataque que se potencia con su desparpajo.",
+    "caps": 55,
+    "intlGoals": 14,
+    "tournaments": [
+     "2022 (Group stage)",
+     "2023 CONCACAF Gold Cup (Winner)",
+     "2020 Olympics (Bronze medal)"
+    ],
+    "clubs": [
+     {
+      "team": "Toluca",
+      "years": "2023–",
+      "country": "Mexico"
+     },
+     {
+      "team": "Guadalajara (Chivas)",
+      "years": "2018–2023",
+      "country": "Mexico"
+     },
+     {
+      "team": "Toluca",
+      "years": "2015–2018",
+      "country": "Mexico"
+     }
+    ],
+    "honors": [
+     "CONCACAF Gold Cup (2023)",
+     "Olympic Bronze Medal (2020)",
+     "Liga MX All-Star (multiple years)"
+    ]
+   },
+   {
+    "name": "Obed Vargas",
+    "position": "Central midfielder",
+    "club": "Atlético Madrid (La Liga, Spain)",
+    "hometown": "Anchorage, Alaska, USA (Mexican-Honduran heritage)",
+    "why": "At just 20 years old, Vargas is Mexico's most exciting young talent and the squad's youngest player. Born in Alaska to a Mexican-Honduran family, he broke through at the Seattle Sounders before earning a transfer to Atlético Madrid in 2024, where he has established himself as a regular in La Liga. A technically sharp midfielder with excellent ball retention and a mature reading of the game beyond his years, he represents the future of El Tri.",
+    "number": 18,
+    "why_es": "Con solo 20 años, Vargas es el joven talento más emocionante de México y el jugador más joven del plantel. Nacido en Alaska de familia mexicano-hondureña, despuntó en los Seattle Sounders antes de ganarse un traspaso al Atlético de Madrid en 2024, donde se ha consolidado como titular habitual en La Liga. Un mediocampista técnicamente preciso con excelente retención del balón y una lectura madura del juego que supera su edad, representa el futuro del Tri.",
+    "why_fr": "À seulement 20 ans, Vargas est le jeune talent le plus passionnant du Mexique et le plus jeune joueur du groupe. Né en Alaska de parents mexicano-honduriens, il a percé aux Seattle Sounders avant d'obtenir un transfert à l'Atlético de Madrid en 2024, où il s'est imposé comme titulaire régulier en Liga. Milieu de terrain techniquement aiguisé avec une excellente conservation du ballon et une lecture du jeu mature au-delà de son âge, il représente l'avenir de l'El Tri.",
+    "why_pt_BR": "Com apenas 20 anos, Vargas é o jovem talento mais empolgante do México e o mais jovem jogador do elenco. Nascido no Alasca em uma família mexicano-hondurenha, despontou no Seattle Sounders antes de conquistar uma transferência para o Atlético de Madrid em 2024, onde se consolidou como titular regular na La Liga. Um meio-campista tecnicamente refinado com excelente retenção de bola e uma leitura de jogo madura além da sua idade, representa o futuro do El Tri.",
+    "why_de": "Mit nur 20 Jahren ist Vargas Mexikos aufregendster Nachwuchsspieler und der jüngste Spieler im Kader. In Alaska als Sohn einer mexikanisch-honduranischen Familie geboren, durchbrach er bei den Seattle Sounders, bevor er 2024 einen Transfer zu Atlético Madrid verdiente, wo er sich als regelmäßiger Stammspieler in La Liga etabliert hat. Ein technisch versierter Mittelfeldspieler mit ausgezeichneter Ballsicherung und einem für sein Alter erstaunlich reifen Spielverständnis, er repräsentiert die Zukunft von El Tri.",
+    "why_it": "A soli 20 anni, Vargas è il giovane talento più entusiasmante del Messico e il giocatore più giovane della rosa. Nato in Alaska da una famiglia messicano-honduregna, si è affermato ai Seattle Sounders prima di ottenere un trasferimento all'Atlético Madrid nel 2024, dove si è imposto come titolare abituale in Liga. Un centrocampista tecnicamente affilato con un'eccellente gestione del pallone e una lettura del gioco matura oltre i suoi anni, rappresenta il futuro dell'El Tri.",
+    "why_ja": "わずか20歳のVargasはMexicoで最もエキサイティングな若い才能でスカッドの最年少選手だ。メキシコ系ホンジュラス系の家族に生まれたアラスカ出身の彼は、Seattle Soundersで頭角を現し2024年にAtlético Madridへの移籍を勝ち取り、La Ligaでレギュラーに定着した。ボール保持力に優れ年齢を超えた成熟したゲームリーディングを持つ技術的に鋭いミッドフィールダーで、El Triの未来を象徴する。",
+    "why_ko": "겨우 20세의 Vargas는 멕시코에서 가장 흥미로운 젊은 재능이자 스쿼드 최연소 선수다. 멕시코-온두라스계 가정에서 알래스카에서 태어나 Seattle Sounders에서 두각을 나타낸 후 2024년 Atlético Madrid로 이적해 La Liga 주전으로 자리 잡았다. 우수한 볼 보유력과 나이를 뛰어넘는 성숙한 경기 리딩을 갖춘 기술적으로 날카로운 미드필더로 El Tri의 미래를 대표한다.",
+    "why_zh_Hans": "年仅20岁的巴尔加斯是墨西哥最令人兴奋的年轻天才和阵中最年轻的球员。他出生于阿拉斯加的墨西哥裔洪都拉斯家庭，在西雅图海湾人队崭露头角后于2024年转会马德里竞技，并在西甲站稳脚跟。他技术精湛、控球出色、战术阅读超越年龄，代表着El Tri的未来。",
+    "why_ar": "في عمر 20 عاماً فقط فارغاس أكثر المواهب الشابة إثارةً في المكسيك وأصغر لاعبي الفريق. وُلد في ألاسكا لعائلة مكسيكية-هندوراسية وبرز في سياتل ساوندرز قبل أن يحظى بانتقال إلى أتلتيكو مدريد عام 2024 حيث رسّخ نفسه لاعباً أساسياً في الدوري الإسباني. لاعب وسط حاد تقنياً بحفاظ ممتاز على الكرة وقراءة ناضجة للعب تتجاوز عمره يمثّل مستقبل إل تري.",
+    "why_es_ES": "Con solo 20 años, Vargas es el joven talento más ilusionante de México y el jugador más joven de la plantilla. Nacido en Alaska en el seno de una familia mexicano-hondureña, despuntó en los Seattle Sounders antes de lograr un traspaso al Atlético de Madrid en 2024, donde se ha afianzado como titular habitual en La Liga. Un centrocampista técnicamente pulido con una excelente retención del balón y una lectura del juego madura impropia de su edad, encarna el futuro del Tri.",
+    "caps": 22,
+    "intlGoals": 2,
+    "tournaments": [
+     "2025 CONCACAF Gold Cup (Winner)"
+    ],
+    "clubs": [
+     {
+      "team": "Atlético Madrid",
+      "years": "2024–",
+      "country": "Spain"
+     },
+     {
+      "team": "Seattle Sounders FC",
+      "years": "2022–2024",
+      "country": "USA"
+     }
+    ],
+    "honors": [
+     "CONCACAF Gold Cup (2025)",
+     "CONCACAF Nations League (2025)",
+     "MLS Cup (2022, Seattle Sounders)"
     ]
    }
   ],
