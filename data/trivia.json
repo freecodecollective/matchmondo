@@ -1722,6 +1722,20 @@
       "answer": 0,
       "explanation": "A brace refers to a player scoring two goals in a single match. Scoring three goals is called a hat-trick.",
       "approved": true
+    },
+    {
+      "id": "p-caps-definition",
+      "category": "players",
+      "question": "In football, what does it mean when a player earns a 'cap' for their national team?",
+      "options": [
+        "They receive a commemorative hat after scoring their first goal",
+        "They are selected and play in an official match for their country",
+        "They are named captain of their national team",
+        "They win an individual award at the tournament"
+      ],
+      "answer": 1,
+      "explanation": "A 'cap' represents one official appearance for a player's national team. The term originated from the practice of awarding players a physical cap for each match they played. When commentators say a player has 'X caps,' they mean that player has appeared in X official international matches for their country.",
+      "needsReview": true
     }
   ],
   "pendingTasks": [
@@ -1735,8 +1749,9 @@
     {
       "id": "task-1781998633311",
       "text": "write a question to teach people what \"caps\" means",
-      "status": "pending",
-      "created": "2026-06-20T23:37:13.311Z"
+      "status": "done",
+      "created": "2026-06-20T23:37:13.311Z",
+      "completed": "2026-06-20T23:41:24.725775+00:00"
     }
   ]
 }
