@@ -1,5 +1,5 @@
 // FIFA World Cup 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-20 09:15 UTC by scripts/update-data.py
+// Regenerated 2026-06-20 10:22 UTC by scripts/update-data.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -393,7 +393,7 @@ window.WC_MATCHES = [
   },
   {
     "n": 29,
-    "utc": "2026-06-20T01:00:00Z",
+    "utc": "2026-06-20T00:30:00Z",
     "stage": "Group Stage",
     "group": "Group C",
     "home": "Brazil",
@@ -406,7 +406,7 @@ window.WC_MATCHES = [
   },
   {
     "n": 31,
-    "utc": "2026-06-20T04:00:00Z",
+    "utc": "2026-06-20T03:00:00Z",
     "stage": "Group Stage",
     "group": "Group D",
     "home": "Türkiye",
