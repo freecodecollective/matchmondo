@@ -924,7 +924,8 @@
         "Rivaldo"
       ],
       "answer": 2,
-      "explanation": "Right-back Cafu is the only player to appear in three successive finals, winning two of them."
+      "explanation": "Right-back Cafu is the only player to appear in three successive finals, winning two of them.",
+      "claudeTask": "add trivia about Cafu"
     },
     {
       "id": "t-usa-1930",
