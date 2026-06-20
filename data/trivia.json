@@ -702,7 +702,7 @@
       ],
       "answer": 2,
       "explanation": "The trophy weighs 6.175 kg and has been awarded since 1974 after Brazil kept the original Jules Rimet Trophy permanently. Winners get to hold the real trophy only briefly on the pitch — they then receive a gold-plated bronze replica to keep. The original stays with the governing body and no nation can keep it permanently again.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "p-cr7-five-editions",
