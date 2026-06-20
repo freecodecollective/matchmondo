@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MatchMondo — Football 2026</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='92'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="styles.css?v=12">
+<link rel="stylesheet" href="styles.css?v=13">
 </head>
 <body>
 <header class="site-header">
@@ -144,6 +144,7 @@
   <button class="sidebar-tab" data-tab="standings"><span class="tab-icon">📊</span> Standings</button>
   <button class="sidebar-tab" data-tab="rules"><span class="tab-icon">📋</span> Rules</button>
   <button class="sidebar-tab" data-tab="players"><span class="tab-icon">⭐</span> Players</button>
+  <button class="sidebar-tab" data-tab="predict"><span class="tab-icon">🎯</span> Predict</button>
   <div class="sidebar-spacer"></div>
   <label class="sidebar-option">
     <input type="checkbox" id="show-roster">
@@ -171,6 +172,9 @@
   <div class="tab-panel" id="panel-players">
     <section id="players" class="players-section"></section>
   </div>
+  <div class="tab-panel" id="panel-predict">
+    <section id="predict" class="predict-section"></section>
+  </div>
 </main>
 </div>
 
@@ -183,6 +187,6 @@
 <script src="data/rankings.js"></script>
 <script src="data/players.js"></script>
 <script src="data/rosters.js"></script>
-<script src="app.js?v=12"></script>
+<script src="app.js?v=13"></script>
 </body>
 </html>

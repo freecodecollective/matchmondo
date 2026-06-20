@@ -49,6 +49,7 @@
     subscribeLink: document.getElementById("subscribe-link"),
     localWarning: document.getElementById("local-warning"),
     schedule: document.getElementById("schedule"),
+    predict: document.getElementById("predict"),
     count: document.getElementById("match-count"),
     tzLabel: document.getElementById("tz-label"),
     updateNote: document.getElementById("update-note"),
@@ -288,6 +289,10 @@
     if (tab === "standings") renderStandings();
     if (tab === "rules") renderRules();
     if (tab === "players") renderPlayers();
+    if (tab === "predict") {
+      renderPredict();
+      if (!picksLoaded) loadPicks().then(renderPredict);
+    }
     savePrefs();
   }
 
@@ -1007,6 +1012,242 @@
     }
   }, true);
 
+  // ========== Predictions / Pick'em ==========
+  // Talks to the MatchMondo backend (Cloud Run + Firestore). No account:
+  // identity is an anonymous per-device id + a display name, both local.
+  const PREDICT_API = "https://trivia-proxy-702476544925.us-central1.run.app";
+
+  function lsGet(k, d) { try { return localStorage.getItem(k) ?? d; } catch { return d; } }
+  function lsSet(k, v) { try { localStorage.setItem(k, v); } catch {} }
+
+  function deviceId() {
+    let id = lsGet("wc2026-device", "");
+    if (!id) { id = "d_" + Math.random().toString(36).slice(2) + Date.now().toString(36); lsSet("wc2026-device", id); }
+    return id;
+  }
+  let displayName = lsGet("wc2026-name", "") || "";
+  let groupCode = lsGet("wc2026-group", "") || "";
+  let pendingJoin = "";
+  const picksCache = {};       // matchN -> { scoreH, scoreA, result }
+  let picksLoaded = false;
+  const saveTimers = {};
+
+  async function predictApi(path, method, body) {
+    const opts = { method: method || "GET", headers: {} };
+    if (body) { opts.headers["Content-Type"] = "application/json"; opts.body = JSON.stringify(body); }
+    const res = await fetch(PREDICT_API + path, opts);
+    let data = null;
+    try { data = await res.json(); } catch {}
+    if (!res.ok) throw Object.assign(new Error("api " + res.status), { status: res.status, data });
+    return data;
+  }
+
+  function knownTeam(t) { return !!FLAGS[t]; }
+  function shortTeam(t) { return (t || "").replace(/[^A-Za-z]/g, "").slice(0, 3).toUpperCase() || "?"; }
+  function impliedResult(sh, sa) { if (sh == null || sa == null) return null; return sh > sa ? "H" : sa > sh ? "A" : "D"; }
+
+  async function loadPicks() {
+    try {
+      const r = await predictApi("/api/picks?deviceId=" + encodeURIComponent(deviceId()));
+      Object.keys(picksCache).forEach((k) => delete picksCache[k]);
+      Object.entries(r.picks || {}).forEach(([n, p]) => { picksCache[n] = p; });
+    } catch {}
+    picksLoaded = true;
+  }
+
+  function predictMatches() {
+    const now = Date.now();
+    return matches
+      .filter((m) => new Date(m.utc).getTime() > now && knownTeam(m.home) && knownTeam(m.away))
+      .slice(0, 12);
+  }
+
+  function commitPick(n, sh, sa, card) {
+    sh = Math.max(0, Math.min(19, sh));
+    sa = Math.max(0, Math.min(19, sa));
+    picksCache[n] = { scoreH: sh, scoreA: sa, result: impliedResult(sh, sa) };
+    if (card) updateCard(card, n);
+    const note = card && card.querySelector(".psaved");
+    if (note) { note.textContent = "Saving…"; note.classList.remove("err"); }
+    clearTimeout(saveTimers[n]);
+    saveTimers[n] = setTimeout(async () => {
+      try {
+        await predictApi("/api/picks", "PUT", { deviceId: deviceId(), matchN: Number(n), result: picksCache[n].result, scoreH: sh, scoreA: sa });
+        if (note) note.textContent = "Saved ✓";
+      } catch {
+        if (note) { note.textContent = "Couldn't save — check connection"; note.classList.add("err"); }
+      }
+    }, 500);
+  }
+
+  function updateCard(card, n) {
+    const p = picksCache[n];
+    const r = p ? p.result : null;
+    card.querySelectorAll(".wdl button").forEach((b) => b.classList.toggle("sel", b.dataset.r === r));
+    const nums = card.querySelectorAll(".pnum");
+    nums[0].textContent = p && p.scoreH != null ? p.scoreH : 0;
+    nums[1].textContent = p && p.scoreA != null ? p.scoreA : 0;
+  }
+
+  function pcardHTML(m, tz) {
+    const p = picksCache[m.n];
+    const r = p ? p.result : null;
+    const sh = p && p.scoreH != null ? p.scoreH : 0;
+    const sa = p && p.scoreA != null ? p.scoreA : 0;
+    const hs = shortTeam(m.home), as = shortTeam(m.away);
+    const sel = (k) => (r === k ? " sel" : "");
+    return `
+      <article class="pcard" data-match="${m.n}">
+        <div class="pcard-top"><span>${esc(m.group || m.stage)}</span><span>${esc(fmtTime(m.utc, tz))}</span></div>
+        <div class="pteams">
+          <span class="pteam">${flagImg(m.home)}<span>${esc(m.home)}</span></span>
+          <span class="pteam away">${flagImg(m.away)}<span>${esc(m.away)}</span></span>
+        </div>
+        <div class="wdl">
+          <button data-r="H" class="${sel("H")}">${esc(hs)}</button>
+          <button data-r="D" class="${sel("D")}">Draw</button>
+          <button data-r="A" class="${sel("A")}">${esc(as)}</button>
+        </div>
+        <div class="pscore">
+          <span class="ab">${esc(hs)}</span>
+          <button class="step" data-side="H" data-delta="-1" aria-label="${esc(hs)} minus">−</button>
+          <span class="pnum">${sh}</span>
+          <button class="step" data-side="H" data-delta="1" aria-label="${esc(hs)} plus">+</button>
+          <span class="pcolon">:</span>
+          <button class="step" data-side="A" data-delta="-1" aria-label="${esc(as)} minus">−</button>
+          <span class="pnum">${sa}</span>
+          <button class="step" data-side="A" data-delta="1" aria-label="${esc(as)} plus">+</button>
+          <span class="ab">${esc(as)}</span>
+        </div>
+        <div class="psaved">${p ? "Saved ✓" : ""}</div>
+      </article>`;
+  }
+
+  function groupBarHTML() {
+    let h = `<div class="group-bar">`;
+    h += `<div class="gb-field"><label for="pf-name">Your name</label><input id="pf-name" value="${esc(displayName)}" placeholder="e.g. Chris" maxlength="40"></div>`;
+    if (groupCode) {
+      h += `<h2 style="margin-top:12px">Group <span class="code-chip">🔗 ${esc(groupCode)}</span></h2>`;
+      h += `<div class="gb-actions"><button class="btn" id="pf-copy">Copy invite link</button><button class="btn" id="pf-refresh">Refresh</button><button class="btn link" id="pf-leave">Leave</button></div>`;
+      h += `<div class="lb" id="pf-lb"><p class="gb-sub">Loading leaderboard…</p></div>`;
+    } else {
+      h += `<div class="gb-divider">— play with friends (optional) —</div>`;
+      h += `<div class="gb-field"><label for="pf-gname">New group</label><input id="pf-gname" placeholder="Group name" maxlength="60"><button class="btn primary" id="pf-create">Create</button></div>`;
+      h += `<div class="gb-field"><label for="pf-code">Have a code?</label><input id="pf-code" value="${esc(pendingJoin)}" placeholder="brave-falcon" maxlength="40"><button class="btn primary" id="pf-join">Join</button></div>`;
+    }
+    h += `</div>`;
+    return h;
+  }
+
+  function renderPredict() {
+    const tz = currentTz;
+    const list = predictMatches();
+    let h = `<p class="predict-intro">Predict the exact score of upcoming matches — your picks save automatically and lock at kickoff. Create or join a group to compare with friends. <strong>Exact score +3 · correct result +1.</strong></p>`;
+    h += groupBarHTML();
+    h += `<h2 class="predict-h">Make your picks</h2>`;
+    h += list.length
+      ? list.map((m) => pcardHTML(m, tz)).join("")
+      : `<p class="predict-empty">No upcoming matches to predict right now.</p>`;
+    els.predict.innerHTML = h;
+    if (groupCode) refreshLeaderboard();
+  }
+
+  async function refreshLeaderboard() {
+    const box = document.getElementById("pf-lb");
+    if (!box) return;
+    try {
+      const r = await predictApi("/api/groups/" + encodeURIComponent(groupCode) + "/leaderboard");
+      const rows = r.leaderboard || [];
+      box.innerHTML = rows.length
+        ? rows.map((row) => `
+            <div class="lb-row${row.displayName === displayName ? " you" : ""}">
+              <span class="lb-rank">${row.rank}</span>
+              <span class="lb-name">${esc(row.displayName)}</span>
+              <span class="lb-pts">${row.points} <span class="lb-sub">pts</span></span>
+            </div>`).join("")
+        : `<p class="gb-sub">No members yet — share the code!</p>`;
+    } catch (e) {
+      box.innerHTML = `<p class="gb-sub">Couldn't load leaderboard (${e.status || "offline"}).</p>`;
+    }
+  }
+
+  function onWDL(n, r, card) {
+    const p = picksCache[n];
+    let sh = p ? p.scoreH : null, sa = p ? p.scoreA : null;
+    if (impliedResult(sh, sa) !== r) {
+      const def = { H: [1, 0], D: [0, 0], A: [0, 1] }[r];
+      sh = def[0]; sa = def[1];
+    }
+    commitPick(n, sh, sa, card);
+  }
+
+  function onStep(n, side, delta, card) {
+    const p = picksCache[n] || { scoreH: 0, scoreA: 0 };
+    let sh = p.scoreH != null ? p.scoreH : 0;
+    let sa = p.scoreA != null ? p.scoreA : 0;
+    if (side === "H") sh += delta; else sa += delta;
+    commitPick(n, sh, sa, card);
+  }
+
+  async function doCreate() {
+    if (!displayName) { alert("Enter your name first."); return; }
+    const name = (document.getElementById("pf-gname").value || "").trim() || (displayName + "'s group");
+    try {
+      const r = await predictApi("/api/groups", "POST", { name, deviceId: deviceId(), displayName });
+      groupCode = r.code; lsSet("wc2026-group", groupCode); pendingJoin = "";
+      renderPredict();
+    } catch { alert("Couldn't create the group — check your connection."); }
+  }
+
+  async function doJoin() {
+    if (!displayName) { alert("Enter your name first."); return; }
+    const code = (document.getElementById("pf-code").value || "").trim().toLowerCase().replace(/\s+/g, "-");
+    if (!code) return;
+    try {
+      await predictApi("/api/groups/" + encodeURIComponent(code) + "/join", "POST", { deviceId: deviceId(), displayName });
+      groupCode = code; lsSet("wc2026-group", groupCode); pendingJoin = "";
+      renderPredict();
+    } catch (e) { alert(e.status === 404 ? "No group with that code." : "Couldn't join — check your connection."); }
+  }
+
+  function doCopy(btn) {
+    const url = location.origin + location.pathname + "?g=" + encodeURIComponent(groupCode);
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(() => {
+        btn.textContent = "Copied ✓";
+        setTimeout(() => { btn.textContent = "Copy invite link"; }, 1500);
+      }).catch(() => {});
+    }
+  }
+
+  function doLeave() {
+    groupCode = ""; lsSet("wc2026-group", "");
+    renderPredict();
+  }
+
+  els.predict.addEventListener("click", (e) => {
+    const card = e.target.closest(".pcard");
+    if (card) {
+      const n = card.dataset.match;
+      const wb = e.target.closest(".wdl button");
+      if (wb) return onWDL(n, wb.dataset.r, card);
+      const sb = e.target.closest(".step");
+      if (sb) return onStep(n, sb.dataset.side, Number(sb.dataset.delta), card);
+      return;
+    }
+    if (e.target.id === "pf-create") return doCreate();
+    if (e.target.id === "pf-join") return doJoin();
+    if (e.target.id === "pf-copy") return doCopy(e.target);
+    if (e.target.id === "pf-leave") return doLeave();
+    if (e.target.id === "pf-refresh") return refreshLeaderboard();
+  });
+  els.predict.addEventListener("change", (e) => {
+    if (e.target.id === "pf-name") {
+      displayName = e.target.value.trim();
+      lsSet("wc2026-name", displayName);
+    }
+  });
+
   // ---------- Init ----------
   initTzCombo();
   buildFilters();
@@ -1021,6 +1262,9 @@
   render();
   applyLocation();
   if (prefs.activeTab) switchTab(prefs.activeTab);
+  // Invite deep-link: matchmondo…/?g=brave-falcon opens Predict with the code prefilled.
+  const urlG = new URLSearchParams(location.search).get("g");
+  if (urlG) { pendingJoin = urlG.toLowerCase(); switchTab("predict"); }
 
   // Smart polling: 30s during live matches, 2min otherwise. Re-check on tab focus.
   let pollTimer = null;
