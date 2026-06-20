@@ -54,7 +54,28 @@ header h1{font-size:18px;font-weight:700;letter-spacing:-.3px}
 .card-actions .btn-icon{background:#f5f5f5;border:1px solid #e0e0e0;color:#666}
 .card-actions .btn-icon:hover{background:#e8e8e8}
 .card-actions .btn-icon.del:hover{background:#ffe5e5;color:#d63027;border-color:#ffa9a4}
-.check-approved{width:18px;height:18px;cursor:pointer;accent-color:#34d058;flex-shrink:0}
+.ready-toggle{display:flex;align-items:center;gap:0;flex-shrink:0;cursor:pointer;border-radius:20px;overflow:hidden;border:2px solid #ddd;font-size:11px;font-weight:700;letter-spacing:.3px;transition:all .15s;user-select:none}
+.ready-toggle:hover{box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.ready-label{padding:4px 10px;transition:all .15s}
+.ready-toggle.is-ready{border-color:#34d058}
+.ready-toggle.is-ready .ready-yes{background:#34d058;color:#fff}
+.ready-toggle.is-ready .ready-no{background:#fff;color:#ccc}
+.ready-toggle:not(.is-ready){border-color:#e0e0e0}
+.ready-toggle:not(.is-ready) .ready-no{background:#f5f5f5;color:#999}
+.ready-toggle:not(.is-ready) .ready-yes{background:#fff;color:#ccc}
+
+.instructions-banner{background:#fefce8;border-bottom:1px solid #e5e1a8;overflow:hidden;transition:max-height .3s ease}
+.instructions-banner.collapsed{max-height:0;border-bottom:none}
+.instructions-toggle{background:#fef9c3;border:none;width:100%;padding:8px 24px;text-align:left;cursor:pointer;font-size:13px;font-weight:600;color:#854d0e;display:flex;align-items:center;gap:6px}
+.instructions-toggle:hover{background:#fef08a}
+.instructions-toggle .arrow{transition:transform .2s;font-size:10px}
+.instructions-toggle .arrow.open{transform:rotate(90deg)}
+.instructions-content{padding:12px 24px 16px;font-size:13px;line-height:1.6;color:#713f12}
+.instructions-content h3{font-size:14px;margin:10px 0 4px;color:#854d0e}
+.instructions-content h3:first-child{margin-top:0}
+.instructions-content ol,.instructions-content ul{margin:4px 0 4px 20px}
+.instructions-content li{margin:2px 0}
+.instructions-content code{background:rgba(0,0,0,.06);padding:1px 5px;border-radius:4px;font-size:12px}
 
 .card-body{display:none;padding:0 16px 16px;border-top:1px solid #f0f0f0}
 .card-body.open{display:block}
@@ -111,6 +132,31 @@ input[type=file]{display:none}
   </div>
   <input type="file" id="fileInput" accept=".json" onchange="loadFile(event)">
 </header>
+
+<button class="instructions-toggle" onclick="toggleInstructions()">
+  <span class="arrow open" id="instrArrow">&#9654;</span> Reviewer Instructions
+</button>
+<div class="instructions-banner" id="instrPanel">
+  <div class="instructions-content">
+    <h3>How to review questions</h3>
+    <ol>
+      <li>Click any question card to expand it and check the answer, options, and explanation.</li>
+      <li>Edit any field directly — changes auto-save for everyone.</li>
+      <li>When a question looks good, click the <strong>READY</strong> toggle to mark it ready for users.</li>
+      <li>Only questions marked <strong>READY</strong> will appear in the app.</li>
+    </ol>
+    <h3>Controls</h3>
+    <ul>
+      <li><strong>Arrow buttons</strong> — reorder questions</li>
+      <li><strong>Pencil</strong> — open full edit modal</li>
+      <li><strong>X</strong> — delete a question</li>
+      <li><strong>+ Add Question</strong> — create a new question from scratch</li>
+      <li><strong>Save JSON</strong> — download a local copy of all questions</li>
+    </ul>
+    <h3>How saving works</h3>
+    <p>Every change auto-saves to GitHub within 2 seconds. The green <strong>Synced</strong> badge in the header confirms your changes are live. If you see <strong>Sync failed</strong>, try refreshing the page.</p>
+  </div>
+</div>
 
 <div class="toolbar">
   <div class="category-tabs" id="categoryTabs"></div>
@@ -303,7 +349,10 @@ function renderCard(q, realIndex, displayNum, total) {
       <span class="card-num">#${displayNum}</span>
       <span class="card-badge ${badgeClass(q.category)}">${q.category}</span>
       <span class="card-question">${esc(q.question)}</span>
-      <input type="checkbox" class="check-approved" title="Approved" ${q.approved ? 'checked' : ''} onclick="event.stopPropagation();toggleApproved(${realIndex})">
+      <div class="ready-toggle ${q.approved ? 'is-ready' : ''}" onclick="event.stopPropagation();toggleApproved(${realIndex})" title="Toggle ready for users">
+        <span class="ready-label ready-no">NOT READY</span>
+        <span class="ready-label ready-yes">READY</span>
+      </div>
       <div class="card-actions" onclick="event.stopPropagation()">
         <button class="btn-icon" onclick="moveQ(${realIndex},-1)" title="Move up">&uarr;</button>
         <button class="btn-icon" onclick="moveQ(${realIndex},1)" title="Move down">&darr;</button>
@@ -490,6 +539,13 @@ function saveJSON() {
   a.click();
   URL.revokeObjectURL(a.href);
   toast('Saved trivia.json');
+}
+
+function toggleInstructions() {
+  const panel = document.getElementById('instrPanel');
+  const arrow = document.getElementById('instrArrow');
+  panel.classList.toggle('collapsed');
+  arrow.classList.toggle('open');
 }
 
 function loadFile(e) {
