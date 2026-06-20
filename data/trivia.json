@@ -1690,14 +1690,29 @@
       ],
       "answer": 1,
       "explanation": "The USA hosted the 1994 edition, which set all-time attendance records that stood for decades."
+    },
+    {
+      "id": "r-brace-definition",
+      "category": "rules",
+      "question": "In football, what does it mean when a player scores a \"brace\"?",
+      "options": [
+        "They score two goals in the same match",
+        "They score three goals in the same match",
+        "They score a goal with both feet in the same match",
+        "They score in two consecutive matches"
+      ],
+      "answer": 0,
+      "explanation": "A brace refers to a player scoring two goals in a single match. Scoring three goals is called a hat-trick.",
+      "needsReview": true
     }
   ],
   "pendingTasks": [
     {
       "id": "task-1781979197792",
       "text": "make a questino about what a brace is",
-      "status": "pending",
-      "created": "2026-06-20T18:13:17.792Z"
+      "status": "done",
+      "created": "2026-06-20T18:13:17.792Z",
+      "completed": "2026-06-20T19:00:58.048Z"
     }
   ]
 }
