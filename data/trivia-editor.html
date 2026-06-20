@@ -426,18 +426,18 @@ function renderAll() {
 
 function getCategories() {
   const cats = {};
-  data.questions.forEach(q => cats[q.category] = (cats[q.category] || 0) + 1);
+  data.questions.filter(q => !q.approved).forEach(q => cats[q.category] = (cats[q.category] || 0) + 1);
   return cats;
 }
 
 function updateStats() {
-  const total = data.questions.length;
+  const unpublished = data.questions.filter(q => !q.approved).length;
   const approved = data.questions.filter(q => q.approved).length;
   const review = data.questions.filter(q => q.needsReview).length;
   const cats = getCategories();
   const catCount = Object.keys(cats).length;
-  let html = `<span class="stat"><b>${total}</b> questions</span>` +
-    `<span class="stat"><b>${approved}</b> ready</span>`;
+  let html = `<span class="stat"><b>${unpublished}</b> in queue</span>` +
+    `<span class="stat"><b>${approved}</b> published</span>`;
   if (review > 0) html += `<span class="stat" style="background:rgba(245,158,11,.2);color:#f59e0b"><b>${review}</b> needs review</span>`;
   html += `<span class="stat"><b>${catCount}</b> categories</span>`;
   document.getElementById('stats').innerHTML = html;
@@ -445,7 +445,7 @@ function updateStats() {
 
 function renderCategoryTabs() {
   const cats = getCategories();
-  const total = data.questions.length;
+  const total = data.questions.filter(q => !q.approved).length;
   let html = `<button class="cat-tab ${activeCategory === 'all' ? 'active' : ''}" onclick="setCategory('all')">All<span class="cat-count"> ${total}</span></button>`;
   const order = ['history','players','rules','teams','venues','records','culture'];
   const allCats = [...new Set([...order, ...Object.keys(cats)])];
@@ -466,6 +466,7 @@ function setCategory(cat) {
 function getFilteredQuestions() {
   const search = document.getElementById('searchInput').value.toLowerCase();
   return data.questions.map((q, i) => ({ q, i })).filter(({ q }) => {
+    if (q.approved) return false;
     if (activeCategory !== 'all' && q.category !== activeCategory) return false;
     if (search && !q.question.toLowerCase().includes(search) &&
         !q.id.toLowerCase().includes(search) &&
@@ -479,7 +480,11 @@ function renderList() {
   const filtered = getFilteredQuestions();
   const main = document.getElementById('main');
   if (filtered.length === 0) {
-    main.innerHTML = '<div class="empty"><h3>No questions found</h3><p>Try a different filter or add new questions.</p></div>';
+    const hasSearch = document.getElementById('searchInput').value;
+    const msg = hasSearch || activeCategory !== 'all'
+      ? 'Try a different filter or add new questions.'
+      : 'All questions are published! Add new ones or edit published questions from the Published tab.';
+    main.innerHTML = `<div class="empty"><h3>No questions in queue</h3><p>${msg}</p></div>`;
     return;
   }
   main.innerHTML = filtered.map(({ q, i }, displayIdx) => renderCard(q, i, displayIdx + 1, filtered.length)).join('');
