@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-20 18:09 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-06-20 18:46 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -427,8 +427,8 @@ window.WC_MATCHES = [
     "venue": "NRG Stadium",
     "city": "Houston, TX",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": 3,
-    "scoreA": 0
+    "scoreH": 4,
+    "scoreA": 1
   },
   {
     "n": 33,
