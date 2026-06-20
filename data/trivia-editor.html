@@ -925,25 +925,11 @@ async function mergeAndRetry(retryCount) {
     data.questions.forEach(q => { if (q.claudeTask) localTasks[q.id] = q.claudeTask; });
     const localReview = {};
     data.questions.forEach(q => { if (q.needsReview) localReview[q.id] = true; });
-    const localEdits = {};
-    data.questions.forEach(q => {
-      localEdits[q.id] = { question: q.question, options: q.options, answer: q.answer, explanation: q.explanation, category: q.category, approved: q.approved, media: q.media };
-    });
 
     const remoteIds = new Set(remote.questions.map(q => q.id));
     remote.questions.forEach(q => {
       if (localTasks[q.id]) q.claudeTask = localTasks[q.id];
       if (localReview[q.id]) q.needsReview = true;
-      if (localEdits[q.id]) {
-        const e = localEdits[q.id];
-        q.question = e.question;
-        q.options = e.options;
-        q.answer = e.answer;
-        q.explanation = e.explanation;
-        q.category = e.category;
-        // GitHub is authoritative for approved status — don't override from localStorage
-        if (e.media) q.media = e.media;
-      }
     });
     data.questions.forEach(q => {
       if (!remoteIds.has(q.id)) remote.questions.push(q);
