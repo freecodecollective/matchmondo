@@ -1,13 +1,9 @@
 #!/usr/bin/env python3
-"""Scrape YouTube for World Cup 2026 highlight videos and update data/highlights.json.
+"""Scrape Fox Sports YouTube channel for highlight videos and update data/highlights.json.
 
-Three sources, tried in order:
-  1. Fox Sports YouTube RSS feed (15 most recent videos — catches new uploads quickly)
-  2. Fox Sports channel search page (broader — catches older videos that fell off RSS)
-  3. General YouTube search (fallback for matches still missing highlights)
-
-Video title pattern: "{Team A} vs {Team B} [Extended ]Highlights ... 2026 FIFA World Cup"
-Maps them to match numbers from data/matches.json by team-name matching.
+Scrapes https://www.youtube.com/@foxsports/videos for recent uploads, plus the
+RSS feed for fast pickup of brand-new videos. Maps highlight titles to matches
+in data/matches.json by team-name matching.
 """
 import json
 import re
@@ -22,7 +18,7 @@ OUT = SITE_ROOT / "data" / "highlights.json"
 
 FOX_CHANNEL_ID = "UCwNqHDsnBCKT-olwJwIFyfg"
 RSS_URL = f"https://www.youtube.com/feeds/videos.xml?channel_id={FOX_CHANNEL_ID}"
-SEARCH_URL = "https://www.youtube.com/@foxsports/search?query=highlights+2026+FIFA+World+Cup"
+VIDEOS_URL = "https://www.youtube.com/@foxsports/videos"
 
 # Strict pattern for Fox Sports titles
 HIGHLIGHT_RE = re.compile(
@@ -82,15 +78,16 @@ def fetch_rss() -> list[dict]:
     return entries
 
 
-def fetch_channel_search() -> list[dict]:
-    req = urllib.request.Request(SEARCH_URL, headers={
+def fetch_videos_page() -> list[dict]:
+    """Scrape https://www.youtube.com/@foxsports/videos for recent uploads."""
+    req = urllib.request.Request(VIDEOS_URL, headers={
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
     })
     try:
         with urllib.request.urlopen(req, timeout=15, context=_ssl_ctx) as resp:
             html = resp.read().decode("utf-8", errors="replace")
     except Exception as e:
-        print(f"  Channel search failed: {e}")
+        print(f"  Videos page failed: {e}")
         return []
 
     pattern = r'"videoRenderer":\{"videoId":"([A-Za-z0-9_-]{11})".*?"title":\{"runs":\[\{"text":"([^"]+?)"'
@@ -98,30 +95,6 @@ def fetch_channel_search() -> list[dict]:
     entries = []
     for vid, title in re.findall(pattern, html):
         if vid not in seen and "Highlights" in title and "2026" in title:
-            seen.add(vid)
-            entries.append({"title": title, "videoId": vid})
-    return entries
-
-
-def fetch_youtube_search(query: str) -> list[dict]:
-    """General YouTube search — used as fallback for matches Fox Sports didn't cover."""
-    encoded = urllib.request.quote(query)
-    url = f"https://www.youtube.com/results?search_query={encoded}"
-    req = urllib.request.Request(url, headers={
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
-    })
-    try:
-        with urllib.request.urlopen(req, timeout=15, context=_ssl_ctx) as resp:
-            html = resp.read().decode("utf-8", errors="replace")
-    except Exception as e:
-        print(f"  YouTube search failed for '{query}': {e}")
-        return []
-
-    pattern = r'"videoRenderer":\{"videoId":"([A-Za-z0-9_-]{11})".*?"title":\{"runs":\[\{"text":"([^"]+?)"'
-    seen = set()
-    entries = []
-    for vid, title in re.findall(pattern, html):
-        if vid not in seen and ("Highlights" in title or "highlights" in title):
             seen.add(vid)
             entries.append({"title": title, "videoId": vid})
     return entries
@@ -162,56 +135,6 @@ def process_entries(entries: list[dict], match_lookup: dict, highlights: dict) -
     return added
 
 
-def _title_has_team(title_lower: str, team: str) -> bool:
-    """Check if a team name (or any alias) appears in the title."""
-    if team.lower() in title_lower:
-        return True
-    for alias, canonical in TEAM_ALIASES.items():
-        if canonical == team and alias.lower() in title_lower:
-            return True
-    return False
-
-
-_BLOCKLIST = {"before", "preview", "prediction", "predicted", "simulate", "fifa 25", "fifa 26", "ea fc"}
-
-
-def process_fallback_entries(
-    entries: list[dict], home: str, away: str, match_n: int, highlights: dict,
-) -> bool:
-    """Match entries by checking title contains both team names + 'Highlights' + '2026'."""
-    for entry in entries:
-        title = entry["title"]
-        title_lower = title.lower()
-
-        if "highlights" not in title_lower:
-            continue
-        if "2026" not in title_lower:
-            continue
-        if any(w in title_lower for w in _BLOCKLIST):
-            continue
-        if not _title_has_team(title_lower, home):
-            continue
-        if not _title_has_team(title_lower, away):
-            continue
-
-        is_extended = "extended" in title_lower
-        video_id = entry["videoId"]
-
-        n_str = str(match_n)
-        if n_str not in highlights:
-            highlights[n_str] = {}
-
-        field = "extended" if is_extended else "short"
-        if highlights[n_str].get(field) and not highlights[n_str].get(f"{field}_fallback"):
-            continue
-
-        highlights[n_str][field] = video_id
-        highlights[n_str][f"{field}_fallback"] = True
-        print(f"  ADD (fallback): Match {match_n} {field} = {video_id}")
-        return True
-
-    return False
-
 
 def main() -> None:
     match_lookup, all_matches = load_matches()
@@ -226,30 +149,9 @@ def main() -> None:
     rss_entries = fetch_rss()
     added = process_entries(rss_entries, match_lookup, highlights)
 
-    print("Checking channel search...")
-    search_entries = fetch_channel_search()
-    added += process_entries(search_entries, match_lookup, highlights)
-
-    # Fallback: search YouTube for matches missing highlights or only having fallback sources
-    missing = []
-    for m in all_matches:
-        if m["scoreH"] is None:
-            continue
-        n_str = str(m["n"])
-        h = highlights.get(n_str, {})
-        has_fox = (h.get("short") and not h.get("short_fallback")) or \
-                  (h.get("extended") and not h.get("extended_fallback"))
-        if has_fox:
-            continue
-        missing.append(m)
-
-    if missing:
-        print(f"\nFallback search for {len(missing)} matches still missing highlights...")
-        for m in missing:
-            query = f"{m['home']} vs {m['away']} Highlights 2026 FIFA World Cup"
-            entries = fetch_youtube_search(query)
-            if process_fallback_entries(entries, m["home"], m["away"], m["n"], highlights):
-                added += 1
+    print("Checking @foxsports/videos page...")
+    page_entries = fetch_videos_page()
+    added += process_entries(page_entries, match_lookup, highlights)
 
     OUT.write_text(json.dumps(highlights, indent=2, sort_keys=True) + "\n")
     print(f"\nWrote {len(highlights)} matches to {OUT} ({added} new/updated)")
