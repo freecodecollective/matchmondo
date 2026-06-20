@@ -1210,7 +1210,8 @@ function rejectReview(idx) {
   autoSave();
   renderAll();
   renderClaudeTasksView();
-  editQuestion(idx);
+  switchView('questions');
+  expandAndScroll(idx);
 }
 
 document.getElementById('addModal').addEventListener('click', e => {
