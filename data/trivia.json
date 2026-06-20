@@ -1731,6 +1731,12 @@
       "status": "done",
       "created": "2026-06-20T18:13:17.792Z",
       "completed": "2026-06-20T19:00:58.048Z"
+    },
+    {
+      "id": "task-1781998633311",
+      "text": "write a question to teach people what \"caps\" means",
+      "status": "pending",
+      "created": "2026-06-20T23:37:13.311Z"
     }
   ]
 }
