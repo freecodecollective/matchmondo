@@ -182,19 +182,12 @@ let fileSha = null;
 
 const GH_API = 'https://api.github.com/repos/freecodecollective/matchmondo/contents/data/trivia.json';
 
-function getToken() { return localStorage.getItem('trivia-gh-token'); }
-function setToken(t) { localStorage.setItem('trivia-gh-token', t); }
+const GH_TOKEN = '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';
 
 function setSyncStatus(state, label) {
   const el = document.getElementById('syncStatus');
   el.className = 'sync-status sync-' + state;
   el.innerHTML = '<span class="sync-dot"></span> ' + label;
-}
-
-function promptToken() {
-  const t = prompt('Enter a GitHub Personal Access Token with contents:write scope on the matchmondo repo.\n\nCreate one at: github.com/settings/tokens');
-  if (t && t.trim()) { setToken(t.trim()); return t.trim(); }
-  return null;
 }
 
 async function init() {
@@ -526,11 +519,6 @@ function autoSave() {
 }
 
 async function syncToGitHub() {
-  let token = getToken();
-  if (!token) {
-    token = promptToken();
-    if (!token) { setSyncStatus('error', 'No token'); return; }
-  }
   const out = { version: data.version || 1, questions: data.questions.map(q => {
     const clean = { id: q.id, category: q.category, question: q.question, options: q.options, answer: q.answer, explanation: q.explanation };
     if (q.media) clean.media = q.media;
@@ -542,12 +530,11 @@ async function syncToGitHub() {
     const body = { message: 'Update trivia questions via editor', content, sha: fileSha };
     const resp = await fetch(GH_API, {
       method: 'PUT',
-      headers: { 'Authorization': 'token ' + token, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
+      headers: { 'Authorization': 'token ' + GH_TOKEN, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
       body: JSON.stringify(body)
     });
     if (resp.status === 401 || resp.status === 403) {
-      localStorage.removeItem('trivia-gh-token');
-      setSyncStatus('error', 'Bad token');
+      setSyncStatus('error', 'Auth failed');
       return;
     }
     if (resp.status === 409) {
