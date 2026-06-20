@@ -39,10 +39,11 @@ header h1{font-size:18px;font-weight:700;letter-spacing:-.3px}
 .question-card{background:#fff;border-radius:12px;margin-bottom:8px;border:1px solid #e0e0e0;overflow:hidden;transition:box-shadow .15s,opacity .15s,transform .15s}
 .question-card:hover{box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .question-card.approved{border-left:3px solid #34d058}
+.question-card.needs-review{border-left:3px solid #f59e0b}
 .question-card.dragging{opacity:.4;transform:scale(.98)}
 .question-card.drag-over-above{border-top:3px solid #1a472a;margin-top:-1px}
 .question-card.drag-over-below{border-bottom:3px solid #1a472a;margin-bottom:-1px}
-.card-header{display:flex;align-items:flex-start;padding:12px 16px;cursor:pointer;gap:10px}
+.card-header{display:flex;align-items:flex-start;padding:10px 12px;cursor:pointer;gap:6px;flex-wrap:wrap}
 .drag-handle{cursor:grab;color:#bbb;font-size:16px;padding:0 2px;flex-shrink:0;user-select:none;line-height:1}
 .drag-handle:active{cursor:grabbing}
 .card-num{font-size:11px;font-weight:700;color:#999;min-width:28px;padding-top:2px}
@@ -59,15 +60,23 @@ header h1{font-size:18px;font-weight:700;letter-spacing:-.3px}
 .card-actions .btn-icon{background:#f5f5f5;border:1px solid #e0e0e0;color:#666}
 .card-actions .btn-icon:hover{background:#e8e8e8}
 .card-actions .btn-icon.del:hover{background:#ffe5e5;color:#d63027;border-color:#ffa9a4}
-.ready-toggle{display:flex;align-items:center;gap:0;flex-shrink:0;cursor:pointer;border-radius:20px;overflow:hidden;border:2px solid #ddd;font-size:11px;font-weight:700;letter-spacing:.3px;transition:all .15s;user-select:none}
-.ready-toggle:hover{box-shadow:0 1px 4px rgba(0,0,0,.1)}
-.ready-label{padding:4px 10px;transition:all .15s}
-.ready-toggle.is-ready{border-color:#34d058}
-.ready-toggle.is-ready .ready-yes{background:#34d058;color:#fff}
-.ready-toggle.is-ready .ready-no{background:#fff;color:#ccc}
-.ready-toggle:not(.is-ready){border-color:#e0e0e0}
-.ready-toggle:not(.is-ready) .ready-no{background:#f5f5f5;color:#999}
-.ready-toggle:not(.is-ready) .ready-yes{background:#fff;color:#ccc}
+
+.status-toggle{display:flex;align-items:center;gap:0;flex-shrink:0;cursor:pointer;border-radius:16px;overflow:hidden;border:2px solid #e0e0e0;font-size:9px;font-weight:700;letter-spacing:.3px;transition:all .15s;user-select:none}
+.status-toggle:hover{box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.status-label{padding:3px 5px;transition:all .15s;white-space:nowrap}
+.status-toggle .status-not-ready{background:#f5f5f5;color:#999}
+.status-toggle .status-review{background:#fff;color:#ccc}
+.status-toggle .status-ready{background:#fff;color:#ccc}
+.status-toggle.is-review{border-color:#f59e0b}
+.status-toggle.is-review .status-not-ready{background:#fff;color:#ccc}
+.status-toggle.is-review .status-review{background:#f59e0b;color:#fff}
+.status-toggle.is-review .status-ready{background:#fff;color:#ccc}
+.status-toggle.is-ready{border-color:#34d058}
+.status-toggle.is-ready .status-not-ready{background:#fff;color:#ccc}
+.status-toggle.is-ready .status-review{background:#fff;color:#ccc}
+.status-toggle.is-ready .status-ready{background:#34d058;color:#fff}
+
+.claude-task-tag{font-size:10px;font-weight:600;background:#f3e8fd;color:#8430ce;padding:2px 8px;border-radius:8px;white-space:nowrap;max-width:200px;overflow:hidden;text-overflow:ellipsis;display:inline-block}
 
 .instructions-banner{background:#fefce8;border-bottom:1px solid #e5e1a8;overflow:hidden;transition:max-height .3s ease}
 .instructions-banner.collapsed{max-height:0;border-bottom:none}
@@ -81,6 +90,34 @@ header h1{font-size:18px;font-weight:700;letter-spacing:-.3px}
 .instructions-content ol,.instructions-content ul{margin:4px 0 4px 20px}
 .instructions-content li{margin:2px 0}
 .instructions-content code{background:rgba(0,0,0,.06);padding:1px 5px;border-radius:4px;font-size:12px}
+
+.claude-section{background:#f3e8fd;border-bottom:1px solid #d8b4fe;overflow:hidden;transition:max-height .3s ease}
+.claude-section.collapsed{max-height:0;border-bottom:none}
+.claude-toggle{background:#ede9fe;border:none;width:100%;padding:8px 24px;text-align:left;cursor:pointer;font-size:13px;font-weight:600;color:#6b21a8;display:flex;align-items:center;gap:6px}
+.claude-toggle:hover{background:#e2d6fb}
+.claude-content{padding:12px 24px 16px}
+.claude-input-row{display:flex;gap:8px;align-items:flex-start}
+.claude-input-row textarea{flex:1;padding:10px 12px;border:2px solid #d8b4fe;border-radius:10px;font-size:13px;font-family:inherit;outline:none;resize:vertical;min-height:44px;max-height:120px}
+.claude-input-row textarea:focus{border-color:#8b5cf6;box-shadow:0 0 0 2px rgba(139,92,246,.2)}
+.claude-input-row textarea::placeholder{color:#a78bfa}
+.btn-claude{background:#8b5cf6;color:#fff;padding:10px 18px;border:none;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;transition:all .15s}
+.btn-claude:hover{background:#7c3aed}
+.btn-claude:disabled{opacity:.5;cursor:not-allowed}
+.claude-tasks-list{margin-top:12px}
+.claude-task-item{display:flex;align-items:center;gap:8px;padding:6px 10px;background:#fff;border-radius:8px;margin-bottom:4px;font-size:12px;border:1px solid #e9d5ff}
+.claude-task-item .task-status{font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:.3px;padding:2px 8px;border-radius:6px;flex-shrink:0}
+.task-pending{background:#fef3c7;color:#b45309}
+.task-done{background:#d1fae5;color:#065f46}
+.claude-task-item .task-text{flex:1;color:#4c1d95}
+.claude-task-item .task-remove{cursor:pointer;color:#a78bfa;font-size:14px;padding:0 4px}
+.claude-task-item .task-remove:hover{color:#7c3aed}
+
+.setup-banner{background:#fff3cd;border-bottom:1px solid #ffc107;padding:12px 24px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:13px;color:#856404}
+.setup-banner input{flex:1;min-width:200px;padding:6px 10px;border:1px solid #ffc107;border-radius:6px;font-size:12px;font-family:monospace;outline:none}
+.setup-banner input:focus{border-color:#e0a800;box-shadow:0 0 0 2px rgba(255,193,7,.3)}
+.setup-banner .btn-sm{background:#ffc107;color:#856404;border:none}
+.setup-banner .btn-sm:hover{background:#e0a800}
+.setup-banner a{color:#856404;font-weight:600}
 
 .card-body{display:none;padding:0 16px 16px;border-top:1px solid #f0f0f0}
 .card-body.open{display:block}
@@ -138,6 +175,13 @@ input[type=file]{display:none}
   <input type="file" id="fileInput" accept=".json" onchange="loadFile(event)">
 </header>
 
+<div class="setup-banner" id="setupBanner" style="display:none">
+  <span>To enable shared saving, paste a GitHub token with <b>Contents: Read &amp; write</b> on the matchmondo repo:</span>
+  <input type="text" id="tokenInput" placeholder="github_pat_..." autocomplete="off">
+  <button class="btn btn-sm" onclick="saveToken()">Save Token</button>
+  <a href="https://github.com/settings/tokens?type=beta" target="_blank">Create token</a>
+</div>
+
 <button class="instructions-toggle" onclick="toggleInstructions()">
   <span class="arrow open" id="instrArrow">&#9654;</span> Reviewer Instructions
 </button>
@@ -147,7 +191,7 @@ input[type=file]{display:none}
     <ol>
       <li>Click any question card to expand it and check the answer, options, and explanation.</li>
       <li>Edit any field directly — changes auto-save for everyone.</li>
-      <li>When a question looks good, click the <strong>READY</strong> toggle to mark it ready for users.</li>
+      <li>Questions have three states: <strong>NOT READY</strong> (default), <strong>REVIEW</strong> (Claude made changes, needs human check), and <strong>READY</strong> (approved for users).</li>
       <li>Only questions marked <strong>READY</strong> will appear in the app.</li>
     </ol>
     <h3>Controls</h3>
@@ -159,8 +203,23 @@ input[type=file]{display:none}
       <li><strong>+ Add Question</strong> — create a new question from scratch</li>
       <li><strong>Save JSON</strong> — download a local copy of all questions</li>
     </ul>
+    <h3>Task for Claude</h3>
+    <p>Use the purple <strong>Task for Claude</strong> section to request changes (e.g. "Add 10 questions about penalty shootouts"). Claude will pick up the task, make changes, and mark affected questions as <strong>REVIEW</strong> so you can check them.</p>
     <h3>How saving works</h3>
     <p>Every change auto-saves to GitHub within 2 seconds. The green <strong>Synced</strong> badge in the header confirms your changes are live. If you see <strong>Sync failed</strong>, try refreshing the page.</p>
+  </div>
+</div>
+
+<button class="claude-toggle" onclick="toggleClaude()">
+  <span class="arrow open" id="claudeArrow">&#9654;</span> Task for Claude
+</button>
+<div class="claude-section" id="claudePanel">
+  <div class="claude-content">
+    <div class="claude-input-row">
+      <textarea id="claudeTaskInput" placeholder="Describe what you want Claude to do, e.g. &quot;Add 10 questions about penalty shootouts&quot; or &quot;Fix the explanation on question #42&quot;"></textarea>
+      <button class="btn-claude" onclick="submitClaudeTask()" id="claudeSubmitBtn">Assign to Claude</button>
+    </div>
+    <div class="claude-tasks-list" id="claudeTasksList"></div>
   </div>
 </div>
 
@@ -225,7 +284,7 @@ input[type=file]{display:none}
 </div>
 
 <script>
-let data = { version: 1, questions: [] };
+let data = { version: 1, questions: [], pendingTasks: [] };
 let activeCategory = 'all';
 let expandedCard = null;
 let editingIndex = -1;
@@ -234,7 +293,22 @@ let fileSha = null;
 
 const GH_API = 'https://api.github.com/repos/freecodecollective/matchmondo/contents/data/trivia.json';
 
-const GH_TOKEN = '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';
+function getToken() { return localStorage.getItem('trivia-gh-token'); }
+
+function saveToken() {
+  const t = document.getElementById('tokenInput').value.trim();
+  if (!t) return;
+  localStorage.setItem('trivia-gh-token', t);
+  document.getElementById('setupBanner').style.display = 'none';
+  toast('Token saved — changes will now sync');
+  syncToGitHub();
+}
+
+function checkSetup() {
+  if (!getToken()) {
+    document.getElementById('setupBanner').style.display = 'flex';
+  }
+}
 
 function setSyncStatus(state, label) {
   const el = document.getElementById('syncStatus');
@@ -243,6 +317,7 @@ function setSyncStatus(state, label) {
 }
 
 async function init() {
+  checkSetup();
   try {
     const resp = await fetch(GH_API, { headers: { 'Accept': 'application/vnd.github.v3+json' } });
     if (!resp.ok) throw new Error('GitHub fetch failed');
@@ -250,17 +325,20 @@ async function init() {
     fileSha = gh.sha;
     const bytes = Uint8Array.from(atob(gh.content.replace(/\n/g, '')), c => c.charCodeAt(0));
     data = JSON.parse(new TextDecoder().decode(bytes));
+    if (!data.pendingTasks) data.pendingTasks = [];
     setSyncStatus('saved', 'Synced');
   } catch (e) {
     try {
       const resp2 = await fetch('trivia.json');
       if (!resp2.ok) throw new Error('local fetch failed');
       data = await resp2.json();
+      if (!data.pendingTasks) data.pendingTasks = [];
       setSyncStatus('error', 'Read-only');
     } catch (e2) {
       const saved = localStorage.getItem('trivia-editor-data');
       if (saved) {
         data = JSON.parse(saved);
+        if (!data.pendingTasks) data.pendingTasks = [];
         setSyncStatus('error', 'Local only');
       } else {
         document.getElementById('loading').innerHTML = '<h3>Could not load data</h3><p>Use "Load JSON" to open a file.</p>';
@@ -275,6 +353,7 @@ function renderAll() {
   updateStats();
   renderCategoryTabs();
   renderList();
+  renderClaudeTasks();
 }
 
 function getCategories() {
@@ -286,12 +365,14 @@ function getCategories() {
 function updateStats() {
   const total = data.questions.length;
   const approved = data.questions.filter(q => q.approved).length;
+  const review = data.questions.filter(q => q.needsReview).length;
   const cats = getCategories();
   const catCount = Object.keys(cats).length;
-  document.getElementById('stats').innerHTML =
-    `<span class="stat"><b>${total}</b> questions</span>` +
-    `<span class="stat"><b>${approved}</b> approved</span>` +
-    `<span class="stat"><b>${catCount}</b> categories</span>`;
+  let html = `<span class="stat"><b>${total}</b> questions</span>` +
+    `<span class="stat"><b>${approved}</b> ready</span>`;
+  if (review > 0) html += `<span class="stat" style="background:rgba(245,158,11,.2);color:#f59e0b"><b>${review}</b> needs review</span>`;
+  html += `<span class="stat"><b>${catCount}</b> categories</span>`;
+  document.getElementById('stats').innerHTML = html;
 }
 
 function renderCategoryTabs() {
@@ -341,8 +422,16 @@ function badgeClass(cat) {
   return map[cat] || 'badge-history';
 }
 
+function questionStatus(q) {
+  if (q.approved) return 'ready';
+  if (q.needsReview) return 'review';
+  return 'not-ready';
+}
+
 function renderCard(q, realIndex, displayNum, total) {
   const isOpen = expandedCard === realIndex;
+  const status = questionStatus(q);
+  const cardClass = status === 'ready' ? 'approved' : status === 'review' ? 'needs-review' : '';
   const optionsHtml = q.options.map((opt, oi) =>
     `<div class="option-row ${oi === q.answer ? 'correct' : ''}">
       <input type="radio" name="ans_${realIndex}" value="${oi}" ${oi === q.answer ? 'checked' : ''} onchange="updateAnswer(${realIndex}, ${oi})">
@@ -350,15 +439,19 @@ function renderCard(q, realIndex, displayNum, total) {
     </div>`
   ).join('');
 
-  return `<div class="question-card ${q.approved ? 'approved' : ''}" id="card-${realIndex}" draggable="true" ondragstart="onDragStart(event,${realIndex})" ondragend="onDragEnd(event)" ondragover="onDragOver(event,${realIndex})" ondragleave="onDragLeave(event)" ondrop="onDrop(event,${realIndex})">
+  const toggleClass = status === 'ready' ? 'is-ready' : status === 'review' ? 'is-review' : '';
+  const claudeTag = q.claudeTask ? `<span class="claude-task-tag" title="${esc(q.claudeTask)}">Claude: ${esc(q.claudeTask)}</span>` : '';
+
+  return `<div class="question-card ${cardClass}" id="card-${realIndex}" draggable="true" ondragstart="onDragStart(event,${realIndex})" ondragend="onDragEnd(event)" ondragover="onDragOver(event,${realIndex})" ondragleave="onDragLeave(event)" ondrop="onDrop(event,${realIndex})">
     <div class="card-header" onclick="toggleCard(${realIndex})">
       <span class="drag-handle" title="Drag to reorder">&#x2630;</span>
       <span class="card-num">#${displayNum}</span>
       <span class="card-badge ${badgeClass(q.category)}">${q.category}</span>
-      <span class="card-question">${esc(q.question)}</span>
-      <div class="ready-toggle ${q.approved ? 'is-ready' : ''}" onclick="event.stopPropagation();toggleApproved(${realIndex})" title="Toggle ready for users">
-        <span class="ready-label ready-no">NOT READY</span>
-        <span class="ready-label ready-yes">READY</span>
+      <span class="card-question">${esc(q.question)}${claudeTag ? '<br>' + claudeTag : ''}</span>
+      <div class="status-toggle ${toggleClass}" onclick="event.stopPropagation();cycleStatus(${realIndex})" title="Click to cycle: Not Ready → Review → Ready">
+        <span class="status-label status-not-ready">NOT READY</span>
+        <span class="status-label status-review">REVIEW</span>
+        <span class="status-label status-ready">READY</span>
       </div>
       <div class="card-actions" onclick="event.stopPropagation()">
         <button class="btn-icon" onclick="moveQ(${realIndex},-1)" title="Move up">&uarr;</button>
@@ -399,6 +492,7 @@ function renderCard(q, realIndex, displayNum, total) {
         <input type="text" value="${esc(q.media||'')}" onchange="updateField(${realIndex},'media',this.value)" placeholder="https://...">
       </div>
       ${q.media ? renderMediaPreview(q.media) : ''}
+      ${q.claudeTask ? `<div style="margin-top:8px;padding:8px 12px;background:#f3e8fd;border-radius:8px;font-size:12px;color:#6b21a8"><strong>Claude task:</strong> ${esc(q.claudeTask)}</div>` : ''}
     </div>
   </div>`;
 }
@@ -424,8 +518,16 @@ function toggleCard(idx) {
   renderList();
 }
 
-function toggleApproved(idx) {
-  data.questions[idx].approved = !data.questions[idx].approved;
+function cycleStatus(idx) {
+  const q = data.questions[idx];
+  const status = questionStatus(q);
+  if (status === 'not-ready') {
+    q.needsReview = true; q.approved = false;
+  } else if (status === 'review') {
+    q.needsReview = false; q.approved = true;
+  } else {
+    q.needsReview = false; q.approved = false;
+  }
   autoSave();
   renderAll();
 }
@@ -566,6 +668,8 @@ function saveModal() {
 
   if (editingIndex >= 0) {
     q.approved = data.questions[editingIndex].approved;
+    q.needsReview = data.questions[editingIndex].needsReview;
+    if (data.questions[editingIndex].claudeTask) q.claudeTask = data.questions[editingIndex].claudeTask;
     data.questions[editingIndex] = q;
     toast('Question updated');
   } else {
@@ -580,12 +684,7 @@ function saveModal() {
 }
 
 function saveJSON() {
-  const out = { version: data.version || 1, questions: data.questions.map(q => {
-    const clean = { id: q.id, category: q.category, question: q.question, options: q.options, answer: q.answer, explanation: q.explanation };
-    if (q.media) clean.media = q.media;
-    if (q.approved) clean.approved = true;
-    return clean;
-  })};
+  const out = buildOutput();
   const blob = new Blob([JSON.stringify(out, null, 2) + '\n'], { type: 'application/json' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
@@ -595,11 +694,64 @@ function saveJSON() {
   toast('Saved trivia.json');
 }
 
+function buildOutput() {
+  const out = { version: data.version || 1, questions: data.questions.map(q => {
+    const clean = { id: q.id, category: q.category, question: q.question, options: q.options, answer: q.answer, explanation: q.explanation };
+    if (q.media) clean.media = q.media;
+    if (q.approved) clean.approved = true;
+    if (q.needsReview) clean.needsReview = true;
+    if (q.claudeTask) clean.claudeTask = q.claudeTask;
+    return clean;
+  })};
+  if (data.pendingTasks && data.pendingTasks.length > 0) out.pendingTasks = data.pendingTasks;
+  return out;
+}
+
 function toggleInstructions() {
   const panel = document.getElementById('instrPanel');
   const arrow = document.getElementById('instrArrow');
   panel.classList.toggle('collapsed');
   arrow.classList.toggle('open');
+}
+
+function toggleClaude() {
+  const panel = document.getElementById('claudePanel');
+  const arrow = document.getElementById('claudeArrow');
+  panel.classList.toggle('collapsed');
+  arrow.classList.toggle('open');
+}
+
+function submitClaudeTask() {
+  const input = document.getElementById('claudeTaskInput');
+  const text = input.value.trim();
+  if (!text) return;
+  if (!data.pendingTasks) data.pendingTasks = [];
+  data.pendingTasks.push({ id: 'task-' + Date.now(), text, status: 'pending', created: new Date().toISOString() });
+  input.value = '';
+  autoSave();
+  renderClaudeTasks();
+  toast('Task assigned to Claude');
+}
+
+function removeClaudeTask(idx) {
+  data.pendingTasks.splice(idx, 1);
+  autoSave();
+  renderClaudeTasks();
+}
+
+function renderClaudeTasks() {
+  const list = document.getElementById('claudeTasksList');
+  if (!data.pendingTasks || data.pendingTasks.length === 0) {
+    list.innerHTML = '';
+    return;
+  }
+  list.innerHTML = data.pendingTasks.map((t, i) =>
+    `<div class="claude-task-item">
+      <span class="task-status ${t.status === 'done' ? 'task-done' : 'task-pending'}">${t.status === 'done' ? 'Done' : 'Pending'}</span>
+      <span class="task-text">${esc(t.text)}</span>
+      <span class="task-remove" onclick="removeClaudeTask(${i})" title="Remove task">&times;</span>
+    </div>`
+  ).join('');
 }
 
 function loadFile(e) {
@@ -609,6 +761,7 @@ function loadFile(e) {
   reader.onload = () => {
     try {
       data = JSON.parse(reader.result);
+      if (!data.pendingTasks) data.pendingTasks = [];
       expandedCard = null;
       autoSave();
       renderAll();
@@ -629,22 +782,23 @@ function autoSave() {
 }
 
 async function syncToGitHub() {
-  const out = { version: data.version || 1, questions: data.questions.map(q => {
-    const clean = { id: q.id, category: q.category, question: q.question, options: q.options, answer: q.answer, explanation: q.explanation };
-    if (q.media) clean.media = q.media;
-    if (q.approved) clean.approved = true;
-    return clean;
-  })};
-  const content = btoa(unescape(encodeURIComponent(JSON.stringify(out, null, 2) + '\n')));
+  const token = getToken();
+  if (!token) {
+    setSyncStatus('error', 'No token');
+    document.getElementById('setupBanner').style.display = 'flex';
+    return;
+  }
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(buildOutput(), null, 2) + '\n')));
   try {
     const body = { message: 'Update trivia questions via editor', content, sha: fileSha };
     const resp = await fetch(GH_API, {
       method: 'PUT',
-      headers: { 'Authorization': 'token ' + GH_TOKEN, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
+      headers: { 'Authorization': 'token ' + token, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
       body: JSON.stringify(body)
     });
     if (resp.status === 401 || resp.status === 403) {
-      setSyncStatus('error', 'Auth failed');
+      setSyncStatus('error', 'Bad token');
+      document.getElementById('setupBanner').style.display = 'flex';
       return;
     }
     if (resp.status === 409) {
