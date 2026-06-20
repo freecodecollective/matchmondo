@@ -492,7 +492,14 @@ function renderCard(q, realIndex, displayNum, total) {
         <input type="text" value="${esc(q.media||'')}" onchange="updateField(${realIndex},'media',this.value)" placeholder="https://...">
       </div>
       ${q.media ? renderMediaPreview(q.media) : ''}
-      ${q.claudeTask ? `<div style="margin-top:8px;padding:8px 12px;background:#f3e8fd;border-radius:8px;font-size:12px;color:#6b21a8"><strong>Claude task:</strong> ${esc(q.claudeTask)}</div>` : ''}
+      <div class="field" style="margin-top:8px">
+        <label style="color:#6b21a8">Task for Claude</label>
+        <div class="claude-input-row">
+          <textarea id="qClaudeTask-${realIndex}" placeholder="e.g. &quot;Rewrite this question to be harder&quot; or &quot;Fix the explanation&quot;" style="min-height:36px">${esc(q.claudeTask||'')}</textarea>
+          <button class="btn-claude" onclick="assignQuestionTask(${realIndex})" style="padding:8px 14px;font-size:12px">${q.claudeTask ? 'Update' : 'Assign'}</button>
+          ${q.claudeTask ? `<button class="btn-claude" onclick="clearQuestionTask(${realIndex})" style="padding:8px 14px;font-size:12px;background:#dc2626">Clear</button>` : ''}
+        </div>
+      </div>
     </div>
   </div>`;
 }
@@ -737,6 +744,23 @@ function removeClaudeTask(idx) {
   data.pendingTasks.splice(idx, 1);
   autoSave();
   renderClaudeTasks();
+}
+
+function assignQuestionTask(realIndex) {
+  const input = document.getElementById('qClaudeTask-' + realIndex);
+  const text = input.value.trim();
+  if (!text) return;
+  data.questions[realIndex].claudeTask = text;
+  autoSave();
+  renderAll();
+  toast('Task assigned on question #' + data.questions[realIndex].id);
+}
+
+function clearQuestionTask(realIndex) {
+  delete data.questions[realIndex].claudeTask;
+  autoSave();
+  renderAll();
+  toast('Task cleared');
 }
 
 function renderClaudeTasks() {
