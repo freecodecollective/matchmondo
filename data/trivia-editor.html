@@ -1046,7 +1046,7 @@ function renderPublishedView() {
             <div style="font-size:14px;font-weight:500;margin-bottom:2px">${esc(q.question)}</div>
             <div style="font-size:12px;color:#888">${esc(q.options[q.answer])}</div>
           </div>
-          <button class="btn btn-sm" style="background:#f5f5f5;color:#555;border:1px solid #ddd;white-space:nowrap" onclick="editQuestion(${idx})">Edit</button>
+          <button class="btn btn-sm" style="background:#f5f5f5;color:#555;border:1px solid #ddd;white-space:nowrap" onclick="unpublishAndEdit(${idx})">Unpublish & Edit</button>
         </div>`;
       });
     });
@@ -1210,6 +1210,14 @@ function rejectReview(idx) {
   autoSave();
   renderAll();
   renderClaudeTasksView();
+  switchView('questions');
+  expandAndScroll(idx);
+}
+
+function unpublishAndEdit(idx) {
+  data.questions[idx].approved = false;
+  autoSave();
+  renderAll();
   switchView('questions');
   expandAndScroll(idx);
 }
