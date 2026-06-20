@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Predictions — your record over time (for Heather)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --green: #0b6e4f; --green-dark: #07523b; --gold: #e8b923;
+    --exact: #0b6e4f; --right: #b8860b; --miss: #8a8a8a;
+    --ink: #1a1a2e; --muted: #6b7280; --line: #e3e6e1;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif; background: #f4f5f2; color: var(--ink); padding: 24px 20px 60px; -webkit-font-smoothing: antialiased; }
+  .greeting { max-width: 780px; margin: 0 auto 14px; background: #eef5f1; border: 1px solid #cfe4d9; border-radius: 14px; padding: 16px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+  .greeting h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .greeting p { font-size: 13.5px; color: #3f5a4e; line-height: 1.5; }
+  .greeting strong { color: var(--green); }
+
+  h2.page-h { font-size: 17px; font-weight: 600; text-align: center; color: #444; margin: 30px auto 4px; }
+  .page-sub { text-align: center; font-size: 13px; color: #999; margin: 0 auto 22px; max-width: 740px; line-height: 1.5; }
+
+  .options { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; max-width: 1200px; margin: 24px auto 0; }
+  .option-wrap { flex: 0 0 330px; }
+  .option-label { text-align: center; margin-bottom: 8px; }
+  .option-label h3 { font-size: 16px; font-weight: 600; color: var(--green); }
+  .option-label p { font-size: 12px; color: #999; margin-top: 2px; line-height: 1.35; min-height: 46px; }
+
+  .phone { width: 330px; background: #e9ece8; border-radius: 36px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06); padding: 12px; }
+  .phone-inner { border-radius: 26px; overflow: hidden; background: #eef2ee; }
+  .status-bar { height: 50px; background: var(--green-dark); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px; }
+  .status-time { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.85); }
+  .header-banner { position: relative; background: linear-gradient(135deg, var(--green-dark), var(--green)); padding: 14px 16px; text-align: center; }
+  .header-banner h3 { color: #fff; font-size: 20px; font-weight: 700; }
+  .back-chev { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.9); font-size: 13px; font-weight: 500; }
+  .content { padding: 12px; background: #eef2ee; height: 600px; overflow-y: auto; }
+  .content::-webkit-scrollbar { width: 0; }
+
+  .sec { font-size: 11px; font-weight: 700; color: #8a8a8a; text-transform: uppercase; letter-spacing: 0.6px; padding: 6px 2px 8px; }
+
+  /* ---- Option A: slim strip ---- */
+  .strip { display: flex; align-items: center; gap: 8px; background: #fff; border: 1px solid var(--line); border-radius: 11px; padding: 10px 13px; margin-bottom: 12px; }
+  .strip .ic { font-size: 16px; }
+  .strip .segs { display: flex; align-items: baseline; gap: 8px; flex: 1; flex-wrap: wrap; }
+  .strip .seg { font-size: 12.5px; color: #555; font-weight: 600; }
+  .strip .seg b { color: var(--ink); }
+  .strip .dot { color: #ccc; }
+  .strip .chev { color: #bbb; font-size: 13px; font-weight: 700; }
+
+  /* ---- Option B: hero ---- */
+  .hero { border-radius: 16px; padding: 16px; margin-bottom: 12px; color: #fff; background: linear-gradient(135deg, var(--green-dark), #2e8b63); box-shadow: 0 3px 12px rgba(11,110,79,0.25); position: relative; overflow: hidden; }
+  .hero .ball { position: absolute; right: -10px; bottom: -16px; font-size: 84px; opacity: 0.12; }
+  .hero .eyebrow { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85; margin-bottom: 8px; }
+  .hero .big { font-size: 40px; font-weight: 800; line-height: 1; }
+  .hero .big small { font-size: 15px; font-weight: 600; opacity: 0.85; }
+  .hero .stats { display: flex; gap: 16px; margin-top: 12px; position: relative; z-index: 1; }
+  .hero .st .n { font-size: 16px; font-weight: 700; }
+  .hero .st .l { font-size: 10px; opacity: 0.85; }
+
+  .scorechip { display: inline-flex; gap: 6px; align-items: center; font-size: 11px; font-weight: 700; color: var(--right); background: rgba(184,134,11,0.15); padding: 5px 10px; border-radius: 20px; margin-bottom: 12px; }
+
+  /* ---- Option C: record + form ---- */
+  .rec { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 15px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .rec-top { display: flex; align-items: flex-end; justify-content: space-between; }
+  .rec .pts { font-size: 34px; font-weight: 800; color: var(--green-dark); line-height: 1; }
+  .rec .pts small { font-size: 14px; font-weight: 600; color: var(--muted); }
+  .rec .acc { text-align: right; }
+  .rec .acc .big { font-size: 20px; font-weight: 800; }
+  .rec .acc .l { font-size: 10.5px; color: var(--muted); }
+  .rec .subline { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .rec .subline b { color: var(--ink); }
+  .formlbl { font-size: 10.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin: 12px 0 6px; }
+  .formrow { display: flex; gap: 6px; align-items: center; }
+  .fchip { width: 24px; height: 24px; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; color: #fff; }
+  .fchip.exact { background: var(--exact); }
+  .fchip.right { background: var(--gold); color: #5a4500; }
+  .fchip.miss  { background: #cfcfcf; color: #777; }
+  .formrow .arrow { color: #bbb; font-size: 12px; margin-left: 2px; }
+
+  /* shared lower cards */
+  .card { background: #fff; border-radius: 13px; padding: 12px 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .ctop { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--muted); margin-bottom: 9px; }
+  .ctop .ft { font-weight: 700; color: #444; }
+  .teams { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .team { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 14px; }
+  .team.away { flex-direction: row-reverse; }
+  .flag { width: 24px; height: 17px; border-radius: 2px; object-fit: cover; box-shadow: 0 0 0 0.5px rgba(0,0,0,0.12); }
+  .mid { font-size: 12px; color: var(--muted); font-weight: 600; }
+  .yourpick { margin-top: 10px; font-size: 12px; color: #555; display: flex; align-items: center; justify-content: space-between; }
+  .pickchip { background: #eef4f1; color: var(--green-dark); font-weight: 700; padding: 2px 8px; border-radius: 10px; font-size: 11.5px; }
+  .grade { font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 20px; }
+  .grade.exact { background: rgba(11,110,79,0.14); color: var(--exact); }
+  .grade.right { background: rgba(184,134,11,0.16); color: var(--right); }
+  .predline { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; font-size: 13px; color: #555; }
+  .predline .num { font-size: 18px; font-weight: 800; color: var(--ink); }
+  .predline .step { width: 24px; height: 24px; border-radius: 7px; border: 1.5px solid var(--line); background:#fff; color: var(--green-dark); font-weight: 700; display:inline-flex; align-items:center; justify-content:center; }
+
+  .recommend { max-width: 780px; margin: 40px auto 0; background: #eef5f1; border: 1px solid #cfe4d9; border-radius: 14px; padding: 18px 22px; }
+  .recommend h4 { font-size: 14px; color: var(--green-dark); margin-bottom: 8px; }
+  .recommend p { font-size: 13px; color: #45596b; line-height: 1.55; }
+  .recommend p + p { margin-top: 8px; }
+  .recommend strong { color: var(--green-dark); }
+</style>
+</head>
+<body>
+
+<div class="greeting">
+  <h1>👋 Hi Heather — your prediction record over time</h1>
+  <p>As the tournament goes on, your graded picks add up. This is about the <strong>running summary at the top of Predictions</strong> — your score / record so far. Scoring is <strong>Exact score +3 · Right result +1</strong>. Three options below, from a slim one-liner to a full record card. (No friends leaderboard here — that's parked — this is just <em>your</em> record.)</p>
+</div>
+
+<h2 class="page-h">Three options</h2>
+<p class="page-sub">Same stats in each (14 pts · 8 of 14 right · 3 exact · 3-pick streak) — only the top summary changes. Illustrative numbers.</p>
+
+<div class="options">
+
+  <!-- OPTION A — slim strip -->
+  <div class="option-wrap">
+    <div class="option-label"><h3>A · Slim strip</h3><p>A quiet one-liner above your picks. Stays out of the way; tap to see full history.</p></div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">12:57</span></div>
+      <div class="header-banner"><span class="back-chev">‹ More</span><h3>Predictions</h3></div>
+      <div class="content">
+        <div class="strip">
+          <span class="ic">🎯</span>
+          <div class="segs">
+            <span class="seg"><b>14</b> pts</span><span class="dot">·</span>
+            <span class="seg"><b>8/14</b> right</span><span class="dot">·</span>
+            <span class="seg"><b>3</b> exact</span>
+          </div>
+          <span class="chev">›</span>
+        </div>
+
+        <div class="sec">Make your picks · upcoming</div>
+        <div class="card">
+          <div class="ctop"><span>Group E</span><span>5:00 PM</span></div>
+          <div class="teams"><span class="team"><img class="flag" src="https://flagcdn.com/w40/ec.png">Ecuador</span><span class="mid">vs</span><span class="team away"><img class="flag" src="https://flagcdn.com/w40/cw.png">Curaçao</span></div>
+          <div class="predline">ECU <span class="step">−</span><span class="num">2</span><span class="step">+</span> : <span class="step">−</span><span class="num">0</span><span class="step">+</span> CUW</div>
+        </div>
+
+        <div class="sec">Your results · today</div>
+        <div class="card">
+          <div class="ctop"><span>Group C</span><span class="ft">FT 3–0</span></div>
+          <div class="teams"><span class="team"><img class="flag" src="https://flagcdn.com/w40/br.png">BRA</span><span class="mid"></span><span class="team away"><img class="flag" src="https://flagcdn.com/w40/ht.png">HAI</span></div>
+          <div class="yourpick"><span>Your pick <span class="pickchip">3–0</span></span><span class="grade exact">★ Exact · +3</span></div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- OPTION B — hero -->
+  <div class="option-wrap">
+    <div class="option-label"><h3>B · Score hero</h3><p>Your points front and center, with supporting stats. Motivating, headline-first.</p></div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">12:57</span></div>
+      <div class="header-banner"><span class="back-chev">‹ More</span><h3>Predictions</h3></div>
+      <div class="content">
+        <div class="hero">
+          <span class="ball">🎯</span>
+          <div class="eyebrow">Your prediction score</div>
+          <div class="big">14 <small>pts</small></div>
+          <div class="stats">
+            <div class="st"><div class="n">8 / 14</div><div class="l">results right</div></div>
+            <div class="st"><div class="n">3</div><div class="l">exact scores</div></div>
+            <div class="st"><div class="n">🔥 3</div><div class="l">streak</div></div>
+          </div>
+        </div>
+        <div class="scorechip">⚽ Exact score +3 · Right result +1</div>
+
+        <div class="sec">Make your picks · upcoming</div>
+        <div class="card">
+          <div class="ctop"><span>Group E</span><span>5:00 PM</span></div>
+          <div class="teams"><span class="team"><img class="flag" src="https://flagcdn.com/w40/ec.png">Ecuador</span><span class="mid">vs</span><span class="team away"><img class="flag" src="https://flagcdn.com/w40/cw.png">Curaçao</span></div>
+          <div class="predline">ECU <span class="step">−</span><span class="num">2</span><span class="step">+</span> : <span class="step">−</span><span class="num">0</span><span class="step">+</span> CUW</div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- OPTION C — record + form -->
+  <div class="option-wrap">
+    <div class="option-label"><h3>C · Record + form</h3><p>Score &amp; accuracy plus a "recent form" trail — best shows progress over time.</p></div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">12:57</span></div>
+      <div class="header-banner"><span class="back-chev">‹ More</span><h3>Predictions</h3></div>
+      <div class="content">
+        <div class="rec">
+          <div class="rec-top">
+            <div class="pts">14 <small>pts</small></div>
+            <div class="acc"><div class="big">57%</div><div class="l">8 of 14 right</div></div>
+          </div>
+          <div class="subline"><b>3</b> exact scores · best streak <b>4</b> · <b>3</b> in a row now 🔥</div>
+          <div class="formlbl">Recent form</div>
+          <div class="formrow">
+            <span class="fchip miss">✗</span>
+            <span class="fchip right">✓</span>
+            <span class="fchip exact">★</span>
+            <span class="fchip right">✓</span>
+            <span class="fchip right">✓</span>
+            <span class="fchip exact">★</span>
+            <span class="arrow">latest →</span>
+          </div>
+        </div>
+
+        <div class="sec">Make your picks · upcoming</div>
+        <div class="card">
+          <div class="ctop"><span>Group E</span><span>5:00 PM</span></div>
+          <div class="teams"><span class="team"><img class="flag" src="https://flagcdn.com/w40/ec.png">Ecuador</span><span class="mid">vs</span><span class="team away"><img class="flag" src="https://flagcdn.com/w40/cw.png">Curaçao</span></div>
+          <div class="predline">ECU <span class="step">−</span><span class="num">2</span><span class="step">+</span> : <span class="step">−</span><span class="num">0</span><span class="step">+</span> CUW</div>
+        </div>
+        <div class="sec">Your results · today</div>
+        <div class="card">
+          <div class="ctop"><span>Group C</span><span class="ft">FT 3–0</span></div>
+          <div class="teams"><span class="team"><img class="flag" src="https://flagcdn.com/w40/br.png">BRA</span><span class="mid"></span><span class="team away"><img class="flag" src="https://flagcdn.com/w40/ht.png">HAI</span></div>
+          <div class="yourpick"><span>Your pick <span class="pickchip">3–0</span></span><span class="grade exact">★ Exact · +3</span></div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+</div>
+
+<div class="recommend">
+  <h4>My quick take (open to yours)</h4>
+  <p><strong>I lean Option C.</strong> "Over time" is the whole point, and the recent-form trail (★✓✓✗…) shows momentum in a glance while still leading with the score and accuracy. <strong>Option B</strong> is the most motivating single number if we want it to feel like a game; <strong>Option A</strong> is best if we're worried about the top of the screen getting busy above the actual picks.</p>
+  <p>All three tap through to a fuller history if we want one later. And since scoring already runs per-device on the backend, the numbers are real today — this is a display layer, no new data work.</p>
+</div>
+
+</body>
+</html>
