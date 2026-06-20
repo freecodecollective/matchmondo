@@ -370,7 +370,7 @@ function mergeLocalIntoRemote(remote) {
   local.questions.forEach(lq => {
     const rq = remoteById[lq.id];
     if (!rq) { remote.questions.push(lq); return; }
-    if (lq.claudeTask) rq.claudeTask = lq.claudeTask;
+    if (lq.claudeTask && !rq.needsReview) rq.claudeTask = lq.claudeTask;
   });
 
   const remotePendingIds = new Set((remote.pendingTasks || []).map(t => t.id));
@@ -928,7 +928,7 @@ async function mergeAndRetry(retryCount) {
 
     const remoteIds = new Set(remote.questions.map(q => q.id));
     remote.questions.forEach(q => {
-      if (localTasks[q.id]) q.claudeTask = localTasks[q.id];
+      if (localTasks[q.id] && !q.needsReview) q.claudeTask = localTasks[q.id];
       if (localReview[q.id]) q.needsReview = true;
     });
     data.questions.forEach(q => {
