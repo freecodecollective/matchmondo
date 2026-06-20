@@ -607,7 +607,8 @@
         "Visual Assistance Replay"
       ],
       "answer": 1,
-      "explanation": "VAR helps match officials review decisions on goals, penalties, red cards, and mistaken identity using video footage."
+      "explanation": "VAR helps match officials review decisions on goals, penalties, red cards, and mistaken identity using video footage.",
+      "claudeTask": "make one of these funny but it should reference football/soccer"
     },
     {
       "id": "t-uruguay-years",
