@@ -455,7 +455,8 @@
         "Germany (1990, 2014)"
       ],
       "answer": 1,
-      "explanation": "Brazil's back-to-back wins in 1958 and 1962 remain the last time any nation successfully defended the title."
+      "explanation": "Brazil's back-to-back wins in 1958 and 1962 remain the last time any nation successfully defended the title.",
+      "claudeTask": "don't have the years in the answers, makes it too obious. do say for each answer who their most famous player(s) were at that time"
     },
     {
       "id": "h-1934-italy",
