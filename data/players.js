@@ -1,6 +1,6 @@
 // Football 2026 — top players per team. Compiled from agent web research (June 2026).
-// Top-5 teams: 6 players each; next 5 teams: 5 each; all other teams: 3. Clubs reflect the 2025-26 season.
-// 48 teams, 177 players.
+// Top-10 teams: 5 players each; all other teams: 3-6. Clubs reflect the 2025-26 season.
+// 48 teams, 192 players.
 // Team order/rank come from data/rankings.js.
 window.WC_PLAYERS = {
  "teams": {
@@ -885,6 +885,174 @@ window.WC_PLAYERS = {
      "DFL-Supercup 2025-26 (Bayern Munich)",
      "Austrian Bundesliga 2013-14, 2014-15, 2015-16, 2016-17 (Red Bull Salzburg)",
      "Austrian Cup 2013-14, 2014-15, 2015-16, 2016-17 (Red Bull Salzburg)"
+    ]
+   },
+   {
+    "name": "Christoph Baumgartner",
+    "position": "Attacking midfielder / Forward",
+    "club": "RB Leipzig (Germany, Bundesliga)",
+    "hometown": "Horn, Lower Austria",
+    "why": "Baumgartner is Austria's most dynamic attacking midfielder, with the knack of arriving in the box at the right moment. He scored at Euro 2024 and has been a key figure in Rangnick's high-pressing system, contributing goals and energy from advanced positions. His ability to play between the lines and press relentlessly makes him a perfect fit for Austria's intense style.",
+    "number": 19,
+    "why_es": "Baumgartner es el mediapunta más dinámico de Austria, con la habilidad de aparecer en el área en el momento exacto. Marcó en la Euro 2024 y ha sido una pieza clave en el sistema de presión alta de Rangnick, contribuyendo con goles y energía desde posiciones avanzadas. Su capacidad para jugar entre líneas y presionar sin descanso lo convierte en un encaje perfecto para el estilo intenso de Austria.",
+    "why_fr": "Baumgartner est le meneur offensif le plus dynamique de l'Autriche, doté d'un flair pour arriver dans la surface au bon moment. Il a marqué à l'Euro 2024 et est une figure clé du système de pressing haut de Rangnick, apportant buts et énergie depuis des positions avancées. Sa capacité à jouer entre les lignes et à presser sans relâche en fait un profil idéal pour le style intense autrichien.",
+    "why_pt_BR": "Baumgartner é o meia-atacante mais dinâmico da Áustria, com o instinto de chegar à área no momento certo. Marcou na Euro 2024 e tem sido figura-chave no sistema de pressão alta de Rangnick, contribuindo com gols e energia de posições avançadas. Sua capacidade de jogar nas entrelinhas e pressionar incansavelmente faz dele um encaixe perfeito para o estilo intenso da Áustria.",
+    "why_de": "Baumgartner ist Österreichs dynamischster offensiver Mittelfeldspieler, mit dem Gespür, zum richtigen Moment im Strafraum aufzutauchen. Er traf bei der Euro 2024 und ist eine Schlüsselfigur in Rangnicks Hochpressing-System, wobei er Tore und Energie aus vorgeschobener Position beiträgt. Seine Fähigkeit, zwischen den Linien zu spielen und unermüdlich zu pressen, macht ihn zur perfekten Besetzung für Österreichs intensiven Stil.",
+    "why_it": "Baumgartner è il trequartista più dinamico dell'Austria, con il fiuto di arrivare in area al momento giusto. Ha segnato a Euro 2024 ed è stato una figura chiave nel sistema di pressing alto di Rangnick, contribuendo con gol ed energia da posizioni avanzate. La sua capacità di giocare fra le linee e pressare incessantemente lo rende il profilo ideale per lo stile intenso dell'Austria.",
+    "why_ja": "BaumgartnerはAustriaで最もダイナミックな攻撃的ミッドフィールダーで、適切なタイミングでボックスに入る嗅覚を持つ。Euro 2024でゴールを決め、Rangnickのハイプレスシステムの重要な人物として攻撃的なポジションからゴールとエネルギーを提供している。ライン間でのプレーと絶え間ないプレスはAustriaのインテンスなスタイルに完璧にフィットする。",
+    "why_ko": "Baumgartner는 오스트리아에서 가장 역동적인 공격형 미드필더로 적절한 순간 박스 안으로 침투하는 감각이 뛰어나다. Euro 2024에서 득점했으며 Rangnick의 하이프레싱 시스템에서 핵심 인물로 전진 위치에서 골과 에너지를 보태고 있다. 라인 사이에서의 플레이와 끊임없는 압박은 오스트리아의 강렬한 스타일에 완벽하게 부합한다.",
+    "why_zh_Hans": "鲍姆加特纳是奥地利最具活力的攻击型中场，拥有在关键时刻杀入禁区的直觉。他在2024年欧洲杯上有进球表现，一直是朗尼克高位逼抢体系中的核心人物，从前场位置贡献进球和拼劲。他在两条线之间灵活活动、不知疲倦施压的能力使他完美契合奥地利的高强度风格。",
+    "why_ar": "باومغارتنر هو الوسط الهجومي الأكثر حيوية في النمسا ويملك حاسة الوصول إلى منطقة الجزاء في اللحظة المناسبة. سجّل في يورو 2024 وكان شخصية محورية في منظومة رانغنيك للضغط العالي مساهماً بالأهداف والطاقة من مراكز متقدمة. قدرته على اللعب بين الخطوط والضغط بلا هوادة تجعله الملاءمة المثالية لأسلوب النمسا المكثف.",
+    "why_es_ES": "Baumgartner es el mediapunta más dinámico de Austria, con el instinto de aparecer en el área en el momento preciso. Marcó en la Euro 2024 y ha sido una pieza fundamental en el sistema de presión alta de Rangnick, aportando goles y energía desde posiciones avanzadas. Su capacidad para jugar entre líneas y presionar sin tregua lo convierte en la pieza perfecta para el estilo intenso de Austria.",
+    "caps": 51,
+    "intlGoals": 13,
+    "tournaments": [
+     "Euro 2020 (Round of 16)",
+     "Euro 2024 (Round of 16)"
+    ],
+    "clubs": [
+     {
+      "team": "RB Leipzig",
+      "years": "2023-present",
+      "country": "Germany"
+     },
+     {
+      "team": "TSG Hoffenheim",
+      "years": "2020-2023",
+      "country": "Germany"
+     },
+     {
+      "team": "SV Horn",
+      "years": "2017-2020",
+      "country": "Austria"
+     }
+    ],
+    "honors": [
+     "DFB-Pokal 2024-25 (RB Leipzig)",
+     "DFL-Supercup 2023-24 (RB Leipzig)"
+    ]
+   },
+   {
+    "name": "Kevin Danso",
+    "position": "Centre-back",
+    "club": "Tottenham Hotspur (England, Premier League)",
+    "hometown": "Voitsberg, Styria (born in Rocourt, Belgium, raised in Austria)",
+    "why": "Danso is one of Austria's most commanding defenders and earned a move to Tottenham Hotspur in 2025 after standout seasons with Lens in Ligue 1. Strong, aggressive in the air and composed on the ball, he anchors Rangnick's backline and has established himself as a regular starter alongside Alaba. His physicality and defensive intelligence are vital to Austria's chances against top-level opposition.",
+    "number": 3,
+    "why_es": "Danso es uno de los defensores más imponentes de Austria y se ganó un traspaso al Tottenham Hotspur en 2025 tras temporadas destacadas con el Lens en la Ligue 1. Fuerte, agresivo en el juego aéreo y sereno con el balón, sostiene la línea defensiva de Rangnick y se ha consolidado como titular habitual junto a Alaba. Su fortaleza física e inteligencia defensiva son vitales para las posibilidades de Austria ante los mejores rivales.",
+    "why_fr": "Danso est l'un des défenseurs les plus imposants de l'Autriche et a décroché un transfert à Tottenham Hotspur en 2025 après des saisons remarquables avec le RC Lens en Ligue 1. Fort, agressif dans les airs et serein avec le ballon, il ancre la défense de Rangnick et s'est imposé comme titulaire régulier aux côtés d'Alaba. Sa puissance physique et son intelligence défensive sont vitales pour les chances de l'Autriche face à l'élite.",
+    "why_pt_BR": "Danso é um dos zagueiros mais imponentes da Áustria e conquistou uma transferência para o Tottenham Hotspur em 2025 após temporadas de destaque no Lens, na Ligue 1. Forte, agressivo no jogo aéreo e seguro com a bola, sustenta a linha defensiva de Rangnick e se firmou como titular regular ao lado de Alaba. Sua força física e inteligência defensiva são fundamentais para as chances da Áustria contra adversários de alto nível.",
+    "why_de": "Danso ist einer von Österreichs eindrucksvollsten Verteidigern und verdiente sich 2025 einen Wechsel zu Tottenham Hotspur nach herausragenden Saisons mit Lens in der Ligue 1. Stark, kopfballstark und ballsicher verankert er Rangnicks Abwehrkette und hat sich als regelmäßiger Starter neben Alaba etabliert. Seine Physis und defensive Intelligenz sind entscheidend für Österreichs Chancen gegen die besten Gegner.",
+    "why_it": "Danso è uno dei difensori più autoritari dell'Austria e ha conquistato un trasferimento al Tottenham Hotspur nel 2025 dopo stagioni eccellenti con il Lens in Ligue 1. Forte, aggressivo nel gioco aereo e composto con la palla, presidia la linea difensiva di Rangnick e si è affermato come titolare fisso accanto ad Alaba. La sua fisicità e intelligenza difensiva sono fondamentali per le possibilità dell'Austria contro avversari di primo livello.",
+    "why_ja": "DansoはAustria最も支配的なディフェンダーの一人で、LensでのLigue 1での際立ったシーズンの後、2025年にTottenham Hotspurへの移籍を勝ち取った。力強く空中戦に強くボールコントロールも冷静で、Rangnickのバックラインを支え、Alabaと並んでレギュラースターターの座を確立した。フィジカルと守備的インテリジェンスはトップレベルの対戦相手に対するAustriaのチャンスに不可欠だ。",
+    "why_ko": "Danso는 오스트리아에서 가장 위압적인 수비수 중 한 명으로, Lens에서의 활약 끝에 2025년 Tottenham Hotspur로 이적했다. 공중전에 강하고 볼을 지닌 채 침착하며 Rangnick의 수비 라인을 지탱하고 Alaba와 함께 정규 선발로 자리 잡았다. 그의 피지컬과 수비 지능은 오스트리아가 최상위 상대를 만났을 때 핵심이다.",
+    "why_zh_Hans": "丹索是奥地利最具统治力的后卫之一，在朗斯表现出色后于2025年赢得了热刺的青睐。他身体强壮、空中对抗凶猛、持球沉着，镇守朗尼克的后防线，并与阿拉巴搭档成为固定首发。他的身体素质和防守智慧对奥地利面对顶级对手时至关重要。",
+    "why_ar": "دانسو أحد أقوى مدافعي النمسا وانتزع انتقالاً لتوتنهام هوتسبير عام 2025 بعد مواسم لافتة مع لانس في الدوري الفرنسي. قوي وعدواني في الهواء ورصين على الكرة يرسّخ خط دفاع رانغنيك وقد أثبت نفسه لاعباً أساسياً بجانب ألابا. قوته الجسدية وذكاؤه الدفاعي حيويان لفرص النمسا أمام المنافسين الكبار.",
+    "why_es_ES": "Danso es uno de los defensas más imponentes de Austria y se ganó un traspaso al Tottenham Hotspur en 2025 tras campañas sobresalientes con el Lens en la Ligue 1. Fuerte, agresivo en el juego aéreo y aplomado con el balón, sustenta la línea defensiva de Rangnick y se ha afianzado como titular habitual junto a Alaba. Su fortaleza física e inteligencia defensiva son vitales para las aspiraciones de Austria ante rivales de primer nivel.",
+    "caps": 35,
+    "intlGoals": 2,
+    "tournaments": [
+     "Euro 2024 (Round of 16)"
+    ],
+    "clubs": [
+     {
+      "team": "Tottenham Hotspur",
+      "years": "2025-present",
+      "country": "England"
+     },
+     {
+      "team": "RC Lens",
+      "years": "2021-2025",
+      "country": "France"
+     },
+     {
+      "team": "Fortuna Düsseldorf",
+      "years": "2019-2021",
+      "country": "Germany"
+     },
+     {
+      "team": "FC Augsburg",
+      "years": "2018-2019",
+      "country": "Germany"
+     },
+     {
+      "team": "Southampton",
+      "years": "2018 (loan)",
+      "country": "England"
+     }
+    ],
+    "honors": []
+   },
+   {
+    "name": "Marko Arnautovic",
+    "position": "Forward / Striker",
+    "club": "Red Star Belgrade (Serbia, Serbian SuperLiga)",
+    "hometown": "Vienna (Floridsdorf district)",
+    "why": "Austria's all-time top scorer with 39 goals in over 115 caps, Arnautovic brings invaluable experience and a proven goal-scoring pedigree at international level. The veteran forward has played across Europe's top leagues and scored at three consecutive European Championships. He provides a physical aerial option alongside tactical flexibility and remains a crucial part of the squad's leadership group.",
+    "number": 7,
+    "why_es": "El máximo goleador histórico de Austria con 39 goles en más de 115 partidos, Arnautovic aporta experiencia invaluable y un historial de goleador probado a nivel internacional. El veterano delantero ha jugado en las mejores ligas de Europa y ha marcado en tres Campeonatos de Europa consecutivos. Proporciona una opción aérea física junto con flexibilidad táctica y sigue siendo una parte crucial del grupo de líderes del plantel.",
+    "why_fr": "Meilleur buteur de tous les temps de l'Autriche avec 39 buts en plus de 115 sélections, Arnautovic apporte une expérience inestimable et un pedigree de buteur éprouvé au niveau international. L'attaquant vétéran a joué dans les meilleures ligues d'Europe et a marqué lors de trois Championnats d'Europe consécutifs. Il offre une option aérienne physique ainsi qu'une flexibilité tactique et reste un élément crucial du groupe de leaders de l'équipe.",
+    "why_pt_BR": "Maior artilheiro da história da Áustria com 39 gols em mais de 115 convocações, Arnautovic traz experiência inestimável e um comprovado faro de gol no nível internacional. O veterano atacante atuou nas principais ligas da Europa e marcou em três Campeonatos Europeus consecutivos. Oferece uma opção aérea física junto com flexibilidade tática e segue sendo parte crucial do grupo de liderança do elenco.",
+    "why_de": "Österreichs Rekordtorschütze aller Zeiten mit 39 Toren in über 115 Länderspielen bringt Arnautovic unschätzbare Erfahrung und eine nachgewiesene Torjäger-Pedigree auf internationalem Niveau. Der erfahrene Stürmer hat in Europas Top-Ligen gespielt und bei drei aufeinanderfolgenden Europameisterschaften getroffen. Er bietet eine physische Kopfballoption gepaart mit taktischer Flexibilität und bleibt ein zentraler Teil der Führungsgruppe des Kaders.",
+    "why_it": "Miglior marcatore di tutti i tempi dell'Austria con 39 gol in oltre 115 presenze, Arnautovic porta un'esperienza inestimabile e un pedigree goleador comprovato a livello internazionale. Il veterano attaccante ha giocato nei principali campionati europei e ha segnato in tre Europei consecutivi. Offre un'opzione aerea fisica insieme a flessibilità tattica e rimane una parte cruciale del gruppo di leader della squadra.",
+    "why_ja": "115キャップ超で39ゴールのAustria歴代最多得点者として、Arnautovicは国際レベルで実績あるゴールスコアリングの血統と計り知れない経験をもたらす。ベテランFWはヨーロッパのトップリーグを渡り歩き、3つの連続する欧州選手権でゴールを挙げた。空中戦での物理的なオプションと戦術的柔軟性を持ちスカッドのリーダーシップグループの重要な一角を占める。",
+    "why_ko": "115캡 이상에서 39골을 기록한 오스트리아 역대 최다 득점자로, Arnautovic는 국제 수준에서 입증된 골 결정력과 소중한 경험을 가져온다. 베테랑 공격수는 유럽 최고의 리그들을 거치며 3회 연속 유럽선수권대회에서 득점했다. 공중볼 옵션과 전술적 유연성을 제공하며 스쿼드 리더십 그룹의 핵심으로 남아 있다.",
+    "why_zh_Hans": "阿尔瑙托维奇是奥地利历史上最佳射手，115场以上国际赛事中攻入39球，拥有不可估量的经验和国际层面上久经考验的得分血统。这位老将前锋曾征战欧洲各大顶级联赛，在连续三届欧洲锦标赛上均有进球。他提供了一个身体对抗型的空中进攻选择，同时具备战术灵活性，仍然是球队领导层中不可或缺的一员。",
+    "why_ar": "الهداف التاريخي للنمسا بـ39 هدفاً في أكثر من 115 مشاركة، يجلب أرناوتوفيتش خبرة لا تُقدَّر بثمن ونسباً تهديفياً ثابتاً على المستوى الدولي. خاض المهاجم المخضرم مسيرته في كبرى الدوريات الأوروبية وسجّل في ثلاث بطولات أوروبية متتالية. يقدم خياراً جوياً بدنياً ومرونة تكتيكية ويبقى ركناً أساسياً في مجموعة قادة الفريق.",
+    "why_es_ES": "Máximo goleador histórico de Austria con 39 goles en más de 115 internacionalidades, Arnautovic aporta una experiencia inestimable y un historial goleador acreditado a nivel internacional. El veterano delantero ha jugado en las mejores ligas de Europa y ha marcado en tres Campeonatos de Europa consecutivos. Ofrece una referencia aérea junto con flexibilidad táctica y sigue siendo una pieza clave en el grupo de líderes del vestuario.",
+    "caps": 117,
+    "intlGoals": 39,
+    "tournaments": [
+     "Euro 2016 (Group stage)",
+     "Euro 2020 (Round of 16)",
+     "Euro 2024 (Round of 16)"
+    ],
+    "clubs": [
+     {
+      "team": "Red Star Belgrade",
+      "years": "2025-present",
+      "country": "Serbia"
+     },
+     {
+      "team": "Inter Milan",
+      "years": "2023-2025",
+      "country": "Italy"
+     },
+     {
+      "team": "Bologna",
+      "years": "2021-2023",
+      "country": "Italy"
+     },
+     {
+      "team": "Shanghai Port",
+      "years": "2019-2021",
+      "country": "China"
+     },
+     {
+      "team": "West Ham United",
+      "years": "2017-2019",
+      "country": "England"
+     },
+     {
+      "team": "Stoke City",
+      "years": "2013-2017",
+      "country": "England"
+     },
+     {
+      "team": "Werder Bremen",
+      "years": "2010-2013",
+      "country": "Germany"
+     },
+     {
+      "team": "Inter Milan",
+      "years": "2009-2010",
+      "country": "Italy"
+     }
+    ],
+    "honors": [
+     "Serie A 2023-24 (Inter Milan)",
+     "Supercoppa Italiana 2023-24 (Inter Milan)",
+     "Stoke City Player of the Year 2014-15"
     ]
    }
   ],
@@ -1944,6 +2112,178 @@ window.WC_PLAYERS = {
      }
     ],
     "honors": []
+   },
+   {
+    "name": "Jovane Cabral",
+    "position": "Winger / Forward",
+    "club": "Estrela da Amadora (Primeira Liga, Portugal)",
+    "hometown": "Born in Praia, Santiago island",
+    "why": "Cabral is one of the most technically gifted players in Cabo Verde's history, having developed through the Sporting CP academy and earned a reputation as an electrifying dribbler. His speed, creativity and ability to beat defenders one-on-one make him the squad's primary chance creator from wide areas. He provides a spark of individual brilliance that the Blue Sharks need against stronger sides.",
+    "number": 7,
+    "why_es": "Cabral es uno de los jugadores con más talento técnico en la historia de Cabo Verde, formado en la cantera del Sporting CP y reconocido como un regateador electrizante. Su velocidad, creatividad y capacidad para superar a los defensas en el uno contra uno lo convierten en el principal creador de oportunidades del equipo desde las bandas. Aporta un destello de genialidad individual que los Tubarões Azuis necesitan ante rivales más poderosos.",
+    "why_fr": "Cabral est l'un des joueurs les plus doués techniquement de l'histoire du Cap-Vert, formé à l'académie du Sporting CP et reconnu comme un dribbleur électrisant. Sa vitesse, sa créativité et sa capacité à battre les défenseurs en un-contre-un en font le principal créateur d'occasions de l'équipe sur les côtés. Il apporte une étincelle de génie individuel dont les Requins Bleus ont besoin face aux équipes plus fortes.",
+    "why_pt_BR": "Cabral é um dos jogadores mais talentosos tecnicamente da história de Cabo Verde, formado nas categorias de base do Sporting CP e reconhecido como um driblador eletrizante. Sua velocidade, criatividade e capacidade de superar marcadores no um-contra-um fazem dele o principal criador de oportunidades do time pelas pontas. Traz um lampejo de genialidade individual que os Tubarões Azuis precisam contra adversários mais fortes.",
+    "why_de": "Cabral ist einer der technisch begabtesten Spieler in Cabo Verdes Geschichte, ausgebildet in der Akademie von Sporting CP und bekannt als elektrisierender Dribbler. Seine Geschwindigkeit, Kreativität und Fähigkeit, Verteidiger im Eins-gegen-Eins zu schlagen, machen ihn zum wichtigsten Chancenkreierer des Teams von den Flügeln. Er bietet den Funken individueller Brillanz, den die Blue Sharks gegen stärkere Teams brauchen.",
+    "why_it": "Cabral è uno dei giocatori tecnicamente più dotati nella storia di Capo Verde, cresciuto nell'accademia dello Sporting CP e noto come dribblatore elettrizzante. La sua velocità, creatività e capacità di saltare l'uomo nell'uno-contro-uno lo rendono il principale creatore di occasioni della squadra dalle fasce. Porta un lampo di genialità individuale di cui gli Squali Blu hanno bisogno contro le squadre più forti.",
+    "why_ja": "CabralはSporting CPアカデミーで育ちカーボベルデ史上最も技術的な天才の一人として知られるエレクトリファイなドリブラー。そのスピード、創造性、1対1で守備を抜く能力からチームのワイドエリアからの主要なチャンスクリエイターだ。強豪相手にBlue Sharksが必要とする個人の閃きを提供する。",
+    "why_ko": "Cabral은 Sporting CP 아카데미 출신으로 카보베르데 역사상 가장 기술적으로 뛰어난 선수 중 한 명이며 전율적인 드리블러로 명성을 얻었다. 스피드, 창의성, 1대1 돌파 능력으로 넓은 지역에서 팀의 주요 찬스 창출자 역할을 한다. 강팀 상대 시 Blue Sharks에게 필요한 개인기의 스파크를 제공한다.",
+    "why_zh_Hans": "卡布拉尔是佛得角历史上技术天赋最高的球员之一，出身于体育CP青训学院，以令人炫目的盘带闻名。他的速度、创造力和一对一过人能力使他成为球队在边路的主要机会创造者。他带来的个人灵光一现是蓝鲨队在面对强队时不可或缺的元素。",
+    "why_ar": "كابرال أحد أكثر اللاعبين موهبة تقنية في تاريخ الرأس الخضراء تخرج من أكاديمية سبورتينغ لشبونة وعُرف بمراوغته المذهلة. سرعته وإبداعه وقدرته على التغلب على المدافعين في المواجهات الفردية تجعله صانع الفرص الأول للفريق من الأجنحة. يقدم شرارة التألق الفردي التي يحتاجها القرش الأزرق أمام الفرق الأقوى.",
+    "why_es_ES": "Cabral es uno de los jugadores con más talento técnico en la historia de Cabo Verde, formado en la cantera del Sporting CP y conocido como un regateador electrizante. Su velocidad, creatividad y capacidad para desbordar en el uno contra uno lo convierten en el principal generador de ocasiones del equipo desde las bandas. Aporta un destello de genialidad individual que los Tubarões Azuis necesitan ante rivales de mayor enjundia.",
+    "caps": 27,
+    "intlGoals": 5,
+    "tournaments": [
+     "2024 AFCON (Quarter-final)"
+    ],
+    "clubs": [
+     {
+      "team": "Estrela da Amadora",
+      "years": "2024-present",
+      "country": "Portugal"
+     },
+     {
+      "team": "Lazio",
+      "years": "2022-2024",
+      "country": "Italy"
+     },
+     {
+      "team": "Sporting CP",
+      "years": "2017-2022",
+      "country": "Portugal"
+     },
+     {
+      "team": "Sporting CP B",
+      "years": "2015-2017",
+      "country": "Portugal"
+     }
+    ],
+    "honors": [
+     "Primeira Liga 2020-21 (Sporting CP)",
+     "Taça da Liga 2018-19, 2020-21 (Sporting CP)"
+    ]
+   },
+   {
+    "name": "Jamiro Monteiro",
+    "position": "Central midfielder",
+    "club": "PEC Zwolle (Eredivisie, Netherlands)",
+    "hometown": "Born in Rotterdam, Netherlands to a Cabo Verdean family (diaspora roots)",
+    "why": "Monteiro is Cabo Verde's most experienced midfielder and the heartbeat of the team's engine room. A technically polished passer with the composure to dictate tempo, he has played in the MLS, Ligue 1, and the Eredivisie and brings a calm, steady presence to a squad making its tournament debut. He wears the number 10 shirt and is central to how the Blue Sharks build and retain possession.",
+    "number": 10,
+    "why_es": "Monteiro es el mediocampista más experimentado de Cabo Verde y el pulso de la sala de máquinas del equipo. Un pasador con técnica pulida y aplomo para dictar el ritmo, ha jugado en la MLS, la Ligue 1 y la Eredivisie, y aporta una presencia serena y estable a un plantel que debuta en un torneo. Viste el dorsal 10 y es fundamental en la forma en que los Tubarões Azuis construyen y retienen la posesión.",
+    "why_fr": "Monteiro est le milieu le plus expérimenté du Cap-Vert et le cœur battant de l'entrejeu. Passeur techniquement fin avec le sang-froid pour dicter le tempo, il a joué en MLS, en Ligue 1 et en Eredivisie, et apporte une présence calme et constante à un groupe qui fait ses débuts en compétition mondiale. Il porte le numéro 10 et est central dans la manière dont les Requins Bleus construisent et conservent la possession.",
+    "why_pt_BR": "Monteiro é o meio-campista mais experiente de Cabo Verde e o coração do meio de campo da equipe. Um passador tecnicamente refinado com a compostura para ditar o ritmo, jogou na MLS, na Ligue 1 e na Eredivisie, trazendo uma presença calma e estável para um elenco que estreia em torneios mundiais. Veste a camisa 10 e é central na forma como os Tubarões Azuis constroem e mantêm a posse de bola.",
+    "why_de": "Monteiro ist Cabo Verdes erfahrenster Mittelfeldspieler und das Herzstück des Teams. Ein technisch versierter Passgeber mit der Ruhe, das Tempo zu diktieren, hat er in der MLS, der Ligue 1 und der Eredivisie gespielt und bringt eine ruhige, beständige Präsenz in einen Kader, der sein Turnierdebüt gibt. Er trägt die Nummer 10 und ist zentral dafür, wie die Blue Sharks den Ballbesitz aufbauen und halten.",
+    "why_it": "Monteiro è il centrocampista più esperto di Capo Verde e il cuore del motore della squadra. Passatore tecnicamente raffinato con la calma per dettare i tempi, ha giocato in MLS, Ligue 1 ed Eredivisie e porta una presenza serena e costante a una rosa che debutta ai tornei mondiali. Indossa la maglia numero 10 ed è centrale nel modo in cui gli Squali Blu costruiscono e mantengono il possesso.",
+    "why_ja": "Monteiroはカーボベルデで最も経験豊富なミッドフィールダーでチームのエンジンルームの心臓部。テンポを支配する落ち着きを持つ技術的に洗練されたパサーで、MLS、Ligue 1、Eredivisieでプレーしてきた。大会デビューを果たすスカッドに穏やかで安定した存在感をもたらす。背番号10を背負いBlue Sharksのポゼッション構築と維持の中心を担う。",
+    "why_ko": "Monteiro는 카보베르데에서 가장 경험이 풍부한 미드필더이자 팀 엔진룸의 심장이다. 기술적으로 세련된 패서로 템포를 지배하는 침착함을 갖추고 있으며 MLS, Ligue 1, Eredivisie에서 활약했다. 첫 대회에 나서는 스쿼드에 차분하고 안정적인 존재감을 가져온다. 10번을 달고 Blue Sharks의 소유권 구축과 유지의 핵심이다.",
+    "why_zh_Hans": "蒙泰罗是佛得角最有经验的中场球员，也是球队中场的心脏。他是一名技术精湛的传球手，有着掌控比赛节奏的沉着气质，曾在MLS、法甲和荷甲效力，为这支首次亮相赛事的球队带来沉稳可靠的气场。他身披10号球衣，是蓝鲨队组织和保持控球权的核心。",
+    "why_ar": "مونتيرو أكثر لاعبي وسط الرأس الخضراء خبرة ونبض غرفة محركات الفريق. ممرر ذو تقنية مصقولة وهدوء يمليه الإيقاع، لعب في الدوري الأمريكي والدوري الفرنسي والدوري الهولندي ويقدم حضوراً هادئاً ومتزناً لفريق يخوض أول بطولاته. يرتدي القميص رقم 10 وهو محوري في طريقة بناء القرش الأزرق للاستحواذ والحفاظ عليه.",
+    "why_es_ES": "Monteiro es el centrocampista más experimentado de Cabo Verde y el pulso del centro del campo del equipo. Un pasador con técnica depurada y aplomo para manejar el ritmo, ha jugado en la MLS, la Ligue 1 y la Eredivisie y aporta una presencia serena y fiable a un plantel que debuta en un torneo de esta magnitud. Lleva el dorsal 10 y es fundamental en la manera en que los Tubarões Azuis construyen y conservan la posesión.",
+    "caps": 42,
+    "intlGoals": 6,
+    "tournaments": [
+     "2021 AFCON",
+     "2024 AFCON (Quarter-final)"
+    ],
+    "clubs": [
+     {
+      "team": "PEC Zwolle",
+      "years": "2024-present",
+      "country": "Netherlands"
+     },
+     {
+      "team": "Philadelphia Union",
+      "years": "2019-2023",
+      "country": "United States"
+     },
+     {
+      "team": "GD Estoril",
+      "years": "2018-2019",
+      "country": "Portugal"
+     },
+     {
+      "team": "Metz",
+      "years": "2015-2018",
+      "country": "France"
+     },
+     {
+      "team": "Excelsior",
+      "years": "2013-2015",
+      "country": "Netherlands"
+     }
+    ],
+    "honors": []
+   },
+   {
+    "name": "Garry Rodrigues",
+    "position": "Winger / Forward",
+    "club": "Apollon Limassol (First Division, Cyprus)",
+    "hometown": "Born in Rotterdam, Netherlands to a Cabo Verdean family (diaspora roots)",
+    "why": "Rodrigues is one of the most decorated players in Cabo Verdean football history, having won the Turkish championship with Galatasaray and played in the Saudi Pro League. A tricky winger with pace and an eye for goal, he has been a mainstay of the national team for over a decade and provides big-stage experience that few teammates can match. His versatility across the front line adds tactical options.",
+    "number": 11,
+    "why_es": "Rodrigues es uno de los jugadores más laureados en la historia del fútbol caboverdiano, habiendo ganado el campeonato turco con el Galatasaray y jugado en la Saudi Pro League. Un extremo habilidoso con velocidad y olfato de gol, ha sido pilar de la selección durante más de una década y aporta experiencia en grandes escenarios que pocos compañeros pueden igualar. Su versatilidad a lo largo de la línea de ataque agrega opciones tácticas.",
+    "why_fr": "Rodrigues est l'un des joueurs les plus décorés de l'histoire du football cap-verdien, ayant remporté le championnat turc avec Galatasaray et joué en Saudi Pro League. Ailier rusé avec de la vitesse et un sens du but, il est un pilier de l'équipe nationale depuis plus d'une décennie et apporte une expérience des grands rendez-vous que peu de coéquipiers peuvent égaler. Sa polyvalence sur le front de l'attaque ajoute des options tactiques.",
+    "why_pt_BR": "Rodrigues é um dos jogadores mais condecorados da história do futebol cabo-verdiano, tendo conquistado o campeonato turco com o Galatasaray e jogado na Saudi Pro League. Um ponta habilidoso com velocidade e faro de gol, é pilar da seleção há mais de uma década e traz experiência em grandes palcos que poucos companheiros podem igualar. Sua versatilidade por toda a linha de frente acrescenta opções táticas.",
+    "why_de": "Rodrigues ist einer der dekoriertesten Spieler in der Cabo-Verdianischen Fußballgeschichte, hat die türkische Meisterschaft mit Galatasaray gewonnen und in der Saudi Pro League gespielt. Ein trickreicher Flügelspieler mit Tempo und Torinstinkt, ist er seit über einem Jahrzehnt eine Stammkraft der Nationalmannschaft und bringt Erfahrung auf der großen Bühne, die nur wenige Teamkollegen bieten können. Seine Vielseitigkeit in der Offensive eröffnet taktische Optionen.",
+    "why_it": "Rodrigues è uno dei giocatori più decorati nella storia del calcio capoverdiano, avendo vinto il campionato turco con il Galatasaray e giocato nella Saudi Pro League. Ala astuta con velocità e fiuto per il gol, è un punto fermo della nazionale da oltre un decennio e porta un'esperienza sui grandi palcoscenici che pochi compagni possono eguagliare. La sua versatilità nel reparto offensivo aggiunge opzioni tattiche.",
+    "why_ja": "Rodriguesはカーボベルデサッカー史上最も受賞歴のある選手の一人で、Galatasarayでトルコリーグ優勝を果たしサウジプロリーグでもプレーした。スピードとゴール感覚を持つトリッキーなウインガーで、10年以上ナショナルチームの主力として大舞台での経験をもたらす。前線全体での汎用性が戦術的オプションを広げる。",
+    "why_ko": "Rodrigues는 Galatasaray에서 터키 챔피언십을 우승하고 Saudi Pro League에서도 뛰며 카보베르데 축구 역사상 가장 화려한 수상 경력을 가진 선수 중 한 명이다. 스피드와 골 감각을 가진 트리키한 윙어로 10년 넘게 국가대표팀의 핵심이었으며 동료들이 따라올 수 없는 빅 스테이지 경험을 가져온다. 공격 라인 전체를 소화하는 다재다능함이 전술적 옵션을 더한다.",
+    "why_zh_Hans": "罗德里格斯是佛得角足球历史上荣誉最多的球员之一，曾随加拉塔萨雷赢得土耳其联赛冠军，还在沙特职业联赛效力过。他是一名灵巧的边路球员，拥有速度和进球嗅觉，十多年来一直是国家队的中坚力量，具备队友难以匹敌的大赛经验。他在前场的全能性为球队带来了更多战术选择。",
+    "why_ar": "رودريغيز أحد أكثر لاعبي كرة القدم الرأس خضراويين تتويجاً في التاريخ فاز بالدوري التركي مع غلطة سراي ولعب في الدوري السعودي للمحترفين. جناح ماكر بسرعة وحاسة تهديفية وركيزة في المنتخب لأكثر من عقد يجلب خبرة ملاعب كبرى يعجز عنها معظم زملائه. تنوعه عبر خط الهجوم يضيف خيارات تكتيكية.",
+    "why_es_ES": "Rodrigues es uno de los jugadores más laureados de la historia del fútbol caboverdiano, habiendo ganado la liga turca con el Galatasaray y jugado en la Saudi Pro League. Un extremo habilidoso con velocidad y olfato goleador, ha sido un pilar de la selección durante más de una década y aporta una experiencia en grandes citas que pocos compañeros pueden igualar. Su versatilidad a lo largo del frente ofensivo añade opciones tácticas.",
+    "caps": 62,
+    "intlGoals": 11,
+    "tournaments": [
+     "2015 AFCON",
+     "2021 AFCON",
+     "2024 AFCON (Quarter-final)"
+    ],
+    "clubs": [
+     {
+      "team": "Apollon Limassol",
+      "years": "2024-present",
+      "country": "Cyprus"
+     },
+     {
+      "team": "Al-Ittihad",
+      "years": "2022-2024",
+      "country": "Saudi Arabia"
+     },
+     {
+      "team": "Olympiacos",
+      "years": "2020-2022",
+      "country": "Greece"
+     },
+     {
+      "team": "Al Ain",
+      "years": "2019-2020",
+      "country": "UAE"
+     },
+     {
+      "team": "Galatasaray",
+      "years": "2017-2019",
+      "country": "Turkey"
+     },
+     {
+      "team": "PAOK",
+      "years": "2016-2017",
+      "country": "Greece"
+     },
+     {
+      "team": "Caen",
+      "years": "2015-2016",
+      "country": "France"
+     },
+     {
+      "team": "Elche",
+      "years": "2013-2015",
+      "country": "Spain"
+     }
+    ],
+    "honors": [
+     "Turkish Süper Lig 2017-18, 2018-19 (Galatasaray)",
+     "Turkish Cup 2018-19 (Galatasaray)"
+    ]
    }
   ],
   "Canada": [
@@ -3772,6 +4112,162 @@ window.WC_PLAYERS = {
      "Egyptian Super Cup 2023 (Al Ahly)",
      "Egyptian Super Cup 2024 (Al Ahly)",
      "CAF Super Cup 2024 (Al Ahly)"
+    ]
+   },
+   {
+    "name": "Trezeguet",
+    "position": "Winger / Forward",
+    "club": "Al Ahly (Egypt, Egyptian Premier League)",
+    "hometown": "Kafr El Sheikh, Nile Delta",
+    "why": "Known by his nickname Trezeguet, Mahmoud Hassan is one of Egypt's most experienced attackers with over 90 caps and a track record of delivering in pressure moments. He scored the winning goal that sent Aston Villa back to the Premier League and has been a regular in the national team for nearly a decade. His work rate, wide playmaking and ability to cut in and shoot make him a vital complement to Salah.",
+    "number": 7,
+    "why_es": "Conocido como Trezeguet, Mahmoud Hassan es uno de los atacantes más experimentados de Egipto con más de 90 partidos internacionales y un historial de entrega en momentos de presión. Marcó el gol que devolvió al Aston Villa a la Premier League y ha sido habitual en la selección durante casi una década. Su ritmo de trabajo, juego creativo por las bandas y capacidad para recortar y disparar lo convierten en un complemento vital para Salah.",
+    "why_fr": "Connu sous le surnom de Trezeguet, Mahmoud Hassan est l'un des attaquants les plus expérimentés d'Égypte avec plus de 90 sélections et un bilan de prestations sous pression. Il a marqué le but de la victoire qui a renvoyé Aston Villa en Premier League et est un habitué de l'équipe nationale depuis près d'une décennie. Son volume de travail, sa créativité sur les côtés et sa capacité à couper vers l'intérieur pour tirer en font un complément vital à Salah.",
+    "why_pt_BR": "Conhecido como Trezeguet, Mahmoud Hassan é um dos atacantes mais experientes do Egito com mais de 90 convocações e um histórico de decisões em momentos de pressão. Marcou o gol da vitória que levou o Aston Villa de volta à Premier League e é presença regular na seleção há quase uma década. Seu ritmo de trabalho, criatividade pelas pontas e capacidade de cortar para dentro e chutar fazem dele um complemento vital para Salah.",
+    "why_de": "Unter seinem Spitznamen Trezeguet bekannt, ist Mahmoud Hassan einer von Ägyptens erfahrensten Angreifern mit über 90 Länderspielen und einer Bilanz wichtiger Tore in Druckmomenten. Er erzielte das Siegtor, das Aston Villa zurück in die Premier League brachte, und ist seit fast einem Jahrzehnt Stammgast in der Nationalmannschaft. Seine Laufbereitschaft, sein Flankenspiel und die Fähigkeit, nach innen zu ziehen und abzuschließen, machen ihn zu einer wichtigen Ergänzung zu Salah.",
+    "why_it": "Noto con il soprannome Trezeguet, Mahmoud Hassan è uno degli attaccanti più esperti dell'Egitto con oltre 90 presenze e un curriculum di momenti decisivi sotto pressione. Ha segnato il gol vittoria che ha riportato l'Aston Villa in Premier League ed è un habitué della nazionale da quasi un decennio. Il suo ritmo di lavoro, la creazione di gioco dalla fascia e la capacità di accentrarsi e calciare lo rendono un complemento vitale per Salah.",
+    "why_ja": "Trezeguetの愛称で知られるMahmoud Hassanは90キャップ以上を誇るEgypt最も経験豊富なアタッカーの一人で、プレッシャー下での決定力に定評がある。Aston VillaをPremier Leagueに復帰させる決勝ゴールを決め、約10年にわたりナショナルチームのレギュラーだ。労働量、サイドからの崩し、カットインからのシュート能力でSalahの重要な補完役となる。",
+    "why_ko": "Trezeguet라는 별명으로 알려진 Mahmoud Hassan은 90캡 이상을 보유한 이집트 최고 경험 공격수 중 한 명으로 압박 속에서 결과물을 만들어내는 이력이 있다. Aston Villa를 프리미어리그로 복귀시킨 결승골을 기록했으며 약 10년간 국가대표팀 정규 멤버다. 활동량, 넓은 지역에서의 플레이메이킹, 안쪽으로 치고 들어가 슈팅하는 능력이 Salah의 핵심 보완 역할을 한다.",
+    "why_zh_Hans": "绰号特雷泽盖的马哈茂德·哈桑是埃及最具经验的攻击手之一，拥有超过90次国际赛出场，并以在关键时刻发挥著称。他曾打入将阿斯顿维拉送回英超的制胜球，近十年来一直是国家队常客。他的跑动量、边路创造力以及内切射门能力使他成为萨拉赫不可或缺的搭档。",
+    "why_ar": "المعروف بلقب تريزيجيه، محمود حسن أحد أكثر مهاجمي مصر خبرةً بأكثر من 90 مشاركة وسجل حافل بالحسم تحت الضغط. سجّل هدف الفوز الذي أعاد أستون فيلا إلى الدوري الإنجليزي الممتاز وظل ركيزة أساسية في المنتخب قرابة عقد. معدّل عمله وصناعته من الأطراف وقدرته على القص والتسديد تجعله مكمّلاً حيوياً لصلاح.",
+    "why_es_ES": "Conocido como Trezeguet, Mahmoud Hassan es uno de los atacantes más experimentados de Egipto con más de 90 internacionalidades y un historial de rendimiento en momentos de presión. Marcó el gol decisivo que devolvió al Aston Villa a la Premier League y ha sido habitual en la selección durante casi una década. Su capacidad de trabajo, juego creativo por las bandas y habilidad para recortar y disparar lo convierten en un complemento esencial para Salah.",
+    "caps": 91,
+    "intlGoals": 18,
+    "tournaments": [
+     "2018",
+     "2019 AFCON (Round of 16)",
+     "2021 AFCON (Runner-up)",
+     "2023 AFCON",
+     "2025 AFCON (Semi-finals)"
+    ],
+    "clubs": [
+     {
+      "team": "Al Ahly",
+      "years": "2023-present",
+      "country": "Egypt"
+     },
+     {
+      "team": "Trabzonspor",
+      "years": "2022-2023",
+      "country": "Turkey"
+     },
+     {
+      "team": "Istanbul Basaksehir",
+      "years": "2021-2022",
+      "country": "Turkey"
+     },
+     {
+      "team": "Aston Villa",
+      "years": "2019-2022",
+      "country": "England"
+     },
+     {
+      "team": "Kasimpasa",
+      "years": "2017-2019",
+      "country": "Turkey"
+     },
+     {
+      "team": "Anderlecht",
+      "years": "2016-2017",
+      "country": "Belgium"
+     },
+     {
+      "team": "Al Ahly",
+      "years": "2013-2016",
+      "country": "Egypt"
+     }
+    ],
+    "honors": [
+     "Egyptian Premier League 2013-14, 2014-15, 2015-16 (Al Ahly)",
+     "Egyptian Premier League 2023-24, 2024-25 (Al Ahly)",
+     "CAF Champions League 2024 (Al Ahly)"
+    ]
+   },
+   {
+    "name": "Mohamed Abdelmonem",
+    "position": "Centre-back",
+    "club": "OGC Nice (Ligue 1, France)",
+    "hometown": "Cairo",
+    "why": "Abdelmonem is Egypt's most important defender and a growing force in European football since joining OGC Nice. Strong in aerial duels and aggressive in the tackle, he scored the dramatic late header that sent Egypt to the AFCON 2021 final. He is the leader of the backline tasked with shielding the goal while the Salah-Marmoush attack presses forward.",
+    "number": 6,
+    "why_es": "Abdelmonem es el defensa más importante de Egipto y una fuerza en crecimiento en el fútbol europeo desde que se unió al OGC Nice. Fuerte en el juego aéreo y agresivo en la entrada, marcó el espectacular cabezazo tardío que llevó a Egipto a la final del AFCON 2021. Es el líder de la línea defensiva encargada de proteger la portería mientras el ataque de Salah-Marmoush presiona hacia adelante.",
+    "why_fr": "Abdelmonem est le défenseur le plus important d'Égypte et une force montante dans le football européen depuis son arrivée à l'OGC Nice. Solide dans les duels aériens et agressif dans le tacle, il a inscrit le coup de tête dramatique en fin de match qui a envoyé l'Égypte en finale de l'AFCON 2021. Il est le leader de la défense chargée de protéger le but pendant que l'attaque Salah-Marmoush pousse vers l'avant.",
+    "why_pt_BR": "Abdelmonem é o zagueiro mais importante do Egito e uma força crescente no futebol europeu desde sua chegada ao OGC Nice. Forte no jogo aéreo e agressivo nos desarmes, marcou a dramática cabeçada nos minutos finais que levou o Egito à final da AFCON 2021. É o líder da linha defensiva responsável por proteger o gol enquanto o ataque de Salah e Marmoush avança.",
+    "why_de": "Abdelmonem ist Ägyptens wichtigster Verteidiger und eine wachsende Kraft im europäischen Fußball seit seinem Wechsel zu OGC Nice. Stark in Kopfballduellen und aggressiv im Zweikampf, köpfelte er das dramatische späte Tor, das Ägypten ins AFCON-2021-Finale brachte. Er ist der Anführer der Abwehrreihe, die das Tor schützen soll, während der Salah-Marmoush-Angriff nach vorne presst.",
+    "why_it": "Abdelmonem è il difensore più importante dell'Egitto e una forza in crescita nel calcio europeo dal suo arrivo all'OGC Nice. Forte nei duelli aerei e aggressivo nel tackle, ha segnato il drammatico colpo di testa nel finale che ha portato l'Egitto alla finale dell'AFCON 2021. È il leader della retroguardia incaricata di proteggere la porta mentre l'attacco Salah-Marmoush spinge in avanti.",
+    "why_ja": "AbdelmonemはEgypt最も重要なディフェンダーでOGC Niceに加入以来ヨーロッパサッカーで台頭している。空中戦に強くタックルも激しい彼は、AFCON 2021でEgyptを決勝に送り込むドラマチックな終盤のヘディングゴールを決めた。Salah-Marmoush攻撃が前方にプレスする中、ゴールを守るバックラインのリーダーだ。",
+    "why_ko": "Abdelmonem은 이집트의 가장 중요한 수비수로 OGC Nice 합류 이후 유럽 축구에서 입지를 넓혀가고 있다. 공중전에 강하고 태클이 공격적인 그는 AFCON 2021에서 극적인 후반 종료 직전 헤딩골로 이집트를 결승에 올려놓았다. Salah-Marmoush 공격진이 전방으로 밀고 나갈 때 골문을 지키는 수비 라인의 리더다.",
+    "why_zh_Hans": "阿卜杜勒蒙是埃及最重要的后卫，自加盟尼斯以来在欧洲足坛崭露头角。他空中对抗强、铲球凶狠，曾在2021年非洲杯上打入戏剧性的终场头球将埃及送入决赛。他是后防线的领袖，负责在萨拉赫和马尔穆什前压进攻时为球门护航。",
+    "why_ar": "عبد المنعم أهم مدافعي مصر وقوة صاعدة في الكرة الأوروبية منذ انتقاله إلى نيس. قوي في الصراعات الجوية وعنيد في التدخلات سجّل رأسية الدقائق الأخيرة الدرامية التي أرسلت مصر إلى نهائي أمم أفريقيا 2021. هو قائد خط الدفاع المكلف بحماية المرمى بينما يضغط ثنائي صلاح-مرموش للأمام.",
+    "why_es_ES": "Abdelmonem es el defensa más importante de Egipto y una fuerza en auge en el fútbol europeo desde su incorporación al OGC Nice. Fuerte en el juego aéreo y agresivo en la entrada, marcó el espectacular cabezazo sobre la bocina que llevó a Egipto a la final de la AFCON 2021. Es el líder de la línea defensiva que debe proteger la portería mientras el ataque de Salah-Marmoush presiona al frente.",
+    "caps": 40,
+    "intlGoals": 3,
+    "tournaments": [
+     "2021 AFCON (Runner-up)",
+     "2023 AFCON",
+     "2025 AFCON (Semi-finals)"
+    ],
+    "clubs": [
+     {
+      "team": "OGC Nice",
+      "years": "2024-present",
+      "country": "France"
+     },
+     {
+      "team": "Al Ahly",
+      "years": "2020-2024",
+      "country": "Egypt"
+     },
+     {
+      "team": "El Zamalek",
+      "years": "2018-2020",
+      "country": "Egypt"
+     }
+    ],
+    "honors": [
+     "Egyptian Premier League 2020-21, 2021-22, 2022-23, 2023-24 (Al Ahly)",
+     "CAF Champions League 2021, 2023, 2024 (Al Ahly)",
+     "CAF Super Cup 2022, 2024 (Al Ahly)"
+    ]
+   },
+   {
+    "name": "Ibrahim Adel",
+    "position": "Winger / Forward",
+    "club": "FC Nordsjælland (Danish Superliga, Denmark)",
+    "hometown": "Cairo",
+    "why": "Adel is one of Egypt's brightest young talents and a key part of the squad's future, having made his mark at Al Ahly before moving to Europe. Quick, tricky and capable of playing on either flank, he adds a dimension of unpredictability to Egypt's attack. He scored the opening goal of the AFCON 2025 quarter-final and has steadily grown into a regular starter alongside the established names.",
+    "number": 20,
+    "why_es": "Adel es uno de los jóvenes talentos más brillantes de Egipto y una pieza clave del futuro del equipo, habiendo dejado su huella en el Al Ahly antes de mudarse a Europa. Rápido, habilidoso y capaz de jugar en ambas bandas, aporta una dimensión de imprevisibilidad al ataque egipcio. Marcó el gol inaugural del cuarto de final del AFCON 2025 y se ha consolidado progresivamente como titular habitual junto a los nombres establecidos.",
+    "why_fr": "Adel est l'un des jeunes talents les plus brillants d'Égypte et un élément clé de l'avenir de l'équipe, s'étant fait un nom à Al Ahly avant de partir en Europe. Rapide, habile et capable de jouer sur les deux flancs, il ajoute une dimension d'imprévisibilité à l'attaque égyptienne. Il a inscrit le premier but du quart de finale de l'AFCON 2025 et s'est progressivement imposé comme titulaire régulier aux côtés des noms établis.",
+    "why_pt_BR": "Adel é um dos jovens talentos mais brilhantes do Egito e uma peça fundamental para o futuro do time, tendo se destacado no Al Ahly antes de ir para a Europa. Rápido, habilidoso e capaz de jogar em ambas as pontas, acrescenta imprevisibilidade ao ataque egípcio. Marcou o gol de abertura nas quartas de final do AFCON 2025 e tem se consolidado como titular regular ao lado dos nomes consagrados.",
+    "why_de": "Adel ist eines von Ägyptens hellsten jungen Talenten und ein Schlüsselteil der Zukunft des Teams, nachdem er sich bei Al Ahly einen Namen machte, bevor er nach Europa wechselte. Schnell, trickreich und auf beiden Flügeln einsetzbar, fügt er Ägyptens Angriff eine Dimension der Unberechenbarkeit hinzu. Er erzielte das Eröffnungstor im AFCON-2025-Viertelfinale und hat sich stetig als regelmäßiger Starter neben den etablierten Namen entwickelt.",
+    "why_it": "Adel è uno dei giovani talenti più brillanti dell'Egitto e un elemento chiave per il futuro della squadra, affermatosi all'Al Ahly prima di trasferirsi in Europa. Veloce, imprevedibile e capace di giocare su entrambe le fasce, aggiunge una dimensione di imprevedibilità all'attacco egiziano. Ha segnato il gol di apertura nei quarti di finale dell'AFCON 2025 e si è progressivamente affermato come titolare regolare accanto ai nomi affermati.",
+    "why_ja": "AdelはEgypt最も輝かしい若手タレントの一人でチームの未来を担う重要な存在。Al Ahlyで頭角を現した後ヨーロッパへ移った。素早くトリッキーで両サイドでプレーでき、Egyptの攻撃に予測不能な次元を加える。AFCON 2025準々決勝の先制ゴールを決め、確立された名前の横で着実にレギュラースターターへと成長した。",
+    "why_ko": "Adel은 이집트에서 가장 밝은 젊은 재능 중 하나로 Al Ahly에서 이름을 알린 뒤 유럽으로 진출해 팀 미래의 핵심이다. 빠르고 트리키하며 양쪽 측면 모두 소화 가능한 그는 이집트 공격에 예측 불가의 차원을 더한다. AFCON 2025 8강 선제골을 기록했으며 기존 핵심 선수들 옆에서 꾸준히 정규 선발로 성장했다.",
+    "why_zh_Hans": "阿德尔是埃及最闪耀的年轻天才之一，也是球队未来的关键成员，在阿赫利崭露头角后转战欧洲。他速度快、技术灵巧，能在两侧出任边锋，为埃及进攻增添了不可预测性。他在2025年非洲杯四分之一决赛中打入首球，已稳步成长为与成名球员并肩作战的常规首发。",
+    "why_ar": "عادل أحد أبرز المواهب الشابة في مصر وركيزة مستقبل الفريق بعد أن أثبت نفسه في الأهلي قبل الانتقال إلى أوروبا. سريع وماكر وقادر على اللعب على الجناحين يضيف بعداً من عدم القابلية للتنبؤ لهجوم مصر. سجّل هدف الافتتاح في ربع نهائي أمم أفريقيا 2025 ونما بثبات ليصبح لاعباً أساسياً إلى جانب الأسماء الراسخة.",
+    "why_es_ES": "Adel es uno de los jóvenes talentos más brillantes de Egipto y una pieza clave para el futuro del equipo, tras dejar su huella en el Al Ahly antes de dar el salto a Europa. Rápido, habilidoso y capaz de actuar en ambas bandas, añade una dimensión de imprevisibilidad al ataque egipcio. Marcó el primer gol de los cuartos de final del AFCON 2025 y se ha afianzado progresivamente como titular habitual junto a los nombres consagrados.",
+    "caps": 35,
+    "intlGoals": 8,
+    "tournaments": [
+     "2023 AFCON",
+     "2025 AFCON (Semi-finals)"
+    ],
+    "clubs": [
+     {
+      "team": "FC Nordsjælland",
+      "years": "2024-present",
+      "country": "Denmark"
+     },
+     {
+      "team": "Al Ahly",
+      "years": "2019-2024",
+      "country": "Egypt"
+     }
+    ],
+    "honors": [
+     "Egyptian Premier League 2020-21, 2021-22, 2022-23, 2023-24 (Al Ahly)",
+     "CAF Champions League 2021, 2023, 2024 (Al Ahly)"
     ]
    }
   ],
@@ -6019,6 +6515,167 @@ window.WC_PLAYERS = {
      "AFC International Player of the Year (2025)",
      "U-20 Tournament Golden Ball (2019)"
     ]
+   },
+   {
+    "name": "Hwang Hee-chan",
+    "position": "Forward / Winger",
+    "club": "Wolverhampton Wanderers (Premier League, England)",
+    "hometown": "Chuncheon, Gangwon Province",
+    "why": "Known as the 'Bull' for his tireless running and physicality, Hwang is South Korea's most dynamic forward option behind Son. A proven Premier League scorer at Wolves, he combines pace, pressing intensity and clinical finishing, capable of playing across the front line. His energy and direct running make him a vital outlet in transition for the national team.",
+    "number": 11,
+    "why_es": "Conocido como el 'Toro' por sus carreras incansables y su fisicalidad, Hwang es la opción atacante más dinámica de Corea del Sur detrás de Son. Goleador probado en la Premier League con el Wolves, combina velocidad, intensidad en la presión y definición clínica, capaz de jugar en toda la línea de ataque. Su energía y carreras directas lo convierten en una salida vital en transición para la selección.",
+    "why_fr": "Surnommé le 'Taureau' pour ses courses infatigables et son physique, Hwang est l'option offensive la plus dynamique de la Corée du Sud derrière Son. Buteur éprouvé en Premier League avec Wolverhampton, il combine vitesse, intensité de pressing et finition clinique, capable de jouer sur tout le front d'attaque. Son énergie et ses courses directes en font un atout vital en transition pour l'équipe nationale.",
+    "why_pt_BR": "Conhecido como o 'Touro' por suas corridas incansáveis e fisicalidade, Hwang é a opção ofensiva mais dinâmica da Coreia do Sul depois de Son. Artilheiro comprovado na Premier League pelo Wolves, combina velocidade, intensidade na marcação e finalização clínica, capaz de jogar em toda a linha de frente. Sua energia e corridas diretas fazem dele uma opção vital em transição para a seleção.",
+    "why_de": "Als 'der Stier' für sein unermüdliches Laufen und seine Physis bekannt, ist Hwang Südkoreas dynamischste Angriffsoption hinter Son. Ein bewährter Premier-League-Torschütze bei Wolverhampton, kombiniert er Tempo, Pressing-Intensität und klinischen Abschluss und kann überall in der Angriffslinie spielen. Seine Energie und seine direkten Läufe machen ihn zu einer vitalen Umschalt-Option für das Nationalteam.",
+    "why_it": "Soprannominato il 'Toro' per le sue corse instancabili e la sua fisicità, Hwang è l'opzione offensiva più dinamica della Corea del Sud dopo Son. Goleador affermato in Premier League con il Wolverhampton, unisce velocità, intensità nel pressing e finalizzazione clinica, in grado di giocare su tutto il fronte d'attacco. La sua energia e le sue corse dirette lo rendono un punto di sfogo vitale in transizione per la nazionale.",
+    "why_ja": "「ブル」と称される疲れ知らずのランニングとフィジカルで知られるHwangは、Son以降の韓国で最もダイナミックなフォワードオプションだ。Wolverhamptonのプレミアリーグでの実績あるゴールスコアラーで、スピード、プレッシングの強度、決定力あるフィニッシュを組み合わせ、前線のどのポジションでもプレーできる。そのエネルギーと直線的なランニングはナショナルチームのトランジションに不可欠な武器だ。",
+    "why_ko": "'황소'라는 별명으로 불리며 지칠 줄 모르는 달리기와 피지컬로 유명한 황희찬은 손흥민 다음으로 한국의 가장 역동적인 공격 옵션이다. Wolverhampton에서 입증된 프리미어리그 득점자로 스피드, 강한 압박, 냉정한 마무리를 겸비하며 최전방 어디서든 활약할 수 있다. 그의 에너지와 직선적인 달리기는 대표팀 전환 공격에 핵심적이다.",
+    "why_zh_Hans": "黄喜灿被称为\"公牛\"，以不知疲倦的跑动和强壮的身体素质著称，是孙兴慜之后韩国最具活力的前锋选择。他是在狼队已经证明自己的英超射手，兼具速度、高压逼抢强度和精准射门能力，能胜任整条锋线的任何位置。他的充沛精力和直接跑动使他成为国家队反击转换中的关键武器。",
+    "why_ar": "ملقَّب بـ«الثور» لركضه الدؤوب وقوته البدنية، هوانغ الخيار الهجومي الأكثر ديناميكية لكوريا الجنوبية خلف سون. مسجّل أهداف مثبت في الدوري الإنجليزي الممتاز مع وولفرهامبتون يجمع السرعة وشدة الضغط والإنهاء الحاسم ويستطيع اللعب في أي موقع هجومي. طاقته وجريه المباشر يجعلانه متنفساً حيوياً في الانتقالات للمنتخب.",
+    "why_es_ES": "Conocido como el 'Toro' por sus incansables carreras y su físico, Hwang es la opción atacante más dinámica de Corea del Sur tras Son. Goleador contrastado en la Premier League con el Wolverhampton, combina velocidad, intensidad en la presión alta y definición clínica, capaz de actuar en cualquier posición de ataque. Su energía y sus carreras directas lo convierten en una salida vital en las transiciones de la selección.",
+    "caps": 72,
+    "intlGoals": 18,
+    "tournaments": [
+     "2022 (Group stage)",
+     "2023 Asian Cup"
+    ],
+    "clubs": [
+     {
+      "team": "Wolverhampton Wanderers",
+      "years": "2023–",
+      "country": "England"
+     },
+     {
+      "team": "Wolverhampton Wanderers (loan)",
+      "years": "2022–2023",
+      "country": "England"
+     },
+     {
+      "team": "RB Leipzig",
+      "years": "2020–2023",
+      "country": "Germany"
+     },
+     {
+      "team": "Red Bull Salzburg",
+      "years": "2015–2020",
+      "country": "Austria"
+     }
+    ],
+    "honors": [
+     "Austrian Bundesliga (2015–16, 2016–17, 2017–18, 2018–19, Red Bull Salzburg)",
+     "Austrian Cup (2015–16, 2016–17, 2018–19, Red Bull Salzburg)",
+     "DFB-Pokal (2021–22, RB Leipzig)"
+    ]
+   },
+   {
+    "name": "Hwang In-beom",
+    "position": "Central midfielder",
+    "club": "Feyenoord (Eredivisie, Netherlands)",
+    "hometown": "Daejeon",
+    "why": "Hwang In-beom is the engine of the South Korean midfield, a tireless box-to-box runner who combines technical quality with relentless work rate. He moved to Feyenoord in 2024 and quickly became a key figure in the Eredivisie, contributing goals and assists from central midfield. His pressing, ball-carrying ability and long-range shooting give South Korea dynamism and balance in the middle of the park.",
+    "number": 6,
+    "why_es": "Hwang In-beom es el motor del mediocampo surcoreano, un incansable corredor de box a box que combina calidad técnica con un ritmo de trabajo implacable. Se trasladó al Feyenoord en 2024 y rápidamente se convirtió en una pieza clave en la Eredivisie, aportando goles y asistencias desde el centro del campo. Su presión, capacidad para conducir el balón y disparo de larga distancia dan a Corea del Sur dinamismo y equilibrio en el mediocampo.",
+    "why_fr": "Hwang In-beom est le moteur du milieu de terrain sud-coréen, un coureur boîte-à-boîte infatigable qui combine qualité technique et intensité de travail sans relâche. Il a rejoint Feyenoord en 2024 et est rapidement devenu une figure clé en Eredivisie, contribuant par des buts et des passes décisives depuis le milieu de terrain central. Son pressing, sa capacité à porter le ballon et ses frappes de loin apportent du dynamisme et de l'équilibre au milieu de terrain sud-coréen.",
+    "why_pt_BR": "Hwang In-beom é o motor do meio-campo sul-coreano, um incansável corredor de área a área que combina qualidade técnica com ritmo de trabalho incessante. Transferiu-se para o Feyenoord em 2024 e rapidamente se tornou peça fundamental na Eredivisie, contribuindo com gols e assistências do meio-campo central. Sua pressão, capacidade de condução e chutes de longa distância dão à Coreia do Sul dinamismo e equilíbrio no centro.",
+    "why_de": "Hwang In-beom ist der Motor des südkoreanischen Mittelfelds, ein unermüdlicher Box-to-Box-Läufer, der technische Qualität mit rastlosem Arbeitseinsatz verbindet. Er wechselte 2024 zu Feyenoord und wurde schnell eine Schlüsselfigur in der Eredivisie mit Toren und Vorlagen aus dem zentralen Mittelfeld. Sein Pressing, seine Ballführung und seine Fernschüsse geben Südkorea Dynamik und Gleichgewicht im Mittelfeld.",
+    "why_it": "Hwang In-beom è il motore del centrocampo sudcoreano, un instancabile centrocampista box-to-box che unisce qualità tecnica a un ritmo di lavoro inarrestabile. Si è trasferito al Feyenoord nel 2024 ed è diventato rapidamente un elemento chiave in Eredivisie, contribuendo con gol e assist dal centrocampo. Il suo pressing, la capacità di portare palla e i tiri dalla distanza danno alla Corea del Sud dinamismo e equilibrio a centrocampo.",
+    "why_ja": "Hwang In-beomは韓国中盤のエンジンで、技術的な質と弛まない運動量を兼ね備えた疲れ知らずのボックス・トゥ・ボックスランナーだ。2024年にFeyenoordへ移籍し、エールディヴィジでゴールとアシストを記録し素早く主力に定着した。そのプレッシング、ボールキャリー能力、ロングレンジシュートが韓国の中盤にダイナミズムとバランスを与える。",
+    "why_ko": "황인범은 한국 미드필드의 엔진으로, 기술적 능력과 쉬지 않는 활동량을 겸비한 지칠 줄 모르는 박스-투-박스 미드필더다. 2024년 Feyenoord로 이적해 에레디비시에서 빠르게 핵심 선수로 자리 잡으며 중앙 미드필드에서 골과 어시스트를 기록했다. 그의 압박, 볼 캐리 능력, 중거리 슛은 한국에 미드필드 역동성과 균형을 부여한다.",
+    "why_zh_Hans": "黄仁范是韩国中场的发动机，一名将技术质量与永不停歇的工作节奏完美结合的不知疲倦的中场跑动者。他2024年转会费耶诺德，迅速成为荷甲的关键人物，从中场贡献进球和助攻。他的逼抢、带球推进能力和远射为韩国中场注入了活力与平衡。",
+    "why_ar": "هوانغ إن-بيوم محرّك وسط الميدان الكوري الجنوبي، جرّاء لا يكل من صندوق لصندوق يجمع الجودة التقنية مع معدل عمل لا يتوقف. انتقل إلى فيينورد عام 2024 وسرعان ما أصبح ركيزة في الدوري الهولندي مسجّلاً أهدافاً وتمريرات حاسمة من وسط الميدان. ضغطه وقدرته على حمل الكرة وتسديده من بعيد يمنحان كوريا الجنوبية ديناميكية وتوازناً في القلب.",
+    "why_es_ES": "Hwang In-beom es el motor del centro del campo surcoreano, un infatigable centrocampista box-to-box que combina calidad técnica con un ritmo de trabajo incansable. Fichó por el Feyenoord en 2024 y rápidamente se convirtió en una pieza clave de la Eredivisie, aportando goles y asistencias desde la medular. Su presión, capacidad de conducción y disparo de larga distancia aportan dinamismo y equilibrio al mediocampo surcoreano.",
+    "caps": 58,
+    "intlGoals": 8,
+    "tournaments": [
+     "2022 (Group stage)",
+     "2023 Asian Cup"
+    ],
+    "clubs": [
+     {
+      "team": "Feyenoord",
+      "years": "2024–",
+      "country": "Netherlands"
+     },
+     {
+      "team": "Red Star Belgrade",
+      "years": "2022–2024",
+      "country": "Serbia"
+     },
+     {
+      "team": "Olympiacos",
+      "years": "2021–2022",
+      "country": "Greece"
+     },
+     {
+      "team": "Rubin Kazan",
+      "years": "2020–2021",
+      "country": "Russia"
+     },
+     {
+      "team": "Vancouver Whitecaps",
+      "years": "2019–2020",
+      "country": "Canada"
+     },
+     {
+      "team": "Daejeon Citizen",
+      "years": "2017–2019",
+      "country": "South Korea"
+     }
+    ],
+    "honors": [
+     "Serbian SuperLiga (2022–23, 2023–24, Red Star Belgrade)",
+     "Serbian Cup (2023–24, Red Star Belgrade)",
+     "Greek Cup (2021–22, Olympiacos)"
+    ]
+   },
+   {
+    "name": "Cho Gue-sung",
+    "position": "Forward (striker)",
+    "club": "FC Midtjylland (Danish Superliga, Denmark)",
+    "hometown": "Anyang, Gyeonggi Province",
+    "why": "Cho became a household name in South Korea after scoring two headed goals against Ghana at the 2022 tournament, and he remains a key forward option for the national team. A tall, powerful striker who excels in aerial duels, he provides an alternative attacking dimension with his physicality and movement inside the box. His goal threat from crosses and set-pieces complements the more fluid play of Son and Lee Kang-in.",
+    "number": 9,
+    "why_es": "Cho se convirtió en un nombre conocido en Corea del Sur tras marcar dos goles de cabeza ante Ghana en el torneo 2022, y sigue siendo una opción clave en el ataque de la selección. Un delantero alto y potente que destaca en el juego aéreo, aporta una dimensión atacante alternativa con su fisicalidad y movimiento dentro del área. Su amenaza goleadora en centros y jugadas a balón parado complementa el juego más fluido de Son y Lee Kang-in.",
+    "why_fr": "Cho est devenu une célébrité en Corée du Sud après avoir inscrit deux buts de la tête contre le Ghana lors de la tournoi 2022, et il reste une option clé dans l'attaque de l'équipe nationale. Grand attaquant puissant qui excelle dans les duels aériens, il apporte une dimension offensive alternative avec son physique et ses déplacements dans la surface. Sa menace sur les centres et les coups de pied arrêtés complète le jeu plus fluide de Son et Lee Kang-in.",
+    "why_pt_BR": "Cho se tornou uma figura conhecida na Coreia do Sul após marcar dois gols de cabeça contra Gana na torneio de 2022, e continua sendo uma opção-chave de ataque para a seleção. Um atacante alto e poderoso que se destaca em disputas aéreas, oferece uma dimensão alternativa de ataque com sua fisicalidade e movimentação dentro da área. Sua ameaça de gol em cruzamentos e bolas paradas complementa o jogo mais fluido de Son e Lee Kang-in.",
+    "why_de": "Cho wurde in Südkorea zum Star, nachdem er beim Turnier 2022 zwei Kopfballtore gegen Ghana erzielte, und bleibt eine Schlüssel-Option im Angriff des Nationalteams. Ein großer, kraftvoller Stürmer, der in Kopfballduellen exzelliert, bietet er eine alternative Angriffsdimension mit seiner Physis und Bewegung im Strafraum. Seine Torgefahr bei Flanken und Standardsituationen ergänzt das flüssigere Spiel von Son und Lee Kang-in.",
+    "why_it": "Cho è diventato un personaggio celebre in Corea del Sud dopo aver segnato due gol di testa contro il Ghana alla torneo 2022, e rimane un'opzione chiave in attacco per la nazionale. Attaccante alto e potente che eccelle nei duelli aerei, offre una dimensione offensiva alternativa con la sua fisicità e il suo movimento in area. La sua pericolosità sui cross e sui calci piazzati integra il gioco più fluido di Son e Lee Kang-in.",
+    "why_ja": "Choは2022年大会でGhana戦に2つのヘディングゴールを決めて韓国で一躍有名になり、代表チームの重要なフォワードオプションであり続けている。空中戦に優れた長身パワフルなストライカーで、そのフィジカルとボックス内での動きでオルタナティブな攻撃の次元を提供する。クロスやセットプレーからのゴール脅威はSonとLee Kang-inのよりフルイドなプレーを補完する。",
+    "why_ko": "조규성은 2022 대회에서 가나전 두 골의 헤딩을 넣으며 한국에서 스타덤에 올랐고, 국가대표팀의 핵심 공격 옵션으로 남아있다. 공중 듀얼에서 탁월한 장신의 강력한 스트라이커로, 피지컬과 박스 안 움직임으로 대안적인 공격 차원을 제공한다. 크로스와 세트피스에서의 득점 위협은 손흥민과 이강인의 유동적인 플레이를 보완한다.",
+    "why_zh_Hans": "赵圭成在2022年赛事上对阵加纳头球梅开二度而在韩国家喻户晓，他至今仍是国家队的关键前锋选择。身材高大、身体强壮的他擅长空中对抗，以其体格和禁区内的移动为进攻提供了不同的维度。他在传中球和定位球上的进球威胁，与孙兴慜和李刚仁更流畅的踢法形成互补。",
+    "why_ar": "أصبح تشو اسماً لامعاً في كوريا الجنوبية بعد تسجيله هدفين بالرأس ضد غانا في بطولة 2022 ولا يزال خياراً هجومياً أساسياً للمنتخب. مهاجم طويل وقوي يتفوق في المبارزات الجوية يُقدم بُعداً هجومياً بديلاً بجسمانيته وتحركاته في منطقة الجزاء. تهديده التسجيلي من العرضيات والكرات الثابتة يُكمّل اللعب الانسيابي لسون ولي كانغ-إن.",
+    "why_es_ES": "Cho se convirtió en un nombre conocido en Corea del Sur tras anotar dos goles de cabeza ante Ghana en el torneo 2022 y sigue siendo una opción clave en la delantera de la selección. Un delantero alto y poderoso que sobresale en los duelos aéreos, aporta una dimensión atacante alternativa con su físico y su movimiento dentro del área. Su peligro en centros y balones parados complementa el juego más fluido de Son y Lee Kang-in.",
+    "caps": 38,
+    "intlGoals": 10,
+    "tournaments": [
+     "2022 (Group stage)",
+     "2023 Asian Cup"
+    ],
+    "clubs": [
+     {
+      "team": "FC Midtjylland",
+      "years": "2024–",
+      "country": "Denmark"
+     },
+     {
+      "team": "Gimcheon Sangmu",
+      "years": "2023–2024",
+      "country": "South Korea"
+     },
+     {
+      "team": "Jeonbuk Hyundai Motors",
+      "years": "2019–2023",
+      "country": "South Korea"
+     },
+     {
+      "team": "Anyang FC",
+      "years": "2018",
+      "country": "South Korea"
+     }
+    ],
+    "honors": [
+     "K League 1 (2021, Jeonbuk Hyundai Motors)"
+    ]
    }
   ],
   "Mexico": [
@@ -7199,6 +7856,154 @@ window.WC_PLAYERS = {
     "honors": [
      "Turkish Süper Lig top scorer (2019–20)"
     ]
+   },
+   {
+    "name": "Sander Berge",
+    "position": "Central midfielder",
+    "club": "Fulham (England, Premier League)",
+    "hometown": "Asker (near Oslo)",
+    "why": "Berge is Norway's midfield anchor and physical enforcer, a towering presence at 196 cm who controls the tempo and shields the backline. He has been a consistent Premier League performer at Fulham and brings vital experience from years in England and Belgium. His box-to-box engine, aerial dominance and ability to carry the ball forward complement the creative play of Odegaard perfectly.",
+    "number": 8,
+    "why_es": "Berge es el ancla del mediocampo noruego y su ejecutor físico, una presencia imponente de 196 cm que controla el ritmo y protege la línea defensiva. Ha sido un jugador constante en la Premier League con el Fulham y aporta una experiencia vital adquirida durante años en Inglaterra y Bélgica. Su motor box a box, dominio aéreo y capacidad para conducir el balón complementan perfectamente el juego creativo de Odegaard.",
+    "why_fr": "Berge est le pivot du milieu norvégien et son exécutant physique, une présence imposante de 196 cm qui contrôle le tempo et protège la défense. Il a été un joueur régulier en Premier League avec Fulham et apporte une expérience vitale acquise en Angleterre et en Belgique. Son moteur box-to-box, sa domination aérienne et sa capacité à porter le ballon vers l'avant complètent parfaitement le jeu créatif d'Odegaard.",
+    "why_pt_BR": "Berge é o pivô do meio-campo norueguês e sua força física, uma presença imponente de 196 cm que controla o ritmo e protege a linha defensiva. Tem sido um jogador consistente na Premier League pelo Fulham e traz experiência vital de anos na Inglaterra e na Bélgica. Seu motor de área a área, domínio aéreo e capacidade de conduzir a bola complementam perfeitamente o jogo criativo de Odegaard.",
+    "why_de": "Berge ist Norwegens Mittelfeld-Anker und physischer Durchsetzer, eine überragende Präsenz mit 196 cm, der das Tempo kontrolliert und die Abwehr abschirmt. Er war ein beständiger Premier-League-Spieler bei Fulham und bringt wertvolle Erfahrung aus Jahren in England und Belgien. Sein Box-to-Box-Motor, Kopfballdominanz und die Fähigkeit, den Ball nach vorne zu tragen, ergänzen Odegaards kreatives Spiel perfekt.",
+    "why_it": "Berge è il perno del centrocampo norvegese e il suo esecutore fisico, una presenza imponente di 196 cm che controlla il ritmo e scherma la difesa. È stato un giocatore costante in Premier League con il Fulham e porta un'esperienza vitale maturata in anni tra Inghilterra e Belgio. Il suo motore box-to-box, il dominio aereo e la capacità di portare palla in avanti completano perfettamente il gioco creativo di Odegaard.",
+    "why_ja": "BergeはNorwayのミッドフィールドアンカー兼フィジカルエンフォーサーで、196cmの存在感でテンポをコントロールしバックラインを守る。FulhamでPremier Leagueでの安定したパフォーマンスを見せ、EnglandとBelgiumでの経験をもたらす。ボックス・トゥ・ボックスのエンジン、空中での支配力、ボールを前に運ぶ能力でOdegaardの創造的プレーを完璧に補完する。",
+    "why_ko": "Berge는 노르웨이 미드필드의 앵커이자 피지컬 집행자로, 196cm의 위압적인 존재감으로 템포를 조절하고 수비 라인을 보호한다. Fulham에서 프리미어리그에서 꾸준한 활약을 보여주며 잉글랜드와 벨기에에서의 오랜 경험을 가져온다. 박스-투-박스 엔진, 공중 지배력, 볼 운반 능력은 Odegaard의 창의적 플레이를 완벽히 보완한다.",
+    "why_zh_Hans": "贝尔格是挪威中场的定海神针和身体对抗执行者，196厘米的身高令人望而生畏，掌控着比赛节奏并为后防线提供屏障。他在富勒姆表现稳健，带来了在英格兰和比利时多年积累的宝贵经验。他的双向奔跑引擎、空中统治力和向前推进的能力与厄德高的创造性打法完美互补。",
+    "why_ar": "بيرغي ركيزة وسط الميدان النرويجي ومنفذه البدني حضور مهيمن بطول 196 سم يتحكم في الإيقاع ويحمي خط الدفاع. أداؤه في الدوري الإنجليزي الممتاز مع فولهام ثابت ويقدم خبرة ثمينة من سنوات في إنجلترا وبلجيكا. محركه بين الخطوط وسيطرته الجوية وقدرته على حمل الكرة يكمل لعب أودغارد الإبداعي بشكل مثالي.",
+    "why_es_ES": "Berge es el ancla del centro del campo noruego y su baluarte físico, una presencia imponente de 196 cm que controla el tempo y protege la línea defensiva. Ha sido un jugador fiable en la Premier League con el Fulham y aporta una experiencia vital acumulada en Inglaterra y Bélgica. Su motor de ida y vuelta, dominio aéreo y capacidad de conducción complementan a la perfección el juego creativo de Odegaard.",
+    "caps": 58,
+    "intlGoals": 4,
+    "tournaments": [
+     "2026"
+    ],
+    "clubs": [
+     {
+      "team": "Fulham",
+      "years": "2024-present",
+      "country": "England"
+     },
+     {
+      "team": "Burnley",
+      "years": "2023-2024",
+      "country": "England"
+     },
+     {
+      "team": "Sheffield United",
+      "years": "2020-2023",
+      "country": "England"
+     },
+     {
+      "team": "Genk",
+      "years": "2017-2020",
+      "country": "Belgium"
+     },
+     {
+      "team": "Valerenga",
+      "years": "2015-2017",
+      "country": "Norway"
+     }
+    ],
+    "honors": [
+     "Belgian First Division A 2018-19 (Genk)"
+    ]
+   },
+   {
+    "name": "Antonio Nusa",
+    "position": "Winger",
+    "club": "RB Leipzig (Germany, Bundesliga)",
+    "hometown": "Sandnes, Rogaland (born in Kaduna, Nigeria, raised in Norway from age one)",
+    "why": "At just 21, Nusa is the most exciting young talent in Norway's squad and one of the Bundesliga's brightest emerging wingers. Blessed with explosive pace, silky dribbling and a low centre of gravity, he can unlock defenses from either flank. He earned his move to RB Leipzig from Club Brugge and represents the dynamic, unpredictable element Norway can deploy off the bench or from the start.",
+    "number": 20,
+    "why_es": "Con solo 21 años, Nusa es el joven talento más emocionante del plantel noruego y uno de los extremos emergentes más brillantes de la Bundesliga. Dotado de una velocidad explosiva, un regate sedoso y un centro de gravedad bajo, puede desbloquear defensas desde ambas bandas. Se ganó su traspaso al RB Leipzig desde el Club Brugge y representa el elemento dinámico e impredecible que Noruega puede usar como suplente o de titular.",
+    "why_fr": "À seulement 21 ans, Nusa est le jeune talent le plus excitant du groupe norvégien et l'un des ailiers émergents les plus brillants de la Bundesliga. Doté d'une vitesse explosive, d'un dribble soyeux et d'un centre de gravité bas, il peut déverrouiller les défenses des deux côtés. Il a mérité son transfert au RB Leipzig depuis le Club Bruges et représente l'élément dynamique et imprévisible que la Norvège peut utiliser en cours de match ou dès le coup d'envoi.",
+    "why_pt_BR": "Com apenas 21 anos, Nusa é o jovem talento mais empolgante do elenco norueguês e um dos pontas emergentes mais brilhantes da Bundesliga. Abençoado com velocidade explosiva, dribles suaves e centro de gravidade baixo, pode destravar defesas por ambos os lados. Conquistou sua transferência para o RB Leipzig vindo do Club Brugge e representa o elemento dinâmico e imprevisível que a Noruega pode usar como reserva ou titular.",
+    "why_de": "Mit gerade einmal 21 Jahren ist Nusa das aufregendste junge Talent in Norwegens Kader und einer der vielversprechendsten aufstrebenden Flügelspieler der Bundesliga. Ausgestattet mit explosivem Tempo, seidigem Dribbling und einem tiefen Schwerpunkt, kann er Abwehren von beiden Flügeln aufbrechen. Er verdiente sich seinen Wechsel zu RB Leipzig von Club Brügge und verkörpert das dynamische, unberechenbare Element, das Norwegen von der Bank oder von Beginn an einsetzen kann.",
+    "why_it": "A soli 21 anni, Nusa è il giovane talento più entusiasmante della rosa norvegese e uno degli esterni emergenti più brillanti della Bundesliga. Dotato di velocità esplosiva, dribbling setoso e un baricentro basso, può scardinare le difese da entrambi i lati. Si è guadagnato il trasferimento al RB Leipzig dal Club Brugge e rappresenta l'elemento dinamico e imprevedibile che la Norvegia può schierare dalla panchina o dal primo minuto.",
+    "why_ja": "わずか21歳のNusaはNorwayスカッドで最もエキサイティングな若手タレントでブンデスリーガで最も輝く新星ウインガーの一人だ。爆発的なスピード、滑らかなドリブル、低い重心を兼ね備え両サイドから守備を崩すことができる。Club BruggeからRB Leipzigへの移籍を勝ち取りNorwayがベンチから投入するか先発で使えるダイナミックで予測不能な要素を代表する。",
+    "why_ko": "21세의 Nusa는 노르웨이 스쿼드에서 가장 흥미로운 젊은 재능이자 분데스리가에서 가장 밝은 신성 윙어 중 한 명이다. 폭발적인 스피드, 부드러운 드리블링, 낮은 무게중심을 갖추어 양쪽 측면에서 수비를 열 수 있다. Club Brugge에서 RB Leipzig로 이적을 이뤘으며 노르웨이가 교체 또는 선발로 투입할 수 있는 역동적이고 예측 불가한 요소다.",
+    "why_zh_Hans": "年仅21岁的努萨是挪威阵中最令人兴奋的年轻天才，也是德甲最闪亮的新星边锋之一。他拥有爆发力十足的速度、丝滑的盘带和较低的重心，能够从两侧突破对方防线。他从布鲁日俱乐部转会至RB莱比锡，是挪威可以在替补席或首发阵容中使用的充满活力和不可预测性的武器。",
+    "why_ar": "بعمر 21 عاماً فقط نوسا أكثر المواهب الشابة إثارة في صفوف النرويج وأحد ألمع الأجنحة الصاعدة في الدوري الألماني. يتمتع بسرعة انفجارية ومراوغة ناعمة ومركز جاذبية منخفض يمكّنه من فتح الدفاعات من كلا الجناحين. انتزع انتقاله إلى لايبزيغ من كلوب بروج ويمثل العنصر الديناميكي غير المتوقع الذي يمكن للنرويج استخدامه من الدكة أو الأساس.",
+    "why_es_ES": "Con solo 21 años, Nusa es el joven talento más emocionante del plantel noruego y uno de los extremos emergentes más prometedores de la Bundesliga. Dotado de una velocidad explosiva, un regate sedoso y un centro de gravedad bajo, puede desarbolar defensas desde cualquier banda. Se ganó su traspaso al RB Leipzig desde el Club Brugge y representa el elemento dinámico e impredecible que Noruega puede emplear como revulsivo o como titular.",
+    "caps": 22,
+    "intlGoals": 3,
+    "tournaments": [
+     "2026"
+    ],
+    "clubs": [
+     {
+      "team": "RB Leipzig",
+      "years": "2024-present",
+      "country": "Germany"
+     },
+     {
+      "team": "Club Brugge",
+      "years": "2022-2024",
+      "country": "Belgium"
+     },
+     {
+      "team": "Stabæk",
+      "years": "2021-2022",
+      "country": "Norway"
+     }
+    ],
+    "honors": [
+     "Belgian First Division A 2022-23 (Club Brugge)",
+     "Belgian Super Cup 2022 (Club Brugge)"
+    ]
+   },
+   {
+    "name": "Jørgen Strand Larsen",
+    "position": "Forward (striker)",
+    "club": "Crystal Palace (England, Premier League)",
+    "hometown": "Halden, Viken (southeastern Norway)",
+    "why": "Strand Larsen gives Norway a formidable third striking option alongside Haaland and Sorloth, having earned his move to Crystal Palace after a prolific spell with Celta Vigo. A tall, physical forward who excels at hold-up play, aerial duels and poacher's finishes, he scored consistently in La Liga and has become a key rotation piece for the national team. His presence ensures Norway can maintain their attacking threat even when resting their first-choice strikers.",
+    "number": 11,
+    "why_es": "Strand Larsen le da a Noruega una tercera opción de ataque formidable junto a Haaland y Sorloth, habiendo conseguido su traspaso al Crystal Palace tras una prolífica etapa en el Celta de Vigo. Un delantero alto y físico que destaca en el juego de espaldas, los duelos aéreos y las definiciones de cazagol, marcó con regularidad en La Liga y se ha convertido en una pieza clave de rotación en la selección. Su presencia garantiza que Noruega mantenga su amenaza atacante incluso al descansar a sus delanteros titulares.",
+    "why_fr": "Strand Larsen offre à la Norvège une redoutable troisième option d'attaque aux côtés de Haaland et Sørloth, ayant mérité son transfert à Crystal Palace après une période prolifique à Celta Vigo. Grand attaquant physique qui excelle dos au but, dans les duels aériens et les finitions de renard des surfaces, il a marqué régulièrement en Liga et est devenu un atout clé en rotation pour l'équipe nationale. Sa présence assure que la Norvège conserve sa menace offensive même au repos de ses attaquants titulaires.",
+    "why_pt_BR": "Strand Larsen oferece à Noruega uma terceira opção formidável de ataque junto com Haaland e Sørloth, tendo conquistado sua transferência para o Crystal Palace após uma fase prolífica no Celta de Vigo. Um atacante alto e físico que se destaca no jogo de costas, duelos aéreos e finalizações de oportunismo, marcou com consistência na La Liga e se tornou peça fundamental de rotação na seleção. Sua presença garante que a Noruega mantenha a ameaça ofensiva mesmo descansando seus atacantes titulares.",
+    "why_de": "Strand Larsen gibt Norwegen eine hervorragende dritte Sturmoption neben Haaland und Sørloth, nachdem er sich seinen Wechsel zu Crystal Palace nach einer torreichen Zeit bei Celta Vigo verdient hat. Ein großer, physischer Stürmer, der im Rücken-zum-Tor-Spiel, in Kopfballduellen und bei Abstauber-Abschlüssen glänzt, traf er regelmäßig in der Liga und wurde zu einem wichtigen Rotationsspieler für die Nationalmannschaft. Seine Präsenz stellt sicher, dass Norwegen seine Angriffsbedrohung auch bei Schonung der Stammstürmer aufrechterhalten kann.",
+    "why_it": "Strand Larsen dà alla Norvegia una formidabile terza opzione d'attacco accanto a Haaland e Sørloth, avendo guadagnato il trasferimento al Crystal Palace dopo un periodo prolifico al Celta Vigo. Attaccante alto e fisico che eccelle nel gioco spalle alla porta, nei duelli aerei e nelle conclusioni da rapace d'area, ha segnato con costanza in Liga ed è diventato un'importante pedina di rotazione per la nazionale. La sua presenza assicura che la Norvegia mantenga la minaccia offensiva anche quando i titolari riposano.",
+    "why_ja": "Strand LarsenはHaalandとSørlothに並ぶNorwayの強力な第3のストライカーオプションで、Celta Vigoでの得点量産期を経てCrystal Palaceへの移籍を果たした。背の高いフィジカルなフォワードで、ポストプレー、空中戦、ゴール前での嗅覚に優れ、La Ligaで安定して得点しナショナルチームの重要なローテーション要員となった。その存在感でNorwayは第一選択のストライカーを休ませても攻撃の脅威を維持できる。",
+    "why_ko": "Strand Larsen은 Celta Vigo에서의 다작 시기 후 Crystal Palace로 이적하며 Haaland, Sørloth에 이은 노르웨이의 강력한 세 번째 공격 옵션을 제공한다. 포스트 플레이, 공중 경합, 골잡이적 마무리에 뛰어난 장신 피지컬 포워드로 라리가에서 꾸준히 득점하며 국가대표팀의 핵심 로테이션 선수가 됐다. 그의 존재로 노르웨이는 주전 공격수를 쉬게 해도 공격 위협을 유지할 수 있다.",
+    "why_zh_Hans": "斯特兰德·拉尔森为挪威在哈兰德和索尔洛特之外提供了强有力的第三前锋选择，他在塞尔塔维戈的多产表现为他赢得了转会水晶宫的机会。他身材高大、身体对抗能力强，擅长背身拿球、争顶和禁区内终结，在西甲稳定进球并已成为国家队的重要轮换棋子。他的存在确保挪威即使在轮休首发前锋时也能保持进攻威胁。",
+    "why_ar": "يمنح ستراند لارسن النرويج خياراً هجومياً ثالثاً مرعباً إلى جانب هالاند وسورلوث بعد أن انتزع انتقاله إلى كريستال بالاس عقب فترة غزيرة مع سيلتا فيغو. مهاجم طويل وبدني يبرع في اللعب بالظهر والصراعات الجوية وإنهاءات صيادي الأهداف سجّل بانتظام في الدوري الإسباني وأصبح قطعة تناوب محورية للمنتخب. وجوده يضمن بقاء تهديد النرويج الهجومي حتى عند إراحة المهاجمَين الأساسيين.",
+    "why_es_ES": "Strand Larsen aporta a Noruega una tercera opción de ataque formidable junto a Haaland y Sørloth, tras ganarse su traspaso al Crystal Palace después de una prolífica etapa en el Celta de Vigo. Un delantero alto y físico que sobresale en el juego de espaldas, los duelos aéreos y las finalizaciones de cazagol, marcó con regularidad en La Liga y se ha convertido en pieza clave de rotación en la selección. Su presencia garantiza que Noruega mantenga su amenaza ofensiva incluso cuando descansen los delanteros titulares.",
+    "caps": 28,
+    "intlGoals": 8,
+    "tournaments": [
+     "2026"
+    ],
+    "clubs": [
+     {
+      "team": "Crystal Palace",
+      "years": "2024-present",
+      "country": "England"
+     },
+     {
+      "team": "Celta Vigo",
+      "years": "2022-2024",
+      "country": "Spain"
+     },
+     {
+      "team": "FC Groningen",
+      "years": "2020-2022",
+      "country": "Netherlands"
+     },
+     {
+      "team": "Sarpsborg 08",
+      "years": "2019-2020",
+      "country": "Norway"
+     },
+     {
+      "team": "Molde",
+      "years": "2018-2019",
+      "country": "Norway"
+     }
+    ],
+    "honors": []
    }
   ],
   "Panama": [
