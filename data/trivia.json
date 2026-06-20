@@ -12,7 +12,8 @@
         "1978 in Argentina"
       ],
       "answer": 1,
-      "explanation": "English referee Ken Aston devised the card system after the 1966 edition. It debuted at the 1970 tournament in Mexico."
+      "explanation": "English referee Ken Aston devised the card system after the 1966 edition. It debuted at the 1970 tournament in Mexico.",
+      "approved": true
     },
     {
       "id": "h-2026-hosts",
@@ -25,7 +26,8 @@
         "Canada & USA"
       ],
       "answer": 2,
-      "explanation": "2026 is the first edition hosted by three nations — the USA, Canada and Mexico — across 16 cities."
+      "explanation": "2026 is the first edition hosted by three nations — the USA, Canada and Mexico — across 16 cities.",
+      "approved": true
     },
     {
       "id": "v-mercedes-roof",
@@ -39,7 +41,8 @@
       ],
       "answer": 0,
       "explanation": "Atlanta's Mercedes-Benz Stadium has a retractable roof composed of eight triangular panels that open like a camera aperture.",
-      "media": "https://www.youtube.com/watch?v=7YrxBpzsytE"
+      "media": "https://www.youtube.com/watch?v=7YrxBpzsytE",
+      "approved": true
     },
     {
       "id": "h-2002-cohosts",
@@ -52,7 +55,8 @@
         "South Korea & China"
       ],
       "answer": 1,
-      "explanation": "South Korea and Japan co-hosted in 2002 — the first time two nations shared the event."
+      "explanation": "South Korea and Japan co-hosted in 2002 — the first time two nations shared the event.",
+      "approved": true
     },
     {
       "id": "t-how-many-groups",
@@ -91,7 +95,8 @@
         "United States"
       ],
       "answer": 1,
-      "explanation": "The Netherlands lost finals in 1974, 1978, and 2010 — the most successful team never to win the title. The US men's team has never one, but the women's team has won four times (1991, 1999, 2015, 2019), making them the most successful team in women's tournament history"
+      "explanation": "The Netherlands lost finals in 1974, 1978, and 2010 — the most successful team never to win the title. The US men's team has never one, but the women's team has won four times (1991, 1999, 2015, 2019), making them the most successful team in women's tournament history",
+      "approved": true
     },
     {
       "id": "r-yellow-wiped",
@@ -1699,12 +1704,13 @@
       "options": [
         "They score two goals in the same match",
         "They score three goals in the same match",
-        "They literally brace themselves for a tackle — feet planted, eyes closed, full clench",
+        "They put on actual leg braces and keep playing",
         "They score in two consecutive matches"
       ],
       "answer": 0,
       "explanation": "A brace refers to a player scoring two goals in a single match. Scoring three goals is called a hat-trick.",
-      "needsReview": true
+      "needsReview": true,
+      "claudeTask": "make 3d answer funny"
     }
   ],
   "pendingTasks": [
