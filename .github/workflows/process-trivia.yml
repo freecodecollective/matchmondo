@@ -1,0 +1,41 @@
+name: Process trivia tasks
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: process-trivia
+  cancel-in-progress: false
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Process pending trivia tasks
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/process-trivia.py
+
+      - name: Commit and push if anything changed
+        run: |
+          if [ -n "$(git status --porcelain data/trivia.json)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/trivia.json
+            git commit -m "Process trivia tasks assigned via editor"
+            git push
+            echo "Pushed updated trivia.json."
+          else
+            echo "No changes."
+          fi

@@ -18,7 +18,7 @@ REPO = "freecodecollective/matchmondo"
 IOS_REPO = "freecodecollective/matchmondo-ios"
 FILE_PATH = "data/trivia.json"
 GH_API = f"https://api.github.com/repos/{REPO}/contents/{FILE_PATH}"
-WORKFLOW_API = f"https://api.github.com/repos/{IOS_REPO}/actions/workflows/process-trivia.yml/dispatches"
+WORKFLOW_API = f"https://api.github.com/repos/{REPO}/actions/workflows/process-trivia.yml/dispatches"
 RESULTS_URL = f"https://raw.githubusercontent.com/{REPO}/main/data/matches.json"
 ALLOWED_ORIGINS = [
     "https://freecodecollective.github.io",
