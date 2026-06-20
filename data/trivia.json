@@ -26,7 +26,8 @@
         "Canada & USA"
       ],
       "answer": 2,
-      "explanation": "2026 is the first edition hosted by three nations — the USA, Canada and Mexico — across 16 cities."
+      "explanation": "2026 is the first edition hosted by three nations — the USA, Canada and Mexico — across 16 cities.",
+      "approved": true
     },
     {
       "id": "v-mercedes-roof",
