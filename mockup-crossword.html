@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Play Tab — Daily Mini Crossword (working mockup)</title>
+<style>
+  :root {
+    --blue: #3A6F9A;
+    --blue2: #5A9FC9;
+    --cream: #F2F0EC;
+    --cream2: #E4E2DD;
+    --gold: #D4A017;
+    --ink: #222;
+    --word: #C9D9E8;     /* highlighted word cells */
+    --cell: #FFFFFF;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    background: #f5f5f5;
+    color: var(--ink);
+    padding: 20px 12px 60px;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1 { font-size: 23px; font-weight: 600; text-align: center; margin-bottom: 6px; }
+  .page-sub { text-align: center; font-size: 14px; color: #888; margin: 0 auto 24px; max-width: 520px; line-height: 1.5; }
+  .page-sub b { color: var(--blue); }
+
+  /* ===== phone frame ===== */
+  .phone {
+    width: 360px; margin: 0 auto;
+    background: #F2F0EC;
+    border-radius: 38px;
+    box-shadow: 0 8px 50px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06);
+    padding: 12px;
+  }
+  .phone-inner {
+    border-radius: 28px; overflow: hidden; background: var(--cream);
+    display: flex; flex-direction: column;
+  }
+  .status-bar {
+    height: 44px; background: var(--blue);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 22px; color: #fff;
+  }
+  .status-bar .t { font-size: 14px; font-weight: 600; }
+  .status-bar .r { font-size: 13px; letter-spacing: 1px; }
+
+  /* ===== app header / toolbar ===== */
+  .appbar {
+    background: linear-gradient(135deg, var(--blue), var(--blue2));
+    color: #fff; padding: 10px 12px 12px;
+  }
+  .appbar-top { display: flex; align-items: center; gap: 8px; }
+  .appbar-top .timer {
+    font-variant-numeric: tabular-nums; font-size: 17px; font-weight: 600;
+    min-width: 54px;
+  }
+  .appbar-top .title { flex: 1; text-align: center; font-size: 16px; font-weight: 700; letter-spacing: .3px; }
+  .tool {
+    width: 30px; height: 30px; border-radius: 8px; border: none;
+    background: rgba(255,255,255,0.16); color: #fff; font-size: 15px;
+    display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+    transition: background .15s;
+  }
+  .tool:hover { background: rgba(255,255,255,0.30); }
+  .appbar-sub { display: flex; align-items: baseline; gap: 8px; margin-top: 8px; padding: 0 2px; }
+  .appbar-sub .pz { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; opacity: .85; }
+  .appbar-sub .theme { font-size: 13px; opacity: .95; }
+
+  /* ===== puzzle picker pills ===== */
+  .picker { display: flex; gap: 6px; padding: 10px 12px 4px; background: var(--cream); overflow-x: auto; }
+  .pill {
+    flex: 0 0 auto; font-size: 12px; font-weight: 600; color: #8a8a8a;
+    background: var(--cream2); border: none; border-radius: 20px; padding: 6px 12px; cursor: pointer;
+    transition: all .15s; white-space: nowrap;
+  }
+  .pill.active { background: var(--blue); color: #fff; }
+  .pill .done { color: var(--gold); }
+  .pill.active .done { color: #FFE9A8; }
+
+  /* ===== grid ===== */
+  .board-wrap { background: var(--cream); padding: 14px 14px 6px; display: flex; justify-content: center; }
+  .board {
+    display: grid; gap: 2px; background: #2b2b2b; border: 2px solid #2b2b2b; border-radius: 4px;
+  }
+  .cell {
+    position: relative; background: var(--cell); width: 100%; aspect-ratio: 1;
+    display: flex; align-items: center; justify-content: center; cursor: pointer;
+    user-select: none;
+  }
+  .cell.block { background: #2b2b2b; cursor: default; }
+  .cell .num { position: absolute; top: 2px; left: 3px; font-size: 9px; font-weight: 600; color: #777; line-height: 1; }
+  .cell .ch { font-size: 26px; font-weight: 600; color: #14304a; text-transform: uppercase; }
+  .cell.word { background: var(--word); }
+  .cell.sel  { background: var(--blue2); }
+  .cell.sel .ch { color: #fff; }
+  .cell.bad .ch { color: #D6453B; }
+  .cell.bad::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(to top left, transparent calc(50% - 1px), #D6453B, transparent calc(50% + 1px));
+    opacity: .55;
+  }
+  .cell.revealed .num-rev { position: absolute; top: 2px; right: 3px; font-size: 8px; color: var(--gold); }
+  .cell.correct-flash { animation: pop .3s ease; }
+  @keyframes pop { 0%{transform:scale(1)} 50%{transform:scale(1.12)} 100%{transform:scale(1)} }
+
+  /* ===== clue bar ===== */
+  .cluebar {
+    display: flex; align-items: stretch; background: #3b3566; color: #fff; margin-top: 8px;
+  }
+  .cluebar .nav { width: 42px; background: rgba(255,255,255,0.08); border: none; color: #fff; font-size: 20px; cursor: pointer; }
+  .cluebar .nav:hover { background: rgba(255,255,255,0.18); }
+  .cluebar .clue { flex: 1; padding: 12px 10px; display: flex; align-items: center; gap: 8px; min-height: 52px; cursor: pointer; }
+  .cluebar .clue .tag { font-size: 11px; font-weight: 700; background: rgba(255,255,255,0.18); padding: 2px 6px; border-radius: 5px; flex: 0 0 auto; }
+  .cluebar .clue .txt { font-size: 14px; line-height: 1.25; }
+
+  /* ===== keyboard ===== */
+  .kbd { background: #d3d6dc; padding: 7px 4px 10px; }
+  .kbd .row { display: flex; justify-content: center; gap: 5px; margin-bottom: 6px; }
+  .kbd .row:last-child { margin-bottom: 0; }
+  .key {
+    flex: 1 1 0; max-width: 31px; height: 42px; border: none; border-radius: 6px; background: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.28); font-size: 16px; font-weight: 500; color: #14304a;
+    cursor: pointer; text-transform: uppercase;
+  }
+  .key:active { background: #c4c8cf; }
+  .key.wide { max-width: 52px; flex: 1.4 1 0; font-size: 13px; background: #aab0ba; color: #fff; }
+  .key.del  { max-width: 52px; flex: 1.4 1 0; font-size: 18px; background: #aab0ba; color: #fff; }
+
+  /* ===== tab bar ===== */
+  .tabbar { display: flex; background: rgba(255,255,255,0.96); border-top: .5px solid #ddd; padding: 6px 0 14px; }
+  .tab { flex: 1; text-align: center; font-size: 10px; color: #9a9a9a; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .tab.active { color: var(--blue); }
+  .tab .ti { font-size: 21px; line-height: 1; }
+
+  /* ===== popover / overlay ===== */
+  .overlay {
+    position: absolute; inset: 0; background: rgba(20,28,40,0.45);
+    display: none; align-items: center; justify-content: center; padding: 18px; z-index: 30;
+  }
+  .overlay.show { display: flex; }
+  .sheet {
+    background: #fff; border-radius: 18px; width: 100%; max-height: 86%; overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3); padding: 18px;
+  }
+  .sheet h3 { font-size: 18px; margin-bottom: 4px; color: var(--ink); display: flex; align-items: center; gap: 7px; }
+  .sheet .sub { font-size: 13px; color: #888; margin-bottom: 14px; }
+  .menu-btn {
+    display: block; width: 100%; text-align: left; background: var(--cream); border: none;
+    border-radius: 10px; padding: 12px 14px; font-size: 14px; font-weight: 600; color: var(--ink);
+    margin-bottom: 8px; cursor: pointer;
+  }
+  .menu-btn:hover { background: var(--cream2); }
+  .menu-btn .d { display: block; font-size: 11.5px; font-weight: 400; color: #999; margin-top: 2px; }
+  .menu-btn.danger { color: #C0392B; }
+  .close-x { float: right; background: none; border: none; font-size: 20px; color: #aaa; cursor: pointer; line-height: 1; }
+
+  .learn-card {
+    border: 1px solid #eee; border-left: 4px solid var(--blue); border-radius: 8px;
+    padding: 10px 12px; margin-bottom: 9px;
+  }
+  .learn-card .a { font-size: 13px; font-weight: 700; color: var(--blue); }
+  .learn-card .a .pos { color: #bbb; font-weight: 600; margin-left: 6px; }
+  .learn-card .clue { font-size: 12px; color: #666; margin: 1px 0 5px; font-style: italic; }
+  .learn-card .fact { font-size: 13px; color: #333; line-height: 1.45; }
+
+  /* win */
+  .win-emoji { font-size: 40px; text-align: center; margin-bottom: 6px; }
+  .win-time { text-align: center; font-size: 15px; color: #555; margin-bottom: 4px; }
+  .win-time b { color: var(--gold); font-size: 20px; }
+  .confetti { position: absolute; top: -10px; width: 9px; height: 14px; border-radius: 2px; z-index: 40; animation: fall linear forwards; }
+  @keyframes fall { to { transform: translateY(640px) rotate(540deg); opacity: .2; } }
+
+  .hint { text-align: center; font-size: 12px; color: #aaa; margin-top: 16px; }
+  .legend { max-width: 520px; margin: 18px auto 0; font-size: 12.5px; color: #999; line-height: 1.6; }
+  .legend b { color: #777; }
+</style>
+</head>
+<body>
+
+<h1>Play tab — Daily Mini</h1>
+<p class="page-sub">A bite-sized football crossword for MatchMondo — <b>simpler than the NYT Mini</b> (a clean 4×4). Every clue and the post-solve <b>“What you learned”</b> cards teach a fact about players, history, rules or the game. <b>Fully playable:</b> tap a square, type on the keyboard (or your physical one), use ‹ › to move between clues, and try Check / Reveal.</p>
+
+<div class="phone"><div class="phone-inner" id="app" style="position:relative;">
+  <div class="status-bar"><span class="t">9:41</span><span class="r">📶 ✦ 100</span></div>
+
+  <div class="appbar">
+    <div class="appbar-top">
+      <span class="timer" id="timer">0:00</span>
+      <span class="title">Daily Mini</span>
+      <button class="tool" id="btnClues" title="Clue list">≣</button>
+      <button class="tool" id="btnCheck" title="Check / Reveal">🎯</button>
+      <button class="tool" id="btnInfo" title="How to play">ⓘ</button>
+    </div>
+    <div class="appbar-sub"><span class="pz" id="pzNum">Mini #1</span><span class="theme" id="pzTheme">The Woodwork</span></div>
+  </div>
+
+  <div class="picker" id="picker"></div>
+
+  <div class="board-wrap"><div class="board" id="board"></div></div>
+
+  <div class="cluebar">
+    <button class="nav" id="prevClue">‹</button>
+    <div class="clue" id="clueBox"><span class="tag" id="clueTag">1A</span><span class="txt" id="clueTxt">—</span></div>
+    <button class="nav" id="nextClue">›</button>
+  </div>
+
+  <div class="kbd" id="kbd"></div>
+
+  <div class="tabbar">
+    <div class="tab"><span class="ti">📅</span>Schedule</div>
+    <div class="tab"><span class="ti">📊</span>Standings</div>
+    <div class="tab"><span class="ti">📋</span>Rules</div>
+    <div class="tab active"><span class="ti">🧩</span>Play</div>
+    <div class="tab"><span class="ti">⭐</span>Players</div>
+  </div>
+
+  <!-- overlays -->
+  <div class="overlay" id="ovCheck"><div class="sheet">
+    <button class="close-x" data-close>×</button>
+    <h3>🎯 Check &amp; reveal</h3>
+    <div class="sub">No judgment — use these whenever you're stuck.</div>
+    <button class="menu-btn" data-act="checkCell">Check this square<span class="d">Mark just the selected square if it's wrong</span></button>
+    <button class="menu-btn" data-act="checkWord">Check this word<span class="d">Mark wrong letters in the current word</span></button>
+    <button class="menu-btn" data-act="checkAll">Check the whole puzzle<span class="d">Mark every wrong letter in red</span></button>
+    <button class="menu-btn" data-act="revealWord">Reveal this word<span class="d">Fill in the current answer</span></button>
+    <button class="menu-btn" data-act="revealAll">Reveal the puzzle<span class="d">Show every answer (no win)</span></button>
+    <button class="menu-btn danger" data-act="clearAll">Clear the grid<span class="d">Erase all your letters and start over</span></button>
+  </div></div>
+
+  <div class="overlay" id="ovClues"><div class="sheet">
+    <button class="close-x" data-close>×</button>
+    <h3>≣ Clues</h3>
+    <div class="sub">Tap a clue to jump to it.</div>
+    <div id="clueListAcross"></div>
+    <div id="clueListDown"></div>
+  </div></div>
+
+  <div class="overlay" id="ovInfo"><div class="sheet">
+    <button class="close-x" data-close>×</button>
+    <h3>ⓘ How to play</h3>
+    <div class="sub">The Daily Mini takes about a minute.</div>
+    <p style="font-size:13.5px;line-height:1.6;color:#444">
+      • <b>Tap a square</b> to select it; tap again to switch between Across and Down.<br>
+      • <b>Type</b> with the on-screen keyboard (or your computer keyboard).<br>
+      • Use <b>‹ ›</b> to move between clues, or tap a clue to jump.<br>
+      • Stuck? The <b>🎯</b> menu lets you check or reveal.<br>
+      • Solve it and you'll get a <b>“What you learned”</b> card for every answer — a new fact about the beautiful game.<br><br>
+      A fresh Mini drops every matchday of Football 2026.
+    </p>
+  </div></div>
+
+  <div class="overlay" id="ovWin"><div class="sheet">
+    <button class="close-x" data-close>×</button>
+    <div class="win-emoji">🎉⚽🎉</div>
+    <h3 style="justify-content:center">Solved!</h3>
+    <div class="win-time">Time: <b id="winTime">0:00</b></div>
+    <div class="sub" style="text-align:center">Here's what this Mini taught you 👇</div>
+    <div id="learnList"></div>
+    <button class="menu-btn" style="text-align:center;background:var(--blue);color:#fff;margin-top:4px" id="winNext">Next Mini →</button>
+  </div></div>
+
+</div></div>
+
+<div class="legend">
+  <b>Notes for the app:</b> This is a self-contained, no-build prototype of a new <b>Play</b> tab. Puzzle data
+  (grid + clues + facts) is just a JS array — swap in a new 4×4 (or larger) per matchday. All five sample
+  Minis here are real, fully-checked crosswords (every Across and Down answer is a valid word). The on-screen
+  keyboard is shown so the mockup is testable in a browser; in the native app the device keyboard is used.
+</div>
+
+<script>
+/* ============================== PUZZLE DATA ==============================
+   Each puzzle: rows = solution (use '#' for a black square).
+   across / down clue+fact keyed by the cell number that starts the word.
+   (For an open 4×4 the numbers are deterministic: across 1,5,6,7 ; down 1,2,3,4.)
+*/
+const PUZZLES = [
+  {
+    num: "Mini #1", theme: "The Woodwork",
+    rows: ["PAST","ORCA","SEAL","TAME"],
+    across: {
+      1: { clue:"Bygone, as a former glory", fact:"Football's first international was Scotland vs England in 1872 — it finished 0–0, the only goalless meeting in their long rivalry's opener." },
+      5: { clue:"Black-and-white “killer” whale", fact:"Black-and-white is a kit classic: Juventus, Newcastle and Germany's away strip all wear the stripes." },
+      6: { clue:"Confirm — a late goal can ___ the win", fact:"To “seal” a result, teams sometimes “park the bus” — José Mourinho popularised the phrase in 2004 for ultra-defensive play." },
+      7: { clue:"Easy to handle; a soft shot is a ___ one", fact:"Not tame: the hardest struck free kicks have been measured above 130 km/h (80 mph)." }
+    },
+    down: {
+      1: { clue:"Keeper's upright — off the ___!", fact:"The goal is 8 yards (7.32 m) wide and 8 feet (2.44 m) tall — dimensions fixed all the way back in 1863." },
+      2: { clue:"The penalty ___ (the box)", fact:"A foul inside the penalty area earns a penalty kick, taken from 12 yards (11 m) out." },
+      3: { clue:"A swindle or con", fact:"A legal trick: the “Panenka” — a cheeky chipped penalty — is named after Antonín Panenka, who scored one to win the 1976 Euros." },
+      4: { clue:"A story; a fairy ___", fact:"A real fairy tale: 150-1 outsiders Greece won Euro 2004, and Leicester City won the 2016 league title at 5000-1." }
+    }
+  },
+  {
+    num: "Mini #2", theme: "Out Wide",
+    rows: ["WISH","IDLE","NEAR","GAME"],
+    across: {
+      1: { clue:"Hope for; make a ___", fact:"Hopeful underdogs win: in 2022 Saudi Arabia stunned eventual champions Argentina 2–1 in the group stage." },
+      5: { clue:"Doing nothing; sitting unused", fact:"No longer idle on the bench — since 2020 teams may use up to five substitutes in most competitions." },
+      6: { clue:"The ___ post (closest to the ball)", fact:"Strikers attack the near post to beat the keeper at the front; near-post flick-ons are a corner-kick staple." },
+      7: { clue:"The match itself", fact:"A game lasts 90 minutes plus stoppage time, split into two 45-minute halves." }
+    },
+    down: {
+      1: { clue:"The flank a winger patrols", fact:"Wingers hug the touchline to whip in crosses; Brazil's Garrincha was the most magical of all in 1958 and 1962." },
+      2: { clue:"A bright thought", fact:"“Total Football” — the Dutch idea of the 1970s — let any outfield player take over any team-mate's role." },
+      3: { clue:"Shut hard — like a finish into the top corner", fact:"A “screamer” is a ferocious long-range goal that slams into the net." },
+      4: { clue:"In this very place", fact:"Football 2026 is co-hosted by three countries — Canada, Mexico and the USA — a first for the tournament." }
+    }
+  },
+  {
+    num: "Mini #3", theme: "Rise & Mark",
+    rows: ["CLUB","RISE","AREA","MARK"],
+    across: {
+      1: { clue:"A team like Barça or Boca", fact:"FC Barcelona was founded in 1899; its motto is “Més que un club” — “more than a club.”" },
+      5: { clue:"Climb high, as for a header", fact:"Cristiano Ronaldo's leaping headers reach roughly 2.8 m off the ground — like a basketball dunk height." },
+      6: { clue:"The penalty box, informally", fact:"The penalty area stretches 18 yards from the goal line, which is why it's nicknamed “the 18-yard box.”" },
+      7: { clue:"Stick tight to an opponent", fact:"“Man-marking” puts one defender on one attacker; “zonal marking” guards space instead." }
+    },
+    down: {
+      1: { clue:"Stuff in tightly", fact:"The biggest crowd ever crammed in was about 199,000 at the Maracanã for the 1950 final in Brazil." },
+      2: { clue:"Italy's pre-euro currency", fact:"Italy have lifted the global trophy four times — second only to Brazil's five." },
+      3: { clue:"App ___ (that's you!)", fact:"Today's refs get help from VAR — the Video Assistant Referee — first used at the top level in 2018." },
+      4: { clue:"A bird's bill", fact:"Football loves birds: Brazil are the “Canarinho” (little canary) and Crystal Palace are the “Eagles.”" }
+    }
+  },
+  {
+    num: "Mini #4", theme: "On Target",
+    rows: ["SHOT","LOVE","OPEN","WENT"],
+    across: {
+      1: { clue:"An attempt on goal", fact:"“Shots on target” counts only efforts that would go in if not saved — a key modern stat." },
+      5: { clue:"What devoted fans feel for their club", fact:"In tennis it means zero; in football a “clean sheet” means the keeper let in zero goals." },
+      6: { clue:"An empty net is an ___ goal", fact:"Missing an open goal is every striker's nightmare — even Messi and Ronaldo have done it." },
+      7: { clue:"Departed; the shot ___ wide", fact:"Goal-line technology, introduced in 2014, settles whether a shot truly went in." }
+    },
+    down: {
+      1: { clue:"Not fast; a patient ___ build-up", fact:"“Tiki-taka” is a slow, patient passing style perfected by Spain and Barcelona around 2008–2012." },
+      2: { clue:"Optimism during a comeback", fact:"Never lose hope: Liverpool trailed AC Milan 3–0 at half-time in the 2005 Champions League final — and won on penalties." },
+      3: { clue:"Where you bake", fact:"Oven-hot: the 1986 tournament in Mexico was played in 40°C heat and at high altitude." },
+      4: { clue:"Campsite shelter", fact:"Devoted fans camp out for tickets — some queued for days before the 1966 final at Wembley." }
+    }
+  },
+  {
+    num: "Mini #5", theme: "Los Blancos",
+    rows: ["SWIM","TIDE","AREA","REAL"],
+    across: {
+      1: { clue:"Move through water", fact:"Many players swim for recovery — low-impact training eases tired legs between matches." },
+      5: { clue:"Turn the ___ (shift momentum)", fact:"Momentum turns fast: a single red card can change the tide of a match in seconds." },
+      6: { clue:"The 18-yard box", fact:"Only the goalkeeper may handle the ball — and only inside their own penalty area." },
+      7: { clue:"___ Madrid, record European champions", fact:"Real Madrid have won the European Cup / Champions League a record 15 times." }
+    },
+    down: {
+      1: { clue:"A team's standout player", fact:"The Ballon d'Or, awarded since 1956, crowns the year's best player; Lionel Messi has won it a record eight times." },
+      2: { clue:"Down to the ___ (the last second)", fact:"Sergio Agüero's title-winning goal for Man City came in the 94th minute of the final day in 2012." },
+      3: { clue:"A clever plan", fact:"The “false nine” is a tactical idea — a striker who drops deep — that Spain used to win Euro 2012." },
+      4: { clue:"Breakfast, lunch or dinner", fact:"Pre-match meals are usually carb-heavy — pasta or rice, eaten 3–4 hours before kickoff." }
+    }
+  }
+];
+
+/* ============================== ENGINE ============================== */
+const QWERTY = [["q","w","e","r","t","y","u","i","o","p"],
+                ["a","s","d","f","g","h","j","k","l"],
+                ["z","x","c","v","b","n","m"]];
+const $ = id => document.getElementById(id);
+let pi = 0;            // current puzzle index
+let P;                // model for current puzzle
+let user;             // 2D array of typed letters
+let sel = {r:0,c:0};
+let dir = "across";
+let seconds = 0, timerId = null, started = false, solved = false;
+const completed = new Set();   // puzzle indices solved this session
+
+function buildModel(p){
+  const n = p.rows.length;
+  const sol = p.rows.map(r => r.split(""));
+  const block = sol.map(row => row.map(ch => ch === "#"));
+  // numbering
+  const num = Array.from({length:n}, () => Array(n).fill(0));
+  let k = 1;
+  const acrossSlots = {}, downSlots = {};
+  for (let r=0;r<n;r++) for (let c=0;c<n;c++){
+    if (block[r][c]) continue;
+    const startA = (c===0 || block[r][c-1]) && (c+1<n && !block[r][c+1]);
+    const startD = (r===0 || block[r-1][c]) && (r+1<n && !block[r+1][c]);
+    if (startA || startD){ num[r][c]=k;
+      if (startA){ const cells=[]; let cc=c; while(cc<n && !block[r][cc]){cells.push([r,cc]);cc++;} acrossSlots[k]=cells; }
+      if (startD){ const cells=[]; let rr=r; while(rr<n && !block[rr][c]){cells.push([rr,c]);rr++;} downSlots[k]=cells; }
+      k++;
+    }
+  }
+  return { p, n, sol, block, num, acrossSlots, downSlots };
+}
+
+function loadPuzzle(i){
+  pi = i; P = buildModel(PUZZLES[i]);
+  user = P.sol.map(row => row.map(ch => ch==="#" ? "#" : ""));
+  sel = firstOpenCell();
+  dir = "across";
+  seconds = 0; started = false; solved = false;
+  $("timer").textContent = "0:00";
+  if (timerId){ clearInterval(timerId); timerId=null; }
+  $("pzNum").textContent = PUZZLES[i].num;
+  $("pzTheme").textContent = PUZZLES[i].theme;
+  renderPicker(); renderBoard(); updateClue();
+}
+
+function firstOpenCell(){
+  for (let r=0;r<P.n;r++) for (let c=0;c<P.n;c++) if(!P.block[r][c]) return {r,c};
+  return {r:0,c:0};
+}
+
+function renderPicker(){
+  const el = $("picker"); el.innerHTML = "";
+  PUZZLES.forEach((p,idx)=>{
+    const b = document.createElement("button");
+    b.className = "pill" + (idx===pi ? " active":"");
+    b.innerHTML = (completed.has(idx) ? '<span class="done">✓ </span>' : '') + p.num.replace("Mini ","");
+    b.onclick = ()=> loadPuzzle(idx);
+    el.appendChild(b);
+  });
+}
+
+function renderBoard(){
+  const el = $("board");
+  el.style.gridTemplateColumns = `repeat(${P.n}, 62px)`;
+  el.innerHTML = "";
+  for (let r=0;r<P.n;r++) for (let c=0;c<P.n;c++){
+    const cell = document.createElement("div");
+    if (P.block[r][c]){ cell.className="cell block"; el.appendChild(cell); continue; }
+    cell.className = "cell"; cell.dataset.r=r; cell.dataset.c=c;
+    if (P.num[r][c]) cell.innerHTML += `<span class="num">${P.num[r][c]}</span>`;
+    cell.innerHTML += `<span class="ch"></span>`;
+    cell.onclick = ()=> onCellTap(r,c);
+    el.appendChild(cell);
+  }
+  paint();
+}
+
+function cellEl(r,c){ return document.querySelector(`.cell[data-r="${r}"][data-c="${c}"]`); }
+
+function currentSlot(){
+  const map = dir==="across" ? P.acrossSlots : P.downSlots;
+  for (const k in map){ if (map[k].some(([r,c])=> r===sel.r && c===sel.c)) return map[k]; }
+  // fall back: maybe this cell only has the other direction
+  const other = dir==="across" ? P.downSlots : P.acrossSlots;
+  for (const k in other){ if (other[k].some(([r,c])=> r===sel.r && c===sel.c)){ dir = dir==="across"?"down":"across"; return other[k]; } }
+  return [[sel.r,sel.c]];
+}
+
+function slotNumber(slot){
+  const [r,c] = slot[0]; return P.num[r][c];
+}
+
+function paint(){
+  const slot = currentSlot();
+  const inSlot = new Set(slot.map(([r,c])=>r+","+c));
+  for (let r=0;r<P.n;r++) for (let c=0;c<P.n;c++){
+    if (P.block[r][c]) continue;
+    const cel = cellEl(r,c); if(!cel) continue;
+    cel.classList.remove("word","sel");
+    if (inSlot.has(r+","+c)) cel.classList.add("word");
+    if (r===sel.r && c===sel.c) cel.classList.add("sel");
+    cel.querySelector(".ch").textContent = user[r][c]==="#" ? "" : user[r][c];
+  }
+}
+
+function onCellTap(r,c){
+  if (P.block[r][c]) return;
+  if (r===sel.r && c===sel.c){ toggleDir(); }
+  else { sel={r,c}; }
+  paint(); updateClue();
+}
+
+function toggleDir(){
+  // only toggle if the cell participates in both directions
+  const inAcross = Object.values(P.acrossSlots).some(s=>s.some(([r,c])=>r===sel.r&&c===sel.c));
+  const inDown   = Object.values(P.downSlots).some(s=>s.some(([r,c])=>r===sel.r&&c===sel.c));
+  if (inAcross && inDown) dir = dir==="across" ? "down":"across";
+  paint(); updateClue();
+}
+
+function updateClue(){
+  const slot = currentSlot();
+  const k = slotNumber(slot);
+  const data = (dir==="across"?P.p.across:P.p.down)[k];
+  $("clueTag").textContent = k + (dir==="across"?"A":"D");
+  $("clueTxt").textContent = data ? data.clue : "—";
+}
+
+/* ---- input ---- */
+function startTimer(){
+  if (started) return; started = true;
+  timerId = setInterval(()=>{ if(solved) return; seconds++; $("timer").textContent = fmt(seconds); }, 1000);
+}
+function fmt(s){ const m=Math.floor(s/60); return m+":"+String(s%60).padStart(2,"0"); }
+
+function typeLetter(ch){
+  if (solved) return;
+  startTimer();
+  const cel = cellEl(sel.r, sel.c);
+  user[sel.r][sel.c] = ch.toUpperCase();
+  if (cel){ cel.classList.remove("bad"); cel.classList.remove("revealed");
+    cel.querySelector(".ch").textContent = ch.toUpperCase(); }
+  advance();
+  if (isFull()) checkSolved();
+}
+
+function advance(){
+  const slot = currentSlot();
+  let idx = slot.findIndex(([r,c])=> r===sel.r && c===sel.c);
+  // move to next empty cell in slot, else next cell
+  for (let j=idx+1;j<slot.length;j++){ if(!user[slot[j][0]][slot[j][1]]){ sel={r:slot[j][0],c:slot[j][1]}; paint(); return; } }
+  if (idx < slot.length-1){ const [r,c]=slot[idx+1]; sel={r,c}; paint(); return; }
+  paint();
+}
+
+function backspace(){
+  if (solved) return;
+  const cel = cellEl(sel.r, sel.c);
+  if (user[sel.r][sel.c]){ user[sel.r][sel.c]=""; if(cel){cel.classList.remove("bad","revealed"); cel.querySelector(".ch").textContent="";} paint(); return; }
+  // move back within slot
+  const slot = currentSlot();
+  const idx = slot.findIndex(([r,c])=> r===sel.r && c===sel.c);
+  if (idx>0){ const [r,c]=slot[idx-1]; sel={r,c}; user[r][c]=""; const pe=cellEl(r,c); if(pe){pe.classList.remove("bad","revealed"); pe.querySelector(".ch").textContent="";} paint(); }
+}
+
+function moveClue(delta){
+  // ordered list of [dir,k]
+  const order = [];
+  Object.keys(P.acrossSlots).map(Number).sort((a,b)=>a-b).forEach(k=>order.push(["across",k]));
+  Object.keys(P.downSlots).map(Number).sort((a,b)=>a-b).forEach(k=>order.push(["down",k]));
+  const slot = currentSlot(); const curK = slotNumber(slot);
+  let i = order.findIndex(([d,k])=> d===dir && k===curK);
+  i = (i + delta + order.length) % order.length;
+  const [nd, nk] = order[i];
+  dir = nd;
+  const cells = (nd==="across"?P.acrossSlots:P.downSlots)[nk];
+  const empty = cells.find(([r,c])=>!user[r][c]) || cells[0];
+  sel = {r:empty[0], c:empty[1]};
+  paint(); updateClue();
+}
+
+/* ---- check / reveal ---- */
+function isFull(){ for(let r=0;r<P.n;r++)for(let c=0;c<P.n;c++) if(!P.block[r][c] && !user[r][c]) return false; return true; }
+
+function markCell(r,c){
+  const cel = cellEl(r,c); if(!cel) return;
+  if (user[r][c] && user[r][c] !== P.sol[r][c]) cel.classList.add("bad");
+  else cel.classList.remove("bad");
+}
+function checkCell(){ markCell(sel.r, sel.c); }
+function checkWord(){ currentSlot().forEach(([r,c])=>markCell(r,c)); }
+function checkAll(){ for(let r=0;r<P.n;r++)for(let c=0;c<P.n;c++) if(!P.block[r][c]) markCell(r,c); }
+function revealCells(cells){
+  cells.forEach(([r,c])=>{
+    if (user[r][c] !== P.sol[r][c]){
+      user[r][c]=P.sol[r][c];
+      const cel=cellEl(r,c); cel.classList.remove("bad"); cel.classList.add("revealed");
+      if(!cel.querySelector(".num-rev")){ const s=document.createElement("span"); s.className="num-rev"; s.textContent="★"; cel.appendChild(s);}
+      cel.querySelector(".ch").textContent=P.sol[r][c];
+    }
+  });
+  paint();
+}
+function revealWord(){ revealCells(currentSlot()); }
+function revealAll(){ const all=[]; for(let r=0;r<P.n;r++)for(let c=0;c<P.n;c++) if(!P.block[r][c]) all.push([r,c]); revealCells(all); }
+function clearAll(){
+  for(let r=0;r<P.n;r++)for(let c=0;c<P.n;c++) if(!P.block[r][c]){ user[r][c]=""; const cel=cellEl(r,c); cel.classList.remove("bad","revealed"); const rv=cel.querySelector(".num-rev"); if(rv) rv.remove(); }
+  paint();
+}
+
+function checkSolved(){
+  for(let r=0;r<P.n;r++)for(let c=0;c<P.n;c++) if(!P.block[r][c] && user[r][c]!==P.sol[r][c]) return;
+  solved = true; if(timerId){clearInterval(timerId); timerId=null;}
+  completed.add(pi); renderPicker();
+  for(let r=0;r<P.n;r++)for(let c=0;c<P.n;c++){ const cel=cellEl(r,c); if(cel && !P.block[r][c]) cel.classList.add("correct-flash"); }
+  setTimeout(win, 400);
+}
+
+function win(){
+  confetti();
+  $("winTime").textContent = fmt(seconds);
+  const list = $("learnList"); list.innerHTML="";
+  const add = (dir,k)=>{
+    const data = (dir==="across"?P.p.across:P.p.down)[k];
+    const cells = (dir==="across"?P.acrossSlots:P.downSlots)[k];
+    const answer = cells.map(([r,c])=>P.sol[r][c]).join("");
+    const card = document.createElement("div"); card.className="learn-card";
+    card.innerHTML = `<div class="a">${answer}<span class="pos">${k}${dir==="across"?"A":"D"}</span></div>
+      <div class="clue">${data.clue}</div><div class="fact">${data.fact}</div>`;
+    list.appendChild(card);
+  };
+  Object.keys(P.acrossSlots).map(Number).sort((a,b)=>a-b).forEach(k=>add("across",k));
+  Object.keys(P.downSlots).map(Number).sort((a,b)=>a-b).forEach(k=>add("down",k));
+  show("ovWin");
+}
+
+function confetti(){
+  const cols=["#3A6F9A","#5A9FC9","#D4A017","#E0533B","#3FA66A","#8E5BA6"];
+  const host=$("app");
+  for(let i=0;i<60;i++){
+    const d=document.createElement("div"); d.className="confetti";
+    d.style.left=Math.random()*100+"%";
+    d.style.background=cols[i%cols.length];
+    d.style.animationDuration=(1.4+Math.random()*1.4)+"s";
+    d.style.animationDelay=(Math.random()*0.5)+"s";
+    host.appendChild(d);
+    setTimeout(()=>d.remove(),3200);
+  }
+}
+
+/* ---- overlays ---- */
+function show(id){ $(id).classList.add("show"); }
+function hide(id){ $(id).classList.remove("show"); }
+
+function buildClueList(){
+  const mk = (d,host,label)=>{
+    const el=$(host); el.innerHTML=`<div style="font-size:12px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:.5px;margin:8px 0 6px">${label}</div>`;
+    const map = d==="across"?P.acrossSlots:P.downSlots;
+    Object.keys(map).map(Number).sort((a,b)=>a-b).forEach(k=>{
+      const data=(d==="across"?P.p.across:P.p.down)[k];
+      const b=document.createElement("button"); b.className="menu-btn"; b.style.padding="9px 12px";
+      b.innerHTML=`<span style="color:var(--blue);font-weight:700">${k}${d==="across"?"A":"D"}</span> &nbsp;${data.clue}`;
+      b.onclick=()=>{ dir=d; const cells=map[k]; const e=cells.find(([r,c])=>!user[r][c])||cells[0]; sel={r:e[0],c:e[1]}; paint(); updateClue(); hide("ovClues"); };
+      el.appendChild(b);
+    });
+  };
+  mk("across","clueListAcross","Across");
+  mk("down","clueListDown","Down");
+}
+
+/* ============================== WIRING ============================== */
+function buildKeyboard(){
+  const el=$("kbd"); el.innerHTML="";
+  QWERTY.forEach((row,ri)=>{
+    const r=document.createElement("div"); r.className="row";
+    if (ri===2){ const k=document.createElement("button"); k.className="key wide"; k.textContent="ABC"; k.disabled=true; k.style.opacity=.6; r.appendChild(k); }
+    row.forEach(ch=>{ const k=document.createElement("button"); k.className="key"; k.textContent=ch; k.onclick=()=>typeLetter(ch); r.appendChild(k); });
+    if (ri===2){ const k=document.createElement("button"); k.className="key del"; k.textContent="⌫"; k.onclick=backspace; r.appendChild(k); }
+    el.appendChild(r);
+  });
+}
+
+$("prevClue").onclick=()=>moveClue(-1);
+$("nextClue").onclick=()=>moveClue(1);
+$("clueBox").onclick=()=>toggleDir();
+$("btnCheck").onclick=()=>show("ovCheck");
+$("btnInfo").onclick=()=>show("ovInfo");
+$("btnClues").onclick=()=>{ buildClueList(); show("ovClues"); };
+$("winNext").onclick=()=>{ hide("ovWin"); loadPuzzle((pi+1)%PUZZLES.length); };
+
+document.querySelectorAll("[data-close]").forEach(b=> b.onclick=()=> b.closest(".overlay").classList.remove("show"));
+document.querySelectorAll(".overlay").forEach(o=> o.addEventListener("click", e=>{ if(e.target===o) o.classList.remove("show"); }));
+document.querySelectorAll("#ovCheck [data-act]").forEach(b=> b.onclick=()=>{
+  const a=b.dataset.act; ({checkCell,checkWord,checkAll,revealWord,revealAll,clearAll})[a]();
+  hide("ovCheck");
+});
+
+document.addEventListener("keydown", e=>{
+  if (document.querySelector(".overlay.show")){ if(e.key==="Escape") document.querySelector(".overlay.show").classList.remove("show"); return; }
+  if (/^[a-zA-Z]$/.test(e.key)){ typeLetter(e.key); e.preventDefault(); }
+  else if (e.key==="Backspace"){ backspace(); e.preventDefault(); }
+  else if (e.key==="ArrowRight"||e.key==="ArrowLeft"||e.key==="ArrowUp"||e.key==="ArrowDown"){ arrowMove(e.key); e.preventDefault(); }
+  else if (e.key===" "){ toggleDir(); e.preventDefault(); }
+  else if (e.key==="Tab"){ moveClue(e.shiftKey?-1:1); e.preventDefault(); }
+  else if (e.key==="Enter"){ moveClue(1); e.preventDefault(); }
+});
+function arrowMove(key){
+  let {r,c}=sel; const d={ArrowRight:[0,1],ArrowLeft:[0,-1],ArrowUp:[-1,0],ArrowDown:[1,0]}[key];
+  // set direction based on arrow
+  dir = (key==="ArrowRight"||key==="ArrowLeft") ? "across" : "down";
+  let nr=r+d[0], nc=c+d[1];
+  while(nr>=0&&nr<P.n&&nc>=0&&nc<P.n){ if(!P.block[nr][nc]){ sel={r:nr,c:nc}; break; } nr+=d[0]; nc+=d[1]; }
+  paint(); updateClue();
+}
+
+buildKeyboard();
+loadPuzzle(0);
+</script>
+</body>
+</html>
