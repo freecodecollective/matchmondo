@@ -157,6 +157,43 @@ header h1{font-size:18px;font-weight:700;letter-spacing:-.3px}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
 input[type=file]{display:none}
+
+.view-tabs{display:flex;gap:0;margin-right:auto}
+.view-tab{padding:6px 14px;border:1px solid #ddd;background:#fff;font-size:12px;font-weight:600;cursor:pointer;color:#555;transition:all .15s}
+.view-tab:first-child{border-radius:8px 0 0 8px}
+.view-tab:last-child{border-radius:0 8px 8px 0}
+.view-tab:not(:first-child){border-left:none}
+.view-tab:hover{background:#f5f5f5}
+.view-tab.active{background:#1a472a;color:#fff;border-color:#1a472a}
+.view-tab .tab-badge{background:rgba(139,92,246,.15);color:#8b5cf6;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;margin-left:4px}
+.view-tab.active .tab-badge{background:rgba(255,255,255,.25);color:#fff}
+
+.claude-tasks-view{max-width:900px;margin:0 auto;padding:16px 24px 80px}
+.ct-section{margin-bottom:24px}
+.ct-section-header{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.ct-section-header h3{font-size:15px;font-weight:700;color:#1d1d1f}
+.ct-count{font-size:11px;font-weight:700;padding:2px 8px;border-radius:8px}
+.ct-count-pending{background:#fef3c7;color:#b45309}
+.ct-count-review{background:#fef3c7;color:#f59e0b}
+.ct-count-done{background:#d1fae5;color:#065f46}
+.ct-empty{text-align:center;padding:32px;color:#999;font-size:13px;background:#f9fafb;border-radius:10px;border:1px dashed #e0e0e0}
+.ct-task-card{background:#fff;border:1px solid #e9d5ff;border-radius:10px;padding:14px 16px;margin-bottom:8px}
+.ct-task-card.is-done{border-color:#d1fae5;opacity:.7}
+.ct-task-header{display:flex;align-items:flex-start;gap:10px}
+.ct-task-text{flex:1;font-size:13px;font-weight:500;color:#4c1d95;line-height:1.5}
+.ct-task-meta{font-size:11px;color:#a78bfa;margin-top:4px}
+.ct-task-actions{display:flex;gap:4px;flex-shrink:0}
+.ct-review-card{background:#fff;border:1px solid #fde68a;border-radius:10px;padding:14px 16px;margin-bottom:8px;cursor:pointer;transition:all .15s}
+.ct-review-card:hover{box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.ct-review-header{display:flex;align-items:flex-start;gap:10px}
+.ct-review-question{flex:1;font-size:13px;font-weight:500;line-height:1.4}
+.ct-review-id{font-size:11px;font-weight:700;color:#999;flex-shrink:0}
+.ct-review-task{font-size:11px;color:#8430ce;margin-top:6px;padding:6px 10px;background:#f3e8fd;border-radius:6px}
+.ct-review-actions{display:flex;gap:6px;margin-top:10px}
+.ct-q-task-card{background:#fff;border:1px solid #e9d5ff;border-radius:10px;padding:14px 16px;margin-bottom:8px}
+.ct-q-task-header{display:flex;align-items:flex-start;gap:10px}
+.ct-q-task-question{flex:1;font-size:13px;font-weight:500;line-height:1.4}
+.ct-q-task-text{font-size:11px;color:#8430ce;margin-top:6px;padding:6px 10px;background:#f3e8fd;border-radius:6px}
 </style>
 </head>
 <body>
@@ -224,15 +261,23 @@ input[type=file]{display:none}
 </div>
 
 <div class="toolbar">
-  <div class="category-tabs" id="categoryTabs"></div>
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search questions..." oninput="renderList()">
+  <div class="view-tabs">
+    <button class="view-tab active" id="viewTabQuestions" onclick="switchView('questions')">Questions</button>
+    <button class="view-tab" id="viewTabClaude" onclick="switchView('claude')">Claude Tasks<span class="tab-badge" id="claudeTabBadge" style="display:none">0</span></button>
+  </div>
+  <div id="questionsToolbar" style="display:contents">
+    <div class="category-tabs" id="categoryTabs"></div>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search questions..." oninput="renderList()">
+    </div>
   </div>
 </div>
 
 <div class="main" id="main">
   <div class="empty" id="loading"><h3>Loading trivia.json...</h3></div>
 </div>
+
+<div class="claude-tasks-view" id="claudeTasksView" style="display:none"></div>
 
 <div class="modal-overlay" id="addModal">
   <div class="modal">
@@ -354,6 +399,7 @@ function renderAll() {
   renderCategoryTabs();
   renderList();
   renderClaudeTasks();
+  updateClaudeBadge();
 }
 
 function getCategories() {
@@ -844,6 +890,166 @@ function toast(msg) {
   el.textContent = msg;
   document.body.appendChild(el);
   setTimeout(() => el.remove(), 2500);
+}
+
+let currentView = 'questions';
+
+function switchView(view) {
+  currentView = view;
+  document.getElementById('viewTabQuestions').classList.toggle('active', view === 'questions');
+  document.getElementById('viewTabClaude').classList.toggle('active', view === 'claude');
+  document.getElementById('questionsToolbar').style.display = view === 'questions' ? 'contents' : 'none';
+  document.getElementById('main').style.display = view === 'questions' ? 'block' : 'none';
+  document.getElementById('claudeTasksView').style.display = view === 'claude' ? 'block' : 'none';
+  if (view === 'claude') renderClaudeTasksView();
+}
+
+function updateClaudeBadge() {
+  const pending = (data.pendingTasks || []).filter(t => t.status === 'pending').length;
+  const qTasks = data.questions.filter(q => q.claudeTask).length;
+  const review = data.questions.filter(q => q.needsReview).length;
+  const total = pending + qTasks + review;
+  const badge = document.getElementById('claudeTabBadge');
+  if (total > 0) {
+    badge.textContent = total;
+    badge.style.display = 'inline';
+  } else {
+    badge.style.display = 'none';
+  }
+}
+
+function renderClaudeTasksView() {
+  const el = document.getElementById('claudeTasksView');
+  const pendingTasks = (data.pendingTasks || []).filter(t => t.status === 'pending');
+  const doneTasks = (data.pendingTasks || []).filter(t => t.status === 'done');
+  const qTasks = data.questions.map((q, i) => ({ q, i })).filter(({ q }) => q.claudeTask);
+  const reviewQs = data.questions.map((q, i) => ({ q, i })).filter(({ q }) => q.needsReview);
+
+  let html = '';
+
+  // Pending global tasks
+  html += `<div class="ct-section">
+    <div class="ct-section-header">
+      <h3>Pending Tasks</h3>
+      <span class="ct-count ct-count-pending">${pendingTasks.length}</span>
+    </div>`;
+  if (pendingTasks.length === 0) {
+    html += '<div class="ct-empty">No pending tasks. Use the "Task for Claude" section above or assign a task on any question.</div>';
+  } else {
+    pendingTasks.forEach((t, _) => {
+      const idx = data.pendingTasks.indexOf(t);
+      const created = t.created ? new Date(t.created).toLocaleDateString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '';
+      html += `<div class="ct-task-card">
+        <div class="ct-task-header">
+          <span class="task-status task-pending">Pending</span>
+          <span class="ct-task-text">${esc(t.text)}</span>
+          <div class="ct-task-actions">
+            <button class="btn btn-sm btn-danger" onclick="removeClaudeTask(${idx});renderClaudeTasksView()" title="Remove">&times;</button>
+          </div>
+        </div>
+        ${created ? `<div class="ct-task-meta">Created ${created}</div>` : ''}
+      </div>`;
+    });
+  }
+  html += '</div>';
+
+  // Per-question tasks
+  html += `<div class="ct-section">
+    <div class="ct-section-header">
+      <h3>Question-Level Tasks</h3>
+      <span class="ct-count ct-count-pending">${qTasks.length}</span>
+    </div>`;
+  if (qTasks.length === 0) {
+    html += '<div class="ct-empty">No per-question tasks. Expand any question and use "Task for Claude" to assign one.</div>';
+  } else {
+    qTasks.forEach(({ q, i }) => {
+      html += `<div class="ct-q-task-card">
+        <div class="ct-q-task-header">
+          <span class="ct-review-id">#${q.id}</span>
+          <span class="card-badge ${badgeClass(q.category)}" style="font-size:9px">${q.category}</span>
+          <span class="ct-q-task-question">${esc(q.question)}</span>
+          <div class="ct-task-actions">
+            <button class="btn btn-sm" style="background:#8b5cf6;color:#fff" onclick="switchView('questions');expandAndScroll(${i})" title="View question">View</button>
+            <button class="btn btn-sm btn-danger" onclick="clearQuestionTask(${i});renderClaudeTasksView()" title="Clear task">&times;</button>
+          </div>
+        </div>
+        <div class="ct-q-task-text">${esc(q.claudeTask)}</div>
+      </div>`;
+    });
+  }
+  html += '</div>';
+
+  // Needs review
+  html += `<div class="ct-section">
+    <div class="ct-section-header">
+      <h3>Needs Review</h3>
+      <span class="ct-count ct-count-review">${reviewQs.length}</span>
+    </div>`;
+  if (reviewQs.length === 0) {
+    html += '<div class="ct-empty">No questions need review. Questions modified by Claude will appear here.</div>';
+  } else {
+    reviewQs.forEach(({ q, i }) => {
+      html += `<div class="ct-review-card" onclick="switchView('questions');expandAndScroll(${i})">
+        <div class="ct-review-header">
+          <span class="ct-review-id">#${q.id}</span>
+          <span class="card-badge ${badgeClass(q.category)}" style="font-size:9px">${q.category}</span>
+          <span class="ct-review-question">${esc(q.question)}</span>
+        </div>
+        ${q.claudeTask ? `<div class="ct-review-task">Claude task: ${esc(q.claudeTask)}</div>` : ''}
+        <div class="ct-review-actions">
+          <button class="btn btn-sm" style="background:#34d058;color:#fff" onclick="event.stopPropagation();approveQuestion(${i})">Approve</button>
+          <button class="btn btn-sm" style="background:#f5f5f5;color:#333;border:1px solid #ddd" onclick="event.stopPropagation();switchView('questions');expandAndScroll(${i})">Review</button>
+        </div>
+      </div>`;
+    });
+  }
+  html += '</div>';
+
+  // Done tasks
+  if (doneTasks.length > 0) {
+    html += `<div class="ct-section">
+      <div class="ct-section-header">
+        <h3>Completed</h3>
+        <span class="ct-count ct-count-done">${doneTasks.length}</span>
+      </div>`;
+    doneTasks.forEach(t => {
+      const idx = data.pendingTasks.indexOf(t);
+      const created = t.created ? new Date(t.created).toLocaleDateString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '';
+      const completed = t.completed ? new Date(t.completed).toLocaleDateString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '';
+      html += `<div class="ct-task-card is-done">
+        <div class="ct-task-header">
+          <span class="task-status task-done">Done</span>
+          <span class="ct-task-text">${esc(t.text)}</span>
+          <div class="ct-task-actions">
+            <button class="btn btn-sm" style="background:#f5f5f5;color:#666;border:1px solid #ddd" onclick="removeClaudeTask(${idx});renderClaudeTasksView()" title="Remove">&times;</button>
+          </div>
+        </div>
+        <div class="ct-task-meta">${created ? 'Created ' + created : ''}${completed ? ' · Completed ' + completed : ''}</div>
+      </div>`;
+    });
+    html += '</div>';
+  }
+
+  el.innerHTML = html;
+}
+
+function expandAndScroll(realIndex) {
+  expandedCard = realIndex;
+  renderList();
+  requestAnimationFrame(() => {
+    const card = document.getElementById('card-' + realIndex);
+    if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+}
+
+function approveQuestion(idx) {
+  data.questions[idx].needsReview = false;
+  data.questions[idx].approved = true;
+  delete data.questions[idx].claudeTask;
+  autoSave();
+  renderAll();
+  renderClaudeTasksView();
+  toast('Question approved');
 }
 
 document.getElementById('addModal').addEventListener('click', e => {
