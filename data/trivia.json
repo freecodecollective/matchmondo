@@ -635,7 +635,7 @@
       ],
       "answer": 2,
       "explanation": "MetLife Stadium in East Rutherford, New Jersey seats approximately 82,500. For comparison, the largest venue in tournament history was the Maracanã for the 1950 final, which held an estimated 199,854 spectators. The smallest venue ever used was the Pochtenoy Stadion in Switzerland (1954) with just 10,000 seats.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "h-germany-71-brazil",
