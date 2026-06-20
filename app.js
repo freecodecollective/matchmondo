@@ -378,7 +378,7 @@
     });
 
     // Team filter — real teams only (present in the flag map), so knockout placeholders
-    // like "1A", "3ABCDF" and "To be announced" are excluded.
+    // like "1A", "3ABCDF" and "TBD" are excluded.
     ALL_TEAMS = [...new Set(matches.flatMap((m) => [m.home, m.away]))]
       .filter((t) => FLAGS[t]).sort((a, b) => a.localeCompare(b));
     createChecklistFilter({
