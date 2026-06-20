@@ -1029,7 +1029,8 @@
         "Argentina (6)"
       ],
       "answer": 1,
-      "explanation": "Germany has reached the final 8 times (1954, 1966, 1974, 1982, 1986, 1990, 2002, 2014), winning four."
+      "explanation": "Germany has reached the final 8 times (1954, 1966, 1974, 1982, 1986, 1990, 2002, 2014), winning four.",
+      "claudeTask": "add who is next after germany and how nany they have won"
     },
     {
       "id": "r-two-yellows",
