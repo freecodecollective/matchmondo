@@ -370,6 +370,34 @@ function setSyncStatus(state, label) {
   el.innerHTML = '<span class="sync-dot"></span> ' + label;
 }
 
+function mergeLocalIntoRemote(remote) {
+  const saved = localStorage.getItem('trivia-editor-data');
+  if (!saved) return remote;
+  let local;
+  try { local = JSON.parse(saved); } catch { return remote; }
+
+  const remoteById = {};
+  remote.questions.forEach(q => remoteById[q.id] = q);
+
+  local.questions.forEach(lq => {
+    const rq = remoteById[lq.id];
+    if (!rq) { remote.questions.push(lq); return; }
+    if (lq.claudeTask) rq.claudeTask = lq.claudeTask;
+    if (lq.approved && !rq.approved) { rq.approved = true; delete rq.needsReview; }
+    if (lq.needsReview === false && rq.needsReview) delete rq.needsReview;
+  });
+
+  const remotePendingIds = new Set((remote.pendingTasks || []).map(t => t.id));
+  (local.pendingTasks || []).forEach(t => {
+    if (!remotePendingIds.has(t.id)) {
+      if (!remote.pendingTasks) remote.pendingTasks = [];
+      remote.pendingTasks.push(t);
+    }
+  });
+
+  return remote;
+}
+
 async function init() {
   checkSetup();
   try {
@@ -378,9 +406,12 @@ async function init() {
     const gh = await resp.json();
     fileSha = gh.sha;
     const bytes = Uint8Array.from(atob(gh.content.replace(/\n/g, '')), c => c.charCodeAt(0));
-    data = JSON.parse(new TextDecoder().decode(bytes));
+    data = mergeLocalIntoRemote(JSON.parse(new TextDecoder().decode(bytes)));
     if (!data.pendingTasks) data.pendingTasks = [];
+    const localRaw = localStorage.getItem('trivia-editor-data');
+    const needsSync = localRaw && JSON.stringify(buildOutput()) !== JSON.stringify(data);
     setSyncStatus('saved', 'Synced');
+    if (needsSync) autoSave();
   } catch (e) {
     try {
       const resp2 = await fetch('trivia.json');
