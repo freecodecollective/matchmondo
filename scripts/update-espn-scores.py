@@ -118,7 +118,7 @@ def main():
         body = json.dumps(matches, indent=2, ensure_ascii=False)
         MATCHES_JSON.write_text(body + "\n")
         MATCHES_JS.write_text(
-            "// FIFA World Cup 2026 — all matches. Kickoffs in UTC.\n"
+            "// Football 2026 — all matches. Kickoffs in UTC.\n"
             f"// Regenerated {now.strftime('%Y-%m-%d %H:%M UTC')} by scripts/update-espn-scores.py\n"
             f"window.WC_MATCHES = {body};\n"
         )

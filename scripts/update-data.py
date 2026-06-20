@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch the latest World Cup 2026 fixtures (incl. scores) and regenerate data/matches.js.
+"""Fetch the latest Football 2026 fixtures (incl. scores) and regenerate data/matches.js.
 
 Source: fixturedownload.com JSON feed (UTC kickoff times).
 Run any time during the tournament to pull in new scores:
@@ -126,7 +126,7 @@ def main() -> None:
     body = json.dumps(rows, indent=2, ensure_ascii=False)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(
-        "// FIFA World Cup 2026 — all matches. Kickoffs in UTC.\n"
+        "// Football 2026 — all matches. Kickoffs in UTC.\n"
         f"// Regenerated {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')} by scripts/update-data.py\n"
         f"window.WC_MATCHES = {body};\n"
     )
@@ -159,8 +159,8 @@ def build_ics(rows: list[dict]) -> str:
         "PRODID:-//WC2026 Fan Schedule//EN",
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
-        "X-WR-CALNAME:MatchMondo — World Cup 2026",
-        "X-WR-CALDESC:FIFA World Cup 2026 — all 104 matches (UTC; your calendar shows them in your local time zone)",
+        "X-WR-CALNAME:MatchMondo — Football 2026",
+        "X-WR-CALDESC:Football 2026 — all 104 matches (UTC; your calendar shows them in your local time zone)",
         "REFRESH-INTERVAL;VALUE=DURATION:PT6H",
         "X-PUBLISHED-TTL:PT6H",
     ]
