@@ -40,9 +40,9 @@
         "A traditional dome"
       ],
       "answer": 0,
-      "explanation": "Atlanta's Mercedes-Benz Stadium has a retractable roof composed of eight triangular panels that open like a camera aperture.",
+      "explanation": "Atlanta’s Mercedes-Benz Stadium opened in 2017 at a cost of roughly $1.6 billion. Its retractable roof is composed of eight triangular “petal” panels that open and close like a camera aperture — the first design of its kind. The stadium also holds the Guinness record for the world’s largest halo video board, a 360-degree LED ring circling the interior.",
       "media": "https://www.youtube.com/watch?v=7YrxBpzsytE",
-      "claudeTask": "say a bit more about the stadium like how much it cost and when it was built or any other trivia"
+      "needsReview": true
     },
     {
       "id": "h-2002-cohosts",
