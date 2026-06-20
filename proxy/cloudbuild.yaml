@@ -1,15 +1,10 @@
 steps:
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: gcloud
+    entrypoint: bash
     dir: proxy
     args:
-      - 'run'
-      - 'deploy'
-      - 'trivia-proxy'
-      - '--source=.'
-      - '--region=us-central1'
-      - '--allow-unauthenticated'
-      - '--set-env-vars=GITHUB_PAT=$$GITHUB_PAT'
+      - '-c'
+      - 'gcloud run deploy trivia-proxy --source=. --region=us-central1 --allow-unauthenticated --set-env-vars=GITHUB_PAT=$$GITHUB_PAT'
     secretEnv: ['GITHUB_PAT']
 
 availableSecrets:
