@@ -1,5 +1,5 @@
 // FIFA World Cup 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-20 07:59 UTC by scripts/update-data.py
+// Regenerated 2026-06-20 09:15 UTC by scripts/update-data.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1020,7 +1020,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-01T01:00:00Z",
     "stage": "Round of 32",
     "group": null,
-    "home": "1A",
+    "home": "Mexico",
     "away": "3CEFHI",
     "venue": "Estadio Azteca",
     "city": "Mexico City, Mexico",
@@ -1059,7 +1059,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-02T00:00:00Z",
     "stage": "Round of 32",
     "group": null,
-    "home": "1D",
+    "home": "USA",
     "away": "3BEFIJ",
     "venue": "Levi's Stadium",
     "city": "Santa Clara (SF Bay Area), CA",
