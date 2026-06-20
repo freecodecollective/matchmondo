@@ -1,6 +1,6 @@
 // Football 2026 — top players per team. Compiled from agent web research (June 2026).
 // Top-5 teams: 6 players each; next 5 teams: 5 each; all other teams: 3. Clubs reflect the 2025-26 season.
-// 48 teams, 169 players.
+// 48 teams, 177 players.
 // Team order/rank come from data/rankings.js.
 window.WC_PLAYERS = {
  "teams": {
@@ -1222,6 +1222,60 @@ window.WC_PLAYERS = {
      "Belgian Super Cup 2013-14, 2014-15 (Anderlecht)",
      "Belgian Professional Footballer of the Year 2017"
     ]
+   },
+   {
+    "name": "Amadou Onana",
+    "position": "Defensive midfielder",
+    "club": "Aston Villa (Premier League, England)",
+    "hometown": "Dakar, Senegal (raised in Belgium)",
+    "why": "A towering, physically dominant midfielder who provides Belgium's midfield with steel and ball-carrying ability. Onana won the Europa League with Aston Villa in 2025-26 and scored on his debut after signing from Everton. His tactical versatility saw him deployed at centre-back for Belgium, and his combination of power, passing range and defensive intensity makes him the ideal partner to Tielemans.",
+    "number": 24,
+    "why_es": "Un mediocampista imponente y físicamente dominante que aporta acero y capacidad de conducción al mediocampo de Bélgica. Onana ganó la Europa League con el Aston Villa en 2025-26 y marcó en su debut tras fichar del Everton. Su versatilidad táctica lo llevó a jugar como central con Bélgica, y su combinación de potencia, rango de pase e intensidad defensiva lo convierten en el compañero ideal de Tielemans.",
+    "why_fr": "Un milieu imposant et physiquement dominant qui apporte de la dureté et une capacité de progression au milieu belge. Onana a remporté l'Europa League avec Aston Villa en 2025-26 et a marqué lors de ses débuts après avoir signé en provenance d'Everton. Sa polyvalence tactique l'a vu être déployé en défense centrale avec la Belgique, et sa combinaison de puissance, d'éventail de passes et d'intensité défensive fait de lui le partenaire idéal de Tielemans.",
+    "why_pt_BR": "Um meio-campista imponente e fisicamente dominante que dá ao meio-campo belga solidez e capacidade de condução. Onana conquistou a Europa League com o Aston Villa em 2025-26 e marcou em sua estreia após deixar o Everton. Sua versatilidade tática o levou a atuar como zagueiro pela Bélgica, e sua combinação de força, alcance de passe e intensidade defensiva fazem dele o parceiro ideal de Tielemans.",
+    "why_de": "Ein überragender, physisch dominanter Mittelfeldspieler, der Belgiens Mittelfeld Härte und Ballführungsqualität verleiht. Onana gewann die Europa League mit Aston Villa 2025-26 und traf bei seinem Debüt nach dem Wechsel von Everton. Seine taktische Vielseitigkeit führte dazu, dass er für Belgien als Innenverteidiger aufgestellt wurde, und seine Kombination aus Kraft, Passreichweite und defensiver Intensität macht ihn zum idealen Partner von Tielemans.",
+    "why_it": "Un centrocampista imponente e fisicamente dominante che fornisce al centrocampo del Belgio solidità e capacità di portare palla. Onana ha vinto l'Europa League con l'Aston Villa nel 2025-26 e ha segnato al debutto dopo il trasferimento dall'Everton. La sua versatilità tattica lo ha visto schierato come difensore centrale per il Belgio, e la sua combinazione di potenza, ampiezza di passaggio e intensità difensiva lo rende il partner ideale di Tielemans.",
+    "why_ja": "ベルギーの中盤に堅固さとボールキャリー能力をもたらす圧倒的なフィジカルを持つミッドフィールダー。Onanaは2025-26にAston VillaでEuropa Leagueを制し、Evertonからの移籍後デビュー戦でゴールを決めた。戦術的な多才さからベルギー代表ではセンターバックとしても起用され、パワー、パスレンジ、守備強度の組み合わせがTielemansの理想的なパートナーとなっている。",
+    "why_ko": "벨기에 미드필드에 강철 같은 수비력과 볼 운반 능력을 제공하는 압도적인 피지컬의 미드필더. Onana는 2025-26 Aston Villa에서 유로파리그를 우승했고 Everton에서 이적한 후 데뷔전에서 득점했다. 전술적 다재다능함으로 벨기에 대표팀에서 센터백으로도 기용되었으며, 파워, 패스 범위, 수비 강도의 조합이 Tielemans의 이상적인 파트너다.",
+    "why_zh_Hans": "奥纳纳是一名高大且身体素质出众的中场球员，为比利时中场提供硬度和推进能力。他在2025-26赛季随阿斯顿维拉赢得欧联杯，并在从埃弗顿加盟后的首秀中破门。他的战术多面性使他在比利时队中也被安排在中后卫位置，其力量、传球范围和防守强度的结合使他成为蒂勒曼斯的理想搭档。",
+    "why_ar": "لاعب وسط مهيب وبدنياً مسيطر يمنح خط وسط بلجيكا صلابة وقدرة على حمل الكرة. فاز أونانا بالدوري الأوروبي مع أستون فيلا في 2025-26 وسجّل في مباراة ظهوره الأول بعد انتقاله من إيفرتون. تنوعه التكتيكي أدى لتوظيفه قلب دفاع مع بلجيكا، ومزيجه من القوة ومدى التمرير والشراسة الدفاعية يجعله الشريك المثالي لتيليمانز.",
+    "why_es_ES": "Un centrocampista imponente y físicamente dominante que aporta fortaleza y capacidad de conducción al centro del campo belga. Onana ganó la Europa League con el Aston Villa en 2025-26 y marcó en su debut tras fichar procedente del Everton. Su versatilidad táctica le llevó a jugar como central con Bélgica, y su combinación de potencia, rango de pase e intensidad defensiva lo convierten en el compañero ideal de Tielemans.",
+    "caps": 25,
+    "intlGoals": 1,
+    "tournaments": [
+     "2022 (Group stage)",
+     "Euro 2024 (Round of 16)"
+    ],
+    "clubs": [
+     {
+      "team": "Aston Villa",
+      "years": "2024–",
+      "country": "England"
+     },
+     {
+      "team": "Everton",
+      "years": "2022–2024",
+      "country": "England"
+     },
+     {
+      "team": "Lille",
+      "years": "2021–2022",
+      "country": "France"
+     },
+     {
+      "team": "Hamburger SV",
+      "years": "2020–2021",
+      "country": "Germany"
+     },
+     {
+      "team": "TSG Hoffenheim",
+      "years": "2018–2020",
+      "country": "Germany"
+     }
+    ],
+    "honors": [
+     "Europa League 2025-26 (Aston Villa)"
+    ]
    }
   ],
   "Bosnia and Herzegovina": [
@@ -1684,6 +1738,45 @@ window.WC_PLAYERS = {
      "Copa do Brasil 2019 (Athletico Paranaense)",
      "Olympic Gold Medal 2020 (Brazil)"
     ]
+   },
+   {
+    "name": "Gabriel Martinelli",
+    "position": "Forward (left winger)",
+    "club": "Arsenal (Premier League, England)",
+    "hometown": "Guarulhos, São Paulo state",
+    "why": "A direct, hard-working winger who won the Premier League with Arsenal in 2025-26, Martinelli brings relentless pressing and end product to Brazil's front line. He scored six Champions League goals this season and offers a left-sided threat that stretches defences. His energy and willingness to track back make him a key tactical piece for Carlo Ancelotti.",
+    "number": 22,
+    "why_es": "Un extremo directo y trabajador que ganó la Premier League con el Arsenal en 2025-26, Martinelli aporta una presión incansable y producción final a la línea ofensiva de Brasil. Marcó seis goles en la Champions League esta temporada y ofrece una amenaza por la izquierda que estira a las defensas. Su energía y disposición para retroceder lo convierten en una pieza táctica clave para Carlo Ancelotti.",
+    "why_fr": "Ailier direct et travailleur qui a remporté la Premier League avec Arsenal en 2025-26, Martinelli apporte un pressing incessant et une efficacité au front offensif du Brésil. Il a inscrit six buts en Champions League cette saison et offre une menace côté gauche qui étire les défenses. Son énergie et sa volonté de revenir défendre en font un rouage tactique clé pour Carlo Ancelotti.",
+    "why_pt_BR": "Um ponta direto e incansável que conquistou a Premier League com o Arsenal em 2025-26, Martinelli traz pressão constante e eficiência ao ataque brasileiro. Marcou seis gols na Champions League nesta temporada e oferece uma ameaça pelo lado esquerdo que abre as defesas. Sua energia e disposição para voltar e marcar fazem dele uma peça tática essencial para Carlo Ancelotti.",
+    "why_de": "Ein direkter, fleißiger Flügelspieler, der 2025-26 mit Arsenal die Premier League gewann, bringt Martinelli unermüdliches Pressing und Endprodukt in Brasiliens Offensive. Er erzielte sechs Champions-League-Tore in dieser Saison und bietet eine linksseitige Bedrohung, die Abwehrreihen auseinanderzieht. Seine Energie und Bereitschaft zurückzulaufen machen ihn zu einem taktisch wichtigen Baustein für Carlo Ancelotti.",
+    "why_it": "Ala diretta e instancabile che ha vinto la Premier League con l'Arsenal nel 2025-26, Martinelli porta pressing costante ed efficacia al fronte offensivo del Brasile. Ha segnato sei gol in Champions League questa stagione e offre una minaccia sulla sinistra che allunga le difese. La sua energia e la disponibilità a ripiegare lo rendono un tassello tattico chiave per Carlo Ancelotti.",
+    "why_ja": "2025-26シーズンにArsenalでプレミアリーグを制した直線的で勤勉なウインガーで、ブラジルの前線に絶え間ないプレッシングと決定力をもたらす。今シーズンはチャンピオンズリーグで6ゴールを記録し、左サイドからディフェンスを引き伸ばす脅威を提供する。そのエネルギーと守備への献身が、Carlo Ancelottiにとって戦術的な重要ピースとなっている。",
+    "why_ko": "2025-26 시즌 Arsenal에서 프리미어리그를 우승한 직선적이고 성실한 윙어로, 브라질 공격진에 끊임없는 압박과 결정력을 더한다. 이번 시즌 챔피언스리그에서 6골을 넣었고 좌측에서 수비를 늘리는 위협을 제공한다. 그의 에너지와 수비 가담 의지는 Carlo Ancelotti에게 전술적 핵심 요소다.",
+    "why_zh_Hans": "马丁内利是一名直接、勤勉的边锋，在2025-26赛季随阿森纳赢得英超冠军，为巴西前线带来不懈的压迫和终端产出。本赛季他在欧冠联赛中打入六球，从左侧提供拉伸防线的威胁。他的活力和积极回防使他成为安切洛蒂战术体系中的关键棋子。",
+    "why_ar": "جناح مباشر ومجتهد فاز بالدوري الإنجليزي الممتاز مع آرسنال في 2025-26، يضيف مارتينيلي ضغطاً لا يتوقف وفعالية هجومية لخط هجوم البرازيل. سجّل ستة أهداف في دوري الأبطال هذا الموسم ويوفر تهديداً من الجانب الأيسر يُرهق الدفاعات. طاقته واستعداده للعودة دفاعياً يجعلانه قطعة تكتيكية محورية لكارلو أنشيلوتي.",
+    "why_es_ES": "Un extremo directo y trabajador que ganó la Premier League con el Arsenal en 2025-26, Martinelli aporta presión incansable y producción ofensiva al frente de ataque de Brasil. Marcó seis goles en la Champions League esta temporada y ofrece una amenaza por la banda izquierda que descoyunta las defensas. Su energía y disposición para replegar lo convierten en una pieza táctica clave para Carlo Ancelotti.",
+    "caps": 22,
+    "intlGoals": 4,
+    "tournaments": [
+     "2022 (Quarter-final)"
+    ],
+    "clubs": [
+     {
+      "team": "Arsenal",
+      "years": "2019–",
+      "country": "England"
+     },
+     {
+      "team": "Ituano",
+      "years": "2017–2019",
+      "country": "Brazil"
+     }
+    ],
+    "honors": [
+     "Premier League 2025-26 (Arsenal)",
+     "Community Shield 2023-24 (Arsenal)"
+    ]
    }
   ],
   "Cabo Verde": [
@@ -2007,6 +2100,160 @@ window.WC_PLAYERS = {
      "Taça de Portugal 2022 (Porto)",
      "Supertaça Cândido de Oliveira 2022 (Porto)",
      "Taça da Liga 2023 (Porto)"
+    ]
+   },
+   {
+    "name": "Tajon Buchanan",
+    "position": "Winger / Wing-back",
+    "club": "Villarreal (La Liga, Spain)",
+    "hometown": "Brampton, Ontario",
+    "why": "Buchanan is Canada's most explosive wide player, a two-footed winger capable of playing on either flank or as a wing-back. After breaking through at the New England Revolution, he moved to Club Brugge and then on loan to Inter Milan before signing permanently with Villarreal. His blistering speed and direct dribbling give Canada a potent outlet on the counter-attack.",
+    "number": 17,
+    "why_es": "Buchanan es el jugador por las bandas más explosivo de Canadá, un extremo ambidiestro capaz de jugar en ambos flancos o como carrilero. Tras despuntar en el New England Revolution, pasó al Club Brugge y luego en préstamo al Inter Milan antes de firmar en propiedad con el Villarreal. Su velocidad deslumbrante y regate directo dan a Canadá una salida potente en el contraataque.",
+    "why_fr": "Buchanan est le joueur de flanc le plus explosif du Canada, un ailier ambidextre capable de jouer sur chaque côté ou comme piston. Après avoir percé au New England Revolution, il est passé au Club Bruges puis en prêt à l'Inter Milan avant de signer définitivement à Villarreal. Sa vitesse foudroyante et ses dribbles directs offrent au Canada un atout redoutable en contre-attaque.",
+    "why_pt_BR": "Buchanan é o jogador de ponta mais explosivo do Canadá, um ponta ambidestro capaz de atuar em ambos os flancos ou como ala. Após se destacar no New England Revolution, transferiu-se para o Club Brugge e depois por empréstimo à Inter de Milão antes de assinar em definitivo com o Villarreal. Sua velocidade deslumbrante e dribles diretos oferecem ao Canadá uma opção potente no contra-ataque.",
+    "why_de": "Buchanan ist Kanadas explosivster Flügelspieler, ein beidfüßiger Außenstürmer, der auf beiden Seiten oder als Schienenspieler agieren kann. Nach seinem Durchbruch bei der New England Revolution wechselte er zu Club Brügge und wurde dann an Inter Mailand ausgeliehen, bevor er fest bei Villarreal unterschrieb. Sein blitzendes Tempo und sein direktes Dribbling geben Kanada eine wirksame Option im Konterangriff.",
+    "why_it": "Buchanan è l'esterno più esplosivo del Canada, un'ala ambidestra in grado di giocare su entrambe le fasce o come quinto di difesa. Dopo essersi affermato al New England Revolution, è passato al Club Bruges e poi in prestito all'Inter prima di firmare a titolo definitivo con il Villarreal. La sua velocità devastante e il suo dribbling diretto offrono al Canada una valvola di sfogo temibile in contropiede.",
+    "why_ja": "BuchananはCanadaで最も爆発力のあるサイドプレーヤーで、両足を使え両サイドまたはウィングバックとしてもプレーできるウインガーだ。New England Revolutionで頭角を現した後、Club BruggeからInter Milanへのローンを経てVillarrealに完全移籍した。目を見張るスピードと直線的なドリブルはCanadaのカウンターアタックに強力な武器を与える。",
+    "why_ko": "Buchanan은 캐나다 가장 폭발적인 측면 선수로, 양쪽 측면이나 윙백에서 모두 활약할 수 있는 양발잡이 윙어다. New England Revolution에서 성장한 뒤 Club Brugge를 거쳐 Inter Milan 임대 후 Villarreal에 영구 이적했다. 눈부신 스피드와 직선적인 드리블은 캐나다에 역습에서 강력한 무기를 제공한다.",
+    "why_zh_Hans": "布坎南是加拿大最具爆发力的边路球员，双脚均可、能踢两翼或翼卫的多面手。他在新英格兰革命队崭露头角后转投布鲁日俱乐部，随后租借至国际米兰，最终正式加盟比利亚雷阿尔。他惊人的速度和直接的盘带为加拿大提供了强劲的反击利器。",
+    "why_ar": "بوكانان أكثر لاعبي الأطراف الكندية انفجاراً، جناح ثنائي القدم قادر على اللعب في كلا الجهتين أو كظهير. بعد بروزه في نيو إنغلاند ريفولوشن انتقل إلى كلوب بروج ثم بالإعارة إلى إنتر ميلان قبل توقيعه نهائياً مع فياريال. سرعته الخاطفة وتسلّله المباشر يمنحان كندا منفذاً فعّالاً في الهجمات المرتدة.",
+    "why_es_ES": "Buchanan es el extremo más explosivo de Canadá, un jugador ambidextro capaz de actuar en ambas bandas o como carrilero. Tras despuntar en el New England Revolution, fichó por el Club Brujas y pasó cedido al Inter de Milán antes de firmar en propiedad con el Villarreal. Su velocidad demoledora y su regate directo proporcionan a Canadá una salida letal en la contra.",
+    "caps": 52,
+    "intlGoals": 13,
+    "tournaments": [
+     "2022"
+    ],
+    "clubs": [
+     {
+      "team": "Villarreal",
+      "years": "2024–",
+      "country": "Spain"
+     },
+     {
+      "team": "Inter Milan (loan)",
+      "years": "2024",
+      "country": "Italy"
+     },
+     {
+      "team": "Club Brugge",
+      "years": "2022–2024",
+      "country": "Belgium"
+     },
+     {
+      "team": "New England Revolution",
+      "years": "2019–2022",
+      "country": "USA"
+     }
+    ],
+    "honors": [
+     "Belgian Pro League (2022–23, Club Brugge)",
+     "Belgian Super Cup (2022, Club Brugge)",
+     "Canadian Player of the Year (2021)"
+    ]
+   },
+   {
+    "name": "Cyle Larin",
+    "position": "Forward",
+    "club": "Southampton (Premier League, England)",
+    "hometown": "Brampton, Ontario",
+    "why": "Larin is Canada's second-highest all-time goalscorer, a powerful target forward who thrives on crosses and set-pieces. After prolific spells in MLS with Orlando City and stints with Besiktas, Real Valladolid and Real Mallorca, he signed with Southampton to play in the Premier League. His aerial presence, experience and ability to score in big moments make him a crucial option in the Canadian attack.",
+    "number": 9,
+    "why_es": "Larin es el segundo máximo goleador histórico de Canadá, un delantero potente de área que se nutre de centros y jugadas a balón parado. Tras prolíficas etapas en la MLS con Orlando City y pasajes por el Besiktas, Real Valladolid y Real Mallorca, fichó por el Southampton para jugar en la Premier League. Su presencia aérea, experiencia y capacidad de marcar en momentos importantes lo convierten en una opción crucial en el ataque canadiense.",
+    "why_fr": "Larin est le deuxième meilleur buteur de l'histoire du Canada, un avant-centre puissant qui excelle sur les centres et les coups de pied arrêtés. Après des périodes prolifiques en MLS avec Orlando City et des passages à Besiktas, au Real Valladolid et au Real Majorque, il a signé à Southampton pour jouer en Premier League. Sa présence aérienne, son expérience et sa capacité à marquer dans les grands moments en font une option cruciale dans l'attaque canadienne.",
+    "why_pt_BR": "Larin é o segundo maior artilheiro de todos os tempos do Canadá, um centroavante poderoso que se destaca em cruzamentos e bolas paradas. Após passagens prolíficas na MLS pelo Orlando City e clubes como Besiktas, Real Valladolid e Real Mallorca, assinou com o Southampton para jogar na Premier League. Sua presença aérea, experiência e capacidade de marcar nos grandes momentos o tornam uma opção crucial para o ataque canadense.",
+    "why_de": "Larin ist Kanadas zweiterfolgreichster Torschütze aller Zeiten, ein kraftvoller Zielspieler, der bei Flanken und Standardsituationen aufblüht. Nach produktiven Phasen in der MLS bei Orlando City und Stationen bei Besiktas, Real Valladolid und Real Mallorca unterschrieb er bei Southampton für die Premier League. Seine Kopfballstärke, Erfahrung und Fähigkeit, in großen Momenten zu treffen, machen ihn zu einer entscheidenden Option im kanadischen Angriff.",
+    "why_it": "Larin è il secondo miglior marcatore di tutti i tempi del Canada, un centravanti potente che si esalta su cross e calci piazzati. Dopo stagioni prolifiche in MLS con l'Orlando City e periodi al Besiktas, Real Valladolid e Real Mallorca, ha firmato con il Southampton per giocare in Premier League. La sua presenza aerea, l'esperienza e la capacità di segnare nei momenti chiave lo rendono un'opzione cruciale per l'attacco canadese.",
+    "why_ja": "LarinはCanada歴代2位の得点者で、クロスやセットプレーに強い力強いターゲットフォワードだ。MLSのOrlando Cityでの豊富なシーズンとBesiktas、Real Valladolid、Real Mallorcaでのプレーを経て、プレミアリーグのSouthamptonに加入した。空中戦での存在感、経験、大舞台での決定力がCanadaの攻撃における重要な選択肢となっている。",
+    "why_ko": "Larin은 캐나다 역대 득점 2위 기록자로, 크로스와 세트피스에서 빛나는 강력한 타겟 포워드다. MLS Orlando City에서의 왕성한 활약과 Besiktas, Real Valladolid, Real Mallorca를 거쳐 프리미어리그의 Southampton에 합류했다. 공중전 존재감, 경험, 큰 순간에 골을 넣는 능력이 캐나다 공격에서 핵심 옵션이 되게 한다.",
+    "why_zh_Hans": "拉林是加拿大历史第二射手，一名以争顶和定位球见长的强力目标型前锋。在MLS奥兰多城的高产赛季和效力贝西克塔什、皇家巴利亚多利德和皇家马略卡后，他签约南安普顿征战英超。他的空中优势、丰富经验和关键时刻的进球能力使他成为加拿大进攻的重要选择。",
+    "why_ar": "لارين ثاني أكثر الهدافين الكنديين عبر التاريخ، مهاجم هدّاف قوي يزدهر بالعرضيات والكرات الثابتة. بعد فترات مثمرة في الدوري الأمريكي مع أورلاندو سيتي ومحطات في بشيكتاش وبلد الوليد ومايوركا وقّع مع ساوثهامبتون للعب في الدوري الإنجليزي الممتاز. حضوره الجوي وخبرته وقدرته على التسجيل في الأوقات الحاسمة تجعلانه خياراً محورياً في هجوم كندا.",
+    "why_es_ES": "Larin es el segundo máximo goleador histórico de Canadá, un delantero centro potente que se nutre de centros y balones parados. Tras prolíficas etapas en la MLS con Orlando City y pasos por Besiktas, Real Valladolid y Real Mallorca, fichó por el Southampton para disputar la Premier League. Su presencia aérea, experiencia y capacidad para marcar en momentos clave lo convierten en una pieza fundamental del ataque canadiense.",
+    "caps": 74,
+    "intlGoals": 30,
+    "tournaments": [
+     "2022"
+    ],
+    "clubs": [
+     {
+      "team": "Southampton",
+      "years": "2025–",
+      "country": "England"
+     },
+     {
+      "team": "Real Mallorca",
+      "years": "2024–2025",
+      "country": "Spain"
+     },
+     {
+      "team": "Real Valladolid",
+      "years": "2023–2024",
+      "country": "Spain"
+     },
+     {
+      "team": "Club Brugge",
+      "years": "2022–2023",
+      "country": "Belgium"
+     },
+     {
+      "team": "Besiktas",
+      "years": "2021–2022",
+      "country": "Turkey"
+     },
+     {
+      "team": "Orlando City SC",
+      "years": "2015–2021",
+      "country": "USA"
+     }
+    ],
+    "honors": [
+     "Belgian Pro League (2022–23, Club Brugge)",
+     "Turkish Super Cup (2021, Besiktas)",
+     "MLS Rookie of the Year (2015)"
+    ]
+   },
+   {
+    "name": "Alistair Johnston",
+    "position": "Right-back",
+    "club": "Celtic (Scottish Premiership, Scotland)",
+    "hometown": "Aurora, Ontario",
+    "why": "Johnston is Canada's first-choice right-back and one of the most consistent performers in Jesse Marsch's setup. A tireless overlapping defender with excellent reading of the game, he won back-to-back Scottish Premiership titles with Celtic and brings Champions League experience. His energy, defensive solidity and willingness to get forward make him essential on the right side of the Canadian defense.",
+    "number": 2,
+    "why_es": "Johnston es el lateral derecho titular de Canadá y uno de los jugadores más consistentes en el esquema de Jesse Marsch. Un defensor incansable que se proyecta con excelente lectura del juego, ganó dos títulos consecutivos de la Scottish Premiership con el Celtic y aporta experiencia en la Champions League. Su energía, solidez defensiva y voluntad de proyectarse lo hacen esencial en el costado derecho de la defensa canadiense.",
+    "why_fr": "Johnston est l'arrière droit titulaire du Canada et l'un des joueurs les plus réguliers dans le dispositif de Jesse Marsch. Un défenseur infatigable qui monte avec une excellente lecture du jeu, il a remporté deux titres consécutifs de Scottish Premiership avec le Celtic et apporte une expérience en Champions League. Son énergie, sa solidité défensive et sa volonté de se projeter le rendent indispensable sur le côté droit de la défense canadienne.",
+    "why_pt_BR": "Johnston é o lateral-direito titular do Canadá e um dos jogadores mais consistentes no esquema de Jesse Marsch. Um defensor incansável com excelente leitura de jogo, conquistou dois títulos consecutivos da Scottish Premiership com o Celtic e traz experiência na Champions League. Sua energia, solidez defensiva e disposição para atacar o tornam essencial no lado direito da defesa canadense.",
+    "why_de": "Johnston ist Kanadas Rechtsverteidiger Nummer eins und einer der beständigsten Spieler in Jesse Marschs System. Ein unermüdlicher nachrückender Verteidiger mit ausgezeichnetem Spielverständnis, gewann er mit Celtic zwei schottische Meisterschaften in Folge und bringt Champions-League-Erfahrung mit. Seine Energie, defensive Stabilität und Bereitschaft nach vorne zu gehen machen ihn auf der rechten Seite der kanadischen Abwehr unverzichtbar.",
+    "why_it": "Johnston è il terzino destro titolare del Canada e uno dei giocatori più costanti nel sistema di Jesse Marsch. Difensore instancabile con eccellente lettura di gioco, ha vinto due titoli consecutivi della Scottish Premiership con il Celtic e porta esperienza in Champions League. La sua energia, solidità difensiva e voglia di spingersi in avanti lo rendono essenziale sul lato destro della difesa canadese.",
+    "why_ja": "JohnstonはCanadaの第一選択の右バックでJesse Marschの体制で最も安定したパフォーマーの一人だ。優れたゲームリーディングを持つ疲れ知らずのオーバーラッピングディフェンダーで、Celticで2年連続のスコティッシュ・プレミアシップ制覇とチャンピオンズリーグ経験を持つ。そのエネルギー、守備の堅実さ、前線への積極性がCanadaの守備の右サイドに不可欠な存在となっている。",
+    "why_ko": "Johnston은 캐나다의 주전 라이트백이자 Jesse Marsch 시스템에서 가장 꾸준한 퍼포먼스를 보이는 선수 중 하나다. 뛰어난 경기 판독력을 갖춘 지칠 줄 모르는 오버래핑 수비수로 Celtic에서 연속 스코티시 프리미어십 우승을 차지하고 챔피언스리그 경험을 갖추고 있다. 에너지, 수비 안정감, 전방 투입 의지가 캐나다 수비 우측에 필수적이다.",
+    "why_zh_Hans": "约翰斯顿是加拿大的首选右后卫，也是杰西·马尔施阵容中最稳定的球员之一。他是一名不知疲倦的套边防守者，拥有出色的比赛阅读能力，随凯尔特人连续赢得苏格兰超级联赛冠军并拥有欧冠经验。他的充沛体能、防守稳固性和积极前插使他成为加拿大右路防线不可或缺的一员。",
+    "why_ar": "جونستون ظهير كندا الأيمن الأساسي وأحد أكثر اللاعبين استقراراً في منظومة جيسي مارش. مدافع لا يكل يتقدم بامتياز بقراءة ممتازة للعبة، فاز بلقبين متتاليين من الدوري الاسكتلندي مع سلتيك ويحمل خبرة في دوري الأبطال. طاقته وثباته الدفاعي واستعداده للتقدم تجعله ضرورياً على الجانب الأيمن من الدفاع الكندي.",
+    "why_es_ES": "Johnston es el lateral derecho titular de Canadá y uno de los futbolistas más regulares en el esquema de Jesse Marsch. Un defensor incansable que se proyecta con una lectura de juego excelente, ganó dos Scottish Premiership consecutivas con el Celtic y aporta experiencia en la Champions League. Su energía, solidez defensiva y voluntad de llegar al ataque lo hacen imprescindible en el costado derecho de la defensa canadiense.",
+    "caps": 45,
+    "intlGoals": 2,
+    "tournaments": [
+     "2022"
+    ],
+    "clubs": [
+     {
+      "team": "Celtic",
+      "years": "2023–",
+      "country": "Scotland"
+     },
+     {
+      "team": "CF Montréal",
+      "years": "2021–2023",
+      "country": "Canada"
+     },
+     {
+      "team": "Nashville SC",
+      "years": "2020–2021",
+      "country": "USA"
+     }
+    ],
+    "honors": [
+     "Scottish Premiership (2022–23, 2023–24, 2024–25, Celtic)",
+     "Scottish League Cup (2023–24, 2024–25, Celtic)"
     ]
    }
   ],
@@ -4397,6 +4644,61 @@ window.WC_PLAYERS = {
      "Club Championship 2021 (Chelsea)",
      "Community Shield 2023–24 (Arsenal)"
     ]
+   },
+   {
+    "name": "Leroy Sané",
+    "position": "Winger (left/right)",
+    "club": "Galatasaray (Süper Lig, Turkey)",
+    "hometown": "Essen, North Rhine-Westphalia",
+    "why": "A blistering-pace winger with 77 caps and 17 international goals, Sané is one of Germany's most experienced attacking threats across multiple tournaments. After leaving Bayern Munich for Galatasaray, he rediscovered top form with 7 goals and 5 assists in 2025-26. His ability to beat defenders on either flank and deliver decisive moments in big games makes him a proven weapon in Nagelsmann's squad.",
+    "number": 19,
+    "why_es": "Un extremo de velocidad fulminante con 77 partidos y 17 goles internacionales, Sané es una de las amenazas ofensivas más experimentadas de Alemania en múltiples torneos. Tras dejar el Bayern Munich por el Galatasaray, redescubrió su mejor forma con 7 goles y 5 asistencias en 2025-26. Su habilidad para superar defensores por ambas bandas y generar momentos decisivos en partidos grandes lo convierten en un arma probada en el plantel de Nagelsmann.",
+    "why_fr": "Ailier à la vitesse fulgurante avec 77 sélections et 17 buts internationaux, Sané est l'une des menaces offensives les plus expérimentées de l'Allemagne à travers plusieurs tournois. Après avoir quitté le Bayern Munich pour Galatasaray, il a retrouvé sa meilleure forme avec 7 buts et 5 passes décisives en 2025-26. Sa capacité à éliminer des défenseurs sur les deux flancs et à livrer des moments décisifs dans les grands matchs fait de lui une arme éprouvée dans l'effectif de Nagelsmann.",
+    "why_pt_BR": "Um ponta de velocidade devastadora com 77 convocações e 17 gols internacionais, Sané é uma das ameaças ofensivas mais experientes da Alemanha em múltiplos torneios. Após deixar o Bayern de Munique pelo Galatasaray, reencontrou sua melhor forma com 7 gols e 5 assistências em 2025-26. Sua capacidade de superar marcadores por ambos os lados e entregar momentos decisivos nos grandes jogos fazem dele uma arma comprovada no elenco de Nagelsmann.",
+    "why_de": "Ein blitzschneller Flügelspieler mit 77 Länderspielen und 17 Toren für Deutschland, ist Sané eine der erfahrensten Offensivwaffen über mehrere Turniere hinweg. Nach seinem Wechsel von Bayern München zu Galatasaray fand er 2025-26 mit 7 Toren und 5 Vorlagen zu Topform zurück. Seine Fähigkeit, Verteidiger auf beiden Flügeln zu überwinden und entscheidende Momente in großen Spielen zu liefern, macht ihn zu einer bewährten Waffe in Nagelsmanns Kader.",
+    "why_it": "Un'ala dalla velocità devastante con 77 presenze e 17 gol internazionali, Sané è una delle minacce offensive più esperte della Germania in più tornei. Dopo aver lasciato il Bayern Monaco per il Galatasaray, ha ritrovato la sua forma migliore con 7 gol e 5 assist nel 2025-26. La sua capacità di saltare i difensori su entrambe le fasce e di regalare momenti decisivi nelle grandi partite lo rende un'arma collaudata nella rosa di Nagelsmann.",
+    "why_ja": "77キャップ17ゴールの電光石火のスピードを持つウインガーで、Saneは複数の大会にわたりドイツ屈指の経験豊富な攻撃的脅威だ。Bayern MunichからGalatasarayへ移籍後、2025-26で7ゴール5アシストとトップフォームを取り戻した。両サイドでディフェンダーを抜く能力とビッグゲームでの決定的な瞬間を生み出す力が、Nagelsmannのスカッドにおける実績ある武器となっている。",
+    "why_ko": "77캡 17골의 전광석화 같은 윙어로, Sané는 여러 대회에 걸쳐 독일의 가장 경험 많은 공격 위협 중 하나다. Bayern Munich을 떠나 Galatasaray로 이적한 후 2025-26 시즌 7골 5어시스트로 최상의 폼을 되찾았다. 양쪽 측면에서 수비수를 제치고 빅 게임에서 결정적 순간을 만드는 능력이 Nagelsmann 스쿼드의 검증된 무기다.",
+    "why_zh_Hans": "萨内是一名速度惊人的边锋，拥有77次国际赛出场和17粒进球，是德国在多届赛事中最有经验的进攻威胁之一。从拜仁慕尼黑转投加拉塔萨雷后，他在2025-26赛季以7球5助攻找回最佳状态。他在两翼突破防守球员并在大赛中贡献关键时刻的能力，使他成为纳格尔斯曼阵容中久经考验的武器。",
+    "why_ar": "جناح بسرعة خاطفة بـ77 مشاركة و17 هدفاً دولياً، يُعدّ ساني من أكثر الأسلحة الهجومية خبرة في ألمانيا عبر بطولات متعددة. بعد مغادرة بايرن ميونخ إلى غلطة سراي، استعاد أفضل مستوياته بـ7 أهداف و5 تمريرات حاسمة في 2025-26. قدرته على تجاوز المدافعين من الجانبين وتقديم لحظات حاسمة في المباريات الكبيرة تجعله سلاحاً مُجرّباً في تشكيلة ناغلسمان.",
+    "why_es_ES": "Un extremo de velocidad fulgurante con 77 internacionalidades y 17 goles con Alemania, Sané es una de las amenazas ofensivas más experimentadas en múltiples torneos. Tras dejar el Bayern de Múnich por el Galatasaray, redescubrió su mejor versión con 7 goles y 5 asistencias en 2025-26. Su capacidad para desbordar por ambas bandas y ofrecer momentos decisivos en los partidos importantes lo convierten en un arma contrastada en la convocatoria de Nagelsmann.",
+    "caps": 77,
+    "intlGoals": 17,
+    "tournaments": [
+     "Euro 2016 (Semi-final)",
+     "Euro 2020",
+     "2022 (Group stage)",
+     "Euro 2024 (Quarter-final)"
+    ],
+    "clubs": [
+     {
+      "team": "Galatasaray",
+      "years": "2025–",
+      "country": "Turkey"
+     },
+     {
+      "team": "Bayern Munich",
+      "years": "2020–2025",
+      "country": "Germany"
+     },
+     {
+      "team": "Manchester City",
+      "years": "2016–2020",
+      "country": "England"
+     },
+     {
+      "team": "Schalke 04",
+      "years": "2014–2016",
+      "country": "Germany"
+     }
+    ],
+    "honors": [
+     "Bundesliga (2021, 2022, 2023, 2024 with Bayern Munich)",
+     "DFB-Pokal (2020 with Bayern Munich)",
+     "Champions League 2019-20 (Bayern Munich)",
+     "Premier League 2017-18, 2018-19 (Manchester City)",
+     "PFA Young Player of the Year 2017-18"
+    ]
    }
   ],
   "Ghana": [
@@ -6167,6 +6469,77 @@ window.WC_PLAYERS = {
      "Eredivisie (2019, 2021, 2022)",
      "KNVB Cup (2019, 2021)"
     ]
+   },
+   {
+    "name": "Sofyan Amrabat",
+    "position": "Defensive midfielder",
+    "club": "Real Betis (La Liga, Spain; on loan from Fenerbahçe)",
+    "hometown": "Born in Huizen, Netherlands to Moroccan parents",
+    "why": "The tireless engine of Morocco's midfield, Amrabat was the breakout star of the 2022 tournament semi-final run with his ball-winning intensity and ability to carry the ball under pressure. With 75 caps and experience at Fiorentina, Manchester United and now Real Betis, he provides the defensive shield that allows Morocco's attacking talent to flourish. He was also part of the AFCON 2025-winning squad.",
+    "number": 4,
+    "why_es": "El motor incansable del mediocampo marroquí, Amrabat fue la revelación de la semifinal del torneo 2022 con su intensidad en la recuperación de balón y su habilidad para conducir bajo presión. Con 75 partidos internacionales y experiencia en Fiorentina, Manchester United y ahora Real Betis, proporciona el escudo defensivo que permite al talento ofensivo de Marruecos florecer. También fue parte del plantel campeón del AFCON 2025.",
+    "why_fr": "Le moteur infatigable du milieu marocain, Amrabat a été la révélation de la demi-finale du tournoi 2022 par son intensité dans la récupération de balle et sa capacité à porter le ballon sous pression. Fort de 75 sélections et d'expériences à la Fiorentina, Manchester United et maintenant au Real Betis, il fournit le bouclier défensif qui permet au talent offensif du Maroc de s'exprimer. Il faisait également partie de l'effectif vainqueur de la CAN 2025.",
+    "why_pt_BR": "O motor incansável do meio-campo marroquino, Amrabat foi a revelação da campanha semifinal do torneio de 2022 com sua intensidade na recuperação de bola e habilidade para conduzir sob pressão. Com 75 convocações e passagens por Fiorentina, Manchester United e agora Real Betis, ele fornece o escudo defensivo que permite o talento ofensivo de Marrocos brilhar. Também fez parte do elenco campeão da AFCON 2025.",
+    "why_de": "Der unermüdliche Motor von Marokkos Mittelfeld, Amrabat war der Durchbruchsstar des Halbfinaleinzugs beim Turnier 2022 mit seiner Balleroberungsintensität und Fähigkeit, den Ball unter Druck zu tragen. Mit 75 Länderspielen und Erfahrung bei Fiorentina, Manchester United und nun Real Betis bietet er den defensiven Schutzschild, der Marokkos Offensivtalent zur Entfaltung kommen lässt. Er war auch Teil des AFCON-2025-siegreichen Kaders.",
+    "why_it": "Il motore instancabile del centrocampo marocchino, Amrabat è stato la rivelazione della corsa alla semifinale nel torneo 2022 con la sua intensità nel recupero palla e la capacità di portare il pallone sotto pressione. Con 75 presenze internazionali ed esperienze alla Fiorentina, al Manchester United e ora al Real Betis, fornisce lo scudo difensivo che permette al talento offensivo del Marocco di fiorire. Ha fatto parte anche della rosa vincitrice della Coppa d'Africa 2025.",
+    "why_ja": "Morocco中盤の不屈のエンジンであるAmrabatは、2022年大会準決勝進出でボール奪取の激しさとプレッシャー下でのボールキャリー能力で一躍スターとなった。75キャップの経験を持ちFiorentina、Manchester United、そして現在のReal Betisでプレーし、Moroccoの攻撃的タレントを輝かせる守備の盾を提供する。AFCON 2025優勝スカッドのメンバーでもあった。",
+    "why_ko": "모로코 미드필드의 지칠 줄 모르는 엔진인 Amrabat는 2022 대회 4강 진출에서 볼 탈취 강도와 압박 속에서 볼을 운반하는 능력으로 돌풍의 주역이었다. 75캡의 경험과 Fiorentina, Manchester United, 현재 Real Betis에서의 경력을 보유하며 모로코의 공격 재능이 꽃피울 수 있는 수비 방패를 제공한다. AFCON 2025 우승 스쿼드의 일원이기도 했다.",
+    "why_zh_Hans": "阿姆拉巴特是摩洛哥中场的不知疲倦引擎，在2022年赛事半决赛之旅中凭借其拼抢强度和压力下带球能力一举成名。他拥有75次国际赛出场经验，先后效力于佛罗伦萨、曼联，现在在皇家贝蒂斯，为摩洛哥的进攻人才发挥提供防守屏障。他也是2025年非洲杯冠军阵容的一员。",
+    "why_ar": "محرّك خط الوسط المغربي الذي لا يكلّ، كان أمرابط نجم نصف نهائي بطولة 2022 بشراسته في استخلاص الكرة وقدرته على حملها تحت الضغط. بـ75 مشاركة دولية وخبرة في فيورنتينا ومانشستر يونايتد وحالياً ريال بيتيس، يوفر الدرع الدفاعي الذي يسمح للمواهب الهجومية المغربية بالتألق. كان أيضاً جزءاً من المنتخب الفائز بأمم أفريقيا 2025.",
+    "why_es_ES": "El motor incansable del centro del campo marroquí, Amrabat fue la revelación de la semifinal del torneo 2022 con su intensidad en la recuperación del balón y su capacidad para conducir bajo presión. Con 75 internacionalidades y experiencia en la Fiorentina, Manchester United y ahora el Real Betis, proporciona el escudo defensivo que permite al talento ofensivo de Marruecos florecer. También formó parte de la plantilla campeona del AFCON 2025.",
+    "caps": 75,
+    "intlGoals": 0,
+    "tournaments": [
+     "2022 (Semi-final)",
+     "2025 Africa Cup of Nations (Winner)"
+    ],
+    "clubs": [
+     {
+      "team": "Real Betis (loan)",
+      "years": "2025–",
+      "country": "Spain"
+     },
+     {
+      "team": "Fenerbahçe",
+      "years": "2024–",
+      "country": "Turkey"
+     },
+     {
+      "team": "Manchester United (loan)",
+      "years": "2023–2024",
+      "country": "England"
+     },
+     {
+      "team": "Fiorentina",
+      "years": "2021–2024",
+      "country": "Italy"
+     },
+     {
+      "team": "Hellas Verona",
+      "years": "2020–2021",
+      "country": "Italy"
+     },
+     {
+      "team": "Club Brugge",
+      "years": "2019–2020",
+      "country": "Belgium"
+     },
+     {
+      "team": "Feyenoord",
+      "years": "2017–2019",
+      "country": "Netherlands"
+     },
+     {
+      "team": "Utrecht",
+      "years": "2014–2017",
+      "country": "Netherlands"
+     }
+    ],
+    "honors": [
+     "Africa Cup of Nations (2025)",
+     "Coppa Italia runner-up (2023 with Fiorentina)",
+     "Europa Conference League runner-up (2023 with Fiorentina)"
+    ]
    }
   ],
   "Netherlands": [
@@ -6415,6 +6788,52 @@ window.WC_PLAYERS = {
      "Coppa Italia (2022, 2023)",
      "Supercoppa Italiana (2022, 2023, 2024)",
      "Eerste Divisie (2016 with Sparta Rotterdam)"
+    ]
+   },
+   {
+    "name": "Ryan Gravenberch",
+    "position": "Central midfielder",
+    "club": "Liverpool (Premier League, England)",
+    "hometown": "Amsterdam",
+    "why": "One of the breakout stars of the Premier League era at Liverpool, Gravenberch has cemented himself as a deep-lying playmaker who controls tempo and breaks up opposition attacks. He signed a new contract through 2032 and was integral to Liverpool's title-winning campaigns. His composure on the ball, progressive passing and physical presence give the Netherlands a modern midfield anchor.",
+    "number": 11,
+    "why_es": "Una de las revelaciones de la era del Liverpool en la Premier League, Gravenberch se ha consolidado como un mediocampista profundo que controla el tempo y desarticula los ataques rivales. Firmó un nuevo contrato hasta 2032 y fue pieza clave en las campañas de títulos del Liverpool. Su compostura con el balón, pase progresivo y presencia física le dan a los Países Bajos un ancla moderna en el mediocampo.",
+    "why_fr": "L'une des révélations de l'ère Liverpool en Premier League, Gravenberch s'est imposé comme un milieu relayeur qui contrôle le tempo et casse les attaques adverses. Il a signé un nouveau contrat jusqu'en 2032 et a été un rouage essentiel des campagnes de titre de Liverpool. Sa sérénité balle au pied, ses passes progressives et sa présence physique offrent aux Pays-Bas un ancrage moderne au milieu.",
+    "why_pt_BR": "Uma das revelações da era do Liverpool na Premier League, Gravenberch se consolidou como um meio-campista profundo que controla o ritmo e desarma os ataques adversários. Assinou um novo contrato até 2032 e foi peça fundamental nas campanhas de título do Liverpool. Sua serenidade com a bola, passes progressivos e presença física dão à Holanda um volante moderno no meio de campo.",
+    "why_de": "Einer der Durchstarter der Liverpool-Ära in der Premier League, hat sich Gravenberch als tiefliegender Spielmacher etabliert, der das Tempo kontrolliert und gegnerische Angriffe unterbindet. Er unterschrieb einen neuen Vertrag bis 2032 und war ein wesentlicher Bestandteil von Liverpools Titelgewinnen. Seine Ruhe am Ball, sein progressives Passspiel und seine physische Präsenz geben den Niederlanden einen modernen Mittelfeld-Anker.",
+    "why_it": "Una delle rivelazioni dell'era Liverpool in Premier League, Gravenberch si è affermato come regista arretrato che controlla il ritmo e spezza gli attacchi avversari. Ha firmato un nuovo contratto fino al 2032 ed è stato fondamentale nelle campagne vincenti del Liverpool. La sua compostezza palla al piede, i passaggi progressivi e la presenza fisica offrono ai Paesi Bassi un'ancora moderna a centrocampo.",
+    "why_ja": "プレミアリーグ時代のLiverpoolで台頭した注目選手の一人であるGravenberchは、テンポをコントロールし相手の攻撃を遮断するディープ・プレーメーカーとしての地位を確立した。2032年までの新契約を結び、Liverpoolのタイトル獲得キャンペーンに不可欠だった。ボールへの落ち着き、プログレッシブパス、フィジカルプレゼンスが、Netherlandsに現代的な中盤のアンカーをもたらす。",
+    "why_ko": "프리미어리그 리버풀 시대의 돌풍 중 하나인 Gravenberch는 템포를 조절하고 상대 공격을 차단하는 딥라잉 플레이메이커로 자리매김했다. 2032년까지의 새 계약을 체결하고 리버풀의 타이틀 우승 캠페인에 핵심적이었다. 볼 처리 침착함, 전진 패스, 피지컬 프레즌스가 네덜란드에 현대적인 미드필드 앵커를 제공한다.",
+    "why_zh_Hans": "格拉芬贝赫是利物浦英超时代的突破之星之一，已确立自己作为掌控节奏并瓦解对手进攻的深位组织者地位。他签下了至2032年的新合同，在利物浦的夺冠赛季中发挥了关键作用。他的持球沉稳、前进传球和身体存在感为荷兰提供了一个现代化的中场支撑点。",
+    "why_ar": "أحد أبرز نجوم حقبة ليفربول في الدوري الإنجليزي الممتاز، رسّخ غرافنبيرخ نفسه صانع ألعاب عميقاً يتحكم في الإيقاع ويقطع هجمات الخصم. وقّع عقداً جديداً حتى 2032 وكان ركيزة أساسية في حملات ليفربول لنيل الألقاب. هدوؤه على الكرة وتمريراته التصاعدية وحضوره البدني يمنحون هولندا مرتكزاً عصرياً في الوسط.",
+    "why_es_ES": "Una de las revelaciones de la era del Liverpool en la Premier League, Gravenberch se ha consolidado como un centrocampista profundo que controla el ritmo y desactiva los ataques rivales. Firmó un nuevo contrato hasta 2032 y fue pieza clave en las campañas de títulos del Liverpool. Su compostura con el balón, su pase progresivo y su presencia física otorgan a los Países Bajos un ancla moderna en el centro del campo.",
+    "caps": 25,
+    "intlGoals": 1,
+    "tournaments": [
+     "Euro 2024 (Semi-final)"
+    ],
+    "clubs": [
+     {
+      "team": "Liverpool",
+      "years": "2023–",
+      "country": "England"
+     },
+     {
+      "team": "Bayern Munich",
+      "years": "2022–2023",
+      "country": "Germany"
+     },
+     {
+      "team": "Ajax",
+      "years": "2018–2022",
+      "country": "Netherlands"
+     }
+    ],
+    "honors": [
+     "Premier League 2024-25 (Liverpool)",
+     "Bundesliga 2022-23 (Bayern Munich)",
+     "Eredivisie (2021, 2022 with Ajax)",
+     "KNVB Cup (2019, 2021 with Ajax)"
     ]
    }
   ],
