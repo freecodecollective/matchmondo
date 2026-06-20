@@ -80,9 +80,9 @@
         "Germany"
       ],
       "answer": 2,
-      "explanation": "Argentina won in 2022 and enter 2026 as the reigning champions.",
+      "explanation": "Argentina won in 2022, beating France on penalties after a thrilling 3–3 final in Qatar. It was Lionel Messi’s first title after five tournaments, capping one of the greatest careers in football history. Mbappé scored a hat-trick for France but it wasn’t enough.",
       "media": "https://www.youtube.com/watch?v=Mxkg3qLIPC8",
-      "claudeTask": "mention something about 2022 as well — more info like how argentina made the run, messi first win, any other fun facts, who they beat in the finals."
+      "needsReview": true
     },
     {
       "id": "t-netherlands-finals",
