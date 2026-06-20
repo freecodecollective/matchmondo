@@ -1709,8 +1709,7 @@
       ],
       "answer": 0,
       "explanation": "A brace refers to a player scoring two goals in a single match. Scoring three goals is called a hat-trick.",
-      "needsReview": true,
-      "claudeTask": "make answer 3 funny but it needs to relate to scoring."
+      "approved": true
     }
   ],
   "pendingTasks": [
