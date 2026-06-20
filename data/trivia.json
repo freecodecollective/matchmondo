@@ -80,7 +80,9 @@
         "Germany"
       ],
       "answer": 2,
-      "explanation": "Argentina won in 2022 and enter 2026 as the reigning champions."
+      "explanation": "Argentina won in 2022 and enter 2026 as the reigning champions.",
+      "media": "https://www.youtube.com/watch?v=Mxkg3qLIPC8",
+      "claudeTask": "mention something about 2022 as well — more info like how argentina made the run, messi first win, any other fun facts, who they beat in the finals."
     },
     {
       "id": "t-netherlands-finals",
