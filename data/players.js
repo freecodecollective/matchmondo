@@ -713,6 +713,166 @@ window.WC_PLAYERS = {
      "A-League Premiership 2021-22, 2022-23 (Melbourne City)",
      "Eredivisie Player of the Month September 2025"
     ]
+   },
+   {
+    "name": "Harry Souttar",
+    "position": "Centre-back",
+    "club": "Leicester City (Premier League, England)",
+    "hometown": "Aberdeen, Scotland (Australian through mother; raised partly in Australia)",
+    "why": "Souttar is Australia's commanding centre-back, standing at 198cm and dominating in the air while being composed on the ball. He was a standout at the 2022 tournament and his towering presence is the bedrock of the Socceroos' defensive organisation. After establishing himself in the Premier League with Leicester City, he brings top-flight experience and physicality that few opponents can match.",
+    "number": 19,
+    "why_es": "Souttar es el imponente central de Australia, con 198 cm de altura y un dominio aéreo combinado con serenidad con el balón. Fue una de las figuras del torneo de 2022 y su presencia imponente es el pilar de la organización defensiva de los Socceroos. Tras consolidarse en la Premier League con el Leicester City, aporta experiencia de primer nivel y un físico que pocos rivales pueden igualar.",
+    "why_fr": "Souttar est le défenseur central imposant de l'Australie, mesurant 198 cm et dominant dans les airs tout en restant serein au sol. Il s'est illustré lors du tournoi 2022 et sa présence dominante est le socle de l'organisation défensive des Socceroos. Après s'être imposé en Premier League avec Leicester City, il apporte une expérience de haut niveau et une physicalité que peu d'adversaires peuvent égaler.",
+    "why_pt_BR": "Souttar é o imponente zagueiro da Austrália, com 1,98m de altura, dominante no jogo aéreo e sereno com a bola nos pés. Foi destaque no torneio de 2022 e sua presença marcante é a base da organização defensiva dos Socceroos. Após se firmar na Premier League com o Leicester City, traz experiência de alto nível e fisicalidade que poucos adversários conseguem igualar.",
+    "why_de": "Souttar ist Australiens beherrschender Innenverteidiger mit 198 cm Körpergröße, der in der Luft dominiert und am Boden besonnen agiert. Er war eine herausragende Figur bei der Turnier 2022, und seine überragende Präsenz ist das Fundament der defensiven Organisation der Socceroos. Nach seiner Etablierung in der Premier League bei Leicester City bringt er erstklassige Erfahrung und eine Physis mit, der wenige Gegner gewachsen sind.",
+    "why_it": "Souttar è l'imponente difensore centrale dell'Australia, alto 198 cm, dominante nel gioco aereo e composto con la palla tra i piedi. È stato uno dei protagonisti del torneo 2022 e la sua presenza è il pilastro dell'organizzazione difensiva dei Socceroos. Dopo essersi affermato in Premier League con il Leicester City, porta esperienza di alto livello e una fisicità che pochi avversari possono eguagliare.",
+    "why_ja": "Souttarは198cmの長身を生かして空中戦を制し、ボールを持っても冷静なオーストラリアの支配的なセンターバック。2022年大会で存在感を示し、その圧倒的な存在感はサッカルーズの守備組織の礎となっている。Leicester Cityでプレミアリーグに定着した後は、トップレベルの経験と相手が太刀打ちできないフィジカルを持ち込む。",
+    "why_ko": "Souttar는 198cm의 장신으로 공중볼을 지배하면서도 볼 소유 시 침착한 호주의 지배적인 센터백이다. 2022 대회에서 두각을 나타냈으며 그의 압도적인 존재감은 Socceroos 수비 조직의 토대다. Leicester City에서 프리미어리그에 안착한 후 최고 수준의 경험과 대부분의 상대가 따라올 수 없는 피지컬을 제공한다.",
+    "why_zh_Hans": "索塔尔是澳大利亚的统治级中后卫，身高198厘米，空中球占据绝对优势，持球时也表现沉稳。他是2022年赛事的突出表现者，其高大的存在感是袋鼠队防守组织的基石。在莱斯特城确立了英超主力地位后，他带来了顶级联赛经验和少有对手能匹敌的身体条件。",
+    "why_ar": "سوتار هو المدافع المركزي المهيمن لأستراليا بطوله البالغ 198 سم مسيطراً في الجو وهادئاً بالكرة. كان بارزاً في بطولة 2022 وحضوره الطاغي هو حجر الأساس في التنظيم الدفاعي للسوكيروز. بعد ترسيخ نفسه في الدوري الإنجليزي الممتاز مع ليستر سيتي، يأتي بخبرة عليا وجسدية قل من ينافسه فيها.",
+    "why_es_ES": "Souttar es el imponente central de Australia, con 198 cm de estatura y un dominio aéreo combinado con compostura con el balón. Fue una de las figuras del torneo de 2022 y su presencia dominante es la base de la organización defensiva de los Socceroos. Tras asentarse en la Premier League con el Leicester City, aporta experiencia de primer nivel y un físico difícil de igualar.",
+    "caps": 28,
+    "intlGoals": 7,
+    "tournaments": [
+     "2022 (Round of 16)",
+     "2023 Asian Cup"
+    ],
+    "clubs": [
+     {
+      "team": "Leicester City",
+      "years": "2023–",
+      "country": "England"
+     },
+     {
+      "team": "Sheffield United (loan)",
+      "years": "2023",
+      "country": "England"
+     },
+     {
+      "team": "Stoke City",
+      "years": "2016–2023",
+      "country": "England"
+     },
+     {
+      "team": "Fleetwood Town (loan)",
+      "years": "2018–2019",
+      "country": "England"
+     },
+     {
+      "team": "Ross County (loan)",
+      "years": "2017–2018",
+      "country": "Scotland"
+     }
+    ],
+    "honors": [
+     "EFL Championship (2023-24, Leicester City)"
+    ]
+   },
+   {
+    "name": "Nestory Irankunda",
+    "position": "Winger",
+    "club": "Watford (Championship, England; on loan from Bayern Munich)",
+    "hometown": "Adelaide, South Australia (born to Burundian parents)",
+    "why": "Irankunda is the most exciting young talent in Australian football, a dazzling winger with electric pace and skill who signed for Bayern Munich at 18 after breaking through at Adelaide United. He became the youngest ever Socceroo to score when he netted on debut in 2024 at just 17, and his direct, fearless running at defenders provides a dimension Australia have rarely possessed. He is the squad's X-factor from the bench or as an impact starter.",
+    "number": 17,
+    "why_es": "Irankunda es el joven talento más emocionante del fútbol australiano, un deslumbrante extremo con velocidad eléctrica y habilidad que fichó por el Bayern Múnich a los 18 años tras despuntar en el Adelaide United. Se convirtió en el Socceroo más joven en marcar cuando anotó en su debut en 2024 con solo 17 años, y su carrera directa y sin miedo contra los defensores aporta una dimensión que Australia rara vez ha poseído. Es el factor X del plantel desde el banquillo o como titular de impacto.",
+    "why_fr": "Irankunda est le jeune talent le plus passionnant du football australien, un ailier éblouissant doté d'une vitesse fulgurante et d'une technique signée avec Bayern Munich à 18 ans après avoir éclos à Adelaide United. Il est devenu le plus jeune Socceroo à marquer en inscrivant un but pour ses débuts en 2024 à seulement 17 ans, et ses courses directes et intrépides face aux défenseurs offrent une dimension que l'Australie a rarement possédée. Il est le facteur X du groupe depuis le banc ou en tant que titulaire d'impact.",
+    "why_pt_BR": "Irankunda é o jovem talento mais empolgante do futebol australiano, um ponta deslumbrante com velocidade elétrica e habilidade que assinou com o Bayern de Munique aos 18 anos após se destacar no Adelaide United. Tornou-se o Socceroo mais jovem a marcar ao balançar as redes em sua estreia em 2024 com apenas 17 anos, e suas corridas diretas e destemidas contra os defensores proporcionam uma dimensão que a Austrália raramente possuiu. É o fator X do elenco vindo do banco ou como titular de impacto.",
+    "why_de": "Irankunda ist das aufregendste junge Talent im australischen Fußball, ein schillernder Flügelspieler mit elektrischem Tempo und Technik, der mit 18 Jahren bei Bayern München unterschrieb, nachdem er bei Adelaide United durchgebrochen war. Er wurde der jüngste Socceroo, der je traf, als er 2024 mit nur 17 Jahren bei seinem Debüt einnetzte, und sein direktes, furchtloses Anlaufen gegen Verteidiger bringt eine Dimension, die Australien selten besessen hat. Er ist der X-Faktor des Kaders von der Bank oder als wirkungsvoller Starter.",
+    "why_it": "Irankunda è il giovane talento più entusiasmante del calcio australiano, un esterno abbagliante con velocità elettrica e tecnica che ha firmato con il Bayern Monaco a 18 anni dopo essere emerso all'Adelaide United. È diventato il più giovane Socceroo a segnare al debutto nel 2024 a soli 17 anni, e le sue corse dirette e impavide contro i difensori offrono una dimensione che l'Australia ha raramente posseduto. È il fattore X della rosa dalla panchina o come titolare d'impatto.",
+    "why_ja": "Irankunda はオーストラリアサッカーで最もエキサイティングな若手タレント。電撃的なスピードと技術を持つ華麗なウィンガーで、Adelaide Unitedでのブレイクスルー後18歳でBayern Munichと契約した。2024年にわずか17歳でデビュー戦で得点し歴代最年少ゴールのサッカルーとなった。守備の選手に対する恐れを知らない直接的なランニングはオーストラリアが滅多に持たなかった次元を提供する。ベンチからのX要素またはインパクトスターターだ。",
+    "why_ko": "Irankunda는 호주 축구에서 가장 흥미로운 젊은 재능으로, Adelaide United에서 부상한 후 18세에 Bayern Munich과 계약한 전기적인 스피드와 기술을 가진 화려한 윙어다. 2024년 17세의 나이로 데뷔전에서 골을 넣어 역대 최연소 득점 Socceroo가 됐으며, 수비수를 향한 직선적이고 두려움 없는 돌파는 호주가 거의 갖지 못했던 차원을 제공한다. 벤치에서의 X팩터 또는 임팩트 선발이다.",
+    "why_zh_Hans": "伊兰昆达是澳大利亚足球中最令人兴奋的年轻天才，一名拥有闪电般速度和技术的耀眼边锋，在阿德莱德联队崭露头角后18岁即签约拜仁慕尼黑。他在2024年首秀中仅17岁即破门，成为历史上最年轻的袋鼠队进球球员，他面对防守球员的直接、无畏的突破提供了澳大利亚极少拥有的维度。他是阵容中的X因素，无论替补登场还是首发。",
+    "why_ar": "إيرانكوندا أكثر المواهب الشابة إثارة في كرة القدم الأسترالية، جناح مبهر بسرعة خاطفة ومهارة وقّع مع بايرن ميونخ في عمر 18 عاماً بعد بروزه في أديلايد يونايتد. أصبح أصغر لاعع سوكيروز يسجل حين أحرز هدفاً في أول ظهور له عام 2024 بعمر 17 عاماً فقط، وجريه المباشر الجريء ضد المدافعين يمنح بُعداً نادراً ما امتلكته أستراليا. هو العامل الحاسم من مقاعد البدلاء أو كبديل مؤثر.",
+    "why_es_ES": "Irankunda es el joven talento más emocionante del fútbol australiano, un extremo deslumbrante con velocidad eléctrica y habilidad que fichó por el Bayern de Múnich a los 18 años tras despuntar en el Adelaide United. Se convirtió en el Socceroo más joven en marcar al anotar en su debut en 2024 con solo 17 años, y sus carreras directas y valientes contra los defensas aportan una dimensión que Australia rara vez ha poseído. Es el factor X del plantel desde el banquillo o como titular de impacto.",
+    "caps": 12,
+    "intlGoals": 3,
+    "tournaments": [],
+    "clubs": [
+     {
+      "team": "Watford (loan)",
+      "years": "2025–2026",
+      "country": "England"
+     },
+     {
+      "team": "Bayern Munich",
+      "years": "2024–",
+      "country": "Germany"
+     },
+     {
+      "team": "Adelaide United",
+      "years": "2022–2024",
+      "country": "Australia"
+     }
+    ],
+    "honors": [
+     "A-League Young Footballer of the Year (2023-24)"
+    ]
+   },
+   {
+    "name": "Awer Mabil",
+    "position": "Forward (winger)",
+    "club": "Castellón (Segunda División, Spain)",
+    "hometown": "Kakuma refugee camp, Kenya (Sudanese-Australian; raised in Adelaide, South Australia)",
+    "why": "Mabil's journey from a Kenyan refugee camp to the international stage is one of football's great human stories. A rapid, skilful winger comfortable on either flank, he scored crucial goals during Australia's 2022 qualifying campaign and played a key role at that tournament. An experienced figure with stints across Denmark, Turkey and Spain, he provides leadership and work rate in the wide positions alongside his pace and direct running.",
+    "number": 11,
+    "why_es": "El viaje de Mabil desde un campo de refugiados en Kenia hasta la escena internacional es una de las grandes historias humanas del fútbol. Un extremo veloz y hábil cómodo en ambas bandas, marcó goles cruciales durante la clasificación de Australia para 2022 y jugó un papel clave en ese torneo. Una figura experimentada con etapas en Dinamarca, Turquía y España, aporta liderazgo y entrega en las posiciones de banda junto con su velocidad y carrera directa.",
+    "why_fr": "Le parcours de Mabil, d'un camp de réfugiés au Kenya à la scène internationale, est l'une des plus belles histoires humaines du football. Ailier rapide et habile à l'aise sur les deux flancs, il a marqué des buts cruciaux lors de la campagne de qualification 2022 de l'Australie et a joué un rôle clé dans ce tournoi. Figure expérimentée passée par le Danemark, la Turquie et l'Espagne, il apporte leadership et abnégation sur les ailes en plus de sa vitesse et de ses courses directes.",
+    "why_pt_BR": "A jornada de Mabil de um campo de refugiados no Quênia até o palco internacional é uma das grandes histórias humanas do futebol. Um ponta veloz e habilidoso confortável em ambos os lados, marcou gols cruciais durante a campanha de classificação de 2022 da Austrália e desempenhou papel fundamental naquele torneio. Figura experiente com passagens pela Dinamarca, Turquia e Espanha, oferece liderança e entrega nas posições de ala junto com sua velocidade e corrida direta.",
+    "why_de": "Mabils Weg von einem Flüchtlingslager in Kenia auf die internationale Bühne ist eine der großen menschlichen Geschichten des Fußballs. Ein schneller, geschickter Flügelspieler, der auf beiden Seiten eingesetzt werden kann, erzielte er entscheidende Tore während Australiens Qualifikationskampagne 2022 und spielte eine Schlüsselrolle bei dieser Turnier. Als erfahrener Akteur mit Stationen in Dänemark, der Türkei und Spanien bringt er neben seinem Tempo und seiner direkten Art Führung und Arbeitsrate auf den Außenpositionen.",
+    "why_it": "Il viaggio di Mabil da un campo profughi in Kenya al palcoscenico internazionale è una delle grandi storie umane del calcio. Ala rapida e abile a suo agio su entrambe le fasce, ha segnato gol cruciali durante la campagna di qualificazione 2022 dell'Australia e ha giocato un ruolo chiave in quel torneo. Figura esperta con esperienze in Danimarca, Turchia e Spagna, porta leadership e intensità sulle fasce insieme alla sua velocità e alle corse dirette.",
+    "why_ja": "ケニアの難民キャンプから国際舞台へのMabilの旅はフットボールの偉大な人間物語の一つだ。両サイドで活躍できる速くて巧みなウィンガーで、オーストラリアの2022年予選キャンペーンで重要なゴールを決め、大会でも鍵となる役割を果たした。デンマーク、トルコ、スペインでの経験を持つベテランとして、スピードとダイレクトなランニングに加えて、サイドでのリーダーシップと労働量を提供する。",
+    "why_ko": "케냐 난민 캠프에서 국제 무대까지 Mabil의 여정은 축구의 위대한 인간 이야기 중 하나다. 양 측면에서 편안한 빠르고 기술적인 윙어로, 호주의 2022 예선 캠페인에서 결정적인 골을 넣었고 그 대회에서 핵심적인 역할을 했다. 덴마크, 터키, 스페인에서의 경험을 가진 베테랑으로 측면 포지션에서 리더십과 활동량, 그리고 스피드와 직선적인 달리기를 제공한다.",
+    "why_zh_Hans": "马比尔从肯尼亚难民营走向国际赛场的历程是足球界最伟大的人类故事之一。他是一名速度快、技术好、两翼皆宜的边锋，在澳大利亚2022年资格赛中打入关键进球，并在那届赛事中发挥了重要作用。作为在丹麦、土耳其和西班牙都有经历的老将，他在边路位置上提供领导力和勤勉的跑动，以及速度和直接的突破。",
+    "why_ar": "رحلة مابيل من مخيم لاجئين في كينيا إلى المسرح الدولي هي واحدة من أعظم القصص الإنسانية في كرة القدم. جناح سريع وماهر مرتاح على الجانبين، سجل أهدافاً حاسمة خلال حملة تصفيات أستراليا لعام 2022 ولعب دوراً محورياً في تلك البطولة. شخصية مخضرمة مرّت بمحطات في الدنمارك وتركيا وإسبانيا، يوفر قيادة ومعدل عمل في مراكز الأجنحة إلى جانب سرعته وجريه المباشر.",
+    "why_es_ES": "El viaje de Mabil desde un campo de refugiados en Kenia hasta la escena internacional es una de las grandes historias humanas del fútbol. Un extremo rápido y hábil cómodo en ambas bandas, marcó goles cruciales durante la clasificación de Australia para 2022 y tuvo un papel clave en ese torneo. Figura experimentada con etapas en Dinamarca, Turquía y España, aporta liderazgo y sacrificio en las bandas junto con su velocidad y verticalidad.",
+    "caps": 38,
+    "intlGoals": 10,
+    "tournaments": [
+     "2022 (Round of 16)",
+     "2023 Asian Cup"
+    ],
+    "clubs": [
+     {
+      "team": "Castellón",
+      "years": "2025–",
+      "country": "Spain"
+     },
+     {
+      "team": "Grasshoppers",
+      "years": "2024–2025",
+      "country": "Switzerland"
+     },
+     {
+      "team": "Cadiz",
+      "years": "2023–2024",
+      "country": "Spain"
+     },
+     {
+      "team": "Kasımpaşa",
+      "years": "2022–2023",
+      "country": "Turkey"
+     },
+     {
+      "team": "FC Midtjylland",
+      "years": "2018–2022",
+      "country": "Denmark"
+     },
+     {
+      "team": "Paços de Ferreira (loan)",
+      "years": "2017–2018",
+      "country": "Portugal"
+     },
+     {
+      "team": "Adelaide United",
+      "years": "2015–2018",
+      "country": "Australia"
+     }
+    ],
+    "honors": [
+     "Danish Superliga (2019-20, FC Midtjylland)",
+     "A-League Championship (2015-16, Adelaide United)"
+    ]
    }
   ],
   "Austria": [
@@ -3756,6 +3916,185 @@ window.WC_PLAYERS = {
     "honors": [
      "AFCON 2023 (Ivory Coast)",
      "Turkish Süper Lig 2025-26 (Galatasaray)"
+    ]
+   },
+   {
+    "name": "Simon Adingra",
+    "position": "Forward (winger)",
+    "club": "AS Monaco (Ligue 1, France)",
+    "hometown": "Yamoussoukro",
+    "why": "Adingra is the rising star of Ivorian football, a pacy and explosive winger who was named Player of the Tournament at the 2023 Africa Cup of Nations, helping Côte d'Ivoire lift the trophy on home soil. His electric dribbling, acceleration and end product have made him a regular at top European clubs. He provides width, creativity and a constant goal threat from the flanks, and at just 24 is entering his prime.",
+    "number": 10,
+    "why_es": "Adingra es la estrella emergente del fútbol marfileño, un extremo veloz y explosivo que fue nombrado Jugador del Torneo en la Copa de África de Naciones 2023, ayudando a Costa de Marfil a levantar el trofeo en casa. Su regate eléctrico, aceleración y productividad lo han convertido en titular en los mejores clubes europeos. Aporta amplitud, creatividad y una constante amenaza de gol desde las bandas, y con solo 24 años está entrando en su mejor momento.",
+    "why_fr": "Adingra est l'étoile montante du football ivoirien, un ailier rapide et explosif nommé Joueur du Tournoi à la CAN 2023, aidant la Côte d'Ivoire à soulever le trophée à domicile. Ses dribbles électriques, son accélération et son produit final en ont fait un titulaire régulier dans les meilleurs clubs européens. Il apporte largeur, créativité et une menace constante de but depuis les ailes, et à seulement 24 ans, il entre dans la plénitude de sa carrière.",
+    "why_pt_BR": "Adingra é a estrela em ascensão do futebol marfinense, um ponta veloz e explosivo que foi eleito Jogador do Torneio na Copa Africana das Nações de 2023, ajudando a Costa do Marfim a erguer o troféu em casa. Seu drible elétrico, aceleração e produção ofensiva o tornaram titular regular nos melhores clubes europeus. Oferece largura, criatividade e ameaça constante de gol pelas pontas, e com apenas 24 anos está entrando em seu auge.",
+    "why_de": "Adingra ist der aufgehende Stern des ivorischen Fußballs, ein temporeicher und explosiver Flügelspieler, der beim Afrika-Cup 2023 zum Spieler des Turniers gewählt wurde und Côte d'Ivoire zum Titel auf heimischem Boden verhalf. Sein elektrisches Dribbling, seine Beschleunigung und sein Endprodukt haben ihn bei europäischen Topclubs zum Stammspieler gemacht. Er liefert Breite, Kreativität und eine konstante Torbedrohung von den Flügeln, und mit nur 24 Jahren tritt er in seine beste Phase ein.",
+    "why_it": "Adingra è la stella nascente del calcio ivoriano, un'ala veloce ed esplosiva nominata Giocatore del Torneo alla Coppa d'Africa 2023, aiutando la Costa d'Avorio a sollevare il trofeo in casa. Il suo dribbling elettrico, la sua accelerazione e il suo prodotto finale lo hanno reso titolare fisso nei migliori club europei. Offre ampiezza, creatività e una costante minaccia dal gol dalle fasce, e a soli 24 anni sta entrando nel pieno della maturità.",
+    "why_ja": "Adingra はコートジボワールサッカーの新星で、2023年アフリカネーションズカップで大会最優秀選手に選ばれ、ホームでのトロフィー獲得に貢献したスピードと爆発力を持つウィンガー。電撃的なドリブル、加速力、決定力でヨーロッパのトップクラブでレギュラーとなった。サイドからの幅と創造性、そして常にゴールを脅かす存在で、わずか24歳でプライムに入りつつある。",
+    "why_ko": "Adingra는 코트디부아르 축구의 떠오르는 별로, 2023 아프리카 네이션스컵에서 대회 최우수 선수로 선정되어 홈에서 트로피를 들어올리는 데 기여한 빠르고 폭발적인 윙어다. 전기적인 드리블, 가속력, 결정력으로 유럽 톱 클럽에서 주전이 됐다. 측면에서 폭, 창의성, 끊임없는 골 위협을 제공하며 24세에 전성기에 접어들고 있다.",
+    "why_zh_Hans": "阿丁格拉是科特迪瓦足球冉冉升起的新星，是一名速度快、爆发力强的边锋，在2023年非洲杯上被评为赛事最佳球员，帮助科特迪瓦在主场捧杯。他电光石火般的盘带、加速和终结能力使他成为欧洲顶级俱乐部的常客。他从边路提供宽度、创造力和持续的进球威胁，年仅24岁正步入巅峰。",
+    "why_ar": "أدينغرا النجم الصاعد لكرة القدم الإيفوارية، جناح سريع ومتفجر اختير أفضل لاعب في كأس الأمم الأفريقية 2023 مساهماً في رفع الكأس على الأرض الوطنية. مراوغاته الكهربائية وتسارعه وإنتاجيته جعلت منه لاعباً أساسياً في كبار الأندية الأوروبية. يقدم اتساعاً وإبداعاً وتهديداً مستمراً بالتهديف من الأجنحة وبعمره 24 عاماً فقط يدخل ذروته.",
+    "why_es_ES": "Adingra es la estrella emergente del fútbol marfileño, un extremo veloz y explosivo que fue nombrado Jugador del Torneo en la Copa de África de Naciones 2023, ayudando a Costa de Marfil a levantar el trofeo en casa. Su regate eléctrico, aceleración y productividad ofensiva lo han convertido en titular fijo en clubes europeos de primer nivel. Aporta amplitud, creatividad y una amenaza goleadora constante desde las bandas, y con solo 24 años está entrando en su mejor momento.",
+    "caps": 30,
+    "intlGoals": 6,
+    "tournaments": [
+     "2026",
+     "2025 AFCON (Quarter-finals)",
+     "2023 AFCON (Winner)"
+    ],
+    "clubs": [
+     {
+      "team": "AS Monaco",
+      "years": "2025–",
+      "country": "France"
+     },
+     {
+      "team": "Brighton & Hove Albion",
+      "years": "2023–2025",
+      "country": "England"
+     },
+     {
+      "team": "Lommel SK (loan)",
+      "years": "2022–2023",
+      "country": "Belgium"
+     },
+     {
+      "team": "Nordsjaelland",
+      "years": "2020–2023",
+      "country": "Denmark"
+     },
+     {
+      "team": "Right to Dream Academy",
+      "years": "2018–2020",
+      "country": "Ghana"
+     }
+    ],
+    "honors": [
+     "AFCON 2023 (Ivory Coast)",
+     "AFCON 2023 Player of the Tournament"
+    ]
+   },
+   {
+    "name": "Ibrahim Sangaré",
+    "position": "Central midfielder",
+    "club": "Nottingham Forest (Premier League, England)",
+    "hometown": "Man (western Côte d'Ivoire)",
+    "why": "Sangaré is a towering, physical central midfielder who anchors the Elephants' engine room with his ball-carrying, passing range and tireless running. After establishing himself as one of the Eredivisie's best midfielders at PSV Eindhoven, he earned a move to Nottingham Forest and has brought his dominant style to the Premier League. His ability to break up play and stride forward with the ball provides the link between defence and the attackers.",
+    "number": 18,
+    "why_es": "Sangaré es un mediocampista central imponente y físico que ancla la sala de máquinas de los Elephants con su conducción de balón, rango de pase y carreras incansables. Tras consolidarse como uno de los mejores mediocampistas de la Eredivisie en el PSV Eindhoven, obtuvo un traspaso al Nottingham Forest y ha llevado su estilo dominante a la Premier League. Su capacidad para cortar el juego y avanzar con el balón establece el enlace entre la defensa y los atacantes.",
+    "why_fr": "Sangaré est un milieu central imposant et puissant qui ancre le moteur des Éléphants avec son jeu de progression balle au pied, son éventail de passes et ses courses inlassables. Après s'être imposé comme l'un des meilleurs milieux de l'Eredivisie au PSV Eindhoven, il a décroché un transfert à Nottingham Forest et a apporté son style dominant en Premier League. Sa capacité à casser le jeu et à progresser balle au pied fait le lien entre la défense et les attaquants.",
+    "why_pt_BR": "Sangaré é um meia central imponente e físico que ancora o motor dos Elefantes com sua condução de bola, alcance de passes e corridas incansáveis. Após se firmar como um dos melhores meias da Eredivisie no PSV Eindhoven, conquistou uma transferência ao Nottingham Forest e trouxe seu estilo dominante para a Premier League. Sua capacidade de desarmar e avançar com a bola é o elo entre a defesa e os atacantes.",
+    "why_de": "Sangaré ist ein großgewachsener, physischer zentraler Mittelfeldspieler, der den Maschinenraum der Elefanten mit seiner Ballführung, Passreichweite und unermüdlichem Laufen verankert. Nachdem er sich bei PSV Eindhoven als einer der besten Mittelfeldspieler der Eredivisie etabliert hatte, verdiente er sich einen Wechsel zu Nottingham Forest und hat seinen dominanten Stil in die Premier League gebracht. Seine Fähigkeit, das Spiel zu unterbrechen und mit dem Ball vorwärts zu marschieren, stellt die Verbindung zwischen Abwehr und Angriff her.",
+    "why_it": "Sangaré è un centrocampista centrale imponente e fisico che presidia il motore degli Elefanti con la sua conduzione di palla, il raggio dei passaggi e la corsa instancabile. Dopo essersi affermato come uno dei migliori centrocampisti dell'Eredivisie al PSV Eindhoven, ha ottenuto il trasferimento al Nottingham Forest portando il suo stile dominante in Premier League. La sua capacità di rompere il gioco e avanzare con la palla è il collegamento tra difesa e attacco.",
+    "why_ja": "Sangaréは長身でフィジカルなセントラルミッドフィールダーで、ボール運び、パスレンジ、疲れを知らないランニングでElephants のエンジンルームを支える。PSV Eindhovenでエールディビジ最高のMFの一人として確立した後、Nottingham Forestへの移籍を果たし、そのドミナントなスタイルをプレミアリーグに持ち込んだ。プレーを分断しボールと共に前進する能力が守備と攻撃をつなぐリンクとなる。",
+    "why_ko": "Sangaré는 볼 캐리, 패스 범위, 지칠 줄 모르는 달리기로 Elephants의 엔진룸을 지탱하는 장신의 피지컬 센트럴 미드필더다. PSV Eindhoven에서 에레디비시 최고의 미드필더 중 한 명으로 자리잡은 후 Nottingham Forest로 이적해 프리미어리그에 지배적인 스타일을 도입했다. 플레이를 끊고 볼을 가지고 전진하는 능력은 수비와 공격수 사이의 연결고리를 제공한다.",
+    "why_zh_Hans": "桑加雷是一名高大、强壮的中场球员，以带球推进、传球范围和不知疲倦的奔跑为大象队的引擎室提供支撑。在PSV埃因霍温确立了荷甲最佳中场之一的地位后，他转会诺丁汉森林，将统治力十足的风格带到英超。他中断对方进攻并持球前进的能力在防守和攻击线之间搭建了桥梁。",
+    "why_ar": "سانغاريه لاعب وسط مركزي طويل القامة وقوي البنية يرسّخ محرك الأفيال بحمله للكرة ونطاق تمريراته وجريه اللاهث. بعد ترسيخ نفسه واحداً من أفضل لاعبي وسط الدوري الهولندي في بي إس في آيندهوفن، نال انتقالاً إلى نوتنغهام فوريست ونقل أسلوبه المهيمن إلى الدوري الإنجليزي الممتاز. قدرته على قطع اللعب والتقدم بالكرة توفر الحلقة الرابطة بين الدفاع والمهاجمين.",
+    "why_es_ES": "Sangaré es un centrocampista central imponente y físico que ancla el motor de los Elephants con su conducción, rango de pase y carreras incansables. Tras consolidarse como uno de los mejores centrocampistas de la Eredivisie en el PSV Eindhoven, logró un traspaso al Nottingham Forest y ha trasladado su estilo dominante a la Premier League. Su capacidad para cortar el juego y progresar con el balón es el nexo entre la defensa y los delanteros.",
+    "caps": 38,
+    "intlGoals": 2,
+    "tournaments": [
+     "2026",
+     "2025 AFCON (Quarter-finals)",
+     "2023 AFCON (Winner)",
+     "2021 AFCON"
+    ],
+    "clubs": [
+     {
+      "team": "Nottingham Forest",
+      "years": "2023–",
+      "country": "England"
+     },
+     {
+      "team": "PSV Eindhoven",
+      "years": "2020–2023",
+      "country": "Netherlands"
+     },
+     {
+      "team": "Toulouse",
+      "years": "2016–2020",
+      "country": "France"
+     }
+    ],
+    "honors": [
+     "AFCON 2023 (Ivory Coast)",
+     "Eredivisie (2022-23, PSV Eindhoven)",
+     "KNVB Cup (2021-22, 2022-23, PSV Eindhoven)"
+    ]
+   },
+   {
+    "name": "Nicolas Pépé",
+    "position": "Forward (winger)",
+    "club": "Villarreal (La Liga, Spain)",
+    "hometown": "Mantes-la-Jolie, France (Ivorian descent)",
+    "why": "Pépé is a proven match-winner at the highest level, having been the most expensive African player in history when Arsenal signed him for £72m in 2019 after a sensational Ligue 1 season at Lille. The experienced, left-footed winger cuts inside from the right to unleash powerful shots and creates chances with his dribbling and pace. Now revitalised at Villarreal, he adds veteran nous and big-game pedigree to an exciting young Ivorian attack.",
+    "number": 19,
+    "why_es": "Pépé es un probado ganador de partidos al más alto nivel, habiendo sido el jugador africano más caro de la historia cuando el Arsenal lo fichó por 72 millones de libras en 2019 tras una sensacional temporada en la Ligue 1 con el Lille. El experimentado extremo zurdo recorta desde la derecha para soltar tiros potentes y crea oportunidades con su regate y velocidad. Ahora revitalizado en el Villarreal, aporta experiencia veterana y pedigrí en grandes partidos a un emocionante ataque marfileño joven.",
+    "why_fr": "Pépé est un joueur décisif avéré au plus haut niveau, ayant été le joueur africain le plus cher de l'histoire lorsqu'Arsenal l'a signé pour 72 millions de livres en 2019 après une saison sensationnelle en Ligue 1 avec Lille. L'ailier gaucher expérimenté coupe vers l'intérieur depuis la droite pour déclencher des frappes puissantes et crée des occasions avec ses dribbles et sa vitesse. Désormais revitalisé à Villarreal, il ajoute l'intelligence du vétéran et le pedigree des grands rendez-vous à une attaque ivoirienne jeune et excitante.",
+    "why_pt_BR": "Pépé é um comprovado vencedor de partidas no mais alto nível, tendo sido o jogador africano mais caro da história quando o Arsenal o contratou por £72 milhões em 2019 após uma sensacional temporada na Ligue 1 pelo Lille. O experiente ponta canhoto corta da direita para a esquerda para desferir chutes poderosos e cria oportunidades com dribles e velocidade. Agora revitalizado no Villarreal, agrega experiência veterana e currículo em grandes jogos a um empolgante ataque jovem marfinense.",
+    "why_de": "Pépé ist ein bewährter Matchwinner auf höchstem Niveau und war der teuerste afrikanische Spieler der Geschichte, als Arsenal ihn 2019 nach einer sensationellen Ligue-1-Saison bei Lille für 72 Millionen Pfund verpflichtete. Der erfahrene, linksfüßige Flügelspieler schneidet von rechts nach innen, um kraftvolle Schüsse abzufeuern und kreiert Chancen mit seinem Dribbling und Tempo. Nun bei Villarreal revitalisiert, fügt er der aufregenden jungen ivorischen Angriffsreihe die Cleverness eines Veteranen und Erfahrung bei großen Spielen hinzu.",
+    "why_it": "Pépé è un comprovato vincitore di partite ai massimi livelli, essendo stato il giocatore africano più costoso della storia quando l'Arsenal lo acquistò per 72 milioni di sterline nel 2019 dopo una sensazionale stagione in Ligue 1 al Lille. L'esterno mancino esperto si accentra da destra per scagliare tiri potenti e crea occasioni con il dribbling e la velocità. Ora rivitalizzato al Villarreal, aggiunge l'astuzia del veterano e il pedigree nelle grandi partite a un attacco ivoriano giovane ed entusiasmante.",
+    "why_ja": "Pépéは最高レベルでの証明済みのマッチウィナー。2019年にLilleでの衝撃的なリーグアンシーズンの後、7,200万ポンドで史上最高額のアフリカ人選手としてArsenalに加入した。左足の経験豊かなウィンガーとして右から内側に切り込みパワフルなシュートを放ち、ドリブルとスピードでチャンスを作る。Villarrealで復活し、興奮するコートジボワールの若い攻撃にベテランの知性と大舞台での血統を加える。",
+    "why_ko": "Pépé는 최고 수준에서 검증된 경기 결정자로, 2019년 Lille에서의 센세이셔널한 Ligue 1 시즌 후 £7,200만으로 역사상 가장 비싼 아프리카 선수로 Arsenal에 입단했다. 경험 있는 왼발잡이 윙어로 오른쪽에서 안쪽으로 치고 들어가 강력한 슛을 날리고 드리블과 스피드로 찬스를 만든다. Villarreal에서 재충전되어 흥미진진한 젊은 코트디부아르 공격진에 베테랑의 노하우와 빅 게임 혈통을 더한다.",
+    "why_zh_Hans": "佩佩是最高水平上经过验证的赢球能手，2019年在里尔创造了轰动性的法甲赛季后，阿森纳以7200万英镑的史上最高非洲球员转会费将他签下。这名经验丰富的左脚边锋从右路内切释放强力射门，用盘带和速度创造机会。如今在比利亚雷亚尔焕发新生，他为令人兴奋的年轻科特迪瓦攻击线增添了老将的智慧和大赛底蕴。",
+    "why_ar": "بيبيه صانع نتائج مثبت على أعلى المستويات، كان أغلى لاعب أفريقي في التاريخ حين وقّعه آرسنال بـ72 مليون جنيه عام 2019 بعد موسم مذهل في ليغ 1 مع ليل. الجناح المخضرم ذو القدم اليسرى يقطع من اليمين للداخل ليطلق تسديدات قوية ويصنع الفرص بمراوغاته وسرعته. بعد تجديد نشاطه في فياريال، يُضيف خبرة المحترف المخضرم ونسب المباريات الكبيرة لهجوم إيفواري شاب ومثير.",
+    "why_es_ES": "Pépé es un probado ganador de partidos al más alto nivel, habiendo sido el jugador africano más caro de la historia cuando el Arsenal lo fichó por 72 millones de libras en 2019 tras una sensacional temporada en la Ligue 1 con el Lille. El experimentado extremo zurdo perfilándose desde la derecha suelta disparos potentes y crea ocasiones con su regate y velocidad. Ahora revitalizado en el Villarreal, aporta el oficio del veterano y el pedigrí de los grandes partidos a una emocionante delantera marfileña joven.",
+    "caps": 56,
+    "intlGoals": 11,
+    "tournaments": [
+     "2026",
+     "2025 AFCON (Quarter-finals)",
+     "2023 AFCON (Winner)",
+     "2021 AFCON",
+     "2019 AFCON"
+    ],
+    "clubs": [
+     {
+      "team": "Villarreal",
+      "years": "2024–",
+      "country": "Spain"
+     },
+     {
+      "team": "Trabzonspor",
+      "years": "2023–2024",
+      "country": "Turkey"
+     },
+     {
+      "team": "OGC Nice (loan)",
+      "years": "2022–2023",
+      "country": "France"
+     },
+     {
+      "team": "Arsenal",
+      "years": "2019–2023",
+      "country": "England"
+     },
+     {
+      "team": "Lille",
+      "years": "2017–2019",
+      "country": "France"
+     },
+     {
+      "team": "Angers",
+      "years": "2016–2017",
+      "country": "France"
+     },
+     {
+      "team": "Orléans (loan)",
+      "years": "2014–2015",
+      "country": "France"
+     },
+     {
+      "team": "Poitiers",
+      "years": "2012–2014",
+      "country": "France"
+     }
+    ],
+    "honors": [
+     "AFCON 2023 (Ivory Coast)",
+     "FA Cup (2019-20, Arsenal)",
+     "FA Community Shield (2020, Arsenal)",
+     "Ligue 1 Team of the Season (2018-19)"
     ]
    }
   ],
@@ -9924,6 +10263,117 @@ window.WC_PLAYERS = {
      "UEFA U-21 Championship (2015 with Sweden U-21)",
      "Swedish Footballer of the Year / Guldbollen (2018)"
     ]
+   },
+   {
+    "name": "Anthony Elanga",
+    "position": "Forward (winger)",
+    "club": "Newcastle United (Premier League, England)",
+    "hometown": "Hyllinge, Skåne (born in Malmö; family from Cameroon)",
+    "why": "Elanga has developed into one of the Premier League's most dangerous wide players at Newcastle United, combining blistering pace with improved end product. A direct, two-footed winger who can play on either flank, he was the top-scoring Swedish player in the 2025-26 Premier League and adds a threat in behind that complements the hold-up play of Gyökeres and Isak. His rapid development at Newcastle makes him a key component of Sweden's forward line.",
+    "number": 11,
+    "why_es": "Elanga se ha convertido en uno de los extremos más peligrosos de la Premier League en el Newcastle United, combinando velocidad fulminante con un producto final mejorado. Un extremo directo con ambos pies que puede jugar en ambas bandas, fue el jugador sueco con más goles en la Premier League 2025-26 y aporta una amenaza a la espalda de las defensas que complementa el juego de apoyo de Gyökeres e Isak. Su rápido desarrollo en el Newcastle lo convierte en pieza clave de la delantera sueca.",
+    "why_fr": "Elanga est devenu l'un des joueurs de couloir les plus dangereux de la Premier League à Newcastle United, alliant vitesse fulgurante et produit final amélioré. Ailier direct et ambidextre capable de jouer sur les deux flancs, il a été le joueur suédois le plus prolifique en Premier League 2025-26 et ajoute une menace dans le dos qui complète le jeu de pivot de Gyökeres et Isak. Son développement rapide à Newcastle en fait un élément clé du front offensif suédois.",
+    "why_pt_BR": "Elanga se desenvolveu em um dos pontas mais perigosos da Premier League no Newcastle United, combinando velocidade devastadora com produção ofensiva aprimorada. Um ponta direto e ambidestro que pode atuar em ambas as pontas, foi o jogador sueco com mais gols na Premier League 2025-26 e adiciona uma ameaça nas costas da defesa que complementa o jogo de apoio de Gyökeres e Isak. Seu rápido desenvolvimento no Newcastle o torna uma peça fundamental da linha ofensiva sueca.",
+    "why_de": "Elanga hat sich bei Newcastle United zu einem der gefährlichsten Flügelspieler der Premier League entwickelt und kombiniert blendendes Tempo mit verbessertem Endprodukt. Ein direkter, beidfüßiger Flügelspieler, der auf beiden Seiten spielen kann, war er der treffsicherste schwedische Spieler in der Premier League 2025-26 und fügt eine Bedrohung im Rücken hinzu, die das Aufbauspiel von Gyökeres und Isak ergänzt. Seine rasante Entwicklung bei Newcastle macht ihn zu einer Schlüsselkomponente von Schwedens Angriffslinie.",
+    "why_it": "Elanga si è sviluppato come uno dei giocatori di fascia più pericolosi della Premier League al Newcastle United, combinando velocità bruciante e prodotto finale migliorato. Ala diretta e ambidestra che può giocare su entrambe le fasce, è stato il giocatore svedese più prolifico in Premier League 2025-26 e aggiunge una minaccia alle spalle della difesa che completa il gioco di raccordo di Gyökeres e Isak. La sua rapida crescita al Newcastle lo rende un elemento chiave del fronte offensivo svedese.",
+    "why_ja": "ElangaはNewcastle Unitedでプレミアリーグ最も危険なワイドプレーヤーの一人へと成長し、灼熱のスピードと向上したエンドプロダクトを兼ね備える。両足を使えてどちらのフランクでもプレーできるダイレクトなウィンガーとして、2025-26プレミアリーグでスウェーデン人最多得点選手となり、GyökeresとIsakのポストプレーを補完する裏への脅威を加える。Newcastleでの急速な成長はSweden前線の重要な構成要素にしている。",
+    "why_ko": "Elanga는 Newcastle United에서 프리미어리그 가장 위험한 측면 공격수 중 한 명으로 성장했으며, 폭발적인 스피드와 향상된 결정력을 결합한다. 양쪽 측면에서 뛸 수 있는 직선적이고 양발잡이인 윙어로, 2025-26 프리미어리그에서 스웨덴 선수 최다 득점자가 됐으며 Gyökeres와 Isak의 포스트 플레이를 보완하는 뒤 공간 위협을 추가한다. Newcastle에서의 빠른 성장은 스웨덴 공격 라인의 핵심 구성 요소로 만든다.",
+    "why_zh_Hans": "埃兰加在纽卡斯尔联发展成为英超最危险的边路球员之一，将闪电般的速度与日益提升的终结能力结合在一起。他是一名直接、双脚俱佳的边锋，可以在任一侧路出战，是2025-26赛季英超进球最多的瑞典球员，他在身后空间的威胁与久约克雷斯和伊萨克的支点配合形成互补。他在纽卡斯尔的快速成长使他成为瑞典前锋线上的关键组成部分。",
+    "why_ar": "تطور إيلانغا ليصبح أحد أخطر لاعبي الأجنحة في الدوري الإنجليزي الممتاز مع نيوكاسل يونايتد، جامعاً السرعة الخاطفة مع إنتاجية أفضل. جناح مباشر بكلتا القدمين يمكنه اللعب على الجانبين، كان أعلى اللاعبين السويديين تسجيلاً في موسم 2025-26 للدوري الإنجليزي ويضيف تهديداً خلف الخطوط يكمّل اللعب الارتباطي لغيوكيريس وإيساك. تطوره السريع في نيوكاسل يجعله ركيزة في الخط الأمامي السويدي.",
+    "why_es_ES": "Elanga se ha convertido en uno de los extremos más peligrosos de la Premier League en el Newcastle United, combinando velocidad endiablada con un producto final mejorado. Un extremo directo y con ambos perfiles que puede actuar en ambas bandas, fue el jugador sueco con más goles en la Premier League 2025-26 y añade una amenaza a la espalda de las defensas que complementa el juego asociativo de Gyökeres e Isak. Su rápido desarrollo en el Newcastle lo convierte en pieza clave del ataque sueco.",
+    "caps": 28,
+    "intlGoals": 5,
+    "tournaments": [],
+    "clubs": [
+     {
+      "team": "Newcastle United",
+      "years": "2024–",
+      "country": "England"
+     },
+     {
+      "team": "Nottingham Forest",
+      "years": "2023–2024",
+      "country": "England"
+     },
+     {
+      "team": "Manchester United",
+      "years": "2020–2023",
+      "country": "England"
+     }
+    ],
+    "honors": [
+     "EFL Cup (2025, Newcastle United)"
+    ]
+   },
+   {
+    "name": "Lucas Bergvall",
+    "position": "Central midfielder",
+    "club": "Tottenham Hotspur (Premier League, England)",
+    "hometown": "Stockholm",
+    "why": "Bergvall is Sweden's most gifted young midfielder, a technically polished, press-resistant playmaker who signed for Tottenham at just 18 after breaking through at Djurgårdens IF. Despite his youth, he brings composure and vision to Sweden's midfield, picking passes through the lines and carrying the ball under pressure. He represents the future of Swedish football and has already shown he belongs at the Premier League level.",
+    "number": 7,
+    "why_es": "Bergvall es el joven mediocampista más dotado de Suecia, un creador de juego técnicamente pulido y resistente a la presión que fichó por el Tottenham con solo 18 años tras despuntar en el Djurgårdens IF. A pesar de su juventud, aporta compostura y visión al mediocampo sueco, filtrando pases entre líneas y conduciendo el balón bajo presión. Representa el futuro del fútbol sueco y ya ha demostrado que está a la altura de la Premier League.",
+    "why_fr": "Bergvall est le jeune milieu de terrain le plus doué de Suède, un meneur de jeu techniquement accompli et résistant à la pression qui a signé à Tottenham à seulement 18 ans après avoir émergé au Djurgårdens IF. Malgré sa jeunesse, il apporte sérénité et vision au milieu suédois, distribuant des passes entre les lignes et portant le ballon sous pression. Il représente l'avenir du football suédois et a déjà montré qu'il avait sa place au niveau de la Premier League.",
+    "why_pt_BR": "Bergvall é o jovem meia mais talentoso da Suécia, um construtor de jogo tecnicamente polido e resistente à pressão que assinou com o Tottenham com apenas 18 anos após se destacar no Djurgårdens IF. Apesar da juventude, traz compostura e visão ao meio-campo sueco, filtrando passes entre linhas e conduzindo a bola sob pressão. Representa o futuro do futebol sueco e já demonstrou que pertence ao nível da Premier League.",
+    "why_de": "Bergvall ist Schwedens begabtester junger Mittelfeldspieler, ein technisch versierter, pressingresistenter Spielmacher, der mit nur 18 Jahren nach seinem Durchbruch bei Djurgårdens IF bei Tottenham unterschrieb. Trotz seiner Jugend bringt er Ruhe und Übersicht ins schwedische Mittelfeld, findet Pässe zwischen den Linien und führt den Ball unter Druck. Er repräsentiert die Zukunft des schwedischen Fußballs und hat bereits gezeigt, dass er auf Premier-League-Niveau mithalten kann.",
+    "why_it": "Bergvall è il giovane centrocampista più dotato della Svezia, un regista tecnicamente raffinato e resistente al pressing che ha firmato con il Tottenham a soli 18 anni dopo essere emerso al Djurgårdens IF. Nonostante la giovane età, porta compostezza e visione al centrocampo svedese, smistando passaggi tra le linee e conducendo la palla sotto pressione. Rappresenta il futuro del calcio svedese e ha già dimostrato di appartenere al livello della Premier League.",
+    "why_ja": "Bergvallはスウェーデンで最も才能あるヤングミッドフィールダーで、Djurgårdens IFでブレイクした後わずか18歳でTottenhamと契約した技術的に洗練されたプレス耐性のあるプレーメーカー。若さにもかかわらずスウェーデンの中盤に落ち着きとビジョンをもたらし、ライン間にパスを通しプレッシャー下でボールを運ぶ。スウェーデンサッカーの未来を代表し、すでにプレミアリーグレベルで通用することを示している。",
+    "why_ko": "Bergvall은 스웨덴에서 가장 재능 있는 젊은 미드필더로, Djurgårdens IF에서 부상한 후 18세에 Tottenham에 입단한 기술적으로 세련되고 프레스에 강한 플레이메이커다. 어린 나이에도 스웨덴 미드필드에 침착함과 시야를 가져오며 라인 사이로 패스를 꿰고 압박 속에서 볼을 운반한다. 스웨덴 축구의 미래를 대표하며 이미 프리미어리그 수준에서 통한다는 것을 보여줬다.",
+    "why_zh_Hans": "贝格瓦尔是瑞典最有天赋的年轻中场，一名技术精湛、抗压能力强的组织核心，在尤尔加登IF脱颖而出后年仅18岁即签约热刺。尽管年纪轻轻，他为瑞典中场带来了沉稳和视野，在线间传出穿透球并在压力下持球推进。他代表着瑞典足球的未来，并已证明自己属于英超级别。",
+    "why_ar": "بيرغفال أكثر لاعبي الوسط الشباب موهبةً في السويد، صانع لعب مصقول فنياً ومقاوم للضغط وقّع مع توتنهام في عمر 18 عاماً فقط بعد بروزه في يورغوردنز. رغم صغر سنه يمنح هدوءاً ورؤية لوسط الملعب السويدي مُمرّراً بين الخطوط وحاملاً الكرة تحت الضغط. يمثل مستقبل كرة القدم السويدية وأثبت بالفعل أنه ينتمي إلى مستوى الدوري الإنجليزي الممتاز.",
+    "why_es_ES": "Bergvall es el joven centrocampista más dotado de Suecia, un creador de juego técnicamente refinado y resistente a la presión que fichó por el Tottenham con solo 18 años tras despuntar en el Djurgårdens IF. Pese a su juventud, aporta compostura y visión al centro del campo sueco, filtrando pases entre líneas y conduciendo el balón bajo presión. Representa el futuro del fútbol sueco y ya ha demostrado que está a la altura de la Premier League.",
+    "caps": 15,
+    "intlGoals": 1,
+    "tournaments": [],
+    "clubs": [
+     {
+      "team": "Tottenham Hotspur",
+      "years": "2024–",
+      "country": "England"
+     },
+     {
+      "team": "Djurgårdens IF",
+      "years": "2022–2024",
+      "country": "Sweden"
+     }
+    ],
+    "honors": [
+     "Allsvenskan (2023, Djurgårdens IF)"
+    ]
+   },
+   {
+    "name": "Yasin Ayari",
+    "position": "Central midfielder",
+    "club": "Brighton & Hove Albion (Premier League, England)",
+    "hometown": "Stockholm",
+    "why": "Ayari is a dynamic, box-to-box midfielder who has broken into Brighton's first team in the Premier League. Energetic and aggressive in his pressing, he combines relentless running with technical quality and an eye for arriving late in the box. He provides drive and intensity in Sweden's midfield and, partnered with Bergvall, represents a new generation of technically strong Swedish central midfielders.",
+    "number": 18,
+    "why_es": "Ayari es un mediocampista dinámico de box a box que se ha ganado un puesto en el primer equipo del Brighton en la Premier League. Energético y agresivo en la presión, combina carreras incansables con calidad técnica y olfato para llegar tarde al área. Aporta impulso e intensidad al mediocampo sueco y, junto a Bergvall, representa una nueva generación de centrocampistas suecos técnicamente fuertes.",
+    "why_fr": "Ayari est un milieu boîte-à-boîte dynamique qui s'est imposé dans l'équipe première de Brighton en Premier League. Énergique et agressif dans son pressing, il combine courses inlassables avec qualité technique et instinct pour arriver en retard dans la surface. Il apporte élan et intensité au milieu suédois et, associé à Bergvall, représente une nouvelle génération de milieux centraux suédois techniquement solides.",
+    "why_pt_BR": "Ayari é um meia dinâmico de área a área que se firmou no time titular do Brighton na Premier League. Energético e agressivo na pressão, combina corridas incansáveis com qualidade técnica e faro para chegar na área nos momentos certos. Proporciona impulso e intensidade ao meio-campo sueco e, ao lado de Bergvall, representa uma nova geração de meias centrais suecos tecnicamente fortes.",
+    "why_de": "Ayari ist ein dynamischer Box-to-Box-Mittelfeldspieler, der sich in Brightons Premier-League-Stammelf gespielt hat. Energisch und aggressiv im Pressing kombiniert er unermüdliches Laufen mit technischer Qualität und einem Gespür für späte Einläufe in den Strafraum. Er bringt Antrieb und Intensität ins schwedische Mittelfeld und repräsentiert zusammen mit Bergvall eine neue Generation technisch starker schwedischer zentraler Mittelfeldspieler.",
+    "why_it": "Ayari è un centrocampista box-to-box dinamico che si è guadagnato un posto nella formazione titolare del Brighton in Premier League. Energico e aggressivo nel pressing, combina corsa instancabile con qualità tecnica e fiuto per gli inserimenti tardivi in area. Porta spinta e intensità al centrocampo svedese e, in coppia con Bergvall, rappresenta una nuova generazione di centrocampisti centrali svedesi tecnicamente solidi.",
+    "why_ja": "Ayariはブライトンのプレミアリーグ一軍に食い込んだダイナミックなボックス・トゥ・ボックスのミッドフィールダー。プレッシングにおいてエネルギッシュでアグレッシブで、絶え間ないランニングと技術的なクオリティ、そしてボックスへの遅い飛び出しの嗅覚を兼ね備える。スウェーデンの中盤に推進力と強度をもたらし、Bergvallと組んで技術的に優れた新世代のスウェーデン人セントラルミッドフィールダーを体現する。",
+    "why_ko": "Ayari는 브라이턴 프리미어리그 1군에 자리잡은 역동적인 박스-투-박스 미드필더다. 프레싱에서 에너지 넘치고 적극적이며 끊임없는 달리기와 기술적 자질, 박스 늦은 침투 감각을 결합한다. 스웨덴 미드필드에 추진력과 강도를 제공하며 Bergvall과 함께 기술적으로 강한 스웨덴 센트럴 미드필더의 새로운 세대를 대표한다.",
+    "why_zh_Hans": "阿亚里是一名充满活力的双向奔跑型中场，已在英超布莱顿一队站稳脚跟。他在压迫中充满能量和侵略性，将不知疲倦的奔跑与技术品质和后排插上进球的嗅觉结合在一起。他为瑞典中场提供推动力和强度，与贝格瓦尔搭档，代表着瑞典技术型中场球员的新一代。",
+    "why_ar": "أياري لاعب وسط ديناميكي بين الخطوط اقتحم التشكيلة الأساسية لبرايتون في الدوري الإنجليزي الممتاز. نشيط وعدواني في ضغطه يجمع الجري اللاهث مع الجودة الفنية وحاسة الوصول المتأخر إلى المنطقة. يمنح قوة دفع وشدة لوسط الملعب السويدي ومع بيرغفال يمثل جيلاً جديداً من لاعبي الوسط المركزيين السويديين المتينين فنياً.",
+    "why_es_ES": "Ayari es un centrocampista de ida y vuelta dinámico que se ha ganado un puesto en el once titular del Brighton en la Premier League. Energético y agresivo en la presión, combina carreras incansables con calidad técnica y olfato para llegar tarde al área. Aporta empuje e intensidad al centro del campo sueco y, junto a Bergvall, representa una nueva generación de centrocampistas suecos técnicamente dotados.",
+    "caps": 18,
+    "intlGoals": 2,
+    "tournaments": [],
+    "clubs": [
+     {
+      "team": "Brighton & Hove Albion",
+      "years": "2023–",
+      "country": "England"
+     },
+     {
+      "team": "AIK",
+      "years": "2021–2023",
+      "country": "Sweden"
+     }
+    ],
+    "honors": []
    }
   ],
   "Switzerland": [
@@ -10561,6 +11011,161 @@ window.WC_PLAYERS = {
     "honors": [
      "CONCACAF Nations League (2024, USMNT)",
      "U.S. Soccer Male Player of the Year (2024)"
+    ]
+   },
+   {
+    "name": "Tyler Adams",
+    "position": "Defensive midfielder",
+    "club": "AFC Bournemouth (Premier League, England)",
+    "hometown": "Wappinger, New York",
+    "why": "Adams is the team's midfield anchor and was captain during the 2022 tournament, where his composure and ball-winning transformed the U.S. engine room. A tenacious, intelligent defensive midfielder who reads the game exceptionally, he moved to Bournemouth in 2023 and has been a consistent starter in the Premier League. His defensive discipline and ability to progress the ball under pressure make him indispensable to Pochettino's system.",
+    "number": 4,
+    "why_es": "Adams es el ancla del mediocampo del equipo y fue capitán durante el torneo 2022, donde su compostura y recuperación de balón transformaron la sala de máquinas de los Estados Unidos. Un mediocampista defensivo tenaz e inteligente que lee el juego excepcionalmente, se trasladó al Bournemouth en 2023 y ha sido titular constante en la Premier League. Su disciplina defensiva y su habilidad para progresar con el balón bajo presión lo hacen indispensable en el sistema de Pochettino.",
+    "why_fr": "Adams est le pivot du milieu de terrain de l'équipe et a été capitaine lors du tournoi 2022, où son sang-froid et sa récupération de balle ont transformé le moteur américain. Milieu défensif tenace et intelligent qui lit le jeu de manière exceptionnelle, il a rejoint Bournemouth en 2023 et a été un titulaire régulier en Premier League. Sa discipline défensive et sa capacité à faire progresser le ballon sous pression le rendent indispensable dans le système de Pochettino.",
+    "why_pt_BR": "Adams é a âncora do meio-campo da equipe e foi capitão durante o torneio de 2022, onde sua compostura e recuperação de bola transformaram o motor americano. Um volante tenaz e inteligente que lê o jogo de maneira excepcional, transferiu-se para o Bournemouth em 2023 e tem sido titular constante na Premier League. Sua disciplina defensiva e sua capacidade de progredir com a bola sob pressão o tornam indispensável no sistema de Pochettino.",
+    "why_de": "Adams ist der Anker des Mittelfelds und war Kapitän bei der Turnier 2022, wo seine Besonnenheit und sein Ballgewinn den US-Maschinenraum verwandelten. Ein hartnäckiger, intelligenter defensiver Mittelfeldspieler, der das Spiel außergewöhnlich liest, wechselte er 2023 zu Bournemouth und ist ein beständiger Stammspieler in der Premier League. Seine defensive Disziplin und seine Fähigkeit, den Ball unter Druck nach vorne zu spielen, machen ihn im System von Pochettino unverzichtbar.",
+    "why_it": "Adams è il perno del centrocampo della squadra ed è stato capitano durante il torneo 2022, dove la sua compostezza e il recupero palla hanno trasformato il motore americano. Un centrocampista difensivo tenace e intelligente che legge il gioco in modo eccezionale, si è trasferito al Bournemouth nel 2023 ed è stato un titolare costante in Premier League. La sua disciplina difensiva e la capacità di far progredire il pallone sotto pressione lo rendono indispensabile nel sistema di Pochettino.",
+    "why_ja": "Adamsはチームのミッドフィールドアンカーで2022年大会ではキャプテンを務め、冷静さとボール奪取でU.S.のエンジンルームを変革した。試合の読みが卓越した粘り強くインテリジェントな守備的ミッドフィールダーで、2023年にBournemouthに移籍しプレミアリーグで安定的に先発。守備規律とプレッシャー下でのボール前進能力がPochettinoのシステムに不可欠だ。",
+    "why_ko": "Adams는 팀의 미드필드 앵커이자 2022 대회에서 주장을 맡아 침착함과 볼 탈취로 미국의 엔진룸을 변혁했다. 게임 리딩이 뛰어나고 끈질기며 지적인 수비형 미드필더로, 2023년 Bournemouth로 이적해 프리미어리그에서 꾸준한 주전이 됐다. 수비적 규율과 압박 속 볼 전진 능력은 Pochettino 시스템에서 없어서는 안 될 존재로 만든다.",
+    "why_zh_Hans": "亚当斯是球队的中场锚点，曾在2022年赛事中担任队长，他的冷静和抢球能力彻底改变了美国中场引擎。他是一名顽强、聪明的防守型中场，比赛阅读能力出众，2023年转会伯恩茅斯后成为英超的稳定首发。他的防守纪律和在压力下推进球的能力使他在波切蒂诺的体系中不可或缺。",
+    "why_ar": "آدامز هو مرتكز وسط الملعب للفريق وكان القائد خلال بطولة 2022 حيث غيّرت هدوؤه واسترداده للكرات غرفة محركات الولايات المتحدة. لاعب وسط دفاعي عنيد وذكي يقرأ اللعب بشكل استثنائي، انتقل إلى بورنموث في 2023 وأصبح لاعباً أساسياً ثابتاً في الدوري الإنجليزي الممتاز. انضباطه الدفاعي وقدرته على تقدم الكرة تحت الضغط يجعلانه لا غنى عنه في منظومة بوتشيتينو.",
+    "why_es_ES": "Adams es el ancla del centro del campo del equipo y fue capitán durante el torneo 2022, donde su compostura y recuperación de balón transformaron la sala de máquinas de los Estados Unidos. Un centrocampista defensivo tenaz e inteligente que lee el juego de forma excepcional, fichó por el Bournemouth en 2023 y ha sido titular regular en la Premier League. Su disciplina defensiva y su habilidad para progresar con el balón bajo presión lo hacen indispensable en el sistema de Pochettino.",
+    "caps": 45,
+    "intlGoals": 1,
+    "tournaments": [
+     "2022 (Round of 16)"
+    ],
+    "clubs": [
+     {
+      "team": "AFC Bournemouth",
+      "years": "2023–",
+      "country": "England"
+     },
+     {
+      "team": "Leeds United",
+      "years": "2022–2023",
+      "country": "England"
+     },
+     {
+      "team": "RB Leipzig",
+      "years": "2019–2023",
+      "country": "Germany"
+     },
+     {
+      "team": "New York Red Bulls",
+      "years": "2015–2019",
+      "country": "USA"
+     }
+    ],
+    "honors": [
+     "CONCACAF Nations League (2021, 2023, USMNT)",
+     "CONCACAF Gold Cup (2021, USMNT)",
+     "DFB-Pokal (2021-22, RB Leipzig)",
+     "DFL-Supercup (2022, RB Leipzig)"
+    ]
+   },
+   {
+    "name": "Timothy Weah",
+    "position": "Forward (winger)",
+    "club": "Olympique Marseille (Ligue 1, France)",
+    "hometown": "New York City, New York (born in Brooklyn)",
+    "why": "The son of Ballon d'Or winner George Weah, Timothy has carved out his own identity as a rapid, direct right winger with a proven record in top European leagues. He scored in the U.S. opening match at the 2022 tournament and brings genuine pace and end product to stretch defences. After strong seasons at Lille and Juventus, his move to Marseille underscores his quality, and he is a guaranteed starter on the right flank.",
+    "number": 21,
+    "why_es": "Hijo del ganador del Balón de Oro George Weah, Timothy ha forjado su propia identidad como un extremo derecho rápido y directo con un historial probado en las principales ligas europeas. Marcó en el partido inaugural de Estados Unidos en el torneo de 2022 y aporta velocidad genuina y productividad en ataque para estirar las defensas. Tras sólidas temporadas en el Lille y la Juventus, su traspaso al Marsella subraya su calidad, y es titular garantizado en el carril derecho.",
+    "why_fr": "Fils du Ballon d'Or George Weah, Timothy s'est forgé sa propre identité en tant qu'ailier droit rapide et direct avec un parcours prouvé dans les meilleurs championnats européens. Il a marqué lors du match d'ouverture des États-Unis lors du tournoi 2022 et apporte une véritable vitesse et un produit final pour étirer les défenses. Après de solides saisons à Lille et à la Juventus, son transfert à Marseille souligne sa qualité, et il est titulaire garanti sur le flanc droit.",
+    "why_pt_BR": "Filho do vencedor da Bola de Ouro George Weah, Timothy construiu sua própria identidade como um ponta-direita veloz e direto com um histórico comprovado nas principais ligas europeias. Marcou no jogo de estreia dos EUA no torneio de 2022 e traz velocidade genuína e produção ofensiva para esticar defesas. Após boas temporadas no Lille e na Juventus, sua transferência ao Marseille reforça sua qualidade, e é titular garantido na ala direita.",
+    "why_de": "Als Sohn des Ballon-d'Or-Gewinners George Weah hat sich Timothy als schneller, direkter Rechtsaußen mit bewähretem Leistungsausweis in den europäischen Topligen eine eigene Identität geschaffen. Er erzielte im Eröffnungsspiel der USA bei der Turnier 2022 ein Tor und bringt echtes Tempo und Endprodukt, um Abwehren zu strecken. Nach starken Saisons bei Lille und Juventus untermauert sein Wechsel zu Marseille seine Qualität, und er ist gesetzter Stammspieler auf dem rechten Flügel.",
+    "why_it": "Figlio del Pallone d'Oro George Weah, Timothy si è costruito una propria identità come ala destra rapida e diretta con un curriculum comprovato nei campionati europei di vertice. Ha segnato nella partita inaugurale degli USA al torneo 2022 e porta velocità genuina e qualità offensiva per allungare le difese. Dopo ottime stagioni al Lille e alla Juventus, il passaggio al Marsiglia ne conferma la qualità, ed è un titolare garantito sulla fascia destra.",
+    "why_ja": "バロンドール受賞者のGeorge Weahの息子であるTimothyは、ヨーロッパのトップリーグでの実績を持つ速くて直接的な右ウィンガーとして独自のアイデンティティを築いた。2022年大会の開幕戦でゴールを決め、守備を引き延ばす真のスピードと決定力をもたらす。LilleとJuventusでの好シーズンを経て、Marseilleへの移籍はその質を裏付け、右フランクの確実な先発だ。",
+    "why_ko": "발롱도르 수상자 George Weah의 아들인 Timothy는 유럽 톱 리그에서 검증된 기록을 가진 빠르고 직선적인 라이트 윙어로 자신만의 정체성을 확립했다. 2022 대회 미국 개막전에서 골을 넣었으며 진정한 속도와 결정력으로 수비를 늘린다. Lille과 Juventus에서의 좋은 시즌 후 Marseille로의 이적은 그의 자질을 입증하며 오른쪽 측면에서 확정 주전이다.",
+    "why_zh_Hans": "作为金球奖得主乔治·维阿的儿子，蒂莫西在欧洲顶级联赛中以快速、直接的右翼球员形象建立了自己的身份。他在2022年赛事美国队的揭幕战中打入进球，以真正的速度和终结能力拉伸防线。在里尔和尤文图斯度过出色赛季后，转会马赛彰显了他的质量，他是右路的保证首发。",
+    "why_ar": "ابن الفائز بالكرة الذهبية جورج وياه، صنع تيموثي هويته الخاصة كجناح أيمن سريع ومباشر بسجل مثبت في أرقى الدوريات الأوروبية. سجل في مباراة الافتتاح الأمريكية في بطولة 2022 ويُضفي سرعة حقيقية وإنتاجية لتمطيط الدفاعات. بعد مواسم قوية في ليل ويوفنتوس، يعكس انتقاله إلى مرسيليا جودته وهو لاعب أساسي مضمون على الجناح الأيمن.",
+    "why_es_ES": "Hijo del ganador del Balón de Oro George Weah, Timothy ha forjado su propia identidad como un extremo derecho rápido y directo con trayectoria demostrada en las principales ligas europeas. Marcó en el partido inaugural de Estados Unidos en el torneo 2022 y aporta velocidad pura y desborde ofensivo para estirar las defensas. Tras sólidas temporadas en el Lille y la Juventus, su fichaje por el Marsella avala su calidad, y es titular indiscutible en la banda derecha.",
+    "caps": 48,
+    "intlGoals": 7,
+    "tournaments": [
+     "2022 (Round of 16)"
+    ],
+    "clubs": [
+     {
+      "team": "Olympique Marseille",
+      "years": "2025–",
+      "country": "France"
+     },
+     {
+      "team": "Juventus",
+      "years": "2023–2025",
+      "country": "Italy"
+     },
+     {
+      "team": "Lille",
+      "years": "2019–2023",
+      "country": "France"
+     },
+     {
+      "team": "Celtic",
+      "years": "2019 (loan)",
+      "country": "Scotland"
+     },
+     {
+      "team": "Paris Saint-Germain",
+      "years": "2014–2019",
+      "country": "France"
+     }
+    ],
+    "honors": [
+     "Ligue 1 (2020-21, Lille)",
+     "Coppa Italia (2023-24, Juventus)",
+     "CONCACAF Nations League (2024, USMNT)"
+    ]
+   },
+   {
+    "name": "Folarin Balogun",
+    "position": "Forward (striker)",
+    "club": "AS Monaco (Ligue 1, France)",
+    "hometown": "New York City, New York (born in New York; raised in London, England)",
+    "why": "Balogun chose the U.S. over England and has emerged as the team's starting centre-forward, offering a combination of technical skill, link-up play and clinical finishing rare among American strikers. He was the top scorer in Ligue 1 in his debut Monaco season and his movement between the lines creates space for Pulisic and Weah. At 24, he represents the next generation of American attacking talent on the biggest stage.",
+    "number": 20,
+    "why_es": "Balogun eligió a Estados Unidos sobre Inglaterra y se ha convertido en el delantero centro titular del equipo, ofreciendo una combinación de habilidad técnica, juego de enlace y definición clínica poco común entre los delanteros estadounidenses. Fue el máximo goleador de la Ligue 1 en su primera temporada en el Monaco y su movimiento entre líneas crea espacio para Pulisic y Weah. Con 24 años, representa la próxima generación de talento atacante estadounidense en el escenario más grande.",
+    "why_fr": "Balogun a choisi les États-Unis plutôt que l'Angleterre et s'est imposé comme l'avant-centre titulaire de l'équipe, offrant une combinaison de qualité technique, de jeu de liaison et de finition clinique rare parmi les attaquants américains. Il a été le meilleur buteur de Ligue 1 lors de sa première saison à Monaco et ses déplacements entre les lignes créent de l'espace pour Pulisic et Weah. À 24 ans, il représente la prochaine génération de talent offensif américain sur la plus grande scène.",
+    "why_pt_BR": "Balogun escolheu os EUA em vez da Inglaterra e se firmou como o centroavante titular da equipe, oferecendo uma combinação de habilidade técnica, jogo de ligação e finalização clínica rara entre atacantes americanos. Foi artilheiro da Ligue 1 em sua primeira temporada no Monaco e sua movimentação entre linhas cria espaço para Pulisic e Weah. Aos 24 anos, representa a próxima geração de talento ofensivo americano no maior palco.",
+    "why_de": "Balogun entschied sich für die USA statt England und hat sich als Stamm-Mittelstürmer des Teams etabliert, mit einer unter amerikanischen Stürmern seltenen Kombination aus technischem Können, Verbindungsspiel und klinischem Abschluss. Er war der beste Torschütze der Ligue 1 in seiner ersten Monaco-Saison, und seine Bewegung zwischen den Linien schafft Raum für Pulisic und Weah. Mit 24 Jahren repräsentiert er die nächste Generation amerikanischer Angriffstalente auf der größten Bühne.",
+    "why_it": "Balogun ha scelto gli USA rispetto all'Inghilterra e si è affermato come il centravanti titolare della squadra, offrendo una combinazione di qualità tecnica, gioco di raccordo e finalizzazione clinica rara tra gli attaccanti americani. È stato il capocannoniere della Ligue 1 nella sua prima stagione al Monaco e il suo movimento tra le linee crea spazio per Pulisic e Weah. A 24 anni rappresenta la prossima generazione del talento offensivo americano sul palcoscenico più grande.",
+    "why_ja": "BalogunはEnglandよりU.S.を選びチームの先発センターフォワードとして台頭。アメリカのストライカーには珍しい技術力、リンクアッププレー、正確なフィニッシュの組み合わせを提供する。Monacoでの初シーズンでリーグアン得点王となり、ライン間での動きでPulisicとWeahのためのスペースを創出する。24歳で、最大の舞台におけるアメリカの次世代攻撃的タレントを代表する。",
+    "why_ko": "Balogun은 잉글랜드 대신 미국을 선택했고 팀의 선발 센터포워드로 부상하며 미국 스트라이커 중 드문 기술력, 연결 플레이, 냉정한 마무리의 조합을 제공한다. Monaco 데뷔 시즌에 Ligue 1 득점왕이 됐으며 라인 사이의 움직임은 Pulisic과 Weah를 위한 공간을 만든다. 24세에 가장 큰 무대에서 미국 공격 재능의 차세대를 대표한다.",
+    "why_zh_Hans": "巴洛贡选择代表美国而非英格兰，已成为球队的首发中锋，提供了美国前锋中罕见的技术能力、配合能力和冷静的临门一脚。他在摩纳哥首个赛季就成为法甲最佳射手，他在线间的跑动为普利西奇和维阿创造了空间。24岁的他代表了美国进攻人才在最大舞台上的新一代。",
+    "why_ar": "اختار بالوغون الولايات المتحدة بدل إنجلترا وبرز مهاجماً أساسياً للفريق مقدماً مزيجاً من المهارة الفنية ولعب الارتباط والإنهاء الإكلينيكي النادر بين المهاجمين الأمريكيين. كان هداف ليغ 1 في موسمه الأول مع موناكو وتحركاته بين الخطوط تفتح المساحات لبوليسيتش ووياه. في عمر 24 عاماً يمثل الجيل القادم من الموهبة الهجومية الأمريكية على أكبر مسرح.",
+    "why_es_ES": "Balogun eligió a Estados Unidos por encima de Inglaterra y se ha consolidado como el delantero centro titular del equipo, ofreciendo una combinación de habilidad técnica, juego asociativo y definición clínica poco habitual entre los delanteros estadounidenses. Fue el máximo goleador de la Ligue 1 en su primera temporada en el Monaco y su movimiento entre líneas genera espacio para Pulisic y Weah. Con 24 años, representa la nueva generación del talento ofensivo estadounidense en el mayor escenario.",
+    "caps": 33,
+    "intlGoals": 8,
+    "tournaments": [
+     "Copa America 2024"
+    ],
+    "clubs": [
+     {
+      "team": "AS Monaco",
+      "years": "2023–",
+      "country": "France"
+     },
+     {
+      "team": "Stade de Reims (loan)",
+      "years": "2022–2023",
+      "country": "France"
+     },
+     {
+      "team": "Middlesbrough (loan)",
+      "years": "2022",
+      "country": "England"
+     },
+     {
+      "team": "Arsenal",
+      "years": "2017–2023",
+      "country": "England"
+     }
+    ],
+    "honors": [
+     "CONCACAF Nations League (2024, USMNT)",
+     "Ligue 1 Top Scorer (2023-24)"
     ]
    }
   ],
