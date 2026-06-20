@@ -2,379 +2,964 @@
   "version": 1,
   "questions": [
     {
-      "id": "h-most-titles",
+      "id": "h-cards-introduced",
       "category": "history",
-      "question": "Which nation has won the most titles?",
-      "options": ["Germany", "Brazil", "Italy", "Argentina"],
+      "question": "In which tournament were red and yellow cards first introduced?",
+      "options": [
+        "1966",
+        "1970",
+        "1974",
+        "1978"
+      ],
       "answer": 1,
-      "explanation": "Brazil has lifted the trophy 5 times (1958, 1962, 1970, 1994 and 2002) — more than any other nation."
-    },
-    {
-      "id": "h-2022-champion",
-      "category": "history",
-      "question": "Who were the champions in 2022?",
-      "options": ["France", "Argentina", "Croatia", "Brazil"],
-      "answer": 1,
-      "explanation": "Argentina beat France on penalties after a 3–3 final — their third title and Lionel Messi's first."
+      "explanation": "English referee Ken Aston devised the card system after the 1966 edition. It debuted at the 1970 tournament in Mexico."
     },
     {
       "id": "h-2026-hosts",
       "category": "history",
       "question": "Which countries are co-hosting in 2026?",
-      "options": ["USA only", "USA & Mexico", "USA, Canada & Mexico", "Canada & USA"],
+      "options": [
+        "USA only",
+        "USA & Mexico",
+        "USA, Canada & Mexico",
+        "Canada & USA"
+      ],
       "answer": 2,
       "explanation": "2026 is the first edition hosted by three nations — the USA, Canada and Mexico — across 16 cities."
     },
     {
-      "id": "h-first-edition",
-      "category": "history",
-      "question": "Where was the very first edition held, in 1930?",
-      "options": ["Brazil", "Italy", "Uruguay", "France"],
-      "answer": 2,
-      "explanation": "Uruguay hosted and won the inaugural 1930 tournament on home soil."
-    },
-    {
-      "id": "h-2018-champion",
-      "category": "history",
-      "question": "Who won in 2018, in Russia?",
-      "options": ["Croatia", "France", "Belgium", "England"],
-      "answer": 1,
-      "explanation": "France beat Croatia 4–2 in the final for their second title."
-    },
-    {
-      "id": "h-2014-champion",
-      "category": "history",
-      "question": "Who won in 2014, in Brazil?",
-      "options": ["Argentina", "Netherlands", "Germany", "Brazil"],
-      "answer": 2,
-      "explanation": "Germany beat Argentina 1–0 in extra time, Mario Götze scoring the winner."
-    },
-    {
-      "id": "h-2010-champion",
-      "category": "history",
-      "question": "Which nation won its first title in 2010?",
-      "options": ["Netherlands", "Spain", "Germany", "Uruguay"],
-      "answer": 1,
-      "explanation": "Spain beat the Netherlands 1–0 in extra time for their first-ever title."
-    },
-    {
-      "id": "h-1966-england",
-      "category": "history",
-      "question": "In which year did England win its only title?",
-      "options": ["1962", "1966", "1970", "1974"],
-      "answer": 1,
-      "explanation": "England won on home soil in 1966, beating West Germany 4–2 after extra time."
-    },
-    {
-      "id": "h-germany-71-brazil",
-      "category": "history",
-      "question": "Germany famously thrashed Brazil 7–1 in a 2014 semi-final. Where was it played?",
-      "options": ["Rio de Janeiro", "São Paulo", "Belo Horizonte", "Brasília"],
-      "answer": 2,
-      "explanation": "The shock 7–1 result came in Belo Horizonte — one of the most stunning scorelines in the sport's history."
-    },
-    {
-      "id": "p-top-scorer-alltime",
-      "category": "players",
-      "question": "Who is the all-time top scorer across all editions?",
-      "options": ["Ronaldo (Brazil)", "Miroslav Klose", "Gerd Müller", "Just Fontaine"],
-      "answer": 1,
-      "explanation": "Germany's Miroslav Klose scored 16 goals across four tournaments (2002–2014)."
-    },
-    {
-      "id": "p-fontaine-single",
-      "category": "players",
-      "question": "Who holds the record for most goals in a single edition (13)?",
-      "options": ["Just Fontaine", "Pelé", "Sandor Kocsis", "Gerd Müller"],
+      "id": "v-mercedes-roof",
+      "category": "venues",
+      "question": "Mercedes-Benz Stadium in Atlanta is famous for its unique retractable roof shaped like…",
+      "options": [
+        "A camera aperture",
+        "A sunflower",
+        "An eagle's wings",
+        "A traditional dome"
+      ],
       "answer": 0,
-      "explanation": "France's Just Fontaine scored 13 goals at the 1958 tournament — a record that still stands."
-    },
-    {
-      "id": "p-pele-three",
-      "category": "players",
-      "question": "Which player won three titles — the only one to do so?",
-      "options": ["Diego Maradona", "Pelé", "Franz Beckenbauer", "Zinedine Zidane"],
-      "answer": 1,
-      "explanation": "Pelé won with Brazil in 1958, 1962 and 1970 — still the only player with three winners' medals."
-    },
-    {
-      "id": "p-mbappe-final",
-      "category": "players",
-      "question": "Who scored a hat-trick in the 2022 final — and still finished on the losing side?",
-      "options": ["Lionel Messi", "Kylian Mbappé", "Olivier Giroud", "Ángel Di María"],
-      "answer": 1,
-      "explanation": "Kylian Mbappé scored all three of France's goals, but Argentina won the shootout."
-    },
-    {
-      "id": "p-hand-of-god",
-      "category": "players",
-      "question": "Whose 'Hand of God' goal came in 1986?",
-      "options": ["Diego Maradona", "Mario Kempes", "Gabriel Batistuta", "Daniel Passarella"],
-      "answer": 0,
-      "explanation": "Diego Maradona punched in a goal against England, then scored the 'Goal of the Century' minutes later."
-    },
-    {
-      "id": "p-messi-most-matches",
-      "category": "players",
-      "question": "Who has played the most matches in the tournament's history?",
-      "options": ["Lothar Matthäus", "Paolo Maldini", "Lionel Messi", "Cristiano Ronaldo"],
-      "answer": 2,
-      "explanation": "Lionel Messi passed Lothar Matthäus in 2022, reaching 26 career appearances."
-    },
-    {
-      "id": "p-fastest-goal",
-      "category": "players",
-      "question": "Who scored the fastest goal ever — just 11 seconds into a 2002 match?",
-      "options": ["Hakan Şükür", "Ronaldo", "Rivaldo", "Christian Vieri"],
-      "answer": 0,
-      "explanation": "Türkiye's Hakan Şükür scored after 11 seconds against South Korea in the 2002 third-place match."
-    },
-    {
-      "id": "r-who-advances",
-      "category": "rules",
-      "question": "How many of the 48 teams reach the Round of 32 in 2026?",
-      "options": ["16", "24", "32", "48"],
-      "answer": 2,
-      "explanation": "The top two from each of the 12 groups (24) plus the 8 best third-placed teams advance — 32 in all."
-    },
-    {
-      "id": "r-red-card-replace",
-      "category": "rules",
-      "question": "When a player is shown a red card, the team may…",
-      "options": ["Bring on a substitute", "Play a player short for the rest of the match", "Replace them after 10 minutes", "Appeal immediately"],
-      "answer": 1,
-      "explanation": "A sent-off player cannot be replaced — the team plays a player down, and the player is suspended for at least the next match."
-    },
-    {
-      "id": "r-two-yellows",
-      "category": "rules",
-      "question": "Two yellow cards in the same match result in…",
-      "options": ["A warning", "A red card", "A penalty", "Nothing"],
-      "answer": 1,
-      "explanation": "A second yellow in one match becomes a red card, and the player misses the next match."
-    },
-    {
-      "id": "r-extra-time",
-      "category": "rules",
-      "question": "If a knockout match is level after 90 minutes, what happens next?",
-      "options": ["Straight to penalties", "A replay", "Two 15-minute periods of extra time", "Golden goal"],
-      "answer": 2,
-      "explanation": "From the Round of 32 on, a tie goes to two 15-minute periods of extra time, then a penalty shootout if still level."
-    },
-    {
-      "id": "r-first-tiebreaker",
-      "category": "rules",
-      "question": "If two teams finish level on points in a group, what's the first tiebreaker?",
-      "options": ["Head-to-head result", "Goal difference", "Fair-play score", "Drawing of lots"],
-      "answer": 1,
-      "explanation": "Goal difference across all group matches is checked first, then goals scored, then head-to-head."
-    },
-    {
-      "id": "r-yellow-wiped",
-      "category": "rules",
-      "question": "When are single yellow cards wiped clean?",
-      "options": ["Never", "After every match", "After the group stage", "Only after the semi-finals"],
-      "answer": 2,
-      "explanation": "Single yellows are wiped after the group stage, and again after the quarter-finals, so an early caution can't cost a player the final."
-    },
-    {
-      "id": "r-points-for-win",
-      "category": "rules",
-      "question": "How many points does a team get for a win in the group stage?",
-      "options": ["1", "2", "3", "4"],
-      "answer": 2,
-      "explanation": "A win is worth 3 points, a draw 1, and a loss 0."
-    },
-    {
-      "id": "t-defending-champs",
-      "category": "teams",
-      "question": "Who are the defending champions going into 2026?",
-      "options": ["France", "Brazil", "Argentina", "Germany"],
-      "answer": 2,
-      "explanation": "Argentina won in 2022 and enter 2026 as the reigning champions."
-    },
-    {
-      "id": "t-how-many-groups",
-      "category": "teams",
-      "question": "How many groups are there in the 2026 tournament?",
-      "options": ["8", "10", "12", "16"],
-      "answer": 2,
-      "explanation": "48 teams are split into 12 groups of four for the expanded 2026 format."
-    },
-    {
-      "id": "t-opener-azteca",
-      "category": "teams",
-      "question": "Which historic stadium hosts the opening match in 2026?",
-      "options": ["Estadio Azteca, Mexico City", "MetLife Stadium, New Jersey", "Rose Bowl, Pasadena", "BC Place, Vancouver"],
-      "answer": 0,
-      "explanation": "Mexico City's Estadio Azteca opens the tournament — a venue that has hosted two previous finals."
-    },
-    {
-      "id": "t-final-metlife",
-      "category": "teams",
-      "question": "Where will the 2026 final be played?",
-      "options": ["Rose Bowl, Pasadena", "AT&T Stadium, Dallas", "MetLife Stadium, New Jersey", "SoFi Stadium, Los Angeles"],
-      "answer": 2,
-      "explanation": "The final is set for MetLife Stadium in East Rutherford, New Jersey, just outside New York City."
-    },
-    {
-      "id": "t-brazil-titles-count",
-      "category": "teams",
-      "question": "How many titles has Brazil won?",
-      "options": ["3", "4", "5", "6"],
-      "answer": 2,
-      "explanation": "Brazil's 5 titles are the most of any nation — and they're the only team to play in every edition."
-    },
-    {
-      "id": "t-total-matches-2026",
-      "category": "teams",
-      "question": "How many matches will be played at the 2026 tournament?",
-      "options": ["64", "80", "104", "128"],
-      "answer": 2,
-      "explanation": "The 48-team format means 104 matches — up from 64 in the previous 32-team era."
-    },
-
-    {
-      "id": "h-1934-italy",
-      "category": "history",
-      "question": "Which European nation hosted AND won in both 1934 and 1938?",
-      "options": ["France", "Italy", "Germany", "Spain"],
-      "answer": 1,
-      "explanation": "Italy won on home soil in 1934 and retained the title in France in 1938 — the only European nation to win back-to-back."
-    },
-    {
-      "id": "h-1994-usa",
-      "category": "history",
-      "question": "Which country hosted the tournament in 1994?",
-      "options": ["Mexico", "USA", "Japan", "South Korea"],
-      "answer": 1,
-      "explanation": "The USA hosted the 1994 edition, which set all-time attendance records that stood for decades."
+      "explanation": "Atlanta's Mercedes-Benz Stadium has a retractable roof composed of eight triangular panels that open like a camera aperture."
     },
     {
       "id": "h-2002-cohosts",
       "category": "history",
       "question": "The 2002 edition was the first to be co-hosted. Which two countries shared it?",
-      "options": ["China & Japan", "South Korea & Japan", "Australia & New Zealand", "South Korea & China"],
+      "options": [
+        "China & Japan",
+        "South Korea & Japan",
+        "Australia & New Zealand",
+        "South Korea & China"
+      ],
       "answer": 1,
       "explanation": "South Korea and Japan co-hosted in 2002 — the first time two nations shared the event."
     },
     {
-      "id": "h-miracle-bern",
-      "category": "history",
-      "question": "The 'Miracle of Bern' describes which team's shock 1954 final victory?",
-      "options": ["Hungary", "West Germany", "Uruguay", "Brazil"],
-      "answer": 1,
-      "explanation": "West Germany stunned mighty Hungary 3–2 in the 1954 final despite trailing 2–0 early on."
+      "id": "t-how-many-groups",
+      "category": "teams",
+      "question": "How many groups are there in the 2026 tournament?",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "16"
+      ],
+      "answer": 2,
+      "explanation": "48 teams are split into 12 groups of four for the expanded 2026 format."
     },
     {
-      "id": "h-1970-brazil-final",
-      "category": "history",
-      "question": "What was the score when Brazil beat Italy in the iconic 1970 final?",
-      "options": ["3–1", "4–1", "2–0", "3–2"],
+      "id": "t-defending-champs",
+      "category": "teams",
+      "question": "Who are the defending champions going into 2026?",
+      "options": [
+        "France",
+        "Brazil",
+        "Argentina",
+        "Germany"
+      ],
+      "answer": 2,
+      "explanation": "Argentina won in 2022 and enter 2026 as the reigning champions."
+    },
+    {
+      "id": "t-netherlands-finals",
+      "category": "teams",
+      "question": "Despite reaching three finals, which traditional powerhouse has never won?",
+      "options": [
+        "Portugal",
+        "Netherlands",
+        "Belgium",
+        "Colombia"
+      ],
       "answer": 1,
-      "explanation": "Brazil's 4–1 victory in Mexico City is widely regarded as one of the greatest finals ever played."
+      "explanation": "The Netherlands lost finals in 1974, 1978, and 2010 — the most successful team never to win the title."
+    },
+    {
+      "id": "r-yellow-wiped",
+      "category": "rules",
+      "question": "When are single yellow cards wiped clean?",
+      "options": [
+        "Never",
+        "After every match",
+        "After the group stage",
+        "Only after the semi-finals"
+      ],
+      "answer": 2,
+      "explanation": "Single yellows are wiped after the group stage, and again after the quarter-finals, so an early caution can't cost a player the final."
+    },
+    {
+      "id": "c-fan-fest",
+      "category": "culture",
+      "question": "Official fan festivals for big-screen outdoor viewing were first introduced at which tournament?",
+      "options": [
+        "2002",
+        "2006",
+        "2010",
+        "2014"
+      ],
+      "answer": 1,
+      "explanation": "Germany pioneered official Fan Fests in 2006, with hundreds of thousands gathering in public viewing areas across host cities."
+    },
+    {
+      "id": "v-total-cities",
+      "category": "venues",
+      "question": "How many total cities across three countries host matches in 2026?",
+      "options": [
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "answer": 2,
+      "explanation": "Sixteen cities host matches — 11 in the USA, 3 in Mexico, and 2 in Canada."
+    },
+    {
+      "id": "c-vuvuzela",
+      "category": "culture",
+      "question": "The buzzing vuvuzela horn became the soundtrack of which tournament?",
+      "options": [
+        "2006 Germany",
+        "2010 South Africa",
+        "2014 Brazil",
+        "2018 Russia"
+      ],
+      "answer": 1,
+      "explanation": "The plastic vuvuzela horns were blown constantly by South African fans in 2010 — loved by some, loathed by many."
+    },
+    {
+      "id": "rec-fastest-hat-trick",
+      "category": "records",
+      "question": "Who scored the fastest hat-trick in tournament history, in just 8 minutes?",
+      "options": [
+        "Gerd Müller (1970)",
+        "László Kiss (1982)",
+        "Cristiano Ronaldo (2018)",
+        "Kylian Mbappé (2022)"
+      ],
+      "answer": 1,
+      "explanation": "Hungary's László Kiss scored three goals in 8 minutes against El Salvador in 1982, the fastest hat-trick in tournament history."
     },
     {
       "id": "h-golden-goal",
       "category": "history",
       "question": "In which year was the golden goal rule first used at the tournament?",
-      "options": ["1994", "1998", "2002", "2006"],
+      "options": [
+        "1994",
+        "1998",
+        "2002",
+        "2006"
+      ],
       "answer": 1,
       "explanation": "Laurent Blanc scored a golden goal for France against Paraguay in 1998 — the rule was abolished after 2002."
+    },
+    {
+      "id": "r-lots-tiebreak",
+      "category": "rules",
+      "question": "If teams are still level after all group-stage tiebreakers, what is the final resort?",
+      "options": [
+        "A playoff match",
+        "A coin toss",
+        "Drawing of lots",
+        "The team with fewer fouls"
+      ],
+      "answer": 2,
+      "explanation": "If goal difference, goals scored, head-to-head, and fair play can't separate teams, lots are drawn — though this has never happened."
+    },
+    {
+      "id": "h-2014-champion",
+      "category": "history",
+      "question": "Who won in 2014, in Brazil?",
+      "options": [
+        "Argentina",
+        "Netherlands",
+        "Germany",
+        "Brazil"
+      ],
+      "answer": 2,
+      "explanation": "Germany beat Argentina 1–0 in extra time, Mario Götze scoring the winner."
     },
     {
       "id": "h-host-wins",
       "category": "history",
       "question": "How many times has the host nation gone on to win the tournament?",
-      "options": ["3", "5", "6", "8"],
+      "options": [
+        "3",
+        "5",
+        "6",
+        "8"
+      ],
       "answer": 2,
       "explanation": "The host has won six times: Uruguay (1930), Italy (1934), England (1966), West Germany (1974), Argentina (1978), and France (1998)."
     },
     {
-      "id": "h-cameroon-1990",
-      "category": "history",
-      "question": "Which African nation shocked the world by reaching the quarter-finals in 1990?",
-      "options": ["Nigeria", "Ghana", "Cameroon", "Senegal"],
-      "answer": 2,
-      "explanation": "Cameroon beat reigning champions Argentina in the opening match and reached the quarter-finals, led by 38-year-old Roger Milla."
+      "id": "v-lincoln-philly",
+      "category": "venues",
+      "question": "Which 2026 venue in the Philadelphia area is home to the NFL's Philadelphia Eagles?",
+      "options": [
+        "Lincoln Financial Field",
+        "Citizens Bank Park",
+        "Wells Fargo Center",
+        "Franklin Field"
+      ],
+      "answer": 0,
+      "explanation": "Lincoln Financial Field in Philadelphia is home to the Eagles and will host group-stage and knockout matches."
     },
     {
-      "id": "h-korea-2002",
+      "id": "h-2018-champion",
       "category": "history",
-      "question": "Which was the first Asian country to reach the semi-finals?",
-      "options": ["Japan", "South Korea", "Saudi Arabia", "Iran"],
+      "question": "Who won in 2018, in Russia?",
+      "options": [
+        "Croatia",
+        "France",
+        "Belgium",
+        "England"
+      ],
       "answer": 1,
-      "explanation": "South Korea reached the semi-finals as co-hosts in 2002, defeating Spain and Italy along the way."
+      "explanation": "France beat Croatia 4–2 in the final for their second title."
+    },
+    {
+      "id": "p-zidane-red",
+      "category": "players",
+      "question": "Who was sent off in the 2006 final for headbutting Marco Materazzi?",
+      "options": [
+        "Thierry Henry",
+        "Patrick Vieira",
+        "Zinedine Zidane",
+        "David Trezeguet"
+      ],
+      "answer": 2,
+      "explanation": "Zidane's headbutt in extra time of the 2006 final was his last act as a professional — Italy won on penalties."
+    },
+    {
+      "id": "v-lumen-sounders",
+      "category": "venues",
+      "question": "Lumen Field, the 2026 venue in Seattle, is home to which MLS team?",
+      "options": [
+        "Portland Timbers",
+        "Seattle Sounders",
+        "LA Galaxy",
+        "Vancouver Whitecaps"
+      ],
+      "answer": 1,
+      "explanation": "Lumen Field is home to the Seattle Sounders and is famous for its electric atmosphere."
+    },
+    {
+      "id": "t-france-count",
+      "category": "teams",
+      "question": "How many titles has France won?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explanation": "France has won twice — at home in 1998 and in Russia in 2018."
+    },
+    {
+      "id": "t-spain-2010",
+      "category": "teams",
+      "question": "Spain's 2010 victory was built on a possession-based style known as…",
+      "options": [
+        "Catenaccio",
+        "Tiki-taka",
+        "Total Football",
+        "Counter-press"
+      ],
+      "answer": 1,
+      "explanation": "Spain's short-passing, possession-heavy 'tiki-taka' style dominated the 2010 tournament, crowned by Iniesta's extra-time winner."
+    },
+    {
+      "id": "t-canada-1986",
+      "category": "teams",
+      "question": "In which year did Canada make their tournament debut?",
+      "options": [
+        "1982",
+        "1986",
+        "2018",
+        "2022"
+      ],
+      "answer": 1,
+      "explanation": "Canada qualified for the 1986 tournament in Mexico, losing all three group matches. They returned 36 years later in 2022."
+    },
+    {
+      "id": "p-hand-of-god",
+      "category": "players",
+      "question": "Whose 'Hand of God' goal came in 1986?",
+      "options": [
+        "Diego Maradona",
+        "Mario Kempes",
+        "Gabriel Batistuta",
+        "Daniel Passarella"
+      ],
+      "answer": 0,
+      "explanation": "Diego Maradona punched in a goal against England, then scored the 'Goal of the Century' minutes later."
+    },
+    {
+      "id": "v-sofi-nfl",
+      "category": "venues",
+      "question": "SoFi Stadium, a 2026 venue in Los Angeles, is home to which two NFL teams?",
+      "options": [
+        "LA Rams and LA Chargers",
+        "SF 49ers and LA Chargers",
+        "Dallas Cowboys and Houston Texans",
+        "LA Rams and LA Raiders"
+      ],
+      "answer": 0,
+      "explanation": "SoFi Stadium in Inglewood, California is home to both the LA Rams and LA Chargers."
+    },
+    {
+      "id": "p-fastest-goal",
+      "category": "players",
+      "question": "Who scored the fastest goal ever — just 11 seconds into a 2002 match?",
+      "options": [
+        "Hakan Şükür",
+        "Ronaldo",
+        "Rivaldo",
+        "Christian Vieri"
+      ],
+      "answer": 0,
+      "explanation": "Türkiye's Hakan Şükür scored after 11 seconds against South Korea in the 2002 third-place match."
+    },
+    {
+      "id": "r-points-for-win",
+      "category": "rules",
+      "question": "How many points does a team get for a win in the group stage?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 2,
+      "explanation": "A win is worth 3 points, a draw 1, and a loss 0."
+    },
+    {
+      "id": "r-offside",
+      "category": "rules",
+      "question": "A player is offside if, when the ball is passed to them, they are…",
+      "options": [
+        "In their own half",
+        "Behind the ball",
+        "Ahead of the second-to-last defender and closer to the goal",
+        "Standing still"
+      ],
+      "answer": 2,
+      "explanation": "A player is offside if any part of their body (except hands and arms) is closer to the goal line than both the ball and the second-to-last defender."
+    },
+    {
+      "id": "r-first-tiebreaker",
+      "category": "rules",
+      "question": "If two teams finish level on points in a group, what's the first tiebreaker?",
+      "options": [
+        "Head-to-head result",
+        "Goal difference",
+        "Fair-play score",
+        "Drawing of lots"
+      ],
+      "answer": 1,
+      "explanation": "Goal difference across all group matches is checked first, then goals scored, then head-to-head."
+    },
+    {
+      "id": "p-golden-ball-22",
+      "category": "players",
+      "question": "Who won the Golden Ball (best player) at the 2022 tournament?",
+      "options": [
+        "Kylian Mbappé",
+        "Luka Modrić",
+        "Lionel Messi",
+        "Antoine Griezmann"
+      ],
+      "answer": 2,
+      "explanation": "Messi won the Golden Ball with 7 goals and 3 assists, leading Argentina to the title."
+    },
+    {
+      "id": "r-red-card-replace",
+      "category": "rules",
+      "question": "When a player is shown a red card, the team may…",
+      "options": [
+        "Bring on a substitute",
+        "Play a player short for the rest of the match",
+        "Replace them after 10 minutes",
+        "Appeal immediately"
+      ],
+      "answer": 1,
+      "explanation": "A sent-off player cannot be replaced — the team plays a player down, and the player is suspended for at least the next match."
+    },
+    {
+      "id": "r-extra-time",
+      "category": "rules",
+      "question": "If a knockout match is level after 90 minutes, what happens next?",
+      "options": [
+        "Straight to penalties",
+        "A replay",
+        "Two 15-minute periods of extra time",
+        "Golden goal"
+      ],
+      "answer": 2,
+      "explanation": "From the Round of 32 on, a tie goes to two 15-minute periods of extra time, then a penalty shootout if still level."
+    },
+    {
+      "id": "t-opener-azteca",
+      "category": "teams",
+      "question": "Which historic stadium hosts the opening match in 2026?",
+      "options": [
+        "Estadio Azteca, Mexico City",
+        "MetLife Stadium, New Jersey",
+        "Rose Bowl, Pasadena",
+        "BC Place, Vancouver"
+      ],
+      "answer": 0,
+      "explanation": "Mexico City's Estadio Azteca opens the tournament — a venue that has hosted two previous finals."
+    },
+    {
+      "id": "p-deschamps-dual",
+      "category": "players",
+      "question": "Who won the tournament as captain in 1998 and as head coach in 2018?",
+      "options": [
+        "Zinedine Zidane",
+        "Laurent Blanc",
+        "Didier Deschamps",
+        "Raymond Domenech"
+      ],
+      "answer": 2,
+      "explanation": "Didier Deschamps lifted the trophy as France's captain in 1998 and guided them to the title as coach 20 years later."
     },
     {
       "id": "h-back-to-back",
       "category": "history",
       "question": "Which team was the last to win two consecutive titles?",
-      "options": ["Italy (1934, 1938)", "Brazil (1958, 1962)", "Argentina (1978, 1986)", "Germany (1990, 2014)"],
+      "options": [
+        "Italy (1934, 1938)",
+        "Brazil (1958, 1962)",
+        "Argentina (1978, 1986)",
+        "Germany (1990, 2014)"
+      ],
       "answer": 1,
       "explanation": "Brazil's back-to-back wins in 1958 and 1962 remain the last time any nation successfully defended the title."
     },
     {
-      "id": "h-maracanazo",
+      "id": "h-1934-italy",
       "category": "history",
-      "question": "The 'Maracanazo' shocked Brazil in 1950. Who beat them in the deciding match?",
-      "options": ["Argentina", "Uruguay", "Sweden", "Spain"],
+      "question": "Which European nation hosted AND won in both 1934 and 1938?",
+      "options": [
+        "France",
+        "Italy",
+        "Germany",
+        "Spain"
+      ],
       "answer": 1,
-      "explanation": "Uruguay beat Brazil 2–1 in the 1950 final group match at the Maracanã, silencing nearly 200,000 fans."
+      "explanation": "Italy won on home soil in 1934 and retained the title in France in 1938 — the only European nation to win back-to-back."
     },
     {
-      "id": "h-first-shootout",
+      "id": "h-1966-england",
       "category": "history",
-      "question": "In which year was the first penalty shootout held at the tournament?",
-      "options": ["1978", "1982", "1986", "1990"],
+      "question": "In which year did England win its only title?",
+      "options": [
+        "1962",
+        "1966",
+        "1970",
+        "1974"
+      ],
       "answer": 1,
-      "explanation": "The first shootout came in 1982 when West Germany beat France in the semi-final after a 3–3 draw."
+      "explanation": "England won on home soil in 1966, beating West Germany 4–2 after extra time."
     },
     {
-      "id": "h-cards-introduced",
-      "category": "history",
-      "question": "In which tournament were red and yellow cards first introduced?",
-      "options": ["1966", "1970", "1974", "1978"],
+      "id": "t-brazil-every-edition",
+      "category": "teams",
+      "question": "Which nation is the only one to have competed in every single edition?",
+      "options": [
+        "Germany",
+        "Argentina",
+        "Brazil",
+        "Italy"
+      ],
+      "answer": 2,
+      "explanation": "Brazil has appeared in every tournament since 1930 — the only nation with a perfect attendance record."
+    },
+    {
+      "id": "t-costa-rica-2014",
+      "category": "teams",
+      "question": "In 2014, Costa Rica topped a group containing Italy, England, and which other former champion?",
+      "options": [
+        "Spain",
+        "France",
+        "Germany",
+        "Uruguay"
+      ],
+      "answer": 3,
+      "explanation": "Costa Rica won Group D ahead of Uruguay, Italy, and England — all former champions — one of the biggest group-stage shocks ever."
+    },
+    {
+      "id": "rec-highest-score",
+      "category": "records",
+      "question": "What is the highest-scoring match in tournament history, with 12 goals?",
+      "options": [
+        "Hungary 9–0 South Korea (1954)",
+        "Hungary 10–1 El Salvador (1982)",
+        "Germany 7–1 Brazil (2014)",
+        "Austria 7–5 Switzerland (1954)"
+      ],
+      "answer": 3,
+      "explanation": "Austria beat Switzerland 7–5 in a 1954 quarter-final, producing 12 goals — still the all-time record for a single match."
+    },
+    {
+      "id": "v-hard-rock-miami",
+      "category": "venues",
+      "question": "Hard Rock Stadium, a 2026 venue in Miami, is home to which NFL team?",
+      "options": [
+        "Tampa Bay Buccaneers",
+        "Jacksonville Jaguars",
+        "Miami Dolphins",
+        "Carolina Panthers"
+      ],
+      "answer": 2,
+      "explanation": "Hard Rock Stadium in Miami Gardens is home to the Miami Dolphins and has hosted multiple Super Bowls."
+    },
+    {
+      "id": "t-brazil-titles-count",
+      "category": "teams",
+      "question": "How many titles has Brazil won?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": 2,
+      "explanation": "Brazil's 5 titles are the most of any nation — and they're the only team to play in every edition."
+    },
+    {
+      "id": "c-jabulani",
+      "category": "culture",
+      "question": "The controversial 'Jabulani' was the official match ball for which edition?",
+      "options": [
+        "2006",
+        "2010",
+        "2014",
+        "2018"
+      ],
       "answer": 1,
-      "explanation": "English referee Ken Aston devised the card system after the 1966 edition. It debuted at the 1970 tournament in Mexico."
+      "explanation": "The Jabulani, used at the 2010 tournament, was criticised by goalkeepers and players for its unpredictable flight path."
+    },
+    {
+      "id": "h-2010-champion",
+      "category": "history",
+      "question": "Which nation won its first title in 2010?",
+      "options": [
+        "Netherlands",
+        "Spain",
+        "Germany",
+        "Uruguay"
+      ],
+      "answer": 1,
+      "explanation": "Spain beat the Netherlands 1–0 in extra time for their first-ever title."
     },
     {
       "id": "h-var-debut",
       "category": "history",
       "question": "In which edition was VAR (Video Assistant Referee) first used?",
-      "options": ["2014", "2018", "2022", "2026"],
+      "options": [
+        "2014",
+        "2018",
+        "2022",
+        "2026"
+      ],
       "answer": 1,
       "explanation": "VAR made its tournament debut in Russia in 2018, reviewing goals, penalties, red cards, and mistaken identity."
     },
     {
-      "id": "h-1950-format",
-      "category": "history",
-      "question": "What unusual format did the 1950 tournament use instead of a knockout final?",
-      "options": ["A final group stage", "Extra time only", "A two-legged final", "A best-of-three series"],
-      "answer": 0,
-      "explanation": "The 1950 tournament had a round-robin final group instead of a single knockout final — the only time this format was used."
-    },
-    {
-      "id": "h-32-team-era",
-      "category": "history",
-      "question": "For how many editions (1998–2022) did the tournament use a 32-team format?",
-      "options": ["5", "6", "7", "8"],
-      "answer": 2,
-      "explanation": "The 32-team format ran for seven editions from France 1998 through Qatar 2022 before expanding to 48 teams."
-    },
-    {
-      "id": "h-pickles",
-      "category": "history",
-      "question": "The original trophy was stolen in England in 1966 and famously found by…",
-      "options": ["A police officer", "A dog named Pickles", "A museum guard", "A young boy"],
+      "id": "r-var-meaning",
+      "category": "rules",
+      "question": "What does VAR stand for?",
+      "options": [
+        "Virtual Action Review",
+        "Video Assistant Referee",
+        "Video Analysis Review",
+        "Visual Assistance Replay"
+      ],
       "answer": 1,
-      "explanation": "The Jules Rimet Trophy was found by a dog named Pickles, who discovered it wrapped in newspaper under a hedge."
+      "explanation": "VAR helps match officials review decisions on goals, penalties, red cards, and mistaken identity using video footage."
+    },
+    {
+      "id": "t-uruguay-years",
+      "category": "teams",
+      "question": "Uruguay won two titles. In which years?",
+      "options": [
+        "1930 and 1950",
+        "1934 and 1950",
+        "1930 and 1954",
+        "1938 and 1950"
+      ],
+      "answer": 0,
+      "explanation": "Uruguay won the inaugural tournament in 1930 on home soil and again in 1950 with the famous 'Maracanazo' in Brazil."
+    },
+    {
+      "id": "v-metlife-capacity",
+      "category": "venues",
+      "question": "What is the approximate seating capacity of MetLife Stadium, host of the 2026 final?",
+      "options": [
+        "65,000",
+        "72,000",
+        "82,500",
+        "95,000"
+      ],
+      "answer": 2,
+      "explanation": "MetLife Stadium in East Rutherford, New Jersey has a seating capacity of approximately 82,500."
+    },
+    {
+      "id": "h-germany-71-brazil",
+      "category": "history",
+      "question": "Germany famously thrashed Brazil 7–1 in a 2014 semi-final. Where was it played?",
+      "options": [
+        "Rio de Janeiro",
+        "São Paulo",
+        "Belo Horizonte",
+        "Brasília"
+      ],
+      "answer": 2,
+      "explanation": "The shock 7–1 result came in Belo Horizonte — one of the most stunning scorelines in the sport's history."
+    },
+    {
+      "id": "p-youngest-final",
+      "category": "players",
+      "question": "Who is the youngest player to score in a tournament final?",
+      "options": [
+        "Kylian Mbappé",
+        "Pelé",
+        "Michael Owen",
+        "Lionel Messi"
+      ],
+      "answer": 1,
+      "explanation": "Pelé was just 17 when he scored twice in the 1958 final against Sweden."
+    },
+    {
+      "id": "p-puskas",
+      "category": "players",
+      "question": "Which legendary Hungarian scored 84 goals in 85 internationals and starred in the 1954 tournament?",
+      "options": [
+        "Sándor Kocsis",
+        "Ferenc Puskás",
+        "Nándor Hidegkuti",
+        "Zoltán Czibor"
+      ],
+      "answer": 1,
+      "explanation": "Puskás was the star of Hungary's 'Golden Team' that reached the 1954 final, though they lost to West Germany despite being heavy favorites."
+    },
+    {
+      "id": "rec-nuremberg",
+      "category": "records",
+      "question": "The 2006 'Battle of Nuremberg' (Portugal vs Netherlands) holds the record for most cards in a match. How many?",
+      "options": [
+        "12",
+        "16",
+        "20",
+        "24"
+      ],
+      "answer": 2,
+      "explanation": "Referee Valentin Ivanov showed 16 yellow cards and 4 red cards — 20 total — in one of the most ill-tempered matches ever."
+    },
+    {
+      "id": "c-trophy-weight",
+      "category": "culture",
+      "question": "The current trophy is made of 18-carat gold. How much does it weigh?",
+      "options": [
+        "About 2 kg",
+        "About 4 kg",
+        "About 6 kg",
+        "About 8 kg"
+      ],
+      "answer": 2,
+      "explanation": "The trophy weighs 6.175 kg and has been awarded since 1974 after Brazil kept the original Jules Rimet Trophy permanently."
+    },
+    {
+      "id": "p-cr7-five-editions",
+      "category": "players",
+      "question": "Who was the first player to score at five consecutive editions of the tournament?",
+      "options": [
+        "Lionel Messi",
+        "Cristiano Ronaldo",
+        "Miroslav Klose",
+        "Pelé"
+      ],
+      "answer": 1,
+      "explanation": "Ronaldo scored at every edition from 2006 to 2022 — five consecutive tournaments, a record no player had achieved before."
+    },
+    {
+      "id": "p-yashin",
+      "category": "players",
+      "question": "Which legendary goalkeeper is the only keeper ever to win the Ballon d'Or?",
+      "options": [
+        "Gordon Banks",
+        "Lev Yashin",
+        "Dino Zoff",
+        "Gianluigi Buffon"
+      ],
+      "answer": 1,
+      "explanation": "Soviet keeper Lev Yashin, the 'Black Spider,' won the Ballon d'Or in 1963 — still the only goalkeeper ever awarded it."
+    },
+    {
+      "id": "t-host-confederation",
+      "category": "teams",
+      "question": "All three 2026 host nations belong to which football confederation?",
+      "options": [
+        "UEFA",
+        "CONMEBOL",
+        "CONCACAF",
+        "AFC"
+      ],
+      "answer": 2,
+      "explanation": "The USA, Canada, and Mexico are all members of CONCACAF — the Confederation of North, Central American and Caribbean Association Football."
+    },
+    {
+      "id": "rec-goals-per-game",
+      "category": "records",
+      "question": "Which edition holds the record for most goals per game (5.38)?",
+      "options": [
+        "1930 Uruguay",
+        "1954 Switzerland",
+        "1970 Mexico",
+        "2014 Brazil"
+      ],
+      "answer": 1,
+      "explanation": "The 1954 tournament averaged 5.38 goals per game across 26 matches — a record that will almost certainly never be broken."
+    },
+    {
+      "id": "t-germany-count",
+      "category": "teams",
+      "question": "How many titles has Germany won?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": 1,
+      "explanation": "Germany has won four titles: 1954, 1974, 1990, and 2014."
+    },
+    {
+      "id": "t-senegal-2002",
+      "category": "teams",
+      "question": "Which African nation stunned defending champions France in the 2002 opening match?",
+      "options": [
+        "Cameroon",
+        "Nigeria",
+        "Senegal",
+        "Ghana"
+      ],
+      "answer": 2,
+      "explanation": "Senegal beat France 1–0 in the tournament opener — one of the biggest upsets in the competition's history."
+    },
+    {
+      "id": "p-hurst-final",
+      "category": "players",
+      "question": "Who scored the first hat-trick in a tournament final, in 1966?",
+      "options": [
+        "Bobby Charlton",
+        "Geoff Hurst",
+        "Eusébio",
+        "Franz Beckenbauer"
+      ],
+      "answer": 1,
+      "explanation": "Geoff Hurst scored three for England against West Germany — a feat unmatched for 56 years until Mbappé's hat-trick in 2022."
+    },
+    {
+      "id": "r-who-advances",
+      "category": "rules",
+      "question": "How many of the 48 teams reach the Round of 32 in 2026?",
+      "options": [
+        "16",
+        "24",
+        "32",
+        "48"
+      ],
+      "answer": 2,
+      "explanation": "The top two from each of the 12 groups (24) plus the 8 best third-placed teams advance — 32 in all."
+    },
+    {
+      "id": "h-1970-brazil-final",
+      "category": "history",
+      "question": "What was the score when Brazil beat Italy in the iconic 1970 final?",
+      "options": [
+        "3–1",
+        "4–1",
+        "2–0",
+        "3–2"
+      ],
+      "answer": 1,
+      "explanation": "Brazil's 4–1 victory in Mexico City is widely regarded as one of the greatest finals ever played."
+    },
+    {
+      "id": "c-panini",
+      "category": "culture",
+      "question": "Panini has produced collectible sticker albums for the tournament since which year?",
+      "options": [
+        "1962",
+        "1970",
+        "1978",
+        "1986"
+      ],
+      "answer": 1,
+      "explanation": "Italian company Panini first published a tournament sticker album for the 1970 edition in Mexico, starting a global collecting tradition."
+    },
+    {
+      "id": "rec-oldest-player",
+      "category": "records",
+      "question": "Who is the oldest player to appear at the tournament?",
+      "options": [
+        "Roger Milla (42)",
+        "Peter Shilton (40)",
+        "Essam El Hadary (45)",
+        "Dino Zoff (40)"
+      ],
+      "answer": 2,
+      "explanation": "Egypt's Essam El Hadary was 45 years and 161 days old when he played against Saudi Arabia at the 2018 tournament."
+    },
+    {
+      "id": "v-azteca-finals",
+      "category": "venues",
+      "question": "Estadio Azteca in Mexico City has hosted how many previous tournament finals?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 2,
+      "explanation": "The Azteca hosted finals in both 1970 (Brazil 4–1 Italy) and 1986 (Argentina 3–2 West Germany)."
+    },
+    {
+      "id": "p-cr7-spain",
+      "category": "players",
+      "question": "Against which team did Cristiano Ronaldo score a hat-trick in the 2018 group stage?",
+      "options": [
+        "Morocco",
+        "Spain",
+        "Iran",
+        "Uruguay"
+      ],
+      "answer": 1,
+      "explanation": "Ronaldo's hat-trick in a thrilling 3–3 draw with Spain included a stunning late free kick on the opening day of 2018."
+    },
+    {
+      "id": "t-48-format",
+      "category": "teams",
+      "question": "How many teams compete in the 2026 edition?",
+      "options": [
+        "32",
+        "40",
+        "48",
+        "64"
+      ],
+      "answer": 2,
+      "explanation": "2026 expanded the field from 32 to 48 nations, making it the largest edition ever."
+    },
+    {
+      "id": "v-rose-bowl-94",
+      "category": "venues",
+      "question": "The Rose Bowl in Pasadena hosted which historic tournament final?",
+      "options": [
+        "1990",
+        "1994",
+        "1998",
+        "2002"
+      ],
+      "answer": 1,
+      "explanation": "The 1994 final at the Rose Bowl saw Brazil beat Italy on penalties — the first final decided by a shootout."
+    },
+    {
+      "id": "p-gerd-muller",
+      "category": "players",
+      "question": "How many tournament goals did Germany's Gerd Müller score in just two editions?",
+      "options": [
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "answer": 2,
+      "explanation": "Müller scored 10 goals in 1970 and 4 in 1974 — 14 in just 13 matches, a stunning strike rate."
+    },
+    {
+      "id": "p-cafu-finals",
+      "category": "players",
+      "question": "Which Brazilian appeared in three consecutive finals (1994, 1998, 2002)?",
+      "options": [
+        "Roberto Carlos",
+        "Ronaldo",
+        "Cafu",
+        "Rivaldo"
+      ],
+      "answer": 2,
+      "explanation": "Right-back Cafu is the only player to appear in three successive finals, winning two of them."
+    },
+    {
+      "id": "t-usa-1930",
+      "category": "teams",
+      "question": "In which year did the USA achieve their best-ever finish, reaching the semi-finals?",
+      "options": [
+        "1930",
+        "1994",
+        "2002",
+        "2014"
+      ],
+      "answer": 0,
+      "explanation": "The USA reached the semi-finals at the inaugural 1930 tournament, losing 6–1 to Argentina."
+    },
+    {
+      "id": "p-golden-boot-22",
+      "category": "players",
+      "question": "Who won the Golden Boot (top scorer) at the 2022 tournament?",
+      "options": [
+        "Lionel Messi",
+        "Kylian Mbappé",
+        "Olivier Giroud",
+        "Julián Álvarez"
+      ],
+      "answer": 1,
+      "explanation": "Mbappé scored 8 goals including a hat-trick in the final, edging out Messi on assists."
+    },
+    {
+      "id": "p-james-2014",
+      "category": "players",
+      "question": "Which Colombian star won the Golden Boot in 2014 with 6 goals?",
+      "options": [
+        "Radamel Falcao",
+        "James Rodríguez",
+        "Juan Cuadrado",
+        "Carlos Bacca"
+      ],
+      "answer": 1,
+      "explanation": "James Rodríguez dazzled in 2014, including a stunning volley against Uruguay voted the tournament's best goal."
     },
     {
       "id": "h-north-korea-1966",
       "category": "history",
       "question": "Which surprise team knocked out Italy in the group stage of the 1966 tournament?",
-      "options": ["Portugal", "North Korea", "Australia", "Cuba"],
+      "options": [
+        "Portugal",
+        "North Korea",
+        "Australia",
+        "Cuba"
+      ],
       "answer": 1,
       "explanation": "North Korea stunned Italy 1–0, one of the biggest upsets in history, before losing 5–3 to Portugal in the quarter-finals."
     },
@@ -382,419 +967,519 @@
       "id": "h-48-expansion",
       "category": "history",
       "question": "2026 is the first edition with 48 teams. How many competed in the previous format?",
-      "options": ["24", "28", "32", "36"],
+      "options": [
+        "24",
+        "28",
+        "32",
+        "36"
+      ],
       "answer": 2,
       "explanation": "The tournament expanded from 32 to 48 teams for 2026, adding 16 more nations and an extra knockout round."
     },
     {
-      "id": "h-first-televised",
+      "id": "h-first-edition",
       "category": "history",
-      "question": "In which year was the tournament first broadcast on television?",
-      "options": ["1950", "1954", "1958", "1962"],
-      "answer": 1,
-      "explanation": "The 1954 tournament in Switzerland was the first to be televised, bringing the event to living rooms across Europe."
-    },
-
-    {
-      "id": "p-youngest-final",
-      "category": "players",
-      "question": "Who is the youngest player to score in a tournament final?",
-      "options": ["Kylian Mbappé", "Pelé", "Michael Owen", "Lionel Messi"],
-      "answer": 1,
-      "explanation": "Pelé was just 17 when he scored twice in the 1958 final against Sweden."
-    },
-    {
-      "id": "p-oldest-scorer",
-      "category": "players",
-      "question": "Who is the oldest player to score at the tournament, netting at 42 years old?",
-      "options": ["Dino Zoff", "Roger Milla", "Peter Shilton", "Essam El Hadary"],
-      "answer": 1,
-      "explanation": "Cameroon's Roger Milla scored against Russia at the 1994 tournament at 42 years and 39 days old."
-    },
-    {
-      "id": "p-cafu-finals",
-      "category": "players",
-      "question": "Which Brazilian appeared in three consecutive finals (1994, 1998, 2002)?",
-      "options": ["Roberto Carlos", "Ronaldo", "Cafu", "Rivaldo"],
+      "question": "Where was the very first edition held, in 1930?",
+      "options": [
+        "Brazil",
+        "Italy",
+        "Uruguay",
+        "France"
+      ],
       "answer": 2,
-      "explanation": "Right-back Cafu is the only player to appear in three successive finals, winning two of them."
+      "explanation": "Uruguay hosted and won the inaugural 1930 tournament on home soil."
     },
     {
-      "id": "p-zidane-red",
-      "category": "players",
-      "question": "Who was sent off in the 2006 final for headbutting Marco Materazzi?",
-      "options": ["Thierry Henry", "Patrick Vieira", "Zinedine Zidane", "David Trezeguet"],
-      "answer": 2,
-      "explanation": "Zidane's headbutt in extra time of the 2006 final was his last act as a professional — Italy won on penalties."
-    },
-    {
-      "id": "p-ronaldo-brazil-15",
-      "category": "players",
-      "question": "How many tournament goals did Brazil's Ronaldo score across his career?",
-      "options": ["10", "12", "15", "18"],
-      "answer": 2,
-      "explanation": "Ronaldo scored 15 goals across 1998, 2002, and 2006 — including both goals in the 2002 final."
-    },
-    {
-      "id": "p-golden-boot-22",
-      "category": "players",
-      "question": "Who won the Golden Boot (top scorer) at the 2022 tournament?",
-      "options": ["Lionel Messi", "Kylian Mbappé", "Olivier Giroud", "Julián Álvarez"],
+      "id": "h-maracanazo",
+      "category": "history",
+      "question": "The 'Maracanazo' shocked Brazil in 1950. Who beat them in the deciding match?",
+      "options": [
+        "Argentina",
+        "Uruguay",
+        "Sweden",
+        "Spain"
+      ],
       "answer": 1,
-      "explanation": "Mbappé scored 8 goals including a hat-trick in the final, edging out Messi on assists."
+      "explanation": "Uruguay beat Brazil 2–1 in the 1950 final group match at the Maracanã, silencing nearly 200,000 fans."
     },
     {
-      "id": "p-golden-ball-22",
-      "category": "players",
-      "question": "Who won the Golden Ball (best player) at the 2022 tournament?",
-      "options": ["Kylian Mbappé", "Luka Modrić", "Lionel Messi", "Antoine Griezmann"],
-      "answer": 2,
-      "explanation": "Messi won the Golden Ball with 7 goals and 3 assists, leading Argentina to the title."
-    },
-    {
-      "id": "p-eusebio-66",
-      "category": "players",
-      "question": "Which Portuguese legend scored 9 goals at the 1966 tournament?",
-      "options": ["Luís Figo", "Cristiano Ronaldo", "Eusébio", "Rui Costa"],
-      "answer": 2,
-      "explanation": "Eusébio's 9 goals made him the top scorer in 1966, leading Portugal to third place on their debut."
-    },
-    {
-      "id": "p-matthaus-apps",
-      "category": "players",
-      "question": "Before Messi surpassed him, who held the record for most tournament appearances?",
-      "options": ["Paolo Maldini", "Lothar Matthäus", "Cafu", "Diego Maradona"],
+      "id": "rec-most-finals",
+      "category": "records",
+      "question": "Which nation has appeared in the most finals?",
+      "options": [
+        "Brazil (7)",
+        "Germany (8)",
+        "Italy (6)",
+        "Argentina (6)"
+      ],
       "answer": 1,
-      "explanation": "Germany's Lothar Matthäus played 25 matches across five editions (1982–1998) before Messi overtook him in 2022."
+      "explanation": "Germany has reached the final 8 times (1954, 1966, 1974, 1982, 1986, 1990, 2002, 2014), winning four."
+    },
+    {
+      "id": "r-two-yellows",
+      "category": "rules",
+      "question": "Two yellow cards in the same match result in…",
+      "options": [
+        "A warning",
+        "A red card",
+        "A penalty",
+        "Nothing"
+      ],
+      "answer": 1,
+      "explanation": "A second yellow in one match becomes a red card, and the player misses the next match."
     },
     {
       "id": "p-muller-2010",
       "category": "players",
       "question": "Who won the Golden Boot in 2010 with 5 goals and 3 assists?",
-      "options": ["David Villa", "Thomas Müller", "Wesley Sneijder", "Diego Forlán"],
+      "options": [
+        "David Villa",
+        "Thomas Müller",
+        "Wesley Sneijder",
+        "Diego Forlán"
+      ],
       "answer": 1,
       "explanation": "Germany's Thomas Müller won the Golden Boot at age 20 in his first major tournament."
     },
     {
-      "id": "p-james-2014",
-      "category": "players",
-      "question": "Which Colombian star won the Golden Boot in 2014 with 6 goals?",
-      "options": ["Radamel Falcao", "James Rodríguez", "Juan Cuadrado", "Carlos Bacca"],
+      "id": "v-bc-place-roof",
+      "category": "venues",
+      "question": "Which Canadian 2026 venue features a retractable roof?",
+      "options": [
+        "BMO Field, Toronto",
+        "BC Place, Vancouver",
+        "Olympic Stadium, Montreal",
+        "Commonwealth Stadium, Edmonton"
+      ],
       "answer": 1,
-      "explanation": "James Rodríguez dazzled in 2014, including a stunning volley against Uruguay voted the tournament's best goal."
+      "explanation": "BC Place in Vancouver features a retractable roof, ensuring matches can be played regardless of weather."
     },
     {
-      "id": "p-deschamps-dual",
-      "category": "players",
-      "question": "Who won the tournament as captain in 1998 and as head coach in 2018?",
-      "options": ["Zinedine Zidane", "Laurent Blanc", "Didier Deschamps", "Raymond Domenech"],
-      "answer": 2,
-      "explanation": "Didier Deschamps lifted the trophy as France's captain in 1998 and guided them to the title as coach 20 years later."
-    },
-    {
-      "id": "p-yashin",
-      "category": "players",
-      "question": "Which legendary goalkeeper is the only keeper ever to win the Ballon d'Or?",
-      "options": ["Gordon Banks", "Lev Yashin", "Dino Zoff", "Gianluigi Buffon"],
+      "id": "h-korea-2002",
+      "category": "history",
+      "question": "Which was the first Asian country to reach the semi-finals?",
+      "options": [
+        "Japan",
+        "South Korea",
+        "Saudi Arabia",
+        "Iran"
+      ],
       "answer": 1,
-      "explanation": "Soviet keeper Lev Yashin, the 'Black Spider,' won the Ballon d'Or in 1963 — still the only goalkeeper ever awarded it."
-    },
-    {
-      "id": "p-lineker-86",
-      "category": "players",
-      "question": "Who won the Golden Boot at the 1986 tournament with 6 goals?",
-      "options": ["Diego Maradona", "Gary Lineker", "Michel Platini", "Emilio Butragueño"],
-      "answer": 1,
-      "explanation": "England's Gary Lineker scored 6 goals, including a hat-trick against Poland, to win the 1986 Golden Boot."
-    },
-    {
-      "id": "p-gerd-muller",
-      "category": "players",
-      "question": "How many tournament goals did Germany's Gerd Müller score in just two editions?",
-      "options": ["10", "12", "14", "16"],
-      "answer": 2,
-      "explanation": "Müller scored 10 goals in 1970 and 4 in 1974 — 14 in just 13 matches, a stunning strike rate."
-    },
-    {
-      "id": "p-cr7-spain",
-      "category": "players",
-      "question": "Against which team did Cristiano Ronaldo score a hat-trick in the 2018 group stage?",
-      "options": ["Morocco", "Spain", "Iran", "Uruguay"],
-      "answer": 1,
-      "explanation": "Ronaldo's hat-trick in a thrilling 3–3 draw with Spain included a stunning late free kick on the opening day of 2018."
-    },
-    {
-      "id": "p-moore-66",
-      "category": "players",
-      "question": "Which captain lifted the trophy for England in 1966?",
-      "options": ["Bobby Charlton", "Bobby Moore", "Gordon Banks", "Geoff Hurst"],
-      "answer": 1,
-      "explanation": "Bobby Moore captained England to their only title in 1966, widely regarded as one of the greatest defenders ever."
-    },
-    {
-      "id": "p-hurst-final",
-      "category": "players",
-      "question": "Who scored the first hat-trick in a tournament final, in 1966?",
-      "options": ["Bobby Charlton", "Geoff Hurst", "Eusébio", "Franz Beckenbauer"],
-      "answer": 1,
-      "explanation": "Geoff Hurst scored three for England against West Germany — a feat unmatched for 56 years until Mbappé's hat-trick in 2022."
-    },
-    {
-      "id": "p-puskas",
-      "category": "players",
-      "question": "Which legendary Hungarian scored 84 goals in 85 internationals and starred in the 1954 tournament?",
-      "options": ["Sándor Kocsis", "Ferenc Puskás", "Nándor Hidegkuti", "Zoltán Czibor"],
-      "answer": 1,
-      "explanation": "Puskás was the star of Hungary's 'Golden Team' that reached the 1954 final, though they lost to West Germany despite being heavy favorites."
+      "explanation": "South Korea reached the semi-finals as co-hosts in 2002, defeating Spain and Italy along the way."
     },
     {
       "id": "p-forlan-2010",
       "category": "players",
       "question": "Who won the Golden Ball (best player) at the 2010 tournament?",
-      "options": ["Wesley Sneijder", "Andrés Iniesta", "Diego Forlán", "David Villa"],
+      "options": [
+        "Wesley Sneijder",
+        "Andrés Iniesta",
+        "Diego Forlán",
+        "David Villa"
+      ],
       "answer": 2,
       "explanation": "Uruguay's Diego Forlán won the Golden Ball in 2010, scoring 5 goals as Uruguay reached the semi-finals."
     },
     {
-      "id": "p-cr7-five-editions",
+      "id": "c-mexican-wave",
+      "category": "culture",
+      "question": "'La Ola' (the Mexican wave) became a global phenomenon at which tournament?",
+      "options": [
+        "1978 Argentina",
+        "1982 Spain",
+        "1986 Mexico",
+        "1990 Italy"
+      ],
+      "answer": 2,
+      "explanation": "While the wave existed before, it gained worldwide fame during the 1986 tournament in Mexico, earning the name 'Mexican wave.'"
+    },
+    {
+      "id": "p-pele-three",
       "category": "players",
-      "question": "Who was the first player to score at five consecutive editions of the tournament?",
-      "options": ["Lionel Messi", "Cristiano Ronaldo", "Miroslav Klose", "Pelé"],
+      "question": "Which player won three titles — the only one to do so?",
+      "options": [
+        "Diego Maradona",
+        "Pelé",
+        "Franz Beckenbauer",
+        "Zinedine Zidane"
+      ],
       "answer": 1,
-      "explanation": "Ronaldo scored at every edition from 2006 to 2022 — five consecutive tournaments, a record no player had achieved before."
-    },
-
-    {
-      "id": "r-penalty-spot",
-      "category": "rules",
-      "question": "How far is the penalty spot from the goal line?",
-      "options": ["10 yards (9.15 m)", "12 yards (11 m)", "15 yards (13.7 m)", "18 yards (16.5 m)"],
-      "answer": 1,
-      "explanation": "The penalty spot is 12 yards (approximately 11 metres) from the centre of the goal line."
+      "explanation": "Pelé won with Brazil in 1958, 1962 and 1970 — still the only player with three winners' medals."
     },
     {
-      "id": "r-subs-per-match",
-      "category": "rules",
-      "question": "How many substitutions does each team get per match in 2026?",
-      "options": ["3", "4", "5", "6"],
-      "answer": 2,
-      "explanation": "Each team may make up to 5 substitutions, using a maximum of 3 stoppages in play plus half-time and extra-time breaks."
-    },
-    {
-      "id": "r-var-meaning",
-      "category": "rules",
-      "question": "What does VAR stand for?",
-      "options": ["Virtual Action Review", "Video Assistant Referee", "Video Analysis Review", "Visual Assistance Replay"],
-      "answer": 1,
-      "explanation": "VAR helps match officials review decisions on goals, penalties, red cards, and mistaken identity using video footage."
-    },
-    {
-      "id": "r-match-time",
-      "category": "rules",
-      "question": "How long is a standard match, excluding stoppage time?",
-      "options": ["80 minutes", "90 minutes", "100 minutes", "120 minutes"],
-      "answer": 1,
-      "explanation": "A match is played in two 45-minute halves. Extra time in knockout rounds adds two more 15-minute periods."
-    },
-    {
-      "id": "r-lots-tiebreak",
-      "category": "rules",
-      "question": "If teams are still level after all group-stage tiebreakers, what is the final resort?",
-      "options": ["A playoff match", "A coin toss", "Drawing of lots", "The team with fewer fouls"],
-      "answer": 2,
-      "explanation": "If goal difference, goals scored, head-to-head, and fair play can't separate teams, lots are drawn — though this has never happened."
-    },
-    {
-      "id": "r-stoppage-time",
-      "category": "rules",
-      "question": "What determines how much stoppage time is added at the end of each half?",
-      "options": ["A fixed 3 minutes", "The referee's judgment based on stoppages", "A coin toss", "VAR decides"],
-      "answer": 1,
-      "explanation": "The referee adds time for substitutions, injuries, time-wasting, VAR reviews, and other stoppages — there's no fixed amount."
-    },
-    {
-      "id": "r-yellow-suspension",
-      "category": "rules",
-      "question": "What happens if a player collects two yellow cards across two different group-stage matches?",
-      "options": ["Nothing until the knockouts", "They are suspended for the next match", "They receive a red card", "They pay a fine"],
-      "answer": 1,
-      "explanation": "Two yellows in separate matches leads to a one-match suspension, which is why players on a yellow are sometimes rested."
-    },
-    {
-      "id": "r-offside",
-      "category": "rules",
-      "question": "A player is offside if, when the ball is passed to them, they are…",
-      "options": ["In their own half", "Behind the ball", "Ahead of the second-to-last defender and closer to the goal", "Standing still"],
-      "answer": 2,
-      "explanation": "A player is offside if any part of their body (except hands and arms) is closer to the goal line than both the ball and the second-to-last defender."
-    },
-    {
-      "id": "r-kickoff-any",
-      "category": "rules",
-      "question": "At kickoff, the ball can be played in which direction?",
-      "options": ["Forward only", "Backward only", "Any direction", "To a teammate in the other half"],
-      "answer": 2,
-      "explanation": "Since 2016, the ball can be kicked in any direction at kickoff. Previously it had to move forward."
-    },
-    {
-      "id": "r-goal-kick-score",
-      "category": "rules",
-      "question": "Can a goal be scored directly from a goal kick?",
-      "options": ["No, another player must touch it first", "Yes, but only against the opposing team", "Yes, for either team", "Only in extra time"],
-      "answer": 1,
-      "explanation": "A goal can be scored directly from a goal kick, but only against the opposing team — an own goal from a goal kick results in a corner."
-    },
-
-    {
-      "id": "t-germany-count",
-      "category": "teams",
-      "question": "How many titles has Germany won?",
-      "options": ["3", "4", "5", "6"],
-      "answer": 1,
-      "explanation": "Germany has won four titles: 1954, 1974, 1990, and 2014."
-    },
-    {
-      "id": "t-italy-count",
-      "category": "teams",
-      "question": "How many titles has Italy won?",
-      "options": ["2", "3", "4", "5"],
-      "answer": 2,
-      "explanation": "Italy has won four titles (1934, 1938, 1982, 2006), tied with Germany for the second-most."
-    },
-    {
-      "id": "t-brazil-every-edition",
-      "category": "teams",
-      "question": "Which nation is the only one to have competed in every single edition?",
-      "options": ["Germany", "Argentina", "Brazil", "Italy"],
-      "answer": 2,
-      "explanation": "Brazil has appeared in every tournament since 1930 — the only nation with a perfect attendance record."
-    },
-    {
-      "id": "t-48-format",
-      "category": "teams",
-      "question": "How many teams compete in the 2026 edition?",
-      "options": ["32", "40", "48", "64"],
-      "answer": 2,
-      "explanation": "2026 expanded the field from 32 to 48 nations, making it the largest edition ever."
-    },
-    {
-      "id": "t-usa-1930",
-      "category": "teams",
-      "question": "In which year did the USA achieve their best-ever finish, reaching the semi-finals?",
-      "options": ["1930", "1994", "2002", "2014"],
+      "id": "h-1950-format",
+      "category": "history",
+      "question": "What unusual format did the 1950 tournament use instead of a knockout final?",
+      "options": [
+        "A final group stage",
+        "Extra time only",
+        "A two-legged final",
+        "A best-of-three series"
+      ],
       "answer": 0,
-      "explanation": "The USA reached the semi-finals at the inaugural 1930 tournament, losing 6–1 to Argentina."
+      "explanation": "The 1950 tournament had a round-robin final group instead of a single knockout final — the only time this format was used."
     },
     {
-      "id": "t-canada-1986",
-      "category": "teams",
-      "question": "In which year did Canada make their tournament debut?",
-      "options": ["1982", "1986", "2018", "2022"],
+      "id": "p-top-scorer-alltime",
+      "category": "players",
+      "question": "Who is the all-time top scorer across all editions?",
+      "options": [
+        "Ronaldo (Brazil)",
+        "Miroslav Klose",
+        "Gerd Müller",
+        "Just Fontaine"
+      ],
       "answer": 1,
-      "explanation": "Canada qualified for the 1986 tournament in Mexico, losing all three group matches. They returned 36 years later in 2022."
+      "explanation": "Germany's Miroslav Klose scored 16 goals across four tournaments (2002–2014)."
+    },
+    {
+      "id": "c-tango-ball",
+      "category": "culture",
+      "question": "The iconic 'Tango' ball design, with its distinctive pattern of interlocking triads, was introduced at which tournament?",
+      "options": [
+        "1970",
+        "1974",
+        "1978",
+        "1982"
+      ],
+      "answer": 2,
+      "explanation": "The Adidas Tango debuted at the 1978 tournament in Argentina and its design influenced every match ball until 2006."
+    },
+    {
+      "id": "p-moore-66",
+      "category": "players",
+      "question": "Which captain lifted the trophy for England in 1966?",
+      "options": [
+        "Bobby Charlton",
+        "Bobby Moore",
+        "Gordon Banks",
+        "Geoff Hurst"
+      ],
+      "answer": 1,
+      "explanation": "Bobby Moore captained England to their only title in 1966, widely regarded as one of the greatest defenders ever."
+    },
+    {
+      "id": "h-first-televised",
+      "category": "history",
+      "question": "In which year was the tournament first broadcast on television?",
+      "options": [
+        "1950",
+        "1954",
+        "1958",
+        "1962"
+      ],
+      "answer": 1,
+      "explanation": "The 1954 tournament in Switzerland was the first to be televised, bringing the event to living rooms across Europe."
+    },
+    {
+      "id": "h-pickles",
+      "category": "history",
+      "question": "The original trophy was stolen in England in 1966 and famously found by…",
+      "options": [
+        "A police officer",
+        "A dog named Pickles",
+        "A museum guard",
+        "A young boy"
+      ],
+      "answer": 1,
+      "explanation": "The Jules Rimet Trophy was found by a dog named Pickles, who discovered it wrapped in newspaper under a hedge."
+    },
+    {
+      "id": "h-32-team-era",
+      "category": "history",
+      "question": "For how many editions (1998–2022) did the tournament use a 32-team format?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": 2,
+      "explanation": "The 32-team format ran for seven editions from France 1998 through Qatar 2022 before expanding to 48 teams."
+    },
+    {
+      "id": "h-miracle-bern",
+      "category": "history",
+      "question": "The 'Miracle of Bern' describes which team's shock 1954 final victory?",
+      "options": [
+        "Hungary",
+        "West Germany",
+        "Uruguay",
+        "Brazil"
+      ],
+      "answer": 1,
+      "explanation": "West Germany stunned mighty Hungary 3–2 in the 1954 final despite trailing 2–0 early on."
+    },
+    {
+      "id": "p-oldest-scorer",
+      "category": "players",
+      "question": "Who is the oldest player to score at the tournament, netting at 42 years old?",
+      "options": [
+        "Dino Zoff",
+        "Roger Milla",
+        "Peter Shilton",
+        "Essam El Hadary"
+      ],
+      "answer": 1,
+      "explanation": "Cameroon's Roger Milla scored against Russia at the 1994 tournament at 42 years and 39 days old."
+    },
+    {
+      "id": "c-jules-rimet-brazil",
+      "category": "culture",
+      "question": "Brazil was awarded permanent possession of the original Jules Rimet Trophy after winning their…",
+      "options": [
+        "First title",
+        "Second title",
+        "Third title",
+        "Fourth title"
+      ],
+      "answer": 2,
+      "explanation": "After winning their third title in 1970, Brazil kept the Jules Rimet Trophy permanently, and a new trophy was created for 1974."
+    },
+    {
+      "id": "h-first-shootout",
+      "category": "history",
+      "question": "In which year was the first penalty shootout held at the tournament?",
+      "options": [
+        "1978",
+        "1982",
+        "1986",
+        "1990"
+      ],
+      "answer": 1,
+      "explanation": "The first shootout came in 1982 when West Germany beat France in the semi-final after a 3–3 draw."
     },
     {
       "id": "t-mexico-third",
       "category": "teams",
       "question": "2026 marks Mexico's third time as host. When were the first two?",
-      "options": ["1966 and 1978", "1970 and 1986", "1974 and 1990", "1970 and 1994"],
+      "options": [
+        "1966 and 1978",
+        "1970 and 1986",
+        "1974 and 1990",
+        "1970 and 1994"
+      ],
       "answer": 1,
       "explanation": "Mexico hosted in 1970 (won by Brazil) and 1986 (won by Argentina), making 2026 their record third time."
+    },
+    {
+      "id": "rec-most-by-one",
+      "category": "records",
+      "question": "Which team scored the most goals in a single match — 10?",
+      "options": [
+        "Hungary vs El Salvador (1982)",
+        "Germany vs Saudi Arabia (2002)",
+        "Yugoslavia vs Zaire (1974)",
+        "Brazil vs Sweden (1950)"
+      ],
+      "answer": 0,
+      "explanation": "Hungary scored 10 times in their 10–1 thrashing of El Salvador in 1982 — the most by one team in a single match."
     },
     {
       "id": "t-iceland-small",
       "category": "teams",
       "question": "What is the smallest nation by population to qualify for the tournament?",
-      "options": ["Trinidad & Tobago", "Iceland", "Panama", "New Zealand"],
+      "options": [
+        "Trinidad & Tobago",
+        "Iceland",
+        "Panama",
+        "New Zealand"
+      ],
       "answer": 1,
       "explanation": "Iceland, with a population of around 350,000, qualified for the 2018 tournament and drew 1–1 with Argentina in the group stage."
     },
     {
-      "id": "t-netherlands-finals",
-      "category": "teams",
-      "question": "Despite reaching three finals, which traditional powerhouse has never won?",
-      "options": ["Portugal", "Netherlands", "Belgium", "Colombia"],
+      "id": "h-2022-champion",
+      "category": "history",
+      "question": "Who were the champions in 2022?",
+      "options": [
+        "France",
+        "Argentina",
+        "Croatia",
+        "Brazil"
+      ],
       "answer": 1,
-      "explanation": "The Netherlands lost finals in 1974, 1978, and 2010 — the most successful team never to win the title."
+      "explanation": "Argentina beat France on penalties after a 3–3 final — their third title and Lionel Messi's first."
     },
     {
-      "id": "t-france-count",
-      "category": "teams",
-      "question": "How many titles has France won?",
-      "options": ["1", "2", "3", "4"],
+      "id": "p-matthaus-apps",
+      "category": "players",
+      "question": "Before Messi surpassed him, who held the record for most tournament appearances?",
+      "options": [
+        "Paolo Maldini",
+        "Lothar Matthäus",
+        "Cafu",
+        "Diego Maradona"
+      ],
       "answer": 1,
-      "explanation": "France has won twice — at home in 1998 and in Russia in 2018."
+      "explanation": "Germany's Lothar Matthäus played 25 matches across five editions (1982–1998) before Messi overtook him in 2022."
     },
     {
-      "id": "t-uruguay-years",
-      "category": "teams",
-      "question": "Uruguay won two titles. In which years?",
-      "options": ["1930 and 1950", "1934 and 1950", "1930 and 1954", "1938 and 1950"],
+      "id": "p-mbappe-final",
+      "category": "players",
+      "question": "Who scored a hat-trick in the 2022 final — and still finished on the losing side?",
+      "options": [
+        "Lionel Messi",
+        "Kylian Mbappé",
+        "Olivier Giroud",
+        "Ángel Di María"
+      ],
+      "answer": 1,
+      "explanation": "Kylian Mbappé scored all three of France's goals, but Argentina won the shootout."
+    },
+    {
+      "id": "h-cameroon-1990",
+      "category": "history",
+      "question": "Which African nation shocked the world by reaching the quarter-finals in 1990?",
+      "options": [
+        "Nigeria",
+        "Ghana",
+        "Cameroon",
+        "Senegal"
+      ],
+      "answer": 2,
+      "explanation": "Cameroon beat reigning champions Argentina in the opening match and reached the quarter-finals, led by 38-year-old Roger Milla."
+    },
+    {
+      "id": "p-messi-most-matches",
+      "category": "players",
+      "question": "Who has played the most matches in the tournament's history?",
+      "options": [
+        "Lothar Matthäus",
+        "Paolo Maldini",
+        "Lionel Messi",
+        "Cristiano Ronaldo"
+      ],
+      "answer": 2,
+      "explanation": "Lionel Messi passed Lothar Matthäus in 2022, reaching 26 career appearances."
+    },
+    {
+      "id": "p-fontaine-single",
+      "category": "players",
+      "question": "Who holds the record for most goals in a single edition (13)?",
+      "options": [
+        "Just Fontaine",
+        "Pelé",
+        "Sandor Kocsis",
+        "Gerd Müller"
+      ],
       "answer": 0,
-      "explanation": "Uruguay won the inaugural tournament in 1930 on home soil and again in 1950 with the famous 'Maracanazo' in Brazil."
+      "explanation": "France's Just Fontaine scored 13 goals at the 1958 tournament — a record that still stands."
     },
     {
-      "id": "t-spain-2010",
-      "category": "teams",
-      "question": "Spain's 2010 victory was built on a possession-based style known as…",
-      "options": ["Catenaccio", "Tiki-taka", "Total Football", "Counter-press"],
+      "id": "r-kickoff-any",
+      "category": "rules",
+      "question": "At kickoff, the ball can be played in which direction?",
+      "options": [
+        "Forward only",
+        "Backward only",
+        "Any direction",
+        "To a teammate in the other half"
+      ],
+      "answer": 2,
+      "explanation": "Since 2016, the ball can be kicked in any direction at kickoff. Previously it had to move forward."
+    },
+    {
+      "id": "h-most-titles",
+      "category": "history",
+      "question": "Which nation has won the most titles?",
+      "options": [
+        "Germany",
+        "Brazil",
+        "Italy",
+        "Argentina"
+      ],
       "answer": 1,
-      "explanation": "Spain's short-passing, possession-heavy 'tiki-taka' style dominated the 2010 tournament, crowned by Iniesta's extra-time winner."
+      "explanation": "Brazil has lifted the trophy 5 times (1958, 1962, 1970, 1994 and 2002) — more than any other nation."
     },
     {
-      "id": "t-host-confederation",
-      "category": "teams",
-      "question": "All three 2026 host nations belong to which football confederation?",
-      "options": ["UEFA", "CONMEBOL", "CONCACAF", "AFC"],
+      "id": "c-var-final-2018",
+      "category": "culture",
+      "question": "In 2018, a penalty was awarded via VAR review for the first time in a final. Which team benefited?",
+      "options": [
+        "Croatia",
+        "France",
+        "England",
+        "Belgium"
+      ],
+      "answer": 1,
+      "explanation": "France were awarded a penalty after VAR confirmed a handball by Croatia's Ivan Perišić — Antoine Griezmann converted to make it 2–1."
+    },
+    {
+      "id": "p-eusebio-66",
+      "category": "players",
+      "question": "Which Portuguese legend scored 9 goals at the 1966 tournament?",
+      "options": [
+        "Luís Figo",
+        "Cristiano Ronaldo",
+        "Eusébio",
+        "Rui Costa"
+      ],
       "answer": 2,
-      "explanation": "The USA, Canada, and Mexico are all members of CONCACAF — the Confederation of North, Central American and Caribbean Association Football."
+      "explanation": "Eusébio's 9 goals made him the top scorer in 1966, leading Portugal to third place on their debut."
     },
     {
-      "id": "t-argentina-count",
-      "category": "teams",
-      "question": "How many titles has Argentina won?",
-      "options": ["1", "2", "3", "4"],
-      "answer": 2,
-      "explanation": "Argentina has won three titles: 1978, 1986, and most recently 2022 in Qatar."
+      "id": "r-stoppage-time",
+      "category": "rules",
+      "question": "What determines how much stoppage time is added at the end of each half?",
+      "options": [
+        "A fixed 3 minutes",
+        "The referee's judgment based on stoppages",
+        "A coin toss",
+        "VAR decides"
+      ],
+      "answer": 1,
+      "explanation": "The referee adds time for substitutions, injuries, time-wasting, VAR reviews, and other stoppages — there's no fixed amount."
     },
     {
-      "id": "t-senegal-2002",
-      "category": "teams",
-      "question": "Which African nation stunned defending champions France in the 2002 opening match?",
-      "options": ["Cameroon", "Nigeria", "Senegal", "Ghana"],
-      "answer": 2,
-      "explanation": "Senegal beat France 1–0 in the tournament opener — one of the biggest upsets in the competition's history."
-    },
-    {
-      "id": "t-costa-rica-2014",
-      "category": "teams",
-      "question": "In 2014, Costa Rica topped a group containing Italy, England, and which other former champion?",
-      "options": ["Spain", "France", "Germany", "Uruguay"],
+      "id": "c-winter-2022",
+      "category": "culture",
+      "question": "The 2022 edition in Qatar was unique for being held in which months?",
+      "options": [
+        "January–February",
+        "March–April",
+        "June–July",
+        "November–December"
+      ],
       "answer": 3,
-      "explanation": "Costa Rica won Group D ahead of Uruguay, Italy, and England — all former champions — one of the biggest group-stage shocks ever."
+      "explanation": "Qatar 2022 was moved to November–December to avoid the extreme summer heat — the first winter edition in the Northern Hemisphere."
     },
     {
       "id": "t-les-bleus",
       "category": "teams",
       "question": "Which national team is known as 'Les Bleus'?",
-      "options": ["Belgium", "France", "Italy", "Netherlands"],
+      "options": [
+        "Belgium",
+        "France",
+        "Italy",
+        "Netherlands"
+      ],
       "answer": 1,
       "explanation": "France's national team is nicknamed 'Les Bleus' (The Blues) after the colour of their home jerseys."
     },
-
     {
-      "id": "v-azteca-finals",
-      "category": "venues",
-      "question": "Estadio Azteca in Mexico City has hosted how many previous tournament finals?",
-      "options": ["0", "1", "2", "3"],
-      "answer": 2,
-      "explanation": "The Azteca hosted finals in both 1970 (Brazil 4–1 Italy) and 1986 (Argentina 3–2 West Germany)."
+      "id": "p-lineker-86",
+      "category": "players",
+      "question": "Who won the Golden Boot at the 1986 tournament with 6 goals?",
+      "options": [
+        "Diego Maradona",
+        "Gary Lineker",
+        "Michel Platini",
+        "Emilio Butragueño"
+      ],
+      "answer": 1,
+      "explanation": "England's Gary Lineker scored 6 goals, including a hat-trick against Poland, to win the 1986 Golden Boot."
     },
     {
       "id": "v-us-cities",
       "category": "venues",
       "question": "How many cities in the United States host matches in 2026?",
-      "options": ["8", "9", "11", "13"],
+      "options": [
+        "8",
+        "9",
+        "11",
+        "13"
+      ],
       "answer": 2,
       "explanation": "Eleven US cities host matches, from New York/New Jersey and Los Angeles to Dallas, Houston, Atlanta, Miami, Seattle, Philadelphia, Kansas City, the San Francisco Bay Area, and Boston."
     },
@@ -802,251 +1487,209 @@
       "id": "v-canada-cities",
       "category": "venues",
       "question": "How many Canadian cities host matches in 2026?",
-      "options": ["1", "2", "3", "4"],
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
       "answer": 1,
       "explanation": "Canada hosts matches in two cities — Vancouver (BC Place) and Toronto (BMO Field)."
     },
     {
-      "id": "v-mexico-cities",
-      "category": "venues",
-      "question": "How many Mexican cities host matches in 2026?",
-      "options": ["2", "3", "4", "5"],
-      "answer": 1,
-      "explanation": "Mexico hosts matches in three cities — Mexico City (Estadio Azteca), Guadalajara (Estadio Akron), and Monterrey (Estadio BBVA)."
-    },
-    {
-      "id": "v-sofi-nfl",
-      "category": "venues",
-      "question": "SoFi Stadium, a 2026 venue in Los Angeles, is home to which two NFL teams?",
-      "options": ["LA Rams and LA Chargers", "SF 49ers and LA Chargers", "Dallas Cowboys and Houston Texans", "LA Rams and LA Raiders"],
-      "answer": 0,
-      "explanation": "SoFi Stadium in Inglewood, California is home to both the LA Rams and LA Chargers."
-    },
-    {
-      "id": "v-bc-place-roof",
-      "category": "venues",
-      "question": "Which Canadian 2026 venue features a retractable roof?",
-      "options": ["BMO Field, Toronto", "BC Place, Vancouver", "Olympic Stadium, Montreal", "Commonwealth Stadium, Edmonton"],
-      "answer": 1,
-      "explanation": "BC Place in Vancouver features a retractable roof, ensuring matches can be played regardless of weather."
-    },
-    {
-      "id": "v-rose-bowl-94",
-      "category": "venues",
-      "question": "The Rose Bowl in Pasadena hosted which historic tournament final?",
-      "options": ["1990", "1994", "1998", "2002"],
-      "answer": 1,
-      "explanation": "The 1994 final at the Rose Bowl saw Brazil beat Italy on penalties — the first final decided by a shootout."
-    },
-    {
-      "id": "v-total-cities",
-      "category": "venues",
-      "question": "How many total cities across three countries host matches in 2026?",
-      "options": ["12", "14", "16", "18"],
+      "id": "t-argentina-count",
+      "category": "teams",
+      "question": "How many titles has Argentina won?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
       "answer": 2,
-      "explanation": "Sixteen cities host matches — 11 in the USA, 3 in Mexico, and 2 in Canada."
-    },
-    {
-      "id": "v-mercedes-roof",
-      "category": "venues",
-      "question": "Mercedes-Benz Stadium in Atlanta is famous for its unique retractable roof shaped like…",
-      "options": ["A camera aperture", "A sunflower", "An eagle's wings", "A traditional dome"],
-      "answer": 0,
-      "explanation": "Atlanta's Mercedes-Benz Stadium has a retractable roof composed of eight triangular panels that open like a camera aperture."
-    },
-    {
-      "id": "v-lumen-sounders",
-      "category": "venues",
-      "question": "Lumen Field, the 2026 venue in Seattle, is home to which MLS team?",
-      "options": ["Portland Timbers", "Seattle Sounders", "LA Galaxy", "Vancouver Whitecaps"],
-      "answer": 1,
-      "explanation": "Lumen Field is home to the Seattle Sounders and is famous for its electric atmosphere."
+      "explanation": "Argentina has won three titles: 1978, 1986, and most recently 2022 in Qatar."
     },
     {
       "id": "v-att-dallas",
       "category": "venues",
       "question": "AT&T Stadium, a 2026 venue near Dallas, is the home of which NFL team?",
-      "options": ["Houston Texans", "Dallas Cowboys", "Tennessee Titans", "New Orleans Saints"],
+      "options": [
+        "Houston Texans",
+        "Dallas Cowboys",
+        "Tennessee Titans",
+        "New Orleans Saints"
+      ],
       "answer": 1,
       "explanation": "AT&T Stadium in Arlington, Texas is home to the Dallas Cowboys and can seat over 80,000 for football."
     },
     {
-      "id": "v-hard-rock-miami",
+      "id": "r-penalty-spot",
+      "category": "rules",
+      "question": "How far is the penalty spot from the goal line?",
+      "options": [
+        "10 yards (9.15 m)",
+        "12 yards (11 m)",
+        "15 yards (13.7 m)",
+        "18 yards (16.5 m)"
+      ],
+      "answer": 1,
+      "explanation": "The penalty spot is 12 yards (approximately 11 metres) from the centre of the goal line."
+    },
+    {
+      "id": "r-match-time",
+      "category": "rules",
+      "question": "How long is a standard match, excluding stoppage time?",
+      "options": [
+        "80 minutes",
+        "90 minutes",
+        "100 minutes",
+        "120 minutes"
+      ],
+      "answer": 1,
+      "explanation": "A match is played in two 45-minute halves. Extra time in knockout rounds adds two more 15-minute periods."
+    },
+    {
+      "id": "v-mexico-cities",
       "category": "venues",
-      "question": "Hard Rock Stadium, a 2026 venue in Miami, is home to which NFL team?",
-      "options": ["Tampa Bay Buccaneers", "Jacksonville Jaguars", "Miami Dolphins", "Carolina Panthers"],
+      "question": "How many Mexican cities host matches in 2026?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 1,
+      "explanation": "Mexico hosts matches in three cities — Mexico City (Estadio Azteca), Guadalajara (Estadio Akron), and Monterrey (Estadio BBVA)."
+    },
+    {
+      "id": "p-ronaldo-brazil-15",
+      "category": "players",
+      "question": "How many tournament goals did Brazil's Ronaldo score across his career?",
+      "options": [
+        "10",
+        "12",
+        "15",
+        "18"
+      ],
       "answer": 2,
-      "explanation": "Hard Rock Stadium in Miami Gardens is home to the Miami Dolphins and has hosted multiple Super Bowls."
+      "explanation": "Ronaldo scored 15 goals across 1998, 2002, and 2006 — including both goals in the 2002 final."
     },
     {
-      "id": "v-metlife-capacity",
-      "category": "venues",
-      "question": "What is the approximate seating capacity of MetLife Stadium, host of the 2026 final?",
-      "options": ["65,000", "72,000", "82,500", "95,000"],
+      "id": "r-subs-per-match",
+      "category": "rules",
+      "question": "How many substitutions does each team get per match in 2026?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
       "answer": 2,
-      "explanation": "MetLife Stadium in East Rutherford, New Jersey has a seating capacity of approximately 82,500."
+      "explanation": "Each team may make up to 5 substitutions, using a maximum of 3 stoppages in play plus half-time and extra-time breaks."
     },
     {
-      "id": "v-lincoln-philly",
-      "category": "venues",
-      "question": "Which 2026 venue in the Philadelphia area is home to the NFL's Philadelphia Eagles?",
-      "options": ["Lincoln Financial Field", "Citizens Bank Park", "Wells Fargo Center", "Franklin Field"],
-      "answer": 0,
-      "explanation": "Lincoln Financial Field in Philadelphia is home to the Eagles and will host group-stage and knockout matches."
-    },
-
-    {
-      "id": "rec-highest-score",
-      "category": "records",
-      "question": "What is the highest-scoring match in tournament history, with 12 goals?",
-      "options": ["Hungary 9–0 South Korea (1954)", "Hungary 10–1 El Salvador (1982)", "Germany 7–1 Brazil (2014)", "Austria 7–5 Switzerland (1954)"],
-      "answer": 3,
-      "explanation": "Austria beat Switzerland 7–5 in a 1954 quarter-final, producing 12 goals — still the all-time record for a single match."
+      "id": "r-goal-kick-score",
+      "category": "rules",
+      "question": "Can a goal be scored directly from a goal kick?",
+      "options": [
+        "No, another player must touch it first",
+        "Yes, but only against the opposing team",
+        "Yes, for either team",
+        "Only in extra time"
+      ],
+      "answer": 1,
+      "explanation": "A goal can be scored directly from a goal kick, but only against the opposing team — an own goal from a goal kick results in a corner."
     },
     {
-      "id": "rec-most-by-one",
-      "category": "records",
-      "question": "Which team scored the most goals in a single match — 10?",
-      "options": ["Hungary vs El Salvador (1982)", "Germany vs Saudi Arabia (2002)", "Yugoslavia vs Zaire (1974)", "Brazil vs Sweden (1950)"],
-      "answer": 0,
-      "explanation": "Hungary scored 10 times in their 10–1 thrashing of El Salvador in 1982 — the most by one team in a single match."
-    },
-    {
-      "id": "rec-fastest-red",
-      "category": "records",
-      "question": "What is the fastest red card in tournament history?",
-      "options": ["56 seconds", "90 seconds", "2 minutes", "3 minutes"],
-      "answer": 0,
-      "explanation": "José Batista of Uruguay was sent off after just 56 seconds against Scotland in 1986 — the fastest dismissal ever."
+      "id": "r-yellow-suspension",
+      "category": "rules",
+      "question": "What happens if a player collects two yellow cards across two different group-stage matches?",
+      "options": [
+        "Nothing until the knockouts",
+        "They are suspended for the next match",
+        "They receive a red card",
+        "They pay a fine"
+      ],
+      "answer": 1,
+      "explanation": "Two yellows in separate matches leads to a one-match suspension, which is why players on a yellow are sometimes rested."
     },
     {
       "id": "rec-youngest-player",
       "category": "records",
       "question": "Who is the youngest player to appear at the tournament?",
-      "options": ["Pelé", "Norman Whiteside", "Samuel Eto'o", "Kylian Mbappé"],
+      "options": [
+        "Pelé",
+        "Norman Whiteside",
+        "Samuel Eto'o",
+        "Kylian Mbappé"
+      ],
       "answer": 1,
       "explanation": "Northern Ireland's Norman Whiteside was 17 years and 41 days old when he played against Yugoslavia at the 1982 tournament."
     },
     {
-      "id": "rec-oldest-player",
+      "id": "t-total-matches-2026",
+      "category": "teams",
+      "question": "How many matches will be played at the 2026 tournament?",
+      "options": [
+        "64",
+        "80",
+        "104",
+        "128"
+      ],
+      "answer": 2,
+      "explanation": "The 48-team format means 104 matches — up from 64 in the previous 32-team era."
+    },
+    {
+      "id": "rec-fastest-red",
       "category": "records",
-      "question": "Who is the oldest player to appear at the tournament?",
-      "options": ["Roger Milla (42)", "Peter Shilton (40)", "Essam El Hadary (45)", "Dino Zoff (40)"],
+      "question": "What is the fastest red card in tournament history?",
+      "options": [
+        "56 seconds",
+        "90 seconds",
+        "2 minutes",
+        "3 minutes"
+      ],
+      "answer": 0,
+      "explanation": "José Batista of Uruguay was sent off after just 56 seconds against Scotland in 1986 — the fastest dismissal ever."
+    },
+    {
+      "id": "t-final-metlife",
+      "category": "teams",
+      "question": "Where will the 2026 final be played?",
+      "options": [
+        "Rose Bowl, Pasadena",
+        "AT&T Stadium, Dallas",
+        "MetLife Stadium, New Jersey",
+        "SoFi Stadium, Los Angeles"
+      ],
       "answer": 2,
-      "explanation": "Egypt's Essam El Hadary was 45 years and 161 days old when he played against Saudi Arabia at the 2018 tournament."
+      "explanation": "The final is set for MetLife Stadium in East Rutherford, New Jersey, just outside New York City."
     },
     {
-      "id": "rec-goals-per-game",
-      "category": "records",
-      "question": "Which edition holds the record for most goals per game (5.38)?",
-      "options": ["1930 Uruguay", "1954 Switzerland", "1970 Mexico", "2014 Brazil"],
-      "answer": 1,
-      "explanation": "The 1954 tournament averaged 5.38 goals per game across 26 matches — a record that will almost certainly never be broken."
-    },
-    {
-      "id": "rec-fastest-hat-trick",
-      "category": "records",
-      "question": "Who scored the fastest hat-trick in tournament history, in just 8 minutes?",
-      "options": ["Gerd Müller (1970)", "László Kiss (1982)", "Cristiano Ronaldo (2018)", "Kylian Mbappé (2022)"],
-      "answer": 1,
-      "explanation": "Hungary's László Kiss scored three goals in 8 minutes against El Salvador in 1982, the fastest hat-trick in tournament history."
-    },
-    {
-      "id": "rec-most-finals",
-      "category": "records",
-      "question": "Which nation has appeared in the most finals?",
-      "options": ["Brazil (7)", "Germany (8)", "Italy (6)", "Argentina (6)"],
-      "answer": 1,
-      "explanation": "Germany has reached the final 8 times (1954, 1966, 1974, 1982, 1986, 1990, 2002, 2014), winning four."
-    },
-    {
-      "id": "rec-nuremberg",
-      "category": "records",
-      "question": "The 2006 'Battle of Nuremberg' (Portugal vs Netherlands) holds the record for most cards in a match. How many?",
-      "options": ["12", "16", "20", "24"],
+      "id": "t-italy-count",
+      "category": "teams",
+      "question": "How many titles has Italy won?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "answer": 2,
-      "explanation": "Referee Valentin Ivanov showed 16 yellow cards and 4 red cards — 20 total — in one of the most ill-tempered matches ever."
+      "explanation": "Italy has won four titles (1934, 1938, 1982, 2006), tied with Germany for the second-most."
     },
-
     {
-      "id": "c-vuvuzela",
-      "category": "culture",
-      "question": "The buzzing vuvuzela horn became the soundtrack of which tournament?",
-      "options": ["2006 Germany", "2010 South Africa", "2014 Brazil", "2018 Russia"],
+      "id": "h-1994-usa",
+      "category": "history",
+      "question": "Which country hosted the tournament in 1994?",
+      "options": [
+        "Mexico",
+        "USA",
+        "Japan",
+        "South Korea"
+      ],
       "answer": 1,
-      "explanation": "The plastic vuvuzela horns were blown constantly by South African fans in 2010 — loved by some, loathed by many."
-    },
-    {
-      "id": "c-mexican-wave",
-      "category": "culture",
-      "question": "'La Ola' (the Mexican wave) became a global phenomenon at which tournament?",
-      "options": ["1978 Argentina", "1982 Spain", "1986 Mexico", "1990 Italy"],
-      "answer": 2,
-      "explanation": "While the wave existed before, it gained worldwide fame during the 1986 tournament in Mexico, earning the name 'Mexican wave.'"
-    },
-    {
-      "id": "c-panini",
-      "category": "culture",
-      "question": "Panini has produced collectible sticker albums for the tournament since which year?",
-      "options": ["1962", "1970", "1978", "1986"],
-      "answer": 1,
-      "explanation": "Italian company Panini first published a tournament sticker album for the 1970 edition in Mexico, starting a global collecting tradition."
-    },
-    {
-      "id": "c-jabulani",
-      "category": "culture",
-      "question": "The controversial 'Jabulani' was the official match ball for which edition?",
-      "options": ["2006", "2010", "2014", "2018"],
-      "answer": 1,
-      "explanation": "The Jabulani, used at the 2010 tournament, was criticised by goalkeepers and players for its unpredictable flight path."
-    },
-    {
-      "id": "c-trophy-weight",
-      "category": "culture",
-      "question": "The current trophy is made of 18-carat gold. How much does it weigh?",
-      "options": ["About 2 kg", "About 4 kg", "About 6 kg", "About 8 kg"],
-      "answer": 2,
-      "explanation": "The trophy weighs 6.175 kg and has been awarded since 1974 after Brazil kept the original Jules Rimet Trophy permanently."
-    },
-    {
-      "id": "c-fan-fest",
-      "category": "culture",
-      "question": "Official fan festivals for big-screen outdoor viewing were first introduced at which tournament?",
-      "options": ["2002", "2006", "2010", "2014"],
-      "answer": 1,
-      "explanation": "Germany pioneered official Fan Fests in 2006, with hundreds of thousands gathering in public viewing areas across host cities."
-    },
-    {
-      "id": "c-winter-2022",
-      "category": "culture",
-      "question": "The 2022 edition in Qatar was unique for being held in which months?",
-      "options": ["January–February", "March–April", "June–July", "November–December"],
-      "answer": 3,
-      "explanation": "Qatar 2022 was moved to November–December to avoid the extreme summer heat — the first winter edition in the Northern Hemisphere."
-    },
-    {
-      "id": "c-jules-rimet-brazil",
-      "category": "culture",
-      "question": "Brazil was awarded permanent possession of the original Jules Rimet Trophy after winning their…",
-      "options": ["First title", "Second title", "Third title", "Fourth title"],
-      "answer": 2,
-      "explanation": "After winning their third title in 1970, Brazil kept the Jules Rimet Trophy permanently, and a new trophy was created for 1974."
-    },
-    {
-      "id": "c-tango-ball",
-      "category": "culture",
-      "question": "The iconic 'Tango' ball design, with its distinctive pattern of interlocking triads, was introduced at which tournament?",
-      "options": ["1970", "1974", "1978", "1982"],
-      "answer": 2,
-      "explanation": "The Adidas Tango debuted at the 1978 tournament in Argentina and its design influenced every match ball until 2006."
-    },
-    {
-      "id": "c-var-final-2018",
-      "category": "culture",
-      "question": "In 2018, a penalty was awarded via VAR review for the first time in a final. Which team benefited?",
-      "options": ["Croatia", "France", "England", "Belgium"],
-      "answer": 1,
-      "explanation": "France were awarded a penalty after VAR confirmed a handball by Croatia's Ivan Perišić — Antoine Griezmann converted to make it 2–1."
+      "explanation": "The USA hosted the 1994 edition, which set all-time attendance records that stood for decades."
     }
   ]
 }
