@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Match Predictions — Mockup options for Heather</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    padding: 24px 20px 60px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---- Greeting for Heather ---- */
+  .greeting {
+    max-width: 760px;
+    margin: 0 auto 14px;
+    background: #fff8e1;
+    border: 1px solid #f2e3a8;
+    border-radius: 14px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .greeting h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .greeting h1 .wave { font-size: 22px; }
+  .greeting p { font-size: 13.5px; color: #6b6450; line-height: 1.5; }
+  .greeting p + p { margin-top: 8px; }
+  .greeting strong { color: #3A6F9A; }
+
+  h2.page-h { font-size: 17px; font-weight: 600; text-align: center; color: #444; margin: 30px auto 4px; }
+  .page-sub {
+    text-align: center; font-size: 13px; color: #999;
+    margin: 0 auto 22px; max-width: 720px; line-height: 1.5;
+  }
+
+  /* ---- the two open questions, called out ---- */
+  .qrow { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; max-width: 760px; margin: 0 auto 4px; }
+  .qcard {
+    flex: 1 1 240px; background: #fff; border-radius: 12px; padding: 13px 15px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05); border-left: 3px solid #3A6F9A;
+  }
+  .qcard .q { font-size: 12px; font-weight: 700; color: #3A6F9A; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 5px; }
+  .qcard p { font-size: 12.5px; color: #555; line-height: 1.45; }
+  .qcard p strong { color: #222; }
+
+  .options {
+    display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;
+    max-width: 1200px; margin: 26px auto 0;
+  }
+  .option-wrap { flex: 0 0 340px; }
+  .option-label { text-align: center; margin-bottom: 8px; }
+  .option-label h3 { font-size: 16px; font-weight: 600; color: #3A6F9A; }
+  .option-label p { font-size: 12px; color: #999; margin-top: 2px; line-height: 1.35; min-height: 32px; }
+
+  /* ---- phone frame (matches the other mockups) ---- */
+  .phone {
+    width: 340px; background: #F2F0EC; border-radius: 36px; overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06); padding: 12px;
+  }
+  .phone-inner { border-radius: 26px; overflow: hidden; background: #F2F0EC; }
+  .status-bar { height: 54px; background: #3A6F9A; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px; }
+  .status-time { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.8); }
+  .header-banner { position: relative; background: linear-gradient(135deg, #3A6F9A, #5A9FC9); padding: 16px 16px 14px; text-align: center; }
+  .header-banner h3 { color: #fff; font-size: 21px; font-weight: 600; letter-spacing: 0.3px; }
+  .back-chev { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.9); font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 2px; }
+
+  .content { padding: 12px; background: #F2F0EC; height: 588px; overflow-y: auto; }
+  .content::-webkit-scrollbar { width: 0; }
+
+  .section-title { font-size: 11px; font-weight: 700; color: #888; padding: 2px 2px 10px; text-transform: uppercase; letter-spacing: 0.7px; }
+
+  /* ---- match prediction card (Athletic style) ---- */
+  .pcard { background: #fff; border-radius: 14px; padding: 14px 14px 12px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .pcard-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .pcard-grp { font-size: 12px; color: #888; font-weight: 500; }
+  .pcard-time { font-size: 12px; color: #888; font-weight: 600; }
+  .pcard-time.live { color: #DC3545; }
+  .pcard-time.final { color: #444; }
+
+  .picks { display: flex; align-items: flex-start; justify-content: space-between; }
+  .pick { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; cursor: pointer; }
+  .pick-target {
+    width: 58px; height: 58px; border-radius: 50%;
+    border: 2px dashed #c9c5bd; display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s; background: #fff;
+  }
+  .pick-target.draw { border-radius: 26px; width: auto; padding: 0 18px; height: 50px; font-size: 13px; font-weight: 700; color: #999; }
+  .pick .flag { width: 30px; height: 22px; border-radius: 3px; object-fit: cover; box-shadow: 0 0 0 0.5px rgba(0,0,0,0.12); }
+  .pick-abbr { font-size: 12px; font-weight: 700; color: #444; }
+  .pick.sel .pick-target { border-style: solid; border-color: #3A6F9A; background: rgba(58,111,154,0.08); box-shadow: 0 0 0 3px rgba(58,111,154,0.12); }
+  .pick.sel .pick-abbr { color: #3A6F9A; }
+  .pick.sel .pick-target.draw { color: #3A6F9A; }
+
+  /* community vote bar */
+  .votes { margin-top: 12px; opacity: 0; max-height: 0; overflow: hidden; transition: opacity 0.3s, max-height 0.3s; }
+  .votes.show { opacity: 1; max-height: 80px; }
+  .vote-pcts { display: flex; justify-content: space-between; font-size: 12px; color: #555; font-weight: 600; margin-bottom: 4px; }
+  .vote-bar { display: flex; height: 8px; border-radius: 4px; overflow: hidden; background: #eee; }
+  .vote-bar .vh { background: #3A6F9A; }
+  .vote-bar .vd { background: repeating-linear-gradient(45deg,#cfcabf,#cfcabf 3px,#e4e0d7 3px,#e4e0d7 6px); }
+  .vote-bar .va { background: #E08A3C; }
+  .vote-count { text-align: center; font-size: 11px; color: #aaa; margin-top: 6px; }
+
+  /* exact-score predictor */
+  .score-toggle { margin-top: 12px; text-align: center; font-size: 12.5px; font-weight: 600; color: #3A6F9A; cursor: pointer; padding: 8px; border-top: 1px solid #f0eee9; }
+  .score-toggle.open { color: #999; }
+  .score-box { max-height: 0; overflow: hidden; transition: max-height 0.3s; }
+  .score-box.open { max-height: 160px; }
+  .score-inner { padding-top: 12px; }
+  .score-predict { display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .score-side { display: flex; align-items: center; gap: 7px; }
+  .score-side .pick-abbr { width: 30px; text-align: center; }
+  .stepper-btn {
+    width: 28px; height: 28px; border-radius: 8px; border: 1.5px solid #d8d4cb; background: #fff;
+    font-size: 18px; font-weight: 600; color: #3A6F9A; display: flex; align-items: center; justify-content: center;
+    cursor: pointer; user-select: none; line-height: 1;
+  }
+  .stepper-btn:active { background: #f0f4f8; }
+  .score-num { font-size: 22px; font-weight: 700; width: 24px; text-align: center; color: #222; }
+  .score-colon { font-size: 18px; font-weight: 700; color: #bbb; }
+  .score-saved { text-align: center; font-size: 11px; color: #2EA56A; font-weight: 600; margin-top: 10px; }
+
+  /* locked / graded states */
+  .locked-row { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 12px; font-size: 11.5px; color: #999; font-weight: 500; }
+  .result-strip { margin-top: 12px; background: #f6f5f2; border-radius: 10px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; }
+  .result-strip .lbl { font-size: 11px; color: #888; }
+  .result-strip .val { font-size: 13px; font-weight: 700; }
+  .pts-pill { font-size: 11.5px; font-weight: 700; padding: 4px 9px; border-radius: 20px; }
+  .pts-pill.win { background: rgba(46,165,106,0.14); color: #1e7a4d; }
+  .pts-pill.partial { background: rgba(212,160,23,0.16); color: #a17a06; }
+  .pts-pill.miss { background: rgba(150,150,150,0.16); color: #888; }
+  .final-score { font-size: 22px; font-weight: 800; }
+  .final-score .dim { color: #bbb; }
+
+  /* ---- Option B: settings toggle + inline on schedule ---- */
+  .setting-card { background: #fff; border-radius: 14px; padding: 14px 15px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 12px; }
+  .setting-card .ic { font-size: 26px; }
+  .setting-card .txt { flex: 1; }
+  .setting-card .txt h4 { font-size: 14px; font-weight: 700; }
+  .setting-card .txt p { font-size: 11.5px; color: #999; margin-top: 2px; line-height: 1.35; }
+  .switch { width: 50px; height: 30px; border-radius: 16px; background: #2EA56A; position: relative; cursor: pointer; transition: background 0.2s; flex-shrink: 0; }
+  .switch.off { background: #cfcabf; }
+  .switch .knob { width: 26px; height: 26px; border-radius: 50%; background: #fff; position: absolute; top: 2px; left: 22px; transition: left 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+  .switch.off .knob { left: 2px; }
+
+  .sched-day { font-size: 11px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.6px; padding: 6px 2px 8px; }
+  .mrow { background: #fff; border-radius: 12px; padding: 11px 13px; margin-bottom: 9px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .mrow-main { display: flex; align-items: center; justify-content: space-between; }
+  .mrow-team { display: flex; align-items: center; gap: 7px; flex: 1; }
+  .mrow-team.away { justify-content: flex-end; }
+  .mrow-team .flag { width: 24px; height: 17px; border-radius: 2px; object-fit: cover; box-shadow: 0 0 0 0.5px rgba(0,0,0,0.1); }
+  .mrow-team .ab { font-size: 13px; font-weight: 700; }
+  .mrow-mid { font-size: 11px; color: #999; font-weight: 600; width: 64px; text-align: center; }
+  .mrow-mid.live { color: #DC3545; }
+  /* inline predictor that appears when mode is ON */
+  .inline-pred { margin-top: 10px; padding-top: 10px; border-top: 1px solid #f0eee9; display: none; }
+  .schedule.mode-on .inline-pred { display: block; }
+  .seg { display: flex; gap: 5px; }
+  .seg .opt { flex: 1; text-align: center; font-size: 12px; font-weight: 700; padding: 7px 0; border-radius: 8px; border: 1.5px solid #e2ded5; color: #888; cursor: pointer; transition: all 0.12s; }
+  .seg .opt.sel { border-color: #3A6F9A; background: rgba(58,111,154,0.08); color: #3A6F9A; }
+  .inline-score { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 9px; }
+  .inline-score .mini-abbr { font-size: 11px; font-weight: 700; color: #888; width: 28px; text-align: center; }
+  .inline-saved { font-size: 10.5px; color: #2EA56A; font-weight: 600; text-align: center; margin-top: 7px; }
+  .inline-locked { font-size: 11px; color: #999; text-align: center; margin-top: 4px; font-weight: 500; }
+
+  /* ---- Option C: pick'em scoring + leaderboard ---- */
+  .score-hero { border-radius: 16px; padding: 16px; margin-bottom: 12px; color: #fff; background: linear-gradient(135deg, #3A6F9A, #6BB0D6); box-shadow: 0 3px 12px rgba(58,111,154,0.25); position: relative; overflow: hidden; }
+  .score-hero .ball { position: absolute; right: -12px; bottom: -16px; font-size: 88px; opacity: 0.13; }
+  .score-hero .eyebrow { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85; margin-bottom: 8px; }
+  .score-hero .total { font-size: 40px; font-weight: 800; line-height: 1; }
+  .score-hero .total small { font-size: 15px; font-weight: 600; opacity: 0.85; }
+  .hero-stats { display: flex; gap: 18px; margin-top: 12px; position: relative; z-index: 1; }
+  .hero-stats .hs .n { font-size: 17px; font-weight: 700; }
+  .hero-stats .hs .l { font-size: 10.5px; opacity: 0.85; }
+  .rule-chip { display: inline-flex; gap: 6px; align-items: center; font-size: 11px; font-weight: 600; color: #a17a06; background: rgba(212,160,23,0.15); padding: 6px 11px; border-radius: 20px; margin-bottom: 12px; }
+
+  .lb-card { background: #fff; border-radius: 14px; padding: 6px 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom: 12px; }
+  .lb-row { display: flex; align-items: center; gap: 11px; padding: 9px 12px; }
+  .lb-row + .lb-row { border-top: 1px solid #f3f1ec; }
+  .lb-rank { font-size: 13px; font-weight: 700; color: #aaa; width: 18px; text-align: center; }
+  .lb-av { width: 32px; height: 32px; border-radius: 50%; background: #ECEAE6; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #8a8a8a; }
+  .lb-nm { flex: 1; font-size: 13.5px; font-weight: 600; }
+  .lb-pts { font-size: 13.5px; font-weight: 700; color: #3A6F9A; }
+  .lb-row.you { background: rgba(58,111,154,0.06); border-radius: 10px; }
+  .lb-row.you .lb-nm { color: #3A6F9A; }
+
+  .home-bar { height: 34px; background: #f2f0ec; border-radius: 0 0 26px 26px; display: flex; justify-content: center; padding-top: 6px; }
+  .home-indicator { width: 120px; height: 5px; background: #ccc; border-radius: 3px; }
+  .tab-bar { display: flex; background: rgba(255,255,255,0.95); border-top: 0.5px solid #ddd; padding: 6px 0 8px; }
+  .tab { flex: 1; text-align: center; font-size: 10px; color: #999; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .tab.active { color: #3A6F9A; }
+  .tab .tab-icon { font-size: 22px; line-height: 1; }
+
+  .recommend { max-width: 760px; margin: 40px auto 0; background: #eef5fb; border: 1px solid #cfe0ef; border-radius: 14px; padding: 18px 22px; }
+  .recommend h4 { font-size: 14px; color: #2c5a82; margin-bottom: 8px; }
+  .recommend p { font-size: 13px; color: #45596b; line-height: 1.55; }
+  .recommend p + p { margin-top: 8px; }
+  .recommend strong { color: #234e72; }
+</style>
+</head>
+<body>
+
+<div class="greeting">
+  <h1><span class="wave">👋</span> Hi Heather — what do you think of these?</h1>
+  <p>Three ways we could add <strong>match predictions</strong> (à la The Athletic's "Make your picks"), with the extra twist
+     you asked for: letting people <strong>predict the exact score</strong>, not just who wins. Tap around — the picks, score
+     steppers, and the on/off toggle are all live.</p>
+  <p>The two things I want your read on are flagged just below: <strong>where it lives</strong> (its own screen vs. a setting
+     you flip on) and the fact that <strong>predictions need to stick around</strong> so people can track how they did all tournament.</p>
+</div>
+
+<div class="qrow">
+  <div class="qcard">
+    <div class="q">Open question 1 · Where it lives</div>
+    <p>A dedicated <strong>Predictions</strong> screen under "More" (Option A &amp; C), <em>or</em> a <strong>setting you turn on</strong>
+       that adds a predict box to every upcoming / in-progress match right on the Schedule (Option B)?</p>
+  </div>
+  <div class="qcard">
+    <div class="q">Open question 2 · Keeping the data</div>
+    <p>Picks save on the device automatically (works with no login). If we want a <strong>friends leaderboard</strong> + sync across
+       phones (Option C), that needs a lightweight account. Worth it?</p>
+  </div>
+</div>
+
+<h2 class="page-h">The three options</h2>
+<p class="page-sub">All three use today's real fixtures. Predictions lock at kickoff; once a match ends, your pick gets graded.</p>
+
+<div class="options">
+
+<!-- ============================================================ -->
+<!-- OPTION A — DEDICATED PREDICTIONS SCREEN (Athletic style)      -->
+<!-- ============================================================ -->
+<div class="option-wrap">
+  <div class="option-label">
+    <h3>Option A — Predictions screen</h3>
+    <p>Its own tab under "More." Pick W/D/L + tap to add an exact score. Closest to The Athletic.</p>
+  </div>
+  <div class="phone"><div class="phone-inner">
+    <div class="status-bar"><span class="status-time">12:57</span></div>
+    <div class="header-banner"><span class="back-chev">‹ More</span><h3>Predictions</h3></div>
+    <div class="content">
+
+      <div class="section-title">Make your picks · Today</div>
+
+      <!-- upcoming match: GER v CIV -->
+      <div class="pcard">
+        <div class="pcard-top"><span class="pcard-grp">Group E</span><span class="pcard-time">4:00 PM</span></div>
+        <div class="picks">
+          <div class="pick" onclick="pickWDL(this)">
+            <div class="pick-target"><img class="flag" src="https://flagcdn.com/w40/de.png" alt=""></div>
+            <span class="pick-abbr">GER</span>
+          </div>
+          <div class="pick" onclick="pickWDL(this)">
+            <div class="pick-target draw">DRAW</div>
+          </div>
+          <div class="pick" onclick="pickWDL(this)">
+            <div class="pick-target"><img class="flag" src="https://flagcdn.com/w40/ci.png" alt=""></div>
+            <span class="pick-abbr">CIV</span>
+          </div>
+        </div>
+        <div class="votes" data-pcts="90·7·3" data-count="24,013 picks">
+          <div class="vote-pcts"><span>90%</span><span>7%</span><span>3%</span></div>
+          <div class="vote-bar"><div class="vh" style="flex:90"></div><div class="vd" style="flex:7"></div><div class="va" style="flex:3"></div></div>
+          <div class="vote-count">24,013 picks</div>
+        </div>
+        <div class="score-toggle" onclick="toggleScore(this)">＋ Predict the exact score</div>
+        <div class="score-box"><div class="score-inner">
+          <div class="score-predict">
+            <div class="score-side"><span class="pick-abbr">GER</span><span class="stepper-btn" onclick="step(this,-1)">−</span><span class="score-num">2</span><span class="stepper-btn" onclick="step(this,1)">+</span></div>
+            <span class="score-colon">:</span>
+            <div class="score-side"><span class="stepper-btn" onclick="step(this,-1)">−</span><span class="score-num">0</span><span class="stepper-btn" onclick="step(this,1)">+</span><span class="pick-abbr">CIV</span></div>
+          </div>
+          <div class="score-saved">✓ Saved · you can change it until kickoff</div>
+        </div></div>
+      </div>
+
+      <!-- upcoming match: ECU v CUW -->
+      <div class="pcard">
+        <div class="pcard-top"><span class="pcard-grp">Group E</span><span class="pcard-time">8:00 PM</span></div>
+        <div class="picks">
+          <div class="pick" onclick="pickWDL(this)">
+            <div class="pick-target"><img class="flag" src="https://flagcdn.com/w40/ec.png" alt=""></div>
+            <span class="pick-abbr">ECU</span>
+          </div>
+          <div class="pick" onclick="pickWDL(this)">
+            <div class="pick-target draw">DRAW</div>
+          </div>
+          <div class="pick" onclick="pickWDL(this)">
+            <div class="pick-target"><img class="flag" src="https://flagcdn.com/w40/cw.png" alt=""></div>
+            <span class="pick-abbr">CUW</span>
+          </div>
+        </div>
+        <div class="votes" data-count="21,034 picks">
+          <div class="vote-pcts"><span>94%</span><span>5%</span><span>2%</span></div>
+          <div class="vote-bar"><div class="vh" style="flex:94"></div><div class="vd" style="flex:5"></div><div class="va" style="flex:2"></div></div>
+          <div class="vote-count">21,034 picks</div>
+        </div>
+        <div class="score-toggle" onclick="toggleScore(this)">＋ Predict the exact score</div>
+        <div class="score-box"><div class="score-inner">
+          <div class="score-predict">
+            <div class="score-side"><span class="pick-abbr">ECU</span><span class="stepper-btn" onclick="step(this,-1)">−</span><span class="score-num">0</span><span class="stepper-btn" onclick="step(this,1)">+</span></div>
+            <span class="score-colon">:</span>
+            <div class="score-side"><span class="stepper-btn" onclick="step(this,-1)">−</span><span class="score-num">0</span><span class="stepper-btn" onclick="step(this,1)">+</span><span class="pick-abbr">CUW</span></div>
+          </div>
+          <div class="score-saved">✓ Saved · you can change it until kickoff</div>
+        </div></div>
+      </div>
+
+      <div class="section-title" style="padding-top:6px">Final · graded</div>
+      <!-- finished match: NED 5-1 SWE -->
+      <div class="pcard">
+        <div class="pcard-top"><span class="pcard-grp">Group F</span><span class="pcard-time final">FT</span></div>
+        <div class="picks">
+          <div class="pick sel">
+            <div class="pick-target"><img class="flag" src="https://flagcdn.com/w40/nl.png" alt=""></div>
+            <span class="pick-abbr">NED</span>
+          </div>
+          <div class="final-score">5 <span class="dim">:</span> 1</div>
+          <div class="pick">
+            <div class="pick-target"><img class="flag" src="https://flagcdn.com/w40/se.png" alt=""></div>
+            <span class="pick-abbr">SWE</span>
+          </div>
+        </div>
+        <div class="result-strip">
+          <div><div class="lbl">Your pick</div><div class="val">NED win · 2–1</div></div>
+          <span class="pts-pill partial">+1 · result right, score off</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="tab-bar">
+      <div class="tab"><span class="tab-icon">📅</span>Schedule</div>
+      <div class="tab"><span class="tab-icon">📊</span>Standings</div>
+      <div class="tab"><span class="tab-icon">🏳️</span>Teams</div>
+      <div class="tab active"><span class="tab-icon">🎯</span>More</div>
+    </div>
+    <div class="home-bar"><div class="home-indicator"></div></div>
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- OPTION B — SETTING TOGGLE → INLINE ON SCHEDULE                -->
+<!-- ============================================================ -->
+<div class="option-wrap">
+  <div class="option-label">
+    <h3>Option B — A setting you flip on</h3>
+    <p>Turn on "Prediction mode" and a predict box appears on every match in the Schedule. Tap the green switch ↓</p>
+  </div>
+  <div class="phone"><div class="phone-inner">
+    <div class="status-bar"><span class="status-time">12:57</span></div>
+    <div class="header-banner"><span class="back-chev">‹</span><h3>Schedule</h3></div>
+    <div class="content">
+
+      <div class="setting-card">
+        <span class="ic">🎯</span>
+        <div class="txt"><h4>Prediction mode</h4><p>Add a pick &amp; score box to every upcoming match</p></div>
+        <div class="switch" id="predSwitch" onclick="toggleMode(this)"><div class="knob"></div></div>
+      </div>
+
+      <div class="schedule mode-on" id="schedList">
+        <div class="sched-day">Today · Sat Jun 20</div>
+
+        <!-- LIVE match -->
+        <div class="mrow">
+          <div class="mrow-main">
+            <div class="mrow-team"><img class="flag" src="https://flagcdn.com/w40/nl.png" alt=""><span class="ab">NED</span></div>
+            <div class="mrow-mid live">🔴 65'<br>2 – 1</div>
+            <div class="mrow-team away"><span class="ab">SWE</span><img class="flag" src="https://flagcdn.com/w40/se.png" alt=""></div>
+          </div>
+          <div class="inline-pred">
+            <div class="inline-locked">🔒 Locked at kickoff · you picked NED 2–1</div>
+          </div>
+        </div>
+
+        <!-- upcoming GER v CIV -->
+        <div class="mrow">
+          <div class="mrow-main">
+            <div class="mrow-team"><img class="flag" src="https://flagcdn.com/w40/de.png" alt=""><span class="ab">GER</span></div>
+            <div class="mrow-mid">4:00 PM</div>
+            <div class="mrow-team away"><span class="ab">CIV</span><img class="flag" src="https://flagcdn.com/w40/ci.png" alt=""></div>
+          </div>
+          <div class="inline-pred">
+            <div class="seg">
+              <div class="opt" onclick="pickSeg(this)">GER</div>
+              <div class="opt" onclick="pickSeg(this)">Draw</div>
+              <div class="opt" onclick="pickSeg(this)">CIV</div>
+            </div>
+            <div class="inline-score">
+              <span class="mini-abbr">GER</span><span class="stepper-btn" onclick="step(this,-1)">−</span><span class="score-num">1</span><span class="stepper-btn" onclick="step(this,1)">+</span>
+              <span class="score-colon">:</span>
+              <span class="stepper-btn" onclick="step(this,-1)">−</span><span class="score-num">0</span><span class="stepper-btn" onclick="step(this,1)">+</span><span class="mini-abbr">CIV</span>
+            </div>
+            <div class="inline-saved">✓ Auto-saved</div>
+          </div>
+        </div>
+
+        <!-- upcoming ECU v CUW -->
+        <div class="mrow">
+          <div class="mrow-main">
+            <div class="mrow-team"><img class="flag" src="https://flagcdn.com/w40/ec.png" alt=""><span class="ab">ECU</span></div>
+            <div class="mrow-mid">8:00 PM</div>
+            <div class="mrow-team away"><span class="ab">CUW</span><img class="flag" src="https://flagcdn.com/w40/cw.png" alt=""></div>
+          </div>
+          <div class="inline-pred">
+            <div class="seg">
+              <div class="opt" onclick="pickSeg(this)">ECU</div>
+              <div class="opt" onclick="pickSeg(this)">Draw</div>
+              <div class="opt" onclick="pickSeg(this)">CUW</div>
+            </div>
+            <div class="inline-score">
+              <span class="mini-abbr">ECU</span><span class="stepper-btn" onclick="step(this,-1)">−</span><span class="score-num">0</span><span class="stepper-btn" onclick="step(this,1)">+</span>
+              <span class="score-colon">:</span>
+              <span class="stepper-btn" onclick="step(this,-1)">−</span><span class="score-num">0</span><span class="stepper-btn" onclick="step(this,1)">+</span><span class="mini-abbr">CUW</span>
+            </div>
+            <div class="inline-saved">✓ Auto-saved</div>
+          </div>
+        </div>
+
+        <div class="sched-day">Tomorrow · Sun Jun 21</div>
+        <!-- ESP v KSA -->
+        <div class="mrow">
+          <div class="mrow-main">
+            <div class="mrow-team"><img class="flag" src="https://flagcdn.com/w40/es.png" alt=""><span class="ab">ESP</span></div>
+            <div class="mrow-mid">12:00 PM</div>
+            <div class="mrow-team away"><span class="ab">KSA</span><img class="flag" src="https://flagcdn.com/w40/sa.png" alt=""></div>
+          </div>
+          <div class="inline-pred">
+            <div class="seg">
+              <div class="opt" onclick="pickSeg(this)">ESP</div>
+              <div class="opt" onclick="pickSeg(this)">Draw</div>
+              <div class="opt" onclick="pickSeg(this)">KSA</div>
+            </div>
+            <div class="inline-score">
+              <span class="mini-abbr">ESP</span><span class="stepper-btn" onclick="step(this,-1)">−</span><span class="score-num">0</span><span class="stepper-btn" onclick="step(this,1)">+</span>
+              <span class="score-colon">:</span>
+              <span class="stepper-btn" onclick="step(this,-1)">−</span><span class="score-num">0</span><span class="stepper-btn" onclick="step(this,1)">+</span><span class="mini-abbr">KSA</span>
+            </div>
+            <div class="inline-saved">✓ Auto-saved</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="tab-bar">
+      <div class="tab active"><span class="tab-icon">📅</span>Schedule</div>
+      <div class="tab"><span class="tab-icon">📊</span>Standings</div>
+      <div class="tab"><span class="tab-icon">🏳️</span>Teams</div>
+      <div class="tab"><span class="tab-icon">⋯</span>More</div>
+    </div>
+    <div class="home-bar"><div class="home-indicator"></div></div>
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- OPTION C — PICK'EM: SCORING + LEADERBOARD                     -->
+<!-- ============================================================ -->
+<div class="option-wrap">
+  <div class="option-label">
+    <h3>Option C — Pick'em (scored)</h3>
+    <p>Predictions earn points all tournament, with a friends leaderboard. The reason data needs to persist.</p>
+  </div>
+  <div class="phone"><div class="phone-inner">
+    <div class="status-bar"><span class="status-time">12:57</span></div>
+    <div class="header-banner"><span class="back-chev">‹ More</span><h3>Pick'em</h3></div>
+    <div class="content">
+
+      <div class="score-hero">
+        <span class="ball">🎯</span>
+        <div class="eyebrow">Your tournament score</div>
+        <div class="total">37 <small>pts</small></div>
+        <div class="hero-stats">
+          <div class="hs"><div class="n">14 / 21</div><div class="l">results right</div></div>
+          <div class="hs"><div class="n">5</div><div class="l">exact scores</div></div>
+          <div class="hs"><div class="n">#3</div><div class="l">of 12 friends</div></div>
+        </div>
+      </div>
+
+      <div class="rule-chip">⚽ Exact score +3 · Correct result +1</div>
+
+      <div class="section-title">Predict next · Group E · 4:00 PM</div>
+      <div class="pcard">
+        <div class="pcard-top"><span class="pcard-grp">Germany v Côte d'Ivoire</span><span class="pcard-time">in 3h</span></div>
+        <div class="score-predict" style="margin-top:4px">
+          <div class="score-side"><span class="pick-abbr">GER</span><span class="stepper-btn" onclick="step(this,-1)">−</span><span class="score-num">2</span><span class="stepper-btn" onclick="step(this,1)">+</span></div>
+          <span class="score-colon">:</span>
+          <div class="score-side"><span class="stepper-btn" onclick="step(this,-1)">−</span><span class="score-num">0</span><span class="stepper-btn" onclick="step(this,1)">+</span><span class="pick-abbr">CIV</span></div>
+        </div>
+        <div class="score-saved">✓ Locked in · +3 if you nail it</div>
+      </div>
+
+      <div class="section-title" style="padding-top:6px">Friends</div>
+      <div class="lb-card">
+        <div class="lb-row"><span class="lb-rank">1</span><span class="lb-av">JM</span><span class="lb-nm">Jordan M.</span><span class="lb-pts">44</span></div>
+        <div class="lb-row"><span class="lb-rank">2</span><span class="lb-av">HK</span><span class="lb-nm">Heather K.</span><span class="lb-pts">41</span></div>
+        <div class="lb-row you"><span class="lb-rank">3</span><span class="lb-av">YO</span><span class="lb-nm">You</span><span class="lb-pts">37</span></div>
+        <div class="lb-row"><span class="lb-rank">4</span><span class="lb-av">CB</span><span class="lb-nm">Chris B.</span><span class="lb-pts">33</span></div>
+        <div class="lb-row"><span class="lb-rank">5</span><span class="lb-av">SD</span><span class="lb-nm">Sam D.</span><span class="lb-pts">29</span></div>
+      </div>
+
+      <div class="section-title" style="padding-top:6px">Last match · graded</div>
+      <div class="pcard">
+        <div class="pcard-top"><span class="pcard-grp">Netherlands v Sweden</span><span class="pcard-time final">FT 5–1</span></div>
+        <div class="result-strip">
+          <div><div class="lbl">You predicted</div><div class="val">NED 2–1</div></div>
+          <span class="pts-pill partial">+1</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="tab-bar">
+      <div class="tab"><span class="tab-icon">📅</span>Schedule</div>
+      <div class="tab"><span class="tab-icon">📊</span>Standings</div>
+      <div class="tab"><span class="tab-icon">🏳️</span>Teams</div>
+      <div class="tab active"><span class="tab-icon">🎯</span>More</div>
+    </div>
+    <div class="home-bar"><div class="home-indicator"></div></div>
+  </div></div>
+</div>
+
+</div>
+
+<div class="recommend">
+  <h4>My quick take (totally open to yours)</h4>
+  <p><strong>Where it lives:</strong> I lean toward a <strong>dedicated "Predictions" screen under More (Option A)</strong> as the home for it,
+     because picks + scores + community % need room to breathe. Option B's "flip a setting and predict right from the Schedule" is a great
+     <em>shortcut</em> we could add on top — they're not mutually exclusive.</p>
+  <p><strong>Score predictions:</strong> the +/− steppers work everywhere and keep it one-tap fast. Scoring (Option C) is what makes scores
+     <em>matter</em> — exact score +3, right result +1.</p>
+  <p><strong>Keeping the data:</strong> v1 saves on the phone automatically (no login, picks survive app restarts). The friends leaderboard in
+     Option C is the only piece that needs a tiny account — so that's really a "do we want social?" decision, not a blocker for predictions themselves.</p>
+</div>
+
+<script>
+  // ---- Option A/B: W/D/L pick + reveal community votes ----
+  function pickWDL(el) {
+    const row = el.closest('.picks');
+    row.querySelectorAll('.pick').forEach(p => p.classList.remove('sel'));
+    el.classList.add('sel');
+    const votes = el.closest('.pcard').querySelector('.votes');
+    if (votes) votes.classList.add('show');
+  }
+
+  // ---- exact-score expand/collapse ----
+  function toggleScore(el) {
+    const box = el.nextElementSibling;
+    const open = box.classList.toggle('open');
+    el.classList.toggle('open', open);
+    el.textContent = open ? '− Hide exact score' : '＋ Predict the exact score';
+  }
+
+  // ---- +/- score steppers (shared) ----
+  function step(btn, delta) {
+    const num = delta < 0 ? btn.nextElementSibling : btn.previousElementSibling;
+    let v = parseInt(num.textContent, 10) + delta;
+    if (v < 0) v = 0; if (v > 19) v = 19;
+    num.textContent = v;
+    // nudge the nearest "saved" confirmation
+    const card = btn.closest('.pcard, .mrow');
+    const saved = card && (card.querySelector('.score-saved') || card.querySelector('.inline-saved'));
+    if (saved) { saved.textContent = '✓ Saved'; saved.style.color = '#2EA56A'; }
+  }
+
+  // ---- Option B: prediction-mode toggle ----
+  function toggleMode(sw) {
+    const on = !sw.classList.contains('off') ? false : true; // current state
+    sw.classList.toggle('off');
+    document.getElementById('schedList').classList.toggle('mode-on', !sw.classList.contains('off'));
+  }
+
+  // ---- Option B: segmented W/D/L ----
+  function pickSeg(el) {
+    el.closest('.seg').querySelectorAll('.opt').forEach(o => o.classList.remove('sel'));
+    el.classList.add('sel');
+  }
+</script>
+</body>
+</html>
