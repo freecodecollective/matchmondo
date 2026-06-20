@@ -1699,13 +1699,12 @@
       "options": [
         "They score two goals in the same match",
         "They score three goals in the same match",
-        "They put on actual leg braces and keep playing",
+        "They literally brace themselves for a tackle — feet planted, eyes closed, full clench",
         "They score in two consecutive matches"
       ],
       "answer": 0,
       "explanation": "A brace refers to a player scoring two goals in a single match. Scoring three goals is called a hat-trick.",
-      "needsReview": true,
-      "claudeTask": "make 3d answer funny"
+      "needsReview": true
     }
   ],
   "pendingTasks": [
