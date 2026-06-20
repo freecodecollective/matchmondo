@@ -83,6 +83,15 @@ header h1{font-size:18px;font-weight:700;letter-spacing:-.3px}
 .drag-over{border-color:#1a472a;background:#f0f8f0}
 .toast{position:fixed;bottom:24px;right:24px;background:#1a472a;color:#fff;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:500;z-index:300;animation:fadeIn .2s ease}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.sync-status{font-size:11px;font-weight:500;padding:3px 10px;border-radius:8px;display:inline-flex;align-items:center;gap:4px}
+.sync-saved{background:rgba(52,208,88,.2);color:#34d058}
+.sync-saving{background:rgba(255,214,0,.2);color:#ffd600}
+.sync-error{background:rgba(255,69,58,.2);color:#ff453a}
+.sync-dot{width:6px;height:6px;border-radius:50%;display:inline-block}
+.sync-saved .sync-dot{background:#34d058}
+.sync-saving .sync-dot{background:#ffd600;animation:pulse 1s infinite}
+.sync-error .sync-dot{background:#ff453a}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
 input[type=file]{display:none}
 </style>
@@ -93,6 +102,7 @@ input[type=file]{display:none}
   <div class="header-top">
     <h1>Football 2026 — Trivia Editor</h1>
     <div class="stats" id="stats"></div>
+    <span class="sync-status sync-saved" id="syncStatus"><span class="sync-dot"></span> Synced</span>
     <div class="header-actions">
       <button class="btn btn-secondary" onclick="document.getElementById('fileInput').click()">Load JSON</button>
       <button class="btn btn-secondary" onclick="saveJSON()">Save JSON</button>
@@ -167,19 +177,50 @@ let data = { version: 1, questions: [] };
 let activeCategory = 'all';
 let expandedCard = null;
 let editingIndex = -1;
+let saveTimer = null;
+let fileSha = null;
+
+const GH_API = 'https://api.github.com/repos/freecodecollective/matchmondo/contents/data/trivia.json';
+
+function getToken() { return localStorage.getItem('trivia-gh-token'); }
+function setToken(t) { localStorage.setItem('trivia-gh-token', t); }
+
+function setSyncStatus(state, label) {
+  const el = document.getElementById('syncStatus');
+  el.className = 'sync-status sync-' + state;
+  el.innerHTML = '<span class="sync-dot"></span> ' + label;
+}
+
+function promptToken() {
+  const t = prompt('Enter a GitHub Personal Access Token with contents:write scope on the matchmondo repo.\n\nCreate one at: github.com/settings/tokens');
+  if (t && t.trim()) { setToken(t.trim()); return t.trim(); }
+  return null;
+}
 
 async function init() {
   try {
-    const resp = await fetch('trivia.json');
-    if (!resp.ok) throw new Error('fetch failed');
-    data = await resp.json();
+    const resp = await fetch(GH_API, { headers: { 'Accept': 'application/vnd.github.v3+json' } });
+    if (!resp.ok) throw new Error('GitHub fetch failed');
+    const gh = await resp.json();
+    fileSha = gh.sha;
+    const bytes = Uint8Array.from(atob(gh.content.replace(/\n/g, '')), c => c.charCodeAt(0));
+    data = JSON.parse(new TextDecoder().decode(bytes));
+    setSyncStatus('saved', 'Synced');
   } catch (e) {
-    const saved = localStorage.getItem('trivia-editor-data');
-    if (saved) {
-      data = JSON.parse(saved);
-    } else {
-      document.getElementById('loading').innerHTML = '<h3>Could not load trivia.json</h3><p>Use "Load JSON" to open a file.</p>';
-      return;
+    try {
+      const resp2 = await fetch('trivia.json');
+      if (!resp2.ok) throw new Error('local fetch failed');
+      data = await resp2.json();
+      setSyncStatus('error', 'Read-only');
+    } catch (e2) {
+      const saved = localStorage.getItem('trivia-editor-data');
+      if (saved) {
+        data = JSON.parse(saved);
+        setSyncStatus('error', 'Local only');
+      } else {
+        document.getElementById('loading').innerHTML = '<h3>Could not load data</h3><p>Use "Load JSON" to open a file.</p>';
+        return;
+      }
     }
   }
   renderAll();
@@ -479,6 +520,47 @@ function loadFile(e) {
 
 function autoSave() {
   localStorage.setItem('trivia-editor-data', JSON.stringify(data));
+  setSyncStatus('saving', 'Saving...');
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(syncToGitHub, 2000);
+}
+
+async function syncToGitHub() {
+  let token = getToken();
+  if (!token) {
+    token = promptToken();
+    if (!token) { setSyncStatus('error', 'No token'); return; }
+  }
+  const out = { version: data.version || 1, questions: data.questions.map(q => {
+    const clean = { id: q.id, category: q.category, question: q.question, options: q.options, answer: q.answer, explanation: q.explanation };
+    if (q.media) clean.media = q.media;
+    if (q.approved) clean.approved = true;
+    return clean;
+  })};
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(out, null, 2) + '\n')));
+  try {
+    const body = { message: 'Update trivia questions via editor', content, sha: fileSha };
+    const resp = await fetch(GH_API, {
+      method: 'PUT',
+      headers: { 'Authorization': 'token ' + token, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
+      body: JSON.stringify(body)
+    });
+    if (resp.status === 401 || resp.status === 403) {
+      localStorage.removeItem('trivia-gh-token');
+      setSyncStatus('error', 'Bad token');
+      return;
+    }
+    if (resp.status === 409) {
+      setSyncStatus('error', 'Conflict — reload');
+      return;
+    }
+    if (!resp.ok) throw new Error('save failed');
+    const result = await resp.json();
+    fileSha = result.content.sha;
+    setSyncStatus('saved', 'Synced');
+  } catch (e) {
+    setSyncStatus('error', 'Sync failed');
+  }
 }
 
 function toast(msg) {
