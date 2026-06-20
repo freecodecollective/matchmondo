@@ -941,7 +941,7 @@ async function mergeAndRetry(retryCount) {
         q.answer = e.answer;
         q.explanation = e.explanation;
         q.category = e.category;
-        if (e.approved) q.approved = true;
+        // GitHub is authoritative for approved status — don't override from localStorage
         if (e.media) q.media = e.media;
       }
     });
