@@ -608,7 +608,7 @@
       ],
       "answer": 1,
       "explanation": "VAR helps match officials review decisions on goals, penalties, red cards, and mistaken identity using video footage.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "t-uruguay-years",
