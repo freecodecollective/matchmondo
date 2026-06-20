@@ -13,7 +13,7 @@
       ],
       "answer": 1,
       "explanation": "English referee Ken Aston devised the card system after the 1966 edition. It debuted at the 1970 tournament in Mexico.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "h-2026-hosts",
@@ -26,7 +26,8 @@
         "Canada & USA"
       ],
       "answer": 2,
-      "explanation": "2026 is the first edition hosted by three nations — the USA, Canada and Mexico — across 16 cities."
+      "explanation": "2026 is the first edition hosted by three nations — the USA, Canada and Mexico — across 16 cities.",
+      "approved": true
     },
     {
       "id": "v-mercedes-roof",
@@ -1704,7 +1705,8 @@
       ],
       "answer": 0,
       "explanation": "A brace refers to a player scoring two goals in a single match. Scoring three goals is called a hat-trick.",
-      "needsReview": true
+      "needsReview": true,
+      "claudeTask": "make 3d answer funny"
     }
   ],
   "pendingTasks": [
