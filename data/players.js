@@ -1,6 +1,6 @@
 // Football 2026 — top players per team. Compiled from agent web research (June 2026).
 // Top-10 teams: 5 players each; all other teams: 3-6. Clubs reflect the 2025-26 season.
-// 48 teams, 192 players.
+// 48 teams, 216 players.
 // Team order/rank come from data/rankings.js.
 window.WC_PLAYERS = {
  "teams": {
@@ -10928,6 +10928,160 @@ window.WC_PLAYERS = {
     ],
     "honors": [
      "Swiss Super League (2013–14, 2014–15, 2015–16, Basel)"
+    ]
+   },
+   {
+    "name": "Gregor Kobel",
+    "position": "Goalkeeper",
+    "club": "Borussia Dortmund (Bundesliga, Germany)",
+    "hometown": "Zürich",
+    "why": "Kobel has established himself as one of the Bundesliga's best goalkeepers and Switzerland's undisputed number one. Tall and athletic with excellent shot-stopping reflexes and command of the box, he was a Champions League finalist with Dortmund in 2024. His distribution and composure under pressure make him a vital part of how Switzerland build from the back.",
+    "number": 1,
+    "why_es": "Kobel se ha consolidado como uno de los mejores porteros de la Bundesliga y el indiscutible número uno de Suiza. Alto y atlético, con excelentes reflejos para detener tiros y dominio del área, fue finalista de la Champions League con el Dortmund en 2024. Su distribución y compostura bajo presión lo convierten en una pieza vital de cómo Suiza construye desde atrás.",
+    "why_fr": "Kobel s'est imposé comme l'un des meilleurs gardiens de la Bundesliga et le numéro un incontesté de la Suisse. Grand et athlétique avec d'excellents réflexes d'arrêt et un bon commandement de la surface, il a été finaliste de la Champions League avec Dortmund en 2024. Sa relance et son calme sous pression en font un élément vital de la construction suisse depuis l'arrière.",
+    "why_pt_BR": "Kobel se estabeleceu como um dos melhores goleiros da Bundesliga e o indiscutível número um da Suíça. Alto e atlético, com excelentes reflexos de defesa e domínio da área, foi finalista da Champions League com o Dortmund em 2024. Sua distribuição e serenidade sob pressão fazem dele uma peça vital na forma como a Suíça constrói jogo desde trás.",
+    "why_de": "Kobel hat sich als einer der besten Torhüter der Bundesliga und als unangefochtene Nummer eins der Schweiz etabliert. Groß und athletisch mit ausgezeichneten Reflexen und Strafraum-Beherrschung, war er 2024 Champions-League-Finalist mit Dortmund. Seine Spieleröffnung und Ruhe unter Druck machen ihn zu einem unverzichtbaren Teil des Schweizer Spielaufbaus.",
+    "why_it": "Kobel si è affermato come uno dei migliori portieri della Bundesliga e il numero uno indiscusso della Svizzera. Alto e atletico, con eccellenti riflessi e padronanza dell'area, è stato finalista di Champions League con il Dortmund nel 2024. La sua distribuzione e compostezza sotto pressione lo rendono un elemento essenziale nel modo in cui la Svizzera costruisce dal basso.",
+    "why_ja": "コベルはブンデスリーガ屈指のゴールキーパーの一人としてスイスの不動の正ゴールキーパーに定着した。長身で身体能力に優れ、シュートストップの反射神経とボックス支配力を持ち、2024年にはドルトムントでチャンピオンズリーグ決勝に進出した。そのキック配球と圧力下での冷静さがスイスの後方からのビルドアップに不可欠な要素となっている。",
+    "why_ko": "코벨은 분데스리가 최고의 골키퍼 중 한 명이자 스위스의 확고한 1번 골키퍼로 자리매김했다. 장신에 운동 능력이 뛰어나며 탁월한 세이브 반응과 박스 장악력을 갖춘 그는 2024년 도르트문트에서 챔피언스리그 결승에 진출했다. 그의 배급과 압박 속 침착함은 스위스가 후방에서 빌드업하는 방식의 핵심이다.",
+    "why_zh_Hans": "科贝尔已确立自己作为德甲最佳门将之一和瑞士无可争议的头号门将的地位。他身材高大、运动能力出色，拥有出色的扑救反应和禁区控制力，2024年随多特蒙德闯入欧冠决赛。他的传球分配能力和面对压力时的冷静使他成为瑞士从后场组织进攻不可或缺的环节。",
+    "why_ar": "رسّخ كوبل نفسه كواحد من أفضل حراس المرمى في الدوري الألماني والحارس الأول بلا منازع لسويسرا. طويل ورياضي بردود فعل ممتازة في التصدي وتحكم بالمنطقة، كان ضمن نهائي دوري أبطال أوروبا مع دورتموند عام 2024. توزيعه وهدوؤه تحت الضغط يجعلانه حيوياً في بناء سويسرا من الخلف.",
+    "why_es_ES": "Kobel se ha consolidado como uno de los mejores porteros de la Bundesliga y el número uno indiscutible de Suiza. Alto y atlético, con excelentes reflejos para bloquear disparos y dominio del área, fue finalista de la Champions League con el Dortmund en 2024. Su distribución y compostura bajo presión lo convierten en una pieza clave en la forma en que Suiza construye desde atrás.",
+    "caps": 30,
+    "intlGoals": 0,
+    "tournaments": [
+     "Euro 2024 (Quarter-finals)"
+    ],
+    "clubs": [
+     {
+      "team": "Borussia Dortmund",
+      "years": "2021–",
+      "country": "Germany"
+     },
+     {
+      "team": "VfB Stuttgart",
+      "years": "2019–2021",
+      "country": "Germany"
+     },
+     {
+      "team": "FC Augsburg (loan)",
+      "years": "2018–2019",
+      "country": "Germany"
+     },
+     {
+      "team": "TSG Hoffenheim",
+      "years": "2014–2019",
+      "country": "Germany"
+     }
+    ],
+    "honors": [
+     "DFB-Pokal (2024–25, Borussia Dortmund)",
+     "Champions League Runner-up (2023–24, Borussia Dortmund)"
+    ]
+   },
+   {
+    "name": "Dan Ndoye",
+    "position": "Forward / Winger",
+    "club": "Nottingham Forest (Premier League, England)",
+    "hometown": "Nyon (Canton of Vaud)",
+    "why": "Ndoye burst onto the international stage at Euro 2024, where his electric pace, direct dribbling and fearless running at defenses made him Switzerland's breakout star. He signed with Nottingham Forest after an impressive spell at Bologna and is one of the fastest players in the squad. His ability to stretch play and create chaos in the final third makes him a vital part of the Swiss attack.",
+    "number": 11,
+    "why_es": "Ndoye irrumpió en la escena internacional en la Euro 2024, donde su velocidad eléctrica, regate directo y carreras sin miedo hacia las defensas lo convirtieron en la revelación de Suiza. Fichó por el Nottingham Forest tras una impresionante etapa en el Bolonia y es uno de los jugadores más rápidos del plantel. Su capacidad para estirar el juego y crear caos en el último tercio lo convierten en una pieza vital del ataque suizo.",
+    "why_fr": "Ndoye a explosé sur la scène internationale à l'Euro 2024, où sa vitesse électrisante, ses dribbles directs et ses courses intrépides sur les défenses en ont fait la révélation suisse. Il a signé à Nottingham Forest après un passage impressionnant à Bologne et est l'un des joueurs les plus rapides du groupe. Sa capacité à étirer le jeu et à créer le chaos dans le dernier tiers en font un élément vital de l'attaque suisse.",
+    "why_pt_BR": "Ndoye irrompeu na cena internacional na Euro 2024, onde sua velocidade elétrica, dribles diretos e corridas destemidas contra as defesas o tornaram a revelação da Suíça. Assinou com o Nottingham Forest após uma impressionante passagem pelo Bologna e é um dos jogadores mais rápidos do elenco. Sua capacidade de esticar o jogo e criar caos no terço final fazem dele uma peça vital do ataque suíço.",
+    "why_de": "Ndoye brach bei der Euro 2024 auf die internationale Bühne, wo sein elektrisches Tempo, direktes Dribbling und furchtloses Anlaufen gegen Abwehrreihen ihn zum Schweizer Durchbruchsstar machten. Er unterschrieb bei Nottingham Forest nach einer beeindruckenden Phase bei Bologna und ist einer der schnellsten Spieler im Kader. Seine Fähigkeit, das Spiel zu strecken und Chaos im letzten Drittel zu erzeugen, macht ihn zu einem wichtigen Teil des Schweizer Angriffs.",
+    "why_it": "Ndoye è esploso sulla scena internazionale a Euro 2024, dove la sua velocità elettrica, il dribbling diretto e le corse coraggiose contro le difese ne hanno fatto la rivelazione svizzera. Ha firmato con il Nottingham Forest dopo un'impressionante parentesi al Bologna ed è uno dei giocatori più veloci della rosa. La sua capacità di allungare il gioco e creare scompiglio nell'ultimo terzo lo rende una parte vitale dell'attacco svizzero.",
+    "why_ja": "ンドイェはユーロ2024で国際舞台に鮮烈デビューし、電光石火のスピード、直線的なドリブル、恐れを知らないディフェンスへの突進でスイスのブレイクスターとなった。ボローニャでの印象的な活躍の後ノッティンガム・フォレストに移籍し、スカッドで最速の選手の一人だ。プレーを引き延ばしファイナルサードで混乱を引き起こす能力がスイスの攻撃の不可欠な要素だ。",
+    "why_ko": "은도예는 유로 2024에서 전기 같은 스피드, 직선적인 드리블, 두려움 없는 수비 돌파로 스위스의 브레이크아웃 스타가 되며 국제 무대에 등장했다. 볼로냐에서의 인상적인 활약 후 노팅엄 포레스트에 합류했으며 스쿼드에서 가장 빠른 선수 중 한 명이다. 플레이를 늘리고 최종 3분의 1에서 혼란을 만드는 능력이 스위스 공격의 핵심이다.",
+    "why_zh_Hans": "恩多耶在2024年欧洲杯上横空出世，以惊人的速度、直接的盘带和无所畏惧的突破成为瑞士的突破之星。他在博洛尼亚的出色表现后签约诺丁汉森林，是阵中速度最快的球员之一。他拉开空间、在前场三分之一制造混乱的能力使他成为瑞士进攻的关键一员。",
+    "why_ar": "انفجر ندوية على المسرح الدولي في يورو 2024 حيث جعلته سرعته الكهربائية وتسلّله المباشر وركضه الجريء ضد الدفاعات نجم سويسرا الصاعد. وقّع مع نوتنغهام فورست بعد فترة مؤثرة في بولونيا وهو أحد أسرع لاعبي الفريق. قدرته على تمطيط اللعب وإحداث فوضى في الثلث الأخير تجعلانه جزءاً حيوياً من الهجوم السويسري.",
+    "why_es_ES": "Ndoye irrumpió en la escena internacional en la Eurocopa 2024, donde su velocidad electrizante, su regate directo y sus carreras intrépidas contra las defensas lo convirtieron en la revelación de Suiza. Fichó por el Nottingham Forest tras una brillante etapa en el Bolonia y es uno de los jugadores más veloces de la plantilla. Su capacidad para estirar el juego y generar peligro en el último tercio lo convierten en un elemento vital del ataque suizo.",
+    "caps": 28,
+    "intlGoals": 4,
+    "tournaments": [
+     "Euro 2024 (Quarter-finals)"
+    ],
+    "clubs": [
+     {
+      "team": "Nottingham Forest",
+      "years": "2025–",
+      "country": "England"
+     },
+     {
+      "team": "Bologna",
+      "years": "2023–2025",
+      "country": "Italy"
+     },
+     {
+      "team": "Basel",
+      "years": "2022–2023",
+      "country": "Switzerland"
+     },
+     {
+      "team": "Nice",
+      "years": "2020–2022",
+      "country": "France"
+     }
+    ],
+    "honors": [
+     "Swiss Super League (2022–23, Basel)"
+    ]
+   },
+   {
+    "name": "Denis Zakaria",
+    "position": "Central midfielder",
+    "club": "AS Monaco (Ligue 1, France)",
+    "hometown": "Geneva",
+    "why": "Zakaria is one of Europe's most physically imposing midfielders, combining long-striding runs, ball-winning duels and athletic coverage of ground that few can match. A starter for Monaco in Ligue 1, he provides the dynamic, box-to-box presence alongside Xhaka that gives Switzerland balance. His ability to drive forward with the ball, break lines and contribute defensively makes him a key cog in the Swiss engine room.",
+    "number": 6,
+    "why_es": "Zakaria es uno de los mediocampistas más imponentes físicamente de Europa, combinando zancadas largas, duelos de recuperación y una cobertura atlética del terreno que pocos pueden igualar. Titular en el Monaco de la Ligue 1, aporta la presencia dinámica de box a box junto a Xhaka que da equilibrio a Suiza. Su capacidad para conducir el balón hacia adelante, romper líneas y contribuir defensivamente lo convierte en una pieza clave de la sala de máquinas suiza.",
+    "why_fr": "Zakaria est l'un des milieux de terrain les plus physiquement imposants d'Europe, combinant de longues foulées, des duels de récupération et une couverture athlétique du terrain inégalée. Titulaire pour Monaco en Ligue 1, il apporte la présence dynamique boîte-à-boîte aux côtés de Xhaka qui donne l'équilibre à la Suisse. Sa capacité à porter le ballon vers l'avant, à casser les lignes et à contribuer défensivement en fait un rouage essentiel de la salle des machines suisse.",
+    "why_pt_BR": "Zakaria é um dos meios-campistas mais fisicamente imponentes da Europa, combinando passadas longas, disputas de bola e cobertura atlética do campo que poucos conseguem igualar. Titular no Monaco na Ligue 1, oferece a presença dinâmica de área a área ao lado de Xhaka que dá equilíbrio à Suíça. Sua capacidade de avançar com a bola, romper linhas e contribuir defensivamente fazem dele uma peça fundamental na sala de máquinas suíça.",
+    "why_de": "Zakaria ist einer der physisch imposantesten Mittelfeldspieler Europas, der große Schritte, Balleroberungsduelle und athletische Raumabdeckung kombiniert. Als Stammspieler bei Monaco in der Ligue 1 bietet er neben Xhaka die dynamische Box-to-Box-Präsenz, die der Schweiz Gleichgewicht gibt. Seine Fähigkeit, mit dem Ball vorzustoßen, Linien zu durchbrechen und defensiv beizutragen, macht ihn zu einem Schlüsselelement im Schweizer Maschinenraum.",
+    "why_it": "Zakaria è uno dei centrocampisti più fisicamente imponenti d'Europa, unendo falcate lunghe, duelli di recupero e una copertura atletica del campo che pochi possono eguagliare. Titolare al Monaco in Ligue 1, offre la presenza dinamica box-to-box accanto a Xhaka che dà equilibrio alla Svizzera. La sua capacità di avanzare con il pallone, rompere le linee e contribuire in fase difensiva lo rende un ingranaggio chiave nella sala macchine svizzera.",
+    "why_ja": "ザカリアはヨーロッパで最もフィジカルに優れたミッドフィールダーの一人で、長いストライドのラン、ボール奪取デュエル、そして類まれな運動能力によるカバー範囲を兼ね備えている。リーグ・アンのモナコでスターターとして、ジャカとのペアでスイスにバランスを与えるダイナミックなボックス・トゥ・ボックスの存在感を提供する。ボールを持って前に運ぶ能力、ラインブレイク、守備的な貢献がスイスのエンジンルームの重要な歯車だ。",
+    "why_ko": "자카리아는 유럽에서 가장 피지컬이 뛰어난 미드필더 중 한 명으로, 긴 보폭의 달리기, 볼 탈취 듀얼, 그리고 비할 데 없는 운동 능력을 결합한다. 리그 1 모나코의 주전으로 자카 옆에서 스위스에 균형을 주는 역동적인 박스-투-박스 존재감을 제공한다. 볼을 들고 전진하고, 라인을 깨고, 수비에 기여하는 능력은 스위스 엔진 룸의 핵심 톱니바퀴다.",
+    "why_zh_Hans": "扎卡里亚是欧洲身体素质最出众的中场球员之一，将大步奔跑、拦截对抗和超凡的覆盖范围融为一体。他是法甲摩纳哥的主力，与扎卡搭档为瑞士提供了兼具攻守的平衡。他持球推进、打穿防线和防守贡献的能力使他成为瑞士中场引擎的关键齿轮。",
+    "why_ar": "زكريا أحد أكثر لاعبي الوسط هيبةً جسدياً في أوروبا يجمع بين خطوات واسعة ومبارزات لكسب الكرة وتغطية رياضية للميدان قلّ نظيرها. أساسي في موناكو بالدوري الفرنسي يُقدم حضوراً ديناميكياً من صندوق لصندوق إلى جانب جاكا يمنح سويسرا التوازن. قدرته على الاندفاع بالكرة وكسر الخطوط والمساهمة دفاعياً تجعله ترساً جوهرياً في غرفة محركات سويسرا.",
+    "why_es_ES": "Zakaria es uno de los centrocampistas más imponentes físicamente de Europa, combinando zancadas largas, duelos de recuperación y una cobertura atlética del terreno difícil de igualar. Titular en el Mónaco de la Ligue 1, aporta la presencia dinámica box-to-box junto a Xhaka que otorga equilibrio a Suiza. Su capacidad para conducir el balón, romper líneas y contribuir en defensa lo convierten en un engranaje clave de la sala de máquinas suiza.",
+    "caps": 55,
+    "intlGoals": 3,
+    "tournaments": [
+     "2018 (Round of 16)",
+     "Euro 2020 (Quarter-finals)",
+     "2022 (Round of 16)",
+     "Euro 2024 (Quarter-finals)"
+    ],
+    "clubs": [
+     {
+      "team": "AS Monaco",
+      "years": "2023–",
+      "country": "France"
+     },
+     {
+      "team": "Chelsea (loan)",
+      "years": "2022–2023",
+      "country": "England"
+     },
+     {
+      "team": "Juventus",
+      "years": "2022",
+      "country": "Italy"
+     },
+     {
+      "team": "Borussia Mönchengladbach",
+      "years": "2017–2022",
+      "country": "Germany"
+     },
+     {
+      "team": "BSC Young Boys",
+      "years": "2014–2017",
+      "country": "Switzerland"
+     }
+    ],
+    "honors": [
+     "Swiss Super League (2014–15, 2015–16, Young Boys)",
+     "Swiss Cup (2014–15, Young Boys)"
     ]
    }
   ],
