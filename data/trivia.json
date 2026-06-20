@@ -701,7 +701,8 @@
         "About 8 kg"
       ],
       "answer": 2,
-      "explanation": "The trophy weighs 6.175 kg and has been awarded since 1974 after Brazil kept the original Jules Rimet Trophy permanently."
+      "explanation": "The trophy weighs 6.175 kg and has been awarded since 1974 after Brazil kept the original Jules Rimet Trophy permanently.",
+      "claudeTask": "add more trivia. what happens to it when you win?"
     },
     {
       "id": "p-cr7-five-editions",
