@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Football 2026 — Trivia Editor</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:#f0f2f5;color:#1d1d1f;font-size:14px}
+header{background:#1a472a;color:#fff;padding:16px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.header-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+header h1{font-size:18px;font-weight:700;letter-spacing:-.3px}
+.stats{display:flex;gap:8px;flex-wrap:wrap}
+.stat{background:rgba(255,255,255,.12);padding:4px 10px;border-radius:10px;font-size:12px;font-weight:500}
+.stat b{font-weight:700}
+.header-actions{display:flex;gap:6px}
+.btn{padding:7px 14px;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s}
+.btn-primary{background:#34d058;color:#1a472a}
+.btn-primary:hover{background:#2ea44f;color:#fff}
+.btn-secondary{background:rgba(255,255,255,.15);color:#fff}
+.btn-secondary:hover{background:rgba(255,255,255,.25)}
+.btn-danger{background:#ff453a;color:#fff}
+.btn-danger:hover{background:#d63027}
+.btn-sm{padding:4px 10px;font-size:12px;border-radius:6px}
+.btn-icon{width:30px;height:30px;padding:0;display:flex;align-items:center;justify-content:center;border-radius:6px;font-size:14px}
+
+.toolbar{background:#fff;border-bottom:1px solid #e0e0e0;padding:12px 24px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;position:sticky;top:60px;z-index:90}
+.category-tabs{display:flex;gap:4px;flex-wrap:wrap}
+.cat-tab{padding:5px 12px;border-radius:14px;border:1px solid #ddd;background:#fff;font-size:12px;font-weight:600;cursor:pointer;transition:all .15s;color:#555}
+.cat-tab:hover{border-color:#1a472a;color:#1a472a}
+.cat-tab.active{background:#1a472a;color:#fff;border-color:#1a472a}
+.cat-count{font-weight:400;opacity:.7;margin-left:2px}
+.search-box{flex:1;min-width:180px;position:relative}
+.search-box input{width:100%;padding:7px 12px 7px 32px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none}
+.search-box input:focus{border-color:#1a472a;box-shadow:0 0 0 2px rgba(26,71,42,.15)}
+.search-box::before{content:"\1F50D";position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:13px;opacity:.5}
+
+.main{max-width:900px;margin:0 auto;padding:16px 24px 80px}
+.question-card{background:#fff;border-radius:12px;margin-bottom:8px;border:1px solid #e0e0e0;overflow:hidden;transition:box-shadow .15s}
+.question-card:hover{box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.question-card.approved{border-left:3px solid #34d058}
+.card-header{display:flex;align-items:flex-start;padding:12px 16px;cursor:pointer;gap:10px}
+.card-num{font-size:11px;font-weight:700;color:#999;min-width:28px;padding-top:2px}
+.card-badge{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:8px;white-space:nowrap}
+.badge-history{background:#e8f0fe;color:#1a73e8}
+.badge-players{background:#fce8e6;color:#d93025}
+.badge-rules{background:#fef7e0;color:#e37400}
+.badge-teams{background:#e6f4ea;color:#137333}
+.badge-venues{background:#f3e8fd;color:#8430ce}
+.badge-records{background:#fde7d9;color:#c5511b}
+.badge-culture{background:#e0f7fa;color:#00838f}
+.card-question{flex:1;font-size:14px;font-weight:500;line-height:1.4}
+.card-actions{display:flex;gap:4px;align-items:center;flex-shrink:0}
+.card-actions .btn-icon{background:#f5f5f5;border:1px solid #e0e0e0;color:#666}
+.card-actions .btn-icon:hover{background:#e8e8e8}
+.card-actions .btn-icon.del:hover{background:#ffe5e5;color:#d63027;border-color:#ffa9a4}
+.check-approved{width:18px;height:18px;cursor:pointer;accent-color:#34d058;flex-shrink:0}
+
+.card-body{display:none;padding:0 16px 16px;border-top:1px solid #f0f0f0}
+.card-body.open{display:block}
+.field{margin-top:12px}
+.field label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#888;margin-bottom:4px}
+.field input,.field textarea,.field select{width:100%;padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;outline:none}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:#1a472a;box-shadow:0 0 0 2px rgba(26,71,42,.12)}
+.field textarea{resize:vertical;min-height:50px}
+.options-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.option-row{display:flex;gap:6px;align-items:center}
+.option-row input[type=text]{flex:1}
+.option-row input[type=radio]{accent-color:#1a472a;cursor:pointer}
+.option-row.correct{background:#e6f4ea;border-radius:6px;padding:2px 6px;margin:-2px -6px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:200;align-items:center;justify-content:center}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;border-radius:16px;padding:24px;width:560px;max-width:90vw;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.modal h2{font-size:18px;margin-bottom:16px}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:20px}
+
+.empty{text-align:center;padding:60px 20px;color:#999}
+.empty h3{font-size:16px;margin-bottom:8px;color:#666}
+
+.drag-over{border-color:#1a472a;background:#f0f8f0}
+.toast{position:fixed;bottom:24px;right:24px;background:#1a472a;color:#fff;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:500;z-index:300;animation:fadeIn .2s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+input[type=file]{display:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <h1>Football 2026 — Trivia Editor</h1>
+    <div class="stats" id="stats"></div>
+    <div class="header-actions">
+      <button class="btn btn-secondary" onclick="document.getElementById('fileInput').click()">Load JSON</button>
+      <button class="btn btn-secondary" onclick="saveJSON()">Save JSON</button>
+      <button class="btn btn-primary" onclick="openAddModal()">+ Add Question</button>
+    </div>
+  </div>
+  <input type="file" id="fileInput" accept=".json" onchange="loadFile(event)">
+</header>
+
+<div class="toolbar">
+  <div class="category-tabs" id="categoryTabs"></div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search questions..." oninput="renderList()">
+  </div>
+</div>
+
+<div class="main" id="main">
+  <div class="empty" id="loading"><h3>Loading trivia.json...</h3></div>
+</div>
+
+<div class="modal-overlay" id="addModal">
+  <div class="modal">
+    <h2 id="modalTitle">Add Question</h2>
+    <div class="field">
+      <label>ID (unique slug)</label>
+      <input type="text" id="mId" placeholder="e.g. h-my-question">
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Category</label>
+        <select id="mCategory">
+          <option value="history">History</option>
+          <option value="players">Players</option>
+          <option value="rules">Rules</option>
+          <option value="teams">Teams</option>
+          <option value="venues">Venues</option>
+          <option value="records">Records</option>
+          <option value="culture">Culture</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Media URL (optional)</label>
+        <input type="text" id="mMedia" placeholder="YouTube or image URL">
+      </div>
+    </div>
+    <div class="field">
+      <label>Question</label>
+      <textarea id="mQuestion" rows="2" placeholder="Enter the question..."></textarea>
+    </div>
+    <div class="field">
+      <label>Options (select the correct answer)</label>
+      <div class="options-grid">
+        <div class="option-row"><input type="radio" name="mAnswer" value="0" checked> <input type="text" id="mOpt0" placeholder="Option A"></div>
+        <div class="option-row"><input type="radio" name="mAnswer" value="1"> <input type="text" id="mOpt1" placeholder="Option B"></div>
+        <div class="option-row"><input type="radio" name="mAnswer" value="2"> <input type="text" id="mOpt2" placeholder="Option C"></div>
+        <div class="option-row"><input type="radio" name="mAnswer" value="3"> <input type="text" id="mOpt3" placeholder="Option D"></div>
+      </div>
+    </div>
+    <div class="field">
+      <label>Explanation</label>
+      <textarea id="mExplanation" rows="2" placeholder="Explain the correct answer..."></textarea>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeModal()" style="color:#333">Cancel</button>
+      <button class="btn btn-primary" onclick="saveModal()">Save</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let data = { version: 1, questions: [] };
+let activeCategory = 'all';
+let expandedCard = null;
+let editingIndex = -1;
+
+async function init() {
+  try {
+    const resp = await fetch('trivia.json');
+    if (!resp.ok) throw new Error('fetch failed');
+    data = await resp.json();
+  } catch (e) {
+    const saved = localStorage.getItem('trivia-editor-data');
+    if (saved) {
+      data = JSON.parse(saved);
+    } else {
+      document.getElementById('loading').innerHTML = '<h3>Could not load trivia.json</h3><p>Use "Load JSON" to open a file.</p>';
+      return;
+    }
+  }
+  renderAll();
+}
+
+function renderAll() {
+  updateStats();
+  renderCategoryTabs();
+  renderList();
+}
+
+function getCategories() {
+  const cats = {};
+  data.questions.forEach(q => cats[q.category] = (cats[q.category] || 0) + 1);
+  return cats;
+}
+
+function updateStats() {
+  const total = data.questions.length;
+  const approved = data.questions.filter(q => q.approved).length;
+  const cats = getCategories();
+  const catCount = Object.keys(cats).length;
+  document.getElementById('stats').innerHTML =
+    `<span class="stat"><b>${total}</b> questions</span>` +
+    `<span class="stat"><b>${approved}</b> approved</span>` +
+    `<span class="stat"><b>${catCount}</b> categories</span>`;
+}
+
+function renderCategoryTabs() {
+  const cats = getCategories();
+  const total = data.questions.length;
+  let html = `<button class="cat-tab ${activeCategory === 'all' ? 'active' : ''}" onclick="setCategory('all')">All<span class="cat-count"> ${total}</span></button>`;
+  const order = ['history','players','rules','teams','venues','records','culture'];
+  const allCats = [...new Set([...order, ...Object.keys(cats)])];
+  allCats.forEach(c => {
+    if (cats[c]) {
+      html += `<button class="cat-tab ${activeCategory === c ? 'active' : ''}" onclick="setCategory('${c}')">${c}<span class="cat-count"> ${cats[c]}</span></button>`;
+    }
+  });
+  document.getElementById('categoryTabs').innerHTML = html;
+}
+
+function setCategory(cat) {
+  activeCategory = cat;
+  renderCategoryTabs();
+  renderList();
+}
+
+function getFilteredQuestions() {
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  return data.questions.map((q, i) => ({ q, i })).filter(({ q }) => {
+    if (activeCategory !== 'all' && q.category !== activeCategory) return false;
+    if (search && !q.question.toLowerCase().includes(search) &&
+        !q.id.toLowerCase().includes(search) &&
+        !q.explanation.toLowerCase().includes(search) &&
+        !q.options.some(o => o.toLowerCase().includes(search))) return false;
+    return true;
+  });
+}
+
+function renderList() {
+  const filtered = getFilteredQuestions();
+  const main = document.getElementById('main');
+  if (filtered.length === 0) {
+    main.innerHTML = '<div class="empty"><h3>No questions found</h3><p>Try a different filter or add new questions.</p></div>';
+    return;
+  }
+  main.innerHTML = filtered.map(({ q, i }, displayIdx) => renderCard(q, i, displayIdx + 1, filtered.length)).join('');
+}
+
+function badgeClass(cat) {
+  const map = { history:'badge-history', players:'badge-players', rules:'badge-rules', teams:'badge-teams', venues:'badge-venues', records:'badge-records', culture:'badge-culture' };
+  return map[cat] || 'badge-history';
+}
+
+function renderCard(q, realIndex, displayNum, total) {
+  const isOpen = expandedCard === realIndex;
+  const optionsHtml = q.options.map((opt, oi) =>
+    `<div class="option-row ${oi === q.answer ? 'correct' : ''}">
+      <input type="radio" name="ans_${realIndex}" value="${oi}" ${oi === q.answer ? 'checked' : ''} onchange="updateAnswer(${realIndex}, ${oi})">
+      <input type="text" value="${esc(opt)}" onchange="updateOption(${realIndex}, ${oi}, this.value)">
+    </div>`
+  ).join('');
+
+  return `<div class="question-card ${q.approved ? 'approved' : ''}" id="card-${realIndex}">
+    <div class="card-header" onclick="toggleCard(${realIndex})">
+      <span class="card-num">#${displayNum}</span>
+      <span class="card-badge ${badgeClass(q.category)}">${q.category}</span>
+      <span class="card-question">${esc(q.question)}</span>
+      <input type="checkbox" class="check-approved" title="Approved" ${q.approved ? 'checked' : ''} onclick="event.stopPropagation();toggleApproved(${realIndex})">
+      <div class="card-actions" onclick="event.stopPropagation()">
+        <button class="btn-icon" onclick="moveQ(${realIndex},-1)" title="Move up">&uarr;</button>
+        <button class="btn-icon" onclick="moveQ(${realIndex},1)" title="Move down">&darr;</button>
+        <button class="btn-icon" onclick="editQuestion(${realIndex})" title="Edit">&#9998;</button>
+        <button class="btn-icon del" onclick="deleteQ(${realIndex})" title="Delete">&times;</button>
+      </div>
+    </div>
+    <div class="card-body ${isOpen ? 'open' : ''}">
+      <div class="field-row">
+        <div class="field">
+          <label>ID</label>
+          <input type="text" value="${esc(q.id)}" onchange="updateField(${realIndex},'id',this.value)">
+        </div>
+        <div class="field">
+          <label>Category</label>
+          <select onchange="updateField(${realIndex},'category',this.value)">
+            ${['history','players','rules','teams','venues','records','culture'].map(c =>
+              `<option value="${c}" ${q.category===c?'selected':''}>${c}</option>`
+            ).join('')}
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label>Question</label>
+        <textarea onchange="updateField(${realIndex},'question',this.value)">${esc(q.question)}</textarea>
+      </div>
+      <div class="field">
+        <label>Options (select correct answer)</label>
+        <div class="options-grid">${optionsHtml}</div>
+      </div>
+      <div class="field">
+        <label>Explanation</label>
+        <textarea onchange="updateField(${realIndex},'explanation',this.value)">${esc(q.explanation)}</textarea>
+      </div>
+      <div class="field">
+        <label>Media URL (YouTube, image, etc.)</label>
+        <input type="text" value="${esc(q.media||'')}" onchange="updateField(${realIndex},'media',this.value)" placeholder="https://...">
+      </div>
+      ${q.media ? renderMediaPreview(q.media) : ''}
+    </div>
+  </div>`;
+}
+
+function renderMediaPreview(url) {
+  if (!url) return '';
+  const ytMatch = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)/);
+  if (ytMatch) {
+    return `<div style="margin-top:8px"><iframe width="100%" height="200" src="https://www.youtube.com/embed/${ytMatch[1]}" frameborder="0" allowfullscreen style="border-radius:8px"></iframe></div>`;
+  }
+  if (/\.(jpg|jpeg|png|gif|webp|svg)(\?|$)/i.test(url)) {
+    return `<div style="margin-top:8px"><img src="${esc(url)}" style="max-width:100%;max-height:200px;border-radius:8px"></div>`;
+  }
+  return `<div style="margin-top:8px;font-size:12px;color:#888">Media: <a href="${esc(url)}" target="_blank">${esc(url)}</a></div>`;
+}
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function toggleCard(idx) {
+  expandedCard = expandedCard === idx ? null : idx;
+  renderList();
+}
+
+function toggleApproved(idx) {
+  data.questions[idx].approved = !data.questions[idx].approved;
+  autoSave();
+  renderAll();
+}
+
+function updateField(idx, field, value) {
+  data.questions[idx][field] = value;
+  autoSave();
+  if (field === 'category') renderAll();
+}
+
+function updateOption(idx, optIdx, value) {
+  data.questions[idx].options[optIdx] = value;
+  autoSave();
+}
+
+function updateAnswer(idx, ansIdx) {
+  data.questions[idx].answer = ansIdx;
+  autoSave();
+  renderList();
+}
+
+function moveQ(idx, dir) {
+  const newIdx = idx + dir;
+  if (newIdx < 0 || newIdx >= data.questions.length) return;
+  const temp = data.questions[idx];
+  data.questions[idx] = data.questions[newIdx];
+  data.questions[newIdx] = temp;
+  if (expandedCard === idx) expandedCard = newIdx;
+  else if (expandedCard === newIdx) expandedCard = idx;
+  autoSave();
+  renderList();
+}
+
+function deleteQ(idx) {
+  const q = data.questions[idx];
+  if (!confirm(`Delete "${q.question.substring(0, 60)}..."?`)) return;
+  data.questions.splice(idx, 1);
+  expandedCard = null;
+  autoSave();
+  renderAll();
+  toast('Question deleted');
+}
+
+function editQuestion(idx) {
+  editingIndex = idx;
+  const q = data.questions[idx];
+  document.getElementById('modalTitle').textContent = 'Edit Question';
+  document.getElementById('mId').value = q.id;
+  document.getElementById('mCategory').value = q.category;
+  document.getElementById('mQuestion').value = q.question;
+  document.getElementById('mMedia').value = q.media || '';
+  q.options.forEach((o, i) => document.getElementById('mOpt' + i).value = o);
+  document.querySelectorAll('input[name=mAnswer]').forEach(r => r.checked = parseInt(r.value) === q.answer);
+  document.getElementById('mExplanation').value = q.explanation;
+  document.getElementById('addModal').classList.add('open');
+}
+
+function openAddModal() {
+  editingIndex = -1;
+  document.getElementById('modalTitle').textContent = 'Add Question';
+  document.getElementById('mId').value = '';
+  document.getElementById('mCategory').value = activeCategory === 'all' ? 'history' : activeCategory;
+  document.getElementById('mQuestion').value = '';
+  document.getElementById('mMedia').value = '';
+  [0,1,2,3].forEach(i => document.getElementById('mOpt' + i).value = '');
+  document.querySelectorAll('input[name=mAnswer]')[0].checked = true;
+  document.getElementById('mExplanation').value = '';
+  document.getElementById('addModal').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('addModal').classList.remove('open');
+}
+
+function saveModal() {
+  const id = document.getElementById('mId').value.trim();
+  const category = document.getElementById('mCategory').value;
+  const question = document.getElementById('mQuestion').value.trim();
+  const media = document.getElementById('mMedia').value.trim();
+  const options = [0,1,2,3].map(i => document.getElementById('mOpt' + i).value.trim());
+  const answer = parseInt(document.querySelector('input[name=mAnswer]:checked').value);
+  const explanation = document.getElementById('mExplanation').value.trim();
+
+  if (!id || !question || options.some(o => !o) || !explanation) {
+    alert('Please fill in all required fields.');
+    return;
+  }
+
+  const q = { id, category, question, options, answer, explanation };
+  if (media) q.media = media;
+
+  if (editingIndex >= 0) {
+    q.approved = data.questions[editingIndex].approved;
+    data.questions[editingIndex] = q;
+    toast('Question updated');
+  } else {
+    q.approved = false;
+    data.questions.push(q);
+    toast('Question added');
+  }
+
+  closeModal();
+  autoSave();
+  renderAll();
+}
+
+function saveJSON() {
+  const out = { version: data.version || 1, questions: data.questions.map(q => {
+    const clean = { id: q.id, category: q.category, question: q.question, options: q.options, answer: q.answer, explanation: q.explanation };
+    if (q.media) clean.media = q.media;
+    if (q.approved) clean.approved = true;
+    return clean;
+  })};
+  const blob = new Blob([JSON.stringify(out, null, 2) + '\n'], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'trivia.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+  toast('Saved trivia.json');
+}
+
+function loadFile(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      data = JSON.parse(reader.result);
+      expandedCard = null;
+      autoSave();
+      renderAll();
+      toast(`Loaded ${data.questions.length} questions`);
+    } catch (err) {
+      alert('Invalid JSON file: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+  e.target.value = '';
+}
+
+function autoSave() {
+  localStorage.setItem('trivia-editor-data', JSON.stringify(data));
+}
+
+function toast(msg) {
+  const el = document.createElement('div');
+  el.className = 'toast';
+  el.textContent = msg;
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 2500);
+}
+
+document.getElementById('addModal').addEventListener('click', e => {
+  if (e.target === document.getElementById('addModal')) closeModal();
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+init();
+</script>
+</body>
+</html>
