@@ -97,7 +97,7 @@
         "United States"
       ],
       "answer": 1,
-      "explanation": "The Netherlands lost finals in 1974, 1978, and 2010 — the most successful team never to win the title. The US mens team has never one, but the womens team has ",
+      "explanation": "The Netherlands lost finals in 1974, 1978, and 2010 — the most successful team never to win the title. The US men's team has never one, but the women's team has won four times (1991, 1999, 2015, 2019), making them the most successful team in women's tournament history",
       "approved": true
     },
     {
@@ -1835,6 +1835,7 @@
       "answer": 0,
       "explanation": "A brace refers to a player scoring two goals in a single match. Scoring three goals is called a hat-trick.",
       "approved": true,
+      "needsReview": true,
       "claudeTask": "make 3d answer funny"
     }
   ],
