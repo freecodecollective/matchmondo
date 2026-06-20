@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trivia Tab — Learn / Discover Mockup</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    padding: 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1 { font-size: 24px; font-weight: 600; text-align: center; margin-bottom: 6px; }
+  .page-sub {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    margin: 0 auto 32px;
+    max-width: 720px;
+    line-height: 1.5;
+  }
+  .page-sub strong { color: #3A6F9A; }
+  .options {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .option-wrap { flex: 0 0 340px; }
+  .option-label { text-align: center; margin-bottom: 8px; }
+  .option-label h2 { font-size: 16px; font-weight: 600; color: #3A6F9A; }
+  .option-label p { font-size: 12px; color: #999; margin-top: 2px; }
+
+  .phone {
+    width: 340px;
+    background: #F2F0EC;
+    border-radius: 36px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06);
+    padding: 12px;
+  }
+  .phone-inner { border-radius: 26px; overflow: hidden; background: #F2F0EC; }
+  .status-bar {
+    height: 54px;
+    background: #3A6F9A;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 4px;
+  }
+  .status-time { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.8); }
+  .header-banner {
+    position: relative;
+    background: linear-gradient(135deg, #3A6F9A, #5A9FC9);
+    padding: 16px 16px 14px;
+    text-align: center;
+  }
+  .header-banner h3 { color: #fff; font-size: 22px; font-weight: 600; letter-spacing: 0.3px; }
+  .back-chev {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255,255,255,0.9);
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .content {
+    padding: 12px;
+    background: #F2F0EC;
+    height: 560px;
+    overflow-y: auto;
+  }
+  .content::-webkit-scrollbar { width: 0; }
+
+  .card {
+    background: #fff;
+    border-radius: 14px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .section-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: #3A6F9A;
+    padding: 4px 2px 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .flag-small {
+    width: 22px;
+    height: 16px;
+    border-radius: 2px;
+    object-fit: cover;
+    box-shadow: 0 0 0 0.5px rgba(0,0,0,0.1);
+  }
+
+  /* ---- Featured "fact of the day" hero ---- */
+  .hero {
+    border-radius: 14px;
+    margin-bottom: 12px;
+    padding: 16px;
+    color: #fff;
+    background: linear-gradient(135deg, #3A6F9A, #6BB0D6);
+    box-shadow: 0 3px 12px rgba(58,111,154,0.25);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero .ball { position: absolute; right: -14px; bottom: -18px; font-size: 96px; opacity: 0.13; }
+  .hero .eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.85;
+    margin-bottom: 8px;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .hero .fact { font-size: 16px; font-weight: 600; line-height: 1.35; position: relative; z-index: 1; }
+  .hero .src { font-size: 11px; opacity: 0.8; margin-top: 10px; }
+
+  /* ---- Option A: category grid ---- */
+  .cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .cat-tile {
+    background: #fff;
+    border-radius: 14px;
+    padding: 14px 12px 13px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    cursor: pointer;
+    transition: transform 0.12s, box-shadow 0.12s;
+  }
+  .cat-tile:active { transform: scale(0.97); box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  .cat-ic {
+    width: 40px; height: 40px;
+    border-radius: 11px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+  .cat-tile h4 { font-size: 13.5px; font-weight: 600; color: #222; line-height: 1.2; }
+  .cat-tile p { font-size: 11px; color: #999; margin-top: 3px; line-height: 1.3; }
+  .ic-rules { background: rgba(58,111,154,0.12); }
+  .ic-facts { background: rgba(212,160,23,0.15); }
+  .ic-hist  { background: rgba(220,53,69,0.10); }
+  .ic-leg   { background: rgba(123,84,196,0.12); }
+  .ic-host  { background: rgba(40,160,120,0.12); }
+  .ic-num   { background: rgba(58,111,154,0.10); }
+
+  /* ---- Option B: discover feed ---- */
+  .chips { display: flex; gap: 6px; margin-bottom: 12px; flex-wrap: wrap; }
+  .chip {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #777;
+    background: #E4E2DD;
+    border-radius: 20px;
+    padding: 5px 11px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .chip.active { background: #3A6F9A; color: #fff; }
+  .feed-card { padding: 13px 14px; }
+  .feed-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .feed-tag.rules { color: #3A6F9A; }
+  .feed-tag.hist  { color: #DC3545; }
+  .feed-tag.rec   { color: #D4A017; }
+  .feed-tag.player{ color: #7B54C4; }
+  .feed-card h4 { font-size: 14.5px; font-weight: 600; line-height: 1.3; margin-bottom: 5px; }
+  .feed-card p { font-size: 12.5px; color: #555; line-height: 1.45; }
+  .feed-card .more-link { font-size: 12px; font-weight: 600; color: #3A6F9A; margin-top: 8px; display: inline-block; }
+  .player-strip { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .avatar {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: #ECEAE6;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700; color: #8a8a8a;
+    flex-shrink: 0;
+  }
+  .player-strip .nm { font-size: 14px; font-weight: 700; line-height: 1.2; }
+  .player-strip .sub { font-size: 11.5px; color: #999; display: flex; align-items: center; gap: 5px; margin-top: 2px; }
+
+  /* number row inside record card */
+  .stat-line { display: flex; align-items: baseline; gap: 8px; }
+  .stat-line .big { font-size: 30px; font-weight: 700; color: #D4A017; line-height: 1; }
+  .stat-line .lbl { font-size: 12.5px; color: #555; font-weight: 500; }
+
+  /* ---- Option C: quiz ---- */
+  .quiz-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px 15px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+  .quiz-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .quiz-head .ttl { font-size: 13px; font-weight: 700; color: #3A6F9A; display:flex; align-items:center; gap:5px; }
+  .streak {
+    font-size: 11px; font-weight: 700; color: #D4A017;
+    background: rgba(212,160,23,0.13);
+    padding: 4px 9px; border-radius: 20px;
+    display: flex; align-items: center; gap: 3px;
+  }
+  .q-text { font-size: 15px; font-weight: 600; line-height: 1.35; margin-bottom: 12px; }
+  .q-opt {
+    border: 1.5px solid #E4E2DD;
+    border-radius: 11px;
+    padding: 11px 13px;
+    font-size: 13.5px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .q-opt:hover { border-color: #b9d2e4; }
+  .q-opt.correct { border-color: #2EA56A; background: rgba(46,165,106,0.10); color: #1e7a4d; font-weight: 600; }
+  .q-opt.wrong   { border-color: #DC3545; background: rgba(220,53,69,0.08); color: #b02a37; }
+  .q-opt .mk { font-size: 14px; font-weight: 700; opacity: 0; }
+  .q-opt.correct .mk, .q-opt.wrong .mk { opacity: 1; }
+  .q-foot { font-size: 11.5px; color: #999; text-align: center; margin-top: 4px; }
+  .q-foot.revealed { color: #2EA56A; font-weight: 600; }
+
+  .learn-row {
+    display: flex; align-items: center; gap: 12px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    cursor: pointer;
+  }
+  .learn-row .lic {
+    width: 34px; height: 34px; border-radius: 9px;
+    display: flex; align-items: center; justify-content: center; font-size: 18px;
+    flex-shrink: 0;
+  }
+  .learn-row .lt { flex: 1; }
+  .learn-row .lt h4 { font-size: 13.5px; font-weight: 600; }
+  .learn-row .lt p { font-size: 11px; color: #999; margin-top: 1px; }
+  .learn-row .chev { color: #ccc; font-size: 18px; }
+  .group-label {
+    font-size: 11px; font-weight: 600; color: #999;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    padding: 4px 2px 8px;
+  }
+
+  .home-bar {
+    height: 34px;
+    background: #f2f0ec;
+    border-radius: 0 0 26px 26px;
+    display: flex; justify-content: center; padding-top: 6px;
+  }
+  .home-indicator { width: 120px; height: 5px; background: #ccc; border-radius: 3px; }
+
+  .tab-bar {
+    display: flex;
+    background: rgba(255,255,255,0.95);
+    border-top: 0.5px solid #ddd;
+    padding: 6px 0 8px;
+  }
+  .tab {
+    flex: 1;
+    text-align: center;
+    font-size: 10px;
+    color: #999;
+    display: flex; flex-direction: column; align-items: center; gap: 2px;
+  }
+  .tab.active { color: #3A6F9A; }
+  .tab .tab-icon { font-size: 22px; line-height: 1; }
+</style>
+</head>
+<body>
+
+<h1>Trivia tab — learn, discover &amp; play</h1>
+<p class="page-sub">A new tab where fans pick up the rules, fun facts, past-tournament history, legends &amp; records.
+Three directions below. The bottom bar already holds 5 tabs, so Trivia lives under <strong>More</strong> (header shows a “‹ More” back link).
+On Option C, tap a quiz answer; on Option B, tap the filter chips.</p>
+
+<div class="options">
+
+<!-- ============================================================ -->
+<!-- OPTION A — CATEGORY HUB                                       -->
+<!-- ============================================================ -->
+<div class="option-wrap">
+  <div class="option-label">
+    <h2>Option A — Category hub</h2>
+    <p>Browse-by-topic grid, like a “Learn” menu</p>
+  </div>
+  <div class="phone"><div class="phone-inner">
+    <div class="status-bar"><span class="status-time">9:41</span></div>
+    <div class="header-banner"><span class="back-chev">‹ More</span><h3>Trivia</h3></div>
+    <div class="content">
+
+      <div class="hero">
+        <span class="ball">⚽</span>
+        <div class="eyebrow">💡 Fact of the day</div>
+        <div class="fact">2026 is the first 48-team edition — and the first hosted by three nations: USA, Canada &amp; Mexico.</div>
+        <div class="src">104 matches · June 11 – July 19</div>
+      </div>
+
+      <div class="cat-grid">
+        <div class="cat-tile">
+          <div class="cat-ic ic-rules">📋</div>
+          <h4>Rules &amp; format</h4>
+          <p>How the game &amp; tournament work</p>
+        </div>
+        <div class="cat-tile">
+          <div class="cat-ic ic-facts">💡</div>
+          <h4>Did you know?</h4>
+          <p>42 bite-size fun facts</p>
+        </div>
+        <div class="cat-tile">
+          <div class="cat-ic ic-hist">🏆</div>
+          <h4>Through the years</h4>
+          <p>Every past champion</p>
+        </div>
+        <div class="cat-tile">
+          <div class="cat-ic ic-leg">⭐</div>
+          <h4>Legends</h4>
+          <p>The all-time greats</p>
+        </div>
+        <div class="cat-tile">
+          <div class="cat-ic ic-host">🏟️</div>
+          <h4>Host cities</h4>
+          <p>16 stadiums, 3 countries</p>
+        </div>
+        <div class="cat-tile">
+          <div class="cat-ic ic-num">📊</div>
+          <h4>By the numbers</h4>
+          <p>Records &amp; all-time stats</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="tab-bar">
+      <div class="tab"><span class="tab-icon">📅</span>Schedule</div>
+      <div class="tab"><span class="tab-icon">📊</span>Standings</div>
+      <div class="tab"><span class="tab-icon">🏳️</span>Teams</div>
+      <div class="tab active"><span class="tab-icon">💡</span>More</div>
+    </div>
+    <div class="home-bar"><div class="home-indicator"></div></div>
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- OPTION B — DISCOVER FEED                                      -->
+<!-- ============================================================ -->
+<div class="option-wrap">
+  <div class="option-label">
+    <h2>Option B — Discover feed</h2>
+    <p>One scrolling feed of mixed cards</p>
+  </div>
+  <div class="phone"><div class="phone-inner">
+    <div class="status-bar"><span class="status-time">9:41</span></div>
+    <div class="header-banner"><span class="back-chev">‹ More</span><h3>Trivia</h3></div>
+    <div class="content">
+
+      <div class="chips">
+        <div class="chip active">All</div>
+        <div class="chip">Rules</div>
+        <div class="chip">Facts</div>
+        <div class="chip">History</div>
+        <div class="chip">Players</div>
+        <div class="chip">Records</div>
+      </div>
+
+      <div class="hero">
+        <span class="ball">⚽</span>
+        <div class="eyebrow">💡 Fact of the day</div>
+        <div class="fact">Brazil has lifted the trophy 5 times (1958–2002) — more than any other nation.</div>
+      </div>
+
+      <div class="card feed-card">
+        <div class="feed-tag hist">📅 On this day · 1958</div>
+        <h4>A 17-year-old named Pelé scores in the final</h4>
+        <p>He remains the youngest player ever to score in a final — and would go on to win three titles, the only player to do so.</p>
+        <span class="more-link">Read more →</span>
+      </div>
+
+      <div class="card feed-card">
+        <div class="feed-tag rules">📋 Rule spotlight</div>
+        <h4>Why a yellow card can vanish</h4>
+        <p>Single yellow cards are wiped after the group stage, and again after the quarter-finals — so an early caution can’t make a player miss the final.</p>
+      </div>
+
+      <div class="card feed-card">
+        <div class="feed-tag rec">🏆 Record</div>
+        <div class="stat-line"><span class="big">16</span><span class="lbl">career goals — Miroslav Klose (Germany), the all-time top scorer across editions.</span></div>
+      </div>
+
+      <div class="card feed-card">
+        <div class="feed-tag player">⭐ Legend</div>
+        <div class="player-strip">
+          <div class="avatar">DM</div>
+          <div>
+            <div class="nm">Diego Maradona</div>
+            <div class="sub"><img class="flag-small" src="https://flagcdn.com/w40/ar.png" alt="">Argentina · 1986 champion</div>
+          </div>
+        </div>
+        <p>Carried Argentina to the 1986 title — including the “Hand of God” and the Goal of the Century in the same match.</p>
+      </div>
+
+    </div>
+    <div class="tab-bar">
+      <div class="tab"><span class="tab-icon">📅</span>Schedule</div>
+      <div class="tab"><span class="tab-icon">📊</span>Standings</div>
+      <div class="tab"><span class="tab-icon">🏳️</span>Teams</div>
+      <div class="tab active"><span class="tab-icon">💡</span>More</div>
+    </div>
+    <div class="home-bar"><div class="home-indicator"></div></div>
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- OPTION C — DAILY QUIZ + LEARN                                 -->
+<!-- ============================================================ -->
+<div class="option-wrap">
+  <div class="option-label">
+    <h2>Option C — Quiz + learn</h2>
+    <p>Gamified: test your knowledge, then browse</p>
+  </div>
+  <div class="phone"><div class="phone-inner">
+    <div class="status-bar"><span class="status-time">9:41</span></div>
+    <div class="header-banner"><span class="back-chev">‹ More</span><h3>Trivia</h3></div>
+    <div class="content">
+
+      <div class="quiz-card">
+        <div class="quiz-head">
+          <span class="ttl">🧠 Daily quiz</span>
+          <span class="streak">🔥 4-day streak</span>
+        </div>
+        <div class="q-text">Which nation has won the most titles?</div>
+        <div class="q-opt" onclick="answer(this,false)"><span>Germany</span><span class="mk">✕</span></div>
+        <div class="q-opt" onclick="answer(this,true)"><span>Brazil</span><span class="mk">✓</span></div>
+        <div class="q-opt" onclick="answer(this,false)"><span>Italy</span><span class="mk">✕</span></div>
+        <div class="q-opt" onclick="answer(this,false)"><span>Argentina</span><span class="mk">✕</span></div>
+        <div class="q-foot" id="qfoot">Question 1 of 5 · tap an answer</div>
+      </div>
+
+      <div class="group-label">Keep learning</div>
+
+      <div class="learn-row">
+        <div class="lic ic-rules">📋</div>
+        <div class="lt"><h4>Rules &amp; format</h4><p>Cards, extra time, tiebreakers</p></div>
+        <span class="chev">›</span>
+      </div>
+      <div class="learn-row">
+        <div class="lic ic-facts">💡</div>
+        <div class="lt"><h4>Did you know?</h4><p>42 fun facts</p></div>
+        <span class="chev">›</span>
+      </div>
+      <div class="learn-row">
+        <div class="lic ic-hist">🏆</div>
+        <div class="lt"><h4>Through the years</h4><p>Every past champion</p></div>
+        <span class="chev">›</span>
+      </div>
+      <div class="learn-row">
+        <div class="lic ic-leg">⭐</div>
+        <div class="lt"><h4>Legends</h4><p>Pelé, Maradona, Messi &amp; more</p></div>
+        <span class="chev">›</span>
+      </div>
+      <div class="learn-row">
+        <div class="lic ic-num">📊</div>
+        <div class="lt"><h4>By the numbers</h4><p>Records &amp; all-time stats</p></div>
+        <span class="chev">›</span>
+      </div>
+
+    </div>
+    <div class="tab-bar">
+      <div class="tab"><span class="tab-icon">📅</span>Schedule</div>
+      <div class="tab"><span class="tab-icon">📊</span>Standings</div>
+      <div class="tab"><span class="tab-icon">🏳️</span>Teams</div>
+      <div class="tab active"><span class="tab-icon">💡</span>More</div>
+    </div>
+    <div class="home-bar"><div class="home-indicator"></div></div>
+  </div></div>
+</div>
+
+</div>
+
+<script>
+// Option B — filter chips
+document.querySelectorAll('.chips').forEach(row => {
+  row.addEventListener('click', e => {
+    const chip = e.target.closest('.chip');
+    if (!chip) return;
+    row.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+  });
+});
+
+// Option C — quiz answer reveal
+function answer(el, correct) {
+  const card = el.closest('.quiz-card');
+  if (card.dataset.done) return;
+  card.dataset.done = '1';
+  const opts = card.querySelectorAll('.q-opt');
+  opts.forEach(o => o.onclick = null);
+  // always highlight the correct one
+  opts.forEach(o => { if (o.querySelector('.mk').textContent === '✓') o.classList.add('correct'); });
+  if (!correct) el.classList.add('wrong');
+  const foot = card.querySelector('#qfoot');
+  foot.classList.add('revealed');
+  foot.textContent = correct ? 'Correct! +1 · streak extended 🔥' : 'Not quite — Brazil, with 5 titles.';
+}
+</script>
+</body>
+</html>
