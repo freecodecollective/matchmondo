@@ -432,6 +432,7 @@ async function init() {
     }
   }
   renderAll();
+  if (currentView !== 'questions') switchView(currentView);
 }
 
 function renderAll() {
@@ -998,10 +999,11 @@ function toast(msg) {
   setTimeout(() => el.remove(), 2500);
 }
 
-let currentView = 'questions';
+let currentView = localStorage.getItem('trivia-editor-tab') || 'questions';
 
 function switchView(view) {
   currentView = view;
+  localStorage.setItem('trivia-editor-tab', view);
   document.getElementById('viewTabQuestions').classList.toggle('active', view === 'questions');
   document.getElementById('viewTabPublished').classList.toggle('active', view === 'published');
   document.getElementById('viewTabClaude').classList.toggle('active', view === 'claude');
