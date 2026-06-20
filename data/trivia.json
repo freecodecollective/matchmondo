@@ -601,14 +601,14 @@
       "category": "rules",
       "question": "What does VAR stand for?",
       "options": [
-        "Virtual Action Review",
+        "Very Angry Referee",
         "Video Assistant Referee",
         "Video Analysis Review",
         "Visual Assistance Replay"
       ],
       "answer": 1,
       "explanation": "VAR helps match officials review decisions on goals, penalties, red cards, and mistaken identity using video footage.",
-      "claudeTask": "make one of these funny but it should reference football/soccer"
+      "needsReview": true
     },
     {
       "id": "t-uruguay-years",
@@ -634,8 +634,8 @@
         "95,000"
       ],
       "answer": 2,
-      "explanation": "MetLife Stadium in East Rutherford, New Jersey has a seating capacity of approximately 82,500.",
-      "claudeTask": "add some trivia about the largest & smallest venues in world cup history"
+      "explanation": "MetLife Stadium in East Rutherford, New Jersey seats approximately 82,500. For comparison, the largest venue in tournament history was the Maracanã for the 1950 final, which held an estimated 199,854 spectators. The smallest venue ever used was the Pochtenoy Stadion in Switzerland (1954) with just 10,000 seats.",
+      "needsReview": true
     },
     {
       "id": "h-germany-71-brazil",
@@ -701,8 +701,8 @@
         "About 8 kg"
       ],
       "answer": 2,
-      "explanation": "The trophy weighs 6.175 kg and has been awarded since 1974 after Brazil kept the original Jules Rimet Trophy permanently.",
-      "claudeTask": "add more trivia. what happens to it when you win?"
+      "explanation": "The trophy weighs 6.175 kg and has been awarded since 1974 after Brazil kept the original Jules Rimet Trophy permanently. Winners get to hold the real trophy only briefly on the pitch — they then receive a gold-plated bronze replica to keep. The original stays with the governing body and no nation can keep it permanently again.",
+      "needsReview": true
     },
     {
       "id": "p-cr7-five-editions",
@@ -924,8 +924,8 @@
         "Rivaldo"
       ],
       "answer": 2,
-      "explanation": "Right-back Cafu is the only player to appear in three successive finals, winning two of them.",
-      "claudeTask": "add trivia about Cafu"
+      "explanation": "Right-back Cafu is the only player to appear in three successive finals, winning two (1994 and 2002) and losing one (1998 to France). He captained Brazil in 2002 and earned 142 caps across his career — a Brazilian record at the time. Known for his tireless runs down the right flank, he was nicknamed 'Il Pendolino' (the express train) during his time at AC Milan.",
+      "needsReview": true
     },
     {
       "id": "t-usa-1930",
@@ -1029,8 +1029,8 @@
         "Argentina (6)"
       ],
       "answer": 1,
-      "explanation": "Germany has reached the final 8 times (1954, 1966, 1974, 1982, 1986, 1990, 2002, 2014), winning four.",
-      "claudeTask": "add who is next after germany and how nany they have won"
+      "explanation": "Germany has reached the final 8 times (1954, 1966, 1974, 1982, 1986, 1990, 2002, 2014), winning four. Next is Brazil with 7 finals and 5 wins — the most titles of any nation. Italy and Argentina follow with 6 final appearances each (Italy won 4, Argentina won 3).",
+      "needsReview": true
     },
     {
       "id": "r-two-yellows",
@@ -1040,11 +1040,11 @@
         "A warning",
         "A red card",
         "A penalty",
-        "Nothing"
+        "A free subscription to the bench"
       ],
       "answer": 1,
       "explanation": "A second yellow in one match becomes a red card, and the player misses the next match.",
-      "claudeTask": "make the 4th answer funny (but keep it soccer related)"
+      "needsReview": true
     },
     {
       "id": "p-muller-2010",
@@ -1716,12 +1716,12 @@
       "options": [
         "They score two goals in the same match",
         "They score three goals in the same match",
-        "They score two goals and then need dental work to fix their smile",
+        "They score and then brace themselves for the inevitable VAR review",
         "They score in two consecutive matches"
       ],
       "answer": 0,
       "explanation": "A brace refers to a player scoring two goals in a single match. Scoring three goals is called a hat-trick.",
-      "claudeTask": "make the funny one about bracing for VAR review"
+      "needsReview": true
     }
   ],
   "pendingTasks": [
