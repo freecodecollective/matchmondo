@@ -12,8 +12,7 @@
         "1978 in Argentina"
       ],
       "answer": 1,
-      "explanation": "English referee Ken Aston devised the card system after the 1966 edition. It debuted at the 1970 tournament in Mexico.",
-      "approved": true
+      "explanation": "English referee Ken Aston devised the card system after the 1966 edition. It debuted at the 1970 tournament in Mexico."
     },
     {
       "id": "h-2026-hosts",
@@ -1716,7 +1715,8 @@
       ],
       "answer": 0,
       "explanation": "A brace refers to a player scoring two goals in a single match. Scoring three goals is called a hat-trick.",
-      "approved": true
+      "approved": true,
+      "claudeTask": "make 3d answer funny"
     }
   ],
   "pendingTasks": [
