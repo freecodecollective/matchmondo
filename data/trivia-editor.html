@@ -371,8 +371,6 @@ function mergeLocalIntoRemote(remote) {
     const rq = remoteById[lq.id];
     if (!rq) { remote.questions.push(lq); return; }
     if (lq.claudeTask) rq.claudeTask = lq.claudeTask;
-    if (lq.approved && !rq.approved) { rq.approved = true; delete rq.needsReview; }
-    if (lq.needsReview === false && rq.needsReview) delete rq.needsReview;
   });
 
   const remotePendingIds = new Set((remote.pendingTasks || []).map(t => t.id));
