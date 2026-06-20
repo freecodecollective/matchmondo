@@ -219,12 +219,6 @@ input[type=file]{display:none}
   <input type="file" id="fileInput" accept=".json" onchange="loadFile(event)">
 </header>
 
-<div class="setup-banner" id="setupBanner" style="display:none">
-  <span>To enable shared saving, paste a GitHub token with <b>Contents: Read &amp; write</b> on the matchmondo repo:</span>
-  <input type="text" id="tokenInput" placeholder="github_pat_..." autocomplete="off">
-  <button class="btn btn-sm" onclick="saveToken()">Save Token</button>
-  <a href="https://github.com/settings/tokens?type=beta" target="_blank">Create token</a>
-</div>
 
 <button class="instructions-toggle" onclick="toggleInstructions()">
   <span class="arrow" id="instrArrow">&#9654;</span> Reviewer Instructions
@@ -345,24 +339,10 @@ let editingIndex = -1;
 let saveTimer = null;
 let fileSha = null;
 
+const PROXY_API = 'https://trivia-proxy-702476544925.us-central1.run.app/api/trivia';
 const GH_API = 'https://api.github.com/repos/freecodecollective/matchmondo/contents/data/trivia.json';
 
-function getToken() { return localStorage.getItem('trivia-gh-token'); }
-
-function saveToken() {
-  const t = document.getElementById('tokenInput').value.trim();
-  if (!t) return;
-  localStorage.setItem('trivia-gh-token', t);
-  document.getElementById('setupBanner').style.display = 'none';
-  toast('Token saved — changes will now sync');
-  syncToGitHub();
-}
-
-function checkSetup() {
-  if (!getToken()) {
-    document.getElementById('setupBanner').style.display = 'flex';
-  }
-}
+function checkSetup() {}
 
 function setSyncStatus(state, label) {
   const el = document.getElementById('syncStatus');
@@ -401,7 +381,7 @@ function mergeLocalIntoRemote(remote) {
 async function init() {
   checkSetup();
   try {
-    const resp = await fetch(GH_API, { headers: { 'Accept': 'application/vnd.github.v3+json' } });
+    const resp = await fetch(PROXY_API);
     if (!resp.ok) throw new Error('GitHub fetch failed');
     const gh = await resp.json();
     fileSha = gh.sha;
@@ -895,25 +875,14 @@ function autoSave() {
 
 async function syncToGitHub(retryCount) {
   retryCount = retryCount || 0;
-  const token = getToken();
-  if (!token) {
-    setSyncStatus('error', 'No token');
-    document.getElementById('setupBanner').style.display = 'flex';
-    return;
-  }
   const content = btoa(unescape(encodeURIComponent(JSON.stringify(buildOutput(), null, 2) + '\n')));
   try {
     const body = { message: 'Update trivia questions via editor', content, sha: fileSha };
-    const resp = await fetch(GH_API, {
+    const resp = await fetch(PROXY_API, {
       method: 'PUT',
-      headers: { 'Authorization': 'token ' + token, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body)
     });
-    if (resp.status === 401 || resp.status === 403) {
-      setSyncStatus('error', 'Bad token');
-      document.getElementById('setupBanner').style.display = 'flex';
-      return;
-    }
     if (resp.status === 409) {
       if (retryCount >= 2) {
         setSyncStatus('error', 'Conflict — reload');
@@ -934,9 +903,7 @@ async function syncToGitHub(retryCount) {
 
 async function mergeAndRetry(retryCount) {
   try {
-    const resp = await fetch(GH_API, {
-      headers: { 'Authorization': 'token ' + getToken(), 'Accept': 'application/vnd.github.v3+json' }
-    });
+    const resp = await fetch(PROXY_API);
     if (!resp.ok) throw new Error('fetch failed');
     const gh = await resp.json();
     const bytes = Uint8Array.from(atob(gh.content.replace(/\n/g, '')), c => c.charCodeAt(0));
