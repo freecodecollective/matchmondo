@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "id": "h-most-titles",
+      "category": "history",
+      "question": "Which nation has won the most titles?",
+      "options": ["Germany", "Brazil", "Italy", "Argentina"],
+      "answer": 1,
+      "explanation": "Brazil has lifted the trophy 5 times (1958, 1962, 1970, 1994 and 2002) — more than any other nation."
+    },
+    {
+      "id": "h-2022-champion",
+      "category": "history",
+      "question": "Who were the champions in 2022?",
+      "options": ["France", "Argentina", "Croatia", "Brazil"],
+      "answer": 1,
+      "explanation": "Argentina beat France on penalties after a 3–3 final — their third title and Lionel Messi's first."
+    },
+    {
+      "id": "h-2026-hosts",
+      "category": "history",
+      "question": "Which countries are co-hosting in 2026?",
+      "options": ["USA only", "USA & Mexico", "USA, Canada & Mexico", "Canada & USA"],
+      "answer": 2,
+      "explanation": "2026 is the first edition hosted by three nations — the USA, Canada and Mexico — across 16 cities."
+    },
+    {
+      "id": "h-first-edition",
+      "category": "history",
+      "question": "Where was the very first edition held, in 1930?",
+      "options": ["Brazil", "Italy", "Uruguay", "France"],
+      "answer": 2,
+      "explanation": "Uruguay hosted and won the inaugural 1930 tournament on home soil."
+    },
+    {
+      "id": "h-2018-champion",
+      "category": "history",
+      "question": "Who won in 2018, in Russia?",
+      "options": ["Croatia", "France", "Belgium", "England"],
+      "answer": 1,
+      "explanation": "France beat Croatia 4–2 in the final for their second title."
+    },
+    {
+      "id": "h-2014-champion",
+      "category": "history",
+      "question": "Who won in 2014, in Brazil?",
+      "options": ["Argentina", "Netherlands", "Germany", "Brazil"],
+      "answer": 2,
+      "explanation": "Germany beat Argentina 1–0 in extra time, Mario Götze scoring the winner."
+    },
+    {
+      "id": "h-2010-champion",
+      "category": "history",
+      "question": "Which nation won its first title in 2010?",
+      "options": ["Netherlands", "Spain", "Germany", "Uruguay"],
+      "answer": 1,
+      "explanation": "Spain beat the Netherlands 1–0 in extra time for their first-ever title."
+    },
+    {
+      "id": "h-1966-england",
+      "category": "history",
+      "question": "In which year did England win its only title?",
+      "options": ["1962", "1966", "1970", "1974"],
+      "answer": 1,
+      "explanation": "England won on home soil in 1966, beating West Germany 4–2 after extra time."
+    },
+    {
+      "id": "h-germany-71-brazil",
+      "category": "history",
+      "question": "Germany famously thrashed Brazil 7–1 in a 2014 semi-final. Where was it played?",
+      "options": ["Rio de Janeiro", "São Paulo", "Belo Horizonte", "Brasília"],
+      "answer": 2,
+      "explanation": "The shock 7–1 result came in Belo Horizonte — one of the most stunning scorelines in the sport's history."
+    },
+    {
+      "id": "p-top-scorer-alltime",
+      "category": "players",
+      "question": "Who is the all-time top scorer across all editions?",
+      "options": ["Ronaldo (Brazil)", "Miroslav Klose", "Gerd Müller", "Just Fontaine"],
+      "answer": 1,
+      "explanation": "Germany's Miroslav Klose scored 16 goals across four tournaments (2002–2014)."
+    },
+    {
+      "id": "p-fontaine-single",
+      "category": "players",
+      "question": "Who holds the record for most goals in a single edition (13)?",
+      "options": ["Just Fontaine", "Pelé", "Sandor Kocsis", "Gerd Müller"],
+      "answer": 0,
+      "explanation": "France's Just Fontaine scored 13 goals at the 1958 tournament — a record that still stands."
+    },
+    {
+      "id": "p-pele-three",
+      "category": "players",
+      "question": "Which player won three titles — the only one to do so?",
+      "options": ["Diego Maradona", "Pelé", "Franz Beckenbauer", "Zinedine Zidane"],
+      "answer": 1,
+      "explanation": "Pelé won with Brazil in 1958, 1962 and 1970 — still the only player with three winners' medals."
+    },
+    {
+      "id": "p-mbappe-final",
+      "category": "players",
+      "question": "Who scored a hat-trick in the 2022 final — and still finished on the losing side?",
+      "options": ["Lionel Messi", "Kylian Mbappé", "Olivier Giroud", "Ángel Di María"],
+      "answer": 1,
+      "explanation": "Kylian Mbappé scored all three of France's goals, but Argentina won the shootout."
+    },
+    {
+      "id": "p-hand-of-god",
+      "category": "players",
+      "question": "Whose 'Hand of God' goal came in 1986?",
+      "options": ["Diego Maradona", "Mario Kempes", "Gabriel Batistuta", "Daniel Passarella"],
+      "answer": 0,
+      "explanation": "Diego Maradona punched in a goal against England, then scored the 'Goal of the Century' minutes later."
+    },
+    {
+      "id": "p-messi-most-matches",
+      "category": "players",
+      "question": "Who has played the most matches in the tournament's history?",
+      "options": ["Lothar Matthäus", "Paolo Maldini", "Lionel Messi", "Cristiano Ronaldo"],
+      "answer": 2,
+      "explanation": "Lionel Messi passed Lothar Matthäus in 2022, reaching 26 career appearances."
+    },
+    {
+      "id": "p-fastest-goal",
+      "category": "players",
+      "question": "Who scored the fastest goal ever — just 11 seconds into a 2002 match?",
+      "options": ["Hakan Şükür", "Ronaldo", "Rivaldo", "Christian Vieri"],
+      "answer": 0,
+      "explanation": "Türkiye's Hakan Şükür scored after 11 seconds against South Korea in the 2002 third-place match."
+    },
+    {
+      "id": "r-who-advances",
+      "category": "rules",
+      "question": "How many of the 48 teams reach the Round of 32 in 2026?",
+      "options": ["16", "24", "32", "48"],
+      "answer": 2,
+      "explanation": "The top two from each of the 12 groups (24) plus the 8 best third-placed teams advance — 32 in all."
+    },
+    {
+      "id": "r-red-card-replace",
+      "category": "rules",
+      "question": "When a player is shown a red card, the team may…",
+      "options": ["Bring on a substitute", "Play a player short for the rest of the match", "Replace them after 10 minutes", "Appeal immediately"],
+      "answer": 1,
+      "explanation": "A sent-off player cannot be replaced — the team plays a player down, and the player is suspended for at least the next match."
+    },
+    {
+      "id": "r-two-yellows",
+      "category": "rules",
+      "question": "Two yellow cards in the same match result in…",
+      "options": ["A warning", "A red card", "A penalty", "Nothing"],
+      "answer": 1,
+      "explanation": "A second yellow in one match becomes a red card, and the player misses the next match."
+    },
+    {
+      "id": "r-extra-time",
+      "category": "rules",
+      "question": "If a knockout match is level after 90 minutes, what happens next?",
+      "options": ["Straight to penalties", "A replay", "Two 15-minute periods of extra time", "Golden goal"],
+      "answer": 2,
+      "explanation": "From the Round of 32 on, a tie goes to two 15-minute periods of extra time, then a penalty shootout if still level."
+    },
+    {
+      "id": "r-first-tiebreaker",
+      "category": "rules",
+      "question": "If two teams finish level on points in a group, what's the first tiebreaker?",
+      "options": ["Head-to-head result", "Goal difference", "Fair-play score", "Drawing of lots"],
+      "answer": 1,
+      "explanation": "Goal difference across all group matches is checked first, then goals scored, then head-to-head."
+    },
+    {
+      "id": "r-yellow-wiped",
+      "category": "rules",
+      "question": "When are single yellow cards wiped clean?",
+      "options": ["Never", "After every match", "After the group stage", "Only after the semi-finals"],
+      "answer": 2,
+      "explanation": "Single yellows are wiped after the group stage, and again after the quarter-finals, so an early caution can't cost a player the final."
+    },
+    {
+      "id": "r-points-for-win",
+      "category": "rules",
+      "question": "How many points does a team get for a win in the group stage?",
+      "options": ["1", "2", "3", "4"],
+      "answer": 2,
+      "explanation": "A win is worth 3 points, a draw 1, and a loss 0."
+    },
+    {
+      "id": "t-defending-champs",
+      "category": "teams",
+      "question": "Who are the defending champions going into 2026?",
+      "options": ["France", "Brazil", "Argentina", "Germany"],
+      "answer": 2,
+      "explanation": "Argentina won in 2022 and enter 2026 as the reigning champions."
+    },
+    {
+      "id": "t-how-many-groups",
+      "category": "teams",
+      "question": "How many groups are there in the 2026 tournament?",
+      "options": ["8", "10", "12", "16"],
+      "answer": 2,
+      "explanation": "48 teams are split into 12 groups of four for the expanded 2026 format."
+    },
+    {
+      "id": "t-opener-azteca",
+      "category": "teams",
+      "question": "Which historic stadium hosts the opening match in 2026?",
+      "options": ["Estadio Azteca, Mexico City", "MetLife Stadium, New Jersey", "Rose Bowl, Pasadena", "BC Place, Vancouver"],
+      "answer": 0,
+      "explanation": "Mexico City's Estadio Azteca opens the tournament — a venue that has hosted two previous finals."
+    },
+    {
+      "id": "t-final-metlife",
+      "category": "teams",
+      "question": "Where will the 2026 final be played?",
+      "options": ["Rose Bowl, Pasadena", "AT&T Stadium, Dallas", "MetLife Stadium, New Jersey", "SoFi Stadium, Los Angeles"],
+      "answer": 2,
+      "explanation": "The final is set for MetLife Stadium in East Rutherford, New Jersey, just outside New York City."
+    },
+    {
+      "id": "t-brazil-titles-count",
+      "category": "teams",
+      "question": "How many titles has Brazil won?",
+      "options": ["3", "4", "5", "6"],
+      "answer": 2,
+      "explanation": "Brazil's 5 titles are the most of any nation — and they're the only team to play in every edition."
+    },
+    {
+      "id": "t-total-matches-2026",
+      "category": "teams",
+      "question": "How many matches will be played at the 2026 tournament?",
+      "options": ["64", "80", "104", "128"],
+      "answer": 2,
+      "explanation": "The 48-team format means 104 matches — up from 64 in the previous 32-team era."
+    }
+  ]
+}
