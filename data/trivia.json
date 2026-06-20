@@ -634,7 +634,8 @@
         "95,000"
       ],
       "answer": 2,
-      "explanation": "MetLife Stadium in East Rutherford, New Jersey has a seating capacity of approximately 82,500."
+      "explanation": "MetLife Stadium in East Rutherford, New Jersey has a seating capacity of approximately 82,500.",
+      "claudeTask": "add some trivia about the largest & smallest venues in world cup history"
     },
     {
       "id": "h-germany-71-brazil",
