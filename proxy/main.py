@@ -36,6 +36,17 @@ ANIM = ["falcon", "panda", "otter", "tiger", "fox", "puffin", "heron", "marlin",
         "stork", "raven", "moose", "koala", "viper", "wombat", "manta", "ferret",
         "beaver", "hawk", "seal", "ibis", "crane", "shark"]
 
+# Friend codes (NYT-style): two short football words/players, dash-joined, e.g.
+# "saka-volley". Short and easy to read aloud or text.
+FRIEND_WORDS = [
+    "goal", "pitch", "volley", "header", "cross", "keeper", "striker", "net",
+    "chip", "derby", "corner", "flick", "pace", "boot", "post", "save", "wing",
+    "pass", "tackle", "kit", "offside", "pitch", "free", "kick", "bicycle",
+    "messi", "kane", "saka", "vini", "son", "rice", "foden", "yamal", "pedri",
+    "rodri", "modric", "musiala", "haaland", "mbappe", "neymar", "kroos",
+    "gavi", "salah", "kante", "mount", "pulisic", "bellingham",
+]
+
 
 # ---------------------------------------------------------------------------
 # Trivia helpers (existing behaviour)
@@ -212,37 +223,73 @@ def score_pick(pick, actual):
     return 0, 0, 0
 
 
+def predict_points(did):
+    """A device's prediction tally, graded against final scores."""
+    res = results()
+    st, pl = fs("GET", f"/picks/{did}/matches", params={"pageSize": "300"})
+    picks = pl.get("documents", []) if st == 200 else []
+    pts = ex = rc = graded = 0
+    for pdoc in picks:
+        mn = pdoc["name"].split("/")[-1]
+        if mn not in res:
+            continue
+        sp, se, sr = score_pick(parse(pdoc), res[mn])
+        pts += sp
+        ex += se
+        rc += sr
+        graded += 1
+    return {"points": pts, "exact": ex, "results": rc, "graded": graded}
+
+
 def leaderboard(code):
     st, _grp = fs("GET", f"/groups/{code}")
     if st != 200:
         return None
     st, ml = fs("GET", f"/groups/{code}/members", params={"pageSize": "300"})
     members = ml.get("documents", []) if st == 200 else []
-    res = results()
     rows = []
     for mdoc in members:
         did = mdoc["name"].split("/")[-1]
         info = parse(mdoc)
-        st, pl = fs("GET", f"/picks/{did}/matches", params={"pageSize": "300"})
-        picks = pl.get("documents", []) if st == 200 else []
-        pts = ex = rc = graded = 0
-        for pdoc in picks:
-            mn = pdoc["name"].split("/")[-1]
-            if mn not in res:
-                continue
-            sp, se, sr = score_pick(parse(pdoc), res[mn])
-            pts += sp
-            ex += se
-            rc += sr
-            graded += 1
+        pp = predict_points(did)
         rows.append({
             "displayName": info.get("displayName", "?"),
-            "points": pts, "exact": ex, "results": rc, "graded": graded,
+            "points": pp["points"], "exact": pp["exact"],
+            "results": pp["results"], "graded": pp["graded"],
         })
     rows.sort(key=lambda r: (-r["points"], -r["exact"], r["displayName"].lower()))
     for i, r in enumerate(rows):
         r["rank"] = i + 1
     return rows
+
+
+# ---------------------------------------------------------------------------
+# Friends (NYT-style): each device registers a profile with a unique friend
+# code; adding a friend by code creates a mutual link; the leaderboard compares
+# you + your friends on prediction points (graded server-side) and trivia score
+# (synced from the app, since trivia is otherwise device-local).
+# ---------------------------------------------------------------------------
+def fs_merge(rel, fields):
+    """PATCH that updates only the given fields (Firestore merge), instead of
+    replacing the whole document."""
+    mask = [("updateMask.fieldPaths", k) for k in fields.keys()]
+    return fs("PATCH", rel, body=docbody(fields), params=mask)
+
+
+def gen_unique_code(did):
+    """Allocate an unused friend code and claim it for this device."""
+    for _ in range(14):
+        a = random.choice(FRIEND_WORDS)
+        b = random.choice(FRIEND_WORDS)
+        if a == b:
+            continue
+        cand = f"{a}-{b}"
+        st, _ = fs("PATCH", f"/codes/{cand}",
+                   body=docbody({"deviceId": did, "createdAt": now_iso()}),
+                   params={"currentDocument.exists": "false"})
+        if st == 200:
+            return cand
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -292,6 +339,12 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/api/picks":
             q = urllib.parse.parse_qs(u.query)
             return self.picks_get((q.get("deviceId") or [""])[0])
+        if path == "/api/me":
+            q = urllib.parse.parse_qs(u.query)
+            return self.me_get((q.get("deviceId") or [""])[0])
+        if path == "/api/friends/leaderboard":
+            q = urllib.parse.parse_qs(u.query)
+            return self.friends_leaderboard_get((q.get("deviceId") or [""])[0])
         if len(parts) == 3 and parts[:2] == ["api", "groups"]:
             return self.group_get(parts[2])
         if len(parts) == 4 and parts[:2] == ["api", "groups"] and parts[3] == "leaderboard":
@@ -306,6 +359,12 @@ class Handler(BaseHTTPRequestHandler):
             return self.group_create(body)
         if len(parts) == 4 and parts[:2] == ["api", "groups"] and parts[3] == "join":
             return self.group_join(parts[2], body)
+        if parts == ["api", "me"]:
+            return self.me_post(body)
+        if parts == ["api", "me", "reroll"]:
+            return self.me_reroll(body)
+        if parts == ["api", "friends", "add"]:
+            return self.friend_add(body)
         self.send_json(404, {"error": "not found"})
 
     def do_PUT(self):
@@ -314,6 +373,8 @@ class Handler(BaseHTTPRequestHandler):
             return self.trivia_put()
         if path == "/api/picks":
             return self.picks_put()
+        if path == "/api/trivia-score":
+            return self.trivia_score_put()
         self.send_json(404, {"error": "not found"})
 
     # ---- trivia (existing behaviour) --------------------------------------
@@ -440,6 +501,111 @@ class Handler(BaseHTTPRequestHandler):
         for pdoc in pl.get("documents", []):
             out[pdoc["name"].split("/")[-1]] = parse(pdoc)
         self.send_json(200, {"deviceId": did, "picks": out})
+
+    # ---- friends -----------------------------------------------------------
+    def me_get(self, did):
+        if not did:
+            return self.send_json(400, {"error": "deviceId required"})
+        st, doc = fs("GET", f"/users/{did}")
+        if st != 200:
+            return self.send_json(404, {"error": "not registered"})
+        d = parse(doc)
+        st, fl = fs("GET", f"/users/{did}/friends", params={"pageSize": "300"})
+        n = len(fl.get("documents", [])) if st == 200 else 0
+        self.send_json(200, {"code": d.get("code", ""), "displayName": d.get("displayName", ""), "friends": n})
+
+    def me_post(self, body):
+        """Register or update my profile; allocate a friend code on first call."""
+        did = body.get("deviceId")
+        dn = (body.get("displayName") or "").strip()[:40]
+        if not did:
+            return self.send_json(400, {"error": "deviceId required"})
+        st, doc = fs("GET", f"/users/{did}")
+        if st == 200:
+            d = parse(doc)
+            code = d.get("code") or gen_unique_code(did)
+            if not code:
+                return self.send_json(500, {"error": "could not allocate a code"})
+            fields = {"updatedAt": now_iso(), "code": code}
+            if dn:
+                fields["displayName"] = dn
+            fs_merge(f"/users/{did}", fields)
+            return self.send_json(200, {"code": code, "displayName": dn or d.get("displayName", "")})
+        code = gen_unique_code(did)
+        if not code:
+            return self.send_json(500, {"error": "could not allocate a code"})
+        fs("PATCH", f"/users/{did}",
+           body=docbody({"displayName": dn, "code": code, "createdAt": now_iso(), "updatedAt": now_iso()}))
+        self.send_json(200, {"code": code, "displayName": dn})
+
+    def me_reroll(self, body):
+        did = body.get("deviceId")
+        if not did:
+            return self.send_json(400, {"error": "deviceId required"})
+        st, doc = fs("GET", f"/users/{did}")
+        old = parse(doc).get("code") if st == 200 else None
+        code = gen_unique_code(did)
+        if not code:
+            return self.send_json(500, {"error": "could not allocate a code"})
+        fs_merge(f"/users/{did}", {"code": code, "updatedAt": now_iso()})
+        if old and old != code:
+            fs("DELETE", f"/codes/{old}")
+        self.send_json(200, {"code": code})
+
+    def trivia_score_put(self):
+        b = self.read_json()
+        did = b.get("deviceId")
+        if not did:
+            return self.send_json(400, {"error": "deviceId required"})
+        fields = {"updatedAt": now_iso()}
+        for src, dst in [("correct", "triviaCorrect"), ("answered", "triviaAnswered"),
+                         ("streak", "triviaStreak"), ("best", "triviaBest")]:
+            if isinstance(b.get(src), int):
+                fields[dst] = b[src]
+        fs_merge(f"/users/{did}", fields)
+        self.send_json(200, {"ok": True})
+
+    def friend_add(self, body):
+        did = body.get("deviceId")
+        code = (body.get("code") or "").strip().lower().replace(" ", "-")
+        if not did or not code:
+            return self.send_json(400, {"error": "deviceId and code required"})
+        st, cdoc = fs("GET", f"/codes/{code}")
+        if st != 200:
+            return self.send_json(404, {"error": "code not found"})
+        friend = parse(cdoc).get("deviceId")
+        if not friend:
+            return self.send_json(404, {"error": "code not found"})
+        if friend == did:
+            return self.send_json(400, {"error": "that's your own code"})
+        ts = now_iso()
+        fs("PATCH", f"/users/{did}/friends/{friend}", body=docbody({"addedAt": ts}))
+        fs("PATCH", f"/users/{friend}/friends/{did}", body=docbody({"addedAt": ts}))
+        st, fdoc = fs("GET", f"/users/{friend}")
+        fn = parse(fdoc).get("displayName", "") if st == 200 else ""
+        self.send_json(200, {"ok": True, "friend": fn})
+
+    def friends_leaderboard_get(self, did):
+        if not did:
+            return self.send_json(400, {"error": "deviceId required"})
+        st, mydoc = fs("GET", f"/users/{did}")
+        if st != 200:
+            return self.send_json(404, {"error": "not registered"})
+        ids = [did]
+        st, fl = fs("GET", f"/users/{did}/friends", params={"pageSize": "300"})
+        if st == 200:
+            ids += [f["name"].split("/")[-1] for f in fl.get("documents", [])]
+        rows = []
+        for uid in ids:
+            st, udoc = fs("GET", f"/users/{uid}")
+            info = parse(udoc) if st == 200 else {}
+            rows.append({
+                "deviceId": uid,
+                "displayName": info.get("displayName") or "Player",
+                "predict": predict_points(uid)["points"],
+                "trivia": int(info.get("triviaCorrect") or 0),
+            })
+        self.send_json(200, {"me": did, "rows": rows})
 
     def log_message(self, fmt, *args):
         print(f"{self.client_address[0]} - {fmt % args}")
