@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-21 17:34 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-06-21 18:12 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
