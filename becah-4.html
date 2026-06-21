@@ -331,7 +331,7 @@
         <div class="metric-chips">
           <div class="metric">
             <div class="m-label">Sessions</div>
-            <div class="m-num"><span id="sessDone">4</span> / 5</div>
+            <div class="m-num"><span id="sessDone">4</span> / <span id="sessGoal">11</span></div>
           </div>
           <div class="metric">
             <div class="m-label">Minutes</div>
@@ -435,6 +435,7 @@
     order.forEach(k => goalSessions += workouts[k].goal);
     week.forEach(day => day.forEach(([k,d]) => { done++; minutes += d; }));
     document.getElementById('sessDone').textContent = Math.round(done);
+    document.getElementById('sessGoal').textContent = Math.round(goalSessions);
     document.getElementById('minTotal').textContent = Math.round(minutes);
 
     // goals bars
