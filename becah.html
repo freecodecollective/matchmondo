@@ -3,237 +3,77 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Workout tracker — design preview</title>
-<meta name="description" content="A calm, non-dopamine weekly workout tracker. Tap a workout to log it; see what's left this week and how blue you got this month.">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.30.0/dist/tabler-icons.min.css">
+<title>Workout tracker — design options</title>
+<meta name="description" content="Five design directions for a calm weekly workout tracker. Tap any one to try it.">
 <style>
 :root{
   --color-background-primary:#ffffff;
   --color-background-secondary:#f3f1ec;
   --color-background-tertiary:#edebe4;
-  --color-background-info:#E6F1FB;
   --color-text-primary:#1f1f1d;
   --color-text-secondary:#6b6a64;
   --color-text-tertiary:#a09f97;
-  --color-text-info:#0C447C;
   --color-border-tertiary:rgba(20,20,15,0.12);
   --color-border-secondary:rgba(20,20,15,0.20);
   --color-border-info:#378ADD;
-  --border-radius-md:8px;
-  --border-radius-lg:12px;
+  --border-radius-lg:14px;
 }
 *{box-sizing:border-box;}
-body{
-  margin:0;padding:28px 16px 48px;
-  background:var(--color-background-tertiary);
-  color:var(--color-text-primary);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  -webkit-font-smoothing:antialiased;
-}
-.page-head{text-align:center;max-width:680px;margin:0 auto 24px;}
-.page-head h1{font-size:22px;font-weight:500;margin:0 0 4px;}
-.page-head p{font-size:14px;color:var(--color-text-secondary);margin:0;line-height:1.6;}
-.stage{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;align-items:flex-start;}
-.wt-phone{width:min(330px,100%);background:var(--color-background-primary);border:0.5px solid var(--color-border-secondary);border-radius:26px;padding:18px 16px;box-shadow:0 1px 2px rgba(20,20,15,0.04);}
-.wt-tile{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:11px 12px;cursor:pointer;background:var(--color-background-primary);text-align:left;position:relative;transition:background .12s,transform .06s;font-family:inherit;}
-.wt-tile:hover{background:var(--color-background-secondary);}
-.wt-tile:active{transform:scale(0.97);}
-.wt-pip{width:11px;height:11px;border-radius:50%;display:inline-block;box-sizing:border-box;}
-.wt-day{flex:1;text-align:center;border-radius:var(--border-radius-md);padding:5px 0;}
-.wt-mday{text-align:center;font-size:11px;color:var(--color-text-tertiary);}
-.wt-mcell{aspect-ratio:1;border-radius:6px;display:flex;align-items:flex-start;justify-content:flex-end;padding:2px 4px;font-size:11px;}
-.page-foot{text-align:center;font-size:12px;color:var(--color-text-tertiary);margin:32px auto 0;max-width:680px;line-height:1.6;}
+body{margin:0;padding:32px 18px 56px;background:var(--color-background-tertiary);color:var(--color-text-primary);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;}
+.head{max-width:1040px;margin:0 auto 26px;text-align:center;}
+.head h1{font-size:24px;font-weight:500;margin:0 0 6px;}
+.head p{font-size:15px;color:var(--color-text-secondary);margin:0;line-height:1.6;}
+.grid{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px;}
+.card{display:flex;flex-direction:column;background:var(--color-background-primary);border:0.5px solid var(--color-border-secondary);
+  border-radius:var(--border-radius-lg);overflow:hidden;text-decoration:none;color:inherit;transition:transform .12s,border-color .12s;}
+.card:hover{transform:translateY(-2px);border-color:var(--color-border-info);}
+.thumb{position:relative;width:100%;height:430px;overflow:hidden;background:var(--color-background-tertiary);border-bottom:0.5px solid var(--color-border-tertiary);}
+.thumb iframe{position:absolute;top:0;left:0;width:250%;height:250%;transform:scale(0.4);transform-origin:top left;border:0;pointer-events:none;}
+.meta{padding:14px 16px 18px;}
+.meta .row{display:flex;align-items:center;gap:10px;margin-bottom:4px;}
+.num{width:24px;height:24px;border-radius:50%;background:var(--color-background-secondary);color:var(--color-text-secondary);
+  font-size:13px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+.meta h3{font-size:16px;font-weight:500;margin:0;}
+.tag{font-size:11px;color:var(--color-border-info);border:0.5px solid var(--color-border-info);border-radius:20px;padding:1px 8px;margin-left:auto;}
+.meta p{font-size:13px;color:var(--color-text-secondary);margin:6px 0 0;line-height:1.55;}
+.foot{max-width:1040px;margin:30px auto 0;text-align:center;font-size:12px;color:var(--color-text-tertiary);line-height:1.6;}
 </style>
 </head>
 <body>
-<header class="page-head">
-  <h1>Workout tracker</h1>
-  <p>Design preview · tap a workout to log it. See what's left this week, and how blue you got this month.</p>
+<header class="head">
+  <h1>Workout tracker — pick a look</h1>
+  <p>Five takes on the same calm, no-pressure tracker. Tap any one to try it — log a workout and watch what's left this week update.</p>
 </header>
 
-<div class="stage">
+<main class="grid">
+  <a class="card" href="becah-1.html">
+    <div class="thumb"><iframe src="becah-1.html" scrolling="no" title="Week and month preview" loading="lazy"></iframe></div>
+    <div class="meta"><div class="row"><span class="num">1</span><h3>Week + month</h3><span class="tag">live now</span></div>
+      <p>Two panels — this week's tap-to-log grid, and a blue month heatmap.</p></div>
+  </a>
+  <a class="card" href="becah-2.html">
+    <div class="thumb"><iframe src="becah-2.html" scrolling="no" title="Rings preview" loading="lazy"></iframe></div>
+    <div class="meta"><div class="row"><span class="num">2</span><h3>Rings</h3></div>
+      <p>An activity ring for each goal — watch them fill as the week goes on.</p></div>
+  </a>
+  <a class="card" href="becah-3.html">
+    <div class="thumb"><iframe src="becah-3.html" scrolling="no" title="This week's plan preview" loading="lazy"></iframe></div>
+    <div class="meta"><div class="row"><span class="num">3</span><h3>This week's plan</h3></div>
+      <p>A quiet checklist. Each session is a row you check off — what's left is what's unchecked.</p></div>
+  </a>
+  <a class="card" href="becah-4.html">
+    <div class="thumb"><iframe src="becah-4.html" scrolling="no" title="Glance preview" loading="lazy"></iframe></div>
+    <div class="meta"><div class="row"><span class="num">4</span><h3>Glance</h3></div>
+      <p>One compact dashboard — goals, the week, and the month, all on a single card.</p></div>
+  </a>
+  <a class="card" href="becah-5.html">
+    <div class="thumb"><iframe src="becah-5.html" scrolling="no" title="Month preview" loading="lazy"></iframe></div>
+    <div class="meta"><div class="row"><span class="num">5</span><h3>Month</h3></div>
+      <p>The calendar is the star — tap any day to log it and see how blue you got.</p></div>
+  </a>
+</main>
 
-  <div class="wt-phone">
-    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2px;">
-      <span style="font-size:13px;color:var(--color-text-secondary);">This week</span>
-      <span style="font-size:13px;color:var(--color-text-tertiary);">Jun 15 – 21</span>
-    </div>
-    <div id="leftSummary" style="font-size:20px;font-weight:500;margin-bottom:14px;"></div>
-
-    <div id="weekStrip" style="display:flex;gap:4px;margin-bottom:18px;"></div>
-
-    <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:8px;">Goals</div>
-    <div id="goals" style="display:flex;flex-direction:column;gap:10px;margin-bottom:18px;"></div>
-
-    <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:8px;">Tap to log today</div>
-    <div id="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;"></div>
-
-    <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:6px;">Today · Sat Jun 20</div>
-    <div id="todayLog"></div>
-  </div>
-
-  <div class="wt-phone">
-    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;">
-      <span style="font-size:20px;font-weight:500;">June</span>
-      <span style="font-size:13px;color:var(--color-text-tertiary);">how blue did you get?</span>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-bottom:5px;">
-      <div class="wt-mday">M</div><div class="wt-mday">T</div><div class="wt-mday">W</div><div class="wt-mday">T</div><div class="wt-mday">F</div><div class="wt-mday">S</div><div class="wt-mday">S</div>
-    </div>
-    <div id="monthGrid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:5px;"></div>
-    <div style="display:flex;align-items:center;gap:6px;margin-top:14px;font-size:11px;color:var(--color-text-tertiary);">
-      <span>less</span>
-      <span class="wt-mcell" style="width:14px;height:14px;background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);"></span>
-      <span class="wt-mcell" style="width:14px;height:14px;background:#E6F1FB;"></span>
-      <span class="wt-mcell" style="width:14px;height:14px;background:#85B7EB;"></span>
-      <span class="wt-mcell" style="width:14px;height:14px;background:#378ADD;"></span>
-      <span>more</span>
-    </div>
-  </div>
-
-</div>
-
-<p class="page-foot">An early design mockup — the numbers are sample data and reset on refresh.</p>
-
-<script>
-const TODAY = 5;
-const workouts = {
-  tonal1:{name:'Tonal · Workout 1', short:'Tonal 1', cat:'Tonal', color:'#378ADD', dur:15, goal:2, icon:'ti-bolt'},
-  tonal2:{name:'Tonal · Workout 2', short:'Tonal 2', cat:'Tonal', color:'#185FA5', dur:15, goal:2, icon:'ti-bolt'},
-  pilates:{name:'Pilates', short:'Pilates', cat:'Pilates', color:'#1D9E75', dur:25, goal:3, icon:'ti-yoga'},
-  hills:{name:'Hills', short:'Hills', cat:'Hills', color:'#BA7517', dur:40, goal:4, icon:'ti-mountain'}
-};
-const order = ['tonal1','tonal2','pilates','hills'];
-const week = {
-  0:[{wid:'tonal1',label:'Tonal · Workout 1',min:15},{wid:'hills',label:'Hills',min:40}],
-  1:[{wid:'pilates',label:'Pilates',min:25},{wid:'hills',label:'Hills',min:35}],
-  2:[{wid:'tonal2',label:'Tonal · Workout 2',min:15}],
-  3:[{wid:'pilates',label:'Pilates',min:25},{wid:'hills',label:'Hills',min:52}],
-  4:[],5:[],6:[]
-};
-const dayLabels=['M','T','W','T','F','S','S'];
-const dayDates=[15,16,17,18,19,20,21];
-const monthTotals={1:2,2:1,3:2,4:1,5:0,6:3,7:0,8:1,9:2,10:0,11:2,12:1,13:2,14:0};
-
-function countFor(wid){let n=0;for(let d=0;d<7;d++)n+=week[d].filter(e=>e.wid===wid).length;return n;}
-
-function renderLeft(){
-  let left=0;order.forEach(id=>{left+=Math.max(0,workouts[id].goal-countFor(id));});
-  const el=document.getElementById('leftSummary');
-  el.textContent = left===0 ? 'All caught up' : left+' left this week';
-}
-
-function renderGoals(){
-  const g=document.getElementById('goals');g.innerHTML='';
-  order.forEach(id=>{
-    const w=workouts[id], c=countFor(id);
-    const row=document.createElement('div');
-    row.style.cssText='display:flex;align-items:center;justify-content:space-between;';
-    let pips='';
-    for(let i=0;i<w.goal;i++){
-      pips+= i<c ? '<span class="wt-pip" style="background:'+w.color+';"></span>'
-                 : '<span class="wt-pip" style="border:1.5px solid var(--color-border-secondary);"></span>';
-    }
-    if(c>w.goal) pips+='<span style="font-size:11px;color:'+w.color+';margin-left:2px;">+'+(c-w.goal)+'</span>';
-    row.innerHTML='<span style="font-size:14px;">'+w.name+'</span><span style="display:flex;gap:5px;align-items:center;">'+pips+'</span>';
-    g.appendChild(row);
-  });
-}
-
-function renderGrid(){
-  const grid=document.getElementById('grid');grid.innerHTML='';
-  order.forEach(id=>{
-    const w=workouts[id], todayN=week[TODAY].filter(e=>e.wid===id).length;
-    const t=document.createElement('button');t.className='wt-tile';
-    t.onclick=()=>logWorkout(id);
-    const badge= todayN>0 ? '<span style="position:absolute;top:8px;right:10px;background:'+w.color+';color:#fff;font-size:11px;min-width:18px;height:18px;border-radius:9px;display:flex;align-items:center;justify-content:center;padding:0 4px;">'+todayN+'</span>':'';
-    t.innerHTML=badge+'<i class="ti '+w.icon+'" aria-hidden="true" style="font-size:20px;color:'+w.color+';"></i>'+
-      '<div style="font-size:14px;font-weight:500;margin-top:6px;">'+w.short+'</div>'+
-      '<div style="font-size:12px;color:var(--color-text-tertiary);">'+w.dur+' min</div>';
-    grid.appendChild(t);
-  });
-  const cust=document.createElement('button');cust.className='wt-tile';
-  cust.onclick=()=>logWorkout('hills','City walk',22);
-  cust.innerHTML='<i class="ti ti-plus" aria-hidden="true" style="font-size:20px;color:var(--color-text-secondary);"></i>'+
-    '<div style="font-size:14px;font-weight:500;margin-top:6px;">Custom</div>'+
-    '<div style="font-size:12px;color:var(--color-text-tertiary);">set your own time</div>';
-  grid.appendChild(cust);
-  const edit=document.createElement('button');edit.className='wt-tile';
-  edit.onclick=()=>alert('Down the road: rename your workouts and change weekly goals here.');
-  edit.innerHTML='<i class="ti ti-adjustments" aria-hidden="true" style="font-size:20px;color:var(--color-text-secondary);"></i>'+
-    '<div style="font-size:14px;font-weight:500;margin-top:6px;">Edit</div>'+
-    '<div style="font-size:12px;color:var(--color-text-tertiary);">types &amp; goals</div>';
-  grid.appendChild(edit);
-}
-
-function renderWeekStrip(){
-  const s=document.getElementById('weekStrip');s.innerHTML='';
-  for(let d=0;d<7;d++){
-    const isToday=d===TODAY, isFuture=d>TODAY;
-    const cell=document.createElement('div');cell.className='wt-day';
-    cell.style.background= isToday ? 'var(--color-background-info)' : 'transparent';
-    cell.style.opacity= isFuture ? '0.4':'1';
-    let dots='';
-    week[d].forEach(e=>{dots+='<span class="wt-pip" style="width:7px;height:7px;background:'+workouts[e.wid].color+';"></span>';});
-    if(!dots) dots='<span style="display:inline-block;width:7px;height:7px;"></span>';
-    cell.innerHTML='<div style="font-size:11px;color:var(--color-text-tertiary);">'+dayLabels[d]+'</div>'+
-      '<div style="font-size:13px;font-weight:'+(isToday?'500':'400')+';margin:1px 0 4px;">'+dayDates[d]+'</div>'+
-      '<div style="display:flex;flex-wrap:wrap;gap:2px;justify-content:center;min-height:8px;">'+dots+'</div>';
-    s.appendChild(cell);
-  }
-}
-
-function renderTodayLog(){
-  const box=document.getElementById('todayLog');
-  const entries=week[TODAY];
-  if(entries.length===0){
-    box.innerHTML='<div style="font-size:13px;color:var(--color-text-tertiary);padding:4px 0;">Nothing logged yet — it\'s Saturday.</div>';return;
-  }
-  let total=entries.reduce((a,e)=>a+e.min,0), rows='';
-  entries.forEach(e=>{
-    rows+='<div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-top:0.5px solid var(--color-border-tertiary);">'+
-      '<span class="wt-pip" style="background:'+workouts[e.wid].color+';"></span>'+
-      '<span style="font-size:14px;flex:1;">'+e.label+'</span>'+
-      '<span style="font-size:13px;color:var(--color-text-secondary);">'+e.min+' min</span></div>';
-  });
-  box.innerHTML=rows+'<div style="font-size:12px;color:var(--color-text-tertiary);text-align:right;padding-top:6px;">'+total+' min today</div>';
-}
-
-function intensity(n){
-  if(n<=0)return{bg:'var(--color-background-secondary)',fg:'var(--color-text-tertiary)'};
-  if(n===1)return{bg:'#E6F1FB',fg:'#0C447C'};
-  if(n===2)return{bg:'#85B7EB',fg:'#042C53'};
-  return{bg:'#378ADD',fg:'#ffffff'};
-}
-function monthTotalFor(date){
-  if(date<15)return monthTotals[date]||0;
-  return week[date-15].length;
-}
-function renderMonth(){
-  const grid=document.getElementById('monthGrid');grid.innerHTML='';
-  for(let i=0;i<35;i++){
-    const date=i+1;const cell=document.createElement('div');cell.className='wt-mcell';
-    if(date>30){cell.style.visibility='hidden';grid.appendChild(cell);continue;}
-    const isFuture=date>20, isToday=date===20;
-    if(isFuture){
-      cell.style.background='var(--color-background-secondary)';cell.style.opacity='0.4';
-      cell.style.color='var(--color-text-tertiary)';cell.textContent=date;
-    }else{
-      const t=monthTotalFor(date), col=intensity(t);
-      cell.style.background=col.bg;cell.style.color=col.fg;cell.textContent=date;
-    }
-    if(isToday)cell.style.boxShadow='0 0 0 2px var(--color-border-info)';
-    grid.appendChild(cell);
-  }
-}
-
-function logWorkout(wid,label,min){
-  const w=workouts[wid];
-  week[TODAY].push({wid:wid,label:label||w.name,min:min||w.dur});
-  renderAll();
-}
-function renderAll(){renderLeft();renderGoals();renderGrid();renderWeekStrip();renderTodayLog();renderMonth();}
-renderAll();
-</script>
+<p class="foot">Early design mockups · sample data that resets on refresh. Tell Chris which one feels best.</p>
 </body>
 </html>

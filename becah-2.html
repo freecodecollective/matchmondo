@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workout tracker · Rings</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.30.0/dist/tabler-icons.min.css">
+<style>
+:root{
+  --color-background-primary:#ffffff;
+  --color-background-secondary:#f3f1ec;
+  --color-background-tertiary:#edebe4;
+  --color-background-info:#E6F1FB;
+  --color-text-primary:#1f1f1d;
+  --color-text-secondary:#6b6a64;
+  --color-text-tertiary:#a09f97;
+  --color-text-info:#0C447C;
+  --color-border-tertiary:rgba(20,20,15,0.12);
+  --color-border-secondary:rgba(20,20,15,0.20);
+  --color-border-info:#378ADD;
+  --border-radius-md:8px;
+  --border-radius-lg:12px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-weight:400;
+  background:var(--color-background-tertiary);
+  color:var(--color-text-primary);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:32px 16px 48px;
+  line-height:1.5;
+}
+.page-head{
+  width:100%;
+  max-width:330px;
+  margin-bottom:18px;
+  padding:0 4px;
+}
+.page-head h1{
+  font-size:19px;
+  font-weight:500;
+  letter-spacing:-0.01em;
+}
+.page-head p{
+  font-size:14px;
+  color:var(--color-text-secondary);
+  margin-top:3px;
+}
+.phone{
+  width:330px;
+  max-width:100%;
+  background:var(--color-background-primary);
+  border-radius:26px;
+  border:0.5px solid var(--color-border-tertiary);
+  padding:24px 20px 22px;
+}
+.headline{
+  margin-bottom:20px;
+}
+.headline .big{
+  font-size:30px;
+  font-weight:500;
+  letter-spacing:-0.02em;
+  line-height:1.1;
+  transition:color .25s ease;
+}
+.headline .sub{
+  font-size:13px;
+  color:var(--color-text-secondary);
+  margin-top:4px;
+}
+
+.rings{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-bottom:22px;
+}
+.ring-cell{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+.ring-wrap{
+  position:relative;
+  width:110px;
+  height:110px;
+}
+.ring-wrap svg{
+  width:110px;
+  height:110px;
+  transform:rotate(-90deg);
+}
+.ring-arc{
+  transition:stroke-dashoffset .55s cubic-bezier(.4,0,.2,1);
+}
+.ring-center{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
+}
+.ring-center i{
+  font-size:20px;
+}
+.ring-count{
+  font-size:14px;
+  font-weight:500;
+  color:var(--color-text-primary);
+}
+.ring-done{
+  display:none;
+  font-size:18px;
+}
+.ring-cell.done .ring-count{display:none;}
+.ring-cell.done .ring-done{display:block;}
+.ring-label{
+  font-size:13px;
+  color:var(--color-text-secondary);
+  margin-top:8px;
+}
+
+.section-label{
+  font-size:12px;
+  color:var(--color-text-tertiary);
+  margin-bottom:10px;
+  letter-spacing:0.01em;
+}
+
+.tiles{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:22px;
+}
+.tile{
+  background:var(--color-background-secondary);
+  border:0.5px solid var(--color-border-tertiary);
+  border-radius:var(--border-radius-lg);
+  padding:12px 12px 11px;
+  text-align:left;
+  cursor:pointer;
+  font-family:inherit;
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  transition:transform .08s ease,background .15s ease;
+}
+.tile:active{transform:scale(0.97);}
+.tile-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.tile-top i{font-size:22px;}
+.tile-badge{
+  min-width:20px;
+  height:20px;
+  padding:0 6px;
+  border-radius:10px;
+  background:var(--color-background-info);
+  color:var(--color-text-info);
+  font-size:12px;
+  font-weight:500;
+  display:none;
+  align-items:center;
+  justify-content:center;
+}
+.tile.has-count .tile-badge{display:inline-flex;}
+.tile-name{
+  font-size:14px;
+  font-weight:500;
+  color:var(--color-text-primary);
+}
+.tile-dur{
+  font-size:12px;
+  color:var(--color-text-secondary);
+}
+.tile.util{
+  background:var(--color-background-primary);
+}
+.tile.util .tile-top i{color:var(--color-text-secondary);}
+
+.today{
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-lg);
+  padding:14px 14px 13px;
+  margin-bottom:18px;
+}
+.today-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  margin-bottom:8px;
+}
+.today-head .t{
+  font-size:13px;
+  font-weight:500;
+  color:var(--color-text-primary);
+}
+.today-head .total{
+  font-size:13px;
+  color:var(--color-text-secondary);
+}
+.today-empty{
+  font-size:13px;
+  color:var(--color-text-tertiary);
+}
+.log-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:5px 0;
+}
+.log-row i{font-size:17px;}
+.log-row .lname{
+  font-size:13px;
+  color:var(--color-text-primary);
+  flex:1;
+}
+.log-row .ldur{
+  font-size:13px;
+  color:var(--color-text-secondary);
+}
+
+.month{
+  border-top:0.5px solid var(--color-border-tertiary);
+  padding-top:14px;
+}
+.month .section-label{margin-bottom:9px;}
+.dots{
+  display:grid;
+  grid-template-columns:repeat(15,1fr);
+  gap:5px;
+}
+.dot{
+  width:100%;
+  aspect-ratio:1/1;
+  border-radius:50%;
+  background:var(--color-background-tertiary);
+}
+.dot.today-dot{
+  outline:1.5px solid var(--color-text-secondary);
+  outline-offset:1px;
+}
+</style>
+</head>
+<body>
+<div class="page-head">
+  <h1>Workout tracker</h1>
+  <p>Rings · tap a workout to log</p>
+</div>
+
+<div class="phone">
+  <div class="headline">
+    <div class="big" id="headline-big">4 left this week</div>
+    <div class="sub">Mon Jun 15 – Sun Jun 21</div>
+  </div>
+
+  <div class="rings" id="rings"></div>
+
+  <div class="section-label">Log a session</div>
+  <div class="tiles" id="tiles"></div>
+
+  <div class="today">
+    <div class="today-head">
+      <span class="t">Today</span>
+      <span class="total" id="today-total"></span>
+    </div>
+    <div id="today-log"></div>
+  </div>
+
+  <div class="month">
+    <div class="section-label">This month</div>
+    <div class="dots" id="dots"></div>
+  </div>
+</div>
+
+<script>
+const workouts = {
+  tonal1:{name:'Tonal · Workout 1', short:'Tonal 1', color:'#378ADD', dur:15, goal:2, icon:'ti-bolt'},
+  tonal2:{name:'Tonal · Workout 2', short:'Tonal 2', color:'#185FA5', dur:15, goal:2, icon:'ti-bolt'},
+  pilates:{name:'Pilates', short:'Pilates', color:'#1D9E75', dur:25, goal:3, icon:'ti-yoga'},
+  hills:{name:'Hills', short:'Hills', color:'#BA7517', dur:40, goal:4, icon:'ti-mountain'}
+};
+const order = ['tonal1','tonal2','pilates','hills'];
+
+const week = [
+  [{w:'tonal1',min:15},{w:'hills',min:40}],
+  [{w:'pilates',min:25},{w:'hills',min:35}],
+  [{w:'tonal2',min:15}],
+  [{w:'pilates',min:25},{w:'hills',min:52}],
+  [],
+  [],
+  []
+];
+const todayIndex = 5;
+
+function weekCount(id){
+  let c = 0;
+  for(const day of week){ for(const e of day){ if(e.w===id) c++; } }
+  return c;
+}
+
+function leftThisWeek(){
+  let left = 0;
+  for(const id of order){ left += Math.max(0, workouts[id].goal - weekCount(id)); }
+  return left;
+}
+
+const R = 48;
+const CIRC = 2 * Math.PI * R;
+
+function buildRings(){
+  const el = document.getElementById('rings');
+  el.innerHTML = '';
+  for(const id of order){
+    const w = workouts[id];
+    const cell = document.createElement('div');
+    cell.className = 'ring-cell';
+    cell.id = 'ring-' + id;
+    cell.innerHTML = `
+      <div class="ring-wrap">
+        <svg viewBox="0 0 110 110" aria-hidden="true">
+          <circle cx="55" cy="55" r="${R}" fill="none" stroke="var(--color-border-tertiary)" stroke-width="9"></circle>
+          <circle class="ring-arc" cx="55" cy="55" r="${R}" fill="none" stroke="${w.color}" stroke-width="9"
+            stroke-linecap="round" stroke-dasharray="${CIRC}" stroke-dashoffset="${CIRC}"></circle>
+        </svg>
+        <div class="ring-center">
+          <i class="${w.icon}" style="color:${w.color}" aria-hidden="true"></i>
+          <span class="ring-count">0/${w.goal}</span>
+          <span class="ring-done" style="color:${w.color}"><i class="ti ti-check" aria-hidden="true"></i></span>
+        </div>
+      </div>
+      <div class="ring-label">${w.short}</div>`;
+    el.appendChild(cell);
+  }
+}
+
+function buildTiles(){
+  const el = document.getElementById('tiles');
+  el.innerHTML = '';
+  for(const id of order){
+    const w = workouts[id];
+    const btn = document.createElement('button');
+    btn.className = 'tile';
+    btn.id = 'tile-' + id;
+    btn.setAttribute('aria-label', 'Log ' + w.name);
+    btn.innerHTML = `
+      <div class="tile-top">
+        <i class="${w.icon}" style="color:${w.color}" aria-hidden="true"></i>
+        <span class="tile-badge">0</span>
+      </div>
+      <div class="tile-name">${w.short}</div>
+      <div class="tile-dur">${w.dur} min</div>`;
+    btn.addEventListener('click', () => logSession(id, w.dur));
+    el.appendChild(btn);
+  }
+
+  const custom = document.createElement('button');
+  custom.className = 'tile util';
+  custom.setAttribute('aria-label', 'Log a custom session');
+  custom.innerHTML = `
+    <div class="tile-top"><i class="ti ti-plus" aria-hidden="true"></i></div>
+    <div class="tile-name">Custom</div>
+    <div class="tile-dur">Pick workout & time</div>`;
+  custom.addEventListener('click', logCustom);
+  el.appendChild(custom);
+
+  const edit = document.createElement('button');
+  edit.className = 'tile util';
+  edit.setAttribute('aria-label', 'Edit workouts and goals');
+  edit.innerHTML = `
+    <div class="tile-top"><i class="ti ti-adjustments" aria-hidden="true"></i></div>
+    <div class="tile-name">Edit</div>
+    <div class="tile-dur">Rename & set goals</div>`;
+  edit.addEventListener('click', () => alert('Down the road: rename workouts and change goals here.'));
+  el.appendChild(edit);
+}
+
+function logSession(id, min){
+  week[todayIndex].push({w:id, min:min});
+  render();
+}
+
+function logCustom(){
+  const labels = order.map((id,i) => (i+1) + '. ' + workouts[id].short).join('\n');
+  const pick = prompt('Custom log — which workout?\n' + labels + '\n\nEnter a number 1–4:');
+  if(pick === null) return;
+  const idx = parseInt(pick, 10) - 1;
+  if(isNaN(idx) || idx < 0 || idx >= order.length){ return; }
+  const id = order[idx];
+  const minRaw = prompt('Minutes for this session?', String(workouts[id].dur));
+  if(minRaw === null) return;
+  let min = Math.round(parseFloat(minRaw));
+  if(isNaN(min) || min <= 0){ min = workouts[id].dur; }
+  logSession(id, min);
+}
+
+function renderRings(){
+  for(const id of order){
+    const w = workouts[id];
+    const count = weekCount(id);
+    const cell = document.getElementById('ring-' + id);
+    const frac = Math.min(1, count / w.goal);
+    const arc = cell.querySelector('.ring-arc');
+    arc.style.strokeDashoffset = (CIRC * (1 - frac)).toFixed(2);
+    cell.querySelector('.ring-count').textContent = count + '/' + w.goal;
+    cell.classList.toggle('done', count >= w.goal);
+  }
+}
+
+function renderTiles(){
+  for(const id of order){
+    const count = week[todayIndex].filter(e => e.w === id).length;
+    const tile = document.getElementById('tile-' + id);
+    tile.classList.toggle('has-count', count > 0);
+    tile.querySelector('.tile-badge').textContent = count;
+  }
+}
+
+function renderHeadline(){
+  const left = leftThisWeek();
+  const el = document.getElementById('headline-big');
+  if(left === 0){
+    el.textContent = 'All caught up';
+    el.style.color = workouts.pilates.color;
+  } else {
+    el.textContent = left + (left === 1 ? ' left this week' : ' left this week');
+    el.style.color = 'var(--color-text-primary)';
+  }
+}
+
+function renderToday(){
+  const entries = week[todayIndex];
+  const logEl = document.getElementById('today-log');
+  const totalEl = document.getElementById('today-total');
+  if(entries.length === 0){
+    logEl.innerHTML = '<div class="today-empty">Nothing logged yet — it’s Saturday.</div>';
+    totalEl.textContent = '';
+    return;
+  }
+  let total = 0;
+  logEl.innerHTML = '';
+  for(const e of entries){
+    const w = workouts[e.w];
+    total += e.min;
+    const row = document.createElement('div');
+    row.className = 'log-row';
+    row.innerHTML = `
+      <i class="${w.icon}" style="color:${w.color}" aria-hidden="true"></i>
+      <span class="lname">${w.name}</span>
+      <span class="ldur">${Math.round(e.min)} min</span>`;
+    logEl.appendChild(row);
+  }
+  totalEl.textContent = Math.round(total) + ' min today';
+}
+
+function buildMonth(){
+  const el = document.getElementById('dots');
+  el.innerHTML = '';
+  const monthVol = {};
+  let dayOfMonth = 15;
+  for(let i = 0; i < week.length; i++){
+    monthVol[dayOfMonth + i] = week[i].length;
+  }
+  for(let d = 1; d <= 30; d++){
+    const dot = document.createElement('div');
+    dot.className = 'dot';
+    const v = monthVol[d] || 0;
+    let bg = 'var(--color-background-tertiary)';
+    if(v === 1) bg = '#E6F1FB';
+    else if(v === 2) bg = '#85B7EB';
+    else if(v >= 3) bg = '#378ADD';
+    dot.style.background = bg;
+    if(d === 20) dot.classList.add('today-dot');
+    el.appendChild(dot);
+  }
+}
+
+function renderMonth(){
+  buildMonth();
+}
+
+function render(){
+  renderRings();
+  renderTiles();
+  renderHeadline();
+  renderToday();
+  renderMonth();
+}
+
+buildRings();
+buildTiles();
+render();
+requestAnimationFrame(() => renderRings());
+</script>
+</body>
+</html>

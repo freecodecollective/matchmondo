@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workout tracker · Month</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.30.0/dist/tabler-icons.min.css">
+<style>
+  :root {
+    --color-background-primary:#ffffff;
+    --color-background-secondary:#f3f1ec;
+    --color-background-tertiary:#edebe4;
+    --color-background-info:#E6F1FB;
+    --color-text-primary:#1f1f1d;
+    --color-text-secondary:#6b6a64;
+    --color-text-tertiary:#a09f97;
+    --color-text-info:#0C447C;
+    --color-border-tertiary:rgba(20,20,15,0.12);
+    --color-border-secondary:rgba(20,20,15,0.20);
+    --color-border-info:#378ADD;
+    --border-radius-md:8px;
+    --border-radius-lg:12px;
+    --navy:#042C53;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: var(--color-background-tertiary);
+    color: var(--color-text-primary);
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 16px 48px;
+  }
+
+  .page-header {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 0 18px;
+    padding: 0 6px;
+  }
+
+  .page-header h1 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 3px;
+    letter-spacing: -0.01em;
+  }
+
+  .page-header p {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  .phone {
+    width: 340px;
+    max-width: 100%;
+    background: var(--color-background-primary);
+    border-radius: 26px;
+    border: 1px solid var(--color-border-tertiary);
+    padding: 24px 20px 26px;
+  }
+
+  .month-head {
+    margin: 0 0 18px;
+  }
+
+  .month-head .title {
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  .month-head .sub {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    margin: 4px 0 0;
+  }
+
+  /* this week tray */
+  .tray {
+    margin: 0 0 20px;
+  }
+
+  .tray .tray-line {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0 0 10px;
+  }
+
+  .tray .tray-line span {
+    font-weight: 400;
+    color: var(--color-text-secondary);
+  }
+
+  .goal-row {
+    display: flex;
+    gap: 8px;
+  }
+
+  .goal-chip {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 7px 8px;
+    min-width: 0;
+  }
+
+  .goal-chip .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .goal-chip .count {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    white-space: nowrap;
+  }
+
+  .goal-chip.done .count {
+    color: var(--color-text-secondary);
+  }
+
+  /* calendar */
+  .cal-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin: 0 0 8px;
+  }
+
+  .cal-weekdays span {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--color-text-tertiary);
+  }
+
+  .cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+  }
+
+  .day {
+    aspect-ratio: 1 / 1;
+    min-height: 38px;
+    border-radius: var(--border-radius-md);
+    border: 1px solid transparent;
+    background: var(--color-background-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--color-text-tertiary);
+    cursor: pointer;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.2s ease;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .day.empty-cell {
+    background: transparent;
+    cursor: default;
+  }
+
+  .day.lvl1 { background: #E6F1FB; color: var(--navy); }
+  .day.lvl2 { background: #85B7EB; color: var(--navy); }
+  .day.lvl3 { background: #378ADD; color: #ffffff; }
+
+  .day.future {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  .day.today {
+    border: 2px solid var(--color-border-info);
+  }
+
+  .day.selected {
+    border: 2px solid var(--navy);
+  }
+
+  /* legend */
+  .legend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    margin: 14px 2px 0;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--color-text-tertiary);
+  }
+
+  .legend .sw {
+    width: 13px;
+    height: 13px;
+    border-radius: 3px;
+  }
+
+  .legend .sw0 { background: var(--color-background-secondary); }
+  .legend .sw1 { background: #E6F1FB; }
+  .legend .sw2 { background: #85B7EB; }
+  .legend .sw3 { background: #378ADD; }
+
+  /* day panel */
+  .panel {
+    margin: 22px 0 0;
+    border-top: 1px solid var(--color-border-tertiary);
+    padding-top: 18px;
+  }
+
+  .panel-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 0 0 12px;
+  }
+
+  .panel-head .pdate {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .panel-head .ptotal {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+  }
+
+  .log-list {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+  }
+
+  .log-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--color-border-tertiary);
+  }
+
+  .log-list li:last-child { border-bottom: none; }
+
+  .log-list .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .log-list .lname {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+    flex: 1;
+  }
+
+  .log-list .lmin {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+  }
+
+  .empty-note {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    margin: 0 0 16px;
+    line-height: 1.5;
+  }
+
+  .quick-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-text-tertiary);
+    margin: 0 0 10px;
+  }
+
+  .quick-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .quick-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-background-primary);
+    border: 1px solid var(--color-border-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.18s ease, transform 0.08s ease;
+    min-width: 0;
+  }
+
+  .quick-btn:hover { background: var(--color-background-secondary); }
+  .quick-btn:active { transform: scale(0.98); }
+
+  .quick-btn .qicon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    flex-shrink: 0;
+  }
+
+  .quick-btn .qtxt {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .quick-btn .qname {
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .quick-btn .qdur {
+    font-size: 11px;
+    color: var(--color-text-secondary);
+  }
+
+  .quick-btn[disabled] {
+    opacity: 0.4;
+    cursor: default;
+  }
+</style>
+</head>
+<body>
+
+  <div class="page-header">
+    <h1>Workout tracker</h1>
+    <p>Month · how blue did you get?</p>
+  </div>
+
+  <main class="phone">
+    <header class="month-head">
+      <p class="title">June</p>
+      <p class="sub">Tap a day to see what you did.</p>
+    </header>
+
+    <section class="tray" aria-label="This week">
+      <p class="tray-line"><span id="trayCount">4</span> left this week</p>
+      <div class="goal-row" id="goalRow"></div>
+    </section>
+
+    <section aria-label="June calendar">
+      <div class="cal-weekdays">
+        <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+      </div>
+      <div class="cal-grid" id="calGrid"></div>
+      <div class="legend" aria-hidden="true">
+        <span>less</span>
+        <span class="sw sw0"></span>
+        <span class="sw sw1"></span>
+        <span class="sw sw2"></span>
+        <span class="sw sw3"></span>
+        <span>more</span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel" aria-label="Selected day"></section>
+  </main>
+
+<script>
+  var WORKOUTS = {
+    tonal1:  { name:'Tonal · Workout 1', short:'Tonal 1', color:'#378ADD', dur:15, goal:2, icon:'ti-bolt' },
+    tonal2:  { name:'Tonal · Workout 2', short:'Tonal 2', color:'#185FA5', dur:15, goal:2, icon:'ti-bolt' },
+    pilates: { name:'Pilates', short:'Pilates', color:'#1D9E75', dur:25, goal:3, icon:'ti-yoga' },
+    hills:   { name:'Hills', short:'Hills', color:'#BA7517', dur:40, goal:4, icon:'ti-mountain' },
+    custom:  { name:'Custom session', short:'Custom', color:'#6b6a64', dur:30, goal:0, icon:'ti-plus' }
+  };
+  var ORDER = ['tonal1','tonal2','pilates','hills'];
+
+  var TODAY = 20;
+  var WEEK = [15,16,17,18,19,20,21];
+
+  var entries = {};
+  for (var d = 1; d <= 30; d++) entries[d] = [];
+
+  function add(d, wid, min) {
+    entries[d].push({ wid: wid, min: min });
+  }
+
+  var fillPlan = {
+    1:['tonal1','pilates'],
+    2:['hills'],
+    3:['tonal2','pilates'],
+    4:['tonal1'],
+    5:[],
+    6:['tonal1','pilates','hills'],
+    7:[],
+    8:['hills'],
+    9:['tonal2','pilates'],
+    10:[],
+    11:['tonal1','hills'],
+    12:['pilates'],
+    13:['tonal2','hills'],
+    14:[]
+  };
+  for (var dd in fillPlan) {
+    fillPlan[dd].forEach(function(wid){ add(parseInt(dd,10), wid, WORKOUTS[wid].dur); });
+  }
+
+  add(15,'tonal1',15); add(15,'hills',40);
+  add(16,'pilates',25); add(16,'hills',35);
+  add(17,'tonal2',15);
+  add(18,'pilates',25); add(18,'hills',52);
+
+  var selected = TODAY;
+
+  function dayTotalCount(d) { return entries[d].length; }
+
+  function levelFor(count) {
+    if (count <= 0) return 0;
+    if (count === 1) return 1;
+    if (count === 2) return 2;
+    return 3;
+  }
+
+  function weekCount(wid) {
+    var c = 0;
+    WEEK.forEach(function(d){
+      entries[d].forEach(function(e){ if (e.wid === wid) c++; });
+    });
+    return c;
+  }
+
+  function buildCalendar() {
+    var grid = document.getElementById('calGrid');
+    grid.innerHTML = '';
+    for (var i = 1; i <= 30; i++) {
+      (function(d){
+        var cell = document.createElement('div');
+        cell.className = 'day';
+        cell.id = 'day-' + d;
+        cell.textContent = d;
+        cell.setAttribute('role','button');
+        cell.setAttribute('aria-label', 'June ' + d);
+        if (d > TODAY) {
+          cell.classList.add('future');
+        } else {
+          cell.addEventListener('click', function(){ selectDay(d); });
+        }
+        grid.appendChild(cell);
+      })(i);
+    }
+    refreshCells();
+  }
+
+  function refreshCells() {
+    for (var d = 1; d <= 30; d++) {
+      var cell = document.getElementById('day-' + d);
+      if (!cell) continue;
+      cell.classList.remove('lvl1','lvl2','lvl3','today','selected');
+      var lvl = levelFor(dayTotalCount(d));
+      if (lvl === 1) cell.classList.add('lvl1');
+      else if (lvl === 2) cell.classList.add('lvl2');
+      else if (lvl === 3) cell.classList.add('lvl3');
+      if (d === TODAY) cell.classList.add('today');
+      if (d === selected) cell.classList.add('selected');
+    }
+  }
+
+  function refreshTray() {
+    var row = document.getElementById('goalRow');
+    row.innerHTML = '';
+    var left = 0;
+    ORDER.forEach(function(wid){
+      var w = WORKOUTS[wid];
+      var c = weekCount(wid);
+      left += Math.max(0, w.goal - c);
+      var chip = document.createElement('div');
+      chip.className = 'goal-chip' + (c >= w.goal ? ' done' : '');
+      var dot = document.createElement('span');
+      dot.className = 'dot';
+      dot.style.background = w.color;
+      var cnt = document.createElement('span');
+      cnt.className = 'count';
+      cnt.textContent = c + '/' + w.goal;
+      chip.appendChild(dot);
+      chip.appendChild(cnt);
+      row.appendChild(chip);
+    });
+    document.getElementById('trayCount').textContent = left;
+  }
+
+  function selectDay(d) {
+    selected = d;
+    refreshCells();
+    renderPanel();
+  }
+
+  function renderPanel() {
+    var panel = document.getElementById('panel');
+    var list = entries[selected];
+    var totalMin = 0;
+    list.forEach(function(e){ totalMin += e.min; });
+
+    var html = '';
+    html += '<div class="panel-head">';
+    html += '<p class="pdate">June ' + selected + '</p>';
+    if (list.length > 0) {
+      html += '<span class="ptotal">' + Math.round(totalMin) + ' min</span>';
+    }
+    html += '</div>';
+
+    if (list.length === 0) {
+      if (selected === TODAY) {
+        html += '<p class="empty-note">Nothing logged yet — it’s Saturday.</p>';
+      } else {
+        html += '<p class="empty-note">Nothing logged this day.</p>';
+      }
+    } else {
+      html += '<ul class="log-list">';
+      list.forEach(function(e){
+        var w = WORKOUTS[e.wid];
+        html += '<li>';
+        html += '<span class="dot" style="background:' + w.color + '"></span>';
+        html += '<span class="lname">' + w.name + '</span>';
+        html += '<span class="lmin">' + Math.round(e.min) + ' min</span>';
+        html += '</li>';
+      });
+      html += '</ul>';
+    }
+
+    html += '<p class="quick-label">Add to this day</p>';
+    html += '<div class="quick-grid">';
+    ORDER.forEach(function(wid){
+      var w = WORKOUTS[wid];
+      html += '<button class="quick-btn" data-wid="' + wid + '" data-min="' + w.dur + '">';
+      html += '<span class="qicon" style="color:' + w.color + '"><i class="ti ' + w.icon + '" aria-hidden="true"></i></span>';
+      html += '<span class="qtxt"><span class="qname">' + (w.short || w.name) + '</span><span class="qdur">' + w.dur + ' min</span></span>';
+      html += '</button>';
+    });
+    html += '<button class="quick-btn" data-wid="custom" data-min="30">';
+    html += '<span class="qicon" style="color:var(--color-text-secondary)"><i class="ti ti-plus" aria-hidden="true"></i></span>';
+    html += '<span class="qtxt"><span class="qname">Custom</span><span class="qdur">30 min</span></span>';
+    html += '</button>';
+    html += '</div>';
+
+    panel.innerHTML = html;
+
+    var btns = panel.querySelectorAll('.quick-btn');
+    btns.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var wid = btn.getAttribute('data-wid');
+        var min = parseInt(btn.getAttribute('data-min'), 10);
+        add(selected, wid, min);
+        refreshCells();
+        refreshTray();
+        renderPanel();
+      });
+    });
+  }
+
+  buildCalendar();
+  refreshTray();
+  renderPanel();
+</script>
+</body>
+</html>
