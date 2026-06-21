@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formations — ESPN-style (2 tabs)</title>
+<style>
+  :root{--ink:#1d2127;--muted:#6b7280;--line:rgba(0,0,0,.09);--bg:#f1efea;--card:#fff;
+    --pitch1:#1f9e57;--pitch2:#178a4a;--green:#12a150;--green-d:#0c7a3c;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',sans-serif;
+    background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;padding-bottom:80px;}
+  .banner{background:linear-gradient(135deg,var(--pitch1),var(--pitch2));color:#fff;padding:38px 24px 30px;text-align:center;}
+  .banner h1{font-size:26px;font-weight:800;}
+  .banner p{font-size:14.5px;opacity:.93;margin:8px auto 0;max-width:660px;line-height:1.5;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px;}
+  .note{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:-18px;
+    position:relative;box-shadow:0 3px 16px rgba(0,0,0,.06);font-size:13.5px;color:#444;line-height:1.55;}
+  .note b{color:var(--ink);}
+  .note .pill{display:inline-block;background:rgba(18,161,80,.12);color:var(--green-d);font-weight:700;font-size:11.5px;padding:2px 9px;border-radius:20px;margin-right:6px;}
+
+  .games{display:flex;flex-wrap:wrap;gap:22px;justify-content:center;margin-top:26px;}
+  .game{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+    box-shadow:0 3px 16px rgba(0,0,0,.06);width:430px;max-width:100%;}
+  .ghead{padding:15px 18px 12px;border-bottom:1px solid var(--line);}
+  .gtitle{font-size:17px;font-weight:800;display:flex;align-items:center;gap:8px;}
+  .gsub{font-size:12px;color:var(--muted);margin-top:3px;}
+  .espn-link{display:inline-flex;align-items:center;gap:5px;margin-top:9px;font-size:12.5px;font-weight:700;
+    color:#fff;background:#cc0000;padding:6px 11px;border-radius:8px;text-decoration:none;}
+  .espn-link:hover{background:#a30000;}
+
+  .tabs{display:flex;gap:6px;padding:12px 14px 0;}
+  .tab{flex:1;text-align:center;font-size:13.5px;font-weight:700;color:var(--muted);background:#f1efea;
+    border:1px solid var(--line);border-radius:10px 10px 0 0;padding:9px 6px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;}
+  .tab.on{color:#fff;}
+  .tab .dot{width:9px;height:9px;border-radius:50%;}
+
+  .pitchwrap{padding:0 14px 8px;}
+  .pitch{position:relative;width:100%;aspect-ratio:.66;border-radius:0 0 12px 12px;overflow:hidden;
+    background:repeating-linear-gradient(var(--pitch1) 0 9.09%,var(--pitch2) 9.09% 18.18%);}
+  .markings{position:absolute;inset:0;pointer-events:none;}
+  .markings .box{position:absolute;left:50%;transform:translateX(-50%);border:1.5px solid rgba(255,255,255,.28);}
+  .markings .pbox-top{top:0;width:46%;height:13%;border-top:0;border-radius:0 0 4px 4px;}
+  .markings .pbox-bot{bottom:0;width:46%;height:13%;border-bottom:0;border-radius:4px 4px 0 0;}
+  .markings .gbox-top{top:0;width:22%;height:5%;border-top:0;}
+  .markings .gbox-bot{bottom:0;width:22%;height:5%;border-bottom:0;}
+  .markings .halfway{position:absolute;top:50%;left:0;right:0;height:0;border-top:1.5px solid rgba(255,255,255,.28);}
+  .markings .circle{position:absolute;top:50%;left:50%;width:24%;aspect-ratio:1;transform:translate(-50%,-50%);
+    border:1.5px solid rgba(255,255,255,.28);border-radius:50%;}
+
+  .player{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;width:64px;}
+  .shot{position:relative;width:46px;height:46px;border-radius:50%;background:#fff center/cover no-repeat;
+    border:2.5px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.35);}
+  .shot .num{position:absolute;bottom:-3px;right:-4px;min-width:18px;height:18px;border-radius:9px;color:#fff;
+    font-size:10.5px;font-weight:800;display:flex;align-items:center;justify-content:center;padding:0 3px;border:1.5px solid #fff;}
+  .pname{margin-top:3px;font-size:10px;font-weight:700;color:#fff;background:rgba(0,0,0,.5);
+    padding:1px 6px;border-radius:6px;white-space:nowrap;max-width:78px;overflow:hidden;text-overflow:ellipsis;text-align:center;}
+
+  .foot{text-align:center;color:#9aa0a6;font-size:12px;margin-top:34px;line-height:1.6;}
+  .foot a{color:var(--green-d);text-decoration:none;font-weight:600;}
+</style>
+</head>
+<body>
+  <div class="banner">
+    <h1>⚽ Formations — ESPN-style, two tabs</h1>
+    <p>One tab per team, each on the full pitch (so there's room for headshots + numbers), positioned the way ESPN does it. Today's games below — tap the red button on each to open ESPN and compare.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="note">
+      <span class="pill">Why this fixes it</span>
+      The old view crammed both teams onto one pitch and ordered players by formation size, which scrambled them (ESPN's <b>formationPlace</b> isn't a simple back-to-front sequence, and some feeds only give coarse <b>D/M/F</b> positions). Here each player is dropped onto ESPN's exact grid slot for their formation + place — so it matches ESPN one-to-one. Tap a team tab to switch sides.
+    </div>
+
+    <div class="games" id="games"></div>
+
+    <div class="foot">
+      Live ESPN lineups · headshots from ESPN · positions from ESPN formationPlace + per-formation templates<br>
+      <a href="mockups.html">← Back to all mockups</a>
+    </div>
+  </div>
+
+<script>
+// ESPN positions each formation on a fixed grid; formationPlace (1–11) indexes into it.
+// Coords are [x,y] fractions, GK at the bottom, attack upward. Derived to match ESPN exactly.
+const TEMPLATES = {
+  "4-2-3-1":{1:[.50,.93],2:[.86,.73],3:[.14,.73],4:[.37,.55],5:[.61,.73],6:[.39,.73],7:[.83,.33],8:[.63,.55],9:[.50,.13],10:[.50,.33],11:[.17,.33]},
+  "5-3-2":  {1:[.50,.93],2:[.90,.73],3:[.10,.73],4:[.30,.73],5:[.50,.73],6:[.70,.73],7:[.80,.47],8:[.50,.47],9:[.35,.18],10:[.65,.18],11:[.20,.47]},
+  "3-4-2-1":{1:[.50,.93],2:[.88,.55],3:[.12,.55],4:[.30,.75],5:[.50,.75],6:[.70,.75],7:[.62,.55],8:[.38,.55],9:[.50,.12],10:[.65,.34],11:[.35,.34]},
+};
+const COLORS = { ESP:"#e11d2a", KSA:"#1a8f4c", TUN:"#e70013", JPN:"#13235b" };
+const GAMES = [{"eid":"760449","home":{"team":"Tunisia","abbr":"TUN","formation":"3-4-2-1","players":[{"place":"1","pos":"G","jersey":"16","name":"A. Dahmen","id":"265272"},{"place":"5","pos":"CD","jersey":"3","name":"M. Talbi","id":"265099"},{"place":"4","pos":"CD-L","jersey":"4","name":"O. Rekik","id":"303848"},{"place":"6","pos":"CD-R","jersey":"6","name":"D. Bronn","id":"240371"},{"place":"8","pos":"CM-L","jersey":"17","name":"E. Skhiri","id":"209595"},{"place":"7","pos":"CM-R","jersey":"25","name":"A. Slimane","id":"302944"},{"place":"3","pos":"LM","jersey":"2","name":"A. Abdi","id":"265234"},{"place":"2","pos":"RM","jersey":"20","name":"Y. Valery","id":"240588"},{"place":"9","pos":"F","jersey":"26","name":"S. Tounekti","id":"303702"},{"place":"11","pos":"CF-L","jersey":"10","name":"H. Mejbri","id":"300007"},{"place":"10","pos":"CF-R","jersey":"8","name":"E. Saad","id":"323950"}]},"away":{"team":"Japan","abbr":"JPN","formation":"3-4-2-1","players":[{"place":"1","pos":"G","jersey":"1","name":"Z. Suzuki","id":"265958"},{"place":"5","pos":"CD","jersey":"4","name":"K. Itakura","id":"238033"},{"place":"4","pos":"CD-L","jersey":"21","name":"H. Ito","id":"97111"},{"place":"6","pos":"CD-R","jersey":"22","name":"T. Tomiyasu","id":"238004"},{"place":"8","pos":"CM-L","jersey":"7","name":"A. Tanaka","id":"253173"},{"place":"7","pos":"CM-R","jersey":"24","name":"K. Sano","id":"357030"},{"place":"3","pos":"LM","jersey":"13","name":"K. Nakamura","id":"265953"},{"place":"2","pos":"RM","jersey":"10","name":"R. Doan","id":"219627"},{"place":"9","pos":"F","jersey":"18","name":"A. Ueda","id":"274277"},{"place":"11","pos":"CF-L","jersey":"15","name":"D. Kamada","id":"219362"},{"place":"10","pos":"CF-R","jersey":"14","name":"J. Ito","id":"219350"}]}},{"eid":"760453","home":{"team":"Spain","abbr":"ESP","formation":"4-2-3-1","players":[{"place":"1","pos":"G","jersey":"23","name":"U. Simón","id":"222375"},{"place":"5","pos":"D","jersey":"22","name":"P. Cubarsí","id":"368992"},{"place":"3","pos":"D","jersey":"24","name":"M. Cucurella","id":"259910"},{"place":"2","pos":"D","jersey":"12","name":"P. Porro","id":"268533"},{"place":"6","pos":"D","jersey":"14","name":"A. Laporte","id":"159317"},{"place":"11","pos":"M","jersey":"15","name":"Á. Baena","id":"297373"},{"place":"4","pos":"M","jersey":"16","name":"Rodri","id":"231828"},{"place":"7","pos":"M","jersey":"19","name":"L. Yamal","id":"362150"},{"place":"10","pos":"M","jersey":"10","name":"D. Olmo","id":"227765"},{"place":"8","pos":"M","jersey":"20","name":"Pedri","id":"250465"},{"place":"9","pos":"F","jersey":"21","name":"M. Oyarzabal","id":"229018"}]},"away":{"team":"Saudi Arabia","abbr":"KSA","formation":"5-3-2","players":[{"place":"1","pos":"G","jersey":"21","name":"M. Al-Owais","id":"247018"},{"place":"2","pos":"D","jersey":"12","name":"S. Abdulhamid","id":"286011"},{"place":"4","pos":"D","jersey":"4","name":"A. Al-Amri","id":"256667"},{"place":"3","pos":"D","jersey":"24","name":"M. Al-Harbi","id":"330543"},{"place":"6","pos":"D","jersey":"5","name":"H. Al-Tambakti","id":"256666"},{"place":"5","pos":"D","jersey":"3","name":"A. Lajami","id":"296972"},{"place":"8","pos":"M","jersey":"15","name":"A. Al-Khaibari","id":"271461"},{"place":"7","pos":"M","jersey":"6","name":"N. Al-Dawsari","id":"270417"},{"place":"11","pos":"M","jersey":"7","name":"M. Al-Juwayr","id":"315523"},{"place":"10","pos":"F","jersey":"9","name":"F. Al-Brikan","id":"283331"},{"place":"9","pos":"F","jersey":"10","name":"S. Al-Dawsari","id":"163850"}]}}];
+
+function headshot(id){ return `https://a.espncdn.com/i/headshots/soccer/players/full/${id}.png`; }
+
+function pitchHTML(team){
+  const tpl = TEMPLATES[team.formation];
+  const color = COLORS[team.abbr] || "#333";
+  const markings = `<div class="markings">
+    <div class="box pbox-top"></div><div class="box pbox-bot"></div>
+    <div class="box gbox-top"></div><div class="box gbox-bot"></div>
+    <div class="halfway"></div><div class="circle"></div></div>`;
+  const dots = team.players.map(p=>{
+    const slot = tpl && tpl[p.place] ? tpl[p.place] : [0.5,0.5];
+    const x = slot[0]*100, y = slot[1]*100;
+    return `<div class="player" style="left:${x}%;top:${y}%">
+      <div class="shot" style="background-image:url('${headshot(p.id)}');border-color:${color}">
+        <span class="num" style="background:${color}">${p.jersey}</span>
+      </div>
+      <div class="pname">${p.name}</div>
+    </div>`;
+  }).join("");
+  return `<div class="pitch">${markings}${dots}</div>`;
+}
+
+function render(){
+  document.getElementById('games').innerHTML = GAMES.map((g,gi)=>{
+    const hc = COLORS[g.home.abbr], ac = COLORS[g.away.abbr];
+    return `<div class="game">
+      <div class="ghead">
+        <div class="gtitle">${g.home.team} <span style="color:var(--muted);font-weight:600">vs</span> ${g.away.team}</div>
+        <div class="gsub">${g.home.formation} &nbsp;·&nbsp; ${g.away.formation}</div>
+        <a class="espn-link" href="https://www.espn.com/soccer/match/_/gameId/${g.eid}" target="_blank" rel="noopener">Compare on ESPN ↗</a>
+      </div>
+      <div class="tabs">
+        <div class="tab on" style="background:${hc};border-color:${hc}" data-g="${gi}" data-s="home">
+          <span class="dot" style="background:#fff"></span>${g.home.team}</div>
+        <div class="tab" data-g="${gi}" data-s="away">
+          <span class="dot" style="background:${ac}"></span>${g.away.team}</div>
+      </div>
+      <div class="pitchwrap" id="pitch-${gi}">${pitchHTML(g.home)}</div>
+    </div>`;
+  }).join("");
+
+  document.querySelectorAll('.tab').forEach(t=>{
+    t.onclick=()=>{
+      const gi=+t.dataset.g, side=t.dataset.s, g=GAMES[gi];
+      const team=g[side], col=COLORS[team.abbr];
+      // tab styling
+      t.parentElement.querySelectorAll('.tab').forEach(x=>{
+        x.classList.remove('on'); x.style.background='#f1efea'; x.style.borderColor='var(--line)'; x.style.color='var(--muted)';
+        x.querySelector('.dot').style.background=COLORS[g[x.dataset.s].abbr];
+      });
+      t.classList.add('on'); t.style.background=col; t.style.borderColor=col; t.style.color='#fff';
+      t.querySelector('.dot').style.background='#fff';
+      document.getElementById('pitch-'+gi).innerHTML=pitchHTML(team);
+    };
+  });
+}
+render();
+</script>
+</body>
+</html>
