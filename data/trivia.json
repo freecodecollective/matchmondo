@@ -220,7 +220,8 @@
         "8"
       ],
       "answer": 2,
-      "explanation": "The host has won six times: Uruguay (1930), Italy (1934), England (1966), West Germany (1974), Argentina (1978), and France (1998)."
+      "explanation": "The host has won six times: Uruguay (1930), Italy (1934), England (1966), West Germany (1974), Argentina (1978), and France (1998).",
+      "approved": true
     },
     {
       "id": "v-lincoln-philly",
@@ -233,7 +234,8 @@
         "Franklin Field"
       ],
       "answer": 0,
-      "explanation": "Lincoln Financial Field in Philadelphia is home to the Eagles and will host group-stage and knockout matches."
+      "explanation": "Lincoln Financial Field in Philadelphia is home to the Eagles and will host group-stage and knockout matches.",
+      "needsReview": true
     },
     {
       "id": "h-2018-champion",
