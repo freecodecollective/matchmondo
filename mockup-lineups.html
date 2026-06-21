@@ -20,7 +20,7 @@
   .legend{display:flex;flex-wrap:wrap;gap:16px;align-items:center;font-size:12.5px;color:#444;margin-top:14px;}
   .legend b{color:var(--ink);}
   .legend .lg{display:inline-flex;align-items:center;gap:6px;}
-  .lgball{width:20px;height:20px;border-radius:50%;background:#fff;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;font-size:12px;box-shadow:0 1px 2px rgba(0,0,0,.12);}
+  .lgball{display:inline-flex;align-items:center;justify-content:center;font-size:20px;}
   .lgA{width:20px;height:20px;border-radius:50%;background:#fff;color:#0c7a3c;border:1.5px solid #0c7a3c;font-size:12px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;}
   .lgcard{width:13px;height:18px;border-radius:2px;border:1px solid rgba(0,0,0,.3);display:inline-block;}
   .lgup{width:20px;height:20px;border-radius:50%;background:#1f9e57;color:#fff;font-size:12px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;}
@@ -50,13 +50,17 @@
   .shot .num{position:absolute;bottom:-4px;right:-5px;min-width:19px;height:19px;border-radius:10px;font-size:10.5px;font-weight:800;display:flex;align-items:center;justify-content:center;padding:0 4px;border:1.5px solid #fff;z-index:3;}
   .pname{margin-top:4px;font-size:9.5px;font-weight:700;color:#fff;background:rgba(0,0,0,.5);padding:1px 6px;border-radius:6px;white-space:nowrap;max-width:78px;overflow:hidden;text-overflow:ellipsis;}
   /* arc markers on top of headshot */
-  .m{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;font-weight:800;line-height:1;box-shadow:0 1px 3px rgba(0,0,0,.45);z-index:4;}
-  .m-goal{width:20px;height:20px;border-radius:50%;background:#fff;font-size:12px;}
-  .m-assist{width:20px;height:20px;border-radius:50%;background:#fff;color:#0c7a3c;border:1.5px solid #0c7a3c;font-size:12px;}
-  .m-subon{width:20px;height:20px;border-radius:50%;background:#1f9e57;color:#fff;border:1.5px solid #fff;font-size:13px;}
-  .m-suboff{width:20px;height:20px;border-radius:50%;background:#d1453b;color:#fff;border:1.5px solid #fff;font-size:13px;}
-  .m-yellow{width:12px;height:17px;border-radius:2px;background:#f4c20d;border:1px solid rgba(0,0,0,.3);}
-  .m-red{width:12px;height:17px;border-radius:2px;background:#e0322b;border:1px solid rgba(0,0,0,.3);}
+  .m{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;font-weight:800;line-height:1;z-index:4;}
+  .m-goal{font-size:26px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.55));}
+  .m-assist{width:21px;height:21px;border-radius:50%;background:#fff;color:#0c7a3c;border:2px solid #0c7a3c;font-size:12px;box-shadow:0 1px 3px rgba(0,0,0,.4);}
+  .m-subon{width:21px;height:21px;border-radius:50%;background:#1f9e57;color:#fff;border:2px solid #fff;font-size:13px;box-shadow:0 1px 3px rgba(0,0,0,.4);}
+  .m-suboff{width:21px;height:21px;border-radius:50%;background:#d1453b;color:#fff;border:2px solid #fff;font-size:13px;box-shadow:0 1px 3px rgba(0,0,0,.4);}
+  .m-yellow{width:13px;height:18px;border-radius:2px;background:#f4c20d;border:1px solid rgba(0,0,0,.3);box-shadow:0 1px 3px rgba(0,0,0,.4);}
+  .m-red{width:13px;height:18px;border-radius:2px;background:#e0322b;border:1px solid rgba(0,0,0,.3);box-shadow:0 1px 3px rgba(0,0,0,.4);}
+  /* bench: smaller event markers */
+  .bp .m-goal{font-size:18px;}
+  .bp .m-assist,.bp .m-subon,.bp .m-suboff{width:15px;height:15px;font-size:9px;border-width:1.5px;}
+  .bp .m-yellow,.bp .m-red{width:9px;height:13px;}
 
   /* sideline (different turf) below the keeper */
   .sideline{background:repeating-linear-gradient(90deg,var(--side1) 0 14px,var(--side2) 14px 28px);
@@ -161,9 +165,9 @@ function marks(p,benched){
 }
 function arc(ms,R){
   if(!ms.length) return '';
-  const N=ms.length;
+  const step=40; // degrees between markers, fanning out from 12 o'clock
   return ms.map((t,i)=>{
-    const deg=N===1?0:(-58+116*i/(N-1)), a=deg*Math.PI/180;
+    const k=Math.ceil(i/2), deg=i===0?0:(i%2?-1:1)*k*step, a=deg*Math.PI/180;
     const dx=(R*Math.sin(a)).toFixed(1), dy=(-R*Math.cos(a)).toFixed(1);
     return `<div class="m m-${t}" style="left:calc(50% + ${dx}px);top:calc(50% + ${dy}px)">${MG[t]||''}</div>`;
   }).join('');
@@ -180,10 +184,10 @@ function card(g){
   const pos=positions(g.onField);
   const dots=pos.map(d=>{const p=d.p;
     return `<div class="player" style="left:${d.x*100}%;top:${d.y*100}%">
-      ${shot(p,ring,23,g.color,badgeText,false)}<div class="pname">${p.name||''}</div></div>`;
+      ${shot(p,ring,34,g.color,badgeText,false)}<div class="pname">${p.name||''}</div></div>`;
   }).join('');
   const bench=(g.bench||[]).map(p=>
-    `<div class="bp">${shot(p,ring,16,g.color,badgeText,true)}<div class="pname">${p.name||''}</div></div>`).join('');
+    `<div class="bp">${shot(p,ring,26,g.color,badgeText,true)}<div class="pname">${p.name||''}</div></div>`).join('');
   const coach=g.coach||{};
   const initials=(coach.name||'').split(/\s+/).map(w=>w[0]||'').join('').slice(0,2).toUpperCase();
   const cshotInner=coach.headshot?'':`<span class="cinit">${initials}</span>`;
