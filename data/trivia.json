@@ -55,7 +55,8 @@
         "South Korea & China"
       ],
       "answer": 1,
-      "explanation": "South Korea and Japan co-hosted in 2002 — the first time two nations shared the event."
+      "explanation": "South Korea and Japan co-hosted in 2002 — the first time two nations shared the event.",
+      "claudeTask": "say who won the event and who they beat and any famous players on the winner and any other fun facts"
     },
     {
       "id": "t-how-many-groups",
