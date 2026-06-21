@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-21 05:58 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-06-21 07:53 UTC by scripts/update-data.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -968,7 +968,7 @@ window.WC_MATCHES = [
     "utc": "2026-06-29T20:30:00Z",
     "stage": "Round of 32",
     "group": null,
-    "home": "1E",
+    "home": "Germany",
     "away": "3ABCDF",
     "venue": "Gillette Stadium",
     "city": "Foxborough (Boston), MA",
