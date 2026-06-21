@@ -114,7 +114,7 @@
       ],
       "answer": 2,
       "explanation": "Single yellows are wiped after the group stage, and again after the quarter-finals, so an early caution can't cost a player the final. Red cards are different: a straight red earns an automatic one-match ban minimum, but the disciplinary committee can extend it depending on severity. These suspensions carry across stages — a red card in a quarter-final means missing the semi-final, and yes, even a final.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "c-fan-fest",
