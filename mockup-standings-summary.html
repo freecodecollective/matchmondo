@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Standings summary — clickable options</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --bg:#eef1ef; --card:#fff; --ink:#1c1c1e; --sub:#6b6f76; --line:rgba(0,0,0,.08);
+    --green:#1f7d45; --green-l:#2f9e5b; --red:#d1453b; --gold:#D4A017; --chip:#f1f1f0;
+  }
+  body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',sans-serif;
+    background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+  .banner{background:linear-gradient(135deg,#1f7d45,#2f9e5b);color:#fff;padding:36px 24px 28px;text-align:center;}
+  .banner h1{font-size:24px;font-weight:800;}
+  .banner p{font-size:14px;opacity:.95;margin-top:8px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.5;}
+  .wrap{max-width:470px;margin:0 auto;padding:0 18px;}
+  .note{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:-16px;
+    box-shadow:0 3px 16px rgba(0,0,0,.07);font-size:13px;color:var(--sub);line-height:1.5;}
+  .note b{color:var(--ink);}
+
+  .opt{margin-top:30px;}
+  .opt-head{display:flex;align-items:baseline;gap:8px;margin:0 4px 4px;}
+  .opt-tag{font-size:12px;font-weight:800;color:#fff;background:var(--green-l);padding:2px 9px;border-radius:20px;}
+  .opt-name{font-size:16px;font-weight:700;}
+  .opt-desc{font-size:12.5px;color:var(--sub);margin:0 4px 12px;line-height:1.45;}
+  .pros{font-size:11.5px;color:var(--sub);margin:9px 4px 0;line-height:1.5;}
+  .pros b{color:var(--green);}
+
+  /* app-screen container */
+  .screen{background:var(--card);border-radius:18px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,.08);
+    border:1px solid var(--line);position:relative;overflow:hidden;}
+
+  /* summary strip */
+  .strip{display:flex;gap:8px;}
+  .scard{flex:1;background:#f4f5f4;border:2px solid transparent;border-radius:13px;padding:11px 6px 9px;text-align:center;
+    cursor:pointer;font-family:inherit;transition:all .15s;}
+  .scard:hover{background:#eceeec;}
+  .scard .snum{font-size:25px;font-weight:800;line-height:1;}
+  .scard .slabel{font-size:10px;font-weight:700;letter-spacing:.5px;color:var(--sub);text-transform:uppercase;margin-top:5px;}
+  .snum.through{color:var(--green-l);} .snum.out{color:var(--red);} .snum.contention{color:var(--ink);}
+  .scard.on{background:#fff;}
+  .scard.on.through{border-color:var(--green-l);box-shadow:0 0 0 3px rgba(47,158,91,.15);}
+  .scard.on.out{border-color:var(--red);box-shadow:0 0 0 3px rgba(209,69,59,.15);}
+  .scard.on.contention{border-color:#9aa0a6;box-shadow:0 0 0 3px rgba(120,120,120,.15);}
+
+  .legend{font-size:11px;color:var(--sub);text-align:center;margin:10px 0 4px;}
+  .legend b{color:var(--ink);font-weight:700;}
+
+  /* group table */
+  .gtitle{font-size:13px;font-weight:800;background:#faf6ec;border-radius:9px;padding:7px 10px;margin:12px 0 2px;}
+  .ghead,.row{display:grid;grid-template-columns:20px 1fr 30px 34px;align-items:center;gap:6px;padding:7px 8px;}
+  .ghead{font-size:10px;font-weight:700;color:#a8acb2;text-transform:uppercase;letter-spacing:.4px;padding-bottom:3px;}
+  .row{border-top:1px solid #f0f0ef;border-left:3px solid transparent;border-radius:0 6px 6px 0;transition:opacity .18s,background .18s;}
+  .row .pos{font-size:12px;color:#a8acb2;text-align:center;}
+  .row .team{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;min-width:0;}
+  .row .team img{width:22px;height:15px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 .5px rgba(0,0,0,.1);flex:0 0 auto;}
+  .row .team span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .row .pts{font-size:13.5px;font-weight:800;text-align:right;}
+  .row .gd{font-size:12px;color:var(--sub);text-align:right;}
+  .row.dim{opacity:.28;}
+  .row.hl.through{border-left-color:var(--green-l);background:rgba(47,158,91,.07);}
+  .row.hl.out{border-left-color:var(--red);background:rgba(209,69,59,.06);}
+  .row.hl.contention{border-left-color:#c9ccd1;background:rgba(120,120,120,.05);}
+  .crown{font-size:11px;}
+
+  /* filter header (option D) */
+  .filterbar{display:none;align-items:center;justify-content:space-between;gap:8px;margin-top:12px;
+    background:#f4f5f4;border-radius:10px;padding:8px 12px;font-size:13px;font-weight:700;}
+  .filterbar.show{display:flex;}
+  .filterbar .clear{font-size:12.5px;font-weight:700;color:var(--green-l);cursor:pointer;background:none;border:none;font-family:inherit;}
+
+  /* accordion panel (option B) */
+  .panel{display:none;margin-top:10px;background:#f7f8f7;border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  .panel.show{display:block;}
+  .panel-h{font-size:12px;font-weight:800;letter-spacing:.3px;padding:9px 12px;color:#fff;}
+  .panel-h.through{background:var(--green-l);} .panel-h.out{background:var(--red);} .panel-h.contention{background:#7a8088;}
+  .plist .pitem{display:flex;align-items:center;gap:9px;padding:8px 12px;border-top:1px solid #ececec;font-size:13px;}
+  .plist .pitem:first-child{border-top:none;}
+  .plist img{width:22px;height:15px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 .5px rgba(0,0,0,.1);}
+  .plist .grp{margin-left:auto;font-size:11px;color:var(--sub);}
+
+  /* bottom sheet (option C) */
+  .scrim{position:absolute;inset:0;background:rgba(0,0,0,.32);opacity:0;pointer-events:none;transition:opacity .2s;border-radius:18px;z-index:5;}
+  .scrim.show{opacity:1;pointer-events:auto;}
+  .sheet{position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:18px 18px 0 0;z-index:6;
+    transform:translateY(110%);transition:transform .26s cubic-bezier(.2,.8,.2,1);box-shadow:0 -6px 24px rgba(0,0,0,.18);max-height:86%;display:flex;flex-direction:column;}
+  .sheet.show{transform:translateY(0);}
+  .sheet .grab{width:38px;height:5px;border-radius:3px;background:#d7d9dd;margin:8px auto 4px;}
+  .sheet-h{display:flex;align-items:center;gap:8px;padding:6px 16px 10px;border-bottom:1px solid var(--line);}
+  .sheet-h .dot{width:11px;height:11px;border-radius:50%;}
+  .sheet-h .t{font-size:16px;font-weight:800;}
+  .sheet-h .x{margin-left:auto;font-size:14px;font-weight:700;color:var(--green-l);cursor:pointer;background:none;border:none;font-family:inherit;}
+  .sheet-list{overflow:auto;}
+  .sheet-row{display:flex;align-items:center;gap:10px;padding:11px 16px;border-top:1px solid #f0f0ef;font-size:14px;}
+  .sheet-row img{width:26px;height:18px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 .5px rgba(0,0,0,.1);}
+  .sheet-row .nm{font-weight:600;}
+  .sheet-row .meta{margin-left:auto;font-size:12px;color:var(--sub);}
+  .sheet-row .chev{color:#c4c0b8;font-size:18px;}
+
+  .hint{font-size:11px;color:#b0b4b9;text-align:center;margin-top:8px;font-style:italic;}
+  .foot{text-align:center;font-size:12px;color:#9aa0a6;margin-top:44px;line-height:1.6;}
+  .foot a{color:var(--green);text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="banner">
+  <h1>📊 Standings summary — clickable options</h1>
+  <p>Right now the Through / Out / In-contention cards aren’t tappable. Here are four ways they could become interactive. Every demo below is live — tap the cards. (Sample data, 2 groups.)</p>
+</div>
+<div class="wrap">
+  <div class="note"><b>The question:</b> when you tap “3 Through” (or Out / In contention), what should happen? Try each option and pick a favorite — or mix ideas. — for Luis</div>
+
+  <div class="opt">
+    <div class="opt-head"><span class="opt-tag">A</span><span class="opt-name">Highlight in the tables</span></div>
+    <div class="opt-desc">Tapping a card keeps you in the group tables and dims every team that isn’t in that bucket — so you see exactly where the through / out teams sit. Tap again to clear.</div>
+    <div class="screen" id="demoA"></div>
+    <div class="pros"><b>Good for:</b> seeing position in context, no navigation. <b>Trade-off:</b> with many groups you still scroll to find them.</div>
+  </div>
+
+  <div class="opt">
+    <div class="opt-head"><span class="opt-tag">B</span><span class="opt-name">Expand a list inline</span></div>
+    <div class="opt-desc">Tapping a card opens a little panel right under the cards listing those teams (flag, name, group). Quick “who exactly?” without touching the tables. Tap again to close.</div>
+    <div class="screen" id="demoB"></div>
+    <div class="pros"><b>Good for:</b> a fast roll-call. <b>Trade-off:</b> a second list separate from the tables.</div>
+  </div>
+
+  <div class="opt">
+    <div class="opt-head"><span class="opt-tag">C</span><span class="opt-name">Open a bottom sheet</span></div>
+    <div class="opt-desc">Tapping a card slides up a sheet listing the teams, each row tappable through to the team page. Best when the list is long (e.g. 42 in contention).</div>
+    <div class="screen" id="demoC"></div>
+    <div class="pros"><b>Good for:</b> long lists + tappable rows to teams. <b>Trade-off:</b> covers the standings while open.</div>
+  </div>
+
+  <div class="opt">
+    <div class="opt-head"><span class="opt-tag">D</span><span class="opt-name">Filter to only those teams</span></div>
+    <div class="opt-desc">Tapping a card filters the tables down to just that bucket, with a “Showing: Through · Show all” bar. A focus mode. Tap “Show all” to reset.</div>
+    <div class="screen" id="demoD"></div>
+    <div class="pros"><b>Good for:</b> a clean focused view. <b>Trade-off:</b> loses the full-group context while filtered.</div>
+  </div>
+
+  <div class="foot">MatchMondo · Standings &nbsp;·&nbsp; <a href="mockups.html">← all mockups</a></div>
+</div>
+
+<script>
+const F = c => `https://flagcdn.com/w40/${c}.png`;
+const TEAMS = [
+  {n:'Mexico', c:'mx', g:'A', pos:1, pts:6, gd:'+3', s:'through', won:true},
+  {n:'Korea Republic', c:'kr', g:'A', pos:2, pts:3, gd:'0', s:'contention'},
+  {n:'Czechia', c:'cz', g:'A', pos:3, pts:1, gd:'-1', s:'contention'},
+  {n:'South Africa', c:'za', g:'A', pos:4, pts:1, gd:'-2', s:'out'},
+  {n:'Canada', c:'ca', g:'B', pos:1, pts:6, gd:'+6', s:'through', won:true},
+  {n:'Switzerland', c:'ch', g:'B', pos:2, pts:4, gd:'+3', s:'contention'},
+  {n:'Bosnia & H.', c:'ba', g:'B', pos:3, pts:1, gd:'-3', s:'contention'},
+  {n:'Qatar', c:'qa', g:'B', pos:4, pts:1, gd:'-6', s:'out'},
+];
+const META = {
+  through:{label:'Through', color:'#2f9e5b'},
+  out:{label:'Out', color:'#d1453b'},
+  contention:{label:'In contention', color:'#7a8088'},
+};
+const count = s => TEAMS.filter(t=>t.s===s).length;
+
+function stripHTML(active){
+  const card = (s, big) => `<button class="scard ${active===s?'on '+s:''}" data-s="${s}">
+      <div class="snum ${s}">${count(s)}</div><div class="slabel">${s==='contention'?'In contention':META[s].label}</div></button>`;
+  return `<div class="strip">${card('through')}${card('out')}${card('contention')}</div>`;
+}
+const legend = `<div class="legend">👑 <b>Won group</b> · 🟢 <b>Through</b> · 🔴 <b>Out</b> · grey = still in contention</div>`;
+
+function rowHTML(t, {dim, hl}){
+  const crown = t.won ? `<span class="crown">👑</span>` : '';
+  const cls = (dim&&dim.has(t.s)?'':'dim') ; // dim handled by caller via hlStatus
+  return `<div class="row ${dim===t.s?'':''}" data-row="${t.s}">
+    <div class="pos">${t.pos}</div>
+    <div class="team"><img src="${F(t.c)}" alt=""><span>${t.n}</span>${crown}</div>
+    <div class="gd">${t.gd}</div>
+    <div class="pts">${t.pts}</div></div>`;
+}
+function tablesHTML(){
+  let out='';
+  for(const g of ['A','B']){
+    out += `<div class="gtitle">Group ${g}</div>
+      <div class="ghead"><div>#</div><div>Team</div><div class="gd" style="text-align:right">GD</div><div class="pts">Pts</div></div>`;
+    for(const t of TEAMS.filter(x=>x.g===g)) out += rowHTML(t,{});
+  }
+  return out;
+}
+
+function applyHighlight(root, status){
+  root.querySelectorAll('.row').forEach(r=>{
+    const s = r.getAttribute('data-row');
+    r.classList.remove('dim','hl','through','out','contention');
+    if(!status) return;
+    if(s===status){ r.classList.add('hl', status); }
+    else r.classList.add('dim');
+  });
+}
+
+// ---------- Option A: highlight in tables ----------
+function demoA(){
+  const root=document.getElementById('demoA'); let active=null;
+  const render=()=>{ root.innerHTML = stripHTML(active)+legend+tablesHTML();
+    root.querySelectorAll('.scard').forEach(b=>b.onclick=()=>{ const s=b.dataset.s; active = active===s?null:s; render(); applyHighlight(root, active); });
+    applyHighlight(root, active);
+  };
+  render();
+}
+// ---------- Option B: inline accordion list ----------
+function demoB(){
+  const root=document.getElementById('demoB'); let open=null;
+  const panel = s => { if(!s) return `<div class="panel" id="pB"></div>`;
+    const items = TEAMS.filter(t=>t.s===s).map(t=>`<div class="pitem"><img src="${F(t.c)}" alt="">${t.n}${t.won?' 👑':''}<span class="grp">Group ${t.g}</span></div>`).join('');
+    return `<div class="panel show"><div class="panel-h ${s}">${META[s].label.toUpperCase()} · ${count(s)}</div><div class="plist">${items}</div></div>`; };
+  const render=()=>{ root.innerHTML = stripHTML(open)+panel(open)+legend+tablesHTML();
+    root.querySelectorAll('.scard').forEach(b=>b.onclick=()=>{ const s=b.dataset.s; open = open===s?null:s; render(); }); };
+  render();
+}
+// ---------- Option C: bottom sheet ----------
+function demoC(){
+  const root=document.getElementById('demoC');
+  const sheetRows = s => TEAMS.filter(t=>t.s===s).map(t=>`<div class="sheet-row"><img src="${F(t.c)}" alt=""><span class="nm">${t.n}${t.won?' 👑':''}</span><span class="meta">Group ${t.g} · ${t.pts} pts</span><span class="chev">›</span></div>`).join('');
+  const render=()=>{ root.innerHTML = stripHTML(null)+legend+tablesHTML()
+      +`<div class="scrim" id="scrimC"></div>
+        <div class="sheet" id="sheetC"><div class="grab"></div>
+          <div class="sheet-h"><span class="dot" id="sdotC"></span><span class="t" id="stitleC"></span><button class="x" id="sxC">Close</button></div>
+          <div class="sheet-list" id="slistC"></div></div>`;
+    const scrim=root.querySelector('#scrimC'), sheet=root.querySelector('#sheetC');
+    const close=()=>{ sheet.classList.remove('show'); scrim.classList.remove('show'); };
+    root.querySelectorAll('.scard').forEach(b=>b.onclick=()=>{ const s=b.dataset.s;
+      root.querySelector('#stitleC').textContent = `${META[s].label} · ${count(s)}`;
+      root.querySelector('#sdotC').style.background = META[s].color;
+      root.querySelector('#slistC').innerHTML = sheetRows(s);
+      sheet.classList.add('show'); scrim.classList.add('show'); });
+    scrim.onclick=close; root.querySelector('#sxC').onclick=close;
+  };
+  render();
+}
+// ---------- Option D: filter to only ----------
+function demoD(){
+  const root=document.getElementById('demoD'); let filter=null;
+  const filteredTables = () => {
+    if(!filter) return tablesHTML();
+    let out='';
+    for(const g of ['A','B']){
+      const rows=TEAMS.filter(x=>x.g===g && x.s===filter);
+      if(!rows.length) continue;
+      out += `<div class="gtitle">Group ${g}</div><div class="ghead"><div>#</div><div>Team</div><div class="gd" style="text-align:right">GD</div><div class="pts">Pts</div></div>`;
+      for(const t of rows) out += rowHTML(t,{});
+    }
+    return out;
+  };
+  const bar = () => filter ? `<div class="filterbar show">Showing: <span style="color:${META[filter].color}">${META[filter].label} · ${count(filter)}</span><button class="clear" id="clrD">Show all ✕</button></div>` : '';
+  const render=()=>{ root.innerHTML = stripHTML(filter)+bar()+legend+filteredTables();
+    root.querySelectorAll('.scard').forEach(b=>b.onclick=()=>{ const s=b.dataset.s; filter = filter===s?null:s; render(); });
+    const c=root.querySelector('#clrD'); if(c) c.onclick=()=>{ filter=null; render(); };
+  };
+  render();
+}
+demoA(); demoB(); demoC(); demoD();
+</script>
+</body>
+</html>
