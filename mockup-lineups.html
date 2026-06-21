@@ -64,14 +64,14 @@
 
   /* sideline (different turf) below the keeper */
   .sideline{background:repeating-linear-gradient(90deg,var(--side1) 0 14px,var(--side2) 14px 28px);
-    border-top:2px solid rgba(255,255,255,.25);padding:12px 12px 14px;}
-  .sideline-h{font-size:9.5px;font-weight:800;letter-spacing:.6px;color:rgba(255,255,255,.7);text-transform:uppercase;margin-bottom:9px;}
-  .bench{display:flex;flex-wrap:wrap;gap:10px 6px;align-items:flex-start;}
+    border-top:2px solid rgba(255,255,255,.25);padding:14px 10px 16px;}
+  .bench-row{display:flex;justify-content:center;align-items:flex-start;gap:8px;}
+  .bench-row + .bench-row{margin-top:12px;}
   .bp{display:flex;flex-direction:column;align-items:center;width:58px;}
   .bp .shot{width:36px;height:36px;border-width:2px;}
   .bp .num{min-width:16px;height:16px;font-size:9px;bottom:-3px;right:-4px;}
   .bp .pname{font-size:9px;max-width:58px;color:#fff;background:rgba(0,0,0,.35);}
-  .coach{display:flex;flex-direction:column;align-items:center;width:64px;margin-right:6px;}
+  .coach{display:flex;flex-direction:column;align-items:center;width:64px;}
   .coach .cshot{width:40px;height:40px;border-radius:50%;background:#9aa3ad center/cover no-repeat;border:2.5px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.35);position:relative;display:flex;align-items:center;justify-content:center;}
   .coach .cinit{font-size:14px;font-weight:800;color:#fff;}
   .coach .badge{position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);background:#fff;color:#111;font-size:8px;font-weight:800;letter-spacing:.3px;padding:1px 5px;border-radius:7px;border:1px solid var(--line);}
@@ -186,14 +186,19 @@ function card(g){
     return `<div class="player" style="left:${d.x*100}%;top:${d.y*100}%">
       ${shot(p,ring,34,g.color,badgeText,false)}<div class="pname">${p.name||''}</div></div>`;
   }).join('');
-  const bench=(g.bench||[]).map(p=>
-    `<div class="bp">${shot(p,ring,26,g.color,badgeText,true)}<div class="pname">${p.name||''}</div></div>`).join('');
+  const benchChips=(g.bench||[]).map(p=>
+    `<div class="bp">${shot(p,ring,26,g.color,badgeText,true)}<div class="pname">${p.name||''}</div></div>`);
   const coach=g.coach||{};
   const initials=(coach.name||'').split(/\s+/).map(w=>w[0]||'').join('').slice(0,2).toUpperCase();
   const cshotInner=coach.headshot?'':`<span class="cinit">${initials}</span>`;
   const coachHTML=`<div class="coach">
       <div class="cshot" style="background-image:url('${coach.headshot||''}')">${cshotInner}<span class="badge">COACH</span></div>
       <div class="cname">${coach.name||'—'}</div></div>`;
+  const items=[...benchChips, coachHTML]; // coach last → bottom-right
+  const n=items.length, h=Math.ceil(n/2);
+  const benchRows = n<=3
+    ? `<div class="bench-row">${items.join('')}</div>`
+    : `<div class="bench-row">${items.slice(0,h).join('')}</div><div class="bench-row">${items.slice(h).join('')}</div>`;
   return `<div class="card">
     <div class="chead">
       <span class="formbadge" style="background:${ring}">${g.formation}</span>
@@ -202,8 +207,7 @@ function card(g){
       <a class="espn-link" href="https://www.espn.com/soccer/match/_/gameId/${g.eid}" target="_blank" rel="noopener">Compare on ESPN ↗</a>
     </div>
     <div class="pitch"><div class="mk half"></div><div class="mk circle"></div><div class="mk pbB"></div>${dots}</div>
-    <div class="sideline"><div class="sideline-h">Bench · came off ↓ &amp; coach</div>
-      <div class="bench">${coachHTML}${bench}</div></div>
+    <div class="sideline">${benchRows}</div>
   </div>`;
 }
 
