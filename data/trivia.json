@@ -69,7 +69,8 @@
         "16"
       ],
       "answer": 2,
-      "explanation": "48 teams are split into 12 groups of four for the expanded 2026 format."
+      "explanation": "48 teams are split into 12 groups of four for the expanded 2026 format.",
+      "claudeTask": "say more about how this is more than historically and why it was done"
     },
     {
       "id": "t-defending-champs",
