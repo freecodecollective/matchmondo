@@ -14,7 +14,7 @@
       "answer": 1,
       "explanation": "English referee Ken Aston devised the card system after the 1966 edition, inspired by traffic lights. It debuted at the 1970 tournament in Mexico. Today, a yellow card is a caution (for fouls, dissent, or time-wasting), and two yellows in one match equal a red. A straight red card means immediate ejection for serious foul play or violent conduct. Since 2019, VAR can also recommend cards after video review.",
       "approved": true,
-      "claudeTask": "add more trivia or facts about them and how they are used today so that users learn something"
+      "needsReview": true
     },
     {
       "id": "h-2026-hosts",
@@ -58,7 +58,7 @@
       "answer": 1,
       "explanation": "South Korea and Japan co-hosted in 2002 — the first time two nations shared the event. Brazil won their record fifth title, beating Germany 2–0 in the final in Yokohama. Ronaldo scored both goals, finishing as top scorer with 8 goals and silencing doubts after his mysterious seizure before the 1998 final. Co-host South Korea stunned the world by reaching the semi-finals, eliminating Spain and Italy along the way.",
       "approved": true,
-      "claudeTask": "say who won the event and who they beat and any famous players on the winner and any other fun facts"
+      "needsReview": true
     },
     {
       "id": "t-how-many-groups",
@@ -73,7 +73,7 @@
       "answer": 2,
       "explanation": "The 2026 tournament expands from 32 to 48 teams, split into 12 groups of four. Previous editions used 8 groups of four (since 1998). The expansion was approved to give more nations — especially from Africa, Asia, and smaller confederations — a chance to compete on the biggest stage. The top two from each group plus the eight best third-placed teams advance to a new Round of 32.",
       "approved": true,
-      "claudeTask": "say more about how this is more than historically and why it was done"
+      "needsReview": true
     },
     {
       "id": "t-defending-champs",
@@ -116,9 +116,9 @@
         "Only after the semi-finals"
       ],
       "answer": 2,
-      "explanation": "Single yellows are wiped after the group stage, and again after the quarter-finals, so an early caution can't cost a player the final. Red cards are different: a straight red earns an automatic one-match ban minimum, but the disciplinary committee can extend it depending on severity. These suspensions carry across stages — a red card in a quarter-final means missing the semi-final, and yes, even a final.",
+      "explanation": "Single yellows are wiped after the group stage, and again after the quarter-finals, so an early caution can’t cost a player the final. Red cards are different: a straight red earns an automatic one-match ban minimum, but the disciplinary committee can extend it depending on severity. These suspensions carry across stages — a red card in a quarter-final means missing the semi-final, and yes, even a final.",
       "approved": true,
-      "claudeTask": "say what happens if a player gets a red card — does it carry over t the next stage including the final?"
+      "needsReview": true
     },
     {
       "id": "c-fan-fest",
@@ -266,10 +266,10 @@
         "David Trezeguet"
       ],
       "answer": 2,
-      "explanation": "Zidane's headbutt on Materazzi in extra time of the 2006 final was his last act as a professional — Italy won on penalties. Zidane played for Cannes, Bordeaux, Juventus, and Real Madrid, where he scored one of the greatest Champions League final goals ever (a left-foot volley in 2002). He later said he didn't regret the headbutt itself because Materazzi's insults about his mother and sister were unacceptable, though he regretted that millions of children saw it.",
+      "explanation": "Zidane’s headbutt on Materazzi in extra time of the 2006 final was his last act as a professional — Italy won on penalties. Zidane played for Cannes, Bordeaux, Juventus, and Real Madrid, where he scored one of the greatest Champions League final goals ever (a left-foot volley in 2002). He later said he didn’t regret the headbutt itself because Materazzi’s insults about his mother and sister were unacceptable, though he regretted that millions of children saw it.",
       "media": "https://www.youtube.com/watch?v=DhIAs8vRZlc",
       "approved": true,
-      "claudeTask": "say more about who zidane played for and wheher he regretted this later"
+      "needsReview": true
     },
     {
       "id": "v-lumen-sounders",
@@ -295,9 +295,9 @@
         "4"
       ],
       "answer": 1,
-      "explanation": "France has won twice — at home in 1998 and in Russia in 2018. Winning as hosts is not unique: Uruguay (1930), Italy (1934), England (1966), West Germany (1974), and Argentina (1978) all won on home soil. However, several hosts have famously failed — including Brazil, who lost the 1950 final to Uruguay at the Maracanã in one of football's greatest upsets.",
+      "explanation": "France has won twice — at home in 1998 and in Russia in 2018. Winning as hosts is not unique: Uruguay (1930), Italy (1934), England (1966), West Germany (1974), and Argentina (1978) all won on home soil. However, several hosts have famously failed — including Brazil, who lost the 1950 final to Uruguay at the Maracanã in one of football’s greatest upsets.",
       "approved": true,
-      "claudeTask": "say whether they were the only ones to win when they hosted"
+      "needsReview": true
     },
     {
       "id": "t-spain-2010",
