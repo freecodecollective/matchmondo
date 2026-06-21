@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iPad Adaptive Layout — Design Review</title>
+<style>
+  :root {
+    --green: #12a150;
+    --green-d: #0c7a3c;
+    --ink: #1d2127;
+    --muted: #6b7280;
+    --line: rgba(0,0,0,0.08);
+    --bg: #f1efea;
+    --card: #ffffff;
+    --pitch1: #14a554;
+    --pitch2: #0b8f44;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 80px;
+  }
+  .banner {
+    background: linear-gradient(135deg, var(--pitch1), var(--pitch2));
+    color: #fff; padding: 38px 24px 30px; text-align: center;
+  }
+  .banner h1 { font-size: 27px; font-weight: 800; letter-spacing: 0.2px; }
+  .banner p { font-size: 14.5px; opacity: 0.92; margin-top: 8px; max-width: 640px; margin-left: auto; margin-right: auto; line-height: 1.5; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+
+  .note {
+    background: #fff; border: 1px solid var(--line); border-radius: 14px;
+    padding: 16px 18px; margin-top: -18px; position: relative;
+    box-shadow: 0 3px 16px rgba(0,0,0,0.06); font-size: 13.5px; color: #444; line-height: 1.5;
+  }
+  .note b { color: var(--ink); }
+  .note .pill { display:inline-block; background: rgba(18,161,80,0.12); color: var(--green-d); font-weight: 700; font-size: 11.5px; padding: 2px 9px; border-radius: 20px; margin-right: 6px; }
+
+  /* tabs */
+  .tabs { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin: 26px 0 8px; }
+  .tab {
+    font-size: 13.5px; font-weight: 600; color: var(--muted);
+    background: #fff; border: 1px solid var(--line); border-radius: 22px;
+    padding: 9px 16px; cursor: pointer; transition: all 0.15s;
+  }
+  .tab:hover { color: var(--ink); }
+  .tab.active { background: var(--green); color: #fff; border-color: var(--green); box-shadow: 0 3px 12px rgba(18,161,80,0.3); }
+
+  .panel { display: none; animation: fade 0.25s ease; }
+  .panel.active { display: block; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px);} to {opacity:1; transform:none;} }
+
+  .panel-head { text-align: center; margin: 20px 0 6px; }
+  .panel-head h2 { font-size: 20px; font-weight: 700; }
+  .panel-head p { font-size: 13.5px; color: var(--muted); margin-top: 4px; max-width: 620px; margin-left:auto; margin-right:auto; line-height: 1.5;}
+
+  /* control bar */
+  .ctrl { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; justify-content: center; margin: 14px 0 22px; }
+  .ctrl .grp { display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 8px 14px; }
+  .ctrl label { font-size: 12.5px; font-weight: 600; color: var(--muted); }
+  .ctrl output { font-size: 12.5px; font-weight: 700; color: var(--green-d); min-width: 56px; }
+  input[type=range] { accent-color: var(--green); width: 150px; }
+  .toggle-btn { font-size: 12.5px; font-weight: 600; padding: 7px 13px; border-radius: 20px; border: 1px solid var(--line); background:#fff; color: var(--muted); cursor:pointer; }
+  .toggle-btn.on { background: var(--green); color:#fff; border-color: var(--green); }
+
+  /* device frames */
+  .stage { display: flex; gap: 30px; justify-content: center; align-items: flex-start; flex-wrap: wrap; }
+  .devcol { text-align: center; }
+  .devcap { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 10px; }
+  .devcap .small { display:block; text-transform: none; letter-spacing: 0; font-weight: 500; color: #9aa0a6; margin-top: 3px; font-size: 11px;}
+
+  .ipad {
+    background: #1b1b1d; border-radius: 26px; padding: 11px;
+    box-shadow: 0 14px 50px rgba(0,0,0,0.22);
+  }
+  .ipad-screen { width: 740px; height: 540px; background: var(--bg); border-radius: 14px; overflow: hidden; display: flex; }
+  .iphone { background: #1b1b1d; border-radius: 34px; padding: 9px; box-shadow: 0 14px 50px rgba(0,0,0,0.22); }
+  .iphone-screen { width: 250px; height: 540px; background: var(--bg); border-radius: 26px; overflow: hidden; position: relative; }
+
+  /* schedule split */
+  .sidebar { width: 300px; background: #fff; border-right: 1px solid var(--line); display: flex; flex-direction: column; }
+  .pane { flex: 1; background: var(--bg); overflow: hidden; }
+  .hdr { background: linear-gradient(135deg, var(--pitch1), var(--pitch2)); color: #fff; padding: 14px 14px 12px; }
+  .hdr h3 { font-size: 19px; font-weight: 800; letter-spacing: 0.3px; }
+  .hdr .sub { font-size: 10.5px; opacity: 0.7; margin-top: 2px; font-weight: 600; letter-spacing: 0.3px;}
+  .seg { display:flex; background: #e7e4df; border-radius: 8px; padding: 2px; margin: 10px; }
+  .seg span { flex:1; text-align:center; font-size: 11px; font-weight: 700; padding: 6px 0; border-radius: 6px; color: #8a8a8a; }
+  .seg .a { background: #fff; color: var(--green-d); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .list { padding: 0 10px 10px; overflow-y: auto; }
+  .daylabel { font-size: 12.5px; font-weight: 800; margin: 8px 4px 6px; }
+  .mcard {
+    background: #fff; border: 1px solid var(--line); border-radius: 11px;
+    padding: 9px 10px; margin-bottom: 7px; display: flex; align-items: center; gap: 9px; cursor: pointer;
+    transition: all 0.12s;
+  }
+  .mcard:hover { border-color: rgba(18,161,80,0.4); }
+  .mcard.sel { border: 2px solid var(--green); padding: 8px 9px; }
+  .flag { width: 22px; height: 16px; border-radius: 3px; flex-shrink: 0; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08); }
+  .mteams { flex: 1; font-size: 12px; font-weight: 600; line-height: 1.35; }
+  .mtime { font-size: 10px; color: var(--muted); font-weight: 600; }
+  .mscore { font-size: 13px; font-weight: 800; color: var(--ink); }
+  .vs { color: #b7bcc2; font-weight: 700; font-size: 11px; }
+
+  /* detail pane */
+  .detail-scroll { height: 100%; overflow-y: auto; padding: 18px 0; }
+  .detail-inner { margin: 0 auto; }
+  .d-hero { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 18px; text-align: center; }
+  .d-hero .comp { font-size: 11px; font-weight: 700; color: var(--green-d); text-transform: uppercase; letter-spacing: 0.5px; }
+  .d-score { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 12px; }
+  .d-team { display:flex; flex-direction: column; align-items:center; gap: 6px; width: 96px;}
+  .d-team .bigflag { width: 46px; height: 33px; border-radius: 5px; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08); }
+  .d-team .tn { font-size: 12.5px; font-weight: 700; }
+  .d-num { font-size: 34px; font-weight: 800; }
+  .d-card { background:#fff; border:1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin-top: 12px; }
+  .d-card h4 { font-size: 13px; font-weight:700; margin-bottom: 8px; }
+  .statrow { display:flex; align-items:center; gap: 10px; margin: 7px 0; font-size: 11.5px; }
+  .statrow .bar { flex:1; height: 6px; background: #eee; border-radius: 4px; overflow:hidden; display:flex;}
+  .statrow .bar i { display:block; height:100%; background: var(--green); }
+  .placeholder { height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#aeb4ba; gap: 12px; }
+  .placeholder .ic { font-size: 46px; }
+  .placeholder p { font-size: 14px; font-weight: 600; }
+
+  /* teams grid */
+  .tgrid { display: grid; gap: 10px; padding: 14px; }
+  .tcard { background:#fff; border:1px solid var(--line); border-radius: 12px; padding: 12px 8px; display:flex; flex-direction:column; align-items:center; gap: 8px; }
+  .tcard .cflag { width: 40px; height: 40px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1); }
+  .tcard .cn { font-size: 11px; font-weight: 700; text-align:center; line-height: 1.2; }
+
+  /* standings */
+  .sgrid { display: grid; gap: 14px; padding: 16px; }
+  .gtable { background:#fff; border:1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .gtable .gt-h { background: rgba(18,161,80,0.1); color: var(--green-d); font-size: 12px; font-weight: 800; padding: 8px 12px; }
+  .gt-row { display:flex; align-items:center; gap: 8px; padding: 7px 12px; font-size: 11.5px; border-top: 1px solid var(--line); }
+  .gt-row .pos { width: 16px; font-weight: 700; color: var(--muted); }
+  .gt-row .tflag { width: 18px; height: 13px; border-radius: 2px; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);}
+  .gt-row .nm { flex: 1; font-weight: 600; }
+  .gt-row .pts { font-weight: 800; }
+  .gt-row.qual { background: rgba(18,161,80,0.05); }
+
+  /* readable width demo */
+  .rw-stage { background:#fff; border:1px solid var(--line); border-radius: 16px; overflow:hidden; }
+  .rw-bar { background: linear-gradient(135deg, var(--pitch1), var(--pitch2)); height: 46px; }
+  .rw-body { padding: 20px 0; min-height: 360px; background: var(--bg); }
+  .rw-content { margin: 0 auto; transition: max-width 0.2s; }
+  .rw-row { background:#fff; border:1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin: 0 16px 12px; }
+  .rw-row .lbl { font-size: 12px; color: var(--muted); }
+  .rw-row .big { font-size: 14px; font-weight: 600; margin-top: 4px; }
+  .edge-flag { font-size: 11px; color: #c0392b; font-weight: 700; }
+
+  /* decisions */
+  .decisions { margin-top: 40px; }
+  .decisions h2 { font-size: 21px; font-weight: 800; text-align:center; }
+  .decisions .lead { text-align:center; color: var(--muted); font-size: 13.5px; margin: 6px auto 22px; max-width: 600px; line-height:1.5;}
+  .dgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16px; }
+  .dcard { background:#fff; border:1px solid var(--line); border-radius: 16px; padding: 18px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); }
+  .dcard .q { font-size: 11px; font-weight: 800; color: var(--green-d); text-transform: uppercase; letter-spacing: 0.6px; }
+  .dcard h3 { font-size: 16px; font-weight: 700; margin: 6px 0 8px; }
+  .dcard p { font-size: 13px; color: #555; line-height: 1.55; }
+  .dcard .mine { background: rgba(18,161,80,0.08); border-radius: 9px; padding: 9px 12px; margin-top: 11px; font-size: 12.5px; }
+  .dcard .mine b { color: var(--green-d); }
+  .dcard .alt { font-size: 12.5px; color: var(--muted); margin-top: 9px; }
+  .foot { text-align:center; color: #9aa0a6; font-size: 12px; margin-top: 36px; line-height: 1.6;}
+  a.back { color: var(--green-d); text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="banner">
+    <h1>📱→📲 iPad Adaptive Layout</h1>
+    <p>Making the app feel designed for iPad — split views, multi-column grids, and readable content widths. One universal codebase: every change below is gated on size class, so the iPhone layout is byte-for-byte unchanged.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="note">
+      <span class="pill">Already shipping-ready</span>
+      The Swift changes are written, compile clean, and live on the <b>ipad-adaptive-layout</b> branch (separate from the trivia work). This page is for you to react to the <b>design choices</b> — tweak the sliders, then tell me what to change. Numbers here mirror the real defaults in code so your feedback maps straight to parameters.
+    </div>
+
+    <div class="tabs">
+      <div class="tab active" data-p="sched">① Schedule split view</div>
+      <div class="tab" data-p="teams">② Teams grid</div>
+      <div class="tab" data-p="stand">③ Standings</div>
+      <div class="tab" data-p="rw">④ Readable width</div>
+    </div>
+
+    <!-- ============ SCHEDULE ============ -->
+    <div class="panel active" id="sched">
+      <div class="panel-head">
+        <h2>Schedule → Match detail, side by side</h2>
+        <p>On iPad the schedule list stays on the left and the selected match opens in a detail pane on the right — no full-screen push, no losing your place. On iPhone it still pushes exactly as today.</p>
+      </div>
+      <div class="stage">
+        <div class="devcol">
+          <div class="devcap">iPad — landscape <span class="small">tap a match in the list →</span></div>
+          <div class="ipad"><div class="ipad-screen">
+            <div class="sidebar">
+              <div class="hdr"><h3>MatchMondo</h3><div class="sub">FOOTBALL 2026</div></div>
+              <div class="seg"><span class="a">3-Day</span><span>Full Schedule</span></div>
+              <div class="list" id="schedList"></div>
+            </div>
+            <div class="pane" id="schedPane"></div>
+          </div></div>
+        </div>
+        <div class="devcol">
+          <div class="devcap">iPhone <span class="small">unchanged — push to full screen</span></div>
+          <div class="iphone"><div class="iphone-screen">
+            <div class="hdr"><h3>MatchMondo</h3><div class="sub">FOOTBALL 2026</div></div>
+            <div class="seg"><span class="a">3-Day</span><span>Full Schedule</span></div>
+            <div class="list" id="phoneList" style="height:420px"></div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ TEAMS ============ -->
+    <div class="panel" id="teams">
+      <div class="panel-head">
+        <h2>Denser team grid on the big canvas</h2>
+        <p>iPhone keeps its 4-column grid. iPad fills the extra width with more columns. The count is width-driven, so it also adapts to split-view panes and Stage Manager — not a fixed number.</p>
+      </div>
+      <div class="ctrl">
+        <div class="grp">
+          <label>iPad columns</label>
+          <input type="range" id="colSlider" min="4" max="8" value="6">
+          <output id="colOut">6 columns</output>
+        </div>
+        <div class="grp"><label>iPhone stays</label><output style="min-width:auto">4 — fixed</output></div>
+      </div>
+      <div class="stage">
+        <div class="devcol">
+          <div class="devcap">iPad</div>
+          <div class="ipad"><div class="ipad-screen" style="display:block; background:var(--bg)">
+            <div class="hdr" style="border-radius:0"><h3>Teams</h3></div>
+            <div class="tgrid" id="teamGridPad" style="overflow-y:auto; height:474px"></div>
+          </div></div>
+        </div>
+        <div class="devcol">
+          <div class="devcap">iPhone</div>
+          <div class="iphone"><div class="iphone-screen">
+            <div class="hdr"><h3>Teams</h3></div>
+            <div class="tgrid" id="teamGridPhone" style="grid-template-columns:repeat(4,1fr); height:474px; overflow-y:auto"></div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ STANDINGS ============ -->
+    <div class="panel" id="stand">
+      <div class="panel-head">
+        <h2>Groups side by side</h2>
+        <p>Today the standings are one tall single column. On iPad the full group tables sit two-up, and the compact mini-tables go 3–4 across — so you see many more groups without scrolling.</p>
+      </div>
+      <div class="ctrl">
+        <button class="toggle-btn on" id="stMode" data-mode="expanded">Expanded (full tables)</button>
+        <button class="toggle-btn" id="stMode2" data-mode="condensed">Condensed (mini tables)</button>
+      </div>
+      <div class="stage">
+        <div class="devcol">
+          <div class="devcap">iPad</div>
+          <div class="ipad"><div class="ipad-screen" style="display:block; background:var(--bg)">
+            <div class="hdr" style="border-radius:0"><h3>Standings</h3></div>
+            <div class="sgrid" id="standPad" style="overflow-y:auto; height:474px"></div>
+          </div></div>
+        </div>
+        <div class="devcol">
+          <div class="devcap">iPhone <span class="small">single column, unchanged</span></div>
+          <div class="iphone"><div class="iphone-screen">
+            <div class="hdr"><h3>Standings</h3></div>
+            <div class="sgrid" id="standPhone" style="grid-template-columns:1fr; height:474px; overflow-y:auto"></div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ READABLE WIDTH ============ -->
+    <div class="panel" id="rw">
+      <div class="panel-head">
+        <h2>Readable, centered content</h2>
+        <p>Single-column screens (match/team/player detail, Settings, More, Rules, Predictions) get capped and centered on iPad instead of stretching edge-to-edge. Drag to feel the difference; the red state is what it looks like with no cap.</p>
+      </div>
+      <div class="ctrl">
+        <div class="grp">
+          <label>Max content width</label>
+          <input type="range" id="rwSlider" min="480" max="960" value="680" step="20">
+          <output id="rwOut">680 pt</output>
+        </div>
+        <button class="toggle-btn" id="rwEdge">Show un-capped (today)</button>
+      </div>
+      <div class="stage">
+        <div class="devcol">
+          <div class="devcap">iPad — Settings example</div>
+          <div class="rw-stage" style="width:740px">
+            <div class="rw-bar"></div>
+            <div class="rw-body"><div class="rw-content" id="rwContent"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ DECISIONS ============ -->
+    <div class="decisions">
+      <h2>Decisions I made — tell me what to change</h2>
+      <p class="lead">I didn't stop to ask, so these are my calls. Each is a one-line tweak if you disagree.</p>
+      <div class="dgrid">
+        <div class="dcard">
+          <div class="q">Decision 1 · Schedule</div>
+          <h3>Split view, no auto-select</h3>
+          <p>iPad shows the list + detail side by side. When nothing's picked yet, the detail pane shows a "Select a match" placeholder.</p>
+          <div class="mine"><b>My call:</b> placeholder, don't auto-open a match (avoids accidentally spoiling a score on launch).</div>
+          <div class="alt"><b>Alternative:</b> auto-select the next upcoming match so the pane is never empty.</div>
+        </div>
+        <div class="dcard">
+          <div class="q">Decision 2 · Teams</div>
+          <h3>6 columns on iPad, grid not split</h3>
+          <p>Teams stays a visual flag grid (just wider) rather than becoming a list+detail split. Width-driven, default lands ~6 portrait / ~8 landscape.</p>
+          <div class="mine"><b>My call:</b> grid feels right for flags; keep push-to-detail.</div>
+          <div class="alt"><b>Alternative:</b> make Teams a split view too (like Schedule). Use the slider above to pick your column count.</div>
+        </div>
+        <div class="dcard">
+          <div class="q">Decision 3 · Standings</div>
+          <h3>Two groups per row</h3>
+          <p>Expanded tables go 2-up on iPad; condensed mini-tables 3–4 across. iPhone untouched.</p>
+          <div class="mine"><b>My call:</b> 2-up for full tables — readable without feeling cramped.</div>
+          <div class="alt"><b>Alternative:</b> 3-up full tables for even more density.</div>
+        </div>
+        <div class="dcard">
+          <div class="q">Decision 4 · Readable width</div>
+          <h3>~680–820 pt, centered</h3>
+          <p>Menus/settings cap at 680, detail screens a bit wider (760–820). Centered in the pane.</p>
+          <div class="mine"><b>My call:</b> centered column — standard iPad reading width.</div>
+          <div class="alt"><b>Alternative:</b> different cap, or left-align instead of center.</div>
+        </div>
+        <div class="dcard">
+          <div class="q">Decision 5 · Tab bar</div>
+          <h3>Left the bottom tab bar as-is</h3>
+          <p>iPadOS can turn the tab bar into a sidebar, but that's iOS 18+ and would collide with the trivia tab work. Skipped for now.</p>
+          <div class="mine"><b>My call:</b> don't touch the tab bar / ContentView (trivia session owns it).</div>
+          <div class="alt"><b>Alternative:</b> revisit a sidebar-style tab bar later, once trivia merges.</div>
+        </div>
+        <div class="dcard">
+          <div class="q">Decision 6 · Formations</div>
+          <h3>Taller pitch on iPad</h3>
+          <p>The formation pitch grows from 440→560pt tall on iPad so it uses the room. Player dots unchanged.</p>
+          <div class="mine"><b>My call:</b> a modest height bump, not a full redesign.</div>
+          <div class="alt"><b>Alternative:</b> make it fully proportional / even larger.</div>
+        </div>
+      </div>
+      <div class="foot">
+        Built on branch <b>ipad-adaptive-layout</b> · iPhone layout unchanged · all new text localized in 11 languages<br>
+        <a class="back" href="mockups.html">← Back to all mockups</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+// ---- sample data ----
+const F = {
+  CAN:'#d52b1e', MEX:'#006847', USA:'#3c3b6e', ARG:'#75aadb', BRA:'#009c3b', FRA:'#0055a4',
+  ENG:'#cf142b', ESP:'#c60b1e', GER:'#000', POR:'#006600', NED:'#ff6f00', BEL:'#fdda24',
+  CRO:'#ff0000', JPN:'#bc002d', KOR:'#0047a0', MAR:'#c1272d', SEN:'#00853f', AUS:'#00843d',
+  ITA:'#0066cc', URU:'#7cb9e8', COL:'#fcd116', SUI:'#d52b1e', DEN:'#c60c30', POL:'#dc143c'
+};
+const fg = c => `<span class="flag" style="background:${c}"></span>`;
+const matches = [
+  {t:'15:00', h:'Mexico', a:'Poland', hf:F.MEX, af:F.POL, hs:2, as:1, done:true},
+  {t:'18:00', h:'Canada', a:'Belgium', hf:F.CAN, af:F.BEL, live:true},
+  {t:'21:00', h:'USA', a:'Wales', hf:F.USA, af:'#c8102e'},
+  {t:'12:00', h:'Argentina', a:'Croatia', hf:F.ARG, af:F.CRO},
+  {t:'15:00', h:'France', a:'Denmark', hf:F.FRA, af:F.DEN},
+  {t:'18:00', h:'Brazil', a:'Serbia', hf:F.BRA, af:'#c6363c'},
+];
+const teams = [
+  ['Canada',F.CAN],['Mexico',F.MEX],['USA',F.USA],['Argentina',F.ARG],['Brazil',F.BRA],['France',F.FRA],
+  ['England',F.ENG],['Spain',F.ESP],['Germany',F.GER],['Portugal',F.POR],['Netherlands',F.NED],['Belgium',F.BEL],
+  ['Croatia',F.CRO],['Japan',F.JPN],['Korea Rep.',F.KOR],['Morocco',F.MAR],['Senegal',F.SEN],['Australia',F.AUS],
+  ['Italy',F.ITA],['Uruguay',F.URU],['Colombia',F.COL],['Switzerland',F.SUI],['Denmark',F.DEN],['Poland',F.POL]
+];
+
+// ---- schedule list ----
+function mcardHTML(m, sel){
+  const right = m.done ? `<span class="mscore">${m.hs}–${m.as}</span>`
+              : m.live ? `<span class="mscore" style="color:#12a150">LIVE</span>`
+              : `<span class="mtime">${m.t}</span>`;
+  return `<div class="mcard ${sel?'sel':''}" data-i="${idx(m)}">
+    ${fg(m.hf)}<div class="mteams">${m.h} <span class="vs">v</span> ${m.a}</div>${right}</div>`;
+}
+let idxCounter; function idx(m){ return matches.indexOf(m); }
+
+let selected = 1; // Canada v Belgium
+function renderSched(){
+  const days = [['Today',[0,1,2]],['Tomorrow',[3,4,5]]];
+  let html='';
+  days.forEach(([label,ids])=>{
+    html += `<div class="daylabel">${label}</div>`;
+    ids.forEach(i=> html += mcardHTML(matches[i], i===selected));
+  });
+  document.getElementById('schedList').innerHTML = html;
+  document.getElementById('phoneList').innerHTML = html;
+  document.querySelectorAll('#schedList .mcard').forEach(el=>{
+    el.onclick = ()=>{ selected = +el.dataset.i; renderSched(); renderPane(); };
+  });
+  document.querySelectorAll('#phoneList .mcard').forEach(el=>{ el.style.cursor='default'; });
+}
+function renderPane(){
+  const m = matches[selected];
+  const pane = document.getElementById('schedPane');
+  if(m===undefined){ return; }
+  const scoreCenter = m.done ? `<div class="d-num">${m.hs}</div><div class="d-num" style="color:#c4c0b8">–</div><div class="d-num">${m.as}</div>`
+    : m.live ? `<div style="color:#12a150;font-weight:800;font-size:15px">LIVE · 67'</div>`
+    : `<div class="vs" style="font-size:22px">vs</div>`;
+  pane.innerHTML = `<div class="detail-scroll"><div class="detail-inner" style="max-width:560px">
+    <div class="d-hero" style="margin:0 18px">
+      <div class="comp">${m.live?'Group F · Matchday 2':'Group stage'}</div>
+      <div class="d-score">
+        <div class="d-team"><span class="bigflag" style="background:${m.hf}"></span><span class="tn">${m.h}</span></div>
+        ${scoreCenter}
+        <div class="d-team"><span class="bigflag" style="background:${m.af}"></span><span class="tn">${m.a}</span></div>
+      </div>
+    </div>
+    <div class="d-card" style="margin:12px 18px 0">
+      <h4>Match stats</h4>
+      ${stat('Possession', 58)}
+      ${stat('Shots', 70)}
+      ${stat('Shots on target', 45)}
+    </div>
+    <div class="d-card" style="margin:12px 18px 0"><h4>Lineups · 4-3-3</h4>
+      <div style="font-size:11.5px;color:#6b7280;line-height:1.6">Tap a player to open their profile — pushes within this pane, list stays put on the left.</div>
+    </div>
+  </div></div>`;
+}
+function stat(label,pct){
+  return `<div class="statrow"><span style="width:90px">${label}</span>
+    <span class="bar"><i style="width:${pct}%"></i><i style="width:${100-pct}%;background:#cdd2d8"></i></span></div>`;
+}
+
+// ---- teams grid ----
+function tcardHTML([n,c]){ return `<div class="tcard"><span class="cflag" style="background:${c}"></span><span class="cn">${n}</span></div>`; }
+function renderTeams(cols){
+  document.getElementById('teamGridPad').style.gridTemplateColumns = `repeat(${cols},1fr)`;
+  const pad = teams.map(tcardHTML).join('');
+  document.getElementById('teamGridPad').innerHTML = pad;
+  document.getElementById('teamGridPhone').innerHTML = teams.map(tcardHTML).join('');
+}
+
+// ---- standings ----
+const groups = {
+  A:[['Canada',F.CAN,7],['Mexico',F.MEX,5],['Poland',F.POL,3],['Wales','#c8102e',1]],
+  B:[['USA',F.USA,9],['England',F.ENG,4],['Senegal',F.SEN,3],['Iran','#239f40',1]],
+  C:[['Argentina',F.ARG,7],['Croatia',F.CRO,5],['Japan',F.JPN,4],['Tunisia','#e70013',0]],
+  D:[['France',F.FRA,6],['Denmark',F.DEN,4],['Australia',F.AUS,4],['Peru','#d91023',2]],
+  E:[['Spain',F.ESP,7],['Germany',F.GER,5],['Morocco',F.MAR,4],['Qatar','#8a1538',0]],
+  F:[['Brazil',F.BRA,9],['Portugal',F.POR,6],['Korea Rep.',F.KOR,3],['Ghana','#fcd116',0]]
+};
+function gtableHTML(letter, rows){
+  let body = rows.map((r,i)=>`<div class="gt-row ${i<2?'qual':''}"><span class="pos">${i+1}</span>
+    <span class="tflag" style="background:${r[1]}"></span><span class="nm">${r[0]}</span><span class="pts">${r[2]}</span></div>`).join('');
+  return `<div class="gtable"><div class="gt-h">Group ${letter}</div>${body}</div>`;
+}
+function miniHTML(letter, rows){
+  let body = rows.slice(0,4).map((r,i)=>`<div class="gt-row ${i<2?'qual':''}" style="padding:4px 10px;font-size:10.5px">
+    <span class="pos" style="width:12px">${i+1}</span><span class="tflag" style="width:14px;height:10px;background:${r[1]}"></span>
+    <span class="nm">${r[0]}</span><span class="pts">${r[2]}</span></div>`).join('');
+  return `<div class="gtable"><div class="gt-h" style="padding:6px 10px;font-size:11px">Group ${letter}</div>${body}</div>`;
+}
+function renderStandings(mode){
+  const padEl = document.getElementById('standPad'), phEl = document.getElementById('standPhone');
+  const ls = Object.keys(groups);
+  if(mode==='expanded'){
+    padEl.style.gridTemplateColumns='1fr 1fr';
+    padEl.innerHTML = ls.map(l=>gtableHTML(l,groups[l])).join('');
+    phEl.innerHTML = ls.map(l=>gtableHTML(l,groups[l])).join('');
+  } else {
+    padEl.style.gridTemplateColumns='1fr 1fr 1fr';
+    padEl.innerHTML = ls.map(l=>miniHTML(l,groups[l])).join('');
+    phEl.style.gridTemplateColumns='1fr 1fr';
+    phEl.innerHTML = ls.map(l=>miniHTML(l,groups[l])).join('');
+  }
+}
+
+// ---- readable width ----
+function renderRW(width, edge){
+  const c = document.getElementById('rwContent');
+  c.style.maxWidth = edge ? '100%' : width+'px';
+  const rows = [
+    ['Score visibility','Show all scores'],
+    ['Default theme','Pitch Green'],
+    ['Text size','Medium'],
+    ['Match alerts','Kickoff + goals'],
+    ['Language','System (English)']
+  ];
+  c.innerHTML = rows.map(r=>`<div class="rw-row"><div class="lbl">${r[0]}</div><div class="big">${r[1]} ${edge?'<span class="edge-flag">↔ stretched edge-to-edge</span>':''}</div></div>`).join('');
+}
+
+// ---- init + wiring ----
+document.querySelectorAll('.tab').forEach(t=>{
+  t.onclick=()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    document.getElementById(t.dataset.p).classList.add('active');
+  };
+});
+document.getElementById('colSlider').oninput = e=>{
+  document.getElementById('colOut').textContent = e.target.value+' columns';
+  renderTeams(+e.target.value);
+};
+const stBtns=[document.getElementById('stMode'),document.getElementById('stMode2')];
+stBtns.forEach(b=> b.onclick=()=>{ stBtns.forEach(x=>x.classList.remove('on')); b.classList.add('on'); renderStandings(b.dataset.mode); });
+document.getElementById('rwSlider').oninput=e=>{ document.getElementById('rwOut').textContent=e.target.value+' pt'; renderRW(+e.target.value, edgeOn); };
+let edgeOn=false;
+document.getElementById('rwEdge').onclick=function(){ edgeOn=!edgeOn; this.classList.toggle('on',edgeOn); this.textContent=edgeOn?'Capped (new)':'Show un-capped (today)'; renderRW(+document.getElementById('rwSlider').value, edgeOn); };
+
+renderSched(); renderPane(); renderTeams(6); renderStandings('expanded'); renderRW(680,false);
+</script>
+</body>
+</html>
