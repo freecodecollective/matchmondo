@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Standings — color only when locked</title>
+<style>
+  :root{
+    --green:#0b6e4f; --green-dark:#07523b; --gold:#e8b923; --ink:#1a1a2e; --muted:#6b7280;
+    --bg:#e9f0e9; --card:#fff; --line:#e7ebe7;
+    --in:#0b6e4f; --in-bg:rgba(11,110,79,0.09); --in-bg2:rgba(11,110,79,0.16);
+    --out:#cf4233; --out-bg:rgba(207,66,51,0.08);
+    --amber:#d6890c; --amber-bg:rgba(214,137,12,0.13);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',Roboto,sans-serif;
+    background:#dfe7df;color:var(--ink);-webkit-font-smoothing:antialiased;padding:28px 16px 60px;
+  }
+  .page-head{text-align:center;max-width:640px;margin:0 auto 22px;}
+  .page-head h1{font-size:23px;font-weight:800;}
+  .page-head p{font-size:13.5px;color:#566;margin-top:7px;line-height:1.5;}
+
+  .stage{display:flex;gap:30px;justify-content:center;align-items:flex-start;flex-wrap:wrap;}
+
+  /* phone */
+  .phone{width:392px;background:#11261d;border-radius:42px;padding:11px;
+    box-shadow:0 12px 50px rgba(0,0,0,0.22),0 0 0 1px rgba(0,0,0,0.06);}
+  .screen{background:var(--bg);border-radius:32px;overflow:hidden;height:812px;display:flex;flex-direction:column;
+    background-image:repeating-linear-gradient(90deg,rgba(11,110,79,0.04) 0 70px,rgba(11,110,79,0.012) 70px 140px);}
+  .statusbar{height:26px;background:var(--green-dark);}
+  .banner{background:linear-gradient(135deg,var(--green-dark),var(--green));color:#fff;padding:14px 18px 13px;}
+  .banner .ttl{font-size:21px;font-weight:800;letter-spacing:.2px;}
+  .banner .sub{font-size:11.5px;opacity:.85;margin-top:2px;}
+  .seg{display:flex;background:rgba(255,255,255,.16);border-radius:9px;padding:2px;margin-top:11px;}
+  .seg b{flex:1;text-align:center;font-size:12px;font-weight:700;color:rgba(255,255,255,.75);padding:6px 0;border-radius:7px;}
+  .seg b.on{background:#fff;color:var(--green-dark);}
+
+  /* scroll body */
+  .body{flex:1;overflow-y:auto;padding:12px 12px 26px;}
+  .body::-webkit-scrollbar{width:0;}
+
+  /* summary chips */
+  .summary{display:flex;gap:7px;margin-bottom:10px;}
+  .chip{flex:1;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:9px 6px;text-align:center;}
+  .chip .num{font-size:20px;font-weight:800;line-height:1;}
+  .chip .lbl{font-size:9.5px;font-weight:600;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:.3px;}
+  .chip.in .num{color:var(--in);} .chip.out .num{color:var(--out);} .chip.live .num{color:var(--ink);}
+
+  /* mode toggle */
+  .modebar{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:8px 10px;margin-bottom:12px;}
+  .modebar .q{font-size:11px;font-weight:700;color:var(--muted);}
+  .mseg{display:inline-flex;background:#eceae5;border-radius:9px;padding:2px;margin-left:auto;}
+  .mseg button{border:0;background:none;font:inherit;font-size:10.5px;font-weight:700;color:var(--muted);
+    padding:5px 9px;border-radius:7px;cursor:pointer;white-space:nowrap;}
+  .mseg button.on{background:#fff;color:var(--green);box-shadow:0 1px 4px rgba(0,0,0,.12);}
+
+  /* legend */
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin:0 2px 14px;align-items:center;}
+  .legend .it{display:flex;align-items:center;gap:6px;}
+  .sw{width:11px;height:11px;border-radius:3px;}
+  .sw.in{background:var(--in);} .sw.out{background:var(--out);}
+  .sw.neu{background:#fff;border:1px solid #cfd6cf;}
+
+  /* group card */
+  .gcard{background:var(--card);border:1px solid var(--line);border-radius:15px;overflow:hidden;margin-bottom:11px;
+    box-shadow:0 1px 4px rgba(0,0,0,.04);}
+  .ghead{display:flex;align-items:center;padding:10px 13px 9px;gap:8px;}
+  .ghead .gname{font-size:14.5px;font-weight:800;}
+  .ghead .gnote{font-size:10.5px;font-weight:600;margin-left:auto;text-align:right;line-height:1.3;}
+  .ghead .gnote .open{color:var(--muted);}
+  .ghead .gnote .lk{color:var(--in);} .ghead .gnote .ko{color:var(--out);}
+
+  table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;}
+  thead th{font-size:9.5px;font-weight:700;color:#9aa3a0;text-transform:uppercase;letter-spacing:.3px;
+    padding:0 0 5px;text-align:center;border-bottom:1px solid var(--line);}
+  thead th.tm{text-align:left;padding-left:30px;}
+  tbody td{font-size:12.5px;text-align:center;padding:7px 0;border-bottom:1px solid #f1f3f1;color:#33403a;}
+  tbody tr:last-child td{border-bottom:0;}
+  td.pos{width:24px;font-weight:700;color:#b3bbb5;position:relative;}
+  td.tm{text-align:left;}
+  .tcell{display:flex;align-items:center;gap:7px;padding-left:6px;}
+  .fl{width:21px;height:15px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 .5px rgba(0,0,0,.12);flex-shrink:0;}
+  .nm{font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  td.p{width:22px;} td.w,td.d,td.l{width:18px;color:var(--muted);} td.gd{width:30px;}
+  td.pts{width:30px;font-weight:800;color:var(--ink);}
+  td.mk{width:20px;font-weight:800;}
+
+  /* status treatments — applied ONLY when locked */
+  tr.in td{background:var(--in-bg);}
+  tr.in td.pos{color:var(--in);font-weight:800;}
+  tr.in td.pos::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--in);}
+  tr.in td.mk{color:var(--in);}
+  tr.out td{background:var(--out-bg);}
+  tr.out td.pos{color:var(--out);font-weight:800;}
+  tr.out td.pos::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--out);}
+  tr.out .nm{color:#7a665f;}
+  tr.out td.mk{color:var(--out);}
+
+  /* old position-based mode treatments */
+  tr.posin td{background:var(--in-bg);}
+  tr.posin td.pos{color:var(--in);font-weight:800;}
+  tr.pos3 td{background:var(--amber-bg);}
+  tr.pos3 td.pos{color:var(--amber);font-weight:800;}
+
+  .foot{max-width:560px;margin:22px auto 0;font-size:12px;color:#5b665f;line-height:1.6;}
+  .foot h4{font-size:12.5px;color:var(--ink);margin-bottom:5px;}
+  .foot b{color:var(--in);} .foot .r{color:var(--out);font-weight:700;}
+  .foot a{color:var(--green);font-weight:600;text-decoration:none;}
+  .foot ul{margin:6px 0 0 16px;} .foot li{margin-bottom:4px;}
+  .tabbar{display:flex;background:rgba(255,255,255,.96);border-top:.5px solid #d7ddd7;padding:7px 0 20px;}
+  .tabbar .t{flex:1;text-align:center;font-size:9.5px;color:#9aa3a0;display:flex;flex-direction:column;gap:2px;align-items:center;}
+  .tabbar .t.on{color:var(--green);} .tabbar .t .i{font-size:19px;line-height:1;}
+</style>
+</head>
+<body>
+
+<div class="page-head">
+  <h1>Standings — color only when it's locked</h1>
+  <p>Shading and bars appear <b>only</b> when a result is mathematically settled: green = guaranteed through,
+     red = can't advance. Everything still in play stays neutral grey — no implied "you're in" just for sitting 1st or 2nd.
+     Flip the toggle to compare with the old position-based coloring.</p>
+</div>
+
+<div class="stage">
+  <div class="phone"><div class="screen">
+    <div class="statusbar"></div>
+    <div class="banner">
+      <div class="ttl">Standings</div>
+      <div class="sub">Group stage · Matchday 2–3 · updated 21 Jun</div>
+      <div class="seg"><b class="on">Groups</b><b>Players</b></div>
+    </div>
+    <div class="body">
+      <div class="summary">
+        <div class="chip in"><div class="num">3</div><div class="lbl">Through</div></div>
+        <div class="chip out"><div class="num">3</div><div class="lbl">Out</div></div>
+        <div class="chip live"><div class="num">42</div><div class="lbl">In contention</div></div>
+      </div>
+
+      <div class="modebar">
+        <span class="q">Color rows…</span>
+        <div class="mseg" id="mseg">
+          <button data-m="locked" class="on">Only when locked</button>
+          <button data-m="position">By position</button>
+        </div>
+      </div>
+
+      <div class="legend" id="legend"></div>
+
+      <div id="groups"></div>
+    </div>
+    <div class="tabbar">
+      <div class="t"><span class="i">🕐</span>3-Day</div>
+      <div class="t"><span class="i">📅</span>Schedule</div>
+      <div class="t on"><span class="i">📊</span>Standings</div>
+      <div class="t"><span class="i">🏳️</span>Teams</div>
+      <div class="t"><span class="i">⋯</span>More</div>
+    </div>
+  </div></div>
+
+  <div class="foot">
+    <h4>What "we know" actually means (as of 21 Jun)</h4>
+    <p><b>Through — guaranteed a top-2 finish:</b> Mexico (A), USA (D), Germany (E). Each has 6 pts with one game
+       left, and their groups can't produce two teams that overtake them — so a top-2 place is locked regardless of
+       results.</p>
+    <p style="margin-top:8px;"><span class="r">Out — cannot advance:</span> Haiti (C), Türkiye (D), Tunisia (F).
+       All sit on 0 pts and can no longer reach the top 2; the only mathematical lifeline (sneaking in as a best-3rd
+       team) would need a 5–7 goal blowout in their last match <i>and</i> other results to fall perfectly — so we
+       treat them as eliminated.</p>
+    <p style="margin-top:8px;">Everyone else stays <b style="color:#5b665f">neutral</b>:</p>
+    <ul>
+      <li><b style="color:#5b665f">Groups A–F</b> — second place and the best-3rd race are still genuinely open, so
+          no team beyond the six above is colored.</li>
+      <li><b style="color:#5b665f">Groups G–L</b> — only matchday 1 has been played (2 of 6 games). Nothing is
+          decided either way, so every row is grey.</li>
+    </ul>
+    <p style="margin-top:10px;">Format: 12 groups of 4 · top 2 from each group + 8 best 3rd-placed teams = 32 into the Round of 32.</p>
+    <p style="margin-top:12px;"><a href="mockups.html">← Back to all mockups</a></p>
+  </div>
+</div>
+
+<script>
+const DATA = {"A":{"played":4,"rounds":2,"rows":[{"disp":"Mexico","code":"mx","P":2,"W":2,"D":0,"L":0,"GD":3,"Pts":6,"status":"in"},{"disp":"South Korea","code":"kr","P":2,"W":1,"D":0,"L":1,"GD":0,"Pts":3,"status":""},{"disp":"Czechia","code":"cz","P":2,"W":0,"D":1,"L":1,"GD":-1,"Pts":1,"status":""},{"disp":"South Africa","code":"za","P":2,"W":0,"D":1,"L":1,"GD":-2,"Pts":1,"status":""}]},
+"B":{"played":4,"rounds":2,"rows":[{"disp":"Canada","code":"ca","P":2,"W":1,"D":1,"L":0,"GD":6,"Pts":4,"status":""},{"disp":"Switzerland","code":"ch","P":2,"W":1,"D":1,"L":0,"GD":3,"Pts":4,"status":""},{"disp":"Bosnia & Herz.","code":"ba","P":2,"W":0,"D":1,"L":1,"GD":-3,"Pts":1,"status":""},{"disp":"Qatar","code":"qa","P":2,"W":0,"D":1,"L":1,"GD":-6,"Pts":1,"status":""}]},
+"C":{"played":4,"rounds":2,"rows":[{"disp":"Brazil","code":"br","P":2,"W":1,"D":1,"L":0,"GD":3,"Pts":4,"status":""},{"disp":"Morocco","code":"ma","P":2,"W":1,"D":1,"L":0,"GD":1,"Pts":4,"status":""},{"disp":"Scotland","code":"gb-sct","P":2,"W":1,"D":0,"L":1,"GD":0,"Pts":3,"status":""},{"disp":"Haiti","code":"ht","P":2,"W":0,"D":0,"L":2,"GD":-4,"Pts":0,"status":"out"}]},
+"D":{"played":4,"rounds":2,"rows":[{"disp":"USA","code":"us","P":2,"W":2,"D":0,"L":0,"GD":5,"Pts":6,"status":"in"},{"disp":"Australia","code":"au","P":2,"W":1,"D":0,"L":1,"GD":0,"Pts":3,"status":""},{"disp":"Paraguay","code":"py","P":2,"W":1,"D":0,"L":1,"GD":-2,"Pts":3,"status":""},{"disp":"Türkiye","code":"tr","P":2,"W":0,"D":0,"L":2,"GD":-3,"Pts":0,"status":"out"}]},
+"E":{"played":4,"rounds":2,"rows":[{"disp":"Germany","code":"de","P":2,"W":2,"D":0,"L":0,"GD":7,"Pts":6,"status":"in"},{"disp":"Côte d'Ivoire","code":"ci","P":2,"W":1,"D":0,"L":1,"GD":0,"Pts":3,"status":""},{"disp":"Ecuador","code":"ec","P":2,"W":0,"D":1,"L":1,"GD":-1,"Pts":1,"status":""},{"disp":"Curaçao","code":"cw","P":2,"W":0,"D":1,"L":1,"GD":-6,"Pts":1,"status":""}]},
+"F":{"played":4,"rounds":2,"rows":[{"disp":"Netherlands","code":"nl","P":2,"W":1,"D":1,"L":0,"GD":4,"Pts":4,"status":""},{"disp":"Japan","code":"jp","P":2,"W":1,"D":1,"L":0,"GD":4,"Pts":4,"status":""},{"disp":"Sweden","code":"se","P":2,"W":1,"D":0,"L":1,"GD":0,"Pts":3,"status":""},{"disp":"Tunisia","code":"tn","P":2,"W":0,"D":0,"L":2,"GD":-8,"Pts":0,"status":"out"}]},
+"G":{"played":2,"rounds":1,"rows":[{"disp":"Iran","code":"ir","P":1,"W":0,"D":1,"L":0,"GD":0,"Pts":1,"status":""},{"disp":"New Zealand","code":"nz","P":1,"W":0,"D":1,"L":0,"GD":0,"Pts":1,"status":""},{"disp":"Belgium","code":"be","P":1,"W":0,"D":1,"L":0,"GD":0,"Pts":1,"status":""},{"disp":"Egypt","code":"eg","P":1,"W":0,"D":1,"L":0,"GD":0,"Pts":1,"status":""}]},
+"H":{"played":2,"rounds":1,"rows":[{"disp":"Saudi Arabia","code":"sa","P":1,"W":0,"D":1,"L":0,"GD":0,"Pts":1,"status":""},{"disp":"Uruguay","code":"uy","P":1,"W":0,"D":1,"L":0,"GD":0,"Pts":1,"status":""},{"disp":"Cabo Verde","code":"cv","P":1,"W":0,"D":1,"L":0,"GD":0,"Pts":1,"status":""},{"disp":"Spain","code":"es","P":1,"W":0,"D":1,"L":0,"GD":0,"Pts":1,"status":""}]},
+"I":{"played":2,"rounds":1,"rows":[{"disp":"Norway","code":"no","P":1,"W":1,"D":0,"L":0,"GD":3,"Pts":3,"status":""},{"disp":"France","code":"fr","P":1,"W":1,"D":0,"L":0,"GD":2,"Pts":3,"status":""},{"disp":"Senegal","code":"sn","P":1,"W":0,"D":0,"L":1,"GD":-2,"Pts":0,"status":""},{"disp":"Iraq","code":"iq","P":1,"W":0,"D":0,"L":1,"GD":-3,"Pts":0,"status":""}]},
+"J":{"played":2,"rounds":1,"rows":[{"disp":"Argentina","code":"ar","P":1,"W":1,"D":0,"L":0,"GD":3,"Pts":3,"status":""},{"disp":"Austria","code":"at","P":1,"W":1,"D":0,"L":0,"GD":2,"Pts":3,"status":""},{"disp":"Jordan","code":"jo","P":1,"W":0,"D":0,"L":1,"GD":-2,"Pts":0,"status":""},{"disp":"Algeria","code":"dz","P":1,"W":0,"D":0,"L":1,"GD":-3,"Pts":0,"status":""}]},
+"K":{"played":2,"rounds":1,"rows":[{"disp":"Colombia","code":"co","P":1,"W":1,"D":0,"L":0,"GD":2,"Pts":3,"status":""},{"disp":"DR Congo","code":"cd","P":1,"W":0,"D":1,"L":0,"GD":0,"Pts":1,"status":""},{"disp":"Portugal","code":"pt","P":1,"W":0,"D":1,"L":0,"GD":0,"Pts":1,"status":""},{"disp":"Uzbekistan","code":"uz","P":1,"W":0,"D":0,"L":1,"GD":-2,"Pts":0,"status":""}]},
+"L":{"played":2,"rounds":1,"rows":[{"disp":"England","code":"gb-eng","P":1,"W":1,"D":0,"L":0,"GD":2,"Pts":3,"status":""},{"disp":"Ghana","code":"gh","P":1,"W":1,"D":0,"L":0,"GD":1,"Pts":3,"status":""},{"disp":"Panama","code":"pa","P":1,"W":0,"D":0,"L":1,"GD":-1,"Pts":0,"status":""},{"disp":"Croatia","code":"hr","P":1,"W":0,"D":0,"L":1,"GD":-2,"Pts":0,"status":""}]}};
+
+let MODE = 'locked';
+const flag = c => `<img class="fl" src="https://flagcdn.com/w40/${c}.png" alt="">`;
+const gd = n => (n>0?'+':'')+n;
+
+function rowClass(r, pos){
+  if(MODE==='locked') return r.status==='in' ? 'in' : r.status==='out' ? 'out' : '';
+  // old position-based: top 2 green, 3rd amber
+  return pos<=2 ? 'posin' : pos===3 ? 'pos3' : '';
+}
+function mark(r){
+  if(MODE!=='locked') return '';
+  return r.status==='in' ? '✓' : r.status==='out' ? '✗' : '';
+}
+function noteFor(key, g){
+  if(MODE!=='locked'){
+    return g.rounds<2 ? '<span class="open">Matchday 1 of 3</span>'
+                      : '<span class="open">Top 2 + best 3rds advance</span>';
+  }
+  const ins = g.rows.filter(r=>r.status==='in').map(r=>r.disp);
+  const outs= g.rows.filter(r=>r.status==='out').map(r=>r.disp);
+  if(!ins.length && !outs.length){
+    return g.rounds<2 ? '<span class="open">Matchday 1 of 3 · all open</span>'
+                      : '<span class="open">Still open</span>';
+  }
+  let parts=[];
+  if(ins.length) parts.push(`<span class="lk">${ins.join(', ')} through</span>`);
+  if(outs.length) parts.push(`<span class="ko">${outs.join(', ')} out</span>`);
+  return parts.join(' · ');
+}
+
+function render(){
+  // legend
+  document.getElementById('legend').innerHTML = MODE==='locked'
+    ? `<div class="it"><span class="sw in"></span>Through to R32</div>
+       <div class="it"><span class="sw out"></span>Eliminated</div>
+       <div class="it"><span class="sw neu"></span>Still in contention</div>`
+    : `<div class="it"><span class="sw in"></span>Top 2 (provisional)</div>
+       <div class="it"><span class="sw" style="background:var(--amber)"></span>3rd — best-3rd race</div>
+       <div class="it"><span class="sw neu"></span>4th</div>`;
+
+  let html='';
+  for(const key of Object.keys(DATA)){
+    const g = DATA[key];
+    html += `<div class="gcard">
+      <div class="ghead"><span class="gname">Group ${key}</span><span class="gnote">${noteFor(key,g)}</span></div>
+      <table><thead><tr>
+        <th></th><th class="tm">Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th></th>
+      </tr></thead><tbody>`;
+    g.rows.forEach((r,i)=>{
+      const pos=i+1, cls=rowClass(r,pos);
+      html += `<tr class="${cls}">
+        <td class="pos">${pos}</td>
+        <td class="tm"><div class="tcell">${flag(r.code)}<span class="nm">${r.disp}</span></div></td>
+        <td class="p">${r.P}</td><td class="w">${r.W}</td><td class="d">${r.D}</td><td class="l">${r.L}</td>
+        <td class="gd">${gd(r.GD)}</td><td class="pts">${r.Pts}</td><td class="mk">${mark(r)}</td>
+      </tr>`;
+    });
+    html += `</tbody></table></div>`;
+  }
+  document.getElementById('groups').innerHTML = html;
+}
+
+document.getElementById('mseg').addEventListener('click', e=>{
+  const b=e.target.closest('button'); if(!b) return;
+  MODE=b.dataset.m;
+  document.querySelectorAll('#mseg button').forEach(x=>x.classList.toggle('on',x===b));
+  render();
+});
+render();
+</script>
+</body>
+</html>
