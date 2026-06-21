@@ -113,7 +113,8 @@
         "Only after the semi-finals"
       ],
       "answer": 2,
-      "explanation": "Single yellows are wiped after the group stage, and again after the quarter-finals, so an early caution can't cost a player the final."
+      "explanation": "Single yellows are wiped after the group stage, and again after the quarter-finals, so an early caution can't cost a player the final.",
+      "claudeTask": "say what happens if a player gets a red card — does it carry over t the next stage including the final?"
     },
     {
       "id": "c-fan-fest",
