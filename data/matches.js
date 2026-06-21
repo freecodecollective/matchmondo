@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-21 22:10 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-06-21 22:41 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -506,7 +506,7 @@ window.WC_MATCHES = [
     "city": "Miami Gardens, FL",
     "tv": "FOX or FS1 · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 0
+    "scoreA": 1
   },
   {
     "n": 40,
