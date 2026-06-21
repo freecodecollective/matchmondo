@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Workout tracker · Punch card</title>
+<meta name="description" content="A calm, non-dopamine weekly workout tracker. Fill in your week like a paper punch card.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.30.0/dist/tabler-icons.min.css">
+<style>
+:root{
+  --color-background-primary:#ffffff;
+  --color-background-secondary:#f3f1ec;
+  --color-background-tertiary:#edebe4;
+  --color-background-info:#E6F1FB;
+  --color-text-primary:#1f1f1d;
+  --color-text-secondary:#6b6a64;
+  --color-text-tertiary:#a09f97;
+  --color-text-info:#0C447C;
+  --color-border-tertiary:rgba(20,20,15,0.12);
+  --color-border-secondary:rgba(20,20,15,0.20);
+  --color-border-info:#378ADD;
+  --border-radius-md:8px;
+  --border-radius-lg:12px;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;padding:28px 16px 48px;
+  background:var(--color-background-tertiary);
+  color:var(--color-text-primary);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.page-head{text-align:center;max-width:680px;margin:0 auto 24px;}
+.page-head h1{font-size:22px;font-weight:500;margin:0 0 4px;}
+.page-head p{font-size:14px;color:var(--color-text-secondary);margin:0;line-height:1.6;}
+.stage{display:flex;justify-content:center;align-items:flex-start;}
+
+.wt-phone{
+  width:min(340px,100%);
+  background:var(--color-background-primary);
+  border:0.5px solid var(--color-border-secondary);
+  border-radius:26px;
+  padding:22px 20px;
+}
+
+/* Aggregate summary */
+.agg{margin-bottom:18px;}
+.agg-month{font-size:12px;color:var(--color-text-tertiary);margin-bottom:10px;}
+.agg-big{display:flex;align-items:baseline;gap:10px;}
+.agg-count{font-size:34px;font-weight:500;line-height:1;letter-spacing:-0.5px;}
+.agg-week{font-size:13px;color:var(--color-text-secondary);}
+.agg-sub{display:flex;justify-content:space-between;align-items:baseline;margin-top:8px;}
+.agg-pct{font-size:13px;color:var(--color-text-secondary);}
+.agg-left{font-size:13px;color:var(--color-text-secondary);}
+.agg-bar{height:5px;border-radius:3px;background:var(--color-background-tertiary);overflow:hidden;margin-top:12px;}
+.agg-bar-fill{height:100%;border-radius:3px;background:var(--color-text-primary);width:0;transition:width .35s ease;}
+
+.rule{height:0.5px;background:var(--color-border-tertiary);border:0;margin:18px 0;}
+
+/* Rows */
+.rows{display:flex;flex-direction:column;gap:0;}
+.row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 0;
+}
+.row + .row{border-top:0.5px solid var(--color-border-tertiary);}
+.row-left{display:flex;align-items:center;gap:10px;min-width:0;}
+.row-dot{width:10px;height:10px;border-radius:50%;flex:none;}
+.row-meta{min-width:0;}
+.row-name{font-size:14px;font-weight:500;line-height:1.2;}
+.row-sub{font-size:12px;color:var(--color-text-tertiary);margin-top:2px;}
+.row-circles{display:flex;align-items:center;gap:8px;flex:none;}
+
+.circle{
+  width:22px;height:22px;border-radius:50%;
+  border:1.5px solid var(--color-border-secondary);
+  background:transparent;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;padding:0;flex:none;
+  color:#fff;
+  transition:background .25s ease,border-color .25s ease,transform .1s ease;
+  font-family:inherit;
+}
+.circle:active{transform:scale(0.9);}
+.circle .ti{font-size:13px;opacity:0;transition:opacity .2s ease;}
+.circle.filled{border-color:transparent;}
+.circle.filled .ti{opacity:1;}
+.circle.add{border-style:dashed;border-color:var(--color-border-tertiary);color:var(--color-text-tertiary);}
+.circle.add .ti{opacity:1;color:var(--color-text-tertiary);font-size:14px;}
+.circle.add:hover{background:var(--color-background-secondary);}
+.circle.extra{width:8px;height:8px;border-width:0;align-self:center;}
+
+/* Custom + edit */
+.actions{display:flex;gap:10px;margin-top:18px;}
+.btn{
+  flex:1;
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  padding:11px 12px;
+  border:0.5px solid var(--color-border-tertiary);
+  border-radius:var(--border-radius-lg);
+  background:var(--color-background-primary);
+  color:var(--color-text-primary);
+  font-size:13px;font-family:inherit;cursor:pointer;
+  transition:background .12s ease;
+}
+.btn:hover{background:var(--color-background-secondary);}
+.btn .ti{font-size:15px;color:var(--color-text-secondary);}
+.btn.ghost{flex:none;border:0;background:transparent;color:var(--color-text-secondary);padding:11px 6px;}
+.btn.ghost:hover{background:transparent;color:var(--color-text-primary);}
+
+/* Today log */
+.today{margin-top:20px;}
+.today-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;}
+.today-title{font-size:12px;color:var(--color-text-secondary);}
+.today-min{font-size:12px;color:var(--color-text-tertiary);}
+.today-empty{font-size:13px;color:var(--color-text-tertiary);line-height:1.5;}
+.log-item{display:flex;align-items:center;gap:10px;padding:7px 0;font-size:13px;}
+.log-item + .log-item{border-top:0.5px solid var(--color-border-tertiary);}
+.log-dot{width:8px;height:8px;border-radius:50%;flex:none;}
+.log-name{flex:1;}
+.log-dur{color:var(--color-text-tertiary);font-size:12px;}
+
+.page-foot{text-align:center;font-size:12px;color:var(--color-text-tertiary);margin:32px auto 0;max-width:680px;line-height:1.6;}
+</style>
+</head>
+<body>
+<header class="page-head">
+  <h1>Workout tracker</h1>
+  <p>Punch card · fill in your week</p>
+</header>
+
+<div class="stage">
+  <div class="wt-phone">
+
+    <!-- Aggregate summary -->
+    <div class="agg">
+      <div class="agg-month">June · Mon 15 – Sun 21</div>
+      <div class="agg-big">
+        <span class="agg-count"><span id="aggDone">7</span> of <span id="aggTarget">11</span></span>
+        <span class="agg-week">this week</span>
+      </div>
+      <div class="agg-sub">
+        <span class="agg-pct"><span id="aggPct">64</span>% complete</span>
+        <span class="agg-left"><span id="aggLeft">4</span> left</span>
+      </div>
+      <div class="agg-bar"><div class="agg-bar-fill" id="aggBar"></div></div>
+    </div>
+
+    <hr class="rule">
+
+    <!-- Punch-card rows -->
+    <div class="rows" id="rows"></div>
+
+    <!-- Custom + edit -->
+    <div class="actions">
+      <button class="btn" id="customBtn"><i class="ti ti-plus" aria-hidden="true"></i>Custom</button>
+      <button class="btn ghost" id="editBtn">Edit</button>
+    </div>
+
+    <hr class="rule">
+
+    <!-- Today log -->
+    <div class="today">
+      <div class="today-head">
+        <span class="today-title">Today · Sat Jun 20</span>
+        <span class="today-min" id="todayMin"></span>
+      </div>
+      <div id="todayLog"></div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="page-foot">A quiet weekly habit. No streaks, no badges — just the week, filled in.</footer>
+
+<script>
+"use strict";
+
+var workouts = [
+  {id:"tonal1", name:"Tonal · Workout 1", short:"Tonal 1", color:"#378ADD", dur:15, goal:2, icon:"ti-bolt"},
+  {id:"tonal2", name:"Tonal · Workout 2", short:"Tonal 2", color:"#185FA5", dur:15, goal:2, icon:"ti-bolt"},
+  {id:"pilates", name:"Pilates", short:"Pilates", color:"#1D9E75", dur:25, goal:3, icon:"ti-yoga"},
+  {id:"hills", name:"Hills", short:"Hills", color:"#BA7517", dur:40, goal:4, icon:"ti-mountain"}
+];
+
+// Prefilled counts for the week
+var counts = {tonal1:1, tonal2:1, pilates:2, hills:3};
+
+// Today's log — ordered list of {id, dur}. Prefill empty (the week's prior
+// sessions happened earlier in the week, not today).
+var todayEntries = [];
+
+function byId(id){ for(var i=0;i<workouts.length;i++){ if(workouts[i].id===id) return workouts[i]; } return null; }
+
+function weekTarget(){ var t=0; for(var i=0;i<workouts.length;i++) t+=workouts[i].goal; return t; }
+
+function weekDone(){
+  var d=0;
+  for(var i=0;i<workouts.length;i++){
+    var w=workouts[i];
+    d += Math.min(counts[w.id], w.goal);
+  }
+  return d;
+}
+
+function weekLeft(){
+  var l=0;
+  for(var i=0;i<workouts.length;i++){
+    var w=workouts[i];
+    l += Math.max(0, w.goal - counts[w.id]);
+  }
+  return l;
+}
+
+function renderAggregate(){
+  var target = weekTarget();
+  var done = weekDone();
+  var pct = Math.round(done/target*100);
+  document.getElementById("aggDone").textContent = done;
+  document.getElementById("aggTarget").textContent = target;
+  document.getElementById("aggPct").textContent = pct;
+  document.getElementById("aggLeft").textContent = weekLeft();
+  document.getElementById("aggBar").style.width = pct + "%";
+}
+
+function rowsHtml(){
+  var html = "";
+  for(var i=0;i<workouts.length;i++){
+    var w = workouts[i];
+    var c = counts[w.id];
+
+    var circles = "";
+    for(var s=0; s<w.goal; s++){
+      var filled = s < c;
+      circles += '<button class="circle' + (filled ? ' filled' : '') + '"' +
+        ' style="' + (filled ? 'background:' + w.color + ';' : '') + '"' +
+        ' data-id="' + w.id + '" data-slot="' + s + '"' +
+        ' aria-label="' + w.name + ' session ' + (s+1) + ' of ' + w.goal + '">' +
+        '<i class="ti ti-check" aria-hidden="true"></i></button>';
+    }
+    // Over-goal extras as subtle small dots, never counted past 100%
+    var extra = c - w.goal;
+    if(extra > 0){
+      for(var e=0;e<extra;e++){
+        circles += '<span class="circle extra filled" style="background:' + w.color + ';"></span>';
+      }
+    }
+    // A "+" affordance at the row end to fill the next session
+    circles += '<button class="circle add" data-id="' + w.id + '" data-add="1"' +
+      ' aria-label="Log another ' + w.name + '"><i class="ti ti-plus" aria-hidden="true"></i></button>';
+
+    html += '<div class="row">' +
+      '<div class="row-left">' +
+        '<span class="row-dot" style="background:' + w.color + ';"></span>' +
+        '<span class="row-meta">' +
+          '<span class="row-name">' + w.short + '</span>' +
+          '<span class="row-sub">' + w.dur + ' min · ' + Math.min(c, w.goal) + ' of ' + w.goal +
+            (extra > 0 ? ' &middot; +' + extra : '') + '</span>' +
+        '</span>' +
+      '</div>' +
+      '<div class="row-circles">' + circles + '</div>' +
+    '</div>';
+  }
+  return html;
+}
+
+function renderRows(){
+  var container = document.getElementById("rows");
+  container.innerHTML = rowsHtml();
+
+  var circles = container.querySelectorAll(".circle");
+  for(var i=0;i<circles.length;i++){
+    circles[i].addEventListener("click", onCircleClick);
+  }
+}
+
+function onCircleClick(){
+  var id = this.getAttribute("data-id");
+  var w = byId(id);
+  if(!w) return;
+
+  if(this.getAttribute("data-add")){
+    logSession(id);
+    return;
+  }
+
+  var slot = parseInt(this.getAttribute("data-slot"), 10);
+  var filled = slot < counts[id];
+
+  // Undo only the most-recent filled circle (the last one within goal)
+  var lastFilledSlot = Math.min(counts[id], w.goal) - 1;
+  if(filled && slot === lastFilledSlot && counts[id] === slot + 1){
+    undoSession(id);
+  } else if(!filled){
+    // Fill the next empty circle (logs at this slot)
+    logSession(id);
+  }
+  // Tapping an earlier filled circle does nothing (keeps it calm/predictable)
+}
+
+function logSession(id){
+  var w = byId(id);
+  counts[id] += 1;
+  todayEntries.push({id:id, dur:w.dur});
+  renderAll();
+}
+
+function undoSession(id){
+  if(counts[id] <= 0) return;
+  counts[id] -= 1;
+  // Remove the most recent today entry for this workout, if any
+  for(var i=todayEntries.length-1;i>=0;i--){
+    if(todayEntries[i].id === id){ todayEntries.splice(i,1); break; }
+  }
+  renderAll();
+}
+
+function renderToday(){
+  var box = document.getElementById("todayLog");
+  var minEl = document.getElementById("todayMin");
+
+  if(todayEntries.length === 0){
+    box.innerHTML = '<div class="today-empty">Nothing logged yet — it’s Saturday.</div>';
+    minEl.textContent = "";
+    return;
+  }
+
+  var total = 0;
+  var html = "";
+  for(var i=0;i<todayEntries.length;i++){
+    var w = byId(todayEntries[i].id);
+    total += todayEntries[i].dur;
+    var label = todayEntries[i].name || w.name;
+    html += '<div class="log-item">' +
+      '<span class="log-dot" style="background:' + w.color + ';"></span>' +
+      '<span class="log-name">' + label + '</span>' +
+      '<span class="log-dur">' + todayEntries[i].dur + ' min</span>' +
+    '</div>';
+  }
+  box.innerHTML = html;
+  minEl.textContent = total + " min today";
+}
+
+function renderAll(){
+  renderAggregate();
+  renderRows();
+  renderToday();
+}
+
+document.getElementById("customBtn").addEventListener("click", function(){
+  var name = window.prompt("Log a custom workout — what did you do?");
+  if(name === null) return;
+  name = name.trim();
+  if(!name) return;
+  var minsStr = window.prompt("How many minutes?", "30");
+  if(minsStr === null) return;
+  var mins = parseInt(minsStr, 10);
+  if(isNaN(mins) || mins <= 0) mins = 30;
+  // Custom logs add to today's minutes but don't count toward a goal row.
+  todayEntries.push({id:"custom", dur:mins, name:name});
+  renderToday();
+});
+
+document.getElementById("editBtn").addEventListener("click", function(){
+  window.alert("Down the road: rename workouts and change goals here.");
+});
+
+// Custom entries need a name fallback in the today renderer.
+var _byId = byId;
+byId = function(id){
+  var w = _byId(id);
+  if(w) return w;
+  if(id === "custom") return {id:"custom", name:"Custom", color:"var(--color-text-tertiary)", dur:0};
+  return null;
+};
+
+renderAll();
+</script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Workout tracker · Rings</title>
+<title>Workout tracker · Week ring</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.30.0/dist/tabler-icons.min.css">
 <style>
 :root{
@@ -36,7 +36,7 @@ body{
 }
 .page-head{
   width:100%;
-  max-width:330px;
+  max-width:340px;
   margin-bottom:18px;
   padding:0 4px;
 }
@@ -51,86 +51,32 @@ body{
   margin-top:3px;
 }
 .phone{
-  width:330px;
+  width:340px;
   max-width:100%;
   background:var(--color-background-primary);
   border-radius:26px;
   border:0.5px solid var(--color-border-tertiary);
-  padding:24px 20px 22px;
-}
-.headline{
-  margin-bottom:20px;
-}
-.headline .big{
-  font-size:30px;
-  font-weight:500;
-  letter-spacing:-0.02em;
-  line-height:1.1;
-  transition:color .25s ease;
-}
-.headline .sub{
-  font-size:13px;
-  color:var(--color-text-secondary);
-  margin-top:4px;
+  padding:26px 20px 22px;
 }
 
-.weekbar{
-  margin-top:14px;
-}
-.weekbar-cells{
-  display:flex;
-  align-items:center;
-  gap:9px;
-  height:8px;
-}
-.weekbar-group{
-  display:flex;
-  gap:3px;
-  flex:1;
-}
-.weekbar-cell{
-  flex:1;
-  height:8px;
-  border-radius:3px;
-  background:var(--color-background-secondary);
-  border:0.5px solid var(--color-border-tertiary);
-  transition:background .45s cubic-bezier(.4,0,.2,1),border-color .45s ease;
-}
-.weekbar-cell.filled{
-  border-color:transparent;
-}
-.weekbar-label{
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin-top:8px;
-}
-.weekbar-extra{
-  color:var(--color-text-tertiary);
-}
-
-.rings{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-  margin-bottom:22px;
-}
-.ring-cell{
+/* HERO ring */
+.hero{
   display:flex;
   flex-direction:column;
   align-items:center;
-  text-align:center;
+  margin-bottom:6px;
 }
 .ring-wrap{
   position:relative;
-  width:110px;
-  height:110px;
+  width:200px;
+  height:200px;
 }
 .ring-wrap svg{
-  width:110px;
-  height:110px;
+  width:200px;
+  height:200px;
   transform:rotate(-90deg);
 }
-.ring-arc{
+.unit-fill{
   transition:stroke-dashoffset .55s cubic-bezier(.4,0,.2,1);
 }
 .ring-center{
@@ -140,26 +86,55 @@ body{
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  gap:2px;
+  gap:0;
 }
-.ring-center i{
-  font-size:20px;
-}
-.ring-count{
-  font-size:14px;
+.ring-center .done{
+  font-size:34px;
   font-weight:500;
+  letter-spacing:-0.02em;
+  line-height:1.05;
+}
+.ring-center .done .total{
+  color:var(--color-text-tertiary);
+  font-weight:400;
+}
+.ring-center .pct{
+  font-size:14px;
+  color:var(--color-text-secondary);
+  margin-top:4px;
+}
+.ring-center .pct .extra{
+  color:var(--color-text-tertiary);
+}
+.left-line{
+  font-size:14px;
+  color:var(--color-text-secondary);
+  margin-top:12px;
+}
+.left-line.done-all{
   color:var(--color-text-primary);
 }
-.ring-done{
-  display:none;
-  font-size:18px;
+
+/* legend */
+.legend{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:6px 14px;
+  margin:16px 0 22px;
 }
-.ring-cell.done .ring-count{display:none;}
-.ring-cell.done .ring-done{display:block;}
-.ring-label{
-  font-size:13px;
+.legend-item{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:12px;
   color:var(--color-text-secondary);
-  margin-top:8px;
+}
+.legend-dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  flex:none;
 }
 
 .section-label{
@@ -169,6 +144,7 @@ body{
   letter-spacing:0.01em;
 }
 
+/* tiles */
 .tiles{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -223,11 +199,11 @@ body{
 }
 .tile.util .tile-top i{color:var(--color-text-secondary);}
 
+/* today log */
 .today{
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-lg);
   padding:14px 14px 13px;
-  margin-bottom:18px;
 }
 .today-head{
   display:flex;
@@ -264,46 +240,27 @@ body{
   font-size:13px;
   color:var(--color-text-secondary);
 }
-
-.month{
-  border-top:0.5px solid var(--color-border-tertiary);
-  padding-top:14px;
-}
-.month .section-label{margin-bottom:9px;}
-.dots{
-  display:grid;
-  grid-template-columns:repeat(15,1fr);
-  gap:5px;
-}
-.dot{
-  width:100%;
-  aspect-ratio:1/1;
-  border-radius:50%;
-  background:var(--color-background-tertiary);
-}
-.dot.today-dot{
-  outline:1.5px solid var(--color-text-secondary);
-  outline-offset:1px;
-}
 </style>
 </head>
 <body>
 <div class="page-head">
   <h1>Workout tracker</h1>
-  <p>Rings · tap a workout to log</p>
+  <p>Week ring · the whole week in one ring</p>
 </div>
 
 <div class="phone">
-  <div class="headline">
-    <div class="big" id="headline-big">4 left this week</div>
-    <div class="sub">Mon Jun 15 – Sun Jun 21</div>
-    <div class="weekbar">
-      <div class="weekbar-cells" id="weekbar-cells"></div>
-      <div class="weekbar-label" id="weekbar-label"></div>
+  <div class="hero">
+    <div class="ring-wrap">
+      <svg viewBox="0 0 200 200" aria-hidden="true" id="ring-svg"></svg>
+      <div class="ring-center">
+        <div class="done"><span id="done-num">7</span><span class="total" id="total-num">/11</span></div>
+        <div class="pct"><span id="pct-num">64%</span><span id="extra-num"></span></div>
+      </div>
     </div>
+    <div class="left-line" id="left-line">4 left this week</div>
   </div>
 
-  <div class="rings" id="rings"></div>
+  <div class="legend" id="legend"></div>
 
   <div class="section-label">Log a session</div>
   <div class="tiles" id="tiles"></div>
@@ -314,11 +271,6 @@ body{
       <span class="total" id="today-total"></span>
     </div>
     <div id="today-log"></div>
-  </div>
-
-  <div class="month">
-    <div class="section-label">This month</div>
-    <div class="dots" id="dots"></div>
   </div>
 </div>
 
@@ -348,55 +300,86 @@ function weekCount(id){
   return c;
 }
 
-function leftThisWeek(){
-  let left = 0;
-  for(const id of order){ left += Math.max(0, workouts[id].goal - weekCount(id)); }
-  return left;
-}
+/* ---- One big ring split into 11 units ---- */
+const CX = 100, CY = 100, R = 84, SW = 16;
+const TOTAL_UNITS = order.reduce((s,id)=>s+workouts[id].goal,0); // 11
+const UNIT_GAP = 2.2;   // degrees of gap between units in a group
+const GROUP_GAP = 7;    // degrees of extra gap between workout groups
 
-const R = 48;
+// Build the per-unit angular layout. Total 360 deg shared by 11 units
+// plus the inter-unit gaps and inter-group gaps.
+function buildLayout(){
+  const gapTotal =
+    order.reduce((s,id)=> s + (workouts[id].goal - 1) * UNIT_GAP, 0) +
+    order.length * GROUP_GAP;
+  const arcTotal = 360 - gapTotal;
+  const unitArc = arcTotal / TOTAL_UNITS;
+
+  const units = [];
+  let angle = 0; // degrees, 0 = top after the -90 svg rotation
+  order.forEach((id) => {
+    const w = workouts[id];
+    for(let i = 0; i < w.goal; i++){
+      units.push({ id, start: angle, sweep: unitArc });
+      angle += unitArc;
+      if(i < w.goal - 1) angle += UNIT_GAP;
+    }
+    angle += GROUP_GAP;
+  });
+  return units;
+}
+const units = buildLayout();
 const CIRC = 2 * Math.PI * R;
 
-function buildRings(){
-  const el = document.getElementById('rings');
-  el.innerHTML = '';
-  for(const id of order){
-    const w = workouts[id];
-    const cell = document.createElement('div');
-    cell.className = 'ring-cell';
-    cell.id = 'ring-' + id;
-    cell.innerHTML = `
-      <div class="ring-wrap">
-        <svg viewBox="0 0 110 110" aria-hidden="true">
-          <circle cx="55" cy="55" r="${R}" fill="none" stroke="var(--color-border-tertiary)" stroke-width="9"></circle>
-          <circle class="ring-arc" cx="55" cy="55" r="${R}" fill="none" stroke="${w.color}" stroke-width="9"
-            stroke-linecap="round" stroke-dasharray="${CIRC}" stroke-dashoffset="${CIRC}"></circle>
-        </svg>
-        <div class="ring-center">
-          <i class="${w.icon}" style="color:${w.color}" aria-hidden="true"></i>
-          <span class="ring-count">0/${w.goal}</span>
-          <span class="ring-done" style="color:${w.color}"><i class="ti ti-check" aria-hidden="true"></i></span>
-        </div>
-      </div>
-      <div class="ring-label">${w.short}</div>`;
-    el.appendChild(cell);
-  }
+function buildRing(){
+  const svg = document.getElementById('ring-svg');
+  let html = '';
+  units.forEach((u, idx) => {
+    const color = workouts[u.id].color;
+    const dashLen = (u.sweep / 360) * CIRC;
+    const offset = -((u.start / 360) * CIRC);
+    // faint track for the unit
+    html += `<circle cx="${CX}" cy="${CY}" r="${R}" fill="none"
+      stroke="var(--color-border-tertiary)" stroke-width="${SW}" stroke-linecap="butt"
+      stroke-dasharray="${dashLen.toFixed(2)} ${(CIRC - dashLen).toFixed(2)}"
+      stroke-dashoffset="${offset.toFixed(2)}"></circle>`;
+    // solid fill, revealed by collapsing its own dashoffset
+    html += `<circle class="unit-fill" id="unit-${idx}" cx="${CX}" cy="${CY}" r="${R}" fill="none"
+      stroke="${color}" stroke-width="${SW}" stroke-linecap="butt"
+      stroke-dasharray="0 ${CIRC.toFixed(2)}"
+      stroke-dashoffset="${offset.toFixed(2)}"
+      data-len="${dashLen.toFixed(2)}" data-off="${offset.toFixed(2)}"></circle>`;
+  });
+  svg.innerHTML = html;
 }
 
-function buildWeekBar(){
-  const el = document.getElementById('weekbar-cells');
+function renderRing(){
+  // determine, per workout, how many units are done (capped at goal)
+  const doneByWorkout = {};
+  for(const id of order){ doneByWorkout[id] = Math.min(weekCount(id), workouts[id].goal); }
+  const filledSoFar = {};
+  for(const id of order){ filledSoFar[id] = 0; }
+
+  units.forEach((u, idx) => {
+    const el = document.getElementById('unit-' + idx);
+    const len = parseFloat(el.dataset.len);
+    const filled = filledSoFar[u.id] < doneByWorkout[u.id];
+    if(filled) filledSoFar[u.id]++;
+    el.style.strokeDasharray = filled
+      ? `${len} ${(CIRC - len).toFixed(2)}`
+      : `0 ${CIRC.toFixed(2)}`;
+  });
+}
+
+function buildLegend(){
+  const el = document.getElementById('legend');
   el.innerHTML = '';
   for(const id of order){
     const w = workouts[id];
-    const group = document.createElement('div');
-    group.className = 'weekbar-group';
-    for(let i = 0; i < w.goal; i++){
-      const cell = document.createElement('div');
-      cell.className = 'weekbar-cell';
-      cell.dataset.w = id;
-      group.appendChild(cell);
-    }
-    el.appendChild(group);
+    const item = document.createElement('div');
+    item.className = 'legend-item';
+    item.innerHTML = `<span class="legend-dot" style="background:${w.color}"></span>${w.short}`;
+    el.appendChild(item);
   }
 }
 
@@ -460,39 +443,31 @@ function logCustom(){
   logSession(id, min);
 }
 
-function renderRings(){
+function renderAggregate(){
+  let weekTarget = 0, weekDone = 0, weekExtra = 0, left = 0;
   for(const id of order){
     const w = workouts[id];
     const count = weekCount(id);
-    const cell = document.getElementById('ring-' + id);
-    const frac = Math.min(1, count / w.goal);
-    const arc = cell.querySelector('.ring-arc');
-    arc.style.strokeDashoffset = (CIRC * (1 - frac)).toFixed(2);
-    cell.querySelector('.ring-count').textContent = count + '/' + w.goal;
-    cell.classList.toggle('done', count >= w.goal);
-  }
-}
-
-function renderWeekBar(){
-  let weekTarget = 0, weekDone = 0, weekExtra = 0;
-  for(const id of order){
-    const w = workouts[id];
-    const count = weekCount(id);
-    const capped = Math.min(count, w.goal);
     weekTarget += w.goal;
-    weekDone += capped;
+    weekDone += Math.min(count, w.goal);
     weekExtra += Math.max(0, count - w.goal);
-    const cells = document.querySelectorAll('.weekbar-cell[data-w="' + id + '"]');
-    cells.forEach((cell, i) => {
-      const filled = i < capped;
-      cell.classList.toggle('filled', filled);
-      cell.style.background = filled ? w.color : 'var(--color-background-secondary)';
-    });
+    left += Math.max(0, w.goal - count);
   }
   const pct = Math.round(weekDone / weekTarget * 100);
-  const extra = weekExtra > 0 ? ' <span class="weekbar-extra">+' + weekExtra + '</span>' : '';
-  document.getElementById('weekbar-label').innerHTML =
-    'This week · ' + weekDone + ' of ' + weekTarget + ' · ' + pct + '%' + extra;
+  document.getElementById('done-num').textContent = weekDone;
+  document.getElementById('total-num').textContent = '/' + weekTarget;
+  document.getElementById('pct-num').textContent = pct + '%';
+  document.getElementById('extra-num').innerHTML =
+    weekExtra > 0 ? ' <span class="extra">+' + weekExtra + '</span>' : '';
+
+  const leftEl = document.getElementById('left-line');
+  if(left === 0){
+    leftEl.textContent = 'All caught up this week';
+    leftEl.classList.add('done-all');
+  } else {
+    leftEl.textContent = left + ' left this week';
+    leftEl.classList.remove('done-all');
+  }
 }
 
 function renderTiles(){
@@ -501,18 +476,6 @@ function renderTiles(){
     const tile = document.getElementById('tile-' + id);
     tile.classList.toggle('has-count', count > 0);
     tile.querySelector('.tile-badge').textContent = count;
-  }
-}
-
-function renderHeadline(){
-  const left = leftThisWeek();
-  const el = document.getElementById('headline-big');
-  if(left === 0){
-    el.textContent = 'All caught up';
-    el.style.color = workouts.pilates.color;
-  } else {
-    el.textContent = left + (left === 1 ? ' left this week' : ' left this week');
-    el.style.color = 'var(--color-text-primary)';
   }
 }
 
@@ -541,46 +504,21 @@ function renderToday(){
   totalEl.textContent = Math.round(total) + ' min today';
 }
 
-function buildMonth(){
-  const el = document.getElementById('dots');
-  el.innerHTML = '';
-  const monthVol = {};
-  let dayOfMonth = 15;
-  for(let i = 0; i < week.length; i++){
-    monthVol[dayOfMonth + i] = week[i].length;
-  }
-  for(let d = 1; d <= 30; d++){
-    const dot = document.createElement('div');
-    dot.className = 'dot';
-    const v = monthVol[d] || 0;
-    let bg = 'var(--color-background-tertiary)';
-    if(v === 1) bg = '#E6F1FB';
-    else if(v === 2) bg = '#85B7EB';
-    else if(v >= 3) bg = '#378ADD';
-    dot.style.background = bg;
-    if(d === 20) dot.classList.add('today-dot');
-    el.appendChild(dot);
-  }
-}
-
-function renderMonth(){
-  buildMonth();
-}
-
 function render(){
-  renderRings();
-  renderWeekBar();
+  renderRing();
+  renderAggregate();
   renderTiles();
-  renderHeadline();
   renderToday();
-  renderMonth();
 }
 
-buildRings();
-buildWeekBar();
+buildRing();
+buildLegend();
 buildTiles();
-render();
-requestAnimationFrame(() => { renderRings(); renderWeekBar(); });
+renderAggregate();
+renderTiles();
+renderToday();
+// reveal fills on next frame so the dashoffset transition animates in
+requestAnimationFrame(() => renderRing());
 </script>
 </body>
 </html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workout tracker · Week bar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.30.0/dist/tabler-icons.min.css">
+<style>
+:root{
+  --color-background-primary:#ffffff;
+  --color-background-secondary:#f3f1ec;
+  --color-background-tertiary:#edebe4;
+  --color-background-info:#E6F1FB;
+  --color-text-primary:#1f1f1d;
+  --color-text-secondary:#6b6a64;
+  --color-text-tertiary:#a09f97;
+  --color-text-info:#0C447C;
+  --color-border-tertiary:rgba(20,20,15,0.12);
+  --color-border-secondary:rgba(20,20,15,0.20);
+  --color-border-info:#378ADD;
+  --border-radius-md:8px;
+  --border-radius-lg:12px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--color-background-tertiary);
+  color:var(--color-text-primary);
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:28px 16px 48px;
+}
+.page-header{width:100%;max-width:340px;margin-bottom:18px;padding:0 4px}
+.page-header h1{font-size:18px;font-weight:500;letter-spacing:-0.01em}
+.page-header p{font-size:13px;color:var(--color-text-secondary);margin-top:3px}
+.phone{
+  width:340px;
+  max-width:100%;
+  background:var(--color-background-primary);
+  border-radius:26px;
+  border:0.5px solid var(--color-border-tertiary);
+  padding:26px 20px 24px;
+}
+.month-nod{
+  display:flex;align-items:center;gap:6px;
+  font-size:12px;color:var(--color-text-tertiary);
+  margin-bottom:18px;
+}
+.month-nod i{font-size:14px}
+
+/* hero numbers */
+.hero-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:4px}
+.hero-count{font-size:34px;font-weight:500;letter-spacing:-0.02em;line-height:1}
+.hero-count .of{color:var(--color-text-tertiary);font-weight:400}
+.hero-pct{font-size:22px;font-weight:500;color:var(--color-text-secondary);line-height:1}
+.hero-sub{font-size:13px;color:var(--color-text-secondary);margin-bottom:20px}
+.hero-sub .left{color:var(--color-text-primary)}
+
+/* segmented week bar */
+.weekbar{display:flex;align-items:flex-end;gap:10px;margin-bottom:8px}
+.group{flex:1;display:flex;flex-direction:column;gap:7px}
+.cells{display:flex;gap:4px}
+.cell{
+  flex:1;height:20px;border-radius:4px;
+  background:var(--color-background-secondary);
+  border:0.5px solid var(--color-border-tertiary);
+  transition:background-color .45s ease,border-color .45s ease;
+}
+.cell.filled{border-color:transparent}
+.glabel{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--color-text-secondary)}
+.dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+
+.divider{height:0.5px;background:var(--color-border-tertiary);margin:20px 0}
+
+.section-label{font-size:12px;color:var(--color-text-tertiary);text-transform:none;margin-bottom:12px;font-weight:500}
+
+/* tiles */
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.tile{
+  display:flex;flex-direction:column;gap:8px;
+  background:var(--color-background-primary);
+  border:0.5px solid var(--color-border-tertiary);
+  border-radius:var(--border-radius-lg);
+  padding:12px 12px 11px;
+  text-align:left;
+  cursor:pointer;
+  font-family:inherit;color:inherit;
+  transition:background-color .15s ease,border-color .15s ease,transform .08s ease;
+}
+.tile:hover{background:var(--color-background-secondary)}
+.tile:active{transform:scale(0.985)}
+.tile-top{display:flex;align-items:center;justify-content:space-between}
+.tile-icon{
+  width:30px;height:30px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;
+}
+.tile-badge{
+  font-size:12px;font-weight:500;
+  min-width:20px;height:20px;padding:0 6px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+}
+.tile-name{font-size:14px;font-weight:500;line-height:1.2}
+.tile-meta{font-size:12px;color:var(--color-text-secondary)}
+.tile.util{border-style:dashed}
+.tile.util .tile-icon{background:var(--color-background-secondary);color:var(--color-text-secondary)}
+
+/* today log */
+.today-log{display:flex;flex-direction:column;gap:9px;margin-top:4px}
+.log-empty{font-size:13px;color:var(--color-text-secondary)}
+.log-row{display:flex;align-items:center;gap:10px}
+.log-bullet{width:9px;height:9px;border-radius:3px;flex-shrink:0}
+.log-name{font-size:13px;flex:1}
+.log-dur{font-size:12px;color:var(--color-text-secondary)}
+.today-total{font-size:12px;color:var(--color-text-tertiary);margin-top:11px}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Workout tracker</h1>
+  <p>Week bar · the whole week at a glance</p>
+</div>
+
+<div class="phone">
+  <div class="month-nod">
+    <i class="ti ti-calendar" aria-hidden="true"></i>
+    <span>Mon Jun 15 – Sun Jun 21</span>
+  </div>
+
+  <div class="hero-top">
+    <div class="hero-count"><span id="weekDone">7</span> <span class="of">of 11</span></div>
+    <div class="hero-pct" id="weekPct">64%</div>
+  </div>
+  <div class="hero-sub">this week · <span class="left" id="weekLeft">4 left this week</span></div>
+
+  <div class="weekbar" id="weekbar"></div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Log a session</div>
+  <div class="tiles" id="tiles"></div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Today</div>
+  <div class="today-log" id="todayLog"></div>
+  <div class="today-total" id="todayTotal"></div>
+</div>
+
+<script>
+const workouts = {
+  tonal1:{name:'Tonal · Workout 1',short:'Tonal 1',color:'#378ADD',dark:'#0C447C',tint:'#E6F1FB',dur:15,goal:2,icon:'ti-bolt'},
+  tonal2:{name:'Tonal · Workout 2',short:'Tonal 2',color:'#185FA5',dark:'#042C53',tint:'#E6F1FB',dur:15,goal:2,icon:'ti-bolt'},
+  pilates:{name:'Pilates',short:'Pilates',color:'#1D9E75',dark:'#085041',tint:'#E1F5EE',dur:25,goal:3,icon:'ti-yoga'},
+  hills:{name:'Hills',short:'Hills',color:'#BA7517',dark:'#633806',tint:'#FAEEDA',dur:40,goal:4,icon:'ti-mountain'}
+};
+const order = ['tonal1','tonal2','pilates','hills'];
+
+// prefilled week, today (Sat Jun 20) = index 5, empty
+const week = {
+  0:[{k:'tonal1',dur:15},{k:'hills',dur:40}],
+  1:[{k:'pilates',dur:25},{k:'hills',dur:35}],
+  2:[{k:'tonal2',dur:15}],
+  3:[{k:'pilates',dur:25},{k:'hills',dur:52}],
+  4:[],
+  5:[],
+  6:[]
+};
+const today = 5;
+
+function counts(){
+  const c = {tonal1:0,tonal2:0,pilates:0,hills:0};
+  for(const d in week) week[d].forEach(e=>c[e.k]++);
+  return c;
+}
+
+function render(){
+  const c = counts();
+  const weekTarget = order.reduce((s,k)=>s+workouts[k].goal,0);
+  const weekDone = order.reduce((s,k)=>s+Math.min(c[k],workouts[k].goal),0);
+  const weekPct = Math.round(weekDone/weekTarget*100);
+  const left = weekTarget - weekDone;
+
+  document.getElementById('weekDone').textContent = weekDone;
+  document.getElementById('weekPct').textContent = weekPct + '%';
+  document.getElementById('weekLeft').textContent = left === 0 ? 'all done this week' : left + ' left this week';
+
+  // segmented week bar
+  const bar = document.getElementById('weekbar');
+  bar.innerHTML = '';
+  order.forEach(k=>{
+    const w = workouts[k];
+    const group = document.createElement('div');
+    group.className = 'group';
+    const cells = document.createElement('div');
+    cells.className = 'cells';
+    for(let i=0;i<w.goal;i++){
+      const cell = document.createElement('div');
+      cell.className = 'cell';
+      if(i < c[k]){
+        cell.classList.add('filled');
+        cell.style.background = w.color;
+      }
+      cells.appendChild(cell);
+    }
+    group.appendChild(cells);
+    const label = document.createElement('div');
+    label.className = 'glabel';
+    const extra = c[k] > w.goal ? ' +' + (c[k]-w.goal) : '';
+    label.innerHTML = '<span class="dot" style="background:'+w.color+'"></span>' + w.short + extra;
+    group.appendChild(label);
+    bar.appendChild(group);
+  });
+
+  // tiles
+  const tiles = document.getElementById('tiles');
+  tiles.innerHTML = '';
+  order.forEach(k=>{
+    const w = workouts[k];
+    const todayCount = week[today].filter(e=>e.k===k).length;
+    const tile = document.createElement('button');
+    tile.className = 'tile';
+    tile.onclick = ()=>logSession(k);
+    let badge = '';
+    if(todayCount > 0){
+      badge = '<span class="tile-badge" style="background:'+w.tint+';color:'+w.dark+'">'+todayCount+'</span>';
+    }
+    tile.innerHTML =
+      '<div class="tile-top">'+
+        '<div class="tile-icon" style="background:'+w.tint+';color:'+w.dark+'"><i class="'+'ti '+w.icon+'" aria-hidden="true"></i></div>'+
+        badge+
+      '</div>'+
+      '<div class="tile-name">'+w.short+'</div>'+
+      '<div class="tile-meta">'+w.dur+' min · '+c[k]+'/'+w.goal+' this week</div>';
+    tiles.appendChild(tile);
+  });
+  // Custom + Edit utility tiles
+  const custom = document.createElement('button');
+  custom.className = 'tile util';
+  custom.onclick = logCustom;
+  custom.innerHTML =
+    '<div class="tile-top"><div class="tile-icon"><i class="ti ti-plus" aria-hidden="true"></i></div></div>'+
+    '<div class="tile-name">Custom</div>'+
+    '<div class="tile-meta">Log something else</div>';
+  tiles.appendChild(custom);
+
+  const edit = document.createElement('button');
+  edit.className = 'tile util';
+  edit.onclick = ()=>alert('Down the road: rename workouts and change goals here.');
+  edit.innerHTML =
+    '<div class="tile-top"><div class="tile-icon"><i class="ti ti-edit" aria-hidden="true"></i></div></div>'+
+    '<div class="tile-name">Edit</div>'+
+    '<div class="tile-meta">Names and goals</div>';
+  tiles.appendChild(edit);
+
+  // today log
+  const log = document.getElementById('todayLog');
+  const total = document.getElementById('todayTotal');
+  log.innerHTML = '';
+  const entries = week[today];
+  if(entries.length === 0){
+    log.innerHTML = '<div class="log-empty">Nothing logged yet — it’s Saturday.</div>';
+    total.textContent = '';
+  }else{
+    let mins = 0;
+    entries.forEach(e=>{
+      const w = workouts[e.k] || {name:e.name,color:'#a09f97'};
+      mins += e.dur;
+      const row = document.createElement('div');
+      row.className = 'log-row';
+      row.innerHTML =
+        '<span class="log-bullet" style="background:'+w.color+'"></span>'+
+        '<span class="log-name">'+w.name+'</span>'+
+        '<span class="log-dur">'+e.dur+' min</span>';
+      log.appendChild(row);
+    });
+    total.textContent = mins + ' min today';
+  }
+}
+
+function logSession(k){
+  week[today].push({k:k,dur:workouts[k].dur});
+  render();
+}
+
+function logCustom(){
+  week[today].push({k:'custom',dur:30,name:'Custom session'});
+  render();
+}
+
+render();
+</script>
+
+</body>
+</html>

@@ -114,6 +114,44 @@
     margin-top: 2px;
   }
 
+  /* aggregate week-progress bar (hero) */
+  .week-bar-wrap {
+    margin-top: 16px;
+  }
+  .week-bar {
+    display: flex;
+    align-items: stretch;
+    gap: 2px;
+    width: 100%;
+    height: 10px;
+  }
+  .week-bar .wb-group {
+    display: flex;
+    gap: 2px;
+    flex: 1;
+  }
+  .week-bar .wb-group + .wb-group {
+    margin-left: 6px;
+  }
+  .week-bar .wb-cell {
+    flex: 1;
+    border-radius: 3px;
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    transition: background 0.25s ease, border-color 0.25s ease;
+  }
+  .week-bar .wb-cell.filled {
+    border-color: transparent;
+  }
+  .week-bar-label {
+    margin-top: 7px;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+  }
+  .week-bar-label .wb-over {
+    color: var(--color-text-tertiary);
+  }
+
   /* two-column on desktop */
   .split {
     display: grid;
@@ -339,6 +377,10 @@
           </div>
         </div>
       </div>
+      <div class="week-bar-wrap">
+        <div class="week-bar" id="weekBar"></div>
+        <div class="week-bar-label" id="weekBarLabel"></div>
+      </div>
     </div>
 
     <div class="split">
@@ -437,6 +479,32 @@
     document.getElementById('sessDone').textContent = Math.round(done);
     document.getElementById('sessGoal').textContent = Math.round(goalSessions);
     document.getElementById('minTotal').textContent = Math.round(minutes);
+
+    // aggregate week-progress bar (segmented, 11 cells in workout order)
+    const weekBar = document.getElementById('weekBar');
+    weekBar.innerHTML = '';
+    let weekDone = 0, weekTarget = 0, weekOver = 0;
+    order.forEach(k => {
+      const w = workouts[k];
+      const capped = Math.min(c[k], w.goal);
+      weekDone += capped;
+      weekTarget += w.goal;
+      weekOver += Math.max(0, c[k] - w.goal);
+      const group = document.createElement('div');
+      group.className = 'wb-group';
+      for (let i = 0; i < w.goal; i++) {
+        const cell = document.createElement('div');
+        cell.className = 'wb-cell' + (i < capped ? ' filled' : '');
+        if (i < capped) cell.style.background = w.color;
+        cell.title = w.short;
+        group.appendChild(cell);
+      }
+      weekBar.appendChild(group);
+    });
+    const weekPct = weekTarget > 0 ? Math.round((weekDone / weekTarget) * 100) : 0;
+    document.getElementById('weekBarLabel').innerHTML =
+      Math.round(weekDone) + ' of ' + Math.round(weekTarget) + ' this week · ' + weekPct + '%' +
+      (weekOver > 0 ? ' <span class="wb-over">+' + Math.round(weekOver) + '</span>' : '');
 
     // goals bars
     const goalsEl = document.getElementById('goals');

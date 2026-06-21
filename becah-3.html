@@ -96,6 +96,42 @@ body{
   letter-spacing:0.2px;
 }
 
+/* aggregate weekly progress */
+.weekbar{
+  margin:-8px 0 24px;
+}
+.weekbar-cells{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  height:10px;
+}
+.weekbar-cells .gap{
+  width:7px;
+  flex:0 0 auto;
+}
+.weekbar-cells .wcell{
+  flex:1 1 0;
+  height:10px;
+  border-radius:3px;
+  background:var(--color-background-secondary);
+  border:0.5px solid var(--color-border-tertiary);
+  transition:background-color 0.32s ease,border-color 0.32s ease;
+}
+.weekbar-cells .wcell.filled{
+  border-color:transparent;
+}
+.weekbar-label{
+  margin-top:9px;
+  font-size:12px;
+  color:var(--color-text-secondary);
+  font-variant-numeric:tabular-nums;
+  letter-spacing:0.1px;
+}
+.weekbar-label .extra{
+  color:var(--color-text-tertiary);
+}
+
 /* plan groups */
 .group{
   margin-bottom:18px;
@@ -251,6 +287,11 @@ body{
   </div>
   <h2 class="headline" id="headline">4 left this week</h2>
 
+  <div class="weekbar" id="weekbar">
+    <div class="weekbar-cells" id="weekbar-cells"></div>
+    <div class="weekbar-label" id="weekbar-label"></div>
+  </div>
+
   <div id="plan"></div>
 
   <section class="month">
@@ -295,6 +336,38 @@ function renderHeadline(){
   const left=leftThisWeek();
   const el=document.getElementById('headline');
   el.textContent = left===0 ? 'All done this week' : left+' left this week';
+}
+
+function renderWeekBar(){
+  const cells=document.getElementById('weekbar-cells');
+  const label=document.getElementById('weekbar-label');
+  cells.innerHTML='';
+
+  let weekTarget=0, weekDone=0, extras=0;
+  workouts.forEach((w,wi)=>{
+    const doneCount=sessions[w.id].filter(r=>r.done).length;
+    const capped=Math.min(doneCount,w.goal);
+    weekTarget+=w.goal;
+    weekDone+=capped;
+    extras+=Math.max(0,doneCount-w.goal);
+
+    if(wi>0){
+      const gap=document.createElement('span');
+      gap.className='gap';
+      cells.appendChild(gap);
+    }
+    for(let i=0;i<w.goal;i++){
+      const cell=document.createElement('span');
+      cell.className='wcell'+(i<capped?' filled':'');
+      if(i<capped){cell.style.background=w.color;}
+      cells.appendChild(cell);
+    }
+  });
+
+  const weekPct=Math.round(weekDone/weekTarget*100);
+  let text='This week · '+weekDone+' of '+weekTarget+' · '+weekPct+'%';
+  if(extras>0){text+=' <span class="extra">+'+extras+'</span>';}
+  label.innerHTML=text;
 }
 
 function renderPlan(){
@@ -348,6 +421,7 @@ function renderPlan(){
 function toggle(id,idx){
   sessions[id][idx].done=!sessions[id][idx].done;
   renderHeadline();
+  renderWeekBar();
   renderPlan();
   renderMonth();
 }
@@ -356,6 +430,7 @@ function addAnother(id){
   const w=workouts.find(x=>x.id===id);
   sessions[id].push({done:true,mins:w.dur});
   renderHeadline();
+  renderWeekBar();
   renderPlan();
   renderMonth();
 }
@@ -402,6 +477,7 @@ function renderMonth(){
 }
 
 renderHeadline();
+renderWeekBar();
 renderPlan();
 renderMonth();
 </script>

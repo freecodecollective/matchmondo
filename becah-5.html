@@ -143,6 +143,50 @@
     color: var(--color-text-secondary);
   }
 
+  /* aggregate week bar */
+  .week-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 10px 0 0;
+  }
+
+  .week-cells {
+    display: flex;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .week-cells .wgroup {
+    display: flex;
+    gap: 2px;
+    margin-right: 6px;
+  }
+
+  .week-cells .wgroup:last-child { margin-right: 0; }
+
+  .week-cells .wcell {
+    flex: 1;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    transition: background-color 0.45s ease, border-color 0.45s ease;
+  }
+
+  .week-cells .wcell.filled { border-color: transparent; }
+
+  .week-bar .week-meta {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--color-text-tertiary);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .week-bar .week-meta .wextra { color: var(--color-text-secondary); }
+
   /* calendar */
   .cal-weekdays {
     display: grid;
@@ -379,6 +423,10 @@
     <section class="tray" aria-label="This week">
       <p class="tray-line"><span id="trayCount">4</span> left this week</p>
       <div class="goal-row" id="goalRow"></div>
+      <div class="week-bar" aria-hidden="true">
+        <div class="week-cells" id="weekCells"></div>
+        <span class="week-meta" id="weekMeta"></span>
+      </div>
     </section>
 
     <section aria-label="June calendar">
@@ -502,11 +550,19 @@
   function refreshTray() {
     var row = document.getElementById('goalRow');
     row.innerHTML = '';
+    var cells = document.getElementById('weekCells');
+    cells.innerHTML = '';
     var left = 0;
+    var weekTarget = 0;
+    var weekDone = 0;
+    var extra = 0;
     ORDER.forEach(function(wid){
       var w = WORKOUTS[wid];
       var c = weekCount(wid);
       left += Math.max(0, w.goal - c);
+      weekTarget += w.goal;
+      weekDone += Math.min(c, w.goal);
+      extra += Math.max(0, c - w.goal);
       var chip = document.createElement('div');
       chip.className = 'goal-chip' + (c >= w.goal ? ' done' : '');
       var dot = document.createElement('span');
@@ -518,8 +574,28 @@
       chip.appendChild(dot);
       chip.appendChild(cnt);
       row.appendChild(chip);
+
+      // one cell group per tracked workout, in workout order
+      var group = document.createElement('div');
+      group.className = 'wgroup';
+      var doneHere = Math.min(c, w.goal);
+      for (var i = 0; i < w.goal; i++) {
+        var cell = document.createElement('span');
+        cell.className = 'wcell';
+        if (i < doneHere) {
+          cell.classList.add('filled');
+          cell.style.background = w.color;
+        }
+        group.appendChild(cell);
+      }
+      cells.appendChild(group);
     });
     document.getElementById('trayCount').textContent = left;
+
+    var weekPct = weekTarget > 0 ? Math.round(weekDone / weekTarget * 100) : 0;
+    var meta = weekDone + ' of ' + weekTarget + ' · ' + weekPct + '%';
+    if (extra > 0) meta += ' <span class="wextra">+' + extra + '</span>';
+    document.getElementById('weekMeta').innerHTML = meta;
   }
 
   function selectDay(d) {
