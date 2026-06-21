@@ -131,7 +131,7 @@
       <p class="feature-note">In this example, <span class="hl">Korea Republic</span> grabs the 8th and final spot over <b>Belgium</b> — both finished on 3 pts with a 0 goal difference, so it came down to <b>goals scored (2 vs 1)</b>. That razor-thin cut is exactly why a live best-3rd table is fun to watch.</p>
     </div>
 
-    <div class="section-h">…and 9 ways to mark each row
+    <div class="section-h">…and 10 ways to mark each row
       <span class="sub">Same idea applied inside the per-group tables — pick the treatment you like.</span>
     </div>
     <div class="grid" id="grid"></div>
@@ -203,6 +203,9 @@ const DESIGNS = [
 
   { name:'Hybrid — tint + ✓/✗ + cut line', rec:true, desc:'The recommended combo: subtle row tint for at-a-glance scanning, a ✓/?/✗ for certainty, and the cut line for context. Clear without shouting.',
     render:()=> table((t)=>{const e=eff(t),c=C[e];return `<div class="row tint-${c}">${nameCells(t)}${stat(t)}<span class="ind ${c}">${STYLE[e].check}</span></div>`;}, true) },
+
+  { name:'Left bar + shading', desc:'Design 3’s colored edge stripe with the row also tinted — bar + soft fill. The boldest colour-only treatment: reads instantly across the table, just a touch heavier.',
+    render:()=> table(t=>{const e=eff(t),c=C[e];return `<div class="row tint-${c}"><span class="leftbar ${c}"></span>${nameCells(t)}${stat(t)}</div>`;}) },
 ];
 
 // ---- Best 3rd-placed leaderboard ----
