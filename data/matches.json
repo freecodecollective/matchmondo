@@ -503,8 +503,8 @@
     "venue": "Hard Rock Stadium",
     "city": "Miami Gardens, FL",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 0,
+    "scoreA": 0
   },
   {
     "n": 40,
