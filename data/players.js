@@ -7,6 +7,7 @@ window.WC_PLAYERS = {
   "Algeria": [
    {
     "name": "Riyad Mahrez",
+    "espnId": 163940,
     "position": "Right winger / Forward",
     "club": "Al-Ahli (Saudi Pro League, Saudi Arabia)",
     "hometown": "Sarcelles (Algerian family roots in Beni Snous, Tlemcen region)",
@@ -73,6 +74,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Mohamed Amoura",
+    "espnId": 315384,
     "position": "Forward / Striker",
     "club": "VfL Wolfsburg (Bundesliga, Germany)",
     "hometown": "Jijel",
@@ -121,6 +123,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Rayan Aït-Nouri",
+    "espnId": 272512,
     "position": "Left-back / Left wing-back",
     "club": "Manchester City (Premier League, England)",
     "hometown": "Montreuil, France (Algerian heritage)",
@@ -167,6 +170,7 @@ window.WC_PLAYERS = {
   "Argentina": [
    {
     "name": "Lionel Messi",
+    "espnId": 45843,
     "position": "Forward (right-sided attacker / withdrawn striker)",
     "club": "Inter Miami CF (USA, MLS)",
     "hometown": "Rosario, Santa Fe Province",
@@ -232,6 +236,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Lautaro Martínez",
+    "espnId": 219713,
     "position": "Forward (centre-forward)",
     "club": "Inter Milan (Italy, Serie A)",
     "hometown": "Bahía Blanca, Buenos Aires Province",
@@ -279,6 +284,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Julián Álvarez",
+    "espnId": 277206,
     "position": "Forward (striker / second striker)",
     "club": "Atlético Madrid (Spain, La Liga)",
     "hometown": "Calchín, Córdoba Province",
@@ -329,6 +335,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Emiliano Martínez",
+    "espnId": 158626,
     "position": "Goalkeeper",
     "club": "Aston Villa (England, Premier League)",
     "hometown": "Mar del Plata, Buenos Aires Province",
@@ -406,6 +413,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Enzo Fernández",
+    "espnId": 285450,
     "position": "Central midfielder",
     "club": "Chelsea (England, Premier League)",
     "hometown": "San Martín, Buenos Aires Province",
@@ -462,6 +470,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Alexis Mac Allister",
+    "espnId": 249299,
     "position": "Central midfielder",
     "club": "Liverpool (Premier League, England)",
     "hometown": "Santa Rosa, La Pampa",
@@ -513,6 +522,7 @@ window.WC_PLAYERS = {
   "Australia": [
    {
     "name": "Mathew Ryan",
+    "espnId": 141438,
     "position": "Goalkeeper",
     "club": "Levante (La Liga, Spain)",
     "hometown": "Plumpton, Western Sydney, New South Wales",
@@ -608,6 +618,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Jackson Irvine",
+    "espnId": 178071,
     "position": "Central midfielder",
     "club": "FC St. Pauli (Bundesliga, Germany)",
     "hometown": "Melbourne, Victoria",
@@ -674,6 +685,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Jordan Bos",
+    "espnId": 328541,
     "position": "Left-back",
     "club": "Feyenoord (Eredivisie, Netherlands)",
     "hometown": "Point Cook, Melbourne, Victoria",
@@ -716,6 +728,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Harry Souttar",
+    "espnId": 207461,
     "position": "Centre-back",
     "club": "Leicester City (Premier League, England)",
     "hometown": "Aberdeen, Scotland (Australian through mother; raised partly in Australia)",
@@ -770,6 +783,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Nestory Irankunda",
+    "espnId": 328535,
     "position": "Winger",
     "club": "Watford (Championship, England; on loan from Bayern Munich)",
     "hometown": "Adelaide, South Australia (born to Burundian parents)",
@@ -811,6 +825,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Awer Mabil",
+    "espnId": 181707,
     "position": "Forward (winger)",
     "club": "Castellón (Segunda División, Spain)",
     "hometown": "Kakuma refugee camp, Kenya (Sudanese-Australian; raised in Adelaide, South Australia)",
@@ -878,6 +893,7 @@ window.WC_PLAYERS = {
   "Austria": [
    {
     "name": "David Alaba",
+    "espnId": 118444,
     "position": "Centre-back",
     "club": "Real Madrid (Spain, La Liga)",
     "hometown": "Vienna",
@@ -931,6 +947,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Marcel Sabitzer",
+    "espnId": 173907,
     "position": "Central midfielder",
     "club": "Borussia Dortmund (Germany, Bundesliga)",
     "hometown": "Wels (Upper Austria)",
@@ -1000,6 +1017,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Konrad Laimer",
+    "espnId": 169189,
     "position": "Central midfielder",
     "club": "Bayern Munich (Germany, Bundesliga)",
     "hometown": "Salzburg",
@@ -1094,6 +1112,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Kevin Danso",
+    "espnId": 250543,
     "position": "Centre-back",
     "club": "Tottenham Hotspur (England, Premier League)",
     "hometown": "Voitsberg, Styria (born in Rocourt, Belgium, raised in Austria)",
@@ -1145,6 +1164,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Marko Arnautovic",
+    "espnId": 98193,
     "position": "Forward / Striker",
     "club": "Red Star Belgrade (Serbia, Serbian SuperLiga)",
     "hometown": "Vienna (Floridsdorf district)",
@@ -1219,6 +1239,7 @@ window.WC_PLAYERS = {
   "Belgium": [
    {
     "name": "Kevin De Bruyne",
+    "espnId": 134947,
     "position": "Attacking midfielder",
     "club": "Napoli (Serie A, Italy)",
     "hometown": "Drongen (Ghent), East Flanders",
@@ -1290,6 +1311,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Thibaut Courtois",
+    "espnId": 134283,
     "position": "Goalkeeper",
     "club": "Real Madrid (LaLiga, Spain)",
     "hometown": "Bree, Limburg",
@@ -1354,6 +1376,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Jérémy Doku",
+    "espnId": 283672,
     "position": "Winger",
     "club": "Manchester City (Premier League, England)",
     "hometown": "Antwerp",
@@ -1403,6 +1426,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Romelu Lukaku",
+    "espnId": 139437,
     "position": "Forward",
     "club": "Napoli (Serie A, Italy)",
     "hometown": "Antwerp",
@@ -1493,6 +1517,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Youri Tielemans",
+    "espnId": 193297,
     "position": "Central midfielder",
     "club": "Aston Villa (Premier League, England)",
     "hometown": "Sint-Pieters-Leeuw, Flemish Brabant",
@@ -1553,6 +1578,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Amadou Onana",
+    "espnId": 304799,
     "position": "Defensive midfielder",
     "club": "Aston Villa (Premier League, England)",
     "hometown": "Dakar, Senegal (raised in Belgium)",
@@ -1609,6 +1635,7 @@ window.WC_PLAYERS = {
   "Bosnia and Herzegovina": [
    {
     "name": "Edin Džeko",
+    "espnId": 102337,
     "position": "Forward",
     "club": "FC Schalke 04 (Germany, 2. Bundesliga)",
     "hometown": "Sarajevo",
@@ -1692,6 +1719,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Amar Dedić",
+    "espnId": 308979,
     "position": "Right-back",
     "club": "SL Benfica (Portugal, Primeira Liga)",
     "hometown": "Family roots near Gračanica (born in Zell am See, Austria)",
@@ -1739,6 +1767,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Ermedin Demirović",
+    "espnId": 269136,
     "position": "Forward",
     "club": "VfB Stuttgart (Germany, Bundesliga)",
     "hometown": "Family roots in Bosnia (born in Hamburg, Germany)",
@@ -1805,6 +1834,7 @@ window.WC_PLAYERS = {
   "Brazil": [
    {
     "name": "Vinícius Júnior",
+    "espnId": 252107,
     "position": "Forward (left winger)",
     "club": "Real Madrid (La Liga, Spain)",
     "hometown": "São Gonçalo, Rio de Janeiro state",
@@ -1849,6 +1879,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Raphinha",
+    "espnId": 231050,
     "position": "Forward (winger)",
     "club": "FC Barcelona (La Liga, Spain)",
     "hometown": "Porto Alegre, Rio Grande do Sul (raised in the Restinga favela)",
@@ -1910,6 +1941,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Alisson Becker",
+    "espnId": 196876,
     "position": "Goalkeeper",
     "club": "Liverpool (Premier League, England)",
     "hometown": "Novo Hamburgo, Rio Grande do Sul",
@@ -1964,6 +1996,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Marquinhos",
+    "espnId": 159047,
     "position": "Centre-back",
     "club": "Paris Saint-Germain (Ligue 1, France)",
     "hometown": "São Paulo, São Paulo state",
@@ -2018,6 +2051,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Bruno Guimarães",
+    "espnId": 218522,
     "position": "Central midfielder",
     "club": "Newcastle United (Premier League, England)",
     "hometown": "Rio de Janeiro (São Cristóvão neighbourhood), Rio de Janeiro state",
@@ -2069,6 +2103,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Gabriel Martinelli",
+    "espnId": 269844,
     "position": "Forward (left winger)",
     "club": "Arsenal (Premier League, England)",
     "hometown": "Guarulhos, São Paulo state",
@@ -2110,6 +2145,7 @@ window.WC_PLAYERS = {
   "Cabo Verde": [
    {
     "name": "Ryan Mendes",
+    "espnId": 135216,
     "position": "Forward/Winger",
     "club": "Iğdır FK (Turkish second division, TFF First League), 2025-26",
     "hometown": "Mindelo, on the island of São Vicente",
@@ -2184,6 +2220,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Logan Costa",
+    "espnId": 271129,
     "position": "Centre-back",
     "club": "Villarreal (La Liga, Spain), 2025-26",
     "hometown": "Born in Saint-Denis, France to a Cabo Verdean family (diaspora roots)",
@@ -2231,6 +2268,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Dailon Livramento",
+    "espnId": 330211,
     "position": "Forward",
     "club": "Casa Pia (Primeira Liga, Portugal), on loan from Hellas Verona, 2025-26",
     "hometown": "Born in Rotterdam, Netherlands to a Cabo Verdean family (diaspora roots)",
@@ -2275,6 +2313,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Jovane Cabral",
+    "espnId": 250059,
     "position": "Winger / Forward",
     "club": "Estrela da Amadora (Primeira Liga, Portugal)",
     "hometown": "Born in Praia, Santiago island",
@@ -2324,6 +2363,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Jamiro Monteiro",
+    "espnId": 227441,
     "position": "Central midfielder",
     "club": "PEC Zwolle (Eredivisie, Netherlands)",
     "hometown": "Born in Rotterdam, Netherlands to a Cabo Verdean family (diaspora roots)",
@@ -2376,6 +2416,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Garry Rodrigues",
+    "espnId": 175012,
     "position": "Winger / Forward",
     "club": "Apollon Limassol (First Division, Cyprus)",
     "hometown": "Born in Rotterdam, Netherlands to a Cabo Verdean family (diaspora roots)",
@@ -2449,6 +2490,7 @@ window.WC_PLAYERS = {
   "Canada": [
    {
     "name": "Alphonso Davies",
+    "espnId": 236721,
     "position": "Left-back / Left wing-back",
     "club": "Bayern Munich (Bundesliga, Germany)",
     "hometown": "Edmonton, Alberta (born in a refugee camp in Ghana, raised in Edmonton)",
@@ -2493,6 +2535,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Jonathan David",
+    "espnId": 273499,
     "position": "Forward",
     "club": "Juventus (Serie A, Italy)",
     "hometown": "Ottawa, Ontario (born in Brooklyn, USA; raised in Ottawa)",
@@ -2538,6 +2581,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Stephen Eustáquio",
+    "espnId": 270505,
     "position": "Central midfielder",
     "club": "Los Angeles FC (MLS, USA), on loan from FC Porto (Portugal)",
     "hometown": "Leamington, Ontario",
@@ -2604,6 +2648,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Tajon Buchanan",
+    "espnId": 284769,
     "position": "Winger / Wing-back",
     "club": "Villarreal (La Liga, Spain)",
     "hometown": "Brampton, Ontario",
@@ -2654,6 +2699,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Cyle Larin",
+    "espnId": 205024,
     "position": "Forward",
     "club": "Southampton (Premier League, England)",
     "hometown": "Brampton, Ontario",
@@ -2714,6 +2760,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Alistair Johnston",
+    "espnId": 293691,
     "position": "Right-back",
     "club": "Celtic (Scottish Premiership, Scotland)",
     "hometown": "Aurora, Ontario",
@@ -2760,6 +2807,7 @@ window.WC_PLAYERS = {
   "Colombia": [
    {
     "name": "Luis Díaz",
+    "espnId": 257390,
     "position": "Forward",
     "club": "Bayern Munich (Germany, Bundesliga)",
     "hometown": "Barrancas, La Guajira",
@@ -2822,6 +2870,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "James Rodríguez",
+    "espnId": 82816,
     "position": "Attacking midfielder",
     "club": "Minnesota United (USA, MLS)",
     "hometown": "Cúcuta (raised in Ibagué)",
@@ -2933,6 +2982,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Daniel Muñoz",
+    "espnId": 146679,
     "position": "Right-back",
     "club": "Crystal Palace (England, Premier League)",
     "hometown": "Amalfi, Antioquia",
@@ -2980,6 +3030,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Jhon Arias",
+    "espnId": 239566,
     "position": "Winger",
     "club": "Palmeiras (Brazil, Série A)",
     "hometown": "Quibdó, Chocó",
@@ -3018,6 +3069,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Richard Ríos",
+    "espnId": 301520,
     "position": "Central midfielder",
     "club": "Benfica (Portugal, Primeira Liga)",
     "hometown": "Vegachí, Antioquia",
@@ -3052,6 +3104,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Jhon Córdoba",
+    "espnId": 176058,
     "position": "Centre-forward",
     "club": "Krasnodar (Russia, Premier League)",
     "hometown": "Istmina, Chocó",
@@ -3088,6 +3141,7 @@ window.WC_PLAYERS = {
   "Congo DR": [
    {
     "name": "Yoane Wissa",
+    "espnId": 224077,
     "position": "Forward",
     "club": "Newcastle United (England, Premier League)",
     "hometown": "Born in Épinay-sous-Sénart, France, to a family of Congolese descent (no specific DR Congo region documented)",
@@ -3139,6 +3193,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Chancel Mbemba",
+    "espnId": 174322,
     "position": "Centre-back",
     "club": "Lille (France, Ligue 1)",
     "hometown": "Kinshasa",
@@ -3201,6 +3256,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Cédric Bakambu",
+    "espnId": 147193,
     "position": "Forward",
     "club": "Real Betis (Spain, LaLiga)",
     "hometown": "Born in France to Congolese parents; his family roots trace to Kongo Central province in DR Congo",
@@ -3279,6 +3335,7 @@ window.WC_PLAYERS = {
   "Croatia": [
    {
     "name": "Luka Modrić",
+    "espnId": 76762,
     "position": "Central midfielder",
     "club": "AC Milan (Serie A, Italy)",
     "hometown": "Zadar (Dalmatia region)",
@@ -3355,6 +3412,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Joško Gvardiol",
+    "espnId": 299910,
     "position": "Centre-back / Left-back",
     "club": "Manchester City (Premier League, England)",
     "hometown": "Zagreb",
@@ -3406,6 +3464,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Mateo Kovačić",
+    "espnId": 154595,
     "position": "Central midfielder",
     "club": "Manchester City (Premier League, England)",
     "hometown": "Linz, Austria (family roots near Šibenik, Dalmatia)",
@@ -3474,6 +3533,7 @@ window.WC_PLAYERS = {
   "Curaçao": [
    {
     "name": "Tahith Chong",
+    "espnId": 276218,
     "position": "Winger / Attacking midfielder",
     "club": "Sheffield United (EFL Championship, England) — joined August 2025",
     "hometown": "Willemstad, Curaçao (the only squad member actually born on the island)",
@@ -3535,6 +3595,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Leandro Bacuna",
+    "espnId": 138664,
     "position": "Central midfielder / Right-back",
     "club": "Bandırmaspor (TFF First League, Turkey)",
     "hometown": "Born in Groningen, Netherlands, to a Curaçaoan family (the diaspora roots most of the squad shares)",
@@ -3704,6 +3765,7 @@ window.WC_PLAYERS = {
   "Czechia": [
    {
     "name": "Patrik Schick",
+    "espnId": 212330,
     "position": "Forward (striker)",
     "club": "Bayer Leverkusen (Germany, Bundesliga)",
     "hometown": "Prague",
@@ -3767,6 +3829,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Tomáš Souček",
+    "espnId": 230666,
     "position": "Central midfielder",
     "club": "West Ham United (England)",
     "hometown": "Havlíčkův Brod (Vysočina Region)",
@@ -3811,6 +3874,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Ladislav Krejčí",
+    "espnId": 151714,
     "position": "Centre-back",
     "club": "Wolverhampton Wanderers (England)",
     "hometown": "Rosice",
@@ -3864,6 +3928,7 @@ window.WC_PLAYERS = {
   "Côte d'Ivoire": [
    {
     "name": "Amad Diallo",
+    "espnId": 291630,
     "position": "Winger / attacking midfielder",
     "club": "Manchester United (Premier League, England)",
     "hometown": "Abidjan",
@@ -3914,6 +3979,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Franck Kessié",
+    "espnId": 194711,
     "position": "Central midfielder",
     "club": "Al-Ahli (Saudi Pro League, Saudi Arabia)",
     "hometown": "Ouragahio (Gôh region)",
@@ -3980,6 +4046,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Wilfried Singo",
+    "espnId": 286569,
     "position": "Defender (centre-back / right-back)",
     "club": "Galatasaray (Süper Lig, Turkey)",
     "hometown": "Ferkessédougou (northern Côte d'Ivoire)",
@@ -4026,6 +4093,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Simon Adingra",
+    "espnId": 317404,
     "position": "Forward (winger)",
     "club": "AS Monaco (Ligue 1, France)",
     "hometown": "Yamoussoukro",
@@ -4082,6 +4150,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Ibrahim Sangaré",
+    "espnId": 213718,
     "position": "Central midfielder",
     "club": "Nottingham Forest (Premier League, England)",
     "hometown": "Man (western Côte d'Ivoire)",
@@ -4130,6 +4199,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Nicolas Pépé",
+    "espnId": 210397,
     "position": "Forward (winger)",
     "club": "Villarreal (La Liga, Spain)",
     "hometown": "Mantes-la-Jolie, France (Ivorian descent)",
@@ -4207,6 +4277,7 @@ window.WC_PLAYERS = {
   "Ecuador": [
    {
     "name": "Moisés Caicedo",
+    "espnId": 289877,
     "position": "Defensive midfielder",
     "club": "Chelsea (Premier League, England)",
     "hometown": "Santo Domingo de los Tsáchilas",
@@ -4261,6 +4332,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Willian Pacho",
+    "espnId": 287005,
     "position": "Centre-back",
     "club": "Paris Saint-Germain (Ligue 1, France)",
     "hometown": "Quinindé, Esmeraldas province",
@@ -4315,6 +4387,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Piero Hincapié",
+    "espnId": 292062,
     "position": "Centre-back",
     "club": "Arsenal (Premier League, England; on loan from Bayer Leverkusen)",
     "hometown": "Esmeraldas",
@@ -4370,6 +4443,7 @@ window.WC_PLAYERS = {
   "Egypt": [
    {
     "name": "Mohamed Salah",
+    "espnId": 173896,
     "position": "Forward (right winger)",
     "club": "Liverpool (England, Premier League)",
     "hometown": "Nagrig, Gharbia Governorate (Nile Delta)",
@@ -4445,6 +4519,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Omar Marmoush",
+    "espnId": 303745,
     "position": "Forward",
     "club": "Manchester City (England, Premier League)",
     "hometown": "Cairo",
@@ -4502,6 +4577,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Emam Ashour",
+    "espnId": 299365,
     "position": "Central/attacking midfielder",
     "club": "Al Ahly (Egypt, Egyptian Premier League)",
     "hometown": "Cairo",
@@ -4561,6 +4637,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Trezeguet",
+    "espnId": 157825,
     "position": "Winger / Forward",
     "club": "Al Ahly (Egypt, Egyptian Premier League)",
     "hometown": "Kafr El Sheikh, Nile Delta",
@@ -4630,6 +4707,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Mohamed Abdelmonem",
+    "espnId": 236957,
     "position": "Centre-back",
     "club": "OGC Nice (Ligue 1, France)",
     "hometown": "Cairo",
@@ -4677,6 +4755,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Ibrahim Adel",
+    "espnId": 299619,
     "position": "Winger / Forward",
     "club": "FC Nordsjælland (Danish Superliga, Denmark)",
     "hometown": "Cairo",
@@ -4719,6 +4798,7 @@ window.WC_PLAYERS = {
   "England": [
    {
     "name": "Jude Bellingham",
+    "espnId": 291281,
     "position": "Central/attacking midfielder",
     "club": "Real Madrid (Spain, La Liga)",
     "hometown": "Stourbridge, West Midlands",
@@ -4773,6 +4853,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Harry Kane",
+    "espnId": 142200,
     "position": "Forward (striker)",
     "club": "Bayern Munich (Germany, Bundesliga)",
     "hometown": "Walthamstow, London",
@@ -4842,6 +4923,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Bukayo Saka",
+    "espnId": 280555,
     "position": "Right winger / forward",
     "club": "Arsenal (England, Premier League)",
     "hometown": "Ealing, London",
@@ -4882,6 +4964,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Declan Rice",
+    "espnId": 238262,
     "position": "Defensive/central midfielder",
     "club": "Arsenal (England, Premier League)",
     "hometown": "Kingston upon Thames, London",
@@ -4926,6 +5009,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Marc Guéhi",
+    "espnId": 265907,
     "position": "Centre-back",
     "club": "Crystal Palace (England, Premier League)",
     "hometown": "South London (Lewisham/Croydon area)",
@@ -4980,6 +5064,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Kobbie Mainoo",
+    "espnId": 328466,
     "position": "Central midfielder",
     "club": "Manchester United (Premier League, England)",
     "hometown": "Stockport, Greater Manchester",
@@ -5016,6 +5101,7 @@ window.WC_PLAYERS = {
   "France": [
    {
     "name": "Kylian Mbappé",
+    "espnId": 231388,
     "position": "Forward",
     "club": "Real Madrid (Spain, La Liga)",
     "hometown": "Bondy (Paris suburb, Seine-Saint-Denis)",
@@ -5074,6 +5160,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Ousmane Dembélé",
+    "espnId": 229744,
     "position": "Forward (winger)",
     "club": "Paris Saint-Germain (France, Ligue 1)",
     "hometown": "Vernon (Eure, Normandy)",
@@ -5131,6 +5218,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "William Saliba",
+    "espnId": 277385,
     "position": "Centre-back",
     "club": "Arsenal (England, Premier League)",
     "hometown": "Bondy (Paris suburb, Seine-Saint-Denis)",
@@ -5181,6 +5269,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Aurélien Tchouaméni",
+    "espnId": 265919,
     "position": "Defensive midfielder",
     "club": "Real Madrid (Spain, La Liga)",
     "hometown": "Rouen (Normandy)",
@@ -5232,6 +5321,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Mike Maignan",
+    "espnId": 189026,
     "position": "Goalkeeper",
     "club": "AC Milan (Italy, Serie A)",
     "hometown": "Cayenne, French Guiana (raised in Villiers-le-Bel, Île-de-France)",
@@ -5281,6 +5371,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "N'Golo Kanté",
+    "espnId": 173556,
     "position": "Central midfielder",
     "club": "Fenerbahçe (Süper Lig, Turkey)",
     "hometown": "Paris (Malian family roots)",
@@ -5346,6 +5437,7 @@ window.WC_PLAYERS = {
   "Germany": [
    {
     "name": "Florian Wirtz",
+    "espnId": 303748,
     "position": "Attacking midfielder",
     "club": "Liverpool (Premier League, England)",
     "hometown": "Pulheim, North Rhine-Westphalia (Cologne area)",
@@ -5387,6 +5479,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Jamal Musiala",
+    "espnId": 303821,
     "position": "Attacking midfielder",
     "club": "Bayern Munich (Bundesliga, Germany)",
     "hometown": "Stuttgart, Baden-Württemberg",
@@ -5428,6 +5521,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Joshua Kimmich",
+    "espnId": 190161,
     "position": "Right-back / Defensive midfielder",
     "club": "Bayern Munich (Bundesliga, Germany)",
     "hometown": "Rottweil, Baden-Württemberg",
@@ -5478,6 +5572,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Antonio Rüdiger",
+    "espnId": 169438,
     "position": "Centre-back",
     "club": "Real Madrid (LaLiga, Spain)",
     "hometown": "Berlin",
@@ -5538,6 +5633,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Kai Havertz",
+    "espnId": 231182,
     "position": "Forward (centre-forward)",
     "club": "Arsenal (Premier League, England)",
     "hometown": "Aachen, North Rhine-Westphalia",
@@ -5588,6 +5684,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Leroy Sané",
+    "espnId": 202641,
     "position": "Winger (left/right)",
     "club": "Galatasaray (Süper Lig, Turkey)",
     "hometown": "Essen, North Rhine-Westphalia",
@@ -5645,6 +5742,7 @@ window.WC_PLAYERS = {
   "Ghana": [
    {
     "name": "Antoine Semenyo",
+    "espnId": 273292,
     "position": "Forward (winger)",
     "club": "Manchester City (England, Premier League)",
     "hometown": "Family roots in Awudome Avenui, Volta Region (born in Chelsea, London, England)",
@@ -5704,6 +5802,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Thomas Partey",
+    "espnId": 189972,
     "position": "Central/defensive midfielder",
     "club": "Villarreal (Spain, La Liga)",
     "hometown": "Krobo Odumase (Odumase Krobo), Eastern Region",
@@ -5767,6 +5866,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Iñaki Williams",
+    "espnId": 214412,
     "position": "Forward",
     "club": "Athletic Club (Bilbao) (Spain, La Liga)",
     "hometown": "Family roots in Accra (born in Bilbao, Spain, to Ghanaian parents)",
@@ -5812,6 +5912,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Jordan Ayew",
+    "espnId": 123518,
     "position": "Forward",
     "club": "Leicester City (England, Championship)",
     "hometown": "Born in Marseille, France (son of Abedi Pele; family roots in Accra)",
@@ -5847,6 +5948,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Abdul Fatawu Issahaku",
+    "espnId": 318680,
     "position": "Winger",
     "club": "Leicester City (England, Championship)",
     "hometown": "Tamale, Northern Region",
@@ -5880,6 +5982,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Kamaldeen Sulemana",
+    "espnId": 303115,
     "position": "Left winger",
     "club": "Atalanta (Italy, Serie A)",
     "hometown": "Techiman, Bono East Region",
@@ -5913,6 +6016,7 @@ window.WC_PLAYERS = {
   "Haiti": [
    {
     "name": "Jean-Ricner Bellegarde",
+    "espnId": 240369,
     "position": "Central/attacking midfielder",
     "club": "Wolverhampton Wanderers (England, Premier League)",
     "hometown": "Born in Colombes, France; of Haitian descent (family roots in Haiti)",
@@ -5954,6 +6058,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Duckens Nazon",
+    "espnId": 210778,
     "position": "Forward",
     "club": "Esteghlal (Iran, Persian Gulf Pro League)",
     "hometown": "Born in Châtenay-Malabry, France; of Haitian descent (family roots in Haiti)",
@@ -6035,6 +6140,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Frantzdy Pierrot",
+    "espnId": 250241,
     "position": "Forward (centre-forward)",
     "club": "Çaykur Rizespor (Turkey, Süper Lig), on loan from AEK Athens (Greece)",
     "hometown": "Cap-Haïtien region (born in/near Bas-Limbé, northern Haiti) before emigrating to Massachusetts at age 11",
@@ -6094,6 +6200,7 @@ window.WC_PLAYERS = {
   "IR Iran": [
    {
     "name": "Mehdi Taremi",
+    "espnId": 219611,
     "position": "Forward",
     "club": "Olympiacos (Super League Greece)",
     "hometown": "Bushehr (Persian Gulf port city, Bushehr Province)",
@@ -6172,6 +6279,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Alireza Jahanbakhsh",
+    "espnId": 188055,
     "position": "Right winger",
     "club": "FCV Dender EH (Belgian Pro League)",
     "hometown": "Jirandeh, Rudbar County (Gilan Province)",
@@ -6239,6 +6347,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Alireza Beiranvand",
+    "espnId": 214798,
     "position": "Goalkeeper",
     "club": "Tractor (Persian Gulf Pro League, Iran)",
     "hometown": "Sarableh, Ilam Province (Lur background)",
@@ -6307,6 +6416,7 @@ window.WC_PLAYERS = {
   "Iraq": [
    {
     "name": "Aymen Hussein",
+    "espnId": 244677,
     "position": "Forward (striker)",
     "club": "Al-Karma (Iraq Stars League)",
     "hometown": "Al-Safra village, Hawija district, Kirkuk Governorate (of Kurdish origin)",
@@ -6405,6 +6515,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Ali Al-Hamadi",
+    "espnId": 330579,
     "position": "Forward (striker)",
     "club": "Luton Town (England, EFL Championship; loan with obligation to buy from Ipswich Town)",
     "hometown": "Born in Maysan, Iraq; raised in Toxteth, Liverpool, England",
@@ -6465,6 +6576,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Amir Al-Ammari",
+    "espnId": 311149,
     "position": "Central midfielder",
     "club": "Cracovia (Poland, Ekstraklasa)",
     "hometown": "Born in Jönköping, Sweden, to an Iraqi father (Iraqi heritage; Palestinian on his mother's side)",
@@ -6517,6 +6629,7 @@ window.WC_PLAYERS = {
   "Japan": [
    {
     "name": "Takefusa Kubo",
+    "espnId": 256587,
     "position": "Right winger / Attacking midfielder",
     "club": "Real Sociedad (La Liga, Spain)",
     "hometown": "Kawasaki, Kanagawa Prefecture",
@@ -6583,6 +6696,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Ritsu Doan",
+    "espnId": 219627,
     "position": "Winger / Attacking midfielder",
     "club": "Eintracht Frankfurt (Bundesliga, Germany)",
     "hometown": "Amagasaki, Hyogo Prefecture",
@@ -6649,6 +6763,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Daichi Kamada",
+    "espnId": 219362,
     "position": "Central / Attacking midfielder",
     "club": "Crystal Palace (Premier League, England)",
     "hometown": "Iyo, Ehime Prefecture",
@@ -6706,6 +6821,7 @@ window.WC_PLAYERS = {
   "Jordan": [
    {
     "name": "Mousa Al-Tamari",
+    "espnId": 257489,
     "position": "Right winger / Forward",
     "club": "Stade Rennais (Rennes, Ligue 1, France)",
     "hometown": "Amman",
@@ -6766,6 +6882,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Ali Olwan",
+    "espnId": 320908,
     "position": "Centre-forward",
     "club": "Al-Sailiya SC (Qatar Stars League)",
     "hometown": "Amman",
@@ -6825,6 +6942,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Yazan Al-Arab",
+    "espnId": 274269,
     "position": "Centre-back",
     "club": "FC Seoul (K League 1, South Korea)",
     "hometown": "Russeifa",
@@ -6888,6 +7006,7 @@ window.WC_PLAYERS = {
   "Korea Republic": [
    {
     "name": "Son Heung-min",
+    "espnId": 149945,
     "position": "Forward",
     "club": "Los Angeles FC (LAFC, Major League Soccer, USA)",
     "hometown": "Chuncheon, Gangwon Province",
@@ -6947,6 +7066,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Kim Min-jae",
+    "espnId": 157688,
     "position": "Centre-back",
     "club": "Bayern Munich (Bundesliga, Germany)",
     "hometown": "Tongyeong, South Gyeongsang Province",
@@ -7014,6 +7134,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Lee Kang-in",
+    "espnId": 274197,
     "position": "Attacking midfielder",
     "club": "Paris Saint-Germain (Ligue 1, France)",
     "hometown": "Incheon",
@@ -7062,6 +7183,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Hwang Hee-chan",
+    "espnId": 237224,
     "position": "Forward / Winger",
     "club": "Wolverhampton Wanderers (Premier League, England)",
     "hometown": "Chuncheon, Gangwon Province",
@@ -7113,6 +7235,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Hwang In-beom",
+    "espnId": 280061,
     "position": "Central midfielder",
     "club": "Feyenoord (Eredivisie, Netherlands)",
     "hometown": "Daejeon",
@@ -7174,6 +7297,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Cho Gue-sung",
+    "espnId": 303464,
     "position": "Forward (striker)",
     "club": "FC Midtjylland (Danish Superliga, Denmark)",
     "hometown": "Anyang, Gyeonggi Province",
@@ -7225,6 +7349,7 @@ window.WC_PLAYERS = {
   "Mexico": [
    {
     "name": "Raúl Jiménez",
+    "espnId": 167060,
     "position": "Forward (centre-forward)",
     "club": "Fulham (Premier League, England)",
     "hometown": "Tepeji del Río, Hidalgo",
@@ -7290,6 +7415,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Edson Álvarez",
+    "espnId": 241627,
     "position": "Defensive midfielder",
     "club": "Fenerbahçe (Süper Lig, Turkey; on loan from West Ham United)",
     "hometown": "Tlalnepantla de Baz, México State",
@@ -7349,6 +7475,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Santiago Giménez",
+    "espnId": 260775,
     "position": "Forward (striker)",
     "club": "AC Milan (Serie A, Italy)",
     "hometown": "Born in Buenos Aires, Argentina; raised in Veracruz, Mexico",
@@ -7398,6 +7525,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Guillermo Ochoa",
+    "espnId": 137038,
     "position": "Goalkeeper",
     "club": "AEL Limassol (First Division, Cyprus)",
     "hometown": "Guadalajara, Jalisco",
@@ -7476,6 +7604,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Alexis Vega",
+    "espnId": 229487,
     "position": "Forward / Winger",
     "club": "Toluca (Liga MX, Mexico)",
     "hometown": "Irapuato, Guanajuato",
@@ -7523,6 +7652,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Obed Vargas",
+    "espnId": 318554,
     "position": "Central midfielder",
     "club": "Atlético Madrid (La Liga, Spain)",
     "hometown": "Anchorage, Alaska, USA (Mexican-Honduran heritage)",
@@ -7565,6 +7695,7 @@ window.WC_PLAYERS = {
   "Morocco": [
    {
     "name": "Achraf Hakimi",
+    "espnId": 240233,
     "position": "Right-back",
     "club": "Paris Saint-Germain (France, Ligue 1)",
     "hometown": "Born in Madrid, Spain to Moroccan parents (father from the Rif region); raised in Getafe",
@@ -7623,6 +7754,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Brahim Díaz",
+    "espnId": 246532,
     "position": "Attacking midfielder",
     "club": "Real Madrid (Spain, La Liga)",
     "hometown": "Born in Málaga, Spain to a Moroccan-Riffian father; switched allegiance from Spain to Morocco in 2024",
@@ -7674,6 +7806,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Yassine Bounou",
+    "espnId": 175149,
     "position": "Goalkeeper",
     "club": "Al-Hilal (Saudi Arabia, Saudi Pro League)",
     "hometown": "Born in Montreal, Canada to Moroccan parents; grew up in Casablanca",
@@ -7747,6 +7880,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Bilal El Khannouss",
+    "espnId": 336595,
     "position": "Attacking midfielder",
     "club": "VfB Stuttgart (Germany, Bundesliga)",
     "hometown": "Born in Strombeek-Bever, Belgium to a Moroccan family; chose Morocco at youth level",
@@ -7791,6 +7925,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Noussair Mazraoui",
+    "espnId": 239350,
     "position": "Right-back / Full-back",
     "club": "Manchester United (England, Premier League)",
     "hometown": "Born in Leiderdorp, Netherlands to Moroccan parents with Rif roots; chose Morocco over the Netherlands",
@@ -7838,6 +7973,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Sofyan Amrabat",
+    "espnId": 195226,
     "position": "Defensive midfielder",
     "club": "Real Betis (La Liga, Spain; on loan from Fenerbahçe)",
     "hometown": "Born in Huizen, Netherlands to Moroccan parents",
@@ -7911,6 +8047,7 @@ window.WC_PLAYERS = {
   "Netherlands": [
    {
     "name": "Virgil van Dijk",
+    "espnId": 157892,
     "position": "Centre-back",
     "club": "Liverpool (England, Premier League)",
     "hometown": "Breda",
@@ -7969,6 +8106,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Frenkie de Jong",
+    "espnId": 219022,
     "position": "Central midfielder",
     "club": "FC Barcelona (Spain, La Liga)",
     "hometown": "Arkel",
@@ -8011,6 +8149,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Cody Gakpo",
+    "espnId": 249524,
     "position": "Forward",
     "club": "Liverpool (England, Premier League)",
     "hometown": "Eindhoven",
@@ -8054,6 +8193,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Tijjani Reijnders",
+    "espnId": 261328,
     "position": "Central midfielder",
     "club": "Manchester City (England, Premier League)",
     "hometown": "Zwolle",
@@ -8107,6 +8247,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Denzel Dumfries",
+    "espnId": 213248,
     "position": "Right-back",
     "club": "Inter Milan (Italy, Serie A)",
     "hometown": "Rotterdam",
@@ -8158,6 +8299,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Ryan Gravenberch",
+    "espnId": 274632,
     "position": "Central midfielder",
     "club": "Liverpool (Premier League, England)",
     "hometown": "Amsterdam",
@@ -8206,6 +8348,7 @@ window.WC_PLAYERS = {
   "New Zealand": [
    {
     "name": "Chris Wood",
+    "espnId": 134190,
     "position": "Forward (striker)",
     "club": "Nottingham Forest (England, Premier League)",
     "hometown": "Auckland",
@@ -8266,6 +8409,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Liberato Cacace",
+    "espnId": 266554,
     "position": "Left-back",
     "club": "Wrexham (Wales/England, EFL Championship)",
     "hometown": "Wellington",
@@ -8315,6 +8459,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Tyler Bindon",
+    "espnId": 367427,
     "position": "Centre-back",
     "club": "Sheffield United (England, EFL Championship, on loan from Nottingham Forest)",
     "hometown": "Auckland",
@@ -8360,6 +8505,7 @@ window.WC_PLAYERS = {
   "Norway": [
    {
     "name": "Erling Haaland",
+    "espnId": 253989,
     "position": "Forward (striker)",
     "club": "Manchester City (England, Premier League)",
     "hometown": "Bryne, Rogaland (born in Leeds, England, but raised in Bryne from age three)",
@@ -8424,6 +8570,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Martin Ødegaard",
+    "espnId": 203669,
     "position": "Attacking midfielder",
     "club": "Arsenal (England, Premier League)",
     "hometown": "Drammen (near Oslo)",
@@ -8485,6 +8632,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Alexander Sørloth",
+    "espnId": 188230,
     "position": "Forward (striker)",
     "club": "Atlético Madrid (Spain, La Liga)",
     "hometown": "Trondheim",
@@ -8568,6 +8716,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Sander Berge",
+    "espnId": 218998,
     "position": "Central midfielder",
     "club": "Fulham (England, Premier League)",
     "hometown": "Asker (near Oslo)",
@@ -8621,6 +8770,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Antonio Nusa",
+    "espnId": 319368,
     "position": "Winger",
     "club": "RB Leipzig (Germany, Bundesliga)",
     "hometown": "Sandnes, Rogaland (born in Kaduna, Nigeria, raised in Norway from age one)",
@@ -8665,6 +8815,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Jørgen Strand Larsen",
+    "espnId": 252747,
     "position": "Forward (striker)",
     "club": "Crystal Palace (England, Premier League)",
     "hometown": "Halden, Viken (southeastern Norway)",
@@ -8718,6 +8869,7 @@ window.WC_PLAYERS = {
   "Panama": [
    {
     "name": "Adalberto Carrasquilla",
+    "espnId": 219508,
     "position": "Central midfielder",
     "club": "Pumas UNAM (Liga MX, Mexico)",
     "hometown": "Panama City",
@@ -8769,6 +8921,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Michael Amir Murillo",
+    "espnId": 216420,
     "position": "Right-back",
     "club": "Beşiktaş (Süper Lig, Turkey)",
     "hometown": "Colón",
@@ -8825,6 +8978,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "José Fajardo",
+    "espnId": 267996,
     "position": "Forward",
     "club": "Universidad Católica (Primera División, Chile)",
     "hometown": "Panama City",
@@ -8891,6 +9045,7 @@ window.WC_PLAYERS = {
   "Paraguay": [
    {
     "name": "Miguel Almirón",
+    "espnId": 48128,
     "position": "Attacking midfielder",
     "club": "Atlanta United (MLS, USA)",
     "hometown": "Asunción",
@@ -8947,6 +9102,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Gustavo Gómez",
+    "espnId": 118395,
     "position": "Centre-back",
     "club": "Palmeiras (Brazil)",
     "hometown": "San Juan Bautista, Misiones",
@@ -9004,6 +9160,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Julio Enciso",
+    "espnId": 20975,
     "position": "Attacking midfielder",
     "club": "Strasbourg (Ligue 1, France)",
     "hometown": "Caaguazú",
@@ -9053,6 +9210,7 @@ window.WC_PLAYERS = {
   "Portugal": [
    {
     "name": "Cristiano Ronaldo",
+    "espnId": 22774,
     "position": "Forward",
     "club": "Al-Nassr (Saudi Pro League)",
     "hometown": "Funchal, Madeira",
@@ -9140,6 +9298,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Bruno Fernandes",
+    "espnId": 124091,
     "position": "Attacking midfielder",
     "club": "Manchester United (England)",
     "hometown": "Maia (near Porto)",
@@ -9201,6 +9360,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Vitinha",
+    "espnId": 288897,
     "position": "Central midfielder",
     "club": "Paris Saint-Germain (France)",
     "hometown": "Santo Tirso (Vila das Aves, near Porto)",
@@ -9252,6 +9412,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Rafael Leão",
+    "espnId": 258917,
     "position": "Forward",
     "club": "AC Milan (Italy)",
     "hometown": "Almada (Lisbon area)",
@@ -9301,6 +9462,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Nuno Mendes",
+    "espnId": 290591,
     "position": "Left-back",
     "club": "Paris Saint-Germain (France)",
     "hometown": "Sintra (Lisbon District)",
@@ -9350,6 +9512,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Bernardo Silva",
+    "espnId": 199833,
     "position": "Attacking midfielder / Winger",
     "club": "Manchester City (Premier League, England)",
     "hometown": "Lisbon",
@@ -9405,6 +9568,7 @@ window.WC_PLAYERS = {
   "Qatar": [
    {
     "name": "Akram Afif",
+    "espnId": 219258,
     "position": "Winger / Forward",
     "club": "Al-Sadd SC (Qatar Stars League, Qatar)",
     "hometown": "Doha",
@@ -9467,6 +9631,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Almoez Ali",
+    "espnId": 219252,
     "position": "Striker / Forward",
     "club": "Al-Duhail SC (Qatar Stars League, Qatar)",
     "hometown": "Born in Khartoum, Sudan, he moved to Doha as a child and was raised there (Sudanese father, Qatari mother)",
@@ -9519,6 +9684,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Hassan Al-Haydos",
+    "espnId": 236586,
     "position": "Forward / Attacking midfielder",
     "club": "Al-Sadd SC (Qatar Stars League, Qatar)",
     "hometown": "Doha",
@@ -9564,6 +9730,7 @@ window.WC_PLAYERS = {
   "Saudi Arabia": [
    {
     "name": "Salem Al-Dawsari",
+    "espnId": 163850,
     "position": "Left winger",
     "club": "Al-Hilal (Saudi Pro League)",
     "hometown": "Jeddah (family roots in Wadi al-Dawasir, Riyadh Province)",
@@ -9609,6 +9776,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Firas Al-Buraikan",
+    "espnId": 283331,
     "position": "Forward",
     "club": "Al-Ahli (Saudi Pro League)",
     "hometown": "Riyadh",
@@ -9656,6 +9824,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Saud Abdulhamid",
+    "espnId": 286011,
     "position": "Right-back",
     "club": "RC Lens (Ligue 1, France)",
     "hometown": "Jeddah",
@@ -9710,6 +9879,7 @@ window.WC_PLAYERS = {
   "Scotland": [
    {
     "name": "Scott McTominay",
+    "espnId": 255850,
     "position": "Central midfielder",
     "club": "Napoli (Serie A, Italy)",
     "hometown": "Lancaster, England (qualifies for Scotland through his father; raised with Scottish heritage)",
@@ -9753,6 +9923,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Andrew Robertson",
+    "espnId": 104943,
     "position": "Left-back",
     "club": "Liverpool (Premier League, England) for the 2025-26 season; signed for Tottenham Hotspur as a free agent effective July 2026",
     "hometown": "Glasgow",
@@ -9809,6 +9980,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "John McGinn",
+    "espnId": 162843,
     "position": "Central/attacking midfielder",
     "club": "Aston Villa (Premier League, England)",
     "hometown": "Glasgow",
@@ -9858,6 +10030,7 @@ window.WC_PLAYERS = {
   "Senegal": [
    {
     "name": "Sadio Mané",
+    "espnId": 169797,
     "position": "Forward",
     "club": "Al Nassr (Saudi Pro League, Saudi Arabia)",
     "hometown": "Bambali, Sédhiou region",
@@ -9929,6 +10102,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Ismaïla Sarr",
+    "espnId": 241012,
     "position": "Winger",
     "club": "Crystal Palace (Premier League, England)",
     "hometown": "Saint-Louis",
@@ -9992,6 +10166,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Nicolas Jackson",
+    "espnId": 308524,
     "position": "Forward",
     "club": "Bayern Munich (Bundesliga, Germany) — on loan from Chelsea",
     "hometown": "Djibonker, Ziguinchor region (Casamance)",
@@ -10052,6 +10227,7 @@ window.WC_PLAYERS = {
   "South Africa": [
    {
     "name": "Ronwen Williams",
+    "espnId": 196230,
     "position": "Goalkeeper",
     "club": "Mamelodi Sundowns (South Africa, Premier Soccer League)",
     "hometown": "Gqeberha (formerly Port Elizabeth), Eastern Cape",
@@ -10097,6 +10273,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Lyle Foster",
+    "espnId": 264751,
     "position": "Forward",
     "club": "Burnley (England, Premier League)",
     "hometown": "Soweto, Gauteng (Johannesburg)",
@@ -10153,6 +10330,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Teboho Mokoena",
+    "espnId": 256691,
     "position": "Central midfielder",
     "club": "Mamelodi Sundowns (South Africa, Premier Soccer League)",
     "hometown": "Bethlehem, Free State",
@@ -10197,6 +10375,7 @@ window.WC_PLAYERS = {
   "Spain": [
    {
     "name": "Lamine Yamal",
+    "espnId": 362150,
     "position": "Right winger (forward)",
     "club": "FC Barcelona (Spain, La Liga)",
     "hometown": "Esplugues de Llobregat / raised in Mataró (Rocafonda), Catalonia",
@@ -10236,6 +10415,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Rodri",
+    "espnId": 231828,
     "position": "Defensive midfielder",
     "club": "Manchester City (England, Premier League)",
     "hometown": "Madrid",
@@ -10291,6 +10471,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Pedri",
+    "espnId": 250465,
     "position": "Central midfielder",
     "club": "FC Barcelona (Spain, La Liga)",
     "hometown": "Tegueste, Tenerife (Canary Islands)",
@@ -10338,6 +10519,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Nico Williams",
+    "espnId": 312146,
     "position": "Left winger (forward)",
     "club": "Athletic Bilbao (Spain, La Liga)",
     "hometown": "Pamplona, Navarre",
@@ -10373,6 +10555,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Mikel Oyarzabal",
+    "espnId": 229018,
     "position": "Forward (centre-forward)",
     "club": "Real Sociedad (Spain, La Liga)",
     "hometown": "Eibar, Gipuzkoa (Basque Country)",
@@ -10411,6 +10594,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Dani Olmo",
+    "espnId": 227765,
     "position": "Attacking midfielder / Forward",
     "club": "FC Barcelona (La Liga, Spain)",
     "hometown": "Terrassa, Catalonia",
@@ -10463,6 +10647,7 @@ window.WC_PLAYERS = {
   "Sweden": [
    {
     "name": "Viktor Gyökeres",
+    "espnId": 258906,
     "position": "Forward (striker)",
     "club": "Arsenal (Premier League, England)",
     "hometown": "Stockholm",
@@ -10527,6 +10712,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Alexander Isak",
+    "espnId": 235662,
     "position": "Forward (striker)",
     "club": "Liverpool (Premier League, England)",
     "hometown": "Solna, Stockholm County",
@@ -10587,6 +10773,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Victor Nilsson Lindelöf",
+    "espnId": 204679,
     "position": "Centre-back",
     "club": "Aston Villa (Premier League, England)",
     "hometown": "Västerås",
@@ -10636,6 +10823,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Anthony Elanga",
+    "espnId": 296622,
     "position": "Forward (winger)",
     "club": "Newcastle United (Premier League, England)",
     "hometown": "Hyllinge, Skåne (born in Malmö; family from Cameroon)",
@@ -10677,6 +10865,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Lucas Bergvall",
+    "espnId": 356379,
     "position": "Central midfielder",
     "club": "Tottenham Hotspur (Premier League, England)",
     "hometown": "Stockholm",
@@ -10713,6 +10902,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Yasin Ayari",
+    "espnId": 304242,
     "position": "Central midfielder",
     "club": "Brighton & Hove Albion (Premier League, England)",
     "hometown": "Stockholm",
@@ -10749,6 +10939,7 @@ window.WC_PLAYERS = {
   "Switzerland": [
    {
     "name": "Granit Xhaka",
+    "espnId": 149981,
     "position": "Central / defensive midfielder",
     "club": "Sunderland (Premier League, England)",
     "hometown": "Basel",
@@ -10810,6 +11001,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Manuel Akanji",
+    "espnId": 214562,
     "position": "Centre-back",
     "club": "Inter Milan (Serie A, Italy), on loan from Manchester City",
     "hometown": "Neftenbach (Canton of Zürich)",
@@ -10875,6 +11067,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Breel Embolo",
+    "espnId": 202099,
     "position": "Forward",
     "club": "Stade Rennais (Ligue 1, France)",
     "hometown": "Basel (born in Yaoundé, Cameroon; raised in Basel)",
@@ -10932,6 +11125,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Gregor Kobel",
+    "espnId": 238544,
     "position": "Goalkeeper",
     "club": "Borussia Dortmund (Bundesliga, Germany)",
     "hometown": "Zürich",
@@ -10981,6 +11175,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Dan Ndoye",
+    "espnId": 275842,
     "position": "Forward / Winger",
     "club": "Nottingham Forest (Premier League, England)",
     "hometown": "Nyon (Canton of Vaud)",
@@ -11029,6 +11224,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Denis Zakaria",
+    "espnId": 222628,
     "position": "Central midfielder",
     "club": "AS Monaco (Ligue 1, France)",
     "hometown": "Geneva",
@@ -11088,6 +11284,7 @@ window.WC_PLAYERS = {
   "Tunisia": [
    {
     "name": "Ellyes Skhiri",
+    "espnId": 209595,
     "position": "Defensive midfielder",
     "club": "Eintracht Frankfurt (Bundesliga, Germany)",
     "hometown": "Born in Lunel, France, to a Tunisian father; his family roots trace to Tunisia (Tunisian-French)",
@@ -11140,6 +11337,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Hannibal Mejbri",
+    "espnId": 300007,
     "position": "Central/attacking midfielder",
     "club": "Burnley (Premier League, England)",
     "hometown": "Born in Ivry-sur-Seine, France, to Tunisian parents (Tunisian-French)",
@@ -11190,6 +11388,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Montassar Talbi",
+    "espnId": 265099,
     "position": "Centre-back",
     "club": "Lorient (Ligue 1, France)",
     "hometown": "Born in Paris, France; moved to Tunisia at age 12 and came through Tunisian football (Tunisian-French)",
@@ -11246,6 +11445,7 @@ window.WC_PLAYERS = {
   "Türkiye": [
    {
     "name": "Arda Güler",
+    "espnId": 310452,
     "position": "Attacking midfielder / playmaker (No. 10)",
     "club": "Real Madrid (Spain, La Liga)",
     "hometown": "Altındağ, Ankara, Turkey",
@@ -11289,6 +11489,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Kenan Yıldız",
+    "espnId": 366509,
     "position": "Forward / left winger",
     "club": "Juventus (Italy, Serie A)",
     "hometown": "Family roots in Kızıllı, Dinar district, Afyonkarahisar Province, Turkey (born in Regensburg, Germany)",
@@ -11328,6 +11529,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Hakan Çalhanoğlu",
+    "espnId": 170785,
     "position": "Central / deep-lying midfielder (regista)",
     "club": "Inter Milan (Italy, Serie A)",
     "hometown": "Family roots in Bayburt, Turkey (born in Mannheim, Germany)",
@@ -11388,6 +11590,7 @@ window.WC_PLAYERS = {
   "USA": [
    {
     "name": "Christian Pulisic",
+    "espnId": 225607,
     "position": "Forward / Attacking winger",
     "club": "AC Milan (Serie A, Italy)",
     "hometown": "Hershey, Pennsylvania",
@@ -11439,6 +11642,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Weston McKennie",
+    "espnId": 256715,
     "position": "Central midfielder",
     "club": "Juventus (Serie A, Italy)",
     "hometown": "Little Elm, Texas (born Fort Lewis, Washington)",
@@ -11484,6 +11688,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Antonee Robinson",
+    "espnId": 222396,
     "position": "Left-back",
     "club": "Fulham (Premier League, England)",
     "hometown": "White Plains, New York (family roots; born in England)",
@@ -11539,6 +11744,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Tyler Adams",
+    "espnId": 222776,
     "position": "Defensive midfielder",
     "club": "AFC Bournemouth (Premier League, England)",
     "hometown": "Wappinger, New York",
@@ -11590,6 +11796,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Timothy Weah",
+    "espnId": 266027,
     "position": "Forward (winger)",
     "club": "Olympique Marseille (Ligue 1, France)",
     "hometown": "New York City, New York (born in Brooklyn)",
@@ -11645,6 +11852,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Folarin Balogun",
+    "espnId": 282643,
     "position": "Forward (striker)",
     "club": "AS Monaco (Ligue 1, France)",
     "hometown": "New York City, New York (born in New York; raised in London, England)",
@@ -11696,6 +11904,7 @@ window.WC_PLAYERS = {
   "Uruguay": [
    {
     "name": "Federico Valverde",
+    "espnId": 235818,
     "position": "Central midfielder",
     "club": "Real Madrid (Spain, La Liga)",
     "hometown": "Unión, Montevideo",
@@ -11753,6 +11962,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Darwin Núñez",
+    "espnId": 271788,
     "position": "Forward",
     "club": "Al-Hilal (Saudi Arabia, Saudi Pro League)",
     "hometown": "Artigas",
@@ -11809,6 +12019,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "José María Giménez",
+    "espnId": 188398,
     "position": "Centre-back",
     "club": "Atlético Madrid (Spain, La Liga)",
     "hometown": "Toledo, Canelones",
@@ -11858,6 +12069,7 @@ window.WC_PLAYERS = {
   "Uzbekistan": [
    {
     "name": "Abdukodir Khusanov",
+    "espnId": 362211,
     "position": "Centre-back",
     "club": "Manchester City (Premier League, England)",
     "hometown": "Tashkent",
@@ -11901,6 +12113,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Eldor Shomurodov",
+    "espnId": 216937,
     "position": "Forward",
     "club": "İstanbul Başakşehir (Süper Lig, Turkey) — on loan from AS Roma",
     "hometown": "Jarqo'rg'on, Surxondaryo Region",
@@ -11971,6 +12184,7 @@ window.WC_PLAYERS = {
    },
    {
     "name": "Abbosbek Fayzullaev",
+    "espnId": 317793,
     "position": "Attacking midfielder",
     "club": "İstanbul Başakşehir (Süper Lig, Turkey)",
     "hometown": "Sirdaryo (Sirdarya Region)",
