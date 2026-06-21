@@ -194,7 +194,8 @@
         "The team with fewer fouls"
       ],
       "answer": 2,
-      "explanation": "If goal difference, goals scored, head-to-head, and fair play can't separate teams, lots are drawn — though this has never happened."
+      "explanation": "If goal difference, goals scored, head-to-head, and fair play can't separate teams, lots are drawn — though this has never happened.",
+      "approved": true
     },
     {
       "id": "h-2014-champion",
