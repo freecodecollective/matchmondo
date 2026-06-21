@@ -6705,12 +6705,12 @@ window.WC_PLAYERS = {
   ],
   "Jordan": [
    {
-    "name": "Musa Al-Taamari",
+    "name": "Mousa Al-Tamari",
     "position": "Right winger / Forward",
     "club": "Stade Rennais (Rennes, Ligue 1, France)",
     "hometown": "Amman",
     "why": "Nicknamed the 'Jordanian Messi,' he is the only Jordan player competing in one of Europe's top-five leagues and the team's undisputed star and creative talisman. A direct, dribble-heavy winger, he produced 6 goals and 6 assists in Ligue 1 in 2025-26 and was central to Jordan's run to the 2024 Asian Cup final and their first-ever qualification.",
-    "number": 7,
+    "number": 10,
     "why_es": "Apodado el 'Messi jordano', es el único jugador de Jordania que compite en una de las cinco grandes ligas europeas y la estrella indiscutida y talismán creativo del equipo. Un extremo directo que depende del regate, produjo 6 goles y 6 asistencias en la Ligue 1 en 2025-26 y fue fundamental en la carrera de Jordania hasta la final de la Copa de Asia 2024 y su primera clasificación al torneo.",
     "why_fr": "Surnommé le 'Messi jordanien', il est le seul joueur jordanien évoluant dans l'une des cinq meilleures ligues d'Europe et l'étoile incontestée et le meneur créatif de l'équipe. Ailier direct adepte des dribbles, il a produit 6 buts et 6 passes décisives en Ligue 1 en 2025-26 et a été central dans la course de la Jordanie jusqu'à la finale de la Coupe d'Asie 2024 et leur première qualification en tournoi.",
     "why_pt_BR": "Apelidado de 'Messi jordaniano,' é o único jogador da Jordânia competindo em uma das cinco principais ligas europeias e a indiscutível estrela e talismã criativo da equipe. Um ponta direto que depende muito dos dribles, registrou 6 gols e 6 assistências na Ligue 1 em 2025-26 e foi central na campanha da Jordânia até a final da Asian Cup de 2024 e na classificação inédita para a torneio.",
