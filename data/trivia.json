@@ -70,7 +70,7 @@
       ],
       "answer": 2,
       "explanation": "The 2026 tournament expands from 32 to 48 teams, split into 12 groups of four. Previous editions used 8 groups of four (since 1998). The expansion was approved to give more nations — especially from Africa, Asia, and smaller confederations — a chance to compete on the biggest stage. The top two from each group plus the eight best third-placed teams advance to a new Round of 32.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "t-defending-champs",
