@@ -1735,7 +1735,7 @@
       ],
       "answer": 1,
       "explanation": "A 'cap' represents one official appearance for a player's national team. The term originated from the practice of awarding players a physical cap for each match they played. When commentators say a player has 'X caps,' they mean that player has appeared in X official international matches for their country.",
-      "needsReview": true
+      "approved": true
     }
   ],
   "pendingTasks": [
