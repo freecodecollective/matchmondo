@@ -44,11 +44,12 @@
   .mk.circle{top:50%;left:50%;width:23%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;}
   .mk.pbB{bottom:0;left:50%;transform:translateX(-50%);width:46%;height:14%;border-bottom:0;}
 
-  .player{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;width:64px;}
-  .shot{position:relative;width:46px;height:46px;border-radius:50%;background:#fff center/cover no-repeat;border:2.5px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.35);}
+  .player{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;width:72px;text-decoration:none;color:inherit;cursor:pointer;}
+  .shot{position:relative;width:46px;height:46px;border-radius:50%;background:#fff center/cover no-repeat;border:2.5px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.35);transition:transform .12s;}
+  .player:hover .shot,.bp:hover .shot,a.coach:hover .cshot{transform:scale(1.09);}
   .shot.kit{background-size:contain;background-color:#eef1f4;}
   .shot .num{position:absolute;bottom:-4px;right:-5px;min-width:19px;height:19px;border-radius:10px;font-size:10.5px;font-weight:800;display:flex;align-items:center;justify-content:center;padding:0 4px;border:1.5px solid #fff;z-index:3;}
-  .pname{margin-top:4px;font-size:9.5px;font-weight:700;color:#fff;background:rgba(0,0,0,.5);padding:1px 6px;border-radius:6px;white-space:nowrap;max-width:78px;overflow:hidden;text-overflow:ellipsis;}
+  .pname{margin-top:4px;font-size:9.5px;font-weight:700;color:#fff;background:rgba(0,0,0,.5);padding:1px 6px;border-radius:6px;white-space:nowrap;max-width:90px;overflow:hidden;text-overflow:ellipsis;}
   /* arc markers on top of headshot */
   .m{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;font-weight:800;line-height:1;z-index:4;}
   .m-goal{font-size:26px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.55));}
@@ -65,13 +66,14 @@
   /* sideline (different turf) below the keeper */
   .sideline{background:repeating-linear-gradient(90deg,var(--side1) 0 14px,var(--side2) 14px 28px);
     border-top:2px solid rgba(255,255,255,.25);padding:14px 10px 16px;}
-  .bench-row{display:flex;justify-content:center;align-items:flex-start;gap:8px;}
-  .bench-row + .bench-row{margin-top:12px;}
-  .bp{display:flex;flex-direction:column;align-items:center;width:58px;}
+  .bench-row{display:flex;justify-content:center;align-items:flex-start;gap:22px;}
+  .bench-row + .bench-row{margin-top:26px;}
+  .bp{display:flex;flex-direction:column;align-items:center;width:62px;text-decoration:none;color:inherit;cursor:pointer;}
   .bp .shot{width:36px;height:36px;border-width:2px;}
   .bp .num{min-width:16px;height:16px;font-size:9px;bottom:-3px;right:-4px;}
-  .bp .pname{font-size:9px;max-width:58px;color:#fff;background:rgba(0,0,0,.35);}
-  .coach{display:flex;flex-direction:column;align-items:center;width:64px;}
+  .bp .pname{margin-top:6px;font-size:9px;max-width:62px;color:#fff;background:rgba(0,0,0,.35);}
+  .coach{display:flex;flex-direction:column;align-items:center;width:64px;text-decoration:none;color:inherit;}
+  a.coach{cursor:pointer;}
   .coach .cshot{width:40px;height:40px;border-radius:50%;background:#9aa3ad center/cover no-repeat;border:2.5px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.35);position:relative;display:flex;align-items:center;justify-content:center;}
   .coach .cinit{font-size:14px;font-weight:800;color:#fff;}
   .coach .badge{position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);background:#fff;color:#111;font-size:8px;font-weight:800;letter-spacing:.3px;padding:1px 5px;border-radius:7px;border:1px solid var(--line);}
@@ -182,18 +184,22 @@ function shot(p,ring,R,color,badgeText,benched){
 function card(g){
   const light=lum(g.color)>.7, ring=light?'#3a3a3a':g.color, badgeText=light?'#222':'#fff';
   const pos=positions(g.onField);
+  const link=p=>p.url?` href="${p.url}" target="_blank" rel="noopener"`:'';
   const dots=pos.map(d=>{const p=d.p;
-    return `<div class="player" style="left:${d.x*100}%;top:${d.y*100}%">
-      ${shot(p,ring,34,g.color,badgeText,false)}<div class="pname">${p.name||''}</div></div>`;
+    return `<a class="player"${link(p)} style="left:${d.x*100}%;top:${d.y*100}%">
+      ${shot(p,ring,34,g.color,badgeText,false)}<div class="pname">${p.name||''}</div></a>`;
   }).join('');
   const benchChips=(g.bench||[]).map(p=>
-    `<div class="bp">${shot(p,ring,26,g.color,badgeText,true)}<div class="pname">${p.name||''}</div></div>`);
+    `<a class="bp"${link(p)}>${shot(p,ring,26,g.color,badgeText,true)}<div class="pname">${p.name||''}</div></a>`);
   const coach=g.coach||{};
-  const initials=(coach.name||'').split(/\s+/).map(w=>w[0]||'').join('').slice(0,2).toUpperCase();
+  const parts=(coach.name||'').trim().split(/\s+/);
+  const initials=(parts.length>1?parts.map(w=>w[0]).join(''):(parts[0]||'')).slice(0,2).toUpperCase();
   const cshotInner=coach.headshot?'':`<span class="cinit">${initials}</span>`;
-  const coachHTML=`<div class="coach">
-      <div class="cshot" style="background-image:url('${coach.headshot||''}')">${cshotInner}<span class="badge">COACH</span></div>
-      <div class="cname">${coach.name||'—'}</div></div>`;
+  const coachInner=`<div class="cshot" style="background-image:url('${coach.headshot||''}')">${cshotInner}<span class="badge">COACH</span></div>
+      <div class="cname">${coach.name||'—'}</div>`;
+  const coachHTML=coach.url
+    ? `<a class="coach" href="${coach.url}" target="_blank" rel="noopener">${coachInner}</a>`
+    : `<div class="coach">${coachInner}</div>`;
   const items=[...benchChips, coachHTML]; // coach last → bottom-right
   const n=items.length, h=Math.ceil(n/2);
   const benchRows = n<=3
