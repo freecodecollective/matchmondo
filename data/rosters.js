@@ -6143,7 +6143,7 @@ window.WC_ROSTERS = {
     },
     {
       "name": "Denzel Dumfries",
-      "number": 6,
+      "number": 22,
       "age": 30,
       "position": "DF",
       "club": "Inter Milan",
@@ -6175,7 +6175,7 @@ window.WC_ROSTERS = {
     },
     {
       "name": "Frenkie de Jong",
-      "number": 10,
+      "number": 21,
       "age": 29,
       "position": "MF",
       "club": "Barcelona",
@@ -6183,7 +6183,7 @@ window.WC_ROSTERS = {
     },
     {
       "name": "Ryan Gravenberch",
-      "number": 11,
+      "number": 8,
       "age": 24,
       "position": "MF",
       "club": "Liverpool",
@@ -6239,7 +6239,7 @@ window.WC_ROSTERS = {
     },
     {
       "name": "Cody Gakpo",
-      "number": 18,
+      "number": 11,
       "age": 27,
       "position": "FW",
       "club": "Liverpool",
