@@ -600,8 +600,9 @@ class Handler(BaseHTTPRequestHandler):
             st, udoc = fs("GET", f"/users/{uid}")
             info = parse(udoc) if st == 200 else {}
             rows.append({
+                # Empty when unset — the client localizes the "Player" fallback.
                 "deviceId": uid,
-                "displayName": info.get("displayName") or "Player",
+                "displayName": info.get("displayName") or "",
                 "predict": predict_points(uid)["points"],
                 "trivia": int(info.get("triviaCorrect") or 0),
             })
