@@ -82,6 +82,19 @@
   .leftbar.g{background:var(--green)} .leftbar.a{background:var(--amber)} .leftbar.r{background:var(--red)}
   .row.tint-g{background:var(--green-bg)} .row.tint-a{background:var(--amber-bg)} .row.tint-r{background:var(--red-bg)}
 
+  /* best 3rd-placed feature */
+  .section-h { font-size:18px; font-weight:800; margin:30px 4px 8px; }
+  .section-h .sub { display:block; font-size:12.5px; font-weight:500; color:var(--muted); margin-top:3px; }
+  .feature { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px 18px 16px; box-shadow:0 2px 10px rgba(0,0,0,0.04); }
+  .feature-intro { font-size:13px; color:#444; line-height:1.5; margin-bottom:14px; max-width:680px; }
+  .thirds { max-width:560px; }
+  .gtag { font-size:9px; font-weight:800; letter-spacing:.3px; color:var(--muted); background:#eceae5; padding:2px 6px; border-radius:5px; margin-left:7px; }
+  .row .gfcol { width:26px; text-align:center; color:var(--muted); font-size:12px; font-variant-numeric:tabular-nums; }
+  .cutline.qual { border-top:2px dashed var(--green); background:var(--green-bg); padding:6px 12px; }
+  .cutline.qual span { font-size:10px; color:var(--green); }
+  .feature-note { font-size:12px; color:var(--muted); margin-top:13px; line-height:1.55; max-width:680px; }
+  .feature-note b { color:var(--ink); }
+  .feature-note .hl { color:var(--green); font-weight:700; }
   .foot { text-align:center; color:#9aa0a6; font-size:12px; margin-top:34px; line-height:1.6; }
   .foot a { color:var(--green); text-decoration:none; font-weight:600; }
 </style>
@@ -109,6 +122,18 @@
       </div>
     </div>
 
+    <div class="section-h">The 3rd-place race — who fills the last 8 spots?
+      <span class="sub">The 12 teams that finish 3rd in their group, ranked head-to-head. Top 8 advance; bottom 4 go home.</span>
+    </div>
+    <div class="feature">
+      <p class="feature-intro">Yes — you can absolutely show this, and it’s exactly how the format resolves. The 12 third-placed teams are ranked by <b>points → goal difference → goals scored</b>. It’s a live <i>standing</i>, not a forecast: it stays provisional (and can shuffle) until every group has played the same number of games.</p>
+      <div class="thirds" id="thirds"></div>
+      <p class="feature-note">In this example, <span class="hl">Korea Republic</span> grabs the 8th and final spot over <b>Belgium</b> — both finished on 3 pts with a 0 goal difference, so it came down to <b>goals scored (2 vs 1)</b>. That razor-thin cut is exactly why a live best-3rd table is fun to watch.</p>
+    </div>
+
+    <div class="section-h">…and 9 ways to mark each row
+      <span class="sub">Same idea applied inside the per-group tables — pick the treatment you like.</span>
+    </div>
     <div class="grid" id="grid"></div>
 
     <div class="foot">
@@ -180,6 +205,38 @@ const DESIGNS = [
     render:()=> table((t)=>{const e=eff(t),c=C[e];return `<div class="row tint-${c}">${nameCells(t)}${stat(t)}<span class="ind ${c}">${STYLE[e].check}</span></div>`;}, true) },
 ];
 
+// ---- Best 3rd-placed leaderboard ----
+// Already in finishing order (points -> goal difference -> goals scored).
+const THIRDS = [
+  { grp:'C', flag:'🇯🇵', name:'Japan',          gd:'+2', gf:5, pts:4 },
+  { grp:'E', flag:'🇲🇦', name:'Morocco',        gd:'+1', gf:4, pts:4 },
+  { grp:'A', flag:'🇲🇽', name:'Mexico',         gd:'0',  gf:3, pts:4 },
+  { grp:'H', flag:'🇸🇳', name:'Senegal',        gd:'0',  gf:2, pts:4 },
+  { grp:'J', flag:'🇳🇴', name:'Norway',         gd:'+2', gf:4, pts:3 },
+  { grp:'D', flag:'🇦🇺', name:'Australia',      gd:'+1', gf:3, pts:3 },
+  { grp:'B', flag:'🇪🇨', name:'Ecuador',        gd:'0',  gf:3, pts:3 },
+  { grp:'F', flag:'🇰🇷', name:'Korea Republic', gd:'0',  gf:2, pts:3 }, // 8th — IN
+  { grp:'G', flag:'🇧🇪', name:'Belgium',        gd:'0',  gf:1, pts:3 }, // 9th — OUT (fewer goals)
+  { grp:'K', flag:'🇵🇱', name:'Poland',         gd:'−1', gf:2, pts:3 },
+  { grp:'I', flag:'🇶🇦', name:'Qatar',          gd:'−3', gf:1, pts:1 },
+  { grp:'L', flag:'🇨🇼', name:'Curaçao',        gd:'−5', gf:1, pts:1 },
+];
+function renderThirds() {
+  const head = `<div class="gh"><span class="grp">3rd-placed team</span><span class="col">GD</span><span class="gfcol">GF</span><span class="col" style="width:30px">Pts</span><span style="width:38px"></span></div>`;
+  let h = head;
+  THIRDS.forEach((t,i)=>{
+    const inRow = i < 8;
+    const c = inRow ? 'g' : 'r';
+    if (i === 8) h += `<div class="cutline qual"><span>▲ 8 best 3rd-placed advance — last spot above</span><span class="ln"></span></div>`;
+    h += `<div class="row tint-${c}">`
+      + `<span class="rk">${i+1}</span><span class="fl">${t.flag}</span>`
+      + `<span class="nm">${t.name}<span class="gtag">Grp ${t.grp}</span></span>`
+      + `<span class="col">${t.gd}</span><span class="gfcol">${t.gf}</span><span class="pts">${t.pts}</span>`
+      + `<span class="ind ${c}">${inRow ? '✓' : '✗'}</span></div>`;
+  });
+  document.getElementById('thirds').innerHTML = `<div class="tbl">${h}</div>`;
+}
+
 function render() {
   document.getElementById('grid').innerHTML = DESIGNS.map((d,i)=>`
     <div class="dcard ${d.rec?'rec':''}">
@@ -197,6 +254,7 @@ document.getElementById('modeSeg').addEventListener('click', e=>{
   document.querySelectorAll('#modeSeg button').forEach(x=>x.classList.toggle('on', x===b));
   render();
 });
+renderThirds();
 render();
 </script>
 </body>
