@@ -1758,7 +1758,7 @@
       ],
       "answer": 1,
       "explanation": "The Golden Boot goes to the tournament's top scorer. If players are tied on goals, assists are the tiebreaker, followed by fewer minutes played. Past winners include Harry Kane (2018, 6 goals) and Kylian Mbappé (2022, 8 goals).",
-      "needsReview": true
+      "approved": true
     }
   ],
   "pendingTasks": [
