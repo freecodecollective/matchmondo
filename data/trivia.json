@@ -289,7 +289,8 @@
         "4"
       ],
       "answer": 1,
-      "explanation": "France has won twice — at home in 1998 and in Russia in 2018."
+      "explanation": "France has won twice — at home in 1998 and in Russia in 2018.",
+      "claudeTask": "say whether they were the only ones to win when they hosted"
     },
     {
       "id": "t-spain-2010",
