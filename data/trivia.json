@@ -1761,6 +1761,20 @@
       "answer": 1,
       "explanation": "The Golden Boot goes to the tournament's top scorer. If players are tied on goals, assists are the tiebreaker, followed by fewer minutes played. Past winners include Harry Kane (2018, 6 goals) and Kylian Mbappé (2022, 8 goals).",
       "approved": true
+    },
+    {
+      "id": "r-clean-sheet",
+      "category": "rules",
+      "question": "In football, what does a 'clean sheet' mean?",
+      "options": [
+        "A team wins by scoring 3 or more goals",
+        "A team completes a match without conceding any goals",
+        "A player makes a perfect pass without any errors",
+        "A goalkeeper makes a save without using their hands"
+      ],
+      "answer": 1,
+      "explanation": "A clean sheet refers to a defensive achievement where a team prevents the opposing team from scoring throughout the entire match. It's a key metric for measuring defensive performance in football.",
+      "needsReview": true
     }
   ],
   "pendingTasks": [
@@ -1788,8 +1802,9 @@
     {
       "id": "task-1782017485252",
       "text": "write a question about what a clean sheet means",
-      "status": "pending",
-      "created": "2026-06-21T04:51:25.252Z"
+      "status": "done",
+      "created": "2026-06-21T04:51:25.252Z",
+      "completed": "2026-06-21T05:01:19.323126+00:00"
     }
   ]
 }
