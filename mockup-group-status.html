@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Group Table — Qualification Visuals</title>
+<style>
+  :root {
+    --ink:#1d2127; --muted:#6b7280; --line:rgba(0,0,0,0.09); --bg:#f1efea; --card:#fff;
+    --green:#12a150; --green-bg:rgba(18,161,80,0.10); --green-bg2:rgba(18,161,80,0.16);
+    --amber:#d6890c; --amber-bg:rgba(214,137,12,0.13);
+    --red:#d1453b; --red-bg:rgba(209,69,59,0.09);
+    --pitch1:#14a554; --pitch2:#0b8f44;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',sans-serif;
+    background:var(--bg); color:var(--ink); -webkit-font-smoothing:antialiased; padding-bottom:80px; }
+  .banner { background:linear-gradient(135deg,var(--pitch1),var(--pitch2)); color:#fff; padding:38px 24px 30px; text-align:center; }
+  .banner h1 { font-size:26px; font-weight:800; }
+  .banner p { font-size:14.5px; opacity:.92; margin-top:8px; max-width:620px; margin-inline:auto; line-height:1.5; }
+  .wrap { max-width:1180px; margin:0 auto; padding:0 20px; }
+
+  .controls { background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px 18px;
+    margin-top:-18px; position:relative; box-shadow:0 3px 16px rgba(0,0,0,0.06); }
+  .legend { display:flex; gap:18px; flex-wrap:wrap; align-items:center; font-size:13px; }
+  .legend .item { display:flex; align-items:center; gap:7px; }
+  .sw { width:13px; height:13px; border-radius:4px; }
+  .sw.g{background:var(--green)} .sw.a{background:var(--amber)} .sw.r{background:var(--red)}
+  .legend .item b { font-weight:700; }
+  .legend .item span { color:var(--muted); }
+  .toggle-row { display:flex; gap:10px; align-items:center; margin-top:14px; padding-top:14px; border-top:1px solid var(--line); flex-wrap:wrap; }
+  .toggle-row .lbl { font-size:12.5px; font-weight:700; color:var(--muted); }
+  .seg { display:inline-flex; background:#eceae5; border-radius:10px; padding:3px; }
+  .seg button { border:0; background:none; font:inherit; font-size:12.5px; font-weight:600; color:var(--muted);
+    padding:7px 13px; border-radius:8px; cursor:pointer; }
+  .seg button.on { background:#fff; color:var(--green); box-shadow:0 1px 4px rgba(0,0,0,0.1); }
+  .ctx { font-size:12px; color:var(--muted); margin-top:10px; line-height:1.5; }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:18px; margin-top:24px; }
+  .dcard { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 16px 18px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.04); }
+  .dcard.rec { border:1.5px solid var(--green); box-shadow:0 4px 18px rgba(18,161,80,0.16); }
+  .dhead { display:flex; align-items:baseline; gap:8px; margin-bottom:3px; }
+  .dnum { font-size:11px; font-weight:800; color:var(--green); }
+  .dhead h3 { font-size:15.5px; font-weight:700; }
+  .recbadge { font-size:9.5px; font-weight:800; letter-spacing:.5px; text-transform:uppercase; color:#fff;
+    background:var(--green); padding:2px 7px; border-radius:20px; margin-left:auto; }
+  .ddesc { font-size:12px; color:var(--muted); line-height:1.45; margin-bottom:12px; }
+
+  /* group table */
+  .tbl { border:1px solid var(--line); border-radius:11px; overflow:hidden; }
+  .tbl .gh { background:#f4f2ee; font-size:10px; font-weight:800; letter-spacing:.4px; text-transform:uppercase;
+    color:var(--muted); padding:6px 12px; display:flex; align-items:center; }
+  .tbl .gh .grp { flex:1; }
+  .tbl .gh .col { width:26px; text-align:center; }
+  .row { display:flex; align-items:center; padding:9px 12px; border-top:1px solid var(--line); font-size:13px; position:relative; }
+  .row .rk { width:18px; font-weight:800; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .row .fl { font-size:16px; margin:0 7px 0 2px; }
+  .row .nm { flex:1; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .row .col { width:26px; text-align:center; color:var(--muted); font-size:12px; font-variant-numeric:tabular-nums; }
+  .row .pts { width:30px; text-align:right; font-weight:800; font-variant-numeric:tabular-nums; }
+  .cutline { display:flex; align-items:center; gap:8px; padding:3px 12px; background:#fafaf8;
+    border-top:1px dashed var(--green); }
+  .cutline span { font-size:9.5px; font-weight:800; text-transform:uppercase; letter-spacing:.4px; color:var(--green); }
+  .cutline .ln { flex:1; height:0; }
+
+  /* indicators */
+  .ind { width:30px; text-align:center; margin-left:8px; font-weight:800; font-size:15px; }
+  .ind.g{color:var(--green)} .ind.a{color:var(--amber)} .ind.r{color:var(--red)}
+  .pill { margin-left:8px; font-size:10px; font-weight:800; letter-spacing:.3px; padding:3px 8px; border-radius:20px; white-space:nowrap; }
+  .pill.g{background:var(--green-bg); color:var(--green)} .pill.a{background:var(--amber-bg); color:var(--amber)} .pill.r{background:var(--red-bg); color:var(--red)}
+  .dot { width:11px; height:11px; border-radius:50%; margin-left:10px; }
+  .dot.g{background:var(--green)} .dot.a{background:var(--amber)} .dot.r{background:var(--red)}
+  .tag { margin-left:8px; width:42px; text-align:center; font-size:10px; font-weight:800; letter-spacing:.3px; }
+  .tag.g{color:var(--green)} .tag.a{color:var(--amber)} .tag.r{color:var(--red)}
+  .rkbadge { width:20px; height:20px; border-radius:6px; display:inline-flex; align-items:center; justify-content:center;
+    font-size:11px; font-weight:800; color:#fff; margin-right:5px; }
+  .rkbadge.g{background:var(--green)} .rkbadge.a{background:var(--amber)} .rkbadge.r{background:var(--red)}
+  .arrow { width:18px; margin-right:6px; text-align:center; font-size:12px; font-weight:900; }
+  .arrow.g{color:var(--green)} .arrow.a{color:var(--amber)} .arrow.r{color:var(--red)}
+  .leftbar { position:absolute; left:0; top:0; bottom:0; width:4px; }
+  .leftbar.g{background:var(--green)} .leftbar.a{background:var(--amber)} .leftbar.r{background:var(--red)}
+  .row.tint-g{background:var(--green-bg)} .row.tint-a{background:var(--amber-bg)} .row.tint-r{background:var(--red-bg)}
+
+  .foot { text-align:center; color:#9aa0a6; font-size:12px; margin-top:34px; line-height:1.6; }
+  .foot a { color:var(--green); text-decoration:none; font-weight:600; }
+</style>
+</head>
+<body>
+  <div class="banner">
+    <h1>🟢 Who’s through, who’s out?</h1>
+    <p>Visual options for showing qualification status in the group tables. Same table, {N} different treatments — pick whichever reads fastest. Toggle below to see how each handles 3rd place.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="controls">
+      <div class="legend">
+        <div class="item"><span class="sw g"></span><b>Advances</b><span>to Round of 32</span></div>
+        <div class="item"><span class="sw a"></span><b>3rd place</b><span>— in the running (8 best 3rds also advance)</span></div>
+        <div class="item"><span class="sw r"></span><b>Eliminated</b></div>
+      </div>
+      <div class="toggle-row">
+        <span class="lbl">3rd place shown as</span>
+        <div class="seg" id="modeSeg">
+          <button data-mode="nuanced" class="on">In contention (amber)</button>
+          <button data-mode="binary">Just out (red)</button>
+        </div>
+        <span class="ctx" style="margin-top:0">2026 format keeps the 8 best 3rd-placed teams, so amber is more accurate — but binary is simpler.</span>
+      </div>
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+    <div class="foot">
+      Example group shown final/decided · flags + names illustrative · accent follows the app theme<br>
+      <a href="mockups.html">← Back to all mockups</a>
+    </div>
+  </div>
+
+<script>
+// One group, used everywhere so designs compare apples-to-apples.
+const TEAMS = [
+  { pos:1, flag:'🇧🇷', name:'Brazil',         p:3, gd:'+5', pts:9, s:'adv' },
+  { pos:2, flag:'🇵🇹', name:'Portugal',       p:3, gd:'+2', pts:6, s:'adv' },
+  { pos:3, flag:'🇰🇷', name:'Korea Republic', p:3, gd:'−1', pts:3, s:'con' },
+  { pos:4, flag:'🇬🇭', name:'Ghana',          p:3, gd:'−6', pts:0, s:'out' },
+];
+let MODE = 'nuanced';
+// effective status given the mode (binary collapses contention -> out)
+const eff = t => (MODE === 'binary' && t.s === 'con') ? 'out' : t.s;
+const C = { adv:'g', con:'a', out:'r' };           // status -> color class
+const STYLE = {
+  adv: { check:'✓', pill:'Advanced',  arrow:'▲', tag:'R32',  rkc:'g' },
+  con: { check:'?', pill:'3rd · race', arrow:'•', tag:'3RD?', rkc:'a' },
+  out: { check:'✗', pill:'Out',       arrow:'▼', tag:'OUT',  rkc:'r' },
+};
+
+// shared row pieces
+const nameCells = t => `<span class="rk">${t.pos}</span><span class="fl">${t.flag}</span><span class="nm">${t.name}</span>`;
+const stat = t => `<span class="col">${t.p}</span><span class="col">${t.gd}</span><span class="pts">${t.pts}</span>`;
+const header = `<div class="gh"><span class="grp">Group F</span><span class="col">P</span><span class="col">GD</span><span class="col" style="width:30px">Pts</span></div>`;
+
+// build a table from a per-row renderer; optional cut line after 2nd place
+function table(renderRow, cut) {
+  let h = header;
+  TEAMS.forEach((t,i) => {
+    if (cut && i === 2) h += `<div class="cutline"><span>▲ Round of 32 cut</span><span class="ln"></span></div>`;
+    h += renderRow(t, eff(t), i);
+  });
+  return `<div class="tbl">${h}</div>`;
+}
+
+// ---- the designs ----
+const DESIGNS = [
+  { name:'Check / cross by points', desc:'A green ✓ or red ✗ right after the point total — the most literal “in or out”. 3rd place gets an amber ? (could still go through).',
+    render:()=> table(t=>{const e=eff(t),c=C[e];return `<div class="row">${nameCells(t)}${stat(t)}<span class="ind ${c}">${STYLE[e].check}</span></div>`;}) },
+
+  { name:'Status pill', desc:'A worded badge at the right edge. Most explicit / least ambiguous, costs the most horizontal room.',
+    render:()=> table(t=>{const e=eff(t),c=C[e];return `<div class="row">${nameCells(t)}<span class="pts">${t.pts}</span><span class="pill ${c}">${STYLE[e].pill}</span></div>`;}) },
+
+  { name:'Left accent bar', desc:'A colored stripe down the left edge of each row. Quiet and clean — colour does the talking, no extra column.',
+    render:()=> table(t=>{const e=eff(t),c=C[e];return `<div class="row"><span class="leftbar ${c}"></span>${nameCells(t)}${stat(t)}</div>`;}) },
+
+  { name:'Colored rank badge', desc:'The position number sits in a colored chip. Ties the status to where the team finished.',
+    render:()=> table(t=>{const e=eff(t),c=STYLE[e].rkc;return `<div class="row"><span class="rkbadge ${c}">${t.pos}</span><span class="fl">${t.flag}</span><span class="nm">${t.name}</span>${stat(t)}</div>`;}) },
+
+  { name:'Row tint + cut line', desc:'Whole row gently shaded, with a dashed “Round of 32 cut” line between 2nd and 3rd. Reads like a classic standings table.',
+    render:()=> table((t)=>{const e=eff(t),c=C[e];return `<div class="row tint-${c}">${nameCells(t)}${stat(t)}</div>`;}, true) },
+
+  { name:'Promotion-style arrows', desc:'▲ up = through, ▼ down = out (like league promotion/relegation). Familiar to football fans; arrows can feel like “movement”.',
+    render:()=> table(t=>{const e=eff(t),c=C[e];return `<div class="row"><span class="arrow ${c}">${STYLE[e].arrow}</span>${nameCells(t)}${stat(t)}</div>`;}) },
+
+  { name:'Traffic-light dot', desc:'A single colored dot in a status column. Minimal and scannable; relies on color alone (less accessible without the legend).',
+    render:()=> table(t=>{const e=eff(t),c=C[e];return `<div class="row">${nameCells(t)}${stat(t)}<span class="dot ${c}"></span></div>`;}) },
+
+  { name:'Outcome label column', desc:'A short text outcome at the right: R32 (Round of 32), 3RD?, OUT. Words + color, compact and unambiguous.',
+    render:()=> table(t=>{const e=eff(t),c=C[e];return `<div class="row">${nameCells(t)}${stat(t)}<span class="tag ${c}">${STYLE[e].tag}</span></div>`;}) },
+
+  { name:'Hybrid — tint + ✓/✗ + cut line', rec:true, desc:'The recommended combo: subtle row tint for at-a-glance scanning, a ✓/?/✗ for certainty, and the cut line for context. Clear without shouting.',
+    render:()=> table((t)=>{const e=eff(t),c=C[e];return `<div class="row tint-${c}">${nameCells(t)}${stat(t)}<span class="ind ${c}">${STYLE[e].check}</span></div>`;}, true) },
+];
+
+function render() {
+  document.getElementById('grid').innerHTML = DESIGNS.map((d,i)=>`
+    <div class="dcard ${d.rec?'rec':''}">
+      <div class="dhead"><span class="dnum">DESIGN ${i+1}</span><h3>${d.name}</h3>${d.rec?'<span class="recbadge">Recommended</span>':''}</div>
+      <div class="ddesc">${d.desc}</div>
+      ${d.render()}
+    </div>`).join('');
+}
+document.querySelector('.banner p').innerHTML =
+  document.querySelector('.banner p').innerHTML.replace('{N}', DESIGNS.length);
+
+document.getElementById('modeSeg').addEventListener('click', e=>{
+  const b = e.target.closest('button'); if(!b) return;
+  MODE = b.dataset.mode;
+  document.querySelectorAll('#modeSeg button').forEach(x=>x.classList.toggle('on', x===b));
+  render();
+});
+render();
+</script>
+</body>
+</html>
