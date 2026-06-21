@@ -1790,6 +1790,12 @@
       "status": "done",
       "created": "2026-06-21T00:41:40.159Z",
       "completed": "2026-06-21T00:44:32.570025+00:00"
+    },
+    {
+      "id": "task-1782017485252",
+      "text": "write a question about what a clean sheet means",
+      "status": "pending",
+      "created": "2026-06-21T04:51:25.252Z"
     }
   ]
 }
