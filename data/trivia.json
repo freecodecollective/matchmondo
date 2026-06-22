@@ -1164,7 +1164,7 @@
       ],
       "answer": 2,
       "explanation": "Miroslav Klose of Germany is the all-time leading scorer across all tournaments with 16 goals, scored across four editions (2002–2014). Ronaldo of Brazil is second with 15 goals.",
-      "claudeTask": "messi passed them both today."
+      "needsReview": true
     },
     {
       "id": "c-tango-ball",
