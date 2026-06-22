@@ -1999,7 +1999,8 @@
       "answer": 1,
       "explanation": "Kylian Mbappé scored a hat trick in the 2022 final and won the Golden Boot with eight goals. He first won the title as a teenager in 2018.",
       "type": "image",
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Picture_with_Mbapp%C3%A9_%28cropped_and_rotated%29.jpg/500px-Picture_with_Mbapp%C3%A9_%28cropped_and_rotated%29.jpg"
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Picture_with_Mbapp%C3%A9_%28cropped_and_rotated%29.jpg/500px-Picture_with_Mbapp%C3%A9_%28cropped_and_rotated%29.jpg",
+      "approved": true
     },
     {
       "id": "img-ronaldinho",
