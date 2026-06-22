@@ -595,7 +595,8 @@
         "Uruguay"
       ],
       "answer": 1,
-      "explanation": "Spain beat the Netherlands 1–0 in extra time for their first-ever title."
+      "explanation": "Spain beat the Netherlands 1–0 in extra time for their first-ever title.",
+      "approved": true
     },
     {
       "id": "h-var-debut",
