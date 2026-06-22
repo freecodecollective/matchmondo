@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rules Review — for Jahan</title>
+<style>
+  :root{
+    --green:#0b6e4f; --green-dark:#07523b; --gold:#e8b923; --ink:#1a1a2e; --muted:#667085;
+    --bg:#eef2ee; --card:#fff; --line:#e3e8e3;
+    --bad:#c0392b; --bad-bg:#fbeeec; --good:#0b6e4f; --good-bg:#eef5f1;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+    background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.5;padding-bottom:60px;}
+  .banner{background:linear-gradient(135deg,var(--green-dark),var(--green));color:#fff;padding:38px 24px 30px;text-align:center;}
+  .banner h1{font-size:26px;font-weight:800;}
+  .banner p{font-size:14.5px;opacity:.92;margin-top:8px;max-width:680px;margin-inline:auto;}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px;}
+
+  .intro{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin-top:-18px;
+    position:relative;box-shadow:0 3px 16px rgba(0,0,0,.06);}
+  .intro p{font-size:15px;color:#333;}
+  .intro p + p{margin-top:10px;}
+  .intro b{color:var(--green-dark);}
+
+  h2.sec{font-size:20px;font-weight:800;margin:34px 2px 6px;}
+  .sec-sub{font-size:13.5px;color:var(--muted);margin:0 2px 16px;}
+
+  /* crown callout */
+  .note{background:#fbf7e6;border:1px solid #ecdca0;border-radius:14px;padding:16px 18px;margin-top:14px;}
+  .note h3{font-size:16px;font-weight:700;margin-bottom:6px;}
+  .note p{font-size:14px;color:#4a4636;}
+  .note .q{margin-top:10px;font-size:13.5px;color:#6a5d2a;}
+
+  /* rule comparison cards */
+  .rule{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:16px;
+    box-shadow:0 2px 10px rgba(0,0,0,.04);}
+  .rule-head{padding:13px 18px;background:#f5f8f5;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;}
+  .rule-head .n{width:24px;height:24px;border-radius:50%;background:var(--green);color:#fff;font-size:13px;font-weight:800;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .rule-head h3{font-size:16.5px;font-weight:700;}
+  .rule-body{display:grid;grid-template-columns:1fr 1fr;}
+  @media(max-width:640px){.rule-body{grid-template-columns:1fr;}}
+  .col{padding:15px 18px;}
+  .col.now{border-right:1px solid var(--line);}
+  @media(max-width:640px){.col.now{border-right:0;border-bottom:1px solid var(--line);}}
+  .tag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;
+    padding:3px 9px;border-radius:20px;margin-bottom:8px;}
+  .tag.now{background:var(--bad-bg);color:var(--bad);}
+  .tag.fix{background:var(--good-bg);color:var(--good);}
+  .col p{font-size:13.5px;}
+  .col.now p{color:#6b5b59;}
+  .col.fix p{color:#243a31;}
+  .col strong.hl{background:rgba(192,57,43,.13);color:var(--bad);padding:0 3px;border-radius:3px;font-weight:700;}
+  .col strong.ok{color:var(--good);font-weight:700;}
+  .off{font-size:12.5px;color:var(--muted);padding:10px 18px 14px;border-top:1px dashed var(--line);}
+  .off b{color:var(--ink);}
+
+  /* missing / also-new */
+  .add{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 18px;margin-bottom:12px;}
+  .add h4{font-size:15px;font-weight:700;color:var(--green-dark);}
+  .add p{font-size:13.5px;color:#3a463f;margin-top:4px;}
+
+  /* decisions */
+  .decisions{background:var(--card);border:2px solid var(--green);border-radius:16px;padding:20px 22px;margin-top:14px;
+    box-shadow:0 4px 18px rgba(11,110,79,.12);}
+  .decisions h2{font-size:18px;font-weight:800;color:var(--green-dark);margin-bottom:4px;}
+  .decisions > p.lead{font-size:13.5px;color:var(--muted);margin-bottom:14px;}
+  .decision{padding:14px 0;border-top:1px solid var(--line);}
+  .decision:first-of-type{border-top:0;padding-top:4px;}
+  .decision .q{font-size:15px;font-weight:700;}
+  .decision .opts{font-size:13.5px;color:#3a463f;margin-top:6px;}
+  .decision .opts .opt{display:block;margin-top:4px;}
+  .decision .rec{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.3px;text-transform:uppercase;
+    color:#fff;background:var(--green);padding:2px 7px;border-radius:10px;margin-left:6px;vertical-align:1px;}
+
+  .foot{text-align:center;color:#9aa0a6;font-size:12px;margin-top:34px;line-height:1.7;}
+  .foot a{color:var(--green);text-decoration:none;font-weight:600;}
+</style>
+</head>
+<body>
+  <div class="banner">
+    <h1>📋 Rules Review</h1>
+    <p>Our in-app “Tournament Rules” — what’s currently shown vs. what the 2026 / IFAB 2025‑26 laws actually say.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="intro">
+      <p>Hi <b>Jahan</b> — Chris flagged that our four “New for 2026” rule cards look off, and that Match Format should mention hydration breaks. I checked each against the current IFAB laws and the 2026 tournament protocols. Each card has the right idea but the wrong details. Below is exactly what we say now vs. what it should say, plus a few decisions for you at the bottom.</p>
+      <p>Nothing’s been changed in the app yet — this is for your review.</p>
+    </div>
+
+    <!-- CROWN -->
+    <h2 class="sec">First, the “group winner” crown 👑</h2>
+    <p class="sec-sub">Chris asked whether Mexico &amp; USA should have a crown.</p>
+    <div class="note">
+      <h3>It’s working — just not earned yet</h3>
+      <p>The crown means a team has <b>mathematically won its group (guaranteed 1st)</b>. Mexico and USA have clinched a top‑2 spot (shown green = “through”), but with one game left they could still be passed on goal difference and finish 2nd — so no crown yet. It’ll appear automatically once 1st place is locked (realistically after the final group games). This matches our “only color it once it’s settled” approach.</p>
+      <p class="q"><b>Decision A:</b> keep the crown strict (= won the group), or loosen it to mean “currently top of the group”? Recommendation: keep it strict.</p>
+    </div>
+
+    <!-- RULES -->
+    <h2 class="sec">The four “New for 2026” cards</h2>
+    <p class="sec-sub">Left = what the app shows today. Right = the correction. Red = the part that’s wrong.</p>
+
+    <div id="rules"></div>
+
+    <!-- MATCH FORMAT -->
+    <h2 class="sec">Match Format card</h2>
+    <p class="sec-sub">Existing card — just needs an addition.</p>
+    <div class="rule">
+      <div class="rule-head"><span class="n">+</span><h3>Match Format — add hydration breaks</h3></div>
+      <div class="rule-body">
+        <div class="col now">
+          <span class="tag now">Now says</span>
+          <p>Two 45‑minute halves plus stoppage time… extra time and penalties from the Round of 32. <strong class="hl">(No mention of hydration breaks.)</strong></p>
+        </div>
+        <div class="col fix">
+          <span class="tag fix">Add</span>
+          <p>Also note <strong class="ok">hydration breaks</strong>: about <strong class="ok">3 minutes midway through each half</strong> (around the 22nd &amp; 68th minute) in hot conditions, when teams can get instructions.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ALSO NEW / MISSING -->
+    <h2 class="sec">Also new for 2026 — currently missing</h2>
+    <p class="sec-sub">Optional additions if we want the section to be complete.</p>
+    <div class="add"><h4>8‑Second Goalkeeper Rule</h4><p>If a keeper controls the ball with their hands for more than <b>8 seconds</b>, the opponent gets a <b>corner kick</b> — the referee counts down the last 5 seconds on their fingers. (This is the headline new law and we don’t show it at all — our “5‑second” card is a garbled version of it.)</p></div>
+    <div class="add"><h4>Captain‑only with the referee</h4><p>Only the team captain may approach the referee to discuss a decision; teammates who crowd the official can be cautioned.</p></div>
+    <div class="add"><h4>Referee announcements</h4><p>Referees explain the final video‑review decision over the stadium PA, and wear body cameras for broadcast. Video review is also expanded to wrongly awarded corners, an incorrect second yellow, and mistaken identity.</p></div>
+
+    <!-- DECISIONS -->
+    <div class="decisions">
+      <h2>Decisions for you, Jahan</h2>
+      <p class="lead">Reply with your picks and Chris/Claude will apply them (iOS rules text, localized in all 11 languages).</p>
+
+      <div class="decision">
+        <div class="q">A. The group‑winner crown</div>
+        <div class="opts">
+          <span class="opt">• Keep it strict — crown = guaranteed group win <span class="rec">Recommended</span></span>
+          <span class="opt">• Loosen it — crown = currently 1st in the group</span>
+        </div>
+      </div>
+
+      <div class="decision">
+        <div class="q">B. Fix the four “New for 2026” cards + add hydration to Match Format</div>
+        <div class="opts">
+          <span class="opt">• Yes, apply all the corrections in the table above <span class="rec">Recommended</span></span>
+          <span class="opt">• Only some — tell us which</span>
+        </div>
+      </div>
+
+      <div class="decision">
+        <div class="q">C. Add the missing new‑for‑2026 rules</div>
+        <div class="opts">
+          <span class="opt">• Add the 8‑second goalkeeper rule (the big one) <span class="rec">Recommended</span></span>
+          <span class="opt">• Also add captain‑only + referee announcements / expanded video review</span>
+          <span class="opt">• Skip — keep just the four (corrected)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot">
+      Sources: ESPN — “World Cup new rules explained” · IFAB — goalkeeper 8‑second law · IFAB Laws of the Game 2025/26.<br>
+      Unofficial fan summary · MatchMondo
+    </div>
+  </div>
+
+<script>
+const RULES = [
+  {
+    n: 1, title: "“5‑Second Restart Rule”",
+    now: `Goal kicks must be taken within 5 seconds, or the referee awards an <strong class="hl">indirect free kick</strong> to the opposing team.`,
+    fix: `Time‑wasting on a goal kick or throw‑in: the ref counts down 5s, then the opponent gets a <strong class="ok">corner kick</strong> (goal kick) or <strong class="ok">the throw‑in</strong> (throw‑in) — not an indirect free kick.`,
+    off: `The 5‑second timing is right, but the penalty is wrong (it’s a corner / turnover, not an indirect free kick), and it leaves out throw‑ins. Separately, the famous <b>8‑second goalkeeper → corner</b> rule is missing entirely (see below).`
+  },
+  {
+    n: 2, title: "“10‑Second Substitution Exit”",
+    now: `A substituted player must leave within 10 seconds. If they don’t, the team gets a warning, and repeat offenses can mean a <strong class="hl">yellow card for the outgoing player</strong>.`,
+    fix: `A substituted player must leave within 10s at the <strong class="ok">nearest point</strong> off the pitch. If they stall, <strong class="ok">the replacement can’t come on until the next stoppage</strong> — so the team plays a player short until then.`,
+    off: `The 10‑second + nearest‑exit part is correct; the penalty is wrong — there’s no “warning then yellow,” the team just plays a man down briefly.`
+  },
+  {
+    n: 3, title: "“60‑Second Injury Treatment”",
+    now: `Injured players must be <strong class="hl">attended to within 60 seconds</strong> and leave the field, returning only after play restarts.`,
+    fix: `An outfield player treated on the pitch must <strong class="ok">leave and stay off for one minute</strong> before returning. Exceptions: goalkeepers, head injuries, and serious collisions.`,
+    off: `It’s a one‑minute <i>removal after</i> treatment (to discourage faking), not a “treat within 60 seconds” limit.`
+  },
+  {
+    n: 4, title: "“Mouth Covering Ban”",
+    now: `Players who cover their mouth while speaking to <strong class="hl">teammates or officials</strong> get a red card (to prevent “tactical concealment”).`,
+    fix: `A player who covers their mouth (hand/arm/shirt) <strong class="ok">during a confrontation with an opponent</strong> is shown a red card. It doesn’t apply to normal talk with teammates or officials.`,
+    off: `The red card is correct — but the trigger is wrong. It’s specifically about hiding remarks during a confrontation with an opponent, not general talking.`
+  },
+];
+document.getElementById('rules').innerHTML = RULES.map(r => `
+  <div class="rule">
+    <div class="rule-head"><span class="n">${r.n}</span><h3>${r.title}</h3></div>
+    <div class="rule-body">
+      <div class="col now"><span class="tag now">Now says</span><p>${r.now}</p></div>
+      <div class="col fix"><span class="tag fix">Should say</span><p>${r.fix}</p></div>
+    </div>
+    <div class="off"><b>What’s off:</b> ${r.off}</div>
+  </div>`).join('');
+</script>
+</body>
+</html>
