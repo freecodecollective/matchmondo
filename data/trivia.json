@@ -1937,7 +1937,8 @@
       "answer": 1,
       "explanation": "Zinedine Zidane led France to their first title in 1998, scoring twice in the final. His 2006 final headbutt on Materazzi became one of football's most infamous moments.",
       "type": "image",
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Zinedine_Zidane_by_Tasnim_03.jpg/500px-Zinedine_Zidane_by_Tasnim_03.jpg"
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Zinedine_Zidane_by_Tasnim_03.jpg/500px-Zinedine_Zidane_by_Tasnim_03.jpg",
+      "approved": true
     },
     {
       "id": "img-ronaldo-brazil",
