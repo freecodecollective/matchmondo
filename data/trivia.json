@@ -2015,7 +2015,8 @@
       "answer": 1,
       "explanation": "Ronaldinho was part of Brazil's 2002 winning squad and scored a memorable free kick against England in the quarterfinals. He won the Ballon d'Or in 2005.",
       "type": "image",
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ronaldinho_in_2019.jpg/500px-Ronaldinho_in_2019.jpg"
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ronaldinho_in_2019.jpg/500px-Ronaldinho_in_2019.jpg",
+      "approved": true
     },
     {
       "id": "img-modric",
