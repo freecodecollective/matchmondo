@@ -1921,7 +1921,8 @@
       "answer": 0,
       "explanation": "Pelé won three titles (1958, 1962, 1970) and scored 12 goals across four editions. Widely regarded as one of the greatest players ever.",
       "type": "image",
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Pele_con_brasil_%28cropped%29.jpg/500px-Pele_con_brasil_%28cropped%29.jpg"
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Pele_con_brasil_%28cropped%29.jpg/500px-Pele_con_brasil_%28cropped%29.jpg",
+      "approved": true
     },
     {
       "id": "img-zidane",
