@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Match Time-Lapse — Jahan's scrubber idea</title>
+<style>
+  :root{--ink:#1d2127;--muted:#6b7280;--line:rgba(0,0,0,.09);--bg:#f1efea;--card:#fff;
+    --pitch1:#1f9e57;--pitch2:#178a4a;--green:#12a150;--green-d:#0c7a3c;
+    --ned:#ec6a26;--swe:#1c63b0;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',sans-serif;
+    background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;padding-bottom:70px;}
+  .banner{background:linear-gradient(135deg,var(--pitch1),var(--pitch2));color:#fff;padding:38px 24px 30px;text-align:center;}
+  .banner h1{font-size:25px;font-weight:800;}
+  .banner p{font-size:14px;opacity:.93;margin:9px auto 0;max-width:640px;line-height:1.5;}
+  .wrap{max-width:920px;margin:0 auto;padding:0 20px;}
+  .note{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px 18px;margin-top:-18px;
+    position:relative;box-shadow:0 3px 16px rgba(0,0,0,.06);font-size:13.5px;color:#444;line-height:1.55;}
+  .note b{color:var(--ink);}
+  .note .pill{display:inline-block;background:rgba(18,161,80,.12);color:var(--green-d);font-weight:700;font-size:11.5px;padding:2px 9px;border-radius:20px;margin-right:6px;}
+  .quote{border-left:3px solid var(--green);padding:4px 0 4px 13px;margin:11px 0 0;color:#555;font-style:italic;font-size:13px;line-height:1.5;}
+
+  /* phone frame */
+  .sim{width:412px;max-width:100%;margin:26px auto 0;background:var(--card);border:1px solid var(--line);
+    border-radius:26px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.14);}
+  .navbar{display:flex;align-items:center;gap:10px;padding:13px 16px 10px;border-bottom:1px solid var(--line);}
+  .chev{width:30px;height:30px;border-radius:50%;background:#f1efea;display:flex;align-items:center;justify-content:center;font-size:16px;color:#444;font-weight:700;}
+  .navbar .ttl{font-weight:800;font-size:16px;}
+  .secthead{display:flex;align-items:center;gap:8px;padding:13px 16px 4px;font-size:12.5px;font-weight:800;letter-spacing:.02em;color:#2c64c4;text-transform:uppercase;}
+  /* scoreboard */
+  .score{display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 16px 4px;}
+  .score .tm{display:flex;align-items:center;gap:7px;font-weight:800;font-size:15px;}
+  .score .tm .sw{width:13px;height:13px;border-radius:3px;}
+  .score .sc{font-size:30px;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:1px;}
+  .score .clk{background:#111;color:#fff;font-weight:800;font-size:12.5px;padding:3px 9px;border-radius:8px;
+    font-variant-numeric:tabular-nums;min-width:42px;text-align:center;}
+  .clk.live{background:#15a34a;} .clk.ht{background:#d98b0a;} .clk.ft{background:#555;}
+
+  /* team tabs */
+  .tabs{display:flex;gap:6px;padding:8px 14px 0;}
+  .tab{flex:1;text-align:center;font-size:13.5px;font-weight:700;color:var(--muted);background:#f1efea;
+    border:1px solid var(--line);border-radius:10px 10px 0 0;padding:9px 6px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;}
+  .tab .dot{width:9px;height:9px;border-radius:50%;}
+
+  .pitchwrap{padding:0 14px 4px;}
+  .pitch{position:relative;width:100%;aspect-ratio:.66;border-radius:0 0 12px 12px;overflow:hidden;
+    background:repeating-linear-gradient(var(--pitch1) 0 9.09%,var(--pitch2) 9.09% 18.18%);}
+  .markings{position:absolute;inset:0;pointer-events:none;}
+  .markings .box{position:absolute;left:50%;transform:translateX(-50%);border:1.5px solid rgba(255,255,255,.28);}
+  .markings .pbox-top{top:0;width:46%;height:13%;border-top:0;border-radius:0 0 4px 4px;}
+  .markings .pbox-bot{bottom:0;width:46%;height:13%;border-bottom:0;border-radius:4px 4px 0 0;}
+  .markings .gbox-top{top:0;width:22%;height:5%;border-top:0;}
+  .markings .gbox-bot{bottom:0;width:22%;height:5%;border-bottom:0;}
+  .markings .halfway{position:absolute;top:50%;left:0;right:0;height:0;border-top:1.5px solid rgba(255,255,255,.28);}
+  .markings .circle{position:absolute;top:50%;left:50%;width:24%;aspect-ratio:1;transform:translate(-50%,-50%);
+    border:1.5px solid rgba(255,255,255,.28);border-radius:50%;}
+  .fx{position:absolute;inset:0;pointer-events:none;z-index:5;}
+
+  .player{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;width:60px;
+    transition:left .55s cubic-bezier(.4,.1,.2,1),top .55s cubic-bezier(.4,.1,.2,1),opacity .4s;}
+  .player.spawn{animation:pop .45s cubic-bezier(.34,1.56,.64,1);}
+  @keyframes pop{0%{transform:translate(-50%,-50%) scale(.2);opacity:0}100%{transform:translate(-50%,-50%) scale(1);opacity:1}}
+  .shot{position:relative;width:44px;height:44px;border-radius:50%;background:#fff center/cover no-repeat;
+    border:2.5px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.35);}
+  .shot .num{position:absolute;bottom:-3px;right:-4px;min-width:18px;height:18px;border-radius:9px;color:#fff;
+    font-size:10.5px;font-weight:800;display:flex;align-items:center;justify-content:center;padding:0 3px;border:1.5px solid #fff;}
+  .pname{margin-top:3px;font-size:10px;font-weight:700;color:#fff;background:rgba(0,0,0,.5);
+    padding:1px 6px;border-radius:6px;white-space:nowrap;max-width:74px;overflow:hidden;text-overflow:ellipsis;text-align:center;}
+  .glow{animation:glow 1.1s ease-out;}
+  @keyframes glow{0%{box-shadow:0 0 0 0 rgba(255,209,0,.9),0 2px 5px rgba(0,0,0,.35)}100%{box-shadow:0 0 0 16px rgba(255,209,0,0),0 2px 5px rgba(0,0,0,.35)}}
+
+  /* event markers on a chip */
+  .evt{position:absolute;display:flex;align-items:center;justify-content:center;font-weight:800;line-height:1;}
+  .evt-goal{top:-7px;left:-13px;background:#fff;color:#111;font-size:9.5px;border-radius:8px;padding:2px 5px;box-shadow:0 1px 3px rgba(0,0,0,.4);white-space:nowrap;}
+  .evt-card{left:-8px;width:9px;height:13px;border-radius:2px;border:1px solid rgba(0,0,0,.35);top:12px;}
+  .evt-yellow{background:#f4c20d;} .evt-red{background:#e0322b;}
+  .evt-on{top:-6px;right:-9px;width:20px;height:20px;border-radius:50%;background:#16a34a;color:#fff;font-size:12px;border:1.5px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);}
+  .evt-assist{bottom:12px;left:-8px;width:16px;height:16px;border-radius:50%;background:#fff;color:#0c7a3c;font-size:9.5px;border:1.5px solid #0c7a3c;}
+
+  /* GOAL flash */
+  .goalflash{position:absolute;inset:0;z-index:8;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:0;}
+  .goalflash.show{animation:flash 1.6s ease-out;}
+  .goalflash span{font-size:46px;font-weight:900;color:#fff;letter-spacing:3px;text-shadow:0 2px 14px rgba(0,0,0,.6);}
+  @keyframes flash{0%{opacity:0;transform:scale(.6)}18%{opacity:1;transform:scale(1.05)}70%{opacity:1}100%{opacity:0;transform:scale(1.1)}}
+
+  /* scrubber */
+  .scrub{padding:12px 16px 6px;}
+  .ctrlrow{display:flex;align-items:center;gap:12px;margin-bottom:9px;}
+  .play{width:42px;height:42px;border-radius:50%;border:none;background:var(--green);color:#fff;font-size:18px;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(18,161,80,.4);flex:none;}
+  .play:active{transform:scale(.94);}
+  .moment{flex:1;font-size:12.5px;color:#444;font-weight:600;line-height:1.35;min-height:34px;display:flex;align-items:center;}
+  .moment .mi{font-size:16px;margin-right:6px;}
+  .spd{flex:none;font-size:12px;font-weight:800;color:#444;background:#f1efea;border:1px solid var(--line);
+    border-radius:8px;padding:6px 9px;cursor:pointer;}
+
+  .track{position:relative;height:46px;margin-top:2px;}
+  .rail{position:absolute;top:30px;left:6px;right:6px;height:5px;border-radius:3px;background:#e3e1da;}
+  .fill{position:absolute;top:30px;left:6px;height:5px;border-radius:3px;background:var(--green);width:0;}
+  .tick{position:absolute;top:22px;transform:translateX(-50%);cursor:pointer;z-index:3;}
+  .tick .ic{font-size:13px;line-height:1;display:block;text-align:center;}
+  .tick .cd{width:9px;height:12px;border-radius:2px;display:block;margin:0 auto;border:1px solid rgba(0,0,0,.3);}
+  .tick .sb{font-size:12px;display:block;text-align:center;}
+  input[type=range]{position:absolute;top:20px;left:0;width:100%;height:26px;margin:0;background:none;-webkit-appearance:none;cursor:pointer;z-index:4;}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--green);box-shadow:0 2px 6px rgba(0,0,0,.3);cursor:grab;margin-top:-1px;}
+  input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--green);box-shadow:0 2px 6px rgba(0,0,0,.3);cursor:grab;}
+  input[type=range]::-webkit-slider-runnable-track{height:20px;background:none;}
+  .axis{display:flex;justify-content:space-between;font-size:10px;color:#9aa0a6;font-weight:700;margin-top:-2px;padding:0 4px;}
+
+  .legend{display:flex;flex-wrap:wrap;gap:13px;align-items:center;font-size:12px;color:#555;padding:8px 16px 14px;border-top:1px solid var(--line);}
+  .legend .lg{display:inline-flex;align-items:center;gap:5px;}
+  .lgpill{background:#fff;border:1px solid var(--line);color:#111;font-size:9.5px;font-weight:800;border-radius:7px;padding:2px 5px;}
+  .lgA{width:15px;height:15px;border-radius:50%;background:#fff;color:#0c7a3c;border:1.5px solid #0c7a3c;font-size:9.5px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;}
+  .lgon{width:17px;height:17px;border-radius:50%;background:#16a34a;color:#fff;font-size:11px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;}
+  .lgcd{width:9px;height:12px;border-radius:2px;display:inline-block;border:1px solid rgba(0,0,0,.3);}
+
+  .section-h2{font-size:20px;font-weight:800;margin:40px 4px 4px;}
+  .section-sub{font-size:13px;color:var(--muted);margin:0 4px 14px;line-height:1.55;max-width:640px;}
+  .data{background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px 18px;font-size:13px;color:#444;line-height:1.6;}
+  .data b{color:var(--ink);} .data code{background:#f1efea;padding:1px 6px;border-radius:5px;font-size:12px;}
+  .foot{text-align:center;color:#9aa0a6;font-size:12px;margin-top:32px;line-height:1.6;}
+  .foot a{color:var(--green-d);text-decoration:none;font-weight:600;}
+</style>
+</head>
+<body>
+  <div class="banner">
+    <h1>⚽ Match Time-Lapse — scrub the match 0′→90′</h1>
+    <p>Jahan's idea, built for real: drag the slider under the pitch to watch the lineup change through the match — subs come on and off, goals and cards pop the moment they happened, and each goal replays the shot exactly where it was taken.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="note">
+      <span class="pill">Jahan</span>
+      <span class="quote">"Could there be a slider on the bottom of the image showing the field, so we could scroll through minutes 0–90 to see when people subbed on or off, and when goals were scored… and if ESPN has data on how goals are scored — where the shot was from and to — you could animate those."</span>
+      <div style="margin-top:11px">Yes on all of it. ESPN's match feed carries the <b>exact minute</b> of every goal, card and substitution, plus <b>shot coordinates</b> (where it was struck → where it crossed the line). This demo uses the <b>real</b> Netherlands 5–1 Sweden data. Press play, or grab the dot and scrub.</div>
+    </div>
+
+    <!-- ===== phone ===== -->
+    <div class="sim">
+      <div class="navbar"><div class="chev">‹</div><div class="ttl">Match 35</div></div>
+      <div class="secthead">⚽ Time-Lapse</div>
+
+      <div class="score">
+        <div class="tm"><span class="sw" style="background:var(--ned)"></span>NED</div>
+        <div class="sc"><span id="scH">0</span><span style="color:#bbb">–</span><span id="scA">0</span></div>
+        <div class="tm">SWE<span class="sw" style="background:var(--swe)"></span></div>
+        <div class="clk" id="clk">0′</div>
+      </div>
+
+      <div class="tabs" id="tabs"></div>
+      <div class="pitchwrap">
+        <div class="pitch" id="pitch">
+          <div class="markings">
+            <div class="box pbox-top"></div><div class="box pbox-bot"></div>
+            <div class="box gbox-top"></div><div class="box gbox-bot"></div>
+            <div class="halfway"></div><div class="circle"></div>
+          </div>
+          <svg class="fx" id="fx" viewBox="0 0 66 100" preserveAspectRatio="none"></svg>
+          <div class="goalflash" id="flash"><span>GOAL</span></div>
+          <div id="chips"></div>
+        </div>
+      </div>
+
+      <div class="scrub">
+        <div class="ctrlrow">
+          <button class="play" id="play">▶</button>
+          <div class="moment" id="moment">Kickoff — drag the dot or press play.</div>
+          <div class="spd" id="spd">1×</div>
+        </div>
+        <div class="track">
+          <div class="rail"></div>
+          <div class="fill" id="fill"></div>
+          <div id="ticks"></div>
+          <input type="range" id="range" min="0" max="96" value="0" step="1">
+        </div>
+        <div class="axis"><span>0′</span><span>15′</span><span>30′</span><span>HT</span><span>60′</span><span>75′</span><span>90′</span></div>
+      </div>
+
+      <div class="legend">
+        <span class="lg"><span class="lgpill">1&nbsp;⚽</span> goal</span>
+        <span class="lg"><span class="lgA">A</span> assist</span>
+        <span class="lg"><span class="lgon">↑</span> came on</span>
+        <span class="lg"><span class="lgcd" style="background:#f4c20d"></span> yellow</span>
+        <span class="lg"><span class="lgcd" style="background:#e0322b"></span> red</span>
+      </div>
+    </div>
+
+    <div class="section-h2">How it works</div>
+    <div class="section-sub">Everything here is driven off one ESPN match-summary fetch — no hand-entry. The same pieces already power the Formations and Lineups views, so wiring this into the iOS match screen is mostly UI.</div>
+    <div class="data">
+      <b>What the feed gives us (per match):</b><br>
+      • <b>keyEvents</b> — every goal, yellow/red, and substitution with its <code>clock</code> minute and the players involved (scorer + assist, on + off).<br>
+      • <b>commentary plays</b> — for each goal, a shot start <code>(x,y)</code> and end <code>(x,y)</code> on a 0–100 pitch grid. That's the "from → to" animation.<br>
+      • <b>rosters</b> — the starting XI with formation slots, so the time-lapse knows who began and where.<br><br>
+      <b>The scrubber logic:</b> at minute <i>T</i> we start from the XI, apply every sub with minute ≤ <i>T</i> (the incoming player drops into the outgoing player's slot), and show each goal/card/assist marker once its minute passes. Crossing a goal forward replays the shot; tapping a goal tick jumps to and replays it.
+    </div>
+
+    <div class="foot">
+      Real data · Netherlands 5–1 Sweden (ESPN event 760447) · shot coordinates from ESPN play-by-play<br>
+      <a href="mockups.html">← Back to all mockups</a>
+    </div>
+  </div>
+
+<script>
+const DATA = {"eid":"760447","home":"NED","away":"SWE","teams":{"NED":{"team":"Netherlands","abbr":"NED","formation":"4-3-3","starters":[{"place":"1","jersey":"1","name":"Verbruggen","id":"291609"},{"place":"10","jersey":"18","name":"Malen","id":"259481"},{"place":"11","jersey":"11","name":"Gakpo","id":"249524"},{"place":"2","jersey":"22","name":"Dumfries","id":"213248"},{"place":"3","jersey":"15","name":"van de Ven","id":"296512"},{"place":"4","jersey":"21","name":"de Jong","id":"219022"},{"place":"5","jersey":"6","name":"van Hecke","id":"282583"},{"place":"6","jersey":"4","name":"van Dijk","id":"157892"},{"place":"7","jersey":"8","name":"Gravenberch","id":"274632"},{"place":"8","jersey":"14","name":"Reijnders","id":"261328"},{"place":"9","jersey":"19","name":"Brobbey","id":"282229"}]},"SWE":{"team":"Sweden","abbr":"SWE","formation":"3-1-4-2","starters":[{"place":"1","jersey":"23","name":"Nordfeldt","id":"133993"},{"place":"10","jersey":"9","name":"Isak","id":"235662"},{"place":"11","jersey":"18","name":"Ayari","id":"304242"},{"place":"2","jersey":"21","name":"Bernhardsson","id":"301370"},{"place":"3","jersey":"5","name":"Gudmundsson","id":"250166"},{"place":"4","jersey":"4","name":"Hien","id":"312862"},{"place":"5","jersey":"2","name":"Lagerbielke","id":"324930"},{"place":"6","jersey":"3","name":"Lindelöf","id":"204679"},{"place":"7","jersey":"10","name":"Nygren","id":"274522"},{"place":"8","jersey":"16","name":"Karlström","id":"237055"},{"place":"9","jersey":"17","name":"Gyökeres","id":"258906"}]}},"subs":[{"minute":45,"disp":"45'","on":"284792","off":"259481","team":"NED","slot":"10","onName":"Summerville","onJersey":"24","offName":"Malen"},{"minute":55,"disp":"55'","on":"296622","off":"301370","team":"SWE","slot":"2","onName":"Elanga","onJersey":"11","offName":"Bernhardsson"},{"minute":56,"disp":"56'","on":"334024","off":"237055","team":"SWE","slot":"8","onName":"Zeneli","onJersey":"22","offName":"Karlström"},{"minute":56,"disp":"56'","on":"356379","off":"274522","team":"SWE","slot":"7","onName":"Bergvall","onJersey":"7","offName":"Nygren"},{"minute":59,"disp":"59'","on":"258968","off":"219022","team":"NED","slot":"4","onName":"Koopmeiners","onJersey":"20","offName":"de Jong"},{"minute":59,"disp":"59'","on":"240965","off":"261328","team":"NED","slot":"8","onName":"Til","onJersey":"16","offName":"Reijnders"},{"minute":72,"disp":"72'","on":"159255","off":"282229","team":"NED","slot":"9","onName":"Depay","onJersey":"10","offName":"Brobbey"},{"minute":79,"disp":"79'","on":"314164","off":"304242","team":"SWE","slot":"11","onName":"Ali","onJersey":"26","offName":"Ayari"},{"minute":90,"disp":"90'","on":"255344","off":"249524","team":"NED","slot":"11","onName":"Lang","onJersey":"17","offName":"Gakpo"},{"minute":93,"disp":"90'+3'","on":"357145","off":"250166","team":"SWE","slot":"3","onName":"Stroud","onJersey":"24","offName":"Gudmundsson"}],"goals":[{"minute":5,"disp":"5'","scorer":"282229","assist":"249524","team":"NED","from":[95.1,49.8],"to":[100.0,49.1]},{"minute":17,"disp":"17'","scorer":"282229","assist":"213248","team":"NED","from":[95.9,46.6],"to":[100.0,53.8]},{"minute":47,"disp":"47'","scorer":"249524","assist":"213248","team":"NED","from":[98.7,52.8],"to":[100.0,49.0]},{"minute":54,"disp":"54'","scorer":"249524","assist":"284792","team":"NED","from":[86.2,63.2],"to":[100.0,54.2]},{"minute":59,"disp":"59'","scorer":"296622","assist":"235662","team":"SWE","from":[86.4,60.7],"to":[100.0,53.4]},{"minute":89,"disp":"89'","scorer":"284792","assist":"159255","team":"NED","from":[81.6,52.4],"to":[100.0,53.9]}],"cards":[{"minute":53,"disp":"53'","player":"250166","type":"y"},{"minute":75,"disp":"75'","player":"304242","type":"y"},{"minute":80,"disp":"80'","player":"356379","type":"y"}]};
+
+// role-based slot coordinates (attack upward, GK bottom) — derived from ESPN position abbreviations
+const LAYOUT = {
+  NED:{1:[.50,.92],2:[.85,.68],3:[.15,.68],4:[.50,.60],5:[.62,.78],6:[.38,.78],7:[.73,.49],8:[.27,.49],9:[.50,.23],10:[.83,.31],11:[.17,.31]},
+  SWE:{1:[.50,.92],2:[.87,.45],3:[.13,.45],4:[.50,.79],5:[.75,.76],6:[.25,.76],7:[.60,.45],8:[.50,.62],9:[.62,.23],10:[.38,.23],11:[.40,.45]}
+};
+const COLORS={NED:"#ec6a26",SWE:"#1c63b0"};
+const MAXT=96;
+const headshot=id=>`https://a.espncdn.com/i/headshots/soccer/players/full/${id}.png`;
+
+// id -> name / team
+const NAME={},TEAMOF={};
+['NED','SWE'].forEach(ab=>DATA.teams[ab].starters.forEach(s=>{NAME[s.id]=s.name;TEAMOF[s.id]=ab;}));
+DATA.subs.forEach(s=>{NAME[s.on]=s.onName;TEAMOF[s.on]=s.team;NAME[s.off]=s.offName;TEAMOF[s.off]=s.team;});
+
+// merged, ordered event list for the caption
+const TIMELINE=[];
+DATA.goals.forEach(g=>TIMELINE.push({m:g.minute,disp:g.disp,kind:'goal',team:g.team,
+  txt:`GOAL — ${NAME[g.scorer]} (${g.team})`+(g.assist?`, assist ${NAME[g.assist]}`:''),ic:'⚽'}));
+DATA.cards.forEach(c=>TIMELINE.push({m:c.minute,disp:c.disp,kind:'card',team:TEAMOF[c.player],
+  txt:`${c.type==='r'?'Red':'Yellow'} card — ${NAME[c.player]} (${TEAMOF[c.player]})`,ic:c.type==='r'?'🟥':'🟨'}));
+DATA.subs.forEach(s=>TIMELINE.push({m:s.minute,disp:s.disp,kind:'sub',team:s.team,
+  txt:`Sub (${s.team}) — ${s.onName} on for ${s.offName}`,ic:'🔄'}));
+TIMELINE.sort((a,b)=>a.m-b.m);
+
+let shown='NED', T=0, playing=false, speed=1, timer=null, prevT=0;
+
+/* ---- which XI is on the pitch at minute T ---- */
+function activeXI(team){
+  const slots={};
+  DATA.teams[team].starters.forEach(s=>slots[s.place]={place:s.place,jersey:s.jersey,name:s.name,id:s.id,onMin:null});
+  DATA.subs.filter(s=>s.team===team && s.minute<=T).forEach(s=>{
+    slots[s.slot]={place:s.slot,jersey:s.onJersey,name:s.onName,id:s.on,onMin:s.minute};
+  });
+  return slots;
+}
+const goalsBy=id=>DATA.goals.filter(g=>g.scorer===id && g.minute<=T).length;
+const assistBy=id=>DATA.goals.some(g=>g.assist===id && g.minute<=T);
+const cardOf=id=>DATA.cards.filter(c=>c.player===id && c.minute<=T).pop();
+const scoreOf=team=>DATA.goals.filter(g=>g.team===team && g.minute<=T).length;
+
+function clockText(){
+  if(T<=0) return '0′';
+  if(T>=96) return 'FT';
+  if(T<=45) return T+'′';
+  if(T===45) return 'HT';
+  return Math.min(T,90)+(T>90?'+'+(T-90):'')+'′';
+}
+
+/* ---- render player chips ---- */
+function renderChips(spawnIds){
+  const xi=activeXI(shown), col=COLORS[shown];
+  const html=Object.values(xi).map(p=>{
+    const [x,y]=LAYOUT[shown][p.place];
+    let ev='';
+    const g=goalsBy(p.id); if(g) ev+=`<div class="evt evt-goal">${g} ⚽</div>`;
+    if(assistBy(p.id)) ev+=`<div class="evt evt-assist">A</div>`;
+    const c=cardOf(p.id); if(c) ev+=`<div class="evt evt-card ${c.type==='y'?'evt-yellow':'evt-red'}"></div>`;
+    if(p.onMin!=null) ev+=`<div class="evt evt-on" title="on ${p.onMin}'">↑</div>`;
+    const spawn = spawnIds && spawnIds.has(p.id) ? ' spawn':'';
+    return `<div class="player${spawn}" data-id="${p.id}" style="left:${x*100}%;top:${y*100}%">
+      <div class="shot" style="background-image:url('${headshot(p.id)}');border-color:${col}">
+        <span class="num" style="background:${col}">${p.jersey}</span>${ev}
+      </div><div class="pname">${p.name}</div></div>`;
+  }).join('');
+  document.getElementById('chips').innerHTML=html;
+}
+
+/* ---- scoreboard + scrubber chrome ---- */
+function renderChrome(){
+  document.getElementById('scH').textContent=scoreOf('NED');
+  document.getElementById('scA').textContent=scoreOf('SWE');
+  const clk=document.getElementById('clk');
+  clk.textContent=clockText();
+  clk.className='clk'+(T>=96?' ft':(T===45?' ht':(T>0?' live':'')));
+  document.getElementById('fill').style.width=(T/MAXT*100)+'%';
+  document.getElementById('range').value=T;
+  // latest event caption
+  const past=TIMELINE.filter(e=>e.m<=T);
+  const m=past[past.length-1];
+  document.getElementById('moment').innerHTML = m
+    ? `<span class="mi">${m.ic}</span><b>${m.disp}</b>&nbsp; ${m.txt}`
+    : `<span class="mi">⏱️</span>Kickoff — drag the dot or press play.`;
+}
+
+function renderTicks(){
+  const seen={};
+  document.getElementById('ticks').innerHTML=TIMELINE.map((e,i)=>{
+    // nudge overlapping ticks apart
+    const key=Math.round(e.m); seen[key]=(seen[key]||0)+1;
+    const off=(seen[key]-1)*7;
+    const left=(e.m/MAXT*100);
+    const tcol=COLORS[e.team]||'#666';
+    let inner;
+    if(e.kind==='goal') inner=`<span class="ic">⚽</span>`;
+    else if(e.kind==='card') inner=`<span class="cd" style="background:${DATA.cards.find(c=>c.minute===e.m&&TEAMOF[c.player]===e.team)?.type==='r'?'#e0322b':'#f4c20d'}"></span>`;
+    else inner=`<span class="sb" style="color:${tcol}">⇅</span>`;
+    return `<div class="tick" data-m="${e.m}" data-kind="${e.kind}" style="left:calc(${left}% + ${off}px)">${inner}</div>`;
+  }).join('');
+  document.querySelectorAll('.tick').forEach(t=>t.onclick=()=>{
+    const m=+t.dataset.m; seek(m,true);
+  });
+}
+
+/* ---- coordinate transform: ESPN (attack→x=100) to pitch fraction ---- */
+function toPitch(scoringTeam,pt){
+  const [X,Y]=pt;
+  const up = (scoringTeam===shown);           // displayed team attacks toward the top
+  // length: X 50..100 -> attacking third; map to a believable vertical band
+  let py = 0.5 - (X-50)/50*0.455;             // X=100 -> .045 (top goal), X=50 -> .5
+  let px = Y/100;
+  if(!up){ py = 1-py; px = 1-px; }            // opponent attacks toward the bottom goal
+  return [px*66, py*100];
+}
+
+/* ---- goal replay (shot from -> to, optional assist line) ---- */
+let fxTimer=null;
+function playGoal(g){
+  const fx=document.getElementById('fx'); fx.innerHTML='';
+  const col=COLORS[g.team];
+  const [sx,sy]=toPitch(g.team,g.from);
+  const [ex,ey]=toPitch(g.team,g.to);
+  // assist line (only if scoring team is the one on screen and assister is on the pitch)
+  if(g.team===shown && g.assist){
+    const xi=activeXI(shown); let ap=null;
+    for(const p of Object.values(xi)) if(p.id===g.assist) ap=p;
+    if(ap){ const [ax,ay]=LAYOUT[shown][ap.place];
+      const aline=document.createElementNS('http://www.w3.org/2000/svg','line');
+      aline.setAttribute('x1',ax*66);aline.setAttribute('y1',ay*100);
+      aline.setAttribute('x2',sx);aline.setAttribute('y2',sy);
+      aline.setAttribute('stroke','#fff');aline.setAttribute('stroke-width','.7');
+      aline.setAttribute('stroke-dasharray','2.2 2');aline.setAttribute('opacity','.75');
+      fx.appendChild(aline);
+    }
+  }
+  // shot line
+  const line=document.createElementNS('http://www.w3.org/2000/svg','line');
+  line.setAttribute('x1',sx);line.setAttribute('y1',sy);line.setAttribute('x2',sx);line.setAttribute('y2',sy);
+  line.setAttribute('stroke',col);line.setAttribute('stroke-width','1.4');line.setAttribute('stroke-linecap','round');line.setAttribute('opacity','.9');
+  fx.appendChild(line);
+  // ball
+  const ball=document.createElementNS('http://www.w3.org/2000/svg','circle');
+  ball.setAttribute('cx',sx);ball.setAttribute('cy',sy);ball.setAttribute('r','2.4');
+  ball.setAttribute('fill','#fff');ball.setAttribute('stroke','#111');ball.setAttribute('stroke-width','.5');
+  fx.appendChild(ball);
+  // tween
+  const start=performance.now(),dur=620;
+  cancelAnimationFrame(fxTimer);
+  (function step(now){
+    let k=Math.min(1,(now-start)/dur); const e=1-Math.pow(1-k,2);
+    const cx=sx+(ex-sx)*e, cy=sy+(ey-sy)*e;
+    ball.setAttribute('cx',cx);ball.setAttribute('cy',cy);
+    line.setAttribute('x2',cx);line.setAttribute('y2',cy);
+    if(k<1) fxTimer=requestAnimationFrame(step);
+  })(start);
+  // flash + scorer glow
+  const flash=document.getElementById('flash'); flash.classList.remove('show'); void flash.offsetWidth; flash.classList.add('show');
+  setTimeout(()=>{ const chip=document.querySelector(`.player[data-id="${g.scorer}"] .shot`); if(chip){chip.classList.remove('glow');void chip.offsetWidth;chip.classList.add('glow');} },120);
+  clearTimeout(fxTimer&&0); clearTimeout(window._fxClear); window._fxClear=setTimeout(()=>{fx.innerHTML='';},2600);
+}
+
+/* ---- state setters ---- */
+function setT(v,opts={}){
+  prevT=T; T=Math.max(0,Math.min(MAXT,v));
+  // spawn animation for newly-arrived subs
+  let spawn=null;
+  if(T>prevT){ spawn=new Set(); DATA.subs.forEach(s=>{ if(s.team===shown && s.minute>prevT && s.minute<=T) spawn.add(s.on); }); }
+  renderChips(spawn); renderChrome();
+  // goal replays when moving forward across a goal minute
+  if(opts.animateCross && T>prevT){
+    const crossed=DATA.goals.filter(g=>g.minute>prevT && g.minute<=T);
+    if(crossed.length) playGoal(crossed[crossed.length-1]);
+  }
+}
+function seek(v,replay){
+  pause(); setT(v);
+  if(replay){ const g=DATA.goals.find(x=>x.minute===v); if(g) playGoal(g); }
+}
+
+/* ---- playback ---- */
+function play(){
+  if(T>=MAXT) setT(0);
+  playing=true; document.getElementById('play').textContent='❚❚';
+  clearInterval(timer);
+  timer=setInterval(()=>{
+    if(T>=MAXT){ pause(); return; }
+    setT(T+1,{animateCross:true});
+  },Math.round(150/speed));
+}
+function pause(){ playing=false; clearInterval(timer); document.getElementById('play').textContent='▶'; }
+
+/* ---- team tabs ---- */
+function renderTabs(){
+  document.getElementById('tabs').innerHTML=['NED','SWE'].map(ab=>{
+    const on=ab===shown, col=COLORS[ab], t=DATA.teams[ab];
+    return `<div class="tab" data-ab="${ab}" style="${on?`background:${col};border-color:${col};color:#fff`:''}">
+      <span class="dot" style="background:${on?'#fff':col}"></span>${t.team}</div>`;
+  }).join('');
+  document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{ shown=t.dataset.ab; renderTabs(); renderChips(); document.getElementById('fx').innerHTML=''; });
+}
+
+/* ---- wire up ---- */
+document.getElementById('play').onclick=()=>playing?pause():play();
+document.getElementById('range').oninput=e=>seek(+e.target.value,false);
+document.getElementById('spd').onclick=()=>{ speed=speed===1?2:(speed===2?4:1); document.getElementById('spd').textContent=speed+'×'; if(playing)play(); };
+
+renderTabs(); renderTicks(); setT(0);
+</script>
+</body>
+</html>
