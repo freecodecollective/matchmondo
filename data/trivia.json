@@ -1841,8 +1841,7 @@
       ],
       "answer": 0,
       "explanation": "Klose scored 16 goals for Germany across the 2002, 2006, 2010, and 2014 editions, surpassing Ronaldo's 15.",
-      "type": "true_false",
-      "approved": true
+      "type": "true_false"
     },
     {
       "id": "tf-2022-penalties",
