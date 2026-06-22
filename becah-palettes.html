@@ -9,15 +9,15 @@
 <style>
 :root{
   --color-background-primary:#ffffff;
-  --color-background-secondary:#f3f1ec;
-  --color-background-tertiary:#edebe4;
-  --color-background-info:#E6F1FB;
-  --color-text-primary:#1f1f1d;
-  --color-text-secondary:#6b6a64;
-  --color-text-tertiary:#a09f97;
-  --color-border-tertiary:rgba(20,20,15,0.12);
-  --color-border-secondary:rgba(20,20,15,0.20);
-  --color-border-info:#378ADD;
+  --color-background-secondary:#f2f2f5;
+  --color-background-tertiary:#eaebef;
+  --color-background-info:#e9eafa;
+  --color-text-primary:#1d1d22;
+  --color-text-secondary:#66666e;
+  --color-text-tertiary:#a1a1a9;
+  --color-border-tertiary:rgba(20,20,28,0.12);
+  --color-border-secondary:rgba(20,20,28,0.20);
+  --color-border-info:#5F6AD8;
   --border-radius-md:8px;
   --border-radius-lg:12px;
 }
@@ -48,7 +48,7 @@ body{margin:0;padding:28px 16px 48px;background:var(--color-background-tertiary)
 <body>
 <header class="page-head">
   <h1>Workout tracker</h1>
-  <p>Your pick — now the calendar shows dots for what you did, day by day. Tap a palette to recolor everything.</p>
+  <p>Your pick — Tonal's now one button, and the calendar shows dots for what you did. Tap a palette to recolor everything.</p>
 </header>
 
 <div id="paletteBar" class="pal-bar"></div>
@@ -94,44 +94,46 @@ body{margin:0;padding:28px 16px 48px;background:var(--color-background-tertiary)
 
 <script>
 const PALETTES = [
+  {id:'vivid', name:'Vivid',
+   vars:{'--color-background-primary':'#ffffff','--color-background-secondary':'#f2f2f5','--color-background-tertiary':'#eaebef','--color-background-info':'#e9eafa','--color-text-primary':'#1d1d22','--color-text-secondary':'#66666e','--color-text-tertiary':'#a1a1a9','--color-border-tertiary':'rgba(20,20,28,0.12)','--color-border-secondary':'rgba(20,20,28,0.20)','--color-border-info':'#5F6AD8'},
+   cats:{tonal:'#5F6AD8',pilates:'#0D9C54',hills:'#AC0548'}},
   {id:'daylight', name:'Daylight',
    vars:{'--color-background-primary':'#ffffff','--color-background-secondary':'#f3f1ec','--color-background-tertiary':'#edebe4','--color-background-info':'#E6F1FB','--color-text-primary':'#1f1f1d','--color-text-secondary':'#6b6a64','--color-text-tertiary':'#a09f97','--color-border-tertiary':'rgba(20,20,15,0.12)','--color-border-secondary':'rgba(20,20,15,0.20)','--color-border-info':'#378ADD'},
-   cats:{tonal1:'#378ADD',tonal2:'#185FA5',pilates:'#1D9E75',hills:'#BA7517'}},
+   cats:{tonal:'#378ADD',pilates:'#1D9E75',hills:'#BA7517'}},
   {id:'dusk', name:'Dusk',
    vars:{'--color-background-primary':'#ffffff','--color-background-secondary':'#eef0f3','--color-background-tertiary':'#e4e6eb','--color-background-info':'#e7edf6','--color-text-primary':'#20232b','--color-text-secondary':'#5f636e','--color-text-tertiary':'#9aa0ac','--color-border-tertiary':'rgba(20,24,35,0.12)','--color-border-secondary':'rgba(20,24,35,0.20)','--color-border-info':'#5b7aa8'},
-   cats:{tonal1:'#5b7aa8',tonal2:'#3b4d6b',pilates:'#6f9277',hills:'#b58a5a'}},
+   cats:{tonal:'#5b7aa8',pilates:'#6f9277',hills:'#b58a5a'}},
   {id:'forest', name:'Forest',
    vars:{'--color-background-primary':'#ffffff','--color-background-secondary':'#f0efe6','--color-background-tertiary':'#e6e4d8','--color-background-info':'#e9efe3','--color-text-primary':'#23261f','--color-text-secondary':'#5f6356','--color-text-tertiary':'#9c9f90','--color-border-tertiary':'rgba(30,34,20,0.12)','--color-border-secondary':'rgba(30,34,20,0.20)','--color-border-info':'#5f7d4f'},
-   cats:{tonal1:'#3f7d8c',tonal2:'#2f5d4f',pilates:'#8a9a52',hills:'#a9663f'}},
+   cats:{tonal:'#3f7d8c',pilates:'#8a9a52',hills:'#a9663f'}},
   {id:'berry', name:'Berry',
    vars:{'--color-background-primary':'#ffffff','--color-background-secondary':'#f1ecef','--color-background-tertiary':'#e8e1e6','--color-background-info':'#f2e9f0','--color-text-primary':'#2a2227','--color-text-secondary':'#6b5f64','--color-text-tertiary':'#a99ca1','--color-border-tertiary':'rgba(35,20,28,0.12)','--color-border-secondary':'rgba(35,20,28,0.20)','--color-border-info':'#9a5a7a'},
-   cats:{tonal1:'#4f6a9a',tonal2:'#8a4a6a',pilates:'#3f8c7a',hills:'#c0913a'}},
+   cats:{tonal:'#4f6a9a',pilates:'#3f8c7a',hills:'#c0913a'}},
   {id:'mist', name:'Mist',
    vars:{'--color-background-primary':'#ffffff','--color-background-secondary':'#eef1f1','--color-background-tertiary':'#e6eaea','--color-background-info':'#e6f0f2','--color-text-primary':'#25292b','--color-text-secondary':'#5f6668','--color-text-tertiary':'#9aa1a3','--color-border-tertiary':'rgba(20,30,30,0.12)','--color-border-secondary':'rgba(20,30,30,0.20)','--color-border-info':'#6aa0b0'},
-   cats:{tonal1:'#6aa0c4',tonal2:'#4f6f9a',pilates:'#5aa898',hills:'#d09a6a'}},
+   cats:{tonal:'#6aa0c4',pilates:'#5aa898',hills:'#d09a6a'}},
   {id:'charcoal', name:'Charcoal',
    vars:{'--color-background-primary':'#26282e','--color-background-secondary':'#2f323a','--color-background-tertiary':'#1b1c20','--color-background-info':'#233042','--color-text-primary':'#f0f0f2','--color-text-secondary':'#a6a8b0','--color-text-tertiary':'#74767e','--color-border-tertiary':'rgba(255,255,255,0.10)','--color-border-secondary':'rgba(255,255,255,0.18)','--color-border-info':'#5b8fd0'},
-   cats:{tonal1:'#5b9fe0',tonal2:'#4a7ac0',pilates:'#3fae8a',hills:'#d6a24f'}}
+   cats:{tonal:'#5b9fe0',pilates:'#3fae8a',hills:'#d6a24f'}}
 ];
-let activePal = 'daylight';
+let activePal = 'vivid';
 
 const workouts = {
-  tonal1:{name:'Tonal · Workout 1', short:'Tonal 1', color:'#378ADD', dur:15, goal:2, icon:'ti-bolt'},
-  tonal2:{name:'Tonal · Workout 2', short:'Tonal 2', color:'#185FA5', dur:15, goal:2, icon:'ti-bolt'},
-  pilates:{name:'Pilates', short:'Pilates', color:'#1D9E75', dur:25, goal:3, icon:'ti-yoga'},
-  hills:{name:'Hills', short:'Hills', color:'#BA7517', dur:40, goal:4, icon:'ti-mountain'}
+  tonal:{name:'Tonal', short:'Tonal', color:'#5F6AD8', dur:15, goal:4, icon:'ti-bolt'},
+  pilates:{name:'Pilates', short:'Pilates', color:'#0D9C54', dur:25, goal:3, icon:'ti-yoga'},
+  hills:{name:'Hills', short:'Hills', color:'#AC0548', dur:40, goal:4, icon:'ti-mountain'}
 };
-const order = ['tonal1','tonal2','pilates','hills'];
+const order = ['tonal','pilates','hills'];
 const week = {
-  0:[{wid:'tonal1',label:'Tonal · Workout 1',min:15},{wid:'hills',label:'Hills',min:40}],
+  0:[{wid:'tonal',label:'Tonal',min:15},{wid:'hills',label:'Hills',min:40}],
   1:[{wid:'pilates',label:'Pilates',min:25},{wid:'hills',label:'Hills',min:35}],
-  2:[{wid:'tonal2',label:'Tonal · Workout 2',min:15}],
+  2:[{wid:'tonal',label:'Tonal',min:15}],
   3:[{wid:'pilates',label:'Pilates',min:25},{wid:'hills',label:'Hills',min:52}],
   4:[],5:[],6:[]
 };
 const dayLabels=['M','T','W','T','F','S','S'];
 const dayDates=[15,16,17,18,19,20,21];
-const monthIds={1:['tonal1','hills'],2:['pilates'],3:['tonal2','hills'],4:['pilates'],5:[],6:['tonal1','pilates','hills'],7:[],8:['hills'],9:['tonal2','hills'],10:[],11:['pilates','hills'],12:['tonal1'],13:['pilates','hills'],14:[]};
+const monthIds={1:['tonal','hills'],2:['pilates'],3:['tonal','hills'],4:['pilates'],5:[],6:['tonal','pilates','hills'],7:[],8:['hills'],9:['tonal','hills'],10:[],11:['pilates','hills'],12:['tonal'],13:['pilates','hills'],14:[]};
 
 function countFor(wid){let n=0;for(let d=0;d<7;d++)n+=week[d].filter(e=>e.wid===wid).length;return n;}
 
@@ -287,7 +289,7 @@ function setPalette(id){
   buildPaletteBar();renderAll();
 }
 
-setPalette('daylight');
+setPalette('vivid');
 </script>
 </body>
 </html>
