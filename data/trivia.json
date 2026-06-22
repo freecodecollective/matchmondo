@@ -98,7 +98,7 @@
         "United States"
       ],
       "answer": 1,
-      "explanation": "The Netherlands lost finals in 1974, 1978, and 2010 — the most successful team never to win the title. The US men's team has never one, but the women's team has won four times (1991, 1999, 2015, 2019), making them the most successful team in women's tournament history",
+      "explanation": "The Netherlands lost finals in 1974, 1978, and 2010 — the most successful team never to win the title.",
       "media": "https://www.youtube.com/watch?v=QSVfVwZ8V5c&t=8s",
       "approved": true
     },
@@ -483,7 +483,7 @@
     {
       "id": "h-1934-italy",
       "category": "history",
-      "question": "Which European nation hosted AND won in both 1934 and 1938?",
+      "question": "Which nation won back-to-back titles in 1934 and 1938?",
       "options": [
         "France",
         "Italy",
@@ -491,7 +491,7 @@
         "Spain"
       ],
       "answer": 1,
-      "explanation": "Italy won on home soil in 1934 and retained the title in France in 1938 — the only European nation to win back-to-back."
+      "explanation": "Italy won on home soil in 1934 and retained the title in France in 1938 — the first nation to win back-to-back."
     },
     {
       "id": "h-1966-england",
@@ -676,7 +676,7 @@
         "Lionel Messi"
       ],
       "answer": 1,
-      "explanation": "Pelé was just 17 when he scored twice in the 1958 final against Sweden. The next youngest was Kylian Mbappé, who was 19 when he scored in the 2018 final. Lamine Yamal, born in June 2007, is 19 during Football 2026.",
+      "explanation": "Pelé was just 17 when he scored twice in the 1958 final against Sweden. The next youngest was Kylian Mbappé, who was 19 when he scored in the 2018 final.",
       "approved": true
     },
     {
@@ -1157,13 +1157,13 @@
       "category": "players",
       "question": "Who is the all-time leading goal scorer across all tournaments?",
       "options": [
-        "Cristiano Ronaldo",
-        "Lionel Messi",
         "Miroslav Klose",
-        "Just Fontaine"
+        "Lionel Messi",
+        "Gerd Müller",
+        "Ronaldo"
       ],
-      "answer": 2,
-      "explanation": "Miroslav Klose of Germany is the all-time leading scorer across all tournaments with 16 goals, scored across four editions (2002–2014). Ronaldo of Brazil is second with 15 goals.",
+      "answer": 1,
+      "explanation": "Lionel Messi overtook Miroslav Klose's longstanding record of 16 goals during the 2026 tournament, becoming the all-time leading scorer.",
       "needsReview": true
     },
     {
@@ -1791,7 +1791,8 @@
       ],
       "answer": 0,
       "explanation": "Brazil has played in every edition since 1930 — the only nation to have never missed one. They've won five titles along the way. Germany and Italy are second and third respectively in terms of tournament appearances, with Germany appearing in 19 editions and Italy in 18 editions.",
-      "needsReview": true
+      "needsReview": true,
+      "type": "true_false"
     },
     {
       "id": "tf-48-teams-2026",
@@ -1840,8 +1841,8 @@
         "True",
         "False"
       ],
-      "answer": 0,
-      "explanation": "Klose scored 16 goals for Germany across the 2002, 2006, 2010, and 2014 editions, surpassing Ronaldo's 15.",
+      "answer": 1,
+      "explanation": "Klose scored 16 goals for Germany across four editions (2002–2014), but Lionel Messi surpassed that record during the 2026 tournament.",
       "type": "true_false"
     },
     {
@@ -1853,8 +1854,9 @@
         "False"
       ],
       "answer": 0,
-      "explanation": "After a 3–3 draw through extra time, Argentina beat France 4–2 in the penalty shootout. This victory gave Messi his first and only Football 2026 title. Many consider it the greatest final ever played.",
-      "needsReview": true
+      "explanation": "After a 3–3 draw through extra time, Argentina beat France 4–2 in the penalty shootout. Many consider it the greatest final ever played.",
+      "needsReview": true,
+      "type": "true_false"
     },
     {
       "id": "tf-host-group-stage",
@@ -1877,8 +1879,9 @@
         "False"
       ],
       "answer": 0,
-      "explanation": "This is true. France hosted and won the 1998 tournament on home soil, defeating Brazil 3–0 in the final. This was their first Football 2026 title. They won their second title in 2018 in Russia.",
-      "needsReview": true
+      "explanation": "France hosted and won the 1998 tournament, defeating Brazil 3–0 in the final. They won their second title in 2018 in Russia.",
+      "needsReview": true,
+      "type": "true_false"
     },
     {
       "id": "tf-fastest-goal",
@@ -1952,7 +1955,7 @@
       "answer": 2,
       "explanation": "Ronaldo Nazário scored 15 goals across four editions (1998–2010), winning the Golden Boot in 2002 with eight goals as Brazil took the title.",
       "type": "image",
-      "media": "https://en.wikipedia.org/wiki/Ronaldo_(Brazilian_footballer)#/media/File:LulaeRonaldo_(2009).jpg",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Ronaldo_gol.jpg/500px-Ronaldo_gol.jpg",
       "approved": true
     },
     {
@@ -1973,7 +1976,7 @@
     {
       "id": "img-cristiano",
       "category": "players",
-      "question": "Who is this Portuguese captain who has played in five editions?",
+      "question": "Who is this Portuguese captain who has scored at five consecutive editions?",
       "options": [
         "Cristiano Ronaldo",
         "Luís Figo",
@@ -1981,7 +1984,7 @@
         "Bruno Fernandes"
       ],
       "answer": 0,
-      "explanation": "Cristiano Ronaldo has represented Portugal at five editions (2006–2026). He holds the record for most international goals by any male player.",
+      "explanation": "Cristiano Ronaldo scored at every edition from 2006 to 2022 — five consecutive tournaments. He holds the record for most international goals by any male player.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/500px-Cristiano_Ronaldo_2018.jpg"
     },
