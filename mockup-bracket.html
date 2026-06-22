@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knockout bracket — mobile options</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --bg:#eef1ef; --card:#fff; --ink:#1c1c1e; --sub:#6b6f76; --line:rgba(0,0,0,.10);
+    --green:#1f7d45; --green-l:#2f9e5b; --gold:#D4A017; --win:#1f7d45; --lose:#9aa0a6;
+  }
+  body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',sans-serif;
+    background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+  .banner{background:linear-gradient(135deg,#1f7d45,#2f9e5b);color:#fff;padding:36px 24px 28px;text-align:center;}
+  .banner h1{font-size:24px;font-weight:800;}
+  .banner p{font-size:14px;opacity:.95;margin-top:8px;max-width:560px;margin:8px auto 0;line-height:1.5;}
+  .wrap{max-width:470px;margin:0 auto;padding:0 18px;}
+  .note{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:-16px;
+    box-shadow:0 3px 16px rgba(0,0,0,.07);font-size:13px;color:var(--sub);line-height:1.5;}
+  .note b{color:var(--ink);}
+
+  .opt{margin-top:30px;}
+  .opt-head{display:flex;align-items:baseline;gap:8px;margin:0 4px 4px;}
+  .opt-tag{font-size:12px;font-weight:800;color:#fff;background:var(--green-l);padding:2px 9px;border-radius:20px;}
+  .opt-name{font-size:16px;font-weight:700;}
+  .opt-desc{font-size:12.5px;color:var(--sub);margin:0 4px 12px;line-height:1.45;}
+  .pros{font-size:11.5px;color:var(--sub);margin:9px 4px 0;line-height:1.5;}
+  .pros b{color:var(--green);}
+
+  .screen{background:var(--card);border-radius:18px;padding:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);border:1px solid var(--line);}
+
+  /* round tabs (A) */
+  .rtabs{display:flex;gap:4px;background:#f1f1f0;border-radius:11px;padding:3px;overflow-x:auto;}
+  .rtab{flex:1;white-space:nowrap;border:none;background:none;font-family:inherit;font-size:12px;font-weight:700;color:var(--sub);
+    padding:7px 9px;border-radius:9px;cursor:pointer;}
+  .rtab.on{background:#fff;color:var(--green);box-shadow:0 1px 3px rgba(0,0,0,.12);}
+
+  /* match card (vertical lists) */
+  .mlist{margin-top:12px;display:flex;flex-direction:column;gap:9px;}
+  .match{border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  .mteam{display:flex;align-items:center;gap:9px;padding:9px 11px;}
+  .mteam + .mteam{border-top:1px solid #f0f0ef;}
+  .mteam img{width:24px;height:16px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 .5px rgba(0,0,0,.12);}
+  .mteam .nm{font-size:14px;font-weight:600;flex:1;}
+  .mteam .sc{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums;min-width:18px;text-align:right;}
+  .mteam.win .nm{color:var(--ink);} .mteam.win .sc{color:var(--win);}
+  .mteam.lose{opacity:.5;} .mteam.lose .nm{font-weight:500;}
+  .mteam .pen{font-size:10px;color:var(--sub);font-weight:600;margin-left:2px;}
+  .trophy{margin-left:auto;font-size:14px;}
+
+  /* horizontal bracket (B) */
+  .hscroll{margin-top:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px dashed var(--line);border-radius:12px;padding:10px;background:#fafbfa;}
+  .bracket{display:flex;gap:18px;min-width:max-content;}
+  .bcol{display:flex;flex-direction:column;justify-content:space-around;gap:10px;min-width:118px;}
+  .bcol-h{font-size:9.5px;font-weight:800;letter-spacing:.4px;color:var(--sub);text-transform:uppercase;text-align:center;margin-bottom:2px;}
+  .bmatch{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;}
+  .brow{display:flex;align-items:center;gap:5px;padding:4px 6px;font-size:11px;}
+  .brow + .brow{border-top:1px solid #f0f0ef;}
+  .brow img{width:18px;height:12px;border-radius:1px;object-fit:cover;box-shadow:0 0 0 .5px rgba(0,0,0,.12);}
+  .brow .ab{font-weight:700;flex:1;}
+  .brow .sc{font-weight:800;font-variant-numeric:tabular-nums;}
+  .brow.lose{opacity:.45;} .brow.win .sc{color:var(--win);}
+  .bcol.final .bmatch{border-color:var(--gold);box-shadow:0 0 0 2px rgba(212,160,23,.2);}
+  .scrollhint{font-size:10.5px;color:#b0b4b9;text-align:center;margin-top:6px;font-style:italic;}
+
+  /* split halves (C) */
+  .half{margin-top:12px;}
+  .half-h{font-size:11px;font-weight:800;letter-spacing:.4px;color:#fff;background:var(--green-l);border-radius:8px;padding:6px 10px;text-transform:uppercase;}
+  .half-h.bottom{background:#4a8f63;}
+  .finalwrap{margin-top:14px;text-align:center;}
+  .finalwrap .fl{font-size:11px;font-weight:800;letter-spacing:.5px;color:var(--gold);text-transform:uppercase;margin-bottom:6px;}
+  .finalcard{border:2px solid var(--gold);border-radius:12px;overflow:hidden;max-width:260px;margin:0 auto;box-shadow:0 2px 10px rgba(212,160,23,.18);}
+
+  /* follow a team (D) */
+  .picker{display:flex;align-items:center;gap:8px;margin-top:6px;}
+  .picker label{font-size:12px;font-weight:700;color:var(--sub);}
+  .picker select{flex:1;font-family:inherit;font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--ink);}
+  .path{margin-top:14px;position:relative;padding-left:8px;}
+  .pstep{display:flex;align-items:center;gap:11px;padding:10px 0;border-top:1px solid #f0f0ef;}
+  .pstep:first-child{border-top:none;}
+  .pstep .rnd{width:54px;font-size:10.5px;font-weight:800;color:var(--sub);text-transform:uppercase;line-height:1.2;}
+  .pstep img{width:26px;height:18px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 .5px rgba(0,0,0,.12);}
+  .pstep .opp{flex:1;font-size:14px;font-weight:600;}
+  .pstep .opp small{display:block;font-size:11px;color:var(--sub);font-weight:500;}
+  .pstep .res{font-size:13px;font-weight:800;font-variant-numeric:tabular-nums;}
+  .pstep .res .w{color:var(--win);} .pstep .res .l{color:#c0392b;}
+  .pstep.outcome{justify-content:center;font-size:14px;font-weight:800;padding-top:14px;}
+
+  .foot{text-align:center;font-size:12px;color:#9aa0a6;margin-top:44px;line-height:1.6;}
+  .foot a{color:var(--green);text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="banner">
+  <h1>🏆 Knockout bracket — mobile options</h1>
+  <p>A full bracket is wide; phones are narrow. Here are four ways the app could show the knockout rounds. Each demo is live. (Projected sample results.)</p>
+</div>
+<div class="wrap">
+  <div class="note"><b>The challenge:</b> the real bracket runs Round of 32 → 16 → Quarters → Semis → Final across the screen. On a phone you can’t show it all at once and keep it readable. These options each make a different trade. — for Luis &amp; Chris</div>
+
+  <div class="opt">
+    <div class="opt-head"><span class="opt-tag">A</span><span class="opt-name">Round by round (tabs)</span></div>
+    <div class="opt-desc">A tab per round; each shows that round’s matchups as a clean vertical list. The most phone-native — no horizontal scrolling, everything readable. (Swipe between rounds would feel the same.)</div>
+    <div class="screen"><div class="rtabs" id="rtabsA"></div><div class="mlist" id="mlistA"></div></div>
+    <div class="pros"><b>Good for:</b> readability, taps to teams. <b>Trade-off:</b> you don’t see the whole bracket shape at once.</div>
+  </div>
+
+  <div class="opt">
+    <div class="opt-head"><span class="opt-tag">B</span><span class="opt-name">Classic bracket (scrolls sideways)</span></div>
+    <div class="opt-desc">The familiar full bracket — like ESPN / Fox on the web — that you scroll left↔right. Keeps the connected shape, but text is small and you do a lot of scrolling.</div>
+    <div class="screen"><div class="hscroll" id="hscrollB"></div><div class="scrollhint">← swipe sideways to see all rounds →</div></div>
+    <div class="pros"><b>Good for:</b> the “real bracket” feel, seeing connections. <b>Trade-off:</b> small text, fiddly on a phone.</div>
+  </div>
+
+  <div class="opt">
+    <div class="opt-head"><span class="opt-tag">C</span><span class="opt-name">Split the draw (top / bottom halves)</span></div>
+    <div class="opt-desc">Break the bracket into its two halves stacked vertically, each a small left-to-right bracket that fits the width, meeting at the Final. Shows structure without one giant scroll.</div>
+    <div class="screen" id="screenC"></div>
+    <div class="pros"><b>Good for:</b> structure + fits width. <b>Trade-off:</b> the two halves are split apart, still a bit dense.</div>
+  </div>
+
+  <div class="opt">
+    <div class="opt-head"><span class="opt-tag">D</span><span class="opt-name">Follow a team (path to the final)</span></div>
+    <div class="opt-desc">Pick a team and see just their road through the knockouts as a vertical timeline. Personal and engaging — pairs nicely with one of the above as the “full” view.</div>
+    <div class="screen"><div class="picker"><label>Team</label><select id="teamSel"></select></div><div class="path" id="pathD"></div></div>
+    <div class="pros"><b>Good for:</b> engagement, “my team’s route.” <b>Trade-off:</b> shows one team, not the field.</div>
+  </div>
+
+  <div class="foot">MatchMondo · Knockouts &nbsp;·&nbsp; <a href="mockups.html">← all mockups</a></div>
+</div>
+
+<script>
+const F = c => `https://flagcdn.com/w40/${c}.png`;
+const T = {
+  ar:['Argentina','ARG'], au:['Australia','AUS'], br:['Brazil','BRA'], cr:['Costa Rica','CRC'],
+  fr:['France','FRA'], gh:['Ghana','GHA'], es:['Spain','ESP'], za:['South Africa','RSA'],
+  de:['Germany','GER'], jp:['Japan','JPN'], 'gb-eng':['England','ENG'], ir:['Iran','IRN'],
+  pt:['Portugal','POR'], kr:['Korea Republic','KOR'], nl:['Netherlands','NED'], qa:['Qatar','QAT'],
+  be:['Belgium','BEL'], ca:['Canada','CAN'], hr:['Croatia','CRO'], sa:['Saudi Arabia','KSA'],
+  uy:['Uruguay','URU'], cm:['Cameroon','CMR'], co:['Colombia','COL'], us:['USA','USA'],
+  ma:['Morocco','MAR'], mx:['Mexico','MEX'], sn:['Senegal','SEN'], cz:['Czechia','CZE'],
+  ch:['Switzerland','SUI'], tn:['Tunisia','TUN'], dk:['Denmark','DEN'], ec:['Ecuador','ECU'],
+};
+const name = c => T[c][0], abbr = c => T[c][1];
+
+// Round of 32 — 16 matches [home, away, scoreH, scoreA]; first listed advances.
+const R32 = [
+  ['ar','au',2,0],['br','cr',3,0],['fr','gh',2,1],['es','za',4,0],
+  ['de','jp',1,0],['gb-eng','ir',2,0],['pt','kr',3,1],['nl','qa',5,0],
+  ['be','ca',2,1],['hr','sa',1,0],['uy','cm',2,0],['co','us',1,0],
+  ['ma','mx',2,1],['sn','cz',2,1],['ch','tn',1,0],['dk','ec',2,1],
+];
+const winner = m => m[2] > m[3] ? m[0] : m[1];
+const loser  = m => m[2] > m[3] ? m[1] : m[0];
+const winnersOf = r => r.map(winner);
+const pair = (keys, scores) => keys.reduce((acc,_,i)=> i%2===0 ? [...acc,[keys[i],keys[i+1],scores[i/2][0],scores[i/2][1]]] : acc, []);
+
+const R16 = pair(winnersOf(R32), [[2,1],[1,0],[2,0],[3,1],[2,1],[1,0],[2,0],[2,1]]);
+const QF  = pair(winnersOf(R16), [[1,0],[2,1],[2,0],[1,0]]);
+const SF  = pair(winnersOf(QF),  [[2,1],[1,2]]);          // ar>de ; ma>be (2nd wins)
+const FIN = pair(winnersOf(SF),  [[3,1]]);                // ar > ma
+const THIRD = [[loser(SF[0]), loser(SF[1]), 2, 1]];       // de > be
+
+const ROUNDS = [
+  {key:'R32', short:'R32', label:'Round of 32', matches:R32},
+  {key:'R16', short:'R16', label:'Round of 16', matches:R16},
+  {key:'QF',  short:'QF',  label:'Quarter-finals', matches:QF},
+  {key:'SF',  short:'SF',  label:'Semi-finals', matches:SF},
+  {key:'FIN', short:'Final', label:'Final & 3rd place', matches:FIN, third:THIRD},
+];
+const champ = winner(FIN[0]);
+
+// team row helpers
+function teamRow(code, sc, isWin, isFinalWin){
+  return `<div class="mteam ${isWin?'win':'lose'}"><img src="${F(code)}" alt="">
+    <span class="nm">${name(code)}</span>${isFinalWin?'<span class="trophy">🏆</span>':''}
+    <span class="sc">${sc}</span></div>`;
+}
+function matchCard(m){
+  const w = winner(m);
+  const isFin = (m===FIN[0]);
+  return `<div class="match">
+    ${teamRow(m[0], m[2], w===m[0], isFin&&w===m[0])}
+    ${teamRow(m[1], m[3], w===m[1], isFin&&w===m[1])}</div>`;
+}
+
+/* ---------- A: round tabs ---------- */
+(function(){
+  const tabs=document.getElementById('rtabsA'), list=document.getElementById('mlistA');
+  let cur='R16';
+  const render=()=>{
+    tabs.innerHTML = ROUNDS.map(r=>`<button class="rtab ${r.key===cur?'on':''}" data-k="${r.key}">${r.short}</button>`).join('');
+    const r = ROUNDS.find(x=>x.key===cur);
+    let html = r.matches.map(matchCard).join('');
+    if(r.third){ html += `<div style="font-size:10.5px;font-weight:800;color:var(--sub);text-transform:uppercase;letter-spacing:.4px;margin:6px 2px 0;">Third place</div>` + r.third.map(matchCard).join(''); }
+    list.innerHTML = html;
+    tabs.querySelectorAll('.rtab').forEach(b=>b.onclick=()=>{cur=b.dataset.k;render();});
+  };
+  render();
+})();
+
+/* ---------- B: classic horizontal bracket ---------- */
+(function(){
+  const root=document.getElementById('hscrollB');
+  const col=(title,matches,extra='')=>`<div class="bcol ${extra}"><div class="bcol-h">${title}</div>${matches.map(bMatch).join('')}</div>`;
+  const bMatch=m=>{const w=winner(m);return `<div class="bmatch">
+    <div class="brow ${w===m[0]?'win':'lose'}"><img src="${F(m[0])}" alt=""><span class="ab">${abbr(m[0])}</span><span class="sc">${m[2]}</span></div>
+    <div class="brow ${w===m[1]?'win':'lose'}"><img src="${F(m[1])}" alt=""><span class="ab">${abbr(m[1])}</span><span class="sc">${m[3]}</span></div></div>`;};
+  root.innerHTML = `<div class="bracket">
+    ${col('Round of 16',R16)}${col('Quarters',QF)}${col('Semis',SF)}${col('Final',FIN,'final')}
+  </div>`;
+})();
+
+/* ---------- C: split halves ---------- */
+(function(){
+  const root=document.getElementById('screenC');
+  const bMatch=m=>{const w=winner(m);return `<div class="bmatch">
+    <div class="brow ${w===m[0]?'win':'lose'}"><img src="${F(m[0])}" alt=""><span class="ab">${abbr(m[0])}</span><span class="sc">${m[2]}</span></div>
+    <div class="brow ${w===m[1]?'win':'lose'}"><img src="${F(m[1])}" alt=""><span class="ab">${abbr(m[1])}</span><span class="sc">${m[3]}</span></div></div>`;};
+  const halfBracket=(r16,qf,sf)=>`<div class="hscroll" style="border-style:solid;margin-top:8px;"><div class="bracket">
+      <div class="bcol"><div class="bcol-h">R16</div>${r16.map(bMatch).join('')}</div>
+      <div class="bcol"><div class="bcol-h">QF</div>${qf.map(bMatch).join('')}</div>
+      <div class="bcol"><div class="bcol-h">SF</div>${sf.map(bMatch).join('')}</div>
+    </div></div>`;
+  const finalCard = `<div class="finalwrap"><div class="fl">🏆 Final</div><div class="finalcard">${
+    (()=>{const m=FIN[0],w=winner(m);return `<div class="mteam ${w===m[0]?'win':'lose'}"><img src="${F(m[0])}" alt=""><span class="nm">${name(m[0])}</span>${w===m[0]?'<span class="trophy">🏆</span>':''}<span class="sc">${m[2]}</span></div>
+      <div class="mteam ${w===m[1]?'win':'lose'}"><img src="${F(m[1])}" alt=""><span class="nm">${name(m[1])}</span>${w===m[1]?'<span class="trophy">🏆</span>':''}<span class="sc">${m[3]}</span></div>`;})()
+  }</div></div>`;
+  root.innerHTML =
+    `<div class="half"><div class="half-h">Top half</div>${halfBracket(R16.slice(0,4),QF.slice(0,2),SF.slice(0,1))}</div>`
+    + finalCard
+    + `<div class="half"><div class="half-h bottom">Bottom half</div>${halfBracket(R16.slice(4,8),QF.slice(2,4),SF.slice(1,2))}</div>`;
+})();
+
+/* ---------- D: follow a team ---------- */
+(function(){
+  const sel=document.getElementById('teamSel'), path=document.getElementById('pathD');
+  const r16Teams = R16.flatMap(m=>[m[0],m[1]]).sort((a,b)=>name(a).localeCompare(name(b)));
+  sel.innerHTML = r16Teams.map(c=>`<option value="${c}">${name(c)}</option>`).join('');
+  sel.value = 'ar';
+  const rounds=[['Round of 16',R16],['Quarter-finals',QF],['Semi-finals',SF],['Final',FIN]];
+  const render=()=>{
+    const team=sel.value; let out=''; let alive=true;
+    for(const [label,r] of rounds){
+      const m = r.find(x=>x[0]===team||x[1]===team);
+      if(!m){ break; }
+      const isHome = m[0]===team; const opp = isHome?m[1]:m[0];
+      const my = isHome?m[2]:m[3], th = isHome?m[3]:m[2];
+      const won = my>th;
+      out += `<div class="pstep"><div class="rnd">${label}</div><img src="${F(opp)}" alt="">
+        <div class="opp">${name(opp)}<small>${won?'Won':'Lost'}</small></div>
+        <div class="res"><span class="${won?'w':'l'}">${my}–${th}</span></div></div>`;
+      if(!won){ alive=false; break; }
+    }
+    const reachedFinal = FIN[0].includes(team);
+    if(reachedFinal && team===champ) out += `<div class="pstep outcome">🏆 Champions</div>`;
+    else if(reachedFinal) out += `<div class="pstep outcome">🥈 Runners-up</div>`;
+    path.innerHTML = out || `<div class="pstep outcome" style="color:var(--sub)">Eliminated earlier</div>`;
+  };
+  sel.onchange=render; render();
+})();
+</script>
+</body>
+</html>
