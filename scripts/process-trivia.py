@@ -12,8 +12,8 @@ TRIVIA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "trivia.json
 
 def call_claude(prompt):
     payload = {
-        "model": "claude-haiku-4-5-20251001",
-        "max_tokens": 4096,
+        "model": "claude-opus-4-8",
+        "max_tokens": 16384,
         "messages": [{"role": "user", "content": prompt}],
     }
     req = urllib.request.Request(
