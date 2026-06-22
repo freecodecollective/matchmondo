@@ -1803,7 +1803,8 @@
       ],
       "answer": 0,
       "explanation": "The 2026 edition expands from 32 to 48 teams, meaning 104 matches across 16 host cities in the United States, Mexico, and Canada.",
-      "type": "true_false"
+      "type": "true_false",
+      "approved": true
     },
     {
       "id": "tf-var-2014",
