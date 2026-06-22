@@ -302,6 +302,14 @@ input[type=file]{display:none}
     </div>
     <div class="field-row">
       <div class="field">
+        <label>Type</label>
+        <select id="mType" onchange="onModalTypeChange()">
+          <option value="multiple_choice">Multiple Choice</option>
+          <option value="true_false">True / False</option>
+          <option value="image">Image Identification</option>
+        </select>
+      </div>
+      <div class="field">
         <label>Category</label>
         <select id="mCategory">
           <option value="history">History</option>
@@ -322,9 +330,9 @@ input[type=file]{display:none}
       <label>Question</label>
       <textarea id="mQuestion" rows="2" placeholder="Enter the question..."></textarea>
     </div>
-    <div class="field">
+    <div class="field" id="mOptionsField">
       <label>Options (select the correct answer)</label>
-      <div class="options-grid">
+      <div class="options-grid" id="mOptionsGrid">
         <div class="option-row"><input type="radio" name="mAnswer" value="0" checked> <input type="text" id="mOpt0" placeholder="Option A"></div>
         <div class="option-row"><input type="radio" name="mAnswer" value="1"> <input type="text" id="mOpt1" placeholder="Option B"></div>
         <div class="option-row"><input type="radio" name="mAnswer" value="2"> <input type="text" id="mOpt2" placeholder="Option C"></div>
@@ -446,10 +454,14 @@ function updateStats() {
   const review = data.questions.filter(q => q.needsReview).length;
   const cats = getCategories();
   const catCount = Object.keys(cats).length;
+  const tfCount = data.questions.filter(q => q.type === 'true_false').length;
+  const imgCount = data.questions.filter(q => q.type === 'image').length;
   let html = `<span class="stat"><b>${unpublished}</b> in queue</span>` +
     `<span class="stat"><b>${approved}</b> published</span>`;
   if (review > 0) html += `<span class="stat" style="background:rgba(245,158,11,.2);color:#f59e0b"><b>${review}</b> needs review</span>`;
   html += `<span class="stat"><b>${catCount}</b> categories</span>`;
+  if (tfCount > 0) html += `<span class="stat" style="background:rgba(124,58,237,.15);color:#7c3aed"><b>${tfCount}</b> T/F</span>`;
+  if (imgCount > 0) html += `<span class="stat" style="background:rgba(2,132,199,.15);color:#0284c7"><b>${imgCount}</b> image</span>`;
   document.getElementById('stats').innerHTML = html;
 }
 
@@ -542,6 +554,7 @@ function renderCard(q, realIndex, displayNum, total) {
       <span class="drag-handle" title="Drag to reorder">&#x2630;</span>
       <span class="card-num">#${displayNum}</span>
       <span class="card-badge ${badgeClass(q.category)}">${q.category}</span>
+      ${q.type && q.type !== 'multiple_choice' ? `<span class="card-badge" style="background:${q.type === 'true_false' ? '#7c3aed' : '#0284c7'};color:#fff;font-size:10px">${q.type === 'true_false' ? 'T/F' : 'IMG'}</span>` : ''}
       <span class="card-question">${esc(q.question)}${claudeTag ? '<br>' + claudeTag : ''}</span>
       <div class="status-toggle ${toggleClass}" onclick="event.stopPropagation();cycleStatus(${realIndex})" title="Click to cycle: Not Ready → Review → Ready">
         <span class="status-label status-not-ready">NOT READY</span>
@@ -560,6 +573,14 @@ function renderCard(q, realIndex, displayNum, total) {
         <div class="field">
           <label>ID</label>
           <input type="text" value="${esc(q.id)}" onchange="updateField(${realIndex},'id',this.value)">
+        </div>
+        <div class="field">
+          <label>Type</label>
+          <select onchange="updateType(${realIndex},this.value)">
+            ${[['multiple_choice','Multiple Choice'],['true_false','True / False'],['image','Image']].map(([v,l]) =>
+              `<option value="${v}" ${(q.type||'multiple_choice')===v?'selected':''}>${l}</option>`
+            ).join('')}
+          </select>
         </div>
         <div class="field">
           <label>Category</label>
@@ -613,6 +634,39 @@ function renderMediaPreview(url) {
 
 function esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function onModalTypeChange() {
+  const type = document.getElementById('mType').value;
+  const grid = document.getElementById('mOptionsGrid');
+  if (type === 'true_false') {
+    grid.innerHTML = `
+      <div class="option-row"><input type="radio" name="mAnswer" value="0" checked> <input type="text" id="mOpt0" value="True" readonly style="background:#f5f5f5"></div>
+      <div class="option-row"><input type="radio" name="mAnswer" value="1"> <input type="text" id="mOpt1" value="False" readonly style="background:#f5f5f5"></div>`;
+  } else {
+    grid.innerHTML = `
+      <div class="option-row"><input type="radio" name="mAnswer" value="0" checked> <input type="text" id="mOpt0" placeholder="Option A"></div>
+      <div class="option-row"><input type="radio" name="mAnswer" value="1"> <input type="text" id="mOpt1" placeholder="Option B"></div>
+      <div class="option-row"><input type="radio" name="mAnswer" value="2"> <input type="text" id="mOpt2" placeholder="Option C"></div>
+      <div class="option-row"><input type="radio" name="mAnswer" value="3"> <input type="text" id="mOpt3" placeholder="Option D"></div>`;
+  }
+}
+
+function updateType(idx, type) {
+  const q = data.questions[idx];
+  if (type === 'true_false') {
+    q.type = 'true_false';
+    q.options = ['True', 'False'];
+    q.answer = Math.min(q.answer, 1);
+  } else if (type === 'image') {
+    q.type = 'image';
+    if (q.options.length < 4) q.options = ['', '', '', ''];
+  } else {
+    delete q.type;
+    if (q.options.length < 4) q.options = [...q.options, ...Array(4 - q.options.length).fill('')];
+  }
+  autoSave();
+  renderAll();
 }
 
 function toggleCard(idx) {
@@ -725,10 +779,12 @@ function editQuestion(idx) {
   const q = data.questions[idx];
   document.getElementById('modalTitle').textContent = 'Edit Question';
   document.getElementById('mId').value = q.id;
+  document.getElementById('mType').value = q.type || 'multiple_choice';
+  onModalTypeChange();
   document.getElementById('mCategory').value = q.category;
   document.getElementById('mQuestion').value = q.question;
   document.getElementById('mMedia').value = q.media || '';
-  q.options.forEach((o, i) => document.getElementById('mOpt' + i).value = o);
+  q.options.forEach((o, i) => { const el = document.getElementById('mOpt' + i); if (el) el.value = o; });
   document.querySelectorAll('input[name=mAnswer]').forEach(r => r.checked = parseInt(r.value) === q.answer);
   document.getElementById('mExplanation').value = q.explanation;
   document.getElementById('addModal').classList.add('open');
@@ -738,10 +794,12 @@ function openAddModal() {
   editingIndex = -1;
   document.getElementById('modalTitle').textContent = 'Add Question';
   document.getElementById('mId').value = '';
+  document.getElementById('mType').value = 'multiple_choice';
+  onModalTypeChange();
   document.getElementById('mCategory').value = activeCategory === 'all' ? 'history' : activeCategory;
   document.getElementById('mQuestion').value = '';
   document.getElementById('mMedia').value = '';
-  [0,1,2,3].forEach(i => document.getElementById('mOpt' + i).value = '');
+  [0,1,2,3].forEach(i => { const el = document.getElementById('mOpt' + i); if (el) el.value = ''; });
   document.querySelectorAll('input[name=mAnswer]')[0].checked = true;
   document.getElementById('mExplanation').value = '';
   document.getElementById('addModal').classList.add('open');
@@ -753,10 +811,12 @@ function closeModal() {
 
 function saveModal() {
   const id = document.getElementById('mId').value.trim();
+  const type = document.getElementById('mType').value;
   const category = document.getElementById('mCategory').value;
   const question = document.getElementById('mQuestion').value.trim();
   const media = document.getElementById('mMedia').value.trim();
-  const options = [0,1,2,3].map(i => document.getElementById('mOpt' + i).value.trim());
+  const optCount = type === 'true_false' ? 2 : 4;
+  const options = Array.from({length: optCount}, (_, i) => document.getElementById('mOpt' + i).value.trim());
   const answer = parseInt(document.querySelector('input[name=mAnswer]:checked').value);
   const explanation = document.getElementById('mExplanation').value.trim();
 
@@ -766,6 +826,7 @@ function saveModal() {
   }
 
   const q = { id, category, question, options, answer, explanation };
+  if (type !== 'multiple_choice') q.type = type;
   if (media) q.media = media;
 
   if (editingIndex >= 0) {
@@ -799,6 +860,7 @@ function saveJSON() {
 function buildOutput() {
   const out = { version: data.version || 1, questions: data.questions.map(q => {
     const clean = { id: q.id, category: q.category, question: q.question, options: q.options, answer: q.answer, explanation: q.explanation };
+    if (q.type && q.type !== 'multiple_choice') clean.type = q.type;
     if (q.media) clean.media = q.media;
     if (q.approved) clean.approved = true;
     if (q.needsReview) clean.needsReview = true;
@@ -1042,8 +1104,9 @@ function renderPublishedView() {
       qs.forEach(q => {
         const idx = data.questions.indexOf(q);
         html += `<div class="pub-card">
+          ${q.type === 'image' && q.media ? `<img src="${esc(q.media)}" style="width:40px;height:40px;object-fit:cover;border-radius:6px;flex-shrink:0">` : ''}
           <div style="flex:1;min-width:0">
-            <div style="font-size:14px;font-weight:500;margin-bottom:2px">${esc(q.question)}</div>
+            <div style="font-size:14px;font-weight:500;margin-bottom:2px">${q.type && q.type !== 'multiple_choice' ? `<span style="display:inline-block;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:700;margin-right:4px;background:${q.type === 'true_false' ? '#7c3aed' : '#0284c7'};color:#fff">${q.type === 'true_false' ? 'T/F' : 'IMG'}</span>` : ''}${esc(q.question)}</div>
             <div style="font-size:12px;color:#888">${esc(q.options[q.answer])}</div>
           </div>
           <button class="btn btn-sm" style="background:#f5f5f5;color:#555;border:1px solid #ddd;white-space:nowrap" onclick="unpublishAndEdit(${idx})">Unpublish & Edit</button>

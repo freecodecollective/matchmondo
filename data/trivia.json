@@ -1779,6 +1779,276 @@
       "answer": 1,
       "explanation": "A clean sheet refers to a defensive achievement where a team prevents the opposing team from scoring throughout the entire match. It's a key metric for measuring defensive performance in football.",
       "approved": true
+    },
+    {
+      "id": "tf-brazil-every-edition",
+      "category": "history",
+      "type": "true_false",
+      "question": "Brazil is the only nation to have appeared at every edition of the tournament.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "Brazil has played in every edition since 1930 — the only nation to have never missed one. They've won five titles along the way."
+    },
+    {
+      "id": "tf-48-teams-2026",
+      "category": "rules",
+      "type": "true_false",
+      "question": "The 2026 tournament will be the first to feature 48 teams.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "The 2026 edition expands from 32 to 48 teams, meaning 104 matches across 16 host cities in the United States, Mexico, and Canada."
+    },
+    {
+      "id": "tf-var-2014",
+      "category": "rules",
+      "type": "true_false",
+      "question": "VAR (Video Assistant Referee) was first used at the 2014 tournament in Brazil.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "VAR debuted at the 2018 tournament in Russia. The 2014 edition in Brazil still relied entirely on on-field officials."
+    },
+    {
+      "id": "tf-germany-italy-tied",
+      "category": "history",
+      "type": "true_false",
+      "question": "Germany has won the tournament more times than Italy.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "They're tied — both nations have won four titles. Germany won in 1954, 1974, 1990, and 2014; Italy in 1934, 1938, 1982, and 2006."
+    },
+    {
+      "id": "tf-klose-16-goals",
+      "category": "records",
+      "type": "true_false",
+      "question": "Miroslav Klose holds the all-time scoring record with 16 goals across four editions.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "Klose scored 16 goals for Germany across the 2002, 2006, 2010, and 2014 editions, surpassing Ronaldo's 15."
+    },
+    {
+      "id": "tf-2022-penalties",
+      "category": "history",
+      "type": "true_false",
+      "question": "The 2022 final between Argentina and France was decided on penalties.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "After a 3–3 draw through extra time, Argentina beat France 4–2 in the penalty shootout. Many consider it the greatest final ever played."
+    },
+    {
+      "id": "tf-host-group-stage",
+      "category": "history",
+      "type": "true_false",
+      "question": "No host nation has ever been eliminated in the group stage.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "South Africa became the first (and so far only) host nation eliminated in the group stage, at their own 2010 tournament."
+    },
+    {
+      "id": "tf-france-first-1998",
+      "category": "teams",
+      "type": "true_false",
+      "question": "France won their first title at the 2018 tournament in Russia.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "France's first title came at the 1998 tournament, which they hosted. They beat Brazil 3–0 in the final. Their 2018 win was their second."
+    },
+    {
+      "id": "tf-fastest-goal",
+      "category": "records",
+      "type": "true_false",
+      "question": "The fastest goal in tournament history was scored in under 15 seconds.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "Turkey's Hakan Şükür scored just 10.8 seconds into the 2002 third-place match against South Korea — the fastest goal in tournament history."
+    },
+    {
+      "id": "tf-three-country-host",
+      "category": "teams",
+      "type": "true_false",
+      "question": "The 2002 tournament was the first to be co-hosted by two countries.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "South Korea and Japan co-hosted in 2002, making it the first multi-nation edition. The 2026 tournament goes further with three co-hosts."
+    },
+    {
+      "id": "img-pele",
+      "category": "players",
+      "type": "image",
+      "question": "Who is this legendary Brazilian forward?",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Pele_con_brasil_%28cropped%29.jpg/640px-Pele_con_brasil_%28cropped%29.jpg",
+      "options": [
+        "Pelé",
+        "Garrincha",
+        "Romário",
+        "Zico"
+      ],
+      "answer": 0,
+      "explanation": "Pelé won three titles (1958, 1962, 1970) and scored 12 goals across four editions. Widely regarded as one of the greatest players ever."
+    },
+    {
+      "id": "img-zidane",
+      "category": "players",
+      "type": "image",
+      "question": "Who is this French midfielder and manager?",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Zinedine_Zidane_by_Tasnim_03.jpg/640px-Zinedine_Zidane_by_Tasnim_03.jpg",
+      "options": [
+        "Thierry Henry",
+        "Zinedine Zidane",
+        "Michel Platini",
+        "Patrick Vieira"
+      ],
+      "answer": 1,
+      "explanation": "Zinedine Zidane led France to their first title in 1998, scoring twice in the final. His 2006 final headbutt on Materazzi became one of football's most infamous moments."
+    },
+    {
+      "id": "img-ronaldo-brazil",
+      "category": "players",
+      "type": "image",
+      "question": "Who is this Brazilian striker who scored 15 goals across four editions?",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Ronaldo_Lu%C3%ADs_Naz%C3%A1rio_de_Lima_2019_%283x4_cropped%29.jpg/640px-Ronaldo_Lu%C3%ADs_Naz%C3%A1rio_de_Lima_2019_%283x4_cropped%29.jpg",
+      "options": [
+        "Ronaldinho",
+        "Rivaldo",
+        "Ronaldo",
+        "Romário"
+      ],
+      "answer": 2,
+      "explanation": "Ronaldo Nazário scored 15 goals across four editions (1998–2010), winning the Golden Boot in 2002 with eight goals as Brazil took the title."
+    },
+    {
+      "id": "img-messi",
+      "category": "players",
+      "type": "image",
+      "question": "Who is this Argentine forward who finally lifted the trophy in 2022?",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Lionel_Messi_White_House_2026_%283x4_cropped%29.jpg/640px-Lionel_Messi_White_House_2026_%283x4_cropped%29.jpg",
+      "options": [
+        "Diego Maradona",
+        "Lionel Messi",
+        "Gabriel Batistuta",
+        "Sergio Agüero"
+      ],
+      "answer": 1,
+      "explanation": "Lionel Messi led Argentina to victory in 2022 at his fifth and final edition. He scored seven goals including two in the final, winning the Golden Ball."
+    },
+    {
+      "id": "img-cristiano",
+      "category": "players",
+      "type": "image",
+      "question": "Who is this Portuguese captain who has played in five editions?",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/President_Donald_Trump_meets_with_Cristiano_Ronaldo_in_the_Oval_Office_%2854933344262%29_%28cropped_and_rotated%29.jpg/640px-President_Donald_Trump_meets_with_Cristiano_Ronaldo_in_the_Oval_Office_%2854933344262%29_%28cropped_and_rotated%29.jpg",
+      "options": [
+        "Cristiano Ronaldo",
+        "Luís Figo",
+        "Eusébio",
+        "Bruno Fernandes"
+      ],
+      "answer": 0,
+      "explanation": "Cristiano Ronaldo has represented Portugal at five editions (2006–2026). He holds the record for most international goals by any male player."
+    },
+    {
+      "id": "img-mbappe",
+      "category": "players",
+      "type": "image",
+      "question": "Who is this French forward who scored a hat trick in the 2022 final?",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Picture_with_Mbapp%C3%A9_%28cropped_and_rotated%29.jpg/640px-Picture_with_Mbapp%C3%A9_%28cropped_and_rotated%29.jpg",
+      "options": [
+        "Antoine Griezmann",
+        "Kylian Mbappé",
+        "Ousmane Dembélé",
+        "Olivier Giroud"
+      ],
+      "answer": 1,
+      "explanation": "Kylian Mbappé scored a hat trick in the 2022 final and won the Golden Boot with eight goals. He first won the title as a teenager in 2018."
+    },
+    {
+      "id": "img-ronaldinho",
+      "category": "players",
+      "type": "image",
+      "question": "Who is this Brazilian playmaker known for his dazzling skills and iconic smile?",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ronaldinho_in_2019.jpg/640px-Ronaldinho_in_2019.jpg",
+      "options": [
+        "Kaká",
+        "Ronaldinho",
+        "Rivaldo",
+        "Roberto Carlos"
+      ],
+      "answer": 1,
+      "explanation": "Ronaldinho was part of Brazil's 2002 winning squad and scored a memorable free kick against England in the quarterfinals. He won the Ballon d'Or in 2005."
+    },
+    {
+      "id": "img-modric",
+      "category": "players",
+      "type": "image",
+      "question": "Who is this Croatian midfielder who led his country to the 2018 final?",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Ofrenda_de_la_Liga_y_la_Champions-57-L.Mill%C3%A1n_%2852109310843%29_%28Luka_Modri%C4%87%29.jpg/640px-Ofrenda_de_la_Liga_y_la_Champions-57-L.Mill%C3%A1n_%2852109310843%29_%28Luka_Modri%C4%87%29.jpg",
+      "options": [
+        "Ivan Rakitić",
+        "Luka Modrić",
+        "Mario Mandžukić",
+        "Robert Kovač"
+      ],
+      "answer": 1,
+      "explanation": "Luka Modrić captained Croatia to the 2018 final and won the Golden Ball as the tournament's best player. He also led them to third place in 2022."
+    },
+    {
+      "id": "img-neymar",
+      "category": "players",
+      "type": "image",
+      "question": "Who is this Brazilian forward playing at the 2026 tournament?",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Neymar_Junior_Brazil_V_Morocco_13_June_2026-40.jpg/640px-Neymar_Junior_Brazil_V_Morocco_13_June_2026-40.jpg",
+      "options": [
+        "Vinícius Jr",
+        "Neymar",
+        "Rodrygo",
+        "Lucas Paquetá"
+      ],
+      "answer": 1,
+      "explanation": "Neymar is Brazil's all-time leading scorer and is competing at his third edition in 2026 after injuries limited his 2014 and 2022 campaigns."
+    },
+    {
+      "id": "img-drogba",
+      "category": "players",
+      "type": "image",
+      "question": "Who is this Ivorian striker, one of Africa's greatest players?",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Didier_Drogba_%282019%29_%28cropped2%29.jpg/640px-Didier_Drogba_%282019%29_%28cropped2%29.jpg",
+      "options": [
+        "Samuel Eto'o",
+        "Didier Drogba",
+        "Yaya Touré",
+        "George Weah"
+      ],
+      "answer": 1,
+      "explanation": "Didier Drogba represented Ivory Coast at three editions (2006, 2010, 2014). He's credited with helping to broker a ceasefire in the Ivorian civil war through football."
     }
   ],
   "pendingTasks": [
