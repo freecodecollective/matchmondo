@@ -542,8 +542,8 @@
     "venue": "Lincoln Financial Field",
     "city": "Philadelphia, PA",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": 1,
-    "scoreA": 0
+    "scoreH": null,
+    "scoreA": null
   },
   {
     "n": 41,
