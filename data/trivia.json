@@ -1936,7 +1936,7 @@
       "answer": 1,
       "explanation": "Zinedine Zidane led France to their first title in 1998, scoring twice in the final. His 2006 final headbutt on Materazzi became one of football's most infamous moments.",
       "type": "image",
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Zinedine_Zidane_by_Tasnim_03.jpg/500px-Zinedine_Zidane_by_Tasnim_03.jpg",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Italy_vs_France_-_FIFA_World_Cup_2006_final_-_Lilian_Thuram_and_Zinedine_Zidane.jpg/500px-Italy_vs_France_-_FIFA_World_Cup_2006_final_-_Lilian_Thuram_and_Zinedine_Zidane.jpg",
       "approved": true
     },
     {
@@ -1952,7 +1952,7 @@
       "answer": 2,
       "explanation": "Ronaldo Nazário scored 15 goals across four editions (1998–2010), winning the Golden Boot in 2002 with eight goals as Brazil took the title.",
       "type": "image",
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Ronaldo_Lu%C3%ADs_Naz%C3%A1rio_de_Lima_2019_%283x4_cropped%29.jpg/500px-Ronaldo_Lu%C3%ADs_Naz%C3%A1rio_de_Lima_2019_%283x4_cropped%29.jpg",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Ronaldo_Nazario_%22Fen%C3%B4meno%22_%285122564094%29.jpg/500px-Ronaldo_Nazario_%22Fen%C3%B4meno%22_%285122564094%29.jpg",
       "approved": true
     },
     {
@@ -1968,7 +1968,7 @@
       "answer": 1,
       "explanation": "Lionel Messi led Argentina to victory in 2022 at his fifth and final edition. He scored seven goals including two in the final, winning the Golden Ball.",
       "type": "image",
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Lionel_Messi_White_House_2026_%283x4_cropped%29.jpg/500px-Lionel_Messi_White_House_2026_%283x4_cropped%29.jpg"
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Lionel_Messi_20180626_%28cropped%29.jpg/500px-Lionel_Messi_20180626_%28cropped%29.jpg"
     },
     {
       "id": "img-cristiano",
@@ -1983,7 +1983,7 @@
       "answer": 0,
       "explanation": "Cristiano Ronaldo has represented Portugal at five editions (2006–2026). He holds the record for most international goals by any male player.",
       "type": "image",
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/President_Donald_Trump_meets_with_Cristiano_Ronaldo_in_the_Oval_Office_%2854933344262%29_%28cropped_and_rotated%29.jpg/500px-President_Donald_Trump_meets_with_Cristiano_Ronaldo_in_the_Oval_Office_%2854933344262%29_%28cropped_and_rotated%29.jpg"
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/500px-Cristiano_Ronaldo_2018.jpg"
     },
     {
       "id": "img-mbappe",
@@ -1998,7 +1998,7 @@
       "answer": 1,
       "explanation": "Kylian Mbappé scored a hat trick in the 2022 final and won the Golden Boot with eight goals. He first won the title as a teenager in 2018.",
       "type": "image",
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Picture_with_Mbapp%C3%A9_%28cropped_and_rotated%29.jpg/500px-Picture_with_Mbapp%C3%A9_%28cropped_and_rotated%29.jpg",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Kylian_Mbappe_celebrating_-_March_2018_%28cropped%29.jpg/500px-Kylian_Mbappe_celebrating_-_March_2018_%28cropped%29.jpg",
       "approved": true
     },
     {
@@ -2014,7 +2014,7 @@
       "answer": 1,
       "explanation": "Ronaldinho was part of Brazil's 2002 winning squad and scored a memorable free kick against England in the quarterfinals. He won the Ballon d'Or in 2005.",
       "type": "image",
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ronaldinho_in_2019.jpg/500px-Ronaldinho_in_2019.jpg",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Ronaldinho_11feb2007.jpg/500px-Ronaldinho_11feb2007.jpg",
       "approved": true
     },
     {
@@ -2060,7 +2060,7 @@
       "answer": 1,
       "explanation": "Didier Drogba represented Ivory Coast at three editions (2006, 2010, 2014). He's credited with helping to broker a ceasefire in the Ivorian civil war through football.",
       "type": "image",
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Didier_Drogba_%282019%29_%28cropped2%29.jpg/500px-Didier_Drogba_%282019%29_%28cropped2%29.jpg"
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Didier_Drogba_9279.JPG/500px-Didier_Drogba_9279.JPG"
     }
   ],
   "pendingTasks": [
