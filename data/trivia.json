@@ -1905,7 +1905,8 @@
       ],
       "answer": 0,
       "explanation": "South Korea and Japan co-hosted in 2002, making it the first multi-nation edition. The 2026 tournament goes further with three co-hosts.",
-      "type": "true_false"
+      "type": "true_false",
+      "approved": true
     },
     {
       "id": "img-pele",
