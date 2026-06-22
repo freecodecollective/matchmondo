@@ -1871,15 +1871,14 @@
     {
       "id": "tf-france-first-1998",
       "category": "teams",
-      "question": "France won their first title at the 2018 tournament in Russia.",
+      "question": "France won their first title at the 1998 tournament, which they hosted in France.",
       "options": [
         "True",
         "False"
       ],
-      "answer": 1,
-      "explanation": "France's first title came at the 1998 tournament, which they hosted. They beat Brazil 3–0 in the final. Their 2018 win was their second.",
-      "type": "true_false",
-      "claudeTask": "say where the 1998 tournament was played."
+      "answer": 0,
+      "explanation": "This is true. France hosted and won the 1998 tournament on home soil, defeating Brazil 3–0 in the final. This was their first Football 2026 title. They won their second title in 2018 in Russia.",
+      "needsReview": true
     },
     {
       "id": "tf-fastest-goal",
