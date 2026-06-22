@@ -64,7 +64,9 @@ def has_pending_tasks(put_body):
     return False
 
 
-def trigger_workflow():
+def trigger_workflow(delay=8):
+    if delay:
+        time.sleep(delay)
     try:
         req = urllib.request.Request(WORKFLOW_API, method="POST", headers={
             "Accept": "application/vnd.github.v3+json",
@@ -359,6 +361,8 @@ class Handler(BaseHTTPRequestHandler):
             return self.group_create(body)
         if len(parts) == 4 and parts[:2] == ["api", "groups"] and parts[3] == "join":
             return self.group_join(parts[2], body)
+        if parts == ["api", "trivia", "process"]:
+            return self.trivia_process()
         if parts == ["api", "me"]:
             return self.me_post(body)
         if parts == ["api", "me", "reroll"]:
@@ -423,6 +427,10 @@ class Handler(BaseHTTPRequestHandler):
             self._cors()
             self.end_headers()
             self.wfile.write(e.read())
+
+    def trivia_process(self):
+        threading.Thread(target=trigger_workflow, kwargs={"delay": 0}, daemon=True).start()
+        self.send_json(200, {"ok": True, "message": "Workflow triggered"})
 
     # ---- groups ------------------------------------------------------------
     def group_create(self, body):
