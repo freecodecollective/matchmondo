@@ -1829,7 +1829,8 @@
       ],
       "answer": 1,
       "explanation": "They're tied — both nations have won four titles. Germany won in 1954, 1974, 1990, and 2014; Italy in 1934, 1938, 1982, and 2006.",
-      "type": "true_false"
+      "type": "true_false",
+      "approved": true
     },
     {
       "id": "tf-klose-16-goals",
