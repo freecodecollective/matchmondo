@@ -35,9 +35,16 @@ def build_task_prompt(trivia, tasks_desc):
     existing_ids = [q["id"] for q in trivia["questions"]]
     return f"""You are a trivia question editor for a football tournament app called "Football 2026".
 
+The 2026 tournament is CURRENTLY IN PROGRESS. Your training data may be outdated about
+ongoing match results, goal tallies, and records. When a task tells you something has
+changed (e.g. "Messi is now the top scorer", "X scored today"), TRUST THAT AS GROUND
+TRUTH — do not second-guess it or substitute your own (possibly stale) knowledge.
+
 CRITICAL RULES:
 - NEVER use "World Cup" or "FIFA" in any text — say "Football 2026" or "the tournament" instead
 - Each question needs: id (unique kebab-case slug), category (one of: history, players, rules, teams, venues, records, culture), question, options (array of exactly 4 strings), answer (0-3 index of correct option), explanation
+- When modifying a question, keep all 4 options distinct — no duplicates
+- "Ronaldo" without qualification means Ronaldo Nazário (Brazil, 15 WC goals). Cristiano Ronaldo (Portugal) has 8 WC goals. Do NOT confuse them.
 
 Existing question IDs (do NOT reuse): {json.dumps(existing_ids)}
 
