@@ -1878,7 +1878,8 @@
       ],
       "answer": 1,
       "explanation": "France's first title came at the 1998 tournament, which they hosted. They beat Brazil 3–0 in the final. Their 2018 win was their second.",
-      "type": "true_false"
+      "type": "true_false",
+      "claudeTask": "say where the 1998 tournament was played."
     },
     {
       "id": "tf-fastest-goal",
