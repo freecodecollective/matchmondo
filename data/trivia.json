@@ -1853,9 +1853,8 @@
         "False"
       ],
       "answer": 0,
-      "explanation": "After a 3–3 draw through extra time, Argentina beat France 4–2 in the penalty shootout. Many consider it the greatest final ever played.",
-      "type": "true_false",
-      "claudeTask": "add that it was messi's first title"
+      "explanation": "After a 3–3 draw through extra time, Argentina beat France 4–2 in the penalty shootout. This victory gave Messi his first and only Football 2026 title. Many consider it the greatest final ever played.",
+      "needsReview": true
     },
     {
       "id": "tf-host-group-stage",
