@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knockout bracket — drag to pan</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --bg:#eef1ef; --card:#fff; --ink:#1c1c1e; --sub:#6b6f76; --line:rgba(0,0,0,.10);
+    --green:#1f7d45; --green-l:#2f9e5b; --gold:#D4A017; --win:#1f7d45; --cline:#cdd3cd;
+  }
+  body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',sans-serif;
+    background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;padding-bottom:50px;}
+  .banner{background:linear-gradient(135deg,#1f7d45,#2f9e5b);color:#fff;padding:34px 24px 26px;text-align:center;}
+  .banner h1{font-size:23px;font-weight:800;}
+  .banner p{font-size:14px;opacity:.95;margin:8px auto 0;max-width:540px;line-height:1.5;}
+  .wrap{max-width:480px;margin:0 auto;padding:0 14px;}
+  .note{background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px 15px;margin-top:-14px;
+    box-shadow:0 3px 16px rgba(0,0,0,.07);font-size:13px;color:var(--sub);line-height:1.5;}
+  .note b{color:var(--ink);}
+
+  .toolbar{display:flex;align-items:center;gap:8px;margin:16px 2px 8px;}
+  .toolbar .seg{display:flex;gap:3px;background:#e4e7e4;border-radius:10px;padding:3px;}
+  .toolbar .seg button{border:none;background:none;font-family:inherit;font-size:12px;font-weight:700;color:var(--sub);
+    padding:6px 11px;border-radius:8px;cursor:pointer;}
+  .toolbar .seg button.on{background:#fff;color:var(--green);box-shadow:0 1px 3px rgba(0,0,0,.12);}
+  .toolbar .spacer{flex:1;}
+  .toolbar .reset{border:1px solid var(--line);background:#fff;font-family:inherit;font-size:12px;font-weight:700;
+    color:var(--green);padding:6px 11px;border-radius:9px;cursor:pointer;}
+
+  /* pannable viewport */
+  .vp{position:relative;height:460px;overflow:auto;border:1px solid var(--line);border-radius:16px;background:#fafbfa;
+    cursor:grab;touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+    box-shadow:inset 0 0 0 1px rgba(0,0,0,.02);}
+  .vp.grabbing{cursor:grabbing;}
+  .vp.grabbing *{cursor:grabbing !important;}
+  .bracket{display:flex;gap:26px;padding:16px 18px;width:max-content;}
+  .bcol{display:flex;flex-direction:column;justify-content:space-around;gap:12px;}
+  .bcol-h{position:sticky;top:0;z-index:2;font-size:10px;font-weight:800;letter-spacing:.5px;color:var(--sub);
+    text-transform:uppercase;text-align:center;background:rgba(250,251,250,.95);padding:2px 0 6px;backdrop-filter:blur(2px);}
+  .bmatch{width:138px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+  .bcol.final .bmatch{border-color:var(--gold);box-shadow:0 0 0 2px rgba(212,160,23,.2);}
+  .brow{display:flex;align-items:center;gap:7px;padding:7px 9px;}
+  .brow + .brow{border-top:1px solid #f0f0ef;}
+  .brow img{width:22px;height:15px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 .5px rgba(0,0,0,.12);pointer-events:none;}
+  .brow .ab{font-size:13px;font-weight:700;flex:1;}
+  .brow .sc{font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;}
+  .brow.lose{opacity:.45;} .brow.win .sc{color:var(--win);}
+  .brow.win .ab{color:var(--ink);}
+  .brow .tr{margin-left:2px;font-size:13px;}
+
+  /* connector stubs (light, to imply the connected shape) */
+  .bcol:not(.final) .bmatch{position:relative;}
+  .bcol:not(.final) .bmatch::after{content:'';position:absolute;left:100%;top:50%;width:13px;height:2px;background:var(--cline);}
+  .bcol:not(.r16) .bmatch{position:relative;}
+  .bcol:not(.r16) .bmatch::before{content:'';position:absolute;right:100%;top:50%;width:13px;height:2px;background:var(--cline);}
+
+  .hint{font-size:12px;color:#9aa0a6;text-align:center;margin-top:10px;}
+  .hint b{color:var(--green);}
+  .foot{text-align:center;font-size:12px;color:#9aa0a6;margin-top:30px;line-height:1.6;}
+  .foot a{color:var(--green);text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="banner">
+  <h1>🏆 Knockout bracket — drag to pan</h1>
+  <p>The whole connected bracket on one canvas — grab it and drag (or swipe) in any direction to move around, ESPN-style. See a lot at once, explore the rest by panning.</p>
+</div>
+<div class="wrap">
+  <div class="note"><b>Try it:</b> press and drag the bracket to pan ↔ and ↕. Toggle how much fits with the zoom buttons; “Reset” recenters. (Projected sample — Round of 16 onward; the Round of 32 could be prepended the same way.)</div>
+
+  <div class="toolbar">
+    <div class="seg" id="zoom">
+      <button data-z="0.8">Fit more</button>
+      <button data-z="1" class="on">Normal</button>
+      <button data-z="1.25">Bigger</button>
+    </div>
+    <div class="spacer"></div>
+    <button class="reset" id="reset">Reset ⟲</button>
+  </div>
+
+  <div class="vp" id="vp">
+    <div class="bracket" id="bracket"></div>
+  </div>
+  <div class="hint">↔ <b>drag / swipe</b> to move the bracket ↕</div>
+
+  <div class="foot">MatchMondo · Knockouts &nbsp;·&nbsp; <a href="mockup-bracket.html">other bracket options</a> · <a href="mockups.html">all mockups</a></div>
+</div>
+
+<script>
+const F = c => `https://flagcdn.com/w40/${c}.png`;
+const T = {
+  ar:['Argentina','ARG'], au:['Australia','AUS'], br:['Brazil','BRA'], cr:['Costa Rica','CRC'],
+  fr:['France','FRA'], gh:['Ghana','GHA'], es:['Spain','ESP'], za:['South Africa','RSA'],
+  de:['Germany','GER'], jp:['Japan','JPN'], 'gb-eng':['England','ENG'], ir:['Iran','IRN'],
+  pt:['Portugal','POR'], kr:['Korea Republic','KOR'], nl:['Netherlands','NED'], qa:['Qatar','QAT'],
+  be:['Belgium','BEL'], ca:['Canada','CAN'], hr:['Croatia','CRO'], sa:['Saudi Arabia','KSA'],
+  uy:['Uruguay','URU'], cm:['Cameroon','CMR'], co:['Colombia','COL'], us:['USA','USA'],
+  ma:['Morocco','MAR'], mx:['Mexico','MEX'], sn:['Senegal','SEN'], cz:['Czechia','CZE'],
+  ch:['Switzerland','SUI'], tn:['Tunisia','TUN'], dk:['Denmark','DEN'], ec:['Ecuador','ECU'],
+};
+const abbr = c => T[c][1];
+const R32 = [
+  ['ar','au',2,0],['br','cr',3,0],['fr','gh',2,1],['es','za',4,0],
+  ['de','jp',1,0],['gb-eng','ir',2,0],['pt','kr',3,1],['nl','qa',5,0],
+  ['be','ca',2,1],['hr','sa',1,0],['uy','cm',2,0],['co','us',1,0],
+  ['ma','mx',2,1],['sn','cz',2,1],['ch','tn',1,0],['dk','ec',2,1],
+];
+const winner = m => m[2] > m[3] ? m[0] : m[1];
+const winnersOf = r => r.map(winner);
+const pair = (keys, s) => keys.reduce((a,_,i)=> i%2===0 ? [...a,[keys[i],keys[i+1],s[i/2][0],s[i/2][1]]] : a, []);
+const R16 = pair(winnersOf(R32), [[2,1],[1,0],[2,0],[3,1],[2,1],[1,0],[2,0],[2,1]]);
+const QF  = pair(winnersOf(R16), [[1,0],[2,1],[2,0],[1,0]]);
+const SF  = pair(winnersOf(QF),  [[2,1],[1,2]]);
+const FIN = pair(winnersOf(SF),  [[3,1]]);
+
+const row = (code, sc, win, isFinal) => `<div class="brow ${win?'win':'lose'}">
+  <img src="${F(code)}" alt=""><span class="ab">${abbr(code)}</span>${win&&isFinal?'<span class="tr">🏆</span>':''}<span class="sc">${sc}</span></div>`;
+const matchEl = (m, isFinal) => { const w=winner(m); return `<div class="bmatch">${row(m[0],m[2],w===m[0],isFinal)}${row(m[1],m[3],w===m[1],isFinal)}</div>`; };
+const colEl = (cls, title, ms, isFinal=false) => `<div class="bcol ${cls}"><div class="bcol-h">${title}</div>${ms.map(m=>matchEl(m,isFinal)).join('')}</div>`;
+
+document.getElementById('bracket').innerHTML =
+  colEl('r16','Round of 16',R16) + colEl('qf','Quarters',QF) + colEl('sf','Semis',SF) + colEl('final','Final',FIN,true);
+
+/* drag-to-pan (mouse/trackpad); touch uses native momentum scrolling */
+const vp = document.getElementById('vp');
+let down=false, sx=0, sy=0, sl=0, st=0;
+vp.addEventListener('pointerdown', e=>{
+  if(e.pointerType==='touch') return;        // let native touch scroll handle swipes
+  down=true; sx=e.clientX; sy=e.clientY; sl=vp.scrollLeft; st=vp.scrollTop;
+  vp.classList.add('grabbing'); vp.setPointerCapture(e.pointerId);
+});
+vp.addEventListener('pointermove', e=>{
+  if(!down) return;
+  vp.scrollLeft = sl-(e.clientX-sx);
+  vp.scrollTop  = st-(e.clientY-sy);
+});
+const end=()=>{ down=false; vp.classList.remove('grabbing'); };
+vp.addEventListener('pointerup', end);
+vp.addEventListener('pointercancel', end);
+vp.addEventListener('pointerleave', ()=>{ if(down) end(); });
+
+/* zoom + reset */
+const bracket = document.getElementById('bracket');
+function setZoom(z){
+  // `zoom` (unlike transform:scale) resizes the scroll area, so panning bounds stay correct.
+  bracket.style.zoom = z;
+  document.querySelectorAll('#zoom button').forEach(b=>b.classList.toggle('on', +b.dataset.z===z));
+}
+document.querySelectorAll('#zoom button').forEach(b=> b.onclick=()=>setZoom(+b.dataset.z));
+document.getElementById('reset').onclick=()=>{ setZoom(1); vp.scrollTo({left:0, top:(vp.scrollHeight-vp.clientHeight)/2, behavior:'smooth'}); };
+// start centered vertically so it reads as a window onto a bigger canvas
+window.addEventListener('load', ()=>{ vp.scrollTop=(vp.scrollHeight-vp.clientHeight)/2; });
+vp.scrollTop=(vp.scrollHeight-vp.clientHeight)/2;
+</script>
+</body>
+</html>
