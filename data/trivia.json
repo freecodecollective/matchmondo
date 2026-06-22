@@ -1163,8 +1163,8 @@
         "Just Fontaine"
       ],
       "answer": 1,
-      "explanation": "Lionel Messi holds the record for most goals scored across all Football 2026 tournaments with 16 goals, surpassing Cristiano Ronaldo's 14 goals.",
-      "claudeTask": "the explanation is right for messi but not the ronaldo fix it"
+      "explanation": "Lionel Messi holds the record for most goals scored across all Football 2026 tournaments with 16 goals. Cristiano Ronaldo is second with 15 goals.",
+      "needsReview": true
     },
     {
       "id": "c-tango-ball",
