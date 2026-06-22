@@ -208,7 +208,8 @@
         "Brazil"
       ],
       "answer": 2,
-      "explanation": "Germany beat Argentina 1–0 in extra time, Mario Götze scoring the winner."
+      "explanation": "Germany beat Argentina 1–0 in extra time, Mario Götze scoring the winner.",
+      "approved": true
     },
     {
       "id": "h-host-wins",
@@ -249,7 +250,8 @@
         "England"
       ],
       "answer": 1,
-      "explanation": "France beat Croatia 4–2 in the final for their second title."
+      "explanation": "France beat Croatia 4–2 in the final for their second title.",
+      "approved": true
     },
     {
       "id": "p-zidane-red",
@@ -277,7 +279,8 @@
         "Vancouver Whitecaps"
       ],
       "answer": 1,
-      "explanation": "Lumen Field is home to the Seattle Sounders and is famous for its electric atmosphere."
+      "explanation": "Lumen Field is home to the Seattle Sounders and is famous for its electric atmosphere.",
+      "approved": true
     },
     {
       "id": "t-france-count",
