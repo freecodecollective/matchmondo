@@ -1816,7 +1816,8 @@
       ],
       "answer": 1,
       "explanation": "VAR debuted at the 2018 tournament in Russia. The 2014 edition in Brazil still relied entirely on on-field officials.",
-      "type": "true_false"
+      "type": "true_false",
+      "approved": true
     },
     {
       "id": "tf-germany-italy-tied",
