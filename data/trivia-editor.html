@@ -1170,12 +1170,18 @@ function renderClaudeTasksView() {
 
   let html = '';
 
+  const hasWork = pendingTasks.length > 0 || qTasks.length > 0;
+  if (hasWork) {
+    html += `<div style="display:flex;justify-content:flex-end;margin-bottom:12px">
+      <button id="processNowBtn" class="btn btn-sm" style="background:#8b5cf6;color:#fff" onclick="event.stopPropagation();triggerProcessing()">▶ Process Now</button>
+    </div>`;
+  }
+
   // Pending global tasks
   html += `<div class="ct-section">
     <div class="ct-section-header">
       <h3>Pending Tasks</h3>
       <span class="ct-count ct-count-pending">${pendingTasks.length}</span>
-      <button id="processNowBtn" class="btn btn-sm" style="margin-left:auto;background:#8b5cf6;color:#fff" onclick="event.stopPropagation();triggerProcessing()">▶ Process Now</button>
     </div>`;
   if (pendingTasks.length === 0) {
     html += '<div class="ct-empty">No pending tasks. Use the "Task for Claude" section above or assign a task on any question.</div>';
