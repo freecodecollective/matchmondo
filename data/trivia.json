@@ -1159,12 +1159,12 @@
       "options": [
         "Cristiano Ronaldo",
         "Lionel Messi",
-        "Gerd Müller",
+        "Miroslav Klose",
         "Just Fontaine"
       ],
-      "answer": 0,
-      "explanation": "Cristiano Ronaldo holds the record for most goals scored across all Football 2026 tournaments with 15 goals. Lionel Messi is second with 13 goals.",
-      "claudeTask": "check for accuracy"
+      "answer": 2,
+      "explanation": "Miroslav Klose of Germany is the all-time leading scorer across all tournaments with 16 goals, scored across four editions (2002–2014). Ronaldo of Brazil is second with 15 goals.",
+      "needsReview": true
     },
     {
       "id": "c-tango-ball",
