@@ -1790,7 +1790,8 @@
       ],
       "answer": 0,
       "explanation": "Brazil has played in every edition since 1930 — the only nation to have never missed one. They've won five titles along the way.",
-      "type": "true_false"
+      "type": "true_false",
+      "claudeTask": "indicate who is second and third in terms of appearances"
     },
     {
       "id": "tf-48-teams-2026",
