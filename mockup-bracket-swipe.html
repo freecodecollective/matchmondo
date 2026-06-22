@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knockout bracket — swipe</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --bg:#eef1ef; --card:#fff; --ink:#1c1c1e; --sub:#6b6f76; --line:rgba(0,0,0,.10);
+    --green:#1f7d45; --green-l:#2f9e5b; --gold:#D4A017; --win:#1f7d45;
+  }
+  body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',sans-serif;
+    background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;padding-bottom:50px;}
+  .banner{background:linear-gradient(135deg,#1f7d45,#2f9e5b);color:#fff;padding:34px 24px 26px;text-align:center;}
+  .banner h1{font-size:23px;font-weight:800;}
+  .banner p{font-size:14px;opacity:.95;margin:8px auto 0;max-width:540px;line-height:1.5;}
+  .wrap{max-width:470px;margin:0 auto;padding:0 14px;}
+  .note{background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px 15px;margin-top:-14px;
+    box-shadow:0 3px 16px rgba(0,0,0,.07);font-size:13px;color:var(--sub);line-height:1.5;}
+  .note b{color:var(--ink);}
+
+  /* round indicator pills */
+  .pills{display:flex;gap:5px;margin:18px 2px 4px;overflow-x:auto;scrollbar-width:none;}
+  .pills::-webkit-scrollbar{display:none;}
+  .pill{white-space:nowrap;border:none;background:#e4e7e4;color:var(--sub);font-family:inherit;font-size:12px;font-weight:700;
+    padding:7px 13px;border-radius:20px;cursor:pointer;transition:all .2s;}
+  .pill.on{background:var(--green);color:#fff;}
+  .progress{height:3px;background:#e4e7e4;border-radius:2px;margin:8px 2px 0;overflow:hidden;}
+  .progress .bar{height:100%;background:var(--green-l);border-radius:2px;transition:width .25s,margin-left .25s;}
+
+  /* swipe carousel */
+  .stage{position:relative;margin-top:12px;}
+  .rail{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none;height:560px;border-radius:16px;}
+  .rail::-webkit-scrollbar{display:none;}
+  .round{flex:0 0 86%;scroll-snap-align:center;padding:0 6px;overflow-y:auto;scrollbar-width:none;}
+  .round::-webkit-scrollbar{display:none;}
+  .round-card{background:var(--card);border:1px solid var(--line);border-radius:16px;min-height:100%;
+    box-shadow:0 2px 10px rgba(0,0,0,.06);overflow:hidden;}
+  .round-card.final{border-color:var(--gold);box-shadow:0 0 0 2px rgba(212,160,23,.18),0 2px 10px rgba(0,0,0,.06);}
+  .round-h{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;
+    padding:11px 14px;background:var(--green);color:#fff;}
+  .round-h.final{background:var(--gold);}
+  .round-h .t{font-size:14px;font-weight:800;letter-spacing:.3px;}
+  .round-h .c{font-size:11px;font-weight:700;opacity:.85;}
+
+  .matches{display:flex;flex-direction:column;justify-content:space-around;gap:10px;padding:12px;min-height:480px;}
+  .matches.few{justify-content:center;}
+  .match{border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  .team{display:flex;align-items:center;gap:9px;padding:10px 11px;position:relative;}
+  .team + .team{border-top:1px solid #f0f0ef;}
+  .team img{width:24px;height:16px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 .5px rgba(0,0,0,.12);}
+  .team .nm{font-size:14px;font-weight:600;flex:1;}
+  .team .sc{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums;min-width:16px;text-align:right;}
+  .team.win .sc{color:var(--win);}
+  .team.win .adv{color:var(--green-l);font-size:12px;font-weight:800;margin-left:2px;}
+  .team.lose{opacity:.5;} .team.lose .nm{font-weight:500;}
+  .team .trophy{margin-left:auto;font-size:15px;}
+
+  /* edge chevrons */
+  .edge{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:30px;height:30px;border-radius:50%;
+    background:rgba(31,125,69,.92);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;
+    box-shadow:0 2px 8px rgba(0,0,0,.25);border:none;cursor:pointer;opacity:.92;}
+  .edge.l{left:2px;} .edge.r{right:2px;}
+  .edge[hidden]{display:none;}
+
+  .hint{font-size:12px;color:#9aa0a6;text-align:center;margin-top:10px;}
+  .hint b{color:var(--green);}
+  .foot{text-align:center;font-size:12px;color:#9aa0a6;margin-top:34px;line-height:1.6;}
+  .foot a{color:var(--green);text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="banner">
+  <h1>🏆 Knockout bracket — swipe</h1>
+  <p>Sweep left ↔ right to slide through the rounds. It snaps to each round and the bar up top tracks where you are — like ESPN’s March Madness bracket.</p>
+</div>
+<div class="wrap">
+  <div class="note"><b>Try it:</b> drag/sweep the bracket sideways, tap a round pill to jump, or use the ◀ ▶ arrows. Winners carry a green ↗ to show who advances. (Projected sample.)</div>
+
+  <div class="pills" id="pills"></div>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+
+  <div class="stage">
+    <button class="edge l" id="prev" aria-label="Previous round">‹</button>
+    <button class="edge r" id="next" aria-label="Next round">›</button>
+    <div class="rail" id="rail"></div>
+  </div>
+  <div class="hint">← <b>swipe</b> to slide between rounds →</div>
+
+  <div class="foot">MatchMondo · Knockouts &nbsp;·&nbsp; <a href="mockup-bracket.html">other bracket options</a> · <a href="mockups.html">all mockups</a></div>
+</div>
+
+<script>
+const F = c => `https://flagcdn.com/w40/${c}.png`;
+const T = {
+  ar:['Argentina','ARG'], au:['Australia','AUS'], br:['Brazil','BRA'], cr:['Costa Rica','CRC'],
+  fr:['France','FRA'], gh:['Ghana','GHA'], es:['Spain','ESP'], za:['South Africa','RSA'],
+  de:['Germany','GER'], jp:['Japan','JPN'], 'gb-eng':['England','ENG'], ir:['Iran','IRN'],
+  pt:['Portugal','POR'], kr:['Korea Republic','KOR'], nl:['Netherlands','NED'], qa:['Qatar','QAT'],
+  be:['Belgium','BEL'], ca:['Canada','CAN'], hr:['Croatia','CRO'], sa:['Saudi Arabia','KSA'],
+  uy:['Uruguay','URU'], cm:['Cameroon','CMR'], co:['Colombia','COL'], us:['USA','USA'],
+  ma:['Morocco','MAR'], mx:['Mexico','MEX'], sn:['Senegal','SEN'], cz:['Czechia','CZE'],
+  ch:['Switzerland','SUI'], tn:['Tunisia','TUN'], dk:['Denmark','DEN'], ec:['Ecuador','ECU'],
+};
+const name = c => T[c][0];
+const R32 = [
+  ['ar','au',2,0],['br','cr',3,0],['fr','gh',2,1],['es','za',4,0],
+  ['de','jp',1,0],['gb-eng','ir',2,0],['pt','kr',3,1],['nl','qa',5,0],
+  ['be','ca',2,1],['hr','sa',1,0],['uy','cm',2,0],['co','us',1,0],
+  ['ma','mx',2,1],['sn','cz',2,1],['ch','tn',1,0],['dk','ec',2,1],
+];
+const winner = m => m[2] > m[3] ? m[0] : m[1];
+const winnersOf = r => r.map(winner);
+const pair = (keys, s) => keys.reduce((a,_,i)=> i%2===0 ? [...a,[keys[i],keys[i+1],s[i/2][0],s[i/2][1]]] : a, []);
+const R16 = pair(winnersOf(R32), [[2,1],[1,0],[2,0],[3,1],[2,1],[1,0],[2,0],[2,1]]);
+const QF  = pair(winnersOf(R16), [[1,0],[2,1],[2,0],[1,0]]);
+const SF  = pair(winnersOf(QF),  [[2,1],[1,2]]);
+const FIN = pair(winnersOf(SF),  [[3,1]]);
+const champ = winner(FIN[0]);
+
+const ROUNDS = [
+  {t:'Round of 32', m:R32},
+  {t:'Round of 16', m:R16},
+  {t:'Quarter-finals', m:QF},
+  {t:'Semi-finals', m:SF},
+  {t:'Final', m:FIN, final:true},
+];
+const PILLS = ['R32','R16','QF','SF','Final'];
+
+function teamRow(code, sc, win, isFinal){
+  return `<div class="team ${win?'win':'lose'}"><img src="${F(code)}" alt="">
+    <span class="nm">${name(code)}</span>
+    ${win&&isFinal?'<span class="trophy">🏆</span>':''}
+    <span class="sc">${sc}</span>${win&&!isFinal?'<span class="adv">↗</span>':''}</div>`;
+}
+function matchCard(m, isFinal){
+  const w = winner(m);
+  return `<div class="match">${teamRow(m[0],m[2],w===m[0],isFinal)}${teamRow(m[1],m[3],w===m[1],isFinal)}</div>`;
+}
+
+const rail = document.getElementById('rail');
+rail.innerHTML = ROUNDS.map(r=>`
+  <div class="round">
+    <div class="round-card ${r.final?'final':''}">
+      <div class="round-h ${r.final?'final':''}"><span class="t">${r.t}</span><span class="c">${r.m.length} ${r.m.length>1?'matches':'match'}</span></div>
+      <div class="matches ${r.m.length<=3?'few':''}">${r.m.map(m=>matchCard(m, r.final)).join('')}</div>
+    </div>
+  </div>`).join('');
+
+const pills = document.getElementById('pills');
+pills.innerHTML = PILLS.map((p,i)=>`<button class="pill ${i===1?'on':''}" data-i="${i}">${p}</button>`).join('');
+const cols = [...rail.querySelectorAll('.round')];
+const bar = document.getElementById('bar');
+const prev = document.getElementById('prev'), next = document.getElementById('next');
+
+function activeIndex(){
+  // Use viewport rects so it's unaffected by offsetParent quirks.
+  const r = rail.getBoundingClientRect();
+  const center = r.left + r.width/2;
+  let best=0, bestD=Infinity;
+  cols.forEach((c,i)=>{ const cr=c.getBoundingClientRect(); const cc=cr.left + cr.width/2; const d=Math.abs(cc-center); if(d<bestD){bestD=d;best=i;} });
+  return best;
+}
+function sync(){
+  const i = activeIndex();
+  pills.querySelectorAll('.pill').forEach((p,j)=>p.classList.toggle('on', j===i));
+  bar.style.width = (100/cols.length)+'%';
+  bar.style.marginLeft = (i*100/cols.length)+'%';
+  prev.hidden = i===0; next.hidden = i===cols.length-1;
+}
+function goTo(i){
+  i = Math.max(0, Math.min(cols.length-1, i));
+  const c = cols[i];
+  const left = rail.scrollLeft + c.getBoundingClientRect().left - rail.getBoundingClientRect().left
+             - (rail.clientWidth - c.clientWidth)/2;
+  rail.scrollTo({left, behavior:'smooth'});
+}
+pills.querySelectorAll('.pill').forEach(p=>p.onclick=()=>goTo(+p.dataset.i));
+prev.onclick=()=>goTo(activeIndex()-1);
+next.onclick=()=>goTo(activeIndex()+1);
+rail.addEventListener('scroll', sync, {passive:true});
+// start on Round of 16
+window.addEventListener('load', ()=>{ goTo(1); setTimeout(sync, 60); });
+sync();
+</script>
+</body>
+</html>
