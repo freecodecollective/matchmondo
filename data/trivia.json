@@ -1791,8 +1791,8 @@
       ],
       "answer": 0,
       "explanation": "Brazil has played in every edition since 1930 — the only nation to have never missed one. They've won five titles along the way. Germany and Italy are second and third respectively in terms of tournament appearances, with Germany appearing in 19 editions and Italy in 18 editions.",
-      "needsReview": true,
-      "type": "true_false"
+      "type": "true_false",
+      "needsReview": true
     },
     {
       "id": "tf-48-teams-2026",
@@ -1855,8 +1855,8 @@
       ],
       "answer": 0,
       "explanation": "After a 3–3 draw through extra time, Argentina beat France 4–2 in the penalty shootout. Many consider it the greatest final ever played.",
-      "needsReview": true,
-      "type": "true_false"
+      "type": "true_false",
+      "needsReview": true
     },
     {
       "id": "tf-host-group-stage",
@@ -1880,8 +1880,8 @@
       ],
       "answer": 0,
       "explanation": "France hosted and won the 1998 tournament, defeating Brazil 3–0 in the final. They won their second title in 2018 in Russia.",
-      "needsReview": true,
-      "type": "true_false"
+      "type": "true_false",
+      "needsReview": true
     },
     {
       "id": "tf-fastest-goal",
