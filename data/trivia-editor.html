@@ -28,7 +28,7 @@ header h1{font-size:18px;font-weight:700;letter-spacing:-.3px}
 .category-tabs{display:flex;gap:4px;flex-wrap:wrap}
 .cat-tab{padding:5px 12px;border-radius:14px;border:1px solid #ddd;background:#fff;font-size:12px;font-weight:600;cursor:pointer;transition:all .15s;color:#555}
 .cat-tab:hover{border-color:#1a472a;color:#1a472a}
-.cat-tab.active{background:#1a472a;color:#fff;border-color:#1a472a}
+.cat-tab.active{background:var(--tab-active-bg,#1a472a);color:#fff;border-color:var(--tab-active-bg,#1a472a)}
 .cat-count{font-weight:400;opacity:.7;margin-left:2px}
 .search-box{flex:1;min-width:180px;position:relative}
 .search-box input{width:100%;padding:7px 28px 7px 32px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none}
@@ -279,6 +279,7 @@ input[type=file]{display:none}
   </div>
   <div id="questionsToolbar" style="display:contents">
     <div class="category-tabs" id="categoryTabs"></div>
+    <div class="category-tabs" id="typeTabs"></div>
     <div class="search-box" id="searchBox">
       <input type="text" id="searchInput" placeholder="Search questions..." oninput="updateSearch()">
       <button class="search-clear" onclick="clearSearch()" title="Clear search">&times;</button>
@@ -353,6 +354,7 @@ input[type=file]{display:none}
 <script>
 let data = { version: 1, questions: [], pendingTasks: [] };
 let activeCategory = 'all';
+let activeType = 'all';
 let expandedCard = null;
 let expandedReview = null;
 let editingIndex = -1;
@@ -436,6 +438,7 @@ async function init() {
 function renderAll() {
   updateStats();
   renderCategoryTabs();
+  renderTypeTabs();
   renderList();
   renderClaudeTasks();
   updateClaudeBadge();
@@ -485,11 +488,35 @@ function setCategory(cat) {
   renderList();
 }
 
+function renderTypeTabs() {
+  const qs = data.questions.filter(q => !q.approved);
+  const counts = { all: qs.length, multiple_choice: 0, true_false: 0, image: 0 };
+  qs.forEach(q => { const t = q.type || 'multiple_choice'; counts[t] = (counts[t] || 0) + 1; });
+  const tabs = [
+    ['all', 'All types', counts.all],
+    ['multiple_choice', 'MC', counts.multiple_choice],
+    ['true_false', 'T/F', counts.true_false],
+    ['image', 'Image', counts.image],
+  ];
+  document.getElementById('typeTabs').innerHTML = tabs
+    .filter(([, , n]) => n > 0 || activeType !== 'all')
+    .map(([key, label, n]) =>
+      `<button class="cat-tab ${activeType === key ? 'active' : ''}" style="${key === 'true_false' ? '--tab-active-bg:#7c3aed;' : key === 'image' ? '--tab-active-bg:#0284c7;' : ''}" onclick="setType('${key}')">${label}<span class="cat-count"> ${n}</span></button>`
+    ).join('');
+}
+
+function setType(t) {
+  activeType = t;
+  renderTypeTabs();
+  renderList();
+}
+
 function getFilteredQuestions() {
   const search = document.getElementById('searchInput').value.toLowerCase();
   return data.questions.map((q, i) => ({ q, i })).filter(({ q }) => {
     if (q.approved) return false;
     if (activeCategory !== 'all' && q.category !== activeCategory) return false;
+    if (activeType !== 'all' && (q.type || 'multiple_choice') !== activeType) return false;
     if (search && !q.question.toLowerCase().includes(search) &&
         !q.id.toLowerCase().includes(search) &&
         !q.explanation.toLowerCase().includes(search) &&
