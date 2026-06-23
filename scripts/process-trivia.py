@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Process pending Claude tasks in data/trivia.json using the Anthropic API."""
 
+import hashlib
 import json
 import os
 import sys
@@ -8,6 +9,19 @@ import urllib.request
 
 ANTHROPIC_API = "https://api.anthropic.com/v1/messages"
 TRIVIA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "trivia.json")
+
+# The 10 non-English languages the iOS app ships. en is the base (the question's
+# top-level fields), so it is NOT stored under translations.
+LANGS = ["ar", "de", "es", "es-ES", "fr", "it", "ja", "ko", "pt-BR", "zh-Hans"]
+LANG_NAMES = {
+    "ar": "Modern Standard Arabic", "de": "German",
+    "es": "Latin American Spanish", "es-ES": "Spain (Castilian) Spanish",
+    "fr": "French", "it": "Italian", "ja": "Japanese", "ko": "Korean",
+    "pt-BR": "Brazilian Portuguese", "zh-Hans": "Simplified Chinese",
+}
+# Cap translations per run so a single cron tick stays well-bounded; the backlog
+# drains over consecutive runs.
+MAX_TRANSLATIONS_PER_RUN = 5
 
 
 def call_claude(prompt):
@@ -123,6 +137,112 @@ def process_tasks(trivia):
     return True
 
 
+# ---------------------------------------------------------------------------
+# Localization of published questions
+#
+# Only PUBLISHED questions (approved == true) are translated — that is the step
+# that puts a question in front of users. A question is (re)translated when its
+# English content changes: we store a hash of the source text alongside the
+# translations, and re-translate whenever the current hash no longer matches.
+# So: publish -> translate; unpublish/edit/republish -> hash differs -> retranslate;
+# unpublish/republish unchanged -> hash matches -> skipped (no API call).
+# ---------------------------------------------------------------------------
+
+def source_hash(q):
+    """Fingerprint of the translatable English content (order-sensitive)."""
+    basis = " ".join([q["question"], *q["options"], q["explanation"]])
+    return hashlib.sha256(basis.encode("utf-8")).hexdigest()[:16]
+
+
+def needs_translation(q):
+    if not q.get("approved"):
+        return False
+    tr = q.get("translations") or {}
+    if q.get("i18nSourceHash") != source_hash(q):
+        return True
+    for lang in LANGS:
+        t = tr.get(lang) or {}
+        if not t.get("question") or not t.get("explanation"):
+            return True
+        if len(t.get("options") or []) != len(q["options"]):
+            return True
+    return False
+
+
+def build_translation_prompt(q):
+    lang_list = "\n".join(f"- {code} ({LANG_NAMES[code]})" for code in LANGS)
+    source = {"question": q["question"], "options": q["options"], "explanation": q["explanation"]}
+    return f"""You are localizing a published trivia question for a football tournament app called "Football 2026". Translate it from English into all of these languages, using these EXACT language codes as JSON keys:
+{lang_list}
+
+CRITICAL RULES:
+- Translate the question, every option, and the explanation into each language.
+- KEEP THE OPTIONS IN THE EXACT SAME ORDER and the SAME COUNT ({len(q['options'])} options). The correct-answer index depends on option order, so never reorder, add, merge, or drop options.
+- Keep numbers, years, scores, and proper nouns (player/team/city names) accurate; transliterate names naturally for ar/ja/ko/zh-Hans but keep them recognizable.
+- NEVER use "World Cup" or "FIFA" in any language — use "Football 2026" or the local equivalent of "the tournament".
+- Produce natural, idiomatic, native-quality phrasing — not literal word-for-word translation.
+
+English source:
+{json.dumps(source, ensure_ascii=False)}
+
+Return ONLY a JSON object (no markdown, no commentary) of this exact shape:
+{{"translations": {{"ar": {{"question": "…", "options": ["…"], "explanation": "…"}}, "de": {{…}}, "…": {{…}} }}}}
+Include all {len(LANGS)} languages."""
+
+
+def _valid_translation(t, n_options):
+    if not isinstance(t, dict):
+        return False
+    if not t.get("question") or not t.get("explanation"):
+        return False
+    opts = t.get("options")
+    if not isinstance(opts, list) or len(opts) != n_options or any(not o for o in opts):
+        return False
+    if "FIFA" in json.dumps(t, ensure_ascii=False) or "World Cup" in json.dumps(t, ensure_ascii=False):
+        return False
+    return True
+
+
+def translate_questions(trivia):
+    todo = [q for q in trivia["questions"] if needs_translation(q)]
+    if not todo:
+        return False
+
+    print(f"{len(todo)} published question(s) need (re)translation; doing up to {MAX_TRANSLATIONS_PER_RUN} this run.")
+    changed = False
+    for q in todo[:MAX_TRANSLATIONS_PER_RUN]:
+        try:
+            response = call_claude(build_translation_prompt(q))
+            start, end = response.find("{"), response.rfind("}") + 1
+            if start < 0 or end <= 0:
+                print(f"  SKIPPED {q['id']}: no JSON in translation response")
+                continue
+            result = json.loads(response[start:end])
+            trans = result.get("translations", {})
+            n = len(q["options"])
+            if not all(_valid_translation(trans.get(lang), n) for lang in LANGS):
+                bad = [lang for lang in LANGS if not _valid_translation(trans.get(lang), n)]
+                print(f"  SKIPPED {q['id']}: invalid/missing translations for {bad}")
+                continue
+            q["translations"] = {
+                lang: {
+                    "question": trans[lang]["question"],
+                    "options": trans[lang]["options"],
+                    "explanation": trans[lang]["explanation"],
+                }
+                for lang in LANGS
+            }
+            q["i18nSourceHash"] = source_hash(q)
+            changed = True
+            print(f"  TRANSLATED: {q['id']}")
+        except Exception as e:  # noqa: BLE001 - keep the run alive for other questions
+            print(f"  ERROR translating {q['id']}: {e}")
+
+    if len(todo) > MAX_TRANSLATIONS_PER_RUN:
+        print(f"  {len(todo) - MAX_TRANSLATIONS_PER_RUN} more await translation (next run).")
+    return changed
+
+
 def main():
     if not os.environ.get("ANTHROPIC_API_KEY"):
         print("Missing ANTHROPIC_API_KEY, skipping.")
@@ -131,8 +251,11 @@ def main():
     with open(TRIVIA_PATH) as f:
         trivia = json.load(f)
 
-    if not process_tasks(trivia):
-        print("No pending tasks.")
+    changed_tasks = process_tasks(trivia)
+    changed_trans = translate_questions(trivia)
+
+    if not (changed_tasks or changed_trans):
+        print("No pending tasks and all published questions are translated.")
         return
 
     with open(TRIVIA_PATH, "w") as f:

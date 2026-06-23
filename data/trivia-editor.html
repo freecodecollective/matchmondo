@@ -861,6 +861,11 @@ function saveModal() {
     q.approved = data.questions[editingIndex].approved;
     q.needsReview = data.questions[editingIndex].needsReview;
     if (data.questions[editingIndex].claudeTask) q.claudeTask = data.questions[editingIndex].claudeTask;
+    // Carry translations + source hash through the edit. The processor compares
+    // the hash to the (possibly edited) English content and re-translates only
+    // when it changed, so republishing an unchanged question costs nothing.
+    if (data.questions[editingIndex].translations) q.translations = data.questions[editingIndex].translations;
+    if (data.questions[editingIndex].i18nSourceHash) q.i18nSourceHash = data.questions[editingIndex].i18nSourceHash;
     data.questions[editingIndex] = q;
     toast('Question updated');
   } else {
@@ -893,6 +898,8 @@ function buildOutput() {
     if (q.approved) clean.approved = true;
     if (q.needsReview) clean.needsReview = true;
     if (q.claudeTask) clean.claudeTask = q.claudeTask;
+    if (q.translations) clean.translations = q.translations;
+    if (q.i18nSourceHash) clean.i18nSourceHash = q.i18nSourceHash;
     return clean;
   })};
   if (data.pendingTasks && data.pendingTasks.length > 0) out.pendingTasks = data.pendingTasks;
