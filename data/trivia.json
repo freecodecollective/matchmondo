@@ -600,7 +600,110 @@
       "answer": 2,
       "explanation": "Argentina won in 2022, beating France on penalties after a thrilling 3–3 final in Qatar. It was Lionel Messi’s first title after five tournaments, capping one of the greatest careers in football history. Mbappé scored a hat-trick for France but it wasn’t enough.",
       "media": "https://www.youtube.com/watch?v=Mxkg3qLIPC8",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو حامل اللقب عند انطلاق بطولة 2026؟",
+          "options": [
+            "فرنسا",
+            "البرازيل",
+            "الأرجنتين",
+            "ألمانيا"
+          ],
+          "explanation": "فازت الأرجنتين عام 2022 بعد التغلب على فرنسا بركلات الترجيح إثر نهائي مثير انتهى بالتعادل 3–3 في قطر. كان ذلك أول لقب لليونيل ميسي بعد خمس بطولات، ليتوّج واحدة من أعظم المسيرات في تاريخ كرة القدم. سجّل مبابي ثلاثية لفرنسا لكنها لم تكن كافية."
+        },
+        "de": {
+          "question": "Wer geht als Titelverteidiger ins Turnier 2026?",
+          "options": [
+            "Frankreich",
+            "Brasilien",
+            "Argentinien",
+            "Deutschland"
+          ],
+          "explanation": "Argentinien gewann 2022 und bezwang Frankreich im Elfmeterschießen nach einem packenden 3:3 im Finale in Katar. Es war Lionel Messis erster Titel nach fünf Turnieren und krönte eine der größten Karrieren der Fußballgeschichte. Mbappé erzielte einen Hattrick für Frankreich, doch das reichte nicht."
+        },
+        "es": {
+          "question": "¿Quién llega como campeón defensor a 2026?",
+          "options": [
+            "Francia",
+            "Brasil",
+            "Argentina",
+            "Alemania"
+          ],
+          "explanation": "Argentina ganó en 2022 al vencer a Francia en los penales tras una emocionante final 3–3 en Qatar. Fue el primer título de Lionel Messi después de cinco torneos, coronando una de las carreras más grandes en la historia del fútbol. Mbappé marcó un triplete para Francia, pero no fue suficiente."
+        },
+        "es-ES": {
+          "question": "¿Quién llega como campeón vigente a 2026?",
+          "options": [
+            "Francia",
+            "Brasil",
+            "Argentina",
+            "Alemania"
+          ],
+          "explanation": "Argentina ganó en 2022 al derrotar a Francia en los penaltis tras una emocionante final con 3–3 en Catar. Fue el primer título de Lionel Messi después de cinco torneos, coronando una de las mejores carreras en la historia del fútbol. Mbappé marcó un triplete para Francia, pero no bastó."
+        },
+        "fr": {
+          "question": "Qui sont les champions en titre à l'aube de 2026 ?",
+          "options": [
+            "France",
+            "Brésil",
+            "Argentine",
+            "Allemagne"
+          ],
+          "explanation": "L'Argentine s'est imposée en 2022 en battant la France aux tirs au but après une finale haletante conclue sur un score de 3–3 au Qatar. Ce fut le premier titre de Lionel Messi après cinq tournois, couronnant l'une des plus grandes carrières de l'histoire du football. Mbappé a inscrit un triplé pour la France, mais cela n'a pas suffi."
+        },
+        "it": {
+          "question": "Chi sono i campioni in carica all'inizio del 2026?",
+          "options": [
+            "Francia",
+            "Brasile",
+            "Argentina",
+            "Germania"
+          ],
+          "explanation": "L'Argentina ha vinto nel 2022 battendo la Francia ai rigori dopo un'avvincente finale terminata 3–3 in Qatar. È stato il primo titolo di Lionel Messi dopo cinque tornei, a coronamento di una delle più grandi carriere nella storia del calcio. Mbappé ha segnato una tripletta per la Francia, ma non è bastato."
+        },
+        "ja": {
+          "question": "2026年を迎えるにあたり、前回王者はどこ？",
+          "options": [
+            "フランス",
+            "ブラジル",
+            "アルゼンチン",
+            "ドイツ"
+          ],
+          "explanation": "アルゼンチンは2022年に優勝し、カタールでの3対3という劇的な決勝戦の末、PK戦でフランスを破った。これは5度目の挑戦を経て手にしたリオネル・メッシ初のタイトルであり、サッカー史に残る偉大なキャリアを締めくくるものとなった。エムバペはフランスのためにハットトリックを決めたが、それでも及ばなかった。"
+        },
+        "ko": {
+          "question": "2026년을 앞두고 디펜딩 챔피언은 어느 팀일까요?",
+          "options": [
+            "프랑스",
+            "브라질",
+            "아르헨티나",
+            "독일"
+          ],
+          "explanation": "아르헨티나는 2022년 카타르에서 열린 3–3의 짜릿한 결승전 끝에 승부차기로 프랑스를 꺾고 우승했습니다. 다섯 번째 도전 만에 거둔 리오넬 메시의 첫 우승이었으며, 축구 역사상 가장 위대한 커리어 중 하나를 완성한 순간이었습니다. 음바페는 프랑스를 위해 해트트릭을 기록했지만 그것만으로는 부족했습니다."
+        },
+        "pt-BR": {
+          "question": "Quem chega como atual campeão para 2026?",
+          "options": [
+            "França",
+            "Brasil",
+            "Argentina",
+            "Alemanha"
+          ],
+          "explanation": "A Argentina venceu em 2022, batendo a França nos pênaltis após uma emocionante final de 3 a 3 no Catar. Foi o primeiro título de Lionel Messi depois de cinco torneios, coroando uma das maiores carreiras da história do futebol. Mbappé marcou três gols pela França, mas não foi suficiente."
+        },
+        "zh-Hans": {
+          "question": "进入2026年时,卫冕冠军是哪支球队?",
+          "options": [
+            "法国",
+            "巴西",
+            "阿根廷",
+            "德国"
+          ],
+          "explanation": "阿根廷在2022年夺冠,在卡塔尔那场惊心动魄、3比3战平的决赛后通过点球大战击败法国。这是莱昂内尔·梅西在五届赛事后首次捧杯,为他足球史上最伟大的职业生涯之一画上圆满句号。姆巴佩为法国上演帽子戏法,但仍不足以扭转结局。"
+        }
+      },
+      "i18nSourceHash": "8b8ad38aa438bdde"
     },
     {
       "id": "t-netherlands-finals",
@@ -615,7 +718,110 @@
       "answer": 1,
       "explanation": "The Netherlands lost finals in 1974, 1978, and 2010 — the most successful team never to win the title.",
       "media": "https://www.youtube.com/watch?v=QSVfVwZ8V5c&t=8s",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "رغم وصولها إلى ثلاث نهائيات، أي قوة كروية تقليدية لم تتوّج باللقب قط؟",
+          "options": [
+            "البرتغال",
+            "هولندا",
+            "بلجيكا",
+            "الولايات المتحدة"
+          ],
+          "explanation": "خسرت هولندا النهائيات في أعوام 1974 و1978 و2010 — وهي أنجح منتخب لم يفز باللقب على الإطلاق."
+        },
+        "de": {
+          "question": "Welche traditionelle Spitzenmannschaft hat trotz drei Finalteilnahmen nie gewonnen?",
+          "options": [
+            "Portugal",
+            "Niederlande",
+            "Belgien",
+            "Vereinigte Staaten"
+          ],
+          "explanation": "Die Niederlande verloren die Finals 1974, 1978 und 2010 — das erfolgreichste Team, das nie den Titel holte."
+        },
+        "es": {
+          "question": "A pesar de llegar a tres finales, ¿qué potencia tradicional nunca ha ganado?",
+          "options": [
+            "Portugal",
+            "Países Bajos",
+            "Bélgica",
+            "Estados Unidos"
+          ],
+          "explanation": "Países Bajos perdió las finales de 1974, 1978 y 2010: el equipo más exitoso que nunca conquistó el título."
+        },
+        "es-ES": {
+          "question": "A pesar de llegar a tres finales, ¿qué potencia tradicional no ha ganado nunca?",
+          "options": [
+            "Portugal",
+            "Países Bajos",
+            "Bélgica",
+            "Estados Unidos"
+          ],
+          "explanation": "Países Bajos perdió las finales de 1974, 1978 y 2010: el equipo más exitoso que jamás conquistó el título."
+        },
+        "fr": {
+          "question": "Malgré trois finales disputées, quelle grande nation traditionnelle n'a jamais gagné ?",
+          "options": [
+            "Portugal",
+            "Pays-Bas",
+            "Belgique",
+            "États-Unis"
+          ],
+          "explanation": "Les Pays-Bas ont perdu les finales de 1974, 1978 et 2010 — la meilleure équipe à n'avoir jamais remporté le titre."
+        },
+        "it": {
+          "question": "Nonostante tre finali raggiunte, quale tradizionale grande del calcio non ha mai vinto?",
+          "options": [
+            "Portogallo",
+            "Paesi Bassi",
+            "Belgio",
+            "Stati Uniti"
+          ],
+          "explanation": "I Paesi Bassi hanno perso le finali del 1974, 1978 e 2010 — la squadra di maggior successo a non aver mai conquistato il titolo."
+        },
+        "ja": {
+          "question": "3度の決勝に進出しながら、一度も優勝していない伝統的強豪はどこでしょう？",
+          "options": [
+            "ポルトガル",
+            "オランダ",
+            "ベルギー",
+            "アメリカ合衆国"
+          ],
+          "explanation": "オランダは1974年、1978年、2010年の決勝で敗れており、タイトルを獲得できなかったチームの中で最も成功したチームです。"
+        },
+        "ko": {
+          "question": "세 번이나 결승에 올랐지만 한 번도 우승하지 못한 전통의 강호는 어디일까요?",
+          "options": [
+            "포르투갈",
+            "네덜란드",
+            "벨기에",
+            "미국"
+          ],
+          "explanation": "네덜란드는 1974년, 1978년, 2010년 결승에서 패했으며, 우승하지 못한 팀 중 가장 성공한 팀입니다."
+        },
+        "pt-BR": {
+          "question": "Apesar de chegar a três finais, qual potência tradicional nunca venceu?",
+          "options": [
+            "Portugal",
+            "Holanda",
+            "Bélgica",
+            "Estados Unidos"
+          ],
+          "explanation": "A Holanda perdeu as finais de 1974, 1978 e 2010 — a equipe mais bem-sucedida a jamais conquistar o título."
+        },
+        "zh-Hans": {
+          "question": "尽管三次闯入决赛，哪支传统强队却从未夺冠？",
+          "options": [
+            "葡萄牙",
+            "荷兰",
+            "比利时",
+            "美国"
+          ],
+          "explanation": "荷兰在1974年、1978年和2010年的决赛中失利，是从未夺得冠军的最成功球队。"
+        }
+      },
+      "i18nSourceHash": "9fec797bc1335462"
     },
     {
       "id": "r-yellow-wiped",
@@ -629,7 +835,110 @@
       ],
       "answer": 2,
       "explanation": "Single yellows are wiped after the group stage, and again after the quarter-finals, so an early caution can’t cost a player the final. Red cards are different: a straight red earns an automatic one-match ban minimum, but the disciplinary committee can extend it depending on severity. These suspensions carry across stages — a red card in a quarter-final means missing the semi-final, and yes, even a final.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "متى يتم إلغاء البطاقات الصفراء الفردية؟",
+          "options": [
+            "أبدًا",
+            "بعد كل مباراة",
+            "بعد دور المجموعات",
+            "فقط بعد الدور نصف النهائي"
+          ],
+          "explanation": "تُلغى البطاقات الصفراء الفردية بعد دور المجموعات، ثم تُلغى مرة أخرى بعد دور ربع النهائي، حتى لا يحرم الإنذار المبكر اللاعب من المباراة النهائية. أما البطاقات الحمراء فمختلفة: البطاقة الحمراء المباشرة تعني إيقافًا تلقائيًا لمباراة واحدة كحد أدنى، لكن لجنة الانضباط قد تزيد المدة حسب جسامة المخالفة. وتنتقل هذه العقوبات عبر الأدوار، فالبطاقة الحمراء في ربع النهائي تعني غياب اللاعب عن الدور نصف النهائي، بل وحتى عن المباراة النهائية."
+        },
+        "de": {
+          "question": "Wann werden einzelne Gelbe Karten gestrichen?",
+          "options": [
+            "Nie",
+            "Nach jedem Spiel",
+            "Nach der Gruppenphase",
+            "Erst nach dem Halbfinale"
+          ],
+          "explanation": "Einzelne Gelbe Karten werden nach der Gruppenphase gestrichen und erneut nach dem Viertelfinale, damit eine frühe Verwarnung einen Spieler nicht das Finale kostet. Bei Roten Karten ist es anders: Eine glatte Rote bedeutet mindestens eine automatische Spielsperre, doch das Sportgericht kann sie je nach Schwere verlängern. Diese Sperren gelten über die Phasen hinweg – eine Rote Karte im Viertelfinale bedeutet das Verpassen des Halbfinals, und ja, sogar des Finales."
+        },
+        "es": {
+          "question": "¿Cuándo se borran las tarjetas amarillas individuales?",
+          "options": [
+            "Nunca",
+            "Después de cada partido",
+            "Después de la fase de grupos",
+            "Solo después de las semifinales"
+          ],
+          "explanation": "Las amarillas individuales se borran tras la fase de grupos y otra vez tras los cuartos de final, así que una amonestación temprana no le cuesta la final a un jugador. Con las tarjetas rojas es distinto: una roja directa implica como mínimo un partido de suspensión automática, pero el comité de disciplina puede ampliarla según la gravedad. Estas sanciones se arrastran de una fase a otra: una roja en cuartos significa perderse la semifinal y, sí, incluso la final."
+        },
+        "es-ES": {
+          "question": "¿Cuándo se borran las tarjetas amarillas individuales?",
+          "options": [
+            "Nunca",
+            "Después de cada partido",
+            "Después de la fase de grupos",
+            "Solo después de las semifinales"
+          ],
+          "explanation": "Las amarillas individuales se borran tras la fase de grupos y de nuevo tras los cuartos de final, de modo que una amonestación temprana no le cueste a un jugador la final. Con las tarjetas rojas es distinto: una roja directa supone como mínimo un partido de sanción automática, pero el comité de disciplina puede ampliarla según la gravedad. Estas sanciones se arrastran de una fase a otra: una roja en cuartos significa perderse la semifinal y, sí, hasta la final."
+        },
+        "fr": {
+          "question": "Quand les cartons jaunes isolés sont-ils effacés ?",
+          "options": [
+            "Jamais",
+            "Après chaque match",
+            "Après la phase de groupes",
+            "Seulement après les demi-finales"
+          ],
+          "explanation": "Les cartons jaunes isolés sont effacés après la phase de groupes, puis de nouveau après les quarts de finale, afin qu'un avertissement précoce ne prive pas un joueur de la finale. Pour les cartons rouges, c'est différent : un rouge direct entraîne au minimum une suspension automatique d'un match, mais la commission de discipline peut l'allonger selon la gravité. Ces suspensions se reportent d'une phase à l'autre : un carton rouge en quart de finale signifie rater la demi-finale, et oui, même la finale."
+        },
+        "it": {
+          "question": "Quando vengono cancellati i singoli cartellini gialli?",
+          "options": [
+            "Mai",
+            "Dopo ogni partita",
+            "Dopo la fase a gironi",
+            "Solo dopo le semifinali"
+          ],
+          "explanation": "I singoli gialli vengono cancellati dopo la fase a gironi e di nuovo dopo i quarti di finale, così che un'ammonizione presa all'inizio non costi a un giocatore la finale. Con i cartellini rossi è diverso: un rosso diretto comporta almeno una giornata di squalifica automatica, ma la commissione disciplinare può estenderla a seconda della gravità. Queste squalifiche si trascinano da una fase all'altra: un rosso ai quarti significa saltare la semifinale e, sì, persino la finale."
+        },
+        "ja": {
+          "question": "単独のイエローカードはいつ消滅しますか？",
+          "options": [
+            "消滅しない",
+            "毎試合後",
+            "グループステージ後",
+            "準決勝の後のみ"
+          ],
+          "explanation": "単独のイエローカードはグループステージ後に消滅し、準々決勝後にも再び消滅します。これにより、早い段階での警告が選手の決勝出場を奪うことはありません。レッドカードは異なります。一発レッドは最低でも自動的に1試合の出場停止となりますが、規律委員会は重大性に応じて延長することができます。これらの出場停止はステージをまたいで持ち越されます。準々決勝でのレッドカードは準決勝を欠場することを意味し、そう、決勝でさえも欠場することになります。"
+        },
+        "ko": {
+          "question": "단독 옐로카드는 언제 소멸되나요?",
+          "options": [
+            "소멸되지 않음",
+            "매 경기 후",
+            "조별 리그 후",
+            "준결승 이후에만"
+          ],
+          "explanation": "단독 옐로카드는 조별 리그 후에 소멸되고, 8강전 후에 다시 소멸됩니다. 따라서 초반에 받은 경고가 선수의 결승 출전을 막지 못합니다. 레드카드는 다릅니다. 다이렉트 레드카드는 최소 1경기 자동 출전 정지를 받으며, 징계위원회가 심각성에 따라 이를 연장할 수 있습니다. 이러한 출전 정지는 단계를 넘어 이어집니다. 8강전에서의 레드카드는 준결승 결장을 의미하며, 그렇습니다, 심지어 결승까지도 결장하게 됩니다."
+        },
+        "pt-BR": {
+          "question": "Quando os cartões amarelos avulsos são zerados?",
+          "options": [
+            "Nunca",
+            "Após cada partida",
+            "Após a fase de grupos",
+            "Somente após as semifinais"
+          ],
+          "explanation": "Os amarelos avulsos são zerados após a fase de grupos e novamente após as quartas de final, para que uma advertência logo no início não custe a final a um jogador. Com os cartões vermelhos é diferente: um vermelho direto resulta em pelo menos um jogo de suspensão automática, mas o comitê disciplinar pode ampliá-la conforme a gravidade. Essas suspensões passam de uma fase para outra: um vermelho nas quartas significa ficar de fora da semifinal e, sim, até da final."
+        },
+        "zh-Hans": {
+          "question": "单张黄牌何时会被清除？",
+          "options": [
+            "永不清除",
+            "每场比赛后",
+            "小组赛阶段后",
+            "仅在半决赛之后"
+          ],
+          "explanation": "单张黄牌会在小组赛阶段后清除，并在四分之一决赛后再次清除，这样早期吃到的警告就不会让球员错过决赛。红牌则不同：直接红牌意味着至少自动停赛一场，但纪律委员会可根据情节严重程度予以延长。这类停赛会跨阶段累计——四分之一决赛中的一张红牌意味着将缺席半决赛，没错，甚至连决赛也会缺席。"
+        }
+      },
+      "i18nSourceHash": "57e06ecf06b190bf"
     },
     {
       "id": "c-fan-fest",
@@ -670,7 +979,110 @@
       "answer": 1,
       "explanation": "The plastic vuvuzela horns were blown constantly by South African fans in 2010 — loved by some, loathed by many.",
       "media": "https://www.youtube.com/watch?v=SuDzzSSG_ac",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "صوت بوق الفوفوزيلا الطنّان أصبح الموسيقى المصاحبة لأي بطولة؟",
+          "options": [
+            "ألمانيا 2006",
+            "جنوب أفريقيا 2010",
+            "البرازيل 2014",
+            "روسيا 2018"
+          ],
+          "explanation": "كان المشجعون في جنوب أفريقيا ينفخون أبواق الفوفوزيلا البلاستيكية باستمرار عام 2010 — أحبّها البعض وكرهها الكثيرون."
+        },
+        "de": {
+          "question": "Das brummende Vuvuzela-Horn wurde zum Soundtrack welches Turniers?",
+          "options": [
+            "2006 Deutschland",
+            "2010 Südafrika",
+            "2014 Brasilien",
+            "2018 Russland"
+          ],
+          "explanation": "Die Plastik-Vuvuzelas wurden 2010 von südafrikanischen Fans pausenlos geblasen — von einigen geliebt, von vielen verabscheut."
+        },
+        "es": {
+          "question": "El zumbido de la vuvuzela se convirtió en la banda sonora de ¿cuál torneo?",
+          "options": [
+            "Alemania 2006",
+            "Sudáfrica 2010",
+            "Brasil 2014",
+            "Rusia 2018"
+          ],
+          "explanation": "En 2010, los aficionados sudafricanos soplaban sin parar las vuvuzelas de plástico — adoradas por algunos y odiadas por muchos."
+        },
+        "es-ES": {
+          "question": "El zumbido de la vuvuzela se convirtió en la banda sonora de ¿qué torneo?",
+          "options": [
+            "Alemania 2006",
+            "Sudáfrica 2010",
+            "Brasil 2014",
+            "Rusia 2018"
+          ],
+          "explanation": "En 2010, los aficionados sudafricanos soplaban sin cesar las vuvuzelas de plástico — adoradas por algunos y detestadas por muchos."
+        },
+        "fr": {
+          "question": "Le bourdonnement de la vuvuzela est devenu la bande-son de quel tournoi ?",
+          "options": [
+            "Allemagne 2006",
+            "Afrique du Sud 2010",
+            "Brésil 2014",
+            "Russie 2018"
+          ],
+          "explanation": "En 2010, les supporters sud-africains soufflaient sans cesse dans les vuvuzelas en plastique — adorées par certains, détestées par beaucoup."
+        },
+        "it": {
+          "question": "Il ronzio della vuvuzela è diventato la colonna sonora di quale torneo?",
+          "options": [
+            "Germania 2006",
+            "Sudafrica 2010",
+            "Brasile 2014",
+            "Russia 2018"
+          ],
+          "explanation": "Nel 2010 i tifosi sudafricani soffiavano di continuo nelle vuvuzela di plastica — amate da alcuni, odiate da molti."
+        },
+        "ja": {
+          "question": "ブンブンと鳴り響くブブゼラの音が、どの大会のサウンドトラックになったでしょう？",
+          "options": [
+            "2006年 ドイツ",
+            "2010年 南アフリカ",
+            "2014年 ブラジル",
+            "2018年 ロシア"
+          ],
+          "explanation": "2010年、南アフリカのファンはプラスチック製のブブゼラを絶え間なく吹き鳴らしていました。一部の人には愛され、多くの人には嫌われました。"
+        },
+        "ko": {
+          "question": "윙윙거리는 부부젤라 나팔 소리는 어느 대회의 사운드트랙이 되었을까요?",
+          "options": [
+            "2006 독일",
+            "2010 남아프리카공화국",
+            "2014 브라질",
+            "2018 러시아"
+          ],
+          "explanation": "2010년 남아프리카공화국 팬들은 플라스틱 부부젤라를 끊임없이 불어댔습니다. 일부는 좋아했지만 많은 사람들은 싫어했죠."
+        },
+        "pt-BR": {
+          "question": "O zumbido da vuvuzela se tornou a trilha sonora de qual torneio?",
+          "options": [
+            "Alemanha 2006",
+            "África do Sul 2010",
+            "Brasil 2014",
+            "Rússia 2018"
+          ],
+          "explanation": "Em 2010, os torcedores sul-africanos sopravam as vuvuzelas de plástico sem parar — amadas por uns e detestadas por muitos."
+        },
+        "zh-Hans": {
+          "question": "嗡嗡作响的呜呜祖拉号角成了哪届赛事的标志性背景音？",
+          "options": [
+            "2006年德国",
+            "2010年南非",
+            "2014年巴西",
+            "2018年俄罗斯"
+          ],
+          "explanation": "2010年，南非球迷不停地吹响塑料呜呜祖拉号角——有人喜爱，但更多人深恶痛绝。"
+        }
+      },
+      "i18nSourceHash": "49bffe36202f4440"
     },
     {
       "id": "rec-fastest-hat-trick",
@@ -710,7 +1122,110 @@
       ],
       "answer": 2,
       "explanation": "If goal difference, goals scored, head-to-head, and fair play can't separate teams, lots are drawn — though this has never happened.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "إذا بقيت الفرق متعادلة بعد تطبيق جميع معايير كسر التعادل في دور المجموعات، فما هو الحل الأخير؟",
+          "options": [
+            "مباراة فاصلة",
+            "رمي عملة معدنية",
+            "القرعة",
+            "الفريق الأقل ارتكابًا للأخطاء"
+          ],
+          "explanation": "إذا تعذّر الفصل بين الفرق عبر فارق الأهداف والأهداف المسجلة والمواجهات المباشرة واللعب النظيف، تُجرى القرعة، رغم أن ذلك لم يحدث قط."
+        },
+        "de": {
+          "question": "Wenn Mannschaften nach allen Kriterien zur Entscheidung in der Gruppenphase immer noch gleichauf liegen, was ist das letzte Mittel?",
+          "options": [
+            "Ein Entscheidungsspiel",
+            "Ein Münzwurf",
+            "Das Los",
+            "Die Mannschaft mit weniger Fouls"
+          ],
+          "explanation": "Wenn Tordifferenz, erzielte Tore, direkter Vergleich und Fairplay-Wertung keine Entscheidung bringen, entscheidet das Los, auch wenn das noch nie vorgekommen ist."
+        },
+        "es": {
+          "question": "Si los equipos siguen empatados tras aplicar todos los criterios de desempate de la fase de grupos, ¿cuál es el último recurso?",
+          "options": [
+            "Un partido de desempate",
+            "Un volado",
+            "Un sorteo",
+            "El equipo con menos faltas"
+          ],
+          "explanation": "Si la diferencia de goles, los goles anotados, el enfrentamiento directo y el juego limpio no logran separar a los equipos, se realiza un sorteo, aunque esto nunca ha ocurrido."
+        },
+        "es-ES": {
+          "question": "Si los equipos siguen empatados tras aplicar todos los criterios de desempate de la fase de grupos, ¿cuál es el último recurso?",
+          "options": [
+            "Un partido de desempate",
+            "Lanzar una moneda al aire",
+            "Un sorteo",
+            "El equipo con menos faltas"
+          ],
+          "explanation": "Si la diferencia de goles, los goles marcados, el enfrentamiento directo y el juego limpio no logran separar a los equipos, se recurre a un sorteo, aunque esto nunca ha sucedido."
+        },
+        "fr": {
+          "question": "Si des équipes restent à égalité après tous les critères de départage de la phase de groupes, quel est le dernier recours ?",
+          "options": [
+            "Un match de barrage",
+            "Un tirage à pile ou face",
+            "Un tirage au sort",
+            "L'équipe ayant commis le moins de fautes"
+          ],
+          "explanation": "Si la différence de buts, les buts marqués, la confrontation directe et le fair-play ne permettent pas de départager les équipes, on procède à un tirage au sort, bien que cela ne soit jamais arrivé."
+        },
+        "it": {
+          "question": "Se le squadre restano in parità dopo tutti i criteri di spareggio della fase a gironi, qual è l'ultima soluzione?",
+          "options": [
+            "Uno spareggio",
+            "Il lancio della monetina",
+            "Il sorteggio",
+            "La squadra con meno falli"
+          ],
+          "explanation": "Se differenza reti, gol segnati, scontri diretti e fair play non bastano a separare le squadre, si ricorre al sorteggio, anche se non è mai accaduto."
+        },
+        "ja": {
+          "question": "グループステージのすべてのタイブレーク基準を適用しても順位が並んだままの場合、最終的にどう決めますか？",
+          "options": [
+            "プレーオフ",
+            "コイントス",
+            "抽選",
+            "ファウルの少ないチーム"
+          ],
+          "explanation": "得失点差、総得点、直接対決、フェアプレーポイントでも順位がつかない場合は抽選で決まりますが、これまで実際に起きたことはありません。"
+        },
+        "ko": {
+          "question": "조별 리그의 모든 순위 결정 기준을 적용한 뒤에도 팀들이 여전히 동률이라면, 최종 결정 방법은 무엇일까요?",
+          "options": [
+            "플레이오프 경기",
+            "동전 던지기",
+            "추첨",
+            "파울이 더 적은 팀"
+          ],
+          "explanation": "골 득실차, 득점 수, 상대 전적, 페어플레이로도 순위를 가릴 수 없으면 추첨으로 결정되지만, 실제로 이런 일은 한 번도 없었습니다."
+        },
+        "pt-BR": {
+          "question": "Se as equipes continuarem empatadas após todos os critérios de desempate da fase de grupos, qual é o último recurso?",
+          "options": [
+            "Uma partida de desempate",
+            "Cara ou coroa",
+            "Sorteio",
+            "A equipe com menos faltas"
+          ],
+          "explanation": "Se o saldo de gols, os gols marcados, o confronto direto e o fair play não conseguirem separar as equipes, recorre-se a um sorteio, embora isso nunca tenha acontecido."
+        },
+        "zh-Hans": {
+          "question": "如果在用尽小组赛所有排名规则后球队仍然不分上下，最终如何决出名次？",
+          "options": [
+            "附加赛",
+            "掷硬币",
+            "抽签",
+            "犯规更少的球队"
+          ],
+          "explanation": "如果净胜球、进球数、相互交锋成绩和公平竞赛积分都无法分出高下，就通过抽签决定，不过这种情况从未发生过。"
+        }
+      },
+      "i18nSourceHash": "ad0fce18e3864f1a"
     },
     {
       "id": "h-2014-champion",
