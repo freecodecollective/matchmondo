@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-23 10:48 UTC by scripts/update-data.py
+// Regenerated 2026-06-23 12:02 UTC by scripts/update-data.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1124,7 +1124,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-03T22:00:00Z",
     "stage": "Round of 32",
     "group": null,
-    "home": "1J",
+    "home": "Argentina",
     "away": "2H",
     "venue": "Hard Rock Stadium",
     "city": "Miami Gardens, FL",
