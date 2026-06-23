@@ -3840,7 +3840,110 @@
       ],
       "answer": 1,
       "explanation": "A second yellow in one match becomes a red card, and the player misses the next match.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "بطاقتان صفراوان في المباراة نفسها تؤديان إلى…",
+          "options": [
+            "إنذار",
+            "بطاقة حمراء",
+            "ركلة جزاء",
+            "اشتراك مجاني على مقاعد البدلاء"
+          ],
+          "explanation": "البطاقة الصفراء الثانية في المباراة نفسها تتحول إلى بطاقة حمراء، ويغيب اللاعب عن المباراة التالية."
+        },
+        "de": {
+          "question": "Zwei gelbe Karten im selben Spiel führen zu…",
+          "options": [
+            "Einer Verwarnung",
+            "Einer roten Karte",
+            "Einem Elfmeter",
+            "Einem Gratis-Abo auf der Ersatzbank"
+          ],
+          "explanation": "Eine zweite gelbe Karte in einem Spiel wird zur roten Karte, und der Spieler verpasst das nächste Spiel."
+        },
+        "es": {
+          "question": "Dos tarjetas amarillas en el mismo partido resultan en…",
+          "options": [
+            "Una advertencia",
+            "Una tarjeta roja",
+            "Un penal",
+            "Una suscripción gratis a la banca"
+          ],
+          "explanation": "Una segunda amarilla en un mismo partido se convierte en tarjeta roja, y el jugador se pierde el siguiente partido."
+        },
+        "es-ES": {
+          "question": "Dos tarjetas amarillas en el mismo partido suponen…",
+          "options": [
+            "Una advertencia",
+            "Una tarjeta roja",
+            "Un penalti",
+            "Una suscripción gratuita al banquillo"
+          ],
+          "explanation": "Una segunda amarilla en un mismo partido se convierte en tarjeta roja, y el jugador se pierde el siguiente partido."
+        },
+        "fr": {
+          "question": "Deux cartons jaunes dans le même match entraînent…",
+          "options": [
+            "Un avertissement",
+            "Un carton rouge",
+            "Un penalty",
+            "Un abonnement gratuit au banc de touche"
+          ],
+          "explanation": "Un deuxième carton jaune dans un même match devient un carton rouge, et le joueur manque le match suivant."
+        },
+        "it": {
+          "question": "Due cartellini gialli nella stessa partita portano a…",
+          "options": [
+            "Un'ammonizione",
+            "Un cartellino rosso",
+            "Un rigore",
+            "Un abbonamento gratuito alla panchina"
+          ],
+          "explanation": "Un secondo giallo nella stessa partita diventa un cartellino rosso, e il giocatore salta la partita successiva."
+        },
+        "ja": {
+          "question": "同じ試合で2枚のイエローカードを受けると…",
+          "options": [
+            "警告",
+            "レッドカード",
+            "ペナルティキック",
+            "ベンチの無料サブスクリプション"
+          ],
+          "explanation": "1試合で2枚目のイエローはレッドカードとなり、その選手は次の試合に出場できません。"
+        },
+        "ko": {
+          "question": "한 경기에서 옐로카드 두 장을 받으면…",
+          "options": [
+            "경고",
+            "레드카드",
+            "페널티킥",
+            "벤치 무료 구독권"
+          ],
+          "explanation": "한 경기에서 두 번째 옐로카드는 레드카드가 되며, 해당 선수는 다음 경기에 출전할 수 없습니다."
+        },
+        "pt-BR": {
+          "question": "Dois cartões amarelos na mesma partida resultam em…",
+          "options": [
+            "Uma advertência",
+            "Um cartão vermelho",
+            "Um pênalti",
+            "Uma assinatura grátis do banco de reservas"
+          ],
+          "explanation": "Um segundo amarelo na mesma partida vira cartão vermelho, e o jogador fica de fora da próxima partida."
+        },
+        "zh-Hans": {
+          "question": "在同一场比赛中吃到两张黄牌会导致…",
+          "options": [
+            "一次警告",
+            "一张红牌",
+            "一个点球",
+            "替补席的免费订阅"
+          ],
+          "explanation": "同一场比赛中的第二张黄牌将变成红牌，该球员将无法参加下一场比赛。"
+        }
+      },
+      "i18nSourceHash": "af4184993a73c40d"
     },
     {
       "id": "p-muller-2010",
@@ -3945,7 +4048,110 @@
       ],
       "answer": 1,
       "explanation": "Lionel Messi overtook Miroslav Klose's longstanding record of 16 goals during the 2026 tournament, becoming the all-time leading scorer.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو الهداف التاريخي عبر جميع البطولات؟",
+          "options": [
+            "ميروسلاف كلوزه",
+            "ليونيل ميسي",
+            "غيرد مولر",
+            "رونالدو"
+          ],
+          "explanation": "تجاوز ليونيل ميسي الرقم القياسي الذي حمله ميروسلاف كلوزه طويلاً والبالغ 16 هدفاً خلال بطولة Football 2026، ليصبح الهداف التاريخي."
+        },
+        "de": {
+          "question": "Wer ist der erfolgreichste Torschütze aller Turniere?",
+          "options": [
+            "Miroslav Klose",
+            "Lionel Messi",
+            "Gerd Müller",
+            "Ronaldo"
+          ],
+          "explanation": "Lionel Messi übertraf während des Turniers Football 2026 Miroslav Kloses langjährigen Rekord von 16 Toren und wurde damit zum erfolgreichsten Torschützen aller Zeiten."
+        },
+        "es": {
+          "question": "¿Quién es el máximo goleador histórico de todos los torneos?",
+          "options": [
+            "Miroslav Klose",
+            "Lionel Messi",
+            "Gerd Müller",
+            "Ronaldo"
+          ],
+          "explanation": "Lionel Messi superó el longevo récord de 16 goles de Miroslav Klose durante el torneo Football 2026, convirtiéndose en el máximo goleador histórico."
+        },
+        "es-ES": {
+          "question": "¿Quién es el máximo goleador histórico de todos los torneos?",
+          "options": [
+            "Miroslav Klose",
+            "Lionel Messi",
+            "Gerd Müller",
+            "Ronaldo"
+          ],
+          "explanation": "Lionel Messi superó el veterano récord de 16 goles de Miroslav Klose durante el torneo Football 2026, convirtiéndose en el máximo goleador de la historia."
+        },
+        "fr": {
+          "question": "Qui est le meilleur buteur de tous les temps, tous tournois confondus ?",
+          "options": [
+            "Miroslav Klose",
+            "Lionel Messi",
+            "Gerd Müller",
+            "Ronaldo"
+          ],
+          "explanation": "Lionel Messi a dépassé le record longtemps détenu par Miroslav Klose de 16 buts lors du tournoi Football 2026, devenant ainsi le meilleur buteur de tous les temps."
+        },
+        "it": {
+          "question": "Chi è il miglior marcatore di sempre considerando tutti i tornei?",
+          "options": [
+            "Miroslav Klose",
+            "Lionel Messi",
+            "Gerd Müller",
+            "Ronaldo"
+          ],
+          "explanation": "Lionel Messi ha superato il primato di lunga data di Miroslav Klose di 16 gol durante il torneo Football 2026, diventando il miglior marcatore di sempre."
+        },
+        "ja": {
+          "question": "全大会を通じての歴代最多得点者は誰でしょう？",
+          "options": [
+            "ミロスラフ・クローゼ",
+            "リオネル・メッシ",
+            "ゲルト・ミュラー",
+            "ロナウド"
+          ],
+          "explanation": "リオネル・メッシはFootball 2026の大会中に、長年破られなかったミロスラフ・クローゼの16得点という記録を上回り、歴代最多得点者となりました。"
+        },
+        "ko": {
+          "question": "모든 대회를 통틀어 역대 최다 득점자는 누구일까요?",
+          "options": [
+            "미로슬라프 클로제",
+            "리오넬 메시",
+            "게르트 뮐러",
+            "호나우두"
+          ],
+          "explanation": "리오넬 메시는 Football 2026 대회에서 오랫동안 유지되던 미로슬라프 클로제의 16골 기록을 넘어서며 역대 최다 득점자가 되었습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é o maior artilheiro da história considerando todos os torneios?",
+          "options": [
+            "Miroslav Klose",
+            "Lionel Messi",
+            "Gerd Müller",
+            "Ronaldo"
+          ],
+          "explanation": "Lionel Messi superou o antigo recorde de 16 gols de Miroslav Klose durante o torneio Football 2026, tornando-se o maior artilheiro de todos os tempos."
+        },
+        "zh-Hans": {
+          "question": "在所有赛事中，谁是历史上的最佳射手？",
+          "options": [
+            "米罗斯拉夫·克洛泽",
+            "利昂内尔·梅西",
+            "格尔德·穆勒",
+            "罗纳尔多"
+          ],
+          "explanation": "利昂内尔·梅西在Football 2026赛事中超越了米罗斯拉夫·克洛泽长期保持的16球纪录，成为历史最佳射手。"
+        }
+      },
+      "i18nSourceHash": "f63e6b0f5934dfef"
     },
     {
       "id": "c-tango-ball",
@@ -4518,7 +4724,110 @@
       ],
       "answer": 0,
       "explanation": "A brace refers to a player scoring two goals in a single match. Scoring three goals is called a hat-trick.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "في كرة القدم، ماذا يعني أن يسجل اللاعب \"ثنائية\" (brace)؟",
+          "options": [
+            "يسجل هدفين في المباراة نفسها",
+            "يسجل ثلاثة أهداف في المباراة نفسها",
+            "يسجل ثم يتأهب لمراجعة حكم الفيديو المساعد التي لا مفر منها",
+            "يسجل في مباراتين متتاليتين"
+          ],
+          "explanation": "تشير \"الثنائية\" إلى تسجيل اللاعب هدفين في مباراة واحدة. أما تسجيل ثلاثة أهداف فيُسمى \"هاتريك\"."
+        },
+        "de": {
+          "question": "Was bedeutet es im Fußball, wenn ein Spieler einen \"Doppelpack\" erzielt?",
+          "options": [
+            "Er erzielt zwei Tore im selben Spiel",
+            "Er erzielt drei Tore im selben Spiel",
+            "Er trifft und macht sich dann auf die unvermeidliche VAR-Überprüfung gefasst",
+            "Er trifft in zwei aufeinanderfolgenden Spielen"
+          ],
+          "explanation": "Ein Doppelpack bezeichnet zwei Tore eines Spielers in einem einzigen Spiel. Drei Tore nennt man einen Hattrick."
+        },
+        "es": {
+          "question": "En el fútbol, ¿qué significa que un jugador anote un \"doblete\"?",
+          "options": [
+            "Marca dos goles en el mismo partido",
+            "Marca tres goles en el mismo partido",
+            "Marca y luego se prepara para la inevitable revisión del VAR",
+            "Marca en dos partidos consecutivos"
+          ],
+          "explanation": "Un doblete se refiere a un jugador que marca dos goles en un solo partido. Marcar tres goles se llama hat-trick."
+        },
+        "es-ES": {
+          "question": "En el fútbol, ¿qué significa que un jugador marque un \"doblete\"?",
+          "options": [
+            "Marca dos goles en el mismo partido",
+            "Marca tres goles en el mismo partido",
+            "Marca y luego se prepara para la inevitable revisión del VAR",
+            "Marca en dos partidos consecutivos"
+          ],
+          "explanation": "Un doblete se refiere a un jugador que marca dos goles en un mismo partido. Marcar tres goles se conoce como hat-trick."
+        },
+        "fr": {
+          "question": "Au football, que signifie le fait qu'un joueur réalise un \"doublé\" (brace) ?",
+          "options": [
+            "Il marque deux buts dans le même match",
+            "Il marque trois buts dans le même match",
+            "Il marque puis se prépare à l'inévitable contrôle de la VAR",
+            "Il marque lors de deux matchs consécutifs"
+          ],
+          "explanation": "Un doublé désigne le fait qu'un joueur marque deux buts au cours d'un même match. Marquer trois buts s'appelle un triplé (hat-trick)."
+        },
+        "it": {
+          "question": "Nel calcio, cosa significa quando un giocatore realizza una \"doppietta\"?",
+          "options": [
+            "Segna due gol nella stessa partita",
+            "Segna tre gol nella stessa partita",
+            "Segna e poi si prepara all'inevitabile revisione del VAR",
+            "Segna in due partite consecutive"
+          ],
+          "explanation": "Una doppietta indica un giocatore che segna due gol in una singola partita. Segnare tre gol si chiama tripletta (hat-trick)."
+        },
+        "ja": {
+          "question": "サッカーで、選手が「ブレイス（brace）」を決めるとはどういう意味でしょう？",
+          "options": [
+            "同じ試合で2ゴールを決める",
+            "同じ試合で3ゴールを決める",
+            "ゴールを決めた後、避けられないVAR判定に備えて身構える",
+            "2試合連続でゴールを決める"
+          ],
+          "explanation": "ブレイスとは、選手が1試合で2ゴールを決めることを指します。3ゴールを決めることはハットトリックと呼ばれます。"
+        },
+        "ko": {
+          "question": "축구에서 선수가 \"브레이스(brace)\"를 기록한다는 것은 무슨 뜻일까요?",
+          "options": [
+            "같은 경기에서 두 골을 넣는다",
+            "같은 경기에서 세 골을 넣는다",
+            "골을 넣은 뒤 피할 수 없는 VAR 판독에 대비한다",
+            "두 경기 연속으로 골을 넣는다"
+          ],
+          "explanation": "브레이스란 선수가 한 경기에서 두 골을 넣는 것을 말합니다. 세 골을 넣는 것은 해트트릭이라고 합니다."
+        },
+        "pt-BR": {
+          "question": "No futebol, o que significa quando um jogador marca um \"brace\"?",
+          "options": [
+            "Ele marca dois gols na mesma partida",
+            "Ele marca três gols na mesma partida",
+            "Ele marca e depois se prepara para a inevitável revisão do VAR",
+            "Ele marca em duas partidas consecutivas"
+          ],
+          "explanation": "Um \"brace\" (dois gols) refere-se a um jogador que marca dois gols em uma única partida. Marcar três gols é chamado de hat-trick."
+        },
+        "zh-Hans": {
+          "question": "在足球中，当一名球员打进\"brace\"（梅开二度）时是什么意思？",
+          "options": [
+            "他在同一场比赛中打进两球",
+            "他在同一场比赛中打进三球",
+            "他进球后开始为不可避免的VAR回看做心理准备",
+            "他连续两场比赛都进球"
+          ],
+          "explanation": "\"brace\"指球员在单场比赛中打进两球。打进三球则被称为\"帽子戏法\"（hat-trick）。"
+        }
+      },
+      "i18nSourceHash": "0b73551f419802e7"
     },
     {
       "id": "p-caps-definition",
@@ -4532,7 +4841,110 @@
       ],
       "answer": 1,
       "explanation": "A 'cap' represents one official appearance for a player's national team. The term originated from the practice of awarding players a physical cap for each match they played. When commentators say a player has 'X caps,' they mean that player has appeared in X official international matches for their country.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "في كرة القدم، ماذا يعني أن يحصل اللاعب على \"cap\" مع منتخب بلاده؟",
+          "options": [
+            "يحصل على قبعة تذكارية بعد تسجيل هدفه الأول",
+            "يتم اختياره ويلعب في مباراة رسمية مع منتخب بلاده",
+            "يتم تعيينه قائدًا لمنتخب بلاده",
+            "يفوز بجائزة فردية في البطولة"
+          ],
+          "explanation": "تمثل كلمة \"cap\" ظهورًا رسميًا واحدًا للاعب مع منتخب بلاده. نشأ المصطلح من عادة منح اللاعبين قبعة فعلية عن كل مباراة يلعبونها. وعندما يقول المعلقون إن لاعبًا لديه \"X caps\"، فهم يقصدون أنه شارك في X مباراة دولية رسمية مع منتخب بلاده."
+        },
+        "de": {
+          "question": "Was bedeutet es im Fußball, wenn ein Spieler einen \"Cap\" für seine Nationalmannschaft erhält?",
+          "options": [
+            "Er bekommt nach seinem ersten Tor eine Erinnerungsmütze",
+            "Er wird nominiert und spielt in einem offiziellen Länderspiel für sein Land",
+            "Er wird zum Kapitän seiner Nationalmannschaft ernannt",
+            "Er gewinnt eine Einzelauszeichnung beim Turnier"
+          ],
+          "explanation": "Ein \"Cap\" steht für einen offiziellen Einsatz eines Spielers in der Nationalmannschaft. Der Begriff geht auf den Brauch zurück, Spielern für jedes Spiel eine echte Mütze zu überreichen. Wenn Kommentatoren sagen, ein Spieler habe \"X Caps\", meinen sie, dass dieser Spieler in X offiziellen Länderspielen für sein Land aufgelaufen ist."
+        },
+        "es": {
+          "question": "En el fútbol, ¿qué significa que un jugador obtenga un \"cap\" con su selección nacional?",
+          "options": [
+            "Recibe una gorra conmemorativa tras anotar su primer gol",
+            "Es convocado y juega un partido oficial con su país",
+            "Es nombrado capitán de su selección nacional",
+            "Gana un premio individual en el torneo"
+          ],
+          "explanation": "Un \"cap\" representa una presentación oficial de un jugador con su selección nacional. El término proviene de la costumbre de entregar a los jugadores una gorra física por cada partido que disputaban. Cuando los comentaristas dicen que un jugador tiene \"X caps\", significa que ese jugador ha jugado X partidos internacionales oficiales con su país."
+        },
+        "es-ES": {
+          "question": "En el fútbol, ¿qué significa que un jugador consiga un \"cap\" con su selección nacional?",
+          "options": [
+            "Recibe una gorra conmemorativa tras marcar su primer gol",
+            "Es convocado y juega un partido oficial con su país",
+            "Es nombrado capitán de su selección nacional",
+            "Gana un premio individual en el torneo"
+          ],
+          "explanation": "Un \"cap\" representa una internacionalidad oficial de un jugador con su selección. El término proviene de la costumbre de entregar a los jugadores una gorra física por cada partido que disputaban. Cuando los comentaristas dicen que un jugador tiene \"X caps\", significa que ese jugador ha disputado X partidos internacionales oficiales con su país."
+        },
+        "fr": {
+          "question": "Au football, que signifie le fait qu'un joueur obtienne une \"cape\" (cap) avec son équipe nationale ?",
+          "options": [
+            "Il reçoit une casquette commémorative après avoir marqué son premier but",
+            "Il est sélectionné et dispute un match officiel pour son pays",
+            "Il est nommé capitaine de son équipe nationale",
+            "Il remporte un prix individuel lors du tournoi"
+          ],
+          "explanation": "Une \"cape\" représente une apparition officielle d'un joueur avec son équipe nationale. Le terme vient de la coutume consistant à remettre aux joueurs une véritable casquette pour chaque match disputé. Quand les commentateurs disent qu'un joueur a \"X capes\", ils veulent dire que ce joueur a disputé X matchs internationaux officiels pour son pays."
+        },
+        "it": {
+          "question": "Nel calcio, cosa significa quando un giocatore ottiene un \"cap\" con la propria nazionale?",
+          "options": [
+            "Riceve un cappellino commemorativo dopo aver segnato il primo gol",
+            "Viene convocato e gioca una partita ufficiale per il suo paese",
+            "Viene nominato capitano della propria nazionale",
+            "Vince un premio individuale durante il torneo"
+          ],
+          "explanation": "Un \"cap\" rappresenta una presenza ufficiale di un giocatore con la propria nazionale. Il termine deriva dall'usanza di consegnare ai giocatori un vero cappellino per ogni partita disputata. Quando i commentatori dicono che un giocatore ha \"X cap\", intendono che quel giocatore ha disputato X partite internazionali ufficiali con il proprio paese."
+        },
+        "ja": {
+          "question": "サッカーで、選手が代表チームで「キャップ（cap）」を獲得するとはどういう意味でしょうか？",
+          "options": [
+            "初ゴールを決めた後に記念の帽子を受け取る",
+            "選出されて自国の公式試合に出場する",
+            "代表チームのキャプテンに任命される",
+            "大会で個人賞を受賞する"
+          ],
+          "explanation": "「キャップ」とは、選手が代表チームで公式戦に1試合出場したことを表します。この言葉は、出場した各試合ごとに選手へ実際の帽子を授与していた慣習に由来します。解説者が選手について「Xキャップ」と言うとき、それはその選手が自国の公式国際試合にX試合出場したことを意味します。"
+        },
+        "ko": {
+          "question": "축구에서 선수가 국가대표팀에서 '캡(cap)'을 얻는다는 것은 무슨 의미일까요?",
+          "options": [
+            "첫 골을 넣은 뒤 기념 모자를 받는다",
+            "선발되어 자국을 위해 공식 경기에 출전한다",
+            "국가대표팀의 주장으로 임명된다",
+            "대회에서 개인상을 수상한다"
+          ],
+          "explanation": "'캡'은 선수가 국가대표팀에서 공식 경기에 한 번 출전한 것을 의미합니다. 이 용어는 선수가 치른 경기마다 실제 모자를 수여하던 관습에서 유래했습니다. 해설자가 어떤 선수에게 'X캡'이 있다고 말할 때는, 그 선수가 자국을 위해 X번의 공식 국제 경기에 출전했다는 뜻입니다."
+        },
+        "pt-BR": {
+          "question": "No futebol, o que significa quando um jogador conquista um \"cap\" pela seleção do seu país?",
+          "options": [
+            "Ele recebe um boné comemorativo após marcar seu primeiro gol",
+            "Ele é convocado e joga uma partida oficial pelo seu país",
+            "Ele é nomeado capitão da seleção nacional",
+            "Ele ganha um prêmio individual no torneio"
+          ],
+          "explanation": "Um \"cap\" representa uma partida oficial disputada por um jogador pela seleção do seu país. O termo surgiu do costume de dar aos jogadores um boné de verdade a cada partida que disputavam. Quando os comentaristas dizem que um jogador tem \"X caps\", querem dizer que ele disputou X partidas internacionais oficiais pelo seu país."
+        },
+        "zh-Hans": {
+          "question": "在足球中，球员为国家队赢得一个\"cap\"（出场纪录）意味着什么？",
+          "options": [
+            "他在打进首球后会获得一顶纪念帽",
+            "他被选中并代表国家参加一场正式比赛",
+            "他被任命为国家队队长",
+            "他在赛事中赢得个人奖项"
+          ],
+          "explanation": "\"cap\"代表球员为国家队出战一场正式比赛。这个术语源自过去的惯例：每踢一场比赛，就为球员颁发一顶实际的帽子。当解说员说某位球员有\"X个cap\"时，意思是这位球员代表国家参加了X场正式国际比赛。"
+        }
+      },
+      "i18nSourceHash": "b4fb4432187707a1"
     },
     {
       "id": "rec-golden-boot",
@@ -4546,7 +4958,110 @@
       ],
       "answer": 1,
       "explanation": "The Golden Boot goes to the tournament's top scorer. If players are tied on goals, assists are the tiebreaker, followed by fewer minutes played. Past winners include Harry Kane (2018, 6 goals) and Kylian Mbappé (2022, 8 goals).",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "علام تُمنح جائزة الحذاء الذهبي في البطولة؟",
+          "options": [
+            "أفضل حارس مرمى",
+            "أكثر الأهداف تسجيلاً",
+            "أفضل مدافع",
+            "أكثر التمريرات الحاسمة"
+          ],
+          "explanation": "يُمنح الحذاء الذهبي لأكثر اللاعبين تسجيلاً للأهداف في البطولة. وفي حال تساوي اللاعبين في عدد الأهداف، تكون التمريرات الحاسمة هي الفيصل، يليها عدد الدقائق الأقل في الملعب. ومن الفائزين السابقين هاري كين (2018، 6 أهداف) وكيليان مبابي (2022، 8 أهداف)."
+        },
+        "de": {
+          "question": "Wofür wird der Goldene Schuh beim Turnier vergeben?",
+          "options": [
+            "Bester Torwart",
+            "Meiste erzielte Tore",
+            "Bester Verteidiger",
+            "Meiste Vorlagen"
+          ],
+          "explanation": "Der Goldene Schuh geht an den besten Torschützen des Turniers. Sind mehrere Spieler bei den Toren gleichauf, entscheiden die Vorlagen, danach die geringere Einsatzzeit. Zu den bisherigen Gewinnern zählen Harry Kane (2018, 6 Tore) und Kylian Mbappé (2022, 8 Tore)."
+        },
+        "es": {
+          "question": "¿Por qué se otorga el premio Bota de Oro en el torneo?",
+          "options": [
+            "Mejor portero",
+            "Más goles anotados",
+            "Mejor defensa",
+            "Más asistencias"
+          ],
+          "explanation": "La Bota de Oro se entrega al máximo goleador del torneo. Si hay empate en goles, las asistencias son el criterio de desempate, seguido de la menor cantidad de minutos jugados. Entre los ganadores anteriores están Harry Kane (2018, 6 goles) y Kylian Mbappé (2022, 8 goles)."
+        },
+        "es-ES": {
+          "question": "¿Por qué se concede el premio Bota de Oro en el torneo?",
+          "options": [
+            "Mejor portero",
+            "Más goles marcados",
+            "Mejor defensa",
+            "Más asistencias"
+          ],
+          "explanation": "La Bota de Oro se concede al máximo goleador del torneo. Si varios jugadores empatan a goles, las asistencias son el criterio de desempate, seguido de los menos minutos jugados. Entre los ganadores anteriores figuran Harry Kane (2018, 6 goles) y Kylian Mbappé (2022, 8 goles)."
+        },
+        "fr": {
+          "question": "Pour quoi le Soulier d'or est-il décerné lors du tournoi ?",
+          "options": [
+            "Meilleur gardien",
+            "Plus grand nombre de buts marqués",
+            "Meilleur défenseur",
+            "Plus grand nombre de passes décisives"
+          ],
+          "explanation": "Le Soulier d'or revient au meilleur buteur du tournoi. En cas d'égalité au nombre de buts, les passes décisives départagent les joueurs, puis le temps de jeu le plus faible. Parmi les anciens lauréats figurent Harry Kane (2018, 6 buts) et Kylian Mbappé (2022, 8 buts)."
+        },
+        "it": {
+          "question": "Per cosa viene assegnata la Scarpa d'Oro nel torneo?",
+          "options": [
+            "Miglior portiere",
+            "Maggior numero di gol segnati",
+            "Miglior difensore",
+            "Maggior numero di assist"
+          ],
+          "explanation": "La Scarpa d'Oro va al miglior marcatore del torneo. In caso di parità di gol, gli assist fanno da spareggio, seguiti dal minor numero di minuti giocati. Tra i vincitori del passato ci sono Harry Kane (2018, 6 gol) e Kylian Mbappé (2022, 8 gol)."
+        },
+        "ja": {
+          "question": "この大会でゴールデンブート賞は何に対して贈られますか？",
+          "options": [
+            "最優秀ゴールキーパー",
+            "最多得点",
+            "最優秀ディフェンダー",
+            "最多アシスト"
+          ],
+          "explanation": "ゴールデンブートは大会の得点王に贈られます。得点が並んだ場合はアシスト数で決まり、それも同じならプレー時間が少ない選手が優先されます。過去の受賞者にはハリー・ケイン（2018年、6得点）やキリアン・ムバッペ（2022年、8得点）がいます。"
+        },
+        "ko": {
+          "question": "이 대회에서 골든 부트 상은 무엇에 대해 수여되나요?",
+          "options": [
+            "최우수 골키퍼",
+            "최다 득점",
+            "최우수 수비수",
+            "최다 도움"
+          ],
+          "explanation": "골든 부트는 대회 최다 득점자에게 수여됩니다. 득점이 같을 경우 도움 수로 가리며, 그것도 같다면 출전 시간이 더 적은 선수가 우선됩니다. 역대 수상자로는 해리 케인(2018년, 6골)과 킬리안 음바페(2022년, 8골)가 있습니다."
+        },
+        "pt-BR": {
+          "question": "Por que a Chuteira de Ouro é concedida no torneio?",
+          "options": [
+            "Melhor goleiro",
+            "Mais gols marcados",
+            "Melhor defensor",
+            "Mais assistências"
+          ],
+          "explanation": "A Chuteira de Ouro vai para o artilheiro do torneio. Se houver empate em gols, as assistências são o critério de desempate, seguidas pelo menor tempo jogado. Entre os vencedores anteriores estão Harry Kane (2018, 6 gols) e Kylian Mbappé (2022, 8 gols)."
+        },
+        "zh-Hans": {
+          "question": "在本届赛事中，金靴奖是为表彰什么而颁发的？",
+          "options": [
+            "最佳门将",
+            "进球最多",
+            "最佳后卫",
+            "助攻最多"
+          ],
+          "explanation": "金靴奖颁发给赛事的最佳射手。如果球员进球数相同，则以助攻数作为决胜依据，其次比较出场时间更少者。past获奖者包括哈里·凯恩（2018年，6球）和基利安·姆巴佩（2022年，8球）。"
+        }
+      },
+      "i18nSourceHash": "5d666dd6cc3f3881"
     },
     {
       "id": "r-clean-sheet",
