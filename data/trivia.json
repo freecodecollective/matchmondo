@@ -2943,7 +2943,110 @@
       ],
       "answer": 1,
       "explanation": "Pelé was just 17 when he scored twice in the 1958 final against Sweden. The next youngest was Kylian Mbappé, who was 19 when he scored in the 2018 final.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو أصغر لاعب سجّل هدفًا في نهائي البطولة؟",
+          "options": [
+            "كيليان مبابي",
+            "بيليه",
+            "مايكل أوين",
+            "ليونيل ميسي"
+          ],
+          "explanation": "كان عمر بيليه 17 عامًا فقط عندما سجّل هدفين في نهائي 1958 ضد السويد. أما ثاني أصغر لاعب فهو كيليان مبابي الذي كان عمره 19 عامًا عندما سجّل في نهائي 2018."
+        },
+        "de": {
+          "question": "Wer ist der jüngste Spieler, der in einem Turnierfinale getroffen hat?",
+          "options": [
+            "Kylian Mbappé",
+            "Pelé",
+            "Michael Owen",
+            "Lionel Messi"
+          ],
+          "explanation": "Pelé war erst 17, als er im Finale 1958 gegen Schweden zweimal traf. Der zweitjüngste war Kylian Mbappé, der mit 19 Jahren im Finale 2018 traf."
+        },
+        "es": {
+          "question": "¿Quién es el jugador más joven en anotar en una final del torneo?",
+          "options": [
+            "Kylian Mbappé",
+            "Pelé",
+            "Michael Owen",
+            "Lionel Messi"
+          ],
+          "explanation": "Pelé tenía apenas 17 años cuando marcó dos goles en la final de 1958 ante Suecia. El segundo más joven fue Kylian Mbappé, que tenía 19 años cuando anotó en la final de 2018."
+        },
+        "es-ES": {
+          "question": "¿Quién es el jugador más joven en marcar en una final del torneo?",
+          "options": [
+            "Kylian Mbappé",
+            "Pelé",
+            "Michael Owen",
+            "Lionel Messi"
+          ],
+          "explanation": "Pelé tenía solo 17 años cuando marcó dos goles en la final de 1958 frente a Suecia. El segundo más joven fue Kylian Mbappé, que tenía 19 años cuando marcó en la final de 2018."
+        },
+        "fr": {
+          "question": "Quel est le plus jeune joueur à avoir marqué lors d'une finale du tournoi ?",
+          "options": [
+            "Kylian Mbappé",
+            "Pelé",
+            "Michael Owen",
+            "Lionel Messi"
+          ],
+          "explanation": "Pelé n'avait que 17 ans lorsqu'il a inscrit un doublé lors de la finale de 1958 contre la Suède. Le deuxième plus jeune est Kylian Mbappé, qui avait 19 ans quand il a marqué en finale en 2018."
+        },
+        "it": {
+          "question": "Chi è il giocatore più giovane ad aver segnato in una finale del torneo?",
+          "options": [
+            "Kylian Mbappé",
+            "Pelé",
+            "Michael Owen",
+            "Lionel Messi"
+          ],
+          "explanation": "Pelé aveva appena 17 anni quando segnò una doppietta nella finale del 1958 contro la Svezia. Il secondo più giovane è stato Kylian Mbappé, che aveva 19 anni quando andò a segno nella finale del 2018."
+        },
+        "ja": {
+          "question": "大会の決勝で得点した最年少の選手は誰でしょう？",
+          "options": [
+            "キリアン・ムバッペ",
+            "ペレ",
+            "マイケル・オーウェン",
+            "リオネル・メッシ"
+          ],
+          "explanation": "ペレは1958年のスウェーデンとの決勝でわずか17歳ながら2得点を記録しました。次に若いのはキリアン・ムバッペで、2018年の決勝で得点したときは19歳でした。"
+        },
+        "ko": {
+          "question": "대회 결승전에서 득점한 최연소 선수는 누구일까요?",
+          "options": [
+            "킬리안 음바페",
+            "펠레",
+            "마이클 오언",
+            "리오넬 메시"
+          ],
+          "explanation": "펠레는 1958년 스웨덴과의 결승전에서 단 17세의 나이로 두 골을 넣었습니다. 두 번째로 어린 선수는 킬리안 음바페로, 2018년 결승전에서 득점했을 때 19세였습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é o jogador mais jovem a marcar em uma final do torneio?",
+          "options": [
+            "Kylian Mbappé",
+            "Pelé",
+            "Michael Owen",
+            "Lionel Messi"
+          ],
+          "explanation": "Pelé tinha apenas 17 anos quando marcou dois gols na final de 1958 contra a Suécia. O segundo mais jovem foi Kylian Mbappé, que tinha 19 anos quando marcou na final de 2018."
+        },
+        "zh-Hans": {
+          "question": "在赛事决赛中进球的最年轻球员是谁？",
+          "options": [
+            "基利安·姆巴佩",
+            "贝利",
+            "迈克尔·欧文",
+            "利昂内尔·梅西"
+          ],
+          "explanation": "贝利在1958年对阵瑞典的决赛中梅开二度，当时年仅17岁。第二年轻的是基利安·姆巴佩，他在2018年决赛中进球时年仅19岁。"
+        }
+      },
+      "i18nSourceHash": "25d5ad2229a7040c"
     },
     {
       "id": "p-puskas",
@@ -2983,7 +3086,110 @@
       ],
       "answer": 2,
       "explanation": "The trophy weighs 6.175 kg and has been awarded since 1974 after Brazil kept the original Jules Rimet Trophy permanently. Winners get to hold the real trophy only briefly on the pitch — they then receive a gold-plated bronze replica to keep. The original stays with the governing body and no nation can keep it permanently again.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "الكأس الحالية مصنوعة من الذهب عيار 18 قيراطاً. كم يبلغ وزنها؟",
+          "options": [
+            "حوالي 2 كيلوغرام",
+            "حوالي 4 كيلوغرامات",
+            "حوالي 6 كيلوغرامات",
+            "حوالي 8 كيلوغرامات"
+          ],
+          "explanation": "يبلغ وزن الكأس 6.175 كيلوغرام، وتُمنح منذ عام 1974 بعد أن احتفظت البرازيل بكأس جول ريميه الأصلية بشكل دائم. لا يحمل الفائزون الكأس الحقيقية سوى لحظات قصيرة على أرض الملعب، ثم يحصلون على نسخة طبق الأصل من البرونز المطلي بالذهب للاحتفاظ بها. أما الكأس الأصلية فتبقى لدى الهيئة المنظمة، ولا يمكن لأي دولة الاحتفاظ بها بشكل دائم مجدداً."
+        },
+        "de": {
+          "question": "Die aktuelle Trophäe besteht aus 18-karätigem Gold. Wie viel wiegt sie?",
+          "options": [
+            "Etwa 2 kg",
+            "Etwa 4 kg",
+            "Etwa 6 kg",
+            "Etwa 8 kg"
+          ],
+          "explanation": "Die Trophäe wiegt 6,175 kg und wird seit 1974 vergeben, nachdem Brasilien die ursprüngliche Jules-Rimet-Trophäe für immer behalten durfte. Die Sieger dürfen die echte Trophäe nur kurz auf dem Spielfeld in die Höhe stemmen – danach erhalten sie eine vergoldete Bronzereplik zum Behalten. Das Original verbleibt beim Dachverband, und kein Land darf es jemals wieder dauerhaft behalten."
+        },
+        "es": {
+          "question": "El trofeo actual está hecho de oro de 18 quilates. ¿Cuánto pesa?",
+          "options": [
+            "Unos 2 kg",
+            "Unos 4 kg",
+            "Unos 6 kg",
+            "Unos 8 kg"
+          ],
+          "explanation": "El trofeo pesa 6,175 kg y se entrega desde 1974, luego de que Brasil se quedara definitivamente con el original Trofeo Jules Rimet. Los campeones solo sostienen el trofeo verdadero por un breve momento en la cancha; después reciben una réplica de bronce bañada en oro para conservar. El original permanece con el organismo rector y ningún país puede volver a quedárselo para siempre."
+        },
+        "es-ES": {
+          "question": "El trofeo actual está hecho de oro de 18 quilates. ¿Cuánto pesa?",
+          "options": [
+            "Unos 2 kg",
+            "Unos 4 kg",
+            "Unos 6 kg",
+            "Unos 8 kg"
+          ],
+          "explanation": "El trofeo pesa 6,175 kg y se entrega desde 1974, después de que Brasil se quedara para siempre con el Trofeo Jules Rimet original. Los campeones solo sostienen el trofeo auténtico durante un breve instante sobre el césped; luego reciben una réplica de bronce chapada en oro para conservarla. El original permanece en manos del organismo rector y ningún país puede volver a quedárselo de forma permanente."
+        },
+        "fr": {
+          "question": "Le trophée actuel est fait d'or 18 carats. Combien pèse-t-il ?",
+          "options": [
+            "Environ 2 kg",
+            "Environ 4 kg",
+            "Environ 6 kg",
+            "Environ 8 kg"
+          ],
+          "explanation": "Le trophée pèse 6,175 kg et est remis depuis 1974, après que le Brésil eut conservé définitivement le trophée original Jules Rimet. Les vainqueurs ne soulèvent le vrai trophée que brièvement sur la pelouse, puis reçoivent une réplique en bronze plaqué or qu'ils peuvent garder. L'original reste entre les mains de l'instance dirigeante et plus aucune nation ne peut le conserver définitivement."
+        },
+        "it": {
+          "question": "Il trofeo attuale è realizzato in oro a 18 carati. Quanto pesa?",
+          "options": [
+            "Circa 2 kg",
+            "Circa 4 kg",
+            "Circa 6 kg",
+            "Circa 8 kg"
+          ],
+          "explanation": "Il trofeo pesa 6,175 kg e viene assegnato dal 1974, dopo che il Brasile conservò per sempre l'originale Coppa Jules Rimet. I vincitori possono tenere in mano il trofeo vero solo per un breve momento sul campo, poi ricevono una replica in bronzo placcato oro da conservare. L'originale rimane all'organismo che governa il calcio e nessuna nazione può più tenerlo in via definitiva."
+        },
+        "ja": {
+          "question": "現在のトロフィーは18金で作られています。その重さはどれくらいでしょう？",
+          "options": [
+            "約2kg",
+            "約4kg",
+            "約6kg",
+            "約8kg"
+          ],
+          "explanation": "このトロフィーの重さは6.175kgで、ブラジルが元のジュール・リメ杯を永久保持した後、1974年から授与されています。優勝チームはピッチ上で本物のトロフィーを短時間掲げることしかできず、その後は金メッキされたブロンズ製のレプリカを保持用として受け取ります。本物は統括団体が保管し、いかなる国も再び永久に保持することはできません。"
+        },
+        "ko": {
+          "question": "현재 트로피는 18캐럿 금으로 만들어졌습니다. 무게는 얼마나 될까요?",
+          "options": [
+            "약 2kg",
+            "약 4kg",
+            "약 6kg",
+            "약 8kg"
+          ],
+          "explanation": "이 트로피의 무게는 6.175kg이며, 브라질이 원조 줄리메 컵을 영구히 소유하게 된 이후 1974년부터 수여되고 있습니다. 우승팀은 경기장에서 진짜 트로피를 잠시 들어 올릴 수 있을 뿐이며, 이후에는 보관용으로 금도금된 청동 복제품을 받습니다. 원본은 주관 단체가 보관하며, 그 어떤 나라도 다시는 영구히 소유할 수 없습니다."
+        },
+        "pt-BR": {
+          "question": "O troféu atual é feito de ouro 18 quilates. Quanto ele pesa?",
+          "options": [
+            "Cerca de 2 kg",
+            "Cerca de 4 kg",
+            "Cerca de 6 kg",
+            "Cerca de 8 kg"
+          ],
+          "explanation": "O troféu pesa 6,175 kg e é entregue desde 1974, depois que o Brasil ficou em definitivo com a Taça Jules Rimet original. Os campeões só seguram o troféu verdadeiro por um breve momento no gramado e, em seguida, recebem uma réplica de bronze banhada a ouro para guardar. O original permanece com a entidade organizadora, e nenhuma nação pode mais ficar com ele de forma permanente."
+        },
+        "zh-Hans": {
+          "question": "现在的奖杯由18K黄金制成。它有多重？",
+          "options": [
+            "约2公斤",
+            "约4公斤",
+            "约6公斤",
+            "约8公斤"
+          ],
+          "explanation": "这座奖杯重6.175公斤，自1974年起开始颁发，此前巴西永久保留了最初的雷米特杯。冠军球队只能在球场上短暂举起真正的奖杯，随后会获得一座镀金青铜复制品留作纪念。原件由管理机构保管，任何国家都无法再次永久保留它。"
+        }
+      },
+      "i18nSourceHash": "8cb943dd4b715ee4"
     },
     {
       "id": "p-cr7-five-editions",
@@ -2997,7 +3203,110 @@
       ],
       "answer": 1,
       "explanation": "Cristiano Ronaldo scored at every edition from 2006 to 2022 — five consecutive tournaments, a record no player had achieved before. The next longest streak is four consecutive editions, held by Miroslav Klose (2002–2014) and Pelé (1958–1970).",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو أول لاعب يسجل في خمس نسخ متتالية من البطولة؟",
+          "options": [
+            "ليونيل ميسي",
+            "كريستيانو رونالدو",
+            "ميروسلاف كلوزه",
+            "بيليه"
+          ],
+          "explanation": "سجّل كريستيانو رونالدو في كل نسخة من عام 2006 حتى عام 2022 — خمس بطولات متتالية، وهو رقم قياسي لم يحققه أي لاعب من قبل. وأطول سلسلة تلية هي أربع نسخ متتالية، ويملكها ميروسلاف كلوزه (2002–2014) وبيليه (1958–1970)."
+        },
+        "de": {
+          "question": "Wer war der erste Spieler, der bei fünf aufeinanderfolgenden Turnierausgaben traf?",
+          "options": [
+            "Lionel Messi",
+            "Cristiano Ronaldo",
+            "Miroslav Klose",
+            "Pelé"
+          ],
+          "explanation": "Cristiano Ronaldo traf bei jeder Ausgabe von 2006 bis 2022 — fünf Turniere in Folge, ein Rekord, den zuvor kein Spieler erreicht hatte. Die nächstlängste Serie umfasst vier aufeinanderfolgende Ausgaben und wird von Miroslav Klose (2002–2014) und Pelé (1958–1970) gehalten."
+        },
+        "es": {
+          "question": "¿Quién fue el primer jugador en marcar en cinco ediciones consecutivas del torneo?",
+          "options": [
+            "Lionel Messi",
+            "Cristiano Ronaldo",
+            "Miroslav Klose",
+            "Pelé"
+          ],
+          "explanation": "Cristiano Ronaldo anotó en cada edición desde 2006 hasta 2022: cinco torneos consecutivos, un récord que ningún jugador había logrado antes. La siguiente racha más larga es de cuatro ediciones consecutivas, en manos de Miroslav Klose (2002–2014) y Pelé (1958–1970)."
+        },
+        "es-ES": {
+          "question": "¿Quién fue el primer jugador en marcar en cinco ediciones consecutivas del torneo?",
+          "options": [
+            "Lionel Messi",
+            "Cristiano Ronaldo",
+            "Miroslav Klose",
+            "Pelé"
+          ],
+          "explanation": "Cristiano Ronaldo marcó en cada edición desde 2006 hasta 2022: cinco torneos consecutivos, un récord que ningún jugador había logrado antes. La siguiente racha más larga es de cuatro ediciones consecutivas, en poder de Miroslav Klose (2002–2014) y Pelé (1958–1970)."
+        },
+        "fr": {
+          "question": "Qui a été le premier joueur à marquer lors de cinq éditions consécutives du tournoi ?",
+          "options": [
+            "Lionel Messi",
+            "Cristiano Ronaldo",
+            "Miroslav Klose",
+            "Pelé"
+          ],
+          "explanation": "Cristiano Ronaldo a marqué à chaque édition de 2006 à 2022 — cinq tournois consécutifs, un record qu'aucun joueur n'avait atteint auparavant. La plus longue série suivante est de quatre éditions consécutives, détenue par Miroslav Klose (2002–2014) et Pelé (1958–1970)."
+        },
+        "it": {
+          "question": "Chi è stato il primo giocatore a segnare in cinque edizioni consecutive del torneo?",
+          "options": [
+            "Lionel Messi",
+            "Cristiano Ronaldo",
+            "Miroslav Klose",
+            "Pelé"
+          ],
+          "explanation": "Cristiano Ronaldo ha segnato in ogni edizione dal 2006 al 2022 — cinque tornei consecutivi, un record che nessun giocatore aveva mai raggiunto prima. La serie più lunga successiva è di quattro edizioni consecutive, detenuta da Miroslav Klose (2002–2014) e Pelé (1958–1970)."
+        },
+        "ja": {
+          "question": "大会の5大会連続で得点を挙げた最初の選手は誰でしょう？",
+          "options": [
+            "リオネル・メッシ",
+            "クリスティアーノ・ロナウド",
+            "ミロスラフ・クローゼ",
+            "ペレ"
+          ],
+          "explanation": "クリスティアーノ・ロナウドは2006年から2022年までのすべての大会で得点を挙げ、5大会連続というそれまでどの選手も成し遂げていなかった記録を打ち立てました。次に長い記録は4大会連続で、ミロスラフ・クローゼ（2002年〜2014年）とペレ（1958年〜1970年）が保持しています。"
+        },
+        "ko": {
+          "question": "이 대회 5회 연속으로 득점한 최초의 선수는 누구일까요?",
+          "options": [
+            "리오넬 메시",
+            "크리스티아누 호날두",
+            "미로슬라프 클로제",
+            "펠레"
+          ],
+          "explanation": "크리스티아누 호날두는 2006년부터 2022년까지 모든 대회에서 득점했습니다. 5회 연속 득점은 이전까지 어떤 선수도 달성하지 못한 기록입니다. 그다음으로 긴 기록은 4회 연속이며, 미로슬라프 클로제(2002~2014)와 펠레(1958~1970)가 보유하고 있습니다."
+        },
+        "pt-BR": {
+          "question": "Quem foi o primeiro jogador a marcar em cinco edições consecutivas do torneio?",
+          "options": [
+            "Lionel Messi",
+            "Cristiano Ronaldo",
+            "Miroslav Klose",
+            "Pelé"
+          ],
+          "explanation": "Cristiano Ronaldo marcou em todas as edições de 2006 a 2022 — cinco torneios consecutivos, um recorde que nenhum jogador havia alcançado antes. A segunda maior sequência é de quatro edições consecutivas, detida por Miroslav Klose (2002–2014) e Pelé (1958–1970)."
+        },
+        "zh-Hans": {
+          "question": "谁是首位在该赛事连续五届都取得进球的球员？",
+          "options": [
+            "利昂内尔·梅西",
+            "克里斯蒂亚诺·罗纳尔多",
+            "米罗斯拉夫·克洛泽",
+            "贝利"
+          ],
+          "explanation": "克里斯蒂亚诺·罗纳尔多从2006年到2022年的每一届赛事都有进球——连续五届，这是此前没有任何球员达成过的纪录。其次最长的连续进球纪录为四届，由米罗斯拉夫·克洛泽（2002—2014）和贝利（1958—1970）保持。"
+        }
+      },
+      "i18nSourceHash": "429e66602c398d15"
     },
     {
       "id": "p-yashin",
@@ -3206,7 +3515,110 @@
       ],
       "answer": 2,
       "explanation": "Right-back Cafu is the only player to appear in three successive finals, winning two (1994 and 2002) and losing one (1998 to France). He captained Brazil in 2002 and earned 142 caps across his career — a Brazilian record at the time. Known for his tireless runs down the right flank, he was nicknamed 'Il Pendolino' (the express train) during his time at AC Milan.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أي لاعب برازيلي ظهر في ثلاث نهائيات متتالية (1994، 1998، 2002)؟",
+          "options": [
+            "روبرتو كارلوس",
+            "رونالدو",
+            "كافو",
+            "ريفالدو"
+          ],
+          "explanation": "الظهير الأيمن كافو هو اللاعب الوحيد الذي شارك في ثلاث نهائيات متتالية، فاز باثنتين (1994 و2002) وخسر واحدة (1998 أمام فرنسا). قاد البرازيل كقائد للمنتخب عام 2002 وخاض 142 مباراة دولية طوال مسيرته — وهو رقم قياسي برازيلي في ذلك الوقت. اشتهر بانطلاقاته التي لا تكل على الجهة اليمنى، ولُقّب بـ'Il Pendolino' (القطار السريع) خلال فترة لعبه مع إيه سي ميلان."
+        },
+        "de": {
+          "question": "Welcher Brasilianer stand in drei aufeinanderfolgenden Endspielen (1994, 1998, 2002)?",
+          "options": [
+            "Roberto Carlos",
+            "Ronaldo",
+            "Cafu",
+            "Rivaldo"
+          ],
+          "explanation": "Der Rechtsverteidiger Cafu ist der einzige Spieler, der in drei aufeinanderfolgenden Endspielen stand: Zwei gewann er (1994 und 2002), eines verlor er (1998 gegen Frankreich). 2002 führte er Brasilien als Kapitän an und brachte es im Laufe seiner Karriere auf 142 Länderspiele — damals brasilianischer Rekord. Bekannt für seine unermüdlichen Vorstöße über die rechte Seite, trug er während seiner Zeit bei der AC Mailand den Spitznamen 'Il Pendolino' (der Schnellzug)."
+        },
+        "es": {
+          "question": "¿Qué brasileño jugó tres finales consecutivas (1994, 1998 y 2002)?",
+          "options": [
+            "Roberto Carlos",
+            "Ronaldo",
+            "Cafú",
+            "Rivaldo"
+          ],
+          "explanation": "El lateral derecho Cafú es el único jugador que disputó tres finales seguidas: ganó dos (1994 y 2002) y perdió una (1998 ante Francia). Fue capitán de Brasil en 2002 y sumó 142 partidos internacionales a lo largo de su carrera, un récord brasileño en aquel momento. Famoso por sus incansables subidas por la banda derecha, fue apodado 'Il Pendolino' (el tren expreso) durante su etapa en el AC Milan."
+        },
+        "es-ES": {
+          "question": "¿Qué brasileño disputó tres finales consecutivas (1994, 1998 y 2002)?",
+          "options": [
+            "Roberto Carlos",
+            "Ronaldo",
+            "Cafú",
+            "Rivaldo"
+          ],
+          "explanation": "El lateral derecho Cafú es el único jugador que jugó tres finales seguidas: ganó dos (1994 y 2002) y perdió una (1998 frente a Francia). Fue capitán de Brasil en 2002 y acumuló 142 internacionalidades a lo largo de su carrera, todo un récord brasileño por aquel entonces. Conocido por sus incansables incorporaciones por la banda derecha, fue apodado 'Il Pendolino' (el tren expreso) durante su etapa en el AC Milan."
+        },
+        "fr": {
+          "question": "Quel Brésilien a disputé trois finales consécutives (1994, 1998, 2002) ?",
+          "options": [
+            "Roberto Carlos",
+            "Ronaldo",
+            "Cafu",
+            "Rivaldo"
+          ],
+          "explanation": "Le latéral droit Cafu est le seul joueur à avoir disputé trois finales d'affilée : il en a remporté deux (1994 et 2002) et perdu une (1998 face à la France). Il a porté le brassard de capitaine du Brésil en 2002 et compte 142 sélections au cours de sa carrière — un record brésilien à l'époque. Réputé pour ses montées inlassables sur le flanc droit, il était surnommé 'Il Pendolino' (le train express) pendant son passage à l'AC Milan."
+        },
+        "it": {
+          "question": "Quale brasiliano ha disputato tre finali consecutive (1994, 1998, 2002)?",
+          "options": [
+            "Roberto Carlos",
+            "Ronaldo",
+            "Cafu",
+            "Rivaldo"
+          ],
+          "explanation": "Il terzino destro Cafu è l'unico giocatore ad aver disputato tre finali consecutive: ne ha vinte due (1994 e 2002) e persa una (1998 contro la Francia). Nel 2002 ha guidato il Brasile da capitano e ha collezionato 142 presenze in carriera con la nazionale — all'epoca un record brasiliano. Famoso per le sue instancabili sgroppate sulla fascia destra, durante la sua militanza all'AC Milan fu soprannominato 'Il Pendolino'."
+        },
+        "ja": {
+          "question": "3大会連続で決勝に出場したブラジル人選手は誰でしょう（1994年、1998年、2002年）？",
+          "options": [
+            "ロベルト・カルロス",
+            "ロナウド",
+            "カフー",
+            "リヴァウド"
+          ],
+          "explanation": "右サイドバックのカフーは、3大会連続で決勝に出場した唯一の選手です。うち2回（1994年と2002年）を制し、1回（1998年、フランス相手）は敗れました。2002年にはブラジル代表のキャプテンを務め、キャリアを通じて142試合に出場——これは当時のブラジル記録でした。右サイドを駆け上がる疲れ知らずのプレーで知られ、ACミラン在籍時には『イル・ペンドリーノ（特急列車）』の愛称で呼ばれました。"
+        },
+        "ko": {
+          "question": "3개 대회 연속(1994, 1998, 2002) 결승에 출전한 브라질 선수는 누구일까요?",
+          "options": [
+            "호베르투 카를로스",
+            "호나우두",
+            "카푸",
+            "히바우두"
+          ],
+          "explanation": "오른쪽 측면 수비수 카푸는 3개 대회 연속으로 결승에 오른 유일한 선수로, 두 번(1994년과 2002년)은 우승하고 한 번(1998년 프랑스전)은 패했습니다. 2002년에는 브라질의 주장을 맡았고, 선수 생활 동안 142경기에 출전해 당시 브라질 최다 출전 기록을 세웠습니다. 오른쪽 측면을 지칠 줄 모르고 오르내리는 플레이로 유명했으며, AC 밀란 시절에는 '일 펜돌리노'(특급열차)라는 별명으로 불렸습니다."
+        },
+        "pt-BR": {
+          "question": "Qual brasileiro disputou três finais consecutivas (1994, 1998 e 2002)?",
+          "options": [
+            "Roberto Carlos",
+            "Ronaldo",
+            "Cafu",
+            "Rivaldo"
+          ],
+          "explanation": "O lateral-direito Cafu é o único jogador a disputar três finais seguidas: venceu duas (1994 e 2002) e perdeu uma (1998 para a França). Foi capitão do Brasil em 2002 e somou 142 jogos pela seleção ao longo da carreira — um recorde brasileiro na época. Conhecido pelas suas incansáveis subidas pela ponta direita, ganhou o apelido de 'Il Pendolino' (o trem-bala) durante sua passagem pelo Milan."
+        },
+        "zh-Hans": {
+          "question": "哪位巴西球员连续三届（1994年、1998年、2002年）打入决赛？",
+          "options": [
+            "罗伯托·卡洛斯",
+            "罗纳尔多",
+            "卡福",
+            "里瓦尔多"
+          ],
+          "explanation": "右后卫卡福是唯一连续三届杀入决赛的球员，其中两次夺冠（1994年和2002年），一次告负（1998年负于法国）。他在2002年担任巴西队队长，职业生涯共代表国家队出场142次，是当时的巴西纪录。他以在右路不知疲倦的奔袭著称，效力AC米兰期间被昵称为“Il Pendolino”（特快列车）。"
+        }
+      },
+      "i18nSourceHash": "5df9b70a433475d0"
     },
     {
       "id": "t-usa-1930",
@@ -3311,7 +3723,110 @@
       ],
       "answer": 1,
       "explanation": "Germany has reached the final 8 times (1954, 1966, 1974, 1982, 1986, 1990, 2002, 2014), winning four. Next is Brazil with 7 finals and 5 wins — the most titles of any nation. Italy and Argentina follow with 6 final appearances each (Italy won 4, Argentina won 3).",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ما هي الدولة التي ظهرت في أكبر عدد من النهائيات؟",
+          "options": [
+            "البرازيل (7)",
+            "ألمانيا (8)",
+            "إيطاليا (6)",
+            "الأرجنتين (6)"
+          ],
+          "explanation": "وصلت ألمانيا إلى النهائي 8 مرات (1954، 1966، 1974، 1982، 1986، 1990، 2002، 2014)، وفازت بأربعة منها. تليها البرازيل بـ 7 نهائيات و5 ألقاب — وهو أكبر عدد من الألقاب لأي دولة. ثم تأتي إيطاليا والأرجنتين بظهور في 6 نهائيات لكل منهما (فازت إيطاليا بـ 4 والأرجنتين بـ 3)."
+        },
+        "de": {
+          "question": "Welche Nation stand in den meisten Endspielen?",
+          "options": [
+            "Brasilien (7)",
+            "Deutschland (8)",
+            "Italien (6)",
+            "Argentinien (6)"
+          ],
+          "explanation": "Deutschland erreichte das Finale 8 Mal (1954, 1966, 1974, 1982, 1986, 1990, 2002, 2014) und gewann viermal. Danach folgt Brasilien mit 7 Endspielen und 5 Titeln — die meisten Titel aller Nationen. Italien und Argentinien folgen mit je 6 Finalteilnahmen (Italien gewann 4, Argentinien 3)."
+        },
+        "es": {
+          "question": "¿Qué país ha jugado más finales?",
+          "options": [
+            "Brasil (7)",
+            "Alemania (8)",
+            "Italia (6)",
+            "Argentina (6)"
+          ],
+          "explanation": "Alemania llegó a la final 8 veces (1954, 1966, 1974, 1982, 1986, 1990, 2002, 2014) y ganó cuatro. Le sigue Brasil con 7 finales y 5 títulos, la mayor cantidad de cualquier país. Italia y Argentina vienen después con 6 finales cada una (Italia ganó 4 y Argentina 3)."
+        },
+        "es-ES": {
+          "question": "¿Qué país ha disputado más finales?",
+          "options": [
+            "Brasil (7)",
+            "Alemania (8)",
+            "Italia (6)",
+            "Argentina (6)"
+          ],
+          "explanation": "Alemania ha llegado a la final 8 veces (1954, 1966, 1974, 1982, 1986, 1990, 2002, 2014) y ha ganado cuatro. Le sigue Brasil con 7 finales y 5 títulos, los más de cualquier país. Italia y Argentina vienen después con 6 finales cada una (Italia ganó 4 y Argentina 3)."
+        },
+        "fr": {
+          "question": "Quelle nation a disputé le plus de finales ?",
+          "options": [
+            "Brésil (7)",
+            "Allemagne (8)",
+            "Italie (6)",
+            "Argentine (6)"
+          ],
+          "explanation": "L'Allemagne a atteint la finale 8 fois (1954, 1966, 1974, 1982, 1986, 1990, 2002, 2014), en remportant quatre. Vient ensuite le Brésil avec 7 finales et 5 victoires — le plus grand nombre de titres pour une nation. L'Italie et l'Argentine suivent avec 6 finales chacune (l'Italie en a gagné 4, l'Argentine 3)."
+        },
+        "it": {
+          "question": "Quale nazione ha disputato il maggior numero di finali?",
+          "options": [
+            "Brasile (7)",
+            "Germania (8)",
+            "Italia (6)",
+            "Argentina (6)"
+          ],
+          "explanation": "La Germania ha raggiunto la finale 8 volte (1954, 1966, 1974, 1982, 1986, 1990, 2002, 2014), vincendone quattro. Segue il Brasile con 7 finali e 5 vittorie — il maggior numero di titoli per qualsiasi nazione. Italia e Argentina seguono con 6 finali ciascuna (l'Italia ne ha vinte 4, l'Argentina 3)."
+        },
+        "ja": {
+          "question": "最も多く決勝に進出した国はどこ？",
+          "options": [
+            "ブラジル（7）",
+            "ドイツ（8）",
+            "イタリア（6）",
+            "アルゼンチン（6）"
+          ],
+          "explanation": "ドイツは決勝に8回進出し（1954年、1966年、1974年、1982年、1986年、1990年、2002年、2014年）、そのうち4回優勝しています。次はブラジルで7回の決勝進出と5回の優勝——これはどの国よりも多いタイトル数です。続いてイタリアとアルゼンチンがそれぞれ6回の決勝進出（イタリアは4回、アルゼンチンは3回優勝）。"
+        },
+        "ko": {
+          "question": "결승에 가장 많이 진출한 나라는 어디일까요?",
+          "options": [
+            "브라질 (7)",
+            "독일 (8)",
+            "이탈리아 (6)",
+            "아르헨티나 (6)"
+          ],
+          "explanation": "독일은 결승에 8번 진출했으며(1954, 1966, 1974, 1982, 1986, 1990, 2002, 2014) 그중 네 번 우승했습니다. 다음은 브라질로 7번의 결승 진출과 5번의 우승을 기록했는데, 이는 어느 나라보다도 많은 우승 횟수입니다. 이탈리아와 아르헨티나가 각각 6번의 결승 진출로 그 뒤를 잇습니다(이탈리아는 4회, 아르헨티나는 3회 우승)."
+        },
+        "pt-BR": {
+          "question": "Qual país disputou mais finais?",
+          "options": [
+            "Brasil (7)",
+            "Alemanha (8)",
+            "Itália (6)",
+            "Argentina (6)"
+          ],
+          "explanation": "A Alemanha chegou à final 8 vezes (1954, 1966, 1974, 1982, 1986, 1990, 2002, 2014), vencendo quatro. Em seguida vem o Brasil, com 7 finais e 5 títulos — o maior número de títulos de qualquer país. Itália e Argentina aparecem depois, com 6 finais cada (a Itália venceu 4 e a Argentina, 3)."
+        },
+        "zh-Hans": {
+          "question": "哪个国家进入决赛的次数最多？",
+          "options": [
+            "巴西（7）",
+            "德国（8）",
+            "意大利（6）",
+            "阿根廷（6）"
+          ],
+          "explanation": "德国曾8次闯入决赛（1954、1966、1974、1982、1986、1990、2002、2014年），其中夺冠四次。其次是巴西，7次进入决赛并5次夺冠——这是所有国家中冠军数量最多的。意大利和阿根廷紧随其后，各进入决赛6次（意大利夺冠4次，阿根廷夺冠3次）。"
+        }
+      },
+      "i18nSourceHash": "839635539e13b129"
     },
     {
       "id": "r-two-yellows",
