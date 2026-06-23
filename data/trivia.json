@@ -5075,7 +5075,110 @@
       ],
       "answer": 1,
       "explanation": "A clean sheet refers to a defensive achievement where a team prevents the opposing team from scoring throughout the entire match. It's a key metric for measuring defensive performance in football.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "في كرة القدم، ماذا يعني مصطلح 'الشباك النظيفة' (clean sheet)؟",
+          "options": [
+            "فوز الفريق بتسجيل 3 أهداف أو أكثر",
+            "إنهاء الفريق للمباراة دون استقبال أي أهداف",
+            "تمرير اللاعب لكرة مثالية دون أي أخطاء",
+            "تصدّي حارس المرمى للكرة دون استخدام يديه"
+          ],
+          "explanation": "تشير 'الشباك النظيفة' إلى إنجاز دفاعي يمنع فيه الفريق منافسه من التسجيل طوال المباراة بأكملها. وهي مقياس أساسي لتقييم الأداء الدفاعي في كرة القدم."
+        },
+        "de": {
+          "question": "Was bedeutet im Fußball ein „Clean Sheet“ (zu Null spielen)?",
+          "options": [
+            "Eine Mannschaft gewinnt mit 3 oder mehr erzielten Toren",
+            "Eine Mannschaft beendet ein Spiel, ohne ein Gegentor zu kassieren",
+            "Ein Spieler spielt einen perfekten Pass ohne jeden Fehler",
+            "Ein Torwart pariert einen Ball, ohne die Hände zu benutzen"
+          ],
+          "explanation": "Ein „Clean Sheet“ steht für eine defensive Leistung, bei der eine Mannschaft den Gegner über das gesamte Spiel hinweg an einem Torerfolg hindert. Es ist eine wichtige Kennzahl zur Bewertung der Defensivleistung im Fußball."
+        },
+        "es": {
+          "question": "En el fútbol, ¿qué significa una „valla invicta“ (clean sheet)?",
+          "options": [
+            "Un equipo gana anotando 3 goles o más",
+            "Un equipo termina un partido sin recibir ningún gol",
+            "Un jugador da un pase perfecto sin ningún error",
+            "Un arquero hace una atajada sin usar las manos"
+          ],
+          "explanation": "Una valla invicta se refiere a un logro defensivo en el que un equipo evita que el rival anote durante todo el partido. Es una métrica clave para medir el rendimiento defensivo en el fútbol."
+        },
+        "es-ES": {
+          "question": "En el fútbol, ¿qué significa una „portería a cero“ (clean sheet)?",
+          "options": [
+            "Un equipo gana marcando 3 goles o más",
+            "Un equipo termina un partido sin encajar ningún gol",
+            "Un jugador da un pase perfecto sin ningún error",
+            "Un portero hace una parada sin usar las manos"
+          ],
+          "explanation": "Una portería a cero se refiere a un logro defensivo en el que un equipo impide que el rival marque durante todo el partido. Es una métrica clave para medir el rendimiento defensivo en el fútbol."
+        },
+        "fr": {
+          "question": "Au football, que signifie un « clean sheet » (cage inviolée) ?",
+          "options": [
+            "Une équipe gagne en marquant 3 buts ou plus",
+            "Une équipe termine un match sans encaisser le moindre but",
+            "Un joueur réalise une passe parfaite sans aucune erreur",
+            "Un gardien réalise un arrêt sans utiliser ses mains"
+          ],
+          "explanation": "Un « clean sheet » désigne une performance défensive où une équipe empêche l'adversaire de marquer pendant toute la durée du match. C'est un indicateur clé pour évaluer le rendement défensif au football."
+        },
+        "it": {
+          "question": "Nel calcio, cosa significa un „clean sheet“ (porta inviolata)?",
+          "options": [
+            "Una squadra vince segnando 3 o più gol",
+            "Una squadra termina una partita senza subire alcun gol",
+            "Un giocatore effettua un passaggio perfetto senza alcun errore",
+            "Un portiere compie una parata senza usare le mani"
+          ],
+          "explanation": "Un „clean sheet“ indica un risultato difensivo in cui una squadra impedisce agli avversari di segnare per l'intera durata della partita. È un parametro fondamentale per valutare il rendimento difensivo nel calcio."
+        },
+        "ja": {
+          "question": "サッカーで「クリーンシート（clean sheet）」とは何を意味しますか？",
+          "options": [
+            "チームが3点以上を挙げて勝利すること",
+            "チームが1失点もせずに試合を終えること",
+            "選手がミスなく完璧なパスを出すこと",
+            "ゴールキーパーが手を使わずにセーブをすること"
+          ],
+          "explanation": "クリーンシートとは、試合を通して相手チームの得点を許さない守備面での成果を指します。サッカーにおける守備のパフォーマンスを測る重要な指標です。"
+        },
+        "ko": {
+          "question": "축구에서 '클린 시트(clean sheet)'란 무엇을 의미하나요?",
+          "options": [
+            "팀이 3골 이상을 넣어 승리하는 것",
+            "팀이 한 골도 실점하지 않고 경기를 마치는 것",
+            "선수가 실수 없이 완벽한 패스를 하는 것",
+            "골키퍼가 손을 사용하지 않고 선방하는 것"
+          ],
+          "explanation": "클린 시트는 한 팀이 경기 내내 상대 팀의 득점을 막아내는 수비적 성과를 의미합니다. 축구에서 수비 능력을 평가하는 핵심 지표입니다."
+        },
+        "pt-BR": {
+          "question": "No futebol, o que significa um „clean sheet“ (jogo sem sofrer gols)?",
+          "options": [
+            "Um time vence marcando 3 ou mais gols",
+            "Um time termina uma partida sem sofrer nenhum gol",
+            "Um jogador faz um passe perfeito sem nenhum erro",
+            "Um goleiro faz uma defesa sem usar as mãos"
+          ],
+          "explanation": "Um clean sheet refere-se a um feito defensivo em que um time impede o adversário de marcar durante toda a partida. É uma métrica fundamental para avaliar o desempenho defensivo no futebol."
+        },
+        "zh-Hans": {
+          "question": "在足球中，“零封”（clean sheet）是什么意思？",
+          "options": [
+            "球队以3球或更多的进球数取胜",
+            "球队在整场比赛中一球未失",
+            "球员完成一次毫无失误的完美传球",
+            "守门员不用手就完成扑救"
+          ],
+          "explanation": "“零封”指的是一种防守成就，即一支球队在整场比赛中阻止对手得分。它是衡量足球防守表现的关键指标。"
+        }
+      },
+      "i18nSourceHash": "799583c3a6af00e6"
     },
     {
       "id": "tf-brazil-every-edition",
@@ -5101,7 +5204,90 @@
       "answer": 0,
       "explanation": "The 2026 edition expands from 32 to 48 teams, meaning 104 matches across 16 host cities in the United States, Mexico, and Canada.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ستكون بطولة 2026 أول نسخة تضم 48 منتخباً.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "تتوسع نسخة 2026 من 32 إلى 48 منتخباً، ما يعني إقامة 104 مباريات في 16 مدينة مضيفة عبر الولايات المتحدة والمكسيك وكندا."
+        },
+        "de": {
+          "question": "Das Turnier 2026 wird das erste mit 48 Mannschaften sein.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Die Ausgabe 2026 wird von 32 auf 48 Mannschaften erweitert, was 104 Spiele in 16 Austragungsstädten in den USA, Mexiko und Kanada bedeutet."
+        },
+        "es": {
+          "question": "El torneo de 2026 será el primero en contar con 48 selecciones.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "La edición de 2026 pasa de 32 a 48 selecciones, lo que significa 104 partidos en 16 ciudades sede de Estados Unidos, México y Canadá."
+        },
+        "es-ES": {
+          "question": "El torneo de 2026 será el primero en contar con 48 selecciones.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "La edición de 2026 pasa de 32 a 48 selecciones, lo que supone 104 partidos en 16 ciudades anfitrionas de Estados Unidos, México y Canadá."
+        },
+        "fr": {
+          "question": "Le tournoi de 2026 sera le premier à réunir 48 équipes.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "L'édition 2026 passe de 32 à 48 équipes, soit 104 matchs répartis dans 16 villes hôtes aux États-Unis, au Mexique et au Canada."
+        },
+        "it": {
+          "question": "Il torneo del 2026 sarà il primo a includere 48 squadre.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "L'edizione 2026 passa da 32 a 48 squadre, il che significa 104 partite in 16 città ospitanti tra Stati Uniti, Messico e Canada."
+        },
+        "ja": {
+          "question": "2026年の大会は、48チームが出場する初めての大会となります。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "2026年大会は32チームから48チームに拡大され、アメリカ、メキシコ、カナダの16の開催都市で104試合が行われます。"
+        },
+        "ko": {
+          "question": "2026년 대회는 48개 팀이 참가하는 최초의 대회가 됩니다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "2026년 대회는 32개 팀에서 48개 팀으로 확대되어, 미국, 멕시코, 캐나다의 16개 개최 도시에서 104경기가 열립니다."
+        },
+        "pt-BR": {
+          "question": "O torneio de 2026 será o primeiro a contar com 48 seleções.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A edição de 2026 passa de 32 para 48 seleções, o que significa 104 partidas em 16 cidades-sede nos Estados Unidos, no México e no Canadá."
+        },
+        "zh-Hans": {
+          "question": "2026年赛事将是首次有48支球队参赛的赛事。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "2026年这届赛事将从32支球队扩充至48支，意味着在美国、墨西哥和加拿大的16座主办城市进行104场比赛。"
+        }
+      },
+      "i18nSourceHash": "c57ba8c77bcde3cf"
     },
     {
       "id": "tf-var-2014",
@@ -5114,7 +5300,90 @@
       "answer": 1,
       "explanation": "VAR debuted at the 2018 tournament in Russia. The 2014 edition in Brazil still relied entirely on on-field officials.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "تم استخدام تقنية حكم الفيديو المساعد (VAR) لأول مرة في بطولة 2014 في البرازيل.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "ظهرت تقنية حكم الفيديو المساعد لأول مرة في بطولة 2018 في روسيا. أما نسخة 2014 في البرازيل فقد اعتمدت بالكامل على الحكام داخل الملعب."
+        },
+        "de": {
+          "question": "Der Videobeweis (VAR) kam erstmals beim Turnier 2014 in Brasilien zum Einsatz.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Der Videobeweis feierte sein Debüt beim Turnier 2018 in Russland. Bei der Ausgabe 2014 in Brasilien verließ man sich noch vollständig auf die Schiedsrichter auf dem Platz."
+        },
+        "es": {
+          "question": "El VAR (árbitro asistente de video) se usó por primera vez en el torneo de 2014 en Brasil.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "El VAR debutó en el torneo de 2018 en Rusia. La edición de 2014 en Brasil aún dependía por completo de los árbitros en el campo."
+        },
+        "es-ES": {
+          "question": "El VAR (videoarbitraje) se utilizó por primera vez en el torneo de 2014 en Brasil.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "El VAR debutó en el torneo de 2018 en Rusia. La edición de 2014 en Brasil aún dependía por completo de los colegiados sobre el césped."
+        },
+        "fr": {
+          "question": "L'assistance vidéo à l'arbitrage (VAR) a été utilisée pour la première fois lors du tournoi de 2014 au Brésil.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "La VAR a fait ses débuts lors du tournoi de 2018 en Russie. L'édition de 2014 au Brésil reposait encore entièrement sur les arbitres présents sur le terrain."
+        },
+        "it": {
+          "question": "Il VAR (Video Assistant Referee) è stato utilizzato per la prima volta nel torneo del 2014 in Brasile.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Il VAR ha debuttato nel torneo del 2018 in Russia. L'edizione del 2014 in Brasile faceva ancora affidamento esclusivamente sugli arbitri in campo."
+        },
+        "ja": {
+          "question": "VAR（ビデオ・アシスタント・レフェリー）は、2014年のブラジル大会で初めて使用された。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "VARが初めて導入されたのは2018年のロシア大会です。2014年のブラジル大会では、依然としてピッチ上の審判だけに頼っていました。"
+        },
+        "ko": {
+          "question": "VAR(비디오 보조 심판)는 2014년 브라질 대회에서 처음 사용되었다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "VAR는 2018년 러시아 대회에서 처음 도입되었습니다. 2014년 브라질 대회는 여전히 그라운드 위의 심판진에게 전적으로 의존했습니다."
+        },
+        "pt-BR": {
+          "question": "O VAR (árbitro assistente de vídeo) foi usado pela primeira vez no torneio de 2014 no Brasil.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "O VAR estreou no torneio de 2018 na Rússia. A edição de 2014 no Brasil ainda dependia totalmente dos árbitros em campo."
+        },
+        "zh-Hans": {
+          "question": "视频助理裁判（VAR）在2014年巴西举办的赛事中首次使用。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "VAR 是在2018年俄罗斯举办的赛事中首次亮相的。2014年巴西那届赛事仍然完全依靠场上的裁判。"
+        }
+      },
+      "i18nSourceHash": "71fe9c940822ed7e"
     },
     {
       "id": "tf-germany-italy-tied",
@@ -5127,7 +5396,90 @@
       "answer": 1,
       "explanation": "They're tied — both nations have won four titles. Germany won in 1954, 1974, 1990, and 2014; Italy in 1934, 1938, 1982, and 2006.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "فازت ألمانيا بالبطولة مرات أكثر من إيطاليا.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "النتيجة متعادلة — فاز كلا البلدين بأربعة ألقاب. ألمانيا فازت في الأعوام 1954 و1974 و1990 و2014؛ وإيطاليا في 1934 و1938 و1982 و2006."
+        },
+        "de": {
+          "question": "Deutschland hat das Turnier öfter gewonnen als Italien.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Es steht unentschieden — beide Nationen haben vier Titel gewonnen. Deutschland siegte 1954, 1974, 1990 und 2014; Italien 1934, 1938, 1982 und 2006."
+        },
+        "es": {
+          "question": "Alemania ha ganado el torneo más veces que Italia.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Están empatadas: ambas naciones han ganado cuatro títulos. Alemania ganó en 1954, 1974, 1990 y 2014; Italia en 1934, 1938, 1982 y 2006."
+        },
+        "es-ES": {
+          "question": "Alemania ha ganado el torneo más veces que Italia.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Están empatadas: ambas selecciones han ganado cuatro títulos. Alemania venció en 1954, 1974, 1990 y 2014; Italia en 1934, 1938, 1982 y 2006."
+        },
+        "fr": {
+          "question": "L'Allemagne a remporté le tournoi plus de fois que l'Italie.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Elles sont à égalité : les deux nations ont décroché quatre titres. L'Allemagne a gagné en 1954, 1974, 1990 et 2014 ; l'Italie en 1934, 1938, 1982 et 2006."
+        },
+        "it": {
+          "question": "La Germania ha vinto il torneo più volte dell'Italia.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Sono in parità: entrambe le nazioni hanno conquistato quattro titoli. La Germania ha vinto nel 1954, 1974, 1990 e 2014; l'Italia nel 1934, 1938, 1982 e 2006."
+        },
+        "ja": {
+          "question": "ドイツはイタリアよりも多くこの大会で優勝している。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "実は同数です。両国とも4回優勝しています。ドイツは1954年、1974年、1990年、2014年に優勝し、イタリアは1934年、1938年、1982年、2006年に優勝しました。"
+        },
+        "ko": {
+          "question": "독일은 이탈리아보다 이 대회에서 더 많이 우승했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "두 나라는 동률입니다. 모두 네 번씩 우승했습니다. 독일은 1954년, 1974년, 1990년, 2014년에, 이탈리아는 1934년, 1938년, 1982년, 2006년에 우승했습니다."
+        },
+        "pt-BR": {
+          "question": "A Alemanha venceu o torneio mais vezes do que a Itália.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Estão empatadas: ambas as seleções conquistaram quatro títulos. A Alemanha venceu em 1954, 1974, 1990 e 2014; a Itália em 1934, 1938, 1982 e 2006."
+        },
+        "zh-Hans": {
+          "question": "德国赢得该赛事冠军的次数比意大利多。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "其实打平——两国都夺得过四次冠军。德国在1954年、1974年、1990年和2014年夺冠；意大利则在1934年、1938年、1982年和2006年夺冠。"
+        }
+      },
+      "i18nSourceHash": "745ae448dd0de49a"
     },
     {
       "id": "tf-klose-16-goals",
@@ -5191,7 +5543,90 @@
       "explanation": "Turkey's Hakan Şükür scored just 10.8 seconds into the 2002 third-place match against South Korea — the fastest goal in tournament history.",
       "type": "true_false",
       "media": "https://www.youtube.com/watch?v=7KH2Z-H37r0",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "سُجّل أسرع هدف في تاريخ البطولة في أقل من 15 ثانية.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "سجّل التركي هاكان شوكور هدفًا بعد 10.8 ثانية فقط في مباراة تحديد المركز الثالث عام 2002 أمام كوريا الجنوبية — وهو أسرع هدف في تاريخ البطولة."
+        },
+        "de": {
+          "question": "Das schnellste Tor in der Geschichte des Turniers fiel in unter 15 Sekunden.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Der Türke Hakan Şükür traf im Spiel um Platz drei 2002 gegen Südkorea bereits nach 10,8 Sekunden — das schnellste Tor in der Geschichte des Turniers."
+        },
+        "es": {
+          "question": "El gol más rápido en la historia del torneo se anotó en menos de 15 segundos.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "El turco Hakan Şükür marcó a solo 10,8 segundos del inicio del partido por el tercer puesto de 2002 ante Corea del Sur — el gol más rápido en la historia del torneo."
+        },
+        "es-ES": {
+          "question": "El gol más rápido en la historia del torneo se marcó en menos de 15 segundos.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "El turco Hakan Şükür anotó a tan solo 10,8 segundos del inicio del partido por el tercer puesto de 2002 frente a Corea del Sur, el gol más rápido en la historia del torneo."
+        },
+        "fr": {
+          "question": "Le but le plus rapide de l'histoire du tournoi a été inscrit en moins de 15 secondes.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Le Turc Hakan Şükür a marqué après seulement 10,8 secondes lors du match pour la troisième place en 2002 contre la Corée du Sud — le but le plus rapide de l'histoire du tournoi."
+        },
+        "it": {
+          "question": "Il gol più veloce nella storia del torneo è stato segnato in meno di 15 secondi.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Il turco Hakan Şükür segnò dopo appena 10,8 secondi nella finale per il terzo posto del 2002 contro la Corea del Sud — il gol più veloce nella storia del torneo."
+        },
+        "ja": {
+          "question": "大会史上最速のゴールは15秒未満で決められた。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "トルコのハカン・シュキュルは、2002年の3位決定戦の韓国戦でわずか10.8秒でゴールを決めた——これは大会史上最速のゴールだ。"
+        },
+        "ko": {
+          "question": "대회 역사상 가장 빠른 골은 15초도 안 되어 터졌다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "터키의 하칸 쉬퀴르는 2002년 한국과의 3·4위전에서 단 10.8초 만에 골을 넣었으며, 이는 대회 역사상 가장 빠른 골이다."
+        },
+        "pt-BR": {
+          "question": "O gol mais rápido da história do torneio foi marcado em menos de 15 segundos.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "O turco Hakan Şükür marcou com apenas 10,8 segundos de jogo na disputa do terceiro lugar de 2002 contra a Coreia do Sul — o gol mais rápido da história do torneio."
+        },
+        "zh-Hans": {
+          "question": "本赛事历史上最快的进球是在不到15秒内打进的。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "土耳其的哈坎·苏克在2002年对阵韩国的季军争夺战中仅用10.8秒便破门，这是本赛事历史上最快的进球。"
+        }
+      },
+      "i18nSourceHash": "e882f1a90765fc5c"
     },
     {
       "id": "tf-three-country-host",
