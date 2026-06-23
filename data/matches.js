@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-22 23:32 UTC by scripts/update-data.py
+// Regenerated 2026-06-23 00:09 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -544,8 +544,8 @@ window.WC_MATCHES = [
     "venue": "Lincoln Financial Field",
     "city": "Philadelphia, PA",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 1,
+    "scoreA": 0
   },
   {
     "n": 41,
@@ -557,8 +557,8 @@ window.WC_MATCHES = [
     "venue": "MetLife Stadium",
     "city": "East Rutherford, NJ",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 0,
+    "scoreA": 0
   },
   {
     "n": 44,
