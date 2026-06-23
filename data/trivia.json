@@ -5639,7 +5639,90 @@
       "answer": 0,
       "explanation": "South Korea and Japan co-hosted in 2002, making it the first multi-nation edition. The 2026 tournament goes further with three co-hosts.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كانت بطولة 2002 أول بطولة يستضيفها بلدان معًا.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "استضافت كوريا الجنوبية واليابان البطولة معًا عام 2002، لتصبح أول نسخة تقام في أكثر من دولة. وتذهب بطولة Football 2026 إلى أبعد من ذلك بثلاث دول مضيفة."
+        },
+        "de": {
+          "question": "Das Turnier 2002 war das erste, das von zwei Ländern gemeinsam ausgerichtet wurde.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Südkorea und Japan richteten 2002 das Turnier gemeinsam aus und machten es damit zur ersten Austragung in mehreren Nationen. Football 2026 geht mit drei Gastgebern noch einen Schritt weiter."
+        },
+        "es": {
+          "question": "El torneo de 2002 fue el primero organizado en conjunto por dos países.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Corea del Sur y Japón fueron sede conjunta en 2002, lo que lo convirtió en la primera edición en varios países. El torneo de Football 2026 va más allá con tres países anfitriones."
+        },
+        "es-ES": {
+          "question": "El torneo de 2002 fue el primero organizado conjuntamente por dos países.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Corea del Sur y Japón lo organizaron juntas en 2002, convirtiéndolo en la primera edición en varias naciones. El torneo de Football 2026 va aún más lejos con tres países anfitriones."
+        },
+        "fr": {
+          "question": "Le tournoi de 2002 a été le premier à être coorganisé par deux pays.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "La Corée du Sud et le Japon ont coorganisé l'édition de 2002, qui est devenue la première à se dérouler dans plusieurs pays. Le tournoi Football 2026 va encore plus loin avec trois pays hôtes."
+        },
+        "it": {
+          "question": "Il torneo del 2002 è stato il primo a essere co-ospitato da due nazioni.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Corea del Sud e Giappone ospitarono insieme l'edizione del 2002, la prima organizzata in più nazioni. Il torneo Football 2026 va oltre, con tre paesi ospitanti."
+        },
+        "ja": {
+          "question": "2002年の大会は、2か国が共同で開催した初めての大会だった。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "2002年は韓国と日本が共同開催し、複数国による初の大会となりました。Football 2026 は3か国による共同開催で、さらにその先を行きます。"
+        },
+        "ko": {
+          "question": "2002년 대회는 두 나라가 공동 개최한 첫 대회였다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "2002년에는 대한민국과 일본이 공동으로 개최하여 여러 나라가 함께 치른 첫 대회가 되었습니다. Football 2026 대회는 세 나라가 공동 개최하며 한 걸음 더 나아갑니다."
+        },
+        "pt-BR": {
+          "question": "O torneio de 2002 foi o primeiro a ser sediado em conjunto por dois países.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Coreia do Sul e Japão sediaram juntas em 2002, tornando-a a primeira edição realizada em mais de um país. O torneio Football 2026 vai além, com três países-sede."
+        },
+        "zh-Hans": {
+          "question": "2002年的赛事是首届由两个国家共同主办的赛事。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "韩国和日本在2002年共同主办，使其成为首届由多个国家联合举办的赛事。Football 2026 更进一步，由三个国家共同主办。"
+        }
+      },
+      "i18nSourceHash": "44e15224f82b3ab4"
     },
     {
       "id": "img-pele",
@@ -5655,7 +5738,110 @@
       "explanation": "Pelé won three titles (1958, 1962, 1970) and scored 12 goals across four editions. Widely regarded as one of the greatest players ever.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Pele_con_brasil_%28cropped%29.jpg/500px-Pele_con_brasil_%28cropped%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا المهاجم البرازيلي الأسطوري؟",
+          "options": [
+            "بيليه",
+            "غارينشا",
+            "روماريو",
+            "زيكو"
+          ],
+          "explanation": "فاز بيليه بثلاثة ألقاب (1958، 1962، 1970) وسجّل 12 هدفًا في أربع نسخ. يُعتبر على نطاق واسع من أعظم اللاعبين على الإطلاق."
+        },
+        "de": {
+          "question": "Wer ist dieser legendäre brasilianische Stürmer?",
+          "options": [
+            "Pelé",
+            "Garrincha",
+            "Romário",
+            "Zico"
+          ],
+          "explanation": "Pelé gewann drei Titel (1958, 1962, 1970) und erzielte 12 Tore in vier Turnieren. Er gilt weithin als einer der größten Spieler aller Zeiten."
+        },
+        "es": {
+          "question": "¿Quién es este legendario delantero brasileño?",
+          "options": [
+            "Pelé",
+            "Garrincha",
+            "Romário",
+            "Zico"
+          ],
+          "explanation": "Pelé ganó tres títulos (1958, 1962, 1970) y marcó 12 goles en cuatro ediciones. Es ampliamente considerado uno de los mejores jugadores de la historia."
+        },
+        "es-ES": {
+          "question": "¿Quién es este legendario delantero brasileño?",
+          "options": [
+            "Pelé",
+            "Garrincha",
+            "Romário",
+            "Zico"
+          ],
+          "explanation": "Pelé ganó tres títulos (1958, 1962, 1970) y marcó 12 goles en cuatro ediciones. Está considerado uno de los mejores jugadores de todos los tiempos."
+        },
+        "fr": {
+          "question": "Qui est ce légendaire attaquant brésilien ?",
+          "options": [
+            "Pelé",
+            "Garrincha",
+            "Romário",
+            "Zico"
+          ],
+          "explanation": "Pelé a remporté trois titres (1958, 1962, 1970) et inscrit 12 buts sur quatre éditions. Il est largement considéré comme l'un des plus grands joueurs de tous les temps."
+        },
+        "it": {
+          "question": "Chi è questo leggendario attaccante brasiliano?",
+          "options": [
+            "Pelé",
+            "Garrincha",
+            "Romário",
+            "Zico"
+          ],
+          "explanation": "Pelé ha vinto tre titoli (1958, 1962, 1970) e segnato 12 gol in quattro edizioni. È considerato da molti uno dei più grandi giocatori di sempre."
+        },
+        "ja": {
+          "question": "この伝説的なブラジル人フォワードは誰でしょう？",
+          "options": [
+            "ペレ",
+            "ガリンシャ",
+            "ロマーリオ",
+            "ジーコ"
+          ],
+          "explanation": "ペレは3度の優勝（1958年、1962年、1970年）を果たし、4大会で通算12得点を記録しました。史上最高の選手の一人として広く称えられています。"
+        },
+        "ko": {
+          "question": "이 전설적인 브라질 공격수는 누구일까요?",
+          "options": [
+            "펠레",
+            "가린샤",
+            "호마리우",
+            "지쿠"
+          ],
+          "explanation": "펠레는 세 차례 우승(1958년, 1962년, 1970년)을 차지했으며 네 번의 대회에서 통산 12골을 기록했습니다. 역대 최고의 선수 중 한 명으로 널리 평가받습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este lendário atacante brasileiro?",
+          "options": [
+            "Pelé",
+            "Garrincha",
+            "Romário",
+            "Zico"
+          ],
+          "explanation": "Pelé conquistou três títulos (1958, 1962, 1970) e marcou 12 gols em quatro edições. É amplamente considerado um dos maiores jogadores de todos os tempos."
+        },
+        "zh-Hans": {
+          "question": "这位传奇的巴西前锋是谁？",
+          "options": [
+            "贝利",
+            "加林查",
+            "罗马里奥",
+            "济科"
+          ],
+          "explanation": "贝利赢得过三次冠军（1958年、1962年、1970年），并在四届赛事中共打进12球。他被广泛视为有史以来最伟大的球员之一。"
+        }
+      },
+      "i18nSourceHash": "f6140dd0f7b9a96d"
     },
     {
       "id": "img-zidane",
@@ -5671,7 +5857,110 @@
       "explanation": "Zinedine Zidane led France to their first title in 1998, scoring twice in the final. His 2006 final headbutt on Materazzi became one of football's most infamous moments.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Football_against_poverty_2014_-_Zidane_%284%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا اللاعب والمدرب الفرنسي في خط الوسط؟",
+          "options": [
+            "تييري هنري",
+            "زين الدين زيدان",
+            "ميشيل بلاتيني",
+            "باتريك فييرا"
+          ],
+          "explanation": "قاد زين الدين زيدان فرنسا إلى لقبها الأول عام 1998، مسجلاً هدفين في النهائي. وأصبحت نطحته للاعب ماتيراتزي في نهائي 2006 واحدة من أكثر اللحظات إثارة للجدل في تاريخ كرة القدم."
+        },
+        "de": {
+          "question": "Wer ist dieser französische Mittelfeldspieler und Trainer?",
+          "options": [
+            "Thierry Henry",
+            "Zinedine Zidane",
+            "Michel Platini",
+            "Patrick Vieira"
+          ],
+          "explanation": "Zinedine Zidane führte Frankreich 1998 zum ersten Titel und traf im Finale zweimal. Sein Kopfstoß gegen Materazzi im Finale 2006 wurde zu einem der berüchtigtsten Momente des Fußballs."
+        },
+        "es": {
+          "question": "¿Quién es este mediocampista y entrenador francés?",
+          "options": [
+            "Thierry Henry",
+            "Zinedine Zidane",
+            "Michel Platini",
+            "Patrick Vieira"
+          ],
+          "explanation": "Zinedine Zidane llevó a Francia a su primer título en 1998, anotando dos goles en la final. Su cabezazo a Materazzi en la final de 2006 se convirtió en uno de los momentos más polémicos del fútbol."
+        },
+        "es-ES": {
+          "question": "¿Quién es este centrocampista y entrenador francés?",
+          "options": [
+            "Thierry Henry",
+            "Zinedine Zidane",
+            "Michel Platini",
+            "Patrick Vieira"
+          ],
+          "explanation": "Zinedine Zidane llevó a Francia a su primer título en 1998, marcando dos goles en la final. Su cabezazo a Materazzi en la final de 2006 se convirtió en uno de los momentos más polémicos del fútbol."
+        },
+        "fr": {
+          "question": "Qui est ce milieu de terrain et entraîneur français ?",
+          "options": [
+            "Thierry Henry",
+            "Zinedine Zidane",
+            "Michel Platini",
+            "Patrick Vieira"
+          ],
+          "explanation": "Zinedine Zidane a mené la France à son premier titre en 1998, en inscrivant un doublé en finale. Son coup de tête sur Materazzi lors de la finale de 2006 est devenu l'un des moments les plus tristement célèbres du football."
+        },
+        "it": {
+          "question": "Chi è questo centrocampista e allenatore francese?",
+          "options": [
+            "Thierry Henry",
+            "Zinedine Zidane",
+            "Michel Platini",
+            "Patrick Vieira"
+          ],
+          "explanation": "Zinedine Zidane portò la Francia al suo primo titolo nel 1998, segnando due gol in finale. La sua testata a Materazzi nella finale del 2006 è diventata uno dei momenti più famigerati del calcio."
+        },
+        "ja": {
+          "question": "このフランス人ミッドフィルダー兼監督は誰でしょう？",
+          "options": [
+            "ティエリ・アンリ",
+            "ジネディーヌ・ジダン",
+            "ミシェル・プラティニ",
+            "パトリック・ヴィエラ"
+          ],
+          "explanation": "ジネディーヌ・ジダンは1998年にフランスを初優勝へと導き、決勝で2得点を挙げました。2006年の決勝でマテラッツィに見舞った頭突きは、サッカー史上最も悪名高い瞬間の一つとなりました。"
+        },
+        "ko": {
+          "question": "이 프랑스 미드필더이자 감독은 누구일까요?",
+          "options": [
+            "티에리 앙리",
+            "지네딘 지단",
+            "미셸 플라티니",
+            "파트리크 비에라"
+          ],
+          "explanation": "지네딘 지단은 1998년 프랑스를 첫 우승으로 이끌며 결승에서 두 골을 넣었습니다. 2006년 결승에서 마테라치에게 가한 박치기는 축구 역사상 가장 악명 높은 순간 중 하나가 되었습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este meio-campista e treinador francês?",
+          "options": [
+            "Thierry Henry",
+            "Zinedine Zidane",
+            "Michel Platini",
+            "Patrick Vieira"
+          ],
+          "explanation": "Zinedine Zidane levou a França ao seu primeiro título em 1998, marcando dois gols na final. Sua cabeçada em Materazzi na final de 2006 se tornou um dos momentos mais infames do futebol."
+        },
+        "zh-Hans": {
+          "question": "这位法国中场兼教练是谁？",
+          "options": [
+            "蒂埃里·亨利",
+            "齐内丁·齐达内",
+            "米歇尔·普拉蒂尼",
+            "帕特里克·维埃拉"
+          ],
+          "explanation": "齐内丁·齐达内带领法国在1998年首次夺冠，并在决赛中梅开二度。他在2006年决赛中头顶马特拉齐的一幕成为足坛最臭名昭著的时刻之一。"
+        }
+      },
+      "i18nSourceHash": "0a89bc9712a96d9c"
     },
     {
       "id": "img-ronaldo-brazil",
@@ -5687,7 +5976,110 @@
       "explanation": "Ronaldo Nazário scored 15 goals across four editions (1998–2010), winning the Golden Boot in 2002 with eight goals as Brazil took the title.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Ronaldo_gol.jpg/500px-Ronaldo_gol.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا المهاجم البرازيلي الذي سجل 15 هدفاً عبر أربع نسخ؟",
+          "options": [
+            "رونالدينيو",
+            "ريفالدو",
+            "رونالدو",
+            "روماريو"
+          ],
+          "explanation": "سجّل رونالدو نازاريو 15 هدفاً عبر أربع نسخ (1998–2010)، وفاز بجائزة الحذاء الذهبي عام 2002 بثمانية أهداف عندما توّجت البرازيل باللقب."
+        },
+        "de": {
+          "question": "Wer ist dieser brasilianische Stürmer, der über vier Turniere hinweg 15 Tore erzielte?",
+          "options": [
+            "Ronaldinho",
+            "Rivaldo",
+            "Ronaldo",
+            "Romário"
+          ],
+          "explanation": "Ronaldo Nazário erzielte über vier Turniere (1998–2010) insgesamt 15 Tore und gewann 2002 mit acht Treffern den Goldenen Schuh, als Brasilien den Titel holte."
+        },
+        "es": {
+          "question": "¿Quién es este delantero brasileño que marcó 15 goles a lo largo de cuatro ediciones?",
+          "options": [
+            "Ronaldinho",
+            "Rivaldo",
+            "Ronaldo",
+            "Romário"
+          ],
+          "explanation": "Ronaldo Nazário marcó 15 goles en cuatro ediciones (1998–2010), ganando la Bota de Oro en 2002 con ocho goles mientras Brasil se quedaba con el título."
+        },
+        "es-ES": {
+          "question": "¿Quién es este delantero brasileño que marcó 15 goles a lo largo de cuatro ediciones?",
+          "options": [
+            "Ronaldinho",
+            "Rivaldo",
+            "Ronaldo",
+            "Romário"
+          ],
+          "explanation": "Ronaldo Nazário marcó 15 goles en cuatro ediciones (1998–2010) y ganó la Bota de Oro en 2002 con ocho goles, mientras Brasil se llevaba el título."
+        },
+        "fr": {
+          "question": "Qui est cet attaquant brésilien qui a inscrit 15 buts sur quatre éditions ?",
+          "options": [
+            "Ronaldinho",
+            "Rivaldo",
+            "Ronaldo",
+            "Romário"
+          ],
+          "explanation": "Ronaldo Nazário a marqué 15 buts sur quatre éditions (1998–2010), remportant le Soulier d'or en 2002 avec huit buts alors que le Brésil décrochait le titre."
+        },
+        "it": {
+          "question": "Chi è questo attaccante brasiliano che ha segnato 15 gol in quattro edizioni?",
+          "options": [
+            "Ronaldinho",
+            "Rivaldo",
+            "Ronaldo",
+            "Romário"
+          ],
+          "explanation": "Ronaldo Nazário ha segnato 15 gol in quattro edizioni (1998–2010), conquistando la Scarpa d'Oro nel 2002 con otto reti mentre il Brasile si aggiudicava il titolo."
+        },
+        "ja": {
+          "question": "4大会で15得点を挙げたこのブラジル人ストライカーは誰でしょう？",
+          "options": [
+            "ロナウジーニョ",
+            "リバウド",
+            "ロナウド",
+            "ロマーリオ"
+          ],
+          "explanation": "ロナウド・ナザーリオは4大会（1998〜2010年）で通算15得点を記録し、2002年にはブラジルの優勝とともに8得点で得点王に輝きました。"
+        },
+        "ko": {
+          "question": "네 개 대회에서 15골을 넣은 이 브라질 공격수는 누구일까요?",
+          "options": [
+            "호나우지뉴",
+            "히바우두",
+            "호나우두",
+            "호마리우"
+          ],
+          "explanation": "호나우두 나자리우는 네 개 대회(1998~2010년)에서 통산 15골을 기록했으며, 2002년에는 8골로 득점왕에 오르며 브라질의 우승을 이끌었습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é esse atacante brasileiro que marcou 15 gols ao longo de quatro edições?",
+          "options": [
+            "Ronaldinho",
+            "Rivaldo",
+            "Ronaldo",
+            "Romário"
+          ],
+          "explanation": "Ronaldo Nazário marcou 15 gols em quatro edições (1998–2010), conquistando a Chuteira de Ouro em 2002 com oito gols enquanto o Brasil levava o título."
+        },
+        "zh-Hans": {
+          "question": "这位在四届赛事中打入15球的巴西前锋是谁？",
+          "options": [
+            "罗纳尔迪尼奥",
+            "里瓦尔多",
+            "罗纳尔多",
+            "罗马里奥"
+          ],
+          "explanation": "罗纳尔多·纳扎里奥在四届赛事（1998–2010）中共打入15球，并在2002年以8粒进球荣膺金靴奖，帮助巴西夺冠。"
+        }
+      },
+      "i18nSourceHash": "5e95b17e196de07b"
     },
     {
       "id": "img-messi",
@@ -5733,7 +6125,110 @@
       "explanation": "Kylian Mbappé scored a hat trick in the 2022 final and won the Golden Boot with eight goals. He first won the title as a teenager in 2018.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Kylian_Mbappe_celebrating_-_March_2018_%28cropped%29.jpg/500px-Kylian_Mbappe_celebrating_-_March_2018_%28cropped%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا المهاجم الفرنسي الذي سجّل ثلاثية في نهائي 2022؟",
+          "options": [
+            "أنطوان غريزمان",
+            "كيليان مبابي",
+            "عثمان ديمبيلي",
+            "أوليفييه جيرو"
+          ],
+          "explanation": "سجّل كيليان مبابي ثلاثية في نهائي 2022 وفاز بجائزة الحذاء الذهبي برصيد ثمانية أهداف. وكان قد أحرز اللقب لأول مرة وهو مراهق عام 2018."
+        },
+        "de": {
+          "question": "Wer ist dieser französische Stürmer, der im Finale 2022 einen Hattrick erzielte?",
+          "options": [
+            "Antoine Griezmann",
+            "Kylian Mbappé",
+            "Ousmane Dembélé",
+            "Olivier Giroud"
+          ],
+          "explanation": "Kylian Mbappé erzielte im Finale 2022 einen Hattrick und gewann mit acht Toren den Goldenen Schuh. Seinen ersten Titel holte er 2018 noch als Teenager."
+        },
+        "es": {
+          "question": "¿Quién es este delantero francés que marcó un triplete en la final de 2022?",
+          "options": [
+            "Antoine Griezmann",
+            "Kylian Mbappé",
+            "Ousmane Dembélé",
+            "Olivier Giroud"
+          ],
+          "explanation": "Kylian Mbappé marcó un triplete en la final de 2022 y ganó la Bota de Oro con ocho goles. Ya había conquistado el título por primera vez en 2018, cuando todavía era un adolescente."
+        },
+        "es-ES": {
+          "question": "¿Quién es este delantero francés que marcó un triplete en la final de 2022?",
+          "options": [
+            "Antoine Griezmann",
+            "Kylian Mbappé",
+            "Ousmane Dembélé",
+            "Olivier Giroud"
+          ],
+          "explanation": "Kylian Mbappé marcó un triplete en la final de 2022 y se llevó la Bota de Oro con ocho goles. Ya había logrado el título por primera vez en 2018, siendo aún un adolescente."
+        },
+        "fr": {
+          "question": "Qui est cet attaquant français qui a inscrit un triplé lors de la finale de 2022 ?",
+          "options": [
+            "Antoine Griezmann",
+            "Kylian Mbappé",
+            "Ousmane Dembélé",
+            "Olivier Giroud"
+          ],
+          "explanation": "Kylian Mbappé a marqué un triplé en finale 2022 et a remporté le Soulier d'or avec huit buts. Il avait déjà décroché le titre dès 2018, alors qu'il n'était qu'un adolescent."
+        },
+        "it": {
+          "question": "Chi è questo attaccante francese che ha segnato una tripletta nella finale del 2022?",
+          "options": [
+            "Antoine Griezmann",
+            "Kylian Mbappé",
+            "Ousmane Dembélé",
+            "Olivier Giroud"
+          ],
+          "explanation": "Kylian Mbappé ha realizzato una tripletta nella finale del 2022 e ha vinto la Scarpa d'Oro con otto gol. Aveva già conquistato il titolo nel 2018, quando era ancora un adolescente."
+        },
+        "ja": {
+          "question": "2022年の決勝でハットトリックを決めたこのフランス人フォワードは誰でしょう？",
+          "options": [
+            "アントワーヌ・グリーズマン",
+            "キリアン・ムバッペ",
+            "ウスマン・デンベレ",
+            "オリヴィエ・ジルー"
+          ],
+          "explanation": "キリアン・ムバッペは2022年の決勝でハットトリックを達成し、8ゴールで得点王に輝きました。彼は2018年に10代で初めてタイトルを手にしています。"
+        },
+        "ko": {
+          "question": "2022년 결승전에서 해트트릭을 기록한 이 프랑스 공격수는 누구일까요?",
+          "options": [
+            "앙투안 그리즈만",
+            "킬리안 음바페",
+            "우스만 뎀벨레",
+            "올리비에 지루"
+          ],
+          "explanation": "킬리안 음바페는 2022년 결승전에서 해트트릭을 기록하며 8골로 득점왕에 올랐습니다. 그는 2018년 10대 시절에 처음으로 우승을 차지한 바 있습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é esse atacante francês que marcou um hat-trick na final de 2022?",
+          "options": [
+            "Antoine Griezmann",
+            "Kylian Mbappé",
+            "Ousmane Dembélé",
+            "Olivier Giroud"
+          ],
+          "explanation": "Kylian Mbappé marcou um hat-trick na final de 2022 e conquistou a Chuteira de Ouro com oito gols. Ele já havia vencido o título pela primeira vez em 2018, ainda adolescente."
+        },
+        "zh-Hans": {
+          "question": "这位在2022年决赛中上演帽子戏法的法国前锋是谁？",
+          "options": [
+            "安托万·格列兹曼",
+            "基利安·姆巴佩",
+            "乌斯曼·登贝莱",
+            "奥利维耶·吉鲁"
+          ],
+          "explanation": "基利安·姆巴佩在2022年决赛中上演帽子戏法，并以八粒进球荣膺金靴奖。早在2018年，他还是个少年时就首次捧得冠军。"
+        }
+      },
+      "i18nSourceHash": "3594a64c70f7e743"
     },
     {
       "id": "img-ronaldinho",
