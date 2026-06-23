@@ -6244,7 +6244,110 @@
       "explanation": "Ronaldinho was part of Brazil's 2002 winning squad and scored a memorable free kick against England in the quarterfinals. He won the Ballon d'Or in 2005.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Ronaldinho_11feb2007.jpg/500px-Ronaldinho_11feb2007.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو صانع الألعاب البرازيلي المعروف بمهاراته المبهرة وابتسامته الأيقونية؟",
+          "options": [
+            "كاكا",
+            "رونالدينيو",
+            "ريفالدو",
+            "روبرتو كارلوس"
+          ],
+          "explanation": "كان رونالدينيو ضمن تشكيلة البرازيل الفائزة عام 2002 وسجّل ركلة حرة لا تُنسى في مرمى إنجلترا في دور ربع النهائي. وقد فاز بالكرة الذهبية عام 2005."
+        },
+        "de": {
+          "question": "Welcher brasilianische Spielmacher ist für seine atemberaubenden Tricks und sein unverwechselbares Lächeln bekannt?",
+          "options": [
+            "Kaká",
+            "Ronaldinho",
+            "Rivaldo",
+            "Roberto Carlos"
+          ],
+          "explanation": "Ronaldinho gehörte 2002 zur siegreichen brasilianischen Mannschaft und erzielte im Viertelfinale einen unvergesslichen Freistoß gegen England. 2005 gewann er den Ballon d'Or."
+        },
+        "es": {
+          "question": "¿Quién es este creador de juego brasileño conocido por su deslumbrante habilidad y su icónica sonrisa?",
+          "options": [
+            "Kaká",
+            "Ronaldinho",
+            "Rivaldo",
+            "Roberto Carlos"
+          ],
+          "explanation": "Ronaldinho formó parte del plantel brasileño campeón en 2002 y marcó un memorable tiro libre ante Inglaterra en los cuartos de final. Ganó el Balón de Oro en 2005."
+        },
+        "es-ES": {
+          "question": "¿Quién es este creador de juego brasileño conocido por su deslumbrante habilidad y su icónica sonrisa?",
+          "options": [
+            "Kaká",
+            "Ronaldinho",
+            "Rivaldo",
+            "Roberto Carlos"
+          ],
+          "explanation": "Ronaldinho formó parte de la selección brasileña campeona en 2002 y marcó un memorable tiro libre ante Inglaterra en los cuartos de final. Ganó el Balón de Oro en 2005."
+        },
+        "fr": {
+          "question": "Quel est ce meneur de jeu brésilien connu pour ses dribbles éblouissants et son sourire emblématique ?",
+          "options": [
+            "Kaká",
+            "Ronaldinho",
+            "Rivaldo",
+            "Roberto Carlos"
+          ],
+          "explanation": "Ronaldinho faisait partie de l'équipe brésilienne sacrée en 2002 et a inscrit un coup franc mémorable contre l'Angleterre en quarts de finale. Il a remporté le Ballon d'Or en 2005."
+        },
+        "it": {
+          "question": "Chi è questo regista offensivo brasiliano noto per le sue giocate spettacolari e il suo sorriso iconico?",
+          "options": [
+            "Kaká",
+            "Ronaldinho",
+            "Rivaldo",
+            "Roberto Carlos"
+          ],
+          "explanation": "Ronaldinho faceva parte della squadra brasiliana campione nel 2002 e segnò un memorabile calcio di punizione contro l'Inghilterra nei quarti di finale. Vinse il Pallone d'Oro nel 2005."
+        },
+        "ja": {
+          "question": "華麗なテクニックと象徴的な笑顔で知られる、このブラジル人の司令塔は誰でしょう？",
+          "options": [
+            "カカ",
+            "ロナウジーニョ",
+            "リバウド",
+            "ロベルト・カルロス"
+          ],
+          "explanation": "ロナウジーニョは2002年に優勝したブラジル代表の一員で、準々決勝のイングランド戦で記憶に残るフリーキックを決めました。2005年にはバロンドールを受賞しました。"
+        },
+        "ko": {
+          "question": "현란한 기술과 상징적인 미소로 유명한 이 브라질 플레이메이커는 누구일까요?",
+          "options": [
+            "카카",
+            "호나우지뉴",
+            "히바우두",
+            "호베르투 카를루스"
+          ],
+          "explanation": "호나우지뉴는 2002년 우승한 브라질 대표팀의 일원으로, 8강전에서 잉글랜드를 상대로 기억에 남는 프리킥 골을 넣었습니다. 그는 2005년 발롱도르를 수상했습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este meia armador brasileiro conhecido por suas jogadas deslumbrantes e seu sorriso icônico?",
+          "options": [
+            "Kaká",
+            "Ronaldinho",
+            "Rivaldo",
+            "Roberto Carlos"
+          ],
+          "explanation": "Ronaldinho fez parte do elenco campeão do Brasil em 2002 e marcou uma cobrança de falta memorável contra a Inglaterra nas quartas de final. Ele ganhou a Bola de Ouro em 2005."
+        },
+        "zh-Hans": {
+          "question": "这位以炫目球技和标志性笑容著称的巴西组织核心是谁？",
+          "options": [
+            "卡卡",
+            "罗纳尔迪尼奥",
+            "里瓦尔多",
+            "罗伯托·卡洛斯"
+          ],
+          "explanation": "罗纳尔迪尼奥是巴西2002年夺冠阵容的一员，并在四分之一决赛对阵英格兰时打入一记令人难忘的任意球。他于2005年荣获金球奖。"
+        }
+      },
+      "i18nSourceHash": "d898e6722d18dc46"
     },
     {
       "id": "img-modric",
