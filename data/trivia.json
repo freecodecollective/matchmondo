@@ -1239,7 +1239,110 @@
       ],
       "answer": 2,
       "explanation": "Germany beat Argentina 1–0 in extra time, Mario Götze scoring the winner.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من فاز عام 2014 في البرازيل؟",
+          "options": [
+            "الأرجنتين",
+            "هولندا",
+            "ألمانيا",
+            "البرازيل"
+          ],
+          "explanation": "تغلبت ألمانيا على الأرجنتين 1–0 في الوقت الإضافي، بعد أن سجل ماريو غوتسه هدف الفوز."
+        },
+        "de": {
+          "question": "Wer hat 2014 in Brasilien gewonnen?",
+          "options": [
+            "Argentinien",
+            "Niederlande",
+            "Deutschland",
+            "Brasilien"
+          ],
+          "explanation": "Deutschland besiegte Argentinien in der Verlängerung mit 1:0, Mario Götze erzielte den Siegtreffer."
+        },
+        "es": {
+          "question": "¿Quién ganó en 2014, en Brasil?",
+          "options": [
+            "Argentina",
+            "Países Bajos",
+            "Alemania",
+            "Brasil"
+          ],
+          "explanation": "Alemania venció a Argentina 1–0 en el tiempo extra, con Mario Götze anotando el gol del triunfo."
+        },
+        "es-ES": {
+          "question": "¿Quién ganó en 2014, en Brasil?",
+          "options": [
+            "Argentina",
+            "Países Bajos",
+            "Alemania",
+            "Brasil"
+          ],
+          "explanation": "Alemania ganó a Argentina 1–0 en la prórroga, con Mario Götze marcando el gol de la victoria."
+        },
+        "fr": {
+          "question": "Qui a gagné en 2014, au Brésil ?",
+          "options": [
+            "Argentine",
+            "Pays-Bas",
+            "Allemagne",
+            "Brésil"
+          ],
+          "explanation": "L'Allemagne a battu l'Argentine 1–0 après prolongation, Mario Götze inscrivant le but de la victoire."
+        },
+        "it": {
+          "question": "Chi ha vinto nel 2014, in Brasile?",
+          "options": [
+            "Argentina",
+            "Paesi Bassi",
+            "Germania",
+            "Brasile"
+          ],
+          "explanation": "La Germania ha battuto l'Argentina 1–0 ai tempi supplementari, con Mario Götze a segnare il gol decisivo."
+        },
+        "ja": {
+          "question": "2014年、ブラジルで優勝したのはどこ？",
+          "options": [
+            "アルゼンチン",
+            "オランダ",
+            "ドイツ",
+            "ブラジル"
+          ],
+          "explanation": "ドイツが延長戦でアルゼンチンを1対0で破り、マリオ・ゲッツェが決勝ゴールを決めました。"
+        },
+        "ko": {
+          "question": "2014년 브라질에서 우승한 팀은?",
+          "options": [
+            "아르헨티나",
+            "네덜란드",
+            "독일",
+            "브라질"
+          ],
+          "explanation": "독일이 연장전에서 아르헨티나를 1-0으로 꺾었고, 마리오 괴체가 결승골을 넣었습니다."
+        },
+        "pt-BR": {
+          "question": "Quem venceu em 2014, no Brasil?",
+          "options": [
+            "Argentina",
+            "Holanda",
+            "Alemanha",
+            "Brasil"
+          ],
+          "explanation": "A Alemanha venceu a Argentina por 1 a 0 na prorrogação, com Mario Götze marcando o gol da vitória."
+        },
+        "zh-Hans": {
+          "question": "2014年在巴西夺冠的是哪支球队？",
+          "options": [
+            "阿根廷",
+            "荷兰",
+            "德国",
+            "巴西"
+          ],
+          "explanation": "德国在加时赛中以1比0击败阿根廷，马里奥·格策攻入制胜一球。"
+        }
+      },
+      "i18nSourceHash": "f6641f785cbb92c3"
     },
     {
       "id": "h-host-wins",
@@ -1370,7 +1473,110 @@
       ],
       "answer": 0,
       "explanation": "Lincoln Financial Field in Philadelphia is home to the Eagles and will host group-stage and knockout matches.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أي ملعب في منطقة فيلادلفيا ضمن بطولة 2026 هو معقل فريق فيلادلفيا إيغلز في دوري كرة القدم الأمريكية؟",
+          "options": [
+            "لينكولن فايننشال فيلد",
+            "سيتيزنز بانك بارك",
+            "ويلز فارغو سنتر",
+            "فرانكلين فيلد"
+          ],
+          "explanation": "ملعب لينكولن فايننشال فيلد في فيلادلفيا هو معقل فريق إيغلز، وسيستضيف مباريات من دور المجموعات والأدوار الإقصائية."
+        },
+        "de": {
+          "question": "Welches Stadion im Raum Philadelphia bei Football 2026 ist die Heimat der Philadelphia Eagles aus der NFL?",
+          "options": [
+            "Lincoln Financial Field",
+            "Citizens Bank Park",
+            "Wells Fargo Center",
+            "Franklin Field"
+          ],
+          "explanation": "Das Lincoln Financial Field in Philadelphia ist die Heimat der Eagles und wird Spiele der Gruppenphase sowie der K.-o.-Runde austragen."
+        },
+        "es": {
+          "question": "¿Cuál de los estadios de Football 2026 en la zona de Filadelfia es la casa de los Philadelphia Eagles de la NFL?",
+          "options": [
+            "Lincoln Financial Field",
+            "Citizens Bank Park",
+            "Wells Fargo Center",
+            "Franklin Field"
+          ],
+          "explanation": "El Lincoln Financial Field, en Filadelfia, es la casa de los Eagles y será sede de partidos de la fase de grupos y de eliminación directa."
+        },
+        "es-ES": {
+          "question": "¿Cuál de las sedes de Football 2026 en la zona de Filadelfia es el estadio de los Philadelphia Eagles de la NFL?",
+          "options": [
+            "Lincoln Financial Field",
+            "Citizens Bank Park",
+            "Wells Fargo Center",
+            "Franklin Field"
+          ],
+          "explanation": "El Lincoln Financial Field, en Filadelfia, es el estadio de los Eagles y acogerá partidos de la fase de grupos y de las eliminatorias."
+        },
+        "fr": {
+          "question": "Quel stade de la région de Philadelphie, retenu pour Football 2026, est l'antre des Philadelphia Eagles de la NFL ?",
+          "options": [
+            "Lincoln Financial Field",
+            "Citizens Bank Park",
+            "Wells Fargo Center",
+            "Franklin Field"
+          ],
+          "explanation": "Le Lincoln Financial Field, à Philadelphie, est le stade des Eagles et accueillera des matchs de la phase de groupes et des phases à élimination directe."
+        },
+        "it": {
+          "question": "Quale stadio dell'area di Filadelfia, sede di Football 2026, è la casa dei Philadelphia Eagles della NFL?",
+          "options": [
+            "Lincoln Financial Field",
+            "Citizens Bank Park",
+            "Wells Fargo Center",
+            "Franklin Field"
+          ],
+          "explanation": "Il Lincoln Financial Field di Filadelfia è la casa degli Eagles e ospiterà partite della fase a gironi e a eliminazione diretta."
+        },
+        "ja": {
+          "question": "Football 2026の会場のうち、フィラデルフィア地域にあり、NFLのフィラデルフィア・イーグルスの本拠地となっているのはどれですか？",
+          "options": [
+            "リンカーン・フィナンシャル・フィールド",
+            "シチズンズ・バンク・パーク",
+            "ウェルズ・ファーゴ・センター",
+            "フランクリン・フィールド"
+          ],
+          "explanation": "フィラデルフィアのリンカーン・フィナンシャル・フィールドはイーグルスの本拠地で、グループステージと決勝トーナメントの試合が開催されます。"
+        },
+        "ko": {
+          "question": "Football 2026의 필라델피아 지역 경기장 중 NFL 필라델피아 이글스의 홈구장은 어디입니까?",
+          "options": [
+            "링컨 파이낸셜 필드",
+            "시티즌스 뱅크 파크",
+            "웰스 파고 센터",
+            "프랭클린 필드"
+          ],
+          "explanation": "필라델피아의 링컨 파이낸셜 필드는 이글스의 홈구장이며, 조별 리그와 토너먼트 경기가 열릴 예정입니다."
+        },
+        "pt-BR": {
+          "question": "Qual sede de Football 2026 na região da Filadélfia é a casa do Philadelphia Eagles, da NFL?",
+          "options": [
+            "Lincoln Financial Field",
+            "Citizens Bank Park",
+            "Wells Fargo Center",
+            "Franklin Field"
+          ],
+          "explanation": "O Lincoln Financial Field, na Filadélfia, é a casa do Eagles e vai receber partidas da fase de grupos e do mata-mata."
+        },
+        "zh-Hans": {
+          "question": "在Football 2026的费城地区场馆中，哪一座是NFL费城老鹰队的主场？",
+          "options": [
+            "林肯金融球场",
+            "市民银行公园球场",
+            "富国银行中心",
+            "富兰克林球场"
+          ],
+          "explanation": "位于费城的林肯金融球场是老鹰队的主场，将举办小组赛和淘汰赛的比赛。"
+        }
+      },
+      "i18nSourceHash": "b57fa99e1ea94194"
     },
     {
       "id": "h-2018-champion",
@@ -1384,7 +1590,110 @@
       ],
       "answer": 1,
       "explanation": "France beat Croatia 4–2 in the final for their second title.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من فاز عام 2018 في روسيا؟",
+          "options": [
+            "كرواتيا",
+            "فرنسا",
+            "بلجيكا",
+            "إنجلترا"
+          ],
+          "explanation": "تغلبت فرنسا على كرواتيا 4–2 في النهائي لتحرز لقبها الثاني."
+        },
+        "de": {
+          "question": "Wer gewann 2018 in Russland?",
+          "options": [
+            "Kroatien",
+            "Frankreich",
+            "Belgien",
+            "England"
+          ],
+          "explanation": "Frankreich besiegte Kroatien im Finale mit 4:2 und holte sich den zweiten Titel."
+        },
+        "es": {
+          "question": "¿Quién ganó en 2018, en Rusia?",
+          "options": [
+            "Croacia",
+            "Francia",
+            "Bélgica",
+            "Inglaterra"
+          ],
+          "explanation": "Francia venció a Croacia 4–2 en la final y consiguió su segundo título."
+        },
+        "es-ES": {
+          "question": "¿Quién ganó en 2018, en Rusia?",
+          "options": [
+            "Croacia",
+            "Francia",
+            "Bélgica",
+            "Inglaterra"
+          ],
+          "explanation": "Francia derrotó a Croacia por 4–2 en la final y logró su segundo título."
+        },
+        "fr": {
+          "question": "Qui a gagné en 2018, en Russie ?",
+          "options": [
+            "Croatie",
+            "France",
+            "Belgique",
+            "Angleterre"
+          ],
+          "explanation": "La France a battu la Croatie 4–2 en finale pour décrocher son deuxième titre."
+        },
+        "it": {
+          "question": "Chi ha vinto nel 2018, in Russia?",
+          "options": [
+            "Croazia",
+            "Francia",
+            "Belgio",
+            "Inghilterra"
+          ],
+          "explanation": "La Francia ha battuto la Croazia 4–2 in finale conquistando il suo secondo titolo."
+        },
+        "ja": {
+          "question": "2018年、ロシアで優勝したのはどこ？",
+          "options": [
+            "クロアチア",
+            "フランス",
+            "ベルギー",
+            "イングランド"
+          ],
+          "explanation": "フランスは決勝でクロアチアを4対2で破り、2度目の優勝を果たしました。"
+        },
+        "ko": {
+          "question": "2018년 러시아에서 우승한 팀은?",
+          "options": [
+            "크로아티아",
+            "프랑스",
+            "벨기에",
+            "잉글랜드"
+          ],
+          "explanation": "프랑스가 결승에서 크로아티아를 4-2로 꺾고 두 번째 우승을 차지했습니다."
+        },
+        "pt-BR": {
+          "question": "Quem venceu em 2018, na Rússia?",
+          "options": [
+            "Croácia",
+            "França",
+            "Bélgica",
+            "Inglaterra"
+          ],
+          "explanation": "A França venceu a Croácia por 4 a 2 na final e conquistou seu segundo título."
+        },
+        "zh-Hans": {
+          "question": "2018年在俄罗斯夺冠的是哪支球队？",
+          "options": [
+            "克罗地亚",
+            "法国",
+            "比利时",
+            "英格兰"
+          ],
+          "explanation": "法国在决赛中以4比2击败克罗地亚，赢得了队史第二个冠军。"
+        }
+      },
+      "i18nSourceHash": "2ecbf1a3d9afb2a0"
     },
     {
       "id": "p-zidane-red",
@@ -1516,7 +1825,110 @@
       ],
       "answer": 1,
       "explanation": "Lumen Field is home to the Seattle Sounders and is famous for its electric atmosphere.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ملعب لومن فيلد، أحد ملاعب بطولة فوتبول 2026 في سياتل، هو معقل أي فريق من فرق الدوري الأمريكي للمحترفين (MLS)؟",
+          "options": [
+            "بورتلاند تيمبرز",
+            "سياتل ساوندرز",
+            "إل إيه غالاكسي",
+            "فانكوفر وايتكابس"
+          ],
+          "explanation": "ملعب لومن فيلد هو معقل فريق سياتل ساوندرز، ويشتهر بأجوائه المتحمسة والمفعمة بالحماس."
+        },
+        "de": {
+          "question": "Das Lumen Field, eine der Spielstätten von Football 2026 in Seattle, ist die Heimat welches MLS-Teams?",
+          "options": [
+            "Portland Timbers",
+            "Seattle Sounders",
+            "LA Galaxy",
+            "Vancouver Whitecaps"
+          ],
+          "explanation": "Das Lumen Field ist die Heimat der Seattle Sounders und berühmt für seine elektrisierende Atmosphäre."
+        },
+        "es": {
+          "question": "El Lumen Field, una de las sedes de Football 2026 en Seattle, ¿es el estadio de qué equipo de la MLS?",
+          "options": [
+            "Portland Timbers",
+            "Seattle Sounders",
+            "LA Galaxy",
+            "Vancouver Whitecaps"
+          ],
+          "explanation": "El Lumen Field es la casa del Seattle Sounders y es famoso por su ambiente vibrante."
+        },
+        "es-ES": {
+          "question": "El Lumen Field, una de las sedes de Football 2026 en Seattle, ¿es el estadio de qué equipo de la MLS?",
+          "options": [
+            "Portland Timbers",
+            "Seattle Sounders",
+            "LA Galaxy",
+            "Vancouver Whitecaps"
+          ],
+          "explanation": "El Lumen Field es el feudo del Seattle Sounders y es famoso por su ambiente electrizante."
+        },
+        "fr": {
+          "question": "Le Lumen Field, l'un des stades de Football 2026 à Seattle, est l'enceinte de quelle équipe de MLS ?",
+          "options": [
+            "Portland Timbers",
+            "Seattle Sounders",
+            "LA Galaxy",
+            "Vancouver Whitecaps"
+          ],
+          "explanation": "Le Lumen Field est le stade des Seattle Sounders et est réputé pour son ambiance électrique."
+        },
+        "it": {
+          "question": "Il Lumen Field, una delle sedi di Football 2026 a Seattle, è lo stadio di quale squadra della MLS?",
+          "options": [
+            "Portland Timbers",
+            "Seattle Sounders",
+            "LA Galaxy",
+            "Vancouver Whitecaps"
+          ],
+          "explanation": "Il Lumen Field è la casa dei Seattle Sounders ed è famoso per la sua atmosfera elettrizzante."
+        },
+        "ja": {
+          "question": "2026年のシアトル会場であるルーメン・フィールドは、どのMLSチームの本拠地でしょう？",
+          "options": [
+            "ポートランド・ティンバーズ",
+            "シアトル・サウンダーズ",
+            "LAギャラクシー",
+            "バンクーバー・ホワイトキャップス"
+          ],
+          "explanation": "ルーメン・フィールドはシアトル・サウンダーズの本拠地で、熱気あふれる雰囲気で知られています。"
+        },
+        "ko": {
+          "question": "2026년 시애틀 경기장인 루멘 필드는 어느 MLS 팀의 홈구장일까요?",
+          "options": [
+            "포틀랜드 팀버스",
+            "시애틀 사운더스",
+            "LA 갤럭시",
+            "밴쿠버 화이트캡스"
+          ],
+          "explanation": "루멘 필드는 시애틀 사운더스의 홈구장으로, 짜릿한 분위기로 유명합니다."
+        },
+        "pt-BR": {
+          "question": "O Lumen Field, uma das sedes do Football 2026 em Seattle, é a casa de qual time da MLS?",
+          "options": [
+            "Portland Timbers",
+            "Seattle Sounders",
+            "LA Galaxy",
+            "Vancouver Whitecaps"
+          ],
+          "explanation": "O Lumen Field é a casa do Seattle Sounders e é famoso por sua atmosfera eletrizante."
+        },
+        "zh-Hans": {
+          "question": "卢门球场（Lumen Field）是2026年西雅图的比赛场地，它是哪支MLS球队的主场？",
+          "options": [
+            "波特兰伐木者",
+            "西雅图音浪",
+            "洛杉矶银河",
+            "温哥华白浪"
+          ],
+          "explanation": "卢门球场是西雅图音浪队的主场，以其热烈火爆的现场氛围而闻名。"
+        }
+      },
+      "i18nSourceHash": "21b3470831baa28f"
     },
     {
       "id": "t-france-count",
@@ -1530,7 +1942,110 @@
       ],
       "answer": 1,
       "explanation": "France has won twice — at home in 1998 and in Russia in 2018. Winning as hosts is not unique: Uruguay (1930), Italy (1934), England (1966), West Germany (1974), and Argentina (1978) all won on home soil. However, several hosts have famously failed — including Brazil, who lost the 1950 final to Uruguay at the Maracanã in one of football’s greatest upsets.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كم عدد الألقاب التي فازت بها فرنسا؟",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "فازت فرنسا مرتين — على أرضها عام 1998 وفي روسيا عام 2018. والفوز على الأرض ليس أمرًا فريدًا: فقد توّجت أوروغواي (1930) وإيطاليا (1934) وإنجلترا (1966) وألمانيا الغربية (1974) والأرجنتين (1978) جميعها على ملاعبها. ومع ذلك، أخفق عدد من المضيفين بشكل مشهور — ومنهم البرازيل التي خسرت نهائي 1950 أمام أوروغواي على ملعب ماراكانا في واحدة من أكبر المفاجآت في تاريخ كرة القدم."
+        },
+        "de": {
+          "question": "Wie viele Titel hat Frankreich gewonnen?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "Frankreich hat zweimal gewonnen — 1998 im eigenen Land und 2018 in Russland. Ein Sieg als Gastgeber ist nichts Einzigartiges: Uruguay (1930), Italien (1934), England (1966), Westdeutschland (1974) und Argentinien (1978) triumphierten allesamt auf heimischem Boden. Mehrere Gastgeber sind jedoch berühmt gescheitert — darunter Brasilien, das 1950 im Maracanã das Finale gegen Uruguay verlor, in einer der größten Sensationen der Fußballgeschichte."
+        },
+        "es": {
+          "question": "¿Cuántos títulos ha ganado Francia?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "Francia ha ganado dos veces: en casa en 1998 y en Rusia en 2018. Ganar como anfitrión no es algo exclusivo: Uruguay (1930), Italia (1934), Inglaterra (1966), Alemania Occidental (1974) y Argentina (1978) se coronaron en su propio suelo. Sin embargo, varios anfitriones fracasaron de forma célebre, entre ellos Brasil, que perdió la final de 1950 ante Uruguay en el Maracaná en una de las mayores sorpresas en la historia del fútbol."
+        },
+        "es-ES": {
+          "question": "¿Cuántos títulos ha ganado Francia?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "Francia ha ganado dos veces: en casa en 1998 y en Rusia en 2018. Ganar como anfitrión no es algo único: Uruguay (1930), Italia (1934), Inglaterra (1966), Alemania Occidental (1974) y Argentina (1978) se coronaron en su propio suelo. Sin embargo, varios anfitriones fracasaron de forma sonada, entre ellos Brasil, que perdió la final de 1950 ante Uruguay en el Maracaná en una de las mayores sorpresas de la historia del fútbol."
+        },
+        "fr": {
+          "question": "Combien de titres la France a-t-elle remportés ?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "La France a triomphé à deux reprises — à domicile en 1998 et en Russie en 2018. Gagner en tant que pays hôte n'a rien d'unique : l'Uruguay (1930), l'Italie (1934), l'Angleterre (1966), l'Allemagne de l'Ouest (1974) et l'Argentine (1978) se sont tous imposés sur leurs terres. Plusieurs hôtes ont toutefois connu des échecs retentissants — notamment le Brésil, battu en finale en 1950 par l'Uruguay au Maracanã, lors de l'une des plus grandes surprises de l'histoire du football."
+        },
+        "it": {
+          "question": "Quanti titoli ha vinto la Francia?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "La Francia ha trionfato due volte: in casa nel 1998 e in Russia nel 2018. Vincere da padroni di casa non è una rarità: Uruguay (1930), Italia (1934), Inghilterra (1966), Germania Ovest (1974) e Argentina (1978) si sono tutte imposte sul proprio suolo. Tuttavia, diversi paesi ospitanti hanno clamorosamente fallito — tra cui il Brasile, sconfitto nella finale del 1950 dall'Uruguay al Maracanã in una delle più grandi sorprese nella storia del calcio."
+        },
+        "ja": {
+          "question": "フランスは何回優勝していますか？",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "フランスは2度優勝しています——1998年に自国開催で、そして2018年にロシアで優勝しました。開催国としての優勝は珍しいことではなく、ウルグアイ（1930年）、イタリア（1934年）、イングランド（1966年）、西ドイツ（1974年）、アルゼンチン（1978年）はいずれも自国で頂点に立ちました。しかし、いくつかの開催国は有名な失敗を喫しており、その一つがブラジルです。1950年の決勝でマラカナンにてウルグアイに敗れ、サッカー史上最大級の番狂わせとなりました。"
+        },
+        "ko": {
+          "question": "프랑스는 몇 번 우승했나요?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "프랑스는 두 번 우승했습니다 — 1998년 자국에서, 그리고 2018년 러시아에서 우승했습니다. 개최국으로서의 우승은 드문 일이 아닙니다. 우루과이(1930년), 이탈리아(1934년), 잉글랜드(1966년), 서독(1974년), 아르헨티나(1978년)가 모두 자국에서 정상에 올랐습니다. 그러나 여러 개최국이 유명한 실패를 맛보기도 했습니다 — 그중 브라질은 1950년 결승에서 마라카낭에서 우루과이에 패하며 축구 역사상 가장 큰 이변 중 하나를 남겼습니다."
+        },
+        "pt-BR": {
+          "question": "Quantos títulos a França conquistou?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "A França venceu duas vezes — em casa, em 1998, e na Rússia, em 2018. Vencer como anfitrião não é algo exclusivo: Uruguai (1930), Itália (1934), Inglaterra (1966), Alemanha Ocidental (1974) e Argentina (1978) todos triunfaram em seu próprio território. No entanto, vários anfitriões falharam de forma marcante — incluindo o Brasil, que perdeu a final de 1950 para o Uruguai no Maracanã, em uma das maiores zebras da história do futebol."
+        },
+        "zh-Hans": {
+          "question": "法国队夺得过多少次冠军？",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "法国队两次夺冠——1998年在本土，以及2018年在俄罗斯。东道主夺冠并不罕见：乌拉圭（1930年）、意大利（1934年）、英格兰（1966年）、西德（1974年）和阿根廷（1978年）都曾在本土登顶。然而，也有几支东道主球队遭遇了著名的失利——其中包括巴西，他们在1950年决赛中于马拉卡纳球场负于乌拉圭，成为足球史上最大的冷门之一。"
+        }
+      },
+      "i18nSourceHash": "fd237bb808a798f6"
     },
     {
       "id": "t-spain-2010",
