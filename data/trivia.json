@@ -1253,7 +1253,110 @@
       ],
       "answer": 2,
       "explanation": "The host has won six times: Uruguay (1930), Italy (1934), England (1966), West Germany (1974), Argentina (1978), and France (1998).",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كم مرة فاز البلد المضيف بالبطولة؟",
+          "options": [
+            "3",
+            "5",
+            "6",
+            "8"
+          ],
+          "explanation": "فاز البلد المضيف ست مرات: أوروغواي (1930)، وإيطاليا (1934)، وإنجلترا (1966)، وألمانيا الغربية (1974)، والأرجنتين (1978)، وفرنسا (1998)."
+        },
+        "de": {
+          "question": "Wie oft hat das Gastgeberland das Turnier gewonnen?",
+          "options": [
+            "3",
+            "5",
+            "6",
+            "8"
+          ],
+          "explanation": "Das Gastgeberland hat sechsmal gewonnen: Uruguay (1930), Italien (1934), England (1966), Westdeutschland (1974), Argentinien (1978) und Frankreich (1998)."
+        },
+        "es": {
+          "question": "¿Cuántas veces el país anfitrión ha terminado ganando el torneo?",
+          "options": [
+            "3",
+            "5",
+            "6",
+            "8"
+          ],
+          "explanation": "El anfitrión ha ganado seis veces: Uruguay (1930), Italia (1934), Inglaterra (1966), Alemania Occidental (1974), Argentina (1978) y Francia (1998)."
+        },
+        "es-ES": {
+          "question": "¿Cuántas veces ha acabado ganando el torneo el país anfitrión?",
+          "options": [
+            "3",
+            "5",
+            "6",
+            "8"
+          ],
+          "explanation": "El anfitrión ha ganado seis veces: Uruguay (1930), Italia (1934), Inglaterra (1966), Alemania Occidental (1974), Argentina (1978) y Francia (1998)."
+        },
+        "fr": {
+          "question": "Combien de fois le pays hôte a-t-il remporté le tournoi ?",
+          "options": [
+            "3",
+            "5",
+            "6",
+            "8"
+          ],
+          "explanation": "Le pays hôte l'a emporté à six reprises : l'Uruguay (1930), l'Italie (1934), l'Angleterre (1966), l'Allemagne de l'Ouest (1974), l'Argentine (1978) et la France (1998)."
+        },
+        "it": {
+          "question": "Quante volte la nazione ospitante ha vinto il torneo?",
+          "options": [
+            "3",
+            "5",
+            "6",
+            "8"
+          ],
+          "explanation": "Il paese ospitante ha vinto sei volte: Uruguay (1930), Italia (1934), Inghilterra (1966), Germania Ovest (1974), Argentina (1978) e Francia (1998)."
+        },
+        "ja": {
+          "question": "開催国が大会を制したのは何回ですか？",
+          "options": [
+            "3",
+            "5",
+            "6",
+            "8"
+          ],
+          "explanation": "開催国は6回優勝しています。ウルグアイ（1930年）、イタリア（1934年）、イングランド（1966年）、西ドイツ（1974年）、アルゼンチン（1978年）、フランス（1998年）です。"
+        },
+        "ko": {
+          "question": "개최국이 대회에서 우승한 것은 몇 번입니까?",
+          "options": [
+            "3",
+            "5",
+            "6",
+            "8"
+          ],
+          "explanation": "개최국은 여섯 번 우승했습니다: 우루과이(1930년), 이탈리아(1934년), 잉글랜드(1966년), 서독(1974년), 아르헨티나(1978년), 프랑스(1998년)."
+        },
+        "pt-BR": {
+          "question": "Quantas vezes o país-sede acabou vencendo o torneio?",
+          "options": [
+            "3",
+            "5",
+            "6",
+            "8"
+          ],
+          "explanation": "O país-sede venceu seis vezes: Uruguai (1930), Itália (1934), Inglaterra (1966), Alemanha Ocidental (1974), Argentina (1978) e França (1998)."
+        },
+        "zh-Hans": {
+          "question": "东道主国家最终赢得赛事冠军的次数是多少？",
+          "options": [
+            "3",
+            "5",
+            "6",
+            "8"
+          ],
+          "explanation": "东道主共夺冠六次：乌拉圭（1930年）、意大利（1934年）、英格兰（1966年）、西德（1974年）、阿根廷（1978年）和法国（1998年）。"
+        }
+      },
+      "i18nSourceHash": "04f2b73726188a18"
     },
     {
       "id": "v-lincoln-philly",
@@ -1296,7 +1399,110 @@
       "answer": 2,
       "explanation": "Zidane’s headbutt on Materazzi in extra time of the 2006 final was his last act as a professional — Italy won on penalties. Zidane played for Cannes, Bordeaux, Juventus, and Real Madrid, where he scored one of the greatest Champions League final goals ever (a left-foot volley in 2002). He later said he didn’t regret the headbutt itself because Materazzi’s insults about his mother and sister were unacceptable, though he regretted that millions of children saw it.",
       "media": "https://www.youtube.com/watch?v=DhIAs8vRZlc",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من طُرد في نهائي 2006 بسبب نطحه ماركو ماتيراتزي؟",
+          "options": [
+            "تييري هنري",
+            "باتريك فييرا",
+            "زين الدين زيدان",
+            "دافيد تريزيغيه"
+          ],
+          "explanation": "كانت نطحة زيدان لماتيراتزي في الوقت الإضافي من نهائي 2006 آخر تصرف له كلاعب محترف — وفازت إيطاليا بركلات الترجيح. لعب زيدان لكان وبوردو ويوفنتوس وريال مدريد، حيث سجل أحد أروع أهداف النهائيات في تاريخ دوري الأبطال (تسديدة بالقدم اليسرى من الطائرة عام 2002). قال لاحقًا إنه لم يندم على النطحة نفسها لأن إهانات ماتيراتزي بحق أمه وأخته كانت غير مقبولة، لكنه ندم على أن ملايين الأطفال شاهدوا ذلك."
+        },
+        "de": {
+          "question": "Wer wurde im Finale 2006 nach einem Kopfstoß gegen Marco Materazzi des Feldes verwiesen?",
+          "options": [
+            "Thierry Henry",
+            "Patrick Vieira",
+            "Zinedine Zidane",
+            "David Trezeguet"
+          ],
+          "explanation": "Zidanes Kopfstoß gegen Materazzi in der Verlängerung des Finales 2006 war seine letzte Aktion als Profi — Italien gewann im Elfmeterschießen. Zidane spielte für Cannes, Bordeaux, Juventus und Real Madrid, wo er eines der schönsten Finaltore der Champions-League-Geschichte erzielte (ein Volleyschuss mit dem linken Fuß im Jahr 2002). Später sagte er, dass er den Kopfstoß selbst nicht bereue, weil Materazzis Beleidigungen gegen seine Mutter und Schwester inakzeptabel gewesen seien, er es aber bedauere, dass Millionen Kinder es gesehen hätten."
+        },
+        "es": {
+          "question": "¿Quién fue expulsado en la final de 2006 por darle un cabezazo a Marco Materazzi?",
+          "options": [
+            "Thierry Henry",
+            "Patrick Vieira",
+            "Zinedine Zidane",
+            "David Trezeguet"
+          ],
+          "explanation": "El cabezazo de Zidane a Materazzi en el tiempo extra de la final de 2006 fue su último acto como profesional: Italia ganó en los penales. Zidane jugó en el Cannes, el Burdeos, la Juventus y el Real Madrid, donde marcó uno de los mejores goles en la historia de las finales de la Champions League (una volea de zurda en 2002). Más tarde dijo que no se arrepentía del cabezazo en sí, porque los insultos de Materazzi sobre su madre y su hermana eran inaceptables, aunque sí lamentaba que millones de niños lo hubieran visto."
+        },
+        "es-ES": {
+          "question": "¿A quién expulsaron en la final de 2006 por dar un cabezazo a Marco Materazzi?",
+          "options": [
+            "Thierry Henry",
+            "Patrick Vieira",
+            "Zinedine Zidane",
+            "David Trezeguet"
+          ],
+          "explanation": "El cabezazo de Zidane a Materazzi en la prórroga de la final de 2006 fue su última acción como profesional: Italia ganó en los penaltis. Zidane jugó en el Cannes, el Burdeos, la Juventus y el Real Madrid, donde marcó uno de los mejores goles de la historia de las finales de la Champions League (una volea de zurda en 2002). Más tarde dijo que no se arrepentía del cabezazo en sí, porque los insultos de Materazzi sobre su madre y su hermana fueron inaceptables, aunque sí lamentaba que millones de niños lo hubieran visto."
+        },
+        "fr": {
+          "question": "Qui a été expulsé lors de la finale 2006 pour avoir donné un coup de tête à Marco Materazzi ?",
+          "options": [
+            "Thierry Henry",
+            "Patrick Vieira",
+            "Zinedine Zidane",
+            "David Trezeguet"
+          ],
+          "explanation": "Le coup de tête de Zidane sur Materazzi dans la prolongation de la finale 2006 fut son dernier geste en tant que professionnel — l'Italie l'a emporté aux tirs au but. Zidane a évolué à Cannes, Bordeaux, la Juventus et au Real Madrid, où il a inscrit l'un des plus beaux buts de l'histoire des finales de Ligue des champions (une reprise de volée du pied gauche en 2002). Il a déclaré plus tard qu'il ne regrettait pas le coup de tête lui-même, car les insultes de Materazzi envers sa mère et sa sœur étaient inacceptables, mais qu'il regrettait que des millions d'enfants l'aient vu."
+        },
+        "it": {
+          "question": "Chi fu espulso nella finale del 2006 per aver dato una testata a Marco Materazzi?",
+          "options": [
+            "Thierry Henry",
+            "Patrick Vieira",
+            "Zinedine Zidane",
+            "David Trezeguet"
+          ],
+          "explanation": "La testata di Zidane a Materazzi nei tempi supplementari della finale del 2006 fu il suo ultimo gesto da professionista: l'Italia vinse ai rigori. Zidane ha giocato nel Cannes, nel Bordeaux, nella Juventus e nel Real Madrid, dove segnò uno dei gol più belli nella storia delle finali di Champions League (una volée di sinistro nel 2002). In seguito disse di non pentirsi della testata in sé, perché gli insulti di Materazzi verso sua madre e sua sorella erano inaccettabili, pur rammaricandosi che milioni di bambini l'avessero vista."
+        },
+        "ja": {
+          "question": "2006年の決勝でマルコ・マテラッツィに頭突きをして退場になったのは誰？",
+          "options": [
+            "ティエリ・アンリ",
+            "パトリック・ヴィエラ",
+            "ジネディーヌ・ジダン",
+            "ダヴィド・トレゼゲ"
+          ],
+          "explanation": "2006年決勝の延長戦でマテラッツィに放ったジダンの頭突きは、プロとしての最後のプレーとなり、試合はイタリアがPK戦で勝利した。ジダンはカンヌ、ボルドー、ユヴェントス、レアル・マドリードでプレーし、レアルでは2002年のチャンピオンズリーグ決勝で左足のボレーという史上屈指の名ゴールを決めた。後に彼は、マテラッツィが母と姉妹を侮辱したことは許せないことだったので頭突きそのものは後悔していないが、数百万人の子どもたちがそれを見たことは悔やまれると語った。"
+        },
+        "ko": {
+          "question": "2006년 결승전에서 마르코 마테라치에게 박치기를 해 퇴장당한 선수는?",
+          "options": [
+            "티에리 앙리",
+            "파트리크 비에이라",
+            "지네딘 지단",
+            "다비드 트레제게"
+          ],
+          "explanation": "2006년 결승 연장전에서 마테라치에게 가한 지단의 박치기는 그의 프로 선수로서 마지막 행동이었고, 경기는 이탈리아가 승부차기로 승리했다. 지단은 칸, 보르도, 유벤투스, 레알 마드리드에서 뛰었으며, 레알에서는 2002년 챔피언스리그 결승에서 왼발 발리슛이라는 역대 최고의 결승골 중 하나를 터뜨렸다. 그는 훗날 마테라치가 자신의 어머니와 누이를 모욕한 것은 용납할 수 없는 일이었기에 박치기 자체는 후회하지 않지만, 수백만 명의 아이들이 그 장면을 본 것은 후회한다고 말했다."
+        },
+        "pt-BR": {
+          "question": "Quem foi expulso na final de 2006 por dar uma cabeçada em Marco Materazzi?",
+          "options": [
+            "Thierry Henry",
+            "Patrick Vieira",
+            "Zinedine Zidane",
+            "David Trezeguet"
+          ],
+          "explanation": "A cabeçada de Zidane em Materazzi na prorrogação da final de 2006 foi o seu último ato como profissional — a Itália venceu nos pênaltis. Zidane jogou pelo Cannes, Bordeaux, Juventus e Real Madrid, onde marcou um dos gols mais bonitos da história das finais da Champions League (uma bicicleta de pé esquerdo em 2002). Mais tarde, ele disse que não se arrependia da cabeçada em si, pois os insultos de Materazzi à sua mãe e irmã foram inaceitáveis, embora lamentasse que milhões de crianças tivessem visto aquilo."
+        },
+        "zh-Hans": {
+          "question": "在2006年决赛中，谁因头顶马尔科·马特拉齐而被罚下场？",
+          "options": [
+            "蒂埃里·亨利",
+            "帕特里克·维埃拉",
+            "齐内丁·齐达内",
+            "大卫·特雷泽盖"
+          ],
+          "explanation": "齐达内在2006年决赛加时赛中头顶马特拉齐，这成了他职业生涯的最后一个动作——意大利最终通过点球大战获胜。齐达内曾效力于戛纳、波尔多、尤文图斯和皇家马德里，并在皇马打入了冠军联赛决赛史上最精彩的进球之一（2002年的一记左脚凌空抽射）。他后来表示并不后悔那记头顶本身，因为马特拉齐对他母亲和姐妹的侮辱令人无法接受，但他遗憾的是有数百万儿童目睹了这一幕。"
+        }
+      },
+      "i18nSourceHash": "48b3b65f2e7a501e"
     },
     {
       "id": "v-lumen-sounders",
