@@ -2215,7 +2215,110 @@
       ],
       "answer": 2,
       "explanation": "Didier Deschamps lifted the trophy as France's captain in 1998 and guided them to the title as coach 20 years later.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من فاز بالبطولة كقائد عام 1998 وكمدرب رئيسي عام 2018؟",
+          "options": [
+            "زين الدين زيدان",
+            "لوران بلان",
+            "ديدييه ديشان",
+            "ريمون دومينيك"
+          ],
+          "explanation": "رفع ديدييه ديشان الكأس كقائد لمنتخب فرنسا عام 1998، ثم قاده إلى اللقب كمدرب بعد 20 عامًا."
+        },
+        "de": {
+          "question": "Wer gewann das Turnier 1998 als Kapitän und 2018 als Cheftrainer?",
+          "options": [
+            "Zinedine Zidane",
+            "Laurent Blanc",
+            "Didier Deschamps",
+            "Raymond Domenech"
+          ],
+          "explanation": "Didier Deschamps stemmte 1998 als Kapitän Frankreichs den Pokal in die Höhe und führte die Mannschaft 20 Jahre später als Trainer zum Titel."
+        },
+        "es": {
+          "question": "¿Quién ganó el torneo como capitán en 1998 y como director técnico en 2018?",
+          "options": [
+            "Zinedine Zidane",
+            "Laurent Blanc",
+            "Didier Deschamps",
+            "Raymond Domenech"
+          ],
+          "explanation": "Didier Deschamps levantó el trofeo como capitán de Francia en 1998 y los llevó al título como entrenador 20 años después."
+        },
+        "es-ES": {
+          "question": "¿Quién ganó el torneo como capitán en 1998 y como seleccionador en 2018?",
+          "options": [
+            "Zinedine Zidane",
+            "Laurent Blanc",
+            "Didier Deschamps",
+            "Raymond Domenech"
+          ],
+          "explanation": "Didier Deschamps levantó el trofeo como capitán de Francia en 1998 y la condujo al título como entrenador 20 años después."
+        },
+        "fr": {
+          "question": "Qui a remporté le tournoi en tant que capitaine en 1998 et en tant que sélectionneur en 2018 ?",
+          "options": [
+            "Zinedine Zidane",
+            "Laurent Blanc",
+            "Didier Deschamps",
+            "Raymond Domenech"
+          ],
+          "explanation": "Didier Deschamps a soulevé le trophée comme capitaine de la France en 1998, puis l'a menée au titre comme entraîneur 20 ans plus tard."
+        },
+        "it": {
+          "question": "Chi ha vinto il torneo da capitano nel 1998 e da commissario tecnico nel 2018?",
+          "options": [
+            "Zinedine Zidane",
+            "Laurent Blanc",
+            "Didier Deschamps",
+            "Raymond Domenech"
+          ],
+          "explanation": "Didier Deschamps ha alzato il trofeo da capitano della Francia nel 1998 e l'ha guidata al titolo da allenatore 20 anni dopo."
+        },
+        "ja": {
+          "question": "1998年にキャプテンとして、2018年に監督としてこの大会を制したのは誰でしょう？",
+          "options": [
+            "ジネディーヌ・ジダン",
+            "ローラン・ブラン",
+            "ディディエ・デシャン",
+            "レイモン・ドメネク"
+          ],
+          "explanation": "ディディエ・デシャンは1998年にフランスのキャプテンとしてトロフィーを掲げ、その20年後には監督としてチームを優勝に導きました。"
+        },
+        "ko": {
+          "question": "1998년에는 주장으로, 2018년에는 감독으로 이 대회에서 우승한 인물은 누구일까요?",
+          "options": [
+            "지네딘 지단",
+            "로랑 블랑",
+            "디디에 데샹",
+            "레몽 도메네크"
+          ],
+          "explanation": "디디에 데샹은 1998년 프랑스 주장으로 트로피를 들어 올렸고, 20년 뒤에는 감독으로 팀을 우승으로 이끌었습니다."
+        },
+        "pt-BR": {
+          "question": "Quem venceu o torneio como capitão em 1998 e como treinador em 2018?",
+          "options": [
+            "Zinedine Zidane",
+            "Laurent Blanc",
+            "Didier Deschamps",
+            "Raymond Domenech"
+          ],
+          "explanation": "Didier Deschamps ergueu o troféu como capitão da França em 1998 e a levou ao título como técnico 20 anos depois."
+        },
+        "zh-Hans": {
+          "question": "谁曾在1998年以队长身份、又在2018年以主教练身份赢得这项赛事的冠军？",
+          "options": [
+            "齐内丁·齐达内",
+            "洛朗·布兰",
+            "迪迪埃·德尚",
+            "雷蒙·多梅内克"
+          ],
+          "explanation": "迪迪埃·德尚在1998年作为法国队长高举奖杯，20年后又以主教练身份带领球队夺冠。"
+        }
+      },
+      "i18nSourceHash": "f4fb70c2619571c4"
     },
     {
       "id": "h-back-to-back",
@@ -2229,7 +2332,110 @@
       ],
       "answer": 1,
       "explanation": "Brazil's back-to-back wins in 1958 and 1962 remain the last time any nation successfully defended the title.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أي منتخب كان آخر من فاز بلقبين متتاليين؟",
+          "options": [
+            "إيطاليا بقيادة ميتزا وبيولا",
+            "البرازيل مع بيليه وغارينشا في أوج عطائهما",
+            "الأرجنتين في ظل براعة مارادونا",
+            "ألمانيا المرتكزة على دفاع بيكنباور"
+          ],
+          "explanation": "يظل فوز البرازيل المتتالي في عامي 1958 و1962 آخر مرة ينجح فيها منتخب في الدفاع عن لقبه."
+        },
+        "de": {
+          "question": "Welche Mannschaft gewann zuletzt zwei aufeinanderfolgende Titel?",
+          "options": [
+            "Italien, angeführt von Meazza und Piola",
+            "Brasilien, mit Pelé und Garrincha in Bestform",
+            "Argentinien, getragen von Maradonas Genie",
+            "Deutschland, gestützt auf Beckenbauers Abwehr"
+          ],
+          "explanation": "Brasiliens aufeinanderfolgende Siege 1958 und 1962 bleiben das letzte Mal, dass eine Nation den Titel erfolgreich verteidigte."
+        },
+        "es": {
+          "question": "¿Qué selección fue la última en ganar dos títulos consecutivos?",
+          "options": [
+            "Italia, liderada por Meazza y Piola",
+            "Brasil, con Pelé y Garrincha en su mejor momento",
+            "Argentina, bajo la genialidad de Maradona",
+            "Alemania, sostenida por la defensa de Beckenbauer"
+          ],
+          "explanation": "Los triunfos consecutivos de Brasil en 1958 y 1962 siguen siendo la última vez que una selección logró defender el título."
+        },
+        "es-ES": {
+          "question": "¿Qué selección fue la última en ganar dos títulos consecutivos?",
+          "options": [
+            "Italia, encabezada por Meazza y Piola",
+            "Brasil, con Pelé y Garrincha en su mejor momento",
+            "Argentina, bajo la genialidad de Maradona",
+            "Alemania, apoyada en la defensa de Beckenbauer"
+          ],
+          "explanation": "Las victorias consecutivas de Brasil en 1958 y 1962 siguen siendo la última vez que una selección logró defender el título."
+        },
+        "fr": {
+          "question": "Quelle équipe a été la dernière à remporter deux titres consécutifs ?",
+          "options": [
+            "L'Italie, emmenée par Meazza et Piola",
+            "Le Brésil, avec Pelé et Garrincha à leur apogée",
+            "L'Argentine, portée par le génie de Maradona",
+            "L'Allemagne, appuyée sur la défense de Beckenbauer"
+          ],
+          "explanation": "Les victoires consécutives du Brésil en 1958 et 1962 restent la dernière fois qu'une nation a su défendre son titre avec succès."
+        },
+        "it": {
+          "question": "Quale squadra è stata l'ultima a vincere due titoli consecutivi?",
+          "options": [
+            "L'Italia, trascinata da Meazza e Piola",
+            "Il Brasile, con Pelé e Garrincha al massimo della forma",
+            "L'Argentina, sotto il genio di Maradona",
+            "La Germania, fondata sulla difesa di Beckenbauer"
+          ],
+          "explanation": "Le vittorie consecutive del Brasile nel 1958 e nel 1962 restano l'ultima volta in cui una nazionale è riuscita a difendere il titolo."
+        },
+        "ja": {
+          "question": "2大会連続で優勝した最後のチームはどこですか？",
+          "options": [
+            "メアッツァとピオラが率いたイタリア",
+            "全盛期のペレとガリンシャを擁したブラジル",
+            "マラドーナの天才ぶりに支えられたアルゼンチン",
+            "ベッケンバウアーの守備が支柱となったドイツ"
+          ],
+          "explanation": "1958年と1962年に連覇したブラジルが、いまだに連続でタイトルを防衛した最後の国です。"
+        },
+        "ko": {
+          "question": "마지막으로 2회 연속 우승을 차지한 팀은 어디인가요?",
+          "options": [
+            "메아차와 피올라가 이끈 이탈리아",
+            "전성기의 펠레와 가린샤를 앞세운 브라질",
+            "마라도나의 천재성에 힘입은 아르헨티나",
+            "베켄바워의 수비를 중심으로 한 독일"
+          ],
+          "explanation": "1958년과 1962년 연속 우승을 거둔 브라질은 지금까지 타이틀 방어에 성공한 마지막 나라로 남아 있습니다."
+        },
+        "pt-BR": {
+          "question": "Qual seleção foi a última a conquistar dois títulos consecutivos?",
+          "options": [
+            "Itália, comandada por Meazza e Piola",
+            "Brasil, com Pelé e Garrincha no auge",
+            "Argentina, sob a genialidade de Maradona",
+            "Alemanha, apoiada na defesa de Beckenbauer"
+          ],
+          "explanation": "As conquistas consecutivas do Brasil em 1958 e 1962 seguem sendo a última vez que uma seleção conseguiu defender o título."
+        },
+        "zh-Hans": {
+          "question": "哪支球队是最后一支连续两次夺冠的队伍？",
+          "options": [
+            "由梅阿查和皮奥拉领衔的意大利",
+            "拥有巅峰期贝利和加林查的巴西",
+            "在马拉多纳天才发挥下的阿根廷",
+            "以贝肯鲍尔防线为支柱的德国"
+          ],
+          "explanation": "巴西在1958年和1962年连续夺冠，至今仍是任何国家最后一次成功卫冕。"
+        }
+      },
+      "i18nSourceHash": "2e3ce57025fd06b7"
     },
     {
       "id": "h-1934-italy",
@@ -2347,7 +2553,110 @@
       ],
       "answer": 1,
       "explanation": "Spain beat the Netherlands 1–0 in extra time for their first-ever title.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أي منتخب فاز بلقبه الأول عام 2010؟",
+          "options": [
+            "هولندا",
+            "إسبانيا",
+            "ألمانيا",
+            "أوروغواي"
+          ],
+          "explanation": "تغلبت إسبانيا على هولندا 1–0 في الوقت الإضافي لتحرز لقبها الأول على الإطلاق."
+        },
+        "de": {
+          "question": "Welche Nation gewann 2010 ihren ersten Titel?",
+          "options": [
+            "Niederlande",
+            "Spanien",
+            "Deutschland",
+            "Uruguay"
+          ],
+          "explanation": "Spanien besiegte die Niederlande in der Verlängerung mit 1:0 und holte den allerersten Titel."
+        },
+        "es": {
+          "question": "¿Qué selección ganó su primer título en 2010?",
+          "options": [
+            "Países Bajos",
+            "España",
+            "Alemania",
+            "Uruguay"
+          ],
+          "explanation": "España venció a Países Bajos 1–0 en el tiempo extra para conseguir su primer título."
+        },
+        "es-ES": {
+          "question": "¿Qué selección ganó su primer título en 2010?",
+          "options": [
+            "Países Bajos",
+            "España",
+            "Alemania",
+            "Uruguay"
+          ],
+          "explanation": "España derrotó a Países Bajos por 1–0 en la prórroga para lograr su primer título."
+        },
+        "fr": {
+          "question": "Quelle nation a remporté son premier titre en 2010 ?",
+          "options": [
+            "Pays-Bas",
+            "Espagne",
+            "Allemagne",
+            "Uruguay"
+          ],
+          "explanation": "L'Espagne a battu les Pays-Bas 1–0 après prolongation pour décrocher son tout premier titre."
+        },
+        "it": {
+          "question": "Quale nazionale ha vinto il suo primo titolo nel 2010?",
+          "options": [
+            "Paesi Bassi",
+            "Spagna",
+            "Germania",
+            "Uruguay"
+          ],
+          "explanation": "La Spagna ha battuto i Paesi Bassi 1–0 ai supplementari conquistando il suo primo titolo in assoluto."
+        },
+        "ja": {
+          "question": "2010年に初優勝した国はどこでしょう？",
+          "options": [
+            "オランダ",
+            "スペイン",
+            "ドイツ",
+            "ウルグアイ"
+          ],
+          "explanation": "スペインは延長戦でオランダを1–0で破り、初のタイトルを獲得しました。"
+        },
+        "ko": {
+          "question": "2010년에 첫 우승을 차지한 나라는 어디일까요?",
+          "options": [
+            "네덜란드",
+            "스페인",
+            "독일",
+            "우루과이"
+          ],
+          "explanation": "스페인은 연장전에서 네덜란드를 1–0으로 꺾고 사상 첫 우승을 달성했습니다."
+        },
+        "pt-BR": {
+          "question": "Qual seleção conquistou seu primeiro título em 2010?",
+          "options": [
+            "Países Baixos",
+            "Espanha",
+            "Alemanha",
+            "Uruguai"
+          ],
+          "explanation": "A Espanha venceu os Países Baixos por 1 a 0 na prorrogação e conquistou seu primeiro título."
+        },
+        "zh-Hans": {
+          "question": "哪个国家在2010年赢得了首个冠军？",
+          "options": [
+            "荷兰",
+            "西班牙",
+            "德国",
+            "乌拉圭"
+          ],
+          "explanation": "西班牙在加时赛中以1–0战胜荷兰，夺得队史首个冠军。"
+        }
+      },
+      "i18nSourceHash": "349b199f0d59e68b"
     },
     {
       "id": "h-var-debut",
@@ -2374,7 +2683,110 @@
       ],
       "answer": 1,
       "explanation": "VAR helps match officials review decisions on goals, penalties, red cards, and mistaken identity using video footage.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ماذا يعني اختصار VAR؟",
+          "options": [
+            "الحكم شديد الغضب",
+            "حكم الفيديو المساعد",
+            "مراجعة تحليل الفيديو",
+            "إعادة المساعدة البصرية"
+          ],
+          "explanation": "يساعد حكم الفيديو المساعد (VAR) طاقم المباراة على مراجعة القرارات المتعلقة بالأهداف وركلات الجزاء والبطاقات الحمراء والخطأ في تحديد هوية اللاعب باستخدام لقطات الفيديو."
+        },
+        "de": {
+          "question": "Wofür steht VAR?",
+          "options": [
+            "Very Angry Referee (Sehr wütender Schiedsrichter)",
+            "Video Assistant Referee (Video-Schiedsrichter-Assistent)",
+            "Video Analysis Review (Videoanalyse-Überprüfung)",
+            "Visual Assistance Replay (Visuelle Assistenz-Wiederholung)"
+          ],
+          "explanation": "Der Videoschiedsrichter (VAR) unterstützt die Spieloffiziellen dabei, Entscheidungen zu Toren, Strafstößen, roten Karten und Spielerverwechslungen anhand von Videoaufnahmen zu überprüfen."
+        },
+        "es": {
+          "question": "¿Qué significa VAR?",
+          "options": [
+            "Árbitro Muy Enojado",
+            "Árbitro Asistente de Video",
+            "Revisión de Análisis de Video",
+            "Repetición de Asistencia Visual"
+          ],
+          "explanation": "El VAR (Árbitro Asistente de Video) ayuda a los árbitros del partido a revisar decisiones sobre goles, penales, tarjetas rojas e identidad equivocada usando imágenes de video."
+        },
+        "es-ES": {
+          "question": "¿Qué significa VAR?",
+          "options": [
+            "Árbitro Muy Enfadado",
+            "Árbitro Asistente de Vídeo",
+            "Revisión de Análisis de Vídeo",
+            "Repetición de Asistencia Visual"
+          ],
+          "explanation": "El VAR (Árbitro Asistente de Vídeo) ayuda a los colegiados a revisar decisiones sobre goles, penaltis, tarjetas rojas e identidad equivocada mediante imágenes de vídeo."
+        },
+        "fr": {
+          "question": "Que signifie VAR ?",
+          "options": [
+            "Very Angry Referee (Arbitre très en colère)",
+            "Video Assistant Referee (Arbitre assistant vidéo)",
+            "Video Analysis Review (Examen d'analyse vidéo)",
+            "Visual Assistance Replay (Rediffusion d'assistance visuelle)"
+          ],
+          "explanation": "L'arbitrage vidéo (VAR) aide les officiels du match à réexaminer les décisions concernant les buts, les penalties, les cartons rouges et les erreurs d'identité à l'aide d'images vidéo."
+        },
+        "it": {
+          "question": "Cosa significa VAR?",
+          "options": [
+            "Very Angry Referee (Arbitro molto arrabbiato)",
+            "Video Assistant Referee (Arbitro assistente video)",
+            "Video Analysis Review (Revisione analisi video)",
+            "Visual Assistance Replay (Replay di assistenza visiva)"
+          ],
+          "explanation": "Il VAR (arbitro assistente video) aiuta gli ufficiali di gara a rivedere le decisioni su gol, rigori, cartellini rossi ed errori di identità grazie alle immagini video."
+        },
+        "ja": {
+          "question": "VARとは何の略ですか？",
+          "options": [
+            "とても怒っている主審（Very Angry Referee）",
+            "ビデオ・アシスタント・レフェリー（Video Assistant Referee）",
+            "ビデオ分析レビュー（Video Analysis Review）",
+            "視覚補助リプレー（Visual Assistance Replay）"
+          ],
+          "explanation": "VAR（ビデオ・アシスタント・レフェリー）は、映像を用いてゴール、PK、レッドカード、人違いに関する判定を試合の審判団が見直すのを支援します。"
+        },
+        "ko": {
+          "question": "VAR는 무엇의 약자인가요?",
+          "options": [
+            "매우 화난 심판(Very Angry Referee)",
+            "비디오 보조 심판(Video Assistant Referee)",
+            "비디오 분석 검토(Video Analysis Review)",
+            "시각 보조 리플레이(Visual Assistance Replay)"
+          ],
+          "explanation": "VAR(비디오 보조 심판)는 영상 자료를 활용해 득점, 페널티킥, 레드카드, 선수 오인 판정에 대한 결정을 경기 심판진이 재검토하도록 돕습니다."
+        },
+        "pt-BR": {
+          "question": "O que significa VAR?",
+          "options": [
+            "Árbitro Muito Irritado",
+            "Árbitro Assistente de Vídeo",
+            "Revisão de Análise de Vídeo",
+            "Replay de Assistência Visual"
+          ],
+          "explanation": "O VAR (Árbitro Assistente de Vídeo) ajuda os árbitros da partida a revisar decisões sobre gols, pênaltis, cartões vermelhos e identidade equivocada usando imagens de vídeo."
+        },
+        "zh-Hans": {
+          "question": "VAR 是什么的缩写？",
+          "options": [
+            "非常愤怒的裁判（Very Angry Referee）",
+            "视频助理裁判（Video Assistant Referee）",
+            "视频分析回看（Video Analysis Review）",
+            "视觉辅助回放（Visual Assistance Replay）"
+          ],
+          "explanation": "VAR（视频助理裁判）通过视频画面帮助比赛裁判组对进球、点球、红牌以及认错球员等判罚进行复核。"
+        }
+      },
+      "i18nSourceHash": "9e27f0cf7071bac1"
     },
     {
       "id": "t-uruguay-years",
@@ -2401,7 +2813,110 @@
       ],
       "answer": 2,
       "explanation": "MetLife Stadium in East Rutherford, New Jersey seats approximately 82,500. For comparison, the largest venue in tournament history was the Maracanã for the 1950 final, which held an estimated 199,854 spectators. The smallest venue ever used was the Pochtenoy Stadion in Switzerland (1954) with just 10,000 seats.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ما هي السعة التقريبية لمقاعد ملعب ميت لايف، المستضيف للنهائي عام 2026؟",
+          "options": [
+            "65,000",
+            "72,000",
+            "82,500",
+            "95,000"
+          ],
+          "explanation": "يتسع ملعب ميت لايف في إيست رذرفورد بولاية نيو جيرسي لنحو 82,500 متفرج. وللمقارنة، كان أكبر ملعب في تاريخ البطولة هو ملعب ماراكانا في نهائي عام 1950، الذي استوعب ما يُقدَّر بـ 199,854 متفرجًا. أما أصغر ملعب استُخدم على الإطلاق فكان ملعب بوختنوي في سويسرا (1954) بسعة 10,000 مقعد فقط."
+        },
+        "de": {
+          "question": "Wie hoch ist die ungefähre Zuschauerkapazität des MetLife Stadium, in dem das Finale 2026 ausgetragen wird?",
+          "options": [
+            "65.000",
+            "72.000",
+            "82.500",
+            "95.000"
+          ],
+          "explanation": "Das MetLife Stadium in East Rutherford, New Jersey, bietet rund 82.500 Zuschauern Platz. Zum Vergleich: Der größte Austragungsort in der Turniergeschichte war das Maracanã beim Finale 1950, das schätzungsweise 199.854 Zuschauer fasste. Der kleinste jemals genutzte Spielort war das Pochtenoy Stadion in der Schweiz (1954) mit gerade einmal 10.000 Plätzen."
+        },
+        "es": {
+          "question": "¿Cuál es la capacidad aproximada de asientos del MetLife Stadium, sede de la final de 2026?",
+          "options": [
+            "65,000",
+            "72,000",
+            "82,500",
+            "95,000"
+          ],
+          "explanation": "El MetLife Stadium en East Rutherford, Nueva Jersey, tiene capacidad para unos 82,500 espectadores. Para comparar, el recinto más grande en la historia del torneo fue el Maracaná en la final de 1950, que albergó a unos 199,854 espectadores. El recinto más pequeño jamás utilizado fue el Pochtenoy Stadion en Suiza (1954), con apenas 10,000 asientos."
+        },
+        "es-ES": {
+          "question": "¿Cuál es la capacidad aproximada de asientos del MetLife Stadium, sede de la final de 2026?",
+          "options": [
+            "65.000",
+            "72.000",
+            "82.500",
+            "95.000"
+          ],
+          "explanation": "El MetLife Stadium de East Rutherford, Nueva Jersey, tiene capacidad para unos 82.500 espectadores. A modo de comparación, el recinto más grande de la historia del torneo fue el Maracaná en la final de 1950, que acogió a unos 199.854 espectadores. El recinto más pequeño que se ha utilizado nunca fue el Pochtenoy Stadion de Suiza (1954), con apenas 10.000 asientos."
+        },
+        "fr": {
+          "question": "Quelle est la capacité d'accueil approximative du MetLife Stadium, hôte de la finale 2026 ?",
+          "options": [
+            "65 000",
+            "72 000",
+            "82 500",
+            "95 000"
+          ],
+          "explanation": "Le MetLife Stadium d'East Rutherford, dans le New Jersey, peut accueillir environ 82 500 spectateurs. À titre de comparaison, la plus grande enceinte de l'histoire du tournoi fut le Maracanã lors de la finale de 1950, qui accueillit environ 199 854 spectateurs. Le plus petit stade jamais utilisé fut le Pochtenoy Stadion en Suisse (1954), avec seulement 10 000 places."
+        },
+        "it": {
+          "question": "Qual è la capienza approssimativa del MetLife Stadium, sede della finale del 2026?",
+          "options": [
+            "65.000",
+            "72.000",
+            "82.500",
+            "95.000"
+          ],
+          "explanation": "Il MetLife Stadium di East Rutherford, nel New Jersey, può ospitare circa 82.500 spettatori. Per fare un confronto, l'impianto più grande nella storia del torneo fu il Maracanã per la finale del 1950, che accolse circa 199.854 spettatori. L'impianto più piccolo mai utilizzato fu il Pochtenoy Stadion in Svizzera (1954), con appena 10.000 posti."
+        },
+        "ja": {
+          "question": "2026年の決勝が開催されるメットライフ・スタジアムのおおよその収容人数はどれくらいですか？",
+          "options": [
+            "65,000",
+            "72,000",
+            "82,500",
+            "95,000"
+          ],
+          "explanation": "ニュージャージー州イーストラザフォードにあるメットライフ・スタジアムの収容人数は約82,500人です。比較すると、大会史上最大の会場は1950年の決勝が行われたマラカナンで、推定199,854人を収容しました。これまでに使用された最小の会場はスイスのポクテノイ・スタジオン（1954年）で、わずか10,000席でした。"
+        },
+        "ko": {
+          "question": "2026년 결승전이 열리는 메트라이프 스타디움의 대략적인 수용 인원은 얼마입니까?",
+          "options": [
+            "65,000",
+            "72,000",
+            "82,500",
+            "95,000"
+          ],
+          "explanation": "뉴저지주 이스트러더퍼드에 위치한 메트라이프 스타디움의 수용 인원은 약 82,500명입니다. 비교하자면, 대회 역사상 가장 큰 경기장은 1950년 결승전이 열린 마라카낭으로, 약 199,854명의 관중을 수용했습니다. 지금까지 사용된 가장 작은 경기장은 스위스의 포크테노이 슈타디온(1954년)으로 단 10,000석에 불과했습니다."
+        },
+        "pt-BR": {
+          "question": "Qual é a capacidade aproximada de assentos do MetLife Stadium, sede da final de 2026?",
+          "options": [
+            "65.000",
+            "72.000",
+            "82.500",
+            "95.000"
+          ],
+          "explanation": "O MetLife Stadium, em East Rutherford, Nova Jersey, comporta cerca de 82.500 espectadores. Para comparação, o maior estádio da história do torneio foi o Maracanã, na final de 1950, que recebeu cerca de 199.854 espectadores. O menor estádio já utilizado foi o Pochtenoy Stadion, na Suíça (1954), com apenas 10.000 lugares."
+        },
+        "zh-Hans": {
+          "question": "承办2026年决赛的大都会人寿球场大约能容纳多少观众？",
+          "options": [
+            "65,000",
+            "72,000",
+            "82,500",
+            "95,000"
+          ],
+          "explanation": "位于新泽西州东拉瑟福德的大都会人寿球场可容纳约82,500名观众。相比之下，赛事史上最大的场馆是举办1950年决赛的马拉卡纳球场，估计容纳了199,854名观众。而有史以来使用过的最小场馆是瑞士的波克特诺伊球场（1954年），仅有10,000个座位。"
+        }
+      },
+      "i18nSourceHash": "92025468b94ef6ab"
     },
     {
       "id": "h-germany-71-brazil",
