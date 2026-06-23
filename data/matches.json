@@ -581,8 +581,8 @@
     "venue": "NRG Stadium",
     "city": "Houston, TX",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 2,
+    "scoreA": 0
   },
   {
     "n": 45,
