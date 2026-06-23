@@ -568,8 +568,8 @@
     "venue": "Levi's Stadium",
     "city": "Santa Clara (SF Bay Area), CA",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 1,
+    "scoreA": 0
   },
   {
     "n": 47,
