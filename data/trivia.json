@@ -13,7 +13,110 @@
       ],
       "answer": 1,
       "explanation": "English referee Ken Aston devised the card system after the 1966 edition, inspired by traffic lights. It debuted at the 1970 tournament in Mexico. Today, a yellow card is a caution (for fouls, dissent, or time-wasting), and two yellows in one match equal a red. A straight red card means immediate ejection for serious foul play or violent conduct. Since 2019, VAR can also recommend cards after video review.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "في أي بطولة استُخدمت البطاقتان الحمراء والصفراء لأول مرة؟",
+          "options": [
+            "1966 في إنجلترا",
+            "1970 في المكسيك",
+            "1974 في ألمانيا الغربية",
+            "1978 في الأرجنتين"
+          ],
+          "explanation": "ابتكر الحكم الإنجليزي كين أستون نظام البطاقات بعد نسخة 1966، مستوحى من إشارات المرور. وظهر لأول مرة في بطولة 1970 في المكسيك. واليوم، تُعدّ البطاقة الصفراء إنذارًا (على الأخطاء أو الاعتراض أو إضاعة الوقت)، وإنذاران في المباراة الواحدة يساويان بطاقة حمراء. أما البطاقة الحمراء المباشرة فتعني الطرد الفوري عند ارتكاب خطأ جسيم أو سلوك عنيف. ومنذ 2019، يمكن لتقنية الفيديو المساعد (VAR) أن توصي أيضًا بإشهار البطاقات بعد مراجعة اللقطات."
+        },
+        "de": {
+          "question": "Bei welchem Turnier wurden die roten und gelben Karten zum ersten Mal eingeführt?",
+          "options": [
+            "1966 in England",
+            "1970 in Mexiko",
+            "1974 in Westdeutschland",
+            "1978 in Argentinien"
+          ],
+          "explanation": "Der englische Schiedsrichter Ken Aston entwickelte das Kartensystem nach der Ausgabe von 1966, inspiriert von Verkehrsampeln. Premiere feierte es beim Turnier 1970 in Mexiko. Heute ist eine gelbe Karte eine Verwarnung (für Fouls, Meckern oder Zeitspiel), und zwei Gelbe in einem Spiel ergeben zusammen Rot. Eine glatte Rote Karte bedeutet den sofortigen Platzverweis bei grobem Foulspiel oder Tätlichkeiten. Seit 2019 kann auch der Videobeweis (VAR) nach Ansicht der Aufnahmen Karten empfehlen."
+        },
+        "es": {
+          "question": "¿En qué torneo se introdujeron por primera vez las tarjetas roja y amarilla?",
+          "options": [
+            "1966 en Inglaterra",
+            "1970 en México",
+            "1974 en Alemania Occidental",
+            "1978 en Argentina"
+          ],
+          "explanation": "El árbitro inglés Ken Aston ideó el sistema de tarjetas después de la edición de 1966, inspirándose en los semáforos. Debutó en el torneo de 1970 en México. Hoy, la tarjeta amarilla es una amonestación (por faltas, protestas o pérdida de tiempo), y dos amarillas en un mismo partido equivalen a una roja. Una tarjeta roja directa significa la expulsión inmediata por juego brusco grave o conducta violenta. Desde 2019, el VAR también puede recomendar tarjetas tras la revisión del video."
+        },
+        "es-ES": {
+          "question": "¿En qué torneo se introdujeron por primera vez las tarjetas roja y amarilla?",
+          "options": [
+            "1966 en Inglaterra",
+            "1970 en México",
+            "1974 en Alemania Occidental",
+            "1978 en Argentina"
+          ],
+          "explanation": "El árbitro inglés Ken Aston ideó el sistema de tarjetas tras la edición de 1966, inspirándose en los semáforos. Debutó en el torneo de 1970 en México. Hoy en día, la tarjeta amarilla es una amonestación (por faltas, protestas o pérdidas de tiempo), y dos amarillas en un mismo partido equivalen a una roja. Una tarjeta roja directa supone la expulsión inmediata por juego brusco grave o conducta violenta. Desde 2019, el VAR también puede recomendar tarjetas tras la revisión del vídeo."
+        },
+        "fr": {
+          "question": "Lors de quel tournoi les cartons rouge et jaune ont-ils été introduits pour la première fois ?",
+          "options": [
+            "1966 en Angleterre",
+            "1970 au Mexique",
+            "1974 en Allemagne de l'Ouest",
+            "1978 en Argentine"
+          ],
+          "explanation": "L'arbitre anglais Ken Aston a imaginé le système des cartons après l'édition de 1966, en s'inspirant des feux de circulation. Il a fait ses débuts lors du tournoi de 1970 au Mexique. Aujourd'hui, un carton jaune est un avertissement (pour fautes, contestation ou perte de temps), et deux jaunes dans un même match équivalent à un rouge. Un carton rouge direct entraîne l'expulsion immédiate en cas de faute grave ou de comportement violent. Depuis 2019, la VAR peut aussi recommander des cartons après visionnage de la vidéo."
+        },
+        "it": {
+          "question": "In quale torneo furono introdotti per la prima volta i cartellini rosso e giallo?",
+          "options": [
+            "1966 in Inghilterra",
+            "1970 in Messico",
+            "1974 nella Germania Ovest",
+            "1978 in Argentina"
+          ],
+          "explanation": "L'arbitro inglese Ken Aston ideò il sistema dei cartellini dopo l'edizione del 1966, ispirandosi ai semafori. Fece il suo debutto nel torneo del 1970 in Messico. Oggi il cartellino giallo è un'ammonizione (per falli, proteste o perdita di tempo), e due gialli nella stessa partita equivalgono a un rosso. Un cartellino rosso diretto comporta l'espulsione immediata per gioco gravemente falloso o condotta violenta. Dal 2019, anche il VAR può raccomandare l'assegnazione di cartellini dopo la revisione delle immagini."
+        },
+        "ja": {
+          "question": "レッドカードとイエローカードが初めて導入されたのはどの大会ですか？",
+          "options": [
+            "1966年 イングランド",
+            "1970年 メキシコ",
+            "1974年 西ドイツ",
+            "1978年 アルゼンチン"
+          ],
+          "explanation": "イングランド人審判のケン・アストンは、1966年大会の後に交通信号からヒントを得てカード制度を考案しました。1970年のメキシコ大会で初めて導入されました。今日では、イエローカードは警告（ファウル、異議、遅延行為など）を意味し、1試合で2枚もらうとレッドカードとなります。一発レッドカードは、悪質なファウルや暴力行為に対して即座に退場を命じるものです。2019年以降は、ビデオ判定（VAR）による映像確認の結果、カードの提示を勧告することもできるようになりました。"
+        },
+        "ko": {
+          "question": "레드카드와 옐로카드가 처음 도입된 대회는 어디일까요?",
+          "options": [
+            "1966년 잉글랜드",
+            "1970년 멕시코",
+            "1974년 서독",
+            "1978년 아르헨티나"
+          ],
+          "explanation": "잉글랜드 심판 켄 애스턴은 1966년 대회 이후 교통 신호등에서 영감을 받아 카드 제도를 고안했습니다. 이 제도는 1970년 멕시코 대회에서 처음 선보였습니다. 오늘날 옐로카드는 경고(파울, 항의, 시간 지연 등)를 의미하며, 한 경기에서 옐로카드 두 장을 받으면 레드카드가 됩니다. 다이렉트 레드카드는 심각한 반칙이나 폭력 행위에 대해 즉시 퇴장을 명하는 것입니다. 2019년부터는 VAR(비디오 판독) 검토 후 카드 제시를 권고할 수도 있습니다."
+        },
+        "pt-BR": {
+          "question": "Em qual torneio os cartões vermelho e amarelo foram introduzidos pela primeira vez?",
+          "options": [
+            "1966 na Inglaterra",
+            "1970 no México",
+            "1974 na Alemanha Ocidental",
+            "1978 na Argentina"
+          ],
+          "explanation": "O árbitro inglês Ken Aston criou o sistema de cartões após a edição de 1966, inspirado nos semáforos. Ele estreou no torneio de 1970 no México. Hoje, o cartão amarelo é uma advertência (por faltas, reclamações ou perda de tempo), e dois amarelos na mesma partida equivalem a um vermelho. Um cartão vermelho direto significa expulsão imediata por jogada brusca grave ou conduta violenta. Desde 2019, o VAR também pode recomendar cartões após a revisão do vídeo."
+        },
+        "zh-Hans": {
+          "question": "红牌和黄牌最早是在哪届赛事中引入的？",
+          "options": [
+            "1966年英格兰",
+            "1970年墨西哥",
+            "1974年西德",
+            "1978年阿根廷"
+          ],
+          "explanation": "英格兰裁判肯·阿斯顿在1966年那届赛事之后，受交通信号灯的启发设计出了红黄牌制度。它在1970年墨西哥那届赛事中首次亮相。如今，黄牌是一种警告（针对犯规、抗议或拖延时间等行为），同一场比赛中两张黄牌相当于一张红牌。直接红牌则意味着因严重犯规或暴力行为被立即罚下场。自2019年起，视频助理裁判（VAR）也可在回看录像后建议出示牌。"
+        }
+      },
+      "i18nSourceHash": "2ee24994fc4a3ef0"
     },
     {
       "id": "h-2026-hosts",
@@ -27,7 +130,110 @@
       ],
       "answer": 2,
       "explanation": "2026 is the first edition hosted by three nations — the USA, Canada and Mexico — across 16 cities.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ما هي الدول التي تستضيف بطولة 2026 بشكل مشترك؟",
+          "options": [
+            "الولايات المتحدة فقط",
+            "الولايات المتحدة والمكسيك",
+            "الولايات المتحدة وكندا والمكسيك",
+            "كندا والولايات المتحدة"
+          ],
+          "explanation": "تُعد نسخة 2026 الأولى التي تستضيفها ثلاث دول — الولايات المتحدة وكندا والمكسيك — عبر 16 مدينة."
+        },
+        "de": {
+          "question": "Welche Länder sind 2026 gemeinsam Gastgeber?",
+          "options": [
+            "Nur die USA",
+            "USA & Mexiko",
+            "USA, Kanada & Mexiko",
+            "Kanada & USA"
+          ],
+          "explanation": "2026 ist die erste Ausgabe, die von drei Nationen ausgerichtet wird – den USA, Kanada und Mexiko – in 16 Städten."
+        },
+        "es": {
+          "question": "¿Qué países son co-anfitriones en 2026?",
+          "options": [
+            "Solo Estados Unidos",
+            "Estados Unidos y México",
+            "Estados Unidos, Canadá y México",
+            "Canadá y Estados Unidos"
+          ],
+          "explanation": "2026 es la primera edición organizada por tres naciones —Estados Unidos, Canadá y México— en 16 ciudades."
+        },
+        "es-ES": {
+          "question": "¿Qué países son coanfitriones en 2026?",
+          "options": [
+            "Solo Estados Unidos",
+            "Estados Unidos y México",
+            "Estados Unidos, Canadá y México",
+            "Canadá y Estados Unidos"
+          ],
+          "explanation": "2026 es la primera edición organizada por tres naciones —Estados Unidos, Canadá y México— repartida en 16 ciudades."
+        },
+        "fr": {
+          "question": "Quels pays coorganisent l'édition 2026 ?",
+          "options": [
+            "Les États-Unis uniquement",
+            "Les États-Unis et le Mexique",
+            "Les États-Unis, le Canada et le Mexique",
+            "Le Canada et les États-Unis"
+          ],
+          "explanation": "L'édition 2026 est la première organisée par trois nations — les États-Unis, le Canada et le Mexique — réparties sur 16 villes."
+        },
+        "it": {
+          "question": "Quali paesi ospitano insieme l'edizione 2026?",
+          "options": [
+            "Solo gli Stati Uniti",
+            "Stati Uniti e Messico",
+            "Stati Uniti, Canada e Messico",
+            "Canada e Stati Uniti"
+          ],
+          "explanation": "Il 2026 è la prima edizione ospitata da tre nazioni — Stati Uniti, Canada e Messico — in 16 città."
+        },
+        "ja": {
+          "question": "2026年大会を共同開催する国はどこですか？",
+          "options": [
+            "アメリカのみ",
+            "アメリカとメキシコ",
+            "アメリカ、カナダ、メキシコ",
+            "カナダとアメリカ"
+          ],
+          "explanation": "2026年大会は、アメリカ・カナダ・メキシコの3か国が16都市にわたって共同開催する初の大会です。"
+        },
+        "ko": {
+          "question": "2026년 대회를 공동 개최하는 나라는 어디인가요？",
+          "options": [
+            "미국만",
+            "미국과 멕시코",
+            "미국, 캐나다, 멕시코",
+            "캐나다와 미국"
+          ],
+          "explanation": "2026년 대회는 미국, 캐나다, 멕시코 세 나라가 16개 도시에 걸쳐 공동 개최하는 첫 대회입니다."
+        },
+        "pt-BR": {
+          "question": "Quais países são co-anfitriões em 2026?",
+          "options": [
+            "Apenas os EUA",
+            "EUA e México",
+            "EUA, Canadá e México",
+            "Canadá e EUA"
+          ],
+          "explanation": "2026 é a primeira edição sediada por três nações — EUA, Canadá e México — em 16 cidades."
+        },
+        "zh-Hans": {
+          "question": "哪些国家共同主办2026年赛事？",
+          "options": [
+            "仅美国",
+            "美国和墨西哥",
+            "美国、加拿大和墨西哥",
+            "加拿大和美国"
+          ],
+          "explanation": "2026年赛事是首次由三个国家——美国、加拿大和墨西哥——在16座城市共同举办的赛事。"
+        }
+      },
+      "i18nSourceHash": "a48471b7b8b388d6"
     },
     {
       "id": "v-mercedes-roof",
@@ -42,7 +248,110 @@
       "answer": 0,
       "explanation": "Atlanta’s Mercedes-Benz Stadium opened in 2017 at a cost of roughly $1.6 billion. Its retractable roof is composed of eight triangular “petal” panels that open and close like a camera aperture — the first design of its kind. The stadium also holds the Guinness record for the world’s largest halo video board, a 360-degree LED ring circling the interior.",
       "media": "https://www.youtube.com/watch?v=7YrxBpzsytE",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "يشتهر ملعب مرسيدس-بنز في أتلانتا بسقفه المتحرك الفريد الذي يشبه شكل…",
+          "options": [
+            "فتحة عدسة الكاميرا",
+            "زهرة عباد الشمس",
+            "جناحَي نسر",
+            "قبة تقليدية"
+          ],
+          "explanation": "افتُتح ملعب مرسيدس-بنز في أتلانتا عام 2017 بتكلفة بلغت نحو 1.6 مليار دولار. يتكوّن سقفه المتحرك من ثماني لوحات مثلثة الشكل تُشبه «البتلات» تفتح وتُغلق مثل فتحة عدسة الكاميرا — وهو أول تصميم من نوعه. كما يحمل الملعب الرقم القياسي في موسوعة غينيس لأكبر شاشة فيديو دائرية «هالة» في العالم، وهي حلقة من إضاءة LED بزاوية 360 درجة تحيط بالملعب من الداخل."
+        },
+        "de": {
+          "question": "Das Mercedes-Benz Stadium in Atlanta ist berühmt für sein einzigartiges versenkbares Dach in Form von…",
+          "options": [
+            "einer Kamerablende",
+            "einer Sonnenblume",
+            "Adlerschwingen",
+            "einer klassischen Kuppel"
+          ],
+          "explanation": "Das Mercedes-Benz Stadium in Atlanta wurde 2017 für rund 1,6 Milliarden Dollar eröffnet. Sein versenkbares Dach besteht aus acht dreieckigen „Blütenblatt“-Paneelen, die sich wie eine Kamerablende öffnen und schließen – das erste Design dieser Art. Das Stadion hält außerdem den Guinness-Weltrekord für die größte Halo-Videowand der Welt, einen 360-Grad-LED-Ring, der das Innere umrundet."
+        },
+        "es": {
+          "question": "El Mercedes-Benz Stadium de Atlanta es famoso por su techo retráctil único con forma de…",
+          "options": [
+            "la apertura de una cámara",
+            "un girasol",
+            "las alas de un águila",
+            "una cúpula tradicional"
+          ],
+          "explanation": "El Mercedes-Benz Stadium de Atlanta se inauguró en 2017 con un costo de aproximadamente 1.600 millones de dólares. Su techo retráctil está compuesto por ocho paneles triangulares en forma de “pétalo” que se abren y cierran como la apertura de una cámara, el primer diseño de su tipo. El estadio también posee el récord Guinness a la pantalla de video tipo halo más grande del mundo, un anillo LED de 360 grados que rodea el interior."
+        },
+        "es-ES": {
+          "question": "El Mercedes-Benz Stadium de Atlanta es famoso por su singular techo retráctil con forma de…",
+          "options": [
+            "la apertura de una cámara",
+            "un girasol",
+            "las alas de un águila",
+            "una cúpula tradicional"
+          ],
+          "explanation": "El Mercedes-Benz Stadium de Atlanta se inauguró en 2017 con un coste de unos 1.600 millones de dólares. Su techo retráctil está formado por ocho paneles triangulares en forma de «pétalo» que se abren y cierran como la apertura de una cámara, el primer diseño de su clase. El estadio también ostenta el récord Guinness a la mayor pantalla de vídeo tipo halo del mundo, un anillo LED de 360 grados que rodea el interior."
+        },
+        "fr": {
+          "question": "Le Mercedes-Benz Stadium d'Atlanta est célèbre pour son toit rétractable unique en forme de…",
+          "options": [
+            "une ouverture d'appareil photo",
+            "un tournesol",
+            "des ailes d'aigle",
+            "un dôme traditionnel"
+          ],
+          "explanation": "Le Mercedes-Benz Stadium d'Atlanta a été inauguré en 2017 pour un coût d'environ 1,6 milliard de dollars. Son toit rétractable est composé de huit panneaux triangulaires en forme de « pétales » qui s'ouvrent et se ferment comme l'ouverture d'un appareil photo — une conception inédite. Le stade détient également le record Guinness du plus grand écran vidéo circulaire au monde, un anneau LED à 360 degrés qui ceinture l'intérieur."
+        },
+        "it": {
+          "question": "Il Mercedes-Benz Stadium di Atlanta è famoso per il suo esclusivo tetto retrattile a forma di…",
+          "options": [
+            "un'apertura fotografica",
+            "un girasole",
+            "ali d'aquila",
+            "una cupola tradizionale"
+          ],
+          "explanation": "Il Mercedes-Benz Stadium di Atlanta è stato inaugurato nel 2017 con un costo di circa 1,6 miliardi di dollari. Il suo tetto retrattile è composto da otto pannelli triangolari a forma di “petalo” che si aprono e si chiudono come l'apertura di una fotocamera, il primo progetto del genere. Lo stadio detiene anche il record Guinness per il più grande schermo video ad anello del mondo, un anello LED a 360 gradi che circonda l'interno."
+        },
+        "ja": {
+          "question": "アトランタのメルセデス・ベンツ・スタジアムは、何の形をした独特な開閉式屋根で有名でしょう？",
+          "options": [
+            "カメラの絞り",
+            "ヒマワリ",
+            "ワシの翼",
+            "伝統的なドーム"
+          ],
+          "explanation": "アトランタのメルセデス・ベンツ・スタジアムは2017年に約16億ドルをかけて開業しました。その開閉式屋根は8枚の三角形の「花びら」パネルで構成され、カメラの絞りのように開閉する、この種では初めての設計です。さらにこのスタジアムは、内部を一周する360度のLEDリングという世界最大のハロー型ビデオボードでギネス記録も保持しています。"
+        },
+        "ko": {
+          "question": "애틀랜타의 메르세데스-벤츠 스타디움은 무엇의 모양을 한 독특한 개폐식 지붕으로 유명할까요?",
+          "options": [
+            "카메라 조리개",
+            "해바라기",
+            "독수리의 날개",
+            "전통적인 돔"
+          ],
+          "explanation": "애틀랜타의 메르세데스-벤츠 스타디움은 약 16억 달러를 들여 2017년에 개장했습니다. 개폐식 지붕은 여덟 개의 삼각형 ‘꽃잎’ 패널로 이루어져 카메라 조리개처럼 열리고 닫히는데, 이러한 설계는 세계 최초입니다. 또한 이 경기장은 내부를 360도로 둘러싸는 LED 링인 세계 최대 헤일로 비디오 보드로 기네스 기록도 보유하고 있습니다."
+        },
+        "pt-BR": {
+          "question": "O Mercedes-Benz Stadium, em Atlanta, é famoso por seu teto retrátil único com formato de…",
+          "options": [
+            "uma abertura de câmera",
+            "um girassol",
+            "asas de águia",
+            "uma cúpula tradicional"
+          ],
+          "explanation": "O Mercedes-Benz Stadium, em Atlanta, foi inaugurado em 2017 a um custo de cerca de 1,6 bilhão de dólares. Seu teto retrátil é formado por oito painéis triangulares em forma de “pétala” que abrem e fecham como a abertura de uma câmera — o primeiro projeto do gênero. O estádio também detém o recorde do Guinness pelo maior placar de vídeo em formato de halo do mundo, um anel de LED de 360 graus que circunda o interior."
+        },
+        "zh-Hans": {
+          "question": "亚特兰大的梅赛德斯-奔驰体育场以其独特的可伸缩屋顶而闻名，它的形状像什么？",
+          "options": [
+            "相机光圈",
+            "向日葵",
+            "雄鹰的翅膀",
+            "传统穹顶"
+          ],
+          "explanation": "亚特兰大的梅赛德斯-奔驰体育场于2017年开放，耗资约16亿美元。其可伸缩屋顶由八块三角形的“花瓣”面板组成，像相机光圈一样开合，是同类设计中的首创。该体育场还保持着吉尼斯世界纪录，拥有全球最大的光环式环形视频屏幕——一圈360度环绕场内的LED环屏。"
+        }
+      },
+      "i18nSourceHash": "bdb745c4e48e669f"
     },
     {
       "id": "h-2002-cohosts",
@@ -56,7 +365,110 @@
       ],
       "answer": 1,
       "explanation": "South Korea and Japan co-hosted in 2002 — the first time two nations shared the event. Brazil won their record fifth title, beating Germany 2–0 in the final in Yokohama. Ronaldo scored both goals, finishing as top scorer with 8 goals and silencing doubts after his mysterious seizure before the 1998 final. Co-host South Korea stunned the world by reaching the semi-finals, eliminating Spain and Italy along the way.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كانت نسخة 2002 أول نسخة تُقام باستضافة مشتركة. أي بلدين تشاركا تنظيمها؟",
+          "options": [
+            "الصين واليابان",
+            "كوريا الجنوبية واليابان",
+            "أستراليا ونيوزيلندا",
+            "كوريا الجنوبية والصين"
+          ],
+          "explanation": "استضافت كوريا الجنوبية واليابان البطولة بشكل مشترك عام 2002 — وهي المرة الأولى التي يتشارك فيها بلدان تنظيم الحدث. توّجت البرازيل بلقبها الخامس القياسي بعد فوزها على ألمانيا 2–0 في النهائي بمدينة يوكوهاما. سجّل رونالدو الهدفين، وأنهى البطولة هدافاً أول برصيد 8 أهداف، ليبدد الشكوك بعد نوبته الغامضة قبل نهائي 1998. وأذهلت كوريا الجنوبية المستضيفة العالم بوصولها إلى نصف النهائي، بعد أن أقصت إسبانيا وإيطاليا في طريقها."
+        },
+        "de": {
+          "question": "Die Ausgabe 2002 war die erste, die gemeinsam ausgerichtet wurde. Welche zwei Länder teilten sich die Gastgeberrolle?",
+          "options": [
+            "China & Japan",
+            "Südkorea & Japan",
+            "Australien & Neuseeland",
+            "Südkorea & China"
+          ],
+          "explanation": "Südkorea und Japan richteten das Turnier 2002 gemeinsam aus — das erste Mal, dass sich zwei Nationen die Veranstaltung teilten. Brasilien holte seinen rekordverdächtigen fünften Titel und besiegte Deutschland im Finale von Yokohama mit 2:0. Ronaldo erzielte beide Tore und wurde mit 8 Treffern Torschützenkönig, womit er die Zweifel nach seinem rätselhaften Anfall vor dem Finale 1998 zum Schweigen brachte. Gastgeber Südkorea verblüffte die Welt mit dem Einzug ins Halbfinale und schaltete dabei Spanien und Italien aus."
+        },
+        "es": {
+          "question": "La edición de 2002 fue la primera con sede compartida. ¿Qué dos países la organizaron juntos?",
+          "options": [
+            "China y Japón",
+            "Corea del Sur y Japón",
+            "Australia y Nueva Zelanda",
+            "Corea del Sur y China"
+          ],
+          "explanation": "Corea del Sur y Japón fueron sede conjunta en 2002, la primera vez que dos naciones compartieron el evento. Brasil ganó su quinto título récord al vencer a Alemania 2–0 en la final de Yokohama. Ronaldo marcó ambos goles y terminó como máximo goleador con 8 tantos, acallando las dudas tras su misterioso ataque antes de la final de 1998. La anfitriona Corea del Sur sorprendió al mundo al llegar a las semifinales, eliminando a España e Italia en el camino."
+        },
+        "es-ES": {
+          "question": "La edición de 2002 fue la primera con sede compartida. ¿Qué dos países la organizaron juntos?",
+          "options": [
+            "China y Japón",
+            "Corea del Sur y Japón",
+            "Australia y Nueva Zelanda",
+            "Corea del Sur y China"
+          ],
+          "explanation": "Corea del Sur y Japón fueron sede conjunta en 2002, la primera vez que dos naciones compartían el evento. Brasil conquistó su quinto título récord al vencer a Alemania por 2–0 en la final de Yokohama. Ronaldo marcó ambos goles y acabó como máximo goleador con 8 tantos, silenciando las dudas tras su misterioso ataque antes de la final de 1998. La anfitriona Corea del Sur asombró al mundo al alcanzar las semifinales, eliminando a España e Italia por el camino."
+        },
+        "fr": {
+          "question": "L'édition 2002 fut la première à être coorganisée. Quels deux pays l'ont accueillie ensemble ?",
+          "options": [
+            "Chine et Japon",
+            "Corée du Sud et Japon",
+            "Australie et Nouvelle-Zélande",
+            "Corée du Sud et Chine"
+          ],
+          "explanation": "La Corée du Sud et le Japon ont coorganisé l'épreuve en 2002 — la première fois que deux nations se partageaient l'événement. Le Brésil a décroché un cinquième titre record en battant l'Allemagne 2–0 en finale à Yokohama. Ronaldo a inscrit les deux buts et terminé meilleur buteur avec 8 réalisations, faisant taire les doutes après sa mystérieuse crise avant la finale de 1998. Pays hôte, la Corée du Sud a stupéfié le monde en atteignant les demi-finales, éliminant l'Espagne et l'Italie en chemin."
+        },
+        "it": {
+          "question": "L'edizione del 2002 fu la prima a essere co-organizzata. Quali due Paesi la ospitarono insieme?",
+          "options": [
+            "Cina e Giappone",
+            "Corea del Sud e Giappone",
+            "Australia e Nuova Zelanda",
+            "Corea del Sud e Cina"
+          ],
+          "explanation": "Corea del Sud e Giappone ospitarono insieme il torneo nel 2002 — la prima volta che due nazioni si dividevano l'evento. Il Brasile conquistò il suo quinto titolo da record battendo la Germania 2–0 nella finale di Yokohama. Ronaldo segnò entrambi i gol e chiuse da capocannoniere con 8 reti, zittendo i dubbi dopo il suo misterioso malore prima della finale del 1998. La padrona di casa Corea del Sud sbalordì il mondo raggiungendo le semifinali, eliminando lungo il cammino Spagna e Italia."
+        },
+        "ja": {
+          "question": "2002年大会は初めて共同開催された大会でした。共催した2か国はどこでしょう？",
+          "options": [
+            "中国と日本",
+            "韓国と日本",
+            "オーストラリアとニュージーランド",
+            "韓国と中国"
+          ],
+          "explanation": "2002年は韓国と日本が共同開催し、2つの国が大会を分け合った初めてのケースとなりました。ブラジルは横浜での決勝でドイツを2–0で破り、史上最多となる5度目の優勝を果たしました。ロナウドが2点とも決め、8得点で得点王に輝き、1998年の決勝前に起きた謎の発作以来の疑念を払拭しました。開催国の韓国はスペインとイタリアを次々と退け、準決勝に進出して世界を驚かせました。"
+        },
+        "ko": {
+          "question": "2002년 대회는 처음으로 공동 개최된 대회였습니다. 어느 두 나라가 함께 개최했을까요?",
+          "options": [
+            "중국과 일본",
+            "대한민국과 일본",
+            "오스트레일리아와 뉴질랜드",
+            "대한민국과 중국"
+          ],
+          "explanation": "2002년에는 대한민국과 일본이 공동 개최했으며, 두 나라가 대회를 함께 치른 것은 이때가 처음이었습니다. 브라질은 요코하마 결승에서 독일을 2–0으로 꺾고 역대 최다인 다섯 번째 우승을 차지했습니다. 호나우두는 두 골을 모두 넣으며 8골로 득점왕에 올랐고, 1998년 결승 직전의 의문스러운 발작 이후 제기됐던 의구심을 잠재웠습니다. 개최국 대한민국은 스페인과 이탈리아를 차례로 꺾고 4강에 진출하며 전 세계를 놀라게 했습니다."
+        },
+        "pt-BR": {
+          "question": "A edição de 2002 foi a primeira com organização compartilhada. Quais dois países sediaram juntos?",
+          "options": [
+            "China e Japão",
+            "Coreia do Sul e Japão",
+            "Austrália e Nova Zelândia",
+            "Coreia do Sul e China"
+          ],
+          "explanation": "A Coreia do Sul e o Japão sediaram juntos em 2002 — a primeira vez que duas nações dividiram o evento. O Brasil conquistou seu recorde de quinto título ao vencer a Alemanha por 2–0 na final em Yokohama. Ronaldo marcou os dois gols e terminou como artilheiro com 8 gols, silenciando as dúvidas após sua misteriosa convulsão antes da final de 1998. A anfitriã Coreia do Sul surpreendeu o mundo ao chegar às semifinais, eliminando Espanha e Itália pelo caminho."
+        },
+        "zh-Hans": {
+          "question": "2002年那一届是首次由两国联合举办的赛事。是哪两个国家共同承办的？",
+          "options": [
+            "中国与日本",
+            "韩国与日本",
+            "澳大利亚与新西兰",
+            "韩国与中国"
+          ],
+          "explanation": "2002年由韩国和日本联合举办，这是历史上首次由两个国家共同承办这项赛事。巴西在横滨的决赛中以2–0击败德国，赢得创纪录的第五个冠军。罗纳尔多攻入全部两球，并以8粒进球荣膺最佳射手，平息了1998年决赛前那次神秘抽搐之后人们的质疑。东道主韩国一路淘汰西班牙和意大利，闯入半决赛，震惊了全世界。"
+        }
+      },
+      "i18nSourceHash": "1c25b3c60b43f400"
     },
     {
       "id": "t-how-many-groups",
@@ -70,7 +482,110 @@
       ],
       "answer": 2,
       "explanation": "The 2026 tournament expands from 32 to 48 teams, split into 12 groups of four. Previous editions used 8 groups of four (since 1998). The expansion was approved to give more nations — especially from Africa, Asia, and smaller confederations — a chance to compete on the biggest stage. The top two from each group plus the eight best third-placed teams advance to a new Round of 32.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كم عدد المجموعات في بطولة 2026؟",
+          "options": [
+            "8",
+            "10",
+            "12",
+            "16"
+          ],
+          "explanation": "تتوسع بطولة 2026 من 32 إلى 48 منتخباً، مقسمة على 12 مجموعة تضم كل منها أربعة منتخبات. أما النسخ السابقة فاعتمدت 8 مجموعات من أربعة منتخبات (منذ عام 1998). وقد جرى اعتماد هذا التوسيع لمنح المزيد من الدول — خصوصاً من أفريقيا وآسيا والاتحادات الأصغر — فرصة المنافسة على أكبر مسرح. يتأهل أول منتخبين من كل مجموعة إضافةً إلى أفضل ثمانية منتخبات حلّت في المركز الثالث إلى دور الـ32 الجديد."
+        },
+        "de": {
+          "question": "Wie viele Gruppen gibt es beim Turnier 2026?",
+          "options": [
+            "8",
+            "10",
+            "12",
+            "16"
+          ],
+          "explanation": "Das Turnier 2026 wird von 32 auf 48 Mannschaften erweitert, aufgeteilt in 12 Vierergruppen. Bei den früheren Ausgaben gab es 8 Vierergruppen (seit 1998). Die Aufstockung wurde beschlossen, um mehr Nationen — besonders aus Afrika, Asien und kleineren Verbänden — die Chance zu geben, auf der größten Bühne anzutreten. Die ersten beiden jeder Gruppe sowie die acht besten Gruppendritten ziehen in eine neue Runde der letzten 32 ein."
+        },
+        "es": {
+          "question": "¿Cuántos grupos hay en el torneo de 2026?",
+          "options": [
+            "8",
+            "10",
+            "12",
+            "16"
+          ],
+          "explanation": "El torneo de 2026 se amplía de 32 a 48 selecciones, repartidas en 12 grupos de cuatro. Las ediciones anteriores usaban 8 grupos de cuatro (desde 1998). La ampliación se aprobó para dar a más naciones — especialmente de África, Asia y confederaciones más pequeñas — la oportunidad de competir en el escenario más grande. Los dos primeros de cada grupo, más los ocho mejores terceros, avanzan a una nueva ronda de 32."
+        },
+        "es-ES": {
+          "question": "¿Cuántos grupos hay en el torneo de 2026?",
+          "options": [
+            "8",
+            "10",
+            "12",
+            "16"
+          ],
+          "explanation": "El torneo de 2026 se amplía de 32 a 48 selecciones, repartidas en 12 grupos de cuatro. Las ediciones anteriores empleaban 8 grupos de cuatro (desde 1998). La ampliación se aprobó para dar a más naciones — sobre todo de África, Asia y confederaciones más pequeñas — la oportunidad de competir en el mayor escenario. Los dos primeros de cada grupo, junto a los ocho mejores terceros, pasan a una nueva ronda de 32."
+        },
+        "fr": {
+          "question": "Combien de groupes compte le tournoi 2026 ?",
+          "options": [
+            "8",
+            "10",
+            "12",
+            "16"
+          ],
+          "explanation": "Le tournoi 2026 passe de 32 à 48 équipes, réparties en 12 groupes de quatre. Les éditions précédentes comptaient 8 groupes de quatre (depuis 1998). Cet élargissement a été approuvé afin d'offrir à davantage de nations — notamment d'Afrique, d'Asie et des confédérations plus modestes — la chance de concourir sur la plus grande scène. Les deux premiers de chaque groupe, ainsi que les huit meilleurs troisièmes, accèdent à un nouveau tour des 32es."
+        },
+        "it": {
+          "question": "Quanti gironi ci sono nel torneo del 2026?",
+          "options": [
+            "8",
+            "10",
+            "12",
+            "16"
+          ],
+          "explanation": "Il torneo del 2026 si amplia da 32 a 48 squadre, divise in 12 gironi da quattro. Le edizioni precedenti prevedevano 8 gironi da quattro (dal 1998). L'ampliamento è stato approvato per dare a più nazioni — soprattutto di Africa, Asia e confederazioni minori — la possibilità di competere sul palcoscenico più importante. Le prime due di ogni girone, più le otto migliori terze, accedono a un nuovo turno dei 32."
+        },
+        "ja": {
+          "question": "2026年大会のグループ数はいくつですか?",
+          "options": [
+            "8",
+            "10",
+            "12",
+            "16"
+          ],
+          "explanation": "2026年大会は出場チームが32から48に拡大され、4チームずつの12グループに分けられます。これまでの大会では(1998年以降)4チームずつの8グループでした。この拡大は、より多くの国々——特にアフリカ、アジア、そして規模の小さい連盟——に最大の舞台で戦う機会を与えるために承認されました。各グループの上位2チームに加え、3位チームのうち成績上位8チームが新設のラウンド32に進出します。"
+        },
+        "ko": {
+          "question": "2026 대회에는 조가 몇 개 있나요?",
+          "options": [
+            "8",
+            "10",
+            "12",
+            "16"
+          ],
+          "explanation": "2026 대회는 참가 팀이 32개국에서 48개국으로 늘어나 네 팀씩 12개 조로 나뉩니다. 이전 대회들은 (1998년부터) 네 팀씩 8개 조를 운영했습니다. 이러한 확대는 더 많은 국가들 — 특히 아프리카, 아시아, 그리고 규모가 작은 대륙연맹 소속 국가들 — 에게 최대 무대에서 경쟁할 기회를 주기 위해 승인되었습니다. 각 조 상위 2개 팀과 3위 팀 중 성적이 가장 좋은 8개 팀이 새로 도입된 32강에 진출합니다."
+        },
+        "pt-BR": {
+          "question": "Quantos grupos há no torneio de 2026?",
+          "options": [
+            "8",
+            "10",
+            "12",
+            "16"
+          ],
+          "explanation": "O torneio de 2026 se amplia de 32 para 48 seleções, divididas em 12 grupos de quatro. As edições anteriores usavam 8 grupos de quatro (desde 1998). A ampliação foi aprovada para dar a mais nações — especialmente da África, da Ásia e de confederações menores — a chance de competir no maior palco. Os dois primeiros de cada grupo, mais os oito melhores terceiros colocados, avançam para uma nova fase de 32."
+        },
+        "zh-Hans": {
+          "question": "2026 年赛事共有多少个小组?",
+          "options": [
+            "8",
+            "10",
+            "12",
+            "16"
+          ],
+          "explanation": "2026 年赛事的参赛球队从 32 支扩充到 48 支,分为 12 个四队小组。此前的赛事(自 1998 年起)采用 8 个四队小组。此次扩军获批,旨在让更多国家——尤其是来自非洲、亚洲及规模较小的足联的球队——有机会在最高舞台上竞技。每个小组前两名加上成绩最好的 8 支小组第三名,将晋级新设的 32 强淘汰赛。"
+        }
+      },
+      "i18nSourceHash": "2e8ce09fe3dd678e"
     },
     {
       "id": "t-defending-champs",
