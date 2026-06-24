@@ -5504,7 +5504,7 @@
       "answer": 0,
       "explanation": "After a 3–3 draw through extra time, Argentina beat France 4–2 in the penalty shootout. Many consider it the greatest final ever played.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-host-group-stage",
