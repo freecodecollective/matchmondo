@@ -2139,7 +2139,8 @@
         "Standing still"
       ],
       "answer": 2,
-      "explanation": "A player is offside if any part of their body (except hands and arms) is closer to the goal line than both the ball and the second-to-last defender."
+      "explanation": "A player is offside if any part of their body (except hands and arms) is closer to the goal line than both the ball and the second-to-last defender.",
+      "approved": true
     },
     {
       "id": "r-first-tiebreaker",
