@@ -7,9 +7,13 @@ ESPN reports as live or finished.
 """
 import json
 import ssl
+import sys
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import match_resolver
 
 _ssl_ctx = ssl.create_default_context()
 _ssl_ctx.check_hostname = False
@@ -101,25 +105,13 @@ def main():
         home_name = ESPN_TEAM_MAP.get(home.get("team", {}).get("displayName", ""), home.get("team", {}).get("displayName", ""))
         away_name = ESPN_TEAM_MAP.get(away.get("team", {}).get("displayName", ""), away.get("team", {}).get("displayName", ""))
 
-        # Find the matching fixture in our data. Prefer an exact name match;
-        # only fall back to time-only matching when the kickoff slot is
-        # unique. Two games can share a 19:00 UTC kickoff (e.g. matches 51
-        # & 52 on Matchday 14), so a "first match in time window wins" rule
-        # leaves the second game in the slot un-updated — that was the
-        # bug that left Bosnia stuck at no-score for hours on 2026-06-24.
-        matched_m = next(
-            (m for m in matches if m["home"] == home_name and m["away"] == away_name),
-            None,
-        )
-        if matched_m is None:
-            same_slot = [
-                m for m in matches
-                if abs(datetime.strptime(m["utc"], "%Y-%m-%dT%H:%M:%SZ")
-                       .replace(tzinfo=timezone.utc).timestamp() - kickoff_ts) < 120
-            ]
-            if len(same_slot) == 1:
-                matched_m = same_slot[0]
-
+        # Match-resolution logic lives in match_resolver.resolve so the same
+        # rule (and the same tests) cover both Python and the iOS Swift
+        # implementation. See scripts/test_match_resolver.py for edge cases,
+        # most importantly the two-fixtures-at-the-same-kickoff case that
+        # bit Bosnia v Qatar on 2026-06-23 and Morocco v Haiti on 2026-06-24.
+        idx = match_resolver.resolve(matches, home_name, away_name, kickoff_ts)
+        matched_m = matches[idx] if idx is not None else None
         if matched_m is not None and (matched_m["scoreH"] is None or matched_m["scoreA"] is None):
             matched_m["scoreH"] = home_score
             matched_m["scoreA"] = away_score
