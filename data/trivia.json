@@ -5191,7 +5191,7 @@
       "answer": 0,
       "explanation": "Brazil has played in every edition since 1930 — the only nation to have never missed one. They've won five titles along the way. Germany and Italy are second and third respectively in terms of tournament appearances, with Germany appearing in 19 editions and Italy in 18 editions.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-48-teams-2026",
