@@ -2060,7 +2060,110 @@
       "answer": 1,
       "explanation": "Spain's short-passing, possession-heavy 'tiki-taka' style dominated the 2010 tournament, crowned by Iniesta's extra-time winner.",
       "media": "https://www.youtube.com/watch?v=RxQWNyrVgEM",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "بُني انتصار إسبانيا عام 2010 على أسلوب يعتمد على الاستحواذ يُعرف بـ…",
+          "options": [
+            "الكاتيناتشيو",
+            "التيكي-تاكا",
+            "الكرة الشاملة",
+            "الضغط المرتد"
+          ],
+          "explanation": "سيطر أسلوب 'التيكي-تاكا' الإسباني القائم على التمريرات القصيرة والاستحواذ الكبير على بطولة 2010، وتُوّج بهدف إنييستا في الوقت الإضافي."
+        },
+        "de": {
+          "question": "Spaniens Triumph 2010 basierte auf einem ballbesitzorientierten Spielstil namens…",
+          "options": [
+            "Catenaccio",
+            "Tiki-Taka",
+            "Totaler Fußball",
+            "Counter-Pressing"
+          ],
+          "explanation": "Spaniens auf Kurzpässen und hohem Ballbesitz beruhender 'Tiki-Taka'-Stil dominierte das Turnier 2010 und wurde durch Iniestas Siegtreffer in der Verlängerung gekrönt."
+        },
+        "es": {
+          "question": "La victoria de España en 2010 se construyó sobre un estilo basado en la posesión conocido como…",
+          "options": [
+            "Catenaccio",
+            "Tiki-taka",
+            "Fútbol total",
+            "Contrapresión"
+          ],
+          "explanation": "El estilo 'tiki-taka' de España, basado en pases cortos y mucha posesión, dominó el torneo de 2010, coronado por el gol de Iniesta en la prórroga."
+        },
+        "es-ES": {
+          "question": "La victoria de España en 2010 se cimentó en un estilo basado en la posesión conocido como…",
+          "options": [
+            "Catenaccio",
+            "Tiki-taka",
+            "Fútbol total",
+            "Contrapresión"
+          ],
+          "explanation": "El estilo 'tiki-taka' de España, de pases cortos y gran posesión, dominó el torneo de 2010 y se coronó con el gol de Iniesta en la prórroga."
+        },
+        "fr": {
+          "question": "La victoire de l'Espagne en 2010 reposait sur un style de jeu basé sur la possession appelé…",
+          "options": [
+            "Catenaccio",
+            "Tiki-taka",
+            "Football total",
+            "Contre-pressing"
+          ],
+          "explanation": "Le style 'tiki-taka' espagnol, fait de passes courtes et d'une domination du ballon, a régné sur le tournoi de 2010, couronné par le but d'Iniesta en prolongation."
+        },
+        "it": {
+          "question": "La vittoria della Spagna nel 2010 si fondava su uno stile basato sul possesso palla noto come…",
+          "options": [
+            "Catenaccio",
+            "Tiki-taka",
+            "Calcio totale",
+            "Contropressing"
+          ],
+          "explanation": "Lo stile 'tiki-taka' della Spagna, fatto di passaggi corti e grande possesso palla, dominò il torneo del 2010, coronato dal gol di Iniesta ai supplementari."
+        },
+        "ja": {
+          "question": "2010年のスペインの優勝は、ポゼッションを軸にしたあるスタイルに支えられていました。それは…",
+          "options": [
+            "カテナチオ",
+            "ティキ・タカ",
+            "トータルフットボール",
+            "カウンタープレス"
+          ],
+          "explanation": "短いパスとポゼッション重視のスペインの『ティキ・タカ』は2010年の大会を支配し、イニエスタの延長戦での決勝ゴールで頂点を迎えました。"
+        },
+        "ko": {
+          "question": "2010년 스페인의 우승은 점유율을 기반으로 한 어떤 스타일에서 비롯되었는데, 그것은…",
+          "options": [
+            "카테나치오",
+            "티키타카",
+            "토탈 풋볼",
+            "역압박"
+          ],
+          "explanation": "짧은 패스와 높은 점유율을 앞세운 스페인의 '티키타카'는 2010년 대회를 지배했고, 연장전에서 터진 이니에스타의 결승골로 정점을 찍었습니다."
+        },
+        "pt-BR": {
+          "question": "A vitória da Espanha em 2010 foi construída sobre um estilo baseado na posse de bola conhecido como…",
+          "options": [
+            "Catenaccio",
+            "Tiki-taka",
+            "Futebol total",
+            "Contrapressão"
+          ],
+          "explanation": "O estilo 'tiki-taka' da Espanha, com passes curtos e muita posse de bola, dominou o torneio de 2010, coroado pelo gol de Iniesta na prorrogação."
+        },
+        "zh-Hans": {
+          "question": "西班牙2010年的夺冠建立在一种以控球为核心的风格之上，这种风格被称为……",
+          "options": [
+            "链式防守",
+            "Tiki-taka（传控）",
+            "全攻全守",
+            "反抢逼压"
+          ],
+          "explanation": "西班牙以短传和高控球率为特点的'Tiki-taka'风格主导了2010年的赛事，并由伊涅斯塔在加时赛的制胜进球加冕。"
+        }
+      },
+      "i18nSourceHash": "83696e49b2337424"
     },
     {
       "id": "t-canada-1986",
@@ -2126,7 +2229,110 @@
       ],
       "answer": 2,
       "explanation": "A win is worth 3 points, a draw 1, and a loss 0.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كم عدد النقاط التي يحصل عليها الفريق عند الفوز في دور المجموعات؟",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "الفوز يساوي 3 نقاط، والتعادل نقطة واحدة، والخسارة صفر."
+        },
+        "de": {
+          "question": "Wie viele Punkte bekommt eine Mannschaft für einen Sieg in der Gruppenphase?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "Ein Sieg bringt 3 Punkte, ein Unentschieden 1 und eine Niederlage 0."
+        },
+        "es": {
+          "question": "¿Cuántos puntos obtiene un equipo por una victoria en la fase de grupos?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "Una victoria vale 3 puntos, un empate 1 y una derrota 0."
+        },
+        "es-ES": {
+          "question": "¿Cuántos puntos consigue un equipo por una victoria en la fase de grupos?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "Una victoria vale 3 puntos, un empate 1 y una derrota 0."
+        },
+        "fr": {
+          "question": "Combien de points une équipe obtient-elle pour une victoire en phase de groupes ?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "Une victoire rapporte 3 points, un match nul 1 et une défaite 0."
+        },
+        "it": {
+          "question": "Quanti punti ottiene una squadra per una vittoria nella fase a gironi?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "Una vittoria vale 3 punti, un pareggio 1 e una sconfitta 0."
+        },
+        "ja": {
+          "question": "グループステージでの勝利でチームは何ポイント獲得しますか？",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "勝利は3ポイント、引き分けは1ポイント、敗北は0ポイントです。"
+        },
+        "ko": {
+          "question": "조별 리그에서 승리하면 팀은 몇 점을 얻나요?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "승리는 3점, 무승부는 1점, 패배는 0점입니다."
+        },
+        "pt-BR": {
+          "question": "Quantos pontos uma equipe ganha por uma vitória na fase de grupos?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "Uma vitória vale 3 pontos, um empate 1 e uma derrota 0."
+        },
+        "zh-Hans": {
+          "question": "在小组赛中获胜，球队能得到多少分？",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "explanation": "胜一场得3分，平局得1分，负一场得0分。"
+        }
+      },
+      "i18nSourceHash": "6bc29ac02d540f52"
     },
     {
       "id": "r-offside",
@@ -2140,7 +2346,110 @@
       ],
       "answer": 2,
       "explanation": "A player is offside if any part of their body (except hands and arms) is closer to the goal line than both the ball and the second-to-last defender.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "يكون اللاعب في موضع تسلل إذا، عند تمرير الكرة إليه، كان…",
+          "options": [
+            "في نصف ملعبه",
+            "خلف الكرة",
+            "أمام ثاني آخر مدافع وأقرب إلى المرمى",
+            "واقفاً بلا حركة"
+          ],
+          "explanation": "يكون اللاعب في موضع تسلل إذا كان أي جزء من جسده (باستثناء اليدين والذراعين) أقرب إلى خط المرمى من كل من الكرة وثاني آخر مدافع."
+        },
+        "de": {
+          "question": "Ein Spieler steht im Abseits, wenn er sich in dem Moment, in dem ihm der Ball zugespielt wird, …",
+          "options": [
+            "in der eigenen Spielhälfte befindet",
+            "hinter dem Ball befindet",
+            "vor dem vorletzten Abwehrspieler und näher am Tor befindet",
+            "still steht"
+          ],
+          "explanation": "Ein Spieler steht im Abseits, wenn ein beliebiger Teil seines Körpers (außer Händen und Armen) näher an der Torlinie ist als sowohl der Ball als auch der vorletzte Abwehrspieler."
+        },
+        "es": {
+          "question": "Un jugador está en posición adelantada si, en el momento en que le pasan el balón, se encuentra…",
+          "options": [
+            "En su propia mitad de la cancha",
+            "Detrás del balón",
+            "Por delante del penúltimo defensor y más cerca de la portería",
+            "Parado sin moverse"
+          ],
+          "explanation": "Un jugador está en posición adelantada si cualquier parte de su cuerpo (salvo las manos y los brazos) está más cerca de la línea de meta que el balón y que el penúltimo defensor."
+        },
+        "es-ES": {
+          "question": "Un jugador está en fuera de juego si, en el momento en que le pasan el balón, se encuentra…",
+          "options": [
+            "En su propio campo",
+            "Por detrás del balón",
+            "Por delante del penúltimo defensor y más cerca de la portería",
+            "Parado sin moverse"
+          ],
+          "explanation": "Un jugador está en fuera de juego si cualquier parte de su cuerpo (salvo las manos y los brazos) está más cerca de la línea de meta que el balón y que el penúltimo defensor."
+        },
+        "fr": {
+          "question": "Un joueur est hors-jeu si, au moment où le ballon lui est transmis, il se trouve…",
+          "options": [
+            "Dans son propre camp",
+            "Derrière le ballon",
+            "Devant l'avant-dernier défenseur et plus près du but",
+            "Immobile"
+          ],
+          "explanation": "Un joueur est hors-jeu si une partie quelconque de son corps (à l'exception des mains et des bras) est plus proche de la ligne de but que le ballon et que l'avant-dernier défenseur."
+        },
+        "it": {
+          "question": "Un giocatore è in fuorigioco se, nel momento in cui il pallone gli viene passato, si trova…",
+          "options": [
+            "Nella propria metà campo",
+            "Dietro il pallone",
+            "Davanti al penultimo difensore e più vicino alla porta",
+            "Fermo immobile"
+          ],
+          "explanation": "Un giocatore è in fuorigioco se una qualsiasi parte del suo corpo (esclusi mani e braccia) è più vicina alla linea di porta sia rispetto al pallone sia rispetto al penultimo difensore."
+        },
+        "ja": {
+          "question": "ボールがパスされた瞬間に、選手が次の状態にあるとオフサイドになります…",
+          "options": [
+            "自陣にいる",
+            "ボールより後ろにいる",
+            "最後から2番目の守備選手より前で、ゴールに近い位置にいる",
+            "静止して立っている"
+          ],
+          "explanation": "選手の体の一部（手と腕を除く）が、ボールと最後から2番目の守備選手の両方よりもゴールラインに近い場合、その選手はオフサイドとなります。"
+        },
+        "ko": {
+          "question": "공이 선수에게 패스되는 순간, 그 선수가 다음 상태에 있으면 오프사이드입니다…",
+          "options": [
+            "자기 진영에 있을 때",
+            "공보다 뒤에 있을 때",
+            "끝에서 두 번째 수비수보다 앞에 있고 골대에 더 가까이 있을 때",
+            "가만히 서 있을 때"
+          ],
+          "explanation": "선수의 신체 일부(손과 팔 제외)가 공과 끝에서 두 번째 수비수보다 골라인에 더 가까이 있으면 그 선수는 오프사이드입니다."
+        },
+        "pt-BR": {
+          "question": "Um jogador está em impedimento se, no momento em que a bola é passada para ele, estiver…",
+          "options": [
+            "No seu próprio campo",
+            "Atrás da bola",
+            "À frente do penúltimo defensor e mais perto do gol",
+            "Parado sem se mover"
+          ],
+          "explanation": "Um jogador está em impedimento se qualquer parte do seu corpo (exceto mãos e braços) estiver mais perto da linha do gol do que a bola e o penúltimo defensor."
+        },
+        "zh-Hans": {
+          "question": "当球传给一名球员时，如果该球员处于以下哪种位置，则属于越位…",
+          "options": [
+            "在本方半场",
+            "在球的后方",
+            "在倒数第二名防守球员前方且更靠近球门",
+            "原地静止站立"
+          ],
+          "explanation": "如果一名球员身体的任何部位（手和手臂除外）比球和倒数第二名防守球员都更靠近球门线，则该球员处于越位位置。"
+        }
+      },
+      "i18nSourceHash": "3cb49038ef31aae0"
     },
     {
       "id": "r-first-tiebreaker",
@@ -5195,7 +5504,90 @@
       "answer": 0,
       "explanation": "Brazil has played in every edition since 1930 — the only nation to have never missed one. They've won five titles along the way. Germany and Italy are second and third respectively in terms of tournament appearances, with Germany appearing in 19 editions and Italy in 18 editions.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "البرازيل هي الدولة الوحيدة التي شاركت في كل نسخة من نسخ البطولة.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "شاركت البرازيل في كل نسخة منذ عام 1930، وهي الدولة الوحيدة التي لم تغب عن أي منها. وقد توّجت باللقب خمس مرات على هذا المسار. تأتي ألمانيا في المركز الثاني وإيطاليا في المركز الثالث من حيث عدد مرات المشاركة، إذ شاركت ألمانيا في 19 نسخة وإيطاليا في 18 نسخة."
+        },
+        "de": {
+          "question": "Brasilien ist die einzige Nation, die bei jeder Ausgabe des Turniers vertreten war.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Brasilien hat seit 1930 an jeder Ausgabe teilgenommen und ist die einzige Nation, die nie gefehlt hat. Dabei holte das Team fünf Titel. Deutschland und Italien folgen bei den Turnierteilnahmen auf Platz zwei beziehungsweise drei – Deutschland war bei 19 Ausgaben dabei, Italien bei 18."
+        },
+        "es": {
+          "question": "Brasil es la única selección que ha estado presente en todas las ediciones del torneo.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Brasil ha jugado en todas las ediciones desde 1930, siendo la única selección que nunca faltó a ninguna. En el camino ha conquistado cinco títulos. Alemania e Italia ocupan el segundo y tercer lugar en cantidad de participaciones, con 19 ediciones para Alemania y 18 para Italia."
+        },
+        "es-ES": {
+          "question": "Brasil es la única selección que ha estado presente en todas las ediciones del torneo.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Brasil ha jugado en todas las ediciones desde 1930 y es la única selección que nunca ha faltado a ninguna. Por el camino ha conquistado cinco títulos. Alemania e Italia ocupan el segundo y el tercer puesto en número de participaciones, con 19 ediciones para Alemania y 18 para Italia."
+        },
+        "fr": {
+          "question": "Le Brésil est la seule nation à avoir participé à toutes les éditions du tournoi.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Le Brésil a disputé toutes les éditions depuis 1930, étant la seule nation à n'en avoir jamais manqué une seule. Il a remporté cinq titres en chemin. L'Allemagne et l'Italie occupent respectivement les deuxième et troisième places en nombre de participations, avec 19 éditions pour l'Allemagne et 18 pour l'Italie."
+        },
+        "it": {
+          "question": "Il Brasile è l'unica nazionale ad aver preso parte a ogni edizione del torneo.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Il Brasile ha giocato in ogni edizione dal 1930, l'unica nazionale a non averne mai saltata una. Lungo questo percorso ha conquistato cinque titoli. Germania e Italia occupano rispettivamente il secondo e il terzo posto per numero di partecipazioni, con la Germania presente in 19 edizioni e l'Italia in 18."
+        },
+        "ja": {
+          "question": "ブラジルは大会のすべての回に出場した唯一の国である。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "ブラジルは1930年以来すべての回に出場しており、一度も逃したことがない唯一の国です。その過程で5度の優勝を果たしています。出場回数ではドイツが2位、イタリアが3位で、ドイツは19回、イタリアは18回出場しています。"
+        },
+        "ko": {
+          "question": "브라질은 이 대회의 모든 대회에 출전한 유일한 국가이다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "브라질은 1930년 이후 모든 대회에 출전했으며, 단 한 번도 빠지지 않은 유일한 국가입니다. 그 과정에서 다섯 차례 우승을 차지했습니다. 출전 횟수로는 독일이 2위, 이탈리아가 3위이며, 독일은 19번, 이탈리아는 18번 출전했습니다."
+        },
+        "pt-BR": {
+          "question": "O Brasil é a única seleção a ter participado de todas as edições do torneio.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "O Brasil jogou em todas as edições desde 1930, sendo a única seleção que nunca ficou de fora de nenhuma. Pelo caminho, conquistou cinco títulos. Alemanha e Itália aparecem em segundo e terceiro lugar, respectivamente, em número de participações, com a Alemanha em 19 edições e a Itália em 18."
+        },
+        "zh-Hans": {
+          "question": "巴西是唯一一支参加了本赛事每一届比赛的球队。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "自1930年以来，巴西参加了每一届比赛，是唯一从未缺席的球队。在此过程中，他们五次夺冠。在参赛次数方面，德国和意大利分别位列第二和第三，德国参加了19届，意大利参加了18届。"
+        }
+      },
+      "i18nSourceHash": "b0b02617bc035f8f"
     },
     {
       "id": "tf-48-teams-2026",
@@ -5508,7 +5900,90 @@
       "answer": 0,
       "explanation": "After a 3–3 draw through extra time, Argentina beat France 4–2 in the penalty shootout. Many consider it the greatest final ever played.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "حُسمت نهائي 2022 بين الأرجنتين وفرنسا بركلات الترجيح.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "بعد تعادل 3–3 حتى نهاية الوقت الإضافي، تغلبت الأرجنتين على فرنسا 4–2 بركلات الترجيح. يعتبره الكثيرون أعظم نهائي لُعب على الإطلاق."
+        },
+        "de": {
+          "question": "Das Finale 2022 zwischen Argentinien und Frankreich wurde im Elfmeterschießen entschieden.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Nach einem 3:3 nach Verlängerung besiegte Argentinien Frankreich im Elfmeterschießen mit 4:2. Viele halten es für das beste Finale aller Zeiten."
+        },
+        "es": {
+          "question": "La final de 2022 entre Argentina y Francia se definió por penales.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Tras un empate 3–3 en el tiempo extra, Argentina venció a Francia 4–2 en la tanda de penales. Muchos la consideran la mejor final de la historia."
+        },
+        "es-ES": {
+          "question": "La final de 2022 entre Argentina y Francia se decidió en los penaltis.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Tras un empate a 3 en la prórroga, Argentina venció a Francia por 4–2 en la tanda de penaltis. Muchos la consideran la mejor final de la historia."
+        },
+        "fr": {
+          "question": "La finale 2022 entre l'Argentine et la France s'est jouée aux tirs au but.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Après un match nul 3–3 à l'issue des prolongations, l'Argentine a battu la France 4–2 aux tirs au but. Beaucoup la considèrent comme la plus belle finale de l'histoire."
+        },
+        "it": {
+          "question": "La finale del 2022 tra Argentina e Francia è stata decisa ai rigori.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Dopo il 3–3 maturato nei tempi supplementari, l'Argentina ha battuto la Francia 4–2 ai calci di rigore. Molti la considerano la più bella finale di sempre."
+        },
+        "ja": {
+          "question": "2022年のアルゼンチン対フランスの決勝戦はPK戦で決着した。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "延長戦を終えて3–3で並んだ後、アルゼンチンはPK戦でフランスを4–2で破った。多くの人がこれを史上最高の決勝戦だと考えている。"
+        },
+        "ko": {
+          "question": "2022년 아르헨티나와 프랑스의 결승전은 승부차기로 결정되었다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "연장전까지 3–3으로 비긴 뒤, 아르헨티나는 승부차기에서 프랑스를 4–2로 꺾었다. 많은 이들이 이를 역대 최고의 결승전으로 꼽는다."
+        },
+        "pt-BR": {
+          "question": "A final de 2022 entre Argentina e França foi decidida nos pênaltis.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Após um empate por 3 a 3 na prorrogação, a Argentina venceu a França por 4 a 2 nos pênaltis. Muitos a consideram a melhor final de todos os tempos."
+        },
+        "zh-Hans": {
+          "question": "2022年阿根廷对阵法国的决赛是通过点球大战决出胜负的。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "加时赛战成3比3后，阿根廷在点球大战中以4比2击败法国。许多人认为这是有史以来最精彩的决赛。"
+        }
+      },
+      "i18nSourceHash": "cb95dfb4833429d9"
     },
     {
       "id": "tf-host-group-stage",
