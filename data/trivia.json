@@ -6110,7 +6110,8 @@
       "answer": 0,
       "explanation": "Cristiano Ronaldo scored at every edition from 2006 to 2022 — five consecutive tournaments. He holds the record for most international goals by any male player.",
       "type": "image",
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/500px-Cristiano_Ronaldo_2018.jpg"
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/500px-Cristiano_Ronaldo_2018.jpg",
+      "approved": true
     },
     {
       "id": "img-mbappe",
