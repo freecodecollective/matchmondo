@@ -6876,6 +6876,706 @@
       "explanation": "Didier Drogba represented Ivory Coast at three editions (2006, 2010, 2014). He's credited with helping to broker a ceasefire in the Ivorian civil war through football.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Didier_Drogba_9279.JPG/500px-Didier_Drogba_9279.JPG"
+    },
+    {
+      "id": "h-1978-host",
+      "category": "history",
+      "question": "Which South American nation hosted the tournament in 1978?",
+      "options": [
+        "Argentina",
+        "Chile",
+        "Colombia",
+        "Brazil"
+      ],
+      "answer": 0,
+      "explanation": "Argentina hosted and won the 1978 edition, defeating the Netherlands 3-1 in extra time at Buenos Aires. The tournament remains one of the most politically controversial, held during Argentina's military dictatorship under Jorge Videla.",
+      "needsReview": true
+    },
+    {
+      "id": "h-1982-expansion",
+      "category": "history",
+      "question": "The 1982 edition in Spain was the first to expand beyond 16 teams. How many competed?",
+      "options": [
+        "24",
+        "20",
+        "28",
+        "32"
+      ],
+      "answer": 0,
+      "explanation": "Spain 1982 increased the field from 16 to 24 teams, introducing a second group stage before the semi-finals. The 24-team format lasted four editions (1982-1994) before expanding to 32 in France 1998.",
+      "needsReview": true
+    },
+    {
+      "id": "h-battle-santiago",
+      "category": "history",
+      "question": "The infamous 'Battle of Santiago' at the 1962 tournament was a notoriously violent match between which two countries?",
+      "options": [
+        "Chile and Italy",
+        "Brazil and Argentina",
+        "England and West Germany",
+        "Uruguay and Argentina"
+      ],
+      "answer": 0,
+      "explanation": "The 1962 group-stage clash between host nation Chile and Italy was so violent that police had to intervene on the pitch. Two Italian players were sent off. BBC commentator David Coleman famously introduced the footage by calling it 'the most stupid, appalling, disgusting, and disgraceful exhibition of football.'",
+      "needsReview": true
+    },
+    {
+      "id": "h-disgrace-gijon",
+      "category": "history",
+      "question": "The 'Disgrace of Gijón' at the 1982 tournament involved a suspicious match between West Germany and which other team?",
+      "options": [
+        "Austria",
+        "France",
+        "Netherlands",
+        "Spain"
+      ],
+      "answer": 0,
+      "explanation": "After West Germany scored early, both teams appeared to stop competing, knowing a narrow German win would send both through at Algeria's expense. The scandal led to a permanent rule change — from 1986 onward, final group-stage matches in each group kick off simultaneously.",
+      "needsReview": true
+    },
+    {
+      "id": "h-italia-90-goals",
+      "category": "history",
+      "question": "The 1990 edition in Italy set a then-record for the fewest average goals per game. Approximately how many?",
+      "options": [
+        "2.21",
+        "2.54",
+        "1.98",
+        "2.67"
+      ],
+      "answer": 0,
+      "explanation": "Italia 90 averaged just 2.21 goals per game, the lowest in tournament history. The ultra-defensive style prompted several rule changes, including awarding three points for a win instead of two (introduced in 1994) and the back-pass rule banning goalkeepers from handling deliberate passes from teammates.",
+      "needsReview": true
+    },
+    {
+      "id": "h-first-color-broadcast",
+      "category": "history",
+      "question": "Which edition was the first to be broadcast worldwide in color television?",
+      "options": [
+        "1970 in Mexico",
+        "1966 in England",
+        "1974 in West Germany",
+        "1978 in Argentina"
+      ],
+      "answer": 0,
+      "explanation": "The 1970 tournament in Mexico was the first with full color TV broadcasts globally. This is partly why that edition's iconic imagery — Brazil's brilliant yellow shirts, Pelé's artistry, Gordon Banks' legendary save — remains so vivid in football lore. The Telstar match ball was designed with black and white panels specifically for TV visibility.",
+      "needsReview": true
+    },
+    {
+      "id": "h-1930-team-count",
+      "category": "history",
+      "question": "How many nations competed in the inaugural 1930 tournament in Uruguay?",
+      "options": [
+        "13",
+        "16",
+        "8",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "Only 13 teams entered the first edition, with just four European nations making the long sea voyage across the Atlantic. Many European countries declined to participate due to the expense and time required for ocean travel, nearly causing a diplomatic rift with South America.",
+      "needsReview": true
+    },
+    {
+      "id": "p-gordon-banks-save",
+      "category": "players",
+      "question": "Whose spectacular save against Pelé at the 1970 tournament is widely considered the greatest save in football history?",
+      "options": [
+        "Gordon Banks",
+        "Lev Yashin",
+        "Peter Shilton",
+        "Dino Zoff"
+      ],
+      "answer": 0,
+      "explanation": "England goalkeeper Gordon Banks pulled off an incredible diving save to deny Pelé's downward header in a 1970 group-stage match against Brazil. Pelé himself later called it 'the save of the century.' Despite Banks' heroics, Brazil won the match 1-0 and went on to win the tournament.",
+      "needsReview": true
+    },
+    {
+      "id": "p-kempes-78",
+      "category": "players",
+      "question": "Who won the Golden Boot at the 1978 tournament with 6 goals, including 2 in the final?",
+      "options": [
+        "Mario Kempes",
+        "Daniel Passarella",
+        "Leopoldo Luque",
+        "Rob Rensenbrink"
+      ],
+      "answer": 0,
+      "explanation": "Mario Kempes was the star of the 1978 tournament on home soil, scoring 6 goals to earn the Golden Boot. Remarkably, he didn't score in the group stage — all 6 came in the second round and final. His two goals in the final against the Netherlands sealed Argentina's first title.",
+      "needsReview": true
+    },
+    {
+      "id": "p-rossi-82-comeback",
+      "category": "players",
+      "question": "Which Italian striker won the 1982 Golden Boot with 6 goals after returning from a match-fixing ban?",
+      "options": [
+        "Paolo Rossi",
+        "Marco Tardelli",
+        "Alessandro Altobelli",
+        "Roberto Bettega"
+      ],
+      "answer": 0,
+      "explanation": "Paolo Rossi had served a two-year ban for involvement in a match-fixing scandal before being selected for Spain 1982. He went on one of football's most remarkable redemption arcs — scoring a hat-trick against Brazil, then goals in the semi-final and final. He won the Golden Boot, Golden Ball, and the tournament.",
+      "needsReview": true
+    },
+    {
+      "id": "p-zagallo-first-dual",
+      "category": "players",
+      "question": "Who was the first person in history to win the tournament as both a player and a head coach?",
+      "options": [
+        "Mário Zagallo",
+        "Franz Beckenbauer",
+        "Didier Deschamps",
+        "Johan Cruyff"
+      ],
+      "answer": 0,
+      "explanation": "Brazilian Mário Zagallo won as a player in 1958 and 1962, then coached Brazil to victory in 1970 — the first person to achieve this double. Franz Beckenbauer later matched the feat (1974/1990), followed by Didier Deschamps (1998/2018). Johan Cruyff, despite being one of the greatest players, never won the tournament.",
+      "needsReview": true
+    },
+    {
+      "id": "p-garrincha-1962",
+      "category": "players",
+      "question": "When Pelé was injured during the 1962 tournament, which Brazilian winger stepped up to lead the team to victory?",
+      "options": [
+        "Garrincha",
+        "Jairzinho",
+        "Rivaldo",
+        "Romário"
+      ],
+      "answer": 0,
+      "explanation": "Garrincha, nicknamed 'Alegria do Povo' (Joy of the People), was the undisputed star of the 1962 tournament after Pelé suffered a groin injury in the second group match. Despite having legs of different lengths due to a childhood illness, Garrincha's dribbling was mesmerizing, and he scored in both the quarter-final and semi-final.",
+      "needsReview": true
+    },
+    {
+      "id": "p-klose-four-editions",
+      "category": "players",
+      "question": "German striker Miroslav Klose scored at four consecutive editions. Which were they?",
+      "options": [
+        "2002, 2006, 2010, 2014",
+        "1998, 2002, 2006, 2010",
+        "2006, 2010, 2014, 2018",
+        "1994, 1998, 2002, 2006"
+      ],
+      "answer": 0,
+      "explanation": "Klose scored across four straight editions: 5 goals in 2002, 5 in 2006, 4 in 2010, and 2 in 2014. Born in Opole, Poland, he moved to Germany as a child and became one of the tournament's most prolific scorers. His trademark acrobatic somersault celebration became iconic.",
+      "needsReview": true
+    },
+    {
+      "id": "p-baggio-penalty-94",
+      "category": "players",
+      "question": "Who missed the decisive penalty in the 1994 final shootout, handing Brazil the title?",
+      "options": [
+        "Roberto Baggio",
+        "Franco Baresi",
+        "Giuseppe Signori",
+        "Dino Baggio"
+      ],
+      "answer": 0,
+      "explanation": "Roberto Baggio blazed his penalty over the crossbar in the 1994 final shootout, giving Brazil a 3-2 victory. It remains one of football's most heartbreaking moments. Despite the miss, Baggio had almost single-handedly carried Italy to the final, scoring 5 goals in the knockout rounds including a last-minute equalizer against Nigeria.",
+      "needsReview": true
+    },
+    {
+      "id": "t-west-germany-last",
+      "category": "teams",
+      "question": "Which was the last tournament that Germany entered as 'West Germany' before reunification?",
+      "options": [
+        "1990",
+        "1986",
+        "1994",
+        "1974"
+      ],
+      "answer": 0,
+      "explanation": "West Germany won the 1990 tournament in Italy — their third title — just months before German reunification in October 1990. The unified German team first competed under simply 'Germany' at the 1994 edition in the United States.",
+      "needsReview": true
+    },
+    {
+      "id": "t-saudi-2022-upset",
+      "category": "teams",
+      "question": "Which nation produced one of the biggest upsets in tournament history by defeating Argentina 2-1 in their 2022 group opener?",
+      "options": [
+        "Saudi Arabia",
+        "Qatar",
+        "Tunisia",
+        "Iran"
+      ],
+      "answer": 0,
+      "explanation": "Saudi Arabia came from behind to beat Lionel Messi's Argentina 2-1 in one of the most stunning results in tournament history. Both Saudi goals came within five minutes of each other early in the second half. The day was declared a national holiday in Saudi Arabia. Argentina recovered from the shock to win the entire tournament.",
+      "needsReview": true
+    },
+    {
+      "id": "t-usa-1994-attendance",
+      "category": "teams",
+      "question": "The 1994 tournament in the United States set a record that still stands. What was it?",
+      "options": [
+        "Highest total attendance",
+        "Most goals scored",
+        "Most red cards shown",
+        "Most penalty shootouts"
+      ],
+      "answer": 0,
+      "explanation": "The 1994 edition drew over 3.58 million total spectators, a record that has endured for over 30 years. The average attendance of nearly 69,000 per match was boosted by the use of massive American football stadiums. This record may finally be broken in 2026, with even larger US stadiums and 104 matches (vs. 52 in 1994).",
+      "needsReview": true
+    },
+    {
+      "id": "t-north-korea-2010",
+      "category": "teams",
+      "question": "When North Korea returned to the tournament in 2010 after a 44-year absence, what happened?",
+      "options": [
+        "They lost all three group matches",
+        "They advanced to the Round of 16",
+        "They drew all three matches",
+        "They beat one team but were eliminated"
+      ],
+      "answer": 0,
+      "explanation": "North Korea's return was painful: they lost to Brazil 2-1 (after briefly leading!), Portugal 7-0, and Ivory Coast 3-0. The 7-0 thrashing by Portugal was one of the most lopsided results in modern tournament history. Their previous appearance had been the famous 1966 run where they stunned Italy.",
+      "needsReview": true
+    },
+    {
+      "id": "t-morocco-2022",
+      "category": "teams",
+      "question": "Which African nation made history in 2022 by becoming the first from their continent to reach a tournament semi-final?",
+      "options": [
+        "Morocco",
+        "Senegal",
+        "Ghana",
+        "Cameroon"
+      ],
+      "answer": 0,
+      "explanation": "Morocco's 2022 run was sensational — they topped a group containing Belgium and Croatia, then knocked out Spain on penalties and Portugal 1-0 before losing to France in the semi-finals. They became the first African and first Arab nation to reach a tournament semi-final, igniting celebrations across the continent and the Arab world.",
+      "needsReview": true
+    },
+    {
+      "id": "t-most-appearances-no-title",
+      "category": "teams",
+      "question": "Which country has appeared at the most editions of the tournament without ever winning it?",
+      "options": [
+        "Mexico",
+        "Netherlands",
+        "Switzerland",
+        "Belgium"
+      ],
+      "answer": 0,
+      "explanation": "Mexico has appeared at 18 editions — more than any nation that hasn't lifted the trophy. Despite being frequent hosts and consistent qualifiers from CONCACAF, Mexico has a so-called 'quinto partido' (fifth match) curse, having been eliminated in the Round of 16 in seven consecutive tournaments from 1994 to 2018.",
+      "needsReview": true
+    },
+    {
+      "id": "t-japan-2022-group",
+      "category": "teams",
+      "question": "At the 2022 tournament, Japan stunned the world by beating which two former champions in the group stage?",
+      "options": [
+        "Germany and Spain",
+        "France and Brazil",
+        "Italy and England",
+        "Argentina and Germany"
+      ],
+      "answer": 0,
+      "explanation": "Japan came from behind to beat Germany 2-1 and Spain 2-1 in Group E, winning the group and sending Germany home. Both comebacks followed an identical pattern — falling behind 1-0 in the first half, then scoring twice after halftime. Japan's tactical flexibility, with coach Hajime Moriyasu making bold substitutions, was key.",
+      "needsReview": true
+    },
+    {
+      "id": "r-corner-kick-awarded",
+      "category": "rules",
+      "question": "A corner kick is awarded when the ball crosses the goal line (without a goal being scored) and was last touched by whom?",
+      "options": [
+        "A defending player",
+        "An attacking player",
+        "The goalkeeper only",
+        "Either team"
+      ],
+      "answer": 0,
+      "explanation": "When a defender is the last to touch the ball before it crosses their own goal line, the attacking team gets a corner kick from the nearest corner arc. If an attacker was the last to touch it, the defending team receives a goal kick instead. Corners are a valuable attacking weapon — roughly 3% result in a goal at the professional level.",
+      "needsReview": true
+    },
+    {
+      "id": "r-throw-in-no-goal",
+      "category": "rules",
+      "question": "Can a goal be scored directly from a throw-in?",
+      "options": [
+        "No, never",
+        "Yes, it counts normally",
+        "Only in extra time",
+        "Only if it bounces before crossing the line"
+      ],
+      "answer": 0,
+      "explanation": "A goal cannot be scored directly from a throw-in. If the ball enters the opponent's goal directly from a throw-in without being touched by another player, a goal kick is awarded. If it enters the thrower's own goal, a corner kick is given. The throw-in is the only restart in football performed with the hands.",
+      "needsReview": true
+    },
+    {
+      "id": "r-keeper-6-seconds",
+      "category": "rules",
+      "question": "Once a goalkeeper picks up the ball, how many seconds do they have to release it?",
+      "options": [
+        "6 seconds",
+        "10 seconds",
+        "4 seconds",
+        "12 seconds"
+      ],
+      "answer": 0,
+      "explanation": "Law 12 states goalkeepers must release the ball within 6 seconds of controlling it with their hands. This is widely considered the least-enforced rule in football — referees typically warn before penalizing, and the infraction results in an indirect free kick. Time-wasting goalkeepers have led to calls for stricter enforcement.",
+      "needsReview": true
+    },
+    {
+      "id": "r-advantage-play",
+      "category": "rules",
+      "question": "When the referee sees a foul but the fouled team keeps possession in a favorable position, what do they signal?",
+      "options": [
+        "They extend both arms forward",
+        "They blow the whistle twice",
+        "They wave a yellow card overhead",
+        "They point to the center circle"
+      ],
+      "answer": 0,
+      "explanation": "The advantage signal — both arms extended forward and upward — tells players that the referee saw the foul but is allowing play to continue because stopping would disadvantage the fouled team. If the expected advantage doesn't materialize within a few seconds, the referee can still come back and award the original free kick.",
+      "needsReview": true
+    },
+    {
+      "id": "r-penalty-rebound",
+      "category": "rules",
+      "question": "During regular play, if a penalty kick hits the post and bounces back, can the kicker score from the rebound?",
+      "options": [
+        "Yes, any player can play the rebound",
+        "No, the kick is dead",
+        "Only teammates can score, not the kicker",
+        "Only the goalkeeper can touch it next"
+      ],
+      "answer": 0,
+      "explanation": "In regular play and extra time, if a penalty hits the post, crossbar, or rebounds off the goalkeeper, the ball is live and any player — including the kicker — can score from it. In a penalty shootout, however, there are no rebounds: each kick ends once the ball stops moving forward, goes out of play, or the goalkeeper makes a clear save.",
+      "needsReview": true
+    },
+    {
+      "id": "v-guadalajara-culture",
+      "category": "venues",
+      "question": "Guadalajara, a 2026 host city, is known as the birthplace of which two iconic Mexican cultural exports?",
+      "options": [
+        "Mariachi music and tequila",
+        "Salsa dancing and mezcal",
+        "Lucha libre and churros",
+        "Día de los Muertos and piñatas"
+      ],
+      "answer": 0,
+      "explanation": "Guadalajara, capital of Mexico's Jalisco state, is the cultural birthplace of both mariachi music and tequila (produced from blue agave grown in surrounding Jalisco highlands). Mexico's second-largest city, it also hosted group-stage matches in both 1970 and 1986.",
+      "needsReview": true
+    },
+    {
+      "id": "v-estadio-akron-chivas",
+      "category": "venues",
+      "question": "Estadio Akron, a 2026 venue in Guadalajara, is the home ground of which famous Mexican club?",
+      "options": [
+        "Club Deportivo Guadalajara (Chivas)",
+        "Club América",
+        "Cruz Azul",
+        "UNAM Pumas"
+      ],
+      "answer": 0,
+      "explanation": "Estadio Akron is home to Chivas, one of Mexico's most beloved clubs and famously the only major Mexican team to field exclusively Mexican-born players — no foreign imports allowed. The modern stadium, which opened in 2010, seats around 49,850 and features a striking volcanic-inspired design.",
+      "needsReview": true
+    },
+    {
+      "id": "v-gillette-boston",
+      "category": "venues",
+      "question": "Gillette Stadium, a 2026 venue near Boston, is the home of which NFL team?",
+      "options": [
+        "New England Patriots",
+        "New York Giants",
+        "Philadelphia Eagles",
+        "Baltimore Ravens"
+      ],
+      "answer": 0,
+      "explanation": "Gillette Stadium sits in Foxborough, Massachusetts, about 30 miles southwest of downtown Boston. Seating approximately 65,878, it's also home to the New England Revolution of MLS. The stadium hosted multiple matches during the 1994 edition when the nearby Foxboro Stadium was used.",
+      "needsReview": true
+    },
+    {
+      "id": "v-estadio-bbva-monterrey",
+      "category": "venues",
+      "question": "Estadio BBVA, a 2026 venue in Monterrey, is the home ground of which club?",
+      "options": [
+        "CF Monterrey (Rayados)",
+        "UANL Tigres",
+        "Santos Laguna",
+        "Club León"
+      ],
+      "answer": 0,
+      "explanation": "Estadio BBVA is home to CF Monterrey, nicknamed 'Rayados' (the striped ones), one of Mexico's most successful clubs. The state-of-the-art stadium opened in 2015 and seats around 51,000. Monterrey, Mexico's third-largest city, is also home to rival club UANL Tigres, who play at the nearby Estadio Universitario.",
+      "needsReview": true
+    },
+    {
+      "id": "rec-salenko-five-goals",
+      "category": "records",
+      "question": "What is the most goals scored by a single player in one tournament match?",
+      "options": [
+        "5",
+        "4",
+        "6",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "Russia's Oleg Salenko scored 5 goals in a 6-1 win over Cameroon at the 1994 tournament, a record that still stands. Remarkably, Russia was eliminated in the group stage despite Salenko's heroics. He shared the Golden Boot that year with Bulgaria's Hristo Stoichkov, each finishing with 6 goals.",
+      "needsReview": true
+    },
+    {
+      "id": "rec-own-goals-2018",
+      "category": "records",
+      "question": "The 2018 tournament in Russia set a record for the most own goals in a single edition. How many were there?",
+      "options": [
+        "12",
+        "8",
+        "6",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "Russia 2018 saw a staggering 12 own goals, more than double the previous record of 6 set in 1998. Faster-moving balls, aggressive high-pressing tactics, and the increased pace of the modern game put defenders under unprecedented pressure. Some of those own goals would have been credited to attackers in earlier eras before tracking technology improved.",
+      "needsReview": true
+    },
+    {
+      "id": "rec-highest-scoring-final",
+      "category": "records",
+      "question": "Which final produced the most total goals (excluding penalty shootouts)?",
+      "options": [
+        "1958 — Brazil 5, Sweden 2",
+        "2022 — Argentina 3, France 3",
+        "1966 — England 4, West Germany 2",
+        "2018 — France 4, Croatia 2"
+      ],
+      "answer": 0,
+      "explanation": "The 1958 final saw 7 goals as a 17-year-old Pelé scored twice and Vavá added two more in Brazil's 5-2 demolition of host nation Sweden. It was Brazil's first title and announced them as a football superpower. The 2022 final matched the drama with 6 goals (3-3) but needed penalties to decide the winner.",
+      "needsReview": true
+    },
+    {
+      "id": "c-first-mascot-1966",
+      "category": "culture",
+      "question": "Which edition of the tournament was the first to feature an official mascot?",
+      "options": [
+        "1966 in England",
+        "1970 in Mexico",
+        "1974 in West Germany",
+        "1978 in Argentina"
+      ],
+      "answer": 0,
+      "explanation": "The 1966 tournament in England introduced the tradition of official mascots with a lion named Willie wearing a Union Jack jersey. Every edition since has had its own mascot, from 1970's Juanito (a boy in a sombrero) to 2022's La'eeb (an animated keffiyeh). The tradition has since spread to nearly every major sporting event.",
+      "needsReview": true
+    },
+    {
+      "id": "c-adidas-ball",
+      "category": "culture",
+      "question": "Which company has manufactured the official match ball for every edition since 1970?",
+      "options": [
+        "Adidas",
+        "Nike",
+        "Puma",
+        "Umbro"
+      ],
+      "answer": 0,
+      "explanation": "Adidas has supplied every official ball since the 1970 Telstar, which became iconic with its black-and-white panel design for TV visibility. Each edition gets a uniquely designed ball — the Tango (1978-1998 era), Jabulani (2010), Brazuca (2014), Al Rihla (2022) — and the designs always spark lively debate among players and fans.",
+      "needsReview": true
+    },
+    {
+      "id": "tf-uruguay-first-host-winner",
+      "category": "history",
+      "type": "true_false",
+      "question": "The first tournament host country, Uruguay in 1930, also won the title.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True! Uruguay hosted and won the inaugural 1930 edition, defeating Argentina 4-2 in the final at the Estadio Centenario in Montevideo before approximately 93,000 spectators. With a population of under 2 million at the time, Uruguay remains one of the smallest nations ever to win the tournament.",
+      "needsReview": true
+    },
+    {
+      "id": "tf-no-cards-1930",
+      "category": "history",
+      "type": "true_false",
+      "question": "No yellow or red cards were shown at the 1930 tournament.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True! The card system wasn't introduced until the 1970 edition in Mexico. Before that, referees communicated cautions and dismissals verbally or with gestures. The card system was invented by English referee Ken Aston, who was inspired by traffic lights while driving home after a particularly confusing 1966 match.",
+      "needsReview": true
+    },
+    {
+      "id": "tf-pele-injured-62",
+      "category": "players",
+      "type": "true_false",
+      "question": "Pelé was injured and missed most of the 1962 tournament, but Brazil still won.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True! Pelé tore a groin muscle in Brazil's second group match against Czechoslovakia and was sidelined for the rest of the tournament. Garrincha stepped into the spotlight as the tournament's star, leading Brazil to their second consecutive title. It showed the incredible depth of Brazilian talent in that era.",
+      "needsReview": true
+    },
+    {
+      "id": "tf-knockout-draw",
+      "category": "rules",
+      "type": "true_false",
+      "question": "A knockout match at the tournament can end in a draw.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False! Every knockout match must produce a winner. If the score is level after 90 minutes, 30 minutes of extra time (two 15-minute halves) are played. If still tied, a penalty shootout decides the outcome. Only group-stage matches can end in a draw.",
+      "needsReview": true
+    },
+    {
+      "id": "tf-referee-own-country",
+      "category": "rules",
+      "type": "true_false",
+      "question": "A referee can be assigned to officiate a match involving their own country.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False! To ensure impartiality, referees are never assigned to matches involving their own nation. Typically, officials come from a different confederation than either competing team. The referee committee carefully selects and assigns officials for each match to avoid even the appearance of bias.",
+      "needsReview": true
+    },
+    {
+      "id": "tf-goalline-tech-2014",
+      "category": "rules",
+      "type": "true_false",
+      "question": "Goal-line technology was first used at the 2014 tournament in Brazil.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True! Goal-line technology debuted at Brazil 2014, using high-speed cameras to instantly determine whether the ball fully crossed the line. Its adoption was spurred by several controversial incidents, most notably Frank Lampard's clearly valid goal against Germany in 2010 that was wrongly disallowed — a miss that might have changed the outcome of the match.",
+      "needsReview": true
+    },
+    {
+      "id": "tf-women-refs-2022",
+      "category": "culture",
+      "type": "true_false",
+      "question": "Female referees officiated at the men's tournament for the first time in 2022.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True! The 2022 edition made history by including female match officials for the first time. France's Stéphanie Frappart became the first woman to referee a men's tournament match (Costa Rica vs Germany), while Rwanda's Salima Mukansanga and Japan's Yoshimi Yamashita also served as officials during the tournament.",
+      "needsReview": true
+    },
+    {
+      "id": "tf-all-confederations-semis",
+      "category": "teams",
+      "type": "true_false",
+      "question": "Teams from all six football confederations have reached the tournament semi-finals.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False! Five of six confederations have had semi-finalists: UEFA (Europe), CONMEBOL (South America), CONCACAF (USA in 1930), AFC (South Korea in 2002), and CAF (Morocco in 2022). The only confederation without a semi-finalist is OFC (Oceania), whose top footballing nation, Australia, moved to the Asian confederation in 2006.",
+      "needsReview": true
+    },
+    {
+      "id": "tf-golden-goal-abolished",
+      "category": "rules",
+      "type": "true_false",
+      "question": "The golden goal rule (sudden death in extra time) was abolished after the 2002 tournament.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True! The golden goal rule, where the first team to score in extra time immediately won, was used at the 1998 and 2002 editions. It was abolished in 2004 due to criticism that it made teams overly defensive in extra time, afraid one mistake would end the match. The 2006 edition returned to the traditional full 30-minute extra-time format.",
+      "needsReview": true
+    },
+    {
+      "id": "tf-added-time-2022",
+      "category": "culture",
+      "type": "true_false",
+      "question": "Multiple matches at the 2022 edition in Qatar had over 10 minutes of stoppage time added to a single half.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True! Referees at the 2022 tournament added significantly more stoppage time than in any previous edition. England vs Iran saw a total of 27 minutes added across both halves. The approach was intended to maximize actual playing time by accounting for goal celebrations, substitutions, VAR reviews, and time-wasting. This trend has continued into subsequent editions.",
+      "needsReview": true
+    },
+    {
+      "id": "img-maradona",
+      "category": "players",
+      "type": "image",
+      "question": "Who is this Argentine legend, famous for the 'Hand of God' and the 'Goal of the Century'?",
+      "options": [
+        "Diego Maradona",
+        "Lionel Messi",
+        "Gabriel Batistuta",
+        "Mario Kempes"
+      ],
+      "answer": 0,
+      "explanation": "Diego Maradona captained Argentina to glory in 1986, scoring two of the most famous goals in football history against England in the quarter-finals — the controversial 'Hand of God' and the mesmerizing 60-meter solo run past five defenders known as the 'Goal of the Century.' He won the Golden Ball as the tournament's best player.",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Maradona-Mundial_86_con_la_copa.JPG/500px-Maradona-Mundial_86_con_la_copa.JPG",
+      "needsReview": true
+    },
+    {
+      "id": "img-beckenbauer",
+      "category": "players",
+      "type": "image",
+      "question": "Who is this German football icon, nicknamed 'Der Kaiser,' who revolutionized the sweeper role?",
+      "options": [
+        "Franz Beckenbauer",
+        "Lothar Matthäus",
+        "Karl-Heinz Rummenigge",
+        "Jürgen Klinsmann"
+      ],
+      "answer": 0,
+      "explanation": "Franz Beckenbauer captained West Germany to victory in 1974 and later coached them to win in 1990, becoming only the second person (after Mário Zagallo) to win as both player and manager. Nicknamed 'Der Kaiser' (The Emperor), he redefined the libero/sweeper role, turning defense into an art form of elegant ball-playing.",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Franz_Beckenbauer_%281975%29.jpg/500px-Franz_Beckenbauer_%281975%29.jpg",
+      "needsReview": true
+    },
+    {
+      "id": "img-klose-striker",
+      "category": "players",
+      "type": "image",
+      "question": "Who is this German striker who scored at four consecutive editions from 2002 to 2014?",
+      "options": [
+        "Miroslav Klose",
+        "Lukas Podolski",
+        "Thomas Müller",
+        "Jürgen Klinsmann"
+      ],
+      "answer": 0,
+      "explanation": "Miroslav Klose scored 16 goals across four editions (2002-2014), making him one of the tournament's most prolific scorers. Born in Opole, Poland, he moved to Germany as a child and developed a reputation for fair play — he once told a referee to disallow a goal he had scored with his hand. His trademark somersault celebration is iconic.",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Miroslav_Klose_Portrait.JPG/500px-Miroslav_Klose_Portrait.JPG",
+      "needsReview": true
+    },
+    {
+      "id": "img-cafu-captain",
+      "category": "players",
+      "type": "image",
+      "question": "Who is this Brazilian right-back and captain who appeared in three consecutive tournament finals?",
+      "options": [
+        "Cafu",
+        "Roberto Carlos",
+        "Dani Alves",
+        "Maicon"
+      ],
+      "answer": 0,
+      "explanation": "Cafu (Marcos Evangelista de Moraes) appeared in three consecutive finals — 1994 (won), 1998 (lost), and 2002 (won) — the only player in history to achieve this feat. He captained the victorious 2002 side and earned 142 caps for Brazil, a record at the time. Known for his tireless runs up and down the right flank, he set the template for modern attacking full-backs.",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Cafu_no_Olinda_Fashion_Week_de_2012%2C_01.jpg/500px-Cafu_no_Olinda_Fashion_Week_de_2012%2C_01.jpg",
+      "needsReview": true
+    },
+    {
+      "id": "img-buffon",
+      "category": "players",
+      "type": "image",
+      "question": "Who is this Italian goalkeeper who won the tournament in 2006 and is considered one of the greatest keepers ever?",
+      "options": [
+        "Gianluigi Buffon",
+        "Iker Casillas",
+        "Manuel Neuer",
+        "Thibaut Courtois"
+      ],
+      "answer": 0,
+      "explanation": "Gianluigi Buffon was the rock of Italy's 2006 triumph, conceding just two goals in the entire tournament (one an own goal, the other a Zidane penalty). He played in five editions (1998-2014), earning 176 caps for Italy — a record. His longevity was remarkable: he was still playing professional football into his mid-40s.",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Gianluigi_Buffon_%2831784615942%29_%28cropped%29.jpg/500px-Gianluigi_Buffon_%2831784615942%29_%28cropped%29.jpg",
+      "needsReview": true
     }
   ],
   "pendingTasks": [
