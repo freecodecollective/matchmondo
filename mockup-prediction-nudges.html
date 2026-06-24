@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Predictions on the Schedule — Mockup options</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    background: #eaf0e8;
+    color: #1a2b1a;
+    padding: 24px 16px 60px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+
+  h1 { font-size: 24px; margin-bottom: 4px; }
+  .lede { color: #4a5a4a; font-size: 14px; line-height: 1.55; max-width: 760px; margin-bottom: 22px; }
+
+  /* ---- Variant grid ---- */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 16px; }
+
+  .variant {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: 16px;
+    padding: 16px 14px 14px;
+  }
+  .variant h2 { font-size: 15px; font-weight: 700; color: #0b6e4f; margin-bottom: 2px; }
+  .variant .sub { font-size: 12px; color: #5a6c5a; line-height: 1.45; margin-bottom: 12px; }
+  .variant .tag {
+    display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; padding: 3px 7px; border-radius: 999px;
+    background: #f0f5ee; color: #38583a; margin-bottom: 10px;
+  }
+  .variant .tag.pro { background: #e6f4ea; color: #1c6b2c; }
+  .variant .tag.con { background: #fbecec; color: #8a2727; }
+
+  /* ---- Schedule day header ---- */
+  .day-head {
+    display: flex; align-items: baseline; gap: 8px;
+    padding: 0 4px 8px;
+    color: #1a2b1a;
+  }
+  .day-head .label { font-size: 15px; font-weight: 700; }
+  .day-head .date  { font-size: 12px; color: #5a6c5a; }
+  .day-head .count { margin-left: auto; font-size: 11px; color: #6c7c6c; }
+
+  /* ---- Match card (base, shared by all variants) ---- */
+  .match {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
+    padding: 10px 12px;
+    display: flex; flex-direction: column; gap: 4px;
+    position: relative;
+  }
+  .match + .match { margin-top: 8px; }
+  .match-meta { font-size: 10px; font-weight: 700; letter-spacing: 0.05em; color: #6c7c6c; text-transform: uppercase; display: flex; gap: 8px; align-items: center; }
+  .match-meta .live { color: #c12c2c; }
+  .match-meta .group { color: #0b6e4f; }
+  .match-row { display: flex; align-items: center; gap: 10px; }
+  .team { display: flex; align-items: center; gap: 8px; flex: 1; }
+  .team.away { justify-content: flex-end; }
+  .flag { width: 22px; height: 16px; border-radius: 2px; flex-shrink: 0; background: #ddd; }
+  .name { font-size: 15px; font-weight: 600; color: #1a2b1a; }
+  .score-block {
+    min-width: 64px; text-align: center; font-variant-numeric: tabular-nums;
+  }
+  .score-block .vs { color: #6c7c6c; font-size: 13px; font-weight: 600; }
+  .score-block .score { font-size: 16px; font-weight: 700; color: #1a2b1a; }
+  .score-block .time { font-size: 12px; color: #5a6c5a; }
+
+  /* Country flag colors (approximate, simple two-tone stripes) */
+  .flag.arg { background: linear-gradient(to bottom, #74acdf 33%, #fff 33%, #fff 66%, #74acdf 66%); }
+  .flag.bra { background: #009c3b; }
+  .flag.fra { background: linear-gradient(to right, #002395 33%, #fff 33%, #fff 66%, #ed2939 66%); }
+  .flag.ger { background: linear-gradient(to bottom, #000 33%, #dd0000 33%, #dd0000 66%, #ffce00 66%); }
+  .flag.eng { background: #fff; position: relative; }
+  .flag.eng::after { content: '+'; position: absolute; inset: 0; color: #c8102e; font-weight: 900; text-align: center; line-height: 14px; }
+  .flag.ghn { background: linear-gradient(to bottom, #ce1126 33%, #fcd116 33%, #fcd116 66%, #006b3f 66%); }
+
+  /* ---- Variant A: subtle line below the card ---- */
+  .pred-line {
+    margin-top: 8px;
+    padding: 6px 8px;
+    background: #f0f5ee;
+    border: 1px dashed rgba(11, 110, 79, 0.25);
+    border-radius: 8px;
+    font-size: 12.5px;
+    color: #0b6e4f;
+    display: flex; align-items: center; gap: 6px;
+    cursor: pointer;
+  }
+  .pred-line .ic { width: 14px; height: 14px; display: inline-flex; align-items: center; justify-content: center; }
+  .pred-line .chev { margin-left: auto; color: #88a08a; font-size: 11px; }
+  .pred-line.has {
+    background: #e6f0e3; border: 1px solid rgba(11, 110, 79, 0.4); border-style: solid;
+    color: #08533c; font-weight: 600;
+  }
+  .pred-line.empty {
+    color: #527055; font-weight: 500;
+  }
+
+  /* ---- Variant B: small chip on the right of the match row ---- */
+  .pred-chip {
+    margin-left: 6px;
+    padding: 3px 8px;
+    background: #f0f5ee;
+    border: 1px solid rgba(11, 110, 79, 0.25);
+    border-radius: 999px;
+    font-size: 11px;
+    color: #0b6e4f;
+    font-weight: 700;
+    display: inline-flex; align-items: center; gap: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .pred-chip.has { background: #cfe7d3; color: #08533c; }
+
+  /* ---- Variant C: integrated into the score column ---- */
+  .pred-score-area {
+    display: flex; flex-direction: column; gap: 2px; align-items: center; min-width: 80px;
+    cursor: pointer;
+  }
+  .pred-score-area .time { color: #5a6c5a; font-size: 12px; }
+  .pred-score-area .pick { font-size: 11px; color: #0b6e4f; font-weight: 700; }
+  .pred-score-area .pick-empty { font-size: 11px; color: #527055; font-weight: 500; font-style: italic; }
+
+  /* ---- Variant D: ribbon underline on the card itself ---- */
+  .match.ribbon-has { border-bottom: 3px solid #0b6e4f; }
+  .match.ribbon-make { border-bottom: 3px dashed rgba(11, 110, 79, 0.45); }
+  .match.ribbon-has::after, .match.ribbon-make::after {
+    content: attr(data-ribbon);
+    position: absolute;
+    bottom: 4px; right: 12px;
+    font-size: 10px; font-weight: 700;
+    color: #08533c;
+    background: #fff;
+    padding: 0 6px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .match.ribbon-make::after { color: #527055; font-weight: 500; }
+  .match.ribbon-has, .match.ribbon-make { padding-bottom: 12px; }
+
+  /* ---- Settings card ---- */
+  .settings-card {
+    margin-top: 26px;
+    max-width: 380px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: 14px;
+    padding: 14px 14px 6px;
+  }
+  .settings-card h3 { font-size: 12px; letter-spacing: 0.05em; color: #5a6c5a; text-transform: uppercase; margin-bottom: 10px; }
+  .settings-row {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 4px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  .settings-row:last-child { border-bottom: none; }
+  .settings-row .label { flex: 1; }
+  .settings-row .label .t { font-size: 14px; font-weight: 600; }
+  .settings-row .label .d { font-size: 11.5px; color: #6c7c6c; margin-top: 2px; line-height: 1.4; }
+  .toggle {
+    width: 42px; height: 26px; background: #b2d2b6; border-radius: 999px; position: relative; cursor: pointer; transition: background 0.15s;
+  }
+  .toggle.on { background: #0b6e4f; }
+  .toggle::after {
+    content: ''; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff;
+    transition: transform 0.15s; box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  .toggle.on::after { transform: translateX(16px); }
+
+  .note { font-size: 12px; color: #4a5a4a; max-width: 760px; margin: 24px 0 6px; line-height: 1.55; }
+  .note strong { color: #08533c; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Predictions on the Schedule — layout options</h1>
+  <p class="lede">
+    The same three sample matches are rendered four ways. Each variant shows: (1) a fixture where you've made a prediction, (2) one where you haven't, and (3) a played fixture. Pick the one that doesn't feel cluttered.
+    Tapping any prediction element opens the Predictions tab; tapping a "Make a prediction" prompt opens Predictions for that specific match.
+  </p>
+
+  <div class="grid">
+
+    <!-- ============================================================ -->
+    <!-- VARIANT A: thin row below the card                            -->
+    <!-- ============================================================ -->
+    <div class="variant">
+      <span class="tag">A</span>
+      <h2>Inline row below the card</h2>
+      <p class="sub">A subtle row right under the match. Clearest "tap me" affordance; uses a bit of vertical space per match.</p>
+
+      <div class="day-head"><span class="label">Today</span><span class="date">— Jun 23</span><span class="count">3 matches</span></div>
+
+      <div>
+        <!-- Match with a prediction made -->
+        <div class="match">
+          <div class="match-meta"><span class="group">Group H</span> · 9 AM PT</div>
+          <div class="match-row">
+            <div class="team"><span class="flag eng"></span><span class="name">England</span></div>
+            <div class="score-block"><div class="time">9:00 AM</div></div>
+            <div class="team away"><span class="name">Ghana</span><span class="flag ghn"></span></div>
+          </div>
+        </div>
+        <div class="pred-line has">
+          <span class="ic">🎯</span> Your pick: <strong style="margin-left: 2px;">ENG 2–1 GHN</strong>
+          <span class="chev">›</span>
+        </div>
+
+        <!-- Match without a prediction -->
+        <div class="match" style="margin-top: 10px;">
+          <div class="match-meta"><span class="group">Group I</span> · 12 PM PT</div>
+          <div class="match-row">
+            <div class="team"><span class="flag arg"></span><span class="name">Argentina</span></div>
+            <div class="score-block"><div class="time">12:00 PM</div></div>
+            <div class="team away"><span class="name">Brazil</span><span class="flag bra"></span></div>
+          </div>
+        </div>
+        <div class="pred-line empty">
+          <span class="ic">🎯</span> Make a prediction
+          <span class="chev">›</span>
+        </div>
+
+        <!-- Played match (no nudge — match is done) -->
+        <div class="match" style="margin-top: 10px;">
+          <div class="match-meta"><span class="group">Group D</span> · FINAL</div>
+          <div class="match-row">
+            <div class="team"><span class="flag fra"></span><span class="name">France</span></div>
+            <div class="score-block"><div class="score">3 – 1</div></div>
+            <div class="team away"><span class="name">Germany</span><span class="flag ger"></span></div>
+          </div>
+        </div>
+        <div class="pred-line has" style="background: #eef3ec; border-color: rgba(11,110,79,0.2);">
+          <span class="ic">🎯</span> Your pick: <strong style="margin-left: 2px;">FRA 2–1 GER</strong> · <span style="color: #08533c;">+5 pts</span>
+          <span class="chev">›</span>
+        </div>
+      </div>
+
+      <p class="sub" style="margin-top: 12px; padding: 8px; background: #f6f9f5; border-radius: 8px;">
+        <strong style="color:#08533c;">Pros:</strong> very legible · clear nudge for empty state · room to show points<br>
+        <strong style="color:#8a2727;">Cons:</strong> adds ~28px per match (3-day view becomes longer)
+      </p>
+    </div>
+
+
+    <!-- ============================================================ -->
+    <!-- VARIANT B: tiny chip on the right of the match row            -->
+    <!-- ============================================================ -->
+    <div class="variant">
+      <span class="tag">B</span>
+      <h2>Compact chip on the right</h2>
+      <p class="sub">A small pill next to the away team. Compact, but competes with the LIVE / group badges already there.</p>
+
+      <div class="day-head"><span class="label">Today</span><span class="date">— Jun 23</span><span class="count">3 matches</span></div>
+
+      <div>
+        <div class="match">
+          <div class="match-meta"><span class="group">Group H</span> · 9 AM PT</div>
+          <div class="match-row">
+            <div class="team"><span class="flag eng"></span><span class="name">England</span></div>
+            <div class="score-block"><div class="time">9:00 AM</div></div>
+            <div class="team away"><span class="name">Ghana</span><span class="flag ghn"></span><span class="pred-chip has">🎯 2-1</span></div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="match-meta"><span class="group">Group I</span> · 12 PM PT</div>
+          <div class="match-row">
+            <div class="team"><span class="flag arg"></span><span class="name">Argentina</span></div>
+            <div class="score-block"><div class="time">12:00 PM</div></div>
+            <div class="team away"><span class="name">Brazil</span><span class="flag bra"></span><span class="pred-chip">+ Pick</span></div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="match-meta"><span class="group">Group D</span> · FINAL</div>
+          <div class="match-row">
+            <div class="team"><span class="flag fra"></span><span class="name">France</span></div>
+            <div class="score-block"><div class="score">3 – 1</div></div>
+            <div class="team away"><span class="name">Germany</span><span class="flag ger"></span><span class="pred-chip has">🎯 2-1 · +5</span></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="sub" style="margin-top: 12px; padding: 8px; background: #f6f9f5; border-radius: 8px;">
+        <strong style="color:#08533c;">Pros:</strong> no extra row · keeps card density · scannable<br>
+        <strong style="color:#8a2727;">Cons:</strong> crowds the team name on narrow phones · weaker discoverability ("+ Pick" might read as decorative)
+      </p>
+    </div>
+
+
+    <!-- ============================================================ -->
+    <!-- VARIANT C: integrated into the score / kickoff area           -->
+    <!-- ============================================================ -->
+    <div class="variant">
+      <span class="tag">C</span>
+      <h2>In the score column</h2>
+      <p class="sub">Where the kickoff time / score sits, show your pick (or "Predict?"). Disappears for played matches.</p>
+
+      <div class="day-head"><span class="label">Today</span><span class="date">— Jun 23</span><span class="count">3 matches</span></div>
+
+      <div>
+        <div class="match">
+          <div class="match-meta"><span class="group">Group H</span> · 9 AM PT</div>
+          <div class="match-row">
+            <div class="team"><span class="flag eng"></span><span class="name">England</span></div>
+            <div class="pred-score-area">
+              <div class="time">9:00 AM</div>
+              <div class="pick">🎯 2–1</div>
+            </div>
+            <div class="team away"><span class="name">Ghana</span><span class="flag ghn"></span></div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="match-meta"><span class="group">Group I</span> · 12 PM PT</div>
+          <div class="match-row">
+            <div class="team"><span class="flag arg"></span><span class="name">Argentina</span></div>
+            <div class="pred-score-area">
+              <div class="time">12:00 PM</div>
+              <div class="pick-empty">Predict?</div>
+            </div>
+            <div class="team away"><span class="name">Brazil</span><span class="flag bra"></span></div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="match-meta"><span class="group">Group D</span> · FINAL</div>
+          <div class="match-row">
+            <div class="team"><span class="flag fra"></span><span class="name">France</span></div>
+            <div class="pred-score-area">
+              <div class="score">3 – 1</div>
+              <div class="pick">🎯 2–1 ✓</div>
+            </div>
+            <div class="team away"><span class="name">Germany</span><span class="flag ger"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="sub" style="margin-top: 12px; padding: 8px; background: #f6f9f5; border-radius: 8px;">
+        <strong style="color:#08533c;">Pros:</strong> no extra rows · two pieces of info stack naturally · always visible<br>
+        <strong style="color:#8a2727;">Cons:</strong> tight tap target · two numbers ("9:00 AM" + "2–1") fight a bit for attention
+      </p>
+    </div>
+
+
+    <!-- ============================================================ -->
+    <!-- VARIANT D: ribbon underline on the card itself                -->
+    <!-- ============================================================ -->
+    <div class="variant">
+      <span class="tag">D</span>
+      <h2>Bottom-edge ribbon</h2>
+      <p class="sub">A thin colored ribbon along the bottom of the card with a tiny label. Most minimal of the four — almost invisible until you've made a pick.</p>
+
+      <div class="day-head"><span class="label">Today</span><span class="date">— Jun 23</span><span class="count">3 matches</span></div>
+
+      <div>
+        <div class="match ribbon-has" data-ribbon="🎯 2–1">
+          <div class="match-meta"><span class="group">Group H</span> · 9 AM PT</div>
+          <div class="match-row">
+            <div class="team"><span class="flag eng"></span><span class="name">England</span></div>
+            <div class="score-block"><div class="time">9:00 AM</div></div>
+            <div class="team away"><span class="name">Ghana</span><span class="flag ghn"></span></div>
+          </div>
+        </div>
+
+        <div class="match ribbon-make" data-ribbon="Make a pick ›">
+          <div class="match-meta"><span class="group">Group I</span> · 12 PM PT</div>
+          <div class="match-row">
+            <div class="team"><span class="flag arg"></span><span class="name">Argentina</span></div>
+            <div class="score-block"><div class="time">12:00 PM</div></div>
+            <div class="team away"><span class="name">Brazil</span><span class="flag bra"></span></div>
+          </div>
+        </div>
+
+        <div class="match ribbon-has" data-ribbon="🎯 2–1 · +5">
+          <div class="match-meta"><span class="group">Group D</span> · FINAL</div>
+          <div class="match-row">
+            <div class="team"><span class="flag fra"></span><span class="name">France</span></div>
+            <div class="score-block"><div class="score">3 – 1</div></div>
+            <div class="team away"><span class="name">Germany</span><span class="flag ger"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="sub" style="margin-top: 12px; padding: 8px; background: #f6f9f5; border-radius: 8px;">
+        <strong style="color:#08533c;">Pros:</strong> visual cue at the edge · doesn't push other content · "made vs. not made" is colorable<br>
+        <strong style="color:#8a2727;">Cons:</strong> smallest tap target · less obvious to a first-time user
+      </p>
+    </div>
+
+  </div>
+
+
+  <!-- ===================== Settings card ===================== -->
+  <h2 style="margin-top: 34px; font-size: 18px;">Settings toggle</h2>
+  <p class="note">Whichever variant we land on, the Settings page gets a switch to turn the schedule prediction surfaces off. Two related toggles, one parent + one nudge:</p>
+
+  <div class="settings-card">
+    <h3>Predictions</h3>
+    <div class="settings-row">
+      <div class="label">
+        <div class="t">Show predictions in schedule</div>
+        <div class="d">Display your pick (or a prompt) on every match in the 3-day and Full Schedule views.</div>
+      </div>
+      <div class="toggle on" onclick="this.classList.toggle('on'); document.getElementById('nudge-row').style.opacity = this.classList.contains('on') ? '1' : '0.4';"></div>
+    </div>
+    <div class="settings-row" id="nudge-row">
+      <div class="label">
+        <div class="t">Show "Make a prediction" prompts</div>
+        <div class="d">When off, only matches you've already predicted show your pick — no nudges on unpredicted matches.</div>
+      </div>
+      <div class="toggle on" onclick="this.classList.toggle('on');"></div>
+    </div>
+  </div>
+
+  <p class="note" style="margin-top: 22px;">
+    My recommendation: <strong>Variant A</strong> for clarity, <strong>Variant D</strong> if you want minimal density.
+    A is the easiest to read and discover; D feels like it disappears when you don't care.
+    B and C save vertical space but at the cost of either crowding (B) or tap-target size (C).
+  </p>
+
+</div>
+</body>
+</html>
