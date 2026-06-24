@@ -2123,7 +2123,8 @@
         "4"
       ],
       "answer": 2,
-      "explanation": "A win is worth 3 points, a draw 1, and a loss 0."
+      "explanation": "A win is worth 3 points, a draw 1, and a loss 0.",
+      "approved": true
     },
     {
       "id": "r-offside",
