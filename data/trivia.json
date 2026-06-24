@@ -5515,8 +5515,9 @@
         "False"
       ],
       "answer": 1,
-      "explanation": "South Africa became the first (and so far only) host nation eliminated in the group stage, at their own 2010 tournament. Some say it was punishment for them introducing the world to vuv",
-      "type": "true_false"
+      "explanation": "South Africa became the first (and so far only) host nation eliminated in the group stage, at their own 2010 tournament. Some say it was punishment for them introducing the world to vuvuzelas.",
+      "type": "true_false",
+      "approved": true
     },
     {
       "id": "tf-france-first-1998",
