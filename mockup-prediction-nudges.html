@@ -145,6 +145,65 @@
   .match.ribbon-make::after { color: #527055; font-weight: 500; }
   .match.ribbon-has, .match.ribbon-make { padding-bottom: 12px; }
 
+  /* ---- Variant E: top mini-banner on the card ---- */
+  .match.top-banner-host { padding-top: 0; overflow: hidden; }
+  .top-banner {
+    margin: 0 -12px 8px;
+    padding: 5px 12px;
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; gap: 6px;
+    cursor: pointer;
+  }
+  .top-banner.has { background: #0b6e4f; color: #fff; }
+  .top-banner.empty { background: #e0eedb; color: #08533c; font-weight: 600; }
+  .top-banner .chev { margin-left: auto; opacity: 0.8; }
+
+  /* ---- Variant F: left accent rail with subtle label ---- */
+  .match.rail-has { border-left: 4px solid #0b6e4f; padding-left: 10px; cursor: pointer; }
+  .match.rail-empty { border-left: 4px dashed rgba(11,110,79,0.4); padding-left: 10px; cursor: pointer; }
+  .rail-label {
+    font-size: 10.5px; font-weight: 600; color: #0b6e4f;
+    margin-top: 6px;
+    letter-spacing: 0.02em;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .rail-label.empty { color: #527055; font-weight: 500; font-style: italic; }
+
+  /* ---- Variant G: corner badge (top-right notification style) ---- */
+  .corner-badge {
+    position: absolute;
+    top: -6px; right: 8px;
+    font-size: 10px; font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    z-index: 2;
+  }
+  .corner-badge.has   { background: #0b6e4f; color: #fff; }
+  .corner-badge.empty { background: #fff; color: #0b6e4f; border: 1px dashed #0b6e4f; }
+  .match.with-corner { margin-top: 12px; }
+
+  /* ---- Variant H: per-team predicted score under each name ---- */
+  .pred-num {
+    display: block;
+    font-size: 11px; font-weight: 700; color: #0b6e4f;
+    margin-top: 2px;
+    letter-spacing: 0.02em;
+  }
+  .pred-num.empty { color: #88a08a; font-weight: 500; font-style: italic; }
+  .team.with-pred { align-items: flex-start; }
+  .team.with-pred .name-block { display: flex; flex-direction: column; gap: 0; }
+  .team.with-pred.away .name-block { align-items: flex-end; }
+
+  /* ---- Variant I: pick REPLACES kickoff time as primary value ---- */
+  .pick-primary {
+    display: flex; flex-direction: column; align-items: center; min-width: 80px; cursor: pointer;
+  }
+  .pick-primary .big    { font-size: 17px; font-weight: 700; color: #0b6e4f; line-height: 1.1; }
+  .pick-primary .big-empty { font-size: 13px; font-weight: 600; color: #0b6e4f; line-height: 1.2; }
+  .pick-primary .little { font-size: 10px; color: #6c7c6c; margin-top: 3px; letter-spacing: 0.04em; text-transform: uppercase; }
+
   /* ---- Settings card ---- */
   .settings-card {
     margin-top: 26px;
@@ -396,6 +455,269 @@
       </p>
     </div>
 
+
+    <!-- ============================================================ -->
+    <!-- VARIANT E: top mini-banner on the card                        -->
+    <!-- ============================================================ -->
+    <div class="variant">
+      <span class="tag">E</span>
+      <h2>Top mini-banner on the card</h2>
+      <p class="sub">A thin band at the top of the card itself — visually attached, not floating below. Reads like a "header" for the fixture.</p>
+
+      <div class="day-head"><span class="label">Today</span><span class="date">— Jun 23</span><span class="count">3 matches</span></div>
+
+      <div>
+        <div class="match top-banner-host">
+          <div class="top-banner has">🎯 Your pick: <strong>ENG 2–1 GHN</strong><span class="chev">›</span></div>
+          <div class="match-meta"><span class="group">Group H</span> · 9 AM PT</div>
+          <div class="match-row">
+            <div class="team"><span class="flag eng"></span><span class="name">England</span></div>
+            <div class="score-block"><div class="time">9:00 AM</div></div>
+            <div class="team away"><span class="name">Ghana</span><span class="flag ghn"></span></div>
+          </div>
+        </div>
+
+        <div class="match top-banner-host">
+          <div class="top-banner empty">+ Make a prediction<span class="chev">›</span></div>
+          <div class="match-meta"><span class="group">Group I</span> · 12 PM PT</div>
+          <div class="match-row">
+            <div class="team"><span class="flag arg"></span><span class="name">Argentina</span></div>
+            <div class="score-block"><div class="time">12:00 PM</div></div>
+            <div class="team away"><span class="name">Brazil</span><span class="flag bra"></span></div>
+          </div>
+        </div>
+
+        <div class="match top-banner-host">
+          <div class="top-banner has">🎯 Your pick: <strong>FRA 2–1 GER</strong> · +5 pts<span class="chev">›</span></div>
+          <div class="match-meta"><span class="group">Group D</span> · FINAL</div>
+          <div class="match-row">
+            <div class="team"><span class="flag fra"></span><span class="name">France</span></div>
+            <div class="score-block"><div class="score">3 – 1</div></div>
+            <div class="team away"><span class="name">Germany</span><span class="flag ger"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="sub" style="margin-top: 12px; padding: 8px; background: #f6f9f5; border-radius: 8px;">
+        <strong style="color:#08533c;">Pros:</strong> highly visible · clearly part of the match · color = state at a glance<br>
+        <strong style="color:#8a2727;">Cons:</strong> heaviest visual weight · "made a pick" banner could feel loud day-to-day
+      </p>
+    </div>
+
+
+    <!-- ============================================================ -->
+    <!-- VARIANT F: left accent rail with subtle label                 -->
+    <!-- ============================================================ -->
+    <div class="variant">
+      <span class="tag">F</span>
+      <h2>Left accent rail</h2>
+      <p class="sub">A colored stripe on the card's left edge tells you at a glance which fixtures you've picked. A tiny label gives the actual score.</p>
+
+      <div class="day-head"><span class="label">Today</span><span class="date">— Jun 23</span><span class="count">3 matches</span></div>
+
+      <div>
+        <div class="match rail-has">
+          <div class="match-meta"><span class="group">Group H</span> · 9 AM PT</div>
+          <div class="match-row">
+            <div class="team"><span class="flag eng"></span><span class="name">England</span></div>
+            <div class="score-block"><div class="time">9:00 AM</div></div>
+            <div class="team away"><span class="name">Ghana</span><span class="flag ghn"></span></div>
+          </div>
+          <div class="rail-label">🎯 ENG 2–1 GHN</div>
+        </div>
+
+        <div class="match rail-empty">
+          <div class="match-meta"><span class="group">Group I</span> · 12 PM PT</div>
+          <div class="match-row">
+            <div class="team"><span class="flag arg"></span><span class="name">Argentina</span></div>
+            <div class="score-block"><div class="time">12:00 PM</div></div>
+            <div class="team away"><span class="name">Brazil</span><span class="flag bra"></span></div>
+          </div>
+          <div class="rail-label empty">Tap to predict</div>
+        </div>
+
+        <div class="match rail-has">
+          <div class="match-meta"><span class="group">Group D</span> · FINAL</div>
+          <div class="match-row">
+            <div class="team"><span class="flag fra"></span><span class="name">France</span></div>
+            <div class="score-block"><div class="score">3 – 1</div></div>
+            <div class="team away"><span class="name">Germany</span><span class="flag ger"></span></div>
+          </div>
+          <div class="rail-label">🎯 FRA 2–1 GER · +5 pts</div>
+        </div>
+      </div>
+
+      <p class="sub" style="margin-top: 12px; padding: 8px; background: #f6f9f5; border-radius: 8px;">
+        <strong style="color:#08533c;">Pros:</strong> rail gives a scannable column · whole card is the tap target · label is optional<br>
+        <strong style="color:#8a2727;">Cons:</strong> bottom label still costs vertical space · less clear that it's interactive
+      </p>
+    </div>
+
+
+    <!-- ============================================================ -->
+    <!-- VARIANT G: corner badge (top-right, like a notification dot)  -->
+    <!-- ============================================================ -->
+    <div class="variant">
+      <span class="tag">G</span>
+      <h2>Corner badge</h2>
+      <p class="sub">A small floating tag in the top-right of the card. Green = picked, dashed outline = not yet. Lightest footprint of the variants that still surface the pick.</p>
+
+      <div class="day-head"><span class="label">Today</span><span class="date">— Jun 23</span><span class="count">3 matches</span></div>
+
+      <div>
+        <div class="match with-corner">
+          <div class="corner-badge has">🎯 2–1</div>
+          <div class="match-meta"><span class="group">Group H</span> · 9 AM PT</div>
+          <div class="match-row">
+            <div class="team"><span class="flag eng"></span><span class="name">England</span></div>
+            <div class="score-block"><div class="time">9:00 AM</div></div>
+            <div class="team away"><span class="name">Ghana</span><span class="flag ghn"></span></div>
+          </div>
+        </div>
+
+        <div class="match with-corner">
+          <div class="corner-badge empty">+ Pick</div>
+          <div class="match-meta"><span class="group">Group I</span> · 12 PM PT</div>
+          <div class="match-row">
+            <div class="team"><span class="flag arg"></span><span class="name">Argentina</span></div>
+            <div class="score-block"><div class="time">12:00 PM</div></div>
+            <div class="team away"><span class="name">Brazil</span><span class="flag bra"></span></div>
+          </div>
+        </div>
+
+        <div class="match with-corner">
+          <div class="corner-badge has">🎯 2–1 · +5</div>
+          <div class="match-meta"><span class="group">Group D</span> · FINAL</div>
+          <div class="match-row">
+            <div class="team"><span class="flag fra"></span><span class="name">France</span></div>
+            <div class="score-block"><div class="score">3 – 1</div></div>
+            <div class="team away"><span class="name">Germany</span><span class="flag ger"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="sub" style="margin-top: 12px; padding: 8px; background: #f6f9f5; border-radius: 8px;">
+        <strong style="color:#08533c;">Pros:</strong> stays out of the card body · floats above so doesn't push content · feels notification-y<br>
+        <strong style="color:#8a2727;">Cons:</strong> small tap target · could collide with system status / clipping when cards are tight together
+      </p>
+    </div>
+
+
+    <!-- ============================================================ -->
+    <!-- VARIANT H: per-team predicted score under each name           -->
+    <!-- ============================================================ -->
+    <div class="variant">
+      <span class="tag">H</span>
+      <h2>Predicted score under each team</h2>
+      <p class="sub">Treat the prediction the way actual scores read — small predicted numbers tucked under each team. Mirrors the mental model of "your scoreline."</p>
+
+      <div class="day-head"><span class="label">Today</span><span class="date">— Jun 23</span><span class="count">3 matches</span></div>
+
+      <div>
+        <div class="match">
+          <div class="match-meta"><span class="group">Group H</span> · 9 AM PT</div>
+          <div class="match-row">
+            <div class="team with-pred">
+              <span class="flag eng"></span>
+              <div class="name-block"><span class="name">England</span><span class="pred-num">🎯 2</span></div>
+            </div>
+            <div class="score-block"><div class="time">9:00 AM</div></div>
+            <div class="team away with-pred">
+              <div class="name-block"><span class="name">Ghana</span><span class="pred-num">🎯 1</span></div>
+              <span class="flag ghn"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="match-meta"><span class="group">Group I</span> · 12 PM PT</div>
+          <div class="match-row">
+            <div class="team with-pred">
+              <span class="flag arg"></span>
+              <div class="name-block"><span class="name">Argentina</span><span class="pred-num empty">predict</span></div>
+            </div>
+            <div class="score-block"><div class="time">12:00 PM</div></div>
+            <div class="team away with-pred">
+              <div class="name-block"><span class="name">Brazil</span><span class="pred-num empty">predict</span></div>
+              <span class="flag bra"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="match-meta"><span class="group">Group D</span> · FINAL</div>
+          <div class="match-row">
+            <div class="team with-pred">
+              <span class="flag fra"></span>
+              <div class="name-block"><span class="name">France</span><span class="pred-num">🎯 2 · +5</span></div>
+            </div>
+            <div class="score-block"><div class="score">3 – 1</div></div>
+            <div class="team away with-pred">
+              <div class="name-block"><span class="name">Germany</span><span class="pred-num">🎯 1</span></div>
+              <span class="flag ger"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="sub" style="margin-top: 12px; padding: 8px; background: #f6f9f5; border-radius: 8px;">
+        <strong style="color:#08533c;">Pros:</strong> mirrors a real scoreline · directly readable as "I picked 2–1"<br>
+        <strong style="color:#8a2727;">Cons:</strong> empty state ("predict / predict") repeats · adds height to the team row · "predict" hint feels less inviting
+      </p>
+    </div>
+
+
+    <!-- ============================================================ -->
+    <!-- VARIANT I: pick REPLACES kickoff time as the primary value   -->
+    <!-- ============================================================ -->
+    <div class="variant">
+      <span class="tag">I</span>
+      <h2>Pick takes over the score column</h2>
+      <p class="sub">For unplayed matches, "your pick" is the headline number; kickoff time is demoted to a tiny label below. Played matches still show the real score.</p>
+
+      <div class="day-head"><span class="label">Today</span><span class="date">— Jun 23</span><span class="count">3 matches</span></div>
+
+      <div>
+        <div class="match">
+          <div class="match-meta"><span class="group">Group H</span> · 9 AM PT</div>
+          <div class="match-row">
+            <div class="team"><span class="flag eng"></span><span class="name">England</span></div>
+            <div class="pick-primary">
+              <div class="big">2 – 1</div>
+              <div class="little">Your pick · 9:00 AM</div>
+            </div>
+            <div class="team away"><span class="name">Ghana</span><span class="flag ghn"></span></div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="match-meta"><span class="group">Group I</span> · 12 PM PT</div>
+          <div class="match-row">
+            <div class="team"><span class="flag arg"></span><span class="name">Argentina</span></div>
+            <div class="pick-primary">
+              <div class="big-empty">Predict ›</div>
+              <div class="little">12:00 PM</div>
+            </div>
+            <div class="team away"><span class="name">Brazil</span><span class="flag bra"></span></div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="match-meta"><span class="group">Group D</span> · FINAL</div>
+          <div class="match-row">
+            <div class="team"><span class="flag fra"></span><span class="name">France</span></div>
+            <div class="score-block"><div class="score">3 – 1</div><div style="font-size:10px;color:#0b6e4f;margin-top:2px;">🎯 2–1 · +5</div></div>
+            <div class="team away"><span class="name">Germany</span><span class="flag ger"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="sub" style="margin-top: 12px; padding: 8px; background: #f6f9f5; border-radius: 8px;">
+        <strong style="color:#08533c;">Pros:</strong> bold &amp; central · turns prediction-making into the obvious action · no added rows<br>
+        <strong style="color:#8a2727;">Cons:</strong> demotes kickoff time (an important value) · the predicted scoreline can be confused with the actual one
+      </p>
+    </div>
+
   </div>
 
 
@@ -422,10 +744,19 @@
   </div>
 
   <p class="note" style="margin-top: 22px;">
-    My recommendation: <strong>Variant A</strong> for clarity, <strong>Variant D</strong> if you want minimal density.
-    A is the easiest to read and discover; D feels like it disappears when you don't care.
-    B and C save vertical space but at the cost of either crowding (B) or tap-target size (C).
+    <strong>My ranking</strong> from most to least recommended:
   </p>
+  <ol style="font-size: 13px; color: #4a5a4a; line-height: 1.7; margin: 6px 0 6px 22px; max-width: 760px;">
+    <li><strong>F · Left rail</strong> — scannable column of "what you've picked," whole card taps, label is optional. Best balance of clarity + density.</li>
+    <li><strong>A · Inline row below the card</strong> — most legible and most obvious affordance; pays ~28px per match.</li>
+    <li><strong>G · Corner badge</strong> — lightest footprint that still surfaces the pick. A good "subtle" choice.</li>
+    <li><strong>E · Top banner</strong> — visually loud, can wear thin if 90% of cards have one.</li>
+    <li><strong>D · Bottom ribbon</strong> — most minimal. Picks blend into the card edge; weakest discoverability.</li>
+    <li><strong>I · Pick takes over</strong> — bold, but demotes kickoff time (which is core info) and risks confusion with the real scoreline.</li>
+    <li><strong>H · Per-team scores</strong> — clever mirror of a scoreline, but the "predict / predict" empty state reads oddly.</li>
+    <li><strong>C · In the score column</strong> — saves space but the tap target is too small.</li>
+    <li><strong>B · Right-side chip</strong> — competes with existing LIVE / group badges on narrow phones.</li>
+  </ol>
 
 </div>
 </body>
