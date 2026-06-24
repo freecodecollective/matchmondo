@@ -620,8 +620,8 @@
     "venue": "Estadio Akron",
     "city": "Guadalajara, Mexico",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 0,
+    "scoreA": 0
   },
   {
     "n": 51,
