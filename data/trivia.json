@@ -5996,7 +5996,90 @@
       "answer": 1,
       "explanation": "South Africa became the first (and so far only) host nation eliminated in the group stage, at their own 2010 tournament. Some say it was punishment for them introducing the world to vuvuzelas.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "لم يسبق أن خرج أي بلد مضيف من دور المجموعات.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "كانت جنوب أفريقيا أول بلد مضيف (والوحيد حتى الآن) يُقصى من دور المجموعات، وذلك في النسخة التي استضافتها عام 2010. يقول البعض إن ذلك كان عقاباً لها على تعريف العالم بأبواق الفوفوزيلا."
+        },
+        "de": {
+          "question": "Noch nie ist ein Gastgeberland in der Gruppenphase ausgeschieden.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Südafrika war das erste (und bislang einzige) Gastgeberland, das in der Gruppenphase ausschied – beim eigenen Turnier 2010. Manche behaupten, es sei die Strafe dafür gewesen, dass sie der Welt die Vuvuzelas beschert haben."
+        },
+        "es": {
+          "question": "Ningún país anfitrión ha sido eliminado nunca en la fase de grupos.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Sudáfrica se convirtió en el primer (y hasta ahora único) país anfitrión eliminado en la fase de grupos, en el torneo que organizó en 2010. Algunos dicen que fue un castigo por haberle presentado al mundo las vuvuzelas."
+        },
+        "es-ES": {
+          "question": "Ningún país anfitrión ha sido eliminado jamás en la fase de grupos.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Sudáfrica se convirtió en el primer (y hasta ahora único) país anfitrión eliminado en la fase de grupos, en el torneo que organizó en 2010. Algunos dicen que fue un castigo por haber presentado al mundo las vuvuzelas."
+        },
+        "fr": {
+          "question": "Aucun pays hôte n'a jamais été éliminé au premier tour.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "L'Afrique du Sud est devenue le premier (et jusqu'ici le seul) pays hôte éliminé dès la phase de groupes, lors du tournoi qu'elle organisait en 2010. Certains disent que c'était une punition pour avoir fait découvrir les vuvuzelas au monde entier."
+        },
+        "it": {
+          "question": "Nessun paese ospitante è mai stato eliminato nella fase a gironi.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Il Sudafrica è diventato il primo (e finora unico) paese ospitante eliminato nella fase a gironi, durante il torneo che ha organizzato nel 2010. Qualcuno dice che fu una punizione per aver fatto conoscere al mondo le vuvuzela."
+        },
+        "ja": {
+          "question": "開催国がグループステージで敗退したことは一度もない。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "南アフリカは、自国開催の2010年大会で、グループステージ敗退となった史上初（そして今のところ唯一の）開催国となりました。ブブゼラを世界に広めたことへの罰だ、と言う人もいます。"
+        },
+        "ko": {
+          "question": "개최국이 조별 리그에서 탈락한 적은 한 번도 없다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "남아프리카공화국은 자국에서 열린 2010년 대회에서 조별 리그 탈락이라는 사상 최초(그리고 지금까지 유일한) 개최국이 되었습니다. 일부는 부부젤라를 세계에 소개한 것에 대한 벌이라고 말하기도 합니다."
+        },
+        "pt-BR": {
+          "question": "Nenhum país-sede jamais foi eliminado na fase de grupos.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A África do Sul se tornou o primeiro (e até agora único) país-sede eliminado na fase de grupos, no torneio que sediou em 2010. Alguns dizem que foi um castigo por terem apresentado as vuvuzelas ao mundo."
+        },
+        "zh-Hans": {
+          "question": "从未有东道主在小组赛阶段被淘汰。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "南非在其本土举办的2010年赛事中，成为首个（也是迄今唯一一个）在小组赛阶段就被淘汰的东道主。有人说，这是对他们把呜呜祖拉介绍给全世界的惩罚。"
+        }
+      },
+      "i18nSourceHash": "1eccd911f74a3616"
     },
     {
       "id": "tf-france-first-1998",
@@ -6575,7 +6658,110 @@
       "explanation": "Lionel Messi led Argentina to victory over France in 2022 at his fifth tournament. He scored seven goals including two in the final.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Lionel_Messi_20180626_%28cropped%29.jpg/500px-Lionel_Messi_20180626_%28cropped%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا المهاجم الأرجنتيني الذي رفع الكأس أخيرًا في 2022؟",
+          "options": [
+            "دييغو مارادونا",
+            "ليونيل ميسي",
+            "غابرييل باتيستوتا",
+            "سيرخيو أغويرو"
+          ],
+          "explanation": "قاد ليونيل ميسي الأرجنتين إلى الفوز على فرنسا في 2022 في مشاركته الخامسة بالبطولة. وسجّل سبعة أهداف من بينها هدفان في المباراة النهائية."
+        },
+        "de": {
+          "question": "Wer ist dieser argentinische Stürmer, der 2022 endlich den Pokal in die Höhe stemmte?",
+          "options": [
+            "Diego Maradona",
+            "Lionel Messi",
+            "Gabriel Batistuta",
+            "Sergio Agüero"
+          ],
+          "explanation": "Lionel Messi führte Argentinien 2022 bei seinem fünften Turnier zum Sieg über Frankreich. Er erzielte sieben Tore, darunter zwei im Finale."
+        },
+        "es": {
+          "question": "¿Quién es este delantero argentino que por fin levantó el trofeo en 2022?",
+          "options": [
+            "Diego Maradona",
+            "Lionel Messi",
+            "Gabriel Batistuta",
+            "Sergio Agüero"
+          ],
+          "explanation": "Lionel Messi llevó a Argentina a vencer a Francia en 2022, en su quinto torneo. Marcó siete goles, dos de ellos en la final."
+        },
+        "es-ES": {
+          "question": "¿Quién es este delantero argentino que por fin levantó el trofeo en 2022?",
+          "options": [
+            "Diego Maradona",
+            "Lionel Messi",
+            "Gabriel Batistuta",
+            "Sergio Agüero"
+          ],
+          "explanation": "Lionel Messi condujo a Argentina a la victoria sobre Francia en 2022, en su quinto torneo. Marcó siete goles, dos de ellos en la final."
+        },
+        "fr": {
+          "question": "Qui est cet attaquant argentin qui a enfin soulevé le trophée en 2022 ?",
+          "options": [
+            "Diego Maradona",
+            "Lionel Messi",
+            "Gabriel Batistuta",
+            "Sergio Agüero"
+          ],
+          "explanation": "Lionel Messi a mené l'Argentine à la victoire face à la France en 2022, lors de son cinquième tournoi. Il a inscrit sept buts, dont deux en finale."
+        },
+        "it": {
+          "question": "Chi è questo attaccante argentino che ha finalmente alzato il trofeo nel 2022?",
+          "options": [
+            "Diego Maradona",
+            "Lionel Messi",
+            "Gabriel Batistuta",
+            "Sergio Agüero"
+          ],
+          "explanation": "Lionel Messi ha guidato l'Argentina alla vittoria sulla Francia nel 2022, al suo quinto torneo. Ha segnato sette gol, due dei quali in finale."
+        },
+        "ja": {
+          "question": "2022年についにトロフィーを掲げたこのアルゼンチンのフォワードは誰でしょう？",
+          "options": [
+            "ディエゴ・マラドーナ",
+            "リオネル・メッシ",
+            "ガブリエル・バティストゥータ",
+            "セルヒオ・アグエロ"
+          ],
+          "explanation": "リオネル・メッシは5度目の大会となった2022年に、アルゼンチンをフランスとの試合での勝利へと導きました。決勝での2得点を含む7ゴールを記録しました。"
+        },
+        "ko": {
+          "question": "2022년에 마침내 우승 트로피를 들어 올린 이 아르헨티나 공격수는 누구일까요?",
+          "options": [
+            "디에고 마라도나",
+            "리오넬 메시",
+            "가브리엘 바티스투타",
+            "세르히오 아구에로"
+          ],
+          "explanation": "리오넬 메시는 다섯 번째 대회였던 2022년에 아르헨티나를 이끌고 프랑스를 꺾으며 우승했습니다. 그는 결승전 2골을 포함해 총 7골을 기록했습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este atacante argentino que finalmente levantou o troféu em 2022?",
+          "options": [
+            "Diego Maradona",
+            "Lionel Messi",
+            "Gabriel Batistuta",
+            "Sergio Agüero"
+          ],
+          "explanation": "Lionel Messi liderou a Argentina na vitória sobre a França em 2022, em seu quinto torneio. Ele marcou sete gols, sendo dois na final."
+        },
+        "zh-Hans": {
+          "question": "这位在2022年终于举起奖杯的阿根廷前锋是谁？",
+          "options": [
+            "迭戈·马拉多纳",
+            "莱昂内尔·梅西",
+            "加布里埃尔·巴蒂斯图塔",
+            "塞尔吉奥·阿圭罗"
+          ],
+          "explanation": "在他参加的第五届赛事——2022年的比赛中，莱昂内尔·梅西带领阿根廷击败法国夺冠。他打进七粒进球，其中两球来自决赛。"
+        }
+      },
+      "i18nSourceHash": "b019de94fd942f9b"
     },
     {
       "id": "img-cristiano",
@@ -6591,7 +6777,110 @@
       "explanation": "Cristiano Ronaldo scored at every edition from 2006 to 2022 — five consecutive tournaments. He holds the record for most international goals by any male player.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/500px-Cristiano_Ronaldo_2018.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا القائد البرتغالي الذي سجّل في خمس نسخ متتالية؟",
+          "options": [
+            "كريستيانو رونالدو",
+            "لويس فيغو",
+            "أوزيبيو",
+            "برونو فيرنانديز"
+          ],
+          "explanation": "سجّل كريستيانو رونالدو في كل نسخة من 2006 إلى 2022 — خمس بطولات متتالية. وهو يحمل الرقم القياسي لأكثر الأهداف الدولية لأي لاعب رجل."
+        },
+        "de": {
+          "question": "Wer ist dieser portugiesische Kapitän, der bei fünf Turnieren in Folge getroffen hat?",
+          "options": [
+            "Cristiano Ronaldo",
+            "Luís Figo",
+            "Eusébio",
+            "Bruno Fernandes"
+          ],
+          "explanation": "Cristiano Ronaldo traf bei jeder Ausgabe von 2006 bis 2022 — fünf aufeinanderfolgende Turniere. Er hält den Rekord für die meisten Länderspieltore aller männlichen Spieler."
+        },
+        "es": {
+          "question": "¿Quién es este capitán portugués que marcó en cinco ediciones consecutivas?",
+          "options": [
+            "Cristiano Ronaldo",
+            "Luís Figo",
+            "Eusébio",
+            "Bruno Fernandes"
+          ],
+          "explanation": "Cristiano Ronaldo marcó en cada edición desde 2006 hasta 2022, cinco torneos consecutivos. Tiene el récord de más goles internacionales de cualquier jugador masculino."
+        },
+        "es-ES": {
+          "question": "¿Quién es este capitán portugués que ha marcado en cinco ediciones consecutivas?",
+          "options": [
+            "Cristiano Ronaldo",
+            "Luís Figo",
+            "Eusébio",
+            "Bruno Fernandes"
+          ],
+          "explanation": "Cristiano Ronaldo marcó en todas las ediciones desde 2006 hasta 2022: cinco torneos seguidos. Posee el récord de más goles internacionales de cualquier jugador masculino."
+        },
+        "fr": {
+          "question": "Quel est ce capitaine portugais qui a marqué lors de cinq éditions consécutives ?",
+          "options": [
+            "Cristiano Ronaldo",
+            "Luís Figo",
+            "Eusébio",
+            "Bruno Fernandes"
+          ],
+          "explanation": "Cristiano Ronaldo a marqué à chaque édition de 2006 à 2022 — cinq tournois consécutifs. Il détient le record du plus grand nombre de buts en sélection pour un joueur masculin."
+        },
+        "it": {
+          "question": "Chi è questo capitano portoghese che ha segnato in cinque edizioni consecutive?",
+          "options": [
+            "Cristiano Ronaldo",
+            "Luís Figo",
+            "Eusébio",
+            "Bruno Fernandes"
+          ],
+          "explanation": "Cristiano Ronaldo ha segnato in ogni edizione dal 2006 al 2022, cinque tornei consecutivi. Detiene il record di gol in nazionale tra tutti i giocatori maschi."
+        },
+        "ja": {
+          "question": "5大会連続でゴールを決めたこのポルトガル代表のキャプテンは誰でしょう？",
+          "options": [
+            "クリスティアーノ・ロナウド",
+            "ルイス・フィーゴ",
+            "エウゼビオ",
+            "ブルーノ・フェルナンデス"
+          ],
+          "explanation": "クリスティアーノ・ロナウドは2006年から2022年までのすべての大会でゴールを決め、5大会連続となりました。彼は男子選手による国際試合最多得点の記録を保持しています。"
+        },
+        "ko": {
+          "question": "5개 대회 연속으로 골을 넣은 이 포르투갈 주장은 누구일까요?",
+          "options": [
+            "크리스티아누 호날두",
+            "루이스 피구",
+            "에우제비우",
+            "브루누 페르난드스"
+          ],
+          "explanation": "크리스티아누 호날두는 2006년부터 2022년까지 모든 대회에서 골을 넣어 5개 대회 연속 득점을 기록했습니다. 그는 남자 선수 중 A매치 최다 득점 기록을 보유하고 있습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este capitão português que marcou em cinco edições consecutivas?",
+          "options": [
+            "Cristiano Ronaldo",
+            "Luís Figo",
+            "Eusébio",
+            "Bruno Fernandes"
+          ],
+          "explanation": "Cristiano Ronaldo marcou em todas as edições de 2006 a 2022 — cinco torneios consecutivos. Ele detém o recorde de mais gols internacionais entre todos os jogadores masculinos."
+        },
+        "zh-Hans": {
+          "question": "这位连续五届都进球的葡萄牙队长是谁？",
+          "options": [
+            "克里斯蒂亚诺·罗纳尔多",
+            "路易斯·菲戈",
+            "尤西比奥",
+            "布鲁诺·费尔南德斯"
+          ],
+          "explanation": "克里斯蒂亚诺·罗纳尔多从2006年到2022年的每一届都有进球，连续五届赛事破门。他保持着男子球员国家队进球最多的纪录。"
+        }
+      },
+      "i18nSourceHash": "df0ca488c12c16a8"
     },
     {
       "id": "img-mbappe",
@@ -6860,7 +7149,110 @@
       "explanation": "Neymar is Brazil's all-time leading scorer and is competing at his third edition in 2026 after injuries limited his 2014 and 2022 campaigns.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Neymar_Junior_Brazil_V_Morocco_13_June_2026-40.jpg/500px-Neymar_Junior_Brazil_V_Morocco_13_June_2026-40.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا المهاجم البرازيلي المشارك في بطولة 2026؟",
+          "options": [
+            "فينيسيوس جونيور",
+            "نيمار",
+            "رودريغو",
+            "لوكاس باكيتا"
+          ],
+          "explanation": "نيمار هو الهداف التاريخي الأول للبرازيل ويشارك في نسخته الثالثة في 2026 بعدما حدّت الإصابات من مشاركتيه في 2014 و2022."
+        },
+        "de": {
+          "question": "Wer ist dieser brasilianische Stürmer beim Turnier 2026?",
+          "options": [
+            "Vinícius Jr",
+            "Neymar",
+            "Rodrygo",
+            "Lucas Paquetá"
+          ],
+          "explanation": "Neymar ist Brasiliens erfolgreichster Torschütze aller Zeiten und nimmt 2026 zum dritten Mal teil, nachdem Verletzungen seine Auftritte 2014 und 2022 beeinträchtigt hatten."
+        },
+        "es": {
+          "question": "¿Quién es este delantero brasileño que juega en el torneo de 2026?",
+          "options": [
+            "Vinícius Jr",
+            "Neymar",
+            "Rodrygo",
+            "Lucas Paquetá"
+          ],
+          "explanation": "Neymar es el máximo goleador histórico de Brasil y disputa su tercera edición en 2026, luego de que las lesiones limitaran sus participaciones en 2014 y 2022."
+        },
+        "es-ES": {
+          "question": "¿Quién es este delantero brasileño que juega en el torneo de 2026?",
+          "options": [
+            "Vinícius Jr",
+            "Neymar",
+            "Rodrygo",
+            "Lucas Paquetá"
+          ],
+          "explanation": "Neymar es el máximo goleador histórico de Brasil y disputa su tercera edición en 2026, después de que las lesiones limitaran sus participaciones en 2014 y 2022."
+        },
+        "fr": {
+          "question": "Qui est cet attaquant brésilien qui dispute le tournoi 2026 ?",
+          "options": [
+            "Vinícius Jr",
+            "Neymar",
+            "Rodrygo",
+            "Lucas Paquetá"
+          ],
+          "explanation": "Neymar est le meilleur buteur de l'histoire du Brésil et participe à sa troisième édition en 2026, après que des blessures ont écourté ses parcours en 2014 et 2022."
+        },
+        "it": {
+          "question": "Chi è questo attaccante brasiliano in campo al torneo del 2026?",
+          "options": [
+            "Vinícius Jr",
+            "Neymar",
+            "Rodrygo",
+            "Lucas Paquetá"
+          ],
+          "explanation": "Neymar è il miglior marcatore di sempre del Brasile e disputa la sua terza edizione nel 2026, dopo che gli infortuni avevano limitato le sue partecipazioni del 2014 e del 2022."
+        },
+        "ja": {
+          "question": "2026年の大会に出場しているこのブラジル人フォワードは誰でしょう？",
+          "options": [
+            "ヴィニシウス・ジュニオール",
+            "ネイマール",
+            "ロドリゴ",
+            "ルーカス・パケタ"
+          ],
+          "explanation": "ネイマールはブラジル代表歴代最多得点者で、2014年と2022年は負傷で出場が制限されたものの、2026年は自身3度目の大会出場となります。"
+        },
+        "ko": {
+          "question": "2026 대회에 출전하는 이 브라질 공격수는 누구일까요?",
+          "options": [
+            "비니시우스 주니어",
+            "네이마르",
+            "호드리구",
+            "루카스 파케타"
+          ],
+          "explanation": "네이마르는 브라질 역대 최다 득점자로, 2014년과 2022년에는 부상으로 출전이 제한됐지만 2026년에 세 번째 대회 출전을 맞이합니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este atacante brasileiro que joga no torneio de 2026?",
+          "options": [
+            "Vinícius Jr",
+            "Neymar",
+            "Rodrygo",
+            "Lucas Paquetá"
+          ],
+          "explanation": "Neymar é o maior artilheiro da história do Brasil e disputa sua terceira edição em 2026, depois que lesões limitaram suas campanhas em 2014 e 2022."
+        },
+        "zh-Hans": {
+          "question": "这位征战2026赛事的巴西前锋是谁？",
+          "options": [
+            "维尼修斯",
+            "内马尔",
+            "罗德里戈",
+            "卢卡斯·帕奎塔"
+          ],
+          "explanation": "内马尔是巴西队史第一射手，在2014年和2022年因伤影响表现后，他将在2026年迎来个人第三次大赛之旅。"
+        }
+      },
+      "i18nSourceHash": "f92cfe589855ba70"
     },
     {
       "id": "img-drogba",
