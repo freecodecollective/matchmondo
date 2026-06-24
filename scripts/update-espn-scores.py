@@ -101,18 +101,31 @@ def main():
         home_name = ESPN_TEAM_MAP.get(home.get("team", {}).get("displayName", ""), home.get("team", {}).get("displayName", ""))
         away_name = ESPN_TEAM_MAP.get(away.get("team", {}).get("displayName", ""), away.get("team", {}).get("displayName", ""))
 
-        for m in matches:
-            m_dt = datetime.strptime(m["utc"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
-            name_match = m["home"] == home_name and m["away"] == away_name
-            time_match = abs(m_dt.timestamp() - kickoff_ts) < 120
-            if name_match or time_match:
-                if m["scoreH"] is None or m["scoreA"] is None:
-                    m["scoreH"] = home_score
-                    m["scoreA"] = away_score
-                    tag = "LIVE" if is_live else "FT"
-                    print(f"  PATCH: Match {m['n']} {m['home']} vs {m['away']} -> {home_score}-{away_score} ({tag})")
-                    patched += 1
-                break
+        # Find the matching fixture in our data. Prefer an exact name match;
+        # only fall back to time-only matching when the kickoff slot is
+        # unique. Two games can share a 19:00 UTC kickoff (e.g. matches 51
+        # & 52 on Matchday 14), so a "first match in time window wins" rule
+        # leaves the second game in the slot un-updated — that was the
+        # bug that left Bosnia stuck at no-score for hours on 2026-06-24.
+        matched_m = next(
+            (m for m in matches if m["home"] == home_name and m["away"] == away_name),
+            None,
+        )
+        if matched_m is None:
+            same_slot = [
+                m for m in matches
+                if abs(datetime.strptime(m["utc"], "%Y-%m-%dT%H:%M:%SZ")
+                       .replace(tzinfo=timezone.utc).timestamp() - kickoff_ts) < 120
+            ]
+            if len(same_slot) == 1:
+                matched_m = same_slot[0]
+
+        if matched_m is not None and (matched_m["scoreH"] is None or matched_m["scoreA"] is None):
+            matched_m["scoreH"] = home_score
+            matched_m["scoreA"] = away_score
+            tag = "LIVE" if is_live else "FT"
+            print(f"  PATCH: Match {matched_m['n']} {matched_m['home']} vs {matched_m['away']} -> {home_score}-{away_score} ({tag})")
+            patched += 1
 
     if patched:
         body = json.dumps(matches, indent=2, ensure_ascii=False)
