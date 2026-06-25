@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-25 08:10 UTC by scripts/update-data.py
+// Regenerated 2026-06-25 09:24 UTC by scripts/update-data.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -942,8 +942,8 @@ window.WC_MATCHES = [
     "utc": "2026-06-28T19:00:00Z",
     "stage": "Round of 32",
     "group": null,
-    "home": "2A",
-    "away": "2B",
+    "home": "South Africa",
+    "away": "Canada",
     "venue": "SoFi Stadium",
     "city": "Inglewood (Los Angeles), CA",
     "tv": "FOX · Telemundo (ES)",
@@ -955,7 +955,7 @@ window.WC_MATCHES = [
     "utc": "2026-06-29T17:00:00Z",
     "stage": "Round of 32",
     "group": null,
-    "home": "1C",
+    "home": "Brazil",
     "away": "2F",
     "venue": "NRG Stadium",
     "city": "Houston, TX",
@@ -982,7 +982,7 @@ window.WC_MATCHES = [
     "stage": "Round of 32",
     "group": null,
     "home": "1F",
-    "away": "2C",
+    "away": "Morocco",
     "venue": "Estadio BBVA",
     "city": "Monterrey, Mexico",
     "tv": "FOX · Telemundo (ES)",
@@ -1098,7 +1098,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-03T03:00:00Z",
     "stage": "Round of 32",
     "group": null,
-    "home": "1B",
+    "home": "Switzerland",
     "away": "3EFGIJ",
     "venue": "BC Place",
     "city": "Vancouver, Canada",
