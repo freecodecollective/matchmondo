@@ -685,8 +685,8 @@
     "venue": "Estadio Azteca",
     "city": "Mexico City, Mexico",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 0,
+    "scoreA": 0
   },
   {
     "n": 54,
@@ -698,8 +698,8 @@
     "venue": "Estadio BBVA",
     "city": "Monterrey, Mexico",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 0,
+    "scoreA": 0
   },
   {
     "n": 55,
