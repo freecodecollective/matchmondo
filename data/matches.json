@@ -789,8 +789,8 @@
     "venue": "Gillette Stadium",
     "city": "Foxborough (Boston), MA",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 0,
+    "scoreA": 1
   },
   {
     "n": 62,
@@ -802,8 +802,8 @@
     "venue": "BMO Field",
     "city": "Toronto, Canada",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 1,
+    "scoreA": 0
   },
   {
     "n": 65,
