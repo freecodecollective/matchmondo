@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-26 20:51 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-06-26 21:32 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -792,7 +792,7 @@ window.WC_MATCHES = [
     "city": "Foxborough (Boston), MA",
     "tv": "FOX or FS1 · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 3
+    "scoreA": 4
   },
   {
     "n": 62,
