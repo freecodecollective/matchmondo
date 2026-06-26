@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-26 08:14 UTC by scripts/update-data.py
+// Regenerated 2026-06-26 09:31 UTC by scripts/update-data.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -956,7 +956,7 @@ window.WC_MATCHES = [
     "stage": "Round of 32",
     "group": null,
     "home": "Brazil",
-    "away": "2F",
+    "away": "Japan",
     "venue": "NRG Stadium",
     "city": "Houston, TX",
     "tv": "FOX · Telemundo (ES)",
@@ -981,7 +981,7 @@ window.WC_MATCHES = [
     "utc": "2026-06-30T01:00:00Z",
     "stage": "Round of 32",
     "group": null,
-    "home": "1F",
+    "home": "Netherlands",
     "away": "Morocco",
     "venue": "Estadio BBVA",
     "city": "Monterrey, Mexico",
@@ -994,7 +994,7 @@ window.WC_MATCHES = [
     "utc": "2026-06-30T17:00:00Z",
     "stage": "Round of 32",
     "group": null,
-    "home": "2E",
+    "home": "Côte d'Ivoire",
     "away": "2I",
     "venue": "AT&T Stadium",
     "city": "Arlington (Dallas), TX",
@@ -1060,7 +1060,7 @@ window.WC_MATCHES = [
     "stage": "Round of 32",
     "group": null,
     "home": "USA",
-    "away": "3BEFIJ",
+    "away": "Bosnia and Herzegovina",
     "venue": "Levi's Stadium",
     "city": "Santa Clara (SF Bay Area), CA",
     "tv": "FOX · Telemundo (ES)",
@@ -1111,7 +1111,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-03T18:00:00Z",
     "stage": "Round of 32",
     "group": null,
-    "home": "2D",
+    "home": "Australia",
     "away": "2G",
     "venue": "AT&T Stadium",
     "city": "Arlington (Dallas), TX",
