@@ -737,8 +737,8 @@
     "venue": "AT&T Stadium",
     "city": "Arlington (Dallas), TX",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": 0,
-    "scoreA": 0
+    "scoreH": 1,
+    "scoreA": 1
   },
   {
     "n": 58,
@@ -750,8 +750,8 @@
     "venue": "Arrowhead Stadium",
     "city": "Kansas City, MO",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": 0,
-    "scoreA": 2
+    "scoreH": 1,
+    "scoreA": 3
   },
   {
     "n": 59,
