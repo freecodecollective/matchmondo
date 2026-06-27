@@ -8655,7 +8655,90 @@
       "answer": 1,
       "explanation": "False! To ensure impartiality, referees are never assigned to matches involving their own nation. Typically, officials come from a different confederation than either competing team. The referee committee carefully selects and assigns officials for each match to avoid even the appearance of bias.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "يمكن تعيين حكم لإدارة مباراة تشارك فيها بلاده.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "خطأ! لضمان الحياد، لا يتم تعيين الحكام أبدًا لإدارة مباريات تشارك فيها بلدانهم. وعادةً ما يأتي الحكام من اتحاد قاري مختلف عن اتحاد أيٍّ من الفريقين المتنافسين. وتختار لجنة الحكام الطواقم وتعيّنها بعناية لكل مباراة لتجنّب أي شبهة تحيّز."
+        },
+        "de": {
+          "question": "Ein Schiedsrichter kann für ein Spiel eingeteilt werden, an dem sein eigenes Land beteiligt ist.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Falsch! Um die Unparteilichkeit zu gewährleisten, werden Schiedsrichter niemals für Spiele eingeteilt, an denen ihr eigenes Land beteiligt ist. In der Regel stammen die Unparteiischen aus einem anderen Kontinentalverband als die beiden Mannschaften. Das Schiedsrichterkomitee wählt die Offiziellen für jedes Spiel sorgfältig aus, um schon den Anschein von Voreingenommenheit zu vermeiden."
+        },
+        "es": {
+          "question": "A un árbitro se le puede asignar dirigir un partido en el que participe su propio país.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Falso! Para garantizar la imparcialidad, nunca se asigna a los árbitros partidos en los que juegue su propia nación. Por lo general, los árbitros provienen de una confederación distinta a la de cualquiera de los equipos que compiten. El comité de árbitros selecciona y asigna cuidadosamente a los oficiales de cada partido para evitar incluso la apariencia de favoritismo."
+        },
+        "es-ES": {
+          "question": "A un árbitro se le puede asignar dirigir un partido en el que participe su propio país.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Falso! Para garantizar la imparcialidad, nunca se asigna a los árbitros partidos en los que juegue su propia selección. Por lo general, los colegiados proceden de una confederación distinta a la de cualquiera de los dos equipos. El comité de árbitros selecciona y designa con cuidado a los oficiales de cada partido para evitar incluso la apariencia de favoritismo."
+        },
+        "fr": {
+          "question": "Un arbitre peut être désigné pour officier lors d'un match impliquant son propre pays.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Faux ! Pour garantir l'impartialité, les arbitres ne sont jamais désignés pour des matchs impliquant leur propre nation. En général, les officiels viennent d'une confédération différente de celle de chacune des deux équipes qui s'affrontent. Le comité des arbitres sélectionne et désigne soigneusement les officiels de chaque match afin d'éviter ne serait-ce que l'apparence d'un parti pris."
+        },
+        "it": {
+          "question": "Un arbitro può essere designato per dirigere una partita che coinvolge il proprio Paese.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Falso! Per garantire l'imparzialità, gli arbitri non vengono mai designati per partite che coinvolgono la propria nazione. Di solito i direttori di gara provengono da una confederazione diversa da quella di entrambe le squadre in campo. Il comitato arbitrale seleziona e designa con cura gli ufficiali di ogni partita per evitare anche solo l'apparenza di parzialità."
+        },
+        "ja": {
+          "question": "審判は、自国が関わる試合を担当するよう割り当てられることがある。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "誤りです！公平性を保つため、審判が自国の関わる試合を担当するよう割り当てられることは決してありません。通常、審判団は対戦する両チームのいずれとも異なる連盟から選ばれます。審判委員会は、偏見の疑いさえ持たれないよう、各試合の審判を慎重に選定し割り当てています。"
+        },
+        "ko": {
+          "question": "심판은 자국이 참가하는 경기를 맡도록 배정될 수 있다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "거짓입니다! 공정성을 보장하기 위해 심판은 결코 자국이 참가하는 경기에 배정되지 않습니다. 일반적으로 심판진은 맞붙는 두 팀 어느 쪽과도 다른 대륙 연맹 소속에서 선발됩니다. 심판 위원회는 편파성의 인상조차 주지 않도록 각 경기의 심판진을 신중하게 선정하고 배정합니다."
+        },
+        "pt-BR": {
+          "question": "Um árbitro pode ser designado para apitar uma partida que envolva o seu próprio país.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Falso! Para garantir a imparcialidade, os árbitros nunca são designados para partidas que envolvam a sua própria nação. Normalmente, os árbitros vêm de uma confederação diferente da de ambas as equipes em campo. O comitê de arbitragem seleciona e designa cuidadosamente os oficiais de cada partida para evitar até mesmo a aparência de favoritismo."
+        },
+        "zh-Hans": {
+          "question": "裁判员可以被指派执法有本国参加的比赛。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "错误！为确保公正性，裁判员绝不会被指派执法有本国参赛的比赛。通常，裁判员来自与参赛双方球队都不同的洲际足联。裁判委员会会为每场比赛精心挑选并指派裁判，以避免哪怕一丝偏袒的嫌疑。"
+        }
+      },
+      "i18nSourceHash": "3a92c6ebf8915203"
     },
     {
       "id": "tf-goalline-tech-2014",
@@ -8681,7 +8764,90 @@
       "answer": 0,
       "explanation": "True! The 2022 edition made history by including female match officials for the first time. France's Stéphanie Frappart became the first woman to referee a men's tournament match (Costa Rica vs Germany), while Rwanda's Salima Mukansanga and Japan's Yoshimi Yamashita also served as officials during the tournament.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أدارت حكمات النساء مباريات بطولة الرجال لأول مرة في عام 2022.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! صنعت نسخة 2022 التاريخ بإشراك حكمات من النساء لأول مرة. أصبحت الفرنسية ستيفاني فرابار أول امرأة تدير مباراة في بطولة الرجال (كوستاريكا ضد ألمانيا)، كما شاركت الرواندية سليمة موكانسانغا واليابانية يوشيمي ياماشيتا كحكمات خلال البطولة."
+        },
+        "de": {
+          "question": "2022 leiteten zum ersten Mal Schiedsrichterinnen Spiele beim Herrenturnier.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Richtig! Die Ausgabe 2022 schrieb Geschichte, indem erstmals weibliche Spieloffizielle eingesetzt wurden. Die Französin Stéphanie Frappart wurde die erste Frau, die ein Spiel beim Herrenturnier leitete (Costa Rica gegen Deutschland), während auch die Ruanderin Salima Mukansanga und die Japanerin Yoshimi Yamashita während des Turniers als Offizielle im Einsatz waren."
+        },
+        "es": {
+          "question": "En 2022, mujeres arbitraron por primera vez en el torneo masculino.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! La edición de 2022 hizo historia al incluir por primera vez a mujeres como árbitras. La francesa Stéphanie Frappart se convirtió en la primera mujer en arbitrar un partido del torneo masculino (Costa Rica vs. Alemania), mientras que la ruandesa Salima Mukansanga y la japonesa Yoshimi Yamashita también actuaron como árbitras durante el torneo."
+        },
+        "es-ES": {
+          "question": "En 2022, mujeres arbitraron por primera vez en el torneo masculino.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! La edición de 2022 hizo historia al incluir por primera vez a colegiadas femeninas. La francesa Stéphanie Frappart se convirtió en la primera mujer en arbitrar un partido del torneo masculino (Costa Rica contra Alemania), mientras que la ruandesa Salima Mukansanga y la japonesa Yoshimi Yamashita también ejercieron como árbitras durante el torneo."
+        },
+        "fr": {
+          "question": "En 2022, des femmes ont arbitré pour la première fois dans le tournoi masculin.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! L'édition 2022 est entrée dans l'histoire en intégrant pour la première fois des arbitres femmes. La Française Stéphanie Frappart est devenue la première femme à arbitrer un match du tournoi masculin (Costa Rica contre Allemagne), tandis que la Rwandaise Salima Mukansanga et la Japonaise Yoshimi Yamashita ont également officié pendant le tournoi."
+        },
+        "it": {
+          "question": "Nel 2022 alcune arbitre donne hanno diretto per la prima volta partite del torneo maschile.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! L'edizione 2022 ha fatto la storia includendo per la prima volta delle arbitre donne. La francese Stéphanie Frappart è diventata la prima donna a dirigere una partita del torneo maschile (Costa Rica contro Germania), mentre anche la ruandese Salima Mukansanga e la giapponese Yoshimi Yamashita hanno arbitrato durante il torneo."
+        },
+        "ja": {
+          "question": "2022年、男子大会で初めて女性審判が試合を裁きました。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "正しい！2022年大会は、女性の試合審判を初めて起用して歴史を刻みました。フランスのステファニー・フラパールは男子大会の試合（コスタリカ対ドイツ）を裁いた史上初の女性審判となり、ルワンダのサリマ・ムカンサンガと日本の山下良美も大会で審判を務めました。"
+        },
+        "ko": {
+          "question": "2022년 남자 대회에서 처음으로 여성 심판이 경기를 맡았습니다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! 2022년 대회는 처음으로 여성 심판진을 포함하며 역사를 새로 썼습니다. 프랑스의 스테파니 프라파르가 남자 대회 경기(코스타리카 대 독일)를 주심으로 맡은 최초의 여성이 되었고, 르완다의 살리마 무칸상가와 일본의 야마시타 요시미도 대회 기간 동안 심판으로 활동했습니다."
+        },
+        "pt-BR": {
+          "question": "Em 2022, mulheres apitaram pela primeira vez no torneio masculino.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! A edição de 2022 fez história ao incluir árbitras mulheres pela primeira vez. A francesa Stéphanie Frappart se tornou a primeira mulher a apitar uma partida do torneio masculino (Costa Rica x Alemanha), enquanto a ruandesa Salima Mukansanga e a japonesa Yoshimi Yamashita também atuaram como árbitras durante o torneio."
+        },
+        "zh-Hans": {
+          "question": "2022年，女性裁判首次在男子赛事中执法。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！2022年那届赛事首次启用女性裁判，创造了历史。法国的斯蒂芬妮·弗拉帕尔成为首位执法男子赛事比赛（哥斯达黎加对阵德国）的女裁判，卢旺达的萨利玛·穆坎桑加和日本的山下良美也在赛事期间担任裁判。"
+        }
+      },
+      "i18nSourceHash": "7698ee7acdb78fea"
     },
     {
       "id": "tf-all-confederations-semis",
@@ -8736,7 +8902,110 @@
       "explanation": "Diego Maradona captained Argentina to glory in 1986, scoring two of the most famous goals in football history against England in the quarter-finals — the controversial 'Hand of God' and the mesmerizing 60-meter solo run past five defenders known as the 'Goal of the Century.' He won the Golden Ball as the tournament's best player.",
       "type": "image",
       "media": "https://www.youtube.com/watch?v=-ccNkksrfls",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا الأسطورة الأرجنتيني الشهير بـ«يد الله» و«هدف القرن»؟",
+          "options": [
+            "دييغو مارادونا",
+            "ليونيل ميسي",
+            "غابرييل باتيستوتا",
+            "ماريو كيمبس"
+          ],
+          "explanation": "قاد دييغو مارادونا الأرجنتين إلى المجد عام 1986، حيث سجّل اثنين من أشهر الأهداف في تاريخ كرة القدم ضد إنجلترا في ربع النهائي — هدف «يد الله» المثير للجدل، والهدف الفردي الساحر الذي قطع فيه 60 مترًا متجاوزًا خمسة مدافعين والمعروف بـ«هدف القرن». وقد فاز بالكرة الذهبية كأفضل لاعب في البطولة."
+        },
+        "de": {
+          "question": "Wer ist diese argentinische Legende, berühmt für die ‚Hand Gottes‘ und das ‚Tor des Jahrhunderts‘?",
+          "options": [
+            "Diego Maradona",
+            "Lionel Messi",
+            "Gabriel Batistuta",
+            "Mario Kempes"
+          ],
+          "explanation": "Diego Maradona führte Argentinien 1986 zum Triumph und erzielte im Viertelfinale gegen England zwei der berühmtesten Tore der Fußballgeschichte — die umstrittene ‚Hand Gottes‘ und den verblüffenden Sololauf über 60 Meter, bei dem er fünf Verteidiger ausspielte, bekannt als ‚Tor des Jahrhunderts‘. Er gewann den Goldenen Ball als bester Spieler des Turniers."
+        },
+        "es": {
+          "question": "¿Quién es esta leyenda argentina, famosa por la 'Mano de Dios' y el 'Gol del Siglo'?",
+          "options": [
+            "Diego Maradona",
+            "Lionel Messi",
+            "Gabriel Batistuta",
+            "Mario Kempes"
+          ],
+          "explanation": "Diego Maradona llevó a Argentina a la gloria en 1986, anotando dos de los goles más famosos en la historia del fútbol contra Inglaterra en los cuartos de final: la polémica 'Mano de Dios' y la hipnotizante carrera en solitario de 60 metros dejando atrás a cinco defensores, conocida como el 'Gol del Siglo'. Ganó el Balón de Oro como mejor jugador del torneo."
+        },
+        "es-ES": {
+          "question": "¿Quién es esta leyenda argentina, famosa por la 'Mano de Dios' y el 'Gol del Siglo'?",
+          "options": [
+            "Diego Maradona",
+            "Lionel Messi",
+            "Gabriel Batistuta",
+            "Mario Kempes"
+          ],
+          "explanation": "Diego Maradona condujo a Argentina a la gloria en 1986, marcando dos de los goles más célebres de la historia del fútbol contra Inglaterra en cuartos de final: la polémica 'Mano de Dios' y la fascinante carrera en solitario de 60 metros sorteando a cinco defensas, conocida como el 'Gol del Siglo'. Ganó el Balón de Oro como mejor jugador del torneo."
+        },
+        "fr": {
+          "question": "Qui est cette légende argentine, célèbre pour la « Main de Dieu » et le « But du Siècle » ?",
+          "options": [
+            "Diego Maradona",
+            "Lionel Messi",
+            "Gabriel Batistuta",
+            "Mario Kempes"
+          ],
+          "explanation": "Diego Maradona a mené l'Argentine au sacre en 1986, inscrivant deux des buts les plus célèbres de l'histoire du football contre l'Angleterre en quarts de finale : la controversée « Main de Dieu » et le fascinant slalom en solitaire sur 60 mètres après avoir dribblé cinq défenseurs, connu comme le « But du Siècle ». Il a remporté le Ballon d'Or en tant que meilleur joueur du tournoi."
+        },
+        "it": {
+          "question": "Chi è questa leggenda argentina, famosa per la 'Mano di Dio' e il 'Gol del Secolo'?",
+          "options": [
+            "Diego Maradona",
+            "Lionel Messi",
+            "Gabriel Batistuta",
+            "Mario Kempes"
+          ],
+          "explanation": "Diego Maradona trascinò l'Argentina al trionfo nel 1986, segnando due dei gol più celebri della storia del calcio contro l'Inghilterra nei quarti di finale: la controversa 'Mano di Dio' e l'incredibile azione solitaria di 60 metri in cui superò cinque difensori, nota come il 'Gol del Secolo'. Vinse il Pallone d'Oro come miglior giocatore del torneo."
+        },
+        "ja": {
+          "question": "「神の手」と「世紀のゴール」で知られるこのアルゼンチンの伝説的選手は誰でしょう？",
+          "options": [
+            "ディエゴ・マラドーナ",
+            "リオネル・メッシ",
+            "ガブリエル・バティストゥータ",
+            "マリオ・ケンペス"
+          ],
+          "explanation": "ディエゴ・マラドーナは1986年にアルゼンチンを栄光へと導き、準々決勝のイングランド戦でサッカー史上最も有名なゴールを2つ決めました。物議を醸した「神の手」と、5人のディフェンダーを抜き去った60メートルの幻想的な単独ドリブルによる「世紀のゴール」です。彼は大会最優秀選手としてゴールデンボールを受賞しました。"
+        },
+        "ko": {
+          "question": "'신의 손'과 '세기의 골'로 유명한 이 아르헨티나의 전설은 누구일까요?",
+          "options": [
+            "디에고 마라도나",
+            "리오넬 메시",
+            "가브리엘 바티스투타",
+            "마리오 켐페스"
+          ],
+          "explanation": "디에고 마라도나는 1986년 아르헨티나를 우승으로 이끌며 8강 잉글랜드전에서 축구 역사상 가장 유명한 두 골을 터뜨렸습니다. 논란이 된 '신의 손'과 수비수 다섯 명을 제치고 60미터를 단독 드리블한 환상적인 '세기의 골'입니다. 그는 대회 최우수 선수로서 골든볼을 수상했습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é essa lenda argentina, famosa pela 'Mão de Deus' e pelo 'Gol do Século'?",
+          "options": [
+            "Diego Maradona",
+            "Lionel Messi",
+            "Gabriel Batistuta",
+            "Mario Kempes"
+          ],
+          "explanation": "Diego Maradona levou a Argentina à glória em 1986, marcando dois dos gols mais famosos da história do futebol contra a Inglaterra nas quartas de final: a polêmica 'Mão de Deus' e a hipnotizante corrida solitária de 60 metros driblando cinco defensores, conhecida como o 'Gol do Século'. Ele conquistou a Bola de Ouro como melhor jogador do torneio."
+        },
+        "zh-Hans": {
+          "question": "这位以「上帝之手」和「世纪进球」闻名的阿根廷传奇球星是谁？",
+          "options": [
+            "迭戈·马拉多纳",
+            "利昂内尔·梅西",
+            "加布里埃尔·巴蒂斯图塔",
+            "马里奥·肯佩斯"
+          ],
+          "explanation": "迭戈·马拉多纳在1986年率领阿根廷登顶，在四分之一决赛对阵英格兰时打入了足球史上最著名的两粒进球——充满争议的「上帝之手」，以及连过五名后卫、奔袭60米的梦幻单刀，被称为「世纪进球」。他荣膺本届赛事最佳球员金球奖。"
+        }
+      },
+      "i18nSourceHash": "695d879eb47454dc"
     },
     {
       "id": "img-beckenbauer",
@@ -8752,7 +9021,110 @@
       "explanation": "Franz Beckenbauer captained West Germany to victory in 1974 and later coached them to win in 1990, becoming only the second person (after Mário Zagallo) to win as both player and manager. Nicknamed 'Der Kaiser' (The Emperor), he redefined the libero/sweeper role, turning defense into an art form of elegant ball-playing.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Franz_Beckenbauer_%281975%29.jpg/500px-Franz_Beckenbauer_%281975%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا الأسطورة الألمانية في كرة القدم، الملقب بـ'القيصر' (Der Kaiser)، الذي أحدث ثورة في مركز صانع الدفاع؟",
+          "options": [
+            "فرانتس بيكنباور",
+            "لوتار ماتيوس",
+            "كارل-هاينز رومينيغه",
+            "يورغن كلينسمان"
+          ],
+          "explanation": "قاد فرانتس بيكنباور ألمانيا الغربية إلى الفوز عام 1974، ثم دربها لتحقيق اللقب عام 1990، ليصبح ثاني شخص فقط (بعد ماريو زاغالو) يفوز باللقب كلاعب ومدرب. ولُقّب بـ'القيصر'، حيث أعاد تعريف مركز الليبيرو/صانع الدفاع، محوّلاً الدفاع إلى فن أنيق في التعامل مع الكرة."
+        },
+        "de": {
+          "question": "Wer ist diese deutsche Fußballlegende mit dem Spitznamen 'Der Kaiser', die die Rolle des Liberos revolutionierte?",
+          "options": [
+            "Franz Beckenbauer",
+            "Lothar Matthäus",
+            "Karl-Heinz Rummenigge",
+            "Jürgen Klinsmann"
+          ],
+          "explanation": "Franz Beckenbauer führte Westdeutschland 1974 als Kapitän zum Titel und coachte das Team 1990 erneut zum Sieg. Damit wurde er erst die zweite Person (nach Mário Zagallo), die sowohl als Spieler als auch als Trainer triumphierte. Sein Spitzname 'Der Kaiser' war Programm: Er definierte die Libero-Position neu und machte aus der Defensive eine elegante Kunst des Ballspiels."
+        },
+        "es": {
+          "question": "¿Quién es este ícono del fútbol alemán, apodado 'Der Kaiser', que revolucionó el rol de líbero?",
+          "options": [
+            "Franz Beckenbauer",
+            "Lothar Matthäus",
+            "Karl-Heinz Rummenigge",
+            "Jürgen Klinsmann"
+          ],
+          "explanation": "Franz Beckenbauer fue capitán de Alemania Occidental en el título de 1974 y más tarde la dirigió como técnico hasta la victoria de 1990, convirtiéndose en apenas la segunda persona (después de Mário Zagallo) en ganar como jugador y como entrenador. Apodado 'Der Kaiser' (El Emperador), redefinió el rol de líbero, transformando la defensa en un arte elegante de manejo del balón."
+        },
+        "es-ES": {
+          "question": "¿Quién es este icono del fútbol alemán, apodado 'Der Kaiser', que revolucionó el papel del líbero?",
+          "options": [
+            "Franz Beckenbauer",
+            "Lothar Matthäus",
+            "Karl-Heinz Rummenigge",
+            "Jürgen Klinsmann"
+          ],
+          "explanation": "Franz Beckenbauer fue capitán de Alemania Occidental en el título de 1974 y más tarde la dirigió como entrenador hasta la victoria de 1990, convirtiéndose en apenas la segunda persona (tras Mário Zagallo) en ganar como jugador y como técnico. Apodado 'Der Kaiser' (El Emperador), redefinió la posición de líbero, convirtiendo la defensa en un arte elegante del juego con el balón."
+        },
+        "fr": {
+          "question": "Quelle est cette icône du football allemand, surnommée 'Der Kaiser', qui a révolutionné le rôle de libéro ?",
+          "options": [
+            "Franz Beckenbauer",
+            "Lothar Matthäus",
+            "Karl-Heinz Rummenigge",
+            "Jürgen Klinsmann"
+          ],
+          "explanation": "Franz Beckenbauer a mené l'Allemagne de l'Ouest au titre en 1974 en tant que capitaine, avant de la conduire à la victoire comme entraîneur en 1990, devenant seulement la deuxième personne (après Mário Zagallo) à triompher à la fois comme joueur et comme sélectionneur. Surnommé 'Der Kaiser' (L'Empereur), il a redéfini le poste de libéro, transformant la défense en un art élégant du jeu de balle."
+        },
+        "it": {
+          "question": "Chi è questa icona del calcio tedesco, soprannominata 'Der Kaiser', che ha rivoluzionato il ruolo del libero?",
+          "options": [
+            "Franz Beckenbauer",
+            "Lothar Matthäus",
+            "Karl-Heinz Rummenigge",
+            "Jürgen Klinsmann"
+          ],
+          "explanation": "Franz Beckenbauer guidò da capitano la Germania Ovest al trionfo del 1974 e in seguito la portò alla vittoria da allenatore nel 1990, diventando solo la seconda persona (dopo Mário Zagallo) a vincere sia da giocatore sia da tecnico. Soprannominato 'Der Kaiser' (L'Imperatore), ridefinì il ruolo del libero, trasformando la difesa in un'elegante arte del gioco con il pallone."
+        },
+        "ja": {
+          "question": "「デア・カイザー（皇帝）」の愛称で呼ばれ、スイーパー（リベロ）の役割に革命をもたらしたこのドイツサッカー界の伝説的選手は誰でしょう？",
+          "options": [
+            "フランツ・ベッケンバウアー",
+            "ローター・マテウス",
+            "カール＝ハインツ・ルンメニゲ",
+            "ユルゲン・クリンスマン"
+          ],
+          "explanation": "フランツ・ベッケンバウアーは1974年に主将として西ドイツを優勝へ導き、後の1990年には監督として再び頂点に立ち、マリオ・ザガロに次いで選手と監督の両方で優勝を果たした史上2人目の人物となりました。「デア・カイザー（皇帝）」と称され、彼はリベロ／スイーパーの役割を再定義し、守備を優雅なボールプレーの芸術へと昇華させました。"
+        },
+        "ko": {
+          "question": "'데어 카이저(황제)'라는 별명으로 불리며 스위퍼(리베로) 역할에 혁신을 일으킨 이 독일 축구의 전설은 누구일까요?",
+          "options": [
+            "프란츠 베켄바워",
+            "로타어 마테우스",
+            "카를하인츠 루메니게",
+            "위르겐 클린스만"
+          ],
+          "explanation": "프란츠 베켄바워는 1974년 주장으로서 서독을 우승으로 이끌었고, 이후 1990년에는 감독으로 다시 정상에 올라 마리우 자갈루에 이어 선수와 감독으로 모두 우승한 역대 두 번째 인물이 되었습니다. '데어 카이저(황제)'라 불린 그는 리베로/스위퍼 역할을 재정의하며 수비를 우아한 볼 플레이의 예술로 승화시켰습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é esse ícone do futebol alemão, apelidado de 'Der Kaiser', que revolucionou a função de líbero?",
+          "options": [
+            "Franz Beckenbauer",
+            "Lothar Matthäus",
+            "Karl-Heinz Rummenigge",
+            "Jürgen Klinsmann"
+          ],
+          "explanation": "Franz Beckenbauer foi capitão da Alemanha Ocidental no título de 1974 e mais tarde a comandou como técnico até a vitória de 1990, tornando-se apenas a segunda pessoa (depois de Mário Zagallo) a vencer tanto como jogador quanto como treinador. Apelidado de 'Der Kaiser' (O Imperador), ele redefiniu a posição de líbero, transformando a defesa em uma arte elegante de tratar a bola."
+        },
+        "zh-Hans": {
+          "question": "这位绰号为'德皇'（Der Kaiser）、彻底变革了清道夫（自由人）位置的德国足球传奇人物是谁？",
+          "options": [
+            "弗朗茨·贝肯鲍尔",
+            "洛塔尔·马特乌斯",
+            "卡尔-海因茨·鲁梅尼格",
+            "尤尔根·克林斯曼"
+          ],
+          "explanation": "弗朗茨·贝肯鲍尔在1974年作为队长率领西德队夺冠，后又在1990年以主教练身份带队登顶，成为继马里奥·扎加洛之后第二位以球员和教练身份双双夺冠的人。绰号'德皇'（The Emperor）的他重新定义了自由人／清道夫这一位置，将防守化作一门优雅的控球艺术。"
+        }
+      },
+      "i18nSourceHash": "a16a1b2bba86c788"
     },
     {
       "id": "img-klose-striker",
@@ -8768,7 +9140,110 @@
       "explanation": "Miroslav Klose scored 16 goals across four editions (2002-2014), making him one of the tournament's most prolific scorers. Born in Opole, Poland, he moved to Germany as a child and developed a reputation for fair play — he once told a referee to disallow a goal he had scored with his hand. His trademark somersault celebration is iconic.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Miroslav_Klose_Portrait.JPG/500px-Miroslav_Klose_Portrait.JPG",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا المهاجم الألماني الذي سجّل في أربع نسخ متتالية من 2002 إلى 2014؟",
+          "options": [
+            "ميروسلاف كلوزه",
+            "لوكاس بودولسكي",
+            "توماس مولر",
+            "يورغن كلينسمان"
+          ],
+          "explanation": "سجّل ميروسلاف كلوزه 16 هدفاً عبر أربع نسخ (2002-2014)، ليصبح أحد أكثر الهدافين تسجيلاً في البطولة. وُلد في مدينة أوبولِه ببولندا، وانتقل إلى ألمانيا في طفولته، واكتسب سمعة في الروح الرياضية — فقد طلب ذات مرة من الحكم إلغاء هدف سجّله بيده. واحتفاله المميز بالشقلبة الهوائية أصبح أيقونياً."
+        },
+        "de": {
+          "question": "Wer ist dieser deutsche Stürmer, der bei vier aufeinanderfolgenden Turnieren von 2002 bis 2014 traf?",
+          "options": [
+            "Miroslav Klose",
+            "Lukas Podolski",
+            "Thomas Müller",
+            "Jürgen Klinsmann"
+          ],
+          "explanation": "Miroslav Klose erzielte bei vier Turnieren (2002-2014) insgesamt 16 Tore und zählt damit zu den erfolgreichsten Torschützen des Turniers. Im polnischen Opole geboren, kam er als Kind nach Deutschland und machte sich einen Namen für sein faires Spiel — einmal bat er den Schiedsrichter sogar, ein Tor abzuerkennen, das er mit der Hand erzielt hatte. Sein typischer Salto-Jubel ist legendär."
+        },
+        "es": {
+          "question": "¿Quién es este delantero alemán que marcó en cuatro ediciones consecutivas, de 2002 a 2014?",
+          "options": [
+            "Miroslav Klose",
+            "Lukas Podolski",
+            "Thomas Müller",
+            "Jürgen Klinsmann"
+          ],
+          "explanation": "Miroslav Klose marcó 16 goles a lo largo de cuatro ediciones (2002-2014), convirtiéndose en uno de los máximos goleadores del torneo. Nacido en Opole, Polonia, se mudó a Alemania de niño y se ganó fama por su juego limpio: en una ocasión le pidió al árbitro que anulara un gol que había marcado con la mano. Su característica celebración con voltereta es todo un ícono."
+        },
+        "es-ES": {
+          "question": "¿Quién es este delantero alemán que marcó en cuatro ediciones consecutivas, de 2002 a 2014?",
+          "options": [
+            "Miroslav Klose",
+            "Lukas Podolski",
+            "Thomas Müller",
+            "Jürgen Klinsmann"
+          ],
+          "explanation": "Miroslav Klose marcó 16 goles a lo largo de cuatro ediciones (2002-2014), convirtiéndose en uno de los máximos goleadores del torneo. Nacido en Opole, Polonia, se mudó a Alemania de niño y se ganó fama por su juego limpio: en una ocasión le pidió al árbitro que anulara un gol que había marcado con la mano. Su característica celebración con voltereta es todo un icono."
+        },
+        "fr": {
+          "question": "Qui est cet attaquant allemand qui a marqué lors de quatre éditions consécutives, de 2002 à 2014 ?",
+          "options": [
+            "Miroslav Klose",
+            "Lukas Podolski",
+            "Thomas Müller",
+            "Jürgen Klinsmann"
+          ],
+          "explanation": "Miroslav Klose a inscrit 16 buts au fil de quatre éditions (2002-2014), ce qui en fait l'un des plus grands buteurs du tournoi. Né à Opole, en Pologne, il a déménagé en Allemagne enfant et s'est forgé une réputation de fair-play — il a un jour demandé à l'arbitre de refuser un but qu'il avait marqué de la main. Sa célébration en salto avant est devenue emblématique."
+        },
+        "it": {
+          "question": "Chi è questo attaccante tedesco che è andato a segno in quattro edizioni consecutive, dal 2002 al 2014?",
+          "options": [
+            "Miroslav Klose",
+            "Lukas Podolski",
+            "Thomas Müller",
+            "Jürgen Klinsmann"
+          ],
+          "explanation": "Miroslav Klose ha segnato 16 gol nel corso di quattro edizioni (2002-2014), diventando uno dei marcatori più prolifici del torneo. Nato a Opole, in Polonia, si trasferì in Germania da bambino e si guadagnò una reputazione di correttezza — una volta chiese all'arbitro di annullare un gol che aveva segnato con la mano. La sua celebre esultanza con la capriola è iconica."
+        },
+        "ja": {
+          "question": "2002年から2014年まで4大会連続でゴールを決めたこのドイツ人ストライカーは誰でしょう？",
+          "options": [
+            "ミロスラフ・クローゼ",
+            "ルーカス・ポドルスキ",
+            "トーマス・ミュラー",
+            "ユルゲン・クリンスマン"
+          ],
+          "explanation": "ミロスラフ・クローゼは4大会（2002-2014年）にわたって通算16ゴールを挙げ、大会屈指の点取り屋となりました。ポーランドのオポーレに生まれ、子どもの頃にドイツへ移住した彼は、フェアプレー精神でも知られています。手で決めてしまったゴールを取り消すよう自ら主審に申し出たこともありました。トレードマークの宙返りパフォーマンスは象徴的です。"
+        },
+        "ko": {
+          "question": "2002년부터 2014년까지 4개 대회 연속으로 골을 넣은 이 독일 공격수는 누구일까요?",
+          "options": [
+            "미로슬라프 클로제",
+            "루카스 포돌스키",
+            "토마스 뮐러",
+            "위르겐 클린스만"
+          ],
+          "explanation": "미로슬라프 클로제는 4개 대회(2002-2014)에 걸쳐 통산 16골을 기록하며 대회 최다 득점자 중 한 명이 되었습니다. 폴란드 오폴레에서 태어나 어린 시절 독일로 이주한 그는 페어플레이로도 명성을 얻었는데, 한번은 자신이 손으로 넣은 골을 무효로 해달라고 심판에게 직접 요청하기도 했습니다. 그의 상징적인 공중제비 골 세리머니는 매우 유명합니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este atacante alemão que marcou em quatro edições consecutivas, de 2002 a 2014?",
+          "options": [
+            "Miroslav Klose",
+            "Lukas Podolski",
+            "Thomas Müller",
+            "Jürgen Klinsmann"
+          ],
+          "explanation": "Miroslav Klose marcou 16 gols ao longo de quatro edições (2002-2014), tornando-se um dos maiores artilheiros do torneio. Nascido em Opole, na Polônia, mudou-se para a Alemanha ainda criança e construiu fama pelo fair play — certa vez pediu ao árbitro que anulasse um gol que havia marcado com a mão. Sua característica comemoração com cambalhota é icônica."
+        },
+        "zh-Hans": {
+          "question": "这位从2002年到2014年连续四届赛事都有进球的德国前锋是谁？",
+          "options": [
+            "米罗斯拉夫·克洛泽",
+            "卢卡斯·波多尔斯基",
+            "托马斯·穆勒",
+            "尤尔根·克林斯曼"
+          ],
+          "explanation": "米罗斯拉夫·克洛泽在四届赛事（2002-2014年）中共打入16球，成为该赛事历史上最高产的射手之一。他出生于波兰奥波莱，幼年移居德国，并以公平竞赛精神著称——他曾主动请求裁判取消一粒自己用手打进的进球。他标志性的空翻庆祝动作堪称经典。"
+        }
+      },
+      "i18nSourceHash": "7d35239a5fe1a381"
     },
     {
       "id": "img-cafu-captain",
