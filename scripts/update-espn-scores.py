@@ -112,12 +112,16 @@ def main():
         # bit Bosnia v Qatar on 2026-06-23 and Morocco v Haiti on 2026-06-24.
         idx = match_resolver.resolve(matches, home_name, away_name, kickoff_ts)
         matched_m = matches[idx] if idx is not None else None
-        if matched_m is not None and (matched_m["scoreH"] is None or matched_m["scoreA"] is None):
-            matched_m["scoreH"] = home_score
-            matched_m["scoreA"] = away_score
-            tag = "LIVE" if is_live else "FT"
-            print(f"  PATCH: Match {matched_m['n']} {matched_m['home']} vs {matched_m['away']} -> {home_score}-{away_score} ({tag})")
-            patched += 1
+        if matched_m is not None:
+            needs_patch = (matched_m["scoreH"] is None or matched_m["scoreA"] is None
+                           or is_live
+                           or (is_finished and (matched_m["scoreH"] != home_score or matched_m["scoreA"] != away_score)))
+            if needs_patch:
+                matched_m["scoreH"] = home_score
+                matched_m["scoreA"] = away_score
+                tag = "LIVE" if is_live else "FT"
+                print(f"  PATCH: Match {matched_m['n']} {matched_m['home']} vs {matched_m['away']} -> {home_score}-{away_score} ({tag})")
+                patched += 1
 
     if patched:
         body = json.dumps(matches, indent=2, ensure_ascii=False)
