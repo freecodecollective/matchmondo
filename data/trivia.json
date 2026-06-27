@@ -6091,7 +6091,7 @@
       "answer": 0,
       "explanation": "France hosted and won the 1998 tournament, defeating Brazil 3–0 in the final. They won their second title in 2018 in Russia.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-fastest-goal",
