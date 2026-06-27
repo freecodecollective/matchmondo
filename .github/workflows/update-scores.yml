@@ -34,6 +34,9 @@ jobs:
       - name: Update highlight video links
         run: python3 scripts/update-highlights.py
 
+      - name: Verify bracket against ESPN
+        run: python3 scripts/verify-bracket.py
+
       - name: Commit and push if anything changed
         run: |
           if [ -n "$(git status --porcelain data/ world-cup-2026.ics)" ]; then
