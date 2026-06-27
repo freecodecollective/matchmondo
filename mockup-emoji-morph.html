@@ -8,7 +8,8 @@
 <style>
   :root{
     --t: 9s;             /* rotation cycle (controls each variant's main animation) */
-    --bounce-t: 1.2s;    /* bounce cycle (controls the global up-down bounce when on) */
+    --bounce-t: 1.2s;
+    --ease: cubic-bezier(0.4, 0, 0.6, 1); /* transition sharpness — driven by the slider */    /* bounce cycle (controls the global up-down bounce when on) */
     --pitch-900:#081711;
     --pitch-800:#0c2118;
     --pitch-700:#113125;
@@ -120,59 +121,59 @@
 
   /* ───── Per-variant animations ───── */
 
-  .v6 .e-ball  { animation: emBall  var(--t) ease-in-out infinite; }
-  .v6 .e-globe { animation: emGlobe var(--t) ease-in-out infinite; }
+  .v6 .e-ball  { animation: emBall var(--t) var(--ease, ease-in-out) infinite; }
+  .v6 .e-globe { animation: emGlobe var(--t) var(--ease, ease-in-out) infinite; }
   @keyframes emBall  { 0%,34% {opacity:1; transform:rotate(0) scale(1); filter:blur(0)} 50%,86% {opacity:0; transform:rotate(140deg) scale(.55); filter:blur(6px)} 100% {opacity:1; transform:rotate(360deg) scale(1); filter:blur(0)} }
   @keyframes emGlobe { 0%,34% {opacity:0; transform:rotate(-140deg) scale(.55); filter:blur(6px)} 50%,86% {opacity:1; transform:rotate(0) scale(1); filter:blur(0)} 100% {opacity:0; transform:rotate(140deg) scale(.55); filter:blur(6px)} }
 
-  .v6a .e-ball  { animation: v6a-ball  var(--t) ease-in-out infinite; }
-  .v6a .e-globe { animation: v6a-globe var(--t) ease-in-out infinite; }
+  .v6a .e-ball  { animation: v6a-ball var(--t) var(--ease, ease-in-out) infinite; }
+  .v6a .e-globe { animation: v6a-globe var(--t) var(--ease, ease-in-out) infinite; }
   @keyframes v6a-ball  { 0%,35% {opacity:1} 50%,85% {opacity:0} 100% {opacity:1} }
   @keyframes v6a-globe { 0%,35% {opacity:0} 50%,85% {opacity:1} 100% {opacity:0} }
 
-  .v6b .e-ball  { animation: v6b-ball  var(--t) linear infinite; }
-  .v6b .e-globe { animation: v6b-globe var(--t) linear infinite; }
+  .v6b .e-ball  { animation: v6b-ball var(--t) var(--ease, linear) infinite; }
+  .v6b .e-globe { animation: v6b-globe var(--t) var(--ease, linear) infinite; }
   @keyframes v6b-ball  { 0% {opacity:1; transform:rotate(0)} 35% {opacity:1} 50% {opacity:0} 85% {opacity:0} 100% {opacity:1; transform:rotate(360deg)} }
   @keyframes v6b-globe { 0% {opacity:0; transform:rotate(0)} 35% {opacity:0} 50% {opacity:1} 85% {opacity:1} 100% {opacity:0; transform:rotate(360deg)} }
 
-  .v6c .e-ball  { animation: v6c-ball  var(--t) ease-in-out infinite; }
-  .v6c .e-globe { animation: v6c-globe var(--t) ease-in-out infinite; }
+  .v6c .e-ball  { animation: v6c-ball var(--t) var(--ease, ease-in-out) infinite; }
+  .v6c .e-globe { animation: v6c-globe var(--t) var(--ease, ease-in-out) infinite; }
   @keyframes v6c-ball  { 0% {opacity:1; transform:rotate(0)} 30% {opacity:1} 50% {opacity:0; transform:rotate(200deg)} 85% {opacity:0} 100% {opacity:1; transform:rotate(360deg)} }
   @keyframes v6c-globe { 0% {opacity:0; transform:rotate(0)} 30% {opacity:0} 50% {opacity:1; transform:rotate(-200deg)} 85% {opacity:1; transform:rotate(-340deg)} 100% {opacity:0; transform:rotate(-360deg)} }
 
-  .v6d .e-ball  { animation: v6d-ball  var(--t) cubic-bezier(.34, 1.56, .64, 1) infinite; }
-  .v6d .e-globe { animation: v6d-globe var(--t) cubic-bezier(.34, 1.56, .64, 1) infinite; }
+  .v6d .e-ball  { animation: v6d-ball var(--t) var(--ease, cubic-bezier(.34, 1.56, .64, 1)) infinite; }
+  .v6d .e-globe { animation: v6d-globe var(--t) var(--ease, cubic-bezier(.34, 1.56, .64, 1)) infinite; }
   @keyframes v6d-ball  { 0%,30% {opacity:1; transform:scale(1)} 40% {transform:scale(.85)} 50% {opacity:0; transform:scale(.3)} 85% {opacity:0; transform:scale(.3)} 95% {opacity:1; transform:scale(1.12)} 100% {opacity:1; transform:scale(1)} }
   @keyframes v6d-globe { 0%,30% {opacity:0; transform:scale(.3)} 45% {opacity:0; transform:scale(.3)} 55% {opacity:1; transform:scale(1.12)} 65% {transform:scale(.96)} 80% {transform:scale(1)} 85% {opacity:1} 100% {opacity:0; transform:scale(.3)} }
 
-  .v6e .e-ball  { animation: v6e-ball  var(--t) cubic-bezier(.7,0,.3,1) infinite; }
-  .v6e .e-globe { animation: v6e-globe var(--t) cubic-bezier(.7,0,.3,1) infinite; }
+  .v6e .e-ball  { animation: v6e-ball var(--t) var(--ease, cubic-bezier(.7,0,.3,1)) infinite; }
+  .v6e .e-globe { animation: v6e-globe var(--t) var(--ease, cubic-bezier(.7,0,.3,1)) infinite; }
   @keyframes v6e-ball  { 0% {opacity:1; transform:scale(1); filter:blur(0)} 30% {opacity:1; transform:scale(1); filter:blur(0)} 50% {opacity:0; transform:scale(.1); filter:blur(20px)} 85% {opacity:0; transform:scale(2.2); filter:blur(20px)} 100% {opacity:1; transform:scale(1); filter:blur(0)} }
   @keyframes v6e-globe { 0% {opacity:0; transform:scale(2.2); filter:blur(20px)} 30% {opacity:0; transform:scale(2.2); filter:blur(20px)} 50% {opacity:1; transform:scale(1); filter:blur(0)} 85% {opacity:1; transform:scale(1); filter:blur(0)} 100% {opacity:0; transform:scale(.1); filter:blur(20px)} }
 
   .v6f .stage-3d { perspective: 600px; width: 100%; height: 100%; position: absolute; inset: 0; }
-  .v6f .flip3d   { position: absolute; inset: 0; transform-style: preserve-3d; animation: v6f-flip var(--t) cubic-bezier(.7,0,.3,1) infinite; }
+  .v6f .flip3d   { position: absolute; inset: 0; transform-style: preserve-3d; animation: v6f-flip var(--t) var(--ease, cubic-bezier(.7,0,.3,1)) infinite; }
   .v6f .e-ball, .v6f .e-globe { backface-visibility: hidden; }
   .v6f .e-globe  { transform: rotateY(180deg); }
   @keyframes v6f-flip { 0%,18% {transform:rotateY(0)} 50%,68% {transform:rotateY(180deg)} 100% {transform:rotateY(360deg)} }
 
-  .v6g .e-ball  { animation: v6g-ball  var(--t) ease-in-out infinite; }
-  .v6g .e-globe { animation: v6g-globe var(--t) ease-in-out infinite; }
+  .v6g .e-ball  { animation: v6g-ball var(--t) var(--ease, ease-in-out) infinite; }
+  .v6g .e-globe { animation: v6g-globe var(--t) var(--ease, ease-in-out) infinite; }
   @keyframes v6g-ball  { 0% {opacity:1; transform:translateY(0)} 10% {transform:translateY(-18px)} 20% {transform:translateY(0)} 30% {transform:translateY(-12px)} 40% {opacity:1; transform:translateY(0)} 50% {opacity:0} 85% {opacity:0} 100% {opacity:1; transform:translateY(0)} }
   @keyframes v6g-globe { 0%,40% {opacity:0; transform:translateY(0)} 50% {opacity:1; transform:translateY(0)} 60% {transform:translateY(-18px)} 70% {transform:translateY(0)} 80% {transform:translateY(-12px)} 90% {opacity:1; transform:translateY(0)} 100% {opacity:0; transform:translateY(0)} }
 
-  .v6h .e-ball  { animation: v6h-ball  var(--t) ease-in-out infinite; }
-  .v6h .e-globe { animation: v6h-globe var(--t) ease-in-out infinite; }
+  .v6h .e-ball  { animation: v6h-ball var(--t) var(--ease, ease-in-out) infinite; }
+  .v6h .e-globe { animation: v6h-globe var(--t) var(--ease, ease-in-out) infinite; }
   @keyframes v6h-ball  { 0% {opacity:1; transform:translate(-30%,0)} 10% {transform:translate(-15%,-10px)} 20% {transform:translate(0,0)} 30% {transform:translate(15%,-10px)} 40% {opacity:1; transform:translate(30%,0)} 50% {opacity:0} 85% {opacity:0} 100% {opacity:1; transform:translate(-30%,0)} }
   @keyframes v6h-globe { 0%,40% {opacity:0; transform:translate(-30%,0)} 50% {opacity:1; transform:translate(-30%,0)} 60% {transform:translate(-15%,-10px)} 70% {transform:translate(0,0)} 80% {transform:translate(15%,-10px)} 90% {opacity:1; transform:translate(30%,0)} 100% {opacity:0; transform:translate(30%,0)} }
 
-  .v6i .e-ball  { animation: v6i-ball  var(--t) ease-in-out infinite; }
-  .v6i .e-globe { animation: v6i-globe var(--t) ease-in-out infinite; }
+  .v6i .e-ball  { animation: v6i-ball var(--t) var(--ease, ease-in-out) infinite; }
+  .v6i .e-globe { animation: v6i-globe var(--t) var(--ease, ease-in-out) infinite; }
   @keyframes v6i-ball  { 0% {opacity:1; transform:scale(1)} 12% {transform:scale(1.08)} 24% {transform:scale(1)} 36% {transform:scale(1.08)} 48% {opacity:1; transform:scale(1)} 50% {opacity:0} 85% {opacity:0} 100% {opacity:1; transform:scale(1)} }
   @keyframes v6i-globe { 0%,48% {opacity:0; transform:scale(1)} 50% {opacity:1; transform:scale(1)} 62% {transform:scale(1.08)} 74% {transform:scale(1)} 86% {transform:scale(1.08)} 98% {opacity:1; transform:scale(1)} 100% {opacity:0} }
 
-  .v6j .e-ball  { animation: v6j-ball  var(--t) cubic-bezier(.85,0,.15,1) infinite; }
-  .v6j .e-globe { animation: v6j-globe var(--t) cubic-bezier(.85,0,.15,1) infinite; }
+  .v6j .e-ball  { animation: v6j-ball var(--t) var(--ease, cubic-bezier(.85,0,.15,1)) infinite; }
+  .v6j .e-globe { animation: v6j-globe var(--t) var(--ease, cubic-bezier(.85,0,.15,1)) infinite; }
   @keyframes v6j-ball  { 0%,45% {opacity:1; transform:rotate(0)} 50% {opacity:0; transform:rotate(180deg)} 95% {opacity:0} 100% {opacity:1; transform:rotate(360deg)} }
   @keyframes v6j-globe { 0%,45% {opacity:0; transform:rotate(-180deg)} 50% {opacity:1; transform:rotate(0)} 95% {opacity:1} 100% {opacity:0; transform:rotate(180deg)} }
 
@@ -222,13 +223,22 @@
           <span class="val" id="speed-bounce-val">1.2s</span>
         </div>
       </div>
+
+      <div class="control">
+        <span class="label">Transition speed</span>
+        <div class="row">
+          <input type="range" id="speed-trans" min="1" max="10" step="1" value="5"
+                 aria-label="Transition speed (1 = gentle blend, 10 = snappy switch)">
+          <span class="val" id="speed-trans-val">5</span>
+        </div>
+      </div>
     </div>
   </header>
 
   <p class="lede">
     Eleven variations on the emoji morph: the soccer ball ⚽ rotates and transforms into the globe 🌍, then back.
-    All share the same Pause and Rotation Speed controls. Turn <b>Bouncing</b> on to add a global up-and-down
-    bounce on top of each variant's own motion — the Bounce Speed slider controls how fast it bobs.
+    All share the same Pause and Rotation Speed controls. <b>Transition Speed</b> controls how sharp the morph itself feels — low = gentle blend, high = snappy switch.
+    Turn <b>Bouncing</b> on to add a global up-and-down bounce on top of each variant's own motion — the Bounce Speed slider controls how fast it bobs.
   </p>
 
   <div class="grid">
@@ -413,6 +423,33 @@
     bVal.textContent = v;
     restartAnimations();
   });
+
+  // Transition speed — controls the --ease CSS variable. Maps slider 1–10 to
+  // a cubic-bezier curve on a sharpness axis: low = gentle S-curve (the
+  // morph feels long and blended); high = near-step curve (the morph feels
+  // sharp and snappy). Restarting animations forces the new easing to take
+  // hold on the running animation loops.
+  const tSlider = document.getElementById('speed-trans');
+  const tVal = document.getElementById('speed-trans-val');
+  const easeStops = [
+    /*  1 */ 'cubic-bezier(0.5, 0, 0.5, 1)',
+    /*  2 */ 'cubic-bezier(0.45, 0, 0.55, 1)',
+    /*  3 */ 'cubic-bezier(0.4, 0, 0.6, 1)',
+    /*  4 */ 'cubic-bezier(0.4, 0, 0.6, 1)',
+    /*  5 */ 'cubic-bezier(0.4, 0, 0.6, 1)',
+    /*  6 */ 'cubic-bezier(0.5, 0, 0.4, 1)',
+    /*  7 */ 'cubic-bezier(0.6, 0, 0.3, 1)',
+    /*  8 */ 'cubic-bezier(0.75, 0, 0.2, 1)',
+    /*  9 */ 'cubic-bezier(0.85, 0, 0.1, 1)',
+    /* 10 */ 'cubic-bezier(0.95, 0, 0.05, 1)',
+  ];
+  tSlider.addEventListener('input', () => {
+    const v = parseInt(tSlider.value, 10);
+    document.documentElement.style.setProperty('--ease', easeStops[v - 1]);
+    tVal.textContent = String(v);
+    restartAnimations();
+  });
+
 </script>
 <style>
   /* Class added/removed in JS to force CSS animations to restart. The
