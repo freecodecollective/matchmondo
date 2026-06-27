@@ -7810,7 +7810,7 @@
       "answer": 1,
       "explanation": "False! Every knockout match must produce a winner. If the score is level after 90 minutes, 30 minutes of extra time (two 15-minute halves) are played. If still tied, a penalty shootout decides the outcome. Only group-stage matches can end in a draw.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-referee-own-country",
