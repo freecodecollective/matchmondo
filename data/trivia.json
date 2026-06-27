@@ -9259,7 +9259,110 @@
       "explanation": "Cafu (Marcos Evangelista de Moraes) appeared in three consecutive finals — 1994 (won), 1998 (lost), and 2002 (won) — the only player in history to achieve this feat. He captained the victorious 2002 side and earned 142 caps for Brazil, a record at the time. Known for his tireless runs up and down the right flank, he set the template for modern attacking full-backs.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Cafu_no_Olinda_Fashion_Week_de_2012%2C_01.jpg/500px-Cafu_no_Olinda_Fashion_Week_de_2012%2C_01.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا الظهير الأيمن والقائد البرازيلي الذي ظهر في ثلاث نهائيات متتالية للبطولة؟",
+          "options": [
+            "كافو",
+            "روبرتو كارلوس",
+            "داني ألفيش",
+            "مايكون"
+          ],
+          "explanation": "ظهر كافو (ماركوس إيفانجيليستا دي مورايس) في ثلاث نهائيات متتالية — 1994 (فاز)، و1998 (خسر)، و2002 (فاز) — وهو اللاعب الوحيد في التاريخ الذي حقق هذا الإنجاز. قاد المنتخب البرازيلي الفائز عام 2002، وخاض 142 مباراة دولية مع البرازيل، وهو رقم قياسي في ذلك الوقت. اشتهر بانطلاقاته الدؤوبة صعودًا وهبوطًا على الجناح الأيمن، فرسم نموذجًا للأظهرة الهجومية الحديثة."
+        },
+        "de": {
+          "question": "Wer ist dieser brasilianische Rechtsverteidiger und Kapitän, der in drei aufeinanderfolgenden Turnierendspielen stand?",
+          "options": [
+            "Cafu",
+            "Roberto Carlos",
+            "Dani Alves",
+            "Maicon"
+          ],
+          "explanation": "Cafu (Marcos Evangelista de Moraes) stand in drei aufeinanderfolgenden Endspielen — 1994 (gewonnen), 1998 (verloren) und 2002 (gewonnen) — als einziger Spieler der Geschichte, dem dieses Kunststück gelang. Er führte die siegreiche Mannschaft von 2002 als Kapitän an und kam auf 142 Länderspiele für Brasilien, damals ein Rekord. Bekannt für seine unermüdlichen Läufe über die rechte Seite, setzte er den Maßstab für moderne offensive Außenverteidiger."
+        },
+        "es": {
+          "question": "¿Quién es este lateral derecho y capitán brasileño que disputó tres finales consecutivas del torneo?",
+          "options": [
+            "Cafú",
+            "Roberto Carlos",
+            "Dani Alves",
+            "Maicon"
+          ],
+          "explanation": "Cafú (Marcos Evangelista de Moraes) disputó tres finales consecutivas — 1994 (ganada), 1998 (perdida) y 2002 (ganada) —, el único jugador de la historia en lograr esa hazaña. Fue capitán del equipo campeón en 2002 y sumó 142 partidos con Brasil, un récord en su momento. Reconocido por sus incansables subidas y bajadas por la banda derecha, marcó la pauta para los laterales ofensivos modernos."
+        },
+        "es-ES": {
+          "question": "¿Quién es este lateral derecho y capitán brasileño que disputó tres finales consecutivas del torneo?",
+          "options": [
+            "Cafú",
+            "Roberto Carlos",
+            "Dani Alves",
+            "Maicon"
+          ],
+          "explanation": "Cafú (Marcos Evangelista de Moraes) disputó tres finales consecutivas — 1994 (ganada), 1998 (perdida) y 2002 (ganada) —, el único jugador de la historia que ha logrado esa gesta. Fue capitán del equipo campeón en 2002 y acumuló 142 partidos con Brasil, todo un récord en aquel momento. Conocido por sus incansables subidas y bajadas por la banda derecha, marcó el modelo de los laterales ofensivos modernos."
+        },
+        "fr": {
+          "question": "Qui est cet arrière droit et capitaine brésilien ayant disputé trois finales consécutives du tournoi ?",
+          "options": [
+            "Cafu",
+            "Roberto Carlos",
+            "Dani Alves",
+            "Maicon"
+          ],
+          "explanation": "Cafu (Marcos Evangelista de Moraes) a disputé trois finales consécutives — 1994 (victoire), 1998 (défaite) et 2002 (victoire) —, le seul joueur de l'histoire à réaliser cet exploit. Il a porté le brassard de capitaine de l'équipe victorieuse en 2002 et a compté 142 sélections avec le Brésil, un record à l'époque. Réputé pour ses montées et descentes infatigables sur le flanc droit, il a défini le modèle des latéraux offensifs modernes."
+        },
+        "it": {
+          "question": "Chi è questo terzino destro e capitano brasiliano che ha disputato tre finali consecutive del torneo?",
+          "options": [
+            "Cafu",
+            "Roberto Carlos",
+            "Dani Alves",
+            "Maicon"
+          ],
+          "explanation": "Cafu (Marcos Evangelista de Moraes) ha disputato tre finali consecutive — 1994 (vinta), 1998 (persa) e 2002 (vinta) — unico giocatore nella storia a riuscire in questa impresa. Ha guidato da capitano la squadra campione nel 2002 e ha collezionato 142 presenze con il Brasile, all'epoca un record. Noto per le sue instancabili scorribande su e giù sulla fascia destra, ha definito il modello dei moderni terzini offensivi."
+        },
+        "ja": {
+          "question": "3大会連続で大会の決勝に出場した、このブラジル人右サイドバック兼キャプテンは誰でしょう？",
+          "options": [
+            "カフー",
+            "ロベルト・カルロス",
+            "ダニ・アウベス",
+            "マイコン"
+          ],
+          "explanation": "カフー（マルコス・エヴァンジェリスタ・デ・モラエス）は3大会連続で決勝に出場しました——1994年（優勝）、1998年（準優勝）、2002年（優勝）——史上唯一この偉業を成し遂げた選手です。2002年には優勝チームの主将を務め、ブラジル代表として当時の記録となる142試合に出場しました。右サイドを上下に駆け回る無尽蔵のスタミナで知られ、現代の攻撃的サイドバックの手本を築きました。"
+        },
+        "ko": {
+          "question": "대회 결승에 3회 연속 출전한 이 브라질 출신 라이트백이자 주장은 누구일까요?",
+          "options": [
+            "카푸",
+            "호베르투 카를루스",
+            "다니 알베스",
+            "마이콘"
+          ],
+          "explanation": "카푸(마르쿠스 에반젤리스타 지 모라에스)는 1994년(우승), 1998년(준우승), 2002년(우승) 등 3회 연속 결승에 출전했으며, 역사상 이 위업을 달성한 유일한 선수입니다. 2002년 우승팀의 주장을 맡았고, 당시 기록인 브라질 대표팀 142경기 출전을 기록했습니다. 오른쪽 측면을 끊임없이 오르내리는 지칠 줄 모르는 활약으로 유명하며, 현대 공격형 풀백의 본보기를 세웠습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este lateral-direito e capitão brasileiro que disputou três finais consecutivas do torneio?",
+          "options": [
+            "Cafu",
+            "Roberto Carlos",
+            "Dani Alves",
+            "Maicon"
+          ],
+          "explanation": "Cafu (Marcos Evangelista de Moraes) disputou três finais consecutivas — 1994 (vencida), 1998 (perdida) e 2002 (vencida) —, o único jogador da história a alcançar esse feito. Foi capitão da equipe campeã em 2002 e somou 142 jogos pela Seleção Brasileira, um recorde na época. Conhecido pelas suas incansáveis subidas e descidas pela ponta direita, ele definiu o modelo dos laterais ofensivos modernos."
+        },
+        "zh-Hans": {
+          "question": "这位连续三届杀入本赛事决赛的巴西右后卫兼队长是谁？",
+          "options": [
+            "卡福",
+            "罗伯托·卡洛斯",
+            "达尼·阿尔维斯",
+            "麦孔"
+          ],
+          "explanation": "卡福（马科斯·埃万杰利斯塔·德·莫拉伊斯）连续三届闯入决赛——1994年（夺冠）、1998年（落败）和2002年（夺冠）——是历史上唯一达成这一壮举的球员。他在2002年担任夺冠队伍的队长，并为巴西出场142次，创下当时的纪录。他以在右路不知疲倦地上下奔跑著称，为现代进攻型边后卫树立了典范。"
+        }
+      },
+      "i18nSourceHash": "244fcc75c2f2832d"
     },
     {
       "id": "img-buffon",
