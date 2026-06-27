@@ -854,8 +854,8 @@
     "venue": "BC Place",
     "city": "Vancouver, Canada",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": 0,
-    "scoreA": 1
+    "scoreH": 1,
+    "scoreA": 5
   },
   {
     "n": 67,
@@ -1044,7 +1044,7 @@
     "utc": "2026-07-01T20:00:00Z",
     "stage": "Round of 32",
     "group": null,
-    "home": "1G",
+    "home": "Belgium",
     "away": "3AEHIJ",
     "venue": "Lumen Field",
     "city": "Seattle, WA",
@@ -1110,7 +1110,7 @@
     "stage": "Round of 32",
     "group": null,
     "home": "Australia",
-    "away": "2G",
+    "away": "Egypt",
     "venue": "AT&T Stadium",
     "city": "Arlington (Dallas), TX",
     "tv": "FOX · Telemundo (ES)",

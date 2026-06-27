@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-27 03:46 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-06-27 05:21 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -856,8 +856,8 @@ window.WC_MATCHES = [
     "venue": "BC Place",
     "city": "Vancouver, Canada",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": 0,
-    "scoreA": 1
+    "scoreH": 1,
+    "scoreA": 5
   },
   {
     "n": 67,
@@ -1046,7 +1046,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-01T20:00:00Z",
     "stage": "Round of 32",
     "group": null,
-    "home": "1G",
+    "home": "Belgium",
     "away": "3AEHIJ",
     "venue": "Lumen Field",
     "city": "Seattle, WA",
@@ -1112,7 +1112,7 @@ window.WC_MATCHES = [
     "stage": "Round of 32",
     "group": null,
     "home": "Australia",
-    "away": "2G",
+    "away": "Egypt",
     "venue": "AT&T Stadium",
     "city": "Arlington (Dallas), TX",
     "tv": "FOX · Telemundo (ES)",
