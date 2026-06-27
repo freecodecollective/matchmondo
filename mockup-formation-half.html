@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formation — half-pitch (starting XI)</title>
+<style>
+  :root{
+    --ink:#1d2127; --muted:#6b7280; --line:rgba(0,0,0,.09); --bg:#f1efea; --card:#fff;
+    --pitch1:#1f9e57; --pitch2:#178a4a; --green:#12a150; --green-d:#0c7a3c;
+    --dark-bg:#0c0d10; --dark-card:#16181d; --dark-ink:#e5e7eb; --dark-muted:#9aa1ad; --dark-line:rgba(255,255,255,.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',sans-serif;
+       background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;padding-bottom:80px;}
+  .banner{background:linear-gradient(135deg,var(--pitch1),var(--pitch2));color:#fff;padding:38px 24px 30px;text-align:center;}
+  .banner h1{font-size:26px;font-weight:800;}
+  .banner p{font-size:14.5px;opacity:.94;margin:8px auto 0;max-width:720px;line-height:1.5;}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 20px;}
+  .intro{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:-18px;
+         position:relative;box-shadow:0 3px 16px rgba(0,0,0,.06);font-size:13.5px;color:#333;line-height:1.55;}
+  .intro b{color:var(--ink);}
+  .intro .pill{display:inline-block;background:rgba(18,161,80,.12);color:var(--green-d);font-weight:700;font-size:11.5px;
+               padding:2px 9px;border-radius:20px;margin-right:6px;}
+
+  /* Variant grid layout */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:26px;margin-top:32px;align-items:start;}
+  .v{background:var(--dark-card);color:var(--dark-ink);border-radius:22px;overflow:hidden;
+     box-shadow:0 6px 30px rgba(0,0,0,.18);border:1px solid var(--dark-line);}
+  .v.light{background:#fff;color:var(--ink);border:1px solid var(--line);}
+  .v-head{padding:16px 18px 4px;}
+  .v-tag{font-size:11.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--green-d);
+         background:rgba(18,161,80,.14);display:inline-block;padding:2px 10px;border-radius:20px;}
+  .v.light .v-tag{background:rgba(18,161,80,.10);}
+  .v-title{font-size:18px;font-weight:800;margin-top:8px;}
+  .v-sub{font-size:12.5px;color:var(--dark-muted);margin-top:3px;line-height:1.4;}
+  .v.light .v-sub{color:var(--muted);}
+
+  /* "Phone" frame for portrait variants */
+  .phone{margin:14px 14px 16px;background:#0a0b0e;border-radius:18px;overflow:hidden;padding:8px 8px 12px;}
+  .v.light .phone{background:#f5f3ed;}
+
+  /* Match strip (3 games like the screenshot) */
+  .strip{display:flex;gap:8px;padding:0 6px 10px;align-items:center;}
+  .strip-back{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;
+              color:#fff;font-size:18px;font-weight:600;flex-shrink:0;}
+  .v.light .strip-back{background:rgba(0,0,0,.06);color:#111;}
+  .strip-pill{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;font-weight:700;
+              background:rgba(255,255,255,.05);border-radius:18px;padding:7px 8px;color:#cbd0d8;white-space:nowrap;min-width:0;}
+  .strip-pill.on{background:rgba(255,255,255,.10);color:#fff;border:1px solid rgba(255,255,255,.16);}
+  .v.light .strip-pill{background:rgba(0,0,0,.04);color:#333;}
+  .v.light .strip-pill.on{background:#fff;color:#111;border:1px solid var(--line);box-shadow:0 1px 3px rgba(0,0,0,.05);}
+  .flag{width:18px;height:13px;border-radius:2px;background:#888 center/cover no-repeat;flex-shrink:0;}
+
+  /* Tabs */
+  .tabs{display:flex;gap:0;padding:4px 14px 0;border-bottom:1px solid rgba(255,255,255,.08);}
+  .v.light .tabs{border-bottom:1px solid var(--line);}
+  .tab{flex:1;text-align:center;font-size:13.5px;font-weight:800;letter-spacing:.4px;color:#9aa1ad;padding:11px 4px;cursor:pointer;border-bottom:2.5px solid transparent;}
+  .tab.on{color:#fff;border-bottom-color:#fff;}
+  .v.light .tab{color:var(--muted);}
+  .v.light .tab.on{color:#111;border-bottom-color:#111;}
+
+  /* Headline bullets like screenshot */
+  .heads{padding:14px 18px 6px;font-size:12.5px;line-height:1.5;color:#cbd0d8;}
+  .v.light .heads{color:#444;}
+  .heads ul{list-style:disc;padding-left:18px;}
+  .heads li+li{margin-top:6px;}
+
+  /* Section label */
+  .label{padding:14px 18px 0;font-size:13px;font-weight:800;letter-spacing:.6px;color:#fff;text-transform:uppercase;}
+  .v.light .label{color:#111;}
+
+  /* Team toggle (Home / Away pill pair) */
+  .toggle{margin:10px 14px 12px;display:flex;background:rgba(255,255,255,.08);border-radius:24px;padding:4px;}
+  .toggle .t{flex:1;text-align:center;font-size:13px;font-weight:700;color:#cbd0d8;padding:8px;border-radius:20px;cursor:pointer;}
+  .toggle .t.on{background:rgba(255,255,255,.12);color:#fff;}
+  .v.light .toggle{background:rgba(0,0,0,.05);}
+  .v.light .toggle .t{color:#444;}
+  .v.light .toggle .t.on{background:#fff;color:#111;box-shadow:0 1px 3px rgba(0,0,0,.08);}
+
+  /* ─── HALF PITCH (portrait, goal at top, half-circle at bottom) ─── */
+  /* Field built with CSS only; aspect ratio chosen for player legibility. */
+  .pitch-half{position:relative;margin:0 14px 14px;border-radius:14px;overflow:hidden;
+              aspect-ratio:.88; /* tunable — taller than wide so players have room */
+              background:
+                repeating-linear-gradient(var(--pitch1) 0 16.66%, var(--pitch2) 16.66% 33.33%);
+              box-shadow:inset 0 0 0 2px rgba(255,255,255,.08);}
+  .pitch-half.flipped{transform:rotate(180deg);}
+  .pitch-half.flipped .player{transform:translate(-50%,-50%) rotate(180deg);}
+  .marks{position:absolute;inset:0;pointer-events:none;}
+
+  /* For TOP-goal pitch */
+  .pitch-half .pbox  {position:absolute;left:50%;top:0;transform:translateX(-50%);
+                      width:60%;height:24%;border:1.8px solid rgba(255,255,255,.45);border-top:0;border-radius:0 0 4px 4px;}
+  .pitch-half .gbox  {position:absolute;left:50%;top:0;transform:translateX(-50%);
+                      width:28%;height:9%;border:1.8px solid rgba(255,255,255,.45);border-top:0;}
+  .pitch-half .pspot {position:absolute;left:50%;top:16%;width:5px;height:5px;border-radius:50%;
+                      background:rgba(255,255,255,.55);transform:translateX(-50%);}
+  .pitch-half .parc  {position:absolute;left:50%;top:24%;width:24%;aspect-ratio:1;
+                      border:1.8px solid rgba(255,255,255,.45);border-radius:50%;
+                      transform:translate(-50%,-50%);clip-path:polygon(0 50%,100% 50%,100% 100%,0 100%);}
+  .pitch-half .goal  {position:absolute;left:50%;top:0;width:18%;height:2.4%;
+                      background:rgba(255,255,255,.65);transform:translate(-50%,-58%);border-radius:1px;}
+  .pitch-half .halfline{position:absolute;left:0;right:0;bottom:0;border-bottom:1.8px solid rgba(255,255,255,.5);}
+  .pitch-half .halfcirc{position:absolute;left:50%;bottom:0;width:38%;aspect-ratio:1;
+                        border:1.8px solid rgba(255,255,255,.5);border-radius:50%;
+                        transform:translate(-50%,50%);clip-path:polygon(0 0,100% 0,100% 50%,0 50%);}
+  .pitch-half .corner-l,.pitch-half .corner-r{position:absolute;top:0;width:7%;aspect-ratio:1;
+                        border:1.8px solid rgba(255,255,255,.45);border-radius:50%;}
+  .pitch-half .corner-l{left:0;transform:translate(-50%,-50%);}
+  .pitch-half .corner-r{right:0;transform:translate(50%,-50%);}
+
+  /* Player chip */
+  .player{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;width:78px;}
+  .badge{position:relative;width:38px;height:38px;border-radius:50%;
+         background:#e11d2a;color:#fff;font-weight:800;font-size:13px;
+         display:flex;align-items:center;justify-content:center;border:2px solid #fff;
+         box-shadow:0 3px 7px rgba(0,0,0,.45);}
+  .badge.alt{background:#d4d4d8;color:#111;}
+  .pname{margin-top:4px;font-size:10.5px;font-weight:700;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.7);
+         line-height:1.15;text-align:center;letter-spacing:.1px;max-width:84px;}
+  .v.light .pname{color:#fff;}
+  .pname.dark{color:#111;text-shadow:0 1px 1px rgba(255,255,255,.5);}
+
+  /* ─── HALF PITCH (landscape, goal on LEFT) for Variant 3 ─── */
+  .pitch-side{position:relative;margin:0 14px 14px;border-radius:14px;overflow:hidden;aspect-ratio:1.25;
+              background:repeating-linear-gradient(90deg,var(--pitch1) 0 16.66%, var(--pitch2) 16.66% 33.33%);
+              box-shadow:inset 0 0 0 2px rgba(255,255,255,.08);}
+  /* Tighter chips in the landscape view so 11 players don't overlap. */
+  .pitch-side .player{width:80px;}
+  .pitch-side .badge{width:32px;height:32px;font-size:12px;border-width:2px;}
+  .pitch-side .pname{font-size:9px;max-width:80px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .pitch-side .pbox-l   {position:absolute;left:0;top:50%;transform:translateY(-50%);
+                         width:24%;height:60%;border:1.8px solid rgba(255,255,255,.45);border-left:0;border-radius:0 4px 4px 0;}
+  .pitch-side .gbox-l   {position:absolute;left:0;top:50%;transform:translateY(-50%);
+                         width:9%;height:28%;border:1.8px solid rgba(255,255,255,.45);border-left:0;}
+  .pitch-side .pspot-l  {position:absolute;left:16%;top:50%;width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.55);transform:translate(-50%,-50%);}
+  .pitch-side .parc-l   {position:absolute;left:24%;top:50%;width:auto;height:24%;aspect-ratio:1;
+                         border:1.8px solid rgba(255,255,255,.45);border-radius:50%;
+                         transform:translate(-50%,-50%);clip-path:polygon(50% 0,100% 0,100% 100%,50% 100%);}
+  .pitch-side .goal-l   {position:absolute;left:0;top:50%;width:2.2%;height:18%;
+                         background:rgba(255,255,255,.65);transform:translate(-58%,-50%);border-radius:1px;}
+  .pitch-side .halfline-r{position:absolute;top:0;bottom:0;right:0;border-right:1.8px solid rgba(255,255,255,.5);}
+  .pitch-side .halfcirc-r{position:absolute;right:0;top:50%;height:54%;aspect-ratio:1;
+                          border:1.8px solid rgba(255,255,255,.5);border-radius:50%;
+                          transform:translate(50%,-50%);clip-path:polygon(0 0,50% 0,50% 100%,0 100%);}
+
+  /* Variant 4: full pitch with both teams in their halves */
+  .pitch-full{position:relative;margin:0 14px 14px;border-radius:14px;overflow:hidden;aspect-ratio:.66;
+              background:repeating-linear-gradient(var(--pitch1) 0 9.09%,var(--pitch2) 9.09% 18.18%);
+              box-shadow:inset 0 0 0 2px rgba(255,255,255,.08);}
+  .pitch-full .pbox-t,.pitch-full .pbox-b{position:absolute;left:50%;transform:translateX(-50%);width:46%;height:14%;
+                         border:1.8px solid rgba(255,255,255,.45);}
+  .pitch-full .pbox-t{top:0;border-top:0;border-radius:0 0 4px 4px;}
+  .pitch-full .pbox-b{bottom:0;border-bottom:0;border-radius:4px 4px 0 0;}
+  .pitch-full .gbox-t,.pitch-full .gbox-b{position:absolute;left:50%;transform:translateX(-50%);width:22%;height:5%;
+                         border:1.8px solid rgba(255,255,255,.45);}
+  .pitch-full .gbox-t{top:0;border-top:0;}
+  .pitch-full .gbox-b{bottom:0;border-bottom:0;}
+  .pitch-full .halfline-c{position:absolute;left:0;right:0;top:50%;border-top:1.8px solid rgba(255,255,255,.5);}
+  .pitch-full .circle{position:absolute;left:50%;top:50%;width:24%;aspect-ratio:1;
+                      border:1.8px solid rgba(255,255,255,.5);border-radius:50%;transform:translate(-50%,-50%);}
+  .pitch-full .spot{position:absolute;left:50%;top:50%;width:5px;height:5px;border-radius:50%;
+                    background:rgba(255,255,255,.55);transform:translate(-50%,-50%);}
+  .pitch-full .team-divider{position:absolute;left:0;right:0;top:50%;height:24px;transform:translateY(-50%);
+                            background:linear-gradient(to bottom,transparent,rgba(255,255,255,.06) 40%,rgba(255,255,255,.06) 60%,transparent);
+                            pointer-events:none;}
+  .pitch-full .team-label{position:absolute;font-size:9.5px;font-weight:800;letter-spacing:1.5px;
+                          color:rgba(255,255,255,.55);text-transform:uppercase;pointer-events:none;
+                          background:rgba(0,0,0,.28);padding:2px 7px;border-radius:8px;}
+  .pitch-full .team-label.t{top:3%;left:3%;}
+  .pitch-full .team-label.b{bottom:3%;right:3%;}
+
+  /* Bottom tab bar like the screenshot */
+  .tabbar{display:flex;justify-content:space-around;padding:8px 4px 6px;border-top:1px solid rgba(255,255,255,.08);}
+  .tabbar .tb{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;font-weight:700;color:#9aa1ad;flex:1;padding:6px 2px;border-radius:18px;}
+  .tabbar .tb.on{background:rgba(255,255,255,.06);color:#fff;}
+  .tabbar .tb svg{width:18px;height:18px;}
+  .v.light .tabbar{border-top:1px solid var(--line);}
+  .v.light .tabbar .tb{color:var(--muted);}
+  .v.light .tabbar .tb.on{background:rgba(0,0,0,.05);color:#111;}
+
+  .legend{margin:18px 4px 4px;font-size:13px;color:#444;line-height:1.55;}
+  .legend b{color:var(--ink);}
+  .foot{text-align:center;color:#9aa0a6;font-size:12px;margin-top:34px;line-height:1.6;}
+  .foot a{color:var(--green-d);text-decoration:none;font-weight:600;}
+
+  /* mini flag swatches */
+  .fg-pa{background:linear-gradient(to right,#fff 50%,#da121a 50%);}
+  .fg-en{background:linear-gradient(to right,#fff 0,#fff 40%,#ce1124 40%,#ce1124 60%,#fff 60%);}
+  .fg-hr{background:linear-gradient(to right,#fff 0,#fff 33%,#171796 33%,#171796 66%,#ce1124 66%);}
+  .fg-gh{background:linear-gradient(to bottom,#ce1126 33%,#fcd116 33%,#fcd116 66%,#006b3f 66%);}
+  .fg-co{background:linear-gradient(to bottom,#fcd116 50%,#003893 50%,#003893 75%,#ce1126 75%);}
+</style>
+</head>
+<body>
+  <div class="banner">
+    <h1>⚽ Formation — half-pitch (starting XI)</h1>
+    <p>ESPN-screenshot aesthetic, but rendered as the team's own half of the field — like an aerial frame the instant before kickoff. Half-circle at the centerline, goal at the far end. Four variants.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="intro">
+      <span class="pill">Why half-pitch</span>
+      The full-pitch view squeezes 22 players into one rectangle, which crushes labels and makes each player tiny. Showing only the team you're looking at — on their own half — gives every chip and label twice the room. The half-circle at the centerline tells you instantly which way they kick.
+    </div>
+
+    <div class="grid">
+
+      <!-- ─────────────── VARIANT 1 — Portrait, goal at TOP ─────────────── -->
+      <div class="v">
+        <div class="v-head">
+          <span class="v-tag">Variant 1 · Portrait · Goal at top</span>
+          <div class="v-title">Defensive aerial — you see the team set up to attack downward</div>
+          <div class="v-sub">Closest to the screenshot's layout. Half-circle at the bottom; the team kicks down off the screen.</div>
+        </div>
+        <div class="phone">
+          <div class="strip">
+            <div class="strip-back">‹</div>
+            <div class="strip-pill on"><span class="flag fg-pa"></span>2:00 PM<span class="flag fg-en"></span></div>
+            <div class="strip-pill"><span class="flag fg-hr"></span>2:00 PM<span class="flag fg-gh"></span></div>
+            <div class="strip-pill"><span class="flag fg-co"></span>4:30 PM</div>
+          </div>
+          <div class="tabs"><div class="tab on">MATCH</div><div class="tab">ODDS</div></div>
+          <div class="heads">
+            <ul>
+              <li>England vs. Panama lineups, starting 11 for Group L game at MetLife Stadium</li>
+              <li>Panama vs England: prediction, kick-off time, team news, TV, live stream, h2h results, odds today</li>
+            </ul>
+          </div>
+          <div class="label">Formations</div>
+          <div class="toggle"><div class="t on">Panama</div><div class="t">England</div></div>
+          <!-- Panama 4-5-1, attacking downward (goal at top is THEIR goal). -->
+          <div class="pitch-half">
+            <div class="marks">
+              <div class="pbox"></div><div class="gbox"></div><div class="pspot"></div><div class="parc"></div>
+              <div class="goal"></div><div class="corner-l"></div><div class="corner-r"></div>
+              <div class="halfline"></div><div class="halfcirc"></div>
+            </div>
+            <!-- GK (closest to own goal at top) -->
+            <div class="player" style="left:50%;top:9%;"><div class="badge alt">22</div><div class="pname">Mosquera</div></div>
+            <!-- 4 DEF -->
+            <div class="player" style="left:14%;top:28%;"><div class="badge">23</div><div class="pname">Murillo</div></div>
+            <div class="player" style="left:37%;top:32%;"><div class="badge">4</div><div class="pname">Escobar</div></div>
+            <div class="player" style="left:63%;top:32%;"><div class="badge">3</div><div class="pname">Córdoba</div></div>
+            <div class="player" style="left:86%;top:28%;"><div class="badge">16</div><div class="pname">Andrade</div></div>
+            <!-- 5 MID -->
+            <div class="player" style="left:13%;top:58%;"><div class="badge">26</div><div class="pname">Gutiérrez</div></div>
+            <div class="player" style="left:35%;top:54%;"><div class="badge">7</div><div class="pname">JL Rodríguez</div></div>
+            <div class="player" style="left:50%;top:62%;"><div class="badge">14</div><div class="pname">Harvey</div></div>
+            <div class="player" style="left:65%;top:54%;"><div class="badge">11</div><div class="pname">Bárcenas</div></div>
+            <div class="player" style="left:87%;top:58%;"><div class="badge">6</div><div class="pname">C. Martínez</div></div>
+            <!-- 1 ST -->
+            <div class="player" style="left:50%;top:84%;"><div class="badge">9</div><div class="pname">T. Rodríguez</div></div>
+          </div>
+          <div class="tabbar">
+            <div class="tb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l9 8h-3v9h-4v-6h-4v6H6v-9H3z"/></svg>Home</div>
+            <div class="tb on"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18v3H3zM3 11h18v3H3zM3 17h18v3H3z" opacity=".0"/><rect x="3" y="6" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>Scores</div>
+            <div class="tb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 8l6 4-6 4z"/></svg>Watch</div>
+            <div class="tb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10v2c2 0 4 2 4 4s-2 4-4 4v3a5 5 0 11-10 0V12c-2 0-4-2-4-4s2-4 4-4z"/></svg>Games</div>
+            <div class="tb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>More</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─────────────── VARIANT 2 — Portrait, goal at BOTTOM ─────────────── -->
+      <div class="v">
+        <div class="v-head">
+          <span class="v-tag">Variant 2 · Portrait · Goal at bottom</span>
+          <div class="v-title">Attacking view — they line up at the bottom, kick upward toward midfield</div>
+          <div class="v-sub">Mirror of V1. Half-circle at top, defenders at bottom, striker reaches the halfway line.</div>
+        </div>
+        <div class="phone">
+          <div class="strip">
+            <div class="strip-back">‹</div>
+            <div class="strip-pill on"><span class="flag fg-pa"></span>2:00 PM<span class="flag fg-en"></span></div>
+            <div class="strip-pill"><span class="flag fg-hr"></span>2:00 PM<span class="flag fg-gh"></span></div>
+            <div class="strip-pill"><span class="flag fg-co"></span>4:30 PM</div>
+          </div>
+          <div class="tabs"><div class="tab on">MATCH</div><div class="tab">ODDS</div></div>
+          <div class="heads">
+            <ul>
+              <li>England vs. Panama lineups, starting 11 for Group L game at MetLife Stadium</li>
+              <li>Panama vs England: prediction, kick-off time, team news, TV, live stream, h2h results, odds today</li>
+            </ul>
+          </div>
+          <div class="label">Formations</div>
+          <div class="toggle"><div class="t on">Panama</div><div class="t">England</div></div>
+          <!-- Same lineup, rotated 180° so goal sits at bottom -->
+          <div class="pitch-half flipped">
+            <div class="marks">
+              <div class="pbox"></div><div class="gbox"></div><div class="pspot"></div><div class="parc"></div>
+              <div class="goal"></div><div class="corner-l"></div><div class="corner-r"></div>
+              <div class="halfline"></div><div class="halfcirc"></div>
+            </div>
+            <div class="player" style="left:50%;top:9%;"><div class="badge alt">22</div><div class="pname">Mosquera</div></div>
+            <div class="player" style="left:14%;top:28%;"><div class="badge">23</div><div class="pname">Murillo</div></div>
+            <div class="player" style="left:37%;top:32%;"><div class="badge">4</div><div class="pname">Escobar</div></div>
+            <div class="player" style="left:63%;top:32%;"><div class="badge">3</div><div class="pname">Córdoba</div></div>
+            <div class="player" style="left:86%;top:28%;"><div class="badge">16</div><div class="pname">Andrade</div></div>
+            <div class="player" style="left:13%;top:58%;"><div class="badge">26</div><div class="pname">Gutiérrez</div></div>
+            <div class="player" style="left:35%;top:54%;"><div class="badge">7</div><div class="pname">JL Rodríguez</div></div>
+            <div class="player" style="left:50%;top:62%;"><div class="badge">14</div><div class="pname">Harvey</div></div>
+            <div class="player" style="left:65%;top:54%;"><div class="badge">11</div><div class="pname">Bárcenas</div></div>
+            <div class="player" style="left:87%;top:58%;"><div class="badge">6</div><div class="pname">C. Martínez</div></div>
+            <div class="player" style="left:50%;top:84%;"><div class="badge">9</div><div class="pname">T. Rodríguez</div></div>
+          </div>
+          <div class="tabbar">
+            <div class="tb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l9 8h-3v9h-4v-6h-4v6H6v-9H3z"/></svg>Home</div>
+            <div class="tb on"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="6" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>Scores</div>
+            <div class="tb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 8l6 4-6 4z"/></svg>Watch</div>
+            <div class="tb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10v2c2 0 4 2 4 4s-2 4-4 4v3a5 5 0 11-10 0V12c-2 0-4-2-4-4s2-4 4-4z"/></svg>Games</div>
+            <div class="tb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>More</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─────────────── VARIANT 3 — Landscape, goal on LEFT ─────────────── -->
+      <div class="v">
+        <div class="v-head">
+          <span class="v-tag">Variant 3 · Landscape · Goal on left</span>
+          <div class="v-title">Wide half — chip labels breathe, attack flows left → right</div>
+          <div class="v-sub">Goal at the left edge, half-circle bulging in from the right. Great for iPad and split-view.</div>
+        </div>
+        <div class="phone">
+          <div class="tabs" style="padding:8px 14px 0;">
+            <div class="tab on">PANAMA · 4-5-1</div>
+            <div class="tab">ENGLAND · 4-3-3</div>
+          </div>
+          <div class="pitch-side">
+            <div class="marks">
+              <div class="pbox-l"></div><div class="gbox-l"></div><div class="pspot-l"></div><div class="parc-l"></div>
+              <div class="goal-l"></div>
+              <div class="halfline-r"></div><div class="halfcirc-r"></div>
+            </div>
+            <!-- GK -->
+            <div class="player" style="left:7%;top:50%;"><div class="badge alt">22</div><div class="pname">Mosquera</div></div>
+            <!-- 4 DEF column -->
+            <div class="player" style="left:24%;top:12%;"><div class="badge">23</div><div class="pname">Murillo</div></div>
+            <div class="player" style="left:28%;top:38%;"><div class="badge">4</div><div class="pname">Escobar</div></div>
+            <div class="player" style="left:28%;top:62%;"><div class="badge">3</div><div class="pname">Córdoba</div></div>
+            <div class="player" style="left:24%;top:88%;"><div class="badge">16</div><div class="pname">Andrade</div></div>
+            <!-- Defensive mid (Harvey) sits behind the attacking-mid line -->
+            <div class="player" style="left:46%;top:50%;"><div class="badge">14</div><div class="pname">Harvey</div></div>
+            <!-- 4 wider mids -->
+            <div class="player" style="left:60%;top:12%;"><div class="badge">26</div><div class="pname">Gutiérrez</div></div>
+            <div class="player" style="left:62%;top:36%;"><div class="badge">7</div><div class="pname">JL Rodríguez</div></div>
+            <div class="player" style="left:62%;top:64%;"><div class="badge">11</div><div class="pname">Bárcenas</div></div>
+            <div class="player" style="left:60%;top:88%;"><div class="badge">6</div><div class="pname">C. Martínez</div></div>
+            <!-- ST -->
+            <div class="player" style="left:84%;top:50%;"><div class="badge">9</div><div class="pname">T. Rodríguez</div></div>
+          </div>
+          <div style="padding:0 18px 14px;font-size:12px;color:#9aa1ad;line-height:1.5;">
+            Attack direction: <b style="color:#fff;">left → right</b>. Toggle to England to flip the half (goal on the right, attack right → left).
+          </div>
+        </div>
+      </div>
+
+      <!-- ─────────────── VARIANT 4 — Both teams, mirrored full pitch ─────────────── -->
+      <div class="v">
+        <div class="v-head">
+          <span class="v-tag">Variant 4 · Both teams · Mirrored kickoff</span>
+          <div class="v-title">Pre-kickoff freeze — both teams in their own halves</div>
+          <div class="v-sub">No half-cropping: each team in their starting half, defending opposite goals. This is the moment before the whistle.</div>
+        </div>
+        <div class="phone">
+          <div class="strip" style="padding:0 6px 8px;">
+            <div class="strip-back">‹</div>
+            <div class="strip-pill on"><span class="flag fg-pa"></span>PAN vs ENG · 2:00 PM</div>
+          </div>
+          <div class="pitch-full">
+            <div class="marks">
+              <div class="pbox-t"></div><div class="gbox-t"></div>
+              <div class="pbox-b"></div><div class="gbox-b"></div>
+              <div class="halfline-c"></div><div class="circle"></div><div class="spot"></div>
+              <div class="team-divider"></div>
+              <div class="team-label t">⬇ PAN</div>
+              <div class="team-label b">ENG ⬆</div>
+            </div>
+            <!-- ── Panama (top half) — 4-5-1 attacking downward ── -->
+            <div class="player" style="left:50%;top:8%;"><div class="badge alt">22</div><div class="pname">Mosquera</div></div>
+            <div class="player" style="left:16%;top:16%;"><div class="badge">23</div><div class="pname">Murillo</div></div>
+            <div class="player" style="left:38%;top:18%;"><div class="badge">4</div><div class="pname">Escobar</div></div>
+            <div class="player" style="left:62%;top:18%;"><div class="badge">3</div><div class="pname">Córdoba</div></div>
+            <div class="player" style="left:84%;top:16%;"><div class="badge">16</div><div class="pname">Andrade</div></div>
+            <div class="player" style="left:14%;top:31%;"><div class="badge">26</div><div class="pname">Gutiérrez</div></div>
+            <div class="player" style="left:36%;top:30%;"><div class="badge">7</div><div class="pname">JL Rodríguez</div></div>
+            <div class="player" style="left:50%;top:33%;"><div class="badge">14</div><div class="pname">Harvey</div></div>
+            <div class="player" style="left:64%;top:30%;"><div class="badge">11</div><div class="pname">Bárcenas</div></div>
+            <div class="player" style="left:86%;top:31%;"><div class="badge">6</div><div class="pname">C. Martínez</div></div>
+            <div class="player" style="left:50%;top:44%;"><div class="badge">9</div><div class="pname">T. Rodríguez</div></div>
+            <!-- ── England (bottom half) — 4-3-3 attacking upward ── -->
+            <div class="player" style="left:50%;top:92%;"><div class="badge alt" style="background:#fff;color:#111;">1</div><div class="pname">Pickford</div></div>
+            <div class="player" style="left:84%;top:84%;"><div class="badge" style="background:#001746;">2</div><div class="pname">Walker</div></div>
+            <div class="player" style="left:62%;top:82%;"><div class="badge" style="background:#001746;">5</div><div class="pname">Stones</div></div>
+            <div class="player" style="left:38%;top:82%;"><div class="badge" style="background:#001746;">6</div><div class="pname">Maguire</div></div>
+            <div class="player" style="left:16%;top:84%;"><div class="badge" style="background:#001746;">3</div><div class="pname">Shaw</div></div>
+            <div class="player" style="left:30%;top:70%;"><div class="badge" style="background:#001746;">4</div><div class="pname">Rice</div></div>
+            <div class="player" style="left:50%;top:67%;"><div class="badge" style="background:#001746;">10</div><div class="pname">Bellingham</div></div>
+            <div class="player" style="left:70%;top:70%;"><div class="badge" style="background:#001746;">8</div><div class="pname">Foden</div></div>
+            <div class="player" style="left:18%;top:57%;"><div class="badge" style="background:#001746;">11</div><div class="pname">Saka</div></div>
+            <div class="player" style="left:50%;top:54%;"><div class="badge" style="background:#001746;">9</div><div class="pname">Kane</div></div>
+            <div class="player" style="left:82%;top:57%;"><div class="badge" style="background:#001746;">7</div><div class="pname">Sterling</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="legend">
+      <b>How to read these:</b> the half-circle at the centerline tells you which way the team attacks. Variants 1 and 2 are the closest to the ESPN screenshot's vertical layout — V1 puts the team's goal at the top (familiar from defensive replays), V2 flips it (attacking up the field, which reads more intuitively). V3 is for wider devices. V4 is the bonus — no half is hidden, but each team is in its starting half, like watching from the stands two seconds before kickoff.
+    </div>
+
+    <div class="foot">
+      <a href="mockups.html">← All mockups</a> &nbsp;·&nbsp;
+      <a href="mockup-formations.html">ESPN-style full pitch (existing)</a> &nbsp;·&nbsp;
+      <a href="mockup-lineups.html">Full-time lineups w/ goals & cards</a>
+    </div>
+  </div>
+</body>
+</html>
