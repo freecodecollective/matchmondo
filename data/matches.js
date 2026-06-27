@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-27 02:20 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-06-27 02:52 UTC by resolve-teams patch
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -969,7 +969,7 @@ window.WC_MATCHES = [
     "stage": "Round of 32",
     "group": null,
     "home": "Germany",
-    "away": "3ABCDF",
+    "away": "Paraguay",
     "venue": "Gillette Stadium",
     "city": "Foxborough (Boston), MA",
     "tv": "FOX · Telemundo (ES)",
@@ -995,7 +995,7 @@ window.WC_MATCHES = [
     "stage": "Round of 32",
     "group": null,
     "home": "Côte d'Ivoire",
-    "away": "2I",
+    "away": "Norway",
     "venue": "AT&T Stadium",
     "city": "Arlington (Dallas), TX",
     "tv": "FOX · Telemundo (ES)",
@@ -1007,8 +1007,8 @@ window.WC_MATCHES = [
     "utc": "2026-06-30T21:00:00Z",
     "stage": "Round of 32",
     "group": null,
-    "home": "1I",
-    "away": "3CDFGH",
+    "home": "France",
+    "away": "Sweden",
     "venue": "MetLife Stadium",
     "city": "East Rutherford, NJ",
     "tv": "FOX · Telemundo (ES)",
@@ -1072,7 +1072,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-02T19:00:00Z",
     "stage": "Round of 32",
     "group": null,
-    "home": "1H",
+    "home": "Spain",
     "away": "2J",
     "venue": "SoFi Stadium",
     "city": "Inglewood (Los Angeles), CA",
@@ -1125,7 +1125,7 @@ window.WC_MATCHES = [
     "stage": "Round of 32",
     "group": null,
     "home": "Argentina",
-    "away": "2H",
+    "away": "Cabo Verde",
     "venue": "Hard Rock Stadium",
     "city": "Miami Gardens, FL",
     "tv": "FOX · Telemundo (ES)",

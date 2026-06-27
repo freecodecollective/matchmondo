@@ -55,25 +55,100 @@ def parse_espn_date(s: str) -> datetime | None:
     return None
 
 
+import re
+
+_PLACEHOLDER_RE = re.compile(
+    r"^[123][A-L]+$"                    # our compact codes: 1I, 2H, 3ABCDF
+    r"|^To be announced$"
+    r"|Group .+ Winner$"                # ESPN: "Group L Winner"
+    r"|Group .+ \d+\w* Place$"          # ESPN: "Group J 2nd Place"
+    r"|Third Place Group"               # ESPN: "Third Place Group C/E/F/H/I"
+    r"|Round of \d+ .+ Winner$"         # ESPN: "Round of 32 1 Winner"
+    r"|Quarterfinal .+ Winner$"
+    r"|Semifinal .+ (Winner|Loser)$"
+)
+
+
+def _is_placeholder(name: str) -> bool:
+    return bool(_PLACEHOLDER_RE.search(name))
+
+
+def _espn_to_our_name(espn_name: str) -> str:
+    return ESPN_TEAM_MAP.get(espn_name, espn_name)
+
+
+def resolve_teams(matches: list, all_events: list) -> int:
+    """Replace placeholder team names (1I, 3ABCDF, etc.) with real names from ESPN."""
+    resolved = 0
+    for event in all_events:
+        comps = event.get("competitions", [])
+        if not comps:
+            continue
+        comp = comps[0]
+        competitors = comp.get("competitors", [])
+        home = next((c for c in competitors if c.get("homeAway") == "home"), None)
+        away = next((c for c in competitors if c.get("homeAway") == "away"), None)
+        if not home or not away:
+            continue
+
+        espn_home = _espn_to_our_name(home.get("team", {}).get("displayName", ""))
+        espn_away = _espn_to_our_name(away.get("team", {}).get("displayName", ""))
+
+        kickoff = parse_espn_date(event.get("date", ""))
+        if not kickoff:
+            continue
+
+        idx = match_resolver.resolve(matches, espn_home, espn_away, kickoff.timestamp())
+        if idx is None:
+            continue
+        m = matches[idx]
+        changed = False
+        if _is_placeholder(m["home"]) and not _is_placeholder(espn_home):
+            print(f"  RESOLVE: Match {m['n']} home {m['home']} -> {espn_home}")
+            m["home"] = espn_home
+            changed = True
+        if _is_placeholder(m["away"]) and not _is_placeholder(espn_away):
+            print(f"  RESOLVE: Match {m['n']} away {m['away']} -> {espn_away}")
+            m["away"] = espn_away
+            changed = True
+        if changed:
+            resolved += 1
+    return resolved
+
+
 def main():
     with open(MATCHES_JSON) as f:
         matches = json.load(f)
 
     now = datetime.now(timezone.utc)
-    dates = [
+
+    # Collect ESPN events: yesterday/today/tomorrow for scores, plus all
+    # knockout dates (June 28 – July 19) for resolving placeholder teams.
+    knockout_matches = [m for m in matches if m["n"] >= 73]
+    ko_dates = set()
+    for m in knockout_matches:
+        dt = datetime.strptime(m["utc"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+        ko_dates.add(dt.strftime("%Y%m%d"))
+
+    score_dates = {
         (now - timedelta(days=1)).strftime("%Y%m%d"),
         now.strftime("%Y%m%d"),
         (now + timedelta(days=1)).strftime("%Y%m%d"),
-    ]
+    }
+
+    all_dates = score_dates | ko_dates
 
     all_events = []
     seen_ids = set()
-    for d in dates:
+    for d in sorted(all_dates):
         for e in fetch_espn(d):
             eid = e.get("id", "")
             if eid not in seen_ids:
                 seen_ids.add(eid)
                 all_events.append(e)
+
+    teams_resolved = resolve_teams(matches, all_events)
+    print(f"ESPN team resolve: {teams_resolved} matches updated")
 
     patched = 0
     for event in all_events:
@@ -123,7 +198,7 @@ def main():
                 print(f"  PATCH: Match {matched_m['n']} {matched_m['home']} vs {matched_m['away']} -> {home_score}-{away_score} ({tag})")
                 patched += 1
 
-    if patched:
+    if patched or teams_resolved:
         body = json.dumps(matches, indent=2, ensure_ascii=False)
         MATCHES_JSON.write_text(body + "\n")
         MATCHES_JS.write_text(
