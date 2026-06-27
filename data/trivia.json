@@ -7768,8 +7768,7 @@
       ],
       "answer": 0,
       "explanation": "True! Uruguay hosted and won the inaugural 1930 edition, defeating Argentina 4-2 in the final at the Estadio Centenario in Montevideo before approximately 93,000 spectators. With a population of under 2 million at the time, Uruguay remains one of the smallest nations ever to win the tournament.",
-      "type": "true_false",
-      "media": "https://www.youtube.com/watch?v=3gELBavbzWQ"
+      "type": "true_false"
     },
     {
       "id": "tf-no-cards-1930",
