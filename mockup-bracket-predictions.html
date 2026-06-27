@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bracket predictions mockup</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --bg:#eef1ef; --card:#fff; --ink:#1c1c1e; --sub:#6b6f76; --line:rgba(0,0,0,.10);
+    --green:#1f7d45; --green-l:#2f9e5b; --gold:#D4A017; --purple:#7c3aed;
+  }
+  body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',sans-serif;
+    background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+  .banner{background:linear-gradient(135deg,#1f7d45,#2f9e5b);color:#fff;padding:36px 24px 28px;text-align:center;}
+  .banner h1{font-size:24px;font-weight:800;}
+  .banner p{font-size:14px;opacity:.95;margin-top:8px;max-width:560px;margin:8px auto 0;line-height:1.5;}
+  .wrap{max-width:470px;margin:0 auto;padding:0 18px;}
+  .note{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:-16px;
+    box-shadow:0 3px 16px rgba(0,0,0,.07);font-size:13px;color:var(--sub);line-height:1.5;}
+  .note b{color:var(--ink);}
+
+  .opt{margin-top:30px;}
+  .opt-head{display:flex;align-items:baseline;gap:8px;margin:0 4px 4px;}
+  .opt-tag{font-size:12px;font-weight:800;color:#fff;background:var(--green-l);padding:2px 9px;border-radius:20px;}
+  .opt-name{font-size:16px;font-weight:700;}
+  .opt-desc{font-size:12.5px;color:var(--sub);margin:0 4px 12px;line-height:1.45;}
+  .pros{font-size:11.5px;color:var(--sub);margin:9px 4px 0;line-height:1.5;}
+  .pros b{color:var(--green);}
+
+  .screen{background:var(--card);border-radius:18px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,.08);border:1px solid var(--line);}
+
+  /* Segmented control */
+  .seg{display:flex;gap:3px;background:#f1f1f0;border-radius:12px;padding:3px;margin-bottom:14px;}
+  .seg-btn{flex:1;border:none;background:none;font-family:inherit;font-size:12px;font-weight:700;
+    color:var(--sub);padding:7px 6px;border-radius:9px;cursor:pointer;text-align:center;}
+  .seg-btn.on{background:var(--green);color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.15);}
+
+  /* Toggle row */
+  .toggle-row{display:flex;align-items:center;gap:8px;margin-bottom:12px;padding:0 2px;}
+  .toggle-pill{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:var(--sub);
+    padding:5px 12px;border-radius:20px;background:#f1f1f0;cursor:pointer;border:1.5px solid transparent;transition:.2s;}
+  .toggle-pill.on{background:rgba(124,58,237,.1);color:var(--purple);border-color:var(--purple);}
+  .toggle-pill .dot{width:7px;height:7px;border-radius:50%;background:currentColor;}
+
+  /* Bracket */
+  .hscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px dashed var(--line);border-radius:12px;
+    padding:10px;background:#fafbfa;position:relative;}
+  .bracket{display:flex;gap:0;min-width:max-content;align-items:flex-start;}
+  .bcol{display:flex;flex-direction:column;justify-content:space-around;min-width:130px;}
+  .bcol-h{font-size:9.5px;font-weight:800;letter-spacing:.4px;color:var(--sub);text-transform:uppercase;
+    text-align:center;margin-bottom:6px;}
+
+  /* Bracket match card */
+  .bmatch{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;margin:4px 0;}
+  .brow{display:flex;align-items:center;gap:5px;padding:5px 7px;font-size:11px;cursor:pointer;
+    transition:background .15s;position:relative;}
+  .brow:hover{background:#f8f9f8;}
+  .brow + .brow{border-top:1px solid #f0f0ef;}
+  .brow img{width:18px;height:12px;border-radius:1px;object-fit:cover;box-shadow:0 0 0 .5px rgba(0,0,0,.12);}
+  .brow .nm{font-weight:600;flex:1;font-size:11px;}
+  .brow .sc{font-weight:800;font-variant-numeric:tabular-nums;font-size:11px;}
+  .brow.tbd .nm{color:var(--sub);font-weight:500;font-style:italic;}
+  .brow.lose{opacity:.45;} .brow.win .sc{color:var(--green);}
+
+  /* Prediction overlay on bracket row */
+  .brow.picked{background:rgba(124,58,237,.06);}
+  .brow.picked .nm{color:var(--purple);font-weight:700;}
+  .brow .pick-dot{width:6px;height:6px;border-radius:50%;background:var(--purple);margin-left:auto;display:none;}
+  .brow.picked .pick-dot{display:block;}
+
+  /* Connector lines */
+  .conn{width:22px;display:flex;flex-direction:column;justify-content:space-around;min-height:80px;}
+  .conn svg{width:100%;}
+
+  /* Score label */
+  .score-strip{display:flex;align-items:center;justify-content:center;gap:8px;margin:14px 0 6px;
+    padding:8px 14px;background:linear-gradient(135deg,rgba(124,58,237,.08),rgba(124,58,237,.04));
+    border-radius:10px;border:1px solid rgba(124,58,237,.15);}
+  .score-strip .lbl{font-size:11px;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:.3px;}
+  .score-strip .val{font-size:22px;font-weight:900;color:var(--purple);}
+  .score-strip .max{font-size:13px;font-weight:600;color:var(--sub);}
+
+  .scrollhint{font-size:10.5px;color:#b0b4b9;text-align:center;margin-top:6px;font-style:italic;}
+
+  /* Bottom card: prediction summary */
+  .pred-summary{margin-top:14px;padding:14px;background:#fff;border-radius:12px;border:1px solid var(--line);}
+  .pred-summary h3{font-size:14px;font-weight:700;margin-bottom:8px;}
+  .pred-row{display:flex;align-items:center;gap:8px;padding:5px 0;font-size:12px;}
+  .pred-row .round{font-weight:700;color:var(--sub);min-width:70px;}
+  .pred-row .pick-team{display:flex;align-items:center;gap:5px;font-weight:600;}
+  .pred-row img{width:18px;height:12px;border-radius:1px;object-fit:cover;box-shadow:0 0 0 .5px rgba(0,0,0,.12);}
+  .pred-row .status{margin-left:auto;font-weight:700;font-size:11px;padding:2px 8px;border-radius:10px;}
+  .pred-row .status.correct{background:#e8f5e9;color:var(--green);}
+  .pred-row .status.pending{background:#f3f0ff;color:var(--purple);}
+  .pred-row .status.wrong{background:#fde8e8;color:#d32f2f;}
+
+  /* Share button */
+  .share-btn{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:12px;
+    padding:10px;background:var(--purple);color:#fff;border:none;border-radius:10px;
+    font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;width:100%;}
+  .share-btn:hover{opacity:.9;}
+
+  /* Option B: inline pick in standard bracket card */
+  .bmatch.predict-mode{border-color:rgba(124,58,237,.3);box-shadow:0 0 0 2px rgba(124,58,237,.1);}
+  .bmatch.predict-mode .brow{cursor:pointer;}
+  .bmatch.locked{border-color:var(--line);}
+  .bmatch.locked .brow{cursor:default;}
+  .bmatch.locked .brow:hover{background:transparent;}
+
+  /* result card */
+  .result-card{display:flex;align-items:center;gap:6px;padding:3px 7px;font-size:10px;font-weight:600;
+    border-top:1px solid #f0f0ef;color:var(--sub);}
+  .result-card .check{color:var(--green);font-size:13px;}
+  .result-card .x{color:#d32f2f;font-size:13px;}
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <h1>Bracket predictions</h1>
+  <p>Pick winners through each knockout round. Tap a team to advance them — your picks cascade forward through the bracket.</p>
+</div>
+
+<div class="wrap">
+  <div class="note">
+    <b>Two approaches</b> for adding predictions to the bracket view.
+    Both use the existing prediction backend (Firestore + device identity).
+  </div>
+
+  <!-- ===== OPTION A ===== -->
+  <div class="opt">
+    <div class="opt-head">
+      <span class="opt-tag">A</span>
+      <span class="opt-name">Predict mode toggle</span>
+    </div>
+    <div class="opt-desc">
+      A toggle pill switches the bracket into prediction mode. Tap a team row to pick them as the winner.
+      Your pick cascades into the next round. Purple highlight shows your selections.
+    </div>
+
+    <div class="screen">
+      <div class="seg">
+        <div class="seg-btn on">Brackets</div>
+        <div class="seg-btn">Players</div>
+        <div class="seg-btn">Groups</div>
+      </div>
+
+      <div class="toggle-row">
+        <div class="toggle-pill on" onclick="this.classList.toggle('on')">
+          <span class="dot"></span> Predict mode
+        </div>
+      </div>
+
+      <div class="score-strip">
+        <span class="lbl">Your bracket score</span>
+        <span class="val">12</span>
+        <span class="max">/ 31 pts</span>
+      </div>
+
+      <div class="hscroll" style="margin-top:10px;">
+        <div class="bracket">
+          <!-- R32 column -->
+          <div class="bcol">
+            <div class="bcol-h">Round of 32</div>
+            <!-- M74 -->
+            <div class="bmatch predict-mode">
+              <div class="brow picked" onclick="togglePick(this)">
+                <img src="https://flagcdn.com/w40/de.png" alt=""> <span class="nm">Germany</span>
+                <span class="pick-dot"></span>
+              </div>
+              <div class="brow" onclick="togglePick(this)">
+                <img src="https://flagcdn.com/w40/py.png" alt=""> <span class="nm">Paraguay</span>
+              </div>
+            </div>
+            <!-- M77 -->
+            <div class="bmatch predict-mode">
+              <div class="brow picked" onclick="togglePick(this)">
+                <img src="https://flagcdn.com/w40/fr.png" alt=""> <span class="nm">France</span>
+                <span class="pick-dot"></span>
+              </div>
+              <div class="brow" onclick="togglePick(this)">
+                <img src="https://flagcdn.com/w40/se.png" alt=""> <span class="nm">Sweden</span>
+              </div>
+            </div>
+            <!-- M73 -->
+            <div class="bmatch predict-mode">
+              <div class="brow" onclick="togglePick(this)">
+                <img src="https://flagcdn.com/w40/za.png" alt=""> <span class="nm">South Africa</span>
+              </div>
+              <div class="brow picked" onclick="togglePick(this)">
+                <img src="https://flagcdn.com/w40/ca.png" alt=""> <span class="nm">Canada</span>
+                <span class="pick-dot"></span>
+              </div>
+            </div>
+            <!-- M75 -->
+            <div class="bmatch predict-mode">
+              <div class="brow picked" onclick="togglePick(this)">
+                <img src="https://flagcdn.com/w40/nl.png" alt=""> <span class="nm">Netherlands</span>
+                <span class="pick-dot"></span>
+              </div>
+              <div class="brow" onclick="togglePick(this)">
+                <img src="https://flagcdn.com/w40/ma.png" alt=""> <span class="nm">Morocco</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Connectors -->
+          <div style="width:22px;display:flex;flex-direction:column;justify-content:space-around;">
+            <svg viewBox="0 0 22 80" style="height:80px;"><line x1="0" y1="20" x2="11" y2="20" stroke="#ccc" stroke-width="1.5"/><line x1="0" y1="60" x2="11" y2="60" stroke="#ccc" stroke-width="1.5"/><line x1="11" y1="20" x2="11" y2="60" stroke="#ccc" stroke-width="1.5"/><line x1="11" y1="40" x2="22" y2="40" stroke="#ccc" stroke-width="1.5"/></svg>
+            <svg viewBox="0 0 22 80" style="height:80px;"><line x1="0" y1="20" x2="11" y2="20" stroke="#ccc" stroke-width="1.5"/><line x1="0" y1="60" x2="11" y2="60" stroke="#ccc" stroke-width="1.5"/><line x1="11" y1="20" x2="11" y2="60" stroke="#ccc" stroke-width="1.5"/><line x1="11" y1="40" x2="22" y2="40" stroke="#ccc" stroke-width="1.5"/></svg>
+          </div>
+
+          <!-- R16 column (populated by picks) -->
+          <div class="bcol">
+            <div class="bcol-h">Round of 16</div>
+            <!-- Populated from R32 picks -->
+            <div class="bmatch predict-mode">
+              <div class="brow picked" onclick="togglePick(this)">
+                <img src="https://flagcdn.com/w40/de.png" alt=""> <span class="nm">Germany</span>
+                <span class="pick-dot"></span>
+              </div>
+              <div class="brow" onclick="togglePick(this)">
+                <img src="https://flagcdn.com/w40/fr.png" alt=""> <span class="nm">France</span>
+              </div>
+            </div>
+            <div class="bmatch predict-mode">
+              <div class="brow" onclick="togglePick(this)">
+                <img src="https://flagcdn.com/w40/ca.png" alt=""> <span class="nm">Canada</span>
+              </div>
+              <div class="brow picked" onclick="togglePick(this)">
+                <img src="https://flagcdn.com/w40/nl.png" alt=""> <span class="nm">Netherlands</span>
+                <span class="pick-dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Connectors -->
+          <div style="width:22px;display:flex;flex-direction:column;justify-content:center;">
+            <svg viewBox="0 0 22 160" style="height:160px;"><line x1="0" y1="40" x2="11" y2="40" stroke="#ccc" stroke-width="1.5"/><line x1="0" y1="120" x2="11" y2="120" stroke="#ccc" stroke-width="1.5"/><line x1="11" y1="40" x2="11" y2="120" stroke="#ccc" stroke-width="1.5"/><line x1="11" y1="80" x2="22" y2="80" stroke="#ccc" stroke-width="1.5"/></svg>
+          </div>
+
+          <!-- QF column -->
+          <div class="bcol">
+            <div class="bcol-h">Quarter-final</div>
+            <div class="bmatch predict-mode" style="margin-top:60px;">
+              <div class="brow picked" onclick="togglePick(this)">
+                <img src="https://flagcdn.com/w40/de.png" alt=""> <span class="nm">Germany</span>
+                <span class="pick-dot"></span>
+              </div>
+              <div class="brow" onclick="togglePick(this)">
+                <img src="https://flagcdn.com/w40/nl.png" alt=""> <span class="nm">Netherlands</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scrollhint">Swipe to see every round →</div>
+    </div>
+
+    <div class="pros">
+      <b>✓</b> Same bracket view, just adds a mode toggle.<br>
+      <b>✓</b> Purple picks are visually distinct from actual results (green).<br>
+      <b>✓</b> Picks cascade — choosing Germany in R32 fills Germany into R16 automatically.<br>
+      <b>✓</b> Score strip tracks points as results come in.<br>
+      <b>✓</b> Toggle off to see the real bracket without prediction clutter.
+    </div>
+  </div>
+
+  <!-- ===== OPTION B ===== -->
+  <div class="opt">
+    <div class="opt-head">
+      <span class="opt-tag">B</span>
+      <span class="opt-name">Inline picks with results</span>
+    </div>
+    <div class="opt-desc">
+      Once a match has a result, show whether your pick was right or wrong directly on the card.
+      Unpicked matches glow purple to prompt a pick before kickoff. Locked after kickoff.
+    </div>
+
+    <div class="screen">
+      <div class="seg">
+        <div class="seg-btn on">Brackets</div>
+        <div class="seg-btn">Players</div>
+        <div class="seg-btn">Groups</div>
+      </div>
+
+      <div class="toggle-row">
+        <div class="toggle-pill on">
+          <span class="dot"></span> Predict mode
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <!-- Completed match: correct pick -->
+        <div style="font-size:10px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.4px;padding:0 2px;">Round of 32 · Completed</div>
+        <div class="bmatch locked">
+          <div class="brow win">
+            <img src="https://flagcdn.com/w40/de.png" alt=""> <span class="nm">Germany</span>
+            <span class="sc">3</span>
+          </div>
+          <div class="brow lose">
+            <img src="https://flagcdn.com/w40/py.png" alt=""> <span class="nm">Paraguay</span>
+            <span class="sc">1</span>
+          </div>
+          <div class="result-card">
+            <span class="check">✓</span> You picked Germany — correct! <span style="margin-left:auto;color:var(--green);font-weight:800;">+3 pts</span>
+          </div>
+        </div>
+
+        <!-- Completed match: wrong pick -->
+        <div class="bmatch locked">
+          <div class="brow lose">
+            <img src="https://flagcdn.com/w40/za.png" alt=""> <span class="nm">South Africa</span>
+            <span class="sc">0</span>
+          </div>
+          <div class="brow win">
+            <img src="https://flagcdn.com/w40/ca.png" alt=""> <span class="nm">Canada</span>
+            <span class="sc">2</span>
+          </div>
+          <div class="result-card">
+            <span class="x">✗</span> You picked South Africa
+          </div>
+        </div>
+
+        <!-- Upcoming: picked -->
+        <div style="font-size:10px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.4px;padding:8px 2px 0;">Round of 32 · Upcoming</div>
+        <div class="bmatch predict-mode">
+          <div class="brow picked" onclick="togglePick(this)">
+            <img src="https://flagcdn.com/w40/fr.png" alt=""> <span class="nm">France</span>
+            <span class="pick-dot"></span>
+          </div>
+          <div class="brow" onclick="togglePick(this)">
+            <img src="https://flagcdn.com/w40/se.png" alt=""> <span class="nm">Sweden</span>
+          </div>
+        </div>
+
+        <!-- Upcoming: not yet picked (glowing border) -->
+        <div class="bmatch predict-mode" style="border-color:var(--purple);box-shadow:0 0 0 2px rgba(124,58,237,.15);">
+          <div class="brow" onclick="togglePick(this)">
+            <img src="https://flagcdn.com/w40/nl.png" alt=""> <span class="nm">Netherlands</span>
+          </div>
+          <div class="brow" onclick="togglePick(this)">
+            <img src="https://flagcdn.com/w40/ma.png" alt=""> <span class="nm">Morocco</span>
+          </div>
+        </div>
+        <div style="font-size:10.5px;color:var(--purple);font-weight:600;padding:0 2px;margin-top:-4px;">
+          ↑ Tap a team to make your pick
+        </div>
+      </div>
+    </div>
+
+    <div class="pros">
+      <b>✓</b> Results and picks live together — no separate predictions page needed.<br>
+      <b>✓</b> Unpicked matches glow to prompt action before kickoff.<br>
+      <b>✓</b> Points shown per match so you can see where you scored.<br>
+      <b>✓</b> Locked after kickoff — no late edits.
+    </div>
+  </div>
+
+  <!-- ===== SCORING ===== -->
+  <div class="opt">
+    <div class="opt-head">
+      <span class="opt-tag">★</span>
+      <span class="opt-name">Scoring &amp; summary</span>
+    </div>
+    <div class="opt-desc">
+      Below the bracket (or as a pull-up sheet), a summary card shows your path to the final,
+      your score, and a share button.
+    </div>
+
+    <div class="screen">
+      <div class="score-strip">
+        <span class="lbl">Bracket score</span>
+        <span class="val">18</span>
+        <span class="max">/ 31 pts</span>
+      </div>
+
+      <div class="pred-summary">
+        <h3>Your picks</h3>
+        <div class="pred-row">
+          <span class="round">R32</span>
+          <span class="pick-team"><img src="https://flagcdn.com/w40/de.png" alt=""> Germany</span>
+          <span class="status correct">✓ Correct</span>
+        </div>
+        <div class="pred-row">
+          <span class="round">R32</span>
+          <span class="pick-team"><img src="https://flagcdn.com/w40/fr.png" alt=""> France</span>
+          <span class="status pending">Pending</span>
+        </div>
+        <div class="pred-row">
+          <span class="round">R32</span>
+          <span class="pick-team"><img src="https://flagcdn.com/w40/za.png" alt=""> S. Africa</span>
+          <span class="status wrong">✗ Wrong</span>
+        </div>
+        <div class="pred-row">
+          <span class="round">R16</span>
+          <span class="pick-team"><img src="https://flagcdn.com/w40/de.png" alt=""> Germany</span>
+          <span class="status pending">Pending</span>
+        </div>
+        <div class="pred-row">
+          <span class="round">QF</span>
+          <span class="pick-team"><img src="https://flagcdn.com/w40/de.png" alt=""> Germany</span>
+          <span class="status pending">Pending</span>
+        </div>
+        <div class="pred-row">
+          <span class="round">Winner</span>
+          <span class="pick-team"><img src="https://flagcdn.com/w40/de.png" alt=""> Germany 🏆</span>
+          <span class="status pending">Pending</span>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;padding:10px 12px;background:#f8f7ff;border-radius:10px;border:1px solid rgba(124,58,237,.1);">
+        <div style="font-size:12px;font-weight:700;color:var(--purple);margin-bottom:4px;">Scoring</div>
+        <div style="font-size:11px;color:var(--sub);line-height:1.6;">
+          R32 correct pick: <b style="color:var(--ink);">1 pt</b><br>
+          R16 correct pick: <b style="color:var(--ink);">2 pts</b><br>
+          QF correct pick: <b style="color:var(--ink);">3 pts</b><br>
+          SF correct pick: <b style="color:var(--ink);">4 pts</b><br>
+          Final correct pick: <b style="color:var(--ink);">5 pts</b><br>
+          Champion correct: <b style="color:var(--ink);">8 pts</b>
+        </div>
+      </div>
+
+      <button class="share-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 12v7a2 2 0 002 2h12a2 2 0 002-2v-7M16 6l-4-4-4 4M12 2v13"/></svg>
+        Share my bracket
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== RECOMMENDATION ===== -->
+  <div class="opt" style="margin-bottom:40px;">
+    <div class="opt-head">
+      <span class="opt-tag" style="background:var(--purple);">Rec</span>
+      <span class="opt-name">Recommended approach</span>
+    </div>
+    <div class="opt-desc" style="line-height:1.55;">
+      <b>Combine A + B:</b> The "Predict mode" toggle (Option A) turns the existing bracket into a pick-your-winner interface.
+      Picks cascade forward. Once matches finish, the result cards (Option B) appear inline showing ✓/✗ and points.
+      The scoring summary sits below the bracket.
+      <br><br>
+      <b>Implementation notes:</b><br>
+      • Reuse existing <code>PredictionStore</code> + Firestore backend — just add bracket picks alongside match-level picks.<br>
+      • Bracket picks are a separate concept from exact-score picks in the Fun→Predictions tab (those give H/D/A + score; these just pick the winner).<br>
+      • Lock picks per match at kickoff time (same logic as current predictions).<br>
+      • Purple styling keeps picks visually separate from green actual results.
+    </div>
+  </div>
+</div>
+
+<script>
+function togglePick(el) {
+  const card = el.closest('.bmatch');
+  if (card.classList.contains('locked')) return;
+  const rows = card.querySelectorAll('.brow');
+  rows.forEach(r => {
+    r.classList.remove('picked');
+    const dot = r.querySelector('.pick-dot');
+    if (dot) dot.style.display = 'none';
+  });
+  el.classList.add('picked');
+  let dot = el.querySelector('.pick-dot');
+  if (!dot) {
+    dot = document.createElement('span');
+    dot.className = 'pick-dot';
+    el.appendChild(dot);
+  }
+  dot.style.display = 'block';
+}
+</script>
+</body>
+</html>
