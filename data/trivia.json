@@ -7849,7 +7849,7 @@
       "answer": 0,
       "explanation": "True! The 2022 edition made history by including female match officials for the first time. France's Stéphanie Frappart became the first woman to referee a men's tournament match (Costa Rica vs Germany), while Rwanda's Salima Mukansanga and Japan's Yoshimi Yamashita also served as officials during the tournament.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-all-confederations-semis",
