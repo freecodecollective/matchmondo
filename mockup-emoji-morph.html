@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MatchMondo · Emoji Morph Lab</title>
+<meta name="description" content="Eleven emoji-morph variants of the MatchMondo mark with controls for rotation speed, bouncing, and bounce speed.">
+<style>
+  :root{
+    --t: 9s;             /* rotation cycle (controls each variant's main animation) */
+    --bounce-t: 1.2s;    /* bounce cycle (controls the global up-down bounce when on) */
+    --pitch-900:#081711;
+    --pitch-800:#0c2118;
+    --pitch-700:#113125;
+    --line:#1d4636;
+    --grass:#39d56b;
+    --grass-dim:#2aa455;
+    --ink:#0a1410;
+    --amber-2:#f4c64a;
+    --fg:#dcefe4;
+    --fg-dim:#7fa593;
+    --mono: ui-monospace, "SF Mono", "JetBrains Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    --sans: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--fg);
+    background:radial-gradient(120% 80% at 50% -10%, #0e2a1f 0%, var(--pitch-900) 55%, #050d09 100%);
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:""; position:fixed; inset:0; pointer-events:none; opacity:.5;
+    background:
+      linear-gradient(transparent 0, transparent calc(100% - 1px), rgba(57,213,107,.05) 100%),
+      repeating-linear-gradient(90deg, rgba(57,213,107,.035) 0 2px, transparent 2px 96px);
+  }
+  .wrap{max-width:1180px; margin:0 auto; padding:40px 24px 72px; position:relative}
+
+  /* ───── Header ───── */
+  header{
+    display:flex; flex-wrap:wrap; align-items:flex-end; gap:24px 32px;
+    border-bottom:1px solid var(--line); padding-bottom:26px; margin-bottom:36px;
+  }
+  .wordmark h1{ margin:0; font-size:clamp(26px,4.4vw,40px); font-weight:800; letter-spacing:-.02em }
+  .wordmark h1 .mondo{color:var(--grass)}
+  .eyebrow{
+    font-family:var(--mono); font-size:11px; letter-spacing:.34em; text-transform:uppercase;
+    color:var(--grass); margin:0 0 8px;
+  }
+  .lede{ margin:8px 0 0; max-width:64ch; color:var(--fg-dim); font-size:15px; line-height:1.55 }
+
+  /* ───── Controls panel ───── */
+  .controls{
+    margin-left:auto; display:flex; flex-wrap:wrap; align-items:center; gap:14px 20px;
+    background:rgba(8,23,17,.7); border:1px solid var(--line); border-radius:14px;
+    padding:14px 18px; backdrop-filter:blur(4px);
+  }
+  .control{ display:flex; flex-direction:column; gap:6px; min-width:120px }
+  .control .label{
+    font-family:var(--mono); font-size:10px; letter-spacing:.18em;
+    color:var(--fg-dim); text-transform:uppercase;
+  }
+  .control .row{ display:flex; align-items:center; gap:10px }
+  .btn{
+    font-family:var(--mono); font-size:12px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--ink); background:var(--grass); border:0; border-radius:9px;
+    padding:9px 14px; cursor:pointer; font-weight:700; transition:filter .15s, transform .05s;
+  }
+  .btn:hover{filter:brightness(1.08)}
+  .btn:active{transform:translateY(1px)}
+  .btn.toggle-off{ background:#1d4636; color:var(--fg) }
+  input[type=range]{ accent-color:var(--grass); width:128px; cursor:pointer }
+  .control .val{
+    font-family:var(--mono); font-size:12px; color:var(--fg); min-width:40px;
+  }
+
+  /* ───── Grid ───── */
+  .grid{
+    display:grid; gap:20px;
+    grid-template-columns:repeat(auto-fill, minmax(280px,1fr));
+  }
+  .card{
+    background:linear-gradient(180deg, var(--pitch-800), var(--pitch-700));
+    border:1px solid var(--line); border-radius:18px; padding:22px 22px 20px;
+    display:flex; flex-direction:column; gap:14px; position:relative; overflow:hidden;
+  }
+  .card .tag{ display:flex; align-items:baseline; gap:10px; font-family:var(--mono); }
+  .card .ver{
+    color:var(--ink); background:var(--amber-2); border-radius:6px;
+    font-size:11px; font-weight:700; letter-spacing:.08em; padding:3px 7px;
+  }
+  .card .name{font-size:13.5px; letter-spacing:.02em; color:var(--fg); font-weight:600}
+  .stage{
+    align-self:center; width:168px; height:168px; position:relative;
+    display:grid; place-items:center; margin:6px 0 2px;
+  }
+  .sphere{ width:160px; height:160px; position:relative }
+  .desc{font-family:var(--mono); font-size:11.5px; line-height:1.6; color:var(--fg-dim); margin:0}
+  .desc b{color:var(--grass); font-weight:600}
+
+  /* ───── Emoji size + bouncer wrapper ───── */
+  .v6 .emoji, .v6a .emoji, .v6b .emoji, .v6c .emoji, .v6d .emoji,
+  .v6e .emoji, .v6f .emoji, .v6g .emoji, .v6h .emoji, .v6i .emoji, .v6j .emoji{
+    position:absolute; inset:0; display:grid; place-items:center;
+    font-size:118px; line-height:1;
+  }
+  /* Wrapper that bounces when global bouncing is on. Composes with each
+     variant's own transform on the inner .emoji elements. */
+  .bouncer{ position:absolute; inset:0 }
+  body.bouncing .bouncer{
+    animation: globalBounce var(--bounce-t) ease-in-out infinite;
+  }
+  @keyframes globalBounce{
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-14px); }
+  }
+
+  /* ───── Per-variant animations ───── */
+
+  .v6 .e-ball  { animation: emBall  var(--t) ease-in-out infinite; }
+  .v6 .e-globe { animation: emGlobe var(--t) ease-in-out infinite; }
+  @keyframes emBall  { 0%,34% {opacity:1; transform:rotate(0) scale(1); filter:blur(0)} 50%,86% {opacity:0; transform:rotate(140deg) scale(.55); filter:blur(6px)} 100% {opacity:1; transform:rotate(360deg) scale(1); filter:blur(0)} }
+  @keyframes emGlobe { 0%,34% {opacity:0; transform:rotate(-140deg) scale(.55); filter:blur(6px)} 50%,86% {opacity:1; transform:rotate(0) scale(1); filter:blur(0)} 100% {opacity:0; transform:rotate(140deg) scale(.55); filter:blur(6px)} }
+
+  .v6a .e-ball  { animation: v6a-ball  var(--t) ease-in-out infinite; }
+  .v6a .e-globe { animation: v6a-globe var(--t) ease-in-out infinite; }
+  @keyframes v6a-ball  { 0%,35% {opacity:1} 50%,85% {opacity:0} 100% {opacity:1} }
+  @keyframes v6a-globe { 0%,35% {opacity:0} 50%,85% {opacity:1} 100% {opacity:0} }
+
+  .v6b .e-ball  { animation: v6b-ball  var(--t) linear infinite; }
+  .v6b .e-globe { animation: v6b-globe var(--t) linear infinite; }
+  @keyframes v6b-ball  { 0% {opacity:1; transform:rotate(0)} 35% {opacity:1} 50% {opacity:0} 85% {opacity:0} 100% {opacity:1; transform:rotate(360deg)} }
+  @keyframes v6b-globe { 0% {opacity:0; transform:rotate(0)} 35% {opacity:0} 50% {opacity:1} 85% {opacity:1} 100% {opacity:0; transform:rotate(360deg)} }
+
+  .v6c .e-ball  { animation: v6c-ball  var(--t) ease-in-out infinite; }
+  .v6c .e-globe { animation: v6c-globe var(--t) ease-in-out infinite; }
+  @keyframes v6c-ball  { 0% {opacity:1; transform:rotate(0)} 30% {opacity:1} 50% {opacity:0; transform:rotate(200deg)} 85% {opacity:0} 100% {opacity:1; transform:rotate(360deg)} }
+  @keyframes v6c-globe { 0% {opacity:0; transform:rotate(0)} 30% {opacity:0} 50% {opacity:1; transform:rotate(-200deg)} 85% {opacity:1; transform:rotate(-340deg)} 100% {opacity:0; transform:rotate(-360deg)} }
+
+  .v6d .e-ball  { animation: v6d-ball  var(--t) cubic-bezier(.34, 1.56, .64, 1) infinite; }
+  .v6d .e-globe { animation: v6d-globe var(--t) cubic-bezier(.34, 1.56, .64, 1) infinite; }
+  @keyframes v6d-ball  { 0%,30% {opacity:1; transform:scale(1)} 40% {transform:scale(.85)} 50% {opacity:0; transform:scale(.3)} 85% {opacity:0; transform:scale(.3)} 95% {opacity:1; transform:scale(1.12)} 100% {opacity:1; transform:scale(1)} }
+  @keyframes v6d-globe { 0%,30% {opacity:0; transform:scale(.3)} 45% {opacity:0; transform:scale(.3)} 55% {opacity:1; transform:scale(1.12)} 65% {transform:scale(.96)} 80% {transform:scale(1)} 85% {opacity:1} 100% {opacity:0; transform:scale(.3)} }
+
+  .v6e .e-ball  { animation: v6e-ball  var(--t) cubic-bezier(.7,0,.3,1) infinite; }
+  .v6e .e-globe { animation: v6e-globe var(--t) cubic-bezier(.7,0,.3,1) infinite; }
+  @keyframes v6e-ball  { 0% {opacity:1; transform:scale(1); filter:blur(0)} 30% {opacity:1; transform:scale(1); filter:blur(0)} 50% {opacity:0; transform:scale(.1); filter:blur(20px)} 85% {opacity:0; transform:scale(2.2); filter:blur(20px)} 100% {opacity:1; transform:scale(1); filter:blur(0)} }
+  @keyframes v6e-globe { 0% {opacity:0; transform:scale(2.2); filter:blur(20px)} 30% {opacity:0; transform:scale(2.2); filter:blur(20px)} 50% {opacity:1; transform:scale(1); filter:blur(0)} 85% {opacity:1; transform:scale(1); filter:blur(0)} 100% {opacity:0; transform:scale(.1); filter:blur(20px)} }
+
+  .v6f .stage-3d { perspective: 600px; width: 100%; height: 100%; position: absolute; inset: 0; }
+  .v6f .flip3d   { position: absolute; inset: 0; transform-style: preserve-3d; animation: v6f-flip var(--t) cubic-bezier(.7,0,.3,1) infinite; }
+  .v6f .e-ball, .v6f .e-globe { backface-visibility: hidden; }
+  .v6f .e-globe  { transform: rotateY(180deg); }
+  @keyframes v6f-flip { 0%,18% {transform:rotateY(0)} 50%,68% {transform:rotateY(180deg)} 100% {transform:rotateY(360deg)} }
+
+  .v6g .e-ball  { animation: v6g-ball  var(--t) ease-in-out infinite; }
+  .v6g .e-globe { animation: v6g-globe var(--t) ease-in-out infinite; }
+  @keyframes v6g-ball  { 0% {opacity:1; transform:translateY(0)} 10% {transform:translateY(-18px)} 20% {transform:translateY(0)} 30% {transform:translateY(-12px)} 40% {opacity:1; transform:translateY(0)} 50% {opacity:0} 85% {opacity:0} 100% {opacity:1; transform:translateY(0)} }
+  @keyframes v6g-globe { 0%,40% {opacity:0; transform:translateY(0)} 50% {opacity:1; transform:translateY(0)} 60% {transform:translateY(-18px)} 70% {transform:translateY(0)} 80% {transform:translateY(-12px)} 90% {opacity:1; transform:translateY(0)} 100% {opacity:0; transform:translateY(0)} }
+
+  .v6h .e-ball  { animation: v6h-ball  var(--t) ease-in-out infinite; }
+  .v6h .e-globe { animation: v6h-globe var(--t) ease-in-out infinite; }
+  @keyframes v6h-ball  { 0% {opacity:1; transform:translate(-30%,0)} 10% {transform:translate(-15%,-10px)} 20% {transform:translate(0,0)} 30% {transform:translate(15%,-10px)} 40% {opacity:1; transform:translate(30%,0)} 50% {opacity:0} 85% {opacity:0} 100% {opacity:1; transform:translate(-30%,0)} }
+  @keyframes v6h-globe { 0%,40% {opacity:0; transform:translate(-30%,0)} 50% {opacity:1; transform:translate(-30%,0)} 60% {transform:translate(-15%,-10px)} 70% {transform:translate(0,0)} 80% {transform:translate(15%,-10px)} 90% {opacity:1; transform:translate(30%,0)} 100% {opacity:0; transform:translate(30%,0)} }
+
+  .v6i .e-ball  { animation: v6i-ball  var(--t) ease-in-out infinite; }
+  .v6i .e-globe { animation: v6i-globe var(--t) ease-in-out infinite; }
+  @keyframes v6i-ball  { 0% {opacity:1; transform:scale(1)} 12% {transform:scale(1.08)} 24% {transform:scale(1)} 36% {transform:scale(1.08)} 48% {opacity:1; transform:scale(1)} 50% {opacity:0} 85% {opacity:0} 100% {opacity:1; transform:scale(1)} }
+  @keyframes v6i-globe { 0%,48% {opacity:0; transform:scale(1)} 50% {opacity:1; transform:scale(1)} 62% {transform:scale(1.08)} 74% {transform:scale(1)} 86% {transform:scale(1.08)} 98% {opacity:1; transform:scale(1)} 100% {opacity:0} }
+
+  .v6j .e-ball  { animation: v6j-ball  var(--t) cubic-bezier(.85,0,.15,1) infinite; }
+  .v6j .e-globe { animation: v6j-globe var(--t) cubic-bezier(.85,0,.15,1) infinite; }
+  @keyframes v6j-ball  { 0%,45% {opacity:1; transform:rotate(0)} 50% {opacity:0; transform:rotate(180deg)} 95% {opacity:0} 100% {opacity:1; transform:rotate(360deg)} }
+  @keyframes v6j-globe { 0%,45% {opacity:0; transform:rotate(-180deg)} 50% {opacity:1; transform:rotate(0)} 95% {opacity:1} 100% {opacity:0; transform:rotate(180deg)} }
+
+
+  /* Pause + reduced-motion */
+  body.paused .stage *, body.paused .bouncer{ animation-play-state:paused !important }
+  @media (prefers-reduced-motion: reduce){
+    .stage *, .bouncer{ animation:none !important }
+  }
+
+  footer{
+    margin-top:42px; padding-top:22px; border-top:1px solid var(--line);
+    font-family:var(--mono); font-size:12px; color:var(--fg-dim); line-height:1.7;
+  }
+  footer b{color:var(--grass); font-weight:600}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="wordmark">
+      <p class="eyebrow">Emoji Morph Lab</p>
+      <h1>Match<span class="mondo">Mondo</span></h1>
+    </div>
+
+    <div class="controls" role="group" aria-label="Animation controls">
+      <button class="btn" id="toggle-pause" aria-pressed="false">Pause</button>
+
+      <div class="control">
+        <span class="label">Rotation speed</span>
+        <div class="row">
+          <input type="range" id="speed-rot" min="3" max="18" step=".5" value="9"
+                 aria-label="Rotation cycle length in seconds">
+          <span class="val" id="speed-rot-val">9s</span>
+        </div>
+      </div>
+
+      <div class="control">
+        <span class="label">Bouncing</span>
+        <button class="btn toggle-off" id="toggle-bounce" aria-pressed="false">Off</button>
+      </div>
+
+      <div class="control">
+        <span class="label">Bounce speed</span>
+        <div class="row">
+          <input type="range" id="speed-bounce" min=".3" max="2.5" step=".1" value="1.2"
+                 aria-label="Bounce cycle length in seconds">
+          <span class="val" id="speed-bounce-val">1.2s</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <p class="lede">
+    Eleven variations on the emoji morph: the soccer ball ⚽ rotates and transforms into the globe 🌍, then back.
+    All share the same Pause and Rotation Speed controls. Turn <b>Bouncing</b> on to add a global up-and-down
+    bounce on top of each variant's own motion — the Bounce Speed slider controls how fast it bobs.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="tag"><span class="ver">v6</span><span class="name">Emoji — Original</span></div>
+      <div class="stage"><div class="sphere v6">
+        <div class="bouncer">
+          <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+        </div>
+      </div></div>
+      <p class="desc">The classic from the lab — <b>spin-down ball cross-fades into spin-up globe</b> with a blur swap mid-cycle. The starting point everything else iterates on.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag"><span class="ver">v6a</span><span class="name">Emoji — Pure Crossfade</span></div>
+      <div class="stage"><div class="sphere v6a">
+        <div class="bouncer">
+          <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+        </div>
+      </div></div>
+      <p class="desc">Calmest of the set: <b>opacity only</b>, no rotation, no scale, no blur. ⚽ fades through to 🌍 and back. The cleanest read; works at any size.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag"><span class="ver">v6b</span><span class="name">Emoji — Continuous Sync Spin</span></div>
+      <div class="stage"><div class="sphere v6b">
+        <div class="bouncer">
+          <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+        </div>
+      </div></div>
+      <p class="desc">Both emojis spin together at the <b>same rate, same direction</b>, with a mid-cycle opacity swap. Feels like one object rotating on a fixed axis, just changing texture mid-spin.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag"><span class="ver">v6c</span><span class="name">Emoji — Counter-Spin Juggle</span></div>
+      <div class="stage"><div class="sphere v6c">
+        <div class="bouncer">
+          <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+        </div>
+      </div></div>
+      <p class="desc">Ball spins <b>clockwise</b>; globe spins <b>counter-clockwise</b>. They pass each other in opposite directions at the handoff — playful, like a juggling toss.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag"><span class="ver">v6d</span><span class="name">Emoji — Elastic Bounce</span></div>
+      <div class="stage"><div class="sphere v6d">
+        <div class="bouncer">
+          <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+        </div>
+      </div></div>
+      <p class="desc"><b>Squash &amp; pop</b> with elastic easing — no rotation. Ball squashes to .85, vanishes, globe springs in past 1× and settles. Quirky, app-icony.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag"><span class="ver">v6e</span><span class="name">Emoji — Zoom Punch</span></div>
+      <div class="stage"><div class="sphere v6e">
+        <div class="bouncer">
+          <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+        </div>
+      </div></div>
+      <p class="desc">Cinematic: emoji <b>enters from huge with heavy blur</b>, snaps to focus, then exits to tiny with blur. Maximum motion energy of the set.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag"><span class="ver">v6f</span><span class="name">Emoji — 3D Coin Flip</span></div>
+      <div class="stage"><div class="sphere v6f">
+        <div class="bouncer">
+          <div class="stage-3d"><div class="flip3d">
+          <div class="emoji e-ball">⚽</div>
+          <div class="emoji e-globe">🌍</div>
+        </div></div>
+        </div>
+      </div></div>
+      <p class="desc">Genuine <b>3D rotateY</b> — the ball is on the front face, globe on the back. Tap the perspective: it looks like flipping a coin between the two.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag"><span class="ver">v6g</span><span class="name">Emoji — Dribble Bounce</span></div>
+      <div class="stage"><div class="sphere v6g">
+        <div class="bouncer">
+          <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+        </div>
+      </div></div>
+      <p class="desc">Stays centered and <b>bounces vertically</b> — two small hops in sequence, like dribbling a ball. Independent of the global bounce; crossfades to globe mid-cycle.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag"><span class="ver">v6h</span><span class="name">Emoji — Header Traverse</span></div>
+      <div class="stage"><div class="sphere v6h">
+        <div class="bouncer">
+          <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+        </div>
+      </div></div>
+      <p class="desc"><b>Rolls across the header</b> from left to right with a small vertical bounce along the path. Ball completes the traverse, then globe takes over and continues. Stays in bounds.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag"><span class="ver">v6i</span><span class="name">Emoji — Pulse Beat</span></div>
+      <div class="stage"><div class="sphere v6i">
+        <div class="bouncer">
+          <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+        </div>
+      </div></div>
+      <p class="desc"><b>Heartbeat pulse</b> — subtle scale (1× ↔ 1.08×) at a steady rhythm. No translation, no rotation. Calmest motion of the set; centered the whole time.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag"><span class="ver">v6j</span><span class="name">Emoji — Snap Quick</span></div>
+      <div class="stage"><div class="sphere v6j">
+        <div class="bouncer">
+          <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+        </div>
+      </div></div>
+      <p class="desc"><b>Quick &amp; sharp</b> — half-rotation, no blur, no scale. Sharp dwell at each end with a snappy mid-cycle switch. Tap/UI-button energy.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    Studio note — <b>v6 Original</b>, <b>v6a Pure Crossfade</b>, and <b>v6j Snap Quick</b> are the safest production picks.
+    <b>v6f 3D Coin Flip</b> reads as the most distinctive. <b>v6g Dribble Bounce</b> and <b>v6h Header Traverse</b>
+    are tuned for "ball moving along a header" energy. The global Bouncing toggle composes on top of any variant.
+  </footer>
+</div>
+
+<script>
+  const body = document.body;
+  const pauseBtn = document.getElementById('toggle-pause');
+  const bounceBtn = document.getElementById('toggle-bounce');
+  const rotSlider = document.getElementById('speed-rot');
+  const rotVal = document.getElementById('speed-rot-val');
+  const bSlider = document.getElementById('speed-bounce');
+  const bVal = document.getElementById('speed-bounce-val');
+
+  // Pause toggle
+  pauseBtn.addEventListener('click', () => {
+    const paused = body.classList.toggle('paused');
+    pauseBtn.textContent = paused ? 'Play' : 'Pause';
+    pauseBtn.setAttribute('aria-pressed', String(paused));
+  });
+
+  // Bouncing toggle
+  bounceBtn.addEventListener('click', () => {
+    const on = body.classList.toggle('bouncing');
+    bounceBtn.textContent = on ? 'On' : 'Off';
+    bounceBtn.setAttribute('aria-pressed', String(on));
+    bounceBtn.classList.toggle('toggle-off', !on);
+  });
+
+  // Rotation speed — set CSS var, restart CSS animations so the new
+  // duration takes effect even if the browser was caching the old value.
+  function restartAnimations() {
+    // Force a reflow that resets all running CSS animations to pick up
+    // the new var(--t) duration. The trick: toggle the animation-name
+    // off then back on. We do this via a class swap.
+    body.classList.add('reset-anim');
+    void body.offsetWidth;  // force reflow
+    body.classList.remove('reset-anim');
+  }
+  rotSlider.addEventListener('input', () => {
+    const v = rotSlider.value + 's';
+    document.documentElement.style.setProperty('--t', v);
+    rotVal.textContent = v;
+    restartAnimations();
+  });
+
+  // Bounce speed — same restart trick.
+  bSlider.addEventListener('input', () => {
+    const v = bSlider.value + 's';
+    document.documentElement.style.setProperty('--bounce-t', v);
+    bVal.textContent = v;
+    restartAnimations();
+  });
+</script>
+<style>
+  /* Class added/removed in JS to force CSS animations to restart. The
+     animation-name change forces the browser to reseed the animation
+     with the new duration from var(--t) / var(--bounce-t). */
+  body.reset-anim .stage *, body.reset-anim .bouncer{ animation-name: none !important }
+</style>
+</html>
