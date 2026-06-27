@@ -2203,7 +2203,8 @@
         "LA Rams and LA Raiders"
       ],
       "answer": 0,
-      "explanation": "SoFi Stadium in Inglewood, California is home to both the LA Rams and LA Chargers."
+      "explanation": "SoFi Stadium in Inglewood, California is home to both the LA Rams and LA Chargers.",
+      "approved": true
     },
     {
       "id": "p-fastest-goal",
