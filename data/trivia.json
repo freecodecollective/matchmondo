@@ -7797,7 +7797,7 @@
       "answer": 0,
       "explanation": "True! Pelé tore a groin muscle in Brazil's second group match against Czechoslovakia and was sidelined for the rest of the tournament. Garrincha stepped into the spotlight as the tournament's star, leading Brazil to their second consecutive title. It showed the incredible depth of Brazilian talent in that era.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-knockout-draw",
