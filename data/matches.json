@@ -841,8 +841,8 @@
     "venue": "Lumen Field",
     "city": "Seattle, WA",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 1,
+    "scoreA": 1
   },
   {
     "n": 64,
@@ -854,8 +854,8 @@
     "venue": "BC Place",
     "city": "Vancouver, Canada",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 0,
+    "scoreA": 1
   },
   {
     "n": 67,
