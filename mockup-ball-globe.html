@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MatchMondo · Ball→Globe Motion Lab</title>
-<meta name="description" content="Twelve versions of the MatchMondo mark: a soccer ball that slowly rotates and transforms into a globe, then back again — across motion treatments and art styles.">
+<meta name="description" content="Twenty-two versions of the MatchMondo mark: a soccer ball that slowly rotates and transforms into a globe, then back again — across motion treatments and art styles.">
 <style>
   :root{
     --t: 9s;                       /* master cycle length, driven by the slider */
@@ -265,6 +265,62 @@
   @keyframes opaBallV12     { 0%,18% {opacity:1} 26%,92% {opacity:0} 100% {opacity:1} }
   @keyframes opaAfricaOnly  { 0%,22% {opacity:0} 32%,46% {opacity:1} 56%,100% {opacity:0} }
   @keyframes opaAmericasOnly{ 0%,54% {opacity:0} 64%,82% {opacity:1} 90%,100% {opacity:0} }
+
+
+  /* ============ V6 EMOJI VARIANTS (V6A–V6J) ============
+     Ten different spin / dissolve treatments of the same ⚽↔🌍
+     crossfade so we can compare and pick a favourite. */
+
+  .v6a .e-ball  { animation: v6a-ball  var(--t) ease-in-out infinite; }
+  .v6a .e-globe { animation: v6a-globe var(--t) ease-in-out infinite; }
+  @keyframes v6a-ball  { 0%,35% {opacity:1} 50%,85% {opacity:0} 100% {opacity:1} }
+  @keyframes v6a-globe { 0%,35% {opacity:0} 50%,85% {opacity:1} 100% {opacity:0} }
+
+  .v6b .e-ball  { animation: v6b-ball  var(--t) linear infinite; }
+  .v6b .e-globe { animation: v6b-globe var(--t) linear infinite; }
+  @keyframes v6b-ball  { 0% {opacity:1; transform:rotate(0)} 35% {opacity:1} 50% {opacity:0} 85% {opacity:0} 100% {opacity:1; transform:rotate(360deg)} }
+  @keyframes v6b-globe { 0% {opacity:0; transform:rotate(0)} 35% {opacity:0} 50% {opacity:1} 85% {opacity:1} 100% {opacity:0; transform:rotate(360deg)} }
+
+  .v6c .e-ball  { animation: v6c-ball  var(--t) ease-in-out infinite; }
+  .v6c .e-globe { animation: v6c-globe var(--t) ease-in-out infinite; }
+  @keyframes v6c-ball  { 0% {opacity:1; transform:rotate(0)} 30% {opacity:1} 50% {opacity:0; transform:rotate(200deg)} 85% {opacity:0} 100% {opacity:1; transform:rotate(360deg)} }
+  @keyframes v6c-globe { 0% {opacity:0; transform:rotate(0)} 30% {opacity:0} 50% {opacity:1; transform:rotate(-200deg)} 85% {opacity:1; transform:rotate(-340deg)} 100% {opacity:0; transform:rotate(-360deg)} }
+
+  .v6d .e-ball  { animation: v6d-ball  var(--t) cubic-bezier(.34, 1.56, .64, 1) infinite; }
+  .v6d .e-globe { animation: v6d-globe var(--t) cubic-bezier(.34, 1.56, .64, 1) infinite; }
+  @keyframes v6d-ball  { 0%,30% {opacity:1; transform:scale(1)} 40% {transform:scale(.85)} 50% {opacity:0; transform:scale(.3)} 85% {opacity:0; transform:scale(.3)} 95% {opacity:1; transform:scale(1.12)} 100% {opacity:1; transform:scale(1)} }
+  @keyframes v6d-globe { 0%,30% {opacity:0; transform:scale(.3)} 45% {opacity:0; transform:scale(.3)} 55% {opacity:1; transform:scale(1.12)} 65% {transform:scale(.96)} 80% {transform:scale(1)} 85% {opacity:1} 100% {opacity:0; transform:scale(.3)} }
+
+  .v6e .e-ball  { animation: v6e-ball  var(--t) cubic-bezier(.7,0,.3,1) infinite; }
+  .v6e .e-globe { animation: v6e-globe var(--t) cubic-bezier(.7,0,.3,1) infinite; }
+  @keyframes v6e-ball  { 0% {opacity:1; transform:scale(1); filter:blur(0)} 30% {opacity:1; transform:scale(1); filter:blur(0)} 50% {opacity:0; transform:scale(.1); filter:blur(20px)} 85% {opacity:0; transform:scale(2.2); filter:blur(20px)} 100% {opacity:1; transform:scale(1); filter:blur(0)} }
+  @keyframes v6e-globe { 0% {opacity:0; transform:scale(2.2); filter:blur(20px)} 30% {opacity:0; transform:scale(2.2); filter:blur(20px)} 50% {opacity:1; transform:scale(1); filter:blur(0)} 85% {opacity:1; transform:scale(1); filter:blur(0)} 100% {opacity:0; transform:scale(.1); filter:blur(20px)} }
+
+  .v6f .stage-3d { perspective: 600px; width: 100%; height: 100%; position: absolute; inset: 0; }
+  .v6f .flip3d   { position: absolute; inset: 0; transform-style: preserve-3d; animation: v6f-flip var(--t) cubic-bezier(.7,0,.3,1) infinite; }
+  .v6f .e-ball, .v6f .e-globe { backface-visibility: hidden; }
+  .v6f .e-globe  { transform: rotateY(180deg); }
+  @keyframes v6f-flip { 0%,18% {transform:rotateY(0)} 50%,68% {transform:rotateY(180deg)} 100% {transform:rotateY(360deg)} }
+
+  .v6g .e-ball  { animation: v6g-ball  var(--t) cubic-bezier(.65,0,.35,1) infinite; }
+  .v6g .e-globe { animation: v6g-globe var(--t) cubic-bezier(.65,0,.35,1) infinite; }
+  @keyframes v6g-ball  { 0%,30% {opacity:1; transform:translateX(0)} 50% {opacity:0; transform:translateX(120%)} 85% {opacity:0; transform:translateX(-120%)} 100% {opacity:1; transform:translateX(0)} }
+  @keyframes v6g-globe { 0%,30% {opacity:0; transform:translateX(-120%)} 50% {opacity:1; transform:translateX(0)} 85% {opacity:1; transform:translateX(0)} 100% {opacity:0; transform:translateX(120%)} }
+
+  .v6h .e-ball  { animation: v6h-ball  var(--t) cubic-bezier(.5,0,.5,1) infinite; }
+  .v6h .e-globe { animation: v6h-globe var(--t) cubic-bezier(.5,0,.5,1) infinite; }
+  @keyframes v6h-ball  { 0%,30% {opacity:1; transform:translateY(0)} 50% {opacity:0; transform:translateY(-120%)} 85% {opacity:0; transform:translateY(120%)} 100% {opacity:1; transform:translateY(0)} }
+  @keyframes v6h-globe { 0%,30% {opacity:0; transform:translateY(-120%)} 50% {opacity:1; transform:translateY(0)} 85% {opacity:1; transform:translateY(0)} 100% {opacity:0; transform:translateY(120%)} }
+
+  .v6i .e-ball  { animation: v6i-ball  var(--t) cubic-bezier(.5,0,.5,1) infinite; }
+  .v6i .e-globe { animation: v6i-globe var(--t) cubic-bezier(.5,0,.5,1) infinite; }
+  @keyframes v6i-ball  { 0%,30% {opacity:1; transform:rotate(0) translate(0,0) scale(1)} 50% {opacity:0; transform:rotate(220deg) translate(40px, 40px) scale(.4)} 85% {opacity:0; transform:rotate(540deg) translate(-40px, -40px) scale(.4)} 100% {opacity:1; transform:rotate(720deg) translate(0,0) scale(1)} }
+  @keyframes v6i-globe { 0%,30% {opacity:0; transform:rotate(-220deg) translate(-40px, 40px) scale(.4)} 50% {opacity:1; transform:rotate(0) translate(0,0) scale(1)} 85% {opacity:1; transform:rotate(0) translate(0,0) scale(1)} 100% {opacity:0; transform:rotate(220deg) translate(40px, -40px) scale(.4)} }
+
+  .v6j .e-ball  { animation: v6j-ball  var(--t) cubic-bezier(.85,0,.15,1) infinite; }
+  .v6j .e-globe { animation: v6j-globe var(--t) cubic-bezier(.85,0,.15,1) infinite; }
+  @keyframes v6j-ball  { 0%,45% {opacity:1; transform:rotate(0)} 50% {opacity:0; transform:rotate(180deg)} 95% {opacity:0} 100% {opacity:1; transform:rotate(360deg)} }
+  @keyframes v6j-globe { 0%,45% {opacity:0; transform:rotate(-180deg)} 50% {opacity:1; transform:rotate(0)} 95% {opacity:1} 100% {opacity:0; transform:rotate(180deg)} }
 
 </style>
 
@@ -651,9 +707,9 @@
   </header>
 
   <p class="lede">
-    One idea, twelve ways: the soccer ball slowly rotates and transforms into a globe,
+    One idea, twenty-two ways: the soccer ball slowly rotates and transforms into a globe,
     then back again. v1–v6 explore different motion treatments; v7–v10 explore
-    art direction; v11 uses real photos with SVG-bridged rotation frames; v12 uses only the real photos, no SVG bridges — photoreal, sketch, watercolour, flat poster. Compare and
+    art direction; v11 uses real photos with SVG-bridged rotation frames; v12 uses only the real photos, no SVG bridges; v6a–v6j are 10 emoji-morph variations on different spin/dissolve treatments — photoreal, sketch, watercolour, flat poster. Compare and
     pick the one that should become the loading + splash mark.
   </p>
 
@@ -831,6 +887,108 @@
       </div></div>
       <p class="desc">No SVG bridges — <b>just the three real photos</b> crossfaded directly. The globe alternates between your Africa-centered and Americas-centered photos (~90° apart). More honest to the source material; less continuous as a rotation than V11.</p>
     </div>
+    <!-- V6A — Pure Crossfade -->
+    <div class="card">
+      <div class="tag"><span class="ver">v6a</span><span class="name">Emoji — Pure Crossfade</span></div>
+      <div class="stage"><div class="sphere v6a">
+        <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+      </div></div>
+      <p class="desc">Calmest of the set: <b>opacity only</b>, no rotation, no scale, no blur. ⚽ fades through to 🌍 and back. The cleanest read; works at any size.</p>
+    </div>
+
+    <!-- V6B — Continuous Sync Spin -->
+    <div class="card">
+      <div class="tag"><span class="ver">v6b</span><span class="name">Emoji — Continuous Sync Spin</span></div>
+      <div class="stage"><div class="sphere v6b">
+        <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+      </div></div>
+      <p class="desc">Both emojis spin together at the <b>same rate, same direction</b>, with a mid-cycle opacity swap. Feels like one object rotating on a fixed axis, just changing texture mid-spin.</p>
+    </div>
+
+    <!-- V6C — Counter-Spin Juggle -->
+    <div class="card">
+      <div class="tag"><span class="ver">v6c</span><span class="name">Emoji — Counter-Spin Juggle</span></div>
+      <div class="stage"><div class="sphere v6c">
+        <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+      </div></div>
+      <p class="desc">Ball spins <b>clockwise</b>; globe spins <b>counter-clockwise</b>. They pass each other in opposite directions at the handoff — playful, like a juggling toss.</p>
+    </div>
+
+    <!-- V6D — Elastic Bounce -->
+    <div class="card">
+      <div class="tag"><span class="ver">v6d</span><span class="name">Emoji — Elastic Bounce</span></div>
+      <div class="stage"><div class="sphere v6d">
+        <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+      </div></div>
+      <p class="desc"><b>Squash &amp; pop</b> with elastic easing — no rotation. Ball squashes to .85, vanishes, globe springs in past 1× and settles. Quirky, app-icony.</p>
+    </div>
+
+    <!-- V6E — Zoom Punch -->
+    <div class="card">
+      <div class="tag"><span class="ver">v6e</span><span class="name">Emoji — Zoom Punch</span></div>
+      <div class="stage"><div class="sphere v6e">
+        <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+      </div></div>
+      <p class="desc">Cinematic: emoji <b>enters from huge with heavy blur</b>, snaps to focus, then exits to tiny with blur. Maximum motion energy of the set.</p>
+    </div>
+
+    <!-- V6F — 3D Coin Flip -->
+    <div class="card">
+      <div class="tag"><span class="ver">v6f</span><span class="name">Emoji — 3D Coin Flip</span></div>
+      <div class="stage"><div class="sphere v6f">
+        <div class="stage-3d"><div class="flip3d">
+        <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+      </div></div>
+      </div></div>
+      <p class="desc">Genuine <b>3D rotateY</b> — the ball is on the front face, globe on the back. Tap the perspective: it looks like flipping a coin between the two.</p>
+    </div>
+
+    <!-- V6G — Slide Lateral -->
+    <div class="card">
+      <div class="tag"><span class="ver">v6g</span><span class="name">Emoji — Slide Lateral</span></div>
+      <div class="stage"><div class="sphere v6g">
+        <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+      </div></div>
+      <p class="desc">The pair <b>slides past each other horizontally</b>. Ball exits right, globe enters from the left. Feels conveyor-belt — energetic.</p>
+    </div>
+
+    <!-- V6H — Lift Vertical -->
+    <div class="card">
+      <div class="tag"><span class="ver">v6h</span><span class="name">Emoji — Lift Vertical</span></div>
+      <div class="stage"><div class="sphere v6h">
+        <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+      </div></div>
+      <p class="desc"><b>Up and over</b>: ball rises out the top, globe drops in from above. Vertical lift instead of horizontal. Reads as gravity.</p>
+    </div>
+
+    <!-- V6I — Spiral -->
+    <div class="card">
+      <div class="tag"><span class="ver">v6i</span><span class="name">Emoji — Spiral</span></div>
+      <div class="stage"><div class="sphere v6i">
+        <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+      </div></div>
+      <p class="desc">Combined <b>rotate + orbit + scale</b>. Each emoji swings into view along a small arc, scales to full, then swings out the other side. Dancey.</p>
+    </div>
+
+    <!-- V6J — Snap Quick -->
+    <div class="card">
+      <div class="tag"><span class="ver">v6j</span><span class="name">Emoji — Snap Quick</span></div>
+      <div class="stage"><div class="sphere v6j">
+        <div class="emoji e-ball">⚽</div>
+        <div class="emoji e-globe">🌍</div>
+      </div></div>
+      <p class="desc"><b>Quick &amp; sharp</b> — half-rotation, no blur, no scale. Sharp dwell at each end with a snappy mid-cycle switch. Tap/UI-button energy.</p>
+    </div>
+
 
 
   </div>
@@ -840,7 +998,7 @@
     <i>is</i> a globe. For absolute realism, <b>v11 (Real Photo + Rotating Earth)</b> is the standout — it crossfades three real photos with two SVG bridges so the globe genuinely rotates. <b>v7 (Photoreal SVG)</b> remains the all-vector production candidate —
     real specular, atmospheric ring, recognisable continent silhouettes. <b>v8 (Pen &amp; Ink)</b> and
     <b>v9 (Watercolour)</b> are editorial / programme-cover energy. <b>v10 (Flat Poster)</b> is the
-    one-ink-pass version. All twelve honour <b>prefers-reduced-motion</b> and the global Pause / Speed
+    one-ink-pass version. All twenty-two honour <b>prefers-reduced-motion</b> and the global Pause / Speed
     controls above.
   </footer>
 </div>
