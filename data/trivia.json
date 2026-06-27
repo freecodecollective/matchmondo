@@ -7823,7 +7823,7 @@
       "answer": 1,
       "explanation": "False! To ensure impartiality, referees are never assigned to matches involving their own nation. Typically, officials come from a different confederation than either competing team. The referee committee carefully selects and assigns officials for each match to avoid even the appearance of bias.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-goalline-tech-2014",
