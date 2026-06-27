@@ -2176,7 +2176,110 @@
       ],
       "answer": 1,
       "explanation": "Canada qualified for the 1986 tournament in Mexico, losing all three group matches. They returned 36 years later in 2022.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "في أي عام شاركت كندا لأول مرة في البطولة؟",
+          "options": [
+            "1982",
+            "1986",
+            "2018",
+            "2022"
+          ],
+          "explanation": "تأهلت كندا إلى بطولة 1986 في المكسيك، لكنها خسرت مبارياتها الثلاث في الدور الأول. وعادت بعد 36 عامًا في 2022."
+        },
+        "de": {
+          "question": "In welchem Jahr gab Kanada sein Turnierdebüt?",
+          "options": [
+            "1982",
+            "1986",
+            "2018",
+            "2022"
+          ],
+          "explanation": "Kanada qualifizierte sich für das Turnier 1986 in Mexiko und verlor alle drei Gruppenspiele. 36 Jahre später, im Jahr 2022, kehrte das Team zurück."
+        },
+        "es": {
+          "question": "¿En qué año debutó Canadá en el torneo?",
+          "options": [
+            "1982",
+            "1986",
+            "2018",
+            "2022"
+          ],
+          "explanation": "Canadá se clasificó para el torneo de 1986 en México, donde perdió sus tres partidos de la fase de grupos. Volvió 36 años después, en 2022."
+        },
+        "es-ES": {
+          "question": "¿En qué año debutó Canadá en el torneo?",
+          "options": [
+            "1982",
+            "1986",
+            "2018",
+            "2022"
+          ],
+          "explanation": "Canadá se clasificó para el torneo de 1986 en México, donde perdió sus tres partidos de la fase de grupos. Regresó 36 años más tarde, en 2022."
+        },
+        "fr": {
+          "question": "En quelle année le Canada a-t-il disputé son premier tournoi ?",
+          "options": [
+            "1982",
+            "1986",
+            "2018",
+            "2022"
+          ],
+          "explanation": "Le Canada s'est qualifié pour le tournoi de 1986 au Mexique, où il a perdu ses trois matchs de poule. Il est revenu 36 ans plus tard, en 2022."
+        },
+        "it": {
+          "question": "In quale anno il Canada ha esordito nel torneo?",
+          "options": [
+            "1982",
+            "1986",
+            "2018",
+            "2022"
+          ],
+          "explanation": "Il Canada si qualificò per il torneo del 1986 in Messico, perdendo tutte e tre le partite del girone. È tornato 36 anni dopo, nel 2022."
+        },
+        "ja": {
+          "question": "カナダが大会に初出場したのは何年ですか？",
+          "options": [
+            "1982",
+            "1986",
+            "2018",
+            "2022"
+          ],
+          "explanation": "カナダはメキシコで開催された1986年大会に出場しましたが、グループステージの3試合すべてに敗れました。その36年後、2022年に再び出場しました。"
+        },
+        "ko": {
+          "question": "캐나다가 대회에 처음 출전한 해는 언제인가요?",
+          "options": [
+            "1982",
+            "1986",
+            "2018",
+            "2022"
+          ],
+          "explanation": "캐나다는 멕시코에서 열린 1986년 대회에 출전했지만 조별리그 세 경기를 모두 패했습니다. 그리고 36년 뒤인 2022년에 다시 출전했습니다."
+        },
+        "pt-BR": {
+          "question": "Em que ano o Canadá fez sua estreia no torneio?",
+          "options": [
+            "1982",
+            "1986",
+            "2018",
+            "2022"
+          ],
+          "explanation": "O Canadá se classificou para o torneio de 1986 no México, perdendo as três partidas da fase de grupos. Voltou 36 anos depois, em 2022."
+        },
+        "zh-Hans": {
+          "question": "加拿大是在哪一年首次参加该赛事的？",
+          "options": [
+            "1982",
+            "1986",
+            "2018",
+            "2022"
+          ],
+          "explanation": "加拿大获得了1986年墨西哥赛事的参赛资格，但在小组赛的三场比赛中全部告负。36年后，他们于2022年再次参赛。"
+        }
+      },
+      "i18nSourceHash": "85356cb05a0d2028"
     },
     {
       "id": "p-hand-of-god",
@@ -2191,7 +2294,110 @@
       "answer": 0,
       "explanation": "Diego Maradona punched in a goal against England, then scored the 'Goal of the Century' minutes later.",
       "media": "https://www.youtube.com/watch?v=-ccNkksrfls",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "لمن كان هدف 'يد الله' عام 1986؟",
+          "options": [
+            "دييغو مارادونا",
+            "ماريو كيمبس",
+            "غابرييل باتيستوتا",
+            "دانيال باساريلا"
+          ],
+          "explanation": "سجّل دييغو مارادونا هدفاً بيده ضد إنجلترا، ثم أحرز بعد دقائق 'هدف القرن'."
+        },
+        "de": {
+          "question": "Wem gelang 1986 das Tor mit der 'Hand Gottes'?",
+          "options": [
+            "Diego Maradona",
+            "Mario Kempes",
+            "Gabriel Batistuta",
+            "Daniel Passarella"
+          ],
+          "explanation": "Diego Maradona beförderte den Ball mit der Hand gegen England ins Tor und erzielte wenige Minuten später das 'Tor des Jahrhunderts'."
+        },
+        "es": {
+          "question": "¿De quién fue el gol de 'la Mano de Dios' en 1986?",
+          "options": [
+            "Diego Maradona",
+            "Mario Kempes",
+            "Gabriel Batistuta",
+            "Daniel Passarella"
+          ],
+          "explanation": "Diego Maradona metió un gol con la mano ante Inglaterra y, minutos después, marcó el 'Gol del Siglo'."
+        },
+        "es-ES": {
+          "question": "¿De quién fue el gol de 'la Mano de Dios' en 1986?",
+          "options": [
+            "Diego Maradona",
+            "Mario Kempes",
+            "Gabriel Batistuta",
+            "Daniel Passarella"
+          ],
+          "explanation": "Diego Maradona metió un gol con la mano frente a Inglaterra y, minutos después, anotó el 'Gol del Siglo'."
+        },
+        "fr": {
+          "question": "À qui doit-on le but de la 'Main de Dieu' en 1986 ?",
+          "options": [
+            "Diego Maradona",
+            "Mario Kempes",
+            "Gabriel Batistuta",
+            "Daniel Passarella"
+          ],
+          "explanation": "Diego Maradona a marqué de la main face à l'Angleterre, puis a inscrit le 'But du siècle' quelques minutes plus tard."
+        },
+        "it": {
+          "question": "Di chi fu il gol della 'Mano de Dios' nel 1986?",
+          "options": [
+            "Diego Maradona",
+            "Mario Kempes",
+            "Gabriel Batistuta",
+            "Daniel Passarella"
+          ],
+          "explanation": "Diego Maradona segnò di mano contro l'Inghilterra e, pochi minuti dopo, realizzò il 'Gol del secolo'."
+        },
+        "ja": {
+          "question": "1986年の『神の手』ゴールを決めたのは誰?",
+          "options": [
+            "ディエゴ・マラドーナ",
+            "マリオ・ケンペス",
+            "ガブリエル・バティストゥータ",
+            "ダニエル・パサレラ"
+          ],
+          "explanation": "ディエゴ・マラドーナはイングランド戦で手を使ってゴールを決め、その数分後に『世紀のゴール』を決めた。"
+        },
+        "ko": {
+          "question": "1986년 '신의 손' 골을 넣은 선수는?",
+          "options": [
+            "디에고 마라도나",
+            "마리오 켐페스",
+            "가브리엘 바티스투타",
+            "다니엘 파사렐라"
+          ],
+          "explanation": "디에고 마라도나는 잉글랜드를 상대로 손으로 골을 넣었고, 몇 분 뒤 '세기의 골'을 터뜨렸다."
+        },
+        "pt-BR": {
+          "question": "De quem foi o gol da 'Mão de Deus' em 1986?",
+          "options": [
+            "Diego Maradona",
+            "Mario Kempes",
+            "Gabriel Batistuta",
+            "Daniel Passarella"
+          ],
+          "explanation": "Diego Maradona marcou um gol com a mão contra a Inglaterra e, minutos depois, fez o 'Gol do Século'."
+        },
+        "zh-Hans": {
+          "question": "1986年的'上帝之手'进球出自谁脚下?",
+          "options": [
+            "迭戈·马拉多纳",
+            "马里奥·肯佩斯",
+            "加布里埃尔·巴蒂斯图塔",
+            "丹尼尔·帕萨雷拉"
+          ],
+          "explanation": "迭戈·马拉多纳在对阵英格兰的比赛中用手将球打进，几分钟后又攻入了'世纪进球'。"
+        }
+      },
+      "i18nSourceHash": "b17c460eca612030"
     },
     {
       "id": "v-sofi-nfl",
@@ -2205,7 +2411,110 @@
       ],
       "answer": 0,
       "explanation": "SoFi Stadium in Inglewood, California is home to both the LA Rams and LA Chargers.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ملعب SoFi، أحد ملاعب Football 2026 في لوس أنجلوس، هو موطن أي فريقين من فرق دوري كرة القدم الأمريكية NFL؟",
+          "options": [
+            "لوس أنجلوس رامز ولوس أنجلوس تشارجرز",
+            "سان فرانسيسكو 49ers ولوس أنجلوس تشارجرز",
+            "دالاس كاوبويز وهيوستن تكسانز",
+            "لوس أنجلوس رامز ولوس أنجلوس رايدرز"
+          ],
+          "explanation": "ملعب SoFi في إنجلوود بولاية كاليفورنيا هو موطن كل من فريقي لوس أنجلوس رامز ولوس أنجلوس تشارجرز."
+        },
+        "de": {
+          "question": "Das SoFi Stadium, ein Spielort von Football 2026 in Los Angeles, ist die Heimat welcher beiden NFL-Teams?",
+          "options": [
+            "LA Rams und LA Chargers",
+            "SF 49ers und LA Chargers",
+            "Dallas Cowboys und Houston Texans",
+            "LA Rams und LA Raiders"
+          ],
+          "explanation": "Das SoFi Stadium in Inglewood, Kalifornien, ist die Heimat sowohl der LA Rams als auch der LA Chargers."
+        },
+        "es": {
+          "question": "El SoFi Stadium, una de las sedes de Football 2026 en Los Ángeles, ¿es la casa de qué dos equipos de la NFL?",
+          "options": [
+            "LA Rams y LA Chargers",
+            "SF 49ers y LA Chargers",
+            "Dallas Cowboys y Houston Texans",
+            "LA Rams y LA Raiders"
+          ],
+          "explanation": "El SoFi Stadium, en Inglewood, California, es la casa tanto de los LA Rams como de los LA Chargers."
+        },
+        "es-ES": {
+          "question": "El SoFi Stadium, una de las sedes de Football 2026 en Los Ángeles, ¿es el hogar de qué dos equipos de la NFL?",
+          "options": [
+            "LA Rams y LA Chargers",
+            "SF 49ers y LA Chargers",
+            "Dallas Cowboys y Houston Texans",
+            "LA Rams y LA Raiders"
+          ],
+          "explanation": "El SoFi Stadium, en Inglewood (California), es el hogar tanto de los LA Rams como de los LA Chargers."
+        },
+        "fr": {
+          "question": "Le SoFi Stadium, un site de Football 2026 à Los Angeles, accueille quelles deux équipes de la NFL ?",
+          "options": [
+            "LA Rams et LA Chargers",
+            "SF 49ers et LA Chargers",
+            "Dallas Cowboys et Houston Texans",
+            "LA Rams et LA Raiders"
+          ],
+          "explanation": "Le SoFi Stadium, à Inglewood en Californie, accueille à la fois les LA Rams et les LA Chargers."
+        },
+        "it": {
+          "question": "Il SoFi Stadium, una delle sedi di Football 2026 a Los Angeles, è la casa di quali due squadre della NFL?",
+          "options": [
+            "LA Rams e LA Chargers",
+            "SF 49ers e LA Chargers",
+            "Dallas Cowboys e Houston Texans",
+            "LA Rams e LA Raiders"
+          ],
+          "explanation": "Il SoFi Stadium di Inglewood, in California, è la casa sia dei LA Rams che dei LA Chargers."
+        },
+        "ja": {
+          "question": "ロサンゼルスにあるFootball 2026の会場、ソファイ・スタジアムを本拠地とするNFLの2チームはどれ？",
+          "options": [
+            "LAラムズとLAチャージャーズ",
+            "SF49ersとLAチャージャーズ",
+            "ダラス・カウボーイズとヒューストン・テキサンズ",
+            "LAラムズとLAレイダーズ"
+          ],
+          "explanation": "カリフォルニア州イングルウッドにあるソファイ・スタジアムは、LAラムズとLAチャージャーズの両チームの本拠地です。"
+        },
+        "ko": {
+          "question": "로스앤젤레스에 위치한 Football 2026 경기장인 소파이 스타디움을 홈구장으로 사용하는 NFL 두 팀은?",
+          "options": [
+            "LA 램스와 LA 차저스",
+            "SF 49ers와 LA 차저스",
+            "댈러스 카우보이스와 휴스턴 텍산스",
+            "LA 램스와 LA 레이더스"
+          ],
+          "explanation": "캘리포니아주 잉글우드에 있는 소파이 스타디움은 LA 램스와 LA 차저스 두 팀 모두의 홈구장입니다."
+        },
+        "pt-BR": {
+          "question": "O SoFi Stadium, uma das sedes do Football 2026 em Los Angeles, é a casa de quais dois times da NFL?",
+          "options": [
+            "LA Rams e LA Chargers",
+            "SF 49ers e LA Chargers",
+            "Dallas Cowboys e Houston Texans",
+            "LA Rams e LA Raiders"
+          ],
+          "explanation": "O SoFi Stadium, em Inglewood, na Califórnia, é a casa tanto do LA Rams quanto do LA Chargers."
+        },
+        "zh-Hans": {
+          "question": "位于洛杉矶的 Football 2026 场馆 SoFi 体育场是哪两支 NFL 球队的主场？",
+          "options": [
+            "洛杉矶公羊队和洛杉矶电光队",
+            "旧金山49人队和洛杉矶电光队",
+            "达拉斯牛仔队和休斯顿德州人队",
+            "洛杉矶公羊队和洛杉矶突袭者队"
+          ],
+          "explanation": "位于加利福尼亚州英格尔伍德的 SoFi 体育场是洛杉矶公羊队和洛杉矶电光队的共同主场。"
+        }
+      },
+      "i18nSourceHash": "4b70d49266834205"
     },
     {
       "id": "p-fastest-goal",
@@ -5891,7 +6200,90 @@
       "answer": 1,
       "explanation": "Klose scored 16 goals for Germany across four editions (2002–2014), but Lionel Messi surpassed that record during the 2026 tournament.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "يحمل ميروسلاف كلوزه الرقم القياسي التاريخي في التهديف برصيد 16 هدفاً عبر أربع نسخ.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "سجّل كلوزه 16 هدفاً مع ألمانيا عبر أربع نسخ (2002–2014)، لكن ليونيل ميسي تجاوز هذا الرقم القياسي خلال بطولة Football 2026."
+        },
+        "de": {
+          "question": "Miroslav Klose hält mit 16 Toren über vier Turniere den ewigen Torrekord.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Klose erzielte für Deutschland über vier Turniere hinweg (2002–2014) 16 Tore, doch Lionel Messi übertraf diesen Rekord beim Turnier Football 2026."
+        },
+        "es": {
+          "question": "Miroslav Klose tiene el récord histórico de goleo con 16 goles en cuatro ediciones.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Klose marcó 16 goles con Alemania en cuatro ediciones (2002–2014), pero Lionel Messi superó ese récord durante el torneo Football 2026."
+        },
+        "es-ES": {
+          "question": "Miroslav Klose ostenta el récord histórico de goleo con 16 goles en cuatro ediciones.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Klose marcó 16 goles con Alemania a lo largo de cuatro ediciones (2002–2014), pero Lionel Messi superó ese récord durante el torneo Football 2026."
+        },
+        "fr": {
+          "question": "Miroslav Klose détient le record absolu de buts avec 16 réalisations sur quatre éditions.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Klose a inscrit 16 buts avec l'Allemagne sur quatre éditions (2002–2014), mais Lionel Messi a dépassé ce record lors du tournoi Football 2026."
+        },
+        "it": {
+          "question": "Miroslav Klose detiene il record assoluto di reti con 16 gol in quattro edizioni.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Klose ha segnato 16 gol con la Germania in quattro edizioni (2002–2014), ma Lionel Messi ha superato quel record durante il torneo Football 2026."
+        },
+        "ja": {
+          "question": "ミロスラフ・クローゼは4大会で16ゴールを挙げ、通算得点記録を保持している。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "クローゼは4大会（2002〜2014年）でドイツ代表として16ゴールを決めたが、リオネル・メッシがFootball 2026の大会中にその記録を更新した。"
+        },
+        "ko": {
+          "question": "미로슬라프 클로제는 네 개 대회에 걸쳐 16골을 기록하며 통산 득점 1위를 보유하고 있다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "클로제는 네 개 대회(2002~2014년)에서 독일 대표로 16골을 넣었지만, 리오넬 메시가 Football 2026 대회에서 그 기록을 넘어섰다."
+        },
+        "pt-BR": {
+          "question": "Miroslav Klose detém o recorde histórico de gols com 16 tentos em quatro edições.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Klose marcou 16 gols pela Alemanha ao longo de quatro edições (2002–2014), mas Lionel Messi superou esse recorde durante o torneio Football 2026."
+        },
+        "zh-Hans": {
+          "question": "米罗斯拉夫·克洛泽以四届赛事16粒进球保持着历史总射手纪录。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "克洛泽代表德国在四届赛事（2002–2014）中打入16球，但莱昂内尔·梅西在Football 2026赛事中超越了这一纪录。"
+        }
+      },
+      "i18nSourceHash": "ba7ed08c424db616"
     },
     {
       "id": "tf-2022-penalties",
@@ -6096,7 +6488,90 @@
       "answer": 0,
       "explanation": "France hosted and won the 1998 tournament, defeating Brazil 3–0 in the final. They won their second title in 2018 in Russia.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "فازت فرنسا بأول لقب لها في بطولة 1998 التي استضافتها على أرضها.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "استضافت فرنسا بطولة 1998 وفازت بها، متغلبةً على البرازيل بنتيجة 3–0 في النهائي. ثم أحرزت لقبها الثاني عام 2018 في روسيا."
+        },
+        "de": {
+          "question": "Frankreich gewann seinen ersten Titel beim Turnier 1998, das es im eigenen Land ausrichtete.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Frankreich war Gastgeber und Sieger des Turniers 1998 und bezwang Brasilien im Finale mit 3:0. Den zweiten Titel holte sich das Team 2018 in Russland."
+        },
+        "es": {
+          "question": "Francia ganó su primer título en el torneo de 1998, que organizó como anfitriona.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Francia fue anfitriona y campeona del torneo de 1998, al vencer a Brasil 3–0 en la final. Conquistó su segundo título en 2018 en Rusia."
+        },
+        "es-ES": {
+          "question": "Francia ganó su primer título en el torneo de 1998, que organizó como anfitriona.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Francia fue anfitriona y campeona del torneo de 1998, tras vencer a Brasil 3–0 en la final. Logró su segundo título en 2018 en Rusia."
+        },
+        "fr": {
+          "question": "La France a remporté son premier titre lors du tournoi de 1998, qu'elle organisait à domicile.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "La France a accueilli et remporté le tournoi de 1998 en battant le Brésil 3–0 en finale. Elle a décroché son deuxième titre en 2018 en Russie."
+        },
+        "it": {
+          "question": "La Francia ha vinto il suo primo titolo nel torneo del 1998, che ha ospitato in casa.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "La Francia ha ospitato e vinto il torneo del 1998, battendo il Brasile 3–0 in finale. Ha conquistato il secondo titolo nel 2018 in Russia."
+        },
+        "ja": {
+          "question": "フランスは自国開催した1998年大会で初優勝を果たした。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "フランスは1998年大会を自国で開催し、決勝でブラジルを3対0で破って優勝しました。2度目の優勝は2018年のロシア大会で果たしました。"
+        },
+        "ko": {
+          "question": "프랑스는 자국에서 개최한 1998년 대회에서 첫 우승을 차지했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "프랑스는 1998년 대회를 개최하며 결승에서 브라질을 3–0으로 꺾고 우승했습니다. 두 번째 우승은 2018년 러시아에서 달성했습니다."
+        },
+        "pt-BR": {
+          "question": "A França conquistou seu primeiro título no torneio de 1998, que sediou em casa.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A França sediou e venceu o torneio de 1998, derrotando o Brasil por 3 a 0 na final. Conquistou seu segundo título em 2018, na Rússia."
+        },
+        "zh-Hans": {
+          "question": "法国在其作为东道主举办的1998年赛事上夺得了首个冠军。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "法国主办并赢得了1998年赛事，在决赛中以3比0击败巴西。他们在2018年俄罗斯赛事上夺得了第二个冠军。"
+        }
+      },
+      "i18nSourceHash": "3fd6174adfc9df58"
     },
     {
       "id": "tf-fastest-goal",
