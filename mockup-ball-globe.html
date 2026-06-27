@@ -345,33 +345,54 @@
       <circle cx="60" cy="60" r="58" fill="none" stroke="rgba(0,0,0,.18)" stroke-width="1"/>
     </g>
 
-    <!-- PHOTOREAL GLOBE — realistic continent silhouettes -->
+    <!-- Recognisable continent silhouettes, shared across V7/V8/V9/V10.
+         These trace simplified but anatomically-correct outlines on a
+         120-px sphere: Africa (with the Horn of Africa jutting east),
+         Madagascar, Eurasia (with the Arabian peninsula hanging south),
+         North + South America joined at Panama, Australia, and an
+         Antarctica sliver. Reused via <use href="#worldMap"/> with
+         per-variant fill/stroke styling. -->
+    <g id="worldMap">
+      <!-- AFRICA: pointed top (Mediterranean), wide West African bulge,
+           Horn jutting right around y=58, tapering to South Africa point. -->
+      <path d="M62,40 L70,40 L74,44 L75,49 L74,54 L77,58 L75,62 L72,66 L70,72 L67,79 L63,86 L59,90 L54,89 L51,84 L49,77 L48,70 L48,64 L49,58 L48,52 L50,47 L55,43 Z"/>
+      <!-- MADAGASCAR (oblique island east of southern Africa) -->
+      <path d="M82,72 L84,72 L85,77 L84,82 L82,82 L81,77 Z"/>
+      <!-- EURASIA: wide top mass, Iberia bulge on left, China bulge on right.
+           Drawn as one long horizontal silhouette across the visible top. -->
+      <path d="M16,24 L26,22 L36,23 L46,25 L54,27 L62,28 L72,28 L82,28 L92,29 L100,32 L106,36 L107,40 L102,42 L95,42 L88,41 L82,41 L77,42 L74,42 L72,42 L70,41 L66,41 L60,41 L54,41 L48,41 L42,40 L36,39 L28,37 L22,35 L18,32 L15,29 Z"/>
+      <!-- ARABIAN PENINSULA hanging south from the Eurasia mass. -->
+      <path d="M71,41 L78,42 L80,48 L78,52 L74,53 L71,49 Z"/>
+      <!-- INDIA hanging south from the Eurasia mass. -->
+      <path d="M86,42 L94,42 L95,49 L91,55 L88,52 L85,48 Z"/>
+      <!-- NORTH AMERICA: wide top tapering through Mexico toward Panama. -->
+      <path d="M10,18 L20,16 L30,16 L38,18 L42,22 L43,28 L42,32 L38,36 L33,38 L28,42 L24,46 L22,50 L20,52 L18,50 L14,46 L11,40 L9,34 L8,28 L9,22 Z"/>
+      <!-- SOUTH AMERICA: tapered teardrop, wide top at the Amazon basin
+           narrowing to Tierra del Fuego in the south. -->
+      <path d="M22,52 L30,52 L36,56 L39,62 L40,68 L38,74 L35,80 L31,86 L27,90 L23,88 L20,82 L19,74 L19,66 L20,58 Z"/>
+      <!-- AUSTRALIA: wedge in lower right, narrow east-west. -->
+      <path d="M92,80 L102,79 L106,82 L108,86 L106,90 L101,92 L94,91 L90,87 L90,83 Z"/>
+      <!-- ANTARCTICA: a horizontal sliver at the very bottom of the visible globe. -->
+      <path d="M14,108 L52,108 L72,107 L106,108 L106,114 L70,116 L34,115 L14,114 Z"/>
+    </g>
+
+    <!-- PHOTOREAL GLOBE — recognisable continents on a deep-blue ocean. -->
     <g id="globeArtReal" clip-path="url(#circClip)">
       <circle cx="60" cy="60" r="58" fill="url(#oceanReal)"/>
-      <!-- continents (stylised but anatomically recognisable on a 120-px sphere) -->
-      <g fill="#3a8742">
-        <!-- Africa + Arabia -->
-        <path d="M59,40 q9,-2 14,5 q3,9 -1,17 q-1,9 -7,15 q-3,11 -9,16 q-7,3 -10,-6 q-5,-9 -3,-19 q1,-12 6,-21 q3,-7 10,-7 z"/>
-        <!-- Eurasia bridge -->
-        <path d="M62,28 q14,-3 24,2 q12,3 17,12 q-8,5 -19,4 q-12,-1 -22,-7 q-5,-4 0,-11 z"/>
-        <!-- Asia far east bulge -->
-        <path d="M88,38 q12,-1 18,9 q5,9 -2,17 q-9,7 -18,3 q-9,-5 -8,-15 q1,-10 10,-14 z"/>
-        <!-- North America -->
-        <path d="M14,30 q12,-7 24,-3 q9,4 11,14 q-3,9 -13,11 q-12,1 -19,-7 q-7,-7 -3,-15 z"/>
-        <!-- South America -->
-        <path d="M30,62 q9,-3 14,5 q5,10 0,21 q-4,12 -11,16 q-9,-1 -11,-12 q-2,-13 1,-22 q2,-8 7,-8 z"/>
-        <!-- Australia -->
-        <path d="M94,82 q9,-2 12,5 q2,7 -5,11 q-9,3 -13,-3 q-3,-7 6,-13 z"/>
-      </g>
-      <!-- soft cloud whisps -->
-      <g fill="#ffffff" opacity=".42" filter="url(#softGlow)">
+      <!-- two-tone continents: deeper green base + slight highlight overlay
+           to suggest topographic variation under the spherical lighting -->
+      <use href="#worldMap" fill="#2f7e3a"/>
+      <use href="#worldMap" fill="#4ea65a" opacity=".55"
+           transform="translate(-1,-1)"/>
+      <!-- soft cloud whisps for atmospheric realism -->
+      <g fill="#ffffff" opacity=".38" filter="url(#softGlow)">
         <ellipse cx="44" cy="22" rx="14" ry="3"/>
         <ellipse cx="80" cy="60" rx="18" ry="3.5"/>
         <ellipse cx="50" cy="100" rx="20" ry="4"/>
       </g>
       <!-- inner shadow for spherical falloff -->
       <circle cx="60" cy="60" r="58" fill="none" stroke="rgba(0,0,0,.55)" stroke-width="6" opacity=".35"/>
-      <!-- specular highlight -->
+      <!-- specular highlight on upper-left -->
       <ellipse cx="42" cy="34" rx="20" ry="11" fill="url(#ballSpec)" opacity=".8"/>
     </g>
 
@@ -382,8 +403,9 @@
       <feComposite in2="SourceGraphic" operator="in"/>
     </filter>
     <filter id="wobble" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="5"/>
-      <feDisplacementMap in="SourceGraphic" scale="2.4"/>
+      <!-- subtler than before so pentagons still read as pentagons -->
+      <feTurbulence type="fractalNoise" baseFrequency=".06" numOctaves="2" seed="5"/>
+      <feDisplacementMap in="SourceGraphic" scale="0.9"/>
     </filter>
 
     <g id="ballArtSketch" clip-path="url(#circClip)">
@@ -417,8 +439,8 @@
 
     <g id="globeArtSketch" clip-path="url(#circClip)">
       <circle cx="60" cy="60" r="58" fill="#f5efde"/>
-      <!-- lat/long grid in light ink -->
-      <g fill="none" stroke="#2b1d10" stroke-width=".7" opacity=".7" filter="url(#wobble)">
+      <!-- lat/long grid in light ink, lightly wobbled for hand-drawn feel -->
+      <g fill="none" stroke="#2b1d10" stroke-width=".7" opacity=".55" filter="url(#wobble)">
         <ellipse cx="60" cy="60" rx="58" ry="20"/>
         <ellipse cx="60" cy="60" rx="58" ry="40"/>
         <line x1="2" y1="60" x2="118" y2="60"/>
@@ -426,28 +448,33 @@
         <ellipse cx="60" cy="60" rx="40" ry="58"/>
         <line x1="60" y1="2" x2="60" y2="118"/>
       </g>
-      <!-- continent outlines, hand-drawn -->
-      <g fill="none" stroke="#2b1d10" stroke-width="1.6" stroke-linejoin="round" filter="url(#wobble)">
-        <path d="M59,40 q9,-2 14,5 q3,9 -1,17 q-1,9 -7,15 q-3,11 -9,16 q-7,3 -10,-6 q-5,-9 -3,-19 q1,-12 6,-21 q3,-7 10,-7 z"/>
-        <path d="M14,30 q12,-7 24,-3 q9,4 11,14 q-3,9 -13,11 q-12,1 -19,-7 q-7,-7 -3,-15 z"/>
-        <path d="M30,62 q9,-3 14,5 q5,10 0,21 q-4,12 -11,16 q-9,-1 -11,-12 q-2,-13 1,-22 q2,-8 7,-8 z"/>
-        <path d="M62,28 q14,-3 24,2 q12,3 17,12 q-8,5 -19,4 q-12,-1 -22,-7 q-5,-4 0,-11 z"/>
-        <path d="M88,38 q12,-1 18,9 q5,9 -2,17 q-9,7 -18,3 q-9,-5 -8,-15 q1,-10 10,-14 z"/>
-        <path d="M94,82 q9,-2 12,5 q2,7 -5,11 q-9,3 -13,-3 q-3,-7 6,-13 z"/>
+      <!-- continent outlines (recognisable shapes from #worldMap), hand-drawn -->
+      <g fill="none" stroke="#2b1d10" stroke-width="1.4" stroke-linejoin="round" filter="url(#wobble)">
+        <use href="#worldMap"/>
       </g>
       <circle cx="60" cy="60" r="58" fill="none" stroke="#2b1d10" stroke-width="1.8" filter="url(#wobble)"/>
     </g>
 
     <!-- ====================== V9 — WATERCOLOR ====================== -->
     <filter id="bleed" x="-8%" y="-8%" width="116%" height="116%">
-      <feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="3" seed="11"/>
-      <feDisplacementMap in="SourceGraphic" scale="5"/>
-      <feGaussianBlur stdDeviation=".7"/>
+      <!-- subtler bleed: keeps continent + pentagon silhouettes recognisable
+           while still giving a painted edge feel -->
+      <feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="3" seed="11"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.6"/>
+      <feGaussianBlur stdDeviation=".5"/>
     </filter>
 
     <g id="ballArtPaint" clip-path="url(#circClip)" filter="url(#bleed)">
       <circle cx="60" cy="60" r="58" fill="#f1e9d8"/>
-      <g fill="#2f4858" opacity=".75">
+      <!-- the iconic seam radials that make this read as a soccer ball -->
+      <g stroke="#2f4858" stroke-width="2.6" stroke-linecap="round" opacity=".85" fill="none">
+        <line x1="60" y1="42" x2="60" y2="3"/>
+        <line x1="77.1" y1="54.4" x2="115" y2="42"/>
+        <line x1="70.6" y1="74.6" x2="94" y2="107"/>
+        <line x1="49.4" y1="74.6" x2="26" y2="107"/>
+        <line x1="42.9" y1="54.4" x2="5" y2="42"/>
+      </g>
+      <g fill="#2f4858" opacity=".82">
         <polygon points="60,42 77.1,54.4 70.6,74.6 49.4,74.6 42.9,54.4"/>
         <polygon points="83.5,14.6 95.9,23.6 91.1,38.1 75.9,38.1 71.1,23.6"/>
         <polygon points="98,59.4 110.4,68.4 105.6,82.9 90.4,82.9 85.6,68.4"/>
@@ -456,7 +483,7 @@
         <polygon points="36.5,14.6 48.9,23.6 44.1,38.1 28.9,38.1 24.1,23.6"/>
       </g>
       <!-- second layer of paint bleeds for richness -->
-      <g fill="#7d6a4a" opacity=".18">
+      <g fill="#7d6a4a" opacity=".15">
         <ellipse cx="40" cy="40" rx="32" ry="20"/>
         <ellipse cx="80" cy="80" rx="32" ry="24"/>
       </g>
@@ -464,16 +491,12 @@
 
     <g id="globeArtPaint" clip-path="url(#circClip)" filter="url(#bleed)">
       <circle cx="60" cy="60" r="58" fill="#a6c9d6"/>
-      <g fill="#7c9b3f" opacity=".9">
-        <path d="M59,40 q9,-2 14,5 q3,9 -1,17 q-1,9 -7,15 q-3,11 -9,16 q-7,3 -10,-6 q-5,-9 -3,-19 q1,-12 6,-21 q3,-7 10,-7 z"/>
-        <path d="M14,30 q12,-7 24,-3 q9,4 11,14 q-3,9 -13,11 q-12,1 -19,-7 q-7,-7 -3,-15 z"/>
-        <path d="M30,62 q9,-3 14,5 q5,10 0,21 q-4,12 -11,16 q-9,-1 -11,-12 q-2,-13 1,-22 q2,-8 7,-8 z"/>
-        <path d="M62,28 q14,-3 24,2 q12,3 17,12 q-8,5 -19,4 q-12,-1 -22,-7 q-5,-4 0,-11 z"/>
-        <path d="M88,38 q12,-1 18,9 q5,9 -2,17 q-9,7 -18,3 q-9,-5 -8,-15 q1,-10 10,-14 z"/>
-        <path d="M94,82 q9,-2 12,5 q2,7 -5,11 q-9,3 -13,-3 q-3,-7 6,-13 z"/>
-      </g>
-      <!-- paint pooling/wash overlays -->
-      <g fill="#46708a" opacity=".25">
+      <!-- continents (real shapes from #worldMap) with a watercolour green -->
+      <use href="#worldMap" fill="#7c9b3f" opacity=".88"/>
+      <!-- second pigment wash over the same shapes for depth -->
+      <use href="#worldMap" fill="#5d7a2e" opacity=".35" transform="translate(1,1)"/>
+      <!-- paint pooling/wash overlays over ocean -->
+      <g fill="#46708a" opacity=".22">
         <ellipse cx="74" cy="74" rx="38" ry="28"/>
         <ellipse cx="36" cy="36" rx="30" ry="22"/>
       </g>
@@ -482,6 +505,14 @@
     <!-- ====================== V10 — MODERN FLAT POSTER ====================== -->
     <g id="ballArtFlat" clip-path="url(#circClip)">
       <circle cx="60" cy="60" r="58" fill="#f4f1e6"/>
+      <!-- seam radials so the panels read as a real ball, not floating shapes -->
+      <g stroke="#0e1714" stroke-width="3" stroke-linecap="round" fill="none">
+        <line x1="60" y1="42" x2="60" y2="3"/>
+        <line x1="77.1" y1="54.4" x2="115" y2="42"/>
+        <line x1="70.6" y1="74.6" x2="94" y2="107"/>
+        <line x1="49.4" y1="74.6" x2="26" y2="107"/>
+        <line x1="42.9" y1="54.4" x2="5" y2="42"/>
+      </g>
       <g fill="#0e1714">
         <polygon points="60,42 77.1,54.4 70.6,74.6 49.4,74.6 42.9,54.4"/>
         <polygon points="83.5,14.6 95.9,23.6 91.1,38.1 75.9,38.1 71.1,23.6"/>
@@ -495,14 +526,9 @@
 
     <g id="globeArtFlat" clip-path="url(#circClip)">
       <circle cx="60" cy="60" r="58" fill="#f4f1e6"/>
-      <g fill="#39d56b">
-        <path d="M59,40 q9,-2 14,5 q3,9 -1,17 q-1,9 -7,15 q-3,11 -9,16 q-7,3 -10,-6 q-5,-9 -3,-19 q1,-12 6,-21 q3,-7 10,-7 z"/>
-        <path d="M14,30 q12,-7 24,-3 q9,4 11,14 q-3,9 -13,11 q-12,1 -19,-7 q-7,-7 -3,-15 z"/>
-        <path d="M30,62 q9,-3 14,5 q5,10 0,21 q-4,12 -11,16 q-9,-1 -11,-12 q-2,-13 1,-22 q2,-8 7,-8 z"/>
-        <path d="M62,28 q14,-3 24,2 q12,3 17,12 q-8,5 -19,4 q-12,-1 -22,-7 q-5,-4 0,-11 z"/>
-        <path d="M88,38 q12,-1 18,9 q5,9 -2,17 q-9,7 -18,3 q-9,-5 -8,-15 q1,-10 10,-14 z"/>
-        <path d="M94,82 q9,-2 12,5 q2,7 -5,11 q-9,3 -13,-3 q-3,-7 6,-13 z"/>
-      </g>
+      <!-- recognisable continents from #worldMap as flat grass-green silhouettes
+           with a dark ink outline matching the poster aesthetic -->
+      <use href="#worldMap" fill="#39d56b" stroke="#0e1714" stroke-width="1.4" stroke-linejoin="round"/>
       <circle cx="60" cy="60" r="58" fill="none" stroke="#0e1714" stroke-width="4"/>
     </g>
   </defs>
