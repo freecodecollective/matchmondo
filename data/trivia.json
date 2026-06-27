@@ -7021,107 +7021,107 @@
       "approved": true,
       "translations": {
         "ar": {
-          "question": "من هو هذا المهاجم البرازيلي الذي سجل 15 هدفاً عبر أربع نسخ؟",
+          "question": "من هو هذا المهاجم البرازيلي الذي سجّل 15 هدفاً عبر ثلاث نسخ؟",
           "options": [
             "رونالدينيو",
             "ريفالدو",
             "رونالدو",
             "روماريو"
           ],
-          "explanation": "سجّل رونالدو نازاريو 15 هدفاً عبر أربع نسخ (1998–2010)، وفاز بجائزة الحذاء الذهبي عام 2002 بثمانية أهداف عندما توّجت البرازيل باللقب."
+          "explanation": "سجّل رونالدو نازاريو 15 هدفاً عبر ثلاث نسخ (1998 و2002 و2006)، وفاز بجائزة الحذاء الذهبي عام 2002 برصيد ثمانية أهداف عندما توّجت البرازيل باللقب. كان ضمن التشكيلة عام 1994 وهو في السابعة عشرة من عمره لكنه لم يلعب."
         },
         "de": {
-          "question": "Wer ist dieser brasilianische Stürmer, der über vier Turniere hinweg 15 Tore erzielte?",
+          "question": "Wer ist dieser brasilianische Stürmer, der über drei Turniere hinweg 15 Tore erzielte?",
           "options": [
             "Ronaldinho",
             "Rivaldo",
             "Ronaldo",
             "Romário"
           ],
-          "explanation": "Ronaldo Nazário erzielte über vier Turniere (1998–2010) insgesamt 15 Tore und gewann 2002 mit acht Treffern den Goldenen Schuh, als Brasilien den Titel holte."
+          "explanation": "Ronaldo Nazário erzielte über drei Turniere hinweg (1998, 2002, 2006) insgesamt 15 Tore und gewann 2002 mit acht Treffern den Goldenen Schuh, als Brasilien den Titel holte. 1994 gehörte er als 17-Jähriger zum Kader, kam aber nicht zum Einsatz."
         },
         "es": {
-          "question": "¿Quién es este delantero brasileño que marcó 15 goles a lo largo de cuatro ediciones?",
+          "question": "¿Quién es este delantero brasileño que marcó 15 goles en tres ediciones?",
           "options": [
             "Ronaldinho",
             "Rivaldo",
             "Ronaldo",
             "Romário"
           ],
-          "explanation": "Ronaldo Nazário marcó 15 goles en cuatro ediciones (1998–2010), ganando la Bota de Oro en 2002 con ocho goles mientras Brasil se quedaba con el título."
+          "explanation": "Ronaldo Nazário marcó 15 goles en tres ediciones (1998, 2002, 2006) y ganó la Bota de Oro en 2002 con ocho goles cuando Brasil se llevó el título. En 1994 formó parte del plantel con apenas 17 años, pero no jugó."
         },
         "es-ES": {
-          "question": "¿Quién es este delantero brasileño que marcó 15 goles a lo largo de cuatro ediciones?",
+          "question": "¿Quién es este delantero brasileño que marcó 15 goles a lo largo de tres ediciones?",
           "options": [
             "Ronaldinho",
             "Rivaldo",
             "Ronaldo",
             "Romário"
           ],
-          "explanation": "Ronaldo Nazário marcó 15 goles en cuatro ediciones (1998–2010) y ganó la Bota de Oro en 2002 con ocho goles, mientras Brasil se llevaba el título."
+          "explanation": "Ronaldo Nazário marcó 15 goles en tres ediciones (1998, 2002, 2006) y ganó la Bota de Oro en 2002 con ocho goles cuando Brasil conquistó el título. En 1994 estuvo en la plantilla con tan solo 17 años, pero no llegó a jugar."
         },
         "fr": {
-          "question": "Qui est cet attaquant brésilien qui a inscrit 15 buts sur quatre éditions ?",
+          "question": "Qui est cet attaquant brésilien qui a marqué 15 buts sur trois éditions ?",
           "options": [
             "Ronaldinho",
             "Rivaldo",
             "Ronaldo",
             "Romário"
           ],
-          "explanation": "Ronaldo Nazário a marqué 15 buts sur quatre éditions (1998–2010), remportant le Soulier d'or en 2002 avec huit buts alors que le Brésil décrochait le titre."
+          "explanation": "Ronaldo Nazário a inscrit 15 buts sur trois éditions (1998, 2002, 2006) et a remporté le Soulier d'or en 2002 avec huit buts, lorsque le Brésil a décroché le titre. En 1994, il faisait partie de l'effectif à seulement 17 ans, mais n'a pas joué."
         },
         "it": {
-          "question": "Chi è questo attaccante brasiliano che ha segnato 15 gol in quattro edizioni?",
+          "question": "Chi è questo attaccante brasiliano che ha segnato 15 gol in tre edizioni?",
           "options": [
             "Ronaldinho",
             "Rivaldo",
             "Ronaldo",
             "Romário"
           ],
-          "explanation": "Ronaldo Nazário ha segnato 15 gol in quattro edizioni (1998–2010), conquistando la Scarpa d'Oro nel 2002 con otto reti mentre il Brasile si aggiudicava il titolo."
+          "explanation": "Ronaldo Nazário ha segnato 15 gol in tre edizioni (1998, 2002, 2006), vincendo la Scarpa d'Oro nel 2002 con otto reti, quando il Brasile conquistò il titolo. Nel 1994 faceva parte della rosa a soli 17 anni, ma non scese in campo."
         },
         "ja": {
-          "question": "4大会で15得点を挙げたこのブラジル人ストライカーは誰でしょう？",
+          "question": "3大会で通算15ゴールを決めたこのブラジル人ストライカーは誰でしょう？",
           "options": [
             "ロナウジーニョ",
             "リバウド",
             "ロナウド",
             "ロマーリオ"
           ],
-          "explanation": "ロナウド・ナザーリオは4大会（1998〜2010年）で通算15得点を記録し、2002年にはブラジルの優勝とともに8得点で得点王に輝きました。"
+          "explanation": "ロナウド・ナザーリオは3大会（1998年、2002年、2006年）で通算15ゴールを記録し、ブラジルが優勝した2002年には8得点で得点王に輝きました。1994年には17歳で代表メンバーに名を連ねていましたが、出場はしませんでした。"
         },
         "ko": {
-          "question": "네 개 대회에서 15골을 넣은 이 브라질 공격수는 누구일까요?",
+          "question": "세 번의 대회에서 통산 15골을 기록한 이 브라질 공격수는 누구일까요?",
           "options": [
             "호나우지뉴",
             "히바우두",
             "호나우두",
             "호마리우"
           ],
-          "explanation": "호나우두 나자리우는 네 개 대회(1998~2010년)에서 통산 15골을 기록했으며, 2002년에는 8골로 득점왕에 오르며 브라질의 우승을 이끌었습니다."
+          "explanation": "호나우두 나자리우는 세 번의 대회(1998년, 2002년, 2006년)에서 통산 15골을 넣었고, 브라질이 우승한 2002년에는 8골로 득점왕에 올랐습니다. 1994년에는 17세의 나이로 대표팀에 포함되었지만 출전하지는 않았습니다."
         },
         "pt-BR": {
-          "question": "Quem é esse atacante brasileiro que marcou 15 gols ao longo de quatro edições?",
+          "question": "Quem é este atacante brasileiro que marcou 15 gols ao longo de três edições?",
           "options": [
             "Ronaldinho",
             "Rivaldo",
             "Ronaldo",
             "Romário"
           ],
-          "explanation": "Ronaldo Nazário marcou 15 gols em quatro edições (1998–2010), conquistando a Chuteira de Ouro em 2002 com oito gols enquanto o Brasil levava o título."
+          "explanation": "Ronaldo Nazário marcou 15 gols ao longo de três edições (1998, 2002, 2006) e conquistou a Chuteira de Ouro em 2002 com oito gols, quando o Brasil ficou com o título. Em 1994 ele estava no elenco aos 17 anos, mas não chegou a jogar."
         },
         "zh-Hans": {
-          "question": "这位在四届赛事中打入15球的巴西前锋是谁？",
+          "question": "这位在三届赛事中共打入15球的巴西前锋是谁？",
           "options": [
             "罗纳尔迪尼奥",
             "里瓦尔多",
             "罗纳尔多",
             "罗马里奥"
           ],
-          "explanation": "罗纳尔多·纳扎里奥在四届赛事（1998–2010）中共打入15球，并在2002年以8粒进球荣膺金靴奖，帮助巴西夺冠。"
+          "explanation": "罗纳尔多·纳扎里奥在三届赛事（1998年、2002年、2006年）中共打入15球，并在巴西夺冠的2002年以8粒进球荣膺金靴奖。1994年他年仅17岁便入选大名单，但并未上场。"
         }
       },
-      "i18nSourceHash": "5e95b17e196de07b"
+      "i18nSourceHash": "3928e0556231ffaf"
     },
     {
       "id": "img-messi",
@@ -7747,7 +7747,110 @@
       "explanation": "Didier Drogba represented Ivory Coast at three editions (2006, 2010, 2014). He's credited with helping to broker a ceasefire in the Ivorian civil war through football.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Didier_Drogba_9279.JPG/500px-Didier_Drogba_9279.JPG",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا المهاجم الإيفواري، أحد أعظم لاعبي أفريقيا؟",
+          "options": [
+            "صامويل إيتو",
+            "ديدييه دروغبا",
+            "يايا توريه",
+            "جورج وياه"
+          ],
+          "explanation": "مثّل ديدييه دروغبا ساحل العاج في ثلاث نسخ (2006 و2010 و2014). ويُنسب إليه الفضل في المساعدة على التوصل إلى وقف لإطلاق النار في الحرب الأهلية الإيفوارية عبر كرة القدم."
+        },
+        "de": {
+          "question": "Wer ist dieser ivorische Stürmer, einer der größten Spieler Afrikas?",
+          "options": [
+            "Samuel Eto'o",
+            "Didier Drogba",
+            "Yaya Touré",
+            "George Weah"
+          ],
+          "explanation": "Didier Drogba vertrat die Elfenbeinküste bei drei Turnieren (2006, 2010, 2014). Ihm wird zugeschrieben, mithilfe des Fußballs zu einem Waffenstillstand im ivorischen Bürgerkrieg beigetragen zu haben."
+        },
+        "es": {
+          "question": "¿Quién es este delantero marfileño, uno de los mejores jugadores de África?",
+          "options": [
+            "Samuel Eto'o",
+            "Didier Drogba",
+            "Yaya Touré",
+            "George Weah"
+          ],
+          "explanation": "Didier Drogba representó a Costa de Marfil en tres ediciones (2006, 2010 y 2014). Se le reconoce por haber ayudado a lograr un alto el fuego en la guerra civil marfileña a través del fútbol."
+        },
+        "es-ES": {
+          "question": "¿Quién es este delantero marfileño, uno de los mejores jugadores de África?",
+          "options": [
+            "Samuel Eto'o",
+            "Didier Drogba",
+            "Yaya Touré",
+            "George Weah"
+          ],
+          "explanation": "Didier Drogba representó a Costa de Marfil en tres ediciones (2006, 2010 y 2014). Se le reconoce por haber contribuido a lograr un alto el fuego en la guerra civil marfileña a través del fútbol."
+        },
+        "fr": {
+          "question": "Qui est cet attaquant ivoirien, l'un des plus grands joueurs d'Afrique ?",
+          "options": [
+            "Samuel Eto'o",
+            "Didier Drogba",
+            "Yaya Touré",
+            "George Weah"
+          ],
+          "explanation": "Didier Drogba a représenté la Côte d'Ivoire lors de trois éditions (2006, 2010, 2014). On lui attribue le mérite d'avoir aidé à obtenir un cessez-le-feu dans la guerre civile ivoirienne grâce au football."
+        },
+        "it": {
+          "question": "Chi è questo attaccante ivoriano, uno dei più grandi giocatori africani?",
+          "options": [
+            "Samuel Eto'o",
+            "Didier Drogba",
+            "Yaya Touré",
+            "George Weah"
+          ],
+          "explanation": "Didier Drogba ha rappresentato la Costa d'Avorio in tre edizioni (2006, 2010, 2014). Gli viene riconosciuto il merito di aver contribuito a ottenere un cessate il fuoco nella guerra civile ivoriana grazie al calcio."
+        },
+        "ja": {
+          "question": "アフリカ史上屈指の選手であるこのコートジボワール出身のストライカーは誰でしょう？",
+          "options": [
+            "サミュエル・エトオ",
+            "ディディエ・ドログバ",
+            "ヤヤ・トゥーレ",
+            "ジョージ・ウェア"
+          ],
+          "explanation": "ディディエ・ドログバはコートジボワール代表として3大会（2006年、2010年、2014年）に出場しました。彼はサッカーを通じてコートジボワール内戦の停戦実現に貢献したと称えられています。"
+        },
+        "ko": {
+          "question": "아프리카 최고의 선수 중 한 명인 이 코트디부아르 출신 공격수는 누구일까요?",
+          "options": [
+            "사뮈엘 에토오",
+            "디디에 드로그바",
+            "야야 투레",
+            "조지 웨아"
+          ],
+          "explanation": "디디에 드로그바는 코트디부아르 대표로 세 차례 대회(2006년, 2010년, 2014년)에 출전했습니다. 그는 축구를 통해 코트디부아르 내전의 휴전을 이끌어내는 데 기여한 것으로 평가받습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este atacante marfinense, um dos maiores jogadores da África?",
+          "options": [
+            "Samuel Eto'o",
+            "Didier Drogba",
+            "Yaya Touré",
+            "George Weah"
+          ],
+          "explanation": "Didier Drogba representou a Costa do Marfim em três edições (2006, 2010 e 2014). Ele é reconhecido por ter ajudado a alcançar um cessar-fogo na guerra civil marfinense por meio do futebol."
+        },
+        "zh-Hans": {
+          "question": "这位科特迪瓦前锋，非洲最伟大的球员之一，他是谁？",
+          "options": [
+            "萨穆埃尔·埃托奥",
+            "迪迪埃·德罗巴",
+            "亚亚·图雷",
+            "乔治·维阿"
+          ],
+          "explanation": "迪迪埃·德罗巴代表科特迪瓦参加了三届赛事（2006年、2010年、2014年）。人们认为他通过足球帮助促成了科特迪瓦内战的停火。"
+        }
+      },
+      "i18nSourceHash": "8d4e0947b51663d2"
     },
     {
       "id": "h-1978-host",
@@ -8251,7 +8354,90 @@
       "explanation": "True! Uruguay hosted and won the inaugural 1930 edition, defeating Argentina 4-2 in the final at the Estadio Centenario in Montevideo before approximately 93,000 spectators. With a population of under 2 million at the time, Uruguay remains one of the smallest nations ever to win the tournament.",
       "type": "true_false",
       "media": "https://www.youtube.com/watch?v=wN21I_F7MN0",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أول دولة مضيفة للبطولة، وهي الأوروغواي عام 1930، فازت أيضاً باللقب.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! استضافت الأوروغواي النسخة الافتتاحية عام 1930 وفازت بها، حيث هزمت الأرجنتين 4-2 في النهائي على ملعب سنتيناريو في مونتيفيديو أمام نحو 93,000 متفرج. وبتعداد سكاني يقل عن مليوني نسمة في ذلك الوقت، تبقى الأوروغواي واحدة من أصغر الدول التي فازت بالبطولة على الإطلاق."
+        },
+        "de": {
+          "question": "Der erste Gastgeber des Turniers, Uruguay im Jahr 1930, holte sich auch den Titel.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Richtig! Uruguay war 1930 Gastgeber der ersten Ausgabe und gewann sie auch, indem es Argentinien im Finale im Estadio Centenario in Montevideo vor rund 93.000 Zuschauern mit 4:2 besiegte. Mit damals weniger als 2 Millionen Einwohnern bleibt Uruguay eine der kleinsten Nationen, die das Turnier je gewonnen haben."
+        },
+        "es": {
+          "question": "El primer país anfitrión del torneo, Uruguay en 1930, también ganó el título.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Uruguay fue sede de la edición inaugural de 1930 y la ganó, venciendo a Argentina 4-2 en la final del Estadio Centenario de Montevideo ante unos 93.000 espectadores. Con una población de menos de 2 millones en aquel entonces, Uruguay sigue siendo una de las naciones más pequeñas que ha ganado el torneo."
+        },
+        "es-ES": {
+          "question": "El primer país anfitrión del torneo, Uruguay en 1930, también se llevó el título.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Uruguay acogió la edición inaugural de 1930 y la ganó, venciendo a Argentina por 4-2 en la final del Estadio Centenario de Montevideo ante unos 93.000 espectadores. Con una población de menos de 2 millones de habitantes en aquella época, Uruguay sigue siendo una de las naciones más pequeñas que ha ganado el torneo."
+        },
+        "fr": {
+          "question": "Le premier pays hôte du tournoi, l'Uruguay en 1930, a également remporté le titre.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! L'Uruguay a accueilli la toute première édition en 1930 et l'a remportée, battant l'Argentine 4-2 en finale au stade Centenario de Montevideo devant environ 93 000 spectateurs. Avec une population de moins de 2 millions d'habitants à l'époque, l'Uruguay reste l'une des plus petites nations à avoir jamais remporté le tournoi."
+        },
+        "it": {
+          "question": "Il primo paese ospitante del torneo, l'Uruguay nel 1930, vinse anche il titolo.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! L'Uruguay ospitò l'edizione inaugurale del 1930 e la vinse, battendo l'Argentina 4-2 in finale allo Stadio Centenario di Montevideo davanti a circa 93.000 spettatori. Con una popolazione di meno di 2 milioni di abitanti all'epoca, l'Uruguay resta una delle nazioni più piccole ad aver mai vinto il torneo."
+        },
+        "ja": {
+          "question": "大会の最初の開催国である1930年のウルグアイは、優勝も果たした。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "正しい！ウルグアイは1930年の記念すべき第1回大会を開催し、優勝も果たしました。モンテビデオのエスタディオ・センテナリオで、約93,000人の観衆を前にアルゼンチンを4対2で下しました。当時の人口は200万人未満で、ウルグアイは今でもこの大会を制した史上最小規模の国の一つです。"
+        },
+        "ko": {
+          "question": "대회 최초 개최국인 1930년 우루과이는 우승까지 차지했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! 우루과이는 1930년 첫 대회를 개최하고 우승까지 차지했으며, 몬테비데오의 에스타디오 센테나리오에서 약 93,000명의 관중 앞에서 아르헨티나를 4-2로 꺾었습니다. 당시 인구가 200만 명 미만이었던 우루과이는 지금까지도 이 대회에서 우승한 가장 작은 나라 중 하나로 남아 있습니다."
+        },
+        "pt-BR": {
+          "question": "O primeiro país-sede do torneio, o Uruguai em 1930, também conquistou o título.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! O Uruguai sediou a edição inaugural de 1930 e a venceu, derrotando a Argentina por 4 a 2 na final, no Estádio Centenário, em Montevidéu, diante de cerca de 93.000 espectadores. Com uma população de menos de 2 milhões de habitantes na época, o Uruguai segue sendo uma das menores nações a já ter vencido o torneio."
+        },
+        "zh-Hans": {
+          "question": "1930年首届赛事的东道主乌拉圭也赢得了冠军。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！乌拉圭主办了1930年的首届赛事并夺得冠军，在蒙得维的亚的世纪体育场决赛中以4比2击败阿根廷，现场约有93,000名观众。当时乌拉圭人口不足200万，至今仍是赢得该赛事的最小国家之一。"
+        }
+      },
+      "i18nSourceHash": "8b8282bf8997d76d"
     },
     {
       "id": "tf-no-cards-1930",
@@ -8277,7 +8463,90 @@
       "answer": 0,
       "explanation": "True! Pelé tore a groin muscle in Brazil's second group match against Czechoslovakia and was sidelined for the rest of the tournament. Garrincha stepped into the spotlight as the tournament's star, leading Brazil to their second consecutive title. It showed the incredible depth of Brazilian talent in that era.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "تعرّض بيليه للإصابة وغاب عن معظم بطولة 1962، لكن البرازيل فازت رغم ذلك.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! أصيب بيليه بتمزق في عضلة الفخذ خلال مباراة البرازيل الثانية في دور المجموعات أمام تشيكوسلوفاكيا وابتعد عن باقي البطولة. وتألق غارينشا ليصبح نجم البطولة، قائدًا البرازيل إلى لقبها الثاني على التوالي. وقد أظهر ذلك العمق المذهل للمواهب البرازيلية في تلك الحقبة."
+        },
+        "de": {
+          "question": "Pelé verletzte sich und verpasste den Großteil des Turniers 1962, doch Brasilien gewann trotzdem.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Richtig! Pelé erlitt im zweiten Gruppenspiel Brasiliens gegen die Tschechoslowakei einen Muskelfaserriss im Leistenbereich und fiel für den Rest des Turniers aus. Garrincha rückte ins Rampenlicht und wurde zum Star des Turniers, der Brasilien zum zweiten Titel in Folge führte. Das zeigte die unglaubliche Tiefe des brasilianischen Talents in jener Ära."
+        },
+        "es": {
+          "question": "Pelé se lesionó y se perdió la mayor parte del torneo de 1962, pero Brasil ganó de todos modos.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Pelé sufrió un desgarro en la ingle en el segundo partido de Brasil en la fase de grupos contra Checoslovaquia y quedó fuera por el resto del torneo. Garrincha tomó el protagonismo como la estrella del torneo y llevó a Brasil a su segundo título consecutivo. Esto demostró la increíble profundidad del talento brasileño en aquella época."
+        },
+        "es-ES": {
+          "question": "Pelé se lesionó y se perdió la mayor parte del torneo de 1962, pero Brasil ganó igualmente.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Pelé sufrió un desgarro en la ingle en el segundo partido de Brasil en la fase de grupos contra Checoslovaquia y se quedó fuera durante el resto del torneo. Garrincha asumió el protagonismo como la estrella del torneo y condujo a Brasil a su segundo título consecutivo. Esto puso de manifiesto la increíble profundidad del talento brasileño en aquella época."
+        },
+        "fr": {
+          "question": "Pelé s'est blessé et a manqué la majeure partie du tournoi de 1962, mais le Brésil l'a tout de même remporté.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! Pelé s'est déchiré un muscle à l'aine lors du deuxième match de poule du Brésil contre la Tchécoslovaquie et a été écarté pour le reste du tournoi. Garrincha a alors pris la lumière en devenant la vedette du tournoi, menant le Brésil à son deuxième titre consécutif. Cela a démontré l'incroyable profondeur du talent brésilien à cette époque."
+        },
+        "it": {
+          "question": "Pelé si infortunò e saltò gran parte del torneo del 1962, ma il Brasile vinse comunque.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! Pelé si stirò un muscolo inguinale nella seconda partita del girone del Brasile contro la Cecoslovacchia e rimase fuori per il resto del torneo. Garrincha si prese la scena diventando la stella del torneo e guidò il Brasile al secondo titolo consecutivo. Ciò dimostrò l'incredibile profondità del talento brasiliano in quell'epoca."
+        },
+        "ja": {
+          "question": "ペレは負傷して1962年大会のほとんどを欠場したが、それでもブラジルは優勝した。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "正しい！ペレはブラジルのグループステージ第2戦、チェコスロバキア戦で股関節の筋肉を断裂し、大会の残りを欠場することになりました。代わってガリンシャが脚光を浴びて大会のスターとなり、ブラジルを2大会連続の優勝へと導きました。これは当時のブラジルの選手層の驚くべき厚さを示すものでした。"
+        },
+        "ko": {
+          "question": "펠레는 부상으로 1962년 대회 대부분을 결장했지만, 그래도 브라질은 우승했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! 펠레는 브라질의 조별리그 2차전인 체코슬로바키아전에서 사타구니 근육이 파열되어 남은 대회 일정에 나서지 못했습니다. 대신 가린샤가 대회의 스타로 떠올라 브라질을 2회 연속 우승으로 이끌었습니다. 이는 당시 브라질 선수층의 놀라운 깊이를 보여준 사례였습니다."
+        },
+        "pt-BR": {
+          "question": "Pelé se machucou e perdeu a maior parte do torneio de 1962, mas o Brasil venceu mesmo assim.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! Pelé sofreu uma lesão muscular na virilha na segunda partida do Brasil na fase de grupos contra a Tchecoslováquia e ficou de fora pelo resto do torneio. Garrincha assumiu o protagonismo como a estrela do torneio, levando o Brasil ao seu segundo título consecutivo. Isso mostrou a incrível profundidade do talento brasileiro naquela época."
+        },
+        "zh-Hans": {
+          "question": "贝利受伤，缺席了1962年赛事的大部分比赛，但巴西仍然夺冠。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！贝利在巴西小组赛第二场对阵捷克斯洛伐克的比赛中拉伤了腹股沟肌肉，因此缺席了赛事余下的所有比赛。加林查挺身而出，成为本届赛事的明星球员，带领巴西夺得了队史第二个连冠。这彰显了那个时代巴西足球人才的惊人厚度。"
+        }
+      },
+      "i18nSourceHash": "e02a306aac3e933f"
     },
     {
       "id": "tf-knockout-draw",
@@ -8290,7 +8559,90 @@
       "answer": 1,
       "explanation": "False! Every knockout match must produce a winner. If the score is level after 90 minutes, 30 minutes of extra time (two 15-minute halves) are played. If still tied, a penalty shootout decides the outcome. Only group-stage matches can end in a draw.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "يمكن أن تنتهي مباراة الأدوار الإقصائية في البطولة بالتعادل.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "خطأ! يجب أن تُسفر كل مباراة إقصائية عن فائز. إذا تعادل الفريقان بعد 90 دقيقة، يُلعب وقت إضافي مدته 30 دقيقة (شوطان من 15 دقيقة لكل منهما). وإذا استمر التعادل، تُحسم النتيجة بركلات الترجيح. مباريات دور المجموعات فقط هي التي يمكن أن تنتهي بالتعادل."
+        },
+        "de": {
+          "question": "Ein K.-o.-Spiel beim Turnier kann unentschieden enden.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Falsch! Jedes K.-o.-Spiel muss einen Sieger hervorbringen. Steht es nach 90 Minuten unentschieden, folgt eine Verlängerung von 30 Minuten (zwei Halbzeiten zu je 15 Minuten). Bleibt es danach gleich, entscheidet ein Elfmeterschießen über den Ausgang. Nur Spiele der Gruppenphase können unentschieden enden."
+        },
+        "es": {
+          "question": "Un partido de eliminación directa en el torneo puede terminar en empate.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Falso! Todo partido de eliminación directa debe tener un ganador. Si el marcador está igualado tras los 90 minutos, se juegan 30 minutos de tiempo extra (dos tiempos de 15 minutos). Si sigue empatado, una tanda de penales define el resultado. Solo los partidos de la fase de grupos pueden terminar en empate."
+        },
+        "es-ES": {
+          "question": "Un partido de eliminatorias en el torneo puede terminar en empate.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Falso! Todo partido de eliminatorias debe tener un ganador. Si el marcador está igualado tras los 90 minutos, se juega una prórroga de 30 minutos (dos partes de 15 minutos). Si sigue habiendo empate, una tanda de penaltis decide el resultado. Solo los partidos de la fase de grupos pueden terminar en empate."
+        },
+        "fr": {
+          "question": "Un match à élimination directe du tournoi peut se terminer par un match nul.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Faux ! Chaque match à élimination directe doit désigner un vainqueur. Si les deux équipes sont à égalité après 90 minutes, on joue 30 minutes de prolongation (deux mi-temps de 15 minutes). En cas d'égalité persistante, une séance de tirs au but départage les équipes. Seuls les matchs de la phase de groupes peuvent se terminer par un match nul."
+        },
+        "it": {
+          "question": "Una partita a eliminazione diretta del torneo può finire in pareggio.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Falso! Ogni partita a eliminazione diretta deve avere un vincitore. Se il punteggio è in parità dopo 90 minuti, si giocano 30 minuti di tempi supplementari (due tempi da 15 minuti). Se la parità persiste, sono i calci di rigore a decidere l'esito. Solo le partite della fase a gironi possono finire in pareggio."
+        },
+        "ja": {
+          "question": "この大会の決勝トーナメントの試合は引き分けで終わることがある。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "間違いです！決勝トーナメントの試合は必ず勝者を決めなければなりません。90分を終えて同点の場合、30分の延長戦（15分ハーフ2本）が行われます。それでも同点なら、PK戦で結果を決めます。引き分けで終われるのはグループステージの試合だけです。"
+        },
+        "ko": {
+          "question": "이 대회의 토너먼트 경기는 무승부로 끝날 수 있다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "거짓입니다! 모든 토너먼트 경기는 반드시 승자를 가려야 합니다. 90분 후에도 동점이면 30분의 연장전(전·후반 각 15분)을 치릅니다. 그래도 동점이면 승부차기로 결과를 결정합니다. 무승부로 끝날 수 있는 경기는 조별 리그 경기뿐입니다."
+        },
+        "pt-BR": {
+          "question": "Uma partida do mata-mata do torneio pode terminar empatada.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Falso! Toda partida do mata-mata precisa ter um vencedor. Se o placar estiver empatado após os 90 minutos, são disputados 30 minutos de prorrogação (dois tempos de 15 minutos). Se o empate persistir, uma disputa de pênaltis decide o resultado. Apenas as partidas da fase de grupos podem terminar empatadas."
+        },
+        "zh-Hans": {
+          "question": "本届赛事的淘汰赛可能以平局结束。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "错误！每场淘汰赛都必须决出胜者。如果90分钟战平，将进行30分钟加时赛（两个15分钟半场）。若仍然战平，则通过点球大战决定胜负。只有小组赛阶段的比赛才可能以平局收场。"
+        }
+      },
+      "i18nSourceHash": "117fcf2ef3113e58"
     },
     {
       "id": "tf-referee-own-country",
