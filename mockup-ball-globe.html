@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MatchMondo · Ball→Globe Motion Lab</title>
-<meta name="description" content="Six versions of the MatchMondo mark: a soccer ball that slowly rotates and transforms into a globe, then back again.">
+<meta name="description" content="Ten versions of the MatchMondo mark: a soccer ball that slowly rotates and transforms into a globe, then back again — across motion treatments and art styles.">
 <style>
   :root{
     --t: 9s;                       /* master cycle length, driven by the slider */
@@ -192,6 +192,27 @@
     100%{opacity:0; transform:rotate(140deg) scale(.55); filter:blur(6px)}
   }
 
+  /* ============ V7–V10 — STYLE-FOCUSED VARIANTS ============
+     All four reuse the V1 cross-dissolve spin so the comparison is
+     purely about the artwork; CSS just attaches the right classes. */
+  .v7 .spin, .v8 .spin, .v9 .spin, .v10 .spin {
+    animation: spin360 var(--t) linear infinite; transform-origin: 50% 50%;
+  }
+  .v7 .l-ball, .v8 .l-ball, .v9 .l-ball, .v10 .l-ball {
+    animation: fadeBall var(--t) ease-in-out infinite;
+  }
+  .v7 .l-globe, .v8 .l-globe, .v9 .l-globe, .v10 .l-globe {
+    animation: fadeGlobe var(--t) ease-in-out infinite;
+  }
+  /* V7 photoreal: full shading from .shade plus an atmosphere ring on the globe */
+  .v7 .atmo { position: absolute; inset: -4%; border-radius: 50%; background: radial-gradient(circle, rgba(120,190,255,0) 60%, rgba(120,190,255,.4) 78%, rgba(120,190,255,0) 100%); pointer-events: none; z-index: 4; }
+  /* V8 ink sketch: paper-coloured stage, drop the spherical shading entirely */
+  .v8 .shade { display: none; }
+  /* V9 watercolor: lighter shading (no harsh inner shadow) for paper feel */
+  .v9 .shade { background: radial-gradient(circle at 33% 28%, rgba(255,255,255,.25), rgba(255,255,255,0) 50%); box-shadow: none; }
+  /* V10 flat poster: no 3D shading at all — pure flat */
+  .v10 .shade { display: none; }
+
   /* pause + reduced-motion */
   body.paused .stage *{animation-play-state:paused !important}
   @media (prefers-reduced-motion: reduce){
@@ -254,6 +275,236 @@
         <line x1="60" y1="2" x2="60" y2="118"/>
       </g>
     </g>
+
+    <!-- ====================== V7 — PHOTOREAL ====================== -->
+    <!-- Reusable gradients + filter for the photoreal pair. The ball uses a
+         tight specular plus warm-cream shadow side; the globe uses a deep
+         ocean radial, a thin atmosphere glow ring, and cloud whisps. -->
+    <radialGradient id="ballSpec" cx="34%" cy="28%" r="62%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".95"/>
+      <stop offset=".45" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ballBody" cx="35%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#fbfbf5"/>
+      <stop offset=".55" stop-color="#e9e9e0"/>
+      <stop offset="1" stop-color="#a9a89c"/>
+    </radialGradient>
+    <radialGradient id="pentShade" cx="40%" cy="32%" r="80%">
+      <stop offset="0" stop-color="#2b2b2b"/>
+      <stop offset="1" stop-color="#070707"/>
+    </radialGradient>
+    <radialGradient id="oceanReal" cx="32%" cy="28%" r="86%">
+      <stop offset="0" stop-color="#62c2ff"/>
+      <stop offset=".4" stop-color="#2d80c7"/>
+      <stop offset=".82" stop-color="#0f3868"/>
+      <stop offset="1" stop-color="#06203f"/>
+    </radialGradient>
+    <radialGradient id="atmo" cx="50%" cy="50%" r="58%">
+      <stop offset="0" stop-color="rgba(120,190,255,0)"/>
+      <stop offset=".82" stop-color="rgba(120,190,255,0)"/>
+      <stop offset=".96" stop-color="rgba(120,190,255,.55)"/>
+      <stop offset="1" stop-color="rgba(120,190,255,0)"/>
+    </radialGradient>
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation=".6"/>
+    </filter>
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="3"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.2"/>
+    </filter>
+
+    <!-- PHOTOREAL BALL -->
+    <g id="ballArtReal" clip-path="url(#circClip)">
+      <circle cx="60" cy="60" r="58" fill="url(#ballBody)"/>
+      <!-- darker ground colour under panels for depth -->
+      <g fill="url(#pentShade)">
+        <polygon points="60,42 77.1,54.4 70.6,74.6 49.4,74.6 42.9,54.4"/>
+        <polygon points="83.5,14.6 95.9,23.6 91.1,38.1 75.9,38.1 71.1,23.6"/>
+        <polygon points="98,59.4 110.4,68.4 105.6,82.9 90.4,82.9 85.6,68.4"/>
+        <polygon points="60,87 72.4,96 67.6,110.5 52.4,110.5 47.6,96"/>
+        <polygon points="22,59.4 34.4,68.4 29.6,82.9 14.4,82.9 9.6,68.4"/>
+        <polygon points="36.5,14.6 48.9,23.6 44.1,38.1 28.9,38.1 24.1,23.6"/>
+      </g>
+      <!-- thin stitched seams (cream over black) so panels read as panels -->
+      <g stroke="#dcd6c1" stroke-width=".8" stroke-linecap="round" fill="none" opacity=".85">
+        <line x1="60" y1="42" x2="60" y2="3"/>
+        <line x1="77.1" y1="54.4" x2="115" y2="42"/>
+        <line x1="70.6" y1="74.6" x2="94" y2="107"/>
+        <line x1="49.4" y1="74.6" x2="26" y2="107"/>
+        <line x1="42.9" y1="54.4" x2="5" y2="42"/>
+      </g>
+      <g stroke="#1a1a1a" stroke-width="2.2" fill="none">
+        <line x1="60" y1="42" x2="60" y2="3"/>
+        <line x1="77.1" y1="54.4" x2="115" y2="42"/>
+        <line x1="70.6" y1="74.6" x2="94" y2="107"/>
+        <line x1="49.4" y1="74.6" x2="26" y2="107"/>
+        <line x1="42.9" y1="54.4" x2="5" y2="42"/>
+      </g>
+      <!-- specular highlight + soft self-shadow on the lower-right -->
+      <ellipse cx="42" cy="40" rx="22" ry="14" fill="url(#ballSpec)"/>
+      <circle cx="60" cy="60" r="58" fill="none" stroke="rgba(0,0,0,.18)" stroke-width="1"/>
+    </g>
+
+    <!-- PHOTOREAL GLOBE — realistic continent silhouettes -->
+    <g id="globeArtReal" clip-path="url(#circClip)">
+      <circle cx="60" cy="60" r="58" fill="url(#oceanReal)"/>
+      <!-- continents (stylised but anatomically recognisable on a 120-px sphere) -->
+      <g fill="#3a8742">
+        <!-- Africa + Arabia -->
+        <path d="M59,40 q9,-2 14,5 q3,9 -1,17 q-1,9 -7,15 q-3,11 -9,16 q-7,3 -10,-6 q-5,-9 -3,-19 q1,-12 6,-21 q3,-7 10,-7 z"/>
+        <!-- Eurasia bridge -->
+        <path d="M62,28 q14,-3 24,2 q12,3 17,12 q-8,5 -19,4 q-12,-1 -22,-7 q-5,-4 0,-11 z"/>
+        <!-- Asia far east bulge -->
+        <path d="M88,38 q12,-1 18,9 q5,9 -2,17 q-9,7 -18,3 q-9,-5 -8,-15 q1,-10 10,-14 z"/>
+        <!-- North America -->
+        <path d="M14,30 q12,-7 24,-3 q9,4 11,14 q-3,9 -13,11 q-12,1 -19,-7 q-7,-7 -3,-15 z"/>
+        <!-- South America -->
+        <path d="M30,62 q9,-3 14,5 q5,10 0,21 q-4,12 -11,16 q-9,-1 -11,-12 q-2,-13 1,-22 q2,-8 7,-8 z"/>
+        <!-- Australia -->
+        <path d="M94,82 q9,-2 12,5 q2,7 -5,11 q-9,3 -13,-3 q-3,-7 6,-13 z"/>
+      </g>
+      <!-- soft cloud whisps -->
+      <g fill="#ffffff" opacity=".42" filter="url(#softGlow)">
+        <ellipse cx="44" cy="22" rx="14" ry="3"/>
+        <ellipse cx="80" cy="60" rx="18" ry="3.5"/>
+        <ellipse cx="50" cy="100" rx="20" ry="4"/>
+      </g>
+      <!-- inner shadow for spherical falloff -->
+      <circle cx="60" cy="60" r="58" fill="none" stroke="rgba(0,0,0,.55)" stroke-width="6" opacity=".35"/>
+      <!-- specular highlight -->
+      <ellipse cx="42" cy="34" rx="20" ry="11" fill="url(#ballSpec)" opacity=".8"/>
+    </g>
+
+    <!-- ====================== V8 — INK SKETCH ====================== -->
+    <filter id="paperGrain" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="7"/>
+      <feColorMatrix values="0 0 0 0 .06  0 0 0 0 .05  0 0 0 0 .04  0 0 0 .14 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <filter id="wobble" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="5"/>
+      <feDisplacementMap in="SourceGraphic" scale="2.4"/>
+    </filter>
+
+    <g id="ballArtSketch" clip-path="url(#circClip)">
+      <circle cx="60" cy="60" r="58" fill="#f5efde"/>
+      <!-- light pencil hatching on shadow side -->
+      <g stroke="#7a6a4a" stroke-width=".5" opacity=".4">
+        <line x1="78" y1="14" x2="118" y2="56"/>
+        <line x1="82" y1="14" x2="118" y2="50"/>
+        <line x1="86" y1="14" x2="118" y2="44"/>
+        <line x1="90" y1="14" x2="116" y2="40"/>
+        <line x1="58" y1="106" x2="116" y2="64"/>
+        <line x1="62" y1="106" x2="116" y2="68"/>
+        <line x1="68" y1="106" x2="116" y2="74"/>
+      </g>
+      <!-- doubled rough strokes for hand-drawn pentagons -->
+      <g fill="none" stroke="#2b1d10" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#wobble)">
+        <polygon points="60,42 77.1,54.4 70.6,74.6 49.4,74.6 42.9,54.4"/>
+        <polygon points="83.5,14.6 95.9,23.6 91.1,38.1 75.9,38.1 71.1,23.6"/>
+        <polygon points="98,59.4 110.4,68.4 105.6,82.9 90.4,82.9 85.6,68.4"/>
+        <polygon points="60,87 72.4,96 67.6,110.5 52.4,110.5 47.6,96"/>
+        <polygon points="22,59.4 34.4,68.4 29.6,82.9 14.4,82.9 9.6,68.4"/>
+        <polygon points="36.5,14.6 48.9,23.6 44.1,38.1 28.9,38.1 24.1,23.6"/>
+        <line x1="60" y1="42" x2="60" y2="3"/>
+        <line x1="77.1" y1="54.4" x2="115" y2="42"/>
+        <line x1="70.6" y1="74.6" x2="94" y2="107"/>
+        <line x1="49.4" y1="74.6" x2="26" y2="107"/>
+        <line x1="42.9" y1="54.4" x2="5" y2="42"/>
+      </g>
+      <circle cx="60" cy="60" r="58" fill="none" stroke="#2b1d10" stroke-width="1.8" filter="url(#wobble)"/>
+    </g>
+
+    <g id="globeArtSketch" clip-path="url(#circClip)">
+      <circle cx="60" cy="60" r="58" fill="#f5efde"/>
+      <!-- lat/long grid in light ink -->
+      <g fill="none" stroke="#2b1d10" stroke-width=".7" opacity=".7" filter="url(#wobble)">
+        <ellipse cx="60" cy="60" rx="58" ry="20"/>
+        <ellipse cx="60" cy="60" rx="58" ry="40"/>
+        <line x1="2" y1="60" x2="118" y2="60"/>
+        <ellipse cx="60" cy="60" rx="20" ry="58"/>
+        <ellipse cx="60" cy="60" rx="40" ry="58"/>
+        <line x1="60" y1="2" x2="60" y2="118"/>
+      </g>
+      <!-- continent outlines, hand-drawn -->
+      <g fill="none" stroke="#2b1d10" stroke-width="1.6" stroke-linejoin="round" filter="url(#wobble)">
+        <path d="M59,40 q9,-2 14,5 q3,9 -1,17 q-1,9 -7,15 q-3,11 -9,16 q-7,3 -10,-6 q-5,-9 -3,-19 q1,-12 6,-21 q3,-7 10,-7 z"/>
+        <path d="M14,30 q12,-7 24,-3 q9,4 11,14 q-3,9 -13,11 q-12,1 -19,-7 q-7,-7 -3,-15 z"/>
+        <path d="M30,62 q9,-3 14,5 q5,10 0,21 q-4,12 -11,16 q-9,-1 -11,-12 q-2,-13 1,-22 q2,-8 7,-8 z"/>
+        <path d="M62,28 q14,-3 24,2 q12,3 17,12 q-8,5 -19,4 q-12,-1 -22,-7 q-5,-4 0,-11 z"/>
+        <path d="M88,38 q12,-1 18,9 q5,9 -2,17 q-9,7 -18,3 q-9,-5 -8,-15 q1,-10 10,-14 z"/>
+        <path d="M94,82 q9,-2 12,5 q2,7 -5,11 q-9,3 -13,-3 q-3,-7 6,-13 z"/>
+      </g>
+      <circle cx="60" cy="60" r="58" fill="none" stroke="#2b1d10" stroke-width="1.8" filter="url(#wobble)"/>
+    </g>
+
+    <!-- ====================== V9 — WATERCOLOR ====================== -->
+    <filter id="bleed" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="3" seed="11"/>
+      <feDisplacementMap in="SourceGraphic" scale="5"/>
+      <feGaussianBlur stdDeviation=".7"/>
+    </filter>
+
+    <g id="ballArtPaint" clip-path="url(#circClip)" filter="url(#bleed)">
+      <circle cx="60" cy="60" r="58" fill="#f1e9d8"/>
+      <g fill="#2f4858" opacity=".75">
+        <polygon points="60,42 77.1,54.4 70.6,74.6 49.4,74.6 42.9,54.4"/>
+        <polygon points="83.5,14.6 95.9,23.6 91.1,38.1 75.9,38.1 71.1,23.6"/>
+        <polygon points="98,59.4 110.4,68.4 105.6,82.9 90.4,82.9 85.6,68.4"/>
+        <polygon points="60,87 72.4,96 67.6,110.5 52.4,110.5 47.6,96"/>
+        <polygon points="22,59.4 34.4,68.4 29.6,82.9 14.4,82.9 9.6,68.4"/>
+        <polygon points="36.5,14.6 48.9,23.6 44.1,38.1 28.9,38.1 24.1,23.6"/>
+      </g>
+      <!-- second layer of paint bleeds for richness -->
+      <g fill="#7d6a4a" opacity=".18">
+        <ellipse cx="40" cy="40" rx="32" ry="20"/>
+        <ellipse cx="80" cy="80" rx="32" ry="24"/>
+      </g>
+    </g>
+
+    <g id="globeArtPaint" clip-path="url(#circClip)" filter="url(#bleed)">
+      <circle cx="60" cy="60" r="58" fill="#a6c9d6"/>
+      <g fill="#7c9b3f" opacity=".9">
+        <path d="M59,40 q9,-2 14,5 q3,9 -1,17 q-1,9 -7,15 q-3,11 -9,16 q-7,3 -10,-6 q-5,-9 -3,-19 q1,-12 6,-21 q3,-7 10,-7 z"/>
+        <path d="M14,30 q12,-7 24,-3 q9,4 11,14 q-3,9 -13,11 q-12,1 -19,-7 q-7,-7 -3,-15 z"/>
+        <path d="M30,62 q9,-3 14,5 q5,10 0,21 q-4,12 -11,16 q-9,-1 -11,-12 q-2,-13 1,-22 q2,-8 7,-8 z"/>
+        <path d="M62,28 q14,-3 24,2 q12,3 17,12 q-8,5 -19,4 q-12,-1 -22,-7 q-5,-4 0,-11 z"/>
+        <path d="M88,38 q12,-1 18,9 q5,9 -2,17 q-9,7 -18,3 q-9,-5 -8,-15 q1,-10 10,-14 z"/>
+        <path d="M94,82 q9,-2 12,5 q2,7 -5,11 q-9,3 -13,-3 q-3,-7 6,-13 z"/>
+      </g>
+      <!-- paint pooling/wash overlays -->
+      <g fill="#46708a" opacity=".25">
+        <ellipse cx="74" cy="74" rx="38" ry="28"/>
+        <ellipse cx="36" cy="36" rx="30" ry="22"/>
+      </g>
+    </g>
+
+    <!-- ====================== V10 — MODERN FLAT POSTER ====================== -->
+    <g id="ballArtFlat" clip-path="url(#circClip)">
+      <circle cx="60" cy="60" r="58" fill="#f4f1e6"/>
+      <g fill="#0e1714">
+        <polygon points="60,42 77.1,54.4 70.6,74.6 49.4,74.6 42.9,54.4"/>
+        <polygon points="83.5,14.6 95.9,23.6 91.1,38.1 75.9,38.1 71.1,23.6"/>
+        <polygon points="98,59.4 110.4,68.4 105.6,82.9 90.4,82.9 85.6,68.4"/>
+        <polygon points="60,87 72.4,96 67.6,110.5 52.4,110.5 47.6,96"/>
+        <polygon points="22,59.4 34.4,68.4 29.6,82.9 14.4,82.9 9.6,68.4"/>
+        <polygon points="36.5,14.6 48.9,23.6 44.1,38.1 28.9,38.1 24.1,23.6"/>
+      </g>
+      <circle cx="60" cy="60" r="58" fill="none" stroke="#0e1714" stroke-width="4"/>
+    </g>
+
+    <g id="globeArtFlat" clip-path="url(#circClip)">
+      <circle cx="60" cy="60" r="58" fill="#f4f1e6"/>
+      <g fill="#39d56b">
+        <path d="M59,40 q9,-2 14,5 q3,9 -1,17 q-1,9 -7,15 q-3,11 -9,16 q-7,3 -10,-6 q-5,-9 -3,-19 q1,-12 6,-21 q3,-7 10,-7 z"/>
+        <path d="M14,30 q12,-7 24,-3 q9,4 11,14 q-3,9 -13,11 q-12,1 -19,-7 q-7,-7 -3,-15 z"/>
+        <path d="M30,62 q9,-3 14,5 q5,10 0,21 q-4,12 -11,16 q-9,-1 -11,-12 q-2,-13 1,-22 q2,-8 7,-8 z"/>
+        <path d="M62,28 q14,-3 24,2 q12,3 17,12 q-8,5 -19,4 q-12,-1 -22,-7 q-5,-4 0,-11 z"/>
+        <path d="M88,38 q12,-1 18,9 q5,9 -2,17 q-9,7 -18,3 q-9,-5 -8,-15 q1,-10 10,-14 z"/>
+        <path d="M94,82 q9,-2 12,5 q2,7 -5,11 q-9,3 -13,-3 q-3,-7 6,-13 z"/>
+      </g>
+      <circle cx="60" cy="60" r="58" fill="none" stroke="#0e1714" stroke-width="4"/>
+    </g>
   </defs>
 </svg>
 
@@ -286,9 +537,10 @@
   </header>
 
   <p class="lede">
-    One idea, six ways: the soccer ball slowly rotates and transforms into a globe,
-    then back again. Compare the treatments, then pick the one that should become the
-    loading + splash mark.
+    One idea, ten ways: the soccer ball slowly rotates and transforms into a globe,
+    then back again. v1–v6 explore different motion treatments; v7–v10 explore
+    art direction — photoreal, sketch, watercolour, flat poster. Compare and
+    pick the one that should become the loading + splash mark.
   </p>
 
   <div class="grid">
@@ -392,12 +644,66 @@
       <p class="desc">Zero-asset fallback: <b>⚽ spins down and 🌍 spins up</b> with a blur cross-fade. Drop-in for any platform, no SVG required.</p>
     </div>
 
+    <!-- V7 — PHOTOREAL -->
+    <div class="card">
+      <div class="tag"><span class="ver">v7</span><span class="name">Photoreal 3D</span></div>
+      <div class="stage"><div class="sphere v7">
+        <div class="atmo"></div>
+        <div class="layer spin">
+          <svg class="l-ball" viewBox="0 0 120 120"><use href="#ballArtReal"/></svg>
+          <svg class="l-globe" viewBox="0 0 120 120"><use href="#globeArtReal"/></svg>
+        </div>
+        <div class="shade"></div>
+      </div></div>
+      <p class="desc">A serious render: <b>specular highlight, cream stitching, atmospheric glow</b>, and continent silhouettes drawn from a real Earth projection. The "buy this for the App Store icon" candidate.</p>
+    </div>
+
+    <!-- V8 — INK SKETCH -->
+    <div class="card">
+      <div class="tag"><span class="ver">v8</span><span class="name">Pen & Ink Sketch</span></div>
+      <div class="stage"><div class="sphere v8">
+        <div class="layer spin">
+          <svg class="l-ball" viewBox="0 0 120 120"><use href="#ballArtSketch"/></svg>
+          <svg class="l-globe" viewBox="0 0 120 120"><use href="#globeArtSketch"/></svg>
+        </div>
+      </div></div>
+      <p class="desc"><b>Hand-drawn on cream paper</b>: wobbled SVG strokes via a turbulence filter, light pencil hatching on the shadow side, no fills. Reads as field-notes / sketchbook.</p>
+    </div>
+
+    <!-- V9 — WATERCOLOR -->
+    <div class="card">
+      <div class="tag"><span class="ver">v9</span><span class="name">Watercolor</span></div>
+      <div class="stage"><div class="sphere v9">
+        <div class="layer spin">
+          <svg class="l-ball" viewBox="0 0 120 120"><use href="#ballArtPaint"/></svg>
+          <svg class="l-globe" viewBox="0 0 120 120"><use href="#globeArtPaint"/></svg>
+        </div>
+        <div class="shade"></div>
+      </div></div>
+      <p class="desc"><b>Pigment bleeds across the panels</b> via displacement + Gaussian blur. Muted, painterly, second-pass wash overlays. Editorial / matchday-programme energy.</p>
+    </div>
+
+    <!-- V10 — FLAT POSTER -->
+    <div class="card">
+      <div class="tag"><span class="ver">v10</span><span class="name">Modern Flat Poster</span></div>
+      <div class="stage"><div class="sphere v10">
+        <div class="layer spin">
+          <svg class="l-ball" viewBox="0 0 120 120"><use href="#ballArtFlat"/></svg>
+          <svg class="l-globe" viewBox="0 0 120 120"><use href="#globeArtFlat"/></svg>
+        </div>
+      </div></div>
+      <p class="desc">Three-colour poster: <b>cream paper, ink seams, MatchMondo grass continents</b>, heavy outline. Strong at any size; reproduces in a single ink pass.</p>
+    </div>
+
   </div>
 
   <footer>
-    Studio note — <b>v4 (Seam → Graticule)</b> is the strongest brand idea: it argues that a soccer ball
-    <i>is</i> a globe. <b>v1</b> is the safe production pick for an app icon. <b>v3</b> reads best at large
-    sizes (splash). All six honor <b>prefers-reduced-motion</b> and the global Pause / Speed controls above.
+    Studio note — for the brand idea, <b>v4 (Seam → Graticule)</b> still argues hardest that a soccer ball
+    <i>is</i> a globe. For an actual App Store icon, <b>v7 (Photoreal)</b> is the production candidate —
+    real specular, atmospheric ring, recognisable continent silhouettes. <b>v8 (Pen &amp; Ink)</b> and
+    <b>v9 (Watercolour)</b> are editorial / programme-cover energy. <b>v10 (Flat Poster)</b> is the
+    one-ink-pass version. All ten honour <b>prefers-reduced-motion</b> and the global Pause / Speed
+    controls above.
   </footer>
 </div>
 
