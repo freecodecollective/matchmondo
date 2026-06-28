@@ -365,8 +365,6 @@ class Handler(BaseHTTPRequestHandler):
             return self.trivia_process()
         if parts == ["api", "me"]:
             return self.me_post(body)
-        if parts == ["api", "me", "reroll"]:
-            return self.me_reroll(body)
         if parts == ["api", "friends", "add"]:
             return self.friend_add(body)
         self.send_json(404, {"error": "not found"})
@@ -545,20 +543,6 @@ class Handler(BaseHTTPRequestHandler):
         fs("PATCH", f"/users/{did}",
            body=docbody({"displayName": dn, "code": code, "createdAt": now_iso(), "updatedAt": now_iso()}))
         self.send_json(200, {"code": code, "displayName": dn})
-
-    def me_reroll(self, body):
-        did = body.get("deviceId")
-        if not did:
-            return self.send_json(400, {"error": "deviceId required"})
-        st, doc = fs("GET", f"/users/{did}")
-        old = parse(doc).get("code") if st == 200 else None
-        code = gen_unique_code(did)
-        if not code:
-            return self.send_json(500, {"error": "could not allocate a code"})
-        fs_merge(f"/users/{did}", {"code": code, "updatedAt": now_iso()})
-        if old and old != code:
-            fs("DELETE", f"/codes/{old}")
-        self.send_json(200, {"code": code})
 
     def trivia_score_put(self):
         b = self.read_json()
