@@ -10017,7 +10017,7 @@
       "answer": 0,
       "explanation": "True! The golden goal was used at the 1998 and 2002 editions. France's Laurent Blanc scored a golden goal against Paraguay in 1998, and several matches in 2002 were decided this way. The rule was scrapped before the 2006 edition in favor of playing out full 30-minute extra time periods.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-brazil-all-editions",
