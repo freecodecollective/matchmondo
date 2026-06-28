@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-28 00:53 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-06-28 01:46 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -908,7 +908,7 @@ window.WC_MATCHES = [
     "venue": "Mercedes-Benz Stadium",
     "city": "Atlanta, GA",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": 0,
+    "scoreH": 3,
     "scoreA": 1
   },
   {
@@ -1034,7 +1034,7 @@ window.WC_MATCHES = [
     "stage": "Round of 32",
     "group": null,
     "home": "England",
-    "away": "3EHIJK",
+    "away": "Congo DR",
     "venue": "Mercedes-Benz Stadium",
     "city": "Atlanta, GA",
     "tv": "FOX · Telemundo (ES)",
@@ -1047,7 +1047,7 @@ window.WC_MATCHES = [
     "stage": "Round of 32",
     "group": null,
     "home": "Belgium",
-    "away": "3AEHIJ",
+    "away": "Senegal",
     "venue": "Lumen Field",
     "city": "Seattle, WA",
     "tv": "FOX · Telemundo (ES)",
@@ -1085,7 +1085,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-02T23:00:00Z",
     "stage": "Round of 32",
     "group": null,
-    "home": "2K",
+    "home": "Portugal",
     "away": "Croatia",
     "venue": "BMO Field",
     "city": "Toronto, Canada",
@@ -1137,7 +1137,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-04T01:30:00Z",
     "stage": "Round of 32",
     "group": null,
-    "home": "1K",
+    "home": "Colombia",
     "away": "Ghana",
     "venue": "Arrowhead Stadium",
     "city": "Kansas City, MO",
