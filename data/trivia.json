@@ -9872,7 +9872,7 @@
       "answer": 1,
       "explanation": "False! A player who has been sent off cannot participate in the penalty shootout. Their team must take their penalties with fewer eligible players. If a team has had two players sent off, they start the shootout with only nine eligible kickers compared to their opponent's eleven.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-13-goals-fontaine",
