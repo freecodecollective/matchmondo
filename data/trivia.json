@@ -9939,7 +9939,7 @@
       "answer": 0,
       "explanation": "True! France's Lucien Laurent scored the first goal in tournament history on July 13, 1930, against Mexico. He volleyed in from a cross in the 19th minute. Laurent later said: 'Everyone was pleased but we didn't realize we'd made history. It was just a goal.'",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-ball-must-be-spherical",
