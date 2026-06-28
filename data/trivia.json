@@ -9978,7 +9978,7 @@
       "answer": 0,
       "explanation": "True! The 2022 edition debuted semi-automated offside technology (SAOT), using 12 dedicated tracking cameras under the stadium roof to track 29 data points on each player's body 50 times per second. Combined with a sensor inside the ball, it generates automated offside alerts within seconds and produces 3D animations shown on stadium screens.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-brazil-1950-jersey-change",
