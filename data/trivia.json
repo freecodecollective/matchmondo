@@ -7613,7 +7613,110 @@
       "explanation": "Luka Modrić captained Croatia to the 2018 final and won the Golden Ball as the tournament's best player. He also led them to third place in 2022.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Ofrenda_de_la_Liga_y_la_Champions-57-L.Mill%C3%A1n_%2852109310843%29_%28Luka_Modri%C4%87%29.jpg/500px-Ofrenda_de_la_Liga_y_la_Champions-57-L.Mill%C3%A1n_%2852109310843%29_%28Luka_Modri%C4%87%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو لاعب الوسط الكرواتي الذي قاد بلاده إلى نهائي 2018؟",
+          "options": [
+            "إيفان راكيتيتش",
+            "لوكا مودريتش",
+            "ماريو مانجوكيتش",
+            "روبرت كوفاتش"
+          ],
+          "explanation": "قاد لوكا مودريتش كرواتيا بصفته قائدًا إلى نهائي 2018 وفاز بالكرة الذهبية كأفضل لاعب في البطولة. كما قادها إلى المركز الثالث في 2022."
+        },
+        "de": {
+          "question": "Wer ist dieser kroatische Mittelfeldspieler, der sein Land 2018 ins Finale führte?",
+          "options": [
+            "Ivan Rakitić",
+            "Luka Modrić",
+            "Mario Mandžukić",
+            "Robert Kovač"
+          ],
+          "explanation": "Luka Modrić führte Kroatien als Kapitän 2018 ins Finale und gewann den Goldenen Ball als bester Spieler des Turniers. 2022 führte er sein Team zudem auf den dritten Platz."
+        },
+        "es": {
+          "question": "¿Quién es este mediocampista croata que llevó a su país a la final de 2018?",
+          "options": [
+            "Ivan Rakitić",
+            "Luka Modrić",
+            "Mario Mandžukić",
+            "Robert Kovač"
+          ],
+          "explanation": "Luka Modrić fue el capitán que llevó a Croacia a la final de 2018 y ganó el Balón de Oro como el mejor jugador del torneo. También condujo a su selección al tercer puesto en 2022."
+        },
+        "es-ES": {
+          "question": "¿Quién es este centrocampista croata que llevó a su país a la final de 2018?",
+          "options": [
+            "Ivan Rakitić",
+            "Luka Modrić",
+            "Mario Mandžukić",
+            "Robert Kovač"
+          ],
+          "explanation": "Luka Modrić fue el capitán que llevó a Croacia a la final de 2018 y ganó el Balón de Oro como mejor jugador del torneo. También llevó a su selección al tercer puesto en 2022."
+        },
+        "fr": {
+          "question": "Qui est ce milieu de terrain croate qui a mené son pays en finale en 2018 ?",
+          "options": [
+            "Ivan Rakitić",
+            "Luka Modrić",
+            "Mario Mandžukić",
+            "Robert Kovač"
+          ],
+          "explanation": "Luka Modrić a porté le brassard de capitaine et conduit la Croatie en finale en 2018, remportant le Ballon d'or du meilleur joueur du tournoi. Il a aussi mené son équipe à la troisième place en 2022."
+        },
+        "it": {
+          "question": "Chi è questo centrocampista croato che ha portato il suo Paese alla finale del 2018?",
+          "options": [
+            "Ivan Rakitić",
+            "Luka Modrić",
+            "Mario Mandžukić",
+            "Robert Kovač"
+          ],
+          "explanation": "Luka Modrić ha guidato da capitano la Croazia alla finale del 2018 e ha vinto il Pallone d'Oro come miglior giocatore del torneo. Ha inoltre condotto la squadra al terzo posto nel 2022."
+        },
+        "ja": {
+          "question": "2018年に母国を決勝へ導いたこのクロアチアのMFは誰でしょう？",
+          "options": [
+            "イバン・ラキティッチ",
+            "ルカ・モドリッチ",
+            "マリオ・マンジュキッチ",
+            "ロベルト・コバチ"
+          ],
+          "explanation": "ルカ・モドリッチはキャプテンとしてクロアチアを2018年の決勝へ導き、大会最優秀選手としてゴールデンボールを獲得しました。さらに2022年にはチームを3位へと導きました。"
+        },
+        "ko": {
+          "question": "2018년 자국을 결승으로 이끈 이 크로아티아 미드필더는 누구일까요?",
+          "options": [
+            "이반 라키티치",
+            "루카 모드리치",
+            "마리오 만주키치",
+            "로베르트 코바치"
+          ],
+          "explanation": "루카 모드리치는 주장으로서 크로아티아를 2018년 결승으로 이끌었고, 대회 최우수 선수에게 주어지는 골든볼을 수상했습니다. 또한 2022년에는 팀을 3위로 이끌었습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este meio-campista croata que levou seu país à final de 2018?",
+          "options": [
+            "Ivan Rakitić",
+            "Luka Modrić",
+            "Mario Mandžukić",
+            "Robert Kovač"
+          ],
+          "explanation": "Luka Modrić foi o capitão que levou a Croácia à final de 2018 e conquistou a Bola de Ouro como melhor jogador do torneio. Ele também conduziu a equipe ao terceiro lugar em 2022."
+        },
+        "zh-Hans": {
+          "question": "这位带领祖国闯入2018年决赛的克罗地亚中场是谁？",
+          "options": [
+            "伊万·拉基蒂奇",
+            "卢卡·莫德里奇",
+            "马里奥·曼朱基奇",
+            "罗伯特·科瓦奇"
+          ],
+          "explanation": "卢卡·莫德里奇作为队长带领克罗地亚闯入2018年决赛，并荣获本届赛事最佳球员金球奖。他还在2022年率队获得季军。"
+        }
+      },
+      "i18nSourceHash": "6b34a6b8ab64b046"
     },
     {
       "id": "img-neymar",
@@ -9859,7 +9962,90 @@
       "answer": 0,
       "explanation": "True! Own goals are recorded against the player who last touched the ball before it entered their own net. They do not count toward any attacking player's goal tally. The own goal count has risen sharply in recent tournaments due to faster play and higher pressing.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "إذا سجّل لاعب هدفًا في مرماه، يُحتسب ذلك رسميًا في سجلّه الإحصائي.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! تُسجَّل الأهداف العكسية على اللاعب الذي لمس الكرة آخر مرة قبل دخولها مرماه. وهي لا تُحتسب ضمن رصيد أهداف أي لاعب هجومي. وقد ارتفع عدد الأهداف العكسية بشكل حاد في البطولات الأخيرة بسبب سرعة اللعب وزيادة الضغط العالي."
+        },
+        "de": {
+          "question": "Wenn ein Spieler ein Eigentor schießt, wird es ihm offiziell in der Statistik angerechnet.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Richtig! Eigentore werden dem Spieler zugeschrieben, der den Ball zuletzt berührt hat, bevor er ins eigene Netz ging. Sie zählen nicht zur Torbilanz eines Offensivspielers. Die Zahl der Eigentore ist bei den letzten Turnieren wegen des schnelleren Spiels und höheren Pressings stark gestiegen."
+        },
+        "es": {
+          "question": "Si un jugador anota un autogol, se le acredita oficialmente en las estadísticas.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Los autogoles se registran a nombre del jugador que tocó la pelota por última vez antes de que entrara en su propia portería. No cuentan para el total de goles de ningún jugador ofensivo. La cantidad de autogoles ha aumentado bruscamente en los torneos recientes debido al juego más rápido y a la mayor presión."
+        },
+        "es-ES": {
+          "question": "Si un jugador marca un gol en propia puerta, se le atribuye oficialmente en las estadísticas.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Los goles en propia puerta se anotan a nombre del jugador que tocó el balón por última vez antes de que entrara en su propia portería. No cuentan para el total de goles de ningún jugador ofensivo. El número de goles en propia puerta ha aumentado notablemente en los últimos torneos debido al juego más rápido y a la mayor presión."
+        },
+        "fr": {
+          "question": "Si un joueur marque contre son camp, ce but lui est officiellement attribué dans les statistiques.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! Les buts contre son camp sont attribués au joueur qui a touché le ballon en dernier avant qu'il n'entre dans ses propres filets. Ils ne comptent pas dans le total de buts d'un joueur offensif. Le nombre de buts contre son camp a fortement augmenté lors des derniers tournois en raison d'un jeu plus rapide et d'un pressing plus intense."
+        },
+        "it": {
+          "question": "Se un giocatore segna un autogol, gli viene ufficialmente accreditato nelle statistiche.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! Gli autogol vengono registrati a carico del giocatore che ha toccato il pallone per ultimo prima che entrasse nella propria rete. Non contano nel totale dei gol di nessun giocatore offensivo. Il numero di autogol è aumentato nettamente nei tornei recenti a causa di un gioco più veloce e di un pressing più alto."
+        },
+        "ja": {
+          "question": "選手がオウンゴールを決めた場合、それは統計上その選手の記録として公式に計上される。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "正しい！オウンゴールは、ボールが自陣ゴールに入る前に最後に触れた選手の記録として残されます。攻撃側の選手の得点数には一切加算されません。近年の大会では、プレーの高速化やハイプレスの増加により、オウンゴールの数が急増しています。"
+        },
+        "ko": {
+          "question": "선수가 자책골을 넣으면, 통계상 공식적으로 그 선수의 기록으로 인정된다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! 자책골은 공이 자기 진영 골문에 들어가기 전 마지막으로 공을 건드린 선수의 기록으로 남습니다. 어떤 공격수의 득점 수에도 포함되지 않습니다. 최근 대회에서는 빨라진 경기 속도와 강해진 압박으로 인해 자책골 수가 급격히 증가했습니다."
+        },
+        "pt-BR": {
+          "question": "Se um jogador marca um gol contra, isso é oficialmente creditado a ele nas estatísticas.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! Os gols contra são registrados na conta do jogador que tocou na bola por último antes de ela entrar em sua própria meta. Eles não contam para o total de gols de nenhum jogador de ataque. O número de gols contra subiu bastante nos torneios recentes por causa do jogo mais rápido e da pressão mais alta."
+        },
+        "zh-Hans": {
+          "question": "如果球员打入乌龙球，这会在统计数据中正式记在他名下。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！乌龙球会记在皮球进入本方球门前最后触球的球员名下。它不会计入任何进攻球员的进球数。由于比赛节奏加快、逼抢更加凶猛，近几届赛事的乌龙球数量大幅上升。"
+        }
+      },
+      "i18nSourceHash": "0fe4e1af470879fe"
     },
     {
       "id": "tf-red-card-shootout",
@@ -9872,7 +10058,90 @@
       "answer": 1,
       "explanation": "False! A player who has been sent off cannot participate in the penalty shootout. Their team must take their penalties with fewer eligible players. If a team has had two players sent off, they start the shootout with only nine eligible kickers compared to their opponent's eleven.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "اللاعب الذي يحصل على بطاقة حمراء خلال المباراة يمكنه مع ذلك تنفيذ ركلة ترجيح في سلسلة الركلات التي تليها.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "خطأ! اللاعب الذي تم طرده لا يمكنه المشاركة في ركلات الترجيح. ويتعين على فريقه تنفيذ الركلات بعدد أقل من اللاعبين المؤهلين. فإذا طُرد لاعبان من فريق واحد، يبدأ هذا الفريق سلسلة الركلات بتسعة منفذين مؤهلين فقط مقابل أحد عشر للفريق المنافس."
+        },
+        "de": {
+          "question": "Ein Spieler, der während eines Spiels eine Rote Karte erhält, darf im anschließenden Elfmeterschießen trotzdem antreten.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Falsch! Ein des Feldes verwiesener Spieler darf nicht am Elfmeterschießen teilnehmen. Seine Mannschaft muss die Elfmeter mit weniger spielberechtigten Spielern ausführen. Wurden bei einer Mannschaft zwei Spieler des Feldes verwiesen, beginnt sie das Elfmeterschießen mit nur neun berechtigten Schützen gegenüber elf beim Gegner."
+        },
+        "es": {
+          "question": "Un jugador que recibe una tarjeta roja durante un partido todavía puede patear un penal en la posterior tanda de penales.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Falso! Un jugador que fue expulsado no puede participar en la tanda de penales. Su equipo debe ejecutar los penales con menos jugadores disponibles. Si un equipo tuvo a dos jugadores expulsados, comienza la tanda con apenas nueve pateadores habilitados frente a los once del rival."
+        },
+        "es-ES": {
+          "question": "Un jugador que recibe una tarjeta roja durante un partido todavía puede lanzar un penalti en la posterior tanda de penaltis.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Falso! Un jugador que ha sido expulsado no puede participar en la tanda de penaltis. Su equipo debe lanzar los penaltis con menos jugadores disponibles. Si un equipo ha tenido a dos jugadores expulsados, empieza la tanda con solo nueve lanzadores habilitados frente a los once del rival."
+        },
+        "fr": {
+          "question": "Un joueur qui reçoit un carton rouge pendant un match peut tout de même tirer un penalty lors de la séance de tirs au but qui suit.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Faux ! Un joueur expulsé ne peut pas participer à la séance de tirs au but. Son équipe doit tirer ses penalties avec moins de joueurs disponibles. Si une équipe a eu deux joueurs expulsés, elle débute la séance avec seulement neuf tireurs autorisés contre onze pour son adversaire."
+        },
+        "it": {
+          "question": "Un giocatore che riceve un cartellino rosso durante una partita può comunque calciare un rigore nei tiri di rigore successivi.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Falso! Un giocatore espulso non può partecipare ai tiri di rigore. La sua squadra deve calciare i rigori con meno giocatori a disposizione. Se una squadra ha avuto due giocatori espulsi, inizia i tiri di rigore con soli nove tiratori utilizzabili contro gli undici dell'avversario."
+        },
+        "ja": {
+          "question": "試合中にレッドカードを受けた選手でも、その後のPK戦でキックを蹴ることができる。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "誤り！退場処分を受けた選手はPK戦に参加できません。そのチームは、利用できる選手が少ない状態でPKを蹴らなければなりません。もし1チームから2人の選手が退場した場合、そのチームは相手の11人に対して、わずか9人の有効なキッカーでPK戦を始めることになります。"
+        },
+        "ko": {
+          "question": "경기 중에 레드카드를 받은 선수도 이어지는 승부차기에서 페널티킥을 찰 수 있다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "거짓! 퇴장당한 선수는 승부차기에 참가할 수 없습니다. 해당 팀은 가능한 선수가 더 적은 상태로 페널티킥을 차야 합니다. 만약 한 팀에서 두 명의 선수가 퇴장당했다면, 그 팀은 상대의 열한 명에 비해 단 아홉 명의 키커만으로 승부차기를 시작하게 됩니다."
+        },
+        "pt-BR": {
+          "question": "Um jogador que recebe um cartão vermelho durante a partida ainda pode cobrar um pênalti na disputa de pênaltis seguinte.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Falso! Um jogador que foi expulso não pode participar da disputa de pênaltis. Sua equipe precisa cobrar os pênaltis com menos jogadores disponíveis. Se uma equipe teve dois jogadores expulsos, ela começa a disputa com apenas nove cobradores aptos, contra onze do adversário."
+        },
+        "zh-Hans": {
+          "question": "在比赛中被红牌罚下的球员，仍然可以在随后的点球大战中主罚点球。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "错误！被罚下场的球员不能参加点球大战。其球队必须在可用球员更少的情况下主罚点球。如果一支球队有两名球员被罚下，那么他们在开始点球大战时只有九名有资格的主罚球员，而对手则有十一名。"
+        }
+      },
+      "i18nSourceHash": "1a708c6686b50e35"
     },
     {
       "id": "tf-13-goals-fontaine",
@@ -9909,10 +10178,8 @@
         "False"
       ],
       "answer": 0,
-      "explanation": "True! VAR is limited to reviewing only these four categories of 'clear and obvious errors' or 'serious missed incidents.' The referee can consult the pitch-side monitor for a final decision, but VAR cannot intervene for yellow cards, throw-in decisions, corner kicks, or other routine calls.",
-      "type": "true_false",
-      "needsReview": true,
-      "claudeTask": "add what mistken idenitity means"
+      "explanation": "True! VAR is limited to reviewing only these four categories of 'clear and obvious errors' or 'serious missed incidents.' 'Mistaken identity' means the referee cautioned or sent off the wrong player — for example, showing a card to a teammate instead of the player who actually committed the foul; VAR can step in to ensure the correct player is penalized. The referee can consult the pitch-side monitor for a final decision, but VAR cannot intervene for yellow cards, throw-in decisions, corner kicks, or other routine calls.",
+      "needsReview": true
     },
     {
       "id": "tf-trophy-not-solid-gold",
@@ -9926,7 +10193,90 @@
       "explanation": "False! While the trophy is made of 18-carat gold, it is not solid throughout. It has a base of malachite (a green semi-precious stone), and the gold forms the main body above the base. Despite this, the trophy weighs over 6 kilograms and its cultural value is, of course, priceless.",
       "type": "true_false",
       "media": "https://en.wikipedia.org/wiki/File:FIFA_World_Cup_Trophy_(Ank_Kumar,_Infosys_Limited)_04.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كأس البطولة الحالية مصنوعة بالكامل من الذهب الخالص.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "خطأ! رغم أن الكأس مصنوعة من الذهب عيار 18 قيراطًا، إلا أنها ليست ذهبًا خالصًا بالكامل. فهي تحتوي على قاعدة من حجر الملكيت (وهو حجر شبه كريم أخضر اللون)، بينما يشكّل الذهب الجسم الرئيسي فوق القاعدة. ومع ذلك، يزيد وزن الكأس عن 6 كيلوغرامات، وقيمتها الثقافية بالطبع لا تُقدّر بثمن."
+        },
+        "de": {
+          "question": "Die aktuelle Turniertrophäe besteht durch und durch aus massivem Gold.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Falsch! Die Trophäe besteht zwar aus 18-karätigem Gold, ist aber nicht durchgehend massiv. Sie hat einen Sockel aus Malachit (einem grünen Halbedelstein), und das Gold bildet den Hauptkörper oberhalb des Sockels. Dennoch wiegt die Trophäe über 6 Kilogramm, und ihr kultureller Wert ist natürlich unbezahlbar."
+        },
+        "es": {
+          "question": "El trofeo actual del torneo es de oro macizo de principio a fin.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Falso! Aunque el trofeo está hecho de oro de 18 quilates, no es macizo en su totalidad. Tiene una base de malaquita (una piedra semipreciosa de color verde), y el oro forma el cuerpo principal por encima de la base. A pesar de ello, el trofeo pesa más de 6 kilogramos y su valor cultural es, por supuesto, incalculable."
+        },
+        "es-ES": {
+          "question": "El trofeo actual del torneo es de oro macizo de arriba abajo.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Falso! Aunque el trofeo está hecho de oro de 18 quilates, no es macizo por completo. Tiene una base de malaquita (una piedra semipreciosa de color verde), y el oro forma el cuerpo principal por encima de la base. Aun así, el trofeo pesa más de 6 kilogramos y su valor cultural es, por supuesto, incalculable."
+        },
+        "fr": {
+          "question": "Le trophée actuel du tournoi est en or massif d'un bout à l'autre.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Faux ! Bien que le trophée soit en or 18 carats, il n'est pas massif sur toute sa hauteur. Il repose sur une base en malachite (une pierre semi-précieuse de couleur verte), et l'or constitue le corps principal au-dessus de cette base. Malgré cela, le trophée pèse plus de 6 kilogrammes et sa valeur culturelle est, bien entendu, inestimable."
+        },
+        "it": {
+          "question": "L'attuale trofeo del torneo è in oro massiccio dall'inizio alla fine.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Falso! Sebbene il trofeo sia realizzato in oro a 18 carati, non è massiccio per intero. Ha una base in malachite (una pietra semipreziosa di colore verde), e l'oro costituisce il corpo principale al di sopra della base. Nonostante ciò, il trofeo pesa oltre 6 chilogrammi e il suo valore culturale è, naturalmente, inestimabile."
+        },
+        "ja": {
+          "question": "現在の大会のトロフィーは、すべて純金でできている。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "誤りです！ トロフィーは18金製ですが、全体が中身まで詰まった金というわけではありません。土台にはマラカイト（緑色の半貴石）が使われており、その上に金で本体が形作られています。それでもトロフィーは6キログラム以上の重さがあり、その文化的価値はもちろん計り知れません。"
+        },
+        "ko": {
+          "question": "현재 대회 트로피는 속까지 전부 순금으로 되어 있다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "거짓입니다! 트로피는 18캐럿 금으로 만들어졌지만 속까지 전부 금으로 채워진 것은 아닙니다. 받침대는 공작석(녹색의 준보석)으로 되어 있고, 그 위로 금이 본체를 이루고 있습니다. 그럼에도 트로피의 무게는 6킬로그램이 넘으며, 그 문화적 가치는 물론 값을 매길 수 없을 만큼 귀합니다."
+        },
+        "pt-BR": {
+          "question": "O troféu atual do torneio é feito de ouro maciço por inteiro.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Falso! Embora o troféu seja feito de ouro de 18 quilates, ele não é maciço por completo. Possui uma base de malaquita (uma pedra semipreciosa de cor verde), e o ouro forma o corpo principal acima da base. Mesmo assim, o troféu pesa mais de 6 quilogramas e seu valor cultural é, claro, inestimável."
+        },
+        "zh-Hans": {
+          "question": "现在这座赛事奖杯从里到外都是纯金打造的。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "错误！虽然奖杯由18克拉黄金制成，但并非整体实心黄金。它的底座由孔雀石（一种绿色半宝石）制成，黄金则构成底座之上的主体部分。尽管如此，这座奖杯的重量仍超过6公斤，而它的文化价值更是无价之宝。"
+        }
+      },
+      "i18nSourceHash": "a1348845befd7c6a"
     },
     {
       "id": "tf-first-goal-lucien-laurent",
@@ -9939,7 +10289,90 @@
       "answer": 0,
       "explanation": "True! France's Lucien Laurent scored the first goal in tournament history on July 13, 1930, against Mexico. He volleyed in from a cross in the 19th minute. Laurent later said: 'Everyone was pleased but we didn't realize we'd made history. It was just a goal.'",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أول هدف في تاريخ البطولة سجله لاعب فرنسي.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! سجّل الفرنسي لوسيان لوران أول هدف في تاريخ البطولة في 13 يوليو 1930 ضد المكسيك. حيث أطلق كرة طائرة في الشباك من تمريرة عرضية في الدقيقة 19. وقال لوران لاحقًا: 'كان الجميع سعداء لكننا لم ندرك أننا صنعنا التاريخ. لقد كان مجرد هدف.'"
+        },
+        "de": {
+          "question": "Das allererste Tor des Turniers wurde von einem französischen Spieler erzielt.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Richtig! Der Franzose Lucien Laurent erzielte am 13. Juli 1930 gegen Mexiko das erste Tor der Turniergeschichte. In der 19. Minute vollendete er eine Flanke per Volleyschuss. Später sagte Laurent: 'Alle freuten sich, aber uns war nicht bewusst, dass wir Geschichte geschrieben hatten. Es war einfach nur ein Tor.'"
+        },
+        "es": {
+          "question": "El primer gol de la historia del torneo lo marcó un jugador francés.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! El francés Lucien Laurent marcó el primer gol en la historia del torneo el 13 de julio de 1930 contra México. Definió de volea tras un centro en el minuto 19. Laurent diría después: 'Todos estaban contentos, pero no nos dimos cuenta de que habíamos hecho historia. Era solo un gol.'"
+        },
+        "es-ES": {
+          "question": "El primer gol de la historia del torneo lo marcó un jugador francés.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! El francés Lucien Laurent marcó el primer gol de la historia del torneo el 13 de julio de 1930 contra México. Remató de volea tras un centro en el minuto 19. Laurent diría más tarde: 'Todos estaban contentos, pero no nos dimos cuenta de que habíamos hecho historia. No era más que un gol.'"
+        },
+        "fr": {
+          "question": "Le tout premier but du tournoi a été inscrit par un joueur français.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! Le Français Lucien Laurent a marqué le premier but de l'histoire du tournoi le 13 juillet 1930 face au Mexique. Il a repris un centre de volée à la 19e minute. Laurent confiera plus tard : 'Tout le monde était content, mais nous ne réalisions pas que nous venions d'entrer dans l'histoire. Ce n'était qu'un but.'"
+        },
+        "it": {
+          "question": "Il primo gol nella storia del torneo fu segnato da un giocatore francese.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! Il francese Lucien Laurent segnò il primo gol nella storia del torneo il 13 luglio 1930 contro il Messico. Al 19° minuto colpì al volo su cross. Laurent raccontò in seguito: 'Erano tutti contenti, ma non ci rendevamo conto di aver fatto la storia. Era solo un gol.'"
+        },
+        "ja": {
+          "question": "大会史上初のゴールはフランス人選手によって決められた。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "正しい！フランスのリュシアン・ローランが、1930年7月13日のメキシコ戦で大会史上初のゴールを決めました。19分にクロスをボレーで押し込んだのです。ローランは後にこう語っています。「みんな喜んでいたが、自分たちが歴史をつくったとは思っていなかった。ただのゴールだったんだ。」"
+        },
+        "ko": {
+          "question": "대회 역사상 최초의 골은 프랑스 선수가 기록했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참! 프랑스의 뤼시앵 로랑이 1930년 7월 13일 멕시코전에서 대회 역사상 첫 골을 기록했습니다. 그는 전반 19분에 크로스를 발리슛으로 마무리했죠. 로랑은 훗날 이렇게 말했습니다. '모두가 기뻐했지만 우리가 역사를 만들었다는 건 몰랐어요. 그냥 골 하나였을 뿐이죠.'"
+        },
+        "pt-BR": {
+          "question": "O primeiro gol da história do torneio foi marcado por um jogador francês.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! O francês Lucien Laurent marcou o primeiro gol da história do torneio em 13 de julho de 1930, contra o México. Ele completou um cruzamento de voleio aos 19 minutos. Laurent contaria mais tarde: 'Todo mundo ficou feliz, mas não percebemos que havíamos feito história. Foi apenas um gol.'"
+        },
+        "zh-Hans": {
+          "question": "本届赛事历史上的首粒进球是由一名法国球员打入的。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！法国球员吕西安·洛朗于1930年7月13日对阵墨西哥的比赛中，打入了赛事历史上的第一粒进球。他在第19分钟接传中凌空抽射破门。洛朗后来回忆道：'大家都很高兴，但我们没意识到自己创造了历史。那只是一个进球而已。'"
+        }
+      },
+      "i18nSourceHash": "82400a7b6dd5b72b"
     },
     {
       "id": "tf-ball-must-be-spherical",
