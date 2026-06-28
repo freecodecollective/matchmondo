@@ -9952,7 +9952,7 @@
       "answer": 0,
       "explanation": "True! Law 2 explicitly states the ball 'must be spherical.' It must also have a circumference between 68-70 cm, weigh between 410-450 grams at the start of the match, and be inflated to a pressure between 0.6-1.1 atmospheres. Each tournament ball undergoes extensive testing to meet these specifications.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-coach-red-card",
