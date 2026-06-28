@@ -441,6 +441,8 @@ class Handler(BaseHTTPRequestHandler):
             return self.group_create(body)
         if len(parts) == 4 and parts[:2] == ["api", "groups"] and parts[3] == "join":
             return self.group_join(parts[2], body)
+        if len(parts) == 4 and parts[:2] == ["api", "groups"] and parts[3] == "leave":
+            return self.group_leave(parts[2], body)
         if parts == ["api", "trivia", "process"]:
             return self.trivia_process()
         if parts == ["api", "me"]:
@@ -451,6 +453,14 @@ class Handler(BaseHTTPRequestHandler):
             return self.devices_register(body)
         if parts == ["api", "internal", "notify-ft"]:
             return self.notify_ft(body)
+        self.send_json(404, {"error": "not found"})
+
+    def do_PATCH(self):
+        path = urllib.parse.urlparse(self.path).path
+        parts = [p for p in path.split("/") if p]
+        body = self.read_json()
+        if len(parts) == 3 and parts[:2] == ["api", "groups"]:
+            return self.group_update(parts[2], body)
         self.send_json(404, {"error": "not found"})
 
     def do_DELETE(self):
@@ -616,6 +626,44 @@ class Handler(BaseHTTPRequestHandler):
                 mid = mdoc["name"].split("/")[-1]
                 fs("DELETE", f"/groups/{code}/members/{mid}")
         fs("DELETE", f"/groups/{code}")
+        self.send_json(200, {"ok": True})
+
+    def group_update(self, code, body):
+        did = body.get("deviceId")
+        if not did:
+            return self.send_json(400, {"error": "deviceId required"})
+        st, doc = fs("GET", f"/groups/{code}")
+        if st != 200:
+            return self.send_json(404, {"error": "group not found"})
+        d = parse(doc)
+        if d.get("createdBy") != did:
+            return self.send_json(403, {"error": "only the pool creator can edit it"})
+        if "name" in body:
+            d["name"] = (body["name"] or "My Pool").strip()[:60]
+        if "type" in body and body["type"] in ("predictions", "trivia", "both"):
+            d["type"] = body["type"]
+        if "predExact" in body:
+            d["predExact"] = max(0, min(10, int(body["predExact"])))
+        if "predResult" in body:
+            d["predResult"] = max(0, min(10, int(body["predResult"])))
+        if "triviaCorrect" in body:
+            d["triviaCorrect"] = max(0, min(10, int(body["triviaCorrect"])))
+        if "startDate" in body:
+            d["startDate"] = (body["startDate"] or "").strip()[:24]
+        fs("PATCH", f"/groups/{code}", body=docbody(d))
+        self.send_json(200, {"ok": True})
+
+    def group_leave(self, code, body):
+        did = body.get("deviceId")
+        if not did:
+            return self.send_json(400, {"error": "deviceId required"})
+        st, doc = fs("GET", f"/groups/{code}")
+        if st != 200:
+            return self.send_json(404, {"error": "group not found"})
+        d = parse(doc)
+        if d.get("createdBy") == did:
+            return self.send_json(403, {"error": "creator cannot leave — delete the pool instead"})
+        fs("DELETE", f"/groups/{code}/members/{did}")
         self.send_json(200, {"ok": True})
 
     def groups_mine(self, did):
