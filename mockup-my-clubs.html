@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Clubs — see how your boys are doing</title>
+<style>
+  :root{
+    --ink:#1d2127; --muted:#6b7280; --line:rgba(0,0,0,.09); --bg:#f1efea; --card:#fff;
+    --green:#12a150; --green-d:#0c7a3c;
+    --arsenal:#ef0107; --liverpool:#c8102e; --barca:#a50044; --psg:#0d3084; --bayern:#dc052d;
+    --dark-bg:#0c0d10; --dark-card:#16181d; --dark-ink:#e5e7eb;
+    --dark-muted:#9aa1ad; --dark-line:rgba(255,255,255,.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',sans-serif;
+       background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;padding-bottom:80px;}
+  .banner{background:linear-gradient(135deg,#1f9e57,#178a4a);color:#fff;padding:38px 24px 30px;text-align:center;}
+  .banner h1{font-size:26px;font-weight:800;}
+  .banner p{font-size:14.5px;opacity:.95;margin:8px auto 0;max-width:720px;line-height:1.5;}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 20px;}
+  .intro{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:-18px;
+         position:relative;box-shadow:0 3px 16px rgba(0,0,0,.06);font-size:13.5px;color:#333;line-height:1.55;}
+  .intro b{color:var(--ink);}
+  .intro .pill{display:inline-block;background:rgba(18,161,80,.12);color:var(--green-d);font-weight:700;font-size:11.5px;
+               padding:2px 9px;border-radius:20px;margin-right:6px;}
+
+  /* Q&A block — captures the design conversation up top */
+  .qa{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:24px;}
+  .qa-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;}
+  .qa-q{font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--green-d);margin-bottom:6px;}
+  .qa-a{font-size:13px;line-height:1.55;color:#333;}
+  .qa-a b{color:var(--ink);}
+
+  /* Variant card */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:26px;margin-top:32px;align-items:start;}
+  .v{background:var(--dark-card);color:var(--dark-ink);border-radius:22px;overflow:hidden;
+     box-shadow:0 6px 30px rgba(0,0,0,.18);border:1px solid var(--dark-line);}
+  .v-head{padding:16px 18px 4px;}
+  .v-tag{font-size:11.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--green-d);
+         background:rgba(18,161,80,.16);display:inline-block;padding:2px 10px;border-radius:20px;}
+  .v-title{font-size:18px;font-weight:800;margin-top:8px;}
+  .v-sub{font-size:12.5px;color:var(--dark-muted);margin-top:3px;line-height:1.45;}
+  .phone{margin:14px 14px 16px;background:#0a0b0e;border-radius:18px;overflow:hidden;padding:10px 8px 12px;}
+
+  /* Top tabs */
+  .tabs{display:flex;gap:0;padding:0 8px 0;border-bottom:1px solid rgba(255,255,255,.08);}
+  .tab{flex:1;text-align:center;font-size:12px;font-weight:800;letter-spacing:.4px;color:#9aa1ad;padding:9px 4px;cursor:pointer;border-bottom:2px solid transparent;}
+  .tab.on{color:#fff;border-bottom-color:#fff;}
+
+  /* Section label */
+  .label{padding:14px 14px 4px;font-size:11.5px;font-weight:800;letter-spacing:.5px;color:#fff;text-transform:uppercase;}
+  .sub{padding:0 14px 8px;font-size:11.5px;color:var(--dark-muted);}
+
+  /* Club chip strip */
+  .clubs{display:flex;gap:8px;overflow-x:auto;padding:4px 14px 10px;}
+  .club{flex-shrink:0;display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.06);
+        border-radius:18px;padding:6px 11px 6px 8px;font-size:12px;font-weight:700;color:#fff;cursor:pointer;}
+  .club.on{background:#fff;color:#111;}
+  .club .badge{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:11px;}
+  .club .num{font-size:10.5px;color:#9aa1ad;font-weight:700;}
+  .club.on .num{color:#444;}
+  .club .badge.arsenal{background:var(--arsenal);}
+  .club .badge.bayern{background:var(--bayern);}
+  .club .badge.barca{background:var(--barca);}
+  .club .badge.psg{background:var(--psg);}
+  .club .badge.liverpool{background:var(--liverpool);}
+
+  /* Player row (My Clubs result list) */
+  .pl{display:flex;align-items:center;gap:10px;padding:10px 14px;}
+  .pl + .pl{border-top:1px solid rgba(255,255,255,.06);}
+  .pl .hd{width:44px;height:44px;border-radius:50%;background:#202126 center/cover no-repeat;flex-shrink:0;
+          background-image:linear-gradient(135deg,#2a2c33,#191a1f);position:relative;}
+  .pl .hd .num{position:absolute;bottom:-2px;right:-2px;background:#fff;color:#111;border-radius:50%;
+               width:18px;height:18px;font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;border:1px solid #0a0b0e;}
+  .pl .body{flex:1;min-width:0;}
+  .pl .name{font-size:14.5px;font-weight:800;color:#fff;display:flex;align-items:center;gap:6px;}
+  .pl .meta{font-size:11.5px;color:var(--dark-muted);display:flex;align-items:center;gap:5px;margin-top:1px;}
+  .pl .meta .dot{color:#555;}
+  .pl .flag{width:14px;height:11px;border-radius:1px;background:#666;display:inline-block;}
+  .pl .heart{color:#ef4444;}
+  .pl .stats{display:flex;flex-direction:column;align-items:flex-end;gap:1px;flex-shrink:0;}
+  .pl .ga{font-size:16px;font-weight:900;color:#fff;font-variant-numeric:tabular-nums;line-height:1;}
+  .pl .ga small{font-size:9.5px;color:var(--dark-muted);font-weight:700;letter-spacing:.4px;}
+  .pl .next{font-size:10.5px;color:#9aa1ad;margin-top:3px;font-weight:600;}
+  .pl .next.live{color:#ef4444;}
+
+  /* Group divider */
+  .group-head{display:flex;align-items:center;gap:8px;padding:14px 14px 8px;}
+  .group-head .crest{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:11px;}
+  .group-head .title{font-size:13.5px;font-weight:800;color:#fff;}
+  .group-head .count{font-size:11px;color:var(--dark-muted);font-weight:600;}
+
+  /* Picker mockup */
+  .pickerwrap{padding:0 14px 14px;}
+  .field{font-size:12.5px;color:var(--dark-muted);margin-bottom:6px;}
+  .ctrl{background:rgba(255,255,255,.07);border-radius:10px;padding:9px 12px;display:flex;align-items:center;justify-content:space-between;font-size:13.5px;font-weight:700;color:#fff;cursor:pointer;}
+  .ctrl + .field{margin-top:14px;}
+  .league-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px 12px;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:#fff;}
+  .league-card + .league-card{margin-top:8px;}
+  .league-card .chev{color:#9aa1ad;font-size:14px;}
+
+  /* Mini chip for picked clubs in a row */
+  .chip-row{display:flex;flex-wrap:wrap;gap:6px;}
+  .picked-chip{display:flex;align-items:center;gap:5px;background:rgba(255,255,255,.10);border-radius:14px;padding:4px 9px 4px 5px;font-size:11px;font-weight:700;color:#fff;}
+  .picked-chip .badge{width:16px;height:16px;border-radius:50%;font-size:8.5px;}
+
+  /* Today next-fixture banner */
+  .next-banner{background:linear-gradient(135deg,rgba(239,1,7,.18),rgba(239,1,7,.06));
+               border:1px solid rgba(239,1,7,.30);border-radius:12px;padding:11px 13px;margin:0 14px 12px;}
+  .next-banner .nb-line{font-size:11px;font-weight:800;letter-spacing:.4px;color:#fff;text-transform:uppercase;}
+  .next-banner .nb-body{font-size:13px;color:#fff;margin-top:3px;}
+  .next-banner .nb-time{font-size:11px;color:#cbd0d8;margin-top:2px;}
+
+  /* fixtures table */
+  .fx{padding:0 14px 10px;}
+  .fxhead{font-size:11.5px;color:var(--dark-muted);font-weight:700;padding:8px 0 4px;}
+  .fxrow{display:flex;justify-content:space-between;font-size:12.5px;color:#fff;padding:6px 0;border-top:1px solid rgba(255,255,255,.06);}
+  .fxrow .fx-left{display:flex;align-items:center;gap:6px;}
+  .fxrow .fx-right{color:#9aa1ad;font-variant-numeric:tabular-nums;}
+  .fxrow.win .fx-right{color:#65d480;}
+  .fxrow.draw .fx-right{color:#cbd0d8;}
+  .fxrow.loss .fx-right{color:#ef6f6f;}
+  .fxrow .res-badge{font-size:9px;font-weight:800;padding:1px 5px;border-radius:6px;background:rgba(255,255,255,.1);}
+  .fxrow.win .res-badge{background:rgba(101,212,128,.15);color:#65d480;}
+
+  /* Settings entry */
+  .entry-row{padding:11px 14px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.06);font-size:13px;color:#fff;cursor:pointer;}
+  .entry-row.first{border-top:0;}
+  .entry-row .icon{width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.08);display:inline-flex;align-items:center;justify-content:center;font-size:14px;}
+  .entry-row .meta{display:flex;align-items:center;gap:10px;flex:1;}
+  .entry-row .value{color:var(--dark-muted);font-size:12px;font-weight:600;}
+
+  /* Layout helpers */
+  .legend{margin:24px 4px 4px;font-size:13px;color:#444;line-height:1.55;}
+  .legend b{color:var(--ink);}
+  .foot{text-align:center;color:#9aa0a6;font-size:12px;margin-top:34px;line-height:1.6;}
+  .foot a{color:var(--green-d);text-decoration:none;font-weight:600;}
+
+  /* flag swatches */
+  .fg-br{background:linear-gradient(to bottom,#009b3a 0,#009b3a 60%,#ffdf00 60%,#ffdf00 80%,#002776 80%);}
+  .fg-de{background:linear-gradient(to bottom,#000 33%,#dd0000 33%,#dd0000 66%,#ffce00 66%);}
+  .fg-en{background:linear-gradient(to right,#fff 0,#fff 40%,#ce1124 40%,#ce1124 60%,#fff 60%);}
+  .fg-fr{background:linear-gradient(to right,#0055a4 33%,#fff 33%,#fff 66%,#ef4135 66%);}
+  .fg-ar{background:linear-gradient(to bottom,#74acdf 33%,#fff 33%,#fff 66%,#74acdf 66%);}
+  .fg-pt{background:linear-gradient(to right,#006600 35%,#ff0000 35%);}
+  .fg-no{background:linear-gradient(to right,#ef2b2d 0,#ef2b2d 30%,#fff 30%,#fff 38%,#002868 38%,#002868 62%,#fff 62%,#fff 70%,#ef2b2d 70%);}
+  .fg-nl{background:linear-gradient(to bottom,#ae1c28 33%,#fff 33%,#fff 66%,#21468b 66%);}
+  .fg-es{background:linear-gradient(to bottom,#aa151b 25%,#f1bf00 25%,#f1bf00 75%,#aa151b 75%);}
+  .fg-ma{background:#c1272d;}
+  .fg-co{background:linear-gradient(to bottom,#fcd116 50%,#003893 50%,#003893 75%,#ce1126 75%);}
+</style>
+</head>
+<body>
+  <div class="banner">
+    <h1>⚽ My Clubs — see how your boys are doing</h1>
+    <p>"I'm an Arsenal fan. Where are my players, when do they play next, how are they doing?" A design exploration for surfacing your club's World Cup players inside MatchMondo.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="intro">
+      <span class="pill">Why this</span>
+      Most football fans support a club, not (or as well as) a country. During the World Cup the question "how's Saka doing?" is a club-fan question first. Right now you'd hunt: go to England → scroll the squad → find Saka. With a "My Clubs" feature, your Arsenal lads show up grouped together with their next fixture, latest stats, and a link to their detail page — one tap from home.
+    </div>
+
+    <!-- Design Q&A — captures the decisions worth flagging -->
+    <div class="qa">
+      <div class="qa-item">
+        <div class="qa-q">Where does it live?</div>
+        <div class="qa-a">
+          Recommendation: a new <b>"My Clubs"</b> top-level sub-tab inside <b>Stats</b>, alongside Players / My Players / Groups. Familiar pattern, no new bottom-tab real estate, and the data shape (filterable player list) matches what Stats already does.
+          Alternative: a card on Today's home that surfaces just your clubs' players playing today.
+        </div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">What does the user pick?</div>
+        <div class="qa-a">
+          A small set of <b>favorite clubs</b> (Arsenal, Bayern, Boca…), not leagues. League-level (Premier League / La Liga) is too broad for the "how are my boys" question. We could still let users pick a league as a shortcut to favorite all of its top clubs, but the unit of storage is the club.
+        </div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">Where does the data come from?</div>
+        <div class="qa-a">
+          <b>Already in the app.</b> The roster JSON in <code>rosters.js</code> has a <code>club</code> field for every WC26 player. No new fetches, no new backend. The lookup is "every roster player whose club is in my favorites." Players who change clubs mid-tournament are rare; we just trust the roster snapshot.
+        </div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">How many clubs can I add?</div>
+        <div class="qa-a">
+          No hard cap. Most users will pick 1–3. The view still works at 10+ (just a longer scroll). We pin the most recently active club to the top by default; user can drag-reorder later.
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <!-- ─── Variant A: Stats > My Clubs (recommended) ─── -->
+      <div class="v">
+        <div class="v-head">
+          <span class="v-tag">Variant A · Stats sub-tab</span>
+          <div class="v-title">My Clubs lives inside Stats</div>
+          <div class="v-sub">Stats already hosts Players / My Players / Groups. Adding "My Clubs" alongside it keeps the navigation familiar and groups WC-time analysis in one place.</div>
+        </div>
+        <div class="phone">
+          <div class="tabs">
+            <div class="tab">PLAYERS</div>
+            <div class="tab">MY PLAYERS</div>
+            <div class="tab on">MY CLUBS</div>
+            <div class="tab">GROUPS</div>
+          </div>
+
+          <!-- Club filter chips -->
+          <div class="clubs">
+            <div class="club on"><div class="badge arsenal">A</div>Arsenal<span class="num">7</span></div>
+            <div class="club"><div class="badge bayern">B</div>Bayern<span class="num">9</span></div>
+            <div class="club"><div class="badge barca">B</div>Barça<span class="num">6</span></div>
+            <div class="club"><div class="badge psg">P</div>PSG<span class="num">8</span></div>
+            <div class="club"><div class="badge liverpool">L</div>Liverpool<span class="num">5</span></div>
+          </div>
+
+          <!-- Up next banner for the active filter -->
+          <div class="next-banner">
+            <div class="nb-line">↻ Next Arsenal player on the pitch</div>
+            <div class="nb-body"><b>Bukayo Saka</b> · England vs Congo DR · R32</div>
+            <div class="nb-time">Tomorrow · 16:00 PT · MetLife Stadium</div>
+          </div>
+
+          <!-- Player rows -->
+          <div class="pl">
+            <div class="hd"><div class="num">7</div></div>
+            <div class="body">
+              <div class="name">Bukayo Saka <span class="heart">♥</span></div>
+              <div class="meta"><span class="flag fg-en"></span>England · MF · 3 caps</div>
+            </div>
+            <div class="stats">
+              <div class="ga">2 <small>G+A</small></div>
+              <div class="next">vs Congo DR · tmrw</div>
+            </div>
+          </div>
+          <div class="pl">
+            <div class="hd"><div class="num">7</div></div>
+            <div class="body">
+              <div class="name">Martin Ødegaard</div>
+              <div class="meta"><span class="flag fg-no"></span>Norway · MF · 3 caps</div>
+            </div>
+            <div class="stats">
+              <div class="ga">3 <small>G+A</small></div>
+              <div class="next">vs Côte d'Ivoire · 16:00</div>
+            </div>
+          </div>
+          <div class="pl">
+            <div class="hd"><div class="num">8</div></div>
+            <div class="body">
+              <div class="name">Declan Rice</div>
+              <div class="meta"><span class="flag fg-en"></span>England · MF · 3 caps</div>
+            </div>
+            <div class="stats">
+              <div class="ga">1 <small>G+A</small></div>
+              <div class="next">vs Congo DR · tmrw</div>
+            </div>
+          </div>
+          <div class="pl">
+            <div class="hd"><div class="num">14</div></div>
+            <div class="body">
+              <div class="name">Gabriel Martinelli</div>
+              <div class="meta"><span class="flag fg-br"></span>Brazil · FW · 3 caps</div>
+            </div>
+            <div class="stats">
+              <div class="ga">2 <small>G+A</small></div>
+              <div class="next">vs Japan · Mon 17:00</div>
+            </div>
+          </div>
+          <div class="pl">
+            <div class="hd"><div class="num">21</div></div>
+            <div class="body">
+              <div class="name">Mikel Merino</div>
+              <div class="meta"><span class="flag fg-es"></span>Spain · MF · 3 caps</div>
+            </div>
+            <div class="stats">
+              <div class="ga">1 <small>G+A</small></div>
+              <div class="next">vs Austria · Thu</div>
+            </div>
+          </div>
+          <div class="pl">
+            <div class="hd"><div class="num">28</div></div>
+            <div class="body">
+              <div class="name">Ethan Nwaneri</div>
+              <div class="meta"><span class="flag fg-en"></span>England · MF · 1 cap</div>
+            </div>
+            <div class="stats">
+              <div class="ga">0 <small>G+A</small></div>
+              <div class="next">vs Congo DR · tmrw</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── Variant B: Onboarding / picker ─── -->
+      <div class="v">
+        <div class="v-head">
+          <span class="v-tag">Variant B · Setup</span>
+          <div class="v-title">Pick your clubs</div>
+          <div class="v-sub">First time you tap "My Clubs", a sheet asks you to pick. Browse by league for speed, search to add anything. Multi-select.</div>
+        </div>
+        <div class="phone">
+          <div class="label">Set up My Clubs</div>
+          <div class="sub">Pick the club teams you support. Your players from each club will show in the My Clubs view, grouped together, with their next match.</div>
+
+          <div class="pickerwrap">
+            <div class="field">Already picked</div>
+            <div class="chip-row">
+              <div class="picked-chip"><div class="badge arsenal">A</div>Arsenal</div>
+              <div class="picked-chip"><div class="badge bayern">B</div>Bayern</div>
+            </div>
+
+            <div class="field" style="margin-top:14px;">Add by league</div>
+            <div class="league-card">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League<span class="chev">›</span></div>
+            <div class="league-card">🇪🇸 La Liga<span class="chev">›</span></div>
+            <div class="league-card">🇩🇪 Bundesliga<span class="chev">›</span></div>
+            <div class="league-card">🇫🇷 Ligue 1<span class="chev">›</span></div>
+            <div class="league-card">🇮🇹 Serie A<span class="chev">›</span></div>
+            <div class="league-card">🌎 Add other club…<span class="chev">›</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── Variant C: Grouped by club ─── -->
+      <div class="v">
+        <div class="v-head">
+          <span class="v-tag">Variant C · Alternative layout</span>
+          <div class="v-title">Grouped by club, with form line</div>
+          <div class="v-sub">Same "My Clubs" sub-tab, but each club gets its own section. Better when the user follows several clubs, or wants a snapshot of each club's WC activity.</div>
+        </div>
+        <div class="phone">
+          <div class="tabs">
+            <div class="tab">PLAYERS</div>
+            <div class="tab">MY PLAYERS</div>
+            <div class="tab on">MY CLUBS</div>
+            <div class="tab">GROUPS</div>
+          </div>
+
+          <!-- Arsenal group -->
+          <div class="group-head">
+            <div class="crest" style="background:var(--arsenal);">A</div>
+            <div class="title">Arsenal</div>
+            <div class="count">· 7 players · 2 in the knockouts</div>
+          </div>
+          <div class="pl">
+            <div class="hd"><div class="num">7</div></div>
+            <div class="body">
+              <div class="name">Saka</div>
+              <div class="meta"><span class="flag fg-en"></span>England · MF</div>
+            </div>
+            <div class="stats"><div class="ga">2 <small>G+A</small></div></div>
+          </div>
+          <div class="pl">
+            <div class="hd"><div class="num">8</div></div>
+            <div class="body">
+              <div class="name">Rice</div>
+              <div class="meta"><span class="flag fg-en"></span>England · MF</div>
+            </div>
+            <div class="stats"><div class="ga">1 <small>G+A</small></div></div>
+          </div>
+          <div class="pl">
+            <div class="hd"><div class="num">7</div></div>
+            <div class="body">
+              <div class="name">Ødegaard</div>
+              <div class="meta"><span class="flag fg-no"></span>Norway · MF</div>
+            </div>
+            <div class="stats"><div class="ga">3 <small>G+A</small></div></div>
+          </div>
+
+          <!-- Bayern group -->
+          <div class="group-head">
+            <div class="crest" style="background:var(--bayern);">B</div>
+            <div class="title">Bayern Munich</div>
+            <div class="count">· 9 players · 4 in the knockouts</div>
+          </div>
+          <div class="pl">
+            <div class="hd"><div class="num">10</div></div>
+            <div class="body">
+              <div class="name">Jamal Musiala</div>
+              <div class="meta"><span class="flag fg-de"></span>Germany · MF</div>
+            </div>
+            <div class="stats"><div class="ga">4 <small>G+A</small></div></div>
+          </div>
+          <div class="pl">
+            <div class="hd"><div class="num">17</div></div>
+            <div class="body">
+              <div class="name">Kim Min-jae</div>
+              <div class="meta"><span class="flag fg-en" style="background:#fff;"></span>Korea Rep · DF</div>
+            </div>
+            <div class="stats"><div class="ga">0 <small>G+A</small></div></div>
+          </div>
+
+          <!-- Barcelona group -->
+          <div class="group-head">
+            <div class="crest" style="background:var(--barca);">B</div>
+            <div class="title">Barcelona</div>
+            <div class="count">· 6 players · 3 in the knockouts</div>
+          </div>
+          <div class="pl">
+            <div class="hd"><div class="num">19</div></div>
+            <div class="body">
+              <div class="name">Lamine Yamal</div>
+              <div class="meta"><span class="flag fg-es"></span>Spain · FW</div>
+            </div>
+            <div class="stats"><div class="ga">5 <small>G+A</small></div></div>
+          </div>
+          <div class="pl">
+            <div class="hd"><div class="num">8</div></div>
+            <div class="body">
+              <div class="name">Pedri</div>
+              <div class="meta"><span class="flag fg-es"></span>Spain · MF</div>
+            </div>
+            <div class="stats"><div class="ga">2 <small>G+A</small></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── Variant D: Settings entry point ─── -->
+      <div class="v">
+        <div class="v-head">
+          <span class="v-tag">Variant D · Entry point</span>
+          <div class="v-title">Settings → My Clubs (and Today widget)</div>
+          <div class="v-sub">Where users discover the feature. A row in Settings to manage clubs (mirrors Favorite Teams), and a Today-screen card surfacing whichever of your clubs' players are playing today.</div>
+        </div>
+        <div class="phone">
+          <div class="label">Settings · Personalize</div>
+          <div class="entry-row first">
+            <div class="meta"><span class="icon">🏳</span> Favorite countries</div>
+            <div class="value">3 teams ›</div>
+          </div>
+          <div class="entry-row">
+            <div class="meta"><span class="icon">⚽</span> My clubs</div>
+            <div class="value">Arsenal, Bayern, Barça ›</div>
+          </div>
+          <div class="entry-row">
+            <div class="meta"><span class="icon">♥</span> Favorite players</div>
+            <div class="value">5 players ›</div>
+          </div>
+
+          <div class="label" style="margin-top:18px;">Today (Today tab card)</div>
+          <div class="next-banner">
+            <div class="nb-line">⚽ Your clubs play today</div>
+            <div class="nb-body"><b>4 Arsenal players</b> in action: Saka, Rice, Nwaneri (ENG vs CGO) and Ødegaard (NOR vs CIV)</div>
+            <div class="nb-time">First kickoff in 2h · tap to see all</div>
+          </div>
+
+          <div class="label">Recent form (per club)</div>
+          <div class="fx">
+            <div class="fxhead">Arsenal in WC26 (last 3 matches by their players)</div>
+            <div class="fxrow win">
+              <div class="fx-left"><span class="res-badge">W</span>Saka — ENG vs PAN</div>
+              <div class="fx-right">1 goal · 90'</div>
+            </div>
+            <div class="fxrow win">
+              <div class="fx-left"><span class="res-badge">W</span>Ødegaard — NOR vs IT</div>
+              <div class="fx-right">1 assist · 90'</div>
+            </div>
+            <div class="fxrow draw">
+              <div class="fx-left"><span class="res-badge">D</span>Merino — ESP vs URU</div>
+              <div class="fx-right">0 G+A · 75'</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="legend">
+      <b>Implementation cost:</b> the data is already on the device. The only new pieces are (1) a club-name picker UI, (2) a `favoriteClubs` set in AppSettings (already in your local WIP), and (3) the "My Clubs" view itself — basically a grouped list off the rosters keyed by club. No backend changes. No new ESPN calls.
+      <br><br>
+      <b>What this doesn't try to do:</b> league standings, club-vs-club rivalries, or "which of your club's players are MOST IMPORTANT to their country." Those are interesting follow-ups but each adds real surface area; the MVP above is the answer to "how are my boys doing?" — nothing more.
+    </div>
+
+    <div class="foot">
+      <a href="mockups.html">← All mockups</a> &nbsp;·&nbsp;
+      <a href="mockup-friends.html">Friends mockup</a> &nbsp;·&nbsp;
+      <a href="mockup-predictions.html">Predictions mockup</a>
+    </div>
+  </div>
+</body>
+</html>
