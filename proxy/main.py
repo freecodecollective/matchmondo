@@ -347,6 +347,9 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/api/friends/leaderboard":
             q = urllib.parse.parse_qs(u.query)
             return self.friends_leaderboard_get((q.get("deviceId") or [""])[0])
+        if path == "/api/global-leaderboard":
+            q = urllib.parse.parse_qs(u.query)
+            return self.global_leaderboard_get((q.get("deviceId") or [""])[0])
         if len(parts) == 3 and parts[:2] == ["api", "groups"]:
             return self.group_get(parts[2])
         if len(parts) == 4 and parts[:2] == ["api", "groups"] and parts[3] == "leaderboard":
@@ -521,11 +524,17 @@ class Handler(BaseHTTPRequestHandler):
         self.send_json(200, {"code": d.get("code", ""), "displayName": d.get("displayName", ""), "friends": n})
 
     def me_post(self, body):
-        """Register or update my profile; allocate a friend code on first call."""
+        """Register or update my profile; allocate a friend code on first call.
+        Accepts the profile fields the iOS app's onboarding flow collects:
+        displayName, favoriteTeam, location, and showOnGlobal (the
+        opt-in flag for the global leaderboard)."""
         did = body.get("deviceId")
-        dn = (body.get("displayName") or "").strip()[:40]
         if not did:
             return self.send_json(400, {"error": "deviceId required"})
+        dn = (body.get("displayName") or "").strip()[:40]
+        team = (body.get("favoriteTeam") or "").strip()[:60]
+        loc = (body.get("location") or "").strip()[:80]
+        show = body.get("showOnGlobal")
         st, doc = fs("GET", f"/users/{did}")
         if st == 200:
             d = parse(doc)
@@ -535,13 +544,32 @@ class Handler(BaseHTTPRequestHandler):
             fields = {"updatedAt": now_iso(), "code": code}
             if dn:
                 fields["displayName"] = dn
+            # Only patch a field if the client actually sent it; missing key
+            # means "no change", whereas an empty-string value is a valid
+            # clear (e.g. user erased their location).
+            if "favoriteTeam" in body:
+                fields["favoriteTeam"] = team
+            if "location" in body:
+                fields["location"] = loc
+            if isinstance(show, bool):
+                fields["showOnGlobal"] = show
             fs_merge(f"/users/{did}", fields)
             return self.send_json(200, {"code": code, "displayName": dn or d.get("displayName", "")})
         code = gen_unique_code(did)
         if not code:
             return self.send_json(500, {"error": "could not allocate a code"})
         fs("PATCH", f"/users/{did}",
-           body=docbody({"displayName": dn, "code": code, "createdAt": now_iso(), "updatedAt": now_iso()}))
+           body=docbody({
+               "displayName": dn,
+               "favoriteTeam": team,
+               "location": loc,
+               # Cold-start default mirrors the iOS app: opt-IN happens only
+               # via the onboarding sheet (which sends showOnGlobal=true).
+               "showOnGlobal": bool(show) if isinstance(show, bool) else False,
+               "code": code,
+               "createdAt": now_iso(),
+               "updatedAt": now_iso(),
+           }))
         self.send_json(200, {"code": code, "displayName": dn})
 
     def trivia_score_put(self):
@@ -595,9 +623,60 @@ class Handler(BaseHTTPRequestHandler):
                 # Empty when unset — the client localizes the "Player" fallback.
                 "deviceId": uid,
                 "displayName": info.get("displayName") or "",
+                # Friends already know each other so we don't strictly need
+                # the public-profile fields here, but include them so the
+                # iOS-side row renderer (which shows team + location in
+                # Everyone scope) has a consistent payload either way.
+                "favoriteTeam": info.get("favoriteTeam") or "",
+                "location": info.get("location") or "",
                 "predict": predict_points(uid)["points"],
                 "trivia": int(info.get("triviaCorrect") or 0),
             })
+        self.send_json(200, {"me": did, "rows": rows})
+
+    def global_leaderboard_get(self, did):
+        """Top globally opted-in users (showOnGlobal=true) by combined score.
+        Returns up to GLOBAL_LIMIT rows sorted high-to-low; the client
+        re-sorts by whichever scoring mode is active. Anyone who opted out
+        — and anyone who never finished onboarding (default off) — is
+        excluded by the Firestore filter."""
+        if not did:
+            return self.send_json(400, {"error": "deviceId required"})
+        # Firestore structured query — server-side filter so we don't
+        # have to fetch every user doc and triage in Python.
+        query = {
+            "from": [{"collectionId": "users"}],
+            "where": {
+                "fieldFilter": {
+                    "field": {"fieldPath": "showOnGlobal"},
+                    "op": "EQUAL",
+                    "value": {"booleanValue": True},
+                }
+            },
+            "limit": 400,
+        }
+        st, results = fs("POST", ":runQuery", body={"structuredQuery": query})
+        if st != 200:
+            return self.send_json(200, {"me": did, "rows": []})
+        rows = []
+        for r in results or []:
+            doc = r.get("document")
+            if not doc:
+                continue
+            uid = doc["name"].split("/")[-1]
+            info = parse(doc)
+            rows.append({
+                "deviceId": uid,
+                "displayName": info.get("displayName") or "",
+                "favoriteTeam": info.get("favoriteTeam") or "",
+                "location": info.get("location") or "",
+                "predict": predict_points(uid)["points"],
+                "trivia": int(info.get("triviaCorrect") or 0),
+            })
+        # Sort by combined score; cap to the top 200 so the response stays
+        # small even as global signups grow.
+        rows.sort(key=lambda r: -(r["predict"] + r["trivia"]))
+        rows = rows[:200]
         self.send_json(200, {"me": did, "rows": rows})
 
     def log_message(self, fmt, *args):
