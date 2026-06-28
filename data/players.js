@@ -1,6 +1,6 @@
-// Football 2026 — top players per team. Compiled from agent web research (June 2026).
-// Top-10 teams: 5 players each; all other teams: 3-6. Clubs reflect the 2025-26 season.
-// 48 teams, 216 players.
+// Football 2026 — player profiles for all squad members.
+// 48 teams, 1286 players. Compiled from web research (June 2026).
+// Featured players include caps, tournament history, honors, and localized bios.
 // Team order/rank come from data/rankings.js.
 window.WC_PLAYERS = {
  "teams": {
@@ -165,6 +165,231 @@ window.WC_PLAYERS = {
      "FA Cup 2025-26 (Manchester City)",
      "EFL Cup 2025-26 (Manchester City)"
     ]
+   },
+   {
+    "name": "Melvin Mastil",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Stade Nyonnais (Swiss Challenge League, Switzerland)",
+    "hometown": "Born in France; of Algerian descent",
+    "why": "A young goalkeeper plying his trade in Switzerland's second division, Mastil brings shot-stopping reflexes and commanding aerial presence. He emerged through the French lower-league system before earning his call-up to Algeria. At 26 he provides depth behind the first-choice keepers for Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Oussama Benbot",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "USM Alger (Ligue 1, Algeria)",
+    "hometown": "Algiers, Algeria",
+    "why": "A veteran domestic-league goalkeeper, Benbot has been a reliable presence for USM Alger in the Algerian top flight. His experience in continental competitions with his club gives him big-game composure. He serves as a dependable backup option for the national team at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Luca Zidane",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Granada (La Liga 2, Spain)",
+    "hometown": "Marseille, France; son of Zinedine Zidane",
+    "why": "Son of legendary midfielder Zinedine Zidane, Luca came through the Real Madrid academy and has carved his own path in Spanish football with Granada. He is a composed shot-stopper who reads the game well and distributes confidently with his feet. Having chosen to represent Algeria through his father's heritage, he brings La Liga experience to the squad for Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Aissa Mandi",
+    "espnId": 173494,
+    "position": "Centre-back",
+    "club": "Lille (Ligue 1, France)",
+    "hometown": "Châlons-en-Champagne, France; of Algerian descent",
+    "why": "A veteran centre-back and long-time pillar of the Algerian defense, Mandi has accumulated over 90 caps and was part of the 2019 Africa Cup of Nations-winning squad. He is strong in the air, reads the game astutely, and brings leadership to the backline. His experience across La Liga with Real Betis and Villarreal, and now Ligue 1 with Lille, makes him indispensable at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Achraf Abada",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "USM Alger (Ligue 1, Algeria)",
+    "hometown": "Algeria",
+    "why": "A solid domestic-league defender, Abada has established himself as a regular at USM Alger in the Algerian top flight. He is a physically strong centre-back comfortable defending set pieces and organizing the backline. His consistent performances domestically earned him a place in the Football 2026 squad.",
+    "number": 3
+   },
+   {
+    "name": "Mohamed Amine Tougai",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Espérance de Tunis (Ligue 1, Tunisia)",
+    "hometown": "Algeria",
+    "why": "Tougai has developed his career in North African club football, establishing himself at Espérance de Tunis, one of the continent's most decorated clubs. A composed defender who is comfortable on the ball and strong in duels, he adds depth and versatility to Algeria's backline. His experience in CAF Champions League matches gives him tournament-level pedigree heading into Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Zineddine Belaid",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "JS Kabylie (Ligue 1, Algeria)",
+    "hometown": "Algeria",
+    "why": "A dependable centre-back in the Algerian domestic league, Belaid has been a consistent performer for JS Kabylie. He is a physical, no-nonsense defender who excels in aerial duels and last-ditch tackles. His domestic leadership qualities earned him selection for Algeria's Football 2026 campaign.",
+    "number": 5
+   },
+   {
+    "name": "Jaouen Hadjam",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "BSC Young Boys (Super League, Switzerland)",
+    "hometown": "Born in France; of Algerian descent",
+    "why": "A young, attack-minded left-back who came through French youth systems before moving to Young Boys in Switzerland. Hadjam is known for his overlapping runs and quality delivery from wide positions. At 23, he represents the next generation of Algerian fullbacks at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Rayan Ait-Nouri",
+    "espnId": 252095,
+    "position": "Left-back",
+    "club": "Manchester City (Premier League, England)",
+    "hometown": "Montreuil, France; of Algerian descent",
+    "why": "One of Algeria's most prized talents, Ait-Nouri is a dynamic left-back who earned a move to Manchester City after excelling at Wolverhampton Wanderers. He combines blistering pace with technical dribbling ability, often functioning as a winger when in possession. His Premier League pedigree makes him one of Algeria's most important players at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Rafik Belghali",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Hellas Verona (Serie A, Italy)",
+    "hometown": "Born in France; of Algerian descent",
+    "why": "A pacey fullback competing in Serie A with Hellas Verona, Belghali brings European top-flight experience to Algeria's defense. He is an energetic right-back who contributes both defensively and in attack with his overlapping runs. His versatility and youth make him a valuable squad member for Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Ramy Bensebaini",
+    "espnId": 228062,
+    "position": "Left-back",
+    "club": "Borussia Dortmund (Bundesliga, Germany)",
+    "hometown": "Constantine, Algeria",
+    "why": "A powerful and versatile left-back who has been a mainstay of the Algerian national team for years, Bensebaini was part of the 2019 AFCON-winning squad. He built his reputation at Borussia Mönchengladbach before moving to Dortmund, known for his ability to score crucial goals from defense. His physicality, big-game experience, and set-piece threat make him a key figure for Algeria at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Samir Chergui",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Paris FC (Ligue 2, France)",
+    "hometown": "Born in France; of Algerian descent",
+    "why": "A composed defender developed in French football, Chergui has been a steady presence for Paris FC as the club has risen through the French pyramid. He is a ball-playing centre-back who reads the game well and transitions play quickly from the back. His selection for Football 2026 recognizes his consistent growth in recent seasons.",
+    "number": 26
+   },
+   {
+    "name": "Ramiz Zerrouki",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "FC Twente (Eredivisie, Netherlands)",
+    "hometown": "Born in the Netherlands; of Algerian descent",
+    "why": "A combative box-to-box midfielder who has been a key player for FC Twente in the Eredivisie, Zerrouki is known for his tenacious tackling and ability to drive forward with the ball. He chose to represent Algeria internationally and has become an important part of the midfield engine. His energy and workrate will be vital for Algeria's Football 2026 campaign.",
+    "number": 6
+   },
+   {
+    "name": "Houssem Aouar",
+    "espnId": 233498,
+    "position": "Attacking midfielder",
+    "club": "Al-Ittihad (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Lyon, France; of Algerian descent",
+    "why": "Once regarded as one of the brightest young talents in European football during his time at Olympique Lyonnais, Aouar is a silky playmaker with exceptional close control and vision. He moved to the Saudi Pro League after spells at Lyon and Roma, but retains his ability to unlock defenses with incisive passing. He switched his international allegiance from France to Algeria and brings top-level creative quality to Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Fares Chaibi",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Eintracht Frankfurt (Bundesliga, Germany)",
+    "hometown": "Born in France; of Algerian descent",
+    "why": "A technically gifted playmaker who has blossomed in the Bundesliga with Eintracht Frankfurt, Chaibi combines creativity with defensive work rate. He is adept at playing between the lines, finding pockets of space, and delivering decisive final balls. At just 23, he is one of Algeria's most exciting prospects heading into Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Hicham Boudaoui",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "OGC Nice (Ligue 1, France)",
+    "hometown": "Oran, Algeria",
+    "why": "A tireless and disciplined midfielder, Boudaoui moved from Paradou AC in Algeria to Nice, where he has become a regular in Ligue 1. He excels at pressing, ball recovery, and recycling possession efficiently. His consistency and tactical intelligence make him a reliable midfield option for Algeria at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Nabil Bentaleb",
+    "espnId": 192814,
+    "position": "Central midfielder",
+    "club": "Lille (Ligue 1, France)",
+    "hometown": "Lillebonne, France; of Algerian descent",
+    "why": "A deep-lying playmaker with extensive Premier League and Bundesliga experience from his time at Tottenham Hotspur and Schalke 04, Bentaleb brings maturity and composure to Algeria's midfield. He is known for his precise long-range passing and ability to dictate tempo from deep positions. His big-game pedigree makes him an experienced anchor for Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Ibrahim Maza",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Bayer Leverkusen (Bundesliga, Germany)",
+    "hometown": "Berlin, Germany; of Algerian descent",
+    "why": "One of the most exciting young talents in German football, Maza broke through at Hertha Berlin before earning a move to Bayer Leverkusen, the reigning Bundesliga champions. He is a tricky, creative attacking midfielder with quick feet and an eye for the spectacular. At just 20, he is Algeria's brightest emerging star at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Yassine Titraoui",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Charleroi (Pro League, Belgium)",
+    "hometown": "Born in Belgium; of Algerian descent",
+    "why": "A young midfielder developing in the Belgian Pro League with Charleroi, Titraoui is a compact, technical player known for his close control in tight spaces. His ability to carry the ball under pressure and link midfield to attack has caught the eye of Algeria's coaching staff. At 22, he is building his international career heading into Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Amine Gouiri",
+    "espnId": 252101,
+    "position": "Forward",
+    "club": "Olympique de Marseille (Ligue 1, France)",
+    "hometown": "Bourgoin-Jallieu, France; of Algerian descent",
+    "why": "A versatile attacker who emerged from Lyon's renowned academy, Gouiri made his name at Nice before moving to Rennes and then Marseille. He is equally dangerous as a centre-forward or playing off the left, combining sharp finishing with intelligent movement. Having chosen Algeria over France at international level, he is a key creative threat for Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Anis Hadj Moussa",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Feyenoord (Eredivisie, Netherlands)",
+    "hometown": "Born in France; of Algerian descent",
+    "why": "A electrifying winger who burst onto the scene with Feyenoord, Hadj Moussa is known for his explosive pace, tricky dribbling, and ability to beat defenders one-on-one. He has been one of the standout performers in the Eredivisie and Champions League, earning widespread attention. His directness and flair make him one of Algeria's most dangerous attacking weapons at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Nadhir Benbouali",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Győri ETO (NB I, Hungary)",
+    "hometown": "Algeria",
+    "why": "A tall, physical striker who uses his aerial presence and hold-up play to bring teammates into the attack. Benbouali has been scoring regularly in the Hungarian top flight with Győri ETO, demonstrating clinical finishing inside the box. His target-man qualities offer Algeria a different tactical option at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Mohamed Amine Amoura",
+    "espnId": null,
+    "position": "Forward",
+    "club": "VfL Wolfsburg (Bundesliga, Germany)",
+    "hometown": "Djelfa, Algeria",
+    "why": "One of Algeria's most exciting attackers, Amoura made a rapid rise from Algerian domestic football through Belgium's Royale Union Saint-Gilloise to the Bundesliga with Wolfsburg. He is an explosive, pacey forward who can play across the front line and is lethal in transition. His direct style and goalscoring instinct make him a central figure in Algeria's Football 2026 attack.",
+    "number": 18
+   },
+   {
+    "name": "Adil Boulbina",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Al-Duhail (Qatar Stars League, Qatar)",
+    "hometown": "Algeria",
+    "why": "A young forward who has taken his talents to the Qatari league with Al-Duhail, Boulbina is a mobile attacker with good movement off the ball. He has shown an ability to score and create in the Qatar Stars League, one of Asia's stronger competitions. His versatility across the front line gives Algeria's coaches tactical flexibility at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Fares Ghedjemis",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Frosinone (Serie B, Italy)",
+    "hometown": "Born in France; of Algerian descent",
+    "why": "A quick, skillful attacker competing in Italian football with Frosinone, Ghedjemis has shown flashes of quality with his dribbling ability and eye for goal. He can operate on either wing and is dangerous cutting inside onto his stronger foot. At 23 he is still developing and brings youthful energy to Algeria's forward line at Football 2026.",
+    "number": 25
    }
   ],
   "Argentina": [
@@ -517,6 +742,222 @@ window.WC_PLAYERS = {
      "Premier League 2023-24 (Liverpool)",
      "EFL Cup 2023-24, 2024-25 (Liverpool)"
     ]
+   },
+   {
+    "name": "Juan Musso",
+    "espnId": 225543,
+    "position": "Goalkeeper",
+    "club": "Atlético Madrid (La Liga, Spain)",
+    "hometown": "San Nicolás de los Arroyos, Argentina",
+    "why": "A commanding goalkeeper who rose through Racing Club's academy before starring in Serie A with Udinese and Atalanta, Musso earned his move to Atlético Madrid through consistent performances. He is an excellent shot-stopper with sharp reflexes and confident distribution. His La Liga experience makes him a reliable option between the posts for Argentina at Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Geronimo Rulli",
+    "espnId": 213469,
+    "position": "Goalkeeper",
+    "club": "Olympique de Marseille (Ligue 1, France)",
+    "hometown": "Mar del Plata, Argentina",
+    "why": "A shot-stopping specialist with extensive European experience across La Liga, Ligue 1, and the Premier League, Rulli earned fame for his penalty heroics in Villarreal's 2021 Europa League triumph. He is brave, athletic, and commands his area effectively. His big-moment mentality provides valuable depth for Argentina's goalkeeping corps at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Emiliano Martinez",
+    "espnId": 163310,
+    "position": "Goalkeeper",
+    "club": "Aston Villa (Premier League, England)",
+    "hometown": "Mar del Plata, Argentina",
+    "why": "Argentina's first-choice goalkeeper and a master of the big occasion, 'Dibu' Martinez is renowned for his penalty-saving prowess that proved decisive in both the 2021 Copa América and the 2022 tournament in Qatar. A superb shot-stopper with commanding presence and vocal leadership, he has been one of the Premier League's best keepers at Aston Villa. His mental fortitude and experience make him indispensable for Argentina at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Marcos Senesi",
+    "espnId": 241853,
+    "position": "Centre-back",
+    "club": "Tottenham Hotspur (Premier League, England)",
+    "hometown": "Concordia, Argentina",
+    "why": "An elegant left-footed centre-back who built his reputation at Feyenoord before moving to the Premier League, Senesi is known for his composure on the ball and ability to play out from the back. He is aggressive in duels and reads the game intelligently. His transition to English football has added physicality to his game, making him a versatile defensive option for Argentina at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Nicolas Tagliafico",
+    "espnId": 212424,
+    "position": "Left-back",
+    "club": "Olympique Lyonnais (Ligue 1, France)",
+    "hometown": "Rafael Calzada, Argentina",
+    "why": "A veteran left-back with over 50 international caps, Tagliafico is a tenacious defender known for his overlapping runs and dangerous deliveries from wide areas. He was a standout performer at Ajax before moving to Lyon and was part of Argentina's 2022 triumph. His experience, leadership, and defensive reliability make him a trusted squad member at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Gonzalo Montiel",
+    "espnId": 254296,
+    "position": "Right-back",
+    "club": "River Plate (Liga Profesional, Argentina)",
+    "hometown": "González Catán, Argentina",
+    "why": "Forever etched in Argentine football history for scoring the decisive penalty in the 2022 final against France, Montiel is a solid, dependable right-back. He returned to boyhood club River Plate after stints in Europe with Sevilla and Nottingham Forest. His composure under pressure and big-game experience make him a valued member of the Football 2026 squad.",
+    "number": 4
+   },
+   {
+    "name": "Lisandro Martinez",
+    "espnId": 247358,
+    "position": "Centre-back",
+    "club": "Manchester United (Premier League, England)",
+    "hometown": "Gualeguay, Argentina",
+    "why": "Known as 'The Butcher' for his ferocious tackling despite his compact frame, Lisandro Martínez is one of the most aggressive and technically gifted centre-backs in world football. He developed at Ajax under Erik ten Hag before following him to Manchester United, where he quickly became a fan favorite. His ability to play both centre-back and left-back, combined with superb ball-playing skills, makes him crucial for Argentina at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Cristian Romero",
+    "espnId": 248600,
+    "position": "Centre-back",
+    "club": "Tottenham Hotspur (Premier League, England)",
+    "hometown": "Córdoba, Argentina",
+    "why": "An intensely competitive centre-back nicknamed 'Cuti,' Romero combines raw aggression with excellent reading of the game and surprisingly good distribution. He was named Serie A's best defender during his loan at Atalanta and has become a fixture in Argentina's back line. His front-foot defending style and leadership qualities make him one of South America's premier defenders at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Nicolas Otamendi",
+    "espnId": 150299,
+    "position": "Centre-back",
+    "club": "Benfica (Liga Portugal, Portugal)",
+    "hometown": "Buenos Aires, Argentina",
+    "why": "One of the most experienced defenders in Argentine history with over 100 caps, Otamendi is a battle-hardened centre-back who has won league titles in England, Portugal, and Argentina. A key figure in the 2022 triumph, he brings unmatched leadership, aerial dominance, and warrior mentality. At 38 he remains a pillar at Benfica and a respected elder statesman in the Football 2026 squad.",
+    "number": 19
+   },
+   {
+    "name": "Facundo Medina",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Olympique de Marseille (Ligue 1, France)",
+    "hometown": "La Plata, Argentina",
+    "why": "A left-footed centre-back who has been a steady performer in Ligue 1, first with Lens and now at Marseille, Medina is valued for his pace, aggression, and comfort carrying the ball out of defense. He adds depth to Argentina's defensive options with his ability to cover at left-back as well. His growth in French football has made him a reliable squad member for Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Nahuel Molina",
+    "espnId": 271019,
+    "position": "Right-back",
+    "club": "Atlético Madrid (La Liga, Spain)",
+    "hometown": "Embalse, Argentina",
+    "why": "An attack-minded right-back who scored a stunning goal in the 2022 quarter-final against the Netherlands, Molina is known for his tireless runs up and down the flank. After impressive spells at Udinese and Atlético Madrid, he has established himself as one of La Liga's most dynamic fullbacks. His combination of defensive discipline and offensive contribution makes him a key asset for Argentina at Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Leandro Paredes",
+    "espnId": 211775,
+    "position": "Defensive midfielder",
+    "club": "Boca Juniors (Liga Profesional, Argentina)",
+    "hometown": "San Justo, Argentina",
+    "why": "A cultured deep-lying playmaker with a sublime passing range, Paredes has played for Roma, PSG, and Juventus across his European career. He was an integral part of Argentina's 2022 triumph, providing midfield control alongside Enzo Fernández. Having returned to Boca Juniors, he brings vast experience and set-piece expertise to the Football 2026 squad.",
+    "number": 5
+   },
+   {
+    "name": "Rodrigo De Paul",
+    "espnId": 226401,
+    "position": "Central midfielder",
+    "club": "Inter Miami (MLS, United States)",
+    "hometown": "Sarandí, Argentina",
+    "why": "Argentina's tireless midfield warrior, De Paul is renowned for his relentless pressing, ball-carrying ability, and emotional leadership on the pitch. He was indispensable in the 2021 Copa América and 2022 campaigns, forming a crucial midfield partnership alongside Messi. Now at Inter Miami, he brings passion and experience to Argentina's Football 2026 midfield.",
+    "number": 7
+   },
+   {
+    "name": "Valentin Barco",
+    "espnId": null,
+    "position": "Left midfielder",
+    "club": "RC Strasbourg (Ligue 1, France)",
+    "hometown": "Buenos Aires, Argentina",
+    "why": "A prodigiously talented young left-sided player who burst onto the scene at Boca Juniors as a teenager, Barco is known for his fearless dribbling, quick feet, and willingness to take on defenders. He signed with Brighton before moving on loan to develop further in European football. At 21 he represents the future of Argentina's left flank at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Giovani Lo Celso",
+    "espnId": 233046,
+    "position": "Attacking midfielder",
+    "club": "Real Betis (La Liga, Spain)",
+    "hometown": "Rosario, Argentina",
+    "why": "A silky playmaker with excellent vision and close control, Lo Celso is a technically refined midfielder who can unlock defenses with a single pass. He was a key member of the 2022 squad and has shone at Real Betis, Tottenham, and Villarreal. When fit, his creativity and ability to operate in tight spaces make him a valuable asset for Argentina at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Exequiel Palacios",
+    "espnId": 262044,
+    "position": "Central midfielder",
+    "club": "Bayer Leverkusen (Bundesliga, Germany)",
+    "hometown": "Famaillá, Argentina",
+    "why": "A dynamic box-to-box midfielder who was part of Bayer Leverkusen's historic unbeaten Bundesliga title-winning season in 2023-24, Palacios brings energy, pressing intensity, and goal threat from midfield. He developed at River Plate and was part of Argentina's 2022 squad. His combination of technical quality and athleticism makes him a modern midfielder perfectly suited for Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Enzo Fernandez",
+    "espnId": 282517,
+    "position": "Central midfielder",
+    "club": "Chelsea (Premier League, England)",
+    "hometown": "San Martín, Argentina",
+    "why": "The breakout star of the 2022 tournament in Qatar, Enzo Fernández won the Young Player Award and became the most expensive signing in Premier League history when Chelsea paid over £100m for him. He is an exceptionally complete midfielder who combines elegant passing, defensive awareness, and late runs into the box. As the heartbeat of Argentina's midfield, he is one of the most important players for Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Julian Alvarez",
+    "espnId": 282165,
+    "position": "Striker",
+    "club": "Atlético Madrid (La Liga, Spain)",
+    "hometown": "Calchín, Argentina",
+    "why": "A supremely versatile forward who can play as a centre-forward, second striker, or wide attacker, Álvarez scored crucial goals in Argentina's 2022 campaign including a brace in the semi-final. After thriving at Manchester City alongside Haaland, he moved to Atlético Madrid seeking a starring role. His work rate, intelligence, and clinical finishing make him central to Argentina's plans at Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Nicolas Gonzalez",
+    "espnId": 240706,
+    "position": "Winger",
+    "club": "Atlético Madrid (La Liga, Spain)",
+    "hometown": "Belén de Escobar, Argentina",
+    "why": "A direct, physically powerful winger who can play on either flank, Nicolás González brings pace, intensity, and goalscoring threat from wide positions. He built his reputation at Fiorentina and Juventus before joining Atlético Madrid. His ability to stretch defenses and contribute in big games makes him a valuable attacking option for Argentina at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Thiago Almada",
+    "espnId": 266062,
+    "position": "Attacking midfielder",
+    "club": "Atlético Madrid (La Liga, Spain)",
+    "hometown": "Ciudadela, Argentina",
+    "why": "A gifted playmaker who won the MLS Cup with Atlanta United before joining Botafogo and then Atlético Madrid, Almada is known for his dazzling dribbling, creativity, and ability to conjure moments of magic. He was part of the 2022 squad and has continued to develop into a more complete player. His flair and vision make him an exciting creative outlet for Argentina at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Giuliano Simeone",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Atlético Madrid (La Liga, Spain)",
+    "hometown": "Buenos Aires, Argentina; son of Diego Simeone",
+    "why": "The son of Atlético Madrid manager Diego Simeone, Giuliano has earned his place through talent rather than lineage, impressing with his pace, directness, and relentless pressing from the right wing. He broke through at the club where his father has managed for over a decade, showing fearless attacking intent. His energy and hunger make him a dynamic option for Argentina's attack at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Nico Paz",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Como (Serie A, Italy)",
+    "hometown": "Santa Cruz de Tenerife, Spain; of Argentine descent",
+    "why": "A supremely elegant playmaker who came through Real Madrid's academy, Nico Paz has dazzled in Serie A with Como, earning comparisons to classic Argentine number 10s with his vision and touch. Born in Spain to an Argentine father (former international Pablo Paz), he chose to represent Argentina at senior level. His technical refinement and creative intelligence make him one of the most intriguing talents at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Jose Manuel Lopez",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Palmeiras (Brasileirão, Brazil)",
+    "hometown": "Argentina",
+    "why": "A tall, powerful striker who has made his mark in South American football with Palmeiras, one of Brazil's biggest clubs, López combines physical presence with intelligent movement and clinical finishing. His ability to hold up play and bring others into the attack adds a different dimension to Argentina's forward line. His goalscoring form in the Brasileirão earned him a spot in the Football 2026 squad.",
+    "number": 21
+   },
+   {
+    "name": "Lautaro Martinez",
+    "espnId": 247098,
+    "position": "Striker",
+    "club": "Inter Milan (Serie A, Italy)",
+    "hometown": "Bahía Blanca, Argentina",
+    "why": "Argentina's captain and leading striker, Lautaro Martínez has evolved into one of the world's most complete forwards at Inter Milan, where he has won multiple Serie A titles. He combines explosive finishing, intelligent pressing, and aerial ability, and was the top scorer in Argentina's 2024 Copa América triumph. With Messi's international retirement, Lautaro carries the armband and the goalscoring burden for Football 2026.",
+    "number": 22
    }
   ],
   "Australia": [
@@ -888,6 +1329,186 @@ window.WC_PLAYERS = {
      "Danish Superliga (2019-20, FC Midtjylland)",
      "A-League Championship (2015-16, Adelaide United)"
     ]
+   },
+   {
+    "name": "Paul Izzo",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Randers FC (Superligaen, Denmark)",
+    "hometown": "Adelaide, Australia",
+    "why": "An experienced Australian goalkeeper who moved to European football with Randers in Denmark after years in the A-League. Izzo is a reliable shot-stopper with good reflexes and a commanding presence in the box. His overseas experience adds depth to Australia's goalkeeping options at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Patrick Beach",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Melbourne City (A-League, Australia)",
+    "hometown": "Melbourne, Australia",
+    "why": "A young goalkeeper emerging through the A-League ranks with Melbourne City, Beach has shown maturity beyond his years with composed performances between the posts. At 22, he represents the future of Australian goalkeeping. His selection for Football 2026 provides the squad with a promising developmental option.",
+    "number": 18
+   },
+   {
+    "name": "Milos Degenek",
+    "espnId": 225897,
+    "position": "Centre-back",
+    "club": "APOEL (First Division, Cyprus)",
+    "hometown": "Knin, Croatia; raised in Australia",
+    "why": "A well-traveled centre-back with extensive international experience, Degenek was born in Croatia but raised in Australia and has become a stalwart of the Socceroos defense. He has played across Asia, Europe, and MLS, bringing a wealth of tactical knowledge. His leadership and versatility across the backline make him a valuable presence at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Alessandro Circati",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Parma (Serie A, Italy)",
+    "hometown": "Born in Italy; of Australian descent",
+    "why": "A tall, athletic centre-back who developed through Parma's youth system in Italy, Circati chose to represent Australia at international level. He is a composed defender who is comfortable playing out from the back and has gained valuable Serie A experience. At 22 he is one of the most promising young defenders in the Football 2026 squad.",
+    "number": 3
+   },
+   {
+    "name": "Jacob Italiano",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Grazer AK (2. Liga, Austria)",
+    "hometown": "Perth, Australia",
+    "why": "A young Australian defender who has taken his career to Austrian football with Grazer AK. Italiano is a ball-playing centre-back who is comfortable in possession and composed under pressure. His willingness to play abroad and develop in European football earned him a spot in the Football 2026 squad.",
+    "number": 4
+   },
+   {
+    "name": "Jason Geria",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Albirex Niigata (J1 League, Japan)",
+    "hometown": "Melbourne, Australia",
+    "why": "An experienced right-back who has played extensively in the A-League and across Asia, Geria brings defensive solidity and professional consistency. He moved to J-League football with Albirex Niigata, adapting his game to a new footballing culture. His versatility and experience provide reliable depth for Australia's defense at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Kai Trewin",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "New York City FC (MLS, United States)",
+    "hometown": "Brisbane, Australia",
+    "why": "A rising defender who moved from the A-League to MLS with New York City FC, Trewin has impressed with his physicality, aerial ability, and reading of the game. He developed through Brisbane Roar's academy and has shown rapid growth in American football. His MLS experience and defensive maturity make him an important squad member for Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Aziz Behich",
+    "espnId": 193027,
+    "position": "Left-back",
+    "club": "Melbourne City (A-League, Australia)",
+    "hometown": "Melbourne, Australia",
+    "why": "A veteran of the Socceroos program with over 60 caps, Behich is an attack-minded left-back renowned for a sensational solo goal against France at the 2022 tournament in Qatar. He has played across Turkey, Scotland, and Australia, bringing tenacity and an overlapping threat. His experience and big-game pedigree make him a valued squad member at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Cameron Burgess",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Swansea City (Championship, England)",
+    "hometown": "Aberdeen, Scotland; raised in Australia",
+    "why": "A tall, commanding centre-back who has been a consistent performer in English football with Ipswich Town and Swansea City, Burgess is strong in aerial duels and brings physical presence to the backline. Born in Scotland to an Australian family, he committed to the Socceroos. His Championship experience makes him a dependable defensive option at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Lucas Herrington",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Colorado Rapids (MLS, United States)",
+    "hometown": "United States; of Australian descent",
+    "why": "At just 18 years old, Herrington is one of the youngest players in the entire Football 2026 tournament. A tall, athletic defender who has broken into the Colorado Rapids first team in MLS, he shows remarkable composure and maturity for his age. His selection signals Australia's faith in his enormous potential.",
+    "number": 25
+   },
+   {
+    "name": "Connor Metcalfe",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "FC St. Pauli (Bundesliga, Germany)",
+    "hometown": "Melbourne, Australia",
+    "why": "A dynamic box-to-box midfielder who made the leap from Melbourne City to the Bundesliga with FC St. Pauli, Metcalfe is known for his engine, pressing intensity, and ability to cover ground. He has established himself in German top-flight football, demonstrating tactical discipline and passing quality. His European experience makes him an important midfield presence for Australia at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Ajdin Hrustic",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Heracles Almelo (Eredivisie, Netherlands)",
+    "hometown": "Melbourne, Australia; of Bosnian descent",
+    "why": "A technically skilled midfielder with a wand of a left foot, Hrustic is known for his set-piece delivery and ability to score from distance. He has had stints at Eintracht Frankfurt and Hellas Verona, winning the Europa League with Frankfurt in 2022. His creativity and dead-ball expertise make him a key playmaking option for Australia at Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Aiden O'Neill",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "New York City FC (MLS, United States)",
+    "hometown": "Gold Coast, Australia",
+    "why": "A combative holding midfielder who spent time in Burnley's academy before establishing himself in MLS with New York City FC, O'Neill is a ball-winning presence who shields the defense effectively. He reads the game well and distributes the ball tidily under pressure. His defensive qualities provide balance to Australia's midfield at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Cameron Devlin",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Heart of Midlothian (Premiership, Scotland)",
+    "hometown": "Sydney, Australia",
+    "why": "A tenacious, energetic midfielder who has thrived in Scottish football with Hearts, Devlin is known for his relentless pressing and ability to win the ball back high up the pitch. Despite his compact stature, he is remarkably tough in the tackle and covers vast distances. His combative style and never-say-die attitude make him a popular figure in the Football 2026 squad.",
+    "number": 14
+   },
+   {
+    "name": "Paul Okon-Engstler",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Sydney FC (A-League, Australia)",
+    "hometown": "Sydney, Australia",
+    "why": "The son of former Socceroos captain Paul Okon, Okon-Engstler is a young midfielder carving his own path in Australian football with Sydney FC. He is a technically tidy player with good passing ability and composure on the ball. At 21, his selection for Football 2026 represents a bridging of generations in Australian football.",
+    "number": 24
+   },
+   {
+    "name": "Mathew Leckie",
+    "espnId": 169073,
+    "position": "Right winger",
+    "club": "Melbourne City (A-League, Australia)",
+    "hometown": "Melbourne, Australia",
+    "why": "A Socceroos legend with over 80 caps, Leckie scored the iconic goal against Denmark that sent Australia into the round of 16 at the 2022 tournament. He spent the prime years of his career in the Bundesliga with Ingolstadt and Hertha Berlin, bringing pace, directness, and big-game experience. At 35, his leadership and tournament pedigree make him a crucial presence at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Mohamed Toure",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Norwich City (Championship, England)",
+    "hometown": "Adelaide, Australia; of Guinean descent",
+    "why": "One of Australian football's most exciting young talents, Toure became the youngest goalscorer in A-League history at age 16 playing for Adelaide United. He is a pacy, powerful striker with explosive acceleration and clinical finishing ability. His move to English football with Norwich City has furthered his development ahead of Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Cristian Volpato",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Sassuolo (Serie A, Italy)",
+    "hometown": "Camperdown, Australia; of Italian descent",
+    "why": "A dual Italian-Australian talent who came through AS Roma's academy and made his Serie A debut as a teenager, Volpato is a creative, technically gifted playmaker with an eye for goal. He chose to represent Australia at senior level, bringing Italian footballing education to the Socceroos. His ability to operate between the lines makes him a key creative threat at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Nishan Velupillay",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Melbourne Victory (A-League, Australia)",
+    "hometown": "Melbourne, Australia; of Sri Lankan descent",
+    "why": "A skillful, agile forward who has emerged as a regular scorer in the A-League with Melbourne Victory, Velupillay is known for his quick feet, clever movement, and ability to create chances out of nothing. He represents the diversity of Australian football, bringing flair and creativity to the attack. His domestic form earned him a well-deserved call-up for Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Tete Yengi",
+    "espnId": null,
+    "position": "Striker",
+    "club": "FC Machida Zelvia (J1 League, Japan)",
+    "hometown": "Adelaide, Australia; of Togolese descent",
+    "why": "A towering target man standing 198cm tall, Yengi is a physical, aerial presence who has proven himself as a reliable goalscorer in both the A-League and J-League. He moved to Japan's Machida Zelvia after impressing at Adelaide United, demonstrating his adaptability. His unique combination of height, hold-up play, and goalscoring instinct gives Australia a genuine focal point in attack at Football 2026.",
+    "number": 26
    }
   ],
   "Austria": [
@@ -1234,6 +1855,186 @@ window.WC_PLAYERS = {
      "Supercoppa Italiana 2023-24 (Inter Milan)",
      "Stoke City Player of the Year 2014-15"
     ]
+   },
+   {
+    "name": "Alexander Schlager",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Red Bull Salzburg (Bundesliga, Austria)",
+    "hometown": "Vöcklabruck, Austria",
+    "why": "Austria's established first-choice goalkeeper, Schlager has been a consistent performer for Red Bull Salzburg across multiple Champions League campaigns. He is an agile shot-stopper who also excels at sweeping behind a high defensive line, perfectly suited to Austria's pressing style. His leadership and experience make him the backbone of the defense at Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Florian Wiegele",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Viktoria Plzeň (First League, Czech Republic)",
+    "hometown": "Austria",
+    "why": "Standing at an imposing 206cm, Wiegele is one of the tallest goalkeepers in international football. He has developed his career in Czech football with Viktoria Plzeň, using his extraordinary reach and commanding aerial presence to dominate his area. At 25 he provides towering backup for Austria at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Patrick Pentz",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Brøndby (Superligaen, Denmark)",
+    "hometown": "Vienna, Austria",
+    "why": "A reliable goalkeeper who has gained valuable international experience across Austrian and Danish football, Pentz was part of Austria's Euro 2024 squad. He is a strong, traditional shot-stopper who communicates well with his defense. His tournament experience and steady performances at Brøndby make him a dependable option at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "David Affengruber",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Elche (La Liga 2, Spain)",
+    "hometown": "Austria",
+    "why": "A young centre-back who moved to Spanish football with Elche after developing at Sturm Graz in Austria, Affengruber is a physical defender with good aerial ability and improving ball-playing skills. His willingness to challenge himself abroad demonstrates his ambition. He provides defensive depth for Austria at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Stefan Posch",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "1. FSV Mainz 05 (Bundesliga, Germany)",
+    "hometown": "Judenburg, Austria",
+    "why": "A versatile defender who can play centre-back or right-back with equal proficiency, Posch was a standout performer at Euro 2024 and has thrived in the Bundesliga. He previously played at Hoffenheim before moving to Bologna in Serie A and then Mainz. His tactical intelligence, aerial dominance, and ability to overlap make him a key defender for Austria at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Philipp Lienhart",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "SC Freiburg (Bundesliga, Germany)",
+    "hometown": "Hohenems, Austria",
+    "why": "A composed, ball-playing centre-back who developed at Real Madrid's youth academy before establishing himself as a Bundesliga regular at SC Freiburg. Lienhart reads the game exceptionally well and is an excellent passer out of the back. His consistent performances over multiple seasons in Germany make him a reliable anchor for Austria's defense at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Phillipp Mwene",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "1. FSV Mainz 05 (Bundesliga, Germany)",
+    "hometown": "Linz, Austria; of Congolese descent",
+    "why": "A dependable left-back who has been a consistent performer at Mainz 05 in the Bundesliga, Mwene is valued for his defensive reliability and ability to contribute in attack with overlapping runs. He was part of Austria's impressive Euro 2024 campaign. His experience and solidity make him a trusted option at left-back for Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Alexander Prass",
+    "espnId": null,
+    "position": "Left wing-back",
+    "club": "TSG Hoffenheim (Bundesliga, Germany)",
+    "hometown": "Graz, Austria",
+    "why": "A dynamic, attack-minded wing-back who emerged at Sturm Graz before moving to Hoffenheim, Prass impressed at Euro 2024 with his energetic surges forward and quality crossing. He is equally capable as a left-back or left midfielder, offering tactical flexibility. His pace and offensive quality make him an exciting option for Austria at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Marco Friedl",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Werder Bremen (Bundesliga, Germany)",
+    "hometown": "Perg, Austria",
+    "why": "A left-footed centre-back who captains Werder Bremen, Friedl developed in Bayern Munich's academy before establishing himself as a regular in the Bundesliga. He is a calm, composed defender who excels at building play from the back and organizing the defensive line. His leadership and consistency make him an important figure in Austria's defense at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Michael Svoboda",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Venezia (Serie A, Italy)",
+    "hometown": "Austria; of Czech descent",
+    "why": "A tall, physical centre-back who has carved out a career in Italian football with Venezia, Svoboda is a strong aerial presence and uncompromising in defensive duels. He brings Serie A experience to Austria's defensive options. His imposing 196cm frame and defensive reliability provide valuable depth at Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Xaver Schlager",
+    "espnId": 240098,
+    "position": "Central midfielder",
+    "club": "RB Leipzig (Bundesliga, Germany)",
+    "hometown": "Vöcklabruck, Austria",
+    "why": "A tireless box-to-box midfielder who thrives in high-pressing systems, Schlager has excelled at Red Bull Salzburg, Wolfsburg, and now RB Leipzig. He combines relentless energy with sharp tackling and an increasingly dangerous late runs into the box. His pressing intensity and engine make him perfectly suited to Austria's aggressive style at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Nicolas Seiwald",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "RB Leipzig (Bundesliga, Germany)",
+    "hometown": "Salzburg, Austria",
+    "why": "A metronomic holding midfielder who anchors Austria's midfield with his precise passing and positional discipline, Seiwald graduated from Red Bull Salzburg's academy before joining RB Leipzig. He is a quiet, intelligent player who rarely gives the ball away and controls the tempo of matches. His tactical maturity makes him indispensable for Austria at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Florian Grillitsch",
+    "espnId": 228816,
+    "position": "Defensive midfielder",
+    "club": "SC Braga (Liga Portugal, Portugal)",
+    "hometown": "Neunkirchen, Austria",
+    "why": "A versatile deep-lying midfielder who can also play centre-back, Grillitsch is known for his composure on the ball and excellent range of passing. He spent productive years at Hoffenheim in the Bundesliga before moving to Portugal. His ability to read the game and start attacks from deep positions makes him a valuable squad member for Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Carney Chukwuemeka",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Borussia Dortmund (Bundesliga, Germany)",
+    "hometown": "Northampton, England; of Nigerian and Austrian descent",
+    "why": "A physically imposing midfielder with dual English-Austrian nationality, Chukwuemeka chose to represent Austria after being developed at Aston Villa and Chelsea. He is a powerful ball-carrier who combines technical skill with athletic dynamism, capable of driving past opponents in midfield. His Premier League pedigree and Bundesliga move to Dortmund make him an exciting addition for Austria at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Romano Schmid",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Werder Bremen (Bundesliga, Germany)",
+    "hometown": "Vienna, Austria",
+    "why": "A nimble, creative attacking midfielder who has been a key performer at Werder Bremen, Schmid is known for his quick feet, intelligent movement between the lines, and eye for a through ball. Despite his diminutive frame at 168cm, he compensates with exceptional agility and technical quality. His creativity and work rate make him a useful attacking option for Austria at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Paul Wanner",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "PSV Eindhoven (Eredivisie, Netherlands)",
+    "hometown": "Dornbirn, Austria; of German-Austrian descent",
+    "why": "One of the most highly rated young talents in European football, Wanner became Bayern Munich's youngest-ever debutant at age 16 and chose Austria over Germany at international level. He is a supremely gifted creative player with exceptional vision, dribbling, and finishing ability. At 20, he is a generational talent and one of the most exciting players at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Alessandro Schopf",
+    "espnId": 212073,
+    "position": "Central midfielder",
+    "club": "Wolfsberger AC (Bundesliga, Austria)",
+    "hometown": "Inzing, Austria",
+    "why": "A versatile, experienced midfielder who has served Austria for over a decade, Schopf has played in the Bundesliga with Schalke and Arminia Bielefeld. He is a technically gifted player who can operate across multiple midfield positions with intelligence and composure. His vast international experience and tournament know-how provide valuable depth at Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Michael Gregoritsch",
+    "espnId": 223677,
+    "position": "Striker",
+    "club": "FC Augsburg (Bundesliga, Germany)",
+    "hometown": "Graz, Austria",
+    "why": "A tall, technically skilled forward who defies stereotypes of the traditional target man with his elegant touch and vision, Gregoritsch has been a reliable scorer in the Bundesliga for years. He scored important goals at Euro 2024 and has over 50 international caps. His versatility to play across the front line and his knack for big goals make him an important player for Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Sasa Kalajdzic",
+    "espnId": null,
+    "position": "Striker",
+    "club": "LASK (Bundesliga, Austria)",
+    "hometown": "Vienna, Austria; of Serbian descent",
+    "why": "Standing 201cm tall, Kalajdžić is a towering aerial threat who made his name at VfB Stuttgart with his prolific heading ability and surprisingly good feet for a player of his height. Serious knee injuries disrupted his time at Wolves, but he remains a potent weapon when fit. His unique physical profile and goalscoring instinct give Austria a valuable plan B at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Patrick Wimmer",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "VfL Wolfsburg (Bundesliga, Germany)",
+    "hometown": "Graz, Austria",
+    "why": "A direct, skillful winger who can play on either flank, Wimmer has established himself in the Bundesliga with Wolfsburg after developing at Arminia Bielefeld. He is known for his dribbling ability, pace in transition, and willingness to take on defenders. His flair and attacking threat from wide positions make him an exciting option for Austria at Football 2026.",
+    "number": 21
    }
   ],
   "Belgium": [
@@ -1630,6 +2431,195 @@ window.WC_PLAYERS = {
     "honors": [
      "Europa League 2025-26 (Aston Villa)"
     ]
+   },
+   {
+    "name": "Senne Lammens",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Manchester United (Premier League, England)",
+    "hometown": "Antwerp, Belgium",
+    "why": "A young Belgian goalkeeper who earned a move to Manchester United, Lammens previously impressed at Royal Antwerp with his shot-stopping ability and composure. He is a modern keeper comfortable with the ball at his feet and commanding in his area. His Premier League move reflects his potential as a future first-choice for Belgium beyond Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Mike Penders",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "RC Strasbourg (Ligue 1, France)",
+    "hometown": "Leuven, Belgium",
+    "why": "At just 20 years old, Penders is one of Belgium's most exciting goalkeeping prospects. Signed by Chelsea from Genk before being loaned out, he is a tall, commanding presence at 201cm with excellent reflexes and distribution. His precocious talent earned him a place in the Football 2026 squad as the youngest goalkeeper in the group.",
+    "number": 13
+   },
+   {
+    "name": "Zeno Debast",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Sporting CP (Liga Portugal, Portugal)",
+    "hometown": "Mortsel, Belgium",
+    "why": "A composed, ball-playing centre-back who became the youngest player in Belgian football history to start a competitive international match when he debuted at 18. After starring at Anderlecht, he moved to Sporting CP in Portugal where he has continued to develop. His maturity, passing range, and aerial ability make him a cornerstone of Belgium's defense at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Arthur Theate",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Eintracht Frankfurt (Bundesliga, Germany)",
+    "hometown": "Liège, Belgium",
+    "why": "A left-footed centre-back known for his aggression, pace, and ability to step out from the back with the ball, Theate has impressed across Serie A and the Bundesliga. He earned his move to Eintracht Frankfurt after strong performances at Bologna and Rennes. His modern defending style and versatility to cover at left-back make him a key figure for Belgium at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Brandon Mechele",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Club Brugge (Pro League, Belgium)",
+    "hometown": "Roeselare, Belgium",
+    "why": "A veteran centre-back who has been Club Brugge's defensive leader for years, Mechele brings Champions League experience and domestic trophy-winning pedigree. He is an intelligent reader of the game who excels in organizing the defensive line and winning aerial duels. His consistency and experience provide essential depth for Belgium's backline at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Maxim De Cuyper",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Brighton & Hove Albion (Premier League, England)",
+    "hometown": "Bruges, Belgium",
+    "why": "A modern full-back who combines defensive solidity with dangerous attacking contributions, De Cuyper burst onto the scene at Club Brugge before earning a move to Brighton. He is known for his whipped deliveries from wide positions and willingness to get forward. His rapid rise has made him a key part of Belgium's new-look defense at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Thomas Meunier",
+    "espnId": 178474,
+    "position": "Right-back",
+    "club": "Lille (Ligue 1, France)",
+    "hometown": "Sainte-Ode, Belgium",
+    "why": "A veteran right-back with over 80 international caps, Meunier has played at the highest level with PSG, Borussia Dortmund, and now Lille. He is a towering presence for a fullback at 190cm, combining physical power with excellent crossing ability and a knack for scoring goals from wide positions. His vast tournament experience makes him invaluable for Belgium at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Koni De Winter",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "AC Milan (Serie A, Italy)",
+    "hometown": "Antwerp, Belgium",
+    "why": "A physically imposing centre-back who developed at Juventus before joining Genoa and then AC Milan, De Winter has shown impressive growth in Serie A. He is strong in aerial duels, composed on the ball, and aggressive in one-on-one defending. His development at one of Italy's biggest clubs positions him as a key defender for Belgium at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Joaquin Seys",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Club Brugge (Pro League, Belgium)",
+    "hometown": "Bruges, Belgium",
+    "why": "A dynamic young full-back who broke into Club Brugge's first team as a teenager, Seys is an attack-minded defender with excellent pace and dribbling ability. He has represented Belgium at various youth levels and made a rapid transition to senior football. At 21, his energy and potential make him an exciting addition to the Football 2026 squad.",
+    "number": 18
+   },
+   {
+    "name": "Timothy Castagne",
+    "espnId": 219764,
+    "position": "Right-back",
+    "club": "Fulham (Premier League, England)",
+    "hometown": "Arlon, Belgium",
+    "why": "A versatile full-back who can play on either side of the defense, Castagne has been a dependable performer in the Premier League with Leicester City and Fulham. He is an energetic, well-rounded defender who contributes effectively in both phases of play. His tactical flexibility and Premier League experience make him a reliable option for Belgium at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Nathan Ngoy",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Lille (Ligue 1, France)",
+    "hometown": "Liège, Belgium; of Congolese descent",
+    "why": "A young, physically gifted centre-back who made his name at Standard Liège before moving to Lille, Ngoy is a modern defender comfortable stepping into midfield with the ball. He combines athletic power with surprising technical ability for a centre-back. His emergence at Lille in Ligue 1 earned him a spot in Belgium's Football 2026 squad.",
+    "number": 25
+   },
+   {
+    "name": "Axel Witsel",
+    "espnId": 151703,
+    "position": "Defensive midfielder",
+    "club": "Girona (La Liga, Spain)",
+    "hometown": "Liège, Belgium",
+    "why": "One of Belgium's most capped players in history with over 130 appearances, Witsel is a commanding defensive midfielder who has played at the highest level with Benfica, Zenit, Dortmund, and Atlético Madrid. He brings calm, positional intelligence, and passing quality from deep. At 37, he is the elder statesman of the squad, providing experience and leadership at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Hans Vanaken",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Club Brugge (Pro League, Belgium)",
+    "hometown": "Neerpelt, Belgium",
+    "why": "A two-time Belgian Golden Shoe winner, Vanaken is one of the most prolific midfielders in Pro League history, combining goalscoring, assists, and intelligent movement. He is a tall, elegant midfielder who times his late runs into the box to devastating effect. His Champions League experience with Club Brugge and consistent end product make him a valuable squad member at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Nicolas Raskin",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Rangers (Premiership, Scotland)",
+    "hometown": "Liège, Belgium",
+    "why": "A combative, energetic midfielder who moved from Standard Liège to Rangers, Raskin has impressed with his tenacious pressing and box-to-box dynamism. He is a tough-tackling midfielder who also possesses quality on the ball and an eye for a forward pass. His intensity and competitive drive make him a useful midfield option for Belgium at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Leandro Trossard",
+    "espnId": 213895,
+    "position": "Forward",
+    "club": "Arsenal (Premier League, England)",
+    "hometown": "Maasmechelen, Belgium",
+    "why": "A versatile, left-footed attacker who has become a key player at Arsenal, Trossard can play across the forward line and brings intelligence, creativity, and clinical finishing. He previously shone at Brighton and Genk, consistently delivering goals and assists. His Premier League title-contending experience and tactical versatility make him one of Belgium's most important players at Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Jeremy Doku",
+    "espnId": 282469,
+    "position": "Left winger",
+    "club": "Manchester City (Premier League, England)",
+    "hometown": "Borgerhout, Belgium; of Ghanaian descent",
+    "why": "One of the most explosive dribblers in world football, Doku terrorizes defenders with his searing pace, low center of gravity, and unpredictable changes of direction. He moved to Manchester City from Rennes for a substantial fee and has added end product to his electric dribbling ability. His ability to single-handedly break open tight games makes him Belgium's most dangerous attacking weapon at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Dodi Lukebakio",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Benfica (Liga Portugal, Portugal)",
+    "hometown": "Liège, Belgium; of Congolese descent",
+    "why": "A rapid, direct winger who made headlines by scoring a hat-trick against Bayern Munich while on loan at Fortuna Düsseldorf, Lukebakio has since established himself at Sevilla, Hertha Berlin, and Benfica. He is a dangerous dribbler with an eye for spectacular goals. His pace and unpredictability from the right wing make him a valuable attacking option for Belgium at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Charles De Ketelaere",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Atalanta (Serie A, Italy)",
+    "hometown": "Bruges, Belgium",
+    "why": "A tall, elegant forward who has found his best form at Atalanta after a difficult spell at AC Milan, De Ketelaere combines technical skill, vision, and aerial ability in an unusually complete package. He emerged at Club Brugge as one of Belgium's brightest talents and has fulfilled that promise in Serie A with consistent goals and assists. His creativity and versatility across attacking positions make him central to Belgium's plans at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Diego Moreira",
+    "espnId": null,
+    "position": "Left winger",
+    "club": "RC Strasbourg (Ligue 1, France)",
+    "hometown": "Brussels, Belgium; of Portuguese descent",
+    "why": "A pacy, tricky winger who developed at Benfica's famous academy before moving to Chelsea and then on loan, Moreira is known for his direct running and ability to take on defenders in one-on-one situations. He has represented Belgium at youth level and brings explosive pace and flair. At just 21, he is one of Belgium's most exciting young attacking prospects at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Alexis Saelemaekers",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "AC Milan (Serie A, Italy)",
+    "hometown": "Berchem-Sainte-Agathe, Belgium",
+    "why": "A versatile, hard-working wide player who has been a reliable performer at AC Milan and on loan at Bologna, Saelemaekers combines tireless work rate with tactical intelligence. He can play on either wing or as a wing-back, offering flexibility to any system. His consistent performances in Serie A and selfless style make him a valued squad player for Belgium at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Matias Fernandez-Pardo",
+    "espnId": null,
+    "position": "Left winger",
+    "club": "Lille (Ligue 1, France)",
+    "hometown": "Brussels, Belgium; of Spanish-Colombian descent",
+    "why": "One of Belgian football's most exciting young talents, Fernandez-Pardo emerged at Gent before moving to Lille, where he has impressed with his pace, technical skill, and ability to score and create from the left wing. He is a direct runner who excels in transitions and has a natural goal threat. At 21, he brings youthful fearlessness to Belgium's attack at Football 2026.",
+    "number": 26
    }
   ],
   "Bosnia and Herzegovina": [
@@ -1829,6 +2819,213 @@ window.WC_PLAYERS = {
      }
     ],
     "honors": []
+   },
+   {
+    "name": "Nikola Vasilj",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "FC St. Pauli (Bundesliga, Germany)",
+    "hometown": "Trebinje, Bosnia and Herzegovina",
+    "why": "Bosnia's first-choice goalkeeper, Vasilj was instrumental in FC St. Pauli's promotion to the Bundesliga and has continued to impress in the German top flight with his reflexes and shot-stopping ability. He is a commanding keeper who communicates well with his defense and shows calm under pressure. His Bundesliga experience makes him a key figure for Bosnia at Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Mladen Jurkas",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Borac Banja Luka (Premijer Liga, Bosnia and Herzegovina)",
+    "hometown": "Banja Luka, Bosnia and Herzegovina",
+    "why": "At just 18, Jurkas is one of the youngest players in the entire Football 2026 tournament. A promising goalkeeper who has broken into Borac Banja Luka's first team in the Bosnian top flight, he has shown remarkable composure and agility for his age. His selection reflects Bosnia's investment in the next generation of goalkeeping talent.",
+    "number": 12
+   },
+   {
+    "name": "Martin Zlomislić",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "HNK Rijeka (HNL, Croatia)",
+    "hometown": "Bosnia and Herzegovina",
+    "why": "A reliable goalkeeper who has established himself in Croatian football with HNK Rijeka, Zlomislić brings experience from a competitive league environment. He is a solid shot-stopper with good positioning and reflexes. His consistency in the Croatian top flight earned him a spot in the Football 2026 squad.",
+    "number": 22
+   },
+   {
+    "name": "Nihad Mujakić",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Gaziantep FK (Süper Lig, Türkiye)",
+    "hometown": "Bosnia and Herzegovina",
+    "why": "A physical right-back competing in the Turkish Süper Lig with Gaziantep, Mujakić combines defensive discipline with the ability to support attacks from wide positions. He has adapted well to Turkish football's demanding pace and physicality. His solid defending and tactical awareness make him a dependable option for Bosnia at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Dennis Hadžikadunić",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Sampdoria (Serie B, Italy)",
+    "hometown": "Gävle, Sweden; of Bosnian descent",
+    "why": "A tall centre-back who has experience in Scandinavian and Italian football, Hadžikadunić is a strong aerial presence and composed defender. He developed in Swedish football before moving to Serie B with Sampdoria. His physical attributes and defensive reliability make him an important part of Bosnia's backline at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Tarik Muharemović",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Sassuolo (Serie A, Italy)",
+    "hometown": "Luxembourg; of Bosnian descent",
+    "why": "A young, athletic centre-back who came through Juventus' youth system before establishing himself at Sassuolo, Muharemović is a modern defender with excellent pace and ball-playing ability. He chose Bosnia over Luxembourg at international level. At 23, his Serie A experience and physical attributes make him one of Bosnia's most promising defenders at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Sead Kolašinac",
+    "espnId": 179908,
+    "position": "Left-back",
+    "club": "Atalanta (Serie A, Italy)",
+    "hometown": "Karlsruhe, Germany; of Bosnian descent",
+    "why": "A powerful, marauding left-back with extensive experience at Schalke 04, Arsenal, and Marseille, Kolašinac is known for his physical strength, overlapping runs, and combative style. He has been a mainstay of the Bosnian national team for over a decade and brings invaluable Champions League experience from his time at Atalanta. His leadership and big-game mentality make him the squad's most experienced defender at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Nikola Katić",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "FC Schalke 04 (2. Bundesliga, Germany)",
+    "hometown": "Split, Croatia; of Bosnian descent",
+    "why": "A strong, aggressive centre-back who made his name at Rangers in Scotland, where he was a fan favorite for his committed defending and goalscoring ability from set pieces. After a serious knee injury, he rebuilt his career and moved to Schalke 04. His physicality and determination make him a useful defensive option for Bosnia at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Stjepan Radeljić",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "HNK Rijeka (HNL, Croatia)",
+    "hometown": "Bosnia and Herzegovina",
+    "why": "A towering centre-back standing 201cm tall, Radeljić is a commanding aerial presence who has been a solid performer in the Croatian top flight with HNK Rijeka. He uses his height advantage effectively in both boxes and is difficult to beat in one-on-one situations. His physical dominance provides Bosnia with a formidable defensive option at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Arjan Malić",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "SK Sturm Graz (Bundesliga, Austria)",
+    "hometown": "Austria; of Bosnian descent",
+    "why": "A young defender developing at Sturm Graz, one of Austria's top clubs, Malić has shown maturity beyond his years with composed performances in the Austrian Bundesliga and European competition. He is comfortable on the ball and reads the game well. At 20, his selection for Football 2026 reflects his exciting potential.",
+    "number": 24
+   },
+   {
+    "name": "Benjamin Tahirović",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Brøndby (Superligaen, Denmark)",
+    "hometown": "Stockholm, Sweden; of Bosnian descent",
+    "why": "A tall, technically gifted midfielder who developed at AS Roma before moving to Ajax and then Brøndby, Tahirović is known for his composure on the ball, passing range, and ability to break up opposition play. He chose to represent Bosnia and Herzegovina over Sweden at international level. His Serie A and Eredivisie pedigree make him an important midfielder for Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Armin Gigović",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "BSC Young Boys (Super League, Switzerland)",
+    "hometown": "Helsingborg, Sweden; of Bosnian descent",
+    "why": "A dynamic midfielder who developed in Swedish football at Helsingborg before moving to Switzerland with Young Boys, Gigović combines technical quality with physical intensity. He is a box-to-box presence who contributes both offensively and defensively. His energy and versatility make him a valuable midfield option for Bosnia at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Ivan Bašić",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "FC Astana (Premier League, Kazakhstan)",
+    "hometown": "Bosnia and Herzegovina",
+    "why": "A technically sound midfielder plying his trade with FC Astana in Kazakhstan, Bašić has gained experience in continental competition through his club's regular participation in European qualifying rounds. He is a composed passer who helps dictate the tempo from central midfield. His international experience adds depth to Bosnia's midfield options at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Ivan Šunjić",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Pafos FC (First Division, Cyprus)",
+    "hometown": "Široki Brijeg, Bosnia and Herzegovina",
+    "why": "A physical, combative holding midfielder who previously played at Birmingham City and Dinamo Zagreb, Šunjić is valued for his tackling, aerial presence, and ability to screen the defense. He has represented Bosnia consistently and brings experience from multiple European leagues. His defensive qualities provide midfield solidity at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Amar Memić",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "FC Viktoria Plzeň (First League, Czech Republic)",
+    "hometown": "Bosnia and Herzegovina",
+    "why": "A nimble, creative midfielder competing in the Czech top flight with Viktoria Plzeň, Memić has shown his quality in domestic and European competition. He is a technically skilled player who operates effectively in tight spaces and can create chances with his passing. His continued development in Czech football earned him a squad place for Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Amir Hadžiahmetović",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Hull City (Championship, England)",
+    "hometown": "Sanski Most, Bosnia and Herzegovina",
+    "why": "A tenacious, all-action midfielder who has become a key player in the English Championship with Hull City, Hadžiahmetović is known for his pressing intensity, ball-winning ability, and driving runs forward. He has been a regular for the Bosnian national team and brings competitive English football experience. His energy and leadership make him important for Bosnia at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Dženis Burnić",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Karlsruher SC (2. Bundesliga, Germany)",
+    "hometown": "Frankfurt, Germany; of Bosnian descent",
+    "why": "A technically tidy midfielder who came through Borussia Dortmund's renowned academy before establishing himself in the 2. Bundesliga with Karlsruher SC. Burnić is a composed passer who helps control the tempo of matches. His German football education and steady development make him a reliable midfield option for Bosnia at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Ermin Mahmić",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Slovan Liberec (First League, Czech Republic)",
+    "hometown": "Bosnia and Herzegovina",
+    "why": "A young midfielder developing in the Czech top flight with Slovan Liberec, Mahmić is a promising talent with good technical skills and an ability to contribute both creatively and defensively. At 21, he is still early in his career and represents the next generation of Bosnian midfield talent. His selection for Football 2026 is a testament to his rapid growth.",
+    "number": 26
+   },
+   {
+    "name": "Samed Baždar",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Jagiellonia Białystok (Ekstraklasa, Poland)",
+    "hometown": "Novi Pazar, Serbia; of Bosniak descent",
+    "why": "A tall, physical striker who has been a prolific goalscorer in Polish football with Jagiellonia Białystok, Baždar combines aerial prowess with strong hold-up play and clinical finishing inside the box. He chose to represent Bosnia and Herzegovina at international level. His goalscoring form and physical presence make him an important attacking option at Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Kerim Alajbegović",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Red Bull Salzburg (Bundesliga, Austria)",
+    "hometown": "Austria; of Bosnian descent",
+    "why": "One of the youngest players at Football 2026 at just 18 years old, Alajbegović is an exciting prospect developed by Red Bull Salzburg's elite academy system. He is a quick, technically gifted forward who can play across the attacking line. His selection at such a young age underscores his enormous potential and the faith Bosnia's coaching staff has in his talent.",
+    "number": 19
+   },
+   {
+    "name": "Esmir Bajraktarević",
+    "espnId": null,
+    "position": "Winger",
+    "club": "PSV Eindhoven (Eredivisie, Netherlands)",
+    "hometown": "Jacksonville, Florida, United States; of Bosnian descent",
+    "why": "Born in the United States to Bosnian parents, Bajraktarević made his name at New England Revolution in MLS before earning a move to PSV Eindhoven. He is a quick, direct winger who excels at dribbling and can play on either flank. His pace, trickery, and European development make him an exciting attacking prospect for Bosnia at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Haris Tabaković",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Borussia Mönchengladbach (Bundesliga, Germany)",
+    "hometown": "Cologne, Germany; of Bosnian descent",
+    "why": "A clinical finisher who earned a Bundesliga move to Borussia Mönchengladbach after a prolific stint in the 2. Bundesliga with Hertha Berlin, Tabaković is a natural goalscorer with sharp instincts inside the box. He is strong in link-up play and can score with both feet and his head. As Bosnia's most experienced striker at 31, he leads the attack at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Jovo Lukić",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Universitatea Cluj (Liga I, Romania)",
+    "hometown": "Bosnia and Herzegovina",
+    "why": "A hard-working forward competing in Romanian football with Universitatea Cluj, Lukić has been a consistent contributor in Liga I with his intelligent movement and ability to score in key moments. He is a versatile attacker who can play as a striker or on the wing. His goalscoring form in Romania earned him a call-up for Bosnia's Football 2026 squad.",
+    "number": 25
    }
   ],
   "Brazil": [
@@ -2140,6 +3337,213 @@ window.WC_PLAYERS = {
      "Premier League 2025-26 (Arsenal)",
      "Community Shield 2023-24 (Arsenal)"
     ]
+   },
+   {
+    "name": "Alisson",
+    "espnId": 176948,
+    "position": "Goalkeeper",
+    "club": "Liverpool (Premier League, England)",
+    "hometown": "Novo Hamburgo, Brazil",
+    "why": "One of the world's elite goalkeepers, Alisson joined Liverpool from Roma in 2018 and has been instrumental in winning the Champions League and Premier League. Known for his exceptional shot-stopping, composure in one-on-one situations, and superb distribution with his feet, he is the undisputed first-choice keeper. He brings vast international experience and big-game mentality to Brazil's campaign at Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Weverton",
+    "espnId": 198983,
+    "position": "Goalkeeper",
+    "club": "Gremio (Serie A, Brazil)",
+    "hometown": "Belem, Brazil",
+    "why": "A veteran goalkeeper who was part of Brazil's gold medal-winning squad at the 2016 Olympics. Weverton spent years as a stalwart at Palmeiras before moving to Gremio, earning a reputation for reliability and excellent reflexes. At 38, he provides experienced backup and locker room leadership for the squad at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Ederson",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Atalanta (Serie A, Italy)",
+    "hometown": "Campo Mourao, Brazil",
+    "why": "Not to be confused with the goalkeeper of the same name, this Ederson is a dynamic box-to-box midfielder at Atalanta who contributed to their Europa League triumph. He combines tireless running with strong tackling and an eye for goal from midfield. His energy and versatility in the engine room make him a valuable asset for Brazil at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Gabriel Magalhaes",
+    "espnId": 256693,
+    "position": "Centre-back",
+    "club": "Arsenal (Premier League, England)",
+    "hometown": "Sao Paulo, Brazil",
+    "why": "A commanding centre-back who has become a cornerstone of Arsenal's defense since arriving from Lille in 2020. Gabriel is dominant in aerial duels, strong in the tackle, and a genuine goal threat from set pieces. His consistency in the Premier League title race has established him as one of Brazil's most important defenders at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Alex Sandro",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Flamengo (Serie A, Brazil)",
+    "hometown": "Catanduva, Brazil",
+    "why": "A vastly experienced left-back who spent eight seasons at Juventus, winning multiple Serie A titles. Alex Sandro is known for his marauding runs down the flank and solid defensive positioning. After returning to Brazil with Flamengo, the veteran brings invaluable tournament experience to the squad at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Danilo",
+    "espnId": 170369,
+    "position": "Right-back",
+    "club": "Flamengo (Serie A, Brazil)",
+    "hometown": "Bicas, Brazil",
+    "why": "A supremely versatile defender who has played for Real Madrid, Manchester City, and Juventus, capable of filling in across the entire backline. Danilo served as Brazil's captain and brings unmatched experience at the highest level. His leadership and tactical intelligence make him a crucial figure for Brazil at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Bremer",
+    "espnId": 258307,
+    "position": "Centre-back",
+    "club": "Juventus (Serie A, Italy)",
+    "hometown": "Itapitanga, Brazil",
+    "why": "A powerful centre-back who established himself as one of Serie A's best defenders at Torino before earning a move to Juventus. Bremer combines physical dominance with excellent reading of the game and clean tackling. After recovering from a serious knee injury, he returns as a key option in Brazil's defense at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Leo Pereira",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Flamengo (Serie A, Brazil)",
+    "hometown": "Minas Gerais, Brazil",
+    "why": "A strong and composed centre-back who has been a key figure at Flamengo, helping the club win multiple domestic and continental titles. Leo Pereira is commanding in the air and comfortable playing out from the back. His consistent performances in Brazilian football earned him a place in the squad for Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Douglas Santos",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Zenit (Premier League, Russia)",
+    "hometown": "Pelotas, Brazil",
+    "why": "An attack-minded left-back who has spent several years at Zenit St. Petersburg after earlier stints at Atletico Mineiro and Hamburg. Douglas Santos is known for his pace, overlapping runs, and quality crossing. He provides depth and experience in the fullback positions for Brazil at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Roger Ibanez",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al-Ahli (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Canela, Brazil",
+    "why": "A versatile defender who spent four productive seasons at Roma in Serie A before moving to Saudi Arabia. Roger Ibanez is quick for a centre-back, comfortable on the ball, and capable of playing at right-back. His European experience and defensive intelligence add depth to Brazil's backline at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Ederson",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Atalanta (Serie A, Italy)",
+    "hometown": "Campo Mourao, Brazil",
+    "why": "Not to be confused with the goalkeeper of the same name, this Ederson is a dynamic box-to-box midfielder at Atalanta who contributed to their Europa League triumph. He combines tireless running with strong tackling and an eye for goal from midfield. His energy and versatility in the engine room make him a valuable asset for Brazil at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Casemiro",
+    "espnId": 173666,
+    "position": "Defensive midfielder",
+    "club": "Manchester United (Premier League, England)",
+    "hometown": "Sao Jose dos Campos, Brazil",
+    "why": "One of the greatest defensive midfielders of his generation, Casemiro won five Champions League titles at Real Madrid before joining Manchester United. He is a master of positioning, tackling, and breaking up opposition attacks, while also contributing with crucial goals. His experience and winning mentality make him a cornerstone of Brazil's midfield at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Bruno Guimaraes",
+    "espnId": 218522,
+    "position": "Central midfielder",
+    "club": "Newcastle United (Premier League, England)",
+    "hometown": "Rio de Janeiro, Brazil",
+    "why": "A technically gifted and combative central midfielder, Bruno Guimaraes has become one of the Premier League's standout players since joining Newcastle from Lyon. He excels at controlling the tempo of the game, pressing opponents, and delivering incisive passes from deep. His blend of creativity and defensive contribution makes him essential for Brazil at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Fabinho",
+    "espnId": 176287,
+    "position": "Defensive midfielder",
+    "club": "Al-Ittihad (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Campinas, Brazil",
+    "why": "A key member of Liverpool's Champions League and Premier League-winning sides, Fabinho is one of the most accomplished holding midfielders of his era. He reads the game superbly, excels at interceptions, and provides a shield for the defense. After moving to Al-Ittihad, the experienced midfielder adds depth and know-how to Brazil's squad at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Danilo Santos",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Botafogo (Serie A, Brazil)",
+    "hometown": "Brazil",
+    "why": "A talented young midfielder who has emerged as an important player for Botafogo in the Brazilian top flight. Danilo Santos combines technical skill with intelligent positioning and a willingness to press. At 25, he represents the new wave of Brazilian midfield talent earning a place in the squad for Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Lucas Paqueta",
+    "espnId": 234715,
+    "position": "Attacking midfielder",
+    "club": "Flamengo (Serie A, Brazil)",
+    "hometown": "Rio de Janeiro, Brazil",
+    "why": "A supremely talented attacking midfielder known for his flair, dribbling, and ability to score spectacular goals. Paqueta has played at AC Milan, Lyon, and West Ham before returning to Flamengo. His creativity, two-footed ability, and infectious energy make him a key playmaker for Brazil at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Vinicius Junior",
+    "espnId": 248755,
+    "position": "Left winger",
+    "club": "Real Madrid (La Liga, Spain)",
+    "hometown": "Sao Goncalo, Brazil",
+    "why": "One of the most electrifying attackers in world football, Vinicius Junior has been decisive in Real Madrid's Champions League triumphs with his blistering pace, audacious dribbling, and big-game goals. Winner of the Ballon d'Or, he combines raw speed with an ever-improving end product. He is the star of Brazil's attack and a potential tournament sensation at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Matheus Cunha",
+    "espnId": 259902,
+    "position": "Forward",
+    "club": "Manchester United (Premier League, England)",
+    "hometown": "Joao Pessoa, Brazil",
+    "why": "A versatile forward capable of playing as a striker or dropping deep as a second striker, Matheus Cunha has proven himself in multiple leagues including the Bundesliga and Premier League. He is strong, technically gifted, and possesses excellent link-up play. His ability to create and score goals makes him an important option for Brazil at Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Neymar",
+    "espnId": 132948,
+    "position": "Forward",
+    "club": "Santos (Serie A, Brazil)",
+    "hometown": "Mogi das Cruzes, Brazil",
+    "why": "One of the greatest Brazilian players of his generation, Neymar is a global icon who has starred at Santos, Barcelona, and Paris Saint-Germain. His dazzling dribbling, vision, and ability to produce moments of magic have defined an era. After returning to Santos, he brings unparalleled experience and star quality to Brazil's attacking lineup at Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Endrick",
+    "espnId": 346612,
+    "position": "Striker",
+    "club": "Lyon (Ligue 1, France)",
+    "hometown": "Taguatinga, Brazil",
+    "why": "A teenage prodigy who burst onto the scene at Palmeiras with a remarkable goalscoring record before joining Real Madrid and then moving to Lyon on loan. Endrick is a powerful, two-footed striker with natural finishing instinct and maturity beyond his years. At just 19, he is already one of the most exciting young talents at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Luiz Henrique",
+    "espnId": 304215,
+    "position": "Right winger",
+    "club": "Zenit (Premier League, Russia)",
+    "hometown": "Duque de Caxias, Brazil",
+    "why": "A quick and skillful winger who impressed at Botafogo and earned a move to Zenit after catching the eye with his direct running and goalscoring ability. Luiz Henrique is adept at beating defenders one-on-one and can play on either flank. His pace and unpredictability add another dimension to Brazil's attack at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Igor Thiago",
+    "espnId": 301894,
+    "position": "Striker",
+    "club": "Brentford (Premier League, England)",
+    "hometown": "Bahia, Brazil",
+    "why": "A tall, powerful centre-forward who earned a move to Brentford after an impressive goalscoring spell at Club Brugge in Belgium. Igor Thiago is a classic target man who excels in the air and with his back to goal, but also shows surprising technical finesse. He provides a physical focal point for Brazil's attack at Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Rayan",
+    "espnId": 357719,
+    "position": "Forward",
+    "club": "Bournemouth (Premier League, England)",
+    "hometown": "Belo Horizonte, Brazil",
+    "why": "A thrilling teenage talent who broke through at Vasco da Gama before moving to Bournemouth in the Premier League. Rayan is an agile, quick forward with natural dribbling ability and an eye for goal. At just 19, he is one of the youngest members of Brazil's squad at Football 2026 and a player tipped for a huge future.",
+    "number": 26
    }
   ],
   "Cabo Verde": [
@@ -2485,6 +3889,186 @@ window.WC_PLAYERS = {
      "Turkish Süper Lig 2017-18, 2018-19 (Galatasaray)",
      "Turkish Cup 2018-19 (Galatasaray)"
     ]
+   },
+   {
+    "name": "Vozinha",
+    "espnId": 181330,
+    "position": "Goalkeeper",
+    "club": "Chaves (Primeira Liga, Portugal)",
+    "hometown": "Praia, Cabo Verde",
+    "why": "The long-serving captain and first-choice goalkeeper for Cabo Verde, Vozinha has been the backbone of the national team for over a decade. He has been a consistent performer in Portuguese football, bringing shot-stopping ability and commanding presence. His leadership and experience are invaluable to Cabo Verde's historic appearance at Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Márcio Rosa",
+    "espnId": 260758,
+    "position": "Goalkeeper",
+    "club": "Montana (First League, Bulgaria)",
+    "hometown": "Praia, Cabo Verde",
+    "why": "A capable goalkeeper who has plied his trade in Bulgarian football, providing reliable backup for the national team. Márcio Rosa is a solid shot-stopper who commands his area well and organizes the defense. He brings squad depth and professionalism to Cabo Verde's campaign at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "CJ dos Santos",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "San Diego FC (MLS, United States)",
+    "hometown": "Newark, New Jersey, United States",
+    "why": "An American-born goalkeeper of Cabo Verdean descent who came through the Benfica academy before moving to MLS. CJ dos Santos brings athleticism and modern goalkeeping skills including excellent distribution. His youth and MLS experience provide an exciting option for Cabo Verde at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Stopira",
+    "espnId": 148146,
+    "position": "Centre-back",
+    "club": "Torreense (Liga Portugal 2, Portugal)",
+    "hometown": "Praia, Cabo Verde",
+    "why": "A veteran defender and long-time stalwart of Cabo Verdean football, Stopira has been a leader in the national team setup for over a decade. He is a no-nonsense centre-back who brings experience and defensive organization. His tenacity and commitment have been central to Cabo Verde's qualification for Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Diney",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al Bataeh (Pro League, UAE)",
+    "hometown": "Praia, Cabo Verde",
+    "why": "A physically imposing centre-back who has played in various leagues including the UAE Pro League. Diney is strong in aerial duels and brings a commanding presence to the backline. His experience across different footballing cultures adds depth to Cabo Verde's defense at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Roberto Lopes",
+    "espnId": 257716,
+    "position": "Centre-back",
+    "club": "Shamrock Rovers (League of Ireland, Ireland)",
+    "hometown": "Dublin, Ireland",
+    "why": "Born in Dublin to a Cabo Verdean father, Roberto Lopes became the first League of Ireland player to play at the Africa Cup of Nations when he represented Cabo Verde. A commanding and intelligent centre-back, he has won multiple league titles with Shamrock Rovers. His unique story and consistent defensive performances make him a key figure at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "João Paulo",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "FCSB (Liga I, Romania)",
+    "hometown": "Praia, Cabo Verde",
+    "why": "A versatile defender capable of playing across the backline who has built his career in Romanian football with FCSB, one of the country's biggest clubs. João Paulo is known for his energy and willingness to support attacks from the fullback position. His experience in European competition adds quality to Cabo Verde's squad at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Sidny Lopes Cabral",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Benfica (Primeira Liga, Portugal)",
+    "hometown": "Praia, Cabo Verde",
+    "why": "A young defender developed at Benfica, one of Portugal's biggest clubs, Sidny Lopes Cabral is a composed ball-playing centre-back with excellent passing range. At just 22, he represents the exciting young talent emerging from Cabo Verde. His development at a top European academy makes him a promising prospect at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Steven Moreira",
+    "espnId": 180113,
+    "position": "Right-back",
+    "club": "Columbus Crew (MLS, United States)",
+    "hometown": "Paris, France",
+    "why": "Born in France to Cabo Verdean parents, Steven Moreira is an experienced right-back who has played in Ligue 1 with Rennes and Lorient before moving to MLS with Columbus Crew. He is an athletic defender who contributes both in defense and attack. His French footballing education and MLS experience make him a key player for Cabo Verde at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Wagner Pina",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Trabzonspor (Super Lig, Turkey)",
+    "hometown": "Praia, Cabo Verde",
+    "why": "A young and dynamic fullback who earned a move to Trabzonspor in the Turkish Super Lig, one of the country's top clubs. Wagner Pina combines defensive solidity with attacking verve down the left side. At 23, he is one of Cabo Verde's brightest young talents at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Kelvin Pires",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "SJK (Veikkausliiga, Finland)",
+    "hometown": "Praia, Cabo Verde",
+    "why": "A tall and physically imposing centre-back playing in the Finnish top flight with SJK. Kelvin Pires uses his height advantage to dominate aerial duels and defend set pieces. His presence adds another dimension to Cabo Verde's defensive options at Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Kevin Pina",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Krasnodar (Premier League, Russia)",
+    "hometown": "Praia, Cabo Verde",
+    "why": "A technically gifted midfielder who has developed his career in Russian football with Krasnodar. Kevin Pina is comfortable on the ball and brings composure and passing ability to the midfield. His experience in Russian domestic competition provides valuable quality for Cabo Verde at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Deroy Duarte",
+    "espnId": 246442,
+    "position": "Central midfielder",
+    "club": "Ludogorets Razgrad (First League, Bulgaria)",
+    "hometown": "Rotterdam, Netherlands",
+    "why": "Born in the Netherlands to Cabo Verdean parents, Deroy Duarte is a dynamic box-to-box midfielder who came through Sparta Rotterdam's academy. He moved to Ludogorets in Bulgaria where he has gained experience in European competition. His energy, technical ability, and Dutch footballing education make him an important presence in Cabo Verde's midfield at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Laros Duarte",
+    "espnId": 222236,
+    "position": "Central midfielder",
+    "club": "Puskas Akademia (NB I, Hungary)",
+    "hometown": "Rotterdam, Netherlands",
+    "why": "A technically accomplished midfielder born in Rotterdam to Cabo Verdean parents, Laros Duarte developed at Feyenoord's academy before building his career across European leagues. He brings vision, passing range, and composure on the ball from central midfield positions. His experience in Hungarian football and earlier Dutch development makes him a reliable contributor at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Yannick Semedo",
+    "espnId": 101251,
+    "position": "Attacking midfielder",
+    "club": "Farense (Primeira Liga, Portugal)",
+    "hometown": "Lisbon, Portugal",
+    "why": "An experienced attacking player who has spent most of his career in Portuguese football, Yannick Semedo brings creativity and flair to the final third. Born in Lisbon to Cabo Verdean parents, he has been a regular for the national team. His technical skill and eye for a pass make him a valuable creative outlet at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Telmo Arcanjo",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Vitoria de Guimaraes (Primeira Liga, Portugal)",
+    "hometown": "Lisbon, Portugal",
+    "why": "A creative midfielder who has impressed in the Portuguese top flight with Vitoria de Guimaraes. Telmo Arcanjo is known for his technical skill, dribbling ability, and vision in the final third. At 24, he is an exciting young talent in Cabo Verde's midfield at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Gilson Benchimol",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Akron Tolyatti (First League, Russia)",
+    "hometown": "Praia, Cabo Verde",
+    "why": "A tall and powerful striker who has developed his career in Russian football with Akron Tolyatti. Gilson Benchimol is a physical presence who uses his height effectively in aerial duels and hold-up play. He provides a focal point for Cabo Verde's attacking play at Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Willy Semedo",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Omonia (First Division, Cyprus)",
+    "hometown": "Praia, Cabo Verde",
+    "why": "An experienced forward who has scored goals across multiple European leagues and has been a regular contributor to the Cabo Verdean national team. Willy Semedo brings pace, directness, and proven goalscoring ability. His consistency in Cypriot football and international experience are valuable assets at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Nuno da Costa",
+    "espnId": 224798,
+    "position": "Forward",
+    "club": "Istanbul Basaksehir (Super Lig, Turkey)",
+    "hometown": "Luxembourg City, Luxembourg",
+    "why": "Born in Luxembourg to Cabo Verdean parents, Nuno da Costa is a versatile forward who has played in France with Strasbourg and in Turkey with Basaksehir. He combines pace with clinical finishing and is equally effective out wide or through the middle. His experience across multiple leagues makes him one of Cabo Verde's most traveled and seasoned attackers at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Hélio Varela",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Maccabi Tel Aviv (Israeli Premier League, Israel)",
+    "hometown": "Praia, Cabo Verde",
+    "why": "A young and exciting forward who has been making waves in Israeli football with Maccabi Tel Aviv. Hélio Varela is a quick, skillful attacker who can play across the front line. At 24, he represents the next generation of Cabo Verdean attacking talent at Football 2026.",
+    "number": 26
    }
   ],
   "Canada": [
@@ -2802,6 +4386,186 @@ window.WC_PLAYERS = {
      "Scottish Premiership (2022–23, 2023–24, 2024–25, Celtic)",
      "Scottish League Cup (2023–24, 2024–25, Celtic)"
     ]
+   },
+   {
+    "name": "Dayne St. Clair",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Inter Miami CF (MLS, United States)",
+    "hometown": "Pickering, Ontario, Canada",
+    "why": "A tall and athletic goalkeeper who has established himself as Canada's first-choice keeper through strong performances in MLS. St. Clair initially starred at Minnesota United before joining Inter Miami, earning recognition for his reflexes and command of the penalty area. His consistency between the posts makes him crucial for Canada's campaign at Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Maxime Crépeau",
+    "espnId": 194803,
+    "position": "Goalkeeper",
+    "club": "Orlando City SC (MLS, United States)",
+    "hometown": "Greenfield Park, Quebec, Canada",
+    "why": "An experienced goalkeeper who has been a reliable presence for Canada across multiple tournaments, including the 2022 tournament in Qatar. Crepeau previously played for LAFC and Vancouver Whitecaps, winning the MLS Cup. His shot-stopping ability and experience make him a dependable backup option at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Owen Goodman",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Barnsley (League One, England)",
+    "hometown": "Ontario, Canada",
+    "why": "A young goalkeeper developing in the English football pyramid with Barnsley after time in Crystal Palace's academy system. Owen Goodman is an agile shot-stopper with good distribution skills. At 22, he provides youthful depth in Canada's goalkeeping department at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Alfie Jones",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Middlesbrough (Championship, England)",
+    "hometown": "England; Canadian-eligible",
+    "why": "A composed centre-back playing in the English Championship with Middlesbrough, Alfie Jones brings defensive solidity and passing ability from the back. He developed through English academy systems and chose to represent Canada internationally. His experience in a competitive league adds quality to Canada's defensive options at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Luc de Fougerolles",
+    "espnId": 365345,
+    "position": "Centre-back",
+    "club": "Dender (Belgian Pro League, Belgium)",
+    "hometown": "France; Canadian-eligible",
+    "why": "A young centre-back developing in Belgian football with Dender, Luc de Fougerolles is a physically strong and technically capable defender. At just 20, he is one of the youngest members of Canada's squad. His development in European football makes him a promising prospect for Canada at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Joel Waterman",
+    "espnId": 236890,
+    "position": "Centre-back",
+    "club": "Chicago Fire FC (MLS, United States)",
+    "hometown": "Winnipeg, Manitoba, Canada",
+    "why": "A Canadian-developed centre-back who has been a steady performer in MLS, first with CF Montreal and then Chicago Fire. Waterman is known for his reading of the game, composure on the ball, and ability to start attacks from the back. His consistent domestic performances earned him a place in Canada's squad at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Derek Cornelius",
+    "espnId": 238712,
+    "position": "Centre-back",
+    "club": "Rangers (Scottish Premiership, Scotland)",
+    "hometown": "Ajax, Ontario, Canada",
+    "why": "A strong and physical centre-back who earned a move to Rangers after impressing at Malmo FF in Sweden and earlier in MLS. Cornelius is dominant in the air and committed in the tackle, forming a reliable partnership in Canada's backline. His experience in European football gives Canada added defensive solidity at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Moïse Bombito",
+    "espnId": 358975,
+    "position": "Centre-back",
+    "club": "Nice (Ligue 1, France)",
+    "hometown": "Montreal, Quebec, Canada",
+    "why": "A rapid rise through Canadian football saw Moïse Bombito go from the Canadian Premier League to Ligue 1 with OGC Nice. He is exceptionally quick for a centre-back, strong in the tackle, and confident carrying the ball out of defense. His meteoric ascent and physical attributes make him one of Canada's most exciting defensive talents at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Richie Laryea",
+    "espnId": 230626,
+    "position": "Right-back",
+    "club": "Toronto FC (MLS, United States)",
+    "hometown": "Toronto, Ontario, Canada",
+    "why": "A versatile and energetic fullback who has been a fixture in the Canadian national team setup, featuring at the 2022 tournament. Laryea is known for his blistering pace, tireless work rate, and ability to provide width in attack. After stints at Nottingham Forest, he returned to Toronto FC and remains a key player at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Niko Sigur",
+    "espnId": 363538,
+    "position": "Centre-back",
+    "club": "Hajduk Split (HNL, Croatia)",
+    "hometown": "Canada; Croatian heritage",
+    "why": "A young defender developing at Hajduk Split in the Croatian top flight, Niko Sigur is a composed ball-playing centre-back with excellent passing range. At 22, he represents the promising future of Canadian defense, having chosen to represent Canada internationally. His European experience gives him an edge at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Mathieu Choinière",
+    "espnId": 274296,
+    "position": "Central midfielder",
+    "club": "Los Angeles FC (MLS, United States)",
+    "hometown": "Repentigny, Quebec, Canada",
+    "why": "A versatile and energetic midfielder who made his name at CF Montreal before joining LAFC. Choiniere is known for his work rate, tactical intelligence, and ability to play multiple positions across midfield and the wing. His contributions to Canada's qualifying campaign earned him a spot in the squad at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Ismaël Koné",
+    "espnId": 286903,
+    "position": "Central midfielder",
+    "club": "Sassuolo (Serie B, Italy)",
+    "hometown": "Montreal, Quebec, Canada (born in Abidjan, Ivory Coast)",
+    "why": "A dynamic and physically imposing midfielder who burst onto the scene at CF Montreal before moving to Watford and then Sassuolo. Kone covers ground relentlessly, wins aerial duels, and drives forward with the ball at his feet. At 23, he is one of Canada's most important midfield engines at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Liam Millar",
+    "espnId": 271879,
+    "position": "Left winger",
+    "club": "Hull City (Championship, England)",
+    "hometown": "Toronto, Ontario, Canada",
+    "why": "A tricky and creative winger who came through Liverpool's academy before establishing himself in the English Championship with Hull City. Millar is known for his pace, direct running, and ability to beat defenders one-on-one. His flair and attacking threat make him a valuable option for Canada at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Jacob Shaffelburg",
+    "espnId": 286214,
+    "position": "Left winger",
+    "club": "Los Angeles FC (MLS, United States)",
+    "hometown": "Port Williams, Nova Scotia, Canada",
+    "why": "A quick and direct winger from Nova Scotia who has become a key player for both LAFC and the Canadian national team. Shaffelburg is known for his blistering pace down the left flank and his ability to stretch defenses. His performances in MLS and international play make him an exciting attacker for Canada at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Jonathan Osorio",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Toronto FC (MLS, United States)",
+    "hometown": "Toronto, Ontario, Canada (born in Brampton)",
+    "why": "A longtime Toronto FC servant and one of Canada's most experienced international players, Osorio is a technically gifted midfielder known for his vision, passing range, and late runs into the box. He has been central to Canada's rise as a footballing nation over the past decade. His leadership and experience make him a vital squad member at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Nathan Saliba",
+    "espnId": 311163,
+    "position": "Central midfielder",
+    "club": "Anderlecht (Pro League, Belgium)",
+    "hometown": "Canada",
+    "why": "A young and talented midfielder developing at Anderlecht in the Belgian top flight. Nathan Saliba is a composed passer who controls the tempo from central midfield. At 22, he is an exciting prospect whose European development path makes him a valuable addition to Canada's squad at Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Tani Oluwaseyi",
+    "espnId": 294039,
+    "position": "Striker",
+    "club": "Villarreal (La Liga, Spain)",
+    "hometown": "Jos, Nigeria (raised in Canada)",
+    "why": "A powerful striker who rose rapidly through the ranks from the Canadian Premier League and Minnesota United to La Liga with Villarreal. Oluwaseyi is a clinical finisher with pace and physicality who has scored prolifically at every level. His meteoric rise and goalscoring instincts make him one of Canada's most dangerous attackers at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Ali Ahmed",
+    "espnId": 340228,
+    "position": "Forward",
+    "club": "Norwich City (Championship, England)",
+    "hometown": "Toronto, Ontario, Canada",
+    "why": "A creative and pacey forward who has impressed in the English Championship with Norwich City after developing in Canada. Ali Ahmed is known for his dribbling ability, quick feet, and eye for goal. At 25, he represents the exciting next generation of Canadian attacking talent at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Promise David",
+    "espnId": 295892,
+    "position": "Striker",
+    "club": "Union Saint-Gilloise (Pro League, Belgium)",
+    "hometown": "Nigeria (raised in Canada)",
+    "why": "A tall and powerful striker who has excelled in Belgian football with Union Saint-Gilloise, scoring prolifically in the top flight. Promise David combines aerial prowess with surprising technical skill for a player of his height. His consistent goalscoring record makes him an important option for Canada at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Jayden Nelson",
+    "espnId": 280612,
+    "position": "Right winger",
+    "club": "Austin FC (MLS, United States)",
+    "hometown": "Brampton, Ontario, Canada",
+    "why": "A quick and skillful winger who came through Toronto FC's academy before moving to Austin FC. Jayden Nelson is known for his pace, dribbling, and willingness to take on defenders. At 23, he brings youthful energy and attacking flair to Canada's squad at Football 2026.",
+    "number": 26
    }
   ],
   "Colombia": [
@@ -3052,12 +4816,36 @@ window.WC_PLAYERS = {
      "2024 Copa América (Runner-up)"
     ],
     "clubs": [
-     {"team": "Palmeiras", "years": "2026–", "country": "Brazil"},
-     {"team": "Wolverhampton Wanderers", "years": "2025–2026", "country": "England"},
-     {"team": "Fluminense", "years": "2021–2025", "country": "Brazil"},
-     {"team": "América de Cali", "years": "2019–2021", "country": "Colombia"},
-     {"team": "Santa Fe", "years": "2018–2019", "country": "Colombia"},
-     {"team": "Patriotas", "years": "2017–2018", "country": "Colombia"}
+     {
+      "team": "Palmeiras",
+      "years": "2026–",
+      "country": "Brazil"
+     },
+     {
+      "team": "Wolverhampton Wanderers",
+      "years": "2025–2026",
+      "country": "England"
+     },
+     {
+      "team": "Fluminense",
+      "years": "2021–2025",
+      "country": "Brazil"
+     },
+     {
+      "team": "América de Cali",
+      "years": "2019–2021",
+      "country": "Colombia"
+     },
+     {
+      "team": "Santa Fe",
+      "years": "2018–2019",
+      "country": "Colombia"
+     },
+     {
+      "team": "Patriotas",
+      "years": "2017–2018",
+      "country": "Colombia"
+     }
     ],
     "honors": [
      "Copa Libertadores 2023 (Fluminense)",
@@ -3091,10 +4879,26 @@ window.WC_PLAYERS = {
      "2024 Copa América (Runner-up)"
     ],
     "clubs": [
-     {"team": "Benfica", "years": "2025–", "country": "Portugal"},
-     {"team": "Palmeiras", "years": "2023–2025", "country": "Brazil"},
-     {"team": "Guarani", "years": "2021–2023", "country": "Brazil"},
-     {"team": "Flamengo", "years": "2019–2021", "country": "Brazil"}
+     {
+      "team": "Benfica",
+      "years": "2025–",
+      "country": "Portugal"
+     },
+     {
+      "team": "Palmeiras",
+      "years": "2023–2025",
+      "country": "Brazil"
+     },
+     {
+      "team": "Guarani",
+      "years": "2021–2023",
+      "country": "Brazil"
+     },
+     {
+      "team": "Flamengo",
+      "years": "2019–2021",
+      "country": "Brazil"
+     }
     ],
     "honors": [
      "Supertaça Cândido de Oliveira 2025 (Benfica)",
@@ -3126,16 +4930,273 @@ window.WC_PLAYERS = {
      "2024 Copa América (Runner-up)"
     ],
     "clubs": [
-     {"team": "Krasnodar", "years": "2021–", "country": "Russia"},
-     {"team": "Hertha BSC", "years": "2020–2021", "country": "Germany"},
-     {"team": "1. FC Köln", "years": "2017–2020", "country": "Germany"},
-     {"team": "Mainz 05", "years": "2015–2017", "country": "Germany"},
-     {"team": "Granada", "years": "2014–2015", "country": "Spain"},
-     {"team": "Espanyol", "years": "2013–2014", "country": "Spain"},
-     {"team": "Chiapas", "years": "2012–2013", "country": "Mexico"},
-     {"team": "Envigado", "years": "2010–2012", "country": "Colombia"}
+     {
+      "team": "Krasnodar",
+      "years": "2021–",
+      "country": "Russia"
+     },
+     {
+      "team": "Hertha BSC",
+      "years": "2020–2021",
+      "country": "Germany"
+     },
+     {
+      "team": "1. FC Köln",
+      "years": "2017–2020",
+      "country": "Germany"
+     },
+     {
+      "team": "Mainz 05",
+      "years": "2015–2017",
+      "country": "Germany"
+     },
+     {
+      "team": "Granada",
+      "years": "2014–2015",
+      "country": "Spain"
+     },
+     {
+      "team": "Espanyol",
+      "years": "2013–2014",
+      "country": "Spain"
+     },
+     {
+      "team": "Chiapas",
+      "years": "2012–2013",
+      "country": "Mexico"
+     },
+     {
+      "team": "Envigado",
+      "years": "2010–2012",
+      "country": "Colombia"
+     }
     ],
     "honors": []
+   },
+   {
+    "name": "David Ospina",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Atletico Nacional (Liga BetPlay, Colombia)",
+    "hometown": "Medellin, Colombia",
+    "why": "One of Colombia's most decorated players, David Ospina has had a distinguished career at Nice, Arsenal, and Napoli. A veteran of over 120 international caps, he is renowned for his penalty-saving ability and command of the box. After returning home to Atletico Nacional, he brings unmatched experience and leadership to Colombia at Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Camilo Vargas",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Atlas (Liga MX, Mexico)",
+    "hometown": "Ibague, Colombia",
+    "why": "A reliable and experienced goalkeeper who has been a key figure for Atlas in Mexico, helping them win back-to-back Liga MX titles. Camilo Vargas is known for his excellent reflexes and shot-stopping ability. His longevity and consistency at the top level make him a trusted option for Colombia at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Alvaro Montero",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Velez Sarsfield (Liga Profesional, Argentina)",
+    "hometown": "Bogota, Colombia",
+    "why": "A tall and imposing goalkeeper who has built his career across South American leagues. Alvaro Montero uses his impressive height to command his area and deny crosses. His experience in Argentine football and familiarity with South American playing styles make him valuable depth for Colombia at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Daniel Munoz",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Crystal Palace (Premier League, England)",
+    "hometown": "Medellin, Colombia",
+    "why": "An explosive right-back who has thrived in the Premier League with Crystal Palace after starring at Genk in Belgium. Daniel Munoz is a dynamic presence who combines strong defensive work with powerful attacking runs and a knack for scoring goals. His energy and Premier League experience make him one of Colombia's key players at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Jhon Lucumi",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Bologna (Serie A, Italy)",
+    "hometown": "Cali, Colombia",
+    "why": "A composed and elegant centre-back who has excelled at Bologna in Serie A, helping them qualify for the Champions League. Lucumi is strong in the air, reads the game intelligently, and is comfortable playing out from the back. His consistency in Italian football makes him a cornerstone of Colombia's defense at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Santiago Arias",
+    "espnId": 200490,
+    "position": "Right-back",
+    "club": "Independiente (Liga BetPlay, Colombia)",
+    "hometown": "Medellin, Colombia",
+    "why": "An experienced right-back who has played for PSV Eindhoven, Atletico Madrid, and Bayer Leverkusen during a well-traveled European career. Santiago Arias is a technically proficient fullback with excellent crossing ability and defensive reliability. His vast international experience makes him a valuable squad member for Colombia at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Yerry Mina",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Cagliari (Serie A, Italy)",
+    "hometown": "Guachene, Colombia",
+    "why": "A towering centre-back who became a Colombian hero with his goalscoring exploits at the 2018 tournament in Russia, netting three headers in the group stage. Mina has played for Barcelona, Everton, and Fiorentina, and is a dominant aerial presence on both ends of the pitch. His power, experience, and set-piece threat make him a vital defender for Colombia at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Johan Mojica",
+    "espnId": 199413,
+    "position": "Left-back",
+    "club": "Mallorca (La Liga, Spain)",
+    "hometown": "Cali, Colombia",
+    "why": "A dynamic left-back who has been a consistent performer in La Liga with Mallorca after earlier spells at Girona and Elche. Mojica is known for his pace, energy, and dangerous crossing from the left flank. His experience in Spanish football and commitment to both defending and attacking make him an important player for Colombia at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Willer Ditta",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Cruz Azul (Liga MX, Mexico)",
+    "hometown": "Cartagena, Colombia",
+    "why": "A strong and physical centre-back who has established himself in Mexican football with Cruz Azul after starring domestically in Colombia. Willer Ditta is a committed defender who excels in aerial duels and brings intensity to the backline. His performances in Liga MX earned him a place in Colombia's squad at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Deiver Machado",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Nantes (Ligue 1, France)",
+    "hometown": "Cali, Colombia",
+    "why": "A speedy left-back who has built a solid career in French football with Nantes after earlier time at RC Lens. Deiver Machado is an athletic defender who contributes effectively in both phases of play. His Ligue 1 experience provides Colombia with European-level quality at the fullback position at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Davinson Sanchez",
+    "espnId": 197105,
+    "position": "Centre-back",
+    "club": "Galatasaray (Super Lig, Turkey)",
+    "hometown": "Caloto, Colombia",
+    "why": "A quick and powerful centre-back who rose through Ajax and Tottenham Hotspur before moving to Galatasaray. Davinson Sanchez is known for his pace, which is unusual for a player of his size, and his aggressive defending style. His experience at the highest levels of European football makes him a key defensive option for Colombia at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Kevin Castano",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "River Plate (Liga Profesional, Argentina)",
+    "hometown": "Colombia",
+    "why": "A combative defensive midfielder who has earned a move to River Plate in Argentina, one of South America's biggest clubs. Kevin Castano is a tenacious ball-winner who shields the defense and keeps play ticking over. His performances in Argentine football earned him a place in Colombia's midfield at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Richard Rios",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Benfica (Primeira Liga, Portugal)",
+    "hometown": "Vegachi, Colombia",
+    "why": "A dynamic midfielder who rose to prominence at Palmeiras in Brazil before earning a move to Benfica in Portugal. Richard Rios caught the eye at the 2024 Copa America with his energy, ball-carrying ability, and impressive range of passing. His talent and European experience make him one of Colombia's most important midfielders at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Jorge Carrascal",
+    "espnId": 208700,
+    "position": "Attacking midfielder",
+    "club": "Flamengo (Serie A, Brazil)",
+    "hometown": "Quibdo, Colombia",
+    "why": "A flair player with outstanding technical ability, Jorge Carrascal is known for his dribbling skills, creativity, and occasional spectacular goal. He has played for River Plate and CSKA Moscow before joining Flamengo in Brazil. His unpredictability and ability to unlock defenses make him an exciting option for Colombia at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "James Rodriguez",
+    "espnId": 178358,
+    "position": "Attacking midfielder",
+    "club": "Minnesota United (MLS, United States)",
+    "hometown": "Cucuta, Colombia",
+    "why": "Colombia's most celebrated player of his generation, James Rodriguez won the Golden Boot at the 2014 tournament in Brazil with six goals, including the iconic volley against Uruguay. He has starred at Porto, Monaco, Real Madrid, and Bayern Munich before joining MLS. His vision, passing range, and dead-ball expertise make him Colombia's creative heartbeat at Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Gustavo Puerta",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Racing Santander (La Liga 2, Spain)",
+    "hometown": "Colombia",
+    "why": "A young midfielder who moved to Spain after impressing at Bayer Leverkusen's academy, Gustavo Puerta is a technically gifted player with an eye for goal from midfield. He combines physical intensity with creative instincts. At 22, he represents Colombia's next generation of midfield talent at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Juan Portilla",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Athletico Paranaense (Serie A, Brazil)",
+    "hometown": "Colombia",
+    "why": "A hardworking midfielder who has established himself in Brazilian football with Athletico Paranaense. Juan Portilla is a box-to-box presence who contributes both defensively and in the final third. His experience in South American club competition adds depth to Colombia's midfield options at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Jefferson Lerma",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Crystal Palace (Premier League, England)",
+    "hometown": "El Cerrito, Colombia",
+    "why": "A combative and reliable defensive midfielder who has become a key player at Crystal Palace after a long spell at Bournemouth. Jefferson Lerma is a tireless ball-winner who breaks up opposition attacks and provides a solid screen for the defense. His Premier League experience and international pedigree make him essential for Colombia at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Juan Fernando Quintero",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "River Plate (Liga Profesional, Argentina)",
+    "hometown": "Medellin, Colombia",
+    "why": "A magician on the ball known for his outrageous technical skill and ability to produce moments of genius, Quintero scored one of the most memorable goals in Copa Libertadores history for River Plate. He has played in Portugal, Italy, and China, and his creativity and free-kick ability remain world-class. His flair and experience add a special dimension to Colombia at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Jaminton Campaz",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Rosario Central (Liga Profesional, Argentina)",
+    "hometown": "Colombia",
+    "why": "A diminutive and skillful attacking midfielder who brings flair and unpredictability from wide areas or behind the striker. Jaminton Campaz has built his career in South American football, impressing in both Colombian and Argentine leagues. His dribbling ability and creative instincts provide an alternative attacking option for Colombia at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Luis Diaz",
+    "espnId": 273051,
+    "position": "Left winger",
+    "club": "Bayern Munich (Bundesliga, Germany)",
+    "hometown": "Barrancas, Colombia",
+    "why": "One of the most exciting wingers in world football, Luis Diaz dazzled at Porto and Liverpool before joining Bayern Munich. Known for his electric pace, direct dribbling, and lethal left foot, he can change a game in an instant. Rising from humble beginnings in La Guajira, he has become Colombia's talisman and a constant threat at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Jhon Cordoba",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Krasnodar (Premier League, Russia)",
+    "hometown": "Istmina, Colombia",
+    "why": "A powerful and experienced striker who has scored goals in the Bundesliga with Koln and Hertha Berlin before moving to Krasnodar. Jhon Cordoba is a physically imposing forward who excels at hold-up play and finishing inside the box. His strength and goalscoring instinct give Colombia a valuable striking option at Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Cucho Hernandez",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Real Betis (La Liga, Spain)",
+    "hometown": "Pereira, Colombia",
+    "why": "A dynamic and skillful forward who earned a move to Real Betis after starring for Columbus Crew in MLS, where he scored spectacular goals and won the MLS Cup. Cucho is known for his acrobatic finishes, tireless pressing, and infectious energy. His ability to score from anywhere makes him a dangerous weapon for Colombia at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Luis Suarez",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Sporting CP (Primeira Liga, Portugal)",
+    "hometown": "Colombia",
+    "why": "Not to be confused with the Uruguayan striker of the same name, this Colombian Luis Suarez is a quick and versatile forward who has established himself in Portuguese football with Sporting CP. He is known for his pace, work rate, and ability to play across the front line. His European experience adds quality to Colombia's attack at Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Andres Gomez",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Vasco da Gama (Serie A, Brazil)",
+    "hometown": "Colombia",
+    "why": "A young and exciting forward developing in Brazilian football with Vasco da Gama. Andres Gomez is a mobile attacker who combines technical skill with pace and an eye for goal. At 23, he represents the future of Colombian attacking football and brings youthful energy to the squad at Football 2026.",
+    "number": 26
    }
   ],
   "Congo DR": [
@@ -3330,6 +5391,222 @@ window.WC_PLAYERS = {
     "honors": [
      "Turkish Super Cup 2023 (Galatasaray)"
     ]
+   },
+   {
+    "name": "Lionel Mpasi",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Le Havre (Ligue 1, France)",
+    "hometown": "Kinshasa, Congo DR",
+    "why": "A dependable goalkeeper who has been plying his trade in French football with Le Havre in Ligue 1. Lionel Mpasi brings shot-stopping ability and composure under pressure. His experience in one of Europe's top leagues makes him a reliable option for Congo DR at Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Timothy Fayulu",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Noah (Armenian Premier League, Armenia)",
+    "hometown": "Kinshasa, Congo DR",
+    "why": "A young goalkeeper who has developed his career in Armenian football with FC Noah. Timothy Fayulu is an agile shot-stopper who commands his box with authority. His international experience and improving game provide depth for Congo DR at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Matthieu Epolo",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Standard Liege (Pro League, Belgium)",
+    "hometown": "Belgium; Congolese heritage",
+    "why": "One of the most exciting young goalkeepers in Belgian football, Matthieu Epolo became Standard Liege's first-choice keeper at a very young age. He is exceptionally athletic with quick reflexes and impressive command of his area. At just 21, he has a bright future and provides exciting depth for Congo DR at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Aaron Wan-Bissaka",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "West Ham United (Premier League, England)",
+    "hometown": "London, England; Congolese heritage",
+    "why": "Born in London to Congolese parents, Aaron Wan-Bissaka made his name at Crystal Palace as one of the Premier League's best one-on-one defenders before joining Manchester United and then West Ham. He is renowned for his exceptional slide tackling and ability to shut down opposing wingers. His decision to represent Congo DR adds significant Premier League quality at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Steve Kapuadi",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Widzew Lodz (Ekstraklasa, Poland)",
+    "hometown": "Kinshasa, Congo DR",
+    "why": "A tall and physically powerful centre-back who has built his career in Polish football with Widzew Lodz. Steve Kapuadi uses his imposing frame to dominate aerial duels and provide defensive solidity. His experience in European league football makes him a useful squad member for Congo DR at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Axel Tuanzebe",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Burnley (Championship, England)",
+    "hometown": "Bunia, Congo DR (raised in Rochdale, England)",
+    "why": "A Manchester United academy product who chose to represent Congo DR, Axel Tuanzebe is a composed and athletic centre-back who has played in the Premier League and Championship. He is strong in the tackle, quick in recovery, and comfortable playing out from the back. His English football pedigree adds quality to Congo DR's defense at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Dylan Batubinsika",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "AEL Larisa (Super League, Greece)",
+    "hometown": "Paris, France; Congolese heritage",
+    "why": "A French-born centre-back of Congolese descent who has played across European leagues including stints in France, Saudi Arabia, and Greece. Dylan Batubinsika is a strong and reliable defender who brings experience and physicality. His diverse career across multiple leagues gives him valuable adaptability for Congo DR at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Ngal'ayel Mukau",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Lille (Ligue 1, France)",
+    "hometown": "Belgium; Congolese heritage",
+    "why": "A young and versatile player at Lille who can operate as a defender or holding midfielder. Ngal'ayel Mukau is physically imposing and brings energy and tenacity to his role. At just 21, he is one of the most promising young talents in Congo DR's squad at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Joris Kayembe",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Racing Genk (Pro League, Belgium)",
+    "hometown": "Belgium; Congolese heritage",
+    "why": "A versatile defender who has experience in Belgian football with Racing Genk and has represented Congo DR at international level. Joris Kayembe is an athletic left-back who provides width in attack and defensive reliability. His Belgian Pro League experience adds quality to the squad at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Gedeon Kalulu",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Aris Limassol (First Division, Cyprus)",
+    "hometown": "France; Congolese heritage",
+    "why": "A left-back who has played across European leagues and chose to represent Congo DR internationally. Gedeon Kalulu is an energetic fullback who contributes in both defensive and attacking phases. His experience across different footballing cultures provides depth for Congo DR at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Arthur Masuaku",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Lens (Ligue 1, France)",
+    "hometown": "Lille, France; Congolese heritage",
+    "why": "A pacy and attack-minded left-back who previously spent several seasons at West Ham United in the Premier League. Arthur Masuaku is known for his dribbling ability and willingness to take on opponents from fullback. His Premier League experience and French Ligue 1 quality add valuable depth to Congo DR's squad at Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Samuel Moutoussamy",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Atromitos (Super League, Greece)",
+    "hometown": "Pontoise, France; Congolese heritage",
+    "why": "A French-born midfielder of Congolese descent who developed at Nantes in Ligue 1 before moving to Greek football. Samuel Moutoussamy is a technically capable central midfielder with good passing range and work rate. His experience across French and Greek leagues provides reliable depth for Congo DR's midfield at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Theo Bongonda",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Spartak Moscow (Premier League, Russia)",
+    "hometown": "Charleroi, Belgium; Congolese heritage",
+    "why": "A pacy and skillful winger who made his name in Belgian football with Zulte Waregem and Genk before moving to Russia. Theo Bongonda is a direct attacker who loves to take on defenders and can score from distance. His flair and European experience make him a dangerous weapon for Congo DR at Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Gael Kakuta",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "AEL Larisa (Super League, Greece)",
+    "hometown": "Lille, France; Congolese heritage",
+    "why": "Once hailed as a prodigy when he joined Chelsea's academy as a teenager, Gael Kakuta has had a well-traveled career across Europe including spells at Lens, Amiens, and Rayo Vallecano. He is a gifted playmaker with exceptional close control and vision. At 34, his experience and creative ability remain valuable for Congo DR at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Noah Sadiki",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Sunderland (Championship, England)",
+    "hometown": "Belgium; Congolese heritage",
+    "why": "A young and exciting midfielder who joined Sunderland from Anderlecht, Noah Sadiki is known for his composure on the ball, passing ability, and tactical intelligence. At just 21, he is one of Congo DR's most promising talents and a player with a bright future. His experience in English football adds quality to the midfield at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Aaron Tshibola",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Kilmarnock (Scottish Premiership, Scotland)",
+    "hometown": "London, England; Congolese heritage",
+    "why": "A powerful and energetic midfielder who has played in the English and Scottish leagues, including spells at Aston Villa, Nottingham Forest, and Kilmarnock. Aaron Tshibola is a box-to-box presence who covers ground tirelessly and drives forward with the ball. His British football experience and physicality add depth to Congo DR's squad at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Charles Pickel",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Espanyol (La Liga 2, Spain)",
+    "hometown": "Switzerland; Congolese heritage",
+    "why": "A Swiss-born midfielder of Congolese descent who plays for Espanyol in Spain. Charles Pickel is a disciplined defensive midfielder known for his tackling, positioning, and ability to recycle possession. His experience in Spanish football provides a solid option in Congo DR's midfield at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Edo Kayembe",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Watford (Championship, England)",
+    "hometown": "Belgium; Congolese heritage",
+    "why": "A dynamic and athletic midfielder playing for Watford in the English Championship. Edo Kayembe is known for his powerful running, long-range shooting, and ability to break forward from midfield. His physicality and energy make him an important presence in Congo DR's midfield at Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Nathanael Mbuku",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Montpellier (Ligue 1, France)",
+    "hometown": "Villepinte, France; Congolese heritage",
+    "why": "A quick and technical winger who came through the Reims academy before joining Montpellier in Ligue 1. Nathanael Mbuku is a direct attacker with pace to burn and the ability to create chances from the flanks. At 24, he is an exciting young talent for Congo DR at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Brian Cipenga",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Castellon (La Liga 2, Spain)",
+    "hometown": "Kinshasa, Congo DR",
+    "why": "A versatile forward playing in Spain's second division with Castellon. Brian Cipenga brings pace, energy, and goalscoring threat from wide or central positions. His development in Spanish football provides an attacking option for Congo DR at Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Meschack Elia",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Alanyaspor (Super Lig, Turkey)",
+    "hometown": "Lubumbashi, Congo DR",
+    "why": "A rapid and direct winger who gained European experience at Young Boys in Switzerland before moving to Turkish football. Meschack Elia is known for his blistering pace and ability to stretch defenses with his runs. His experience in European leagues makes him a dangerous attacking option for Congo DR at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Cedric Bakambu",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Real Betis (La Liga, Spain)",
+    "hometown": "Ivry-sur-Seine, France; Congolese heritage",
+    "why": "One of Congo DR's most accomplished strikers, Cedric Bakambu has scored goals at the highest level with Villarreal, Beijing Guoan, and Marseille. He is a clinical finisher with excellent movement and pace. At 35, his experience, international goals record, and proven quality in La Liga make him a vital presence for Congo DR at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Fiston Mayele",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Pyramids (Egyptian Premier League, Egypt)",
+    "hometown": "Kinshasa, Congo DR",
+    "why": "A powerful and prolific striker who has excelled in African club football, including impressive performances in the CAF Champions League with Pyramids. Fiston Mayele is a physical forward with a keen eye for goal and strong hold-up play. His goalscoring record in continental competitions makes him a key striker for Congo DR at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Simon Banza",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Al Jazira (Pro League, UAE)",
+    "hometown": "Meaux, France; Congolese heritage",
+    "why": "A clinical striker who has scored goals prolifically across European leagues including Ligue 1 with Lens and the Portuguese league with Braga before moving to the UAE. Simon Banza is a sharp finisher with excellent movement in the box and aerial ability. His proven goalscoring pedigree makes him a valuable asset for Congo DR at Football 2026.",
+    "number": 23
    }
   ],
   "Croatia": [
@@ -3528,6 +5805,213 @@ window.WC_PLAYERS = {
      "Croatian First League 2010-11, 2011-12, 2012-13 (Dinamo Zagreb)",
      "Croatian Cup 2010-11, 2011-12 (Dinamo Zagreb)"
     ]
+   },
+   {
+    "name": "Dominik Livaković",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Dinamo Zagreb (HNL, Croatia)",
+    "hometown": "Zadar, Croatia",
+    "why": "A national hero after his penalty-saving heroics at the 2022 tournament in Qatar, Dominik Livaković is Croatia's first-choice goalkeeper and a leader of the squad. He has been a loyal servant to Dinamo Zagreb and is known for his shot-stopping reflexes and composure in high-pressure moments. His big-tournament pedigree makes him invaluable for Croatia at Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Ivor Pandur",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Hull City (Championship, England)",
+    "hometown": "Rijeka, Croatia",
+    "why": "A promising young goalkeeper who has earned a move to the English Championship with Hull City. Ivor Pandur is an agile shot-stopper with good distribution and a confident command of his area. He provides quality depth behind Livakovic in Croatia's squad at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Dominik Kotarski",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Copenhagen (Superliga, Denmark)",
+    "hometown": "Zagreb, Croatia",
+    "why": "A talented young goalkeeper who has developed his game at PAOK in Greece and Copenhagen in Denmark. Dominik Kotarski is known for his reflexes, shot-stopping, and ability with the ball at his feet. His European experience makes him a strong third-choice option for Croatia at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Josip Stanišić",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Bayern Munich (Bundesliga, Germany)",
+    "hometown": "Munich, Germany; Croatian heritage",
+    "why": "A versatile defender who came through Bayern Munich's academy and has established himself in their first-team squad. Josip Stanišić can play at right-back or centre-back with equal effectiveness and is known for his composure on the ball. His Bundesliga pedigree and Champions League experience make him a key defender for Croatia at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Marin Pongračić",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Fiorentina (Serie A, Italy)",
+    "hometown": "Landshut, Germany; Croatian heritage",
+    "why": "A tall and athletic centre-back who has played in the Bundesliga with Wolfsburg and Borussia Dortmund before moving to Fiorentina in Serie A. Marin Pongračić is quick for a central defender and strong in aerial duels. His experience across top European leagues adds quality to Croatia's defensive options at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Duje Ćaleta-Car",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Real Sociedad (La Liga, Spain)",
+    "hometown": "Sibenik, Croatia",
+    "why": "A strong and experienced centre-back who has played for Salzburg, Marseille, and now Real Sociedad in La Liga. Duje Ćaleta-Car is dominant in the air, reads the game well, and brings a physical edge to the backline. His experience across multiple top European leagues makes him a reliable option for Croatia at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Josip Šutalo",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Ajax (Eredivisie, Netherlands)",
+    "hometown": "Zagreb, Croatia",
+    "why": "A young centre-back who earned a move to Ajax after starring for Dinamo Zagreb. Josip Šutalo is a ball-playing defender with pace and aggression who has adapted well to Dutch football. His composure and ability to step out of defense make him a modern centre-back option for Croatia at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Luka Vušković",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Hamburger SV (2. Bundesliga, Germany)",
+    "hometown": "Split, Croatia",
+    "why": "One of the most highly rated teenage defenders in European football, Luka Vušković signed for Tottenham Hotspur before being loaned to Hamburger SV. At just 19, he has already shown remarkable maturity, composure, and defensive intelligence. He is a hugely exciting prospect and one of the youngest players in Croatia's squad at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Martin Erlić",
+    "espnId": 260050,
+    "position": "Centre-back",
+    "club": "Midtjylland (Superliga, Denmark)",
+    "hometown": "Split, Croatia",
+    "why": "A rugged and reliable centre-back who has played in Serie A with Sassuolo and the Danish Superliga with Midtjylland. Martin Erlić is strong in the air, physical in challenges, and provides experience and depth in Croatia's defensive ranks. His consistent performances across European leagues make him a trusted squad member at Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Nikola Moro",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Bologna (Serie A, Italy)",
+    "hometown": "Zagreb, Croatia",
+    "why": "A technically gifted central midfielder who has built his career in Serie A with Bologna after earlier spells at Dinamo Zagreb and Dynamo Moscow. Nikola Moro is a tidy passer with good positioning and the ability to contribute in both phases of play. His Italian league experience adds depth to Croatia's rich midfield at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Nikola Vlašić",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Torino (Serie A, Italy)",
+    "hometown": "Split, Croatia",
+    "why": "A creative and versatile attacking midfielder who has played for Everton, CSKA Moscow, and Torino. Nikola Vlašić is known for his dribbling, shooting from distance, and ability to play across the front line. His Serie A experience and international pedigree make him a valuable option for Croatia at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Mario Pašalić",
+    "espnId": 191816,
+    "position": "Attacking midfielder",
+    "club": "Atalanta (Serie A, Italy)",
+    "hometown": "Mainz, Germany; Croatian heritage",
+    "why": "A prolific goal-scoring midfielder who has become a key player at Atalanta after spending years on loan from Chelsea at various clubs. Mario Pašalić is known for his late runs into the box, aerial ability, and clinical finishing. His consistency in Serie A and Europa League triumph with Atalanta make him important for Croatia at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Martin Baturina",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Como (Serie A, Italy)",
+    "hometown": "Zagreb, Croatia",
+    "why": "One of Croatia's most exciting young talents, Martin Baturina broke through at Dinamo Zagreb before moving to Como in Serie A. He is a creative playmaker with excellent dribbling, vision, and technical ability who has drawn comparisons to Luka Modric. At 23, he is tipped to be Croatia's midfield maestro of the future at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Petar Sučić",
+    "espnId": 288437,
+    "position": "Central midfielder",
+    "club": "Inter Milan (Serie A, Italy)",
+    "hometown": "Split, Croatia",
+    "why": "A supremely talented young midfielder who earned a move to Inter Milan after dazzling performances for Dinamo Zagreb. Petar Sučić is a composed and technically gifted player known for his passing range, set-piece delivery, and ability to score from distance. He is widely regarded as a future star and one of Croatia's most promising players at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Kristijan Jakić",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Augsburg (Bundesliga, Germany)",
+    "hometown": "Zagreb, Croatia",
+    "why": "A combative and disciplined defensive midfielder who has been a reliable performer at Augsburg in the Bundesliga after starting his career at Dinamo Zagreb. Kristijan Jakić excels at breaking up play, winning aerial duels, and keeping things simple. His tactical discipline and work rate make him a useful squad option for Croatia at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Toni Fruk",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Rijeka (HNL, Croatia)",
+    "hometown": "Rijeka, Croatia",
+    "why": "A creative midfielder who has been a standout performer at HNK Rijeka in the Croatian top flight. Toni Fruk is known for his technical skill, vision, and ability to create chances from central areas. His consistent domestic performances earned him a call-up to Croatia's squad at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Luka Sučić",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Real Sociedad (La Liga, Spain)",
+    "hometown": "Linz, Austria; Croatian heritage",
+    "why": "A technically accomplished midfielder who moved to Real Sociedad after impressing at Red Bull Salzburg. Luka Sučić combines excellent passing with the ability to drive forward and score goals. His La Liga experience and growing international pedigree make him an increasingly important player for Croatia at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Andrej Kramarić",
+    "espnId": 133968,
+    "position": "Striker",
+    "club": "Hoffenheim (Bundesliga, Germany)",
+    "hometown": "Zagreb, Croatia",
+    "why": "Croatia's all-time leading active goalscorer, Andrej Kramarić has been a prolific striker for Hoffenheim in the Bundesliga for nearly a decade. He is a clever and clinical finisher who creates and scores goals in equal measure, combining intelligent movement with technical quality. His goalscoring record and big-game experience make him essential for Croatia at Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Ante Budimir",
+    "espnId": 160133,
+    "position": "Striker",
+    "club": "Osasuna (La Liga, Spain)",
+    "hometown": "Zagreb, Croatia",
+    "why": "A hard-working and effective target man who has been one of Osasuna's most important players in La Liga. Ante Budimir is excellent in the air, holds the ball up well, and has consistently scored goals in the Spanish top flight. His physical presence and La Liga experience make him a reliable option for Croatia at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Ivan Perišić",
+    "espnId": 135448,
+    "position": "Left winger",
+    "club": "PSV Eindhoven (Eredivisie, Netherlands)",
+    "hometown": "Split, Croatia",
+    "why": "One of Croatia's most decorated players, Ivan Perišić has had a stellar career at Inter Milan, Bayern Munich, and Tottenham. A powerful and versatile winger who can play on either flank, he scored in the 2018 final and has been a consistent performer at major tournaments. At 37, his experience and big-game mentality remain invaluable for Croatia at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Igor Matanović",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Freiburg (Bundesliga, Germany)",
+    "hometown": "Frankfurt, Germany; Croatian heritage",
+    "why": "A tall and promising young striker who has come through the German football system and established himself at Freiburg in the Bundesliga. Igor Matanović is a physical forward with good technique and an eye for goal. At 23, he is an exciting young talent in Croatia's attacking ranks at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Marco Pašalić",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Orlando City (MLS, United States)",
+    "hometown": "Croatia",
+    "why": "A forward playing in MLS with Orlando City, Marco Pašalić brings pace, energy, and a strong work ethic to the front line. The younger relative of Mario Pasalic, he has developed his game in American soccer. His squad role provides depth and competition for Croatia's attacking positions at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Petar Musa",
+    "espnId": null,
+    "position": "Striker",
+    "club": "FC Dallas (MLS, United States)",
+    "hometown": "Zagreb, Croatia",
+    "why": "A clinical striker who made his name at Benfica and Boavista in Portugal before moving to MLS with FC Dallas. Petar Musa is a strong finisher with excellent movement and positioning in the penalty area. His goalscoring record and experience in European football make him a useful option for Croatia at Football 2026.",
+    "number": 26
    }
   ],
   "Curaçao": [
@@ -3760,6 +6244,222 @@ window.WC_PLAYERS = {
      }
     ],
     "honors": []
+   },
+   {
+    "name": "Eloy Room",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Miami FC (MLS NEXT Pro, United States)",
+    "hometown": "Willemstad, Curaçao",
+    "why": "A veteran goalkeeper who spent years in Dutch football with Vitesse and PSV before moving to the United States with Columbus Crew in MLS. Room has been a long-time starter for the national team and brings experience and shot-stopping ability. His leadership and international caps make him a crucial figure for the tournament.",
+    "number": 1
+   },
+   {
+    "name": "Tyrick Bodak",
+    "espnId": 297542,
+    "position": "Goalkeeper",
+    "club": "Telstar (Eerste Divisie, Netherlands)",
+    "hometown": "Netherlands; of Curaçaoan descent",
+    "why": "A young goalkeeper developing in the Dutch second division with Telstar, Bodak is an agile shot-stopper with good reflexes. He represents the next generation of Curaçaoan keepers and provides solid backup depth. His experience in Dutch football gives him a good foundation heading into Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Trevor Doornbusch",
+    "espnId": 262109,
+    "position": "Goalkeeper",
+    "club": "VVV-Venlo (Eerste Divisie, Netherlands)",
+    "hometown": "Netherlands; of Curaçaoan descent",
+    "why": "A tall goalkeeper who has played in the Dutch lower divisions, Doornbusch brings height and commanding presence in the box. He has developed through the Dutch football pyramid and adds competition to the goalkeeping roster. His frame and composure make him a reliable option for Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Shurandy Sambo",
+    "espnId": 301456,
+    "position": "Right-back",
+    "club": "Sparta Rotterdam (Eredivisie, Netherlands)",
+    "hometown": "Netherlands; of Curaçaoan descent",
+    "why": "A quick and energetic right-back competing in the Eredivisie with Sparta Rotterdam, Sambo combines defensive awareness with attacking thrust. He has developed through Dutch youth systems and earned his way into the senior national team. His pace and overlapping runs make him an important part of the squad for Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Juriën Gaari",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Abha (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Netherlands; of Curaçaoan descent",
+    "why": "A seasoned defender who has played across multiple leagues including stints in the Netherlands and Saudi Arabia. Gaari is a physically strong centre-back who brings leadership and aerial presence to the backline. His international experience across different football cultures makes him a valuable squad member for Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Roshon van Eijma",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "RKC Waalwijk (Eredivisie, Netherlands)",
+    "hometown": "Netherlands; of Curaçaoan descent",
+    "why": "A central defender who has played in Dutch professional football with RKC Waalwijk, van Eijma is a composed ball-playing centre-back. He reads the game well and is comfortable stepping out with the ball from the back. His Eredivisie experience provides solid defensive depth for the tournament.",
+    "number": 4
+   },
+   {
+    "name": "Sherel Floranus",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "PEC Zwolle (Eredivisie, Netherlands)",
+    "hometown": "Netherlands; of Curaçaoan descent",
+    "why": "A versatile defender capable of playing right-back or wing-back, Floranus has been a consistent performer in the Eredivisie. He brings defensive solidity and work rate to the full-back position. His experience in Dutch top-flight football makes him a reliable option for Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Armando Obispo",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "PSV Eindhoven (Eredivisie, Netherlands)",
+    "hometown": "Netherlands; of Curaçaoan descent",
+    "why": "A centre-back at one of the biggest clubs in the Netherlands, Obispo came through PSV Eindhoven's renowned academy. He is a left-footed defender with good passing ability and composure on the ball. His experience competing in the Champions League with PSV gives him top-level pedigree for Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Joshua Brenet",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Kayserispor (Süper Lig, Turkey)",
+    "hometown": "Arnhem, Netherlands; of Curaçaoan descent",
+    "why": "A veteran right-back who came through PSV Eindhoven's academy and played in the Eredivisie and Bundesliga before moving to Turkey. Brenet is a quick, attack-minded fullback with experience at the highest levels of European football. His versatility and big-club background make him a valuable asset for the tournament.",
+    "number": 20
+   },
+   {
+    "name": "Riechedly Bazoer",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Konyaspor (Süper Lig, Turkey)",
+    "hometown": "Utrecht, Netherlands; of Curaçaoan descent",
+    "why": "Once considered one of the brightest talents in Dutch football, Bazoer came through Ajax's famed academy and made his professional debut at just 17. He has played for several European clubs and transitioned from midfielder to centre-back, where his technical quality and passing range set him apart. His ability to play out from the back is a tactical asset for Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Deveron Fonville",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "NEC Nijmegen (Eredivisie, Netherlands)",
+    "hometown": "Netherlands; of Curaçaoan descent",
+    "why": "A young centre-back developing in the Eredivisie with NEC Nijmegen, Fonville is a tall defender with good aerial ability. He has been earning regular minutes in Dutch top-flight football and represents the future of the national team's defense. His youth and physical tools make him an exciting prospect for Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Godfried Roemeratoe",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "RKC Waalwijk (Eredivisie, Netherlands)",
+    "hometown": "Netherlands; of Curaçaoan descent",
+    "why": "A box-to-box midfielder who has been a regular in Dutch professional football with RKC Waalwijk. Roemeratoe is an energetic player who covers a lot of ground and contributes both defensively and going forward. His stamina and willingness to press make him a useful midfield option for the tournament.",
+    "number": 6
+   },
+   {
+    "name": "Juninho Bacuna",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Volendam (Eerste Divisie, Netherlands)",
+    "hometown": "Groningen, Netherlands; of Curaçaoan descent",
+    "why": "A technically gifted midfielder who previously played in the English Championship with Huddersfield Town and Birmingham City, as well as in Scotland with Rangers. Bacuna possesses a powerful long-range shot and creative passing ability. His European experience across multiple leagues makes him an important creative force for Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Livano Comenencia",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "FC Zürich (Super League, Switzerland)",
+    "hometown": "Netherlands; of Curaçaoan descent",
+    "why": "A tall, technically skilled midfielder competing in the Swiss Super League with FC Zürich. Comenencia has developed well and brings physical presence alongside good technical ability in the center of the pitch. At 22, he is one of the younger players in the squad and has a bright future for the tournament.",
+    "number": 8
+   },
+   {
+    "name": "Tyrese Noslin",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Telstar (Eerste Divisie, Netherlands)",
+    "hometown": "Netherlands; of Curaçaoan descent",
+    "why": "A versatile attacking player who can operate as an attacking midfielder or forward, Noslin is a creative presence in the Dutch second division. He has shown an eye for goal and the ability to create chances for teammates. His versatility in the final third adds tactical flexibility for Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Ar'jany Martha",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Rotherham United (League One, England)",
+    "hometown": "Netherlands; of Curaçaoan descent",
+    "why": "A young midfielder who moved to English football with Rotherham United, Martha brings energy and dynamism to the midfield. He is a progressive ball carrier who likes to drive forward from central positions. His experience in competitive English league football provides valuable toughness for Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Kevin Felida",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "FC Den Bosch (Eerste Divisie, Netherlands)",
+    "hometown": "Netherlands; of Curaçaoan descent",
+    "why": "A disciplined defensive midfielder who operates as the shield in front of the defense, Felida is a reliable presence in the Dutch second division. He excels at reading passing lanes and breaking up opposition attacks. His positional awareness and tackling provide midfield stability for the tournament.",
+    "number": 22
+   },
+   {
+    "name": "Jürgen Locadia",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Miami FC (MLS NEXT Pro, United States)",
+    "hometown": "Emmen, Netherlands; of Curaçaoan descent",
+    "why": "A powerful striker who made his name in the Eredivisie with PSV Eindhoven, where he scored prolifically before moves to Brighton in the Premier League and Bochum in the Bundesliga. Locadia is a strong, athletic forward who is dangerous in the air and on the ground. His experience at the top level of European football makes him a key attacking threat for Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Jeremy Antonisse",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Kifisia (Super League 2, Greece)",
+    "hometown": "Netherlands; of Curaçaoan descent",
+    "why": "A young forward who has taken a varied path through European football, currently playing in Greece's second division. Antonisse is a pacy attacker who can play across the front line and is comfortable running in behind defenses. His willingness to seek opportunities abroad shows the determination he brings to Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Sontje Hansen",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Middlesbrough (Championship, England)",
+    "hometown": "Amsterdam, Netherlands; of Curaçaoan descent",
+    "why": "A technically gifted winger who came through Ajax's academy and represented the Netherlands at youth level before switching allegiance to Curaçao. Hansen is a quick, tricky attacker who can beat defenders one-on-one and deliver dangerous crosses. His move to the English Championship with Middlesbrough has accelerated his development heading into Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Kenji Gorré",
+    "espnId": null,
+    "position": "Left winger",
+    "club": "Maccabi Haifa (Israeli Premier League, Israel)",
+    "hometown": "Netherlands; of Curaçaoan descent",
+    "why": "A pacy left winger who has played across several European leagues including the Netherlands, England, and Israel. Gorré is known for his direct dribbling and ability to stretch defenses with his pace. He has been a consistent contributor for the national team and brings experience and width to the attack for Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Jearl Margaritha",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Beveren (Challenger Pro League, Belgium)",
+    "hometown": "Curaçao",
+    "why": "A forward competing in the Belgian second division with Beveren, Margaritha is a mobile attacker who works hard to press and create space. He has been developing his game in Belgian football and looking to make an impact on the international stage. His energy and movement off the ball add options in attack for Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Brandley Kuwas",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "FC Volendam (Eerste Divisie, Netherlands)",
+    "hometown": "Willemstad, Curaçao",
+    "why": "One of the most experienced and decorated players in Curaçao's history, Kuwas has been a key figure in the national team for over a decade. He is a skillful winger with an eye for goal and excellent crossing ability, having played extensively in the Eredivisie with Heracles Almelo. His leadership and big-game experience are invaluable for Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Gervane Kastaneer",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Terengganu FC (Malaysian Super League, Malaysia)",
+    "hometown": "Netherlands; of Curaçaoan descent",
+    "why": "A tall, powerful striker who has played across Europe and Asia, including stints in the Netherlands, Belgium, and England with Coventry City. Kastaneer uses his physicality and aerial ability to lead the line and hold up play. His varied international club experience adds a different dimension to the attacking options for Football 2026.",
+    "number": 19
    }
   ],
   "Czechia": [
@@ -3923,6 +6623,231 @@ window.WC_PLAYERS = {
      "Czech Cup 2019-20 (Sparta Prague)",
      "Czech Cup 2023-24 (Sparta Prague)"
     ]
+   },
+   {
+    "name": "Matej Kovar",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "PSV Eindhoven (Eredivisie, Netherlands)",
+    "hometown": "Uherské Hradiště, Czech Republic",
+    "why": "A talented young goalkeeper who came through Manchester United's academy before finding regular football at PSV Eindhoven. Kovar is an agile shot-stopper with excellent distribution and composure on the ball. His experience in Dutch football and Champions League competition makes him a strong option in goal for Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Jindrich Stanek",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Slavia Prague (Czech First League, Czech Republic)",
+    "hometown": "Pilsen, Czech Republic",
+    "why": "A commanding goalkeeper who has established himself as one of the best in Czech domestic football with Slavia Prague. Stanek is a vocal leader who organizes his defense well and makes crucial saves in big moments. His domestic experience and leadership qualities make him a dependable presence for Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Lukas Hornicek",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Braga (Primeira Liga, Portugal)",
+    "hometown": "Czech Republic",
+    "why": "A promising young goalkeeper who earned a move to Portuguese football with Braga, competing in one of Europe's top leagues. Hornicek has impressed with his reflexes and modern goalkeeping approach that emphasizes distribution. At 23, he represents the future of Czech goalkeeping heading into Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "David Zima",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Slavia Prague (Czech First League, Czech Republic)",
+    "hometown": "Prague, Czech Republic",
+    "why": "A ball-playing centre-back who previously played in Serie A with Torino before returning to Czech football with Slavia Prague. Zima is comfortable stepping out from the back with the ball and is strong in one-on-one duels. His Italian league experience has added tactical maturity to his game heading into Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Tomas Holes",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Slavia Prague (Czech First League, Czech Republic)",
+    "hometown": "Czech Republic",
+    "why": "A versatile veteran who can play centre-back or defensive midfielder, Holes became a national hero at Euro 2020 with a crucial goal against the Netherlands. He has been a long-time stalwart at Slavia Prague and brings big-game experience and tactical intelligence. His ability to contribute at both ends of the pitch makes him valuable for Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Robin Hranac",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Hoffenheim (Bundesliga, Germany)",
+    "hometown": "Czech Republic",
+    "why": "A young centre-back who earned a move to the Bundesliga with Hoffenheim after impressing at Viktoria Plzen. Hranac is a modern defender who combines physical strength with good passing range from the back. His rapid rise to top-level European football makes him one of the most exciting Czech defenders at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Vladimir Coufal",
+    "espnId": 125489,
+    "position": "Right-back",
+    "club": "Hoffenheim (Bundesliga, Germany)",
+    "hometown": "Ostrava, Czech Republic",
+    "why": "An experienced right-back who became a fan favorite at West Ham United in the Premier League with his tireless running and tough defending. Coufal moved to Hoffenheim to continue competing at the top level and remains a fixture in the Czech national team. His consistency, work rate, and crossing ability make him indispensable for Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Stepan Chaloupek",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Slavia Prague (Czech First League, Czech Republic)",
+    "hometown": "Czech Republic",
+    "why": "A young defender who has broken through at Slavia Prague and earned his first senior international call-ups. Chaloupek is a composed left-footed centre-back who reads the game intelligently. At 23, he is part of the new wave of Czech defenders being groomed for Football 2026 and beyond.",
+    "number": 6
+   },
+   {
+    "name": "Ladislav Krejci",
+    "espnId": 241363,
+    "position": "Centre-back",
+    "club": "Wolverhampton Wanderers (Premier League, England)",
+    "hometown": "Czech Republic",
+    "why": "A versatile left-footed defender who earned a move to the Premier League with Wolverhampton after impressive performances at Sparta Prague and in European competition. Krejci is strong in the air, composed on the ball, and can operate as a centre-back or left-back. His adaptability and physicality are assets for the tournament.",
+    "number": 7
+   },
+   {
+    "name": "David Jurasek",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Slavia Prague (Czech First League, Czech Republic)",
+    "hometown": "Czech Republic",
+    "why": "A dynamic left-back who spent time on loan at Benfica before returning to Czech football with Slavia Prague. Jurasek is an attack-minded fullback with pace, good crossing ability, and willingness to get forward. His European experience and attacking quality from the left side add width to the team at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Jaroslav Zeleny",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Sparta Prague (Czech First League, Czech Republic)",
+    "hometown": "Czech Republic",
+    "why": "A veteran right-back who has spent his career in Czech domestic football, becoming a key player for Sparta Prague. Zeleny is a reliable, defensively solid fullback who provides consistency and experience to the backline. His Champions League appearances with Sparta give him tournament-level experience for Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "David Doudera",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Slavia Prague (Czech First League, Czech Republic)",
+    "hometown": "Czech Republic",
+    "why": "A left-back who has established himself as a regular at Slavia Prague, known for his energetic overlapping runs and defensive discipline. Doudera provides balance on the left side of defense and is a dependable squad player. His consistency in Czech domestic football earned him a place in the squad for Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Vladimir Darida",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Hradec Kralove (Czech First League, Czech Republic)",
+    "hometown": "Pilsen, Czech Republic",
+    "why": "A veteran midfielder who spent the prime of his career in the Bundesliga with Hertha Berlin and Freiburg, accumulating over 100 caps for the Czech national team. Darida is a tireless box-to-box midfielder known for his work rate, passing, and leadership. In the twilight of his career, he brings invaluable experience and professionalism to Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Lukas Cerv",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Viktoria Plzen (Czech First League, Czech Republic)",
+    "hometown": "Czech Republic",
+    "why": "A young midfielder who has been developing at Viktoria Plzen, one of the leading clubs in Czech football. Cerv is an energetic player who contributes in both phases of play with his running and passing ability. His domestic experience and emerging talent earned him a spot in the squad for Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Lukas Provod",
+    "espnId": 204397,
+    "position": "Central midfielder",
+    "club": "Slavia Prague (Czech First League, Czech Republic)",
+    "hometown": "Czech Republic",
+    "why": "A creative midfielder who has been one of the standout players in Czech football, earning plaudits for his performances with Slavia Prague and the national team. Provod is known for his vision, set-piece delivery, and ability to score spectacular goals from distance. He was a breakout star at Euro 2020 before injury setbacks, and returns fit for Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Michal Sadilek",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Slavia Prague (Czech First League, Czech Republic)",
+    "hometown": "Czech Republic",
+    "why": "A versatile midfielder who can play in defensive midfield or at full-back, Sadilek developed at PSV Eindhoven before moving to Slavia Prague. He is a disciplined, tactically intelligent player who excels at breaking up play and recycling possession. His versatility and work ethic make him a useful squad member for Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Tomas Soucek",
+    "espnId": 189753,
+    "position": "Central midfielder",
+    "club": "West Ham United (Premier League, England)",
+    "hometown": "Havlíčkův Brod, Czech Republic",
+    "why": "A towering box-to-box midfielder who has been one of the most important Czech players of his generation, Soucek became a Premier League stalwart at West Ham United. He is renowned for his aerial prowess in both boxes, late runs into the penalty area, and goal-scoring ability from midfield. As captain, he leads from the front for Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Alexandr Sojka",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Viktoria Plzen (Czech First League, Czech Republic)",
+    "hometown": "Czech Republic",
+    "why": "A young midfielder from Viktoria Plzen who has been making his mark in Czech domestic football with his technical quality and composure. Sojka is a neat passer who helps control the tempo of play from central midfield. His emergence as a promising talent earned him a call-up for Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Hugo Sochurek",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Sparta Prague (Czech First League, Czech Republic)",
+    "hometown": "Czech Republic",
+    "why": "One of the youngest players in the tournament at just 18, Sochurek is a precocious attacking talent who has broken through at Sparta Prague. He is a creative midfielder with excellent technical skills and the ability to unlock defenses with his passing and dribbling. His inclusion signals the bright future of Czech football at Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Adam Hlozek",
+    "espnId": 287700,
+    "position": "Striker",
+    "club": "Hoffenheim (Bundesliga, Germany)",
+    "hometown": "Ivančice, Czech Republic",
+    "why": "A versatile young forward who burst onto the scene at Sparta Prague before earning a move to Bayer Leverkusen and then Hoffenheim in the Bundesliga. Hlozek can play as a striker or on the wing, combining technical skill with physical presence. His experience at Euro 2024 and in the Bundesliga makes him a key attacking threat for Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Jan Kuchta",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Sparta Prague (Czech First League, Czech Republic)",
+    "hometown": "Czech Republic",
+    "why": "A hardworking striker who leads the line with energy and determination, Kuchta has been a prolific scorer in Czech domestic football. He previously spent time at Lokomotiv Moscow and Rapid Wien before returning to Sparta Prague. His movement, pressing, and clinical finishing make him a dangerous forward for Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Mojmir Chytil",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Slavia Prague (Czech First League, Czech Republic)",
+    "hometown": "Czech Republic",
+    "why": "A versatile attacker who can play across the front line, Chytil has become a regular at Slavia Prague with his pace and directness. He is a willing runner who makes intelligent movements behind the defense and contributes with goals and assists. His form in Czech football earned him a spot in the squad for Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Pavel Sulc",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Lyon (Ligue 1, France)",
+    "hometown": "Czech Republic",
+    "why": "A technically gifted attacking player who earned a move to Lyon in Ligue 1 after outstanding performances with Viktoria Plzen and at Euro 2024. Sulc impressed at the European Championship with his energy and goal contributions, catching the attention of top European clubs. His pace, work rate, and eye for goal make him an exciting prospect for Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Tomas Chory",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Slavia Prague (Czech First League, Czech Republic)",
+    "hometown": "Czech Republic",
+    "why": "A towering target man standing at 198cm, Chory is a classic aerial presence who provides a different dimension to the Czech attack. He has been a consistent scorer in the Czech First League with Viktoria Plzen and Slavia Prague. His height, hold-up play, and heading ability give the team a powerful plan B for Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Denis Visinsky",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Viktoria Plzen (Czech First League, Czech Republic)",
+    "hometown": "Czech Republic",
+    "why": "A young forward making waves at Viktoria Plzen with his pace and directness in attack. Visinsky has shown an ability to beat defenders and score goals in the Czech First League, earning his first senior international call-up. At 23, he adds youthful energy and depth to the attacking options for Football 2026.",
+    "number": 26
    }
   ],
   "Côte d'Ivoire": [
@@ -4272,6 +7197,186 @@ window.WC_PLAYERS = {
      "FA Community Shield (2020, Arsenal)",
      "Ligue 1 Team of the Season (2018-19)"
     ]
+   },
+   {
+    "name": "Yahia Fofana",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Caykur Rizespor (Süper Lig, Turkey)",
+    "hometown": "Paris, France; of Ivorian descent",
+    "why": "A talented goalkeeper who was born in France and came through Angers' academy before moving to Turkish football. Fofana is an athletic shot-stopper with good reflexes and command of his area. He emerged as a key figure for the Elephants and provides a strong presence in goal for Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Mohamed Koné",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Royal Charleroi (Belgian Pro League, Belgium)",
+    "hometown": "Côte d'Ivoire",
+    "why": "A young goalkeeper competing in Belgian football with Royal Charleroi, Koné has developed his skills in a competitive European league. He is an agile keeper who is comfortable with the ball at his feet and commands his box well. His European experience provides solid depth in the goalkeeping department for Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Alban Lafont",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Panathinaikos (Super League, Greece)",
+    "hometown": "Ouagadougou, Burkina Faso; raised in France",
+    "why": "Born in Burkina Faso and raised in France, Lafont was once the most sought-after young goalkeeper in European football, debuting professionally for Toulouse at just 16. He played in Serie A with Fiorentina and spent years in Ligue 1 with Nantes before moving to Panathinaikos. His vast experience and shot-stopping ability make him a seasoned option for Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Ousmane Diomande",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Sporting CP (Primeira Liga, Portugal)",
+    "hometown": "Abidjan, Côte d'Ivoire",
+    "why": "A rising star in European football, Diomande has established himself as a first-choice centre-back at Sporting CP in Portugal. He is a powerful, quick defender who excels in one-on-one situations and is comfortable playing out from the back. Still only 22, he is considered one of the most promising young defenders in European football heading into Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Ghislain Konan",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Gil Vicente (Primeira Liga, Portugal)",
+    "hometown": "Côte d'Ivoire",
+    "why": "An experienced left-back who has played in French and Portuguese football, Konan brings defensive reliability and overlapping runs from the fullback position. He previously spent several seasons in Ligue 1 with Reims. His consistency and tactical discipline make him a solid defensive option for Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Odilon Kossounou",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Atalanta (Serie A, Italy)",
+    "hometown": "Abidjan, Côte d'Ivoire",
+    "why": "A physically imposing centre-back who has played at the highest levels of European football with Club Brugge, Bayer Leverkusen, and now Atalanta in Serie A. Kossounou is exceptionally fast for his size, strong in the air, and composed with the ball at his feet. He was a key figure in the 2023 AFCON triumph and is crucial for Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Christopher Operi",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Istanbul Basaksehir (Süper Lig, Turkey)",
+    "hometown": "Côte d'Ivoire",
+    "why": "A right-back with experience in Turkish football, Operi has been a dependable performer at Istanbul Basaksehir. He is a defensively disciplined fullback who also contributes going forward with overlapping runs and accurate crosses. His consistent performances have earned him a regular spot in the national team for Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Guela Doué",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "RC Strasbourg (Ligue 1, France)",
+    "hometown": "France; of Ivorian descent",
+    "why": "A young right-back competing in Ligue 1 with RC Strasbourg, Doué is part of a talented football family — his brother Désiré plays for PSG. He is an athletic, attack-minded fullback with good pace and crossing ability. His development in French top-flight football makes him an exciting prospect for Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Emmanuel Agbadou",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Besiktas (Süper Lig, Turkey)",
+    "hometown": "Côte d'Ivoire",
+    "why": "A tall, powerful centre-back who has played across European leagues before landing at Besiktas in Turkey. Agbadou is dominant in aerial duels and brings physical strength to the heart of the defense. He was part of the 2023 AFCON-winning squad and contributes his winning mentality to Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Evan Ndicka",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "AS Roma (Serie A, Italy)",
+    "hometown": "Paris, France; of Ivorian descent",
+    "why": "A left-footed centre-back who developed at Auxerre before starring in the Bundesliga with Eintracht Frankfurt, where he won the Europa League in 2022. Ndicka moved to AS Roma in Serie A and has become a key defender in Italian football. His composure on the ball, tactical intelligence, and big-game experience are vital for Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Jean Michaël Seri",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "NK Maribor (PrvaLiga, Slovenia)",
+    "hometown": "Grand-Bassam, Côte d'Ivoire",
+    "why": "A technically brilliant midfielder who was once linked with Barcelona and PSG during his outstanding spell at OGC Nice. Seri moved to Fulham, then Galatasaray before settling in Slovenia with NK Maribor. Despite being 34, his passing range, vision, and ability to dictate tempo make him a valuable veteran presence for Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Seko Fofana",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "FC Porto (Primeira Liga, Portugal)",
+    "hometown": "Paris, France; of Ivorian descent",
+    "why": "A powerful, box-to-box midfielder who starred in Ligue 1 with Lens before a brief spell at Al-Nassr in Saudi Arabia and then FC Porto. Fofana combines physicality with technical quality, driving forward with the ball and contributing goals from midfield. He was instrumental in the 2023 AFCON triumph and brings that winning mentality to Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Parfait Guiagon",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Royal Charleroi (Belgian Pro League, Belgium)",
+    "hometown": "Côte d'Ivoire",
+    "why": "A young midfielder developing in Belgian football with Royal Charleroi, Guiagon has shown technical ability and maturity beyond his years. He is a creative midfielder who can progress the ball effectively and contribute in the final third. His development in European football earned him a spot in the squad for Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Christ Inao Oulaï",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Trabzonspor (Süper Lig, Turkey)",
+    "hometown": "Côte d'Ivoire",
+    "why": "One of the youngest players in the Ivorian squad at just 20, Oulaï is a dynamic midfielder who has made his mark in Turkish football with Trabzonspor. He is an energetic player who covers ground well and contributes in both defensive and attacking phases. His youth and talent represent the future of Ivorian football at Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Ange-Yoan Bonny",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Inter Milan (Serie A, Italy)",
+    "hometown": "Paris, France; of Ivorian descent",
+    "why": "A powerful young striker who rose through French lower leagues with Parma before earning a move to Inter Milan, one of the biggest clubs in world football. Bonny is a physical, technically capable forward who can hold up play and score with both feet. His rapid rise to the top of Italian football marks him as a key striker for Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Yan Diomande",
+    "espnId": null,
+    "position": "Forward",
+    "club": "RB Leipzig (Bundesliga, Germany)",
+    "hometown": "France; of Ivorian descent",
+    "why": "A teenage sensation who has burst onto the scene at RB Leipzig in the Bundesliga with his explosive pace and fearless attacking play. At just 19, Diomande is one of the youngest forwards in the tournament but has already shown he can compete at the highest level. His raw talent and potential make him an exciting wildcard for Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Elye Wahi",
+    "espnId": null,
+    "position": "Striker",
+    "club": "OGC Nice (Ligue 1, France)",
+    "hometown": "Courcouronnes, France; of Ivorian descent",
+    "why": "A young French-born striker who made his name at Montpellier before moves to Lens and Marseille, eventually landing at OGC Nice. Wahi is a sharp, instinctive finisher who is lethal inside the box and possesses good movement off the ball. His Ligue 1 experience and goalscoring record make him a potent attacking option for Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Oumar Diakité",
+    "espnId": 329483,
+    "position": "Forward",
+    "club": "Cercle Brugge (Belgian Pro League, Belgium)",
+    "hometown": "Côte d'Ivoire",
+    "why": "A young forward who impressed in Belgian football with Cercle Brugge, Diakité is known for his pace, power, and direct running style. He can play across the front line and is a constant threat to opposition defenses with his athleticism. His potential and energy bring an exciting dynamic to the attack for Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Evann Guessand",
+    "espnId": 288924,
+    "position": "Striker",
+    "club": "Crystal Palace (Premier League, England)",
+    "hometown": "Nice, France; of Ivorian descent",
+    "why": "A quick, agile striker who developed at OGC Nice before earning a move to the Premier League with Crystal Palace. Guessand is a mobile forward who works hard pressing from the front and creates chances with his intelligent runs. His pace and work rate make him a versatile attacking option for Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Bazoumana Touré",
+    "espnId": 359108,
+    "position": "Left winger",
+    "club": "TSG Hoffenheim (Bundesliga, Germany)",
+    "hometown": "Côte d'Ivoire",
+    "why": "A young, explosive winger who has made an impact in the Bundesliga with Hoffenheim thanks to his electrifying pace and dribbling ability. Touré is a direct attacker who loves to take on defenders one-on-one and create chances for his teammates. At just 20, he is one of the most exciting young talents in Ivorian football heading into Football 2026.",
+    "number": 24
    }
   ],
   "Ecuador": [
@@ -4438,6 +7543,213 @@ window.WC_PLAYERS = {
      "DFL-Supercup 2024 (Bayer Leverkusen)",
      "U-20 Copa Libertadores 2020 (Independiente del Valle)"
     ]
+   },
+   {
+    "name": "Hernán Galíndez",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Huracán (Primera División, Argentina)",
+    "hometown": "Buenos Aires, Argentina; naturalized Ecuadorian",
+    "why": "Born in Argentina, Galíndez moved to Ecuador and established himself at Universidad Católica before earning Ecuadorian citizenship and becoming the national team's first-choice goalkeeper. At 39, he is one of the most experienced players in the squad, bringing calm leadership and shot-stopping reliability. His longevity and dedication make him a valued presence for Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Moisés Ramírez",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Kifisia (Super League 2, Greece)",
+    "hometown": "Ecuador",
+    "why": "A young goalkeeper who previously impressed at Independiente del Valle in Ecuador before seeking European experience in Greece. Ramírez is a solid shot-stopper with good command of his penalty area and developing distribution skills. He provides capable backup and future potential for the goalkeeping position at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Gonzalo Valle",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "LDU Quito (Liga Pro, Ecuador)",
+    "hometown": "Quito, Ecuador",
+    "why": "A domestic league goalkeeper who has been a reliable performer for LDU Quito, one of the biggest clubs in Ecuadorian football. Valle brings experience and consistency between the posts and serves as a dependable option in the goalkeeping rotation. His familiarity with the national team setup makes him a valued squad member for Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Félix Torres",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Internacional (Série A, Brazil)",
+    "hometown": "Esmeraldas, Ecuador",
+    "why": "A powerful centre-back who has become one of Ecuador's most important defenders, Torres previously played at Santos Laguna in Mexico before moving to Brazil with Internacional. He is dominant in the air, strong in the tackle, and dangerous from set pieces with his heading ability. His physicality and aerial threat from corners make him a key player for Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Joel Ordóñez",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Club Brugge (Belgian Pro League, Belgium)",
+    "hometown": "Ecuador",
+    "why": "A young centre-back who earned a move to Club Brugge in Belgium and has been developing rapidly in European football. Ordóñez is a quick, ball-playing defender who is comfortable stepping into midfield with the ball. At 22, he represents Ecuador's next generation of top-level defenders heading into Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Pervis Estupiñán",
+    "espnId": 226775,
+    "position": "Left-back",
+    "club": "AC Milan (Serie A, Italy)",
+    "hometown": "Esmeraldas, Ecuador",
+    "why": "An explosive left-back who made his name in La Liga with Villarreal before moving to Brighton in the Premier League and then AC Milan. Estupiñán is renowned for his blistering pace, powerful overlapping runs, and quality delivery into the box. He is one of Ecuador's most talented players and a constant threat down the left flank at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Ángelo Preciado",
+    "espnId": 274522,
+    "position": "Right-back",
+    "club": "Atlético Mineiro (Série A, Brazil)",
+    "hometown": "Esmeraldas, Ecuador",
+    "why": "A pacey right-back who has experience in European football with Genk in Belgium before moving to Brazilian football with Atlético Mineiro. Preciado is an attack-minded fullback who provides width and energy down the right side. His speed and stamina make him a dynamic presence in the squad for Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Jackson Porozo",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Club Tijuana (Liga MX, Mexico)",
+    "hometown": "Esmeraldas, Ecuador",
+    "why": "A tall, physically imposing centre-back who has played in Portuguese and Mexican football, Porozo brings size and aerial dominance to the defense. He is a no-nonsense defender who excels at winning headers and last-ditch challenges. His physical tools and international experience add valuable depth for Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Yaimar Medina",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Racing Genk (Belgian Pro League, Belgium)",
+    "hometown": "Ecuador",
+    "why": "A young defender who has been developing in Belgian football with Racing Genk, Medina is a promising talent with good tactical awareness and ball-playing ability. At just 21, he represents the future of Ecuadorian defending and has been impressing in the Jupiler Pro League. His youth and potential make him an exciting inclusion for Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Jordy Alcívar",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Independiente del Valle (Liga Pro, Ecuador)",
+    "hometown": "Ecuador",
+    "why": "A product of Independiente del Valle's renowned academy, Alcívar is a technically gifted midfielder who controls the tempo of play. He has been a standout in Ecuadorian domestic football with his passing range and vision. His role as the team's creative heartbeat makes him essential for Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Kendry Páez",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "River Plate (Primera División, Argentina)",
+    "hometown": "Santo Domingo, Ecuador",
+    "why": "Widely regarded as Ecuador's most exciting teenage talent, Páez made his senior international debut at just 16 and was previously signed by Chelsea. A supremely gifted playmaker with vision, technique, and set-piece ability beyond his years, he has been developing at a top South American club. At 19, he could be one of the breakout stars of Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Pedro Vite",
+    "espnId": null,
+    "position": "Left winger",
+    "club": "Pumas UNAM (Liga MX, Mexico)",
+    "hometown": "Ecuador",
+    "why": "A tricky winger who has played in Mexican football with Pumas UNAM, Vite is known for his dribbling ability and creativity on the ball. He can play on either flank and provides unpredictability in the final third. His skill and directness add flair to Ecuador's attack at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Denil Castillo",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Midtjylland (Danish Superliga, Denmark)",
+    "hometown": "Ecuador",
+    "why": "A young midfielder who earned a move to Danish football with FC Midtjylland, Castillo is a physically strong midfielder who combines defensive discipline with progressive ball-carrying. His development in Scandinavian football has added tactical maturity to his game. At 22, he brings energy and European experience to the midfield for Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Alan Franco",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Atlético Mineiro (Série A, Brazil)",
+    "hometown": "Ecuador",
+    "why": "A defensive midfielder who has established himself in Brazilian football with Atlético Mineiro, Franco is a tenacious ball-winner who provides a shield in front of the defense. He reads the game well and makes intelligent interceptions to break up opposition attacks. His experience in competitive South American football makes him a key midfield anchor for Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Anthony Valencia",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Royal Antwerp (Belgian Pro League, Belgium)",
+    "hometown": "Ecuador",
+    "why": "A young forward who has been making his mark in Belgian football with Royal Antwerp, Valencia is a quick, direct attacker who can play across the front line. He has shown an eye for goal and the ability to beat defenders with pace. His European development adds a promising attacking option for Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "John Yeboah",
+    "espnId": null,
+    "position": "Left winger",
+    "club": "Venezia (Serie A, Italy)",
+    "hometown": "Esmeraldas, Ecuador",
+    "why": "A pacy winger of Ecuadorian-Ghanaian heritage who has played in Dutch, German, and Italian football. Yeboah is a direct, skillful attacker who can beat defenders with his dribbling and pace. His versatility across the front line and European experience make him a useful attacking weapon for Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Kevin Rodríguez",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Union Saint-Gilloise (Belgian Pro League, Belgium)",
+    "hometown": "Ecuador",
+    "why": "A tall, powerful striker who has developed in Belgian football with Union Saint-Gilloise, Rodríguez is a target man who is effective in the air and can hold the ball up for teammates. His physical presence and goal-scoring ability have earned him regular minutes in Belgium. He provides a different forward option for Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Enner Valencia",
+    "espnId": 163044,
+    "position": "Striker",
+    "club": "Pachuca (Liga MX, Mexico)",
+    "hometown": "San Lorenzo, Ecuador",
+    "why": "Ecuador's all-time leading scorer and captain, Enner Valencia is a legendary figure in the national team. He has played at the highest levels including the Premier League with West Ham and Everton, and in Turkey with Fenerbahce before moving to Liga MX. At 36, his experience, goal-scoring instinct, and leadership remain invaluable for Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Alan Minda",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Atlético Mineiro (Série A, Brazil)",
+    "hometown": "Ecuador",
+    "why": "A young, pacy winger who has been developing in Brazilian football with Atlético Mineiro. Minda is a direct attacker who uses his speed to stretch defenses and create chances. His development alongside other Ecuadorian players in South American football has prepared him well for Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Jordy Caicedo",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Huracán (Primera División, Argentina)",
+    "hometown": "Ecuador",
+    "why": "A strong, physical striker who has played in Argentine football with Huracán. Caicedo is a hardworking forward who uses his body to hold up the ball and bring teammates into play. His aerial ability and willingness to run the channels make him a useful forward option for Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Gonzalo Plata",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Flamengo (Série A, Brazil)",
+    "hometown": "Guayaquil, Ecuador",
+    "why": "One of Ecuador's most talented and exciting attackers, Plata is a skilful winger who previously played in Portugal with Sporting CP and in Spain with Valladolid before joining Flamengo in Brazil. He is known for his explosive dribbling, ability to beat defenders one-on-one, and powerful shooting. His individual brilliance can change games at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Nilson Angulo",
+    "espnId": null,
+    "position": "Left winger",
+    "club": "Sunderland (Championship, England)",
+    "hometown": "Esmeraldas, Ecuador",
+    "why": "A quick, skillful winger who moved to English football with Sunderland in the Championship after impressing in South American football. Angulo is a direct attacker with pace and the ability to get past defenders. His development in competitive English football adds dynamism to Ecuador's wide options for Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Jeremy Arévalo",
+    "espnId": null,
+    "position": "Forward",
+    "club": "VfB Stuttgart (Bundesliga, Germany)",
+    "hometown": "Ecuador",
+    "why": "A young forward who earned a move to VfB Stuttgart in the Bundesliga, one of the most exciting development moves for an Ecuadorian player. Arévalo is a versatile attacker who can play multiple positions across the front line. His Bundesliga experience at just 21 makes him one of Ecuador's most promising young talents at Football 2026.",
+    "number": 24
    }
   ],
   "Egypt": [
@@ -4793,6 +8105,186 @@ window.WC_PLAYERS = {
      "Egyptian Premier League 2020-21, 2021-22, 2022-23, 2023-24 (Al Ahly)",
      "CAF Champions League 2021, 2023, 2024 (Al Ahly)"
     ]
+   },
+   {
+    "name": "Mohamed El Shenawy",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Al Ahly (Egyptian Premier League, Egypt)",
+    "hometown": "Cairo, Egypt",
+    "why": "One of the most decorated goalkeepers in African club football, El Shenawy has won multiple CAF Champions League titles with Al Ahly. He is a commanding presence between the posts with excellent reflexes and composure under pressure. At 37, his experience and leadership make him a crucial figure for Egypt at Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "El Mahdy Soliman",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Zamalek (Egyptian Premier League, Egypt)",
+    "hometown": "Egypt",
+    "why": "A veteran goalkeeper with extensive experience at Zamalek, one of Egypt's two biggest clubs. Soliman has been a reliable backup throughout his career and brings professionalism and calm to the squad. At 39, he is the oldest player in the Egyptian squad for Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Mostafa Shobeir",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Al Ahly (Egyptian Premier League, Egypt)",
+    "hometown": "Egypt",
+    "why": "A young goalkeeper at Al Ahly who is heir to the goalkeeping tradition at Egypt's most successful club. Shobeir, son of former Egyptian national team goalkeeper Ahmed Shobeir, has shown great potential with his athletic ability and modern goalkeeping skills. He represents the future of Egyptian goalkeeping at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Mohamed Alaa",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "El Gouna (Egyptian Premier League, Egypt)",
+    "hometown": "Egypt",
+    "why": "A goalkeeper from the Egyptian domestic league who provides additional depth to the squad. Alaa has developed through Egyptian club football and shown enough quality to earn his national team call-up. His inclusion adds competition and squad depth for Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Yasser Ibrahim",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al Ahly (Egyptian Premier League, Egypt)",
+    "hometown": "Egypt",
+    "why": "A veteran centre-back and one of the pillars of Al Ahly's defense, Ibrahim has won multiple league titles and continental trophies. He is an experienced, physically strong defender who organizes the backline effectively. His leadership and big-game experience are essential for Egypt at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Mohamed Hany",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Al Ahly (Egyptian Premier League, Egypt)",
+    "hometown": "Egypt",
+    "why": "A quick, attack-minded right-back who has been a regular at Al Ahly, contributing both defensively and in the final third. Hany is known for his overlapping runs and crossing ability from the right side. His experience in CAF Champions League campaigns gives him valuable continental experience for Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Hossam Abdelmaguid",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Zamalek (Egyptian Premier League, Egypt)",
+    "hometown": "Egypt",
+    "why": "A young, tall centre-back at Zamalek who has emerged as one of the most promising defenders in Egyptian football. Abdelmaguid uses his height and athleticism to dominate in aerial duels and has shown impressive composure for his age. At 25, he is a key part of Egypt's defensive future at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Ramy Rabia",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al Ain (UAE Pro League, United Arab Emirates)",
+    "hometown": "Egypt",
+    "why": "An experienced centre-back who has played for Al Ahly and earned a move to Al Ain in the UAE. Rabia is a seasoned defender who has represented Egypt at multiple major tournaments and brings calmness to the backline. His international experience and defensive reading of the game are valuable for Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Ahmed Fatouh",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Zamalek (Egyptian Premier League, Egypt)",
+    "hometown": "Egypt",
+    "why": "A left-back from Zamalek who has become a regular in the Egyptian national team with his consistent performances. Fatouh provides defensive stability and width down the left side, and is known for his crossing ability. His domestic experience and reliability make him a solid option at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Karim Hafez",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Pyramids FC (Egyptian Premier League, Egypt)",
+    "hometown": "Egypt",
+    "why": "A left-back who previously had experience in European football with stints at clubs in Belgium and Turkey before returning to Egypt with Pyramids FC. Hafez is a quick, technically skilled fullback who can contribute going forward. His European exposure and attacking mentality add depth to the squad for Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Tarek Alaa",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "ZED FC (Egyptian Premier League, Egypt)",
+    "hometown": "Egypt",
+    "why": "A young centre-back who has been developing in the Egyptian Premier League with ZED FC. Alaa is a promising defender with good physical attributes and defensive instincts. At 24, he adds youth and depth to the defensive options for Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Mostafa Ziko",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Pyramids FC (Egyptian Premier League, Egypt)",
+    "hometown": "Egypt",
+    "why": "A creative midfielder at Pyramids FC who has established himself as one of the most effective playmakers in Egyptian domestic football. Ziko is known for his dribbling ability, through balls, and set-piece delivery. His creative spark from midfield gives Egypt an important attacking dimension at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Hamdy Fathy",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Al-Wakrah (Qatar Stars League, Qatar)",
+    "hometown": "Egypt",
+    "why": "A veteran defensive midfielder who has experience in both Egyptian domestic football and the Qatari league. Fathy is a disciplined, hard-working midfielder who protects the defense and distributes the ball efficiently. His tactical awareness and professionalism make him a reliable squad member for Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Mohanad Lasheen",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Pyramids FC (Egyptian Premier League, Egypt)",
+    "hometown": "Egypt",
+    "why": "A versatile midfielder who has been performing consistently at Pyramids FC in the Egyptian Premier League. Lasheen is a hardworking player who contributes in both defensive and attacking phases. His energy and ability to cover ground make him a useful option in the Egyptian midfield for Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Nabil Emad",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al-Najma (Bahraini Premier League, Bahrain)",
+    "hometown": "Egypt",
+    "why": "Known by his nickname 'Dunga', Emad is a seasoned midfielder who has played across Gulf leagues. He brings experience and midfield composure to the squad with his passing and game management abilities. His career across different football cultures provides valuable depth for Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Marwan Attia",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al Ahly (Egyptian Premier League, Egypt)",
+    "hometown": "Egypt",
+    "why": "A young midfielder from Al Ahly who has been breaking into the first team with impressive performances in the Egyptian Premier League. Attia is a technically sound player who can create chances and contribute goals from midfield. His development at Egypt's biggest club has prepared him well for Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Mahmoud Saber",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "ZED FC (Egyptian Premier League, Egypt)",
+    "hometown": "Egypt",
+    "why": "A young, energetic midfielder who has been making his mark at ZED FC in the Egyptian Premier League. Saber is a dynamic player with good technical ability and the willingness to press and win the ball back. At 24, he represents the emerging talent in Egyptian football heading into Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Hamza Abdelkarim",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Barcelona Atletic (Segunda División, Spain)",
+    "hometown": "Egypt",
+    "why": "One of the most exciting young talents in Egyptian football, Abdelkarim earned a move to Barcelona's B team, a remarkable achievement for an Egyptian player. At just 18, he is a quick, skillful forward with excellent finishing ability and movement off the ball. He could become one of the breakthrough stars of Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Haissem Hassan",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Real Oviedo (Segunda División, Spain)",
+    "hometown": "France; of Egyptian descent",
+    "why": "A French-born forward of Egyptian heritage who has played in Spanish football with Real Oviedo. Hassan is a versatile attacker who can play across the front line and brings European football experience to the squad. His pace and technical ability make him a useful option in attack for Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Zizo",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Al Ahly (Egyptian Premier League, Egypt)",
+    "hometown": "Egypt",
+    "why": "One of the most popular and decorated players in Egyptian football, Zizo is a skillful winger who has been a key performer for Al Ahly across multiple domestic and continental campaigns. Known by his nickname, he is a tricky dribbler with an eye for goal and creative passing ability. His big-game experience and flair make him a crucial attacking threat for Football 2026.",
+    "number": 25
    }
   ],
   "England": [
@@ -5096,6 +8588,195 @@ window.WC_PLAYERS = {
      "FA Cup 2023-24 (Manchester United)",
      "Euro 2024 Young Player of the Tournament nominee"
     ]
+   },
+   {
+    "name": "Jordan Pickford",
+    "espnId": 188545,
+    "position": "Goalkeeper",
+    "club": "Everton (Premier League, England)",
+    "hometown": "Washington, Tyne and Wear, England",
+    "why": "England's established first-choice goalkeeper, Pickford has been the undisputed number one since the 2018 tournament and has built a reputation for producing his best performances on the international stage. He is an excellent shot-stopper with outstanding reflexes and is particularly adept at saving penalties. His big-game experience and vocal leadership make him essential for Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Dean Henderson",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Crystal Palace (Premier League, England)",
+    "hometown": "Whitehaven, Cumbria, England",
+    "why": "A talented goalkeeper who came through Manchester United's academy before finding regular first-team football at Crystal Palace. Henderson is an agile, commanding keeper who is comfortable with the ball at his feet and organizes his defense well. His Premier League experience provides strong backup in goal for Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "James Trafford",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Manchester City (Premier League, England)",
+    "hometown": "Manchester, England",
+    "why": "A promising young goalkeeper who has been developing at Manchester City, one of the best clubs in the world. Trafford previously impressed on loan at Burnley and has excellent shot-stopping ability and distribution. At 23, he represents England's goalkeeping future heading into Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Ezri Konsa",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Aston Villa (Premier League, England)",
+    "hometown": "Newham, London, England",
+    "why": "A classy, ball-playing centre-back who has been a consistent performer for Aston Villa in the Premier League and Champions League. Konsa is comfortable on the ball, quick across the ground, and reads the game exceptionally well. His composure and defensive intelligence have made him a regular in the England squad for Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Nico O'Reilly",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Manchester City (Premier League, England)",
+    "hometown": "England",
+    "why": "A young defender who has broken through at Manchester City, learning his trade under Pep Guardiola's demanding tactical system. O'Reilly is a tall, composed centre-back who excels at playing out from the back and stepping into midfield with the ball. His emergence at one of the world's best clubs marks him as a player of immense potential for Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "John Stones",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Manchester City (Premier League, England)",
+    "hometown": "Barnsley, South Yorkshire, England",
+    "why": "One of the most technically gifted centre-backs of his generation, Stones has won multiple Premier League titles with Manchester City and is a key figure in England's defense. He is renowned for his ability to carry the ball out from the back, make progressive passes, and occasionally step into midfield. His big-tournament experience makes him invaluable for Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Marc Guehi",
+    "espnId": 289018,
+    "position": "Centre-back",
+    "club": "Manchester City (Premier League, England)",
+    "hometown": "Abidjan, Côte d'Ivoire; raised in England",
+    "why": "A composed, elegant centre-back who rose to prominence at Crystal Palace before earning a move to Manchester City. Guehi is strong in the tackle, reads the game superbly, and is an excellent passer from the back. He established himself as a first-choice England defender at Euro 2024 and is a cornerstone of the defense for Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Tino Livramento",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Newcastle United (Premier League, England)",
+    "hometown": "London, England",
+    "why": "A quick, attack-minded right-back who came through Chelsea's academy before establishing himself at Newcastle United. Livramento is a dynamic fullback who combines defensive awareness with the ability to provide width and deliver quality crosses. His pace and energy down the right flank make him a valuable asset for Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Dan Burn",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Newcastle United (Premier League, England)",
+    "hometown": "Blyth, Northumberland, England",
+    "why": "Standing at 201cm, Burn is one of the tallest outfield players in international football and provides an imposing physical presence in defense. He has been a dependable performer for Newcastle United and brings aerial dominance and a no-nonsense defensive approach. His physicality and experience offer a different defensive option for Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Reece James",
+    "espnId": 282174,
+    "position": "Right-back",
+    "club": "Chelsea (Premier League, England)",
+    "hometown": "London, England",
+    "why": "A supremely talented right-back who possesses outstanding crossing ability, defensive strength, and a powerful shot. James won the Champions League with Chelsea and has been one of the best fullbacks in the Premier League when fit, though injuries have interrupted his career. When available, his quality and versatility make him a game-changer for Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Djed Spence",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Tottenham Hotspur (Premier League, England)",
+    "hometown": "London, England",
+    "why": "A pacy, adventurous right-back who first caught attention with outstanding loan performances at Nottingham Forest before signing for Tottenham Hotspur. Spence is an exciting attacking fullback who loves to get forward and take on defenders. His pace and direct running provide an explosive option at right-back for Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Jarell Quansah",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Bayer Leverkusen (Bundesliga, Germany)",
+    "hometown": "Warrington, England",
+    "why": "A young, athletic centre-back who came through Liverpool's academy and earned a move to Bayer Leverkusen in the Bundesliga. Quansah is a quick, modern defender who is comfortable carrying the ball out from the back. His composure under pressure and pace in recovery make him an exciting young defensive talent for Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Elliot Anderson",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Nottingham Forest (Premier League, England)",
+    "hometown": "Whitley Bay, Tyne and Wear, England",
+    "why": "A technically gifted midfielder who developed at Newcastle United before moving to Nottingham Forest. Anderson is a creative, tenacious midfielder who combines excellent close control with an ability to drive forward with the ball. His energy and technical quality in tight spaces give England a useful midfield option for Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Jordan Henderson",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Brentford (Premier League, England)",
+    "hometown": "Sunderland, England",
+    "why": "One of the most experienced players in English football history, Henderson captained Liverpool to Champions League and Premier League glory. After a spell in Saudi Arabia, he returned to the Premier League with Brentford. His leadership, experience in major finals, and ability to manage games from midfield bring invaluable qualities to Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Morgan Rogers",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Aston Villa (Premier League, England)",
+    "hometown": "Nottingham, England",
+    "why": "A dynamic, powerful attacking midfielder who has been one of the breakout stars of the Premier League with Aston Villa. Rogers uses his pace, strength, and dribbling ability to drive at defenses and create chances. His rapid rise into international contention makes him one of the most exciting selections for Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Eberechi Eze",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Arsenal (Premier League, England)",
+    "hometown": "Greenwich, London, England",
+    "why": "A silky, technically brilliant attacking midfielder who dazzled at Crystal Palace before earning a move to Arsenal. Eze is known for his graceful dribbling, creative passing, and ability to score spectacular goals. His flair and creativity from the number ten position give England an important attacking outlet at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Marcus Rashford",
+    "espnId": null,
+    "position": "Left winger",
+    "club": "Barcelona (La Liga, Spain)",
+    "hometown": "Wythenshawe, Manchester, England",
+    "why": "A rapid, direct forward who made his name at Manchester United, becoming one of the youngest players to score on his international debut. Rashford earned a move to Barcelona and is known for his explosive pace, powerful shooting, and ability to run behind defenses. His big-game experience and match-winning ability make him a threat for Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Anthony Gordon",
+    "espnId": 300089,
+    "position": "Left winger",
+    "club": "Barcelona (La Liga, Spain)",
+    "hometown": "Liverpool, England",
+    "why": "An electric winger who burst onto the scene at Everton before starring at Newcastle United and earning a move to Barcelona. Gordon is a direct, pacy attacker who beats defenders with skill and speed and delivers dangerous crosses. His combination of work rate, creativity, and end product make him a key wide option for Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Ollie Watkins",
+    "espnId": 259735,
+    "position": "Striker",
+    "club": "Aston Villa (Premier League, England)",
+    "hometown": "Torquay, Devon, England",
+    "why": "A versatile, hardworking striker who has been one of the most consistent goal-scorers in the Premier League with Aston Villa. Watkins is renowned for his pressing, intelligent movement, and ability to score crucial goals — including his famous late winner in the Euro 2024 semifinal. His all-round forward play makes him a vital option for Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Noni Madueke",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Arsenal (Premier League, England)",
+    "hometown": "London, England",
+    "why": "A sharp, quick winger who developed at PSV Eindhoven before returning to England. Madueke is a direct, skillful attacker with an eye for goal who is lethal cutting inside from the right flank. His development into one of the Premier League's most dangerous wide players makes him a key attacking weapon for Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Ivan Toney",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Al-Ahli (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Northampton, England",
+    "why": "A powerful, clinical striker who rose from the lower leagues to become a Premier League star with Brentford, earning England recognition with his aerial ability and link-up play. Toney moved to Al-Ahli in Saudi Arabia and remains a potent goal-scoring threat. His physical presence, hold-up play, and penalty-box instinct provide a different forward option for Football 2026.",
+    "number": 22
    }
   ],
   "France": [
@@ -5432,6 +9113,222 @@ window.WC_PLAYERS = {
      "FWA Footballer of the Year 2016-17",
      "PFA Players' Player of the Year 2016-17"
     ]
+   },
+   {
+    "name": "Brice Samba",
+    "espnId": 164126,
+    "position": "Goalkeeper",
+    "club": "Rennes (Ligue 1, France)",
+    "hometown": "Linzolo, Republic of the Congo",
+    "why": "A commanding and athletic goalkeeper, Samba rose to prominence with Nottingham Forest in the English Championship before returning to France with Lens and then Rennes. Known for his outstanding reflexes and penalty-saving ability, he was the hero of France's 2024 European Championship quarterfinal shootout. He brings big-game temperament and shot-stopping prowess to France's Football 2026 campaign.",
+    "number": 1
+   },
+   {
+    "name": "Robin Risser",
+    "espnId": 344517,
+    "position": "Goalkeeper",
+    "club": "Lens (Ligue 1, France)",
+    "hometown": "Colmar, France",
+    "why": "A promising young goalkeeper who emerged through the Lens academy and established himself as a reliable option in Ligue 1. Risser is known for his composure on the ball and quick distribution, fitting the modern goalkeeper mold. His selection for Football 2026 marks a breakthrough moment in his international career.",
+    "number": 23
+   },
+   {
+    "name": "Malo Gusto",
+    "espnId": 308947,
+    "position": "Right-back",
+    "club": "Chelsea (Premier League, England)",
+    "hometown": "Decines-Charpieu, France",
+    "why": "An explosive right-back who made his name at Lyon before moving to Chelsea, Gusto combines blistering pace with defensive awareness. He is a dynamic overlapping fullback capable of delivering dangerous crosses and tracking back with intensity. Still in his early twenties, he has quickly become a key figure in France's defensive setup for Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Lucas Digne",
+    "espnId": 160115,
+    "position": "Left-back",
+    "club": "Aston Villa (Premier League, England)",
+    "hometown": "Meaux, France",
+    "why": "A veteran left-back with elite set-piece delivery, Digne has built an impressive career spanning PSG, Roma, Barcelona, Everton, and Aston Villa. He is renowned for his pinpoint crossing ability and willingness to overlap in attack. His vast international experience across multiple tournaments makes him a trusted option for France at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Dayot Upamecano",
+    "espnId": 222793,
+    "position": "Centre-back",
+    "club": "Bayern Munich (Bundesliga, Germany)",
+    "hometown": "Evreux, France",
+    "why": "A powerful and athletic centre-back, Upamecano developed at RB Salzburg and RB Leipzig before joining Bayern Munich. His combination of pace, physicality, and ball-carrying ability makes him one of the most dynamic defenders in European football. He was a key starter for France at Euro 2024 and brings Bundesliga-hardened experience to Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Jules Kounde",
+    "espnId": 231692,
+    "position": "Right-back",
+    "club": "Barcelona (La Liga, Spain)",
+    "hometown": "Paris, France",
+    "why": "Originally a centre-back at Sevilla, Kounde has excelled as a right-back at Barcelona, combining defensive solidity with the technical quality expected at the Camp Nou. His versatility, reading of the game, and comfort on the ball make him one of Europe's most complete defenders. A regular in the France setup, he is a linchpin of their defense at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Ibrahima Konate",
+    "espnId": 251634,
+    "position": "Centre-back",
+    "club": "Liverpool (Premier League, England)",
+    "hometown": "Paris, France",
+    "why": "A towering and rapid centre-back, Konate made his name at RB Leipzig before joining Liverpool where he has formed a formidable partnership at the heart of defense. His pace for a player of his size is remarkable, allowing him to recover and sweep behind the defensive line with ease. He has become an increasingly important figure for France, bringing Premier League intensity to Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Theo Hernandez",
+    "espnId": 233621,
+    "position": "Left-back",
+    "club": "Al Hilal (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Marseille, France",
+    "why": "One of the most attacking left-backs in the world, Theo Hernandez spent several outstanding seasons at AC Milan before moving to Al Hilal. His surging runs from deep, powerful shooting, and ability to beat defenders one-on-one make him a devastating offensive weapon from the back. Alongside his brother Lucas, he adds a unique family dynamic to the France squad at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Lucas Hernandez",
+    "espnId": 196200,
+    "position": "Centre-back",
+    "club": "Paris Saint-Germain (Ligue 1, France)",
+    "hometown": "Marseille, France",
+    "why": "A tenacious and versatile defender capable of playing centre-back or left-back, Lucas Hernandez has proven himself at the highest level with Atletico Madrid, Bayern Munich, and PSG. He showed immense character returning from a serious knee injury suffered during the 2022 tournament. His experience and warrior mentality make him a vital presence in France's Football 2026 squad.",
+    "number": 21
+   },
+   {
+    "name": "Maxence Lacroix",
+    "espnId": 265918,
+    "position": "Centre-back",
+    "club": "Crystal Palace (Premier League, England)",
+    "hometown": "Villeneuve-Saint-Georges, France",
+    "why": "Lacroix established himself in the Bundesliga with Wolfsburg before moving to Crystal Palace, where his composure and ball-playing ability have impressed in the Premier League. A left-footed centre-back who is comfortable stepping out with the ball under pressure, he offers balance to the defensive unit. His consistent performances in England earned him a place in France's Football 2026 squad.",
+    "number": 26
+   },
+   {
+    "name": "Manu Kone",
+    "espnId": 285226,
+    "position": "Central midfielder",
+    "club": "Roma (Serie A, Italy)",
+    "hometown": "Paris, France",
+    "why": "A dynamic box-to-box midfielder, Kone developed at Toulouse and Borussia Monchengladbach before joining Roma. He combines tireless running, strong ball-carrying, and powerful tackling in a complete midfield package. His energy and ability to break defensive lines with progressive runs make him a key component of France's midfield at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Aurelien Tchouameni",
+    "espnId": 265919,
+    "position": "Defensive midfielder",
+    "club": "Real Madrid (La Liga, Spain)",
+    "hometown": "Rouen, France",
+    "why": "A commanding defensive midfielder who joined Real Madrid from Monaco, Tchouameni anchors the midfield with his exceptional range of passing, tactical intelligence, and ability to win the ball back. He has quickly become indispensable for both club and country, forming part of Real Madrid's Champions League-winning squads. His composure under pressure and leadership belie his young age heading into Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "N'Golo Kante",
+    "espnId": 173556,
+    "position": "Central midfielder",
+    "club": "Fenerbahce (Super Lig, Turkey)",
+    "hometown": "Paris, France",
+    "why": "One of the most beloved midfielders of his generation, Kante is renowned for his relentless energy, ball-winning ability, and humble personality. He was instrumental in Leicester City's miraculous Premier League title and Chelsea's Champions League triumph, and starred in France's 2018 tournament victory. Despite moving to Saudi Arabia and then Turkey later in his career, his unique ability to cover every blade of grass earned him a recall for Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Adrien Rabiot",
+    "espnId": 176203,
+    "position": "Central midfielder",
+    "club": "AC Milan (Serie A, Italy)",
+    "hometown": "Saint-Maurice, France",
+    "why": "A tall and technically gifted midfielder, Rabiot came through the PSG academy before spending five years at Juventus and then joining AC Milan. He is known for his elegant ball control, ability to glide past opponents, and dangerous late runs into the box. A regular in the France squad for years, he brings Serie A experience and big-match composure to Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Warren Zaire-Emery",
+    "espnId": 345581,
+    "position": "Central midfielder",
+    "club": "Paris Saint-Germain (Ligue 1, France)",
+    "hometown": "Montreuil, France",
+    "why": "A prodigious talent who became PSG's youngest-ever first-team player and France's youngest international in decades, Zaire-Emery has established himself as one of Europe's most exciting young midfielders. He combines technical precision with tactical maturity far beyond his years, excelling at both winning possession and driving forward. At just 20 years old, he represents the future of French football at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Ousmane Dembele",
+    "espnId": 229744,
+    "position": "Right winger",
+    "club": "Paris Saint-Germain (Ligue 1, France)",
+    "hometown": "Vernon, France",
+    "why": "An electrifying winger with devastating pace and the rare ability to dribble and shoot with both feet equally well, Dembele has played for Borussia Dortmund, Barcelona, and PSG. His unpredictable dribbling and creativity make him one of the most dangerous attackers in football when in full flow. After a strong spell at PSG, he brings game-changing ability off the wing for France at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Marcus Thuram",
+    "espnId": 217331,
+    "position": "Striker",
+    "club": "Inter Milan (Serie A, Italy)",
+    "hometown": "Parma, Italy",
+    "why": "Son of French legend Lilian Thuram, Marcus has carved out his own stellar career as a powerful and intelligent forward. After excelling at Borussia Monchengladbach, he joined Inter Milan where he has formed a lethal partnership with Lautaro Martinez and won the Serie A title. His combination of physicality, link-up play, and finishing ability makes him central to France's attack at Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Kylian Mbappe",
+    "espnId": 231388,
+    "position": "Forward",
+    "club": "Real Madrid (La Liga, Spain)",
+    "hometown": "Paris, France",
+    "why": "Widely regarded as one of the best players on the planet, Mbappe possesses extraordinary pace, finishing, and big-game mentality. He burst onto the scene as a teenager with Monaco and PSG, winning multiple Ligue 1 titles before fulfilling his dream move to Real Madrid. A Golden Boot winner at the 2022 tournament where he scored a historic hat trick in the final, he leads France's charge at Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Michael Olise",
+    "espnId": 286831,
+    "position": "Right winger",
+    "club": "Bayern Munich (Bundesliga, Germany)",
+    "hometown": "London, England",
+    "why": "A silky and creative winger who chose to represent France over England, Olise made his breakthrough at Crystal Palace before securing a big move to Bayern Munich. His close control, vision, and ability to create and score from the right flank have made him one of Europe's most exciting attacking talents. He starred at the 2024 Paris Olympics, helping France win gold, and brings that winning pedigree to Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Bradley Barcola",
+    "espnId": 328238,
+    "position": "Left winger",
+    "club": "Paris Saint-Germain (Ligue 1, France)",
+    "hometown": "Lyon, France",
+    "why": "A lightning-quick left winger who emerged at Lyon before PSG swooped to sign him, Barcola has quickly become one of Ligue 1's most exciting attackers. His direct running, ability to beat defenders in one-on-one situations, and improving end product have earned him a regular spot in the national team. At just 22, he represents one of France's most promising attacking options at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Desire Doue",
+    "espnId": 336388,
+    "position": "Attacking midfielder",
+    "club": "Paris Saint-Germain (Ligue 1, France)",
+    "hometown": "Angers, France",
+    "why": "A versatile and creative attacker who can operate across the front line or as an attacking midfielder, Doue broke through at Rennes before joining PSG. He was a standout performer for France at the 2024 Paris Olympics alongside Olise, showcasing his technical brilliance and composure in big moments. His versatility and flair give France's coaching staff multiple tactical options at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Jean-Philippe Mateta",
+    "espnId": 241187,
+    "position": "Striker",
+    "club": "Crystal Palace (Premier League, England)",
+    "hometown": "Sevran, France",
+    "why": "A powerful and instinctive striker, Mateta found his best form at Crystal Palace after earlier spells at Lyon and Mainz. His aerial ability, clinical finishing inside the box, and relentless work rate have made him one of the Premier League's most improved forwards. His prolific scoring earned him a well-deserved place in France's Football 2026 squad.",
+    "number": 22
+   },
+   {
+    "name": "Rayan Cherki",
+    "espnId": 298008,
+    "position": "Attacking midfielder",
+    "club": "Manchester City (Premier League, England)",
+    "hometown": "Lyon, France",
+    "why": "A prodigiously talented playmaker who became Lyon's youngest-ever scorer at just 16, Cherki has been tipped for greatness since his early teens. His exceptional close control, creativity, and eye for spectacular goals caught the attention of Manchester City, where he continues to develop his craft. His ability to unlock defenses with a moment of magic makes him a valuable asset for France at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Maghnes Akliouche",
+    "espnId": 329690,
+    "position": "Attacking midfielder",
+    "club": "Monaco (Ligue 1, France)",
+    "hometown": "Villeneuve-Saint-Georges, France",
+    "why": "A skillful and inventive attacking midfielder, Akliouche has flourished at Monaco where his dribbling, vision, and ability to play between the lines have stood out in Ligue 1. He was part of France's gold medal-winning squad at the 2024 Paris Olympics, gaining valuable tournament experience. His creativity and technical quality add depth to France's rich attacking options at Football 2026.",
+    "number": 25
    }
   ],
   "Germany": [
@@ -5737,6 +9634,186 @@ window.WC_PLAYERS = {
      "Premier League 2017-18, 2018-19 (Manchester City)",
      "PFA Young Player of the Year 2017-18"
     ]
+   },
+   {
+    "name": "Manuel Neuer",
+    "espnId": 97250,
+    "position": "Goalkeeper",
+    "club": "Bayern Munich (Bundesliga, Germany)",
+    "hometown": "Gelsenkirchen, Germany",
+    "why": "Widely considered the greatest goalkeeper of his generation, Neuer revolutionized the position with his sweeper-keeper style at Schalke and then Bayern Munich. He has won virtually every major honor in club football and captained Germany to victory at the 2014 tournament in Brazil. At 40, his remarkable longevity and continued excellence between the posts make him a living legend entering Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Oliver Baumann",
+    "espnId": 133055,
+    "position": "Goalkeeper",
+    "club": "Hoffenheim (Bundesliga, Germany)",
+    "hometown": "Breisach, Germany",
+    "why": "A reliable and experienced Bundesliga goalkeeper, Baumann has been a long-serving stalwart for Hoffenheim. Known for his excellent shot-stopping and command of the penalty area, he earned a belated first international cap in 2024 after years of consistent performances. He provides experienced backup in Germany's goalkeeping department at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Alexander Nübel",
+    "espnId": 222760,
+    "position": "Goalkeeper",
+    "club": "Stuttgart (Bundesliga, Germany)",
+    "hometown": "Paderborn, Germany",
+    "why": "A highly rated young goalkeeper who came through the Schalke academy before signing with Bayern Munich and then finding regular playing time on loan at Monaco and Stuttgart. Nubel is an imposing presence in goal with quick reflexes and strong distribution. He is seen as a potential long-term successor to Neuer in the German national team setup at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Waldemar Anton",
+    "espnId": 197612,
+    "position": "Centre-back",
+    "club": "Borussia Dortmund (Bundesliga, Germany)",
+    "hometown": "Olmaliq, Uzbekistan",
+    "why": "Born in Uzbekistan and raised in Germany, Anton developed at Hannover before becoming a defensive leader at Stuttgart and then earning a move to Borussia Dortmund. He impressed at Euro 2024 on home soil and has since established himself as a regular in the German defense. His aerial dominance and no-nonsense defending make him a dependable option for Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Jonathan Tah",
+    "espnId": 197639,
+    "position": "Centre-back",
+    "club": "Bayern Munich (Bundesliga, Germany)",
+    "hometown": "Hamburg, Germany",
+    "why": "A commanding centre-back who spent a decade at Bayer Leverkusen before joining Bayern Munich, Tah was a cornerstone of Leverkusen's historic unbeaten Bundesliga title in 2023-24. His leadership, reading of the game, and ability to play out from the back make him one of the Bundesliga's most complete defenders. He brings top-level experience and calm authority to Germany's backline at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Aleksandar Pavlović",
+    "espnId": 326993,
+    "position": "Defensive midfielder",
+    "club": "Bayern Munich (Bundesliga, Germany)",
+    "hometown": "Munich, Germany",
+    "why": "A Bayern Munich academy graduate who rapidly established himself in the first team, Pavlovic is a tactically intelligent midfielder who excels at shielding the defense and recycling possession. Despite his youth, his maturity and poise on the ball have drawn comparisons to some of Germany's great midfield anchors. He represents the new generation of German talent at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Nico Schlotterbeck",
+    "espnId": 274458,
+    "position": "Centre-back",
+    "club": "Borussia Dortmund (Bundesliga, Germany)",
+    "hometown": "Waiblingen, Germany",
+    "why": "A left-footed centre-back known for his aggressive defending and excellent passing range, Schlotterbeck impressed at Freiburg before moving to Borussia Dortmund. He played a key role in Dortmund's run to the 2024 Champions League final and was part of the Euro 2024 squad. His ball-playing ability and willingness to step into midfield add a creative dimension to Germany's defense at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Nathaniel Brown",
+    "espnId": 120829,
+    "position": "Left-back",
+    "club": "Eintracht Frankfurt (Bundesliga, Germany)",
+    "hometown": "Amberg, Germany",
+    "why": "A dynamic young left-back who emerged from Eintracht Frankfurt's academy, Brown is known for his pace, overlapping runs, and ability to contribute in attack. Born and raised in Frankfurt, he is a homegrown product who has quickly made the left-back position his own at club level. His energy and versatility earned him a spot in Germany's squad for Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "David Raum",
+    "espnId": 255755,
+    "position": "Left-back",
+    "club": "RB Leipzig (Bundesliga, Germany)",
+    "hometown": "Nuremberg, Germany",
+    "why": "An attack-minded left-back renowned for his exceptional crossing ability, Raum quickly rose through the Bundesliga ranks at Hoffenheim before joining RB Leipzig. He is one of the most productive fullbacks in German football, consistently delivering dangerous deliveries from wide areas. His set-piece prowess and offensive output make him a valuable option for Germany at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Malick Thiaw",
+    "espnId": 282605,
+    "position": "Centre-back",
+    "club": "Newcastle United (Premier League, England)",
+    "hometown": "Dusseldorf, Germany",
+    "why": "A physically imposing centre-back who started at Schalke before joining AC Milan and then Newcastle United, Thiaw combines strength in the air with composure on the ball. His move to the Premier League tested him against elite attackers and accelerated his development. His versatility and defensive reliability add depth to Germany's backline at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Leon Goretzka",
+    "espnId": 196976,
+    "position": "Central midfielder",
+    "club": "Bayern Munich (Bundesliga, Germany)",
+    "hometown": "Bochum, Germany",
+    "why": "A powerful box-to-box midfielder, Goretzka combines physicality with technical quality in a way that few midfielders can match. After coming through at Schalke, he has spent years at Bayern Munich winning multiple Bundesliga titles and contributing crucial goals. His ability to arrive late in the box and score important goals makes him a potent weapon for Germany at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Pascal Groß",
+    "espnId": 133056,
+    "position": "Central midfielder",
+    "club": "Brighton (Premier League, England)",
+    "hometown": "Mannheim, Germany",
+    "why": "A technically excellent midfielder who spent years excelling in the Premier League with Brighton, Gross is known for his vision, set-piece delivery, and intelligent movement. He earned a late-career international call-up for Euro 2024, impressing enough to retain his place in the squad. His experience, composure, and creativity in possession make him a valuable squad member for Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Angelo Stiller",
+    "espnId": 274453,
+    "position": "Defensive midfielder",
+    "club": "Stuttgart (Bundesliga, Germany)",
+    "hometown": "Munich, Germany",
+    "why": "A metronomic defensive midfielder who dictates the tempo from deep, Stiller developed at Bayern Munich's academy before finding regular football at Hoffenheim and then Stuttgart. His exceptional passing range and ability to control the rhythm of a match have drawn comparisons to Toni Kroos. He has emerged as a key figure in Germany's midfield rebuild heading into Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Nadiem Amiri",
+    "espnId": 210818,
+    "position": "Attacking midfielder",
+    "club": "Mainz (Bundesliga, Germany)",
+    "hometown": "Ludwigshafen, Germany",
+    "why": "A technically gifted attacking midfielder of Afghan descent, Amiri has been a consistent performer in the Bundesliga across spells at Hoffenheim, Bayer Leverkusen, and Mainz. Known for his quick feet, incisive passing, and ability to unlock defenses in tight spaces, he brings creativity to the German midfield. His selection for Football 2026 rewards years of steady top-flight performances.",
+    "number": 20
+   },
+   {
+    "name": "Felix Nmecha",
+    "espnId": 274464,
+    "position": "Central midfielder",
+    "club": "Borussia Dortmund (Bundesliga, Germany)",
+    "hometown": "Hamburg, Germany",
+    "why": "Born in Germany and raised partly in England, Nmecha came through Manchester City's academy before returning to the Bundesliga with Wolfsburg and then Borussia Dortmund. He is a physically imposing midfielder who combines strength with technical ability and is capable of playing multiple roles across the midfield. His versatility and growing maturity have made him a regular in the Germany setup for Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Assan Ouédraogo",
+    "espnId": 364897,
+    "position": "Central midfielder",
+    "club": "RB Leipzig (Bundesliga, Germany)",
+    "hometown": "Mulheim an der Ruhr, Germany",
+    "why": "One of the most exciting young talents in German football, Ouedraogo burst onto the scene at Schalke before earning a move to RB Leipzig. A creative and technically gifted midfielder with quick feet and an eye for goal, he has drawn attention from Europe's biggest clubs. At just 19, his inclusion in the Football 2026 squad highlights Germany's investment in the next generation.",
+    "number": 25
+   },
+   {
+    "name": "Jamie Leweling",
+    "espnId": 291464,
+    "position": "Right winger",
+    "club": "Stuttgart (Bundesliga, Germany)",
+    "hometown": "Nuremberg, Germany",
+    "why": "A versatile and direct forward who can play across the front line, Leweling made his name at Greuther Furth and Union Berlin before settling at Stuttgart. He scored on his international debut at Euro 2024 and has continued to impress with his pace, work rate, and ability to create chances. His directness and goal threat from wide positions make him a dangerous option for Germany at Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Nick Woltemade",
+    "espnId": 298349,
+    "position": "Striker",
+    "club": "Newcastle United (Premier League, England)",
+    "hometown": "Lilienthal, Germany",
+    "why": "A tall and technically gifted striker who emerged at Werder Bremen before moving to the Premier League with Newcastle United, Woltemade has impressed with his link-up play, aerial ability, and composure in front of goal. His development in one of Europe's most demanding leagues has accelerated his growth as a complete forward. He brings a different dimension to Germany's attack at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Maximilian Beier",
+    "espnId": 305585,
+    "position": "Forward",
+    "club": "Borussia Dortmund (Bundesliga, Germany)",
+    "hometown": "Brandenburg an der Havel, Germany",
+    "why": "A quick and intelligent forward who burst onto the scene with an exceptional season at Hoffenheim, earning a move to Borussia Dortmund. Beier is known for his sharp movement in the box, clinical finishing, and ability to play as both a centre-forward and a second striker. His rapid development and goalscoring instincts make him a key part of Germany's attacking plans for Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Deniz Undav",
+    "espnId": 254014,
+    "position": "Striker",
+    "club": "Stuttgart (Bundesliga, Germany)",
+    "hometown": "Varel, Germany",
+    "why": "A late bloomer who worked his way up through the lower leagues in Belgium and Germany before establishing himself as one of the Bundesliga's most clinical strikers at Stuttgart. Undav combines sharp finishing with intelligent movement and a knack for scoring in big moments. His remarkable journey from obscurity to the national team makes him an inspirational figure heading into Football 2026.",
+    "number": 26
    }
   ],
   "Ghana": [
@@ -5936,13 +10013,41 @@ window.WC_PLAYERS = {
      "2026"
     ],
     "clubs": [
-     {"team": "Leicester City", "years": "2024–", "country": "England"},
-     {"team": "Crystal Palace", "years": "2019–2024", "country": "England"},
-     {"team": "Swansea City", "years": "2017–2019", "country": "Wales"},
-     {"team": "Aston Villa", "years": "2015–2017", "country": "England"},
-     {"team": "Lorient", "years": "2014–2015", "country": "France"},
-     {"team": "Sochaux (loan)", "years": "2013–2014", "country": "France"},
-     {"team": "Marseille", "years": "2009–2014", "country": "France"}
+     {
+      "team": "Leicester City",
+      "years": "2024–",
+      "country": "England"
+     },
+     {
+      "team": "Crystal Palace",
+      "years": "2019–2024",
+      "country": "England"
+     },
+     {
+      "team": "Swansea City",
+      "years": "2017–2019",
+      "country": "Wales"
+     },
+     {
+      "team": "Aston Villa",
+      "years": "2015–2017",
+      "country": "England"
+     },
+     {
+      "team": "Lorient",
+      "years": "2014–2015",
+      "country": "France"
+     },
+     {
+      "team": "Sochaux (loan)",
+      "years": "2013–2014",
+      "country": "France"
+     },
+     {
+      "team": "Marseille",
+      "years": "2009–2014",
+      "country": "France"
+     }
     ],
     "honors": []
    },
@@ -5971,10 +10076,26 @@ window.WC_PLAYERS = {
      "2026"
     ],
     "clubs": [
-     {"team": "Leicester City", "years": "2024–", "country": "England"},
-     {"team": "Leicester City (loan)", "years": "2023–2024", "country": "England"},
-     {"team": "Sporting CP", "years": "2022–2024", "country": "Portugal"},
-     {"team": "Steadfast", "years": "2021–2022", "country": "Ghana"}
+     {
+      "team": "Leicester City",
+      "years": "2024–",
+      "country": "England"
+     },
+     {
+      "team": "Leicester City (loan)",
+      "years": "2023–2024",
+      "country": "England"
+     },
+     {
+      "team": "Sporting CP",
+      "years": "2022–2024",
+      "country": "Portugal"
+     },
+     {
+      "team": "Steadfast",
+      "years": "2021–2022",
+      "country": "Ghana"
+     }
     ],
     "honors": [
      "Championship 2023–24 (Leicester City)"
@@ -6005,12 +10126,217 @@ window.WC_PLAYERS = {
      "2026"
     ],
     "clubs": [
-     {"team": "Atalanta", "years": "2024–", "country": "Italy"},
-     {"team": "Southampton", "years": "2023–2024", "country": "England"},
-     {"team": "Rennes", "years": "2021–2023", "country": "France"},
-     {"team": "Nordsjælland", "years": "2020–2021", "country": "Denmark"}
+     {
+      "team": "Atalanta",
+      "years": "2024–",
+      "country": "Italy"
+     },
+     {
+      "team": "Southampton",
+      "years": "2023–2024",
+      "country": "England"
+     },
+     {
+      "team": "Rennes",
+      "years": "2021–2023",
+      "country": "France"
+     },
+     {
+      "team": "Nordsjælland",
+      "years": "2020–2021",
+      "country": "Denmark"
+     }
     ],
     "honors": []
+   },
+   {
+    "name": "Lawrence Ati-Zigi",
+    "espnId": 277327,
+    "position": "Goalkeeper",
+    "club": "St. Gallen (Super League, Switzerland)",
+    "hometown": "Accra, Ghana",
+    "why": "Ghana's first-choice goalkeeper, Ati-Zigi has built a solid career in Swiss football with St. Gallen after earlier stints at Sochaux and Augsburg. He is known for his commanding presence in the box, sharp reflexes, and vocal organization of the defense. His experience representing Ghana at the 2022 tournament gives him valuable pedigree heading into Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Joseph Anang",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "St Patrick's Athletic (Premier Division, Ireland)",
+    "hometown": "Accra, Ghana",
+    "why": "A young goalkeeper who came through the West Ham United academy before moving to Ireland to find regular first-team football with St Patrick's Athletic. Anang is an agile shot-stopper who has developed rapidly with consistent playing time in the League of Ireland. He provides reliable backup in Ghana's goalkeeping department for Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Benjamin Asare",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Hearts of Oak (Ghana Premier League, Ghana)",
+    "hometown": "Accra, Ghana",
+    "why": "A promising young goalkeeper who has established himself as the number one at Hearts of Oak, one of Ghana's most storied clubs. Asare is known for his shot-stopping ability and commanding aerial presence in the domestic league. His inclusion in the Football 2026 squad gives Ghana a homegrown option between the posts.",
+    "number": 16
+   },
+   {
+    "name": "Alidu Seidu",
+    "espnId": 277332,
+    "position": "Right-back",
+    "club": "Rennes (Ligue 1, France)",
+    "hometown": "Tamale, Ghana",
+    "why": "An explosive right-back known for his blistering pace and tireless energy up and down the flank, Seidu moved from Clermont to Rennes to compete in one of Europe's top leagues. His fearless defending, powerful runs, and improving crossing ability make him one of the most dynamic fullbacks in African football. He is a vital part of Ghana's defensive setup at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Caleb Yirenkyi",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Nordsjaelland (Superliga, Denmark)",
+    "hometown": "Accra, Ghana",
+    "why": "A technically gifted young midfielder developed through the Right to Dream Academy pipeline that feeds into FC Nordsjaelland. Yirenkyi is comfortable on the ball and possesses good vision for picking out passes in the final third. His development in the Danish Superliga has earned him a place in Ghana's squad for Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Jonas Adjetey",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Wolfsburg (Bundesliga, Germany)",
+    "hometown": "Accra, Ghana",
+    "why": "A young and athletic centre-back who earned a move to Wolfsburg in the Bundesliga, Adjetey combines physical power with composure in possession. His pace and ability to read the game have helped him adapt to the demands of one of Europe's top leagues. He adds Bundesliga quality to Ghana's defensive options at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Abdul Mumin",
+    "espnId": 241256,
+    "position": "Centre-back",
+    "club": "Rayo Vallecano (La Liga, Spain)",
+    "hometown": "Accra, Ghana",
+    "why": "A composed centre-back who has established himself in La Liga with Rayo Vallecano after developing at Nordsjaelland and Vitoria Guimaraes. Mumin is a ball-playing defender who is comfortable bringing the ball out from the back and is strong in one-on-one defensive situations. His European experience across multiple leagues makes him a key figure in Ghana's defense at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Gideon Mensah",
+    "espnId": 274442,
+    "position": "Left-back",
+    "club": "Auxerre (Ligue 1, France)",
+    "hometown": "Accra, Ghana",
+    "why": "A dynamic left-back with an excellent engine, Mensah has had spells across European football including Red Bull Salzburg and Bordeaux before settling at Auxerre. He is known for his overlapping runs, defensive work rate, and ability to deliver crosses from deep positions. His Ligue 1 experience provides Ghana with a dependable option at left-back for Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Baba Abdul Rahman",
+    "espnId": 196916,
+    "position": "Left-back",
+    "club": "PAOK (Super League, Greece)",
+    "hometown": "Tamale, Ghana",
+    "why": "A seasoned left-back who had spells at Augsburg, Chelsea, Schalke, and Reims before joining PAOK, Rahman brings vast European experience to Ghana's squad. He is a technically proficient defender with an eye for an attacking pass and strong set-piece delivery. His years of top-level experience make him a valued squad member for Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Jerome Opoku",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Istanbul Basaksehir (Super Lig, Turkey)",
+    "hometown": "Hamburg, Germany",
+    "why": "Born in Germany to Ghanaian parents, Opoku developed at Borussia Dortmund's academy before pursuing a career that took him through several clubs. A physically strong centre-back who is aggressive in the tackle and dominant in aerial duels, he chose to represent Ghana on the international stage. His Turkish Super Lig experience adds depth to Ghana's defense at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Kojo Oppong Peprah",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Nice (Ligue 1, France)",
+    "hometown": "Accra, Ghana",
+    "why": "A young and athletic defender who earned a move to Nice in Ligue 1, Peprah has impressed with his pace, physicality, and willingness to defend on the front foot. He represents the emerging generation of Ghanaian defenders competing in top European leagues. His development at Nice has made him a promising addition to Ghana's squad for Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Derrick Luckassen",
+    "espnId": 229671,
+    "position": "Centre-back",
+    "club": "Pafos (First Division, Cyprus)",
+    "hometown": "Amsterdam, Netherlands",
+    "why": "Born in the Netherlands to Ghanaian parents, Luckassen is a versatile defender who has played for PSV Eindhoven, Anderlecht, and various clubs across Europe before joining Pafos in Cyprus. He is a physical and composed defender who chose to represent Ghana internationally. His experience across multiple European leagues provides valuable depth to the squad at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Marvin Senaya",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Auxerre (Ligue 1, France)",
+    "hometown": "France",
+    "why": "A versatile defender who has established himself at Auxerre in Ligue 1, Senaya can operate at right-back or centre-back with equal effectiveness. He is a reliable and consistent performer whose tactical flexibility gives the coaching staff multiple options in defense. His steady performances in France's top flight earned him a place in Ghana's Football 2026 squad.",
+    "number": 26
+   },
+   {
+    "name": "Kwasi Sibo",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Real Oviedo (La Liga 2, Spain)",
+    "hometown": "Accra, Ghana",
+    "why": "A combative and energetic midfielder plying his trade in Spain's second division with Real Oviedo, Sibo is known for his tireless running and ability to break up opposition attacks. He adds steel and dynamism to the midfield, providing a platform for Ghana's more creative players. His experience in Spanish football has sharpened his tactical awareness heading into Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Elisha Owusu",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Auxerre (Ligue 1, France)",
+    "hometown": "Gonesse, France",
+    "why": "Born in France to Ghanaian parents, Owusu is a technically sound midfielder who came through Lyon's renowned academy before moving to Gent and then Auxerre. He is an intelligent passer who controls the tempo of the game and is effective at winning the ball back in midfield. His Ligue 1 experience and dual cultural background make him a valuable asset for Ghana at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Augustine Boakye",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Saint-Etienne (Ligue 1, France)",
+    "hometown": "Accra, Ghana",
+    "why": "A quick and direct winger who developed in Austrian football at Wolfsberger AC and Sturm Graz before moving to Saint-Etienne, Boakye is known for his pace on the counter and ability to stretch defenses. His direct running style and improving end product have made him a dangerous attacking option on the right flank. He brings exciting offensive quality to Ghana's squad at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Brandon Thomas-Asante",
+    "espnId": 282893,
+    "position": "Forward",
+    "club": "Coventry City (Championship, England)",
+    "hometown": "Milton Keynes, England",
+    "why": "Born in England to a Ghanaian father, Thomas-Asante chose to represent Ghana internationally after building his career in English football. A lively and physical forward with good finishing ability, he has proven himself as a consistent goalscorer in the Championship with West Brom and Coventry City. His work rate and versatility across the front line make him a useful option for Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Christopher Bonsu Baah",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Al Qadsiah (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Accra, Ghana",
+    "why": "A promising young forward who has taken his talents to the Saudi Pro League with Al Qadsiah, Bonsu Baah is known for his pace and direct style of play. He developed through European lower leagues before making a move to the Middle East where he has continued to grow as a striker. His goalscoring instincts earn him a place in Ghana's attack at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Inaki Williams",
+    "espnId": 202204,
+    "position": "Striker",
+    "club": "Athletic Club (La Liga, Spain)",
+    "hometown": "Bilbao, Spain",
+    "why": "Born in Bilbao to Ghanaian parents, Williams holds the remarkable La Liga record for consecutive appearances, surpassing 250 straight games at one point. A powerful and lightning-fast striker, he spent his entire club career at Athletic Club and chose to represent Ghana after initially playing for Spain at youth level. His elite-level experience and tireless pressing make him Ghana's talisman at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Ernest Nuamah",
+    "espnId": 327461,
+    "position": "Right winger",
+    "club": "Lyon (Ligue 1, France)",
+    "hometown": "Accra, Ghana",
+    "why": "A rapid and exciting young winger who developed at the Right to Dream Academy and Nordsjaelland before joining Lyon in Ligue 1. Nuamah is blessed with searing pace, tricky dribbling, and the ability to beat defenders in one-on-one situations. His explosive attacking talent makes him one of Ghana's most dangerous offensive weapons at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Prince Kwabena Adu",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Viktoria Plzen (Czech First League, Czech Republic)",
+    "hometown": "Accra, Ghana",
+    "why": "A young and hungry forward who has been developing in Czech football with Viktoria Plzen, Adu is known for his pace, movement, and finishing ability in the penalty area. He has gained European experience through the club's continental campaigns and has continued to improve season after season. His potential and goal threat earned him a place in Ghana's squad for Football 2026.",
+    "number": 25
    }
   ],
   "Haiti": [
@@ -6195,6 +10521,213 @@ window.WC_PLAYERS = {
      "All-time Gold Cup leading scorer",
      "Haiti second all-time top scorer (34 goals)"
     ]
+   },
+   {
+    "name": "Johny Placide",
+    "espnId": 153414,
+    "position": "Goalkeeper",
+    "club": "Bastia (Ligue 2, France)",
+    "hometown": "Les Abymes, Guadeloupe",
+    "why": "A vastly experienced goalkeeper who has been Haiti's number one for over a decade, Placide has played extensively in French football across multiple divisions. His leadership, shot-stopping ability, and calm presence make him an essential figure in the squad. A veteran of multiple Gold Cup campaigns, he brings invaluable experience to Haiti's historic Football 2026 appearance.",
+    "number": 1
+   },
+   {
+    "name": "Alexandre Pierre",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Sochaux (National, France)",
+    "hometown": "France",
+    "why": "A young goalkeeper developing in French lower-league football with Sochaux, Pierre brings athleticism and ambition to Haiti's goalkeeping contingent. He has worked his way through the French football system while proudly representing his Haitian heritage at international level. His inclusion provides depth and competition in goal for Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Josue Duverger",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Cosmos Koblenz (Regionalliga Sudwest, Germany)",
+    "hometown": "Haiti",
+    "why": "A goalkeeper playing in Germany's regional leagues with Cosmos Koblenz, Duverger brings dedication and hunger to the national team setup. He represents the grassroots spirit of Haitian football, having worked his way through lower divisions to earn an international call-up. His selection for Football 2026 is a testament to his perseverance and commitment.",
+    "number": 23
+   },
+   {
+    "name": "Carlens Arcus",
+    "espnId": 276089,
+    "position": "Right-back",
+    "club": "Angers (Ligue 1, France)",
+    "hometown": "Port-au-Prince, Haiti",
+    "why": "A dynamic right-back who has established himself in Ligue 1 with Angers, Arcus combines defensive solidity with the ability to contribute in attack. His pace and tireless running up and down the flank make him a modern fullback who can affect both ends of the pitch. He is a key player in Haiti's defense for their Football 2026 campaign.",
+    "number": 2
+   },
+   {
+    "name": "Keeto Thermoncy",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Young Boys (Super League, Switzerland)",
+    "hometown": "Haiti",
+    "why": "A strong centre-back who plays for Swiss champions Young Boys, Thermoncy has gained experience in both the Swiss top flight and European continental competition. His physical presence and defensive discipline provide a solid foundation at the heart of Haiti's defense. Playing at a club that regularly features in European competition has prepared him well for Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Ricardo Ade",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "LDU Quito (Serie A, Ecuador)",
+    "hometown": "United States",
+    "why": "A physically imposing centre-back who plays in Ecuadorian football with LDU Quito, one of South America's most decorated clubs. Ade chose to represent Haiti and has become an important figure in the defensive setup. His experience in South American competition adds a different dimension to Haiti's backline at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Hannes Delcroix",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Lugano (Super League, Switzerland)",
+    "hometown": "Brussels, Belgium",
+    "why": "Born in Belgium to a Haitian mother, Delcroix is a technically accomplished centre-back who came through Anderlecht's academy before moving to Lugano. He is comfortable on the ball and excels at playing out from the back under pressure. His Belgian football pedigree and European experience strengthen Haiti's defensive options at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Martin Experience",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Nancy (National, France)",
+    "hometown": "France",
+    "why": "A defender playing in French lower-league football with Nancy, Experience brings commitment and reliability to Haiti's backline. His physical defending and aerial ability make him a useful option in the squad. He is proud to represent Haitian heritage on football's biggest stage at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Duke Lacroix",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Colorado Springs Switchbacks (USL Championship, United States)",
+    "hometown": "United States",
+    "why": "A defender competing in the American second division with Colorado Springs Switchbacks, Lacroix has chosen to represent Haiti at international level. His experience in the physical and competitive USL Championship has developed his defensive capabilities. He provides depth and enthusiasm to Haiti's backline at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Garven Metusala",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Colorado Springs Switchbacks (USL Championship, United States)",
+    "hometown": "United States",
+    "why": "A solid defender playing alongside teammate Duke Lacroix at Colorado Springs Switchbacks in the USL Championship. Metusala brings physicality and determination to Haiti's defensive unit. His selection for Football 2026 reflects Haiti's strategy of drawing from the Haitian diaspora across North America.",
+    "number": 14
+   },
+   {
+    "name": "Jean-Kevin Duverne",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Gent (Jupiler Pro League, Belgium)",
+    "hometown": "France",
+    "why": "A strong centre-back who plays in the Belgian top flight with Gent, Duverne has built a career in European football while representing Haiti at international level. His aerial prowess and positional intelligence make him a dependable option at the back. Playing regularly in the Jupiler Pro League has sharpened his skills heading into Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Wilguens Paugain",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Zulte Waregem (Challenger Pro League, Belgium)",
+    "hometown": "France",
+    "why": "A left-back plying his trade in Belgian football with Zulte Waregem, Paugain offers defensive reliability and willingness to support attacks from the flank. He has developed steadily in Belgian professional football while proudly representing his Haitian roots. His competitive experience in Belgium adds to Haiti's defensive depth at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Carl Sainte",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "El Paso Locomotive (USL Championship, United States)",
+    "hometown": "United States",
+    "why": "A hardworking midfielder competing in the American second division with El Paso Locomotive, Sainte brings energy and combativeness to Haiti's midfield. He is an industrious player who covers ground effectively and helps protect the defensive line. His passion for representing Haiti on the international stage shines through at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Danley Jean Jacques",
+    "espnId": 308541,
+    "position": "Central midfielder",
+    "club": "Philadelphia Union (Major League Soccer, United States)",
+    "hometown": "Haiti",
+    "why": "An emerging midfielder who has earned his place at Philadelphia Union in Major League Soccer, Jean Jacques brings athleticism and tenacity to the center of the park. His development in the MLS system has improved his tactical awareness and passing range. He represents the growing pool of Haitian talent in North American professional football at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Yassin Fortune",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Vizela (Liga Portugal 2, Portugal)",
+    "hometown": "France",
+    "why": "A creative and technically skilled midfielder who has played in Portuguese football, Fortune is known for his close control and ability to play penetrating passes. He has represented Haiti at various levels while building his career in European leagues. His creativity and flair add an important dimension to Haiti's midfield at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Dominique Simon",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Tatran Presov (Fortuna Liga, Slovakia)",
+    "hometown": "Haiti",
+    "why": "A midfielder competing in Slovak football with Tatran Presov, Simon has built his career across different European leagues. His work rate and passing ability make him a steady presence in midfield. He brings dedication and international experience to Haiti's squad at Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Woodensky Pierre",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Violette AC (Ligue Haitienne, Haiti)",
+    "hometown": "Haiti",
+    "why": "A domestic-league midfielder representing Violette AC, one of Haiti's most successful clubs. Pierre is a committed and hardworking player who carries the pride of Haitian domestic football into the international arena. His passion and local knowledge make him a valued squad member for Haiti's Football 2026 campaign.",
+    "number": 26
+   },
+   {
+    "name": "Derrick Etienne Jr.",
+    "espnId": 228074,
+    "position": "Left winger",
+    "club": "Toronto FC (Major League Soccer, Canada)",
+    "hometown": "New York, United States",
+    "why": "Born in New York to Haitian parents, Etienne Jr. chose to represent Haiti and has become one of the team's most experienced internationals. A pacey and skillful winger who has played across MLS with New York Red Bulls, Columbus Crew, and Toronto FC, he provides creativity and direct running from the flanks. His MLS experience and commitment to the national team make him integral to Haiti's Football 2026 campaign.",
+    "number": 7
+   },
+   {
+    "name": "Louicius Deedson",
+    "espnId": null,
+    "position": "Forward",
+    "club": "FC Dallas (Major League Soccer, United States)",
+    "hometown": "Haiti",
+    "why": "A promising young forward competing in MLS with FC Dallas, Deedson brings pace and directness to Haiti's attacking options. His ability to stretch defenses and create chances through his movement makes him a dangerous option from the wing or through the middle. His development in the MLS system has prepared him for the challenge of Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Ruben Providence",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Almere City (Eerste Divisie, Netherlands)",
+    "hometown": "France",
+    "why": "A tricky and technically gifted forward who came through the PSG academy before finding regular playing time in the Netherlands with Almere City. Providence has impressive close control and the ability to create something out of nothing in tight spaces. His French football education and flair make him an exciting attacking option for Haiti at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Lenny Joseph",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Ferencvaros (NB I, Hungary)",
+    "hometown": "France",
+    "why": "A forward playing for one of Hungary's biggest clubs, Ferencvaros, Joseph has experienced European continental competition and competitive domestic football. His pace, movement, and finishing ability have helped him thrive in the Hungarian top flight. His European pedigree is a significant asset for Haiti at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Wilson Isidor",
+    "espnId": 284997,
+    "position": "Striker",
+    "club": "Sunderland (Championship, England)",
+    "hometown": "Meaux, France",
+    "why": "A powerful and pacy striker born in France who chose to represent Haiti internationally, Isidor has played across European football including spells at Monaco, Lokomotiv Moscow, and Zenit St Petersburg before joining Sunderland. His physical attributes and goalscoring instincts make him a handful for any defense. He provides Haiti with a potent attacking threat at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Josue Casimir",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Auxerre (Ligue 1, France)",
+    "hometown": "France",
+    "why": "A forward competing in Ligue 1 with Auxerre, Casimir has worked his way into top-flight French football through determination and consistent performances. His ability to play across the front line and contribute both goals and assists makes him a versatile attacking option. His Ligue 1 quality strengthens Haiti's forward line at Football 2026.",
+    "number": 21
    }
   ],
   "IR Iran": [
@@ -6411,6 +10944,213 @@ window.WC_PLAYERS = {
      "Iranian Footballer of the Year 2019",
      "World record for longest throw in competitive match"
     ]
+   },
+   {
+    "name": "Payam Niazmand",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Persepolis (Persian Gulf Pro League, Iran)",
+    "hometown": "Tehran, Iran",
+    "why": "Iran's current first-choice goalkeeper, Niazmand has been outstanding for Persepolis, one of Asia's biggest clubs. He is known for his exceptional reflexes, commanding presence, and ability to make crucial saves in high-pressure situations. His domestic dominance and continental experience in the AFC Champions League make him Iran's last line of defense at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Hossein Hosseini",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Sepahan (Persian Gulf Pro League, Iran)",
+    "hometown": "Tehran, Iran",
+    "why": "An experienced and reliable goalkeeper who has been a mainstay of Iranian club football for years, Hosseini has played for top clubs including Esteghlal and Sepahan. He is a vocal and commanding presence between the posts with strong shot-stopping abilities. His veteran experience provides vital depth in goal for Iran at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Saleh Hardani",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Esteghlal (Persian Gulf Pro League, Iran)",
+    "hometown": "Ahvaz, Iran",
+    "why": "A strong and physical centre-back who has established himself as a regular at Esteghlal, one of Iran's most popular clubs. Hardani is a no-nonsense defender who excels in aerial duels and tackles decisively. His consistent performances in the Iranian top flight have earned him a place in the squad for Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Ehsan Hajsafi",
+    "espnId": 128620,
+    "position": "Left-back",
+    "club": "Sepahan (Persian Gulf Pro League, Iran)",
+    "hometown": "Isfahan, Iran",
+    "why": "Iran's most-capped player in history with well over 130 appearances, Hajsafi is a legendary figure in Iranian football. Originally a left-back who can also play in midfield, he has captained the national team and represented Iran at multiple major tournaments. His leadership, experience, and set-piece delivery remain invaluable to the squad at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Shoja Khalilzadeh",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Tractor (Persian Gulf Pro League, Iran)",
+    "hometown": "Isfahan, Iran",
+    "why": "A vastly experienced centre-back who has been one of the pillars of Iranian football for over a decade, Khalilzadeh has played for top clubs including Persepolis and Tractor. His aerial dominance, leadership qualities, and reading of the game make him a defensive stalwart. He brings invaluable experience to Iran's backline at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Milad Mohammadi",
+    "espnId": 219246,
+    "position": "Left-back",
+    "club": "Persepolis (Persian Gulf Pro League, Iran)",
+    "hometown": "Tehran, Iran",
+    "why": "An adventurous left-back who previously played in European football with Gent in Belgium and AEK Athens in Greece before returning to Iran with Persepolis. Mohammadi is known for his bombing runs down the left flank and willingness to deliver crosses into dangerous areas. His international experience and attacking intent make him a key figure in Iran's squad for Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Hossein Kanaanizadegan",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Persepolis (Persian Gulf Pro League, Iran)",
+    "hometown": "Ahvaz, Iran",
+    "why": "A commanding centre-back who has risen to prominence at Persepolis with his aerial prowess and solid defensive positioning. Kanaanizadegan is a physical defender who wins the majority of his duels and is strong at defending set pieces. His performances in the Persian Gulf Pro League and AFC Champions League earned him a spot in Iran's Football 2026 squad.",
+    "number": 13
+   },
+   {
+    "name": "Ali Nemati",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Foolad (Persian Gulf Pro League, Iran)",
+    "hometown": "Ahvaz, Iran",
+    "why": "An energetic right-back who has been a consistent performer in the Iranian league with Foolad. Nemati is a dependable defender who combines positional discipline with the ability to support attacks from the right flank. His steady domestic performances earned him selection to Iran's squad for Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Ramin Rezaeian",
+    "espnId": 198068,
+    "position": "Right-back",
+    "club": "Foolad (Persian Gulf Pro League, Iran)",
+    "hometown": "Tehran, Iran",
+    "why": "A veteran right-back with extensive international experience, Rezaeian has played in Qatar, Belgium, and Iran over his career. He is known for his crossing ability, set-piece threat, and big-game experience having featured at the 2018 and 2022 tournaments. His leadership and composure make him a trusted option for Iran at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Danial Eiri",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Malavan (Persian Gulf Pro League, Iran)",
+    "hometown": "Bandar Anzali, Iran",
+    "why": "A young centre-back developing in the Iranian league with Malavan, Eiri has shown promise with his composure on the ball and willingness to defend aggressively. He represents the next generation of Iranian defenders being integrated into the national team. His selection for Football 2026 rewards his consistent improvement in the domestic league.",
+    "number": 25
+   },
+   {
+    "name": "Saeid Ezatolahi",
+    "espnId": 229714,
+    "position": "Defensive midfielder",
+    "club": "Shabab Al Ahli (UAE Pro League, United Arab Emirates)",
+    "hometown": "Tehran, Iran",
+    "why": "A combative defensive midfielder who has played across Europe and the Middle East, Ezatolahi is the shield in front of Iran's defense. He is known for his tenacious tackling, physical presence, and ability to break up opposition attacks. His experience at the 2018 tournament and years of international football make him a key figure at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Mohammad Mohebi",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Rostov (Russian Premier League, Russia)",
+    "hometown": "Iran",
+    "why": "A technically gifted midfielder who moved to Russian football with Rostov, Mohebi is known for his vision, passing range, and ability to control the tempo of matches. His experience playing in European football gives him a broader tactical perspective. He adds creativity and composure to Iran's midfield at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Saman Ghoddos",
+    "espnId": 205485,
+    "position": "Attacking midfielder",
+    "club": "Ittihad Kalba (UAE Pro League, United Arab Emirates)",
+    "hometown": "Malmo, Sweden",
+    "why": "Born in Sweden to Iranian parents, Ghoddos chose to represent Iran and has become a versatile and important member of the squad. He can play as an attacking midfielder or on the wing, bringing European tactical awareness from his time at Amiens and Brentford. His technical quality and adaptability make him a valuable option for Iran at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Rouzbeh Cheshmi",
+    "espnId": 219247,
+    "position": "Defensive midfielder",
+    "club": "Esteghlal (Persian Gulf Pro League, Iran)",
+    "hometown": "Tehran, Iran",
+    "why": "A powerful midfielder who can play defensively or centrally, Cheshmi scored one of the most memorable late goals in 2022 tournament history against Wales. He is a physically imposing player who combines defensive duties with a dangerous long-range shot. His ability to score crucial goals and control midfield makes him a key player for Iran at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Mehdi Torabi",
+    "espnId": 248703,
+    "position": "Attacking midfielder",
+    "club": "Tractor (Persian Gulf Pro League, Iran)",
+    "hometown": "Tehran, Iran",
+    "why": "One of the most creative players in Iranian football, Torabi is renowned for his exceptional free-kick ability and playmaking skills. He has been a consistent performer in the Persian Gulf Pro League across spells at Persepolis and Tractor, frequently contributing goals and assists. His set-piece expertise and technical quality are valuable weapons for Iran at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Aria Yousefi",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Sepahan (Persian Gulf Pro League, Iran)",
+    "hometown": "Iran",
+    "why": "A young and dynamic midfielder who has emerged as a promising talent at Sepahan in the Iranian top flight. Yousefi combines energy and technical ability, contributing both defensively and in attack from central areas. His inclusion in the Football 2026 squad reflects Iran's faith in the emerging generation of talent.",
+    "number": 17
+   },
+   {
+    "name": "Mohammad Ghorbani",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al Wahda (UAE Pro League, United Arab Emirates)",
+    "hometown": "Iran",
+    "why": "A midfielder who has gained experience playing in the UAE Pro League with Al Wahda, Ghorbani is known for his stamina and ability to cover large areas of the pitch. He provides a steady midfield presence and contributes to both the defensive and offensive phases of play. His experience abroad adds to Iran's midfield depth at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Amirmohammad Razzaghinia",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Esteghlal (Persian Gulf Pro League, Iran)",
+    "hometown": "Iran",
+    "why": "A young and emerging midfielder who has been making a name for himself at Esteghlal, one of Iran's two biggest clubs. Razzaghinia is a technically proficient player who is comfortable receiving the ball under pressure and distributing effectively. His development at a high-profile domestic club has prepared him for the demands of Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Mehdi Ghayedi",
+    "espnId": 287030,
+    "position": "Left winger",
+    "club": "Al Nasr (UAE Pro League, United Arab Emirates)",
+    "hometown": "Tehran, Iran",
+    "why": "One of Iran's most exciting attackers, Ghayedi is a tricky winger known for his dribbling skills, pace, and ability to beat defenders in one-on-one situations. He made his name at Esteghlal before moving to the UAE, where he has continued to showcase his creative talents. His flair and directness make him a key attacking threat for Iran at Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Ali Alipour",
+    "espnId": 254821,
+    "position": "Striker",
+    "club": "Persepolis (Persian Gulf Pro League, Iran)",
+    "hometown": "Bushehr, Iran",
+    "why": "A prolific striker who has scored consistently throughout his career at Persepolis, Maritimo, and Gil Vicente before returning to Persepolis. Alipour is a clinical finisher with excellent movement inside the box and the ability to score with both feet and his head. His goalscoring record in Iranian and Portuguese football makes him a vital part of Iran's attack at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Amirhossein Hosseinzadeh",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Tractor (Persian Gulf Pro League, Iran)",
+    "hometown": "Iran",
+    "why": "A talented young forward who has been developing at Tractor in the Iranian top flight, Hosseinzadeh possesses pace and clever movement that trouble defenses. He is capable of playing across the front line and brings energy and directness to Iran's attack. His potential and growing confidence at domestic level earned him a spot in the Football 2026 squad.",
+    "number": 18
+   },
+   {
+    "name": "Shahriyar Moghanlou",
+    "espnId": 287044,
+    "position": "Striker",
+    "club": "Ittihad Kalba (UAE Pro League, United Arab Emirates)",
+    "hometown": "Ardabil, Iran",
+    "why": "A prolific striker who rose to prominence at Sepahan and Persepolis before moving to the UAE, Moghanlou is one of Iran's most consistent goalscorers. He combines sharp instincts in the box with strong hold-up play and an ability to bring teammates into the game. His impressive domestic goalscoring record translates to the international stage at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Dennis Dargahi",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Standard Liege (Jupiler Pro League, Belgium)",
+    "hometown": "Belgium",
+    "why": "Born in Belgium to an Iranian father, Dargahi chose to represent Iran internationally and brings a European footballing education to the squad. A versatile forward who can play centrally or on the wing, he has developed through Belgian football at Standard Liege. His technical quality and tactical awareness from Belgian football add a different dimension to Iran's attack at Football 2026.",
+    "number": 24
    }
   ],
   "Iraq": [
@@ -6624,6 +11364,213 @@ window.WC_PLAYERS = {
      "Gulf Cup of Nations 2023 (Iraq)",
      "King's Cup 2023 (Iraq)"
     ]
+   },
+   {
+    "name": "Fahad Talib",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Al-Talaba (Iraqi Premier League, Iraq)",
+    "hometown": "Baghdad, Iraq",
+    "why": "Iraq's first-choice goalkeeper, Talib has been a commanding presence between the posts in the Iraqi Premier League with Al-Talaba. His reflexes, bravery, and vocal leadership of the defense have made him indispensable to the national team. He carries the hopes of Iraqi football into the country's historic Football 2026 campaign.",
+    "number": 1
+   },
+   {
+    "name": "Jalal Hassan",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Al-Zawraa (Iraqi Premier League, Iraq)",
+    "hometown": "Baghdad, Iraq",
+    "why": "A veteran goalkeeper who has served Al-Zawraa, one of Iraq's most successful clubs, with distinction for many seasons. Hassan is known for his experience, shot-stopping ability, and calm demeanor under pressure. He provides experienced backup in goal for Iraq at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Ahmed Basil",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Al-Shorta (Iraqi Premier League, Iraq)",
+    "hometown": "Baghdad, Iraq",
+    "why": "A talented goalkeeper from Al-Shorta who adds depth to Iraq's goalkeeping department. Basil is an agile keeper with good reflexes and the ability to command his area effectively. His domestic league experience provides reliable cover for Iraq at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Rebin Sulaka",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Port FC (Thai League 1, Thailand)",
+    "hometown": "Duhok, Iraq",
+    "why": "An experienced centre-back who has played across Asian football, Sulaka is a strong and commanding defender. He has been a regular in the Iraqi national team for several years and brings invaluable experience to the backline. His physical presence and leadership qualities are essential to Iraq's defense at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Hussein Ali",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Pogon Szczecin (Ekstraklasa, Poland)",
+    "hometown": "Iraq",
+    "why": "A centre-back competing in the Polish top flight with Pogon Szczecin, Hussein Ali brings European league experience to Iraq's defense. His composure on the ball and tactical discipline developed in European football complement Iraq's defensive setup. His ability to compete at a high level abroad makes him a key defender for Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Zaid Tahseen",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Pakhtakor (Uzbekistan Super League, Uzbekistan)",
+    "hometown": "Iraq",
+    "why": "A physical centre-back who has gained experience in Central Asian football with Pakhtakor, one of Uzbekistan's biggest clubs. Tahseen is an imposing defender who excels in aerial duels and is committed in the tackle. His continental club experience has prepared him well for the demands of Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Akam Hashim",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al-Zawraa (Iraqi Premier League, Iraq)",
+    "hometown": "Sulaymaniyah, Iraq",
+    "why": "A dependable centre-back who has been a stalwart at Al-Zawraa, one of Iraq's most decorated clubs. Hashim is a tough and aggressive defender who organizes the backline effectively. His deep understanding of Iraqi football and defensive leadership make him important to the squad at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Manaf Younis",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al-Shorta (Iraqi Premier League, Iraq)",
+    "hometown": "Baghdad, Iraq",
+    "why": "A solid defender who has been a consistent performer for Al-Shorta in the Iraqi Premier League. Younis is a no-nonsense centre-back whose strength and determination make him a reliable option in the heart of defense. His experience in domestic football adds depth to Iraq's backline at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Ahmed Maknazi",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Al-Karma (Iraqi Premier League, Iraq)",
+    "hometown": "Iraq",
+    "why": "A committed defender who has served Al-Karma in the Iraqi Premier League, Maknazi is known for his defensive discipline and willingness to support attacks from the right side. He is a dependable squad player who gives his all for the national team. His selection reflects his consistent domestic performances heading into Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Merchas Doski",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Viktoria Plzen (Czech First League, Czech Republic)",
+    "hometown": "Duhok, Iraq",
+    "why": "A Kurdish-Iraqi defender who has built his career in European football with Viktoria Plzen in the Czech Republic. Doski has experienced European continental competition with his club and brings that invaluable experience to the Iraqi national team. His European pedigree and defensive quality strengthen Iraq's backline at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Mustafa Saadoon",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Al-Shorta (Iraqi Premier League, Iraq)",
+    "hometown": "Baghdad, Iraq",
+    "why": "A young and energetic left-back from Al-Shorta who provides defensive solidity and attacking support from the left flank. Saadoon has emerged as a promising talent in the Iraqi Premier League with his pace and crossing ability. His youthful energy adds dynamism to Iraq's fullback options at Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Frans Putros",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Persib (Liga 1, Indonesia)",
+    "hometown": "Iraq",
+    "why": "An Assyrian-Iraqi defender who has taken his career to Southeast Asia with Persib in the Indonesian top flight. Putros is a versatile defender who can play at right-back or centre-back, bringing adaptability to the squad. His experience in different football cultures adds unique perspective to Iraq's defensive options at Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Ibrahim Bayesh",
+    "espnId": 344229,
+    "position": "Central midfielder",
+    "club": "Al-Dhafra (UAE Pro League, United Arab Emirates)",
+    "hometown": "Baghdad, Iraq",
+    "why": "A technically gifted midfielder who has played in the UAE Pro League, Bayesh is known for his excellent passing range and vision from central areas. He is a creative force who can dictate play and deliver dangerous set pieces. His experience in Gulf football and technical quality make him central to Iraq's midfield at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Ahmed Qasem",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Nashville SC (Major League Soccer, United States)",
+    "hometown": "Iraq",
+    "why": "A midfielder who has made his way to Major League Soccer with Nashville SC, Qasem brings North American football experience to Iraq's midfield. His exposure to the physicality and pace of MLS has developed his game in new ways. He adds tactical versatility and a global perspective to Iraq's squad at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Zidane Iqbal",
+    "espnId": 309076,
+    "position": "Central midfielder",
+    "club": "Utrecht (Eredivisie, Netherlands)",
+    "hometown": "Manchester, England",
+    "why": "Born in Manchester to an Iraqi-Pakistani father, Iqbal came through Manchester United's academy and chose to represent Iraq internationally. A technically excellent midfielder with silky passing and composure on the ball, he has continued his development in the Dutch Eredivisie with Utrecht. His European pedigree and technical quality make him one of Iraq's most exciting players at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Kevin Yakob",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "AGF (Superliga, Denmark)",
+    "hometown": "Denmark",
+    "why": "A Danish-born midfielder of Assyrian-Iraqi heritage who plays in the Danish Superliga with AGF. Yakob chose to represent Iraq internationally and brings Scandinavian tactical discipline to the midfield. His technical ability and European league experience add quality to Iraq's midfield options at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Aimar Sher",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Sarpsborg 08 (Eliteserien, Norway)",
+    "hometown": "Norway",
+    "why": "A Norwegian-born midfielder of Kurdish-Iraqi descent who plays in the Norwegian top flight with Sarpsborg 08. Sher brings Scandinavian tactical awareness and technical polish to the Iraqi midfield. His ability to control tempo and distribute the ball effectively earned him a place in Iraq's Football 2026 squad.",
+    "number": 20
+   },
+   {
+    "name": "Marko Farji",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Venezia (Serie A, Italy)",
+    "hometown": "Iraq",
+    "why": "A midfielder competing in Serie A with Venezia, Farji brings Italian top-flight experience to Iraq's squad. His tactical awareness and ability to operate in tight spaces developed in one of football's most tactically demanding leagues. His Serie A credentials make him a valuable asset for Iraq at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Zaid Ismail",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al-Talaba (Iraqi Premier League, Iraq)",
+    "hometown": "Baghdad, Iraq",
+    "why": "A domestic-league midfielder who has been a reliable performer for Al-Talaba in the Iraqi Premier League. Ismail is a hardworking and committed player who provides energy and solidity in central midfield. His knowledge of Iraqi football and team-first mentality make him a valued squad member at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Youssef Amyn",
+    "espnId": null,
+    "position": "Forward",
+    "club": "AEK Larnaca (First Division, Cyprus)",
+    "hometown": "Iraq",
+    "why": "A talented forward who has built his career in Cypriot football with AEK Larnaca, Amyn is known for his pace, directness, and ability to score from various positions. His experience in European club football and continental competition has sharpened his game. He provides Iraq with an exciting attacking option at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Mohanad Ali",
+    "espnId": 304038,
+    "position": "Forward",
+    "club": "Dibba Al-Fujairah (UAE Pro League, United Arab Emirates)",
+    "hometown": "Baghdad, Iraq",
+    "why": "Once hailed as the most exciting young talent in Asian football, Mohanad Ali burst onto the scene as a teenager at the 2019 Asian Cup with stunning performances. He has played in the UAE and across the Middle East, and possesses electric pace, skill, and finishing ability. He remains one of Iraq's most dangerous attackers heading into Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Ali Yousif",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Al-Talaba (Iraqi Premier League, Iraq)",
+    "hometown": "Baghdad, Iraq",
+    "why": "A forward who has been a consistent performer in the Iraqi Premier League with Al-Talaba. Yousif is a versatile attacker who combines work rate with finishing ability, contributing goals regularly in domestic competition. His familiarity with the national team setup and competitive drive make him a useful option at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Ali Jasim",
+    "espnId": 371044,
+    "position": "Forward",
+    "club": "Al-Najma (Iraqi Premier League, Iraq)",
+    "hometown": "Basra, Iraq",
+    "why": "The breakout star of Iraqi football, Ali Jasim captured the world's attention at the 2024 Olympics in Paris with his dazzling skill, creativity, and memorable goals. Despite his young age, he plays with the flair and confidence of a veteran, drawing comparisons to some of the game's greatest dribblers. He is the face of a new generation of Iraqi talent at Football 2026.",
+    "number": 17
    }
   ],
   "Japan": [
@@ -6816,6 +11763,213 @@ window.WC_PLAYERS = {
      "FA Cup (2025)",
      "UEFA Europa League (2022 – runner-up with Frankfurt, won in previous seasons)"
     ]
+   },
+   {
+    "name": "Zion Suzuki",
+    "espnId": 265958,
+    "position": "Goalkeeper",
+    "club": "Parma (Serie A, Italy)",
+    "hometown": "Newark, New Jersey, United States",
+    "why": "Born in New Jersey to a Ghanaian father and Japanese mother, Suzuki grew up in Saitama and became the youngest player to sign a professional contract with Urawa Red Diamonds at age 16. After a loan spell at Sint-Truiden in Belgium, he joined Serie A side Parma in 2024 and quickly established himself as one of the most promising young goalkeepers in Europe.",
+    "number": 1
+   },
+   {
+    "name": "Keisuke Osako",
+    "espnId": 255723,
+    "position": "Goalkeeper",
+    "club": "Sanfrecce Hiroshima (J1 League, Japan)",
+    "hometown": "Izumi, Japan",
+    "why": "A one-club loyalist who has been with Sanfrecce Hiroshima since 2018, Osako has amassed over 225 league appearances and was named to the J.League Best XI in 2024. He represented Japan at the 2020 Olympics and brings veteran experience to the Football 2026 squad.",
+    "number": 12
+   },
+   {
+    "name": "Tomoki Hayakawa",
+    "espnId": 312924,
+    "position": "Goalkeeper",
+    "club": "Kashima Antlers (J1 League, Japan)",
+    "hometown": "Sagamihara, Japan",
+    "why": "Hayakawa became Kashima Antlers' first-choice goalkeeper in 2023 and played every minute of every league match for three consecutive seasons. He contributed to Kashima's ninth league championship and their first in nine years.",
+    "number": 23
+   },
+   {
+    "name": "Yukinari Sugawara",
+    "espnId": 265965,
+    "position": "Right-back",
+    "club": "Werder Bremen (Bundesliga, Germany)",
+    "hometown": "Toyokawa, Japan",
+    "why": "A dynamic right-back who started at Nagoya Grampus before joining AZ Alkmaar in the Netherlands in 2019. After a stint at Southampton in the Premier League, he moved to Werder Bremen and has become a regular in Japan's defensive setup with his energetic overlapping runs.",
+    "number": 2
+   },
+   {
+    "name": "Shogo Taniguchi",
+    "espnId": 202728,
+    "position": "Centre-back",
+    "club": "Sint-Truiden (Pro League, Belgium)",
+    "hometown": "Kumamoto, Japan",
+    "why": "A veteran centre-back who spent the peak of his career at Kawasaki Frontale from 2014 to 2022, winning four J1 League championships. At 34, the experienced defender moved to Belgian side Sint-Truiden and brings invaluable leadership to the Football 2026 squad.",
+    "number": 3
+   },
+   {
+    "name": "Ko Itakura",
+    "espnId": 238033,
+    "position": "Centre-back",
+    "club": "Ajax (Eredivisie, Netherlands)",
+    "hometown": "Yokohama, Japan",
+    "why": "Itakura came through Kawasaki Frontale's academy and signed with Manchester City in 2019, who loaned him to FC Groningen and Schalke 04. After a successful spell at Borussia Monchengladbach, he became the first Japanese player on Ajax's first team in 2025.",
+    "number": 4
+   },
+   {
+    "name": "Yuto Nagatomo",
+    "espnId": 119082,
+    "position": "Left-back",
+    "club": "FC Tokyo (J1 League, Japan)",
+    "hometown": "Saijo, Japan",
+    "why": "A veteran left-back with a distinguished European career spanning Inter Milan and Galatasaray, Nagatomo holds 146 caps making him Japan's second-most capped player. At 39, he is the first Japanese footballer selected for five consecutive major tournaments from 2010 to Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Tsuyoshi Watanabe",
+    "espnId": 276279,
+    "position": "Centre-back",
+    "club": "Feyenoord (Eredivisie, Netherlands)",
+    "hometown": "Koshigaya, Japan",
+    "why": "Watanabe began his career at FC Tokyo in 2018 before gaining European experience at Kortrijk and KAA Gent in Belgium. He signed with Dutch giants Feyenoord in 2025 and has established himself as a dependable centre-back for both club and country.",
+    "number": 16
+   },
+   {
+    "name": "Ayumu Seko",
+    "espnId": 258270,
+    "position": "Left-back",
+    "club": "Le Havre (Ligue 1, France)",
+    "hometown": "Osaka, Japan",
+    "why": "Seko came through the Cerezo Osaka academy and won the J.League Best Young Player Award in 2020. After a move to Swiss club Grasshopper Club Zurich, he became Le Havre's first-ever Japanese player in 2025 and has been a consistent presence in their backline.",
+    "number": 20
+   },
+   {
+    "name": "Hiroki Ito",
+    "espnId": 97111,
+    "position": "Centre-back",
+    "club": "Bayern Munich (Bundesliga, Germany)",
+    "hometown": "Hamamatsu, Japan",
+    "why": "Ito started at Jubilo Iwata before impressing at VfB Stuttgart, where his performances attracted the attention of Bayern Munich, who activated his release clause of roughly 30 million euros in 2024. He brings composure and passing quality to the heart of Japan's defence at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Takehiro Tomiyasu",
+    "espnId": 265964,
+    "position": "Right-back",
+    "club": "Ajax (Eredivisie, Netherlands)",
+    "hometown": "Fukuoka, Japan",
+    "why": "Tomiyasu began at Avispa Fukuoka before earning moves to Sint-Truiden and Bologna in Serie A, where his versatility caught Arsenal's eye. After several seasons in the Premier League, the adaptable defender who can play across the backline joined Ajax ahead of the 2025-26 season.",
+    "number": 22
+   },
+   {
+    "name": "Junnosuke Suzuki",
+    "espnId": 333663,
+    "position": "Centre-back",
+    "club": "Copenhagen (Danish Superliga, Denmark)",
+    "hometown": "Kakamigahara, Japan",
+    "why": "Suzuki attended Teikyo University Kani High School before joining J1 League side Shonan Bellmare in 2022. He signed a five-year deal with FC Copenhagen in July 2025 and earned his place in the Football 2026 squad at just 22 years old.",
+    "number": 25
+   },
+   {
+    "name": "Ao Tanaka",
+    "espnId": 253173,
+    "position": "Central midfielder",
+    "club": "Leeds United (Premier League, England)",
+    "hometown": "Kawasaki, Japan",
+    "why": "Tanaka came through Kawasaki Frontale's academy and won the 2019 J.League Rookie of the Year award before moving to Fortuna Dusseldorf in Germany. He joined Leeds United in 2024 and played a crucial role in their Championship title victory and promotion to the Premier League.",
+    "number": 7
+   },
+   {
+    "name": "Junya Ito",
+    "espnId": 219350,
+    "position": "Right winger",
+    "club": "Genk (Pro League, Belgium)",
+    "hometown": "Yokosuka, Japan",
+    "why": "Ito is a pacy winger who gained prominence at Kashiwa Reysol before moving to KRC Genk, where he won the Belgian First Division A title. After a spell at Stade de Reims in Ligue 1, he returned to Genk in August 2025 and remains one of Japan's most dangerous attacking threats.",
+    "number": 14
+   },
+   {
+    "name": "Yuito Suzuki",
+    "espnId": 303031,
+    "position": "Attacking midfielder",
+    "club": "Freiburg (Bundesliga, Germany)",
+    "hometown": "Hayama, Japan",
+    "why": "Suzuki graduated from Ichiritsu Funabashi High School and began at Shimizu S-Pulse before thriving at Danish club Brondby with 24 goals and 16 assists in 70 appearances. He joined SC Freiburg in July 2025 and helped them reach the Europa League final in his debut season.",
+    "number": 17
+   },
+   {
+    "name": "Keito Nakamura",
+    "espnId": 265953,
+    "position": "Left winger",
+    "club": "Reims (Ligue 1, France)",
+    "hometown": "Abiko, Japan",
+    "why": "Nakamura joined Gamba Osaka at age 17 before moving to Austrian club LASK in 2021, where he caught the eye of French scouts. He transferred to Stade de Reims in 2023 and has become a regular for Japan, scoring 11 goals in 28 caps.",
+    "number": 13
+   },
+   {
+    "name": "Kaishu Sano",
+    "espnId": 357030,
+    "position": "Defensive midfielder",
+    "club": "Mainz 05 (Bundesliga, Germany)",
+    "hometown": "Tsuyama, Japan",
+    "why": "Sano is a defensive midfielder who began at FC Machida Zelvia before moving to Kashima Antlers, where he refined his ball-winning skills. He joined Bundesliga club Mainz 05 in 2024 and has quickly adapted to the physicality of German football.",
+    "number": 24
+   },
+   {
+    "name": "Shuto Machino",
+    "espnId": 271352,
+    "position": "Striker",
+    "club": "Borussia Monchengladbach (Bundesliga, Germany)",
+    "hometown": "Iga, Japan",
+    "why": "Machino began at Yokohama F. Marinos before establishing himself at Shonan Bellmare, where he finished second in the J1 League goalscoring rankings in 2022 with 13 goals. He moved to Germany's top division in 2023 and currently leads the line for Borussia Monchengladbach.",
+    "number": 6
+   },
+   {
+    "name": "Keisuke Goto",
+    "espnId": 346208,
+    "position": "Forward",
+    "club": "Sint-Truiden (Pro League, Belgium)",
+    "hometown": "Hamamatsu, Japan",
+    "why": "Goto began at Jubilo Iwata where he became the club's youngest-ever scorer before moving to Belgian football. At just 21, he is one of the youngest members of Japan's Football 2026 squad and represents the exciting next generation of Japanese forwards.",
+    "number": 9
+   },
+   {
+    "name": "Daizen Maeda",
+    "espnId": 286347,
+    "position": "Forward",
+    "club": "Celtic (Scottish Premiership, Scotland)",
+    "hometown": "Osaka, Japan",
+    "why": "Maeda emerged as a prolific scorer at Yokohama F. Marinos, finishing as J1 League top scorer in 2021 with 23 goals. Since joining Celtic in 2022, he has won multiple domestic titles and established himself as one of the Scottish champions' most important attacking players.",
+    "number": 11
+   },
+   {
+    "name": "Ayase Ueda",
+    "espnId": 274277,
+    "position": "Striker",
+    "club": "Feyenoord (Eredivisie, Netherlands)",
+    "hometown": "Mito, Japan",
+    "why": "Ueda began at Kashima Antlers before moving to Belgian club Cercle Brugge in 2022, scoring 22 goals in 40 matches. He joined Dutch champions Feyenoord in 2023 and has established himself as a complete striker with 18 international goals for Japan.",
+    "number": 18
+   },
+   {
+    "name": "Koki Ogawa",
+    "espnId": 238016,
+    "position": "Forward",
+    "club": "NEC Nijmegen (Eredivisie, Netherlands)",
+    "hometown": "Yokohama, Japan",
+    "why": "Ogawa began at Jubilo Iwata before gaining prominence at Yokohama FC, where he scored 26 goals in the 2022 J2 League season to earn MVP and top scorer honours. He moved to Dutch club NEC Nijmegen and has scored 11 international goals in 17 caps for Japan.",
+    "number": 19
+   },
+   {
+    "name": "Kento Shiogai",
+    "espnId": 362959,
+    "position": "Forward",
+    "club": "Wolfsburg (Bundesliga, Germany)",
+    "hometown": "Tokyo, Japan",
+    "why": "Shiogai began at Yokohama F. Marinos before transferring to NEC Nijmegen, where he scored 11 goals in 37 league appearances. He joined VfL Wolfsburg in January 2026 on a long-term contract and is one of the youngest attackers in the Football 2026 squad.",
+    "number": 26
    }
   ],
   "Jordan": [
@@ -7001,6 +12155,213 @@ window.WC_PLAYERS = {
      "Jordanian Cup (2018 with Al-Jazeera)",
      "Jordanian Super Cup (2021 with Al-Wehdat)"
     ]
+   },
+   {
+    "name": "Yazeed Abulaila",
+    "espnId": 370826,
+    "position": "Goalkeeper",
+    "club": "Al-Hussein (Jordanian Pro League, Jordan)",
+    "hometown": "Amman, Jordan",
+    "why": "Abulaila is the first-choice goalkeeper for Jordan's national team and a key figure at Al-Hussein SC. He was instrumental in Jordan's historic run to the 2024 AFC Asian Cup final, keeping crucial clean sheets throughout the tournament.",
+    "number": 1
+   },
+   {
+    "name": "Noor Bani Attiah",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Al-Faisaly (Jordanian Pro League, Jordan)",
+    "hometown": "Amman, Jordan",
+    "why": "Bani Attiah serves as a backup goalkeeper for Jordan, plying his trade at Al-Faisaly, one of the most decorated clubs in Jordanian football. He provides experienced depth behind Abulaila in the Football 2026 squad.",
+    "number": 12
+   },
+   {
+    "name": "Abdallah Al-Fakhouri",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Al-Wehdat (Jordanian Pro League, Jordan)",
+    "hometown": "Amman, Jordan",
+    "why": "Al-Fakhouri is a talented goalkeeper at Al-Wehdat, one of Jordan's most popular and successful clubs. He rounds out the goalkeeping contingent for Jordan's historic Football 2026 campaign.",
+    "number": 22
+   },
+   {
+    "name": "Mohammad Abu Hasheesh",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al-Karma (Jordanian Pro League, Jordan)",
+    "hometown": "Amman, Jordan",
+    "why": "Abu Hasheesh is a steady centre-back who plays for Al-Karma in the Jordanian Pro League. He has been a reliable presence in Jordan's defensive setup through their qualification campaign for Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Abdallah Nasib",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al-Zawraa (Iraqi Premier League, Iraq)",
+    "hometown": "Amman, Jordan",
+    "why": "Nasib is a centre-back who took his talents abroad to Al-Zawraa in Iraq's top division, gaining experience in competitive regional football. He brings physicality and aerial presence to Jordan's backline at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Husam Abu Dahab",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al-Faisaly (Jordanian Pro League, Jordan)",
+    "hometown": "Amman, Jordan",
+    "why": "Abu Dahab is a dependable defender at Al-Faisaly who has earned his place in the national team through consistent performances in the Jordanian Pro League. He was part of the squad that reached the 2024 AFC Asian Cup final.",
+    "number": 4
+   },
+   {
+    "name": "Mohammad Abualnadi",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Selangor (Malaysian Super League, Malaysia)",
+    "hometown": "Amman, Jordan",
+    "why": "Abualnadi is one of Jordan's players plying his trade in Southeast Asian football with Malaysian club Selangor. His experience playing abroad brings tactical versatility to Jordan's defensive options at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Saleem Obaid",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Al-Hussein (Jordanian Pro League, Jordan)",
+    "hometown": "Amman, Jordan",
+    "why": "Obaid is a left-back from Al-Hussein SC who has been a regular in Jordan's national team setup. He provides width and defensive stability on the left flank for the Football 2026 squad.",
+    "number": 17
+   },
+   {
+    "name": "Mohammad Taha",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al-Hussein (Jordanian Pro League, Jordan)",
+    "hometown": "Amman, Jordan",
+    "why": "Taha is a centre-back from Al-Hussein SC who has been a consistent performer in the Jordanian Pro League. His partnership with fellow club defenders has translated well to the national team at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Saed Al-Rosan",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Al-Hussein (Jordanian Pro League, Jordan)",
+    "hometown": "Amman, Jordan",
+    "why": "Al-Rosan is a defender from Al-Hussein SC who has been part of Jordan's national team through their qualification for Football 2026. He is a versatile fullback who can operate on either flank.",
+    "number": 19
+   },
+   {
+    "name": "Mohannad Abu Taha",
+    "espnId": 370845,
+    "position": "Centre-back",
+    "club": "Al-Quwa Al-Jawiya (Iraqi Premier League, Iraq)",
+    "hometown": "Amman, Jordan",
+    "why": "Abu Taha is a centre-back who plays for Al-Quwa Al-Jawiya in Iraq's top division, one of the country's most storied clubs. His experience in competitive regional football makes him a valuable defensive option for Jordan at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Ehsan Haddad",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al-Hussein (Jordanian Pro League, Jordan)",
+    "hometown": "Amman, Jordan",
+    "why": "Haddad is a defender at Al-Hussein SC and one of several players from the club forming the backbone of Jordan's squad. His familiarity with his clubmates has helped Jordan build a cohesive defensive unit for Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Anas Badawi",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al-Faisaly (Jordanian Pro League, Jordan)",
+    "hometown": "Amman, Jordan",
+    "why": "Badawi is a defender at Al-Faisaly, one of Jordan's most successful clubs with numerous league titles. He adds depth to Jordan's defensive ranks at Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Amer Jamous",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al-Zawraa (Iraqi Premier League, Iraq)",
+    "hometown": "Amman, Jordan",
+    "why": "Jamous is a midfielder who plays for Iraqi club Al-Zawraa, gaining experience in one of the region's strongest leagues. He brings energy and work rate to Jordan's midfield at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Noor Al-Rawabdeh",
+    "espnId": 370832,
+    "position": "Central midfielder",
+    "club": "Selangor (Malaysian Super League, Malaysia)",
+    "hometown": "Amman, Jordan",
+    "why": "Al-Rawabdeh is a midfielder who plays alongside compatriot Abualnadi at Malaysian club Selangor. He has been a consistent performer for Jordan's national team and brings creative passing ability to the Football 2026 midfield.",
+    "number": 8
+   },
+   {
+    "name": "Rajaei Ayed",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al-Hussein (Jordanian Pro League, Jordan)",
+    "hometown": "Amman, Jordan",
+    "why": "Ayed is a central midfielder at Al-Hussein SC who has been a key part of Jordan's squad. He provides a link between defence and attack with his passing range and positional awareness at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Ibrahim Saadeh",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al-Karma (Jordanian Pro League, Jordan)",
+    "hometown": "Amman, Jordan",
+    "why": "Saadeh is a midfielder at Al-Karma who has earned his place in Jordan's national team through strong domestic performances. He brings tireless running and tactical discipline to the Football 2026 squad.",
+    "number": 15
+   },
+   {
+    "name": "Nizar Al-Rashdan",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Qatar SC (Qatar Stars League, Qatar)",
+    "hometown": "Amman, Jordan",
+    "why": "Al-Rashdan is one of Jordan's players competing in the Gulf region with Qatari club Qatar SC. His experience in the Qatar Stars League has raised his level and he brings that quality to Jordan's Football 2026 midfield.",
+    "number": 21
+   },
+   {
+    "name": "Mohammad Al-Dawoud",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al-Wehdat (Jordanian Pro League, Jordan)",
+    "hometown": "Amman, Jordan",
+    "why": "Al-Dawoud is a midfielder at Al-Wehdat, one of Jordan's most popular clubs with a massive fanbase. He has been part of Jordan's journey through qualification and brings experience to the Football 2026 squad.",
+    "number": 25
+   },
+   {
+    "name": "Mohammad Abu Zrayq",
+    "espnId": 310497,
+    "position": "Forward",
+    "club": "Raja Casablanca (Botola Pro, Morocco)",
+    "hometown": "Amman, Jordan",
+    "why": "Abu Zrayq is a forward who has taken his talents to North Africa with Moroccan giants Raja Casablanca. He is one of Jordan's most experienced international forwards and a key attacking option at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Odeh Fakhoury",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Pyramids (Egyptian Premier League, Egypt)",
+    "hometown": "Amman, Jordan",
+    "why": "Fakhoury is a forward playing for Pyramids FC in Egypt, one of the most ambitious clubs in African football. His goal-scoring instincts and experience in a top regional league make him a vital attacking threat for Jordan at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Mahmoud Al-Mardi",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Al-Hussein (Jordanian Pro League, Jordan)",
+    "hometown": "Amman, Jordan",
+    "why": "Al-Mardi is a striker at Al-Hussein SC who has been a prolific scorer in the Jordanian Pro League. He leads the line for both his club and country with his physicality and finishing ability at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Ali Azaizeh",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Al-Shabab (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Amman, Jordan",
+    "why": "Azaizeh is one of Jordan's highest-profile players, competing in the Saudi Pro League with Al-Shabab. His pace and directness in attack make him a dangerous option for Jordan in their Football 2026 campaign.",
+    "number": 24
    }
   ],
   "Korea Republic": [
@@ -7344,6 +12705,186 @@ window.WC_PLAYERS = {
     "honors": [
      "K League 1 (2021, Jeonbuk Hyundai Motors)"
     ]
+   },
+   {
+    "name": "Kim Seung-gyu",
+    "espnId": 160428,
+    "position": "Goalkeeper",
+    "club": "FC Tokyo (J1 League, Japan)",
+    "hometown": "Incheon, South Korea",
+    "why": "Kim is a veteran goalkeeper with over 80 caps for South Korea who has served as the national team's number one for over a decade. He played in Japan's J1 League at Vissel Kobe before joining FC Tokyo and brings invaluable experience to the Football 2026 squad.",
+    "number": 1
+   },
+   {
+    "name": "Song Bum-keun",
+    "espnId": 286307,
+    "position": "Goalkeeper",
+    "club": "Jeonbuk Hyundai Motors (K League 1, South Korea)",
+    "hometown": "Seoul, South Korea",
+    "why": "Song is a promising young goalkeeper at Jeonbuk Hyundai Motors who has risen through the ranks to become part of South Korea's senior squad. He provides strong competition for the number one jersey and represents the future of Korean goalkeeping.",
+    "number": 12
+   },
+   {
+    "name": "Jo Hyeon-woo",
+    "espnId": 175028,
+    "position": "Goalkeeper",
+    "club": "Ulsan HD (K League 1, South Korea)",
+    "hometown": "Changwon, South Korea",
+    "why": "Jo became a national hero with his outstanding performances at the 2018 tournament in Russia, including a clean sheet in the famous 2-0 victory over Germany. He has been a mainstay at Ulsan HD and brings big-game experience to the Football 2026 squad.",
+    "number": 21
+   },
+   {
+    "name": "Lee Han-beom",
+    "espnId": 297788,
+    "position": "Centre-back",
+    "club": "FC Midtjylland (Danish Superliga, Denmark)",
+    "hometown": "Seoul, South Korea",
+    "why": "Lee is a young centre-back who has attracted interest from top European clubs including Liverpool, Chelsea, and Newcastle during his time at FC Midtjylland. His composure on the ball and defensive reading of the game have made him one of South Korea's most exciting defensive prospects at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Kim Tae-hyeon",
+    "espnId": 286268,
+    "position": "Centre-back",
+    "club": "Kashima Antlers (J1 League, Japan)",
+    "hometown": "Seoul, South Korea",
+    "why": "Kim is a South Korean centre-back who plays in Japan's J1 League with Kashima Antlers. His experience in one of Asia's top leagues has helped him develop into a reliable defender for the national team at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Lee Tae-seok",
+    "espnId": 297270,
+    "position": "Left-back",
+    "club": "Austria Wien (Austrian Bundesliga, Austria)",
+    "hometown": "Seoul, South Korea",
+    "why": "Lee is a versatile defender who can play at left-back or left wing, having made the move to Europe with Austria Wien from Pohang Steelers in 2025. He brings pace and attacking intent from the defensive line for South Korea at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Cho Wi-je",
+    "espnId": 3098209,
+    "position": "Centre-back",
+    "club": "Jeonbuk Hyundai Motors (K League 1, South Korea)",
+    "hometown": "Seoul, South Korea",
+    "why": "Cho is a centre-back at Jeonbuk Hyundai Motors who was called up as a replacement for the injured Cho Yu-min. He made his senior debut ahead of Football 2026 and seized the opportunity to earn his place in the squad.",
+    "number": 14
+   },
+   {
+    "name": "Kim Moon-hwan",
+    "espnId": 253138,
+    "position": "Right-back",
+    "club": "Daejeon Hana Citizen (K League 1, South Korea)",
+    "hometown": "Seoul, South Korea",
+    "why": "Kim is an experienced right-back with over 50 international caps who previously starred at Busan IPark and Jeonbuk Motors before joining Daejeon Hana Citizen. He brings pace and defensive solidity to South Korea's right flank at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Park Jin-seob",
+    "espnId": 336178,
+    "position": "Defensive midfielder",
+    "club": "Zhejiang Professional (Chinese Super League, China)",
+    "hometown": "Seoul, South Korea",
+    "why": "Park is a deep-lying playmaker who plays in the Chinese Super League with Zhejiang Professional. He brings a calm presence in midfield and was deployed as a tactical option for South Korea during Football 2026 group stage matches.",
+    "number": 16
+   },
+   {
+    "name": "Seol Young-woo",
+    "espnId": 302793,
+    "position": "Centre-back",
+    "club": "Red Star Belgrade (Serbian SuperLiga, Serbia)",
+    "hometown": "Seoul, South Korea",
+    "why": "Seol made the move to Europe with Serbian giants Red Star Belgrade, gaining experience in European competition. His aerial ability and defensive awareness have earned him a place in South Korea's Football 2026 squad.",
+    "number": 22
+   },
+   {
+    "name": "Jens Castrop",
+    "espnId": 304793,
+    "position": "Centre-back",
+    "club": "Borussia Monchengladbach (Bundesliga, Germany)",
+    "hometown": "Dusseldorf, Germany",
+    "why": "Castrop became the first foreign-born, mixed-race footballer in South Korea's history after making his debut in 2024. Born in Dusseldorf to a Korean mother, the physical and versatile defender signed for Borussia Monchengladbach from Germany's second division and can play in defence or midfield.",
+    "number": 23
+   },
+   {
+    "name": "Lee Gi-hyuk",
+    "espnId": 345769,
+    "position": "Central midfielder",
+    "club": "Gangwon FC (K League 1, South Korea)",
+    "hometown": "Seoul, South Korea",
+    "why": "Lee is a midfielder from Gangwon FC who earned his Football 2026 call-up through consistent performances in the K League. Despite listed as a midfielder in the squad, his versatility allows him to fill multiple positions across the pitch.",
+    "number": 3
+   },
+   {
+    "name": "Paik Seung-ho",
+    "espnId": 265998,
+    "position": "Central midfielder",
+    "club": "Birmingham City (Championship, England)",
+    "hometown": "Seoul, South Korea",
+    "why": "Paik is a technically gifted midfielder who spent time in La Liga with Girona before moving to Birmingham City in England's Championship. He brings creativity and vision to South Korea's midfield and has become a regular in the national team setup.",
+    "number": 8
+   },
+   {
+    "name": "Lee Jae-sung",
+    "espnId": 217319,
+    "position": "Attacking midfielder",
+    "club": "Mainz 05 (Bundesliga, Germany)",
+    "hometown": "Ulsan, South Korea",
+    "why": "Lee is one of South Korea's most experienced European-based players, having played in the Bundesliga with Holstein Kiel and Mainz 05. A creative attacking midfielder with an eye for goal, he brings leadership and technical quality to the Football 2026 squad.",
+    "number": 10
+   },
+   {
+    "name": "Bae Jun-ho",
+    "espnId": 346199,
+    "position": "Central midfielder",
+    "club": "Stoke City (Championship, England)",
+    "hometown": "Suwon, South Korea",
+    "why": "Bae is a young South Korean midfielder who plays in England's Championship with Stoke City. His energy and box-to-box running ability have made him a promising talent for South Korea's midfield at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Yang Hyun-jun",
+    "espnId": 327446,
+    "position": "Left winger",
+    "club": "Celtic (Scottish Premiership, Scotland)",
+    "hometown": "Seoul, South Korea",
+    "why": "Yang is a skilful winger who made the move from Gangwon FC to Celtic, following in the footsteps of compatriots at the Scottish giants. His pace and dribbling ability make him a dangerous attacking option for South Korea at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Kim Jin-gyu",
+    "espnId": 90721,
+    "position": "Defensive midfielder",
+    "club": "Jeonbuk Hyundai Motors (K League 1, South Korea)",
+    "hometown": "Seoul, South Korea",
+    "why": "Kim is a veteran midfielder at Jeonbuk Motors who scored the crucial goal in South Korea's 2-0 victory over Iraq in June 2025 that secured qualification for Football 2026. His experience and big-game mentality make him a valuable squad member.",
+    "number": 24
+   },
+   {
+    "name": "Eom Ji-sung",
+    "espnId": 356651,
+    "position": "Attacking midfielder",
+    "club": "Swansea City (Championship, England)",
+    "hometown": "Seoul, South Korea",
+    "why": "Eom is a young attacking midfielder who plays in England's Championship with Swansea City. His technical skills and creativity in the final third have earned him a place in South Korea's Football 2026 squad.",
+    "number": 25
+   },
+   {
+    "name": "Lee Dong-gyeong",
+    "espnId": 271702,
+    "position": "Central midfielder",
+    "club": "Ulsan HD (K League 1, South Korea)",
+    "hometown": "Ulsan, South Korea",
+    "why": "Lee is an experienced midfielder at Ulsan HD who has had stints in European football with Schalke 04 and Hansa Rostock in Germany. He brings creativity and composure to South Korea's midfield at Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Oh Hyeon-gyu",
+    "espnId": 309018,
+    "position": "Striker",
+    "club": "Besiktas (Super Lig, Turkey)",
+    "hometown": "Seoul, South Korea",
+    "why": "Oh is a powerful young striker who made his name at Celtic before moving to Turkish giants Besiktas. As the sole recognized striker in South Korea's Football 2026 squad, he carries the goalscoring responsibility with his physical presence and finishing ability.",
+    "number": 18
    }
   ],
   "Mexico": [
@@ -7690,6 +13231,186 @@ window.WC_PLAYERS = {
      "CONCACAF Nations League (2025)",
      "MLS Cup (2022, Seattle Sounders)"
     ]
+   },
+   {
+    "name": "Raúl Rangel",
+    "espnId": 371041,
+    "position": "Goalkeeper",
+    "club": "Guadalajara (Liga MX, Mexico)",
+    "hometown": "Guadalajara, Mexico",
+    "why": "Rangel emerged as Chivas' first-choice goalkeeper and earned his place as Mexico's number one for Football 2026. His shot-stopping ability and command of his penalty area have made him a standout in Liga MX.",
+    "number": 1
+   },
+   {
+    "name": "Carlos Acevedo",
+    "espnId": 272619,
+    "position": "Goalkeeper",
+    "club": "Santos Laguna (Liga MX, Mexico)",
+    "hometown": "Torreon, Mexico",
+    "why": "Acevedo is an experienced goalkeeper at Santos Laguna who has been a regular in Mexico's international setup since 2022. He provides dependable backup goalkeeping for the Football 2026 squad with his reflexes and distribution.",
+    "number": 12
+   },
+   {
+    "name": "Jorge Sánchez",
+    "espnId": 224027,
+    "position": "Right-back",
+    "club": "PAOK (Super League, Greece)",
+    "hometown": "Mexico City, Mexico",
+    "why": "Sanchez is an experienced right-back who previously played at Club America and Ajax before moving to Greek club PAOK. He has been a regular in Mexico's national team for several years, bringing defensive discipline and attacking intent to the Football 2026 squad.",
+    "number": 2
+   },
+   {
+    "name": "César Montes",
+    "espnId": 241403,
+    "position": "Centre-back",
+    "club": "Lokomotiv Moscow (Russian Premier League, Russia)",
+    "hometown": "Hermosillo, Mexico",
+    "why": "Montes is a tall centre-back who rose to prominence at Monterrey before gaining European experience at Almeria and Lokomotiv Moscow. His aerial dominance and composure on the ball make him a key figure in Mexico's defensive line at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Johan Vásquez",
+    "espnId": 272614,
+    "position": "Centre-back",
+    "club": "Genoa (Serie A, Italy)",
+    "hometown": "Navolato, Mexico",
+    "why": "Vasquez began at Santos Laguna and Pumas before making the move to Serie A with Genoa, where he has become a first-team regular. His ability to read the game and play out from the back make him an essential part of Mexico's defence at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Israel Reyes",
+    "espnId": 290414,
+    "position": "Right-back",
+    "club": "America (Liga MX, Mexico)",
+    "hometown": "Mexico City, Mexico",
+    "why": "Reyes is a defender at Club America who has risen through the ranks to become a regular in Mexico's backline. He described playing at Football 2026 as the pinnacle of his career and has shown his quality on the international stage.",
+    "number": 15
+   },
+   {
+    "name": "Mateo Chávez",
+    "espnId": 379193,
+    "position": "Left-back",
+    "club": "AZ (Eredivisie, Netherlands)",
+    "hometown": "Guadalajara, Mexico",
+    "why": "Chavez is one of Mexico's promising young defenders who plays in the Eredivisie with AZ Alkmaar. At just 22, he has insisted Mexico have the responsibility to win their group as hosts of Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Jesús Gallardo",
+    "espnId": 176211,
+    "position": "Left-back",
+    "club": "Toluca (Liga MX, Mexico)",
+    "hometown": "Culiacan, Mexico",
+    "why": "Gallardo is one of Mexico's most experienced defenders with over 80 caps, having previously been a stalwart at Monterrey before moving to Toluca. His veteran leadership and tactical awareness make him a reliable option at left-back for Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Érik Lira",
+    "espnId": 276942,
+    "position": "Defensive midfielder",
+    "club": "Cruz Azul (Liga MX, Mexico)",
+    "hometown": "Mexico City, Mexico",
+    "why": "Lira is a defensive midfielder at Cruz Azul who previously played for Pumas UNAM. He has earned his place in Mexico's Football 2026 squad with his ball-winning ability and passing quality from deep midfield positions.",
+    "number": 6
+   },
+   {
+    "name": "Luis Romo",
+    "espnId": 241405,
+    "position": "Central midfielder",
+    "club": "Guadalajara (Liga MX, Mexico)",
+    "hometown": "Mexico City, Mexico",
+    "why": "Romo is a box-to-box midfielder at Chivas who previously played for Cruz Azul and Monterrey. He scored a key goal against South Korea during the Football 2026 group stage and has been an important part of Mexico's midfield.",
+    "number": 7
+   },
+   {
+    "name": "Álvaro Fidalgo",
+    "espnId": 272608,
+    "position": "Attacking midfielder",
+    "club": "Real Betis (La Liga, Spain)",
+    "hometown": "Madrid, Spain",
+    "why": "Fidalgo is a Spanish-born midfielder who became a Mexican citizen after excelling at Club America in Liga MX. He earned a move to La Liga's Real Betis and brings technical quality and creative playmaking to Mexico's attack at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Orbelín Pineda",
+    "espnId": 209437,
+    "position": "Attacking midfielder",
+    "club": "AEK Athens (Super League, Greece)",
+    "hometown": "Mexico City, Mexico",
+    "why": "Pineda is a creative midfielder who rose to prominence at Guadalajara and Cruz Azul before moving to Europe with Celta Vigo and AEK Athens. His technical ability and versatility across attacking positions make him a valuable option for Mexico at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Gilberto Mora",
+    "espnId": 389575,
+    "position": "Attacking midfielder",
+    "club": "Tijuana (Liga MX, Mexico)",
+    "hometown": "Tijuana, Mexico",
+    "why": "At just 17, Mora is the youngest player at Football 2026 and has been compared to Lamine Yamal for his precocious talent. He became the youngest-ever scorer in Liga MX history at 15 and recently signed a new contract with Tijuana amid interest from Real Madrid and Manchester City.",
+    "number": 19
+   },
+   {
+    "name": "Luis Chávez",
+    "espnId": 241404,
+    "position": "Central midfielder",
+    "club": "Dynamo Moscow (Russian Premier League, Russia)",
+    "hometown": "El Paso, United States",
+    "why": "Chavez is a left-footed midfielder renowned for his long-range shooting and set-piece delivery. After stints at Pachuca and Dynamo Moscow, he brings a powerful left foot and dead-ball expertise to Mexico's midfield at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Brian Gutiérrez",
+    "espnId": 303577,
+    "position": "Central midfielder",
+    "club": "Guadalajara (Liga MX, Mexico)",
+    "hometown": "Chicago, United States",
+    "why": "Gutierrez grew up in Chicago and spent five seasons at the Chicago Fire before fulfilling a childhood dream by signing with Chivas. A dual-national who switched from the United States to Mexico, he started in the Football 2026 opener with a 2-0 victory over South Africa.",
+    "number": 26
+   },
+   {
+    "name": "Armando González",
+    "espnId": 376110,
+    "position": "Striker",
+    "club": "Guadalajara (Liga MX, Mexico)",
+    "hometown": "Guadalajara, Mexico",
+    "why": "Known as 'Hormiga', Gonzalez was twice rejected by Chivas before finally making the first team and becoming their top scorer. He won the Liga MX scoring title in the Apertura 2025 and has extended his contract with the club for five more years.",
+    "number": 14
+   },
+   {
+    "name": "Julián Quiñones",
+    "espnId": 219302,
+    "position": "Forward",
+    "club": "Al-Qadsiah (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Cali, Colombia",
+    "why": "Quinones is a Colombian-born forward who became a naturalized Mexican citizen after years in Liga MX with Tigres UANL and Club America. His pace and directness on the wing provide a different dimension to Mexico's attack at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "César Huerta",
+    "espnId": 265969,
+    "position": "Left winger",
+    "club": "Anderlecht (Pro League, Belgium)",
+    "hometown": "Zapopan, Mexico",
+    "why": "Known as 'Chino', Huerta excelled at Pumas UNAM before becoming one of the few Mexican players in European football by joining Belgian club Anderlecht. He takes on the responsibility of opening doors for more Mexican players in European football at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Guillermo Martínez",
+    "espnId": 193566,
+    "position": "Striker",
+    "club": "Pumas (Liga MX, Mexico)",
+    "hometown": "Mexico City, Mexico",
+    "why": "Martinez is a tall, physical striker at Pumas UNAM who at 31 brings experience and aerial threat to Mexico's attack. His hold-up play and finishing ability make him a useful option off the bench at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Roberto Alvarado",
+    "espnId": 194308,
+    "position": "Forward",
+    "club": "Guadalajara (Liga MX, Mexico)",
+    "hometown": "Irapuato, Mexico",
+    "why": "Known as 'Piojo', Alvarado is a versatile attacker who previously starred at Cruz Azul before joining Chivas. His dribbling ability and creativity in the final third make him a dangerous option for Mexico's attack at Football 2026.",
+    "number": 25
    }
   ],
   "Morocco": [
@@ -8042,6 +13763,195 @@ window.WC_PLAYERS = {
      "Coppa Italia runner-up (2023 with Fiorentina)",
      "Europa Conference League runner-up (2023 with Fiorentina)"
     ]
+   },
+   {
+    "name": "Munir El Kajoui",
+    "espnId": 206232,
+    "position": "Goalkeeper",
+    "club": "RS Berkane (Botola Pro, Morocco)",
+    "hometown": "Melilla, Spain",
+    "why": "Born in the Spanish autonomous city of Melilla to Moroccan parents, El Kajoui has built a long career across Spain, Turkey, and Saudi Arabia before returning to Moroccan football with RS Berkane. He captained Berkane to the Botola Pro title and earned African Goalkeeper of the Year nominations.",
+    "number": 12
+   },
+   {
+    "name": "Ahmed Reda Tagnaouti",
+    "espnId": 195240,
+    "position": "Goalkeeper",
+    "club": "AS FAR (Botola Pro, Morocco)",
+    "hometown": "Fes, Morocco",
+    "why": "Born in Fes, Tagnaouti came through the Mohammed VI Football Academy before establishing himself as one of Morocco's top goalkeepers at Wydad Athletic Club, winning five Botola Pro titles and the 2021-22 CAF Champions League. He now plays for military club AS FAR.",
+    "number": 22
+   },
+   {
+    "name": "Marwane Saadane",
+    "espnId": 230430,
+    "position": "Centre-back",
+    "club": "Al-Fateh (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Mohammedia, Morocco",
+    "why": "Saadane built his reputation at FUS Rabat before moving to Turkey and then to Saudi Arabia's Al-Fateh, where he has surpassed 200 appearances. A versatile defender comfortable at centre-back and defensive midfield, he was called up to Morocco's Football 2026 squad as a late replacement for the injured Nayef Aguerd.",
+    "number": 5
+   },
+   {
+    "name": "Zakaria El Ouahdi",
+    "espnId": 325024,
+    "position": "Right-back",
+    "club": "Genk (Pro League, Belgium)",
+    "hometown": "Hoboken, Belgium",
+    "why": "Born in Belgium's Antwerp Province to Moroccan parents, El Ouahdi rose through the Belgian lower divisions before signing with Genk in 2023. He chose to represent Morocco internationally and was named best right-back at the 2023 U-23 Africa Cup of Nations.",
+    "number": 13
+   },
+   {
+    "name": "Issa Diop",
+    "espnId": 230963,
+    "position": "Centre-back",
+    "club": "Fulham (Premier League, England)",
+    "hometown": "Toulouse, France",
+    "why": "Born in Toulouse to a Senegalese father and Moroccan mother, Diop is a former France youth international who switched allegiance to Morocco. Standing 1.94m tall, he captained Toulouse before a club-record transfer to West Ham United in 2018 and a subsequent move to Fulham.",
+    "number": 14
+   },
+   {
+    "name": "Chadi Riad",
+    "espnId": 307870,
+    "position": "Centre-back",
+    "club": "Crystal Palace (Premier League, England)",
+    "hometown": "Palma de Mallorca, Spain",
+    "why": "Born in Palma de Mallorca to Moroccan parents, Riad graduated from Barcelona's famed La Masia academy before a loan to Real Betis and a permanent move to Crystal Palace. He played the full 90 minutes in Palace's Conference League final victory and was selected for Morocco's Football 2026 squad.",
+    "number": 18
+   },
+   {
+    "name": "Youssef Belammari",
+    "espnId": 393692,
+    "position": "Left-back",
+    "club": "Al Ahly (Egyptian Premier League, Egypt)",
+    "hometown": "Casablanca, Morocco",
+    "why": "Born in Casablanca, Belammari became a key player at Raja Club Athletic before signing with Egyptian giants Al Ahly in early 2026. He earned his Football 2026 selection after helping Morocco win the 2025 African Nations Championship.",
+    "number": 19
+   },
+   {
+    "name": "Redouane Halhal",
+    "espnId": 328300,
+    "position": "Centre-back",
+    "club": "Mechelen (Pro League, Belgium)",
+    "hometown": "Montpellier, France",
+    "why": "Born in Montpellier, Halhal developed at Montpellier HSC's academy before joining Atletico Madrid B and then Belgian club Mechelen. He established himself at Mechelen in the 2025-26 season and earned his Football 2026 selection at age 23.",
+    "number": 25
+   },
+   {
+    "name": "Anass Salah-Eddine",
+    "espnId": 297296,
+    "position": "Left-back",
+    "club": "PSV (Eredivisie, Netherlands)",
+    "hometown": "Amsterdam, Netherlands",
+    "why": "Born in Amsterdam to Moroccan parents, Salah-Eddine came through the Ajax academy and won the 2019 UEFA European Under-17 Championship with the Netherlands before switching allegiance to Morocco. After stints at Ajax, FC Twente, and Roma, he joined Eredivisie champions PSV on loan.",
+    "number": 26
+   },
+   {
+    "name": "Ayyoub Bouaddi",
+    "espnId": 373927,
+    "position": "Central midfielder",
+    "club": "Lille (Ligue 1, France)",
+    "hometown": "Senlis, France",
+    "why": "Born in Senlis and raised in nearby Creil, Bouaddi is an 18-year-old midfield prodigy who broke Eden Hazard's record as the youngest player to make 50 Ligue 1 appearances for Lille. A former France youth international of Moroccan origin, he switched allegiance to Morocco and immediately became a key figure in the Football 2026 midfield.",
+    "number": 6
+   },
+   {
+    "name": "Azzedine Ounahi",
+    "espnId": 291552,
+    "position": "Central midfielder",
+    "club": "Girona (La Liga, Spain)",
+    "hometown": "Casablanca, Morocco",
+    "why": "Born in Casablanca, Ounahi emerged as a breakout star during Morocco's historic 2022 tournament run in Qatar, starting all seven matches as the Atlas Lions became the first African nation to reach a semifinal. After spells at Strasbourg and Marseille, he signed with La Liga club Girona in 2025.",
+    "number": 8
+   },
+   {
+    "name": "Ismael Saibari",
+    "espnId": 304572,
+    "position": "Attacking midfielder",
+    "club": "PSV (Eredivisie, Netherlands)",
+    "hometown": "Terrassa, Spain",
+    "why": "Born in Terrassa, Spain, to a Moroccan family, Saibari holds triple Moroccan, Spanish, and Belgian citizenship. He was named Eredivisie Player of the Year for 2025-26 with PSV and has been prolific at Football 2026, scoring in Morocco's first three group-stage matches.",
+    "number": 11
+   },
+   {
+    "name": "Samir El Mourabet",
+    "espnId": 378491,
+    "position": "Central midfielder",
+    "club": "Strasbourg (Ligue 1, France)",
+    "hometown": "Strasbourg, France",
+    "why": "Born in Strasbourg, El Mourabet developed through the local club's academy before signing his first professional contract in 2024 at age 18. Elegant on the ball with exceptional passing range, he earned his first senior call-up for Football 2026 as one of the youngest players in Morocco's squad.",
+    "number": 15
+   },
+   {
+    "name": "Neil El Aynaoui",
+    "espnId": 323807,
+    "position": "Central midfielder",
+    "club": "Roma (Serie A, Italy)",
+    "hometown": "Nancy, France",
+    "why": "Born in Nancy to Moroccan parents, El Aynaoui rose through the ranks at AS Nancy and impressed at RC Lens before earning a 23-million-euro move to AS Roma in 2025. His father is former professional tennis player Younes El Aynaoui, and Neil has quickly established himself in Morocco's Football 2026 midfield.",
+    "number": 24
+   },
+   {
+    "name": "Chemsdine Talbi",
+    "espnId": 360062,
+    "position": "Right winger",
+    "club": "Sunderland (Premier League, England)",
+    "hometown": "Sambreville, Belgium",
+    "why": "Born in Sambreville, Belgium, to a Belgian mother and Moroccan father, Talbi developed at Club Brugge before signing with newly promoted Sunderland for a reported 16.5 million pounds. A former Belgium youth international, he chose to represent Morocco and scored dramatic winners against both Chelsea and Newcastle in the Premier League.",
+    "number": 7
+   },
+   {
+    "name": "Soufiane Rahimi",
+    "espnId": 276139,
+    "position": "Forward",
+    "club": "Al Ain (UAE Pro League, UAE)",
+    "hometown": "Casablanca, Morocco",
+    "why": "Born in Casablanca, Rahimi started his career at Raja CA before joining UAE's Al Ain, where he became a continental star by winning the 2024 AFC Champions League MVP and top scorer awards with 13 goals. He also holds the Olympic record for scoring in all six matches of a single edition.",
+    "number": 9
+   },
+   {
+    "name": "Brahim Diaz",
+    "espnId": 246532,
+    "position": "Attacking midfielder",
+    "club": "Real Madrid (La Liga, Spain)",
+    "hometown": "Malaga, Spain",
+    "why": "Born in Malaga to a Spanish mother and Moroccan father, Diaz moved to Manchester City's academy before signing with Real Madrid in 2019. After three successful loan seasons at AC Milan, he returned to Madrid as a first-team regular and switched his international allegiance to Morocco.",
+    "number": 10
+   },
+   {
+    "name": "Yassine Gessime",
+    "espnId": 379012,
+    "position": "Left winger",
+    "club": "Strasbourg (Ligue 1, France)",
+    "hometown": "Salon-de-Provence, France",
+    "why": "Born in Salon-de-Provence and raised in Avignon, Gessime rose through France's lower divisions before signing with Strasbourg in January 2026. At Football 2026, he became the youngest Moroccan player ever to score in the tournament, netting in the 4-2 victory over Haiti.",
+    "number": 16
+   },
+   {
+    "name": "Amine Sbai",
+    "espnId": 314388,
+    "position": "Left winger",
+    "club": "Angers (Ligue 1, France)",
+    "hometown": "Sidi Kacem, Morocco",
+    "why": "Born in the northwestern Moroccan city of Sidi Kacem, Sbai took an unconventional path through France's lower divisions at Ales, Sete, and Grenoble before landing at Angers. He was a late call-up to Morocco's Football 2026 squad as a replacement for the injured Abdessamad Ezzalzouli.",
+    "number": 17
+   },
+   {
+    "name": "Ayoub El Kaabi",
+    "espnId": 269562,
+    "position": "Striker",
+    "club": "Olympiacos (Super League, Greece)",
+    "hometown": "Casablanca, Morocco",
+    "why": "Born in Casablanca's Derb Milla neighbourhood, El Kaabi left school at 15 and worked as a carpenter before launching his professional career. He became a legend at Olympiacos by scoring the extra-time winner in the 2024 UEFA Conference League final, the club's first major European trophy, and was the tournament's top scorer with 11 goals.",
+    "number": 20
+   },
+   {
+    "name": "Ayoube Amaimouni",
+    "espnId": 416636,
+    "position": "Forward",
+    "club": "Eintracht Frankfurt (Bundesliga, Germany)",
+    "hometown": "Vic, Spain",
+    "why": "Born in Vic, Spain, to Moroccan parents, Amaimouni's family later moved to Germany where he dropped to fifth-tier football before catching the eye of Eintracht Frankfurt, who signed him in January 2026. His dynamic play earned a surprise selection to Morocco's Football 2026 squad.",
+    "number": 21
    }
   ],
   "Netherlands": [
@@ -8343,6 +14253,186 @@ window.WC_PLAYERS = {
      "Eredivisie (2021, 2022 with Ajax)",
      "KNVB Cup (2019, 2021 with Ajax)"
     ]
+   },
+   {
+    "name": "Bart Verbruggen",
+    "espnId": 305263,
+    "position": "Goalkeeper",
+    "club": "Brighton (Premier League, England)",
+    "hometown": "Leiderdorp, Netherlands",
+    "why": "Verbruggen is a young Dutch goalkeeper who moved to Brighton from Anderlecht and quickly established himself as one of the Premier League's most promising shot-stoppers. His reflexes and commanding presence earned him the Netherlands' number one jersey for Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Robin Roefs",
+    "espnId": 301449,
+    "position": "Goalkeeper",
+    "club": "Sunderland (Premier League, England)",
+    "hometown": "Venray, Netherlands",
+    "why": "Roefs joined Sunderland and has been a key figure in their promotion season, making 35 starts with 10 clean sheets in the Premier League. His performances have attracted interest from Chelsea and Liverpool, confirming his status as one of Europe's brightest young goalkeepers.",
+    "number": 13
+   },
+   {
+    "name": "Mark Flekken",
+    "espnId": 196842,
+    "position": "Goalkeeper",
+    "club": "Bayer Leverkusen (Bundesliga, Germany)",
+    "hometown": "Kerkrade, Netherlands",
+    "why": "Flekken is a veteran goalkeeper at Bayer Leverkusen who was part of their historic unbeaten Bundesliga title-winning campaign. His experience and shot-stopping ability provide a reliable backup option for the Netherlands at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Lutsharel Geertruida",
+    "espnId": 282579,
+    "position": "Right-back",
+    "club": "RB Leipzig (Bundesliga, Germany)",
+    "hometown": "Rotterdam, Netherlands",
+    "why": "Geertruida rose through the Feyenoord academy and became one of the Eredivisie's best full-backs before joining RB Leipzig in the Bundesliga. His versatility to play at right-back or centre-back makes him a valuable asset for the Netherlands at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Nathan Ake",
+    "espnId": 196831,
+    "position": "Centre-back",
+    "club": "Manchester City (Premier League, England)",
+    "hometown": "The Hague, Netherlands",
+    "why": "Ake developed at Chelsea before spells at Bournemouth and Manchester City, where he has won multiple Premier League titles. His left-footed passing and ability to carry the ball out from defence make him essential to the Netherlands' build-up play at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Jorrel Hato",
+    "espnId": 337009,
+    "position": "Left-back",
+    "club": "Chelsea (Premier League, England)",
+    "hometown": "Amsterdam, Netherlands",
+    "why": "Hato burst onto the scene as the youngest player to start a Champions League match for Ajax at just 17. After impressing at Ajax, he earned a move to Chelsea and has become one of the most exciting young defenders in European football at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Micky van de Ven",
+    "espnId": 282595,
+    "position": "Centre-back",
+    "club": "Tottenham (Premier League, England)",
+    "hometown": "Wormer, Netherlands",
+    "why": "Van de Ven is one of the fastest centre-backs in world football, known for his explosive recovery pace and ball-carrying ability. After impressing at Wolfsburg, he joined Tottenham and has become a key figure in both the Spurs and Netherlands defence at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Jan Paul van Hecke",
+    "espnId": 282583,
+    "position": "Centre-back",
+    "club": "Brighton (Premier League, England)",
+    "hometown": "Arnemuiden, Netherlands",
+    "why": "Van Hecke developed at NAC Breda before joining Brighton, where he became a dependable centre-back in the Premier League. His performances earned a 52-million-pound move to Tottenham, making him one of the most expensive Dutch defenders in history.",
+    "number": 9
+   },
+   {
+    "name": "Teun Koopmeiners",
+    "espnId": 253186,
+    "position": "Central midfielder",
+    "club": "Juventus (Serie A, Italy)",
+    "hometown": "Castricum, Netherlands",
+    "why": "Koopmeiners was a standout at AZ Alkmaar before starring at Atalanta, where he helped them win the 2024 Europa League title. He joined Juventus and brings box-to-box dynamism with an eye for goal to the Netherlands' midfield at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Marten de Roon",
+    "espnId": 161399,
+    "position": "Defensive midfielder",
+    "club": "Atalanta (Serie A, Italy)",
+    "hometown": "Zwijndrecht, Netherlands",
+    "why": "De Roon has been a stalwart at Atalanta for nearly a decade, providing tireless energy and tactical discipline in midfield. The veteran midfielder was part of Atalanta's Europa League-winning squad and brings invaluable experience to the Netherlands at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Guus Til",
+    "espnId": 229651,
+    "position": "Central midfielder",
+    "club": "PSV Eindhoven (Eredivisie, Netherlands)",
+    "hometown": "Leiden, Netherlands",
+    "why": "Til has had an eventful career including stints at Spartak Moscow and Freiburg before settling at PSV Eindhoven, where he has become a key contributor. His goal-scoring ability from midfield and work rate make him a useful option for the Netherlands at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Quinten Timber",
+    "espnId": 293551,
+    "position": "Central midfielder",
+    "club": "Marseille (Ligue 1, France)",
+    "hometown": "Utrecht, Netherlands",
+    "why": "The twin brother of Arsenal defender Jurrien Timber, Quinten developed at Ajax before joining Feyenoord and then Marseille. He brings energy and technical quality to midfield for the Netherlands at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Mats Wieffer",
+    "espnId": 305232,
+    "position": "Defensive midfielder",
+    "club": "Brighton (Premier League, England)",
+    "hometown": "Naaldwijk, Netherlands",
+    "why": "Wieffer broke through at Feyenoord, playing a key role in their 2022-23 Eredivisie title victory before moving to Brighton in the Premier League. His passing range and ability to break up play make him an important midfield anchor for the Netherlands at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Memphis Depay",
+    "espnId": 164498,
+    "position": "Striker",
+    "club": "Corinthians (Serie A, Brazil)",
+    "hometown": "Moordrecht, Netherlands",
+    "why": "Depay is one of the Netherlands' most decorated active players, having played for Manchester United, Lyon, Barcelona, and Atletico Madrid. Despite moving to Brazilian club Corinthians, the flamboyant forward remains a key figure for the national team at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Donyell Malen",
+    "espnId": 232445,
+    "position": "Forward",
+    "club": "Roma (Serie A, Italy)",
+    "hometown": "Wijk bij Duurstede, Netherlands",
+    "why": "Malen developed at Ajax and Arsenal's academies before shining at PSV Eindhoven, which earned him a move to Borussia Dortmund. He has since joined Roma and brings pace, finishing ability, and versatility to the Netherlands' attack at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Brian Brobbey",
+    "espnId": 282596,
+    "position": "Striker",
+    "club": "Sunderland (Premier League, England)",
+    "hometown": "Amsterdam, Netherlands",
+    "why": "Brobbey came through Ajax's vaunted academy and became one of the most prolific young strikers in Dutch football. His power, pace, and movement in the box make him a constant threat for the Netherlands' attack at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Wout Weghorst",
+    "espnId": 196864,
+    "position": "Striker",
+    "club": "Ajax (Eredivisie, Netherlands)",
+    "hometown": "Borne, Netherlands",
+    "why": "Weghorst is a towering target man who has played for Wolfsburg, Burnley, Besiktas, and Manchester United on loan. Known for his never-say-die attitude and aerial ability, the experienced striker provides a different dimension to the Netherlands' attack at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Justin Kluivert",
+    "espnId": 231636,
+    "position": "Left winger",
+    "club": "Bournemouth (Premier League, England)",
+    "hometown": "Amsterdam, Netherlands",
+    "why": "The son of Dutch legend Patrick Kluivert, Justin developed at Ajax before moves to Roma, Nice, and Valencia. He has thrived at Bournemouth in the Premier League and carries his family's footballing legacy into Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Noa Lang",
+    "espnId": 274449,
+    "position": "Left winger",
+    "club": "Galatasaray (Super Lig, Turkey)",
+    "hometown": "Capelle aan den IJssel, Netherlands",
+    "why": "Lang developed at Ajax and burst onto the scene during a loan at Club Brugge, where he helped them win the Belgian league. After a move to PSV Eindhoven and then Galatasaray, the skilful winger brings flair and creativity to the Netherlands' attack at Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Crysencio Summerville",
+    "espnId": 293518,
+    "position": "Right winger",
+    "club": "West Ham (Premier League, England)",
+    "hometown": "Rotterdam, Netherlands",
+    "why": "Summerville won the Championship Player of the Season award with Leeds United before earning a move to West Ham in the Premier League. His pace, directness, and ability to beat defenders make him an exciting attacking option for the Netherlands at Football 2026.",
+    "number": 26
    }
   ],
   "New Zealand": [
@@ -8500,6 +14590,213 @@ window.WC_PLAYERS = {
     "honors": [
      "Reading Player of the Season (2024–25)"
     ]
+   },
+   {
+    "name": "Max Crocombe",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Millwall (Championship, England)",
+    "hometown": "Auckland, New Zealand",
+    "why": "A towering goalkeeper who has built his career in English football, Max Crocombe is a commanding presence between the posts with excellent shot-stopping reflexes. He has been a consistent performer in the Championship with Millwall, gaining valuable experience in one of the most competitive leagues in Europe. His composure and distribution make him the first-choice keeper for New Zealand at Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Alex Paulsen",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Lechia Gdansk (Ekstraklasa, Poland)",
+    "hometown": "New Zealand",
+    "why": "A promising young goalkeeper who ventured to Polish football to develop his career, Alex Paulsen has shown impressive shot-stopping ability and confidence beyond his years. His willingness to play abroad demonstrates his ambition and adaptability. He provides strong competition for the number one jersey and reliable depth for the All Whites at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Michael Woud",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Auckland FC (A-League, New Zealand/Australia)",
+    "hometown": "New Zealand",
+    "why": "A tall and athletic goalkeeper who has been part of Auckland FC's inaugural A-League campaign, Michael Woud brings domestic familiarity and team cohesion to the squad. His imposing frame and command of the penalty area make him a reliable option. He provides experienced depth in goal for New Zealand at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Tim Payne",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Wellington Phoenix (A-League, New Zealand/Australia)",
+    "hometown": "New Zealand",
+    "why": "A seasoned right-back who has been a fixture at Wellington Phoenix for several years, Tim Payne is known for his dependable defending and tireless work rate down the flank. His experience in the A-League gives him a solid foundation against varied attacking styles. He is a trusted veteran presence in the All Whites defense at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Francis De Vries",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Auckland FC (A-League, New Zealand/Australia)",
+    "hometown": "New Zealand",
+    "why": "A composed centre-back who reads the game intelligently and organizes the backline with authority, Francis De Vries has been a key player for Auckland FC. His aerial ability and clean tackling make him a dependable option in central defense. His consistent domestic performances earned him a deserved place in the Football 2026 squad.",
+    "number": 3
+   },
+   {
+    "name": "Michael Boxall",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Minnesota United (MLS, United States)",
+    "hometown": "Auckland, New Zealand",
+    "why": "One of the most experienced All Whites, Michael Boxall has spent many years in MLS with Minnesota United and brings invaluable international tournament know-how. His physicality, leadership, and ability to marshal the defense under pressure are crucial assets. At 37, he remains a vital figure for New Zealand at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Nando Pijnaker",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Auckland FC (A-League, New Zealand/Australia)",
+    "hometown": "New Zealand",
+    "why": "A tall and athletic centre-back who combines physical presence with good distribution from the back, Nando Pijnaker has been a standout for Auckland FC. His aerial dominance and willingness to step into midfield with the ball add a modern dimension to New Zealand's defense. He is a key starter for the All Whites at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Finn Surman",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Portland Timbers (MLS, United States)",
+    "hometown": "New Zealand",
+    "why": "A young defender who has made an impression in MLS with the Portland Timbers, Finn Surman is a modern centre-back comfortable playing out from the back. His height and composure on the ball belie his age, and he represents the future of New Zealand's defensive core. His MLS experience against top-level attackers prepares him well for Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Callan Elliot",
+    "espnId": null,
+    "position": "Full-back",
+    "club": "Auckland FC (A-League, New Zealand/Australia)",
+    "hometown": "New Zealand",
+    "why": "A versatile full-back who can operate on either flank, Callan Elliot has been a regular for Auckland FC with his energetic overlapping runs and solid defensive positioning. His pace and tactical discipline make him a useful option for the coaching staff. He adds important squad depth for New Zealand at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Tommy Smith",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Braintree Town (National League South, England)",
+    "hometown": "Auckland, New Zealand",
+    "why": "A vastly experienced defender who has played at higher levels of English football including the Premier League with Bournemouth, Tommy Smith brings a wealth of knowledge and professionalism to the squad. Now in the lower tiers of English football, he remains a leader on the pitch and in the dressing room. His experience across multiple levels of the game is invaluable for the All Whites at Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Joe Bell",
+    "espnId": 119498,
+    "position": "Central midfielder",
+    "club": "Viking FK (Eliteserien, Norway)",
+    "hometown": "New Zealand",
+    "why": "A technically gifted midfielder who controls the tempo of play with his passing range and positional intelligence, Joe Bell has developed impressively in Norwegian football with Viking FK. He is the metronome of New Zealand's midfield, dictating play from deep and linking defense to attack. His European experience and composure on the ball make him one of the All Whites' most important players at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Matt Garbett",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Peterborough United (League One, England)",
+    "hometown": "Auckland, New Zealand",
+    "why": "A tall, box-to-box midfielder with an eye for goal and the physical attributes to dominate in the middle of the park, Matt Garbett has been developing his career in English football. His ability to arrive late in the box and score important goals adds an extra dimension to New Zealand's midfield. He is one of the most exciting young talents in the All Whites squad at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Marko Stamenic",
+    "espnId": 282936,
+    "position": "Central midfielder",
+    "club": "Swansea City (Championship, England)",
+    "hometown": "New Zealand",
+    "why": "An energetic and combative midfielder who has established himself in the English Championship with Swansea City, Marko Stamenic offers dynamism and tenacity in the middle of the park. His pressing intensity and ability to win the ball back quickly suit the modern game perfectly. He is a key component of New Zealand's engine room at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Sarpreet Singh",
+    "espnId": 258614,
+    "position": "Attacking midfielder",
+    "club": "Wellington Phoenix (A-League, New Zealand/Australia)",
+    "hometown": "Auckland, New Zealand",
+    "why": "A creative and technically skillful attacking midfielder of Indian descent who has become one of New Zealand's most recognizable footballers, Sarpreet Singh wears the prestigious number 10 shirt. He previously played in Germany with Bayern Munich II and has the vision and passing ability to unlock defenses. His flair and creativity make him a crucial playmaker for the All Whites at Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Alex Rufer",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Wellington Phoenix (A-League, New Zealand/Australia)",
+    "hometown": "Wellington, New Zealand",
+    "why": "Coming from one of New Zealand's most famous footballing families — his uncle Wynton Alex Rufer is widely considered the country's greatest player — Alex has carved his own path as a reliable central midfielder for the Wellington Phoenix. His work rate, passing accuracy, and tactical intelligence make him a steady presence in midfield. He brings important domestic experience and leadership to the All Whites at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Ben Old",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Saint-Etienne (Ligue 1, France)",
+    "hometown": "New Zealand",
+    "why": "One of the most exciting young talents in New Zealand football, Ben Old made a significant move to Ligue 1 side Saint-Etienne, marking a major step in his development. He is a technically gifted midfielder who is comfortable on the ball and capable of playing progressive passes through the lines. His move to top-level European football signals his immense potential for the All Whites at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Callum McCowatt",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Silkeborg (Superliga, Denmark)",
+    "hometown": "New Zealand",
+    "why": "A versatile attacking midfielder plying his trade in Denmark's top division, Callum McCowatt possesses quick feet, good vision, and the ability to play across the front line. His Scandinavian experience has sharpened his tactical awareness and positional play. He provides valuable creativity and unpredictability for the All Whites at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Ryan Thomas",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "PEC Zwolle (Eredivisie, Netherlands)",
+    "hometown": "Hamilton, New Zealand",
+    "why": "A seasoned midfielder who has spent the majority of his career in the Netherlands, Ryan Thomas brings years of Eredivisie experience and tactical sophistication to the squad. Known for his tidy passing and intelligent movement, he can operate effectively in multiple midfield roles. His veteran presence and European know-how are valuable assets for New Zealand at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Lachlan Bayliss",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Newcastle Jets (A-League, Australia)",
+    "hometown": "New Zealand",
+    "why": "A young midfielder who has been developing his game in the A-League with the Newcastle Jets, Lachlan Bayliss offers energy, pressing intensity, and youthful dynamism. His ability to cover ground and contribute in both attacking and defensive phases makes him a useful squad option. He represents the emerging generation of All Whites players at Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Elijah Just",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Motherwell (Scottish Premiership, Scotland)",
+    "hometown": "New Zealand",
+    "why": "A pacy and direct winger who has made his mark in Scotland with Motherwell, Elijah Just is known for his explosive speed and willingness to take on defenders. His ability to stretch opposition defenses and deliver dangerous crosses creates opportunities for teammates. He adds an important attacking dimension to New Zealand's squad at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Kosta Barbarouses",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Western Sydney Wanderers (A-League, Australia)",
+    "hometown": "Auckland, New Zealand",
+    "why": "One of the most experienced attackers in New Zealand football history with over 50 caps, Kosta Barbarouses has been a prolific scorer across multiple A-League clubs throughout his career. His pace, movement, and ability to score from wide positions make him a constant threat. At 36, his experience and big-game mentality are invaluable for the All Whites at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Ben Waine",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Port Vale (League One, England)",
+    "hometown": "New Zealand",
+    "why": "A young striker who has been developing his craft in English lower-league football, Ben Waine is a natural goalscorer with sharp instincts in the box and an eye for finding space. His partnership with Chris Wood gives New Zealand a potent attacking option. He is eager to make his mark on the international stage at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Jesse Randall",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Auckland FC (A-League, New Zealand/Australia)",
+    "hometown": "New Zealand",
+    "why": "An exciting young forward who has been a standout performer in Auckland FC's inaugural A-League season, Jesse Randall combines pace with clever movement and a willingness to run at defenders. His domestic form has earned him international recognition and a place in the Football 2026 squad. He represents the exciting future of New Zealand football.",
+    "number": 21
    }
   ],
   "Norway": [
@@ -8864,6 +15161,213 @@ window.WC_PLAYERS = {
      }
     ],
     "honors": []
+   },
+   {
+    "name": "Orjan Nyland",
+    "espnId": 137750,
+    "position": "Goalkeeper",
+    "club": "Sevilla (La Liga, Spain)",
+    "hometown": "Volda, Norway",
+    "why": "A veteran goalkeeper with over 50 caps for Norway, Orjan Nyland has enjoyed a well-traveled career spanning England and Spain. His experience at Sevilla in La Liga gives him exposure to the highest level of Spanish football, and his commanding presence and sharp reflexes make him a reliable first-choice option. His big-game composure and vocal leadership are crucial for Norway at Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Sander Tangvik",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Hamburger SV (2. Bundesliga, Germany)",
+    "hometown": "Norway",
+    "why": "A promising young goalkeeper developing at Hamburger SV in Germany's second division, Sander Tangvik has shown excellent shot-stopping ability and confidence in handling crosses. His move to one of Germany's most prestigious clubs, even in the second tier, demonstrates his talent and ambition. He provides strong competition and youthful depth in goal for Norway at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Egil Selvik",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Watford (Championship, England)",
+    "hometown": "Norway",
+    "why": "A capable goalkeeper who has been plying his trade in the English Championship with Watford, Egil Selvik brings experience in one of Europe's most physically demanding leagues. His shot-stopping and distribution have made him a reliable option at club level. He adds experienced depth to Norway's goalkeeping department at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Kristoffer Ajer",
+    "espnId": 233081,
+    "position": "Centre-back",
+    "club": "Brentford (Premier League, England)",
+    "hometown": "Rade, Norway",
+    "why": "A tall and athletic centre-back who has been a key defender for Brentford in the Premier League, Kristoffer Ajer combines physical dominance with excellent ball-playing ability. His time at Celtic helped him develop in high-pressure environments, and he has continued to grow at Brentford. His ability to carry the ball out of defense and start attacks makes him an integral part of Norway's backline at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Leo Ostigard",
+    "espnId": 287825,
+    "position": "Centre-back",
+    "club": "Genoa (Serie A, Italy)",
+    "hometown": "Haugesund, Norway",
+    "why": "A combative and aerially dominant centre-back who has experienced multiple top European leagues including Serie A with Napoli and now Genoa, Leo Ostigard is a warrior in defense. His heading ability makes him a threat from set pieces at both ends of the pitch. His intensity and competitive fire are vital for Norway's defense at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "David Moller Wolfe",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Wolverhampton Wanderers (Premier League, England)",
+    "hometown": "Norway",
+    "why": "A versatile defender capable of playing across the backline, David Moller Wolfe has earned a move to the Premier League with Wolverhampton Wanderers. His pace, tactical intelligence, and ability to contribute in attack make him a valuable option. At 24, he is still developing and represents an exciting prospect for Norway at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Fredrik Bjorkan",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Bodo/Glimt (Eliteserien, Norway)",
+    "hometown": "Bodo, Norway",
+    "why": "A product of Bodo/Glimt's remarkable rise in Norwegian and European football, Fredrik Bjorkan is an attack-minded left-back with excellent crossing ability and stamina. His experience in European competition with Bodo/Glimt, including memorable Conference League runs, gives him continental pedigree. His overlapping runs and defensive reliability make him a key squad member for Norway at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Marcus Holmgren Pedersen",
+    "espnId": 256716,
+    "position": "Right-back",
+    "club": "Torino (Serie A, Italy)",
+    "hometown": "Kristiansand, Norway",
+    "why": "An energetic right-back who has established himself in Serie A with Torino, Marcus Holmgren Pedersen is known for his tireless running up and down the flank and his ability to deliver dangerous crosses. His defensive discipline has improved significantly through his time in Italian football. He brings important tactical versatility and experience to Norway's squad at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Torbjorn Heggem",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Bologna (Serie A, Italy)",
+    "hometown": "Norway",
+    "why": "A tall and composed centre-back who has been part of Bologna's impressive recent campaigns in Serie A and the Champions League, Torbjorn Heggem offers size, aerial ability, and composure on the ball. His development in Italian football has refined his tactical awareness and positioning. He provides important depth in central defense for Norway at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Sondre Langas",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Derby County (Championship, England)",
+    "hometown": "Norway",
+    "why": "A promising young defender who has moved to English football with Derby County in the Championship, Sondre Langas is a physically imposing centre-back with good passing range. His willingness to defend on the front foot and his aerial presence make him an effective defender. He adds youthful depth to Norway's defensive options at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Henrik Falchener",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Viking (Eliteserien, Norway)",
+    "hometown": "Norway",
+    "why": "A tall young centre-back who has emerged through Viking's development system in the Eliteserien, Henrik Falchener combines physical presence with good technical ability. His aerial dominance and improving reading of the game have attracted attention from clubs across Europe. He is part of Norway's next generation of defenders at Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Julian Ryerson",
+    "espnId": 255287,
+    "position": "Right-back",
+    "club": "Borussia Dortmund (Bundesliga, Germany)",
+    "hometown": "Oslo, Norway",
+    "why": "One of Norway's most important defensive players, Julian Ryerson has been a revelation at Borussia Dortmund, including reaching the Champions League final. His relentless energy, pace, and ability to contribute in attack make him one of the best right-backs in the Bundesliga. His big-game experience and consistency are invaluable for Norway at Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Morten Thorsby",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Cremonese (Serie B, Italy)",
+    "hometown": "Oslo, Norway",
+    "why": "A tireless defensive midfielder known for his incredible work rate and tenacious pressing, Morten Thorsby is the type of player every team needs. Beyond football, he is known for his environmental activism and leadership qualities. His ability to break up opposition attacks and shield the defense makes him a valuable asset for Norway at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Patrick Berg",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Bodo/Glimt (Eliteserien, Norway)",
+    "hometown": "Bodo, Norway",
+    "why": "A technically gifted central midfielder who has been instrumental in Bodo/Glimt's rise as a force in Norwegian and European football, Patrick Berg reads the game superbly and distributes the ball with precision. His ability to dictate the tempo of a match from deep positions is crucial for Norway's build-up play. He is a key cog in the midfield engine at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Martin Odegaard",
+    "espnId": 235674,
+    "position": "Attacking midfielder / Captain",
+    "club": "Arsenal (Premier League, England)",
+    "hometown": "Drammen, Norway",
+    "why": "Norway's captain and one of the most technically gifted players in world football, Martin Odegaard has been the creative heartbeat of Arsenal's Premier League title challenges. A prodigious talent who signed for Real Madrid at just 16, he has matured into a world-class playmaker with extraordinary vision, passing range, and the ability to score spectacular goals. He is the undisputed leader and star of Norway's squad at Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Fredrik Aursnes",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Benfica (Primeira Liga, Portugal)",
+    "hometown": "Alesund, Norway",
+    "why": "A versatile and intelligent midfielder who has thrived at Benfica in Portugal's top flight, Fredrik Aursnes offers balance and composure in the middle of the park. He can play as a holding midfielder or in a more advanced role, making him tactically flexible for the coaching staff. His Champions League experience with Benfica adds valuable big-game pedigree for Norway at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Kristian Thorstvedt",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Sassuolo (Serie A, Italy)",
+    "hometown": "Kristiansand, Norway",
+    "why": "Son of former Tottenham goalkeeper Erik Kristian Thorstvedt, Kristian has forged his own impressive career as an energetic and goal-scoring midfielder in Serie A with Sassuolo. His ability to arrive in the box late and find the net adds a crucial goal threat from midfield. His combination of work rate, technical skill, and goalscoring instinct makes him a valuable player for Norway at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Thelo Aasgaard",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Rangers (Scottish Premiership, Scotland)",
+    "hometown": "Norway",
+    "why": "A dynamic young midfielder who has been making waves at Rangers in Scotland, Thelo Aasgaard brings energy, creativity, and an eye for goal from the middle of the park. His performances in both domestic and European competition have marked him as an exciting talent. He adds depth and attacking impetus to Norway's midfield at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Oscar Bobb",
+    "espnId": null,
+    "position": "Attacking midfielder / Winger",
+    "club": "Fulham (Premier League, England)",
+    "hometown": "Oslo, Norway",
+    "why": "An electrifyingly skillful young talent who developed at Manchester City before moving to Fulham to get more regular playing time, Oscar Bobb possesses dazzling dribbling ability and the confidence to take on any defender. His pace, trickery, and ability to create something out of nothing make him one of Norway's most exciting attacking options. He is a genuine game-changer for Norway at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Jens Petter Hauge",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Bodo/Glimt (Eliteserien, Norway)",
+    "hometown": "Bodo, Norway",
+    "why": "A talented winger who burst onto the European scene with a stunning performance against AC Milan in the Europa League before earning a move to the Rossoneri themselves, Jens Petter Hauge returned to Bodo/Glimt where he has continued to be a creative force. His directness, shooting ability, and capacity to beat defenders one-on-one make him a dangerous attacking weapon. He provides important offensive depth for Norway at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Alexander Sorloth",
+    "espnId": 193847,
+    "position": "Striker",
+    "club": "Atletico Madrid (La Liga, Spain)",
+    "hometown": "Trondheim, Norway",
+    "why": "A powerful and prolific striker who has been in scintillating form at Atletico Madrid, Alexander Sorloth combines physical dominance with surprising technical quality and clinical finishing. His height and aerial ability make him a nightmare for defenders, while his link-up play has improved dramatically at the top level. He forms a fearsome partnership with Haaland that makes Norway's attack one of the most potent at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Jorgen Strand Larsen",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Crystal Palace (Premier League, England)",
+    "hometown": "Bergen, Norway",
+    "why": "A tall and technically gifted striker who has impressed in the Premier League with Crystal Palace after strong seasons in La Liga with Celta Vigo, Jorgen Strand Larsen offers a different dimension to Norway's attack with his hold-up play and aerial presence. His ability to link play and bring others into the game complements the more direct style of Haaland. He provides Norway with an excellent alternative striking option at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Andreas Schjelderup",
+    "espnId": null,
+    "position": "Forward / Winger",
+    "club": "Benfica (Primeira Liga, Portugal)",
+    "hometown": "Tromso, Norway",
+    "why": "An exciting young forward who joined Benfica and has been developing rapidly at one of Portugal's biggest clubs, Andreas Schjelderup is a creative and pacey attacker who can play across the front line. His dribbling ability and eye for goal have drawn comparisons to some of Scandinavia's most talented forwards. At just 22, he is one of the most exciting young prospects in Norway's squad at Football 2026.",
+    "number": 21
    }
   ],
   "Panama": [
@@ -9040,6 +15544,222 @@ window.WC_PLAYERS = {
      }
     ],
     "honors": []
+   },
+   {
+    "name": "Luis Mejía",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Nacional (Primera Division, Uruguay)",
+    "hometown": "Panama City, Panama",
+    "why": "A veteran goalkeeper who has built his career across Central and South American football, Luis Mejía brings experience and shot-stopping ability to the squad. His time at Nacional in Uruguay has exposed him to a high level of competition in one of South America's most prestigious leagues. He is a seasoned campaigner who provides stability between the posts for Panama at Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "César Samudio",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Marathon (Liga Nacional, Honduras)",
+    "hometown": "Panama",
+    "why": "An experienced goalkeeper who has played extensively in Central American football, César Samudio brings familiarity with the regional style of play and reliable shot-stopping. His experience in Honduran football with Marathon gives him exposure to competitive continental matches. He provides solid goalkeeping depth for Panama at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Orlando Mosquera",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Al-Fayha (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Panama",
+    "why": "A well-traveled goalkeeper who has taken his career to the Middle East with Al-Fayha in the Saudi Pro League, Orlando Mosquera has demonstrated adaptability and ambition. His experience playing in different football cultures gives him a broad perspective and resilience. He adds international depth to Panama's goalkeeping options at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "César Blackman",
+    "espnId": 234413,
+    "position": "Right-back",
+    "club": "Slovan Bratislava (Fortuna Liga, Slovakia)",
+    "hometown": "Panama",
+    "why": "A pacey and attack-minded right-back who has played European football with Slovan Bratislava, including Champions League appearances, César Blackman brings continental experience to Panama's defense. His speed and crossing ability make him a threat going forward, while his defensive work rate has improved through his time in Europe. He is a key defender for Panama at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "José Córdoba",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Norwich City (Championship, England)",
+    "hometown": "Panama City, Panama",
+    "why": "A young and physically imposing centre-back who has established himself in the English Championship with Norwich City, José Córdoba is one of Panama's most promising defenders. His strength in the air, pace, and ability to read the game make him a modern centre-back with the potential to play at the highest level. He is a cornerstone of Panama's defense at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Fidel Escobar",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Saprissa (Primera Division, Costa Rica)",
+    "hometown": "Panama",
+    "why": "A veteran centre-back with extensive international experience, Fidel Escobar has been a stalwart of Panama's defense for many years. His physical presence, leadership, and understanding of CONCACAF football make him an important figure in the squad. His experience in Central American football and international tournaments is invaluable for Panama at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Edgardo Fariña",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Pari Nizhny Novgorod (Russian Premier League, Russia)",
+    "hometown": "Panama",
+    "why": "A tall and imposing centre-back who has ventured to Russian football, Edgardo Fariña brings an international perspective and physical dominance to Panama's defense. His time in the Russian Premier League has tested him against different styles of play and harsh conditions. He adds important height and aerial ability to the squad at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Jiovany Ramos",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Puerto Cabello (Primera Division, Venezuela)",
+    "hometown": "Panama",
+    "why": "An experienced defender who has played across South and Central American leagues, Jiovany Ramos is a dependable centre-back who organizes the backline and wins his aerial duels. His time in Venezuelan football has given him exposure to varied tactical systems. He provides solid defensive depth for Panama at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Éric Davis",
+    "espnId": null,
+    "position": "Centre-back / Full-back",
+    "club": "Plaza Amador (Liga Panamena, Panama)",
+    "hometown": "Colon, Panama",
+    "why": "One of the most experienced and decorated players in Panamanian football history, Éric Davis has been a fixture of the national team for over a decade and was part of the historic 2018 tournament squad. His versatility, leadership, and knowledge of the game make him an invaluable presence in the dressing room. At 35, his experience and mentorship are crucial for the younger players at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Andrés Andrade",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "LASK (Bundesliga, Austria)",
+    "hometown": "Panama",
+    "why": "A physically strong defender who has established himself in Austrian football with LASK, Andrés Andrade brings European experience and tactical discipline to Panama's backline. His ability to defend aggressively and his comfort on the ball add quality to the defensive unit. His exposure to European competition makes him an important player for Panama at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Amir Murillo",
+    "espnId": 234414,
+    "position": "Right-back",
+    "club": "Besiktas (Super Lig, Turkey)",
+    "hometown": "Colon, Panama",
+    "why": "One of Panama's most accomplished international footballers, Amir Murillo has played for top clubs across Europe including Anderlecht and now Besiktas. His pace, defensive solidity, and attacking contributions from right-back make him one of the most complete full-backs in CONCACAF football. His vast experience and professionalism are invaluable for Panama at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Roderick Miller",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Turan Tovuz (Premyer Liqa, Azerbaijan)",
+    "hometown": "Panama City, Panama",
+    "why": "A veteran centre-back with extensive international experience who has played across multiple continents, Roderick Miller is a physical and commanding presence in defense. His long career in Panamanian football and abroad has made him one of the most capped players in the squad. His leadership and defensive reliability are valued at Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Jorge Gutiérrez",
+    "espnId": null,
+    "position": "Full-back",
+    "club": "Deportivo La Guaira (Primera Division, Venezuela)",
+    "hometown": "Panama",
+    "why": "A compact and tenacious full-back who has been playing in Venezuelan football, Jorge Gutiérrez brings energy and defensive work rate to Panama's backline. Despite his smaller stature, his positioning and determination make him effective against larger opponents. He provides useful squad depth for Panama at Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Cristian Martínez",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Ironi Kiryat Shmona (Israeli Premier League, Israel)",
+    "hometown": "Panama",
+    "why": "A technical midfielder who has taken his talents to Israeli football, Cristian Martínez is known for his quick feet, vision, and ability to maintain possession under pressure. His experience playing in different football cultures has broadened his tactical understanding. He offers creativity and control in midfield for Panama at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "José Luis Rodríguez",
+    "espnId": null,
+    "position": "Winger / Attacking midfielder",
+    "club": "Juarez (Liga MX, Mexico)",
+    "hometown": "Panama",
+    "why": "A skillful and creative attacking player competing in Liga MX, one of the strongest leagues in the Americas, José Luis Rodríguez brings flair and unpredictability to Panama's attack. His ability to beat defenders and create chances from wide positions or centrally makes him a versatile threat. His Liga MX experience against top opposition is valuable for Panama at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Yoel Bárcenas",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Mazatlan (Liga MX, Mexico)",
+    "hometown": "Panama City, Panama",
+    "why": "An experienced winger who has spent years in Liga MX, Yoel Bárcenas is known for his pace, direct running, and ability to deliver dangerous crosses and cut inside to shoot. He has been a regular in the national team setup for many years and brings big-game experience. His attacking threat from wide positions is important for Panama at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Carlos Harvey",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Minnesota United (MLS, United States)",
+    "hometown": "Panama",
+    "why": "A dynamic midfielder who has established himself in MLS with Minnesota United, Carlos Harvey brings energy, pressing intensity, and tactical awareness to Panama's midfield. His ability to contribute both defensively and in the attacking third makes him a well-rounded option. Playing in the United States gives him familiarity with the Football 2026 host-country environment.",
+    "number": 14
+   },
+   {
+    "name": "Aníbal Godoy",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "San Diego FC (MLS, United States)",
+    "hometown": "Panama City, Panama",
+    "why": "One of the most capped players in Panamanian history, Aníbal Godoy is a veteran defensive midfielder who has spent many years in MLS and was part of the historic 2018 tournament squad. His ability to screen the defense, win tackles, and set the tempo of play makes him invaluable. At 36, his experience and leadership remain crucial for Panama at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Tomás Rodríguez",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Saprissa (Primera Division, Costa Rica)",
+    "hometown": "Panama",
+    "why": "A goal-scoring forward who has found success in Costa Rican football with Saprissa, one of the region's most decorated clubs, Rodriguez is a clinical finisher with good movement inside the box. His ability to score different types of goals makes him a constant threat to opposition defenses. He is an important attacking option for Panama at Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Ismael Díaz",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Leon (Liga MX, Mexico)",
+    "hometown": "Panama City, Panama",
+    "why": "A talented and versatile forward who has been one of Panama's most important attacking players, Ismael Díaz has impressed in Liga MX with Leon. His combination of pace, technique, and finishing ability makes him a dangerous opponent for any defense. He is expected to be a key figure in Panama's attack at Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Cecilio Waterman",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Universidad de Concepcion (Primera B, Chile)",
+    "hometown": "Colon, Panama",
+    "why": "A veteran striker who has scored goals across multiple South American leagues, Cecilio Waterman brings experience and proven goalscoring ability to Panama's attack. His movement, physical presence, and predatory instincts in the box make him a reliable option up front. His international experience and leadership are valued in the squad at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Alberto Quintero",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Plaza Amador (Liga Panamena, Panama)",
+    "hometown": "Chiriqui, Panama",
+    "why": "One of the most experienced players in Panamanian football history with well over 100 caps, Alberto Quintero is a diminutive winger whose pace and trickery have terrorized defenses for over a decade. He was part of the historic 2018 tournament squad and his continued selection at 38 is a testament to his enduring quality. His veteran presence and dressing-room influence are priceless for Panama at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "César Yanis",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Cobresal (Primera Division, Chile)",
+    "hometown": "Panama",
+    "why": "A diminutive but explosive forward who compensates for his small stature with electric pace, low center of gravity, and clever movement, César Yanis has been scoring goals in Chilean football. His ability to play across the front line and his willingness to run at defenders make him a useful attacking weapon. He provides a different dimension to Panama's attack at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Azarias Londoño",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Universidad Catolica (Primera Division, Chile)",
+    "hometown": "Panama",
+    "why": "A young and promising forward who has been developing his career in Chilean football with one of the country's most prestigious clubs, Azarias Londoño is a physical presence up front with good hold-up play and finishing. His youth and potential make him an exciting prospect for Panama's future. He brings energy and enthusiasm to the squad at Football 2026.",
+    "number": 24
    }
   ],
   "Paraguay": [
@@ -9205,6 +15925,231 @@ window.WC_PLAYERS = {
      }
     ],
     "honors": []
+   },
+   {
+    "name": "Roberto Fernandez",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Cerro Porteno (Primera Division, Paraguay)",
+    "hometown": "Asuncion, Paraguay",
+    "why": "A veteran goalkeeper and one of the most experienced players in the Paraguayan squad, Fernandez has been a reliable presence at Cerro Porteno for many years. His shot-stopping ability, command of his area, and vocal leadership make him a dependable option between the posts. At 38, his experience and composure are invaluable for Paraguay at Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Orlando Gill",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "San Lorenzo (Primera Division, Argentina)",
+    "hometown": "Paraguay",
+    "why": "A promising young goalkeeper who has earned a move to Argentine football with San Lorenzo, Orlando Gill brings agility and quick reflexes to the squad. His exposure to the competitive Argentine league has accelerated his development and improved his decision-making. He provides strong depth in goal for Paraguay at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Gaston Olveira",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Olimpia (Primera Division, Paraguay)",
+    "hometown": "Paraguay",
+    "why": "An experienced goalkeeper who has been a consistent performer for Olimpia, one of Paraguay's most successful clubs, Gaston Olveira is known for his reliability and calmness under pressure. His familiarity with Paraguayan football and continental competition through Copa Libertadores gives him valuable big-game experience. He adds seasoned depth to the goalkeeping department at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Gustavo Velazquez",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Cerro Porteno (Primera Division, Paraguay)",
+    "hometown": "Asuncion, Paraguay",
+    "why": "A veteran right-back who has been a loyal servant to Cerro Porteno and the national team for many years, Velazquez brings defensive solidity and experience to the backline. His knowledge of South American football and his leadership on the pitch make him a trusted presence. At 35, his professionalism and consistency remain important for Paraguay at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Omar Alderete",
+    "espnId": 230649,
+    "position": "Centre-back",
+    "club": "Sunderland (Championship, England)",
+    "hometown": "Asuncion, Paraguay",
+    "why": "A left-footed centre-back who has gained experience across European football including spells in Germany, Spain, and now England's Championship with Sunderland, Omar Alderete is comfortable on the ball and strong in aerial duels. His versatility allows him to also slot in at left-back when needed. His European experience makes him one of the most well-rounded defenders in Paraguay's squad at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Juan Jose Caceres",
+    "espnId": null,
+    "position": "Centre-back / Full-back",
+    "club": "Dynamo Moscow (Russian Premier League, Russia)",
+    "hometown": "Paraguay",
+    "why": "A versatile defender capable of playing in central defense or at full-back, Juan Jose Caceres has taken his career to Russian football with Dynamo Moscow. His adaptability and willingness to play in different positions make him a valuable squad player. His international experience adds depth to Paraguay's defensive options at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Fabian Balbuena",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Gremio (Serie A, Brazil)",
+    "hometown": "Ciudad del Este, Paraguay",
+    "why": "A veteran centre-back with extensive experience in South American and European football, including stints at West Ham United and Corinthians, Fabian Balbuena is a physical and commanding defender. His aerial ability and positioning make him a rock at the back, and his experience in big matches is invaluable. He brings leadership and solidity to Paraguay's defense at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Junior Alonso",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Atletico Mineiro (Serie A, Brazil)",
+    "hometown": "Paraguay",
+    "why": "A cultured left-footed centre-back who has spent much of his career in Brazilian football with Atletico Mineiro, Junior Alonso is known for his excellent passing range and ability to start attacks from deep. His composure on the ball and positional intelligence make him a modern centre-back. He is an experienced and important figure in Paraguay's defense at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Jose Canale",
+    "espnId": null,
+    "position": "Centre-back / Full-back",
+    "club": "Lanus (Primera Division, Argentina)",
+    "hometown": "Paraguay",
+    "why": "A solid defender who has been performing consistently in Argentine football with Lanus, Jose Canale can operate in central defense or at full-back. His versatility and reliability make him a useful squad option, and his experience in the demanding Argentine league has sharpened his competitive edge. He provides important defensive depth for Paraguay at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Gustavo Gomez",
+    "espnId": 162072,
+    "position": "Centre-back / Captain",
+    "club": "Palmeiras (Serie A, Brazil)",
+    "hometown": "Asuncion, Paraguay",
+    "why": "The captain and defensive leader of Paraguay, Gustavo Gomez has been one of the best centre-backs in South American football during his time at Palmeiras, winning multiple Copa Libertadores titles. His aerial dominance, leadership, and goal-scoring ability from set pieces make him a complete defender. He is the rock upon which Paraguay's defense is built at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Alexandro Maidana",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Talleres (Primera Division, Argentina)",
+    "hometown": "Paraguay",
+    "why": "The youngest player in Paraguay's squad, Alexandro Maidana is a talented young centre-back who has broken through at Talleres in Argentine football. His composure on the ball and reading of the game belie his age, suggesting a bright future in Paraguayan football. He represents the next generation of defenders for Paraguay at Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Ramon Sosa",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Palmeiras (Serie A, Brazil)",
+    "hometown": "Paraguay",
+    "why": "An electrifying winger who has earned a move to Palmeiras after impressive performances, Ramon Sosa is known for his blistering pace, direct dribbling, and ability to deliver dangerous crosses from wide areas. His ability to beat defenders one-on-one and create chances makes him one of Paraguay's most exciting attacking talents. He is a key player in the wide areas for Paraguay at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Diego Gomez",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Brighton (Premier League, England)",
+    "hometown": "Paraguay",
+    "why": "One of the brightest young talents in Paraguayan football, Diego Gomez earned a move to Brighton in the Premier League after impressing in MLS with Inter Miami. His technical ability, vision, and composure on the ball make him a classy midfielder who can dictate the tempo of a match. At 23, he is already one of Paraguay's most important players at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Miguel Almiron",
+    "espnId": 206827,
+    "position": "Attacking midfielder / Winger",
+    "club": "Atlanta United (MLS, United States)",
+    "hometown": "Asuncion, Paraguay",
+    "why": "One of Paraguay's most recognizable and experienced players, Miguel Almiron is a dynamic attacker known for his electric pace and tireless work rate. After a successful spell at Newcastle United in the Premier League, he returned to MLS with Atlanta United. His experience, big-game mentality, and ability to change matches with his speed and directness make him a vital player for Paraguay at Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Mauricio",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Palmeiras (Serie A, Brazil)",
+    "hometown": "Paraguay",
+    "why": "A creative and technically gifted attacking midfielder who has thrived at Palmeiras, Mauricio possesses excellent vision and the ability to unlock defenses with incisive passing. His performances in Brazilian football and continental competition have established him as one of Paraguay's key creative outlets. He brings flair and imagination to the midfield at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Andres Cubas",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Vancouver Whitecaps (MLS, Canada)",
+    "hometown": "Paraguay",
+    "why": "A combative and energetic defensive midfielder who has been a key player for the Vancouver Whitecaps in MLS, Andres Cubas excels at breaking up opposition attacks and protecting the backline. His tenacity, tackling ability, and tireless pressing make him the ideal midfield enforcer. His experience in North American football is a bonus for Paraguay at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Damian Bobadilla",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Sao Paulo (Serie A, Brazil)",
+    "hometown": "Paraguay",
+    "why": "A dynamic young midfielder who has established himself at Sao Paulo in Brazilian football, Damian Bobadilla brings energy, work rate, and a good passing range to the middle of the park. His box-to-box capabilities allow him to contribute both defensively and in attack. He is part of Paraguay's exciting young midfield contingent at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Alejandro Romero Gamarra",
+    "espnId": null,
+    "position": "Attacking midfielder / Winger",
+    "club": "Al-Ain (UAE Pro League, United Arab Emirates)",
+    "hometown": "Paraguay",
+    "why": "A creative and tricky attacker who has taken his talents to the UAE Pro League with Al-Ain, Alejandro Romero Gamarra is known as 'Kaku' and has previously starred in MLS with New York Red Bulls. His ability to create chances, take on defenders, and score from distance makes him a versatile attacking threat. His experience across multiple leagues adds depth to Paraguay's attack at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Braian Ojeda",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Orlando City (MLS, United States)",
+    "hometown": "Paraguay",
+    "why": "A technically sound midfielder who has been performing well in MLS with Orlando City, Braian Ojeda possesses good ball retention skills and the ability to play progressive passes through the lines. His composure under pressure and tactical intelligence make him a reliable midfield option. His familiarity with the North American football environment is useful for Paraguay at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Matias Galarza",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Atlanta United (MLS, United States)",
+    "hometown": "Paraguay",
+    "why": "A talented young midfielder who has been developing his game in MLS with Atlanta United, Matias Galarza possesses excellent technical ability and creative vision. His ability to pick the right pass and drive forward with the ball makes him an exciting prospect. He adds youthful energy and creativity to Paraguay's midfield at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Antonio Sanabria",
+    "espnId": 192019,
+    "position": "Striker",
+    "club": "Cremonese (Serie A, Italy)",
+    "hometown": "San Lorenzo, Paraguay",
+    "why": "An experienced striker who has spent many years in Italian football, Antonio Sanabria is a clinical finisher with good movement and link-up play. His ability to hold the ball up and bring teammates into play complements his goalscoring instincts. His Serie A experience and international pedigree make him a key attacking option for Paraguay at Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Alex Arce",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Independiente Rivadavia (Primera Division, Argentina)",
+    "hometown": "Paraguay",
+    "why": "A prolific striker who has been in excellent goalscoring form in Argentine football, Alex Arce has been one of the most consistent forwards in the region. His predatory instincts in the box and ability to score with both feet and his head make him a complete striker. His form heading into the tournament makes him a key threat for Paraguay at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Gabriel Avalos",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Independiente (Primera Division, Argentina)",
+    "hometown": "Paraguay",
+    "why": "A veteran striker with extensive experience in Argentine football, Gabriel Avalos is a powerful and physical forward who excels in aerial duels and hold-up play. His ability to bully defenders and create space for teammates makes him a useful tactical option. His experience and professionalism are valued in the squad at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Gustavo Caballero",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Portsmouth (Championship, England)",
+    "hometown": "Paraguay",
+    "why": "An exciting young forward who has earned a move to English football with Portsmouth in the Championship, Gustavo Caballero brings pace, energy, and a hunger to score goals. His willingness to press from the front and his improving all-round game make him a promising talent. He represents Paraguay's next generation of attackers at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Isidro Pitta",
+    "espnId": 250889,
+    "position": "Central midfielder",
+    "club": "Club America (Liga MX, Mexico)",
+    "hometown": "Paraguay",
+    "why": "A combative central midfielder who has been a key player at Club America, one of the biggest clubs in Mexican football, Sanchez brings physicality, pressing intensity, and midfield steel. His ability to win the ball back and launch quick transitions makes him an important component of Paraguay's midfield. His Liga MX pedigree makes him well-prepared for the demands of Football 2026.",
+    "number": 25
    }
   ],
   "Portugal": [
@@ -9563,6 +16508,186 @@ window.WC_PLAYERS = {
      "UEFA Nations League 2019 (Portugal)",
      "Ligue 1 2016-17 (AS Monaco)"
     ]
+   },
+   {
+    "name": "Diogo Costa",
+    "espnId": 155019,
+    "position": "Goalkeeper",
+    "club": "FC Porto (Primeira Liga, Portugal)",
+    "hometown": "Porto, Portugal",
+    "why": "Portugal's first-choice goalkeeper, Diogo Costa has established himself as one of the best keepers in European football with FC Porto. His outstanding reflexes, excellent distribution with both feet, and composure in penalty shootouts — he famously saved three consecutive penalties in the 2022 tournament — make him a world-class talent. He is the undisputed number one for Portugal at Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "José Sá",
+    "espnId": 189744,
+    "position": "Goalkeeper",
+    "club": "Wolverhampton Wanderers (Premier League, England)",
+    "hometown": "Braga, Portugal",
+    "why": "An experienced and reliable goalkeeper who has been a consistent performer in the Premier League with Wolverhampton Wanderers, José Sá brings shot-stopping excellence and commanding aerial presence. His experience in English football's most demanding league ensures Portugal have high-quality depth in goal. He provides trusted backup for Portugal at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Rui Silva",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Sporting CP (Primeira Liga, Portugal)",
+    "hometown": "Portugal",
+    "why": "A composed and experienced goalkeeper who has served as a reliable option for Sporting CP in the Primeira Liga, Rui Silva brings domestic experience and familiarity with Portuguese football's tactical demands. His calmness under pressure and good distribution make him a solid third-choice option. He adds experienced depth to Portugal's goalkeeping ranks at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Nélson Semedo",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Fenerbahce (Super Lig, Turkey)",
+    "hometown": "Sintra, Portugal",
+    "why": "A pacey and attack-minded right-back who has played for Barcelona and Wolverhampton Wanderers before moving to Fenerbahce, Nélson Semedo brings vast experience at the highest level. His speed in recovery and ability to overlap effectively in attack make him a dangerous full-back. His experience across multiple top leagues is a valuable asset for Portugal at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Rúben Dias",
+    "espnId": 282554,
+    "position": "Centre-back",
+    "club": "Manchester City (Premier League, England)",
+    "hometown": "Amadora, Portugal",
+    "why": "One of the premier centre-backs in world football, Ruben Dias has been a cornerstone of Manchester City's defensive success, winning the Premier League title multiple times. His reading of the game, commanding aerial presence, and leadership qualities make him an elite defender. He is the anchor of Portugal's defense and one of their most important players at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Tomás Araújo",
+    "espnId": 329690,
+    "position": "Centre-back",
+    "club": "Benfica (Primeira Liga, Portugal)",
+    "hometown": "Almada, Portugal",
+    "why": "A remarkably mature young centre-back who burst onto the scene at Benfica and quickly established himself as one of Europe's most promising defenders, Antonio Silva reads the game superbly and distributes the ball with composure. His rapid rise to prominence has attracted interest from top clubs across the continent. He is an integral part of Portugal's defensive plans at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Diogo Dalot",
+    "espnId": null,
+    "position": "Right-back / Left-back",
+    "club": "Manchester United (Premier League, England)",
+    "hometown": "Braga, Portugal",
+    "why": "A versatile full-back capable of playing on either flank, Diogo Dalot has been a key player for Manchester United in the Premier League. His crossing ability, defensive work rate, and tactical flexibility make him a valuable option for the coaching staff. His Premier League experience and adaptability are important for Portugal at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Renato Veiga",
+    "espnId": null,
+    "position": "Centre-back / Left-back",
+    "club": "Villarreal (La Liga, Spain)",
+    "hometown": "Portugal",
+    "why": "A tall and technically gifted young defender who can play at centre-back or left-back, Renato Veiga joined Villarreal on loan from Chelsea and has impressed with his composure and passing ability. His versatility across the backline makes him a useful squad option, and his left foot adds balance to the defensive unit. He is an exciting young talent for Portugal at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Gonçalo Inácio",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Sporting CP (Primeira Liga, Portugal)",
+    "hometown": "Almada, Portugal",
+    "why": "A stylish left-footed centre-back who has been outstanding for Sporting CP, Gonçalo Inácio is one of the most sought-after defenders in European football. His ability to carry the ball out of defense, play long-range passes, and score spectacular goals from distance adds a unique dimension to Portugal's backline. He is a key component of Portugal's defense at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "João Cancelo",
+    "espnId": 200647,
+    "position": "Full-back",
+    "club": "Barcelona (La Liga, Spain)",
+    "hometown": "Barreiro, Portugal",
+    "why": "One of the most technically gifted full-backs in the world, João Cancelo has starred for Manchester City, Bayern Munich, and now Barcelona. His ability to invert into midfield, create chances, and score goals makes him more of a playmaker than a traditional defender. His tactical intelligence and versatility to play on either flank make him a unique weapon for Portugal at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Matheus Nunes",
+    "espnId": 214700,
+    "position": "Defensive midfielder",
+    "club": "Bayern Munich (Bundesliga, Germany)",
+    "hometown": "Lisbon, Portugal",
+    "why": "A powerful and aggressive defensive midfielder who earned a move to Bayern Munich, Matheus Nunes is one of the best ball-winners in European football. His tackling, interceptions, and physical presence in midfield provide a shield for the defense and allow Portugal's creative players to flourish. His move to one of the world's biggest clubs confirms his elite status at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "João Neves",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Paris Saint-Germain (Ligue 1, France)",
+    "hometown": "Tavira, Portugal",
+    "why": "A prodigiously talented young midfielder who earned a big move to PSG from Benfica, Joao Neves is an energetic and technically gifted player who combines relentless pressing with excellent passing ability. Despite his youth, he has already shown the maturity and quality to compete at the highest level. He is one of the most exciting young talents in Portugal's squad at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Rúben Neves",
+    "espnId": 204399,
+    "position": "Central midfielder",
+    "club": "Al Hilal (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Mozelos, Portugal",
+    "why": "A cultured and technically excellent midfielder known for his long-range passing, vision, and spectacular goals from distance, Ruben Neves brings vast experience from his time at Wolverhampton Wanderers and now Al Hilal. His ability to dictate play from deep and his set-piece expertise add quality to Portugal's midfield options. His experience and composure are valued at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Samú Costa",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Mallorca (La Liga, Spain)",
+    "hometown": "Portugal",
+    "why": "A physical and combative midfielder who has been a consistent performer in La Liga with Mallorca, Samu Costa brings energy, pressing intensity, and defensive steel to the middle of the park. His tireless work rate and ability to cover ground make him a useful option in a squad filled with creative talents. He provides important midfield depth for Portugal at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Gonçalo Ramos",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Paris Saint-Germain (Ligue 1, France)",
+    "hometown": "Olhao, Portugal",
+    "why": "A clinical young striker who announced himself on the world stage with a hat-trick against Switzerland in the 2022 tournament, Goncalo Ramos has continued his development at PSG. His pace, movement, and finishing ability make him a lethal penalty-box predator. He is widely seen as the natural successor to Ronaldo as Portugal's primary striker at Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "João Félix",
+    "espnId": null,
+    "position": "Forward / Attacking midfielder",
+    "club": "Al Nassr (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Viseu, Portugal",
+    "why": "A supremely talented forward with silky technique and creative flair, Joao João Félix won the Golden Boy award and earned a record-breaking transfer to Atletico Madrid. His ability to play between the lines, create chances, and score spectacular goals makes him one of Portugal's most gifted attackers. His unpredictability and imagination add a spark to Portugal's attack at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Francisco Trincão",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Sporting CP (Primeira Liga, Portugal)",
+    "hometown": "Viana do Castelo, Portugal",
+    "why": "A skillful winger who has revived his career at Sporting CP after an inconsistent spell at Barcelona, Francisco Trincão has rediscovered his best form with his dribbling ability and creative play. His quick feet and ability to cut inside from the right wing make him a dangerous attacker who can unlock tight defenses. His resurgence has earned him a place in Portugal's squad for Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Pedro Neto",
+    "espnId": 275956,
+    "position": "Winger",
+    "club": "Chelsea (Premier League, England)",
+    "hometown": "Viana do Castelo, Portugal",
+    "why": "An explosive and pacy winger who earned a big move to Chelsea after dazzling performances at Wolverhampton Wanderers, Pedro Pedro Neto is one of the most exciting wide players in the Premier League. His blistering speed, direct running, and improving end product make him a nightmare for opposition full-backs. His ability to stretch defenses is a crucial weapon for Portugal at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Gonçalo Guedes",
+    "espnId": null,
+    "position": "Forward / Winger",
+    "club": "Real Sociedad (La Liga, Spain)",
+    "hometown": "Benavente, Portugal",
+    "why": "An experienced forward who has played extensively in La Liga with Valencia and now Real Sociedad, Gonçalo Guedes combines pace, power, and technical ability. His versatility to play across the front line and his ability to score and create goals make him a useful squad option. His La Liga experience adds depth to Portugal's attacking ranks at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Francisco Conceição",
+    "espnId": 304174,
+    "position": "Right winger",
+    "club": "Juventus (Serie A, Italy)",
+    "hometown": "Coimbra, Portugal",
+    "why": "Son of former Portugal international and manager Sergio Francisco Conceição, Francisco has made his own name with his explosive pace, direct dribbling, and end product at Juventus. His ability to take on defenders on the right flank and deliver decisive moments in big matches has already been demonstrated at major tournaments. He is one of Portugal's most exciting young attackers at Football 2026.",
+    "number": 26
    }
   ],
   "Qatar": [
@@ -9725,6 +16850,213 @@ window.WC_PLAYERS = {
      "Emir of Qatar Cup (multiple titles)",
      "Qatar most-capped player of all time"
     ]
+   },
+   {
+    "name": "Mahmoud Abunada",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Al-Rayyan (Qatar Stars League, Qatar)",
+    "hometown": "Qatar",
+    "why": "A young and agile goalkeeper who has emerged as a first-choice option for the Qatari national team, Mahmoud Abunada has been impressive for Al-Rayyan in the Qatar Stars League. His reflexes, positioning, and confidence in handling crosses have earned him recognition. He brings youthful energy and ambition to Qatar's goalkeeping department at Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Salah Zakaria",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Al-Duhail (Qatar Stars League, Qatar)",
+    "hometown": "Qatar",
+    "why": "A reliable goalkeeper who has been performing consistently for Al-Duhail, one of Qatar's strongest domestic clubs, Salah Zakaria is known for his shot-stopping ability and composed demeanor. His experience in the competitive Qatar Stars League and AFC Champions League gives him valuable big-match exposure. He provides quality depth in goal for Qatar at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Meshaal Barsham",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Al-Sadd (Qatar Stars League, Qatar)",
+    "hometown": "Doha, Qatar",
+    "why": "The experienced first-choice goalkeeper who represented Qatar at the 2022 home tournament, Meshaal Barsham has been a loyal servant to both Al-Sadd and the national team. His experience at the highest level of Asian football and on the world stage provides invaluable composure under pressure. His leadership and vocal presence make him a vital squad member at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Pedro Miguel",
+    "espnId": 180989,
+    "position": "Right-back",
+    "club": "Al-Sadd (Qatar Stars League, Qatar)",
+    "hometown": "Born in Portugal; naturalized Qatari",
+    "why": "A naturalized Qatari of Portuguese origin, Pedro Miguel has been a stalwart of the national team and a key player at Al-Sadd for many years. His experience, tactical awareness, and ability to contribute in attack from the right-back position make him one of Qatar's most dependable defenders. He was part of the 2019 Asian Cup-winning squad and brings tournament experience to Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Lucas Mendes",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Al-Wakrah (Qatar Stars League, Qatar)",
+    "hometown": "Born in Brazil; naturalized Qatari",
+    "why": "A naturalized Qatari of Brazilian origin, Lucas Mendes has been a reliable left-back in the Qatar Stars League for many years. His technical ability, crossing, and understanding of the team's system make him a trusted option on the left side of defense. His experience in Qatari football is an important asset for the national team at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Issa Laye",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al-Arabi (Qatar Stars League, Qatar)",
+    "hometown": "Qatar",
+    "why": "A physically imposing centre-back who combines aerial dominance with solid positional play, Issa Laye has been a regular in the Qatar Stars League with Al-Arabi. His ability to defend set pieces and organize the defensive line makes him a reliable option. He provides important defensive depth for Qatar at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Jassem Gaber",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al-Rayyan (Qatar Stars League, Qatar)",
+    "hometown": "Qatar",
+    "why": "A young and promising centre-back who has been establishing himself at Al-Rayyan, Jassem Gaber represents the next generation of Qatari defenders. His composure on the ball and improving reading of the game suggest significant potential. His youth and energy are assets for Qatar's defense at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Ayoub Al-Oui",
+    "espnId": null,
+    "position": "Full-back / Centre-back",
+    "club": "Al-Gharafa (Qatar Stars League, Qatar)",
+    "hometown": "Qatar",
+    "why": "One of the youngest players in Qatar's squad, Ayoub Al-Oui is a versatile defender who can play in multiple positions across the backline. His pace, willingness to learn, and potential have earned him early call-ups to the national team. He represents the future of Qatari football at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Homam Ahmed",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Cultural Leonesa (Segunda Federacion, Spain)",
+    "hometown": "Qatar",
+    "why": "A defender who has gained European experience playing in Spanish football, Homam Ahmed brings a different perspective and tactical understanding to Qatar's defense. His exposure to European football has helped develop his game beyond the domestic league environment. His international club experience adds value to Qatar's squad at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Boualem Khoukhi",
+    "espnId": null,
+    "position": "Centre-back / Defensive midfielder",
+    "club": "Al-Sadd (Qatar Stars League, Qatar)",
+    "hometown": "Born in Algeria; naturalized Qatari",
+    "why": "A versatile veteran who can play in defense or midfield, Boualem Khoukhi has been one of the most experienced and reliable players in the Qatar national team for over a decade. He was instrumental in Qatar's 2019 Asian Cup triumph and represented the nation at the 2022 home tournament. His leadership, versatility, and big-game experience are crucial for Qatar at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Sultan Al-Brake",
+    "espnId": null,
+    "position": "Centre-back / Full-back",
+    "club": "Al-Duhail (Qatar Stars League, Qatar)",
+    "hometown": "Qatar",
+    "why": "A solid and dependable defender who has been a consistent performer for Al-Duhail in the Qatar Stars League, Sultan Al-Brake provides tactical flexibility with his ability to play centrally or at full-back. His defensive discipline and physical attributes make him a reliable option in the squad. He adds important depth to Qatar's defense at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Al-Hashmi Al-Hussain",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al-Arabi (Qatar Stars League, Qatar)",
+    "hometown": "Qatar",
+    "why": "A young defender still developing his game at Al-Arabi, Al-Hashmi Al-Hussain has shown promise with his physical attributes and willingness to compete. His selection reflects Qatar's investment in developing young domestic talent for the future. He gains invaluable experience as part of the Football 2026 squad.",
+    "number": 25
+   },
+   {
+    "name": "Abdulaziz Hatem",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al-Rayyan (Qatar Stars League, Qatar)",
+    "hometown": "Doha, Qatar",
+    "why": "A technically gifted and experienced midfielder who has been a key creative force for Qatar over many years, Abdulaziz Hatem is known for his excellent passing range and ability to control the tempo of a match. His set-piece delivery and vision from midfield have produced many goals for the national team. At 36, his experience and quality remain vital for Qatar at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Karim Boudiaf",
+    "espnId": 180993,
+    "position": "Defensive midfielder",
+    "club": "Al-Duhail (Qatar Stars League, Qatar)",
+    "hometown": "Born in France; naturalized Qatari",
+    "why": "A combative and experienced defensive midfielder who has been a pillar of the Qatari national team for over a decade, Karim Boudiaf was central to the 2019 Asian Cup victory and appeared at the 2022 home tournament. His tackling, positional awareness, and ability to break up opposition attacks provide crucial protection for the defense. His veteran leadership is indispensable for Qatar at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Ahmed Fathy",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al-Arabi (Qatar Stars League, Qatar)",
+    "hometown": "Qatar",
+    "why": "An experienced midfielder who has been a consistent performer in the Qatar Stars League, Ahmed Fathy brings composure and passing accuracy to the midfield. His understanding of the team's tactical system and his reliability in possession make him a trusted option. He provides experienced midfield depth for Qatar at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Assim Madibo",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Al-Wakrah (Qatar Stars League, Qatar)",
+    "hometown": "Born in Sudan; naturalized Qatari",
+    "why": "A dynamic and energetic defensive midfielder known for his tireless running and pressing, Assim Madibo has been an important player for Qatar in recent years. His ability to cover ground, win second balls, and disrupt opposition attacks adds a physical dimension to the midfield. His work rate and commitment make him a valuable player for Qatar at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Mohamed Al-Mannai",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al-Shamal (Qatar Stars League, Qatar)",
+    "hometown": "Qatar",
+    "why": "One of the youngest and most promising midfielders in the squad, Mohamed Al-Mannai has been developing his game at Al-Shamal and earning opportunities with the national team. His technical ability and willingness to take risks with the ball suggest he has a bright future. He gains valuable tournament experience as part of Qatar's squad at Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Ahmed Alaaeldin",
+    "espnId": null,
+    "position": "Forward / Winger",
+    "club": "Al-Rayyan (Qatar Stars League, Qatar)",
+    "hometown": "Born in Egypt; naturalized Qatari",
+    "why": "A tricky and creative attacker who can play on either wing or behind the striker, Ahmed Alaaeldin has been one of Qatar's most dangerous offensive players for several years. His dribbling ability, close control, and eye for a pass make him a constant threat in the final third. His flair and creativity are important for Qatar's attack at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Edmilson Junior",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Al-Duhail (Qatar Stars League, Qatar)",
+    "hometown": "Born in Brazil; naturalized Qatari",
+    "why": "A naturalized Qatari of Brazilian origin, Edmilson Junior brings South American technical quality and goalscoring instinct to the attack. His pace, dribbling ability, and eye for goal have made him a key attacker for both Al-Duhail and the national team. His quality in the final third is a crucial asset for Qatar at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Mohammed Muntari",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Al-Gharafa (Qatar Stars League, Qatar)",
+    "hometown": "Born in Ghana; naturalized Qatari",
+    "why": "Qatar's leading striker who scored at the 2022 home tournament, Mohammed Mohammed Muntari is a powerful and athletic forward with excellent aerial ability and a poacher's instinct. His height and physical presence make him a handful for any defense, while his heading ability is among the best in Asian football. He is the focal point of Qatar's attack at Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Yusuf Abdurisag",
+    "espnId": null,
+    "position": "Forward / Winger",
+    "club": "Al-Wakrah (Qatar Stars League, Qatar)",
+    "hometown": "Qatar",
+    "why": "A pacy and direct attacker who has been performing well for Al-Wakrah in the Qatar Stars League, Yusuf Abdurisag brings speed and unpredictability to Qatar's attack. His willingness to take on defenders and his improving end product make him an exciting attacking option. He adds important depth and energy to Qatar's forward line at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Ahmed Al-Ganehi",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Al-Gharafa (Qatar Stars League, Qatar)",
+    "hometown": "Qatar",
+    "why": "A young and promising forward who has been developing at Al-Gharafa, Ahmed Al-Ganehi has shown good instincts in front of goal and intelligent movement. His selection in the squad reflects Qatar's commitment to blooding young domestic talent in major tournaments. He represents the future of Qatari football at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Tahsin Jamshid",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Al-Duhail (Qatar Stars League, Qatar)",
+    "hometown": "Qatar",
+    "why": "The youngest player in the entire Qatar squad at just 19, Tahsin Jamshid is a highly regarded teenage talent who has already earned first-team opportunities at Al-Duhail. His pace, technical ability, and fearlessness mark him as a special prospect for Qatari football. His inclusion is an investment in the future, giving him invaluable experience at Football 2026.",
+    "number": 24
    }
   ],
   "Saudi Arabia": [
@@ -9874,6 +17206,213 @@ window.WC_PLAYERS = {
      "Saudi King's Cup (2024 with Al-Hilal)",
      "Saudi Super Cup (2024 with Al-Hilal)"
     ]
+   },
+   {
+    "name": "Nawaf Al-Aqidi",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Al Nassr (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Riyadh, Saudi Arabia",
+    "why": "A young shot-stopper who has emerged as Al Nassr's first-choice keeper, competing alongside some of the league's biggest stars. Al-Aqidi is known for his quick reflexes and commanding presence in the box. At 26, he represents the new generation of Saudi goalkeeping talent heading into Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Mohammed Al-Owais",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Al Ula (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Jeddah, Saudi Arabia",
+    "why": "One of Saudi Arabia's most experienced goalkeepers, Al-Owais was the starter in the famous 2022 tournament victory over Argentina. Known for his bravery and shot-stopping ability, the 34-year-old veteran provides invaluable big-game experience to the squad for Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Ahmed Al-Kassar",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Al Qadsiah (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "A veteran goalkeeper providing depth and experience to the Saudi squad. Al-Kassar has spent his career in the Saudi Pro League, most recently with Al Qadsiah. At 35, he brings locker-room leadership and reliable backup capabilities to the Football 2026 campaign.",
+    "number": 22
+   },
+   {
+    "name": "Ali Majrashi",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Al Ahli (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "A dynamic fullback known for his pace and overlapping runs down the right flank. Majrashi has established himself at Al Ahli alongside top international talent in the Saudi Pro League. At 26, he offers energy and attacking threat from the defensive line at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Ali Lajami",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al Hilal (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "A steady centre-back who has been a reliable presence in Al Hilal's dominant domestic campaigns. Lajami is strong in the air and composed on the ball, forming part of one of the Saudi Pro League's stingiest defences. His experience at 30 makes him a key figure in Saudi Arabia's backline for Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Abdulelah Al-Amri",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al Nassr (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "A commanding centre-back who has been a mainstay of both Al Nassr and the Saudi national team. Al-Amri is physically imposing at 185cm and excels in aerial duels and last-ditch defending. He was part of the 2022 tournament squad and brings crucial international experience to Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Hassan Al-Tambakti",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al Hilal (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "A ball-playing centre-back who is equally comfortable building from the back as he is making tackles. Al-Tambakti has developed into one of the Saudi Pro League's most complete defenders at Al Hilal. He was part of the historic 2022 squad that beat Argentina and now anchors the defence for Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Nawaf Boushal",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Al Nassr (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "An attacking left-back with good delivery from wide areas, Boushal has earned his place at Al Nassr through consistent performances. At 26 and 173cm, he uses his low centre of gravity to good effect in one-on-one duels. He brings youthful energy to Saudi Arabia's defensive options at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Hassan Kadesh",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al Ittihad (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "A veteran defender who has been a loyal servant for Al Ittihad and the national team over the years. Kadesh provides experience and tactical awareness in the heart of defence. At 33, he offers seasoned leadership for Saudi Arabia's Football 2026 campaign.",
+    "number": 14
+   },
+   {
+    "name": "Moteb Al-Harbi",
+    "espnId": null,
+    "position": "Full-back",
+    "club": "Al Hilal (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "A versatile fullback who has progressed through the ranks at Al Hilal, one of Saudi Arabia's most successful clubs. Al-Harbi is quick and tenacious in his defensive work while also contributing going forward. At 26, he is entering his prime for Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Jehad Thakri",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al Qadsiah (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "One of the younger members of Saudi Arabia's defensive corps, Thakri is a tall centre-back who uses his 183cm frame well in aerial situations. He has shown composure beyond his years at Al Qadsiah. At 24, he represents the future of the Saudi backline heading into Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Nasser Al-Dawsari",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al Hilal (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "A box-to-box midfielder with excellent passing range and a knack for arriving late in the box. Al-Dawsari has been influential for Al Hilal in both domestic and continental competitions. He is a key creative force in the Saudi midfield for Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Musab Al-Juwayr",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al Qadsiah (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "At just 22, Al-Juwayr is one of the most exciting young midfielders in Saudi football. He has impressed at Al Qadsiah with his technical ability and vision on the ball. His inclusion in the Football 2026 squad signals his potential as a future star for the national team.",
+    "number": 7
+   },
+   {
+    "name": "Ayman Yahya",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al Nassr (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "A technically gifted midfielder who has broken through at Al Nassr, earning the trust of coaches despite the club's star-studded roster. Yahya is comfortable on the ball and excels at linking play between defence and attack. At 25, he brings dynamism to Saudi Arabia's midfield at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Abdullah Al-Khaibari",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al Nassr (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "A hardworking midfielder who provides steel and discipline in the centre of the park for Al Nassr. Al-Khaibari is known for his work rate, tactical intelligence, and ability to break up opposition play. At 29, he brings maturity and balance to the Saudi midfield at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Ziyad Al-Johani",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al Ahli (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "A promising young midfielder who has developed well at Al Ahli, benefiting from the influx of world-class talent in the Saudi Pro League. Al-Johani combines physicality at 180cm with good technical skills. At 24, he is an emerging talent for Saudi Arabia at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Alaa Al-Hajji",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "NEOM SC (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "An experienced midfielder who brings composure and creative passing from central areas. Al-Hajji has carved out a solid career in the Saudi Pro League, most recently with NEOM SC. At 30, he provides reliable depth and know-how to the Football 2026 midfield.",
+    "number": 18
+   },
+   {
+    "name": "Mohamed Kanno",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al Hilal (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Jeddah, Saudi Arabia",
+    "why": "An imposing box-to-box midfielder who stands out at 190cm, Kanno is arguably Saudi Arabia's most important outfield player. He controls the tempo from deep, wins aerial duels, and drives forward with purpose for Al Hilal. A key figure in the 2022 tournament, he remains central to Saudi Arabia's ambitions at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Mohammed Abu Al-Shamat",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al Qadsiah (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "A young, technically sharp midfielder who has caught the eye at Al Qadsiah with his close control and passing ability. At 23 and 170cm, Abu Al-Shamat is a nimble operator who can find space between the lines. His selection for Football 2026 highlights his rapid rise in Saudi football.",
+    "number": 26
+   },
+   {
+    "name": "Saleh Al-Shehri",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Al Ittihad (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "Saudi Arabia's talisman striker, Al-Shehri etched his name into history by scoring the equalizer against Argentina in 2022. A clinical finisher with intelligent movement, he has been a consistent goal-scorer in the Saudi Pro League with Al Ittihad. At 32, he leads the attacking line for Football 2026 with proven big-game pedigree.",
+    "number": 11
+   },
+   {
+    "name": "Khalid Al-Ghannam",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Al Ettifaq (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "A tricky winger with pace and dribbling ability, Al-Ghannam provides width and unpredictability in attack. He has been a bright spot at Al Ettifaq, consistently creating chances and stretching defences. At 25, he brings explosive speed to Saudi Arabia's forward line at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Abdullah Al-Hamdan",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Al Nassr (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "A powerful striker with an eye for goal, Al-Hamdan has established himself as one of the Saudi Pro League's top forwards at Al Nassr. Standing 185cm tall, he is effective both as a target man and in behind. At 26, he offers a potent alternative in Saudi Arabia's attacking options for Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Sultan Mandash",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Al Hilal (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saudi Arabia",
+    "why": "A seasoned forward who has been a consistent contributor for Al Hilal's prolific attack over the years. Mandash is a clever player who thrives on movement and link-up play rather than pure pace. At 31, he brings experience and tactical nous to Saudi Arabia's forward options at Football 2026.",
+    "number": 20
    }
   ],
   "Scotland": [
@@ -10025,6 +17564,222 @@ window.WC_PLAYERS = {
      "Scottish Championship (2017 with Hibernian)",
      "Scottish League Cup (2013 with St Mirren)"
     ]
+   },
+   {
+    "name": "Angus Gunn",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Nottingham Forest (Premier League, England)",
+    "hometown": "Norwich, England",
+    "why": "Son of former Norwich and Scotland keeper Bryan Gunn, Angus chose to represent Scotland at international level after previously playing for England's youth teams. Standing 196cm tall, he has established himself as Nottingham Forest's first-choice keeper with excellent shot-stopping and distribution. He is Scotland's number one heading into Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Liam Kelly",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Rangers (Scottish Premiership, Scotland)",
+    "hometown": "Milton Keynes, England",
+    "why": "A dependable goalkeeper who has earned his place at Rangers through consistent performances in the Scottish Premiership and European competition. Kelly is a good communicator and organizer of his defence. He provides experienced backup between the posts for Scotland at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Craig Gordon",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Hearts (Scottish Premiership, Scotland)",
+    "hometown": "Edinburgh, Scotland",
+    "why": "A remarkable story of longevity, Gordon is 43 years old and still going strong for club and country. The former Sunderland and Celtic keeper has won over 75 caps for Scotland and overcame a career-threatening knee injury. His inclusion in the Football 2026 squad is a testament to his enduring quality and professionalism.",
+    "number": 21
+   },
+   {
+    "name": "Aaron Hickey",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Brentford (Premier League, England)",
+    "hometown": "Glasgow, Scotland",
+    "why": "An exceptionally two-footed fullback who can play on either side of defence, Hickey made his name at Hearts before impressive stints at Bologna and Brentford. He is combative in the tackle and energetic in attack, providing quality crossing from wide positions. At 24, he is one of Scotland's most versatile defenders at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Andy Robertson",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Liverpool (Premier League, England)",
+    "hometown": "Glasgow, Scotland",
+    "why": "Scotland's inspirational captain and one of the best left-backs in world football, Robertson has won the Champions League and Premier League with Liverpool. His relentless energy, pinpoint crossing, and leadership define Scotland's identity. He is the heartbeat of this squad at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Grant Hanley",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Hibernian (Scottish Premiership, Scotland)",
+    "hometown": "Dumfries, Scotland",
+    "why": "A towering, experienced centre-back who has accumulated over 40 Scotland caps across more than a decade of international service. Hanley spent years in the English Championship before returning to Scotland with Hibernian. His aerial prowess and leadership make him a valuable option in the Football 2026 squad.",
+    "number": 5
+   },
+   {
+    "name": "Kieran Tierney",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Celtic (Scottish Premiership, Scotland)",
+    "hometown": "Douglas, Isle of Man",
+    "why": "A fearless, marauding left-back who became a Celtic fan favourite before starring at Arsenal. Tierney returned to Celtic and is known for his wholehearted attacking runs, defensive solidity, and willingness to play through pain. He has been one of Scotland's most dependable performers and is crucial to their Football 2026 hopes.",
+    "number": 6
+   },
+   {
+    "name": "Jack Hendry",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al-Ettifaq (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Glasgow, Scotland",
+    "why": "A well-travelled centre-back whose career has taken him from Celtic to KV Oostende, Club Brugge, and now Al-Ettifaq in Saudi Arabia. Hendry is comfortable on the ball and reads the game well, having developed significantly during his time on the continent. He provides reliable depth at centre-back for Scotland at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "John Souttar",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Rangers (Scottish Premiership, Scotland)",
+    "hometown": "Aberdeen, Scotland",
+    "why": "A technically gifted centre-back who is excellent at playing out from the back, Souttar has overcome multiple Achilles injuries to rebuild his career at Rangers. He is strong in the air and possesses a good passing range for a defender. His resilience makes him an inspirational figure in Scotland's Football 2026 squad.",
+    "number": 15
+   },
+   {
+    "name": "Dominic Hyam",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Wrexham (EFL Championship, Wales)",
+    "hometown": "Edinburgh, Scotland",
+    "why": "A solid, no-nonsense centre-back who was a key part of Wrexham's remarkable rise through the English football pyramid. Hyam previously played for Kilmarnock in the Scottish Premiership before heading south. He offers dependable defensive cover for Scotland at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Nathan Patterson",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Everton (Premier League, England)",
+    "hometown": "Glasgow, Scotland",
+    "why": "A pacey, attack-minded right-back who graduated from Rangers' academy before joining Everton. Patterson is direct in his running and puts in dangerous deliveries from wide areas, though injuries have limited his minutes. At 24, he has the talent to be a key player for Scotland at Football 2026 when fully fit.",
+    "number": 22
+   },
+   {
+    "name": "Anthony Ralston",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Celtic (Scottish Premiership, Scotland)",
+    "hometown": "Glasgow, Scotland",
+    "why": "A Celtic academy graduate who has developed into a dependable right-back in the Scottish Premiership and Champions League. Ralston is committed in defence and offers an outlet going forward with his energetic overlapping runs. He provides experienced domestic depth for Scotland at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Scott McKenna",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Dinamo Zagreb (HNL, Croatia)",
+    "hometown": "Kirriemuir, Scotland",
+    "why": "A left-footed centre-back who has gained valuable European experience at Dinamo Zagreb after spells at Aberdeen and Nottingham Forest. McKenna is physically strong, aerially dominant, and comfortable bringing the ball out of defence. He adds continental experience to Scotland's backline at Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Tyler Fletcher",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Manchester United (Premier League, England)",
+    "hometown": "Scotland",
+    "why": "At just 19, Fletcher is one of the most exciting young talents in Scottish football, having broken through at Manchester United. He is a technically accomplished midfielder with vision and composure beyond his years. His selection for Football 2026 makes him one of the youngest players in the tournament.",
+    "number": 8
+   },
+   {
+    "name": "Ryan Christie",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Bournemouth (Premier League, England)",
+    "hometown": "Inverness, Scotland",
+    "why": "A versatile attacking midfielder who can play across the front line, Christie is known for his work rate, creativity, and ability to score spectacular goals. He has been a regular for Scotland since 2018 and played a key role in their Euro 2020 qualification. His energy and intelligence make him valuable at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Ben Gannon-Doak",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Bournemouth (Premier League, England)",
+    "hometown": "Scotland",
+    "why": "A quick, skillful young attacker who has impressed at Bournemouth with his dribbling ability and willingness to take on defenders. At just 20, Gannon-Doak represents the exciting new generation of Scottish talent. He brings flair and unpredictability to Scotland's Football 2026 attack.",
+    "number": 17
+   },
+   {
+    "name": "Lewis Ferguson",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Bologna (Serie A, Italy)",
+    "hometown": "Hamilton, Scotland",
+    "why": "One of Scotland's most complete midfielders, Ferguson moved from Aberdeen to Bologna where he became a key player, helping them qualify for the Champions League. He is a dynamic box-to-box midfielder who contributes goals, assists, and defensive work in equal measure. He is pivotal to Scotland's midfield at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Kenny McLean",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Norwich City (EFL Championship, England)",
+    "hometown": "Rutherglen, Scotland",
+    "why": "A vastly experienced central midfielder who has been a reliable presence for Scotland across multiple campaigns. McLean is a tidy passer who controls the tempo and provides defensive security from the middle of the park. His leadership and consistency make him a trusted squad member at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Findlay Curtis",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Kilmarnock (Scottish Premiership, Scotland)",
+    "hometown": "Scotland",
+    "why": "A 19-year-old midfielder who has emerged from Kilmarnock's academy to earn a surprise call-up to the senior squad. Curtis has shown maturity and technical quality in the Scottish Premiership despite his young age. His inclusion in the Football 2026 squad demonstrates Scotland's investment in the next generation.",
+    "number": 25
+   },
+   {
+    "name": "Lyndon Dykes",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Charlton Athletic (EFL League One, England)",
+    "hometown": "Gold Coast, Australia",
+    "why": "Born in Australia to Scottish parents, Dykes is a physical, combative striker who excels at holding up the ball and bringing teammates into play. He has been a regular international goalscorer for Scotland and provides a focal point in attack. His aerial ability and work rate make him a key option at Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Che Adams",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Torino (Serie A, Italy)",
+    "hometown": "Leicester, England",
+    "why": "A quick, intelligent forward who moved to Torino in Serie A after successful spells at Southampton and other English clubs. Adams is versatile enough to play as a lone striker or in a pair, combining pressing intensity with clinical finishing. He is Scotland's most potent attacking threat at Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Ross Stewart",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Southampton (EFL Championship, England)",
+    "hometown": "Dingwall, Scotland",
+    "why": "A tall, powerful striker who made his name with prolific goalscoring at Sunderland before moving to Southampton. Stewart is excellent in the air and has a keen eye for goal from close range and distance alike. The Highland-born forward adds physical presence to Scotland's attack at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "George Hirst",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Ipswich Town (Premier League, England)",
+    "hometown": "Sheffield, England",
+    "why": "Son of former Sheffield Wednesday and England striker David Hirst, George chose to represent Scotland through his family heritage. A tall, left-footed striker at 190cm, he has developed well at Ipswich Town in the Premier League. He provides a different physical option in Scotland's forward line at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Lawrence Shankland",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Hearts (Scottish Premiership, Scotland)",
+    "hometown": "Glasgow, Scotland",
+    "why": "A prolific goalscorer who has been the Scottish Premiership's most consistent domestic striker in recent seasons at Hearts. Shankland has an instinct for being in the right place at the right time and finishes clinically with both feet. His outstanding domestic record earned him a place in Scotland's Football 2026 squad.",
+    "number": 20
    }
   ],
   "Senegal": [
@@ -10222,6 +17977,231 @@ window.WC_PLAYERS = {
      "UEFA Conference League (2025 with Chelsea)",
      "Club Championship (2025 with Chelsea)"
     ]
+   },
+   {
+    "name": "Yehvann Diouf",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Nice (Ligue 1, France)",
+    "hometown": "Roubaix, France",
+    "why": "A rising goalkeeper who has established himself at Nice in Ligue 1 with excellent reflexes and composure under pressure. Born in France to Senegalese parents, Diouf has chosen to represent the Lions of Teranga at international level. At 26, he competes for the starting spot heading into Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Edouard Mendy",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Al-Ahli (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Montivilliers, France",
+    "why": "The hero of Senegal's 2021 Africa Cup of Nations triumph, Mendy was previously one of the Premier League's top keepers at Chelsea, winning the Champions League in 2021. His remarkable journey from non-league football in France to global stardom is one of football's great modern stories. He brings elite experience to Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Mory Diaw",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Le Havre (Ligue 1, France)",
+    "hometown": "Le Mans, France",
+    "why": "A towering goalkeeper standing 198cm tall, Diaw provides imposing presence between the posts for Le Havre in Ligue 1. He is dominant on crosses and set pieces thanks to his exceptional reach. At 32, he offers dependable depth in Senegal's goalkeeping department for Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Mamadou Sarr",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Chelsea (Premier League, England)",
+    "hometown": "France",
+    "why": "A precociously talented young centre-back who joined Chelsea and has shown maturity beyond his 20 years. Sarr is an imposing figure at 193cm who combines physical dominance with surprising comfort on the ball. He represents Senegal's exciting defensive future at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Kalidou Koulibaly",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al-Hilal (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Saint-Dié-des-Vosges, France",
+    "why": "One of the best centre-backs of his generation, Koulibaly spent eight dominant years at Napoli before moves to Chelsea and Al-Hilal. He captained Senegal to their historic first Africa Cup of Nations title in 2022 and is revered for his pace, power, and reading of the game. At 34, the veteran leader marshals Senegal's defence at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Abdoulaye Seck",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Maccabi Haifa (Israeli Premier League, Israel)",
+    "hometown": "Dakar, Senegal",
+    "why": "A strong, experienced centre-back who has played in multiple European leagues and been a long-time member of the Senegal squad. Seck is a physical defender who excels in aerial battles and is committed in the tackle. At 34, he provides depth and experience to Senegal's backline at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Ismail Jakobs",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Galatasaray (Süper Lig, Türkiye)",
+    "hometown": "Cologne, Germany",
+    "why": "Born in Germany to Senegalese parents, Jakobs began his career at Köln before joining Galatasaray, where he has thrived as an attacking left-back. He switched his international allegiance from Germany to Senegal and quickly established himself. His pace and crossing ability make him a key weapon for Senegal at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Moussa Niakhate",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Lyon (Ligue 1, France)",
+    "hometown": "Roubaix, France",
+    "why": "A powerful centre-back who has developed impressively through spells at Metz, Nottingham Forest, and now Lyon. Niakhate is strong in the air, aggressive in the tackle, and composed with the ball at his feet. At 30, he is in his peak years and a key figure in Senegal's defence at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Antoine Mendy",
+    "espnId": null,
+    "position": "Full-back",
+    "club": "Nice (Ligue 1, France)",
+    "hometown": "France",
+    "why": "A young, athletic defender who has broken through at Nice in Ligue 1. At 22, Mendy is a physically impressive fullback at 188cm who brings pace and energy to the defensive line. His emergence adds exciting youthful depth to Senegal's backline at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "El Hadji Malick Diouf",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "West Ham United (Premier League, England)",
+    "hometown": "Belgium",
+    "why": "A dynamic young left-back who made a rapid rise from the Belgian league to the Premier League with West Ham. Diouf is an explosive runner who loves to get forward and deliver crosses from the left flank. At 21, he is one of the most exciting young fullbacks representing Senegal at Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Idrissa Gana Gueye",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Everton (Premier League, England)",
+    "hometown": "Dakar, Senegal",
+    "why": "One of the Premier League's most tenacious midfielders, Gueye has been a mainstay for Senegal across three major tournaments. Known for his incredible pressing intensity, interceptions, and ball-winning ability, he played a crucial role in Senegal's 2021 AFCON victory. At 36, the veteran midfielder brings his unmatched work ethic to Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Pathe Ciss",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Rayo Vallecano (La Liga, Spain)",
+    "hometown": "France",
+    "why": "A disciplined holding midfielder who has been a vital cog in Rayo Vallecano's engine room in La Liga. Ciss is effective at screening the defence, winning the ball back, and distributing it simply. His reliability and tactical intelligence make him an important squad player for Senegal at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Lamine Camara",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Monaco (Ligue 1, France)",
+    "hometown": "Dakar, Senegal",
+    "why": "One of the breakout stars of recent African football, Camara earned a move to Monaco after dazzling performances at the 2024 Africa Cup of Nations at just 20 years old. He is a dynamic, all-action midfielder who drives forward with the ball and contributes goals from midfield. At 22, he is a cornerstone of Senegal's future at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Krepin Diatta",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Monaco (Ligue 1, France)",
+    "hometown": "Dakar, Senegal",
+    "why": "A versatile wide midfielder who can play across the front line, Diatta is a rapid, direct runner who takes on defenders. He came through Club Brugge's academy before moving to Monaco, where he has shown his quality in Ligue 1 and European competition. His pace and directness are vital to Senegal's attack at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Pape Matar Sarr",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Tottenham Hotspur (Premier League, England)",
+    "hometown": "Thiès, Senegal",
+    "why": "A dynamic box-to-box midfielder who has developed rapidly at Tottenham after joining from Metz. Sarr combines physical power with elegant technique, excelling at driving runs from midfield and breaking the lines. At 23, he is one of Senegal's most important players and a key creative force at Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Habib Diarra",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Sunderland (EFL Championship, England)",
+    "hometown": "Bamako, Mali",
+    "why": "A talented midfielder who plays for Sunderland in the Championship, Diarra is known for his technical skill and creativity in the final third. He has chosen to represent Senegal at international level and brings flair and unpredictability to the midfield. At 22, he is one of the young talents in Senegal's Football 2026 squad.",
+    "number": 21
+   },
+   {
+    "name": "Bara Ndiaye",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Bayern Munich (Bundesliga, Germany)",
+    "hometown": "Senegal",
+    "why": "At just 18 years old and playing for Bayern Munich, Ndiaye is one of the most hyped teenage talents in world football. He possesses remarkable technical ability and game intelligence for his age, having already broken into Bayern's first-team setup. He is the youngest member of Senegal's Football 2026 squad.",
+    "number": 22
+   },
+   {
+    "name": "Pape Gueye",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Villarreal (La Liga, Spain)",
+    "hometown": "Montreuil, France",
+    "why": "A tall, rangy defensive midfielder who joined Villarreal after a successful spell at Marseille. Gueye uses his 188cm frame to dominate in the air and win duels, while also showing composure on the ball. He provides physical presence and tactical discipline in Senegal's midfield at Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Assane Diao",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Como (Serie A, Italy)",
+    "hometown": "Spain",
+    "why": "A young, exciting winger who burst onto the scene at Real Betis before moving to Como in Serie A. Diao is blessed with electric pace, quick feet, and the confidence to take on defenders one-on-one. At just 20, he is one of Senegal's most thrilling attacking talents at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Bamba Dieng",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Lorient (Ligue 1, France)",
+    "hometown": "Pikine, Senegal",
+    "why": "A lively striker who first made his name at Marseille with his pace and clinical finishing inside the box. Dieng was part of Senegal's 2021 AFCON-winning squad, scoring in the shootout in the final. His speed and movement make him a dangerous attacking option for Senegal at Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Sadio Mane",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Al-Nassr (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Sédhiou, Senegal",
+    "why": "One of Africa's greatest ever footballers, Mane won the Champions League and Premier League with Liverpool before moving to Bayern Munich and then Al-Nassr. He scored the winning penalty in Senegal's historic 2021 AFCON final triumph. At 34, the legendary attacker remains the Lions of Teranga's spiritual leader at Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Cherif Ndiaye",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Samsunspor (Süper Lig, Türkiye)",
+    "hometown": "Senegal",
+    "why": "A tall, physical striker who has been prolific in the Turkish Süper Lig with Samsunspor. Standing 190cm, Ndiaye is a handful for defenders with his aerial ability and hold-up play. At 30, he provides experienced striking depth for Senegal at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Iliman Ndiaye",
+    "espnId": null,
+    "position": "Second striker",
+    "club": "Everton (Premier League, England)",
+    "hometown": "Rouen, France",
+    "why": "A silky, creative forward who became a fan favourite at Sheffield United before spells at Marseille and Everton. Ndiaye is a dribbling specialist with low centre of gravity and exceptional close control in tight spaces. He was a breakout star at the 2024 AFCON and is a key creative weapon for Senegal at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Ismaila Sarr",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Crystal Palace (Premier League, England)",
+    "hometown": "Saint-Louis, Senegal",
+    "why": "A blistering-paced winger who has terrorized Premier League defences with his speed and directness at Watford, Marseille, and now Crystal Palace. Sarr famously scored twice against Liverpool to end their unbeaten run. He is one of Senegal's most dangerous attackers on the counter at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Ibrahim Mbaye",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Paris Saint-Germain (Ligue 1, France)",
+    "hometown": "France",
+    "why": "At just 18 and already on the books at Paris Saint-Germain, Mbaye is one of the youngest and most exciting prospects in Senegalese football. He has shown pace, technique, and a natural goal-scoring instinct in PSG's youth and first-team setup. His inclusion in the Football 2026 squad signals his enormous potential.",
+    "number": 20
    }
   ],
   "South Africa": [
@@ -10370,6 +18350,213 @@ window.WC_PLAYERS = {
      "Nedbank Cup (2017 with SuperSport United)",
      "MTN8 Cup (2018, 2020 with SuperSport United)"
     ]
+   },
+   {
+    "name": "Sipho Chaine",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Orlando Pirates (DStv Premiership, South Africa)",
+    "hometown": "South Africa",
+    "why": "A commanding goalkeeper who has been vital to Orlando Pirates' domestic and continental success. Chaine is an excellent shot-stopper with good command of his area and confident distribution. He is Bafana Bafana's first-choice keeper heading into Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Ricardo Goss",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Siwelele FC (DStv Premiership, South Africa)",
+    "hometown": "South Africa",
+    "why": "An experienced goalkeeper who has been a steady presence in South African football. Goss is known for his shot-stopping ability and vocal organisation of his defence. At 32, he provides reliable backup goalkeeping for Bafana Bafana at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Thabang Matuludi",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Polokwane City (DStv Premiership, South Africa)",
+    "hometown": "Limpopo, South Africa",
+    "why": "A solid right-back who has been one of the standout performers at Polokwane City in the South African top flight. Matuludi is physical and committed in defence while offering overlapping runs down the flank. He adds domestic experience to Bafana Bafana's squad at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Khulumani Ndamane",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Mamelodi Sundowns (DStv Premiership, South Africa)",
+    "hometown": "South Africa",
+    "why": "A young centre-back who has broken through at Mamelodi Sundowns, South Africa's dominant domestic force. At 22, Ndamane is composed on the ball and physically imposing at 183cm. He represents the exciting future of South African football at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Thalente Mbatha",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Orlando Pirates (DStv Premiership, South Africa)",
+    "hometown": "South Africa",
+    "why": "A versatile player who can operate in defence or midfield, Mbatha has become an important figure at Orlando Pirates. He is a combative ball-winner who reads the game well and distributes efficiently. His adaptability makes him valuable to Bafana Bafana at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Aubrey Modiba",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Mamelodi Sundowns (DStv Premiership, South Africa)",
+    "hometown": "Limpopo, South Africa",
+    "why": "A technically gifted left-sided player who can play as a fullback or wing-back, Modiba has been a consistent performer at Mamelodi Sundowns. Despite his relatively small stature at 168cm, he compensates with pace and skill. At 30, he brings experience to Bafana Bafana at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Mbekezeli Mbokazi",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Chicago Fire (MLS, United States)",
+    "hometown": "South Africa",
+    "why": "One of the few South African players plying their trade in MLS, Mbokazi has made the move to Chicago Fire at just 20 years old. He is an athletic, physically strong defender who is developing rapidly in the American league. His overseas experience is valuable for Bafana Bafana at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Samukele Kabini",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Molde FK (Eliteserien, Norway)",
+    "hometown": "South Africa",
+    "why": "A young defender who took the adventurous route to Molde FK in Norway's top division, gaining European experience at 22. Kabini is composed under pressure and comfortable on the ball, traits that caught the eye of Scandinavian scouts. He represents South Africa's growing overseas presence at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Nkosinathi Sibisi",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Orlando Pirates (DStv Premiership, South Africa)",
+    "hometown": "Durban, South Africa",
+    "why": "A reliable centre-back who has been a steady presence at Orlando Pirates and for the national team. Sibisi is strong in the air and makes well-timed tackles, having developed from Golden Arrows into one of South Africa's most dependable defenders. He provides experience in Bafana Bafana's backline at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Khuliso Mudau",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Mamelodi Sundowns (DStv Premiership, South Africa)",
+    "hometown": "Limpopo, South Africa",
+    "why": "An athletic, attack-minded right-back who has been one of South Africa's best performers in recent years at Mamelodi Sundowns. Mudau is known for his speed, stamina, and ability to contribute in the final third. He is a key player for Bafana Bafana at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Ime Okon",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Hannover 96 (2. Bundesliga, Germany)",
+    "hometown": "South Africa",
+    "why": "A young centre-back developing in Germany's second division with Hannover 96, Okon is one of the few South African players in the Bundesliga system. At 22 and 188cm, he has the physical tools to compete at the highest level. His European experience strengthens Bafana Bafana's squad at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Olwethu Makhanya",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Philadelphia Union (MLS, United States)",
+    "hometown": "South Africa",
+    "why": "A young defender who has earned a move to MLS with the Philadelphia Union, gaining valuable international experience at 22. Makhanya is a tall, athletic centre-back at 188cm who is developing well in the American game. He adds overseas depth to Bafana Bafana's defensive options at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Kamogelo Sebelebele",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Orlando Pirates (DStv Premiership, South Africa)",
+    "hometown": "South Africa",
+    "why": "A compact, energetic left-back who has come through Orlando Pirates' youth development system. At 165cm, Sebelebele compensates for his lack of height with pace, tenacity, and aggressive pressing. The 23-year-old adds youthful dynamism to Bafana Bafana's fullback options at Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Bradley Cross",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Kaizer Chiefs (DStv Premiership, South Africa)",
+    "hometown": "South Africa",
+    "why": "A versatile defender who has been part of Kaizer Chiefs' squad in the South African top flight. Cross can operate as a left-back or in a more advanced role, and is valued for his delivery from wide areas. At 25, he provides additional fullback depth for Bafana Bafana at Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Relebohile Mofokeng",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Orlando Pirates (DStv Premiership, South Africa)",
+    "hometown": "Johannesburg, South Africa",
+    "why": "The brightest young talent in South African football, Mofokeng burst onto the scene as a teenager at Orlando Pirates with his dazzling dribbling and creativity. He has drawn comparisons to some of South Africa's greatest players and wears the iconic number 10 shirt. At 21, he is Bafana Bafana's most exciting player at Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Themba Zwane",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Mamelodi Sundowns (DStv Premiership, South Africa)",
+    "hometown": "Tembisa, South Africa",
+    "why": "Affectionately known as 'Mshishi', Zwane is one of the most decorated players in South African domestic football with numerous league titles at Sundowns. A technically brilliant playmaker with silky close control and vision, he has been a stalwart of the national team for over a decade. At 36, the veteran provides invaluable experience at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Thapelo Maseko",
+    "espnId": null,
+    "position": "Winger",
+    "club": "AEL Limassol (First Division, Cyprus)",
+    "hometown": "South Africa",
+    "why": "A pacy, skillful winger who made the move to European football with AEL Limassol in Cyprus. Maseko is direct in his running and loves to cut inside onto his stronger foot. At 22, his overseas experience gives Bafana Bafana a different dimension in attack at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Sphephelo Sithole",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Tondela (Liga Portugal 2, Portugal)",
+    "hometown": "South Africa",
+    "why": "A combative central midfielder who has gained European experience in Portugal with Tondela. Sithole is a ball-winner who provides energy and drive from the middle of the park. His time in Portuguese football has added tactical discipline to Bafana Bafana's midfield options at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Jayden Adams",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Mamelodi Sundowns (DStv Premiership, South Africa)",
+    "hometown": "Cape Town, South Africa",
+    "why": "A technically gifted midfielder who has earned his place at Mamelodi Sundowns through his passing ability and composure on the ball. Adams, from Cape Town, is a creative presence who controls the tempo and links play between the lines. At 25, he is a key component of Bafana Bafana's midfield at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Oswin Appollis",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Orlando Pirates (DStv Premiership, South Africa)",
+    "hometown": "Upington, South Africa",
+    "why": "One of the most electrifying wingers in South African football, Appollis has blazing speed and trickery that terrorize full-backs. He earned a move to Orlando Pirates after outstanding performances at Polokwane City and has become a fan favourite with his direct, exciting style. He is one of Bafana Bafana's most dangerous attackers at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Tshepang Moremi",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Orlando Pirates (DStv Premiership, South Africa)",
+    "hometown": "South Africa",
+    "why": "A quick, mobile forward who has developed through Orlando Pirates' system and brings pace and directness to the attack. Moremi is a versatile attacker who can play across the front line and works hard off the ball. At 25, he provides energetic attacking options for Bafana Bafana at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Iqraam Rayners",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Mamelodi Sundowns (DStv Premiership, South Africa)",
+    "hometown": "Cape Town, South Africa",
+    "why": "A clinical striker who has become one of the most prolific goalscorers in the South African top flight after joining Mamelodi Sundowns. Rayners is a sharp finisher with intelligent movement and the ability to create chances out of nothing. At 30, he leads Bafana Bafana's attack at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Evidence Makgopa",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Orlando Pirates (DStv Premiership, South Africa)",
+    "hometown": "Limpopo, South Africa",
+    "why": "A powerful, physical striker who has developed into one of South Africa's most important forwards at Orlando Pirates. Standing 188cm tall, Makgopa is a genuine target man who holds the ball up well and brings others into play. His aerial ability and finishing make him a key weapon for Bafana Bafana at Football 2026.",
+    "number": 17
    }
   ],
   "Spain": [
@@ -10642,6 +18829,186 @@ window.WC_PLAYERS = {
      "DFB-Pokal (2022, 2023 with RB Leipzig)",
      "Croatian Football League (2018, 2019, 2020 with Dinamo Zagreb)"
     ]
+   },
+   {
+    "name": "David Raya",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Arsenal (Premier League, England)",
+    "hometown": "Barcelona, Spain",
+    "why": "A technically superb goalkeeper who has emerged as Arsenal's number one and one of the best keepers in the Premier League. Raya is exceptional with his feet, fitting perfectly into possession-based systems, and is an outstanding shot-stopper. He has displaced Unai Simon as Spain's first-choice keeper heading into Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Joan Garcia",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Barcelona (La Liga, Spain)",
+    "hometown": "Spain",
+    "why": "A promising young goalkeeper who has earned his place at Barcelona through impressive performances. Garcia is agile, good on crosses, and comfortable with the ball at his feet in the Barca tradition. At 25, he provides quality competition for the goalkeeping spots in Spain's Football 2026 squad.",
+    "number": 13
+   },
+   {
+    "name": "Unai Simon",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Athletic Club (La Liga, Spain)",
+    "hometown": "Vitoria-Gasteiz, Spain",
+    "why": "Athletic Club's long-serving goalkeeper who was Spain's number one at Euro 2024, helping La Roja win the tournament. Simon is decisive in one-on-one situations, commanding in the air, and has improved his distribution significantly. He brings major tournament experience to Spain's Football 2026 campaign.",
+    "number": 23
+   },
+   {
+    "name": "Marc Pubill",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Atletico Madrid (La Liga, Spain)",
+    "hometown": "Spain",
+    "why": "A young right-back who earned a move to Atletico Madrid after impressive performances that caught the eye of Diego Simeone. Pubill is a modern fullback — tall at 190cm, athletic, and capable of contributing both defensively and in the final third. At 22, he represents Spain's next generation at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Alejandro Grimaldo",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Bayer Leverkusen (Bundesliga, Germany)",
+    "hometown": "Valencia, Spain",
+    "why": "One of the best left-backs in European football, Grimaldo was instrumental in Bayer Leverkusen's historic unbeaten Bundesliga title in 2023-24. A former Barcelona youth product, he delivers pinpoint crosses and free-kicks, and is a constant attacking threat from the left flank. His quality makes him key for Spain at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Eric Garcia",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Barcelona (La Liga, Spain)",
+    "hometown": "Martorell, Spain",
+    "why": "A cerebral, ball-playing centre-back who was developed at Barcelona's La Masia academy, spent time at Manchester City, then returned to the Camp Nou. Garcia reads the game brilliantly and is one of the best passing centre-backs in the world, fitting Spain's possession-based philosophy perfectly. He is a regular in the Spanish defence at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Marcos Llorente",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Atletico Madrid (La Liga, Spain)",
+    "hometown": "Madrid, Spain",
+    "why": "An incredibly versatile player who has played as a midfielder, wing-back, and right-back for Atletico Madrid. Llorente has remarkable stamina and pace, often covering more ground than any other player on the pitch. From a famous footballing family, he brings tactical flexibility to Spain at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Pedro Porro",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Tottenham (Premier League, England)",
+    "hometown": "Don Benito, Spain",
+    "why": "An explosive, attack-minded right-back who has become one of Tottenham's most important players with his marauding runs and powerful shooting. Porro made his name at Sporting CP before moving to the Premier League, where his energy and crossing ability have been outstanding. He is a key attacking outlet for Spain at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Aymeric Laporte",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Athletic Club (La Liga, Spain)",
+    "hometown": "Agen, France",
+    "why": "Born in France but chose to represent Spain, Laporte was a key figure in their Euro 2024 triumph after previously winning the Premier League with Manchester City. He is an elegant left-footed centre-back with superb passing range and commanding aerial presence. His experience at the highest level is invaluable for Spain at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Pau Cubarsi",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Barcelona (La Liga, Spain)",
+    "hometown": "Estanyol, Spain",
+    "why": "A generational talent who broke into Barcelona's first team at 16 and became one of the youngest players to appear in the Champions League. Cubarsi is remarkably composed and mature for his age, with reading of the game and passing ability that belie his youth. At 19, he is already a cornerstone of Spain's defence at Football 2026.",
+    "number": 22
+   },
+   {
+    "name": "Marc Cucurella",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Chelsea (Premier League, England)",
+    "hometown": "Alella, Spain",
+    "why": "A tenacious left-back recognizable by his distinctive curly hair, Cucurella was one of Spain's best performers at Euro 2024. He is tireless in his defensive work, aggressive in pressing, and provides width and energy from the left side. His intensity and big-tournament experience make him important for Spain at Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Mikel Merino",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Arsenal (Premier League, England)",
+    "hometown": "Pamplona, Spain",
+    "why": "A tall, elegant box-to-box midfielder who scored the dramatic winning header against Germany at Euro 2024. Merino moved from Real Sociedad to Arsenal, where his aerial ability, tactical intelligence, and goal-scoring threat from midfield have made him integral. He is a key figure in Spain's midfield at Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Fabian Ruiz",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Paris Saint-Germain (Ligue 1, France)",
+    "hometown": "Los Palacios y Villafranca, Spain",
+    "why": "A supremely gifted left-footed midfielder who was named player of the tournament at Euro 2024 with his elegant passing and ability to control games. Fabian excels at PSG with his range of passing and positioning intelligence. He is one of Spain's most important players heading into Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Alex Baena",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Atletico Madrid (La Liga, Spain)",
+    "hometown": "Roquetas de Mar, Spain",
+    "why": "A creative playmaker with exceptional vision and set-piece delivery, Baena has risen from Villarreal's academy to become one of Spain's most gifted technicians. He has moved to Atletico Madrid and is known for his ability to unlock defences with incisive through balls. At 24, he adds creativity to Spain's midfield at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Martin Zubimendi",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Arsenal (Premier League, England)",
+    "hometown": "San Sebastián, Spain",
+    "why": "One of the most sought-after midfielders in European football, Zubimendi is a metronomic passer who controls the tempo from deep. After years as Real Sociedad's heartbeat, he joined Arsenal, where his press-resistance and spatial awareness have been transformative. He is the anchor of Spain's midfield at Football 2026.",
+    "number": 18
+   },
+   {
+    "name": "Ferran Torres",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Barcelona (La Liga, Spain)",
+    "hometown": "Foios, Spain",
+    "why": "A versatile forward who can play across the front line, Torres has been a consistent performer for Spain, scoring important goals at Euro 2020 and the Nations League. He joined Barcelona from Manchester City and is known for his intelligent runs, clinical finishing, and movement off the ball. He provides tactical flexibility for Spain at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Gavi",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Barcelona (La Liga, Spain)",
+    "hometown": "Los Palacios y Villafranca, Spain",
+    "why": "A fearless, combative midfielder who burst onto the scene at Barcelona as a teenager with his tireless pressing and technical excellence. Gavi won the Golden Boy award in 2022 and overcame a serious ACL injury sustained in late 2023 to return to top form. At 21, his intensity and skill are vital to Spain at Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Yeremy Pino",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Crystal Palace (Premier League, England)",
+    "hometown": "Las Palmas, Spain",
+    "why": "A quick, direct winger who can beat defenders on either side and is a constant threat in one-on-one situations. Pino made his name at Villarreal, winning the Europa League and becoming Spain's youngest ever scorer, before moving to Crystal Palace. His pace and creativity enliven Spain's attack at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Victor Munoz",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Osasuna (La Liga, Spain)",
+    "hometown": "Spain",
+    "why": "A young, dynamic forward who has emerged at Osasuna as one of La Liga's most exciting attacking talents. Munoz is quick, direct, and capable of playing across the front line. At 22, his inclusion in the Football 2026 squad reflects his rapid development and promise for the future of Spanish football.",
+    "number": 25
+   },
+   {
+    "name": "Borja Iglesias",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Celta Vigo (La Liga, Spain)",
+    "hometown": "Santiago de Compostela, Spain",
+    "why": "A proven La Liga goalscorer who has plied his trade at Espanyol, Real Betis, and Celta Vigo, known for his clever movement and clinical finishing inside the box. Iglesias, nicknamed 'El Panda', is a fan favourite wherever he plays and brings experience and goalscoring nous. At 33, he provides depth to Spain's attack at Football 2026.",
+    "number": 26
    }
   ],
   "Sweden": [
@@ -10934,6 +19301,195 @@ window.WC_PLAYERS = {
      }
     ],
     "honors": []
+   },
+   {
+    "name": "Jacob Widell Zetterström",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Derby County (EFL Championship, England)",
+    "hometown": "Stockholm, Sweden",
+    "why": "A tall, commanding goalkeeper standing 198cm who has established himself at Derby County in the English Championship. Zetterström is known for his excellent reflexes, composure on the ball, and authority in dealing with crosses. He has claimed the number one shirt for Sweden heading into Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Viktor Johansson",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Stoke City (EFL Championship, England)",
+    "hometown": "Sweden",
+    "why": "A reliable goalkeeper who has developed well in English football with Stoke City after earlier spells at Rotherham. Johansson is a good shot-stopper with improving distribution who competes for the starting position. He provides quality depth between the posts for Sweden at Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Kristoffer Nordfeldt",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "AIK (Allsvenskan, Sweden)",
+    "hometown": "Stockholm, Sweden",
+    "why": "A vastly experienced goalkeeper who has played in the Premier League with Swansea City and across European football before returning to AIK in Sweden. At 36, Nordfeldt brings tournament experience and locker-room leadership. He serves as the veteran third-choice keeper for Sweden at Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Gustaf Lagerbielke",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Braga (Primeira Liga, Portugal)",
+    "hometown": "Sweden",
+    "why": "A tall, ball-playing centre-back who made his name at IFK Gothenburg before earning moves to Celtic and then Braga in the Portuguese top flight. Standing 193cm, Lagerbielke is commanding in the air and progressive with his passing. He is a key figure in Sweden's defensive setup at Football 2026.",
+    "number": 2
+   },
+   {
+    "name": "Victor Lindelöf",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Aston Villa (Premier League, England)",
+    "hometown": "Västra Frölunda, Sweden",
+    "why": "Sweden's most experienced defender, Lindelöf spent years at Manchester United and Benfica before joining Aston Villa. He is an intelligent, composed centre-back who reads the game superbly and passes accurately out of defence. His vast experience at the highest level makes him indispensable for Sweden at Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Isak Hien",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Atalanta (Serie A, Italy)",
+    "hometown": "Stockholm, Sweden",
+    "why": "A powerful, aggressive centre-back who has thrived at Atalanta in Serie A, helping them win the Europa League in 2024. Hien is physically dominant, excellent in duels, and has adapted brilliantly to Italian football's tactical demands. He is one of Sweden's most important defenders at Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Gabriel Gudmundsson",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Leeds United (Premier League, England)",
+    "hometown": "Halmstad, Sweden",
+    "why": "An athletic, attack-minded left-back who has developed through Swedish football at Halmstad and Groningen before earning a move to Leeds United. Gudmundsson is quick, technically sound, and delivers dangerous crosses from the left flank. He provides dynamic width for Sweden at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Daniel Svensson",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Borussia Dortmund (Bundesliga, Germany)",
+    "hometown": "Sweden",
+    "why": "A young right-back who has earned a move to Borussia Dortmund, one of Germany's biggest clubs, through impressive performances. Svensson is a modern fullback who is equally effective in attack and defence, with good pace and tactical awareness. At 24, he is a key player for Sweden at Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Hjalmar Ekdal",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Burnley (EFL Championship, England)",
+    "hometown": "Stockholm, Sweden",
+    "why": "A member of the famous Ekdal footballing family, Hjalmar has established himself at Burnley in the English Championship. He is a tall, athletic centre-back who is comfortable with the ball and strong in aerial duels. At 27, he provides quality defensive depth for Sweden at Football 2026.",
+    "number": 14
+   },
+   {
+    "name": "Carl Starfelt",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Celta Vigo (La Liga, Spain)",
+    "hometown": "Stockholm, Sweden",
+    "why": "A composed centre-back who has played in La Liga with Celta Vigo after a successful spell at Celtic in Scotland. Starfelt is a calm, reliable defender who passes well out of the back and organizes the defensive line effectively. His experience in multiple leagues makes him valuable for Sweden at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Eric Smith",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "St. Pauli (Bundesliga, Germany)",
+    "hometown": "Sweden",
+    "why": "A versatile defender who can also play in midfield, Smith has been part of St. Pauli's journey in the Bundesliga. Standing 193cm, he is physically imposing and uses his height well in defensive situations. His adaptability makes him a useful squad member for Sweden at Football 2026.",
+    "number": 20
+   },
+   {
+    "name": "Herman Johansson",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "FC Dallas (MLS, United States)",
+    "hometown": "Sweden",
+    "why": "A physical midfielder who plies his trade in MLS with FC Dallas, Johansson brings energy and drive from the centre of the park. Standing 190cm, he uses his size well in aerial and ground duels. His experience of playing in the United States, a Football 2026 host nation, could prove advantageous.",
+    "number": 6
+   },
+   {
+    "name": "Ken Sema",
+    "espnId": null,
+    "position": "Left winger",
+    "club": "Pafos (First Division, Cyprus)",
+    "hometown": "Norrköping, Sweden",
+    "why": "A versatile left-sided player who spent years in English football with Watford and Udinese before moving to Pafos in Cyprus. Sema is a tireless runner who provides width, crossing ability, and defensive work rate from the wing. At 32, his experience adds depth to Sweden's midfield at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Jesper Karlström",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Udinese (Serie A, Italy)",
+    "hometown": "Sweden",
+    "why": "A combative defensive midfielder who has become an important player for Udinese in Serie A. Karlström is excellent at breaking up play, winning the ball back, and distributing simply and effectively. His disciplined style provides the platform for Sweden's more creative players at Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Mattias Svanberg",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Wolfsburg (Bundesliga, Germany)",
+    "hometown": "Malmö, Sweden",
+    "why": "A technically gifted midfielder who has played at a high level in both Serie A with Bologna and the Bundesliga with Wolfsburg. Svanberg is a smooth operator who links play well, has a good range of passing, and contributes goals from midfield. He is an important creative outlet for Sweden at Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Besfort Zeneli",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Union Saint-Gilloise (Pro League, Belgium)",
+    "hometown": "Sweden",
+    "why": "A creative, technically skilled attacking midfielder who has made his mark at Union Saint-Gilloise in the Belgian Pro League. Zeneli is capable of unlocking defences with his passing and dribbling, adding flair to Sweden's midfield. At 23, he brings imagination to the Football 2026 squad.",
+    "number": 22
+   },
+   {
+    "name": "Elliot Stroud",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Mjällby (Allsvenskan, Sweden)",
+    "hometown": "Sweden",
+    "why": "A young midfielder who has impressed in the Swedish Allsvenskan with Mjällby, earning a surprise call-up to the senior squad at 23. Stroud has shown composure and quality in domestic competition that caught the national team coaches' attention. His selection for Football 2026 reflects his emerging talent.",
+    "number": 24
+   },
+   {
+    "name": "Taha Ali",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Malmö FF (Allsvenskan, Sweden)",
+    "hometown": "Malmö, Sweden",
+    "why": "A technically accomplished midfielder who has been a key player for Malmö FF, Sweden's most successful club in European competition. Ali combines good vision with work rate and has developed into a reliable performer in the Allsvenskan. At 27, he brings domestic know-how to Sweden's midfield at Football 2026.",
+    "number": 26
+   },
+   {
+    "name": "Benjamin Nygren",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Celtic (Scottish Premiership, Scotland)",
+    "hometown": "Stockholm, Sweden",
+    "why": "A talented young forward who has developed at Celtic after earlier spells in Swedish football and a loan to Heerenveen. Nygren is a clever player with sharp movement and an eye for goal, capable of playing centrally or drifting wide. At 24, he is one of Sweden's key attacking hopes at Football 2026.",
+    "number": 10
+   },
+   {
+    "name": "Alexander Bernhardsson",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Holstein Kiel (Bundesliga, Germany)",
+    "hometown": "Sweden",
+    "why": "A versatile forward who has made his way to the Bundesliga with Holstein Kiel, bringing pace and directness from wide positions. Bernhardsson is effective cutting inside from the wing and has a keen eye for goal. At 27, he provides attacking depth for Sweden at Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Gustaf Nilsson",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Club Brugge (Pro League, Belgium)",
+    "hometown": "Sweden",
+    "why": "A towering striker standing 198cm who has been prolific at Club Brugge in the Belgian Pro League and Champions League. Nilsson is a classic target man who dominates in the air, holds the ball up brilliantly, and brings teammates into play. His physical presence is central to Sweden's attacking strategy at Football 2026.",
+    "number": 25
    }
   ],
   "Switzerland": [
@@ -11279,6 +19835,186 @@ window.WC_PLAYERS = {
      "Swiss Super League (2014–15, 2015–16, Young Boys)",
      "Swiss Cup (2014–15, Young Boys)"
     ]
+   },
+   {
+    "name": "Yvon Mvogo",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Lorient (Ligue 2, France)",
+    "hometown": "Yaoundé, Cameroon",
+    "why": "A Swiss-born goalkeeper of Cameroonian descent who came through the Young Boys academy before spells at RB Leipzig and PSV Eindhoven. Known for his commanding presence in the box and sharp reflexes, Mvogo provides experienced backup depth to the Swiss goalkeeping corps. He has earned sporadic caps as a reliable second or third choice for the national team.",
+    "number": 12
+   },
+   {
+    "name": "Marvin Keller",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Young Boys (Super League, Switzerland)",
+    "hometown": "Bern, Switzerland",
+    "why": "A young goalkeeper who has established himself as Young Boys' first choice in the Swiss Super League. At 23, Keller is a promising shot-stopper with good distribution, representing the next generation of Swiss goalkeeping talent. His consistent performances in European competition with Young Boys earned him a call-up for Football 2026.",
+    "number": 21
+   },
+   {
+    "name": "Miro Muheim",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Hamburger SV (2. Bundesliga, Germany)",
+    "hometown": "Zurich, Switzerland",
+    "why": "An attacking left-back who has been one of the standout performers in the German second division with Hamburg. Muheim offers excellent delivery from wide areas and overlapping runs that create overloads on the flank. His consistent form at club level made him a strong candidate for Switzerland's Football 2026 squad.",
+    "number": 2
+   },
+   {
+    "name": "Silvan Widmer",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Mainz 05 (Bundesliga, Germany)",
+    "hometown": "Aarau, Switzerland",
+    "why": "A veteran right-back who has been a regular in the Bundesliga with Mainz and is known for his tireless engine and ability to contribute in both phases. Widmer scored a memorable brace against Portugal at Euro 2024 qualifying and has been a dependable fixture in the Swiss setup. His experience and tactical discipline make him valuable in tournament football.",
+    "number": 3
+   },
+   {
+    "name": "Nico Elvedi",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Borussia Mönchengladbach (Bundesliga, Germany)",
+    "hometown": "Zurich, Switzerland",
+    "why": "An elegant ball-playing centre-back who reads the game exceptionally well, Elvedi has been a long-serving pillar at Borussia Mönchengladbach. He is renowned for his clean tackling style, rarely committing fouls, and his composure when bringing the ball out from the back. A regular starter for Switzerland, he has over 50 caps and is central to their defensive structure.",
+    "number": 4
+   },
+   {
+    "name": "Ricardo Rodriguez",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Real Betis (La Liga, Spain)",
+    "hometown": "Zurich, Switzerland",
+    "why": "A seasoned left-back with a lethal left foot, Rodriguez has played at the highest level with AC Milan, Wolfsburg, and now Real Betis. He is one of Switzerland's most capped active players, known for his dead-ball delivery and penalty-taking ability. His tactical intelligence and experience in major tournaments make him a senior figure in the Swiss dressing room.",
+    "number": 13
+   },
+   {
+    "name": "Eray Comert",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Valencia (La Liga, Spain)",
+    "hometown": "Basel, Switzerland",
+    "why": "A Swiss-born defender of Turkish heritage who came through FC Basel's renowned academy before moving to Valencia. Comert is an aggressive, front-foot centre-back who excels in aerial duels and one-on-one defending. He provides depth in Switzerland's defensive options and has earned multiple senior caps.",
+    "number": 18
+   },
+   {
+    "name": "Aurele Amenda",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Eintracht Frankfurt (Bundesliga, Germany)",
+    "hometown": "Biel/Bienne, Switzerland",
+    "why": "A tall, athletic young centre-back who joined Eintracht Frankfurt from Young Boys and has quickly adapted to Bundesliga football. At 193cm, Amenda is a dominant aerial presence with good pace for his size. He represents the future of Swiss defending and is among the youngest members of the Football 2026 squad.",
+    "number": 24
+   },
+   {
+    "name": "Luca Jaquez",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "VfB Stuttgart (Bundesliga, Germany)",
+    "hometown": "Fribourg, Switzerland",
+    "why": "A promising young centre-back who has been developing well in the Bundesliga with Stuttgart. Jaquez combines physical strength with a calm temperament on the ball, making him well-suited to Switzerland's possession-based approach. His selection for Football 2026 reflects his rapid rise through Swiss football's ranks.",
+    "number": 25
+   },
+   {
+    "name": "Remo Freuler",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Bologna (Serie A, Italy)",
+    "hometown": "Ennenda, Switzerland",
+    "why": "A tireless box-to-box midfielder who has been one of Switzerland's most important players for nearly a decade, accumulating over 60 caps. Freuler was instrumental in Bologna's surprise Champions League qualification in Serie A and brings immense work rate, tactical awareness, and an eye for late runs into the box. He scored a stunning goal against France at Euro 2020 in the round of 16 upset.",
+    "number": 8
+   },
+   {
+    "name": "Ardon Jashari",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "AC Milan (Serie A, Italy)",
+    "hometown": "Suhr, Switzerland",
+    "why": "A dynamic young midfielder of Kosovar-Albanian descent who earned a move to AC Milan after impressing at FC Luzern. Jashari is a ball-winner with excellent passing range who can dictate tempo from deep. At 23, he is one of the most exciting Swiss midfield talents and is expected to be a key player for the national team for years to come.",
+    "number": 14
+   },
+   {
+    "name": "Djibril Sow",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Sevilla (La Liga, Spain)",
+    "hometown": "Zurich, Switzerland",
+    "why": "An athletic, powerful midfielder who joined Sevilla after productive seasons at Eintracht Frankfurt where he won the Europa League in 2022. Sow covers enormous ground and is effective at breaking up opposition play while also driving forward with the ball. He has become a regular in the Swiss midfield and brings a physical edge to their engine room.",
+    "number": 15
+   },
+   {
+    "name": "Michel Aebischer",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Pisa (Serie B, Italy)",
+    "hometown": "Fribourg, Switzerland",
+    "why": "A versatile midfielder who can operate centrally or on the left, Aebischer scored a brilliant goal against Hungary at Euro 2024 and has been a consistent contributor to the national team. He moved from Bologna to Pisa but remains valued for his technical quality, intelligent movement, and ability to link midfield and attack. His left foot and vision make him a creative threat from deep positions.",
+    "number": 20
+   },
+   {
+    "name": "Fabian Rieder",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "FC Augsburg (Bundesliga, Germany)",
+    "hometown": "Bern, Switzerland",
+    "why": "A creative, technically gifted midfielder who came through Young Boys' academy and has developed into one of Switzerland's brightest young playmakers. Rieder is known for his vision, set-piece delivery, and ability to pick passes in tight spaces. After a loan at Rennes, he moved to Augsburg and continues to be an important creative outlet for the national team.",
+    "number": 22
+   },
+   {
+    "name": "Johan Manzambi",
+    "espnId": null,
+    "position": "Forward",
+    "club": "SC Freiburg (Bundesliga, Germany)",
+    "hometown": "Lausanne, Switzerland",
+    "why": "A young, explosive forward who has broken through at Freiburg and caught the eye with his pace and directness. At just 20, Manzambi is one of the youngest players in Switzerland's Football 2026 squad and represents an exciting prospect for the future. His ability to play across the front line and stretch defenses adds a different dimension to the Swiss attack.",
+    "number": 9
+   },
+   {
+    "name": "Christian Fassnacht",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Young Boys (Super League, Switzerland)",
+    "hometown": "Schöftland, Switzerland",
+    "why": "A hardworking winger who has been a loyal servant to Young Boys and a regular contributor for the Swiss national team. Fassnacht's direct running, crossing ability, and willingness to track back make him a reliable option on either flank. He has represented Switzerland at multiple major tournaments and brings valuable experience to the squad.",
+    "number": 16
+   },
+   {
+    "name": "Ruben Vargas",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Sevilla (La Liga, Spain)",
+    "hometown": "Adliswil, Switzerland",
+    "why": "A tricky, quick winger of Dominican heritage who can beat defenders with his dribbling and has a knack for scoring spectacular goals. Vargas moved to Sevilla after impressing at Augsburg and has been a regular in the Swiss attack at major tournaments. His pace and technical ability make him one of Switzerland's most dangerous wide players going forward.",
+    "number": 17
+   },
+   {
+    "name": "Noah Okafor",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Leeds United (Premier League, England)",
+    "hometown": "Basel, Switzerland",
+    "why": "A versatile, pacey attacker who can play as a striker or on the wing, Okafor came through the FC Basel and Red Bull Salzburg pathway before joining AC Milan and then moving to Leeds United. He is blessed with explosive acceleration and a clinical finishing instinct, and has been a regular goalscorer at international level. His ability to play multiple roles in attack makes him a key tactical option for Switzerland.",
+    "number": 19
+   },
+   {
+    "name": "Zeki Amdouni",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Burnley (Championship, England)",
+    "hometown": "Geneva, Switzerland",
+    "why": "A sharp, mobile striker of Tunisian descent who burst onto the scene with his prolific form at FC Basel before moving to Burnley. Amdouni has scored important goals for Switzerland in qualifying campaigns and brings intelligent movement, link-up play, and an eye for goal. He is one of Switzerland's most exciting young attacking talents heading into Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Cedric Itten",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Fortuna Düsseldorf (2. Bundesliga, Germany)",
+    "hometown": "Basel, Switzerland",
+    "why": "A tall, physical striker who had a stint at Rangers in Scotland before settling in Germany's second division with Fortuna Düsseldorf. Itten is a traditional target man who excels at hold-up play and aerial challenges, offering a different profile to Switzerland's other forwards. His experience and physicality provide a useful Plan B option for the Swiss attack.",
+    "number": 26
    }
   ],
   "Tunisia": [
@@ -11440,6 +20176,213 @@ window.WC_PLAYERS = {
      }
     ],
     "honors": []
+   },
+   {
+    "name": "Aymen Dahmen",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "CS Sfaxien (Ligue Professionnelle 1, Tunisia)",
+    "hometown": "Sfax, Tunisia",
+    "why": "Tunisia's first-choice goalkeeper who earned widespread praise for his performances at the 2022 tournament in Qatar, keeping a clean sheet against Denmark and France. Dahmen is an agile shot-stopper with excellent reflexes who commands his area well. He remains the undisputed number one and a key figure in Tunisia's Football 2026 campaign.",
+    "number": 16
+   },
+   {
+    "name": "Sabri Ben Hessen",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Étoile du Sahel (Ligue Professionnelle 1, Tunisia)",
+    "hometown": "Sousse, Tunisia",
+    "why": "An experienced domestic goalkeeper who has been a consistent performer for Étoile du Sahel in the Tunisian top flight. Ben Hessen provides reliable backup depth to the goalkeeping department with his strong shot-stopping and communication skills. His familiarity with the Tunisian football system makes him a trusted squad member.",
+    "number": 22
+   },
+   {
+    "name": "Mouhib Chamakh",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Club Africain (Ligue Professionnelle 1, Tunisia)",
+    "hometown": "Tunis, Tunisia",
+    "why": "A young goalkeeper who has emerged as one of Tunisia's most promising keepers through his performances with historic Club Africain. At 24, Chamakh offers a long-term option between the posts and has impressed with his commanding presence and modern distribution. His inclusion in the Football 2026 squad signals Tunisia's investment in their goalkeeping future.",
+    "number": 1
+   },
+   {
+    "name": "Ali Abdi",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "OGC Nice (Ligue 1, France)",
+    "hometown": "Paris, France",
+    "why": "A France-born left-back who chose to represent Tunisia internationally and has become a regular in their defense. Abdi offers pace and overlapping runs down the left flank, combining defensive solidity with attacking output from his time in Ligue 1. His European experience makes him one of the more seasoned defenders in the Tunisian squad.",
+    "number": 2
+   },
+   {
+    "name": "Omar Rekik",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "NK Maribor (PrvaLiga, Slovenia)",
+    "hometown": "Haarlem, Netherlands",
+    "why": "A Dutch-born centre-back who is the younger brother of Karim Rekik and came through the Hertha Berlin and Arsenal youth systems before choosing to represent Tunisia. Rekik is a composed, ball-playing defender who reads the game well and is comfortable building from the back. He moved to Maribor to get regular playing time ahead of Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Adem Arous",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Kasımpaşa (Süper Lig, Türkiye)",
+    "hometown": "Tunis, Tunisia",
+    "why": "A young, athletic centre-back who has established himself in the Turkish Süper Lig with Kasımpaşa. At 21, Arous is one of the youngest defenders in Tunisia's squad and brings physicality and aerial prowess at 188cm. His rapid development in a competitive European league earned him a spot in the Football 2026 roster.",
+    "number": 5
+   },
+   {
+    "name": "Dylan Bronn",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Servette (Super League, Switzerland)",
+    "hometown": "Nice, France",
+    "why": "A versatile defender who can play centre-back or full-back and has been a steady presence for Tunisia across multiple international tournaments. Bronn scored a memorable header at the 2018 tournament against Panama and brings leadership and experience. After spells in Germany and Belgium, he settled at Servette where he continues to perform consistently.",
+    "number": 6
+   },
+   {
+    "name": "Yan Valery",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Young Boys (Super League, Switzerland)",
+    "hometown": "Champigny-sur-Marne, France",
+    "why": "A France-born right-back who came through Southampton's academy and chose to represent Tunisia after previously playing for France at youth level. Valery is an adventurous full-back with pace and technical ability who can also play as a wing-back. His Premier League experience at Southampton gives him valuable pedigree in Tunisia's defensive setup.",
+    "number": 20
+   },
+   {
+    "name": "Mohamed Amine Ben Hamida",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Espérance de Tunis (Ligue Professionnelle 1, Tunisia)",
+    "hometown": "Tunis, Tunisia",
+    "why": "A reliable centre-back who has been a cornerstone of Espérance de Tunis, one of Africa's most decorated clubs. Ben Hamida brings defensive steel and experience from competing in African continental competitions. His leadership and organisational abilities are valued by the national team coaching staff.",
+    "number": 21
+   },
+   {
+    "name": "Moutaz Neffati",
+    "espnId": null,
+    "position": "Defender",
+    "club": "IFK Norrköping (Allsvenskan, Sweden)",
+    "hometown": "Tunis, Tunisia",
+    "why": "A young defender who has been developing in the Swedish Allsvenskan with IFK Norrköping. At 21, Neffati is one of Tunisia's emerging defensive talents, gaining experience in Scandinavian football. His athleticism and willingness to learn have put him on the radar of the national team setup.",
+    "number": 23
+   },
+   {
+    "name": "Raed Chikhaoui",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "US Monastir (Ligue Professionnelle 1, Tunisia)",
+    "hometown": "Monastir, Tunisia",
+    "why": "A tall, commanding young centre-back who has been a standout performer for US Monastir in the Tunisian top flight. At 22, Chikhaoui has shown maturity beyond his years with his aerial dominance and positional awareness. His performances in domestic football and continental competitions earned him a call-up for Football 2026.",
+    "number": 24
+   },
+   {
+    "name": "Elias Achouri",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "FC Copenhagen (Superligaen, Denmark)",
+    "hometown": "Tunis, Tunisia",
+    "why": "A creative, technically gifted midfielder who has impressed in the Danish Superliga with FC Copenhagen. Achouri is known for his dribbling ability, vision, and capacity to unlock defenses with incisive passes. He has become an increasingly important figure in Tunisia's midfield and brings European pedigree from competing in Champions League group stages.",
+    "number": 7
+   },
+   {
+    "name": "Mortadha Ben Ouanes",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Kasımpaşa (Süper Lig, Türkiye)",
+    "hometown": "Tunis, Tunisia",
+    "why": "An experienced midfielder who has plied his trade in the Turkish Süper Lig, bringing energy and work rate to the center of the park. Ben Ouanes is a combative player who shields the defense well and provides simple, effective distribution. His consistency at club level has kept him in the Tunisian national team picture.",
+    "number": 12
+   },
+   {
+    "name": "Rani Khedira",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Union Berlin (Bundesliga, Germany)",
+    "hometown": "Stuttgart, Germany",
+    "why": "The older brother of former Germany international Sami Khedira, Rani chose to represent Tunisia through his Tunisian father. A disciplined defensive midfielder who excels at reading the game and intercepting passes, he has been a key player for Union Berlin in the Bundesliga. His experience at the highest level of German football adds valuable steel to Tunisia's midfield.",
+    "number": 13
+   },
+   {
+    "name": "Mohamed Hadj Mahmoud",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "FC Lugano (Super League, Switzerland)",
+    "hometown": "Tunis, Tunisia",
+    "why": "A technically sound midfielder who has developed well in the Swiss Super League with Lugano. Hadj Mahmoud is comfortable on the ball and contributes effectively in possession with his passing range. At 26, he is in the prime of his career and looking to make an impact for Tunisia at Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Anis Ben Slimane",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Norwich City (Championship, England)",
+    "hometown": "Copenhagen, Denmark",
+    "why": "A Denmark-born midfielder of Tunisian descent who represented Denmark at youth level before switching to Tunisia. Ben Slimane is a creative, technically adept player who can play as a number 10 or on the wing, with an eye for spectacular goals. His time in English football with Norwich has sharpened his physicality and all-round game.",
+    "number": 25
+   },
+   {
+    "name": "Elias Saad",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Hannover 96 (2. Bundesliga, Germany)",
+    "hometown": "Stuttgart, Germany",
+    "why": "A Germany-born forward of Tunisian heritage who has been a productive goalscorer in the German second division with Hannover 96. Saad is a direct, pacy attacker who can play across the front line and is dangerous in transitions. His goal-scoring record in the 2. Bundesliga earned him a place in Tunisia's Football 2026 squad.",
+    "number": 8
+   },
+   {
+    "name": "Hazem Mastouri",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Dynamo Makhachkala (Russian Premier League, Russia)",
+    "hometown": "Tunis, Tunisia",
+    "why": "A tall, physical striker who has been scoring regularly in Russian football. Mastouri uses his 190cm frame to dominate aerial duels and hold up play for teammates. His goal-scoring instincts and experience across different leagues make him a valuable option for Tunisia's attack.",
+    "number": 9
+   },
+   {
+    "name": "Ismael Gharbi",
+    "espnId": null,
+    "position": "Winger",
+    "club": "FC Augsburg (Bundesliga, Germany)",
+    "hometown": "Lyon, France",
+    "why": "A highly talented young winger who came through Paris Saint-Germain's prestigious academy before choosing to represent Tunisia. Gharbi is a silky dribbler with excellent close control and the ability to create chances in tight spaces. His technical quality and potential make him one of Tunisia's most exciting attacking prospects at Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Khalil Ayari",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Paris Saint-Germain (Ligue 1, France)",
+    "hometown": "Paris, France",
+    "why": "A young, exciting forward who has come through PSG's academy and represents one of Tunisia's brightest attacking talents. At 21, Ayari brings pace, flair, and the technical education of one of Europe's elite development programs. His inclusion in the Football 2026 squad highlights Tunisia's strategy of integrating diaspora talent from top European academies.",
+    "number": 14
+   },
+   {
+    "name": "Rayan Elloumi",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Vancouver Whitecaps (MLS, USA/Canada)",
+    "hometown": "Montreal, Canada",
+    "why": "At just 18, Elloumi is the youngest player in Tunisia's Football 2026 squad, a precocious talent playing in MLS with Vancouver Whitecaps. He brings youthful energy, pace, and fearlessness to the attack, having already caught the eye with performances beyond his years. His selection is a bold bet on the future of Tunisian football.",
+    "number": 18
+   },
+   {
+    "name": "Firas Chaouat",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Club Africain (Ligue Professionnelle 1, Tunisia)",
+    "hometown": "Tunis, Tunisia",
+    "why": "A prolific domestic striker who has been one of the top scorers in the Tunisian league with Club Africain. Chaouat is a powerful, instinctive finisher who leads the line with aggression and an eye for goal. His consistent scoring record at home has kept him in the national team frame.",
+    "number": 19
+   },
+   {
+    "name": "Sebastian Tounekti",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Celtic (Scottish Premiership, Scotland)",
+    "hometown": "Oslo, Norway",
+    "why": "A Norwegian-born winger of Tunisian descent who has developed rapidly after earning a move to Celtic. Tounekti is a tricky, direct wide player with excellent dribbling skills and the ability to cut inside or go down the line. His performances in European football with Celtic have cemented his place in Tunisia's attacking options for Football 2026.",
+    "number": 26
    }
   ],
   "Türkiye": [
@@ -11585,6 +20528,213 @@ window.WC_PLAYERS = {
      "Supercoppa Italiana (2021–22, 2022–23, 2023–24, Inter Milan)",
      "Champions League Runner-up (2022–23, Inter Milan)"
     ]
+   },
+   {
+    "name": "Mert Günok",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Fenerbahçe (Süper Lig, Türkiye)",
+    "hometown": "Çorum, Türkiye",
+    "why": "A veteran goalkeeper who produced one of the saves of Euro 2024 with a last-gasp stop against Austria in the round of 16. Günok has been a reliable presence between the posts for Fenerbahçe and brings calm authority to the Turkish defense. At 37, he is one of the squad's most experienced campaigners heading into Football 2026.",
+    "number": 1
+   },
+   {
+    "name": "Altay Bayındır",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Manchester United (Premier League, England)",
+    "hometown": "Antalya, Türkiye",
+    "why": "A tall, commanding goalkeeper who moved to Manchester United from Fenerbahçe, where he was one of the Süper Lig's best keepers. At 198cm, Bayındır has an imposing physical presence and is adept at one-on-one situations and claiming crosses. He provides top-level Premier League experience to Türkiye's goalkeeping options.",
+    "number": 12
+   },
+   {
+    "name": "Uğurcan Çakır",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Galatasaray (Süper Lig, Türkiye)",
+    "hometown": "Trabzon, Türkiye",
+    "why": "A top-quality goalkeeper who rose to prominence at Trabzonspor, winning the Süper Lig title, before moving to Galatasaray. Çakır is known for his exceptional reflexes, shot-stopping ability, and composure under pressure. He has been a regular starter for the national team and is one of Türkiye's most important players.",
+    "number": 23
+   },
+   {
+    "name": "Zeki Çelik",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "AS Roma (Serie A, Italy)",
+    "hometown": "Safranbolu, Türkiye",
+    "why": "A dynamic right-back who has played at the top level in France with Lille and Italy with Roma. Çelik is quick, aggressive in his overlapping runs, and a competent defender who rarely gets beaten one-on-one. He has been a fixture in the Turkish national team and brings vital European top-flight experience.",
+    "number": 2
+   },
+   {
+    "name": "Merih Demiral",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Al-Ahli (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Karamürsel, Türkiye",
+    "why": "A powerful, aggressive centre-back who has played for Juventus, Atalanta, and now Al-Ahli. Demiral is a fearless defender who relishes aerial battles and makes decisive interventions, famously scoring a brace against Austria at Euro 2024. He is one of Türkiye's most experienced defenders and a natural leader at the back.",
+    "number": 3
+   },
+   {
+    "name": "Çağlar Söyüncü",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Fenerbahçe (Süper Lig, Türkiye)",
+    "hometown": "İzmit, Türkiye",
+    "why": "A ball-playing centre-back who spent several seasons in the Premier League with Leicester City, including their run to the FA Cup title in 2021. Söyüncü is comfortable in possession and has the pace to cover ground quickly, though he can be rash in the challenge. He returned to Türkiye with Fenerbahçe and remains an important member of the national team's defensive setup.",
+    "number": 4
+   },
+   {
+    "name": "Eren Elmalı",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Galatasaray (Süper Lig, Türkiye)",
+    "hometown": "Ankara, Türkiye",
+    "why": "A young, energetic left-back who has established himself at Galatasaray and in the Turkish national team. Elmalı is known for his overlapping runs, crossing ability, and defensive awareness beyond his years. His rapid rise through the ranks makes him one of Türkiye's most promising defensive talents at Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Abdülkerim Bardakcı",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Galatasaray (Süper Lig, Türkiye)",
+    "hometown": "Besni, Türkiye",
+    "why": "A rugged, dependable centre-back who has been a key part of Galatasaray's dominant defensive unit in recent Süper Lig title wins. Bardakcı excels in aerial duels and brings physicality and organisational skills to the backline. He was part of Türkiye's impressive Euro 2024 squad that reached the quarterfinals.",
+    "number": 14
+   },
+   {
+    "name": "Ozan Kabak",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "TSG Hoffenheim (Bundesliga, Germany)",
+    "hometown": "Ankara, Türkiye",
+    "why": "A highly rated young centre-back who made his name at Galatasaray as a teenager before moves to Stuttgart, Schalke, a loan at Liverpool, and now Hoffenheim. Kabak is a technically proficient defender who reads the game well and can play out from the back. Despite injury setbacks, he remains a key part of Türkiye's defensive plans.",
+    "number": 15
+   },
+   {
+    "name": "Mert Müldür",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Fenerbahçe (Süper Lig, Türkiye)",
+    "hometown": "Vienna, Austria",
+    "why": "An Austria-born right-back of Turkish descent who previously played for Sassuolo in Serie A before moving to Fenerbahçe. Müldür is an attack-minded full-back with a powerful right foot and ability to score spectacular long-range goals. He scored a stunning volley against Georgia at Euro 2024 and adds flair to the Turkish defense.",
+    "number": 18
+   },
+   {
+    "name": "Ferdi Kadıoğlu",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Brighton & Hove Albion (Premier League, England)",
+    "hometown": "Arnhem, Netherlands",
+    "why": "A Netherlands-born versatile defender who chose Türkiye at senior level and was one of the standout performers at Euro 2024. Kadıoğlu can play across the backline and in midfield, earning a move to Brighton from Fenerbahçe. His pace, technical quality, and tactical intelligence make him one of Türkiye's most important and adaptable players.",
+    "number": 20
+   },
+   {
+    "name": "Kaan Ayhan",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Galatasaray (Süper Lig, Türkiye)",
+    "hometown": "Gelsenkirchen, Germany",
+    "why": "A Germany-born centre-back who came through Schalke's academy and has played in the Bundesliga, Serie A, and now the Süper Lig. Ayhan is a steady, experienced defender who can also fill in at defensive midfield when needed. He has been a consistent member of the Turkish national team squad for over a decade.",
+    "number": 22
+   },
+   {
+    "name": "Samet Akaydın",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Çaykur Rizespor (Süper Lig, Türkiye)",
+    "hometown": "Hatay, Türkiye",
+    "why": "A tall, physical centre-back who has been a reliable performer in the Süper Lig and earned his way into the national team through consistent domestic performances. Akaydın is strong in the air and brings defensive solidity to the backline. His experience at 32 adds valuable depth to Türkiye's central defensive options.",
+    "number": 25
+   },
+   {
+    "name": "Salih Özcan",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Borussia Dortmund (Bundesliga, Germany)",
+    "hometown": "Cologne, Germany",
+    "why": "A Germany-born defensive midfielder who chose to represent Türkiye and has been a combative presence in the Bundesliga with Dortmund. Özcan is a tenacious ball-winner who provides energy and intensity in the middle of the park. His ability to break up play and distribute efficiently makes him an important part of Türkiye's midfield structure.",
+    "number": 5
+   },
+   {
+    "name": "Orkun Kökçü",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Beşiktaş (Süper Lig, Türkiye)",
+    "hometown": "Haarlem, Netherlands",
+    "why": "A Netherlands-born playmaker who captained Feyenoord to the Eredivisie title in 2023 and moved to Benfica before returning to Türkiye with Beşiktaş. Kökçü is an elegant midfielder with outstanding passing range, set-piece delivery, and the ability to control the tempo of matches. He is one of the most technically gifted players in the Turkish squad.",
+    "number": 6
+   },
+   {
+    "name": "İsmail Yüksek",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Fenerbahçe (Süper Lig, Türkiye)",
+    "hometown": "Istanbul, Türkiye",
+    "why": "A dynamic box-to-box midfielder who has been a key player for Fenerbahçe in the Süper Lig. Yüksek is known for his high work rate, pressing ability, and capacity to cover large areas of the pitch. He played an important role in Türkiye's Euro 2024 campaign and brings energy and tenacity to the midfield.",
+    "number": 16
+   },
+   {
+    "name": "İrfan Can Kahveci",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Kasımpaşa (Süper Lig, Türkiye)",
+    "hometown": "Ankara, Türkiye",
+    "why": "A talented attacking midfielder known for his powerful left-footed shots and ability to score from distance. Kahveci famously scored a hat trick of long-range strikes against RB Leipzig in the Champions League while at Başakşehir. After time at Fenerbahçe, he moved to Kasımpaşa but remains a creative threat for the Turkish national team.",
+    "number": 17
+   },
+   {
+    "name": "Can Uzun",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Eintracht Frankfurt (Bundesliga, Germany)",
+    "hometown": "Regensburg, Germany",
+    "why": "A Germany-born attacking talent who burst onto the scene at Nürnberg as a teenager, earning a move to Eintracht Frankfurt. Uzun is a technically brilliant young playmaker with an eye for goal and the ability to create chances in tight spaces. At just 20, he is one of the youngest and most exciting prospects in Türkiye's Football 2026 squad.",
+    "number": 26
+   },
+   {
+    "name": "Kerem Aktürkoğlu",
+    "espnId": null,
+    "position": "Left winger",
+    "club": "Fenerbahçe (Süper Lig, Türkiye)",
+    "hometown": "Istanbul, Türkiye",
+    "why": "An explosive left winger who was one of Türkiye's standout performers at Euro 2024, scoring a sensational goal against Georgia. Aktürkoğlu is known for his blistering pace, direct dribbling, and cutting inside onto his right foot. After starring at Galatasaray, he moved to Fenerbahçe and remains one of Türkiye's most dangerous attacking weapons.",
+    "number": 7
+   },
+   {
+    "name": "Deniz Gül",
+    "espnId": null,
+    "position": "Striker",
+    "club": "FC Porto (Primeira Liga, Portugal)",
+    "hometown": "Malmö, Sweden",
+    "why": "A Swedish-born striker of Turkish descent who has earned a move to Porto after impressive performances at Hammarby in Sweden. Gül is a tall, physical forward with good movement and finishing ability who chose to represent Türkiye at senior level. At 21, he represents the future of Turkish striking and is a rising talent in European football.",
+    "number": 9
+   },
+   {
+    "name": "Yunus Akgün",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Galatasaray (Süper Lig, Türkiye)",
+    "hometown": "Kocaeli, Türkiye",
+    "why": "A quick, skillful winger who has been on Galatasaray's books since his youth and has developed through loan spells across Europe. Akgün is a tricky wide player who can operate on either flank, using his pace and dribbling to beat defenders. He adds creative options and unpredictability to Türkiye's attacking play.",
+    "number": 19
+   },
+   {
+    "name": "Barış Alper Yılmaz",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Galatasaray (Süper Lig, Türkiye)",
+    "hometown": "Çaykara, Türkiye",
+    "why": "A rapid, direct winger who burst onto the scene at Galatasaray and was one of Türkiye's key players at Euro 2024 in Germany. Yılmaz is known for his blistering speed on the counterattack and his ability to stretch defenses with his runs in behind. His acceleration and work ethic make him a constant threat on the right flank.",
+    "number": 21
+   },
+   {
+    "name": "Oğuz Aydın",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Fenerbahçe (Süper Lig, Türkiye)",
+    "hometown": "Mersin, Türkiye",
+    "why": "A versatile forward who can play as a second striker or on the wing, Aydın made his name at Alanyaspor before earning a move to Fenerbahçe. He is a clever, mobile attacker who drops into pockets of space and links play between midfield and attack. His intelligent movement and finishing make him a useful option in Türkiye's squad.",
+    "number": 24
    }
   ],
   "USA": [
@@ -11899,6 +21049,186 @@ window.WC_PLAYERS = {
      "CONCACAF Nations League (2024, USMNT)",
      "Ligue 1 Top Scorer (2023-24)"
     ]
+   },
+   {
+    "name": "Matt Turner",
+    "espnId": 159450,
+    "position": "Goalkeeper",
+    "club": "New England Revolution (MLS, USA)",
+    "hometown": "Park Ridge, New Jersey, USA",
+    "why": "A goalkeeper who rose from the lower divisions of American soccer to become a regular for the USMNT, with stints at Arsenal and Nottingham Forest in the Premier League. Turner is an excellent shot-stopper with strong reflexes and has been a key figure in the American goalkeeping picture. He returned to MLS with New England and brings big-game experience to the Football 2026 squad.",
+    "number": 1
+   },
+   {
+    "name": "Matt Freese",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "New York City FC (MLS, USA)",
+    "hometown": "Wayne, Pennsylvania, USA",
+    "why": "A homegrown goalkeeper who has been a steady presence for New York City FC in MLS. Freese has shown composure and strong positional play, earning his first senior USMNT caps after consistent club performances. He provides experienced domestic depth behind the first-choice options for the home Football 2026 tournament.",
+    "number": 24
+   },
+   {
+    "name": "Chris Brady",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Chicago Fire FC (MLS, USA)",
+    "hometown": "Barrington, Illinois, USA",
+    "why": "One of the youngest goalkeepers in MLS history to become a regular starter, Brady has been a standout for the Chicago Fire since his teenage years. His shot-stopping ability, quick reflexes, and modern distribution with his feet have drawn attention from European clubs. At 22, he is part of a new generation of American goalkeeping talent.",
+    "number": 25
+   },
+   {
+    "name": "Sergino Dest",
+    "espnId": 286906,
+    "position": "Right-back",
+    "club": "PSV Eindhoven (Eredivisie, Netherlands)",
+    "hometown": "Almere, Netherlands",
+    "why": "A Dutch-born attacking full-back who chose the USMNT over the Netherlands and previously played for Barcelona and AC Milan. Dest is one of the most technically gifted full-backs in American soccer history, with excellent dribbling and the ability to create overloads in the final third. After recovering from a serious ACL injury, he has rebuilt his career at PSV.",
+    "number": 2
+   },
+   {
+    "name": "Chris Richards",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Crystal Palace (Premier League, England)",
+    "hometown": "Birmingham, Alabama, USA",
+    "why": "A composed, athletic centre-back who came through Bayern Munich's development system before establishing himself in the Premier League with Crystal Palace. Richards is strong in the air, reads the game well, and is comfortable playing out from the back. He is a key part of the USMNT's defensive core heading into the home Football 2026.",
+    "number": 3
+   },
+   {
+    "name": "Auston Trusty",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Celtic (Scottish Premiership, Scotland)",
+    "hometown": "Media, Pennsylvania, USA",
+    "why": "A left-footed centre-back who has been an important part of Celtic's dominant run in the Scottish Premiership and their Champions League campaigns. Trusty is physically imposing, good in aerial duels, and comfortable stepping out with the ball. His consistent performances in European competition have strengthened his case for regular USMNT selection.",
+    "number": 6
+   },
+   {
+    "name": "Miles Robinson",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "FC Cincinnati (MLS, USA)",
+    "hometown": "Arlington, Massachusetts, USA",
+    "why": "A powerful, athletic centre-back who was a mainstay of the USMNT before suffering a torn Achilles in 2022. Robinson has rebuilt his career at FC Cincinnati and brings pace, aggression, and aerial dominance to the backline. His recovery and return to top form make him a valuable veteran presence for the home Football 2026.",
+    "number": 12
+   },
+   {
+    "name": "Tim Ream",
+    "espnId": 134353,
+    "position": "Centre-back",
+    "club": "Charlotte FC (MLS, USA)",
+    "hometown": "St. Louis, Missouri, USA",
+    "why": "At 38, Ream is the elder statesman of the USMNT squad, a left-footed centre-back who spent a decade at Fulham in the English Championship and Premier League. Known for his exceptional reading of the game, composure on the ball, and leadership, Ream was a revelation during the 2022 tournament cycle. He returned to MLS with Charlotte FC and brings invaluable experience to Football 2026.",
+    "number": 13
+   },
+   {
+    "name": "Alex Freeman",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Villarreal (La Liga, Spain)",
+    "hometown": "USA",
+    "why": "A young defender who has been developing at Villarreal in Spain, one of La Liga's strongest development environments. At 21, Freeman represents the next generation of American talent emerging from European academies. His selection for the home Football 2026 reflects confidence in his defensive maturity and tactical intelligence at a young age.",
+    "number": 16
+   },
+   {
+    "name": "Max Arfsten",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Columbus Crew (MLS, USA)",
+    "hometown": "St. Louis, Missouri, USA",
+    "why": "A versatile defender who has established himself at Columbus Crew, contributing to their MLS Cup success. Arfsten can operate at left-back or as a wing-back, bringing energy, defensive solidity, and an ability to push forward. His domestic performances earned him a spot in the Football 2026 roster as a dependable MLS-based option.",
+    "number": 18
+   },
+   {
+    "name": "Mark McKenzie",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Toulouse (Ligue 1, France)",
+    "hometown": "Bear, Delaware, USA",
+    "why": "A well-rounded centre-back who moved from the Philadelphia Union to Genk in Belgium before joining Toulouse in Ligue 1. McKenzie is athletic, good in the air, and has adapted well to European football's tactical demands. His experience playing in multiple European leagues gives him a versatility that is valuable to the USMNT.",
+    "number": 22
+   },
+   {
+    "name": "Joe Scally",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Borussia Mönchengladbach (Bundesliga, Germany)",
+    "hometown": "Lake Grove, New York, USA",
+    "why": "A young right-back who moved to Borussia Mönchengladbach as a teenager from New York City FC and has become a regular Bundesliga starter. Scally is an energetic, attack-minded full-back with a fierce engine and good crossing ability. He has quickly become one of the first names on the USMNT teamsheet and is poised for a breakout at the home Football 2026.",
+    "number": 23
+   },
+   {
+    "name": "Gio Reyna",
+    "espnId": 286904,
+    "position": "Attacking midfielder",
+    "club": "Borussia Mönchengladbach (Bundesliga, Germany)",
+    "hometown": "Sunderland, England",
+    "why": "The son of former USMNT captain Claudio Reyna, Gio is a supremely talented creative midfielder who broke through at Borussia Dortmund as a teenager. Reyna possesses exceptional technical ability, vision, and the capacity to play killer passes, though his career has been hampered by injuries. When fit, he is one of the most naturally gifted American players and a potential difference-maker at Football 2026.",
+    "number": 7
+   },
+   {
+    "name": "Sebastian Berhalter",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Vancouver Whitecaps FC (MLS, USA/Canada)",
+    "hometown": "Columbus, Ohio, USA",
+    "why": "The son of former USMNT head coach Gregg Berhalter, Sebastian has carved out his own path as a tenacious central midfielder in MLS. He is a high-energy player who presses relentlessly and contributes with tidy passing and solid defensive work. His consistent MLS performances earned him a deserved call-up for Football 2026 on his own merits.",
+    "number": 14
+   },
+   {
+    "name": "Cristian Roldan",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Seattle Sounders FC (MLS, USA)",
+    "hometown": "Pico Rivera, California, USA",
+    "why": "A long-serving MLS veteran who has been a cornerstone of the Seattle Sounders for nearly a decade, winning multiple MLS Cups and the CONCACAF Champions League. Roldan is a versatile midfielder who brings work rate, intelligence, and leadership to the center of the park. His big-game experience and locker-room presence make him a trusted squad member for the home Football 2026.",
+    "number": 15
+   },
+   {
+    "name": "Malik Tillman",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Bayer Leverkusen (Bundesliga, Germany)",
+    "hometown": "Nuremberg, Germany",
+    "why": "A Germany-born dual national who chose the USMNT and has thrived in the Bundesliga, contributing to Bayer Leverkusen's historic unbeaten league season. Tillman is a technically excellent attacking midfielder with a tall frame who can play between the lines, score goals, and create chances. His development at one of Europe's top clubs makes him a crucial creative force for the home Football 2026.",
+    "number": 17
+   },
+   {
+    "name": "Ricardo Pepi",
+    "espnId": null,
+    "position": "Striker",
+    "club": "PSV Eindhoven (Eredivisie, Netherlands)",
+    "hometown": "El Paso, Texas, USA",
+    "why": "A clinical young striker who burst onto the scene with FC Dallas before moving to Europe, eventually finding his stride at PSV Eindhoven where he has become a consistent goalscorer. Pepi is a natural finisher with excellent movement in the box and the ability to link play. He is the USMNT's leading striker option going into the home Football 2026.",
+    "number": 9
+   },
+   {
+    "name": "Brenden Aaronson",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Leeds United (Premier League, England)",
+    "hometown": "Medford, New Jersey, USA",
+    "why": "An energetic, pressing-focused attacker who earned moves from the Philadelphia Union to Red Bull Salzburg to Leeds United. Aaronson is known as the 'Medford Messi' for his tireless running, intelligent pressing, and ability to play across the front line. His high-energy style and work rate make him an ideal fit for the modern game and a key player for Football 2026.",
+    "number": 11
+   },
+   {
+    "name": "Haji Wright",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Coventry City (Championship, England)",
+    "hometown": "Los Angeles, California, USA",
+    "why": "A tall, powerful striker who found his scoring touch in Türkiye with Antalyaspor before moving to Coventry City. Wright scored a memorable backheel goal at the 2022 tournament and offers an aerial threat and hold-up play that gives the USMNT a different attacking dimension. His physicality and finishing ability provide a useful alternative to the team's other forward options.",
+    "number": 19
+   },
+   {
+    "name": "Alejandro Zendejas",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Club América (Liga MX, Mexico)",
+    "hometown": "El Paso, Texas, USA",
+    "why": "A dual-national winger who chose the USMNT after previously being called up by Mexico, Zendejas has been one of Liga MX's most exciting attackers with Club América. He is a creative, tricky winger who can play on either flank and deliver dangerous crosses and through balls. His one-on-one ability and productivity in one of North America's strongest leagues earned him a place in the Football 2026 squad.",
+    "number": 26
    }
   ],
   "Uruguay": [
@@ -12064,6 +21394,231 @@ window.WC_PLAYERS = {
      "UEFA Super Cup (2018, Atlético Madrid)",
      "Supercopa de España (2014, Atlético Madrid)"
     ]
+   },
+   {
+    "name": "Sergio Rochet",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Internacional (Brasileirão, Brazil)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "Uruguay's first-choice goalkeeper who has established himself as one of the top keepers in Brazilian football at Internacional. Rochet is a strong shot-stopper with good command of his area and has been a reliable presence for La Celeste in recent years. His performances in the Copa América and qualifying campaign cemented his position as the undisputed number one.",
+    "number": 1
+   },
+   {
+    "name": "Santiago Mele",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Monterrey (Liga MX, Mexico)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "A talented young goalkeeper who has developed well in Liga MX with Monterrey, one of Mexico's biggest clubs. Mele is an agile keeper with good reflexes and distribution who provides strong backup for the national team. His experience in competitive Mexican football has prepared him well for international duty.",
+    "number": 12
+   },
+   {
+    "name": "Fernando Muslera",
+    "espnId": 132539,
+    "position": "Goalkeeper",
+    "club": "Estudiantes (Primera División, Argentina)",
+    "hometown": "Buenos Aires, Argentina",
+    "why": "A legendary Uruguayan goalkeeper who spent over a decade at Galatasaray in Türkiye before returning to South America. Muslera has over 140 caps for Uruguay, making him one of the most capped players in the nation's history, and has been a fixture at multiple major tournaments. At 39, Football 2026 is likely his farewell tournament after an extraordinary international career.",
+    "number": 23
+   },
+   {
+    "name": "Jose Maria Gimenez",
+    "espnId": 211649,
+    "position": "Centre-back",
+    "club": "Atlético Madrid (La Liga, Spain)",
+    "hometown": "Toledo, Uruguay",
+    "why": "A fierce, uncompromising centre-back who has been a cornerstone of Atlético Madrid's famous defense for over a decade. Giménez is aggressive in the tackle, dominant in the air, and a vocal leader on the pitch. He has been one of Uruguay's most important players across multiple tournament cycles and captains the side with intensity.",
+    "number": 2
+   },
+   {
+    "name": "Sebastian Caceres",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Club América (Liga MX, Mexico)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "A composed, ball-playing centre-back who has been a key figure in Club América's recent Liga MX dominance. Cáceres is calm under pressure, reads the game well, and has the ability to start attacks with precise long passes. His consistent performances in one of the Americas' strongest leagues have made him a regular in Uruguay's defensive setup.",
+    "number": 3
+   },
+   {
+    "name": "Ronald Araujo",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "FC Barcelona (La Liga, Spain)",
+    "hometown": "Rivera, Uruguay",
+    "why": "A physically imposing, lightning-fast centre-back who has become one of Barcelona's most important players. Araujo combines raw pace with aerial dominance, aggressive tackling, and improving technical ability, making him one of the best defenders in world football. He has overcome multiple serious injuries and is a vital pillar of both Barcelona and Uruguay's defense for Football 2026.",
+    "number": 4
+   },
+   {
+    "name": "Guillermo Varela",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Flamengo (Brasileirão, Brazil)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "An experienced right-back who once came through Manchester United's academy and has reinvented himself in South American football with Flamengo. Varela is an attack-minded full-back with excellent crossing ability and tireless energy down the right flank. His Copa Libertadores experience and leadership qualities make him a dependable option for Uruguay.",
+    "number": 13
+   },
+   {
+    "name": "Mathias Olivera",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Napoli (Serie A, Italy)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "A dynamic left-back who was part of Napoli's Serie A title-winning squad in 2023, their first scudetto in over three decades. Olivera is quick, defensively solid, and loves to push forward to deliver crosses from wide positions. He has nailed down the left-back spot for Uruguay and brings top-level European experience to Football 2026.",
+    "number": 16
+   },
+   {
+    "name": "Matias Vina",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "River Plate (Primera División, Argentina)",
+    "hometown": "Empalme Olmos, Uruguay",
+    "why": "A left-back who previously played in Serie A with Roma before returning to South American football with River Plate. Viña is an overlapping full-back who offers width and can deliver quality crosses from the left side. His tactical versatility and experience at multiple levels make him a useful depth option for Uruguay.",
+    "number": 17
+   },
+   {
+    "name": "Joaquin Piquerez",
+    "espnId": null,
+    "position": "Left-back",
+    "club": "Palmeiras (Brasileirão, Brazil)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "A reliable left-back who has won multiple Brasileirão titles and Copa Libertadores with Palmeiras. Piquerez is a defensively sound full-back who has the stamina to contribute going forward and provides width and balance to the backline. His winning experience with one of South America's most successful clubs adds valuable pedigree to Uruguay's squad.",
+    "number": 22
+   },
+   {
+    "name": "Santiago Bueno",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Wolverhampton Wanderers (Premier League, England)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "A young centre-back who has established himself in the Premier League with Wolverhampton Wanderers after coming through the Sporting Lisbon academy system. Bueno is a composed defender who is comfortable on the ball and has adapted well to the physical demands of English football. His development in the Premier League has earned him a spot in Uruguay's defensive rotation.",
+    "number": 24
+   },
+   {
+    "name": "Manuel Ugarte",
+    "espnId": null,
+    "position": "Defensive midfielder",
+    "club": "Manchester United (Premier League, England)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "An aggressive, relentless defensive midfielder who joined Manchester United from Paris Saint-Germain and is one of the best ball-winners in world football. Ugarte covers enormous ground, wins possession back with ferocious pressing, and has become the heartbeat of Uruguay's midfield. His tenacity and tactical intelligence make him indispensable to La Celeste's system at Football 2026.",
+    "number": 5
+   },
+   {
+    "name": "Rodrigo Bentancur",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Tottenham Hotspur (Premier League, England)",
+    "hometown": "Nueva Helvecia, Uruguay",
+    "why": "A technically gifted midfielder who developed at Boca Juniors and Juventus before moving to Tottenham Hotspur. Bentancur is an elegant presence in the center of the pitch who can progress the ball through pressure and has improved his goal-scoring output significantly at Spurs. He is a crucial cog in Uruguay's midfield engine for Football 2026.",
+    "number": 6
+   },
+   {
+    "name": "Nicolas de la Cruz",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Flamengo (Brasileirão, Brazil)",
+    "hometown": "Paso de la Arena, Uruguay",
+    "why": "A diminutive, creative midfielder who excelled at River Plate in Argentina before joining Flamengo in Brazil. De la Cruz is a set-piece specialist with a wand of a left foot, capable of threading incisive passes and scoring from free kicks. He adds technical quality and creativity to Uruguay's midfield options.",
+    "number": 7
+   },
+   {
+    "name": "Giorgian de Arrascaeta",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Flamengo (Brasileirão, Brazil)",
+    "hometown": "Nuevo Berlín, Uruguay",
+    "why": "A wonderfully creative playmaker who has been one of the best players in Brazilian football during his time at Flamengo. De Arrascaeta wears the number 10 for Uruguay and provides vision, technique, and match-winning moments with his dribbling and passing. Despite his brilliance at club level, he has often been underutilized for the national team, making Football 2026 an opportunity to leave his mark.",
+    "number": 10
+   },
+   {
+    "name": "Facundo Pellistri",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Panathinaikos (Super League, Greece)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "A tricky, pacy winger who came through Peñarol's academy and was signed by Manchester United as a teenager. Pellistri is a dynamic dribbler who loves to take on defenders one-on-one on the right flank. After loans and a move to Panathinaikos, he continues to be an exciting wide option for Uruguay's attack.",
+    "number": 11
+   },
+   {
+    "name": "Emiliano Martinez",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Palmeiras (Brasileirão, Brazil)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "A solid central midfielder who has become an important part of Palmeiras' dominant squad in Brazilian football. This Emiliano Martínez is a hard-working box-to-box player with good passing ability and tactical awareness, not to be confused with the Argentine goalkeeper of the same name. His consistency in one of South America's toughest leagues earned him a place in Uruguay's Football 2026 squad.",
+    "number": 15
+   },
+   {
+    "name": "Maximiliano Araujo",
+    "espnId": null,
+    "position": "Left winger",
+    "club": "Sporting CP (Primeira Liga, Portugal)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "An exciting young winger who has been developing well at Sporting CP in Portugal, one of Europe's top development clubs. Araujo is a direct, pacey left-sided attacker who can beat defenders with his dribbling and has an eye for goal. His rapid rise in European football has made him one of Uruguay's most promising attacking talents.",
+    "number": 20
+   },
+   {
+    "name": "Juan Manuel Sanabria",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Real Salt Lake (MLS, USA)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "A creative midfielder who has been plying his trade in MLS with Real Salt Lake, bringing South American flair to the American league. Sanabria is a technically proficient player with good vision and the ability to contribute with assists from central areas. His familiarity with playing in the United States could be an advantage for Uruguay at the home Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Rodrigo Zalazar",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Braga (Primeira Liga, Portugal)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "A powerful, physically imposing midfielder who brings energy and dynamism to the center of the park. Zalazar has experience in the Bundesliga with Schalke before moving to Braga in Portugal, and he combines hard running with an ability to arrive in the box and score. His versatility and drive add depth to Uruguay's midfield options.",
+    "number": 26
+   },
+   {
+    "name": "Darwin Nunez",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Al-Hilal (Saudi Pro League, Saudi Arabia)",
+    "hometown": "Artigas, Uruguay",
+    "why": "A devastatingly fast, powerful striker who rose to prominence at Benfica before a big-money move to Liverpool. Núñez is a chaotic, explosive attacker who can score spectacular goals and terrorize defenders with his relentless pressing and movement. He moved to Al-Hilal but remains Uruguay's most dangerous forward and a player who can change any game in an instant.",
+    "number": 9
+   },
+   {
+    "name": "Agustin Canobbio",
+    "espnId": null,
+    "position": "Right winger",
+    "club": "Fluminense (Brasileirão, Brazil)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "An energetic, direct winger who played for Peñarol before moving to Brazilian football with Athletico Paranaense and now Fluminense. Canobbio is known for his high work rate, pace down the flanks, and willingness to track back and defend. He provides Uruguay with a hardworking wide option who can stretch opposition defenses.",
+    "number": 14
+   },
+   {
+    "name": "Brian Rodriguez",
+    "espnId": null,
+    "position": "Left winger",
+    "club": "Club América (Liga MX, Mexico)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "A skillful left winger who previously played in MLS with LAFC before joining Club América in Liga MX. Rodríguez is a quick, tricky dribbler who can cut inside onto his right foot or go down the line and cross. His flair and directness add a creative spark to Uruguay's attacking options.",
+    "number": 18
+   },
+   {
+    "name": "Rodrigo Aguirre",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Tigres UANL (Liga MX, Mexico)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "An experienced, prolific striker who has scored consistently across South American and Mexican football. Aguirre is a clinical finisher with good movement in the penalty area and the physicality to lead the line effectively. His goal-scoring record at Tigres in Liga MX earned him a call-up to provide veteran depth in Uruguay's attacking department.",
+    "number": 19
+   },
+   {
+    "name": "Federico Vinas",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Real Oviedo (Segunda División, Spain)",
+    "hometown": "Montevideo, Uruguay",
+    "why": "A Uruguayan striker who spent several years at Club América in Mexico before moving to Real Oviedo in Spain's second division. Viñas is a hardworking forward who can play as a target man or run in behind, offering tactical flexibility. His experience across different football cultures and his consistent goal-scoring make him a useful squad option.",
+    "number": 21
    }
   ],
   "Uzbekistan": [
@@ -12231,6 +21786,213 @@ window.WC_PLAYERS = {
      "AFC Youth Player of the Year (2023)",
      "Uzbekistan Player of the Year (2023, 2024)"
     ]
+   },
+   {
+    "name": "Utkir Yusupov",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Navbahor (Uzbekistan Super League, Uzbekistan)",
+    "hometown": "Namangan, Uzbekistan",
+    "why": "A veteran goalkeeper who has been a long-serving figure in Uzbek domestic football with Navbahor. At 35, Yusupov brings extensive experience and commanding leadership in the dressing room. His shot-stopping consistency has kept him in the national team picture for Uzbekistan's historic Football 2026 qualification.",
+    "number": 1
+   },
+   {
+    "name": "Abduvohid Nematov",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Nasaf (Uzbekistan Super League, Uzbekistan)",
+    "hometown": "Qarshi, Uzbekistan",
+    "why": "A young goalkeeper who has been developing at Nasaf, one of Uzbekistan's established clubs. At 25, Nematov provides long-term depth in the goalkeeping position with his agility and modern distribution. His inclusion in the Football 2026 squad reflects his potential as a future first-choice keeper.",
+    "number": 12
+   },
+   {
+    "name": "Botirali Ergashev",
+    "espnId": null,
+    "position": "Goalkeeper",
+    "club": "Neftchi (Uzbekistan Super League, Uzbekistan)",
+    "hometown": "Fergana, Uzbekistan",
+    "why": "An experienced goalkeeper who has been a reliable performer in the Uzbekistan Super League with Neftchi. Ergashev is a solid, dependable keeper who brings stability and consistency to the goalkeeping corps. His domestic experience and familiarity with the team setup make him a trusted backup option.",
+    "number": 16
+   },
+   {
+    "name": "Khojiakbar Alijonov",
+    "espnId": null,
+    "position": "Right-back",
+    "club": "Pakhtakor (Uzbekistan Super League, Uzbekistan)",
+    "hometown": "Tashkent, Uzbekistan",
+    "why": "A versatile defender who has been a regular for Pakhtakor, Uzbekistan's most successful club, and the national team. Alijonov offers defensive solidity and the ability to contribute going forward from the right-back position. His continental experience in the AFC Champions League adds valuable big-game pedigree.",
+    "number": 3
+   },
+   {
+    "name": "Farrukh Sayfiev",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Neftchi (Uzbekistan Super League, Uzbekistan)",
+    "hometown": "Fergana, Uzbekistan",
+    "why": "One of the most experienced defenders in the Uzbek squad at 35, Sayfiev has been a stalwart of domestic football for over a decade. He brings leadership, aerial presence, and defensive know-how from years of competing in the Uzbekistan Super League. His selection for Football 2026 is a testament to his enduring quality and mentoring role.",
+    "number": 4
+   },
+   {
+    "name": "Rustam Ashurmatov",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Esteghlal (Persian Gulf Pro League, Iran)",
+    "hometown": "Tashkent, Uzbekistan",
+    "why": "A strong, experienced centre-back who has gained valuable international exposure playing for Esteghlal in Iran's top division. Ashurmatov is a physical defender who excels in aerial duels and brings composure to the backline. His experience of playing abroad in a competitive Asian league is an important asset for Uzbekistan.",
+    "number": 5
+   },
+   {
+    "name": "Sherzod Nasrullaev",
+    "espnId": null,
+    "position": "Defender",
+    "club": "Pakhtakor (Uzbekistan Super League, Uzbekistan)",
+    "hometown": "Tashkent, Uzbekistan",
+    "why": "A dependable defender who has been a regular at Pakhtakor and in the Uzbekistan national team. Nasrullaev offers versatility across the defensive positions and has been tested in AFC Champions League competition. His consistency and tactical discipline make him a trusted option in the backline.",
+    "number": 13
+   },
+   {
+    "name": "Umar Eshmurodov",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Nasaf (Uzbekistan Super League, Uzbekistan)",
+    "hometown": "Qarshi, Uzbekistan",
+    "why": "A veteran centre-back who has been a mainstay of Nasaf's defense for many years. At 33, Eshmurodov brings experience, leadership, and strong organizational skills to the Uzbek backline. His long service to domestic football and the national team is recognized with his inclusion in the Football 2026 squad.",
+    "number": 15
+   },
+   {
+    "name": "Bekhruz Karimov",
+    "espnId": null,
+    "position": "Defender",
+    "club": "Surkhon (Uzbekistan Super League, Uzbekistan)",
+    "hometown": "Termez, Uzbekistan",
+    "why": "At just 18 years old, Karimov is the youngest player in Uzbekistan's Football 2026 squad and a highly rated prospect. He has already broken through at Surkhon and shown maturity beyond his years in the domestic league. His selection signals Uzbekistan's investment in developing the next generation of defensive talent.",
+    "number": 24
+   },
+   {
+    "name": "Avazbek Ulmasaliev",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "AGMK (Uzbekistan Super League, Uzbekistan)",
+    "hometown": "Almalyk, Uzbekistan",
+    "why": "A tall, physical centre-back who has been a strong performer for AGMK in the Uzbekistan Super League. Ulmasaliev uses his 188cm frame to dominate aerial situations and provides a commanding presence at the back. His consistent domestic performances earned him a place in the squad for Football 2026.",
+    "number": 25
+   },
+   {
+    "name": "Jakhongir Urozov",
+    "espnId": null,
+    "position": "Centre-back",
+    "club": "Dinamo Samarqand (Uzbekistan Super League, Uzbekistan)",
+    "hometown": "Samarkand, Uzbekistan",
+    "why": "A young, imposing centre-back standing at 190cm who plays for Dinamo Samarqand. At 22, Urozov is part of the emerging generation of Uzbek defenders who combine physical attributes with improving technical ability. His development and potential make him an exciting prospect for the national team's future.",
+    "number": 26
+   },
+   {
+    "name": "Akmal Mozgovoy",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Pakhtakor (Uzbekistan Super League, Uzbekistan)",
+    "hometown": "Tashkent, Uzbekistan",
+    "why": "A key midfielder for Pakhtakor and the Uzbekistan national team who combines work rate with technical ability. Mozgovoy is an industrious player who can contribute in both attack and defense, linking play from midfield with his passing range. He has been a consistent performer in the AFC Champions League and is central to Uzbekistan's midfield plans.",
+    "number": 6
+   },
+   {
+    "name": "Otabek Shukurov",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Baniyas (UAE Pro League, United Arab Emirates)",
+    "hometown": "Tashkent, Uzbekistan",
+    "why": "An experienced midfielder who has captained Uzbekistan and gained international exposure playing in the UAE Pro League. Shukurov is a technically proficient player with excellent passing range and the ability to dictate the tempo of matches. His leadership qualities and experience make him one of the most important players in the Uzbek squad.",
+    "number": 7
+   },
+   {
+    "name": "Jamshid Iskanderov",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Neftchi (Uzbekistan Super League, Uzbekistan)",
+    "hometown": "Fergana, Uzbekistan",
+    "why": "A veteran midfielder who has been a fixture of Uzbek domestic football for over a decade. Iskanderov is a compact, tenacious player who brings energy and competitiveness to the center of the park. His experience and commitment to the national team have kept him in the squad for Football 2026.",
+    "number": 8
+   },
+   {
+    "name": "Odiljon Hamrobekov",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Tractor (Persian Gulf Pro League, Iran)",
+    "hometown": "Tashkent, Uzbekistan",
+    "why": "A well-traveled midfielder who has gained experience playing in Iran's competitive top division with Tractor. Hamrobekov is a hard-working player who covers ground effectively and provides balance to the midfield. His exposure to different footballing cultures in Asian leagues adds depth to the Uzbek squad.",
+    "number": 9
+   },
+   {
+    "name": "Jaloliddin Masharipov",
+    "espnId": null,
+    "position": "Attacking midfielder",
+    "club": "Esteghlal (Persian Gulf Pro League, Iran)",
+    "hometown": "Tashkent, Uzbekistan",
+    "why": "Widely regarded as one of the most talented players in Uzbek football history, Masharipov is a creative playmaker with dazzling dribbling skills and the ability to score spectacular goals. His flair and vision have made him Uzbekistan's talisman and number 10, and he has experience playing abroad in Saudi Arabia and Iran. Football 2026 represents the pinnacle of his career with the national team.",
+    "number": 10
+   },
+   {
+    "name": "Oston Urunov",
+    "espnId": null,
+    "position": "Winger",
+    "club": "Persepolis (Persian Gulf Pro League, Iran)",
+    "hometown": "Tashkent, Uzbekistan",
+    "why": "An energetic, direct winger who has been developing well at Persepolis, one of Iran's biggest and most decorated clubs. Urunov uses his pace and dribbling ability to cause problems for opposition defenses, and at 25 he is entering his prime years. His attacking threat from wide positions is a key part of Uzbekistan's game plan.",
+    "number": 11
+   },
+   {
+    "name": "Dostonbek Khamdamov",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Pakhtakor (Uzbekistan Super League, Uzbekistan)",
+    "hometown": "Tashkent, Uzbekistan",
+    "why": "A reliable central midfielder who has been a consistent performer for Pakhtakor in the domestic league and continental competitions. Khamdamov brings stability and composure to the midfield with his tidy passing and positional discipline. His experience at Uzbekistan's biggest club translates well to international football.",
+    "number": 17
+   },
+   {
+    "name": "Abdulla Abdullaev",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Dibba (UAE First Division, United Arab Emirates)",
+    "hometown": "Tashkent, Uzbekistan",
+    "why": "A midfielder who has gained experience playing abroad in the UAE, adding an international dimension to his game. Abdullaev is a technically capable player who contributes to build-up play and maintains possession under pressure. His adaptability to different football environments earned him a spot in the Football 2026 squad.",
+    "number": 18
+   },
+   {
+    "name": "Azizjon Ganiev",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Al Bataeh (UAE Pro League, United Arab Emirates)",
+    "hometown": "Tashkent, Uzbekistan",
+    "why": "A versatile midfielder who has been developing in the UAE Pro League with Al Bataeh. Ganiev is comfortable in multiple midfield roles and brings a blend of technical ability and physical presence. His experience in a competitive Gulf league has broadened his game ahead of Football 2026.",
+    "number": 19
+   },
+   {
+    "name": "Sherzod Esanov",
+    "espnId": null,
+    "position": "Central midfielder",
+    "club": "Bukhara (Uzbekistan Super League, Uzbekistan)",
+    "hometown": "Bukhara, Uzbekistan",
+    "why": "A young midfielder who has been developing at Bukhara in the domestic league. At 23, Esanov is a tall midfielder at 190cm who offers a physical presence and aerial advantage in midfield. His potential and growth in the domestic league earned him a place in Uzbekistan's Football 2026 squad.",
+    "number": 23
+   },
+   {
+    "name": "Azizbek Amonov",
+    "espnId": null,
+    "position": "Forward",
+    "club": "Dinamo Samarqand (Uzbekistan Super League, Uzbekistan)",
+    "hometown": "Samarkand, Uzbekistan",
+    "why": "A forward who has been a productive scorer in the Uzbekistan Super League with Dinamo Samarqand. Amonov is a direct, goal-hungry attacker who brings pace and movement to the front line. His domestic scoring record earned him a call-up for Uzbekistan's historic Football 2026 campaign.",
+    "number": 20
+   },
+   {
+    "name": "Igor Sergeev",
+    "espnId": null,
+    "position": "Striker",
+    "club": "Persepolis (Persian Gulf Pro League, Iran)",
+    "hometown": "Tashkent, Uzbekistan",
+    "why": "A prolific striker who has been one of Uzbekistan's most reliable goalscorers, with experience in multiple Asian leagues including Iran's top division with Persepolis. Sergeev is a clinical finisher with good movement and the ability to score different types of goals. His goal-scoring record for the national team makes him crucial to Uzbekistan's chances at Football 2026.",
+    "number": 21
    }
   ]
  }
