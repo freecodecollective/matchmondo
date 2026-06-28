@@ -945,8 +945,8 @@
     "venue": "SoFi Stadium",
     "city": "Inglewood (Los Angeles), CA",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 0,
+    "scoreA": 0
   },
   {
     "n": 76,
