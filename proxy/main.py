@@ -497,6 +497,10 @@ class Handler(BaseHTTPRequestHandler):
             doc["scoreH"] = b["scoreH"]
         if isinstance(b.get("scoreA"), int):
             doc["scoreA"] = b["scoreA"]
+        if b.get("pkWinner") in ("H", "A"):
+            doc["pkWinner"] = b["pkWinner"]
+        elif "pkWinner" in b and b["pkWinner"] is None:
+            doc["pkWinner"] = None
         st, r = fs("PATCH", f"/picks/{did}/matches/{str(mn)}", body=docbody(doc))
         if st != 200:
             return self.send_json(st, {"error": "save failed", "detail": r})
