@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-27 23:49 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-06-28 00:53 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -908,7 +908,7 @@ window.WC_MATCHES = [
     "venue": "Mercedes-Benz Stadium",
     "city": "Atlanta, GA",
     "tv": "FOX or FS1 · Telemundo (ES)",
-    "scoreH": 1,
+    "scoreH": 0,
     "scoreA": 1
   },
   {
