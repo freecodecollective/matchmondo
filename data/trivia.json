@@ -10385,7 +10385,90 @@
       "answer": 0,
       "explanation": "True! Law 2 explicitly states the ball 'must be spherical.' It must also have a circumference between 68-70 cm, weigh between 410-450 grams at the start of the match, and be inflated to a pressure between 0.6-1.1 atmospheres. Each tournament ball undergoes extensive testing to meet these specifications.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "وفقًا لقوانين اللعبة، يجب أن تكون كرة القدم كروية الشكل.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! ينص القانون الثاني صراحةً على أن الكرة 'يجب أن تكون كروية الشكل'. كما يجب أن يتراوح محيطها بين 68 و70 سم، وأن يتراوح وزنها بين 410 و450 غرامًا عند بداية المباراة، وأن تُنفخ بضغط يتراوح بين 0.6 و1.1 ضغط جوي. تخضع كل كرة في البطولة لاختبارات مكثفة للتأكد من مطابقتها لهذه المواصفات."
+        },
+        "de": {
+          "question": "Laut den Spielregeln muss ein Fußball kugelförmig sein.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Richtig! Regel 2 besagt ausdrücklich, dass der Ball 'kugelförmig sein muss'. Außerdem muss er einen Umfang zwischen 68 und 70 cm haben, zu Spielbeginn zwischen 410 und 450 Gramm wiegen und auf einen Druck zwischen 0,6 und 1,1 Atmosphären aufgepumpt sein. Jeder Turnierball wird umfangreichen Tests unterzogen, um diese Vorgaben zu erfüllen."
+        },
+        "es": {
+          "question": "Según las Reglas de Juego, un balón de fútbol debe ser esférico.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! La Regla 2 establece explícitamente que el balón 'debe ser esférico'. También debe tener una circunferencia de entre 68 y 70 cm, pesar entre 410 y 450 gramos al inicio del partido y estar inflado a una presión de entre 0,6 y 1,1 atmósferas. Cada balón del torneo se somete a pruebas exhaustivas para cumplir con estas especificaciones."
+        },
+        "es-ES": {
+          "question": "Según las Reglas de Juego, un balón de fútbol debe ser esférico.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! La Regla 2 establece explícitamente que el balón 'debe ser esférico'. Además, debe tener una circunferencia de entre 68 y 70 cm, pesar entre 410 y 450 gramos al comienzo del partido y estar inflado a una presión de entre 0,6 y 1,1 atmósferas. Cada balón del torneo se somete a pruebas exhaustivas para cumplir con estas especificaciones."
+        },
+        "fr": {
+          "question": "Selon les Lois du Jeu, un ballon de football doit être sphérique.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! La Loi 2 stipule explicitement que le ballon 'doit être sphérique'. Il doit également avoir une circonférence comprise entre 68 et 70 cm, peser entre 410 et 450 grammes au coup d'envoi et être gonflé à une pression comprise entre 0,6 et 1,1 atmosphère. Chaque ballon du tournoi subit des tests approfondis pour respecter ces spécifications."
+        },
+        "it": {
+          "question": "Secondo le Regole del Gioco, un pallone da calcio deve essere sferico.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! La Regola 2 stabilisce esplicitamente che il pallone 'deve essere sferico'. Deve inoltre avere una circonferenza compresa tra 68 e 70 cm, pesare tra 410 e 450 grammi all'inizio della partita ed essere gonfiato a una pressione compresa tra 0,6 e 1,1 atmosfere. Ogni pallone del torneo viene sottoposto a test approfonditi per rispettare queste specifiche."
+        },
+        "ja": {
+          "question": "競技規則によると、サッカーボールは球形でなければならない。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "正しい！第2条には、ボールは「球形でなければならない」と明記されています。さらに、円周は68〜70cm、試合開始時の重量は410〜450グラム、空気圧は0.6〜1.1気圧でなければなりません。大会で使用される各ボールは、これらの仕様を満たすために徹底した検査を受けます。"
+        },
+        "ko": {
+          "question": "경기 규칙에 따르면 축구공은 구형이어야 한다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! 제2조는 공이 '구형이어야 한다'고 명시하고 있습니다. 또한 둘레는 68~70cm여야 하고, 경기 시작 시 무게는 410~450그램, 공기압은 0.6~1.1기압이어야 합니다. 대회에 사용되는 모든 공은 이러한 규격을 충족하기 위해 광범위한 테스트를 거칩니다."
+        },
+        "pt-BR": {
+          "question": "De acordo com as Regras do Jogo, uma bola de futebol deve ser esférica.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! A Regra 2 afirma explicitamente que a bola 'deve ser esférica'. Ela também deve ter uma circunferência entre 68 e 70 cm, pesar entre 410 e 450 gramas no início da partida e estar inflada a uma pressão entre 0,6 e 1,1 atmosferas. Cada bola do torneio passa por testes rigorosos para atender a essas especificações."
+        },
+        "zh-Hans": {
+          "question": "根据足球竞赛规则，足球必须是球形的。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！第2条规则明确规定足球“必须是球形的”。此外，它的周长必须在68至70厘米之间，比赛开始时重量在410至450克之间，气压在0.6至1.1个大气压之间。本届赛事使用的每一颗足球都要经过严格的测试，以确保符合这些规格。"
+        }
+      },
+      "i18nSourceHash": "888f03e0be861922"
     },
     {
       "id": "tf-coach-red-card",
@@ -10411,7 +10494,90 @@
       "answer": 0,
       "explanation": "True! The 2022 edition debuted semi-automated offside technology (SAOT), using 12 dedicated tracking cameras under the stadium roof to track 29 data points on each player's body 50 times per second. Combined with a sensor inside the ball, it generates automated offside alerts within seconds and produces 3D animations shown on stadium screens.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أدخلت بطولة 2022 تقنية التسلل شبه الآلية باستخدام كاميرات تتبّع أطراف اللاعبين.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! شهدت نسخة 2022 ظهور تقنية التسلل شبه الآلية (SAOT) لأول مرة، إذ استُخدمت 12 كاميرا تتبّع مخصّصة مثبّتة أسفل سقف الملعب لرصد 29 نقطة بيانات على جسم كل لاعب 50 مرة في الثانية. وبالاقتران مع مستشعر داخل الكرة، تُنتج هذه التقنية تنبيهات تسلل آلية خلال ثوانٍ، إضافة إلى رسوم متحركة ثلاثية الأبعاد تُعرض على شاشات الملعب."
+        },
+        "de": {
+          "question": "Beim Turnier 2022 wurde die halbautomatische Abseitstechnologie mit Kameras zur Erfassung der Gliedmaßen eingeführt.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Wahr! Bei der Ausgabe 2022 feierte die halbautomatische Abseitstechnologie (SAOT) ihr Debüt. Dabei erfassten 12 spezielle Tracking-Kameras unter dem Stadiondach 29 Datenpunkte am Körper jedes Spielers 50 Mal pro Sekunde. In Kombination mit einem Sensor im Ball erzeugt das System innerhalb von Sekunden automatische Abseitsmeldungen und liefert 3D-Animationen, die auf den Stadionleinwänden gezeigt werden."
+        },
+        "es": {
+          "question": "El torneo de 2022 introdujo la tecnología semiautomática de fuera de juego mediante cámaras de seguimiento de extremidades.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! La edición de 2022 estrenó la tecnología semiautomática de fuera de juego (SAOT), que usó 12 cámaras de seguimiento dedicadas instaladas bajo el techo del estadio para rastrear 29 puntos del cuerpo de cada jugador 50 veces por segundo. Combinada con un sensor dentro del balón, genera alertas automáticas de fuera de juego en segundos y produce animaciones en 3D que se muestran en las pantallas del estadio."
+        },
+        "es-ES": {
+          "question": "El torneo de 2022 introdujo la tecnología semiautomática de fuera de juego mediante cámaras de seguimiento de las extremidades.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! La edición de 2022 estrenó la tecnología semiautomática de fuera de juego (SAOT), que empleó 12 cámaras de seguimiento específicas instaladas bajo el techo del estadio para rastrear 29 puntos del cuerpo de cada jugador 50 veces por segundo. Combinada con un sensor en el interior del balón, genera avisos automáticos de fuera de juego en segundos y crea animaciones en 3D que se muestran en las pantallas del estadio."
+        },
+        "fr": {
+          "question": "Le tournoi de 2022 a introduit la technologie de hors-jeu semi-automatisée grâce à des caméras de suivi des membres.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! L'édition 2022 a inauguré la technologie de hors-jeu semi-automatisée (SAOT), avec 12 caméras de suivi dédiées installées sous le toit du stade pour suivre 29 points du corps de chaque joueur 50 fois par seconde. Associée à un capteur placé dans le ballon, elle génère des alertes de hors-jeu automatiques en quelques secondes et produit des animations en 3D diffusées sur les écrans géants du stade."
+        },
+        "it": {
+          "question": "Il torneo del 2022 ha introdotto la tecnologia semiautomatica per il fuorigioco grazie a telecamere per il tracciamento degli arti.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! L'edizione del 2022 ha visto il debutto della tecnologia semiautomatica del fuorigioco (SAOT), con 12 telecamere di tracciamento dedicate installate sotto il tetto dello stadio per seguire 29 punti del corpo di ogni giocatore 50 volte al secondo. Combinata con un sensore all'interno del pallone, genera avvisi di fuorigioco automatici in pochi secondi e produce animazioni in 3D mostrate sui maxischermi dello stadio."
+        },
+        "ja": {
+          "question": "2022年の大会では、選手の手足を追跡するカメラを使った半自動オフサイド判定技術が導入された。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "正しい！2022年大会で半自動オフサイド判定技術（SAOT）が初めて導入されました。スタジアムの屋根の下に設置された専用追跡カメラ12台が、各選手の体の29か所のデータポイントを1秒間に50回追跡します。ボール内部のセンサーと組み合わせることで、数秒以内に自動でオフサイド警告を生成し、スタジアムの大型スクリーンに表示される3Dアニメーションも作り出します。"
+        },
+        "ko": {
+          "question": "2022년 대회에서는 선수의 팔다리를 추적하는 카메라를 활용한 반자동 오프사이드 판독 기술이 도입되었다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참! 2022년 대회에서 반자동 오프사이드 판독 기술(SAOT)이 처음 선보였습니다. 경기장 지붕 아래에 설치된 12대의 전용 추적 카메라가 각 선수 몸의 29개 데이터 포인트를 초당 50회 추적합니다. 공 내부의 센서와 결합해 몇 초 안에 자동 오프사이드 경고를 생성하고, 경기장 스크린에 표시되는 3D 애니메이션도 만들어냅니다."
+        },
+        "pt-BR": {
+          "question": "O torneio de 2022 introduziu a tecnologia semiautomática de impedimento usando câmeras de rastreamento dos membros dos jogadores.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! A edição de 2022 estreou a tecnologia semiautomática de impedimento (SAOT), que usou 12 câmeras de rastreamento dedicadas instaladas sob o teto do estádio para rastrear 29 pontos do corpo de cada jogador 50 vezes por segundo. Combinada com um sensor dentro da bola, ela gera alertas automáticos de impedimento em segundos e produz animações em 3D exibidas nos telões do estádio."
+        },
+        "zh-Hans": {
+          "question": "2022年的赛事引入了使用肢体追踪摄像头的半自动越位判定技术。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！2022年那届赛事首次采用了半自动越位判定技术（SAOT）。安装在球场顶棚下的12台专用追踪摄像头，每秒50次追踪每名球员身体上的29个数据点。再结合球内的传感器，该技术能在几秒内自动生成越位提示，并制作出在球场大屏幕上播放的3D动画。"
+        }
+      },
+      "i18nSourceHash": "40a4727fb7563052"
     },
     {
       "id": "tf-brazil-1950-jersey-change",
@@ -10437,7 +10603,90 @@
       "answer": 1,
       "explanation": "False! South Africa became the first host nation eliminated in the group stage in 2010, and Qatar followed in 2022. While host nations have historically benefited from home support and automatic qualification, being on home soil is no guarantee of advancing.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "لم يُقصَ أي بلد مُضيف من قبل في دور المجموعات بالبطولة.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "خطأ! أصبحت جنوب أفريقيا أول بلد مضيف يُقصى من دور المجموعات عام 2010، ثم تبعتها قطر عام 2022. ورغم أن البلدان المضيفة استفادت تاريخياً من دعم الجمهور والتأهل التلقائي، فإن اللعب على أرضها لا يضمن التقدم إلى الأدوار التالية."
+        },
+        "de": {
+          "question": "Noch nie ist ein Gastgeberland in der Gruppenphase des Turniers ausgeschieden.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Falsch! Südafrika war 2010 das erste Gastgeberland, das in der Gruppenphase ausschied, und Katar folgte 2022. Zwar profitierten Gastgeber historisch von der heimischen Unterstützung und der automatischen Qualifikation, doch das Heimrecht ist keine Garantie für das Weiterkommen."
+        },
+        "es": {
+          "question": "Ningún país anfitrión ha sido eliminado jamás en la fase de grupos del torneo.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Falso! Sudáfrica se convirtió en el primer país anfitrión eliminado en la fase de grupos en 2010, y Catar siguió sus pasos en 2022. Aunque los anfitriones históricamente se han beneficiado del apoyo local y de la clasificación automática, jugar en casa no garantiza avanzar."
+        },
+        "es-ES": {
+          "question": "Ningún país anfitrión ha sido eliminado nunca en la fase de grupos del torneo.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Falso! Sudáfrica se convirtió en el primer país anfitrión eliminado en la fase de grupos en 2010, y Catar le siguió en 2022. Aunque los anfitriones se han beneficiado históricamente del apoyo local y de la clasificación automática, jugar en casa no es garantía de avanzar."
+        },
+        "fr": {
+          "question": "Aucun pays hôte n'a jamais été éliminé au premier tour du tournoi.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Faux ! L'Afrique du Sud est devenue le premier pays hôte éliminé dès la phase de groupes en 2010, suivie par le Qatar en 2022. Si les pays hôtes ont historiquement profité du soutien de leur public et d'une qualification automatique, jouer à domicile ne garantit en rien de se qualifier pour la suite."
+        },
+        "it": {
+          "question": "Nessuna nazione ospitante è mai stata eliminata nella fase a gironi del torneo.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Falso! Il Sudafrica è stata la prima nazione ospitante a essere eliminata nella fase a gironi nel 2010, seguita dal Qatar nel 2022. Sebbene le nazioni ospitanti abbiano storicamente beneficiato del sostegno del pubblico e della qualificazione automatica, giocare in casa non garantisce il passaggio del turno."
+        },
+        "ja": {
+          "question": "開催国がこの大会のグループステージで敗退したことは一度もない。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "誤り！南アフリカは2010年に開催国として初めてグループステージで敗退し、2022年にはカタールがそれに続きました。開催国は歴史的に地元の声援と自動出場の恩恵を受けてきましたが、ホームで戦うことが次のステージへの進出を保証するわけではありません。"
+        },
+        "ko": {
+          "question": "이 대회 조별 리그에서 탈락한 개최국은 지금까지 한 번도 없었다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "거짓! 남아프리카공화국은 2010년에 조별 리그에서 탈락한 첫 개최국이 되었고, 2022년에는 카타르가 그 뒤를 이었습니다. 개최국은 역사적으로 홈 관중의 응원과 자동 출전의 혜택을 누려왔지만, 자국에서 치른다고 해서 다음 라운드 진출이 보장되는 것은 아닙니다."
+        },
+        "pt-BR": {
+          "question": "Nenhum país-sede jamais foi eliminado na fase de grupos do torneio.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Falso! A África do Sul se tornou o primeiro país-sede eliminado na fase de grupos em 2010, e o Catar seguiu o mesmo caminho em 2022. Embora os países-sede historicamente tenham se beneficiado do apoio da torcida e da classificação automática, jogar em casa não garante o avanço."
+        },
+        "zh-Hans": {
+          "question": "在本届赛事中，从未有东道主在小组赛阶段被淘汰。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "错误！南非于2010年成为首个在小组赛阶段被淘汰的东道主，卡塔尔在2022年也步其后尘。尽管东道主历来受益于主场支持和自动晋级资格，但在本土作战并不能保证晋级。"
+        }
+      },
+      "i18nSourceHash": "96119ae7699200c6"
     },
     {
       "id": "tf-golden-goal-rule",
@@ -10450,7 +10699,90 @@
       "answer": 0,
       "explanation": "True! The golden goal was used at the 1998 and 2002 editions. France's Laurent Blanc scored a golden goal against Paraguay in 1998, and several matches in 2002 were decided this way. The rule was scrapped before the 2006 edition in favor of playing out full 30-minute extra time periods.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "قاعدة 'الهدف الذهبي' — حيث يفوز الفريق بالمباراة فوراً عند تسجيل أول هدف في الوقت الإضافي — استُخدمت في البطولة من عام 1998 إلى 2002.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! استُخدم الهدف الذهبي في نسختي 1998 و2002. سجّل الفرنسي لوران بلان هدفاً ذهبياً ضد باراغواي عام 1998، وحُسمت عدة مباريات عام 2002 بهذه الطريقة. أُلغيت القاعدة قبل نسخة 2006 لصالح لعب فترتي الوقت الإضافي كاملتين البالغتين 30 دقيقة."
+        },
+        "de": {
+          "question": "Die 'Golden-Goal'-Regel — bei der das erste in der Verlängerung erzielte Tor das Spiel sofort entscheidet — kam beim Turnier von 1998 bis 2002 zum Einsatz.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Wahr! Das Golden Goal kam bei den Ausgaben 1998 und 2002 zum Einsatz. Der Franzose Laurent Blanc erzielte 1998 ein Golden Goal gegen Paraguay, und 2002 wurden mehrere Spiele auf diese Weise entschieden. Vor der Ausgabe 2006 wurde die Regel abgeschafft, zugunsten der vollen Verlängerung über zweimal 15 Minuten."
+        },
+        "es": {
+          "question": "La regla del 'gol de oro' — donde el primer gol marcado en el tiempo extra gana el partido de inmediato — se usó en el torneo de 1998 a 2002.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! El gol de oro se usó en las ediciones de 1998 y 2002. El francés Laurent Blanc marcó un gol de oro contra Paraguay en 1998, y varios partidos en 2002 se definieron de esta manera. La regla se eliminó antes de la edición de 2006 a favor de jugar los dos tiempos extra completos de 30 minutos."
+        },
+        "es-ES": {
+          "question": "La regla del 'gol de oro' — donde el primer gol marcado en la prórroga gana el partido de inmediato — se utilizó en el torneo de 1998 a 2002.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! El gol de oro se utilizó en las ediciones de 1998 y 2002. El francés Laurent Blanc marcó un gol de oro contra Paraguay en 1998, y varios partidos en 2002 se decidieron de esta forma. La regla se suprimió antes de la edición de 2006 en favor de disputar la prórroga completa de 30 minutos."
+        },
+        "fr": {
+          "question": "La règle du 'but en or' — où le premier but inscrit en prolongation remporte immédiatement le match — a été utilisée lors du tournoi de 1998 à 2002.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! Le but en or a été utilisé lors des éditions de 1998 et 2002. Le Français Laurent Blanc a inscrit un but en or contre le Paraguay en 1998, et plusieurs matchs en 2002 ont été décidés de cette façon. La règle a été abandonnée avant l'édition 2006 au profit de prolongations complètes de 30 minutes."
+        },
+        "it": {
+          "question": "La regola del 'golden goal' — secondo cui il primo gol segnato nei tempi supplementari assegna immediatamente la vittoria — è stata utilizzata nel torneo dal 1998 al 2002.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! Il golden goal è stato utilizzato nelle edizioni del 1998 e del 2002. Il francese Laurent Blanc segnò un golden goal contro il Paraguay nel 1998, e diverse partite del 2002 furono decise in questo modo. La regola fu abolita prima dell'edizione del 2006 in favore dei tempi supplementari completi da 30 minuti."
+        },
+        "ja": {
+          "question": "延長戦で最初に決まったゴールで即座に試合が決まる「ゴールデンゴール」ルールは、1998年から2002年までこの大会で採用されていた。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "正しい！ゴールデンゴールは1998年と2002年の大会で採用されました。1998年にはフランスのローラン・ブランがパラグアイ戦でゴールデンゴールを決め、2002年には複数の試合がこの方法で決着しました。このルールは2006年大会を前に廃止され、30分間の延長戦をフルに行う方式に変わりました。"
+        },
+        "ko": {
+          "question": "연장전에서 처음 터진 골로 즉시 경기가 끝나는 '골든골' 규칙은 1998년부터 2002년까지 이 대회에서 사용되었다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! 골든골은 1998년과 2002년 대회에서 사용되었습니다. 1998년 프랑스의 로랑 블랑이 파라과이를 상대로 골든골을 넣었고, 2002년에는 여러 경기가 이 방식으로 결정되었습니다. 이 규칙은 2006년 대회를 앞두고 폐지되었으며, 30분 연장전 전체를 치르는 방식으로 바뀌었습니다."
+        },
+        "pt-BR": {
+          "question": "A regra do 'gol de ouro' — em que o primeiro gol marcado na prorrogação vence a partida imediatamente — foi usada no torneio de 1998 a 2002.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! O gol de ouro foi usado nas edições de 1998 e 2002. O francês Laurent Blanc marcou um gol de ouro contra o Paraguai em 1998, e várias partidas em 2002 foram decididas dessa forma. A regra foi abolida antes da edição de 2006 em favor de se disputar a prorrogação completa de 30 minutos."
+        },
+        "zh-Hans": {
+          "question": "“金球”规则——即加时赛中打入的第一个进球立即决定比赛胜负——在1998年至2002年的赛事中被采用。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！金球规则在1998年和2002年两届赛事中被采用。1998年，法国的洛朗·布兰对阵巴拉圭时打入一粒金球，2002年也有数场比赛以这种方式分出胜负。该规则在2006年赛事前被废除，改为完整进行30分钟的加时赛。"
+        }
+      },
+      "i18nSourceHash": "983ee1eef203d3fa"
     },
     {
       "id": "tf-brazil-all-editions",
@@ -10463,7 +10795,90 @@
       "answer": 0,
       "explanation": "True! Brazil has appeared at every single edition since the inaugural 1930 tournament — a streak of over 20 consecutive appearances. No other nation comes close. Germany has missed one (1930), Argentina has missed four, and Italy failed to qualify in 2018 and 2022.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "البرازيل هي الدولة الوحيدة التي تأهلت لكل نسخة من البطولة.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! ظهرت البرازيل في كل نسخة منذ النسخة الافتتاحية عام 1930 — سلسلة تتجاوز 20 مشاركة متتالية. ولا يقترب منها أي منتخب آخر. فقد غابت ألمانيا عن نسخة واحدة (1930)، وغابت الأرجنتين عن أربع نسخ، وفشلت إيطاليا في التأهل عامي 2018 و2022."
+        },
+        "de": {
+          "question": "Brasilien ist das einzige Land, das sich für jede Ausgabe des Turniers qualifiziert hat.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Wahr! Brasilien war seit dem ersten Turnier 1930 bei jeder einzelnen Ausgabe dabei — eine Serie von über 20 Teilnahmen in Folge. Keine andere Nation kommt dem nahe. Deutschland fehlte einmal (1930), Argentinien viermal, und Italien scheiterte 2018 und 2022 in der Qualifikation."
+        },
+        "es": {
+          "question": "Brasil es el único país que se ha clasificado para todas las ediciones del torneo.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Brasil ha estado presente en cada una de las ediciones desde el torneo inaugural de 1930, una racha de más de 20 participaciones consecutivas. Ninguna otra selección se le acerca. Alemania faltó una vez (1930), Argentina cuatro veces, e Italia no logró clasificarse en 2018 ni en 2022."
+        },
+        "es-ES": {
+          "question": "Brasil es el único país que se ha clasificado para todas las ediciones del torneo.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Brasil ha estado presente en todas y cada una de las ediciones desde el torneo inaugural de 1930, una racha de más de 20 participaciones consecutivas. Ninguna otra selección se le acerca. Alemania se perdió una (1930), Argentina cuatro, e Italia no logró clasificarse ni en 2018 ni en 2022."
+        },
+        "fr": {
+          "question": "Le Brésil est le seul pays à s'être qualifié pour chaque édition du tournoi.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! Le Brésil a participé à chaque édition depuis le tout premier tournoi de 1930 — une série de plus de 20 participations consécutives. Aucune autre nation n'en approche. L'Allemagne en a manqué une (1930), l'Argentine quatre, et l'Italie a échoué à se qualifier en 2018 et en 2022."
+        },
+        "it": {
+          "question": "Il Brasile è l'unico paese ad essersi qualificato per ogni edizione del torneo.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! Il Brasile è stato presente a ogni singola edizione fin dal torneo inaugurale del 1930 — una striscia di oltre 20 partecipazioni consecutive. Nessun'altra nazionale le si avvicina. La Germania ne ha saltata una (1930), l'Argentina quattro, e l'Italia non è riuscita a qualificarsi nel 2018 e nel 2022."
+        },
+        "ja": {
+          "question": "ブラジルは大会のすべての回に出場権を得た唯一の国である。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "正しい！ブラジルは1930年の第1回大会以来、すべての大会に出場しており、20回以上の連続出場記録を誇ります。これに匹敵する国はありません。ドイツは1回（1930年）、アルゼンチンは4回出場を逃しており、イタリアは2018年と2022年に出場権を逃しました。"
+        },
+        "ko": {
+          "question": "브라질은 이 대회의 모든 대회에 출전 자격을 얻은 유일한 국가다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! 브라질은 1930년 첫 대회 이래 모든 대회에 출전했으며, 20회가 넘는 연속 출전 기록을 이어가고 있습니다. 이에 근접한 나라는 없습니다. 독일은 한 차례(1930년), 아르헨티나는 네 차례 출전하지 못했고, 이탈리아는 2018년과 2022년에 본선 진출에 실패했습니다."
+        },
+        "pt-BR": {
+          "question": "O Brasil é o único país a ter se classificado para todas as edições do torneio.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! O Brasil esteve presente em todas as edições desde o torneio inaugural de 1930 — uma sequência de mais de 20 participações consecutivas. Nenhuma outra seleção chega perto. A Alemanha ficou de fora de uma (1930), a Argentina de quatro, e a Itália não conseguiu se classificar em 2018 e 2022."
+        },
+        "zh-Hans": {
+          "question": "巴西是唯一一个晋级该赛事每一届的国家。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！自1930年首届赛事以来，巴西参加了每一届比赛——连续出场超过20届。没有其他国家能与之相比。德国缺席过一届（1930年），阿根廷缺席过四届，而意大利在2018年和2022年都未能获得参赛资格。"
+        }
+      },
+      "i18nSourceHash": "74ef721fffba4ee8"
     },
     {
       "id": "tf-three-points-win-1994",
