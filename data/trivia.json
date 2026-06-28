@@ -10891,7 +10891,90 @@
       "answer": 0,
       "explanation": "True! Before 1994, a win was worth only two points. The switch to three points for a win was designed to encourage more attacking football by making victories more rewarding than draws. The change has been credited with reducing the number of dull, risk-averse group stage matches.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "تم إدخال نظام النقاط الثلاث للفوز في بطولة عام 1994.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! قبل عام 1994، كان الفوز يساوي نقطتين فقط. صُمم التحول إلى ثلاث نقاط للفوز لتشجيع كرة قدم أكثر هجومية من خلال جعل الانتصارات أكثر فائدة من التعادلات. ويُنسب إلى هذا التغيير الفضل في تقليل عدد مباريات دور المجموعات المملة والحذرة."
+        },
+        "de": {
+          "question": "Das System mit drei Punkten für einen Sieg wurde beim Turnier 1994 eingeführt.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Wahr! Vor 1994 war ein Sieg nur zwei Punkte wert. Die Umstellung auf drei Punkte für einen Sieg sollte offensiveren Fußball fördern, indem Siege lohnenswerter wurden als Unentschieden. Der Änderung wird zugeschrieben, dass sie die Zahl der langweiligen, risikoscheuen Gruppenspiele verringert hat."
+        },
+        "es": {
+          "question": "El sistema de tres puntos por victoria se introdujo en el torneo de 1994.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Antes de 1994, una victoria valía solo dos puntos. El cambio a tres puntos por victoria se diseñó para fomentar un fútbol más ofensivo, haciendo que ganar fuera más rentable que empatar. A este cambio se le atribuye haber reducido la cantidad de aburridos partidos de fase de grupos en los que se evitaba el riesgo."
+        },
+        "es-ES": {
+          "question": "El sistema de tres puntos por victoria se introdujo en el torneo de 1994.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Antes de 1994, una victoria valía solo dos puntos. El cambio a tres puntos por victoria se ideó para fomentar un fútbol más ofensivo, haciendo que ganar fuese más beneficioso que empatar. A este cambio se le atribuye haber reducido el número de aburridos partidos de fase de grupos en los que se evitaba el riesgo."
+        },
+        "fr": {
+          "question": "Le système des trois points pour une victoire a été instauré lors du tournoi de 1994.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! Avant 1994, une victoire ne rapportait que deux points. Le passage à trois points pour une victoire visait à encourager un football plus offensif en rendant les victoires plus avantageuses que les matchs nuls. Ce changement est crédité d'avoir réduit le nombre de matchs de poule ennuyeux et trop prudents."
+        },
+        "it": {
+          "question": "Il sistema dei tre punti per una vittoria è stato introdotto nel torneo del 1994.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! Prima del 1994, una vittoria valeva solo due punti. Il passaggio ai tre punti per una vittoria fu pensato per incoraggiare un calcio più offensivo, rendendo le vittorie più vantaggiose dei pareggi. A questo cambiamento viene attribuito il merito di aver ridotto il numero di partite della fase a gironi noiose e prive di rischi."
+        },
+        "ja": {
+          "question": "勝利に勝ち点3を与える制度は、1994年の大会で導入された。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "正しい！1994年以前は、勝利の価値は勝ち点2しかありませんでした。勝利に勝ち点3を与える方式への変更は、引き分けよりも勝利の見返りを大きくすることで、より攻撃的なサッカーを促すことを目的としていました。この変更は、退屈でリスクを避けるグループステージの試合を減らしたと評価されています。"
+        },
+        "ko": {
+          "question": "승리 시 승점 3점을 부여하는 제도는 1994년 대회에서 도입되었다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! 1994년 이전에는 승리해도 승점 2점만 주어졌습니다. 승리에 승점 3점을 부여하는 방식으로의 전환은 승리를 무승부보다 더 가치 있게 만들어 더 공격적인 축구를 장려하기 위해 마련되었습니다. 이 변화는 지루하고 위험을 회피하는 조별 리그 경기의 수를 줄인 것으로 평가받고 있습니다."
+        },
+        "pt-BR": {
+          "question": "O sistema de três pontos por vitória foi introduzido no torneio de 1994.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! Antes de 1994, uma vitória valia apenas dois pontos. A mudança para três pontos por vitória foi pensada para incentivar um futebol mais ofensivo, tornando as vitórias mais vantajosas do que os empates. A mudança é creditada por ter reduzido o número de partidas chatas e cautelosas na fase de grupos."
+        },
+        "zh-Hans": {
+          "question": "胜一场得三分的制度是在1994年的赛事中首次引入的。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！在1994年之前，一场胜利只值两分。改为胜一场得三分的目的是通过让胜利比平局更有回报，从而鼓励更具进攻性的足球。这一改变被认为减少了那些沉闷、规避风险的小组赛比赛数量。"
+        }
+      },
+      "i18nSourceHash": "5da18a0a41258723"
     },
     {
       "id": "tf-penalty-retake-var",
@@ -10904,7 +10987,90 @@
       "answer": 0,
       "explanation": "True! Since the introduction of VAR, goalkeepers are monitored more strictly during penalties. If VAR detects the goalkeeper moved off the line before the kick and the penalty was saved or missed, the penalty can be retaken. This led to several retakes at recent tournaments, much to the frustration of goalkeepers.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "يمكن لتقنية الفيديو المساعد (VAR) أن تأمر بإعادة ركلة الجزاء إذا تحرك حارس المرمى عن خط المرمى مبكرًا جدًا.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! منذ إدخال تقنية الفيديو المساعد (VAR)، أصبح حراس المرمى يخضعون لمراقبة أكثر صرامة أثناء ركلات الجزاء. إذا اكتشفت التقنية أن الحارس تحرك عن الخط قبل تنفيذ الركلة وتم التصدي لها أو أهدرت، فيمكن إعادة ركلة الجزاء. وقد أدى ذلك إلى عدة حالات إعادة في البطولات الأخيرة، مما أثار استياء حراس المرمى."
+        },
+        "de": {
+          "question": "Der VAR kann eine Wiederholung des Elfmeters anordnen, wenn der Torwart die Torlinie zu früh verlässt.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Richtig! Seit der Einführung des VAR werden Torhüter bei Elfmetern strenger überwacht. Wenn der VAR feststellt, dass der Torwart die Linie vor dem Schuss verlassen hat und der Elfmeter gehalten oder verschossen wurde, kann er wiederholt werden. Das führte bei den letzten Turnieren zu mehreren Wiederholungen, sehr zum Ärger der Torhüter."
+        },
+        "es": {
+          "question": "El VAR puede ordenar que se repita un penal si el arquero se adelanta de la línea de gol demasiado pronto.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Desde que se introdujo el VAR, los arqueros son vigilados con mayor rigurosidad durante los penales. Si el VAR detecta que el arquero se adelantó de la línea antes del disparo y el penal fue atajado o errado, se puede ordenar que se repita. Esto provocó varias repeticiones en torneos recientes, para gran frustración de los arqueros."
+        },
+        "es-ES": {
+          "question": "El VAR puede ordenar que se repita un penalti si el portero se adelanta de la línea de gol demasiado pronto.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Desde la introducción del VAR, a los porteros se les vigila con mayor rigor durante los penaltis. Si el VAR detecta que el portero se adelantó de la línea antes del disparo y el penalti fue parado o fallado, se puede repetir. Esto provocó varias repeticiones en torneos recientes, para gran frustración de los porteros."
+        },
+        "fr": {
+          "question": "La VAR peut ordonner qu'un penalty soit retiré si le gardien quitte sa ligne de but trop tôt.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! Depuis l'introduction de la VAR, les gardiens sont surveillés plus strictement lors des penalties. Si la VAR détecte que le gardien a quitté sa ligne avant la frappe et que le penalty a été arrêté ou manqué, celui-ci peut être retiré. Cela a entraîné plusieurs penalties à retirer lors des tournois récents, au grand dam des gardiens."
+        },
+        "it": {
+          "question": "Il VAR può ordinare la ripetizione di un rigore se il portiere si stacca dalla linea di porta troppo presto.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! Da quando è stato introdotto il VAR, i portieri vengono controllati più severamente durante i rigori. Se il VAR rileva che il portiere si è staccato dalla linea prima del tiro e il rigore è stato parato o sbagliato, il rigore può essere ripetuto. Questo ha portato a diverse ripetizioni nei tornei recenti, con grande frustrazione dei portieri."
+        },
+        "ja": {
+          "question": "ゴールキーパーが早すぎるタイミングでゴールラインから動いた場合、VARはペナルティキックの再実施を指示できる。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "正しい！VARの導入以降、ペナルティキックの際にはゴールキーパーがより厳しく監視されるようになりました。キックの前にキーパーがラインから動いたとVARが判断し、なおかつそのPKがセーブまたは失敗した場合、PKは再実施されることがあります。これにより最近の大会では何度か再実施が行われ、キーパーたちを大いに悩ませました。"
+        },
+        "ko": {
+          "question": "골키퍼가 너무 일찍 골라인에서 벗어나면 VAR이 페널티킥 재실시를 명령할 수 있다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! VAR이 도입된 이후 골키퍼는 페널티킥 상황에서 더욱 엄격하게 감시받고 있습니다. 골키퍼가 킥 이전에 라인에서 벗어났다고 VAR이 판단하고, 해당 페널티킥이 막히거나 빗나갔다면 페널티킥은 다시 진행될 수 있습니다. 이로 인해 최근 대회에서 여러 차례 재실시가 있었고, 골키퍼들에게 큰 좌절을 안겼습니다."
+        },
+        "pt-BR": {
+          "question": "O VAR pode ordenar que um pênalti seja recobrado se o goleiro sair da linha do gol cedo demais.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! Desde a introdução do VAR, os goleiros são monitorados com mais rigor durante os pênaltis. Se o VAR detectar que o goleiro saiu da linha antes da cobrança e o pênalti foi defendido ou perdido, a cobrança pode ser repetida. Isso gerou várias repetições em torneios recentes, para grande frustração dos goleiros."
+        },
+        "zh-Hans": {
+          "question": "如果门将过早离开球门线，VAR 可以判罚点球重罚。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！自从引入 VAR 以来，门将在罚点球时受到更严格的监控。如果 VAR 发现门将在球员开球前就离开了球门线，且该点球被扑出或罚失，则可以判罚重罚。这在近期的赛事中引发了多次重罚，令门将们十分懊恼。"
+        }
+      },
+      "i18nSourceHash": "142eee0bbec88b59"
     },
     {
       "id": "img-henry",
@@ -10920,7 +11086,110 @@
       "explanation": "Thierry Henry won the 1998 tournament as a young winger before becoming one of the most lethal strikers in football. He scored at the 1998, 2002, and 2006 editions, and is France's second-highest tournament scorer behind Kylian Mbappé. He was also infamously involved in the 'Hand of Henry' handball against Ireland in 2010 qualifying.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Thierry_Henry_2008.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا المهاجم الفرنسي الذي فاز بالبطولة عام 1998 وسجّل في ثلاث نسخ متتالية؟",
+          "options": [
+            "تييري هنري",
+            "ديفيد تريزيغيه",
+            "باتريك فييرا",
+            "روبرت بيريس"
+          ],
+          "explanation": "فاز تييري هنري ببطولة 1998 وهو جناح شاب قبل أن يصبح أحد أكثر المهاجمين فتكاً في كرة القدم. سجّل في نسخ 1998 و2002 و2006، وهو ثاني أكثر هدّافي فرنسا في البطولة بعد كيليان مبابي. كما تورّط بشكل مثير للجدل في حادثة 'لمسة يد هنري' ضد أيرلندا في تصفيات 2010."
+        },
+        "de": {
+          "question": "Wer ist dieser französische Stürmer, der das Turnier 1998 gewann und bei drei aufeinanderfolgenden Ausgaben traf?",
+          "options": [
+            "Thierry Henry",
+            "David Trezeguet",
+            "Patrick Vieira",
+            "Robert Pirès"
+          ],
+          "explanation": "Thierry Henry gewann das Turnier 1998 als junger Flügelspieler, bevor er zu einem der gefährlichsten Stürmer im Fußball wurde. Er traf bei den Ausgaben 1998, 2002 und 2006 und ist hinter Kylian Mbappé Frankreichs zweitbester Turnier-Torschütze. Berüchtigt war zudem sein Handspiel, das sogenannte 'Hand of Henry', gegen Irland in der Qualifikation 2010."
+        },
+        "es": {
+          "question": "¿Quién es este delantero francés que ganó el torneo en 1998 y anotó en tres ediciones consecutivas?",
+          "options": [
+            "Thierry Henry",
+            "David Trezeguet",
+            "Patrick Vieira",
+            "Robert Pirès"
+          ],
+          "explanation": "Thierry Henry ganó el torneo de 1998 siendo un joven extremo, antes de convertirse en uno de los delanteros más letales del fútbol. Marcó en las ediciones de 1998, 2002 y 2006, y es el segundo máximo goleador de Francia en el torneo, solo por detrás de Kylian Mbappé. También protagonizó la célebre polémica de la 'Mano de Henry' contra Irlanda en la clasificación de 2010."
+        },
+        "es-ES": {
+          "question": "¿Quién es este delantero francés que ganó el torneo en 1998 y marcó en tres ediciones consecutivas?",
+          "options": [
+            "Thierry Henry",
+            "David Trezeguet",
+            "Patrick Vieira",
+            "Robert Pirès"
+          ],
+          "explanation": "Thierry Henry ganó el torneo de 1998 siendo un joven extremo, antes de convertirse en uno de los delanteros más letales del fútbol. Marcó en las ediciones de 1998, 2002 y 2006, y es el segundo máximo goleador de Francia en el torneo, solo por detrás de Kylian Mbappé. También protagonizó la famosa polémica de la 'Mano de Henry' contra Irlanda en la clasificación de 2010."
+        },
+        "fr": {
+          "question": "Qui est cet attaquant français qui a remporté le tournoi en 1998 et marqué lors de trois éditions consécutives ?",
+          "options": [
+            "Thierry Henry",
+            "David Trezeguet",
+            "Patrick Vieira",
+            "Robert Pirès"
+          ],
+          "explanation": "Thierry Henry a remporté le tournoi 1998 alors qu'il était un jeune ailier, avant de devenir l'un des attaquants les plus redoutables du football. Il a marqué lors des éditions 1998, 2002 et 2006, et reste le deuxième meilleur buteur français dans le tournoi derrière Kylian Mbappé. Il est aussi tristement célèbre pour la 'Main de Henry', sa main contre l'Irlande lors des qualifications de 2010."
+        },
+        "it": {
+          "question": "Chi è questo attaccante francese che ha vinto il torneo nel 1998 e ha segnato in tre edizioni consecutive?",
+          "options": [
+            "Thierry Henry",
+            "David Trezeguet",
+            "Patrick Vieira",
+            "Robert Pirès"
+          ],
+          "explanation": "Thierry Henry ha vinto il torneo del 1998 da giovane ala, prima di diventare uno degli attaccanti più letali del calcio. Ha segnato nelle edizioni del 1998, 2002 e 2006 ed è il secondo miglior marcatore della Francia nel torneo dietro Kylian Mbappé. È inoltre tristemente noto per la 'Mano di Henry', il fallo di mano contro l'Irlanda nelle qualificazioni del 2010."
+        },
+        "ja": {
+          "question": "1998年に大会を制し、3大会連続で得点したこのフランス人ストライカーは誰でしょう？",
+          "options": [
+            "ティエリ・アンリ",
+            "ダビド・トレゼゲ",
+            "パトリック・ヴィエラ",
+            "ロベール・ピレス"
+          ],
+          "explanation": "ティエリ・アンリは若きウインガーとして1998年の大会を制し、その後サッカー界屈指の決定力を誇るストライカーへと成長しました。1998年、2002年、2006年の各大会で得点を挙げ、フランス代表の大会通算得点ではキリアン・ムバッペに次ぐ歴代2位です。また、2010年予選でのアイルランド戦での『アンリのハンド』でも悪名高い存在です。"
+        },
+        "ko": {
+          "question": "1998년 대회에서 우승하고 3개 대회 연속으로 득점한 이 프랑스 공격수는 누구일까요?",
+          "options": [
+            "티에리 앙리",
+            "다비드 트레제게",
+            "파트리크 비에이라",
+            "로베르 피레스"
+          ],
+          "explanation": "티에리 앙리는 젊은 윙어로서 1998년 대회 우승을 차지한 뒤, 축구계에서 가장 치명적인 공격수 중 한 명으로 성장했습니다. 1998년, 2002년, 2006년 대회에서 모두 득점했으며, 프랑스 대표팀 대회 통산 득점에서는 킬리안 음바페에 이어 2위에 올라 있습니다. 또한 2010년 예선 아일랜드전에서 일어난 '앙리의 핸드볼' 사건으로도 악명이 높습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este atacante francês que venceu o torneio em 1998 e marcou em três edições consecutivas?",
+          "options": [
+            "Thierry Henry",
+            "David Trezeguet",
+            "Patrick Vieira",
+            "Robert Pirès"
+          ],
+          "explanation": "Thierry Henry venceu o torneio de 1998 ainda como um jovem ponta, antes de se tornar um dos atacantes mais letais do futebol. Ele marcou nas edições de 1998, 2002 e 2006 e é o segundo maior artilheiro da França no torneio, atrás apenas de Kylian Mbappé. Também ficou tristemente famoso pela 'Mão de Henry', a jogada de mão contra a Irlanda nas eliminatórias de 2010."
+        },
+        "zh-Hans": {
+          "question": "这位在1998年夺得冠军并在三届赛事中连续进球的法国前锋是谁？",
+          "options": [
+            "蒂埃里·亨利",
+            "大卫·特雷泽盖",
+            "帕特里克·维埃拉",
+            "罗贝尔·皮雷斯"
+          ],
+          "explanation": "蒂埃里·亨利在1998年以年轻边锋的身份夺得赛事冠军，此后成长为足坛最具杀伤力的前锋之一。他在1998、2002和2006三届赛事中均有进球，是法国队在该赛事中的历史第二射手，仅次于基利安·姆巴佩。他还因在2010年预选赛对阵爱尔兰时的『亨利之手』手球事件而声名狼藉。"
+        }
+      },
+      "i18nSourceHash": "c0e75d51184add26"
     },
     {
       "id": "img-iniesta",
@@ -10936,7 +11205,110 @@
       "explanation": "Andrés Iniesta scored the only goal of the 2010 final in the 116th minute against the Netherlands, securing Spain's first ever title. Known for his elegance, vision, and ability to glide past defenders, he was voted the tournament's second-best player behind Diego Forlán.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bar%C3%A7a_-_Napoli_-_20140806_-_Andres_Iniesta.jpg/500px-Bar%C3%A7a_-_Napoli_-_20140806_-_Andres_Iniesta.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو لاعب الوسط الإسباني الذي سجّل هدف الفوز في نهائي 2010؟",
+          "options": [
+            "أندريس إنييستا",
+            "تشافي هيرنانديز",
+            "دافيد سيلفا",
+            "سيسك فابريغاس"
+          ],
+          "explanation": "سجّل أندريس إنييستا الهدف الوحيد في نهائي 2010 في الدقيقة 116 أمام هولندا، ليمنح إسبانيا أول لقب في تاريخها. واشتهر بأناقته ورؤيته وقدرته على المراوغة وتجاوز المدافعين، واختير ثاني أفضل لاعب في البطولة بعد دييغو فورلان."
+        },
+        "de": {
+          "question": "Wer ist dieser spanische Mittelfeldspieler, der im Finale 2010 das Siegtor erzielte?",
+          "options": [
+            "Andrés Iniesta",
+            "Xavi Hernández",
+            "David Silva",
+            "Cesc Fàbregas"
+          ],
+          "explanation": "Andrés Iniesta erzielte in der 116. Minute das einzige Tor des Finales 2010 gegen die Niederlande und sicherte Spanien damit den ersten Titel der Geschichte. Bekannt für seine Eleganz, seine Spielübersicht und seine Fähigkeit, an Verteidigern vorbeizugleiten, wurde er hinter Diego Forlán zum zweitbesten Spieler des Turniers gewählt."
+        },
+        "es": {
+          "question": "¿Quién es este mediocampista español que marcó el gol de la victoria en la final de 2010?",
+          "options": [
+            "Andrés Iniesta",
+            "Xavi Hernández",
+            "David Silva",
+            "Cesc Fàbregas"
+          ],
+          "explanation": "Andrés Iniesta marcó el único gol de la final de 2010 en el minuto 116 frente a los Países Bajos, asegurando el primer título de la historia de España. Reconocido por su elegancia, su visión de juego y su habilidad para escabullirse entre los defensores, fue elegido como el segundo mejor jugador del torneo, detrás de Diego Forlán."
+        },
+        "es-ES": {
+          "question": "¿Quién es este centrocampista español que marcó el gol de la victoria en la final de 2010?",
+          "options": [
+            "Andrés Iniesta",
+            "Xavi Hernández",
+            "David Silva",
+            "Cesc Fàbregas"
+          ],
+          "explanation": "Andrés Iniesta marcó el único gol de la final de 2010 en el minuto 116 frente a los Países Bajos, dándole a España su primer título de la historia. Conocido por su elegancia, su visión de juego y su capacidad para escurrirse entre los defensas, fue elegido el segundo mejor jugador del torneo, por detrás de Diego Forlán."
+        },
+        "fr": {
+          "question": "Quel est ce milieu de terrain espagnol qui a marqué le but de la victoire en finale en 2010 ?",
+          "options": [
+            "Andrés Iniesta",
+            "Xavi Hernández",
+            "David Silva",
+            "Cesc Fàbregas"
+          ],
+          "explanation": "Andrés Iniesta a inscrit l'unique but de la finale 2010 à la 116e minute face aux Pays-Bas, offrant à l'Espagne son tout premier titre. Réputé pour son élégance, sa vision du jeu et sa capacité à se faufiler entre les défenseurs, il a été élu deuxième meilleur joueur du tournoi, derrière Diego Forlán."
+        },
+        "it": {
+          "question": "Chi è questo centrocampista spagnolo che ha segnato il gol vittoria nella finale del 2010?",
+          "options": [
+            "Andrés Iniesta",
+            "Xavi Hernández",
+            "David Silva",
+            "Cesc Fàbregas"
+          ],
+          "explanation": "Andrés Iniesta ha segnato l'unico gol della finale del 2010 al 116° minuto contro i Paesi Bassi, regalando alla Spagna il primo titolo della sua storia. Noto per l'eleganza, la visione di gioco e la capacità di scivolare tra i difensori, è stato votato secondo miglior giocatore del torneo, alle spalle di Diego Forlán."
+        },
+        "ja": {
+          "question": "2010年の決勝で決勝点を挙げたこのスペイン人ミッドフィールダーは誰でしょう？",
+          "options": [
+            "アンドレス・イニエスタ",
+            "シャビ・エルナンデス",
+            "ダビド・シルバ",
+            "セスク・ファブレガス"
+          ],
+          "explanation": "アンドレス・イニエスタは2010年の決勝でオランダを相手に116分に唯一のゴールを決め、スペインに史上初のタイトルをもたらしました。エレガンスと視野の広さ、そしてディフェンダーを軽やかにかわす能力で知られ、大会ではディエゴ・フォルランに次ぐ2番目の優秀選手に選ばれました。"
+        },
+        "ko": {
+          "question": "2010년 결승전에서 결승골을 넣은 이 스페인 미드필더는 누구일까요?",
+          "options": [
+            "안드레스 이니에스타",
+            "차비 에르난데스",
+            "다비드 실바",
+            "세스크 파브레가스"
+          ],
+          "explanation": "안드레스 이니에스타는 2010년 결승전에서 네덜란드를 상대로 116분에 유일한 골을 터뜨리며 스페인에 사상 첫 우승을 안겼습니다. 우아함과 넓은 시야, 수비수들을 부드럽게 제치는 능력으로 유명한 그는 디에고 포를란에 이어 대회 두 번째 최우수 선수로 선정되었습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este meio-campista espanhol que marcou o gol da vitória na final de 2010?",
+          "options": [
+            "Andrés Iniesta",
+            "Xavi Hernández",
+            "David Silva",
+            "Cesc Fàbregas"
+          ],
+          "explanation": "Andrés Iniesta marcou o único gol da final de 2010 aos 116 minutos contra a Holanda, garantindo o primeiro título da história da Espanha. Conhecido pela elegância, pela visão de jogo e pela habilidade de driblar os defensores com leveza, foi eleito o segundo melhor jogador do torneio, atrás de Diego Forlán."
+        },
+        "zh-Hans": {
+          "question": "这位在2010年决赛中攻入制胜球的西班牙中场球员是谁？",
+          "options": [
+            "安德烈斯·伊涅斯塔",
+            "哈维·埃尔南德斯",
+            "大卫·席尔瓦",
+            "塞斯克·法布雷加斯"
+          ],
+          "explanation": "安德烈斯·伊涅斯塔在2010年决赛对阵荷兰的第116分钟攻入全场唯一进球，为西班牙夺得队史首个冠军。他以优雅的球风、出色的视野以及轻松摆脱防守球员的能力著称，并被评为本届赛事第二佳球员，仅次于迭戈·弗兰。"
+        }
+      },
+      "i18nSourceHash": "a31be483529d9b4c"
     },
     {
       "id": "img-xavi",
@@ -10952,7 +11324,110 @@
       "explanation": "Xavi Hernández was the metronome of Spain's tiki-taka passing game at the 2010 tournament. His vision and passing accuracy were unmatched — he completed more passes than any other player at the tournament. He appeared at three editions (2002, 2006, 2010) and later became head coach of FC Barcelona.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Xavi_Hern%C3%A1ndez_-_002_%28cropped%29.jpg/500px-Xavi_Hern%C3%A1ndez_-_002_%28cropped%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو صانع الألعاب الإسباني هذا، مهندس انتصار إسبانيا بأسلوب التيكي-تاكا عام 2010؟",
+          "options": [
+            "تشافي هيرنانديز",
+            "أندريس إنييستا",
+            "سيرخيو بوسكيتس",
+            "دافيد سيلفا"
+          ],
+          "explanation": "كان تشافي هيرنانديز بمثابة منظم إيقاع أسلوب التيكي-تاكا في تمريرات إسبانيا خلال بطولة 2010. لم يكن لرؤيته الميدانية ودقة تمريراته مثيل، فقد أكمل تمريرات أكثر من أي لاعب آخر في البطولة. شارك في ثلاث نسخ (2002 و2006 و2010)، ثم أصبح لاحقًا مدربًا لنادي برشلونة."
+        },
+        "de": {
+          "question": "Wer ist dieser spanische Spielmacher, der Architekt von Spaniens Tiki-Taka-Triumph 2010?",
+          "options": [
+            "Xavi Hernández",
+            "Andrés Iniesta",
+            "Sergio Busquets",
+            "David Silva"
+          ],
+          "explanation": "Xavi Hernández war der Taktgeber des Tiki-Taka-Passspiels Spaniens beim Turnier 2010. Seine Spielübersicht und Passgenauigkeit waren unerreicht – er spielte mehr Pässe als jeder andere Spieler des Turniers. Er trat bei drei Ausgaben an (2002, 2006, 2010) und wurde später Cheftrainer des FC Barcelona."
+        },
+        "es": {
+          "question": "¿Quién es este creador de juego español, el arquitecto del triunfo del tiki-taka de España en 2010?",
+          "options": [
+            "Xavi Hernández",
+            "Andrés Iniesta",
+            "Sergio Busquets",
+            "David Silva"
+          ],
+          "explanation": "Xavi Hernández fue el metrónomo del juego de pases tiki-taka de España en el torneo de 2010. Su visión y precisión en el pase no tenían rival: completó más pases que cualquier otro jugador del torneo. Disputó tres ediciones (2002, 2006 y 2010) y más tarde se convirtió en director técnico del FC Barcelona."
+        },
+        "es-ES": {
+          "question": "¿Quién es este organizador del juego español, el arquitecto del triunfo del tiki-taka de España en 2010?",
+          "options": [
+            "Xavi Hernández",
+            "Andrés Iniesta",
+            "Sergio Busquets",
+            "David Silva"
+          ],
+          "explanation": "Xavi Hernández fue el metrónomo del juego de pases tiki-taka de España en el torneo de 2010. Su visión y precisión en el pase no tenían rival: completó más pases que ningún otro jugador del torneo. Disputó tres ediciones (2002, 2006 y 2010) y más tarde se convirtió en entrenador del FC Barcelona."
+        },
+        "fr": {
+          "question": "Qui est ce meneur de jeu espagnol, l'architecte du triomphe du tiki-taka de l'Espagne en 2010 ?",
+          "options": [
+            "Xavi Hernández",
+            "Andrés Iniesta",
+            "Sergio Busquets",
+            "David Silva"
+          ],
+          "explanation": "Xavi Hernández était le métronome du jeu de passes tiki-taka de l'Espagne lors du tournoi de 2010. Sa vision et sa précision dans les passes étaient inégalées : il a réussi plus de passes que tout autre joueur du tournoi. Il a participé à trois éditions (2002, 2006, 2010) et est devenu plus tard entraîneur principal du FC Barcelone."
+        },
+        "it": {
+          "question": "Chi è questo regista spagnolo, l'architetto del trionfo del tiki-taka della Spagna nel 2010?",
+          "options": [
+            "Xavi Hernández",
+            "Andrés Iniesta",
+            "Sergio Busquets",
+            "David Silva"
+          ],
+          "explanation": "Xavi Hernández fu il metronomo del gioco di passaggi tiki-taka della Spagna al torneo del 2010. La sua visione di gioco e la precisione nei passaggi erano impareggiabili: completò più passaggi di qualsiasi altro giocatore del torneo. Partecipò a tre edizioni (2002, 2006, 2010) e in seguito divenne allenatore dell'FC Barcelona."
+        },
+        "ja": {
+          "question": "2010年のスペインによるティキ・タカの栄光を築いた立役者である、このスペインの司令塔は誰でしょう？",
+          "options": [
+            "シャビ・エルナンデス",
+            "アンドレス・イニエスタ",
+            "セルヒオ・ブスケツ",
+            "ダビド・シルバ"
+          ],
+          "explanation": "シャビ・エルナンデスは2010年大会におけるスペインのティキ・タカ・パスサッカーの中心を担う存在でした。その視野とパスの正確さは群を抜いており、大会を通じて誰よりも多くのパスを成功させました。彼は3大会（2002年、2006年、2010年）に出場し、後にFCバルセロナの監督となりました。"
+        },
+        "ko": {
+          "question": "2010년 스페인의 티키타카 우승을 설계한 이 스페인 플레이메이커는 누구일까요?",
+          "options": [
+            "사비 에르난데스",
+            "안드레스 이니에스타",
+            "세르히오 부스케츠",
+            "다비드 실바"
+          ],
+          "explanation": "사비 에르난데스는 2010년 대회에서 스페인 티키타카 패스 축구의 메트로놈 같은 존재였습니다. 그의 시야와 패스 정확도는 타의 추종을 불허했으며, 대회에서 다른 어떤 선수보다 많은 패스를 성공시켰습니다. 그는 세 차례 대회(2002년, 2006년, 2010년)에 출전했고 이후 FC 바르셀로나의 감독이 되었습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este armador espanhol, o arquiteto do triunfo do tiki-taka da Espanha em 2010?",
+          "options": [
+            "Xavi Hernández",
+            "Andrés Iniesta",
+            "Sergio Busquets",
+            "David Silva"
+          ],
+          "explanation": "Xavi Hernández foi o metrônomo do jogo de passes tiki-taka da Espanha no torneio de 2010. Sua visão de jogo e precisão nos passes eram incomparáveis — ele completou mais passes do que qualquer outro jogador do torneio. Participou de três edições (2002, 2006 e 2010) e mais tarde se tornou treinador do FC Barcelona."
+        },
+        "zh-Hans": {
+          "question": "这位西班牙组织核心、2010年西班牙传控足球（tiki-taka）夺冠的缔造者是谁？",
+          "options": [
+            "哈维·埃尔南德斯",
+            "安德烈斯·伊涅斯塔",
+            "塞尔吉奥·布斯克茨",
+            "大卫·席尔瓦"
+          ],
+          "explanation": "哈维·埃尔南德斯是2010年那届赛事中西班牙传控足球传球体系的节拍器。他的大局观和传球精准度无人能及——他完成的传球次数比赛事中任何其他球员都多。他参加了三届赛事（2002年、2006年、2010年），后来出任巴塞罗那俱乐部主教练。"
+        }
+      },
+      "i18nSourceHash": "c611d158c6d586ba"
     },
     {
       "id": "img-roberto-carlos",
