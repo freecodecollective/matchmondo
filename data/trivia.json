@@ -11491,7 +11491,110 @@
       "explanation": "George Weah won the Ballon d'Or in 1995, the only African-born player ever to receive the honor. Though Liberia never qualified for the tournament, Weah was instrumental in qualifying campaigns and is revered across African football. After retiring, he was elected President of Liberia in 2018 — the only Ballon d'Or winner to become a head of state.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/6/68/Coppa_UEFA_1992-93_-_Napoli_vs_PSG_-_George_Weah.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا الأسطورة الكروية، اللاعب الوحيد المولود في أفريقيا الذي فاز بالكرة الذهبية، والذي أصبح لاحقاً رئيساً لدولة؟",
+          "options": [
+            "جورج وياه",
+            "صامويل إيتو",
+            "ديدييه دروغبا",
+            "روجيه ميلا"
+          ],
+          "explanation": "فاز جورج وياه بالكرة الذهبية عام 1995، وهو اللاعب الوحيد المولود في أفريقيا الذي نال هذا الشرف على الإطلاق. ورغم أن ليبيريا لم تتأهل قط إلى البطولة، فقد كان وياه محورياً في حملات التصفيات، ويحظى بتقدير كبير في عالم كرة القدم الأفريقية. وبعد اعتزاله، انتُخب رئيساً لليبيريا عام 2018 — ليكون الفائز الوحيد بالكرة الذهبية الذي يصبح رئيساً لدولة."
+        },
+        "de": {
+          "question": "Wer ist diese Fußball-Ikone, der einzige in Afrika geborene Spieler, der den Ballon d'Or gewann und später Staatsoberhaupt wurde?",
+          "options": [
+            "George Weah",
+            "Samuel Eto'o",
+            "Didier Drogba",
+            "Roger Milla"
+          ],
+          "explanation": "George Weah gewann 1995 den Ballon d'Or und ist der einzige in Afrika geborene Spieler, dem diese Ehre jemals zuteilwurde. Obwohl sich Liberia nie für das Turnier qualifizierte, war Weah in den Qualifikationsspielen von zentraler Bedeutung und wird im afrikanischen Fußball hoch verehrt. Nach seiner aktiven Karriere wurde er 2018 zum Präsidenten Liberias gewählt — der einzige Ballon-d'Or-Gewinner, der Staatsoberhaupt wurde."
+        },
+        "es": {
+          "question": "¿Quién es este ícono del fútbol, el único jugador nacido en África en ganar el Balón de Oro y que más tarde llegó a ser jefe de Estado?",
+          "options": [
+            "George Weah",
+            "Samuel Eto'o",
+            "Didier Drogba",
+            "Roger Milla"
+          ],
+          "explanation": "George Weah ganó el Balón de Oro en 1995, el único jugador nacido en África que ha recibido ese honor. Aunque Liberia nunca se clasificó al torneo, Weah fue clave en las campañas de clasificación y es venerado en todo el fútbol africano. Tras retirarse, fue elegido Presidente de Liberia en 2018, el único ganador del Balón de Oro en convertirse en jefe de Estado."
+        },
+        "es-ES": {
+          "question": "¿Quién es este icono del fútbol, el único jugador nacido en África que ganó el Balón de Oro y que más tarde llegó a ser jefe de Estado?",
+          "options": [
+            "George Weah",
+            "Samuel Eto'o",
+            "Didier Drogba",
+            "Roger Milla"
+          ],
+          "explanation": "George Weah ganó el Balón de Oro en 1995, siendo el único jugador nacido en África que ha recibido jamás ese honor. Aunque Liberia nunca logró clasificarse para el torneo, Weah fue determinante en las fases de clasificación y goza de gran veneración en todo el fútbol africano. Tras retirarse, fue elegido Presidente de Liberia en 2018: el único ganador del Balón de Oro que ha llegado a ser jefe de Estado."
+        },
+        "fr": {
+          "question": "Qui est cette icône du football, le seul joueur né en Afrique à avoir remporté le Ballon d'Or, et qui est devenu plus tard chef d'État ?",
+          "options": [
+            "George Weah",
+            "Samuel Eto'o",
+            "Didier Drogba",
+            "Roger Milla"
+          ],
+          "explanation": "George Weah a remporté le Ballon d'Or en 1995, le seul joueur né en Afrique à avoir jamais reçu cette distinction. Bien que le Liberia ne se soit jamais qualifié pour le tournoi, Weah a joué un rôle déterminant lors des campagnes de qualification et il est vénéré dans tout le football africain. Après sa retraite, il a été élu président du Liberia en 2018 — le seul lauréat du Ballon d'Or à devenir chef d'État."
+        },
+        "it": {
+          "question": "Chi è questa icona del calcio, l'unico giocatore nato in Africa ad aver vinto il Pallone d'Oro e che in seguito è diventato capo di Stato?",
+          "options": [
+            "George Weah",
+            "Samuel Eto'o",
+            "Didier Drogba",
+            "Roger Milla"
+          ],
+          "explanation": "George Weah vinse il Pallone d'Oro nel 1995, l'unico giocatore nato in Africa ad aver mai ricevuto questo riconoscimento. Sebbene la Liberia non si sia mai qualificata per il torneo, Weah fu determinante nelle campagne di qualificazione ed è venerato in tutto il calcio africano. Dopo il ritiro, nel 2018 fu eletto Presidente della Liberia — l'unico vincitore del Pallone d'Oro a diventare capo di Stato."
+        },
+        "ja": {
+          "question": "アフリカ生まれの選手として唯一バロンドールを受賞し、後に国家元首となったこのサッカーの象徴的存在は誰でしょう?",
+          "options": [
+            "ジョージ・ウェア",
+            "サミュエル・エトー",
+            "ディディエ・ドログバ",
+            "ロジェ・ミラ"
+          ],
+          "explanation": "ジョージ・ウェアは1995年にバロンドールを受賞し、アフリカ生まれの選手として唯一この栄誉に輝きました。リベリアは大会本戦に出場できませんでしたが、ウェアは予選で中心的な役割を果たし、アフリカサッカー全体で深く敬愛されています。引退後、2018年にリベリア大統領に選出され、バロンドール受賞者として唯一国家元首となった人物です。"
+        },
+        "ko": {
+          "question": "아프리카 출신 선수로는 유일하게 발롱도르를 수상했고 훗날 국가 원수가 된 이 축구의 아이콘은 누구일까요?",
+          "options": [
+            "조지 웨아",
+            "사뮈엘 에토",
+            "디디에 드로그바",
+            "로제 밀라"
+          ],
+          "explanation": "조지 웨아는 1995년 발롱도르를 수상했으며, 아프리카 출신 선수로는 유일하게 이 영예를 안은 인물입니다. 라이베리아는 본선에 진출한 적이 없지만, 웨아는 예선 캠페인에서 핵심적인 역할을 했고 아프리카 축구 전반에서 존경받고 있습니다. 은퇴 후 2018년 라이베리아 대통령으로 선출되어, 국가 원수가 된 유일한 발롱도르 수상자가 되었습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é esse ícone do futebol, o único jogador nascido na África a vencer a Bola de Ouro e que mais tarde se tornou chefe de Estado?",
+          "options": [
+            "George Weah",
+            "Samuel Eto'o",
+            "Didier Drogba",
+            "Roger Milla"
+          ],
+          "explanation": "George Weah venceu a Bola de Ouro em 1995, sendo o único jogador nascido na África a receber essa honraria. Embora a Libéria nunca tenha se classificado para o torneio, Weah foi fundamental nas campanhas de classificação e é reverenciado em todo o futebol africano. Após se aposentar, foi eleito Presidente da Libéria em 2018 — o único vencedor da Bola de Ouro a se tornar chefe de Estado."
+        },
+        "zh-Hans": {
+          "question": "这位足球传奇人物是谁?他是唯一一位赢得金球奖的非洲出生球员，后来还成为了国家元首。",
+          "options": [
+            "乔治·维阿",
+            "塞缪尔·埃托奥",
+            "迪迪埃·德罗巴",
+            "罗杰·米拉"
+          ],
+          "explanation": "乔治·维阿在1995年荣获金球奖，是唯一一位获此殊荣的非洲出生球员。尽管利比里亚从未获得过赛事正赛资格，但维阿在预选赛中发挥了关键作用，在整个非洲足坛备受尊崇。退役后，他于2018年当选利比里亚总统——成为唯一一位成为国家元首的金球奖得主。"
+        }
+      },
+      "i18nSourceHash": "887a9543ccc22047"
     },
     {
       "id": "img-etoo",
@@ -11523,7 +11626,110 @@
       "explanation": "Landon Donovan appeared at three editions (2002, 2006, 2010) and is the all-time leading scorer for the US men's national team with 57 goals. His stoppage-time winner against Algeria in 2010 — sending the US through to the Round of 16 — is one of the most iconic goals in American football history.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Landon_Donovan_vs_Algeria.jpg/500px-Landon_Donovan_vs_Algeria.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا المهاجم الأمريكي، الهداف التاريخي لمنتخب الولايات المتحدة لكرة القدم للرجال؟",
+          "options": [
+            "لاندون دونوفان",
+            "كلينت ديمبسي",
+            "تيم هاوارد",
+            "براين ماكبرايد"
+          ],
+          "explanation": "شارك لاندون دونوفان في ثلاث نسخات (2002 و2006 و2010) وهو الهداف التاريخي للمنتخب الأمريكي للرجال برصيد 57 هدفًا. وهدفه القاتل في الوقت بدل الضائع أمام الجزائر عام 2010 — الذي أهّل الولايات المتحدة إلى دور الستة عشر — يُعد من أكثر الأهداف شهرة في تاريخ كرة القدم الأمريكية."
+        },
+        "de": {
+          "question": "Wer ist dieser amerikanische Stürmer, der Rekordtorschütze in der Geschichte der US-Männernationalmannschaft?",
+          "options": [
+            "Landon Donovan",
+            "Clint Dempsey",
+            "Tim Howard",
+            "Brian McBride"
+          ],
+          "explanation": "Landon Donovan nahm an drei Turnieren teil (2002, 2006, 2010) und ist mit 57 Toren der erfolgreichste Torschütze aller Zeiten der US-Männernationalmannschaft. Sein Siegtreffer in der Nachspielzeit gegen Algerien 2010 — der die USA ins Achtelfinale brachte — gilt als eines der ikonischsten Tore in der Geschichte des amerikanischen Fußballs."
+        },
+        "es": {
+          "question": "¿Quién es este delantero estadounidense, el máximo goleador en la historia de la selección masculina de Estados Unidos?",
+          "options": [
+            "Landon Donovan",
+            "Clint Dempsey",
+            "Tim Howard",
+            "Brian McBride"
+          ],
+          "explanation": "Landon Donovan disputó tres ediciones (2002, 2006, 2010) y es el máximo goleador histórico de la selección masculina de Estados Unidos con 57 goles. Su gol de la victoria en el tiempo de descuento ante Argelia en 2010 —que metió a Estados Unidos en los octavos de final— es uno de los goles más emblemáticos en la historia del fútbol estadounidense."
+        },
+        "es-ES": {
+          "question": "¿Quién es este delantero estadounidense, el máximo goleador de la historia de la selección masculina de Estados Unidos?",
+          "options": [
+            "Landon Donovan",
+            "Clint Dempsey",
+            "Tim Howard",
+            "Brian McBride"
+          ],
+          "explanation": "Landon Donovan participó en tres ediciones (2002, 2006, 2010) y es el máximo goleador histórico de la selección masculina de Estados Unidos con 57 goles. Su gol de la victoria en el tiempo de descuento ante Argelia en 2010 —que clasificó a Estados Unidos para los octavos de final— es uno de los goles más emblemáticos de la historia del fútbol estadounidense."
+        },
+        "fr": {
+          "question": "Qui est cet attaquant américain, meilleur buteur de l'histoire de la sélection masculine des États-Unis ?",
+          "options": [
+            "Landon Donovan",
+            "Clint Dempsey",
+            "Tim Howard",
+            "Brian McBride"
+          ],
+          "explanation": "Landon Donovan a disputé trois éditions (2002, 2006, 2010) et reste le meilleur buteur de tous les temps de la sélection masculine des États-Unis avec 57 buts. Son but vainqueur dans les arrêts de jeu face à l'Algérie en 2010 — qui a qualifié les États-Unis pour les huitièmes de finale — est l'un des buts les plus emblématiques de l'histoire du football américain."
+        },
+        "it": {
+          "question": "Chi è questo attaccante statunitense, il miglior marcatore nella storia della nazionale maschile degli Stati Uniti?",
+          "options": [
+            "Landon Donovan",
+            "Clint Dempsey",
+            "Tim Howard",
+            "Brian McBride"
+          ],
+          "explanation": "Landon Donovan ha partecipato a tre edizioni (2002, 2006, 2010) ed è il miglior marcatore di sempre della nazionale maschile statunitense con 57 gol. Il suo gol vittoria nei minuti di recupero contro l'Algeria nel 2010 — che ha portato gli Stati Uniti agli ottavi di finale — è uno dei gol più iconici nella storia del calcio statunitense."
+        },
+        "ja": {
+          "question": "アメリカ男子代表の歴代最多得点者であるこのアメリカ人フォワードは誰でしょう？",
+          "options": [
+            "ランドン・ドノバン",
+            "クリント・デンプシー",
+            "ティム・ハワード",
+            "ブライアン・マクブライド"
+          ],
+          "explanation": "ランドン・ドノバンは3大会（2002年、2006年、2010年）に出場し、57ゴールでアメリカ男子代表の歴代最多得点者です。2010年のアルジェリア戦でアディショナルタイムに決めた決勝ゴールは、アメリカをベスト16へ導き、アメリカサッカー史上もっとも象徴的なゴールの一つとされています。"
+        },
+        "ko": {
+          "question": "미국 남자 대표팀 역사상 최다 득점자인 이 미국인 공격수는 누구일까요?",
+          "options": [
+            "랜던 도노번",
+            "클린트 뎀프시",
+            "팀 하워드",
+            "브라이언 맥브라이드"
+          ],
+          "explanation": "랜던 도노번은 세 차례 대회(2002년, 2006년, 2010년)에 출전했으며 57골로 미국 남자 대표팀 역대 최다 득점자입니다. 2010년 알제리전에서 추가 시간에 터뜨린 결승골은 미국을 16강에 진출시켰으며, 미국 축구 역사상 가장 상징적인 골 중 하나로 꼽힙니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este atacante norte-americano, o maior artilheiro da história da seleção masculina dos Estados Unidos?",
+          "options": [
+            "Landon Donovan",
+            "Clint Dempsey",
+            "Tim Howard",
+            "Brian McBride"
+          ],
+          "explanation": "Landon Donovan disputou três edições (2002, 2006 e 2010) e é o maior artilheiro de todos os tempos da seleção masculina dos Estados Unidos, com 57 gols. Seu gol da vitória nos acréscimos contra a Argélia em 2010 — que classificou os Estados Unidos para as oitavas de final — é um dos gols mais icônicos da história do futebol norte-americano."
+        },
+        "zh-Hans": {
+          "question": "这位美国前锋是谁？他是美国男足国家队历史上的最佳射手。",
+          "options": [
+            "兰登·多诺万",
+            "克林特·邓普西",
+            "蒂姆·霍华德",
+            "布莱恩·麦克布莱德"
+          ],
+          "explanation": "兰登·多诺万参加过三届赛事（2002年、2006年、2010年），以57粒进球成为美国男足国家队历史最佳射手。他在2010年对阵阿尔及利亚的补时阶段攻入制胜球，将美国队送入16强，这一进球被视为美国足球史上最具标志性的进球之一。"
+        }
+      },
+      "i18nSourceHash": "f0a84ee53ec4229e"
     },
     {
       "id": "img-tim-howard",
@@ -11539,7 +11745,110 @@
       "explanation": "Tim Howard made an astonishing 16 saves against Belgium in the 2014 Round of 16, the most saves by any goalkeeper in a single tournament match since records began. Despite his heroics, the US lost 2-1 in extra time. His performance was so extraordinary that the US Secretary of Defense jokingly offered him a job.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/7/76/Everton-Krasnodar_%2811%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو حارس المرمى الأمريكي الذي سجّل رقمًا قياسيًا بلغ 16 تصديًا في مباراة واحدة في بطولة 2014؟",
+          "options": [
+            "تيم هاورد",
+            "براد فريدل",
+            "كيسي كيلر",
+            "مات تيرنر"
+          ],
+          "explanation": "قام تيم هاورد بـ16 تصديًا مذهلاً أمام بلجيكا في دور الـ16 لبطولة 2014، وهو أكبر عدد تصديات يقوم بها أي حارس مرمى في مباراة واحدة ضمن البطولة منذ بدء تسجيل الأرقام. وعلى الرغم من بطولاته، خسرت الولايات المتحدة 2-1 في الوقت الإضافي. كان أداؤه استثنائيًا لدرجة أن وزير الدفاع الأمريكي عرض عليه وظيفة على سبيل المزاح."
+        },
+        "de": {
+          "question": "Wer ist dieser amerikanische Torwart, der beim Turnier 2014 mit 16 Paraden in einem einzigen Spiel einen Rekord aufstellte?",
+          "options": [
+            "Tim Howard",
+            "Brad Friedel",
+            "Kasey Keller",
+            "Matt Turner"
+          ],
+          "explanation": "Tim Howard zeigte im Achtelfinale des Turniers 2014 gegen Belgien sagenhafte 16 Paraden – die meisten, die je ein Torwart in einem einzigen Turnierspiel seit Beginn der Aufzeichnungen geschafft hat. Trotz seiner Heldentaten verloren die USA in der Verlängerung mit 1:2. Seine Leistung war so außergewöhnlich, dass ihm der US-Verteidigungsminister scherzhaft einen Job anbot."
+        },
+        "es": {
+          "question": "¿Quién es este portero estadounidense que estableció un récord de 16 atajadas en un solo partido en el torneo de 2014?",
+          "options": [
+            "Tim Howard",
+            "Brad Friedel",
+            "Kasey Keller",
+            "Matt Turner"
+          ],
+          "explanation": "Tim Howard realizó unas asombrosas 16 atajadas ante Bélgica en los octavos de final del torneo de 2014, la mayor cantidad de un portero en un solo partido del torneo desde que se llevan registros. A pesar de sus hazañas, Estados Unidos perdió 2-1 en el tiempo extra. Su actuación fue tan extraordinaria que el Secretario de Defensa de EE. UU. le ofreció en broma un trabajo."
+        },
+        "es-ES": {
+          "question": "¿Quién es este portero estadounidense que estableció un récord de 16 paradas en un solo partido en el torneo de 2014?",
+          "options": [
+            "Tim Howard",
+            "Brad Friedel",
+            "Kasey Keller",
+            "Matt Turner"
+          ],
+          "explanation": "Tim Howard realizó unas asombrosas 16 paradas frente a Bélgica en los octavos de final del torneo de 2014, la mayor cantidad de un portero en un solo partido del torneo desde que se tienen registros. A pesar de sus heroicidades, Estados Unidos perdió 2-1 en la prórroga. Su actuación fue tan extraordinaria que el Secretario de Defensa de EE. UU. le ofreció en broma un trabajo."
+        },
+        "fr": {
+          "question": "Qui est ce gardien américain qui a établi un record de 16 arrêts en un seul match lors du tournoi de 2014 ?",
+          "options": [
+            "Tim Howard",
+            "Brad Friedel",
+            "Kasey Keller",
+            "Matt Turner"
+          ],
+          "explanation": "Tim Howard a réalisé 16 arrêts stupéfiants face à la Belgique en huitièmes de finale du tournoi de 2014, le plus grand nombre d'arrêts par un gardien lors d'un seul match du tournoi depuis le début des statistiques. Malgré ses exploits, les États-Unis se sont inclinés 2-1 après prolongation. Sa performance fut si extraordinaire que le secrétaire à la Défense des États-Unis lui a proposé un emploi pour plaisanter."
+        },
+        "it": {
+          "question": "Chi è questo portiere statunitense che ha stabilito un record di 16 parate in una sola partita al torneo del 2014?",
+          "options": [
+            "Tim Howard",
+            "Brad Friedel",
+            "Kasey Keller",
+            "Matt Turner"
+          ],
+          "explanation": "Tim Howard ha compiuto ben 16 incredibili parate contro il Belgio negli ottavi di finale del torneo del 2014, il maggior numero di parate mai realizzate da un portiere in una singola partita del torneo da quando si tengono le statistiche. Nonostante le sue prodezze, gli Stati Uniti hanno perso 2-1 ai supplementari. La sua prestazione fu così straordinaria che il Segretario alla Difesa degli Stati Uniti gli offrì scherzosamente un lavoro."
+        },
+        "ja": {
+          "question": "2014年の大会で1試合16セーブという記録を打ち立てた、このアメリカのゴールキーパーは誰でしょう？",
+          "options": [
+            "ティム・ハワード",
+            "ブラッド・フリーデル",
+            "ケイシー・ケラー",
+            "マット・ターナー"
+          ],
+          "explanation": "ティム・ハワードは2014年大会のラウンド16でベルギー相手に驚異の16セーブを記録しました。これは記録が残されて以来、大会の1試合でゴールキーパーが達成した最多セーブ数です。彼の奮闘にもかかわらず、アメリカは延長戦で2-1で敗れました。彼のパフォーマンスはあまりに見事だったため、アメリカの国防長官が冗談交じりに彼に仕事をオファーしたほどでした。"
+        },
+        "ko": {
+          "question": "2014년 대회에서 단일 경기 16세이브라는 기록을 세운 이 미국 골키퍼는 누구일까요?",
+          "options": [
+            "팀 하워드",
+            "브래드 프리델",
+            "케이시 켈러",
+            "맷 터너"
+          ],
+          "explanation": "팀 하워드는 2014년 대회 16강전에서 벨기에를 상대로 놀라운 16세이브를 기록했는데, 이는 기록이 시작된 이래 대회 단일 경기에서 골키퍼가 세운 최다 세이브입니다. 그의 영웅적인 활약에도 불구하고 미국은 연장전에서 2-1로 패했습니다. 그의 활약이 너무나 비범했던 나머지 미국 국방장관이 농담 삼아 그에게 일자리를 제안하기도 했습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este goleiro americano que estabeleceu um recorde de 16 defesas em uma única partida no torneio de 2014?",
+          "options": [
+            "Tim Howard",
+            "Brad Friedel",
+            "Kasey Keller",
+            "Matt Turner"
+          ],
+          "explanation": "Tim Howard fez impressionantes 16 defesas contra a Bélgica nas oitavas de final do torneo de 2014, o maior número de defesas de um goleiro em uma única partida do torneio desde que os registros começaram. Apesar de seus feitos heroicos, os EUA perderam por 2 a 1 na prorrogação. Sua atuação foi tão extraordinária que o Secretário de Defesa dos EUA brincou oferecendo um emprego a ele."
+        },
+        "zh-Hans": {
+          "question": "这位在2014年赛事中单场比赛创下16次扑救纪录的美国门将是谁？",
+          "options": [
+            "蒂姆·霍华德",
+            "布拉德·弗里德尔",
+            "凯西·凯勒",
+            "马特·特纳"
+          ],
+          "explanation": "蒂姆·霍华德在2014年赛事的十六强战中对阵比利时时完成了惊人的16次扑救，这是自有记录以来门将在该赛事单场比赛中的最多扑救次数。尽管他表现英勇，美国队还是在加时赛中以1比2告负。他的表现如此出色，以至于美国国防部长开玩笑地要给他一份工作。"
+        }
+      },
+      "i18nSourceHash": "2052c65a8619baea"
     },
     {
       "id": "img-son",
@@ -11587,7 +11896,110 @@
       "explanation": "Mohamed Salah led Egypt to the 2018 tournament, their first in 28 years. Despite carrying a shoulder injury from the Champions League final, he scored twice — including a penalty against Russia. He is Egypt's all-time leading scorer and one of the most decorated African footballers in Premier League history.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mohamed_Salah_2018.jpg/500px-Mohamed_Salah_2018.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا المهاجم المصري، أحد أكثر الهدافين تسجيلاً في تاريخ الدوري الإنجليزي الممتاز؟",
+          "options": [
+            "محمد صلاح",
+            "محمد أبو تريكة",
+            "أحمد حسن",
+            "محمود تريزيغيه"
+          ],
+          "explanation": "قاد محمد صلاح منتخب مصر إلى نهائيات 2018، وهي المشاركة الأولى منذ 28 عاماً. ورغم معاناته من إصابة في الكتف لحقت به في نهائي دوري أبطال أوروبا، سجل هدفين — من بينهما ركلة جزاء أمام روسيا. وهو الهداف التاريخي لمنتخب مصر وأحد أكثر اللاعبين الأفارقة تتويجاً بالألقاب في تاريخ الدوري الإنجليزي الممتاز."
+        },
+        "de": {
+          "question": "Wer ist dieser ägyptische Stürmer, einer der treffsichersten Torjäger der Geschichte der Premier League?",
+          "options": [
+            "Mohamed Salah",
+            "Mohamed Aboutrika",
+            "Ahmed Hassan",
+            "Mahmoud Trezeguet"
+          ],
+          "explanation": "Mohamed Salah führte Ägypten zum Turnier 2018 – die erste Teilnahme seit 28 Jahren. Trotz einer Schulterverletzung aus dem Champions-League-Finale traf er zweimal, darunter ein Elfmeter gegen Russland. Er ist Ägyptens Rekordtorschütze und einer der erfolgreichsten afrikanischen Fußballer der Premier-League-Geschichte."
+        },
+        "es": {
+          "question": "¿Quién es este delantero egipcio, uno de los goleadores más prolíficos en la historia de la Premier League?",
+          "options": [
+            "Mohamed Salah",
+            "Mohamed Aboutrika",
+            "Ahmed Hassan",
+            "Mahmoud Trezeguet"
+          ],
+          "explanation": "Mohamed Salah llevó a Egipto al torneo de 2018, su primera participación en 28 años. A pesar de arrastrar una lesión en el hombro desde la final de la Champions League, marcó dos goles, incluido un penal ante Rusia. Es el máximo goleador histórico de Egipto y uno de los futbolistas africanos más laureados en la historia de la Premier League."
+        },
+        "es-ES": {
+          "question": "¿Quién es este delantero egipcio, uno de los goleadores más prolíficos de la historia de la Premier League?",
+          "options": [
+            "Mohamed Salah",
+            "Mohamed Aboutrika",
+            "Ahmed Hassan",
+            "Mahmoud Trezeguet"
+          ],
+          "explanation": "Mohamed Salah llevó a Egipto al torneo de 2018, su primera participación en 28 años. A pesar de arrastrar una lesión en el hombro desde la final de la Champions League, marcó dos goles, incluido un penalti ante Rusia. Es el máximo goleador histórico de Egipto y uno de los futbolistas africanos más laureados de la historia de la Premier League."
+        },
+        "fr": {
+          "question": "Qui est cet attaquant égyptien, l'un des buteurs les plus prolifiques de l'histoire de la Premier League ?",
+          "options": [
+            "Mohamed Salah",
+            "Mohamed Aboutrika",
+            "Ahmed Hassan",
+            "Mahmoud Trezeguet"
+          ],
+          "explanation": "Mohamed Salah a mené l'Égypte au tournoi de 2018, sa première participation depuis 28 ans. Malgré une blessure à l'épaule contractée lors de la finale de la Ligue des champions, il a inscrit deux buts, dont un penalty contre la Russie. Il est le meilleur buteur de l'histoire de l'Égypte et l'un des footballeurs africains les plus titrés de l'histoire de la Premier League."
+        },
+        "it": {
+          "question": "Chi è questo attaccante egiziano, uno dei marcatori più prolifici nella storia della Premier League?",
+          "options": [
+            "Mohamed Salah",
+            "Mohamed Aboutrika",
+            "Ahmed Hassan",
+            "Mahmoud Trezeguet"
+          ],
+          "explanation": "Mohamed Salah ha trascinato l'Egitto al torneo del 2018, la prima partecipazione dopo 28 anni. Nonostante un infortunio alla spalla rimediato nella finale di Champions League, ha segnato due gol, tra cui un rigore contro la Russia. È il miglior marcatore di sempre dell'Egitto e uno dei calciatori africani più vincenti nella storia della Premier League."
+        },
+        "ja": {
+          "question": "プレミアリーグ史上屈指の得点力を誇る、このエジプト代表のフォワードは誰でしょう？",
+          "options": [
+            "モハメド・サラー",
+            "モハメド・アブトレイカ",
+            "アハメド・ハッサン",
+            "マフムード・トレゼゲ"
+          ],
+          "explanation": "モハメド・サラーは、エジプトを28年ぶりとなる2018年大会へと導きました。チャンピオンズリーグ決勝で負った肩のけがを抱えながらも、ロシア戦のPKを含む2得点を挙げました。彼はエジプト代表の歴代最多得点者であり、プレミアリーグ史上最も多くのタイトルを獲得したアフリカ人選手の一人です。"
+        },
+        "ko": {
+          "question": "프리미어리그 역사상 손꼽히는 다득점 공격수인 이 이집트 선수는 누구일까요?",
+          "options": [
+            "모하메드 살라",
+            "모하메드 아부트리카",
+            "아흐메드 하산",
+            "마흐무드 트레제게"
+          ],
+          "explanation": "모하메드 살라는 이집트를 28년 만에 2018년 대회로 이끌었습니다. 챔피언스리그 결승에서 입은 어깨 부상을 안고도 러시아전 페널티킥을 포함해 두 골을 넣었습니다. 그는 이집트 역대 최다 득점자이자 프리미어리그 역사상 가장 많은 타이틀을 거머쥔 아프리카 선수 중 한 명입니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este atacante egípcio, um dos goleadores mais prolíficos da história da Premier League?",
+          "options": [
+            "Mohamed Salah",
+            "Mohamed Aboutrika",
+            "Ahmed Hassan",
+            "Mahmoud Trezeguet"
+          ],
+          "explanation": "Mohamed Salah levou o Egito ao torneio de 2018, sua primeira participação em 28 anos. Mesmo carregando uma lesão no ombro sofrida na final da Champions League, ele marcou duas vezes — incluindo um pênalti contra a Rússia. É o maior artilheiro da história do Egito e um dos futebolistas africanos mais premiados da história da Premier League."
+        },
+        "zh-Hans": {
+          "question": "这位埃及前锋是谁？他是英超历史上最高产的射手之一。",
+          "options": [
+            "穆罕默德·萨拉赫",
+            "穆罕默德·阿布特里卡",
+            "艾哈迈德·哈桑",
+            "马哈茂德·特雷泽盖"
+          ],
+          "explanation": "穆罕默德·萨拉赫带领埃及打进2018年的赛事，这是埃及28年来首次参赛。尽管带着欧冠决赛留下的肩伤上阵，他仍打入两球——其中包括对阵俄罗斯时的一记点球。他是埃及队史最佳射手，也是英超历史上荣誉最多的非洲球员之一。"
+        }
+      },
+      "i18nSourceHash": "48ef14170a97c39a"
     },
     {
       "id": "img-suker",
@@ -11763,7 +12175,110 @@
       "explanation": "David Beckham appeared at three editions (1998, 2002, 2006). His 1998 tournament was infamous for his red card against Argentina, which made him a national villain. He redeemed himself in 2002 by scoring the winning penalty against Argentina in the group stage. His crossing ability and free-kick technique were among the best ever.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/7/7b/David_Beckham_Nov_11_2007.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو لاعب الوسط الإنجليزي المعروف بدقة عرضياته وركلاته الحرة؟",
+          "options": [
+            "ديفيد بيكهام",
+            "ستيفن جيرارد",
+            "فرانك لامبارد",
+            "بول سكولز"
+          ],
+          "explanation": "شارك ديفيد بيكهام في ثلاث نسخ (1998 و2002 و2006). اشتهرت بطولته عام 1998 بطردته الشهيرة أمام الأرجنتين، والتي جعلته عدواً للجماهير في بلاده. لكنه رد الاعتبار لنفسه عام 2002 بتسجيله ركلة الجزاء الحاسمة ضد الأرجنتين في دور المجموعات. كانت قدرته على العرضيات وتقنيته في الركلات الحرة من بين الأفضل على الإطلاق."
+        },
+        "de": {
+          "question": "Welcher englische Mittelfeldspieler ist für seine punktgenauen Flanken und Freistöße bekannt?",
+          "options": [
+            "David Beckham",
+            "Steven Gerrard",
+            "Frank Lampard",
+            "Paul Scholes"
+          ],
+          "explanation": "David Beckham nahm an drei Turnieren teil (1998, 2002, 2006). Sein Turnier 1998 war wegen seiner Roten Karte gegen Argentinien berüchtigt, die ihn zum Buhmann der Nation machte. 2002 rehabilitierte er sich, indem er in der Gruppenphase den entscheidenden Elfmeter gegen Argentinien verwandelte. Seine Flankenfähigkeit und Freistoßtechnik gehörten zu den besten aller Zeiten."
+        },
+        "es": {
+          "question": "¿Quién es este mediocampista inglés conocido por sus centros milimétricos y sus tiros libres?",
+          "options": [
+            "David Beckham",
+            "Steven Gerrard",
+            "Frank Lampard",
+            "Paul Scholes"
+          ],
+          "explanation": "David Beckham participó en tres ediciones (1998, 2002, 2006). Su torneo de 1998 fue tristemente célebre por su tarjeta roja ante Argentina, que lo convirtió en villano nacional. Se redimió en 2002 al marcar el penal de la victoria contra Argentina en la fase de grupos. Su capacidad para los centros y su técnica en los tiros libres estuvieron entre las mejores de la historia."
+        },
+        "es-ES": {
+          "question": "¿Quién es este centrocampista inglés conocido por sus centros milimétricos y sus tiros libres?",
+          "options": [
+            "David Beckham",
+            "Steven Gerrard",
+            "Frank Lampard",
+            "Paul Scholes"
+          ],
+          "explanation": "David Beckham disputó tres ediciones (1998, 2002, 2006). Su torneo de 1998 fue tristemente célebre por su tarjeta roja ante Argentina, que lo convirtió en el villano de la nación. Se redimió en 2002 al marcar el penalti de la victoria contra Argentina en la fase de grupos. Su capacidad para centrar y su técnica en los tiros libres estuvieron entre las mejores de la historia."
+        },
+        "fr": {
+          "question": "Quel est ce milieu de terrain anglais réputé pour ses centres millimétrés et ses coups francs ?",
+          "options": [
+            "David Beckham",
+            "Steven Gerrard",
+            "Frank Lampard",
+            "Paul Scholes"
+          ],
+          "explanation": "David Beckham a participé à trois éditions (1998, 2002, 2006). Son tournoi de 1998 fut tristement célèbre pour son carton rouge contre l'Argentine, qui fit de lui le bouc émissaire de toute la nation. Il s'est racheté en 2002 en inscrivant le penalty de la victoire face à l'Argentine en phase de groupes. Sa qualité de centre et sa technique sur coups francs comptaient parmi les meilleures de tous les temps."
+        },
+        "it": {
+          "question": "Chi è questo centrocampista inglese noto per i suoi cross millimetrici e i suoi calci di punizione?",
+          "options": [
+            "David Beckham",
+            "Steven Gerrard",
+            "Frank Lampard",
+            "Paul Scholes"
+          ],
+          "explanation": "David Beckham ha preso parte a tre edizioni (1998, 2002, 2006). Il torneo del 1998 fu tristemente famoso per il suo cartellino rosso contro l'Argentina, che lo rese il nemico pubblico della nazione. Si riscattò nel 2002 segnando il rigore decisivo contro l'Argentina nella fase a gironi. La sua abilità nei cross e la tecnica nei calci di punizione erano tra le migliori di sempre."
+        },
+        "ja": {
+          "question": "正確無比なクロスとフリーキックで知られるこのイングランド人ミッドフィールダーは誰でしょう？",
+          "options": [
+            "デイビッド・ベッカム",
+            "スティーブン・ジェラード",
+            "フランク・ランパード",
+            "ポール・スコールズ"
+          ],
+          "explanation": "デイビッド・ベッカムは3大会（1998年、2002年、2006年）に出場しました。1998年大会ではアルゼンチン戦でのレッドカードで悪名を馳せ、国中の批判を浴びました。しかし2002年には、グループステージのアルゼンチン戦で決勝点となるPKを決めて汚名を返上しました。彼のクロスの能力とフリーキックの技術は史上屈指のものでした。"
+        },
+        "ko": {
+          "question": "정확한 크로스와 프리킥으로 유명한 이 잉글랜드 미드필더는 누구일까요?",
+          "options": [
+            "데이비드 베컴",
+            "스티븐 제라드",
+            "프랭크 램파드",
+            "폴 스콜스"
+          ],
+          "explanation": "데이비드 베컴은 세 차례 대회(1998년, 2002년, 2006년)에 출전했습니다. 1998년 대회에서는 아르헨티나전 레드카드로 악명을 떨치며 국가적 비난의 대상이 되었습니다. 그러나 2002년 조별 리그 아르헨티나전에서 결승 페널티킥을 성공시키며 명예를 회복했습니다. 그의 크로스 능력과 프리킥 기술은 역대 최고 수준이었습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este meia inglês conhecido por seus cruzamentos precisos e cobranças de falta?",
+          "options": [
+            "David Beckham",
+            "Steven Gerrard",
+            "Frank Lampard",
+            "Paul Scholes"
+          ],
+          "explanation": "David Beckham disputou três edições (1998, 2002, 2006). Seu torneio de 1998 ficou marcado pelo cartão vermelho contra a Argentina, que o transformou em vilão nacional. Ele se redimiu em 2002 ao marcar o pênalti da vitória contra a Argentina na fase de grupos. Sua habilidade nos cruzamentos e sua técnica nas cobranças de falta estavam entre as melhores de todos os tempos."
+        },
+        "zh-Hans": {
+          "question": "这位以精准传中和任意球著称的英格兰中场球员是谁？",
+          "options": [
+            "大卫·贝克汉姆",
+            "史蒂文·杰拉德",
+            "弗兰克·兰帕德",
+            "保罗·斯科尔斯"
+          ],
+          "explanation": "大卫·贝克汉姆参加过三届赛事（1998年、2002年、2006年）。他在1998年的比赛中因对阵阿根廷被红牌罚下而声名狼藉，成为全国的众矢之的。2002年，他在小组赛中对阵阿根廷打入制胜点球，洗刷了耻辱。他的传中能力和任意球技术堪称史上顶尖。"
+        }
+      },
+      "i18nSourceHash": "a167f456e191c160"
     },
     {
       "id": "img-zlatan",
