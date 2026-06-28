@@ -12294,7 +12294,110 @@
       "explanation": "Zlatan Ibrahimović appeared at the 2002 and 2006 editions with Sweden. Famous for his bicycle kicks and audacious skill, he scored 62 goals in 122 appearances for Sweden. Known for speaking about himself in the third person, he once said 'I didn't injure myself. I am Zlatan.' His playing career spanned top clubs across Italy, Spain, France, and England.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Zlatan_Ibrahimovic_%28cropped%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا المهاجم السويدي المعروف بأهدافه البهلوانية وشخصيته الاستثنائية؟",
+          "options": [
+            "زلاتان إبراهيموفيتش",
+            "هنريك لارسون",
+            "فريدي يونغبيري",
+            "توماس برولين"
+          ],
+          "explanation": "ظهر زلاتان إبراهيموفيتش مع السويد في نسختي 2002 و2006. اشتهر بركلاته المقصية ومهاراته الجريئة، وسجّل 62 هدفًا في 122 مباراة مع منتخب السويد. وعُرف بحديثه عن نفسه بصيغة الغائب، إذ قال ذات مرة: 'لم أُصب نفسي. أنا زلاتان.' امتدت مسيرته الكروية لتشمل أبرز الأندية في إيطاليا وإسبانيا وفرنسا وإنجلترا."
+        },
+        "de": {
+          "question": "Wer ist dieser schwedische Stürmer, bekannt für seine akrobatischen Tore und seine überlebensgroße Persönlichkeit?",
+          "options": [
+            "Zlatan Ibrahimović",
+            "Henrik Larsson",
+            "Freddie Ljungberg",
+            "Tomas Brolin"
+          ],
+          "explanation": "Zlatan Ibrahimović trat 2002 und 2006 mit Schweden an. Berühmt für seine Fallrückzieher und sein furchtloses Können, erzielte er in 122 Länderspielen 62 Tore für Schweden. Bekannt dafür, in der dritten Person über sich selbst zu sprechen, sagte er einmal: 'Ich habe mich nicht verletzt. Ich bin Zlatan.' Seine Spielerkarriere führte ihn zu Spitzenklubs in Italien, Spanien, Frankreich und England."
+        },
+        "es": {
+          "question": "¿Quién es este delantero sueco conocido por sus goles acrobáticos y su personalidad descomunal?",
+          "options": [
+            "Zlatan Ibrahimović",
+            "Henrik Larsson",
+            "Freddie Ljungberg",
+            "Tomas Brolin"
+          ],
+          "explanation": "Zlatan Ibrahimović participó con Suecia en las ediciones de 2002 y 2006. Famoso por sus chilenas y su habilidad audaz, marcó 62 goles en 122 partidos con la selección sueca. Conocido por hablar de sí mismo en tercera persona, una vez dijo: 'No me lesioné. Soy Zlatan.' Su carrera lo llevó a los mejores clubes de Italia, España, Francia e Inglaterra."
+        },
+        "es-ES": {
+          "question": "¿Quién es este delantero sueco conocido por sus goles acrobáticos y su personalidad arrolladora?",
+          "options": [
+            "Zlatan Ibrahimović",
+            "Henrik Larsson",
+            "Freddie Ljungberg",
+            "Tomas Brolin"
+          ],
+          "explanation": "Zlatan Ibrahimović disputó con Suecia las ediciones de 2002 y 2006. Famoso por sus chilenas y su habilidad descarada, anotó 62 goles en 122 partidos con la selección sueca. Conocido por hablar de sí mismo en tercera persona, una vez dijo: 'No me lesioné. Soy Zlatan.' Su carrera lo llevó por los mejores clubes de Italia, España, Francia e Inglaterra."
+        },
+        "fr": {
+          "question": "Qui est cet attaquant suédois connu pour ses buts acrobatiques et sa personnalité hors norme ?",
+          "options": [
+            "Zlatan Ibrahimović",
+            "Henrik Larsson",
+            "Freddie Ljungberg",
+            "Tomas Brolin"
+          ],
+          "explanation": "Zlatan Ibrahimović a participé aux éditions de 2002 et 2006 avec la Suède. Réputé pour ses retournés acrobatiques et son talent audacieux, il a inscrit 62 buts en 122 sélections avec la Suède. Connu pour parler de lui à la troisième personne, il a un jour déclaré : 'Je ne me suis pas blessé. Je suis Zlatan.' Sa carrière l'a mené dans les plus grands clubs d'Italie, d'Espagne, de France et d'Angleterre."
+        },
+        "it": {
+          "question": "Chi è questo attaccante svedese noto per i suoi gol acrobatici e la sua personalità fuori dal comune?",
+          "options": [
+            "Zlatan Ibrahimović",
+            "Henrik Larsson",
+            "Freddie Ljungberg",
+            "Tomas Brolin"
+          ],
+          "explanation": "Zlatan Ibrahimović ha preso parte alle edizioni del 2002 e del 2006 con la Svezia. Famoso per le sue rovesciate e la sua tecnica spavalda, ha segnato 62 gol in 122 presenze con la nazionale svedese. Noto per parlare di sé in terza persona, una volta disse: 'Non mi sono fatto male. Sono Zlatan.' La sua carriera lo ha portato nei migliori club di Italia, Spagna, Francia e Inghilterra."
+        },
+        "ja": {
+          "question": "アクロバティックなゴールと型破りな個性で知られる、このスウェーデン人ストライカーは誰でしょう？",
+          "options": [
+            "ズラタン・イブラヒモビッチ",
+            "ヘンリク・ラーション",
+            "フレディ・ユングベリ",
+            "トーマス・ブロリン"
+          ],
+          "explanation": "ズラタン・イブラヒモビッチはスウェーデン代表として2002年大会と2006年大会に出場しました。バイシクルシュートと大胆なプレーで有名な彼は、スウェーデン代表として122試合で62ゴールを記録しました。自分のことを三人称で語ることでも知られ、かつて『私はけがをしていない。私はズラタンだ。』と語りました。選手としてのキャリアは、イタリア、スペイン、フランス、イングランドのトップクラブにまたがりました。"
+        },
+        "ko": {
+          "question": "곡예 같은 골과 남다른 개성으로 유명한 이 스웨덴 공격수는 누구일까요?",
+          "options": [
+            "즐라탄 이브라히모비치",
+            "헨리크 라르손",
+            "프레디 융베리",
+            "토마스 브롤린"
+          ],
+          "explanation": "즐라탄 이브라히모비치는 스웨덴 대표팀으로 2002년과 2006년 대회에 출전했습니다. 바이시클 킥과 과감한 기술로 유명한 그는 스웨덴 대표팀에서 122경기 62골을 기록했습니다. 자신을 3인칭으로 말하는 것으로도 알려진 그는 한때 '나는 다치지 않았다. 나는 즐라탄이다.'라고 말했습니다. 선수 경력 동안 그는 이탈리아, 스페인, 프랑스, 잉글랜드의 명문 클럽들을 거쳤습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é esse atacante sueco conhecido por seus gols acrobáticos e sua personalidade extravagante?",
+          "options": [
+            "Zlatan Ibrahimović",
+            "Henrik Larsson",
+            "Freddie Ljungberg",
+            "Tomas Brolin"
+          ],
+          "explanation": "Zlatan Ibrahimović disputou as edições de 2002 e 2006 pela Suécia. Famoso por suas bicicletas e seu talento ousado, marcou 62 gols em 122 jogos pela seleção sueca. Conhecido por falar de si mesmo na terceira pessoa, certa vez declarou: 'Eu não me machuquei. Eu sou o Zlatan.' Sua carreira passou pelos maiores clubes da Itália, Espanha, França e Inglaterra."
+        },
+        "zh-Hans": {
+          "question": "这位以杂技般的进球和与众不同的个性闻名的瑞典前锋是谁？",
+          "options": [
+            "兹拉坦·伊布拉希莫维奇",
+            "亨里克·拉尔松",
+            "弗雷迪·永贝里",
+            "托马斯·布罗林"
+          ],
+          "explanation": "兹拉坦·伊布拉希莫维奇曾代表瑞典出战2002年和2006年的赛事。他以倒钩射门和大胆的球技闻名，为瑞典国家队出场122次，打入62球。他还以用第三人称谈论自己而著称，曾说过：'我没有受伤。我是兹拉坦。'他的职业生涯辗转于意大利、西班牙、法国和英格兰的顶级俱乐部。"
+        }
+      },
+      "i18nSourceHash": "a225b9bd42ffc35a"
     }
   ],
   "pendingTasks": [
