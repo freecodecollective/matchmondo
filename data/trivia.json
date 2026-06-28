@@ -9911,7 +9911,8 @@
       "answer": 0,
       "explanation": "True! VAR is limited to reviewing only these four categories of 'clear and obvious errors' or 'serious missed incidents.' The referee can consult the pitch-side monitor for a final decision, but VAR cannot intervene for yellow cards, throw-in decisions, corner kicks, or other routine calls.",
       "type": "true_false",
-      "needsReview": true
+      "needsReview": true,
+      "claudeTask": "add what mistken idenitity means"
     },
     {
       "id": "tf-trophy-not-solid-gold",
