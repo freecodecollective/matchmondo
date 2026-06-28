@@ -9925,7 +9925,8 @@
       "answer": 1,
       "explanation": "False! While the trophy is made of 18-carat gold, it is not solid throughout. It has a base of malachite (a green semi-precious stone), and the gold forms the main body above the base. Despite this, the trophy weighs over 6 kilograms and its cultural value is, of course, priceless.",
       "type": "true_false",
-      "needsReview": true
+      "media": "https://en.wikipedia.org/wiki/File:FIFA_World_Cup_Trophy_(Ank_Kumar,_Infosys_Limited)_04.jpg",
+      "approved": true
     },
     {
       "id": "tf-first-goal-lucien-laurent",
