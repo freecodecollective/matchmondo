@@ -10043,7 +10043,7 @@
       "answer": 0,
       "explanation": "True! Before 1994, a win was worth only two points. The switch to three points for a win was designed to encourage more attacking football by making victories more rewarding than draws. The change has been credited with reducing the number of dull, risk-averse group stage matches.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-penalty-retake-var",
