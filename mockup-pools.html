@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pools — pick'em & trivia groups for friends</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    padding: 24px 20px 60px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---- top explainer ---- */
+  .greeting {
+    max-width: 760px;
+    margin: 0 auto 14px;
+    background: #fff8e1;
+    border: 1px solid #f2e3a8;
+    border-radius: 14px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .greeting h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .greeting h1 .wave { font-size: 22px; }
+  .greeting p { font-size: 13.5px; color: #6b6450; line-height: 1.55; }
+  .greeting p + p { margin-top: 8px; }
+  .greeting strong { color: #3A6F9A; }
+  .greeting ul { margin: 8px 0 2px 22px; font-size: 13.5px; color: #6b6450; line-height: 1.6; }
+
+  h2.page-h { font-size: 17px; font-weight: 600; text-align: center; color: #444; margin: 36px auto 4px; }
+  .page-sub { text-align: center; font-size: 13px; color: #999; margin: 0 auto 22px; max-width: 720px; line-height: 1.5; }
+
+  /* ---- phone row layout (matches mockup-predictions) ---- */
+  .options { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; max-width: 1200px; margin: 26px auto 0; }
+  .option-wrap { flex: 0 0 340px; }
+  .option-label { text-align: center; margin-bottom: 8px; }
+  .option-label h3 { font-size: 16px; font-weight: 600; color: #3A6F9A; }
+  .option-label p { font-size: 12px; color: #999; margin-top: 4px; line-height: 1.4; min-height: 44px; padding: 0 6px; }
+
+  .phone {
+    width: 340px; background: #F2F0EC; border-radius: 36px; overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06); padding: 12px;
+  }
+  .phone-inner { border-radius: 26px; overflow: hidden; background: #F2F0EC; }
+  .status-bar { height: 54px; background: #3A6F9A; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px; }
+  .status-time { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.8); }
+  .header-banner { position: relative; background: linear-gradient(135deg, #3A6F9A, #5A9FC9); padding: 16px 16px 14px; text-align: center; }
+  .header-banner h3 { color: #fff; font-size: 21px; font-weight: 600; letter-spacing: 0.3px; }
+  .back-chev { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.9); font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 2px; cursor: pointer; }
+  .x-close { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.9); font-size: 18px; font-weight: 400; cursor: pointer; }
+
+  .content { padding: 12px; background: #F2F0EC; height: 588px; overflow-y: auto; }
+  .content::-webkit-scrollbar { width: 0; }
+
+  /* ---- shared bits ---- */
+  .section-title { font-size: 11px; font-weight: 700; color: #888; padding: 2px 2px 10px; text-transform: uppercase; letter-spacing: 0.7px; }
+  .home-bar { height: 34px; background: #f2f0ec; border-radius: 0 0 26px 26px; display: flex; justify-content: center; padding-top: 6px; }
+  .home-indicator { width: 120px; height: 5px; background: #ccc; border-radius: 3px; }
+  .tab-bar { display: flex; background: rgba(255,255,255,0.95); border-top: 0.5px solid #ddd; padding: 6px 0 8px; }
+  .tab { flex: 1; text-align: center; font-size: 10px; color: #999; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .tab.active { color: #3A6F9A; }
+  .tab .tab-icon { font-size: 22px; line-height: 1; }
+
+  /* ---- zippable cards (the meta affordance) ---- */
+  .zip-card { background: #fff; border-radius: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom: 12px; overflow: hidden; }
+  .zip-head { display: flex; align-items: center; gap: 10px; padding: 14px 14px; cursor: pointer; user-select: none; }
+  .zip-title { flex: 1; }
+  .zip-title h4 { font-size: 15px; font-weight: 700; color: #222; }
+  .zip-title .zip-sub { font-size: 11.5px; color: #999; margin-top: 2px; }
+  .zip-chev { color: #bbb; font-size: 16px; transition: transform 0.2s; }
+  .zip-card.open .zip-chev { transform: rotate(90deg); }
+  .zip-body { max-height: 0; overflow: hidden; transition: max-height 0.25s ease; }
+  .zip-card.open .zip-body { max-height: 1400px; }
+  .zip-body-inner { padding: 0 14px 14px; border-top: 1px solid #f3f1ec; padding-top: 12px; }
+
+  /* ---- mini leaderboard inside zip ---- */
+  .lb-row { display: flex; align-items: center; gap: 11px; padding: 8px 4px; }
+  .lb-row + .lb-row { border-top: 1px solid #f7f5f0; }
+  .lb-rank { font-size: 13px; font-weight: 700; color: #aaa; width: 18px; text-align: center; }
+  .lb-rank.r1 { color: #d4a017; }
+  .lb-rank.r2 { color: #a4a3a0; }
+  .lb-rank.r3 { color: #b87c4c; }
+  .lb-av { width: 30px; height: 30px; border-radius: 50%; background: #ECEAE6; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #6a6a6a; flex-shrink: 0; }
+  .lb-nm { flex: 1; font-size: 13.5px; font-weight: 600; }
+  .lb-pts { font-size: 13px; font-weight: 700; color: #3A6F9A; }
+  .lb-row.you { background: rgba(58,111,154,0.06); border-radius: 8px; padding: 8px 8px; margin: 2px -4px; }
+  .lb-row.you + .lb-row { border-top: 1px solid #f7f5f0; }
+  .lb-row.you .lb-nm { color: #3A6F9A; }
+
+  /* ---- pool list rows ---- */
+  .pool-row { display: flex; align-items: center; gap: 10px; padding: 11px 4px; cursor: pointer; }
+  .pool-row + .pool-row { border-top: 1px solid #f7f5f0; }
+  .pool-icon { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .pool-icon.p-blue { background: rgba(58,111,154,0.12); }
+  .pool-icon.p-green { background: rgba(46,165,106,0.14); }
+  .pool-icon.p-orange { background: rgba(224,138,60,0.14); }
+  .pool-icon.p-purple { background: rgba(125,98,170,0.14); }
+  .pool-meta { flex: 1; min-width: 0; }
+  .pool-name { font-size: 14px; font-weight: 700; color: #222; }
+  .pool-sub { font-size: 11.5px; color: #999; margin-top: 1px; }
+  .pool-rank { text-align: right; }
+  .pool-rank .place { font-size: 14px; font-weight: 800; color: #3A6F9A; line-height: 1; }
+  .pool-rank .of { font-size: 10.5px; color: #aaa; margin-top: 2px; }
+  .pool-rank.crown .place::before { content: "👑 "; font-size: 11px; }
+
+  .badge { display: inline-flex; align-items: center; gap: 4px; font-size: 9.5px; font-weight: 700; padding: 2px 6px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.4px; }
+  .badge.b-pred { background: rgba(58,111,154,0.12); color: #3A6F9A; }
+  .badge.b-triv { background: rgba(224,138,60,0.14); color: #c46e1f; }
+  .badge.b-both { background: rgba(125,98,170,0.14); color: #6e54a0; }
+  .badge.b-soon { background: rgba(212,160,23,0.18); color: #a17a06; }
+  .badge.b-live { background: rgba(46,165,106,0.16); color: #1e7a4d; }
+
+  /* ---- big CTAs ---- */
+  .cta-row { display: flex; gap: 9px; margin-bottom: 12px; }
+  .cta-btn { flex: 1; background: #fff; border-radius: 12px; padding: 12px 8px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05); cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; transition: all 0.12s; }
+  .cta-btn:active { transform: scale(0.98); }
+  .cta-btn .ci { font-size: 22px; }
+  .cta-btn .cl { font-size: 12px; font-weight: 700; color: #3A6F9A; }
+  .cta-btn.primary { background: #3A6F9A; }
+  .cta-btn.primary .cl { color: #fff; }
+
+  /* ---- create form ---- */
+  .field-label { font-size: 11px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin: 14px 2px 7px; }
+  .field { width: 100%; background: #fff; border: 1.5px solid #e2ded5; border-radius: 11px; padding: 12px 13px; font-size: 14px; font-weight: 600; color: #222; outline: none; font-family: inherit; }
+  .field:focus { border-color: #3A6F9A; }
+  .field::placeholder { color: #b8b4ab; font-weight: 500; }
+
+  /* segmented chips for type picker */
+  .chip-row { display: flex; gap: 7px; }
+  .chip-row .chip { flex: 1; padding: 10px 6px; border: 1.5px solid #e2ded5; border-radius: 11px; text-align: center; cursor: pointer; background: #fff; transition: all 0.12s; }
+  .chip-row .chip.sel { border-color: #3A6F9A; background: rgba(58,111,154,0.07); }
+  .chip-row .chip .ci2 { font-size: 18px; }
+  .chip-row .chip .cl2 { font-size: 12px; font-weight: 700; color: #555; margin-top: 3px; }
+  .chip-row .chip.sel .cl2 { color: #3A6F9A; }
+
+  /* point steppers */
+  .pts-card { background: #fff; border-radius: 12px; padding: 12px 13px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .pts-card + .pts-card { margin-top: 9px; }
+  .pts-head { display: flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 700; color: #444; margin-bottom: 10px; }
+  .pts-head .pts-ic { font-size: 16px; }
+  .pts-row { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; }
+  .pts-row + .pts-row { border-top: 1px solid #f4f2ec; }
+  .pts-label { font-size: 12.5px; color: #555; flex: 1; }
+  .pts-label .lock { color: #b8b4ab; font-size: 11px; margin-left: 4px; }
+  .pts-stepper { display: flex; align-items: center; gap: 6px; }
+  .step-btn { width: 26px; height: 26px; border-radius: 7px; border: 1.5px solid #d8d4cb; background: #fff; font-size: 16px; font-weight: 600; color: #3A6F9A; display: flex; align-items: center; justify-content: center; cursor: pointer; line-height: 1; }
+  .step-btn[disabled] { opacity: 0.4; cursor: not-allowed; color: #aaa; }
+  .step-val { font-size: 15px; font-weight: 800; color: #222; width: 22px; text-align: center; }
+  .pts-default-note { font-size: 10.5px; color: #b8b4ab; margin-left: 6px; }
+
+  /* date picker stub */
+  .date-card { background: #fff; border-radius: 11px; padding: 11px 13px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); display: flex; align-items: center; gap: 10px; cursor: pointer; }
+  .date-ic { font-size: 22px; }
+  .date-meta { flex: 1; }
+  .date-meta .dm-label { font-size: 11px; color: #888; font-weight: 600; }
+  .date-meta .dm-val { font-size: 14px; font-weight: 700; color: #222; margin-top: 1px; }
+  .date-meta .dm-note { font-size: 10.5px; color: #aaa; margin-top: 2px; }
+  .date-card .chev { color: #ccc; font-size: 18px; }
+
+  /* code box (reused from predictions mock) */
+  .code-box { background: linear-gradient(135deg, #3A6F9A, #5A9FC9); color: #fff; border-radius: 14px; padding: 16px; box-shadow: 0 3px 12px rgba(58,111,154,0.22); text-align: center; }
+  .code-box .cap { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; opacity: 0.85; margin-bottom: 8px; }
+  .code-val { font-size: 30px; font-weight: 800; letter-spacing: 3px; }
+  .code-actions { display: flex; gap: 7px; margin-top: 13px; }
+  .code-action { flex: 1; background: rgba(255,255,255,0.18); color: #fff; border-radius: 9px; padding: 8px 4px; font-size: 11.5px; font-weight: 700; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+  .code-action .ci3 { font-size: 14px; }
+
+  .primary-btn { background: #3A6F9A; color: #fff; border-radius: 12px; padding: 14px; text-align: center; font-size: 15px; font-weight: 700; cursor: pointer; margin-top: 16px; }
+  .secondary-btn { background: #fff; color: #3A6F9A; border-radius: 12px; padding: 13px; text-align: center; font-size: 14px; font-weight: 700; cursor: pointer; border: 1.5px solid #d8e3ed; margin-top: 10px; }
+
+  /* join code grid */
+  .join-hero { text-align: center; padding: 12px 0 6px; }
+  .join-hero .big-ic { font-size: 44px; }
+  .join-hero h4 { font-size: 18px; font-weight: 700; margin-top: 8px; }
+  .join-hero p { font-size: 12.5px; color: #888; margin-top: 6px; line-height: 1.45; padding: 0 14px; }
+  .code-grid { display: flex; gap: 7px; justify-content: center; margin: 18px 0 12px; }
+  .code-slot { width: 36px; height: 46px; border-radius: 9px; border: 1.5px solid #d8d4cb; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 800; color: #3A6F9A; }
+  .code-slot.empty { color: #d8d4cb; }
+  .code-slot.active { border-color: #3A6F9A; box-shadow: 0 0 0 3px rgba(58,111,154,0.14); }
+
+  /* pool detail */
+  .pool-hero { background: linear-gradient(135deg, #3A6F9A, #5A9FC9); color: #fff; border-radius: 16px; padding: 14px 15px; margin-bottom: 12px; box-shadow: 0 3px 12px rgba(58,111,154,0.22); }
+  .pool-hero h4 { font-size: 17px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+  .pool-hero .ph-sub { font-size: 12px; opacity: 0.85; margin-top: 3px; }
+  .pool-hero-row { display: flex; align-items: center; justify-content: space-between; margin-top: 13px; }
+  .pool-hero-row .code-chip { font-size: 12px; font-weight: 700; color: #fff; background: rgba(255,255,255,0.22); padding: 5px 11px; border-radius: 20px; display: flex; align-items: center; gap: 6px; }
+  .pool-hero-row .invite-btn { font-size: 12px; font-weight: 700; color: #3A6F9A; background: #fff; padding: 6px 13px; border-radius: 20px; cursor: pointer; }
+
+  /* segmented sub-tabs in detail */
+  .sub-tabs { display: flex; gap: 6px; background: #ECEAE6; border-radius: 11px; padding: 4px; margin-bottom: 12px; }
+  .sub-tab { flex: 1; text-align: center; font-size: 12px; font-weight: 700; padding: 7px 0; border-radius: 8px; color: #888; cursor: pointer; }
+  .sub-tab.sel { background: #fff; color: #3A6F9A; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+
+  /* prediction row in pool */
+  .ppred { background: #fff; border-radius: 12px; padding: 12px 13px; margin-bottom: 9px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .ppred-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 9px; }
+  .ppred-time { font-size: 11px; font-weight: 600; color: #999; }
+  .ppred-time.live { color: #DC3545; }
+  .ppred-state { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: #999; }
+  .ppred-mid { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+  .ppred-team { display: flex; align-items: center; gap: 6px; flex: 1; font-size: 13px; font-weight: 700; }
+  .ppred-team.away { justify-content: flex-end; }
+  .ppred-team .flag { width: 24px; height: 17px; border-radius: 2px; background: #ccc; }
+  .ppred-vs { font-size: 11px; color: #999; font-weight: 600; }
+  .ppred-mypick { margin-top: 10px; padding-top: 9px; border-top: 1px solid #f4f2ec; display: flex; align-items: center; gap: 8px; font-size: 11.5px; }
+  .ppred-mypick .label { color: #888; font-weight: 600; }
+  .ppred-mypick .mine { color: #3A6F9A; font-weight: 700; }
+  .ppred-mypick .auto-tag { font-size: 9.5px; font-weight: 800; color: #c46e1f; background: rgba(224,138,60,0.16); padding: 2px 6px; border-radius: 8px; margin-left: auto; }
+  .ppred-others { margin-top: 9px; padding-top: 9px; border-top: 1px solid #f4f2ec; }
+  .others-hidden { display: flex; align-items: center; gap: 8px; font-size: 11px; color: #999; font-weight: 500; }
+  .others-hidden .lock { font-size: 14px; }
+  .others-list { display: flex; flex-direction: column; gap: 5px; }
+  .others-row { display: flex; align-items: center; gap: 8px; font-size: 11.5px; }
+  .others-row .av { width: 20px; height: 20px; border-radius: 50%; background: #ECEAE6; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 800; color: #6a6a6a; }
+  .others-row .nm { flex: 1; color: #555; font-weight: 600; }
+  .others-row .pk { color: #3A6F9A; font-weight: 700; }
+  .others-row .pk.wrong { color: #b8b4ab; text-decoration: line-through; text-decoration-color: rgba(184,180,171,0.5); }
+  .others-row .auto-tag { font-size: 8.5px; font-weight: 800; color: #c46e1f; background: rgba(224,138,60,0.16); padding: 1px 5px; border-radius: 6px; margin-left: 4px; }
+  .others-row .pts { font-size: 11px; font-weight: 800; color: #1e7a4d; }
+  .others-row .pts.zero { color: #b8b4ab; }
+  .ppred-final { margin-top: 9px; padding-top: 9px; border-top: 1px solid #f4f2ec; text-align: center; font-size: 11.5px; color: #999; font-weight: 600; }
+  .ppred-final .fs { font-size: 14px; font-weight: 800; color: #222; }
+
+  /* explainer note */
+  .note { background: #f6f5f2; border-radius: 10px; padding: 10px 12px; font-size: 11.5px; color: #777; line-height: 1.5; }
+  .note strong { color: #3A6F9A; }
+
+  /* recommendation block */
+  .recommend { max-width: 760px; margin: 40px auto 0; background: #eef5fb; border: 1px solid #cfe0ef; border-radius: 14px; padding: 18px 22px; }
+  .recommend h4 { font-size: 14px; color: #2c5a82; margin-bottom: 8px; }
+  .recommend p { font-size: 13px; color: #45596b; line-height: 1.55; }
+  .recommend p + p { margin-top: 8px; }
+  .recommend strong { color: #234e72; }
+  .recommend code { background: rgba(58,111,154,0.10); color: #2c5a82; padding: 1px 6px; border-radius: 4px; font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .recommend ul { margin: 6px 0 0 22px; font-size: 13px; color: #45596b; line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<div class="greeting">
+  <h1><span class="wave">🏆</span> Pools — friend groups for Predictions &amp; Trivia</h1>
+  <p>Pools let anyone start a private competition: a name, a 6-char code, the games you want to play (Predictions / Trivia / both), and your own point values.
+     Pre-kickoff, picks are hidden from everyone else in the pool — they unlock the moment the game starts. Forget to pick? You're auto-picked for the higher-FIFA-ranked team to win 1–0; if it hits, you only get the consolation 1&nbsp;pt (not the full 3).</p>
+  <ul>
+    <li><strong>Anyone</strong> creates a pool. They share the code. People join with the code.</li>
+    <li>Pool creator sets <strong>name</strong>, <strong>type</strong> (Predictions / Trivia / Both), <strong>point values</strong> (defaults match how the app already scores), and a <strong>start date</strong> — invite people days early.</li>
+    <li>In Fun → Friends, both <strong>Leaderboard</strong> and <strong>Pools</strong> are zippable cards. If you're in multiple pools, each is its own row inside the Pools card.</li>
+  </ul>
+</div>
+
+<h2 class="page-h">1 · Where pools live (Fun → Friends)</h2>
+<p class="page-sub">Below the global Leaderboard. Both sections zip closed; tap a pool row to drill into it.</p>
+
+<div class="options">
+
+  <div class="option-wrap">
+    <div class="option-label">
+      <h3>A · Friends hub</h3>
+      <p>Leaderboard collapsed by default once you're in a pool or two; Pools card expanded showing all three of yours.</p>
+    </div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">9:41</span></div>
+      <div class="header-banner"><h3>Friends</h3></div>
+      <div class="content">
+
+        <!-- Leaderboard, zipped -->
+        <div class="zip-card">
+          <div class="zip-head" onclick="this.parentElement.classList.toggle('open')">
+            <div style="font-size:22px;">🌍</div>
+            <div class="zip-title">
+              <h4>Global Leaderboard</h4>
+              <div class="zip-sub">You're #847 of 12,403 · 142 pts</div>
+            </div>
+            <div class="zip-chev">›</div>
+          </div>
+          <div class="zip-body"><div class="zip-body-inner">
+            <div class="lb-row"><div class="lb-rank r1">1</div><div class="lb-av">JR</div><div class="lb-nm">Jamie R.</div><div class="lb-pts">418</div></div>
+            <div class="lb-row"><div class="lb-rank r2">2</div><div class="lb-av">AK</div><div class="lb-nm">Anna K.</div><div class="lb-pts">402</div></div>
+            <div class="lb-row"><div class="lb-rank r3">3</div><div class="lb-av">DM</div><div class="lb-nm">Diego M.</div><div class="lb-pts">389</div></div>
+            <div class="lb-row you"><div class="lb-rank">847</div><div class="lb-av">CH</div><div class="lb-nm">You</div><div class="lb-pts">142</div></div>
+          </div></div>
+        </div>
+
+        <!-- Pools, expanded -->
+        <div class="zip-card open">
+          <div class="zip-head" onclick="this.parentElement.classList.toggle('open')">
+            <div style="font-size:22px;">🏆</div>
+            <div class="zip-title">
+              <h4>Your Pools</h4>
+              <div class="zip-sub">3 pools · #1 in Boston Office</div>
+            </div>
+            <div class="zip-chev">›</div>
+          </div>
+          <div class="zip-body"><div class="zip-body-inner">
+            <div class="cta-row">
+              <div class="cta-btn primary"><div class="ci">＋</div><div class="cl">Create Pool</div></div>
+              <div class="cta-btn"><div class="ci">🎟️</div><div class="cl">Join with Code</div></div>
+            </div>
+            <div class="pool-row">
+              <div class="pool-icon p-blue">⚽</div>
+              <div class="pool-meta">
+                <div class="pool-name">Boston Office</div>
+                <div class="pool-sub"><span class="badge b-both">Both</span> &nbsp; 14 people · Live</div>
+              </div>
+              <div class="pool-rank crown"><div class="place">1st</div><div class="of">of 14</div></div>
+            </div>
+            <div class="pool-row">
+              <div class="pool-icon p-green">🎯</div>
+              <div class="pool-meta">
+                <div class="pool-name">Heather's Crew</div>
+                <div class="pool-sub"><span class="badge b-pred">Predictions</span> &nbsp; 8 people · Live</div>
+              </div>
+              <div class="pool-rank"><div class="place">4th</div><div class="of">of 8</div></div>
+            </div>
+            <div class="pool-row">
+              <div class="pool-icon p-orange">🧠</div>
+              <div class="pool-meta">
+                <div class="pool-name">Trivia Nerds</div>
+                <div class="pool-sub"><span class="badge b-triv">Trivia</span> &nbsp; 22 people · <span style="color:#a17a06;font-weight:700;">Starts Jun 30</span></div>
+              </div>
+              <div class="pool-rank"><div class="place">—</div><div class="of">22 in</div></div>
+            </div>
+          </div></div>
+        </div>
+
+        <div class="note"><strong>Zip rule:</strong> if you're in ≥1 pool, the global Leaderboard collapses by default (Pools is what you care about). Either card can be tapped open/closed and remembers its state.</div>
+
+      </div>
+      <div class="home-bar"><div class="home-indicator"></div></div>
+    </div></div>
+  </div>
+
+  <div class="option-wrap">
+    <div class="option-label">
+      <h3>B · Single pool detail (predictions, pre-kickoff)</h3>
+      <p>Tap a pool row → here. Your own picks visible, everyone else's are locked until each game kicks off.</p>
+    </div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">9:41</span></div>
+      <div class="header-banner">
+        <span class="back-chev">‹ Back</span>
+        <h3>Boston Office</h3>
+      </div>
+      <div class="content">
+
+        <div class="pool-hero">
+          <h4>⚽ Boston Office</h4>
+          <div class="ph-sub"><span class="badge b-both" style="background:rgba(255,255,255,0.22);color:#fff;">Both</span> &nbsp; You're <strong>1st of 14</strong> · 86 pts</div>
+          <div class="pool-hero-row">
+            <div class="code-chip">🎟️ <span>K7M2QX</span></div>
+            <div class="invite-btn">Invite</div>
+          </div>
+        </div>
+
+        <div class="sub-tabs">
+          <div class="sub-tab sel">Predictions</div>
+          <div class="sub-tab">Trivia</div>
+          <div class="sub-tab">Standings</div>
+        </div>
+
+        <!-- pre-kickoff game with your pick made -->
+        <div class="ppred">
+          <div class="ppred-top"><div class="ppred-time">Today · 8:00 PM ET</div><div class="ppred-state" style="color:#888;">Picks open</div></div>
+          <div class="ppred-mid">
+            <div class="ppred-team"><div class="flag" style="background:#009b3a;"></div>BRA</div>
+            <div class="ppred-vs">vs</div>
+            <div class="ppred-team away">CMR<div class="flag" style="background:#007a5e;"></div></div>
+          </div>
+          <div class="ppred-mypick">
+            <span class="label">Your pick:</span><span class="mine">BRA win, 2–1</span>
+          </div>
+          <div class="ppred-others">
+            <div class="others-hidden">
+              <span class="lock">🔒</span><span>Other 13 picks unlock at kickoff</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- pre-kickoff, you haven't picked -->
+        <div class="ppred">
+          <div class="ppred-top"><div class="ppred-time">Tomorrow · 12:00 PM ET</div><div class="ppred-state" style="color:#a17a06;">No pick</div></div>
+          <div class="ppred-mid">
+            <div class="ppred-team"><div class="flag" style="background:#ed2e38;"></div>ENG</div>
+            <div class="ppred-vs">vs</div>
+            <div class="ppred-team away">JPN<div class="flag" style="background:#bc002d;"></div></div>
+          </div>
+          <div class="ppred-mypick">
+            <span class="label">Your pick:</span><span style="color:#a17a06;font-weight:700;">— not yet —</span>
+            <span class="auto-tag">Auto: ENG 1–0</span>
+          </div>
+          <div class="ppred-others">
+            <div class="others-hidden">
+              <span class="lock">🔒</span><span>Others locked until kickoff</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="note" style="margin-top:6px;">If you don't pick by kickoff, you'll be auto-picked for <strong>the higher-FIFA-ranked team to win 1–0</strong>. Auto-picks that hit pay <strong>1 pt</strong>, not 3 — make your own pick to earn the full points.</div>
+
+      </div>
+      <div class="home-bar"><div class="home-indicator"></div></div>
+    </div></div>
+  </div>
+
+</div>
+
+
+<h2 class="page-h">2 · Creator flow</h2>
+<p class="page-sub">Anyone can create a pool. One form, no admin panel.</p>
+
+<div class="options">
+
+  <div class="option-wrap">
+    <div class="option-label">
+      <h3>A · Create Pool</h3>
+      <p>Name, type, point values (default = how the app already scores), start date, then a code is generated.</p>
+    </div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">9:41</span></div>
+      <div class="header-banner">
+        <span class="back-chev">‹ Cancel</span>
+        <h3>New Pool</h3>
+      </div>
+      <div class="content">
+
+        <div class="field-label">Pool Name</div>
+        <input class="field" value="Boston Office" />
+
+        <div class="field-label">What's the pool for?</div>
+        <div class="chip-row">
+          <div class="chip"><div class="ci2">🎯</div><div class="cl2">Predictions</div></div>
+          <div class="chip"><div class="ci2">🧠</div><div class="cl2">Trivia</div></div>
+          <div class="chip sel"><div class="ci2">🏆</div><div class="cl2">Both</div></div>
+        </div>
+
+        <div class="field-label">Points — Predictions</div>
+        <div class="pts-card">
+          <div class="pts-row">
+            <div class="pts-label">Correct winner</div>
+            <div class="pts-stepper">
+              <div class="step-btn">−</div><div class="step-val">3</div><div class="step-btn">+</div>
+            </div>
+          </div>
+          <div class="pts-row">
+            <div class="pts-label">Exact score <span style="color:#aaa;font-size:11px;">(bonus)</span></div>
+            <div class="pts-stepper">
+              <div class="step-btn">−</div><div class="step-val">5</div><div class="step-btn">+</div>
+            </div>
+          </div>
+          <div class="pts-row">
+            <div class="pts-label">Auto-pick correct <span class="lock">🔒</span></div>
+            <div class="pts-stepper">
+              <div class="step-btn" disabled>−</div><div class="step-val">1</div><div class="step-btn" disabled>+</div>
+            </div>
+          </div>
+        </div>
+        <div class="pts-default-note" style="margin-top:4px;">Defaults match how MatchMondo scores already.</div>
+
+        <div class="field-label">Points — Trivia</div>
+        <div class="pts-card">
+          <div class="pts-row">
+            <div class="pts-label">Correct answer</div>
+            <div class="pts-stepper">
+              <div class="step-btn">−</div><div class="step-val">1</div><div class="step-btn">+</div>
+            </div>
+          </div>
+          <div class="pts-row">
+            <div class="pts-label">All-correct daily bonus</div>
+            <div class="pts-stepper">
+              <div class="step-btn">−</div><div class="step-val">5</div><div class="step-btn">+</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-label">Pool starts</div>
+        <div class="date-card">
+          <div class="date-ic">📅</div>
+          <div class="date-meta">
+            <div class="dm-label">Points count from</div>
+            <div class="dm-val">Mon, Jun 30, 2026</div>
+            <div class="dm-note">Invite people now; games before Jun 30 don't count.</div>
+          </div>
+          <div class="chev">›</div>
+        </div>
+
+        <div class="primary-btn">Create Pool</div>
+
+      </div>
+      <div class="home-bar"><div class="home-indicator"></div></div>
+    </div></div>
+  </div>
+
+  <div class="option-wrap">
+    <div class="option-label">
+      <h3>B · Code generated, share it</h3>
+      <p>Pool exists, code is yours, copy/text/AirDrop. Friends join with the code from their own app.</p>
+    </div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">9:41</span></div>
+      <div class="header-banner">
+        <h3>Pool Created</h3>
+        <span class="x-close">×</span>
+      </div>
+      <div class="content">
+
+        <div style="text-align:center;padding:8px 0 14px;">
+          <div style="font-size:56px;">🏆</div>
+          <h4 style="font-size:20px;font-weight:800;margin-top:8px;">Boston Office</h4>
+          <p style="font-size:12.5px;color:#888;margin-top:5px;">Both predictions &amp; trivia · starts Jun 30</p>
+        </div>
+
+        <div class="code-box">
+          <div class="cap">Your pool code</div>
+          <div class="code-val">K7M2QX</div>
+          <div class="code-actions">
+            <div class="code-action"><div class="ci3">📋</div>Copy</div>
+            <div class="code-action"><div class="ci3">💬</div>iMessage</div>
+            <div class="code-action"><div class="ci3">⤴</div>Share</div>
+          </div>
+        </div>
+
+        <div class="note" style="margin-top:14px;">Anyone with this code can join — they enter it from <strong>Fun → Friends → Join with Code</strong>. You can re-share, change the name, or close the pool any time from the pool detail.</div>
+
+        <div class="field-label" style="margin-top:18px;">Who's in so far</div>
+        <div class="zip-card open" style="margin-bottom:0;">
+          <div class="zip-body" style="max-height:600px;"><div class="zip-body-inner" style="border-top:none;padding-top:4px;">
+            <div class="lb-row"><div class="lb-rank">1</div><div class="lb-av" style="background:rgba(58,111,154,0.14);color:#3A6F9A;">CH</div><div class="lb-nm">You · creator</div><div class="lb-pts" style="font-size:11px;color:#999;font-weight:600;">just now</div></div>
+          </div></div>
+        </div>
+
+        <div class="secondary-btn">Go to pool</div>
+
+      </div>
+      <div class="home-bar"><div class="home-indicator"></div></div>
+    </div></div>
+  </div>
+
+  <div class="option-wrap">
+    <div class="option-label">
+      <h3>C · Joining a pool</h3>
+      <p>From the Friends hub, &quot;Join with Code&quot; opens this. Paste / type the 6 chars.</p>
+    </div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">9:41</span></div>
+      <div class="header-banner">
+        <span class="back-chev">‹ Back</span>
+        <h3>Join Pool</h3>
+      </div>
+      <div class="content">
+
+        <div class="join-hero">
+          <div class="big-ic">🎟️</div>
+          <h4>Got a pool code?</h4>
+          <p>Ask whoever started the pool to share the 6-character code, then drop it in below.</p>
+        </div>
+
+        <div class="code-grid">
+          <div class="code-slot">K</div>
+          <div class="code-slot">7</div>
+          <div class="code-slot">M</div>
+          <div class="code-slot">2</div>
+          <div class="code-slot active">Q</div>
+          <div class="code-slot empty">—</div>
+        </div>
+
+        <div class="primary-btn">Join Pool</div>
+
+        <div class="note" style="margin-top:18px;">Your existing picks and trivia answers come with you — joining mid-tournament gives you credit only from <strong>the pool's start date forward</strong>. Earlier games don't count.</div>
+
+        <div class="field-label" style="margin-top:14px;">Recently joined by friends</div>
+        <div class="zip-card open" style="margin-bottom:0;">
+          <div class="zip-body" style="max-height:600px;"><div class="zip-body-inner" style="border-top:none;padding-top:4px;">
+            <div class="lb-row"><div class="lb-rank" style="width:auto;">🆕</div><div class="lb-av">HS</div><div class="lb-nm">Heather joined <span style="color:#999;font-weight:500;">Heather's Crew</span></div></div>
+            <div class="lb-row"><div class="lb-rank" style="width:auto;">🆕</div><div class="lb-av">JM</div><div class="lb-nm">James joined <span style="color:#999;font-weight:500;">Boston Office</span></div></div>
+          </div></div>
+        </div>
+
+      </div>
+      <div class="home-bar"><div class="home-indicator"></div></div>
+    </div></div>
+  </div>
+
+</div>
+
+
+<h2 class="page-h">3 · After kickoff — picks revealed</h2>
+<p class="page-sub">As each game kicks off (and only that game), everyone's picks unlock for it. Auto-picks are tagged so you can see who actually played and who slept through it.</p>
+
+<div class="options">
+
+  <div class="option-wrap">
+    <div class="option-label">
+      <h3>A · One match, kickoff hit</h3>
+      <p>Picks visible, points pending. Auto-picks tagged &quot;Auto&quot;.</p>
+    </div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">9:41</span></div>
+      <div class="header-banner">
+        <span class="back-chev">‹ Back</span>
+        <h3>Boston Office</h3>
+      </div>
+      <div class="content">
+
+        <div class="sub-tabs">
+          <div class="sub-tab sel">Predictions</div>
+          <div class="sub-tab">Trivia</div>
+          <div class="sub-tab">Standings</div>
+        </div>
+
+        <div class="ppred">
+          <div class="ppred-top"><div class="ppred-time live">● LIVE · 67'</div><div class="ppred-state" style="color:#1e7a4d;">Picks unlocked</div></div>
+          <div class="ppred-mid">
+            <div class="ppred-team"><div class="flag" style="background:#009b3a;"></div>BRA <span style="color:#3A6F9A;">2</span></div>
+            <div class="ppred-vs">—</div>
+            <div class="ppred-team away"><span style="color:#999;">0</span> CMR<div class="flag" style="background:#007a5e;"></div></div>
+          </div>
+          <div class="ppred-others">
+            <div class="others-list">
+              <div class="others-row"><div class="av">CH</div><div class="nm" style="color:#3A6F9A;font-weight:800;">You</div><div class="pk">BRA 2–1</div><div class="pts">on track</div></div>
+              <div class="others-row"><div class="av">HS</div><div class="nm">Heather</div><div class="pk">BRA 3–0</div><div class="pts">on track</div></div>
+              <div class="others-row"><div class="av">JM</div><div class="nm">James</div><div class="pk">BRA 1–0</div><span class="auto-tag">Auto</span><div class="pts">on track</div></div>
+              <div class="others-row"><div class="av">BC</div><div class="nm">Becah</div><div class="pk wrong">CMR 2–1</div><div class="pts zero">—</div></div>
+              <div class="others-row"><div class="av">JH</div><div class="nm">Jahan</div><div class="pk">Draw 1–1</div><div class="pts zero">—</div></div>
+              <div class="others-row"><div class="av">PB</div><div class="nm">Phil</div><div class="pk">BRA 2–0</div><div class="pts">on track</div></div>
+              <div style="font-size:11px;color:#999;text-align:center;padding:4px 0 0;">+ 8 more</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ppred">
+          <div class="ppred-top"><div class="ppred-time">Today · FT</div><div class="ppred-state" style="color:#1e7a4d;">Settled</div></div>
+          <div class="ppred-mid">
+            <div class="ppred-team"><div class="flag" style="background:#012169;"></div>FRA <span style="color:#222;">3</span></div>
+            <div class="ppred-vs">—</div>
+            <div class="ppred-team away"><span style="color:#222;">1</span> NGA<div class="flag" style="background:#008753;"></div></div>
+          </div>
+          <div class="ppred-others">
+            <div class="others-list">
+              <div class="others-row"><div class="av">CH</div><div class="nm" style="color:#3A6F9A;font-weight:800;">You</div><div class="pk">FRA 3–1</div><div class="pts">+8 pts</div></div>
+              <div class="others-row"><div class="av">HS</div><div class="nm">Heather</div><div class="pk">FRA 2–1</div><div class="pts">+3 pts</div></div>
+              <div class="others-row"><div class="av">JM</div><div class="nm">James</div><div class="pk">FRA 1–0</div><span class="auto-tag">Auto</span><div class="pts">+1 pt</div></div>
+              <div class="others-row"><div class="av">BC</div><div class="nm">Becah</div><div class="pk wrong">Draw 1–1</div><div class="pts zero">0</div></div>
+            </div>
+          </div>
+          <div class="ppred-final">Final · <span class="fs">3–1</span></div>
+        </div>
+
+        <div class="note">
+          <strong>Auto-pick math, in plain English:</strong> James didn't pick FRA–NGA, so he was auto-picked for the higher-FIFA-ranked team (France) at 1–0. France won 3–1, so the pick was right but the score was off. Normally a "right team, wrong score" pays 3 pts — but because it was an auto-pick, James gets <strong>1 pt</strong>.
+        </div>
+
+      </div>
+      <div class="home-bar"><div class="home-indicator"></div></div>
+    </div></div>
+  </div>
+
+  <div class="option-wrap">
+    <div class="option-label">
+      <h3>B · Pool standings</h3>
+      <p>Per-pool leaderboard — points scored under this pool's rules, with predictions / trivia split.</p>
+    </div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">9:41</span></div>
+      <div class="header-banner">
+        <span class="back-chev">‹ Back</span>
+        <h3>Boston Office</h3>
+      </div>
+      <div class="content">
+
+        <div class="sub-tabs">
+          <div class="sub-tab">Predictions</div>
+          <div class="sub-tab">Trivia</div>
+          <div class="sub-tab sel">Standings</div>
+        </div>
+
+        <div class="pool-hero" style="margin-bottom:16px;">
+          <h4>🏆 Boston Office</h4>
+          <div class="ph-sub">Started Jun 30 · 14 people · Both</div>
+          <div style="display:flex;gap:14px;margin-top:12px;font-size:11px;opacity:0.9;">
+            <div><strong style="font-size:14px;display:block;">3·5·1</strong>Pred. pts</div>
+            <div><strong style="font-size:14px;display:block;">1·5</strong>Triv. pts</div>
+            <div><strong style="font-size:14px;display:block;">Both</strong>Counts</div>
+          </div>
+        </div>
+
+        <div class="lb-row you" style="margin-bottom:6px;border:none;">
+          <div class="lb-rank r1">1</div>
+          <div class="lb-av" style="background:rgba(58,111,154,0.14);color:#3A6F9A;">CH</div>
+          <div class="lb-nm">You</div>
+          <div style="display:flex;gap:8px;align-items:center;font-size:10px;color:#999;font-weight:600;">
+            <span style="color:#3A6F9A;font-weight:800;font-size:13px;">86</span>
+            <span>54p · 32t</span>
+          </div>
+        </div>
+
+        <div class="zip-card open" style="margin-bottom:0;">
+          <div class="zip-body" style="max-height:1400px;"><div class="zip-body-inner" style="border-top:none;padding-top:4px;">
+            <div class="lb-row"><div class="lb-rank r2">2</div><div class="lb-av">HS</div><div class="lb-nm">Heather</div><div class="lb-pts">81</div></div>
+            <div class="lb-row"><div class="lb-rank r3">3</div><div class="lb-av">PB</div><div class="lb-nm">Phil</div><div class="lb-pts">74</div></div>
+            <div class="lb-row"><div class="lb-rank">4</div><div class="lb-av">BC</div><div class="lb-nm">Becah</div><div class="lb-pts">68</div></div>
+            <div class="lb-row"><div class="lb-rank">5</div><div class="lb-av">JM</div><div class="lb-nm">James</div><div class="lb-pts">52</div></div>
+            <div class="lb-row"><div class="lb-rank">6</div><div class="lb-av">JH</div><div class="lb-nm">Jahan</div><div class="lb-pts">49</div></div>
+            <div class="lb-row"><div class="lb-rank">7</div><div class="lb-av">MK</div><div class="lb-nm">Mike</div><div class="lb-pts">44</div></div>
+            <div class="lb-row"><div class="lb-rank">8</div><div class="lb-av">TC</div><div class="lb-nm">Tracy</div><div class="lb-pts">41</div></div>
+            <div class="lb-row"><div class="lb-rank">9</div><div class="lb-av">NL</div><div class="lb-nm">Nora L.</div><div class="lb-pts">38</div></div>
+            <div class="lb-row"><div class="lb-rank">10</div><div class="lb-av">DR</div><div class="lb-nm">Drew</div><div class="lb-pts">35</div></div>
+            <div style="font-size:11px;color:#999;text-align:center;padding:6px 0 0;">+ 4 more</div>
+          </div></div>
+        </div>
+
+        <div class="note" style="margin-top:14px;">A user's picks &amp; trivia answers are the <strong>same across every pool they're in</strong> — but each pool scores them with its own point values, so the same answer can be worth different totals in different pools.</div>
+
+      </div>
+      <div class="home-bar"><div class="home-indicator"></div></div>
+    </div></div>
+  </div>
+
+</div>
+
+
+<div class="recommend">
+  <h4>Open questions for you</h4>
+  <p><strong>1. Pool size / cap?</strong> No cap implied — 100-person pools should "just work." Likely fine since picks and totals are cheap to compute. Confirm.</p>
+  <p><strong>2. Pool start date for a pool that's already in flight</strong> (e.g. someone creates one on Jun 30 mid-group-stage) — current mock says points count from the chosen start date. If you want pools to be able to "include the whole tournament so far," that's a different toggle. Let me know.</p>
+  <p><strong>3. Picks are global, not per-pool.</strong> Simpler implementation, less work for users (no picking the same match 3×) — but it means you can't strategically pick "BRA 5–0" in your office pool and "BRA 1–0" in your sibling pool. I think that's fine; flagging it because it's a load-bearing call.</p>
+  <p><strong>4. "Both" pools split the leaderboard total</strong> or just sum predictions+trivia? Right now I'm summing (54p + 32t = 86). Could also tab them.</p>
+  <p><strong>5. Auto-pick fallback uses FIFA ranking</strong> — what about knockouts where one team has already advanced from a less obvious path? FIFA rank still works but might pick the "wrong" favorite occasionally. Acceptable, I think.</p>
+</div>
+
+</body>
+</html>
