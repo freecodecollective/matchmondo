@@ -9005,8 +9005,7 @@
           "explanation": "迭戈·马拉多纳在1986年率领阿根廷登顶，在四分之一决赛对阵英格兰时打入了足球史上最著名的两粒进球——充满争议的「上帝之手」，以及连过五名后卫、奔袭60米的梦幻单刀，被称为「世纪进球」。他荣膺本届赛事最佳球员金球奖。"
         }
       },
-      "i18nSourceHash": "695d879eb47454dc",
-      "video": "https://www.youtube.com/watch?v=-ccNkksrfls"
+      "i18nSourceHash": "695d879eb47454dc"
     },
     {
       "id": "img-beckenbauer",
@@ -9734,7 +9733,6 @@
     {
       "id": "tf-penalty-final-1994",
       "category": "history",
-      "type": "true_false",
       "question": "The 1994 final was the first in tournament history to be decided by a penalty shootout.",
       "options": [
         "True",
@@ -9742,12 +9740,12 @@
       ],
       "answer": 0,
       "explanation": "True! The 1994 final between Brazil and Italy ended 0-0 after extra time, making it the first final decided by penalties. Roberto Baggio's infamous miss sealed Brazil's fourth title. It remains one of the most dramatic moments in football history.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-cruyff-never-won",
       "category": "players",
-      "type": "true_false",
       "question": "Johan Cruyff, one of the greatest players ever, never won the tournament.",
       "options": [
         "True",
@@ -9755,12 +9753,12 @@
       ],
       "answer": 0,
       "explanation": "True! Despite being widely regarded as one of football's greatest ever players, Cruyff's Netherlands lost the 1974 final 2-1 to West Germany. He controversially chose not to travel to the 1978 tournament in Argentina, reportedly due to a kidnapping attempt on his family the previous year.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-yellow-card-final",
       "category": "rules",
-      "type": "true_false",
       "question": "Yellow cards accumulated during the tournament carry over into the final.",
       "options": [
         "True",
@@ -9768,12 +9766,12 @@
       ],
       "answer": 1,
       "explanation": "False! Yellow card accumulations are traditionally wiped after the quarter-final stage, ensuring no player misses the semi-final or final due to bookings from earlier rounds. Only a direct red card would cause a suspension in the latter stages.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-england-penalty-curse",
       "category": "teams",
-      "type": "true_false",
       "question": "England lost seven consecutive penalty shootouts at major tournaments between 1990 and 2012.",
       "options": [
         "True",
@@ -9781,12 +9779,12 @@
       ],
       "answer": 0,
       "explanation": "True! England's penalty shootout record was notoriously dreadful, losing seven in a row across the tournament and European Championship between 1990 and 2012. The curse was finally broken when they beat Colombia on penalties at the 2018 edition in Russia.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-telstar-ball-tv",
       "category": "culture",
-      "type": "true_false",
       "question": "The classic black-and-white football design was created specifically for television broadcasts.",
       "options": [
         "True",
@@ -9794,12 +9792,12 @@
       ],
       "answer": 0,
       "explanation": "True! The iconic Telstar ball, introduced at the 1970 tournament, featured black pentagons on a white background specifically to make the ball more visible on black-and-white television screens. The design became so iconic that it remains the universal symbol for football, even though modern match balls use completely different patterns.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-offside-own-half",
       "category": "rules",
-      "type": "true_false",
       "question": "A player cannot be offside if they are in their own half of the pitch.",
       "options": [
         "True",
@@ -9807,12 +9805,12 @@
       ],
       "answer": 0,
       "explanation": "True! The offside rule only applies in the opponent's half. A player standing in their own half can never be offside, regardless of where the defenders are positioned. This is why teams sometimes push their defensive line very high up the pitch — any opponent behind the ball in their own half is always onside.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-goalkeeper-line-penalty",
       "category": "rules",
-      "type": "true_false",
       "question": "In a penalty shootout, the goalkeeper must stay on the goal line until the ball is kicked.",
       "options": [
         "True",
@@ -9820,12 +9818,12 @@
       ],
       "answer": 0,
       "explanation": "True! The goalkeeper must have at least one foot touching or in line with the goal line when the penalty is taken. This rule, strictly enforced since 2020 with the help of VAR, has led to several penalties being retaken when goalkeepers moved too early.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-1966-only-european-host-win",
       "category": "history",
-      "type": "true_false",
       "question": "The 1966 edition in England is the only time a host nation has won the tournament at home in Europe.",
       "options": [
         "True",
@@ -9833,12 +9831,12 @@
       ],
       "answer": 1,
       "explanation": "False! Italy also won on home soil in 1934, and France won at home in 1998. England 1966 was one of three occasions a European host nation won the tournament at home.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-substitute-rule-1970",
       "category": "rules",
-      "type": "true_false",
       "question": "Substitutions were first allowed at the tournament in 1970.",
       "options": [
         "True",
@@ -9846,12 +9844,12 @@
       ],
       "answer": 0,
       "explanation": "True! Before 1970, teams could not make substitutions — injured players either continued or their team played short-handed. The 1970 tournament in Mexico was the first to allow two substitutes per team. The allowance increased to three in 1998, and to five from 2022 onward.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-own-goal-credited",
       "category": "rules",
-      "type": "true_false",
       "question": "If a player scores an own goal, it is officially credited to them in the statistics.",
       "options": [
         "True",
@@ -9859,12 +9857,12 @@
       ],
       "answer": 0,
       "explanation": "True! Own goals are recorded against the player who last touched the ball before it entered their own net. They do not count toward any attacking player's goal tally. The own goal count has risen sharply in recent tournaments due to faster play and higher pressing.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-red-card-shootout",
       "category": "rules",
-      "type": "true_false",
       "question": "A player who receives a red card during a match can still take a penalty in the ensuing shootout.",
       "options": [
         "True",
@@ -9872,12 +9870,12 @@
       ],
       "answer": 1,
       "explanation": "False! A player who has been sent off cannot participate in the penalty shootout. Their team must take their penalties with fewer eligible players. If a team has had two players sent off, they start the shootout with only nine eligible kickers compared to their opponent's eleven.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-13-goals-fontaine",
       "category": "records",
-      "type": "true_false",
       "question": "Just Fontaine scored his record 13 goals at the 1958 tournament despite not being France's first-choice striker.",
       "options": [
         "True",
@@ -9885,12 +9883,12 @@
       ],
       "answer": 0,
       "explanation": "True! Fontaine was originally a reserve, but injuries to other players gave him his chance. He seized it spectacularly, scoring 13 goals in just 6 matches — a record that has stood for over 65 years and may never be broken. He scored in every match France played.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-finals-extra-time-before-94",
       "category": "history",
-      "type": "true_false",
       "question": "Before 1994, the tournament final had never needed extra time to decide the winner.",
       "options": [
         "True",
@@ -9898,12 +9896,12 @@
       ],
       "answer": 1,
       "explanation": "False! Several finals before 1994 went to extra time, including 1934 (Italy 2-1 Czechoslovakia), 1966 (England 4-2 West Germany), and 1978 (Argentina 3-1 Netherlands). What made 1994 unique was that it was the first final to go to a penalty shootout after extra time.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-var-four-situations",
       "category": "rules",
-      "type": "true_false",
       "question": "VAR can only review four types of match-changing situations: goals, penalties, red cards, and mistaken identity.",
       "options": [
         "True",
@@ -9911,12 +9909,12 @@
       ],
       "answer": 0,
       "explanation": "True! VAR is limited to reviewing only these four categories of 'clear and obvious errors' or 'serious missed incidents.' The referee can consult the pitch-side monitor for a final decision, but VAR cannot intervene for yellow cards, throw-in decisions, corner kicks, or other routine calls.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-trophy-not-solid-gold",
       "category": "culture",
-      "type": "true_false",
       "question": "The current tournament trophy is solid gold all the way through.",
       "options": [
         "True",
@@ -9924,12 +9922,12 @@
       ],
       "answer": 1,
       "explanation": "False! While the trophy is made of 18-carat gold, it is not solid throughout. It has a base of malachite (a green semi-precious stone), and the gold forms the main body above the base. Despite this, the trophy weighs over 6 kilograms and its cultural value is, of course, priceless.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-first-goal-lucien-laurent",
       "category": "history",
-      "type": "true_false",
       "question": "The first-ever tournament goal was scored by a French player.",
       "options": [
         "True",
@@ -9937,12 +9935,12 @@
       ],
       "answer": 0,
       "explanation": "True! France's Lucien Laurent scored the first goal in tournament history on July 13, 1930, against Mexico. He volleyed in from a cross in the 19th minute. Laurent later said: 'Everyone was pleased but we didn't realize we'd made history. It was just a goal.'",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-ball-must-be-spherical",
       "category": "rules",
-      "type": "true_false",
       "question": "According to the Laws of the Game, a football must be spherical.",
       "options": [
         "True",
@@ -9950,12 +9948,12 @@
       ],
       "answer": 0,
       "explanation": "True! Law 2 explicitly states the ball 'must be spherical.' It must also have a circumference between 68-70 cm, weigh between 410-450 grams at the start of the match, and be inflated to a pressure between 0.6-1.1 atmospheres. Each tournament ball undergoes extensive testing to meet these specifications.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-coach-red-card",
       "category": "rules",
-      "type": "true_false",
       "question": "A head coach can receive a red card and be sent to the stands during a match.",
       "options": [
         "True",
@@ -9963,12 +9961,12 @@
       ],
       "answer": 0,
       "explanation": "True! Since 2019, coaches and other team officials can receive yellow and red cards, just like players. If sent off, the coach must leave the technical area (usually going to the stands) and cannot communicate with the team for the rest of the match. An assistant typically takes over tactical duties.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-semi-auto-offside-2022",
       "category": "rules",
-      "type": "true_false",
       "question": "The 2022 tournament introduced semi-automated offside technology using limb-tracking cameras.",
       "options": [
         "True",
@@ -9976,12 +9974,12 @@
       ],
       "answer": 0,
       "explanation": "True! The 2022 edition debuted semi-automated offside technology (SAOT), using 12 dedicated tracking cameras under the stadium roof to track 29 data points on each player's body 50 times per second. Combined with a sensor inside the ball, it generates automated offside alerts within seconds and produces 3D animations shown on stadium screens.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-brazil-1950-jersey-change",
       "category": "culture",
-      "type": "true_false",
       "question": "Brazil changed their jersey colors after the traumatic 1950 final loss at home.",
       "options": [
         "True",
@@ -9989,12 +9987,12 @@
       ],
       "answer": 0,
       "explanation": "True! Before 1950, Brazil played in white shirts. After the devastating 'Maracanazo' loss to Uruguay, a national newspaper competition was held to design new colors that would represent the Brazilian flag. The result was the iconic yellow shirt with green trim — the 'Canarinha' (Little Canary) — which has been Brazil's identity ever since.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-no-host-group-exit",
       "category": "history",
-      "type": "true_false",
       "question": "No host nation has ever been eliminated in the group stage of the tournament.",
       "options": [
         "True",
@@ -10002,12 +10000,12 @@
       ],
       "answer": 1,
       "explanation": "False! South Africa became the first host nation eliminated in the group stage in 2010, and Qatar followed in 2022. While host nations have historically benefited from home support and automatic qualification, being on home soil is no guarantee of advancing.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-golden-goal-rule",
       "category": "rules",
-      "type": "true_false",
       "question": "The 'golden goal' rule — where the first goal scored in extra time immediately wins the match — was used at the tournament from 1998 to 2002.",
       "options": [
         "True",
@@ -10015,12 +10013,12 @@
       ],
       "answer": 0,
       "explanation": "True! The golden goal was used at the 1998 and 2002 editions. France's Laurent Blanc scored a golden goal against Paraguay in 1998, and several matches in 2002 were decided this way. The rule was scrapped before the 2006 edition in favor of playing out full 30-minute extra time periods.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-brazil-all-editions",
       "category": "teams",
-      "type": "true_false",
       "question": "Brazil is the only country to have qualified for every edition of the tournament.",
       "options": [
         "True",
@@ -10028,12 +10026,12 @@
       ],
       "answer": 0,
       "explanation": "True! Brazil has appeared at every single edition since the inaugural 1930 tournament — a streak of over 20 consecutive appearances. No other nation comes close. Germany has missed one (1930), Argentina has missed four, and Italy failed to qualify in 2018 and 2022.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-three-points-win-1994",
       "category": "rules",
-      "type": "true_false",
       "question": "The three-points-for-a-win system was introduced at the 1994 tournament.",
       "options": [
         "True",
@@ -10041,12 +10039,12 @@
       ],
       "answer": 0,
       "explanation": "True! Before 1994, a win was worth only two points. The switch to three points for a win was designed to encourage more attacking football by making victories more rewarding than draws. The change has been credited with reducing the number of dull, risk-averse group stage matches.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "tf-penalty-retake-var",
       "category": "rules",
-      "type": "true_false",
       "question": "VAR can order a penalty to be retaken if the goalkeeper moves off the goal line too early.",
       "options": [
         "True",
@@ -10054,12 +10052,12 @@
       ],
       "answer": 0,
       "explanation": "True! Since the introduction of VAR, goalkeepers are monitored more strictly during penalties. If VAR detects the goalkeeper moved off the line before the kick and the penalty was saved or missed, the penalty can be retaken. This led to several retakes at recent tournaments, much to the frustration of goalkeepers.",
+      "type": "true_false",
       "needsReview": true
     },
     {
       "id": "img-henry",
       "category": "players",
-      "type": "image",
       "question": "Who is this French striker who won the tournament in 1998 and scored at three consecutive editions?",
       "options": [
         "Thierry Henry",
@@ -10069,13 +10067,13 @@
       ],
       "answer": 0,
       "explanation": "Thierry Henry won the 1998 tournament as a young winger before becoming one of the most lethal strikers in football. He scored at the 1998, 2002, and 2006 editions, and is France's second-highest tournament scorer behind Kylian Mbappé. He was also infamously involved in the 'Hand of Henry' handball against Ireland in 2010 qualifying.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Thierry_Henry_%2851649035951%29_%28cropped%29.jpg/500px-Thierry_Henry_%2851649035951%29_%28cropped%29.jpg",
       "needsReview": true
     },
     {
       "id": "img-iniesta",
       "category": "players",
-      "type": "image",
       "question": "Who is this Spanish midfielder who scored the winning goal in the 2010 final?",
       "options": [
         "Andrés Iniesta",
@@ -10085,13 +10083,13 @@
       ],
       "answer": 0,
       "explanation": "Andrés Iniesta scored the only goal of the 2010 final in the 116th minute against the Netherlands, securing Spain's first ever title. Known for his elegance, vision, and ability to glide past defenders, he was voted the tournament's second-best player behind Diego Forlán.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bar%C3%A7a_-_Napoli_-_20140806_-_Andres_Iniesta.jpg/500px-Bar%C3%A7a_-_Napoli_-_20140806_-_Andres_Iniesta.jpg",
       "needsReview": true
     },
     {
       "id": "img-xavi",
       "category": "players",
-      "type": "image",
       "question": "Who is this Spanish playmaker, the architect of Spain's 2010 tiki-taka triumph?",
       "options": [
         "Xavi Hernández",
@@ -10101,13 +10099,13 @@
       ],
       "answer": 0,
       "explanation": "Xavi Hernández was the metronome of Spain's tiki-taka passing game at the 2010 tournament. His vision and passing accuracy were unmatched — he completed more passes than any other player at the tournament. He appeared at three editions (2002, 2006, 2010) and later became head coach of FC Barcelona.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Xavi_Hern%C3%A1ndez_-_002_%28cropped%29.jpg/500px-Xavi_Hern%C3%A1ndez_-_002_%28cropped%29.jpg",
       "needsReview": true
     },
     {
       "id": "img-roberto-carlos",
       "category": "players",
-      "type": "image",
       "question": "Who is this Brazilian left-back famous for his powerful free kicks and thunderous left foot?",
       "options": [
         "Roberto Carlos",
@@ -10117,13 +10115,13 @@
       ],
       "answer": 0,
       "explanation": "Roberto Carlos was part of Brazil's 2002 winning squad and appeared at three editions (1998, 2002, 2006). His swerving free kick against France in the 1997 Tournoi de France defied physics and became one of the most legendary strikes in football history. His thunderous left foot was among the most feared weapons in the game.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/25th_Laureus_World_Sports_Awards_-_Red_Carpet_-_Roberto_Carlos_-_240422_192822.jpg/500px-25th_Laureus_World_Sports_Awards_-_Red_Carpet_-_Roberto_Carlos_-_240422_192822.jpg",
       "needsReview": true
     },
     {
       "id": "img-cannavaro",
       "category": "players",
-      "type": "image",
       "question": "Who is this Italian defender who captained his country to the 2006 title and won the Ballon d'Or?",
       "options": [
         "Fabio Cannavaro",
@@ -10133,13 +10131,13 @@
       ],
       "answer": 0,
       "explanation": "Fabio Cannavaro captained Italy to victory at the 2006 tournament in Germany, putting in a series of commanding defensive performances. His displays earned him the Ballon d'Or in 2006 — only the third defender ever to win it, after Beckenbauer and Matthias Sammer.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Fabio_Cannavaro_in_Tehran%27s_IKA_Airport_%28cropped%29.jpg/500px-Fabio_Cannavaro_in_Tehran%27s_IKA_Airport_%28cropped%29.jpg",
       "needsReview": true
     },
     {
       "id": "img-maldini",
       "category": "players",
-      "type": "image",
       "question": "Who is this legendary Italian defender who appeared at four consecutive editions from 1990 to 2002?",
       "options": [
         "Paolo Maldini",
@@ -10149,13 +10147,13 @@
       ],
       "answer": 0,
       "explanation": "Paolo Maldini appeared at four tournaments (1990, 1994, 1998, 2002) and is widely considered one of the greatest defenders in football history. Despite his brilliance, he never won the tournament — Italy lost the 1994 final to Brazil on penalties. He earned 126 caps for Italy over 14 years.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Paolo_Maldini_press_conference_in_Tehran_%28cropped%29.jpg/500px-Paolo_Maldini_press_conference_in_Tehran_%28cropped%29.jpg",
       "needsReview": true
     },
     {
       "id": "img-weah",
       "category": "players",
-      "type": "image",
       "question": "Who is this football icon, the only African-born player to win the Ballon d'Or, who later became a head of state?",
       "options": [
         "George Weah",
@@ -10165,13 +10163,13 @@
       ],
       "answer": 0,
       "explanation": "George Weah won the Ballon d'Or in 1995, the only African-born player ever to receive the honor. Though Liberia never qualified for the tournament, Weah was instrumental in qualifying campaigns and is revered across African football. After retiring, he was elected President of Liberia in 2018 — the only Ballon d'Or winner to become a head of state.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/George_Weah_in_2019_%28cropped%29.jpg/500px-George_Weah_in_2019_%28cropped%29.jpg",
       "needsReview": true
     },
     {
       "id": "img-etoo",
       "category": "players",
-      "type": "image",
       "question": "Who is this Cameroonian striker who scored at three editions and is one of Africa's greatest ever players?",
       "options": [
         "Samuel Eto'o",
@@ -10181,13 +10179,13 @@
       ],
       "answer": 0,
       "explanation": "Samuel Eto'o is Cameroon's all-time leading scorer and one of Africa's greatest ever players. He appeared at four editions (1998, 2002, 2010, 2014), scoring at three of them. He was just 17 during his first tournament in 1998, making him one of the youngest players at that edition.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Samuel_Eto%27o_-_001.jpg/500px-Samuel_Eto%27o_-_001.jpg",
       "needsReview": true
     },
     {
       "id": "img-donovan",
       "category": "players",
-      "type": "image",
       "question": "Who is this American forward, the top scorer in the history of US men's international football?",
       "options": [
         "Landon Donovan",
@@ -10197,13 +10195,13 @@
       ],
       "answer": 0,
       "explanation": "Landon Donovan appeared at three editions (2002, 2006, 2010) and is the all-time leading scorer for the US men's national team with 57 goals. His stoppage-time winner against Algeria in 2010 — sending the US through to the Round of 16 — is one of the most iconic goals in American football history.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Landon_Donovan_vs_Algeria.jpg/500px-Landon_Donovan_vs_Algeria.jpg",
       "needsReview": true
     },
     {
       "id": "img-tim-howard",
       "category": "players",
-      "type": "image",
       "question": "Who is this American goalkeeper who set a record 16 saves in a single match at the 2014 tournament?",
       "options": [
         "Tim Howard",
@@ -10213,13 +10211,13 @@
       ],
       "answer": 0,
       "explanation": "Tim Howard made an astonishing 16 saves against Belgium in the 2014 Round of 16, the most saves by any goalkeeper in a single tournament match since records began. Despite his heroics, the US lost 2-1 in extra time. His performance was so extraordinary that the US Secretary of Defense jokingly offered him a job.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Tim_Howard_posing_150903-D-FW736-010.JPG/500px-Tim_Howard_posing_150903-D-FW736-010.JPG",
       "needsReview": true
     },
     {
       "id": "img-son",
       "category": "players",
-      "type": "image",
       "question": "Who is this South Korean forward who is the most prolific Asian scorer in Premier League history?",
       "options": [
         "Son Heung-min",
@@ -10229,13 +10227,13 @@
       ],
       "answer": 0,
       "explanation": "Son Heung-min represented South Korea at the 2014, 2018, and 2022 editions. At the 2022 tournament, he played with a mask protecting a fractured eye socket. He's the highest-scoring Asian player in Premier League history, having surpassed 100 goals for Tottenham Hotspur.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/BFA_2023_-2_Heung-Min_Son_%28cropped%29.jpg/500px-BFA_2023_-2_Heung-Min_Son_%28cropped%29.jpg",
       "needsReview": true
     },
     {
       "id": "img-mane",
       "category": "players",
-      "type": "image",
       "question": "Who is this Senegalese forward who won the 2021 Africa Cup of Nations and starred in the Premier League?",
       "options": [
         "Sadio Mané",
@@ -10245,13 +10243,13 @@
       ],
       "answer": 0,
       "explanation": "Sadio Mané was instrumental in winning the 2021 Africa Cup of Nations for Senegal and is one of Africa's greatest modern players. A knee injury ruled him out of the 2022 tournament, but his legacy was already secured through his stellar performances at Liverpool, where he won the Premier League, Champions League, and multiple individual awards.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Sadio_Man%C3%A9_-_Persepolis_F.C._v_Al_Nassr_FC%2C_19_September_2023.jpg/500px-Sadio_Man%C3%A9_-_Persepolis_F.C._v_Al_Nassr_FC%2C_19_September_2023.jpg",
       "needsReview": true
     },
     {
       "id": "img-salah",
       "category": "players",
-      "type": "image",
       "question": "Who is this Egyptian forward, one of the most prolific scorers in Premier League history?",
       "options": [
         "Mohamed Salah",
@@ -10261,13 +10259,13 @@
       ],
       "answer": 0,
       "explanation": "Mohamed Salah led Egypt to the 2018 tournament, their first in 28 years. Despite carrying a shoulder injury from the Champions League final, he scored twice — including a penalty against Russia. He is Egypt's all-time leading scorer and one of the most decorated African footballers in Premier League history.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mohamed_Salah_2018.jpg/500px-Mohamed_Salah_2018.jpg",
       "needsReview": true
     },
     {
       "id": "img-suker",
       "category": "players",
-      "type": "image",
       "question": "Who is this Croatian striker who won the Golden Boot at the 1998 tournament with 6 goals?",
       "options": [
         "Davor Šuker",
@@ -10277,13 +10275,13 @@
       ],
       "answer": 0,
       "explanation": "Davor Šuker was the star of Croatia's sensational third-place finish at the 1998 tournament, their first ever appearance. His 6 goals included a brilliant chip over Danish goalkeeper Peter Schmeichel. He later became president of the Croatian Football Federation.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Football_against_poverty_2014_-_Davor_%C5%A0uker_%28cropped%29.jpg/500px-Football_against_poverty_2014_-_Davor_%C5%A0uker_%28cropped%29.jpg",
       "needsReview": true
     },
     {
       "id": "img-stoichkov",
       "category": "players",
-      "type": "image",
       "question": "Who is this Bulgarian striker who led his country to a remarkable fourth-place finish in 1994?",
       "options": [
         "Hristo Stoichkov",
@@ -10293,13 +10291,13 @@
       ],
       "answer": 0,
       "explanation": "Hristo Stoichkov scored 6 goals at the 1994 tournament, sharing the Golden Boot with Russia's Oleg Salenko. His left-footed free kicks were devastating. Earlier that year, he had won the Ballon d'Or while playing for Barcelona. Bulgaria's semi-final run remains one of the great underdog stories.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Hristo_stoichkov-2010.jpg/500px-Hristo_stoichkov-2010.jpg",
       "needsReview": true
     },
     {
       "id": "img-roger-milla",
       "category": "players",
-      "type": "image",
       "question": "Who is this Cameroonian legend who became the oldest scorer in tournament history at age 42?",
       "options": [
         "Roger Milla",
@@ -10309,13 +10307,13 @@
       ],
       "answer": 0,
       "explanation": "Roger Milla became a global icon at the 1990 tournament, dancing by the corner flag after each goal. He returned in 1994 at age 42 to become the oldest scorer in tournament history. His joyful celebrations introduced the world to African football's flair and helped Cameroon become the first African team to reach the quarter-finals.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Milla2008cropped.jpg/500px-Milla2008cropped.jpg",
       "needsReview": true
     },
     {
       "id": "img-casillas",
       "category": "players",
-      "type": "image",
       "question": "Who is this Spanish goalkeeper who captained his country to victory in 2010?",
       "options": [
         "Iker Casillas",
@@ -10325,13 +10323,13 @@
       ],
       "answer": 0,
       "explanation": "Iker Casillas captained Spain to their first ever title in 2010, making a crucial save against Arjen Robben in the final. He appeared at four editions (2002, 2006, 2010, 2014) and was named the tournament's best goalkeeper in 2010. Known as 'San Iker' (Saint Iker), he earned 167 caps for Spain.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Iker_Casillas_Euro_2012_final_01.jpg/500px-Iker_Casillas_Euro_2012_final_01.jpg",
       "needsReview": true
     },
     {
       "id": "img-neuer",
       "category": "players",
-      "type": "image",
       "question": "Who is this German goalkeeper known for his revolutionary sweeper-keeper style?",
       "options": [
         "Manuel Neuer",
@@ -10341,13 +10339,13 @@
       ],
       "answer": 0,
       "explanation": "Manuel Neuer redefined goalkeeping at the 2014 tournament with his aggressive sweeper-keeper style, frequently rushing far from his goal to intercept through balls. He won the Golden Glove as the best goalkeeper and was instrumental in Germany's fourth title. His playing style has influenced an entire generation of goalkeepers.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Manuel_Neuer%2C_Germany_national_football_team_%2804%29.jpg/500px-Manuel_Neuer%2C_Germany_national_football_team_%2804%29.jpg",
       "needsReview": true
     },
     {
       "id": "img-bergkamp",
       "category": "players",
-      "type": "image",
       "question": "Who is this Dutch forward whose goal against Argentina in 1998 is considered one of the greatest ever?",
       "options": [
         "Dennis Bergkamp",
@@ -10357,13 +10355,13 @@
       ],
       "answer": 0,
       "explanation": "Dennis Bergkamp's last-minute winner against Argentina in the 1998 quarter-final — a sublime first touch, flick, and finish — is one of the most replayed goals in football history. Known as 'The Iceman' for his cool composure, he appeared at three editions (1994, 1998, 2006). His fear of flying meant he often missed away matches for his clubs.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Dennis_Bergkamp_2014_%28cropped%29.jpg/500px-Dennis_Bergkamp_2014_%28cropped%29.jpg",
       "needsReview": true
     },
     {
       "id": "img-hagi",
       "category": "players",
-      "type": "image",
       "question": "Who is this Romanian playmaker, nicknamed 'The Maradona of the Carpathians'?",
       "options": [
         "Gheorghe Hagi",
@@ -10373,13 +10371,13 @@
       ],
       "answer": 0,
       "explanation": "Gheorghe Hagi appeared at three editions (1990, 1994, 1998) and is Romania's greatest ever player. His stunning long-range goal against Colombia at the 1994 tournament showcased his extraordinary left foot. He helped Romania reach the quarter-finals in 1994, their best-ever result.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Gheorghe_Hagi_1.jpg/500px-Gheorghe_Hagi_1.jpg",
       "needsReview": true
     },
     {
       "id": "img-rivaldo",
       "category": "players",
-      "type": "image",
       "question": "Who is this Brazilian forward who won the tournament in 2002 alongside Ronaldo and Ronaldinho?",
       "options": [
         "Rivaldo",
@@ -10389,13 +10387,13 @@
       ],
       "answer": 0,
       "explanation": "Rivaldo was one-third of Brazil's famous 'Three Rs' attack (with Ronaldo and Ronaldinho) that won the 2002 tournament. He scored 5 goals at the 2002 edition, including a stunning overhead kick against Belgium. He had previously won the Ballon d'Or in 1999.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Rivaldo_bunyodkor_2010.jpg/500px-Rivaldo_bunyodkor_2010.jpg",
       "needsReview": true
     },
     {
       "id": "img-raul",
       "category": "players",
-      "type": "image",
       "question": "Who is this Spanish striker who scored at both the 2002 and 2006 editions?",
       "options": [
         "Raúl González",
@@ -10405,13 +10403,13 @@
       ],
       "answer": 0,
       "explanation": "Raúl appeared at the 2002 and 2006 editions but missed the 2010 triumph, having been controversially omitted from the squad by coach Vicente del Bosque. He is Real Madrid's second all-time leading scorer and earned 102 caps for Spain with 44 goals.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Ra%C3%BAl_Gonz%C3%A1lez_in_Real_Madrid_2009.jpg/500px-Ra%C3%BAl_Gonz%C3%A1lez_in_Real_Madrid_2009.jpg",
       "needsReview": true
     },
     {
       "id": "img-owen",
       "category": "players",
-      "type": "image",
       "question": "Who is this English forward who burst onto the scene as an 18-year-old at the 1998 tournament?",
       "options": [
         "Michael Owen",
@@ -10421,13 +10419,13 @@
       ],
       "answer": 0,
       "explanation": "Michael Owen announced himself to the world with a stunning solo goal against Argentina at the 1998 tournament, aged just 18. He received the ball in his own half, sprinted past two defenders, and rifled it into the net. He went on to win the Ballon d'Or in 2001 and appeared at the 2002 and 2006 editions as well.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Michael_Owen_%28Portrait%29.jpg/500px-Michael_Owen_%28Portrait%29.jpg",
       "needsReview": true
     },
     {
       "id": "img-beckham",
       "category": "players",
-      "type": "image",
       "question": "Who is this English midfielder known for his pinpoint crossing and free kicks?",
       "options": [
         "David Beckham",
@@ -10437,13 +10435,13 @@
       ],
       "answer": 0,
       "explanation": "David Beckham appeared at three editions (1998, 2002, 2006). His 1998 tournament was infamous for his red card against Argentina, which made him a national villain. He redeemed himself in 2002 by scoring the winning penalty against Argentina in the group stage. His crossing ability and free-kick technique were among the best ever.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/David_Beckham_2009.jpg/500px-David_Beckham_2009.jpg",
       "needsReview": true
     },
     {
       "id": "img-zlatan",
       "category": "players",
-      "type": "image",
       "question": "Who is this Swedish striker known for his acrobatic goals and larger-than-life personality?",
       "options": [
         "Zlatan Ibrahimović",
@@ -10453,6 +10451,7 @@
       ],
       "answer": 0,
       "explanation": "Zlatan Ibrahimović appeared at the 2002 and 2006 editions with Sweden. Famous for his bicycle kicks and audacious skill, he scored 62 goals in 122 appearances for Sweden. Known for speaking about himself in the third person, he once said 'I didn't injure myself. I am Zlatan.' His playing career spanned top clubs across Italy, Spain, France, and England.",
+      "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Zlatan_Ibrahimovic_%28cropped%29.jpg",
       "needsReview": true
     }
