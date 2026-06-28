@@ -10056,7 +10056,7 @@
       "answer": 0,
       "explanation": "True! Since the introduction of VAR, goalkeepers are monitored more strictly during penalties. If VAR detects the goalkeeper moved off the line before the kick and the penalty was saved or missed, the penalty can be retaken. This led to several retakes at recent tournaments, much to the frustration of goalkeepers.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "img-henry",
