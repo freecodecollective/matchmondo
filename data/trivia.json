@@ -10004,7 +10004,7 @@
       "answer": 1,
       "explanation": "False! South Africa became the first host nation eliminated in the group stage in 2010, and Qatar followed in 2022. While host nations have historically benefited from home support and automatic qualification, being on home soil is no guarantee of advancing.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-golden-goal-rule",
