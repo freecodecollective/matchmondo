@@ -243,21 +243,95 @@ def predict_points(did):
     return {"points": pts, "exact": ex, "results": rc, "graded": graded}
 
 
+def predict_points_pool(did, start_iso, pred_exact=3, pred_result=1):
+    """Like predict_points but only counts matches with kickoff >= start_iso
+    and uses custom point values."""
+    res = results()
+    st, pl = fs("GET", f"/picks/{did}/matches", params={"pageSize": "300"})
+    picks = pl.get("documents", []) if st == 200 else []
+    all_matches = _all_matches()
+    pts = ex = rc = graded = 0
+    for pdoc in picks:
+        mn = pdoc["name"].split("/")[-1]
+        if mn not in res:
+            continue
+        m = all_matches.get(int(mn)) if mn.isdigit() else None
+        if m and start_iso and m.get("utc", "") < start_iso:
+            continue
+        sp, se, sr = score_pick(parse(pdoc), res[mn])
+        if se:
+            pts += pred_exact
+        elif sr:
+            pts += pred_result
+        ex += se
+        rc += sr
+        graded += 1
+    return {"points": pts, "exact": ex, "results": rc, "graded": graded}
+
+
+_matches_cache = {}
+
+
+def _all_matches():
+    """Cached dict of match n → match object from matches.json."""
+    now = time.time()
+    if "data" in _matches_cache and _matches_cache.get("ts", 0) > now - 60:
+        return _matches_cache["data"]
+    try:
+        with urllib.request.urlopen(RESULTS_URL, timeout=15) as r:
+            arr = json.loads(r.read())
+        m = {int(x["n"]): x for x in arr if "n" in x}
+        _matches_cache["data"] = m
+        _matches_cache["ts"] = now
+        return m
+    except Exception:
+        return _matches_cache.get("data", {})
+
+
 def leaderboard(code):
-    st, _grp = fs("GET", f"/groups/{code}")
+    st, grp_doc = fs("GET", f"/groups/{code}")
     if st != 200:
         return None
+    grp = parse(grp_doc)
+    pool_type = grp.get("type", "both")
+    pred_exact = int(grp.get("predExact", 3))
+    pred_result = int(grp.get("predResult", 1))
+    trivia_pts = int(grp.get("triviaCorrect", 1))
+    pool_start = grp.get("startDate")
+
     st, ml = fs("GET", f"/groups/{code}/members", params={"pageSize": "300"})
     members = ml.get("documents", []) if st == 200 else []
     rows = []
     for mdoc in members:
         did = mdoc["name"].split("/")[-1]
         info = parse(mdoc)
-        pp = predict_points(did)
+        member_joined = info.get("joinedAt", "")
+        effective_start = max(pool_start or "", member_joined) or None
+
+        predict = 0
+        trivia = 0
+        exact = 0
+        pred_results = 0
+        graded = 0
+
+        if pool_type in ("predictions", "both"):
+            pp = predict_points_pool(did, effective_start, pred_exact, pred_result)
+            predict = pp["points"]
+            exact = pp["exact"]
+            pred_results = pp["results"]
+            graded = pp["graded"]
+
+        if pool_type in ("trivia", "both"):
+            st2, udoc = fs("GET", f"/users/{did}")
+            user_trivia = int(parse(udoc).get("triviaCorrect", 0)) if st2 == 200 else 0
+            baseline = int(info.get("triviaBaseline", 0))
+            trivia = max(0, user_trivia - baseline) * trivia_pts
+
         rows.append({
             "displayName": info.get("displayName", "?"),
-            "points": pp["points"], "exact": pp["exact"],
-            "results": pp["results"], "graded": pp["graded"],
+            "predict": predict, "trivia": trivia,
+            "points": predict + trivia,
+            "exact": exact, "results": pred_results, "graded": graded,
         })
     rows.sort(key=lambda r: (-r["points"], -r["exact"], r["displayName"].lower()))
     for i, r in enumerate(rows):
@@ -350,6 +424,9 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/api/global-leaderboard":
             q = urllib.parse.parse_qs(u.query)
             return self.global_leaderboard_get((q.get("deviceId") or [""])[0])
+        if parts == ["api", "groups", "mine"]:
+            q = urllib.parse.parse_qs(u.query)
+            return self.groups_mine((q.get("deviceId") or [""])[0])
         if len(parts) == 3 and parts[:2] == ["api", "groups"]:
             return self.group_get(parts[2])
         if len(parts) == 4 and parts[:2] == ["api", "groups"] and parts[3] == "leaderboard":
@@ -374,6 +451,15 @@ class Handler(BaseHTTPRequestHandler):
             return self.devices_register(body)
         if parts == ["api", "internal", "notify-ft"]:
             return self.notify_ft(body)
+        self.send_json(404, {"error": "not found"})
+
+    def do_DELETE(self):
+        u = urllib.parse.urlparse(self.path)
+        path = u.path
+        parts = [p for p in path.split("/") if p]
+        q = urllib.parse.parse_qs(u.query)
+        if len(parts) == 3 and parts[:2] == ["api", "groups"]:
+            return self.group_delete(parts[2], (q.get("deviceId") or [""])[0])
         self.send_json(404, {"error": "not found"})
 
     def do_PUT(self):
@@ -437,26 +523,48 @@ class Handler(BaseHTTPRequestHandler):
         threading.Thread(target=trigger_workflow, kwargs={"delay": 0}, daemon=True).start()
         self.send_json(200, {"ok": True, "message": "Workflow triggered"})
 
-    # ---- groups ------------------------------------------------------------
+    # ---- groups (pools) -----------------------------------------------------
     def group_create(self, body):
-        name = (body.get("name") or "My group").strip()[:60]
+        name = (body.get("name") or "My Pool").strip()[:60]
         did = body.get("deviceId")
         dn = (body.get("displayName") or "Host").strip()[:40]
         if not did:
             return self.send_json(400, {"error": "deviceId required"})
+        pool_type = body.get("type", "both")
+        if pool_type not in ("predictions", "trivia", "both"):
+            pool_type = "both"
+        pred_exact = max(0, min(10, int(body.get("predExact", 3))))
+        pred_result = max(0, min(10, int(body.get("predResult", 1))))
+        trivia_correct = max(0, min(10, int(body.get("triviaCorrect", 1))))
+        start_date = (body.get("startDate") or "").strip()[:24]
+
         code = None
         for _ in range(10):
             cand = f"{random.choice(ADJ)}-{random.choice(ANIM)}"
+            doc = {
+                "name": name, "createdAt": now_iso(), "createdBy": did,
+                "type": pool_type,
+                "predExact": pred_exact, "predResult": pred_result,
+                "triviaCorrect": trivia_correct,
+            }
+            if start_date:
+                doc["startDate"] = start_date
             st, _r = fs("PATCH", f"/groups/{cand}",
-                        body=docbody({"name": name, "createdAt": now_iso(), "createdBy": did}),
+                        body=docbody(doc),
                         params={"currentDocument.exists": "false"})
             if st == 200:
                 code = cand
                 break
         if not code:
             return self.send_json(500, {"error": "could not allocate a code, try again"})
+        # Snapshot trivia baseline for the creator
+        trivia_baseline = 0
+        st2, udoc = fs("GET", f"/users/{did}")
+        if st2 == 200:
+            trivia_baseline = int(parse(udoc).get("triviaCorrect", 0))
         fs("PATCH", f"/groups/{code}/members/{did}",
-           body=docbody({"displayName": dn, "joinedAt": now_iso()}))
+           body=docbody({"displayName": dn, "joinedAt": now_iso(),
+                         "triviaBaseline": trivia_baseline}))
         self.send_json(200, {"code": code, "name": name})
 
     def group_get(self, code):
@@ -466,7 +574,15 @@ class Handler(BaseHTTPRequestHandler):
         d = parse(doc)
         st, ml = fs("GET", f"/groups/{code}/members", params={"pageSize": "300"})
         n = len(ml.get("documents", [])) if st == 200 else 0
-        self.send_json(200, {"code": code, "name": d.get("name"), "members": n})
+        self.send_json(200, {
+            "code": code, "name": d.get("name"), "members": n,
+            "type": d.get("type", "both"),
+            "predExact": int(d.get("predExact", 3)),
+            "predResult": int(d.get("predResult", 1)),
+            "triviaCorrect": int(d.get("triviaCorrect", 1)),
+            "startDate": d.get("startDate", ""),
+            "createdBy": d.get("createdBy", ""),
+        })
 
     def group_join(self, code, body):
         did = body.get("deviceId")
@@ -476,16 +592,92 @@ class Handler(BaseHTTPRequestHandler):
         st, _ = fs("GET", f"/groups/{code}")
         if st != 200:
             return self.send_json(404, {"error": "group not found"})
+        trivia_baseline = 0
+        st2, udoc = fs("GET", f"/users/{did}")
+        if st2 == 200:
+            trivia_baseline = int(parse(udoc).get("triviaCorrect", 0))
         fs("PATCH", f"/groups/{code}/members/{did}",
-           body=docbody({"displayName": dn, "joinedAt": now_iso()}))
+           body=docbody({"displayName": dn, "joinedAt": now_iso(),
+                         "triviaBaseline": trivia_baseline}))
         self.send_json(200, {"ok": True, "code": code})
+
+    def group_delete(self, code, did):
+        if not did:
+            return self.send_json(400, {"error": "deviceId required"})
+        st, doc = fs("GET", f"/groups/{code}")
+        if st != 200:
+            return self.send_json(404, {"error": "group not found"})
+        d = parse(doc)
+        if d.get("createdBy") != did:
+            return self.send_json(403, {"error": "only the pool creator can delete it"})
+        st, ml = fs("GET", f"/groups/{code}/members", params={"pageSize": "300"})
+        if st == 200:
+            for mdoc in ml.get("documents", []):
+                mid = mdoc["name"].split("/")[-1]
+                fs("DELETE", f"/groups/{code}/members/{mid}")
+        fs("DELETE", f"/groups/{code}")
+        self.send_json(200, {"ok": True})
+
+    def groups_mine(self, did):
+        if not did:
+            return self.send_json(400, {"error": "deviceId required"})
+        query = {
+            "structuredQuery": {
+                "from": [{"collectionId": "members", "allDescendants": True}],
+                "where": {
+                    "fieldFilter": {
+                        "field": {"fieldPath": "__name__"},
+                        "op": "EQUAL",
+                        "value": {"referenceValue":
+                            f"{fs_base()}/groups/__PLACEHOLDER__/members/{did}"},
+                    }
+                },
+            }
+        }
+        # Firestore doesn't support a cross-collection member lookup in a single
+        # structured query the way we need. Instead, we use a collection-group
+        # query approach: list all groups and check membership. For the expected
+        # scale (< 1000 groups total) this is fine.
+        # Alternative: maintain a /users/{did}/pools sub-collection as an index.
+        # For now, scan the user's known pools from a lightweight index.
+        #
+        # Simpler approach: keep a pools list in the user doc.
+        # But since we don't have that yet, scan all groups for this device.
+        # This won't scale but works fine for the tournament's lifespan.
+        st, gl = fs("GET", "/groups", params={"pageSize": "500"})
+        if st != 200:
+            return self.send_json(200, {"pools": []})
+        pools = []
+        for gdoc in gl.get("documents", []):
+            gcode = gdoc["name"].split("/")[-1]
+            st2, mdoc = fs("GET", f"/groups/{gcode}/members/{did}")
+            if st2 == 200:
+                g = parse(gdoc)
+                st3, ml = fs("GET", f"/groups/{gcode}/members", params={"pageSize": "300"})
+                n = len(ml.get("documents", [])) if st3 == 200 else 0
+                pools.append({
+                    "code": gcode, "name": g.get("name", ""),
+                    "members": n,
+                    "type": g.get("type", "both"),
+                    "predExact": int(g.get("predExact", 3)),
+                    "predResult": int(g.get("predResult", 1)),
+                    "triviaCorrect": int(g.get("triviaCorrect", 1)),
+                    "startDate": g.get("startDate", ""),
+                    "createdBy": g.get("createdBy", ""),
+                })
+        self.send_json(200, {"pools": pools})
 
     def leaderboard_get(self, code):
         rows = leaderboard(code)
         if rows is None:
             return self.send_json(404, {"error": "group not found"})
         st, doc = fs("GET", f"/groups/{code}")
-        self.send_json(200, {"code": code, "name": parse(doc).get("name"), "leaderboard": rows})
+        d = parse(doc)
+        self.send_json(200, {
+            "code": code, "name": d.get("name"),
+            "type": d.get("type", "both"),
+            "leaderboard": rows,
+        })
 
     # ---- picks -------------------------------------------------------------
     def picks_put(self):
