@@ -6,6 +6,7 @@ yesterday/today/tomorrow UTC and fills in any null scores for matches that
 ESPN reports as live or finished.
 """
 import json
+import os
 import ssl
 import sys
 import urllib.request
@@ -116,6 +117,28 @@ def resolve_teams(matches: list, all_events: list) -> int:
     return resolved
 
 
+PROXY_URL = "https://trivia-proxy-702476544925.us-central1.run.app"
+
+
+def notify_ft(match_n: int) -> None:
+    """Tell the proxy a match just went FT so it can fan out APNs pushes.
+    Idempotent on the proxy side; safe to call from re-runs."""
+    secret = (os.environ.get("PROXY_INTERNAL_SECRET") or "").strip()
+    if not secret:
+        return  # secret not configured — skip silently in local runs
+    body = json.dumps({"secret": secret, "matchN": int(match_n)}).encode()
+    req = urllib.request.Request(
+        f"{PROXY_URL}/api/internal/notify-ft",
+        data=body, method="POST",
+        headers={"Content-Type": "application/json"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as r:
+            print(f"  NOTIFY-FT Match {match_n}: {r.status}")
+    except Exception as e:
+        print(f"  NOTIFY-FT Match {match_n} failed: {e}")
+
+
 def main():
     with open(MATCHES_JSON) as f:
         matches = json.load(f)
@@ -149,6 +172,12 @@ def main():
 
     teams_resolved = resolve_teams(matches, all_events)
     print(f"ESPN team resolve: {teams_resolved} matches updated")
+
+    # Track which matches transition to FT in this run so we can fire push
+    # notifications. We treat any match that ESPN reports as STATUS_FULL_TIME
+    # here as a candidate; the proxy dedupes via /pushed-ft/{n} so a re-run
+    # won't double-fire even though the script may re-detect FT every 15 min.
+    newly_ft: list[int] = []
 
     patched = 0
     for event in all_events:
@@ -197,6 +226,8 @@ def main():
                 tag = "LIVE" if is_live else "FT"
                 print(f"  PATCH: Match {matched_m['n']} {matched_m['home']} vs {matched_m['away']} -> {home_score}-{away_score} ({tag})")
                 patched += 1
+            if is_finished:
+                newly_ft.append(int(matched_m["n"]))
 
     if patched or teams_resolved:
         body = json.dumps(matches, indent=2, ensure_ascii=False)
@@ -208,6 +239,12 @@ def main():
         )
 
     print(f"ESPN score patch: {patched} matches updated")
+
+    # Fan out FT push notifications. The proxy is the source of truth on
+    # whether a given match has already been pushed — we just hand off every
+    # FT we saw this run.
+    for n in sorted(set(newly_ft)):
+        notify_ft(n)
 
 
 if __name__ == "__main__":

@@ -29,6 +29,13 @@ jobs:
         run: python3 scripts/update-data.py
 
       - name: Patch scores from ESPN
+        env:
+          # When set, update-espn-scores.py fans FT detections out to the
+          # proxy at /api/internal/notify-ft, which then sends APNs pushes
+          # to iOS devices subscribed to Full-Time Results. Set this as a
+          # repo secret and add INTERNAL_PUSH_SECRET to Cloud Run with the
+          # same value.
+          PROXY_INTERNAL_SECRET: ${{ secrets.PROXY_INTERNAL_SECRET }}
         run: python3 scripts/update-espn-scores.py
 
       - name: Update highlight video links

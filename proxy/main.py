@@ -370,6 +370,10 @@ class Handler(BaseHTTPRequestHandler):
             return self.me_post(body)
         if parts == ["api", "friends", "add"]:
             return self.friend_add(body)
+        if parts == ["api", "devices"]:
+            return self.devices_register(body)
+        if parts == ["api", "internal", "notify-ft"]:
+            return self.notify_ft(body)
         self.send_json(404, {"error": "not found"})
 
     def do_PUT(self):
@@ -683,8 +687,148 @@ class Handler(BaseHTTPRequestHandler):
         rows = rows[:200]
         self.send_json(200, {"me": did, "rows": rows})
 
+    # ---- push-notification device registry --------------------------------
+    def devices_register(self, body):
+        """iOS reports its APNs token and which kinds of pushes it wants.
+
+        Body: {"deviceId": "...", "token": "<hex>", "ftEnabled": true,
+               "useSandbox": false}.
+        Stored at /devices/{deviceId}. We upsert: replacing the token if the
+        user reinstalled (token rotates), updating the FT subscription, and
+        stamping a lastSeen so we can prune dead tokens later.
+        """
+        did = (body.get("deviceId") or "").strip()
+        token = (body.get("token") or "").strip()
+        if not did or not token:
+            return self.send_json(400, {"error": "deviceId and token required"})
+        ft_enabled = bool(body.get("ftEnabled", False))
+        # `useSandbox` is hinted by the client (TestFlight/Xcode builds use the
+        # sandbox APNs host). For now we trust the server-side env var; this
+        # field is stored for future per-device routing if we need it.
+        sandbox = bool(body.get("useSandbox", False))
+        doc = {
+            "token": token,
+            "ftEnabled": ft_enabled,
+            "useSandbox": sandbox,
+            "updatedAt": now_iso(),
+        }
+        # fs_merge sends `updateMask.fieldPaths=<k>` per field so Firestore
+        # upserts these and leaves other fields untouched.
+        st, _ = fs_merge(f"/devices/{did}", doc)
+        if st >= 400:
+            return self.send_json(500, {"error": "store failed"})
+        self.send_json(200, {"ok": True})
+
+    def notify_ft(self, body):
+        """Internal webhook from update-espn-scores.py: push FT to subscribers.
+
+        Body: {"secret": "...", "matchN": 7}  — sends for one match. The
+        proxy uses the /pushed-ft/{matchN} doc as an idempotency lock so a
+        re-run of the GitHub Action (every 15 min) won't double-fire.
+        """
+        if body.get("secret") != os.environ.get("INTERNAL_PUSH_SECRET", ""):
+            return self.send_json(403, {"error": "forbidden"})
+        try:
+            match_n = int(body.get("matchN"))
+        except (TypeError, ValueError):
+            return self.send_json(400, {"error": "matchN required"})
+        # Idempotency: once we've pushed for this matchN we never push again,
+        # even on a re-run or a corrected score.
+        st, _ = fs("GET", f"/pushed-ft/{match_n}")
+        if st == 200:
+            return self.send_json(200, {"ok": True, "skipped": "already-pushed"})
+        # Look up the match (home + away names) from cached results to build
+        # the notification body. We refresh once if absent.
+        match = _match_by_n(match_n)
+        if not match:
+            return self.send_json(404, {"error": "match not found"})
+        # Find every device that has FT pushes enabled.
+        tokens = _ft_subscribers()
+        if not tokens:
+            # Nothing to do, but still mark pushed so re-runs are no-ops.
+            fs_merge(f"/pushed-ft/{match_n}", {"pushedAt": now_iso(), "count": 0})
+            return self.send_json(200, {"ok": True, "sent": 0})
+        # Build payload once, reuse across devices.
+        matchup = f"{match['home']} vs {match['away']}"
+        title = "Full time"
+        text = f"Tap to see how {matchup} ended."
+        sender = _apns()
+        if sender is None:
+            return self.send_json(503, {"error": "APNs not configured"})
+        sent = 0
+        failed = 0
+        for did, token in tokens:
+            try:
+                sender.send(token=token, title=title, body=text,
+                            category="GAME_RESULT",
+                            user_info={"type": "result", "matchN": match_n},
+                            collapse_id=f"result-{match_n}")
+                sent += 1
+            except Exception as e:
+                failed += 1
+                # Apple returns 410 / "Unregistered" for stale tokens — drop
+                # those so future runs don't keep retrying.
+                if "410" in str(e) or "Unregistered" in str(e) or "BadDeviceToken" in str(e):
+                    fs("DELETE", f"/devices/{did}")
+                print(f"  APNs send failed for {did[:8]}…: {e}")
+        fs_merge(f"/pushed-ft/{match_n}", {"pushedAt": now_iso(), "count": sent})
+        self.send_json(200, {"ok": True, "sent": sent, "failed": failed})
+
     def log_message(self, fmt, *args):
         print(f"{self.client_address[0]} - {fmt % args}")
+
+
+# ---------------------------------------------------------------------------
+# Push-notification helpers (lazy-loaded so the proxy still boots even if
+# APNs deps are unavailable / env vars are unset)
+# ---------------------------------------------------------------------------
+_apns_instance = []  # one-element holder: lets us cache + None-sentinel
+
+
+def _apns():
+    """Return a cached APNsSender or None if APNs isn't configured."""
+    if _apns_instance:
+        return _apns_instance[0]
+    try:
+        from apns import APNsSender  # local module
+        s = APNsSender()
+        if not s.configured:
+            print("APNs env vars missing — push disabled")
+            _apns_instance.append(None)
+            return None
+        _apns_instance.append(s)
+        return s
+    except Exception as e:
+        print(f"APNs init failed: {e}")
+        _apns_instance.append(None)
+        return None
+
+
+def _match_by_n(n):
+    """Find a match record by `n` from the cached results URL feed."""
+    try:
+        with urllib.request.urlopen(RESULTS_URL, timeout=10) as r:
+            arr = json.loads(r.read())
+        for x in arr:
+            if int(x.get("n", -1)) == n:
+                return x
+    except Exception as e:
+        print(f"match lookup failed for n={n}: {e}")
+    return None
+
+
+def _ft_subscribers():
+    """Yield (deviceId, token) for every device with ftEnabled=true."""
+    st, pl = fs("GET", "/devices", params={"pageSize": "1000"})
+    if st != 200:
+        return []
+    out = []
+    for doc in pl.get("documents", []):
+        info = parse(doc)
+        if info.get("ftEnabled") and info.get("token"):
+            did = doc["name"].split("/")[-1]
+            out.append((did, info["token"]))
+    return out
 
 
 if __name__ == "__main__":
