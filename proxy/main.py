@@ -551,9 +551,10 @@ class Handler(BaseHTTPRequestHandler):
         code = None
         for _ in range(10):
             cand = f"{random.choice(ADJ)}-{random.choice(ANIM)}"
-            doc = {
+            icon = (body.get("icon") or "⚽").strip()[:8]
+        doc = {
                 "name": name, "createdAt": now_iso(), "createdBy": did,
-                "type": pool_type,
+                "type": pool_type, "icon": icon,
                 "predExact": pred_exact, "predResult": pred_result,
                 "triviaCorrect": trivia_correct,
             }
@@ -587,6 +588,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_json(200, {
             "code": code, "name": d.get("name"), "members": n,
             "type": d.get("type", "both"),
+            "icon": d.get("icon", "⚽"),
             "predExact": int(d.get("predExact", 3)),
             "predResult": int(d.get("predResult", 1)),
             "triviaCorrect": int(d.get("triviaCorrect", 1)),
@@ -650,6 +652,8 @@ class Handler(BaseHTTPRequestHandler):
             d["triviaCorrect"] = max(0, min(10, int(body["triviaCorrect"])))
         if "startDate" in body:
             d["startDate"] = (body["startDate"] or "").strip()[:24]
+        if "icon" in body:
+            d["icon"] = (body["icon"] or "⚽").strip()[:8]
         fs("PATCH", f"/groups/{code}", body=docbody(d))
         self.send_json(200, {"ok": True})
 
@@ -707,6 +711,7 @@ class Handler(BaseHTTPRequestHandler):
                     "code": gcode, "name": g.get("name", ""),
                     "members": n,
                     "type": g.get("type", "both"),
+                    "icon": g.get("icon", "⚽"),
                     "predExact": int(g.get("predExact", 3)),
                     "predResult": int(g.get("predResult", 1)),
                     "triviaCorrect": int(g.get("triviaCorrect", 1)),
