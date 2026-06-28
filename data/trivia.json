@@ -10030,7 +10030,7 @@
       "answer": 0,
       "explanation": "True! Brazil has appeared at every single edition since the inaugural 1930 tournament — a streak of over 20 consecutive appearances. No other nation comes close. Germany has missed one (1930), Argentina has missed four, and Italy failed to qualify in 2018 and 2022.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-three-points-win-1994",
