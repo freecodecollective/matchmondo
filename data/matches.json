@@ -946,7 +946,7 @@
     "city": "Inglewood (Los Angeles), CA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 0
+    "scoreA": 1
   },
   {
     "n": 76,
@@ -1148,7 +1148,7 @@
     "utc": "2026-07-04T17:00:00Z",
     "stage": "Round of 16",
     "group": null,
-    "home": "To be announced",
+    "home": "Canada",
     "away": "To be announced",
     "venue": "NRG Stadium",
     "city": "Houston, TX",

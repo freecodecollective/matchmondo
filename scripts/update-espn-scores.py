@@ -139,6 +139,77 @@ def notify_ft(match_n: int) -> None:
         print(f"  NOTIFY-FT Match {match_n} failed: {e}")
 
 
+BRACKET_FEEDERS = {
+    # R16: winner of R32 pair
+    89: (74, 77), 90: (73, 75), 93: (83, 84), 94: (81, 82),
+    91: (76, 78), 92: (79, 80), 95: (86, 88), 96: (85, 87),
+    # QF: winner of R16 pair
+    97: (89, 90), 98: (93, 94), 99: (91, 92), 100: (95, 96),
+    # SF: winner of QF pair
+    101: (97, 98), 102: (99, 100),
+    # Final: winner of SF pair
+    104: (101, 102),
+    # 3rd place: loser of SF pair
+}
+THIRD_PLACE_FEEDERS = {103: (101, 102)}
+
+
+def _match_winner(m: dict) -> str | None:
+    if m.get("scoreH") is None or m.get("scoreA") is None:
+        return None
+    if m["scoreH"] > m["scoreA"]:
+        return m["home"]
+    if m["scoreA"] > m["scoreH"]:
+        return m["away"]
+    return None
+
+
+def _match_loser(m: dict) -> str | None:
+    if m.get("scoreH") is None or m.get("scoreA") is None:
+        return None
+    if m["scoreH"] > m["scoreA"]:
+        return m["away"]
+    if m["scoreA"] > m["scoreH"]:
+        return m["home"]
+    return None
+
+
+def propagate_bracket_winners(matches: list) -> int:
+    by_n = {m["n"]: m for m in matches}
+    resolved = 0
+    for target_n, (feeder_a, feeder_b) in BRACKET_FEEDERS.items():
+        target = by_n.get(target_n)
+        fa, fb = by_n.get(feeder_a), by_n.get(feeder_b)
+        if not target or not fa or not fb:
+            continue
+        wa = _match_winner(fa)
+        wb = _match_winner(fb)
+        if wa and _is_placeholder(target["home"]):
+            print(f"  BRACKET: M{target_n} home <- {wa} (winner of M{feeder_a})")
+            target["home"] = wa
+            resolved += 1
+        if wb and _is_placeholder(target["away"]):
+            print(f"  BRACKET: M{target_n} away <- {wb} (winner of M{feeder_b})")
+            target["away"] = wb
+            resolved += 1
+    for target_n, (sf_a, sf_b) in THIRD_PLACE_FEEDERS.items():
+        target = by_n.get(target_n)
+        sa, sb = by_n.get(sf_a), by_n.get(sf_b)
+        if not target or not sa or not sb:
+            continue
+        la = _match_loser(sa)
+        lb = _match_loser(sb)
+        if la and _is_placeholder(target["home"]):
+            print(f"  BRACKET: M{target_n} home <- {la} (loser of M{sf_a})")
+            target["home"] = la
+            resolved += 1
+        if lb and _is_placeholder(target["away"]):
+            print(f"  BRACKET: M{target_n} away <- {lb} (loser of M{sf_b})")
+            target["away"] = lb
+            resolved += 1
+    return resolved
+
+
 def main():
     with open(MATCHES_JSON) as f:
         matches = json.load(f)
@@ -229,7 +300,9 @@ def main():
             if is_finished:
                 newly_ft.append(int(matched_m["n"]))
 
-    if patched or teams_resolved:
+    bracket_resolved = propagate_bracket_winners(matches)
+
+    if patched or teams_resolved or bracket_resolved:
         body = json.dumps(matches, indent=2, ensure_ascii=False)
         MATCHES_JSON.write_text(body + "\n")
         MATCHES_JS.write_text(
@@ -239,6 +312,7 @@ def main():
         )
 
     print(f"ESPN score patch: {patched} matches updated")
+    print(f"Bracket propagation: {bracket_resolved} slots filled")
 
     # Fan out FT push notifications. The proxy is the source of truth on
     # whether a given match has already been pushed — we just hand off every
