@@ -9859,7 +9859,7 @@
       "answer": 0,
       "explanation": "True! Own goals are recorded against the player who last touched the ball before it entered their own net. They do not count toward any attacking player's goal tally. The own goal count has risen sharply in recent tournaments due to faster play and higher pressing.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-red-card-shootout",
