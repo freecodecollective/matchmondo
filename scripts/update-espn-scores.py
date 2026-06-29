@@ -78,8 +78,18 @@ def _espn_to_our_name(espn_name: str) -> str:
     return ESPN_TEAM_MAP.get(espn_name, espn_name)
 
 
+def _feeder_finished(matches_by_n, feeder_n):
+    """Check if a feeder match is fully finished (has scores, not live)."""
+    f = matches_by_n.get(feeder_n)
+    if not f:
+        return False
+    return (f.get("scoreH") is not None and f.get("scoreA") is not None
+            and not f.get("isLive", False))
+
+
 def resolve_teams(matches: list, all_events: list) -> int:
     """Replace placeholder team names (1I, 3ABCDF, etc.) with real names from ESPN."""
+    by_n = {m["n"]: m for m in matches}
     resolved = 0
     for event in all_events:
         comps = event.get("competitions", [])
@@ -103,12 +113,24 @@ def resolve_teams(matches: list, all_events: list) -> int:
         if idx is None:
             continue
         m = matches[idx]
+
+        # For knockout matches with bracket feeders, only resolve a team if
+        # its feeder match is finished — ESPN may show projected/leading teams
+        # for matches still in progress.
+        feeders = BRACKET_FEEDERS.get(m["n"]) or THIRD_PLACE_FEEDERS.get(m["n"])
+        home_ok = True
+        away_ok = True
+        if feeders:
+            fa, fb = feeders
+            home_ok = _feeder_finished(by_n, fa)
+            away_ok = _feeder_finished(by_n, fb)
+
         changed = False
-        if _is_placeholder(m["home"]) and not _is_placeholder(espn_home):
+        if home_ok and _is_placeholder(m["home"]) and not _is_placeholder(espn_home):
             print(f"  RESOLVE: Match {m['n']} home {m['home']} -> {espn_home}")
             m["home"] = espn_home
             changed = True
-        if _is_placeholder(m["away"]) and not _is_placeholder(espn_away):
+        if away_ok and _is_placeholder(m["away"]) and not _is_placeholder(espn_away):
             print(f"  RESOLVE: Match {m['n']} away {m['away']} -> {espn_away}")
             m["away"] = espn_away
             changed = True
