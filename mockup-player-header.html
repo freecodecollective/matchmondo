@@ -1623,13 +1623,13 @@
   .compact-flag-big.fr .stripe:nth-child(2) { left: 33.33%; width: 33.34%; background: #fff; }
   .compact-flag-big.fr .stripe:nth-child(3) { left: 66.67%; width: 33.33%; background: #ED2939; }
 
-  /* Full-bleed flag — covers entire header */
+  /* Full-bleed flag — covers entire header, no pitch visible */
   .compact-flag-full {
     position: absolute;
     inset: 0;
     z-index: 0;
-    opacity: 0.3;
     overflow: hidden;
+    background: #1a3a2a;
   }
   .compact-flag-full .stripe {
     position: absolute; top: 0; bottom: 0;
@@ -1656,6 +1656,15 @@
   .compact-flag-full.ar .stripe:nth-child(1) { top: 0; height: 33.33%; background: #75AADB; }
   .compact-flag-full.ar .stripe:nth-child(2) { top: 33.33%; height: 33.34%; background: #fff; }
   .compact-flag-full.ar .stripe:nth-child(3) { top: 66.67%; height: 33.33%; background: #75AADB; }
+  .compact-flag-full.ar::after {
+    content: '☀';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    opacity: 0.5;
+    z-index: 1;
+  }
 
   /* Centered flag — horizontally centered in the header */
   .compact-flag-center {
@@ -1773,7 +1782,6 @@
     <div class="content">
       <div class="hdr-c big-photo compact">
         <div class="back-btn">‹</div>
-        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
         <div class="compact-flag-full fr"><div class="stripe"></div><div class="stripe"></div><div class="stripe"></div></div>
         <div class="gradient-fade"></div>
         <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
@@ -1804,7 +1812,6 @@
     <div class="content">
       <div class="hdr-c big-photo compact">
         <div class="back-btn">‹</div>
-        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
         <div class="compact-flag-full us"></div>
         <div class="gradient-fade"></div>
         <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/41156.png" alt=""></div>
@@ -1835,7 +1842,6 @@
     <div class="content">
       <div class="hdr-c big-photo compact">
         <div class="back-btn">‹</div>
-        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
         <div class="compact-flag-full ar"><div class="stripe"></div><div class="stripe"></div><div class="stripe"></div></div>
         <div class="gradient-fade"></div>
         <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/711.png" alt=""></div>
