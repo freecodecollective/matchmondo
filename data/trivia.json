@@ -10674,7 +10674,7 @@
       "answer": 0,
       "explanation": "True! The golden goal rule, where the first team to score in extra time immediately won, was used at the 1998 and 2002 editions. It was abolished in 2004 due to criticism that it made teams overly defensive in extra time, afraid one mistake would end the match. The 2006 edition returned to the traditional full 30-minute extra-time format.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-added-time-2022",
