@@ -1067,7 +1067,8 @@
         "18"
       ],
       "answer": 2,
-      "explanation": "Sixteen cities host matches — 11 in the USA, 3 in Mexico, and 2 in Canada."
+      "explanation": "Sixteen cities host matches — 11 in the USA, 3 in Mexico, and 2 in Canada.",
+      "approved": true
     },
     {
       "id": "c-vuvuzela",
