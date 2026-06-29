@@ -4452,7 +4452,8 @@
         "36"
       ],
       "answer": 2,
-      "explanation": "The tournament expanded from 32 to 48 teams for 2026, adding 16 more nations and an extra knockout round."
+      "explanation": "The tournament expanded from 32 to 48 teams for 2026, adding 16 more nations and an extra knockout round.",
+      "approved": true
     },
     {
       "id": "h-first-edition",
