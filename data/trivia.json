@@ -10687,7 +10687,7 @@
       "answer": 0,
       "explanation": "True! Referees at the 2022 tournament added significantly more stoppage time than in any previous edition. England vs Iran saw a total of 27 minutes added across both halves. The approach was intended to maximize actual playing time by accounting for goal celebrations, substitutions, VAR reviews, and time-wasting. This trend has continued into subsequent editions.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "img-maradona",
