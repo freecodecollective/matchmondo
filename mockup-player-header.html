@@ -1296,5 +1296,199 @@
 
 </div>
 
+<!-- ============== BIG PHOTO, NO CIRCLE ============== -->
+<div class="section-divider" style="margin-top:32px">Option C — Big Photo, No Circle</div>
+<div class="section-note">Headshot blown up to the full halo size (~180px) with no border ring. Feels more editorial/magazine. Three sub-variants: solo, with flat flag, with wavy flag.</div>
+
+<style>
+  /* Big photo variant — override photo-main sizing */
+  .hdr-c.big-photo .photo-main {
+    width: 180px; height: 180px;
+    right: 0; bottom: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .hdr-c.big-photo .photo-main img {
+    object-position: top center;
+  }
+  /* Push text area further from the big photo */
+  .hdr-c.big-photo .text-area {
+    right: 170px;
+  }
+  /* Badges reposition for bigger photo */
+  .hdr-c.big-photo .jersey {
+    right: 4px; bottom: 8px;
+  }
+  .hdr-c.big-photo .photo-flag {
+    right: 152px; bottom: 8px;
+  }
+  /* Taller to fit the bigger photo */
+  .hdr-c.big-photo {
+    height: 240px;
+  }
+
+  /* Flag halo behind big photo — larger to match */
+  .hdr-c.big-photo .flag-halo {
+    width: 240px; height: 240px;
+    right: -30px; bottom: -30px;
+    opacity: 0.2;
+  }
+  .hdr-c.big-photo .flag-halo-wavy {
+    width: 240px; height: 240px;
+    right: -30px; bottom: -30px;
+    opacity: 0.25;
+  }
+  .hdr-c.big-photo .flag-halo-wavy svg { width: 100%; height: 100%; }
+</style>
+
+<div class="phones">
+
+<!-- Big photo, no halo -->
+<div class="phone-wrap">
+  <div class="phone-label">Big Photo — Clean</div>
+  <div class="phone-sublabel">Full-size headshot with no circle border, no halo. Just the player emerging from the gradient.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c big-photo">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
+        <div class="jersey">10</div>
+        <div class="photo-flag">🇫🇷</div>
+        <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Big photo + flat flag halo -->
+<div class="phone-wrap">
+  <div class="phone-label">Big Photo + Flat Flag</div>
+  <div class="phone-sublabel">Full-size headshot with the flat tricolor circle behind. Flag provides subtle color context.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c big-photo">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="flag-halo flag-halo-flat fr">
+          <div class="stripe"></div><div class="stripe"></div><div class="stripe"></div>
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
+        <div class="jersey">10</div>
+        <div class="photo-flag">🇫🇷</div>
+        <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Big photo + wavy flag halo -->
+<div class="phone-wrap">
+  <div class="phone-label">Big Photo + Wavy Flag</div>
+  <div class="phone-sublabel">Full-size headshot with the wavy displaced flag behind. Player in front of their nation's colors.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c big-photo">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="flag-halo flag-halo-wavy">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <clipPath id="circle-clip-big"><circle cx="100" cy="100" r="100"/></clipPath>
+            </defs>
+            <g clip-path="url(#circle-clip-big)" filter="url(#wave-filter)">
+              <rect x="0" y="0" width="67" height="200" fill="#002395"/>
+              <rect x="67" y="0" width="66" height="200" fill="#fff"/>
+              <rect x="133" y="0" width="67" height="200" fill="#ED2939"/>
+            </g>
+          </svg>
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
+        <div class="jersey">10</div>
+        <div class="photo-flag">🇫🇷</div>
+        <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Big photo + headshot shadow (original style but bigger) -->
+<div class="phone-wrap">
+  <div class="phone-label">Big Photo + Shadow Headshot</div>
+  <div class="phone-sublabel">Full-size photo with the original faded headshot halo behind, scaled up. The double-exposure look.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c big-photo">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="photo-bg" style="width:240px;height:240px;right:-30px;bottom:-30px"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
+        <div class="jersey">10</div>
+        <div class="photo-flag">🇫🇷</div>
+        <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
 </body>
 </html>
