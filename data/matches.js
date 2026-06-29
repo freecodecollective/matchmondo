@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-29 16:42 UTC by scripts/update-data.py
+// Regenerated 2026-06-29 17:42 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -960,8 +960,8 @@ window.WC_MATCHES = [
     "venue": "NRG Stadium",
     "city": "Houston, TX",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 0,
+    "scoreA": 1
   },
   {
     "n": 74,
@@ -1176,7 +1176,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-05T20:00:00Z",
     "stage": "Round of 16",
     "group": null,
-    "home": "To be announced",
+    "home": "Japan",
     "away": "To be announced",
     "venue": "MetLife Stadium",
     "city": "East Rutherford, NJ",
