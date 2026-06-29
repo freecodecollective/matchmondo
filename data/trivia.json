@@ -3217,7 +3217,8 @@
         "Italy"
       ],
       "answer": 2,
-      "explanation": "Brazil has appeared in every tournament since 1930 — the only nation with a perfect attendance record."
+      "explanation": "Brazil has appeared in every tournament since 1930 — the only nation with a perfect attendance record.",
+      "approved": true
     },
     {
       "id": "t-costa-rica-2014",
