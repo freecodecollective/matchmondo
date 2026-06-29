@@ -10300,8 +10300,7 @@
       ],
       "answer": 0,
       "explanation": "True! Fontaine was originally a reserve, but injuries to other players gave him his chance. He seized it spectacularly, scoring 13 goals in just 6 matches — a record that has stood for over 65 years and may never be broken. He scored in every match France played.",
-      "type": "true_false",
-      "needsReview": true
+      "type": "true_false"
     },
     {
       "id": "tf-finals-extra-time-before-94",
