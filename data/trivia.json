@@ -950,7 +950,8 @@
         "2014"
       ],
       "answer": 1,
-      "explanation": "Germany pioneered official Fan Fests in 2006, with hundreds of thousands gathering in public viewing areas across host cities."
+      "explanation": "Germany pioneered official Fan Fests in 2006, with hundreds of thousands gathering in public viewing areas across host cities.",
+      "approved": true
     },
     {
       "id": "v-total-cities",
