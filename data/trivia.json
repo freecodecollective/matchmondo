@@ -3188,8 +3188,8 @@
         "Spain"
       ],
       "answer": 1,
-      "explanation": "Italy won on home soil in 1934 and retained the title in France in 1938 — the first nation to win back-to-back.",
-      "claudeTask": "indicate if any other nation(s) have done it also"
+      "explanation": "Italy won on home soil in 1934 and retained the title in France in 1938 — the first nation to win back-to-back. Brazil later achieved the same feat in 1958 and 1962, and France won back-to-back in 2018 and would have in 2022 but were eliminated in the final on penalties.",
+      "needsReview": true
     },
     {
       "id": "h-1966-england",
@@ -3291,8 +3291,7 @@
       "answer": 1,
       "explanation": "The Jabulani, used at the 2010 tournament, was criticised by goalkeepers and players for its unpredictable flight path.",
       "media": "https://www.youtube.com/watch?v=28MtUTnUBuI",
-      "approved": true,
-      "claudeTask": "also make this an image questio. keep this one but add an image question"
+      "approved": true
     },
     {
       "id": "h-2010-champion",
@@ -4159,8 +4158,8 @@
         "48"
       ],
       "answer": 2,
-      "explanation": "The top two from each of the 12 groups (24) plus the 8 best third-placed teams advance — 32 in all.",
-      "claudeTask": "indicate how many were in 2022"
+      "explanation": "The top two from each of the 12 groups (24) plus the 8 best third-placed teams advance — 32 in all. In 2022 with 32 teams, only 16 teams advanced to the Round of 16 knockout stage.",
+      "needsReview": true
     },
     {
       "id": "h-1970-brazil-final",
@@ -12538,6 +12537,20 @@
         }
       },
       "i18nSourceHash": "a225b9bd42ffc35a"
+    },
+    {
+      "id": "img-jabulani-ball",
+      "category": "culture",
+      "question": "This controversial match ball was criticized for its unpredictable flight. Which edition did it appear in?",
+      "options": [
+        "2006",
+        "2010",
+        "2014",
+        "2018"
+      ],
+      "answer": 1,
+      "explanation": "The Jabulani, used at the 2010 tournament, was widely criticized by goalkeepers and players for its erratic aerodynamics and speed, affecting gameplay significantly.",
+      "needsReview": true
     }
   ],
   "pendingTasks": [
