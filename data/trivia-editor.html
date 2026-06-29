@@ -357,6 +357,8 @@ let activeCategory = 'all';
 let activeType = 'all';
 let expandedCard = null;
 let expandedReview = null;
+let expandedPublished = null;
+let expandedQTask = null;
 let editingIndex = -1;
 let saveTimer = null;
 let fileSha = null;
@@ -644,6 +646,23 @@ function renderCard(q, realIndex, displayNum, total) {
           ${q.claudeTask ? `<button class="btn-claude" onclick="clearQuestionTask(${realIndex})" style="padding:8px 14px;font-size:12px;background:#dc2626">Clear</button>` : ''}
         </div>
       </div>
+    </div>
+  </div>`;
+}
+
+function renderQuestionDetail(q) {
+  const optionsHtml = q.options.map((opt, oi) =>
+    `<div style="padding:6px 10px;margin:2px 0;border-radius:6px;font-size:13px;${oi === q.answer ? 'background:#d4edda;font-weight:600' : 'background:#f8f9fa'}">
+      ${oi === q.answer ? '✓ ' : ''}${esc(opt)}
+    </div>`
+  ).join('');
+  const mediaHtml = q.media ? renderMediaPreview(q.media) : '';
+  return `<div style="margin-top:10px;padding-top:10px;border-top:1px solid #eee" onclick="event.stopPropagation()">
+    ${mediaHtml ? `<div style="margin-bottom:12px">${mediaHtml}</div>` : ''}
+    <div style="margin-bottom:8px;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:#888">Options</div>
+    ${optionsHtml}
+    <div style="margin-top:12px;padding:10px;background:#f0f7ff;border-radius:8px;font-size:13px;line-height:1.5">
+      <strong>Explanation:</strong> ${esc(q.explanation)}
     </div>
   </div>`;
 }
@@ -1152,13 +1171,17 @@ function renderPublishedView() {
       html += `<h4 style="margin:18px 0 8px;font-size:13px;text-transform:uppercase;color:#888;letter-spacing:.5px">${esc(cat)} (${qs.length})</h4>`;
       qs.forEach(q => {
         const idx = data.questions.indexOf(q);
-        html += `<div class="pub-card">
-          ${q.type === 'image' && q.media ? `<img src="${esc(q.media)}" style="width:40px;height:40px;object-fit:cover;border-radius:6px;flex-shrink:0">` : ''}
-          <div style="flex:1;min-width:0">
-            <div style="font-size:14px;font-weight:500;margin-bottom:2px">${q.type && q.type !== 'multiple_choice' ? `<span style="display:inline-block;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:700;margin-right:4px;background:${q.type === 'true_false' ? '#7c3aed' : '#0284c7'};color:#fff">${q.type === 'true_false' ? 'T/F' : 'IMG'}</span>` : ''}${esc(q.question)}</div>
-            <div style="font-size:12px;color:#888">${esc(q.options[q.answer])}</div>
+        const isOpen = expandedPublished === idx;
+        html += `<div class="pub-card" style="cursor:pointer;flex-direction:column" onclick="expandedPublished=expandedPublished===${idx}?null:${idx};renderPublishedView()">
+          <div style="display:flex;align-items:flex-start;gap:8px;width:100%">
+            ${q.type === 'image' && q.media ? `<img src="${esc(q.media)}" style="width:40px;height:40px;object-fit:cover;border-radius:6px;flex-shrink:0">` : ''}
+            <div style="flex:1;min-width:0">
+              <div style="font-size:14px;font-weight:500;margin-bottom:2px">${q.type && q.type !== 'multiple_choice' ? `<span style="display:inline-block;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:700;margin-right:4px;background:${q.type === 'true_false' ? '#7c3aed' : '#0284c7'};color:#fff">${q.type === 'true_false' ? 'T/F' : 'IMG'}</span>` : ''}${esc(q.question)}</div>
+              <div style="font-size:12px;color:#888">${esc(q.options[q.answer])}</div>
+            </div>
+            <button class="btn btn-sm" style="background:#f5f5f5;color:#555;border:1px solid #ddd;white-space:nowrap" onclick="event.stopPropagation();unpublishAndEdit(${idx})">Unpublish & Edit</button>
           </div>
-          <button class="btn btn-sm" style="background:#f5f5f5;color:#555;border:1px solid #ddd;white-space:nowrap" onclick="unpublishAndEdit(${idx})">Unpublish & Edit</button>
+          ${isOpen ? renderQuestionDetail(q) : ''}
         </div>`;
       });
     });
@@ -1220,17 +1243,20 @@ function renderClaudeTasksView() {
     html += '<div class="ct-empty">No per-question tasks. Expand any question and use "Task for Claude" to assign one.</div>';
   } else {
     qTasks.forEach(({ q, i }) => {
-      html += `<div class="ct-q-task-card">
+      const isOpen = expandedQTask === i;
+      html += `<div class="ct-q-task-card" style="cursor:pointer" onclick="expandedQTask=expandedQTask===${i}?null:${i};renderClaudeTasksView()">
         <div class="ct-q-task-header">
           <span class="ct-review-id">#${q.id}</span>
           <span class="card-badge ${badgeClass(q.category)}" style="font-size:9px">${q.category}</span>
+          ${q.type && q.type !== 'multiple_choice' ? `<span class="card-badge" style="background:${q.type === 'true_false' ? '#7c3aed' : '#0284c7'};color:#fff;font-size:9px">${q.type === 'true_false' ? 'T/F' : 'IMG'}</span>` : ''}
           <span class="ct-q-task-question">${esc(q.question)}</span>
           <div class="ct-task-actions">
-            <button class="btn btn-sm" style="background:#8b5cf6;color:#fff" onclick="switchView('questions');expandAndScroll(${i})" title="View question">View</button>
-            <button class="btn btn-sm btn-danger" onclick="clearQuestionTask(${i});renderClaudeTasksView()" title="Clear task">&times;</button>
+            <button class="btn btn-sm" style="background:#8b5cf6;color:#fff" onclick="event.stopPropagation();switchView('questions');expandAndScroll(${i})" title="View question">Edit</button>
+            <button class="btn btn-sm btn-danger" onclick="event.stopPropagation();clearQuestionTask(${i});renderClaudeTasksView()" title="Clear task">&times;</button>
           </div>
         </div>
         <div class="ct-q-task-text">${esc(q.claudeTask)}</div>
+        ${isOpen ? renderQuestionDetail(q) : ''}
       </div>`;
     });
   }
@@ -1247,25 +1273,15 @@ function renderClaudeTasksView() {
   } else {
     reviewQs.forEach(({ q, i }) => {
       const isOpen = expandedReview === i;
-      const optionsHtml = q.options.map((opt, oi) =>
-        `<div style="padding:6px 10px;margin:2px 0;border-radius:6px;${oi === q.answer ? 'background:#d4edda;font-weight:600' : 'background:#f8f9fa'}">
-          ${oi === q.answer ? '✓ ' : ''}${esc(opt)}
-        </div>`
-      ).join('');
       html += `<div class="ct-review-card" onclick="expandedReview=expandedReview===${i}?null:${i};renderClaudeTasksView()">
         <div class="ct-review-header">
           <span class="ct-review-id">#${q.id}</span>
           <span class="card-badge ${badgeClass(q.category)}" style="font-size:9px">${q.category}</span>
+          ${q.type && q.type !== 'multiple_choice' ? `<span class="card-badge" style="background:${q.type === 'true_false' ? '#7c3aed' : '#0284c7'};color:#fff;font-size:9px">${q.type === 'true_false' ? 'T/F' : 'IMG'}</span>` : ''}
           <span class="ct-review-question">${esc(q.question)}</span>
         </div>
         ${q.claudeTask ? `<div class="ct-review-task">Claude task: ${esc(q.claudeTask)}</div>` : ''}
-        ${isOpen ? `<div style="margin-top:10px;padding-top:10px;border-top:1px solid #eee">
-          <div style="margin-bottom:8px;font-weight:600;font-size:13px">Options:</div>
-          ${optionsHtml}
-          <div style="margin-top:12px;padding:10px;background:#f0f7ff;border-radius:8px;font-size:13px">
-            <strong>Explanation:</strong> ${esc(q.explanation)}
-          </div>
-        </div>` : ''}
+        ${isOpen ? renderQuestionDetail(q) : ''}
         <div class="ct-review-actions">
           <button class="btn btn-sm" style="background:#34d058;color:#fff" onclick="event.stopPropagation();approveQuestion(${i})">Approve</button>
           <button class="btn btn-sm" style="background:#f5f5f5;color:#333;border:1px solid #ddd" onclick="event.stopPropagation();rejectReview(${i})">Not Ready</button>
