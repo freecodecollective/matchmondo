@@ -652,27 +652,43 @@ function draw() {
     r16Junctions.push(jp);
   }
 
-  // R16 junctions → QF
-  var qfPos = [];
+  // R16 junctions → QF pairs
+  var qfPairSpan = 7;
+  var qfHomePos = [], qfAwayPos = [], qfJunctions = [];
   for (var i = 0; i < 4; i++) {
-    var p = polar(CX, CY, R_QF, qfAngles[i]);
-    drawLine(r16Junctions[i*2][0], r16Junctions[i*2][1], p[0], p[1], 'rgba(0,0,0,0.05)', 0.8);
-    drawLine(r16Junctions[i*2+1][0], r16Junctions[i*2+1][1], p[0], p[1], 'rgba(0,0,0,0.05)', 0.8);
-    qfPos.push(p);
+    var base = qfAngles[i];
+    var hp = polar(CX, CY, R_QF, base - qfPairSpan/2);
+    var ap = polar(CX, CY, R_QF, base + qfPairSpan/2);
+    var jp = polar(CX, CY, R_QF - 24*s, base);
+    drawLine(r16Junctions[i*2][0], r16Junctions[i*2][1], hp[0], hp[1], 'rgba(0,0,0,0.05)', 0.8);
+    drawLine(r16Junctions[i*2+1][0], r16Junctions[i*2+1][1], ap[0], ap[1], 'rgba(0,0,0,0.05)', 0.8);
+    drawLine(hp[0], hp[1], jp[0], jp[1], 'rgba(0,0,0,0.05)', 0.8);
+    drawLine(ap[0], ap[1], jp[0], jp[1], 'rgba(0,0,0,0.05)', 0.8);
+    qfHomePos.push(hp);
+    qfAwayPos.push(ap);
+    qfJunctions.push(jp);
   }
 
-  // QF → SF
-  var sfPos = [];
+  // QF junctions → SF pairs
+  var sfPairSpan = 6;
+  var sfHomePos = [], sfAwayPos = [], sfJunctions = [];
   for (var i = 0; i < 2; i++) {
-    var p = polar(CX, CY, R_SF, sfAngles[i]);
-    drawLine(qfPos[i*2][0], qfPos[i*2][1], p[0], p[1], 'rgba(0,0,0,0.05)', 0.8);
-    drawLine(qfPos[i*2+1][0], qfPos[i*2+1][1], p[0], p[1], 'rgba(0,0,0,0.05)', 0.8);
-    sfPos.push(p);
+    var base = sfAngles[i];
+    var hp = polar(CX, CY, R_SF, base - sfPairSpan/2);
+    var ap = polar(CX, CY, R_SF, base + sfPairSpan/2);
+    var jp = polar(CX, CY, R_SF - 20*s, base);
+    drawLine(qfJunctions[i*2][0], qfJunctions[i*2][1], hp[0], hp[1], 'rgba(0,0,0,0.05)', 0.8);
+    drawLine(qfJunctions[i*2+1][0], qfJunctions[i*2+1][1], ap[0], ap[1], 'rgba(0,0,0,0.05)', 0.8);
+    drawLine(hp[0], hp[1], jp[0], jp[1], 'rgba(0,0,0,0.05)', 0.8);
+    drawLine(ap[0], ap[1], jp[0], jp[1], 'rgba(0,0,0,0.05)', 0.8);
+    sfHomePos.push(hp);
+    sfAwayPos.push(ap);
+    sfJunctions.push(jp);
   }
 
-  // SF → Final (center)
-  sfPos.forEach(function(sf) {
-    drawLine(sf[0], sf[1], CX, CY, 'rgba(180,140,40,0.12)', 1);
+  // SF junctions → Final (center)
+  sfJunctions.forEach(function(jp) {
+    drawLine(jp[0], jp[1], CX, CY, 'rgba(180,140,40,0.12)', 1);
   });
 
   // ══════════════════════════════════════════════
@@ -706,9 +722,19 @@ function draw() {
     drawJunction(r16Junctions[i][0], r16Junctions[i][1], s);
   }
 
-  // QF & SF empty nodes
-  qfPos.forEach(function(p) { drawEmptyNode(p[0], p[1], nQF); });
-  sfPos.forEach(function(p) { drawEmptyNode(p[0], p[1], nSF); });
+  // QF pairs
+  for (var i = 0; i < 4; i++) {
+    drawEmptyNode(qfHomePos[i][0], qfHomePos[i][1], nQF);
+    drawEmptyNode(qfAwayPos[i][0], qfAwayPos[i][1], nQF);
+    drawJunction(qfJunctions[i][0], qfJunctions[i][1], s);
+  }
+
+  // SF pairs
+  for (var i = 0; i < 2; i++) {
+    drawEmptyNode(sfHomePos[i][0], sfHomePos[i][1], nSF);
+    drawEmptyNode(sfAwayPos[i][0], sfAwayPos[i][1], nSF);
+    drawJunction(sfJunctions[i][0], sfJunctions[i][1], s);
+  }
 
   // ── Trophy at center ──
   ctx.font = (36*s) + 'px serif';
