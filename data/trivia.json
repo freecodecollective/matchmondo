@@ -10661,7 +10661,7 @@
       "answer": 1,
       "explanation": "False! Five of six confederations have had semi-finalists: UEFA (Europe), CONMEBOL (South America), CONCACAF (USA in 1930), AFC (South Korea in 2002), and CAF (Morocco in 2022). The only confederation without a semi-finalist is OFC (Oceania), whose top footballing nation, Australia, moved to the Asian confederation in 2006.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-golden-goal-abolished",
