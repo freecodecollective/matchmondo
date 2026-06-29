@@ -2903,7 +2903,7 @@
     {
       "id": "r-red-card-replace",
       "category": "rules",
-      "question": "When a player is shown a red card, the team may…",
+      "question": "When a player is shown a red card, the team must…",
       "options": [
         "Bring on a substitute",
         "Play a player short for the rest of the match",
@@ -2911,7 +2911,8 @@
         "Appeal immediately"
       ],
       "answer": 1,
-      "explanation": "A sent-off player cannot be replaced — the team plays a player down, and the player is suspended for at least the next match."
+      "explanation": "A sent-off player cannot be replaced — the team plays a player down, and the player is suspended for at least the next match.",
+      "approved": true
     },
     {
       "id": "r-extra-time",
