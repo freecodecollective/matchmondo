@@ -11623,7 +11623,7 @@
       "answer": 0,
       "explanation": "True! The goalkeeper must have at least one foot touching or in line with the goal line when the penalty is taken. This rule, strictly enforced since 2020 with the help of VAR, has led to several penalties being retaken when goalkeepers moved too early.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-1966-only-european-host-win",
