@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MatchMondo — Team Header Redesign</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif; background: #e8e8e8; padding: 24px 0 48px; -webkit-font-smoothing: antialiased; }
+
+  .page-title { text-align: center; font-size: 22px; font-weight: 700; color: #333; padding: 20px 0 4px; }
+  .page-subtitle { text-align: center; font-size: 13px; color: #888; margin-bottom: 28px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.5; padding: 0 20px; }
+
+  .phones { display: flex; flex-wrap: wrap; gap: 36px; justify-content: center; padding: 0 20px 40px; }
+
+  .phone {
+    width: 375px;
+    background: #e8ece8;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15), 0 2px 8px rgba(0,0,0,0.1);
+    border: 6px solid #1a1a1a;
+  }
+  .phone-label { text-align: center; font-size: 14px; font-weight: 600; color: #555; margin-bottom: 4px; }
+  .phone-sublabel { text-align: center; font-size: 12px; color: #999; margin-bottom: 12px; max-width: 340px; margin-left: auto; margin-right: auto; line-height: 1.4; }
+  .phone-wrap { display: flex; flex-direction: column; align-items: center; }
+
+  .content { background: #e8ece8; }
+
+  :root {
+    --accent: #0F6E56;
+    --accent-dark: #0B3D28;
+    --accent-readable: #0B6E4F;
+  }
+
+  .back-btn {
+    position: absolute; top: 12px; left: 12px; z-index: 2;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: rgba(0,0,0,0.35); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 600;
+  }
+
+  /* Placeholder content below each header */
+  .placeholder-card {
+    margin: 16px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.06);
+    padding: 14px;
+  }
+  .ph-header { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+  .ph-icon { font-size: 12px; color: var(--accent-readable); }
+  .ph-bar { height: 10px; background: #f0f0f0; border-radius: 5px; margin-bottom: 8px; }
+  .ph-bar.w60 { width: 60%; }
+  .ph-bar.w80 { width: 80%; }
+  .ph-bar.w45 { width: 45%; }
+
+  /* Shared turf pattern */
+  .turf-pattern {
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(90deg,
+      transparent 0, transparent 46px,
+      rgba(255,255,255,0.05) 46px, rgba(255,255,255,0.05) 92px);
+    pointer-events: none;
+  }
+  .pitch-line {
+    position: absolute;
+    right: 14%; top: 0; bottom: 0;
+    width: 1.5px;
+    background: rgba(255,255,255,0.15);
+    pointer-events: none;
+  }
+  .pitch-circle {
+    position: absolute;
+    right: calc(14% - 40px); top: 50%; transform: translateY(-50%);
+    width: 80px; height: 80px; border-radius: 50%;
+    border: 1.5px solid rgba(255,255,255,0.12);
+    pointer-events: none;
+  }
+
+  .section-divider {
+    text-align: center; font-size: 18px; font-weight: 700; color: #333;
+    padding: 32px 0 4px;
+  }
+  .section-note {
+    text-align: center; font-size: 12px; color: #999; margin-bottom: 24px;
+    max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.4;
+    padding: 0 20px;
+  }
+
+  /* Shared: frosted chips */
+  .chip {
+    font-size: 11px; font-weight: 600;
+    padding: 3px 8px; border-radius: 6px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(4px);
+    display: flex; align-items: center; gap: 3px;
+  }
+
+  /* Shared: meta pills */
+  .mpill {
+    font-size: 11px; font-weight: 600;
+    padding: 3px 8px; border-radius: 6px;
+    background: rgba(255,255,255,0.15);
+  }
+
+  /* ==============================
+     CURRENT (for reference)
+     ============================== */
+  .hdr-current {
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #1D9E75 100%);
+    padding: 48px 16px 18px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .hdr-current .inner {
+    position: relative; z-index: 1;
+    display: flex; align-items: flex-end; gap: 14px;
+  }
+  .hdr-current .flag-img {
+    width: 56px; height: 42px; border-radius: 4px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    flex-shrink: 0;
+  }
+  .hdr-current .info { flex: 1; min-width: 0; }
+  .hdr-current .name { font-size: 22px; font-weight: 700; }
+  .hdr-current .meta {
+    font-size: 12px; opacity: 0.7; margin-top: 2px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .hdr-current .group-pill {
+    font-size: 12px; font-weight: 600;
+    padding: 3px 8px; border-radius: 10px;
+    background: rgba(255,255,255,0.2);
+    display: inline-flex; align-items: center; gap: 3px;
+  }
+  .hdr-current .group-pill .chev { font-size: 9px; }
+
+  /* ==============================
+     OPTION A — Big Flag Hero
+     ============================== */
+  .hdr-a {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    height: 200px;
+  }
+  .hdr-a .bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #1D9E75 100%);
+  }
+  .hdr-a .gradient-fade {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 60%;
+    background: linear-gradient(to top, rgba(11,61,40,0.7), transparent);
+    z-index: 1; pointer-events: none;
+  }
+  /* Large flag on right side — same editorial feel as player photo */
+  .hdr-a .flag-large {
+    position: absolute; right: 16px; bottom: 16px;
+    width: 120px; height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+    border: 2px solid rgba(255,255,255,0.3);
+    z-index: 2;
+  }
+  .hdr-a .flag-large img { width: 100%; height: 100%; object-fit: cover; }
+  /* Faded flag halo behind */
+  .hdr-a .flag-halo {
+    position: absolute; right: -30px; bottom: -30px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 0.15;
+  }
+  .hdr-a .flag-halo img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-a .text-area {
+    position: absolute; left: 16px; bottom: 16px; z-index: 2;
+    right: 152px;
+  }
+  .hdr-a .name { font-size: 24px; font-weight: 800; letter-spacing: -0.3px; line-height: 1.15; }
+  .hdr-a .rank { font-size: 12px; opacity: 0.7; margin-top: 2px; }
+  .hdr-a .group-pill {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 12px; font-weight: 600;
+    padding: 3px 10px; border-radius: 10px;
+    background: rgba(255,255,255,0.2);
+    margin-top: 6px;
+  }
+  .hdr-a .group-pill .chev { font-size: 9px; }
+  .hdr-a .record {
+    display: flex; gap: 6px; margin-top: 8px;
+  }
+
+  /* ==============================
+     OPTION B — Centered Flag + Stats
+     ============================== */
+  .hdr-b {
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #1D9E75 100%);
+    padding: 48px 16px 20px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hdr-b .inner { position: relative; z-index: 1; }
+  .hdr-b .flag-wrap {
+    width: 88px; height: 60px; border-radius: 8px;
+    overflow: hidden; margin: 0 auto 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    border: 2px solid rgba(255,255,255,0.35);
+  }
+  .hdr-b .flag-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-b .name { font-size: 24px; font-weight: 800; letter-spacing: -0.3px; }
+  .hdr-b .meta-row {
+    display: flex; justify-content: center; gap: 12px;
+    margin-top: 6px; font-size: 12px; opacity: 0.75;
+    align-items: center;
+  }
+  .hdr-b .meta-row .sep { opacity: 0.4; }
+  .hdr-b .group-pill {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 12px; font-weight: 600;
+    padding: 3px 10px; border-radius: 10px;
+    background: rgba(255,255,255,0.2);
+  }
+  .hdr-b .group-pill .chev { font-size: 9px; }
+  .hdr-b .record-row {
+    display: flex; justify-content: center; gap: 16px;
+    margin-top: 10px;
+  }
+  .hdr-b .rec-item {
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .hdr-b .rec-val { font-size: 18px; font-weight: 800; }
+  .hdr-b .rec-label { font-size: 9px; font-weight: 600; opacity: 0.6; text-transform: uppercase; letter-spacing: 0.3px; margin-top: 1px; }
+
+  /* ==============================
+     OPTION C — Stats Strip (dark bar)
+     ============================== */
+  .hdr-c {
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #1D9E75 100%);
+    padding: 48px 16px 0;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .hdr-c .inner {
+    position: relative; z-index: 1;
+    display: flex; align-items: center; gap: 14px;
+    padding-bottom: 14px;
+  }
+  .hdr-c .flag-wrap {
+    width: 64px; height: 44px; border-radius: 6px;
+    overflow: hidden; flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    border: 2px solid rgba(255,255,255,0.35);
+  }
+  .hdr-c .flag-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-c .info { flex: 1; min-width: 0; }
+  .hdr-c .name { font-size: 22px; font-weight: 800; letter-spacing: -0.3px; }
+  .hdr-c .meta { font-size: 12px; opacity: 0.7; margin-top: 2px; display: flex; align-items: center; gap: 8px; }
+  .hdr-c .group-pill {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 12px; font-weight: 600;
+    padding: 3px 10px; border-radius: 10px;
+    background: rgba(255,255,255,0.2);
+  }
+  .hdr-c .group-pill .chev { font-size: 9px; }
+  .hdr-c .stat-strip {
+    position: relative; z-index: 1;
+    display: flex; gap: 0;
+    background: rgba(0,0,0,0.15);
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .hdr-c .sstat {
+    flex: 1; text-align: center;
+    padding: 10px 4px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .hdr-c .sstat:last-child { border-right: none; }
+  .hdr-c .sstat .sv { font-size: 16px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .hdr-c .sstat .sl { font-size: 9px; font-weight: 600; opacity: 0.6; text-transform: uppercase; letter-spacing: 0.3px; margin-top: 1px; }
+
+  /* ==============================
+     OPTION D — Two-Tone Split
+     ============================== */
+  .hdr-d {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+  }
+  .hdr-d .gradient-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #1D9E75 100%);
+  }
+  .hdr-d .top-row {
+    position: relative; z-index: 1;
+    display: flex; align-items: center;
+    padding: 48px 16px 14px;
+    gap: 14px;
+  }
+  .hdr-d .flag-wrap {
+    width: 64px; height: 44px; border-radius: 6px;
+    overflow: hidden; flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    border: 2px solid rgba(255,255,255,0.35);
+  }
+  .hdr-d .flag-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-d .info { flex: 1; min-width: 0; }
+  .hdr-d .name { font-size: 22px; font-weight: 800; letter-spacing: -0.3px; }
+  .hdr-d .meta { font-size: 12px; opacity: 0.7; margin-top: 2px; display: flex; align-items: center; gap: 8px; }
+  .hdr-d .group-pill {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 12px; font-weight: 600;
+    padding: 3px 10px; border-radius: 10px;
+    background: rgba(255,255,255,0.2);
+  }
+  .hdr-d .group-pill .chev { font-size: 9px; }
+  .hdr-d .bottom-strip {
+    position: relative; z-index: 1;
+    background: #fff;
+    display: flex; gap: 0;
+    border-radius: 16px 16px 0 0;
+    margin-top: -2px;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.06);
+  }
+  .hdr-d .bstat {
+    flex: 1; text-align: center;
+    padding: 12px 4px;
+    border-right: 1px solid rgba(0,0,0,0.05);
+  }
+  .hdr-d .bstat:last-child { border-right: none; }
+  .hdr-d .bstat .sv { font-size: 16px; font-weight: 800; color: var(--accent-readable); font-variant-numeric: tabular-nums; }
+  .hdr-d .bstat .sl { font-size: 9px; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 0.3px; margin-top: 1px; }
+
+  /* ==============================
+     OPTION E — Flag Banner (big flag fills right)
+     ============================== */
+  .hdr-e {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    height: 180px;
+  }
+  .hdr-e .bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #1D9E75 100%);
+  }
+  .hdr-e .gradient-fade {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 60%;
+    background: linear-gradient(to top, rgba(11,61,40,0.7), transparent);
+    z-index: 1; pointer-events: none;
+  }
+  /* Flag fills the right edge, like the big photo compact */
+  .hdr-e .flag-mega {
+    position: absolute; right: 0; top: 0; bottom: 0;
+    width: 180px;
+    overflow: hidden;
+    z-index: 0;
+  }
+  .hdr-e .flag-mega img {
+    width: 100%; height: 100%; object-fit: cover;
+    opacity: 0.25;
+  }
+  /* Sharp flag on right */
+  .hdr-e .flag-main {
+    position: absolute; right: 20px; bottom: 20px;
+    width: 100px; height: 68px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+    border: 2px solid rgba(255,255,255,0.35);
+    z-index: 2;
+  }
+  .hdr-e .flag-main img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-e .text-area {
+    position: absolute; left: 16px; bottom: 18px; z-index: 2;
+    right: 140px;
+  }
+  .hdr-e .name { font-size: 22px; font-weight: 800; letter-spacing: -0.3px; line-height: 1.15; }
+  .hdr-e .rank { font-size: 12px; opacity: 0.7; margin-top: 3px; }
+  .hdr-e .group-pill {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 12px; font-weight: 600;
+    padding: 3px 10px; border-radius: 10px;
+    background: rgba(255,255,255,0.2);
+    margin-top: 6px;
+  }
+  .hdr-e .group-pill .chev { font-size: 9px; }
+  .hdr-e .record {
+    display: flex; gap: 6px; margin-top: 8px;
+  }
+
+  /* ==============================
+     OPTION F — National Colors Accent
+     ============================== */
+  .hdr-f {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    height: 190px;
+  }
+  .hdr-f .bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #1D9E75 100%);
+  }
+  .hdr-f .gradient-fade {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 50%;
+    background: linear-gradient(to top, rgba(11,61,40,0.7), transparent);
+    z-index: 1; pointer-events: none;
+  }
+  /* National color stripe along the top */
+  .hdr-f .nat-stripe {
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 4px;
+    z-index: 3;
+    display: flex;
+  }
+  .hdr-f .nat-stripe span { flex: 1; }
+  /* Flag centered, large */
+  .hdr-f .flag-center {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 110px; height: 74px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+    border: 2.5px solid rgba(255,255,255,0.4);
+    z-index: 2;
+    opacity: 0.12;
+  }
+  .hdr-f .flag-center img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-f .text-area {
+    position: absolute; left: 16px; bottom: 16px; z-index: 2;
+    right: 16px;
+  }
+  .hdr-f .top-line {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hdr-f .flag-sm {
+    width: 48px; height: 33px; border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border: 1.5px solid rgba(255,255,255,0.3);
+    flex-shrink: 0;
+  }
+  .hdr-f .flag-sm img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-f .name { font-size: 24px; font-weight: 800; letter-spacing: -0.3px; }
+  .hdr-f .sub-line {
+    display: flex; align-items: center; gap: 8px;
+    margin-top: 4px;
+  }
+  .hdr-f .rank { font-size: 12px; opacity: 0.7; }
+  .hdr-f .group-pill {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 12px; font-weight: 600;
+    padding: 3px 10px; border-radius: 10px;
+    background: rgba(255,255,255,0.2);
+  }
+  .hdr-f .group-pill .chev { font-size: 9px; }
+  .hdr-f .record {
+    display: flex; gap: 6px; margin-top: 8px;
+  }
+
+  /* ==============================
+     OPTION G — Compact with coach
+     ============================== */
+  .hdr-g {
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #1D9E75 100%);
+    padding: 48px 16px 16px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .hdr-g .inner {
+    position: relative; z-index: 1;
+  }
+  .hdr-g .top-row {
+    display: flex; align-items: center; gap: 14px;
+  }
+  .hdr-g .flag-wrap {
+    width: 56px; height: 38px; border-radius: 5px;
+    overflow: hidden; flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    border: 2px solid rgba(255,255,255,0.35);
+  }
+  .hdr-g .flag-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-g .info { flex: 1; min-width: 0; }
+  .hdr-g .name { font-size: 22px; font-weight: 800; letter-spacing: -0.3px; }
+  .hdr-g .meta { font-size: 12px; opacity: 0.7; margin-top: 2px; display: flex; align-items: center; gap: 8px; }
+  .hdr-g .group-pill {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 12px; font-weight: 600;
+    padding: 3px 10px; border-radius: 10px;
+    background: rgba(255,255,255,0.2);
+  }
+  .hdr-g .group-pill .chev { font-size: 9px; }
+  .hdr-g .coach-row {
+    display: flex; align-items: center; gap: 8px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+  .hdr-g .coach-photo {
+    width: 32px; height: 32px; border-radius: 50%;
+    overflow: hidden; flex-shrink: 0;
+    border: 1.5px solid rgba(255,255,255,0.3);
+  }
+  .hdr-g .coach-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-g .coach-info { flex: 1; }
+  .hdr-g .coach-label { font-size: 10px; opacity: 0.5; text-transform: uppercase; font-weight: 600; letter-spacing: 0.3px; }
+  .hdr-g .coach-name { font-size: 14px; font-weight: 600; }
+  .hdr-g .record-row {
+    display: flex; gap: 6px; margin-top: 10px;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="page-title">Team Header — Redesign Options</div>
+<div class="page-subtitle">Seven header layout options for team detail. Matching the same design language as the player headers — gradient, turf stripes, pitch markings. Using Argentina as the example.</div>
+
+<div class="section-divider">Current Design (for reference)</div>
+<div class="section-note">Basic gradient with flag and text. Feels flat compared to player headers.</div>
+
+<div class="phones">
+<div class="phone-wrap">
+  <div class="phone-label">Current</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-current">
+        <div class="back-btn">&#8249;</div>
+        <div class="turf-pattern"></div>
+        <div class="pitch-line"></div>
+        <div class="pitch-circle"></div>
+        <div class="inner">
+          <img class="flag-img" src="https://flagcdn.com/w320/ar.png" alt="Argentina">
+          <div class="info">
+            <div class="name">Argentina</div>
+            <div class="meta">
+              <span style="opacity:0.7">(1)</span>
+              <span class="group-pill">Group J <span class="chev">&#x203A;</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Stats card below -->
+      <div class="placeholder-card">
+        <div style="display:flex;gap:16px;justify-content:space-around">
+          <div style="text-align:center"><div style="font-size:16px;font-weight:800;color:var(--accent-readable)">3</div><div style="font-size:10px;color:#999;text-transform:uppercase">Played</div></div>
+          <div style="text-align:center"><div style="font-size:16px;font-weight:800;color:var(--accent-readable)">3</div><div style="font-size:10px;color:#999;text-transform:uppercase">W</div></div>
+          <div style="text-align:center"><div style="font-size:16px;font-weight:800;color:var(--accent-readable)">0</div><div style="font-size:10px;color:#999;text-transform:uppercase">D</div></div>
+          <div style="text-align:center"><div style="font-size:16px;font-weight:800;color:var(--accent-readable)">0</div><div style="font-size:10px;color:#999;text-transform:uppercase">L</div></div>
+          <div style="text-align:center"><div style="font-size:16px;font-weight:800;color:var(--accent-readable)">8</div><div style="font-size:10px;color:#999;text-transform:uppercase">GF</div></div>
+          <div style="text-align:center"><div style="font-size:16px;font-weight:800;color:var(--accent-readable)">1</div><div style="font-size:10px;color:#999;text-transform:uppercase">GA</div></div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="section-divider">Redesign Options</div>
+<div class="section-note">Same Argentina data across all options — compare flag prominence, stats placement, and information hierarchy</div>
+
+<div class="phones">
+
+<!-- OPTION A — Editorial Banner -->
+<div class="phone-wrap">
+  <div class="phone-label">A — Editorial Banner</div>
+  <div class="phone-sublabel">Taller banner with prominent flag on the right, text fading up. Same layout language as the player "Big Photo" option.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-a">
+        <div class="back-btn">&#8249;</div>
+        <div class="bg">
+          <div class="turf-pattern"></div>
+          <div class="pitch-line"></div>
+          <div class="pitch-circle"></div>
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="flag-halo">
+          <img src="https://flagcdn.com/w640/ar.png" alt="">
+        </div>
+        <div class="flag-large">
+          <img src="https://flagcdn.com/w320/ar.png" alt="Argentina">
+        </div>
+        <div class="text-area">
+          <div class="name">Argentina</div>
+          <div class="rank">#1 FIFA Ranking</div>
+          <div class="group-pill">Group J <span class="chev">&#x203A;</span></div>
+          <div class="record">
+            <span class="mpill">W3 D0 L0</span>
+            <span class="mpill">GF 8 · GA 1</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION B — Centered Flag + Stats -->
+<div class="phone-wrap">
+  <div class="phone-label">B — Centered Flag</div>
+  <div class="phone-sublabel">Flag centered like a sports card. Team name big below, stats row integrated. Clean and symmetrical.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-b">
+        <div class="back-btn">&#8249;</div>
+        <div class="turf-pattern"></div>
+        <div class="pitch-line"></div>
+        <div class="pitch-circle"></div>
+        <div class="inner">
+          <div class="flag-wrap">
+            <img src="https://flagcdn.com/w320/ar.png" alt="Argentina">
+          </div>
+          <div class="name">Argentina</div>
+          <div class="meta-row">
+            <span style="opacity:0.7">#1 FIFA Ranking</span>
+            <span class="sep">·</span>
+            <span class="group-pill">Group J <span class="chev">&#x203A;</span></span>
+          </div>
+          <div class="record-row">
+            <div class="rec-item"><div class="rec-val">3</div><div class="rec-label">W</div></div>
+            <div class="rec-item"><div class="rec-val">0</div><div class="rec-label">D</div></div>
+            <div class="rec-item"><div class="rec-val">0</div><div class="rec-label">L</div></div>
+            <div class="rec-item" style="opacity:0.4">|</div>
+            <div class="rec-item"><div class="rec-val">8</div><div class="rec-label">GF</div></div>
+            <div class="rec-item"><div class="rec-val">1</div><div class="rec-label">GA</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION C — Stats Strip -->
+<div class="phone-wrap">
+  <div class="phone-label">C — Stats Strip</div>
+  <div class="phone-sublabel">Stats integrated into the header as a dark strip at the bottom. Mirrors the player "Stats Strip" layout — info-dense.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c">
+        <div class="back-btn">&#8249;</div>
+        <div class="turf-pattern"></div>
+        <div class="pitch-line"></div>
+        <div class="pitch-circle"></div>
+        <div class="inner">
+          <div class="flag-wrap">
+            <img src="https://flagcdn.com/w320/ar.png" alt="Argentina">
+          </div>
+          <div class="info">
+            <div class="name">Argentina</div>
+            <div class="meta">
+              <span style="opacity:0.7">#1</span>
+              <span class="group-pill">Group J <span class="chev">&#x203A;</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="stat-strip">
+          <div class="sstat"><div class="sv">3</div><div class="sl">Played</div></div>
+          <div class="sstat"><div class="sv">3</div><div class="sl">W</div></div>
+          <div class="sstat"><div class="sv">0</div><div class="sl">D</div></div>
+          <div class="sstat"><div class="sv">0</div><div class="sl">L</div></div>
+          <div class="sstat"><div class="sv">8</div><div class="sl">GF</div></div>
+          <div class="sstat"><div class="sv">1</div><div class="sl">GA</div></div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION D — Two-Tone Split -->
+<div class="phone-wrap">
+  <div class="phone-label">D — Two-Tone Split</div>
+  <div class="phone-sublabel">Green header flows into white stat strip with rounded top edge. Stats bridge header and content. Same as player option E.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-d">
+        <div class="gradient-bg">
+          <div class="turf-pattern"></div>
+          <div class="pitch-line"></div>
+          <div class="pitch-circle"></div>
+        </div>
+        <div class="back-btn">&#8249;</div>
+        <div class="top-row">
+          <div class="flag-wrap">
+            <img src="https://flagcdn.com/w320/ar.png" alt="Argentina">
+          </div>
+          <div class="info">
+            <div class="name">Argentina</div>
+            <div class="meta">
+              <span style="opacity:0.7">#1</span>
+              <span class="group-pill">Group J <span class="chev">&#x203A;</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-strip">
+          <div class="bstat"><div class="sv">3</div><div class="sl">Played</div></div>
+          <div class="bstat"><div class="sv">3</div><div class="sl">W</div></div>
+          <div class="bstat"><div class="sv">0</div><div class="sl">D</div></div>
+          <div class="bstat"><div class="sv">0</div><div class="sl">L</div></div>
+          <div class="bstat"><div class="sv">8</div><div class="sl">GF</div></div>
+          <div class="bstat"><div class="sv">1</div><div class="sl">GA</div></div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION E — Flag fills right edge -->
+<div class="phone-wrap">
+  <div class="phone-label">E — Flag Banner</div>
+  <div class="phone-sublabel">Flag as a large element on the right, like the player compact "Big Photo." Faded flag behind for texture, sharp flag anchored at bottom-right.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-e">
+        <div class="back-btn">&#8249;</div>
+        <div class="bg">
+          <div class="turf-pattern"></div>
+          <div class="pitch-line"></div>
+          <div class="pitch-circle"></div>
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="flag-mega">
+          <img src="https://flagcdn.com/w640/ar.png" alt="">
+        </div>
+        <div class="flag-main">
+          <img src="https://flagcdn.com/w320/ar.png" alt="Argentina">
+        </div>
+        <div class="text-area">
+          <div class="name">Argentina</div>
+          <div class="rank">#1 FIFA Ranking</div>
+          <div class="group-pill">Group J <span class="chev">&#x203A;</span></div>
+          <div class="record">
+            <span class="mpill">W3 D0 L0</span>
+            <span class="mpill">GF 8 · GA 1</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION F — National Colors Accent -->
+<div class="phone-wrap">
+  <div class="phone-label">F — National Colors</div>
+  <div class="phone-sublabel">Country colors as a thin accent stripe at top, with a subtle centered flag watermark. Flag + name at bottom.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-f">
+        <div class="back-btn">&#8249;</div>
+        <div class="bg">
+          <div class="turf-pattern"></div>
+          <div class="pitch-line"></div>
+          <div class="pitch-circle"></div>
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="nat-stripe">
+          <span style="background:#75AADB"></span>
+          <span style="background:#fff"></span>
+          <span style="background:#75AADB"></span>
+        </div>
+        <div class="flag-center">
+          <img src="https://flagcdn.com/w640/ar.png" alt="">
+        </div>
+        <div class="text-area">
+          <div class="top-line">
+            <div class="flag-sm"><img src="https://flagcdn.com/w320/ar.png" alt="Argentina"></div>
+            <div class="name">Argentina</div>
+          </div>
+          <div class="sub-line">
+            <span class="rank">#1 FIFA Ranking</span>
+            <span class="group-pill">Group J <span class="chev">&#x203A;</span></span>
+          </div>
+          <div class="record">
+            <span class="mpill">W3 D0 L0</span>
+            <span class="mpill">GF 8 · GA 1</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION G — Compact with Coach -->
+<div class="phone-wrap">
+  <div class="phone-label">G — With Coach Row</div>
+  <div class="phone-sublabel">Compact team info at top, coach integrated below the divider line. Stats as pills. Shows more context without scrolling.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-g">
+        <div class="back-btn">&#8249;</div>
+        <div class="turf-pattern"></div>
+        <div class="pitch-line"></div>
+        <div class="pitch-circle"></div>
+        <div class="inner">
+          <div class="top-row">
+            <div class="flag-wrap">
+              <img src="https://flagcdn.com/w320/ar.png" alt="Argentina">
+            </div>
+            <div class="info">
+              <div class="name">Argentina</div>
+              <div class="meta">
+                <span style="opacity:0.7">#1</span>
+                <span class="group-pill">Group J <span class="chev">&#x203A;</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="coach-row">
+            <div class="coach-photo">
+              <img src="https://b.fssta.com/uploads/application/soccer/headshots/2221.png" alt="Scaloni">
+            </div>
+            <div class="coach-info">
+              <div class="coach-label">Head Coach</div>
+              <div class="coach-name">Lionel Scaloni</div>
+            </div>
+          </div>
+          <div class="record-row">
+            <span class="mpill">W3 D0 L0</span>
+            <span class="mpill">GF 8 · GA 1</span>
+            <span class="mpill">26 Players</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- ============== STRESS TESTS ============== -->
+<div class="section-divider" style="margin-top:32px">Stress Tests — Long Team Names</div>
+<div class="section-note">Options A, C, D, and F with longer team names to check layout at different widths</div>
+
+<div class="phones">
+
+<!-- Option A — Bosnia and Herzegovina -->
+<div class="phone-wrap">
+  <div class="phone-label">A — Bosnia and Herzegovina</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-a">
+        <div class="back-btn">&#8249;</div>
+        <div class="bg">
+          <div class="turf-pattern"></div>
+          <div class="pitch-line"></div>
+          <div class="pitch-circle"></div>
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="flag-halo">
+          <img src="https://flagcdn.com/w640/ba.png" alt="">
+        </div>
+        <div class="flag-large">
+          <img src="https://flagcdn.com/w320/ba.png" alt="Bosnia">
+        </div>
+        <div class="text-area">
+          <div class="name">Bosnia and Herzegovina</div>
+          <div class="rank">#62 FIFA Ranking</div>
+          <div class="group-pill">Group F <span class="chev">&#x203A;</span></div>
+          <div class="record">
+            <span class="mpill">W1 D0 L2</span>
+            <span class="mpill">GF 3 · GA 5</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Option C — Trinidad and Tobago -->
+<div class="phone-wrap">
+  <div class="phone-label">C — Trinidad and Tobago</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c">
+        <div class="back-btn">&#8249;</div>
+        <div class="turf-pattern"></div>
+        <div class="pitch-line"></div>
+        <div class="pitch-circle"></div>
+        <div class="inner">
+          <div class="flag-wrap">
+            <img src="https://flagcdn.com/w320/tt.png" alt="Trinidad and Tobago">
+          </div>
+          <div class="info">
+            <div class="name">Trinidad and Tobago</div>
+            <div class="meta">
+              <span style="opacity:0.7">#103</span>
+              <span class="group-pill">Group H <span class="chev">&#x203A;</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="stat-strip">
+          <div class="sstat"><div class="sv">3</div><div class="sl">Played</div></div>
+          <div class="sstat"><div class="sv">0</div><div class="sl">W</div></div>
+          <div class="sstat"><div class="sv">1</div><div class="sl">D</div></div>
+          <div class="sstat"><div class="sv">2</div><div class="sl">L</div></div>
+          <div class="sstat"><div class="sv">2</div><div class="sl">GF</div></div>
+          <div class="sstat"><div class="sv">6</div><div class="sl">GA</div></div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Option D — Dominican Republic -->
+<div class="phone-wrap">
+  <div class="phone-label">D — Dominican Republic</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-d">
+        <div class="gradient-bg">
+          <div class="turf-pattern"></div>
+          <div class="pitch-line"></div>
+          <div class="pitch-circle"></div>
+        </div>
+        <div class="back-btn">&#8249;</div>
+        <div class="top-row">
+          <div class="flag-wrap">
+            <img src="https://flagcdn.com/w320/do.png" alt="Dominican Republic">
+          </div>
+          <div class="info">
+            <div class="name">Dominican Republic</div>
+            <div class="meta">
+              <span style="opacity:0.7">#165</span>
+              <span class="group-pill">Group A <span class="chev">&#x203A;</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-strip">
+          <div class="bstat"><div class="sv">3</div><div class="sl">Played</div></div>
+          <div class="bstat"><div class="sv">0</div><div class="sl">W</div></div>
+          <div class="bstat"><div class="sv">0</div><div class="sl">D</div></div>
+          <div class="bstat"><div class="sv">3</div><div class="sl">L</div></div>
+          <div class="bstat"><div class="sv">1</div><div class="sl">GF</div></div>
+          <div class="bstat"><div class="sv">9</div><div class="sl">GA</div></div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Option F — Republic of Ireland -->
+<div class="phone-wrap">
+  <div class="phone-label">F — Republic of Ireland</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-f">
+        <div class="back-btn">&#8249;</div>
+        <div class="bg">
+          <div class="turf-pattern"></div>
+          <div class="pitch-line"></div>
+          <div class="pitch-circle"></div>
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="nat-stripe">
+          <span style="background:#009A49"></span>
+          <span style="background:#fff"></span>
+          <span style="background:#FF7900"></span>
+        </div>
+        <div class="flag-center">
+          <img src="https://flagcdn.com/w640/ie.png" alt="">
+        </div>
+        <div class="text-area">
+          <div class="top-line">
+            <div class="flag-sm"><img src="https://flagcdn.com/w320/ie.png" alt="Ireland"></div>
+            <div class="name">Republic of Ireland</div>
+          </div>
+          <div class="sub-line">
+            <span class="rank">#58 FIFA Ranking</span>
+            <span class="group-pill">Group B <span class="chev">&#x203A;</span></span>
+          </div>
+          <div class="record">
+            <span class="mpill">W1 D1 L1</span>
+            <span class="mpill">GF 4 · GA 4</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- ============== DIFFERENT COUNTRIES ============== -->
+<div class="section-divider" style="margin-top:32px">Option F (National Colors) — Different Countries</div>
+<div class="section-note">Testing the national color stripe with different flag palettes</div>
+
+<div class="phones">
+
+<!-- Brazil -->
+<div class="phone-wrap">
+  <div class="phone-label">F — Brazil</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-f">
+        <div class="back-btn">&#8249;</div>
+        <div class="bg">
+          <div class="turf-pattern"></div>
+          <div class="pitch-line"></div>
+          <div class="pitch-circle"></div>
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="nat-stripe">
+          <span style="background:#009B3A"></span>
+          <span style="background:#FEDF00"></span>
+          <span style="background:#009B3A"></span>
+        </div>
+        <div class="flag-center">
+          <img src="https://flagcdn.com/w640/br.png" alt="">
+        </div>
+        <div class="text-area">
+          <div class="top-line">
+            <div class="flag-sm"><img src="https://flagcdn.com/w320/br.png" alt="Brazil"></div>
+            <div class="name">Brazil</div>
+          </div>
+          <div class="sub-line">
+            <span class="rank">#5 FIFA Ranking</span>
+            <span class="group-pill">Group E <span class="chev">&#x203A;</span></span>
+          </div>
+          <div class="record">
+            <span class="mpill">W2 D1 L0</span>
+            <span class="mpill">GF 5 · GA 2</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Germany -->
+<div class="phone-wrap">
+  <div class="phone-label">F — Germany</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-f">
+        <div class="back-btn">&#8249;</div>
+        <div class="bg">
+          <div class="turf-pattern"></div>
+          <div class="pitch-line"></div>
+          <div class="pitch-circle"></div>
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="nat-stripe">
+          <span style="background:#000"></span>
+          <span style="background:#DD0000"></span>
+          <span style="background:#FFCC00"></span>
+        </div>
+        <div class="flag-center">
+          <img src="https://flagcdn.com/w640/de.png" alt="">
+        </div>
+        <div class="text-area">
+          <div class="top-line">
+            <div class="flag-sm"><img src="https://flagcdn.com/w320/de.png" alt="Germany"></div>
+            <div class="name">Germany</div>
+          </div>
+          <div class="sub-line">
+            <span class="rank">#3 FIFA Ranking</span>
+            <span class="group-pill">Group A <span class="chev">&#x203A;</span></span>
+          </div>
+          <div class="record">
+            <span class="mpill">W3 D0 L0</span>
+            <span class="mpill">GF 7 · GA 0</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Japan -->
+<div class="phone-wrap">
+  <div class="phone-label">F — Japan</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-f">
+        <div class="back-btn">&#8249;</div>
+        <div class="bg">
+          <div class="turf-pattern"></div>
+          <div class="pitch-line"></div>
+          <div class="pitch-circle"></div>
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="nat-stripe">
+          <span style="background:#fff"></span>
+          <span style="background:#BC002D"></span>
+          <span style="background:#fff"></span>
+        </div>
+        <div class="flag-center">
+          <img src="https://flagcdn.com/w640/jp.png" alt="">
+        </div>
+        <div class="text-area">
+          <div class="top-line">
+            <div class="flag-sm"><img src="https://flagcdn.com/w320/jp.png" alt="Japan"></div>
+            <div class="name">Japan</div>
+          </div>
+          <div class="sub-line">
+            <span class="rank">#14 FIFA Ranking</span>
+            <span class="group-pill">Group B <span class="chev">&#x203A;</span></span>
+          </div>
+          <div class="record">
+            <span class="mpill">W2 D0 L1</span>
+            <span class="mpill">GF 4 · GA 3</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Nigeria -->
+<div class="phone-wrap">
+  <div class="phone-label">F — Nigeria</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-f">
+        <div class="back-btn">&#8249;</div>
+        <div class="bg">
+          <div class="turf-pattern"></div>
+          <div class="pitch-line"></div>
+          <div class="pitch-circle"></div>
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="nat-stripe">
+          <span style="background:#008751"></span>
+          <span style="background:#fff"></span>
+          <span style="background:#008751"></span>
+        </div>
+        <div class="flag-center">
+          <img src="https://flagcdn.com/w640/ng.png" alt="">
+        </div>
+        <div class="text-area">
+          <div class="top-line">
+            <div class="flag-sm"><img src="https://flagcdn.com/w320/ng.png" alt="Nigeria"></div>
+            <div class="name">Nigeria</div>
+          </div>
+          <div class="sub-line">
+            <span class="rank">#36 FIFA Ranking</span>
+            <span class="group-pill">Group C <span class="chev">&#x203A;</span></span>
+          </div>
+          <div class="record">
+            <span class="mpill">W1 D1 L1</span>
+            <span class="mpill">GF 3 · GA 3</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
