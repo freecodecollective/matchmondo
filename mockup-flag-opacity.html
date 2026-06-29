@@ -240,6 +240,72 @@ opacities.forEach(op => {
 });
 </script>
 
+<h2 style="text-align:center; margin: 50px 0 6px; font-size: 22px;">Gradient Reach @ 90% Flag</h2>
+<p class="subtitle" style="margin-bottom: 20px;">Same 90% flag opacity — how far should the dark gradient creep into the flag?</p>
+
+<div class="row-header">
+  <div></div>
+  <div class="col-label">Pulisic (USA)</div>
+  <div class="col-label">Ueda (Japan)</div>
+  <div class="col-label">Messi (Argentina)</div>
+</div>
+
+<script>
+(() => {
+const gradients = [
+  { label: "Current", css: "linear-gradient(to top right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 40%, transparent 70%)" },
+  { label: "Tighter", css: "linear-gradient(to top right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 25%, transparent 50%)" },
+  { label: "Minimal", css: "linear-gradient(to top right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 18%, transparent 38%)" },
+  { label: "Text only", css: "linear-gradient(to top right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.25) 12%, transparent 28%)" },
+];
+
+gradients.forEach(g => {
+  const row = document.createElement('div');
+  row.className = 'opacity-row';
+
+  const label = document.createElement('div');
+  label.className = 'opacity-label';
+  label.style.fontSize = '16px';
+  label.textContent = g.label;
+  row.appendChild(label);
+
+  players.forEach(p => {
+    const phone = document.createElement('div');
+    phone.className = 'phone';
+    phone.innerHTML = `
+      <div class="hdr">
+        <div class="flag-bg">
+          <img src="https://flagcdn.com/w640/${p.flagCode}.png" alt="" style="opacity: 0.9">
+        </div>
+        <div class="gradient-overlay" style="background: ${g.css} !important"></div>
+        <div class="photo"><img src="https://b.fssta.com/uploads/application/soccer/headshots/${p.foxId}.png" alt=""></div>
+        <div class="back-btn">‹</div>
+        <div class="heart-btn">♡</div>
+        <div class="jersey">${p.jersey}</div>
+        <div class="text-area">
+          <div class="name">${p.name}</div>
+          <div class="pos">${p.pos}</div>
+          <div class="club">${p.club}</div>
+          <div class="pills">
+            <span class="pill">Age ${p.age}</span>
+            <span class="pill">${p.height}</span>
+          </div>
+        </div>
+      </div>
+      <div class="body-placeholder">
+        <div class="ph-header">🏆 Football 2026</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w60"></div>
+      </div>
+    `;
+    row.appendChild(phone);
+  });
+
+  document.body.appendChild(row);
+});
+})();
+</script>
+
 <div class="footer">Reply with your pick or forever hold your peace.</div>
 
 </body>
