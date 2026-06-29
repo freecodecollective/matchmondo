@@ -10314,7 +10314,7 @@
       "answer": 1,
       "explanation": "False! Several finals before 1994 went to extra time, including 1934 (Italy 2-1 Czechoslovakia), 1966 (England 4-2 West Germany), and 1978 (Argentina 3-1 Netherlands). What made 1994 unique was that it was the first final to go to a penalty shootout after extra time.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-var-four-situations",
