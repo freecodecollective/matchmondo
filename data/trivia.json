@@ -5892,7 +5892,110 @@
       "answer": 2,
       "explanation": "Referee Valentin Ivanov showed 16 yellow cards and 4 red cards — 20 total — in one of the most ill-tempered matches ever.",
       "media": "https://www.youtube.com/watch?v=VpJr6QuMQzk",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "تحمل مباراة 'معركة نورمبرغ' عام 2006 (البرتغال ضد هولندا) الرقم القياسي لأكثر عدد من البطاقات في مباراة واحدة. كم كان عددها؟",
+          "options": [
+            "12",
+            "16",
+            "20",
+            "24"
+          ],
+          "explanation": "أشهر الحكم فالنتين إيفانوف 16 بطاقة صفراء و4 بطاقات حمراء — أي 20 بطاقة إجمالاً — في واحدة من أكثر المباريات احتداماً على الإطلاق."
+        },
+        "de": {
+          "question": "Die 'Schlacht von Nürnberg' 2006 (Portugal gegen die Niederlande) hält den Rekord für die meisten Karten in einem Spiel. Wie viele?",
+          "options": [
+            "12",
+            "16",
+            "20",
+            "24"
+          ],
+          "explanation": "Schiedsrichter Valentin Iwanow zeigte 16 gelbe und 4 rote Karten — insgesamt 20 — in einem der hitzigsten Spiele aller Zeiten."
+        },
+        "es": {
+          "question": "La 'Batalla de Núremberg' de 2006 (Portugal vs. Países Bajos) tiene el récord de más tarjetas en un partido. ¿Cuántas?",
+          "options": [
+            "12",
+            "16",
+            "20",
+            "24"
+          ],
+          "explanation": "El árbitro Valentin Ivanov mostró 16 tarjetas amarillas y 4 rojas —20 en total— en uno de los partidos más broncos de la historia."
+        },
+        "es-ES": {
+          "question": "La 'Batalla de Núremberg' de 2006 (Portugal contra Países Bajos) ostenta el récord de más tarjetas en un partido. ¿Cuántas?",
+          "options": [
+            "12",
+            "16",
+            "20",
+            "24"
+          ],
+          "explanation": "El colegiado Valentin Ivanov sacó 16 tarjetas amarillas y 4 rojas —20 en total— en uno de los partidos más tensos de la historia."
+        },
+        "fr": {
+          "question": "La 'Bataille de Nuremberg' de 2006 (Portugal contre Pays-Bas) détient le record du plus grand nombre de cartons dans un match. Combien ?",
+          "options": [
+            "12",
+            "16",
+            "20",
+            "24"
+          ],
+          "explanation": "L'arbitre Valentin Ivanov a distribué 16 cartons jaunes et 4 cartons rouges — soit 20 au total — lors de l'un des matchs les plus houleux de l'histoire."
+        },
+        "it": {
+          "question": "La 'Battaglia di Norimberga' del 2006 (Portogallo contro Paesi Bassi) detiene il record di più cartellini in una partita. Quanti?",
+          "options": [
+            "12",
+            "16",
+            "20",
+            "24"
+          ],
+          "explanation": "L'arbitro Valentin Ivanov mostrò 16 cartellini gialli e 4 rossi — 20 in totale — in una delle partite più nervose di sempre."
+        },
+        "ja": {
+          "question": "2006年の「ニュルンベルクの戦い」（ポルトガル対オランダ）は、1試合における最多カード数の記録を保持しています。何枚でしょう？",
+          "options": [
+            "12",
+            "16",
+            "20",
+            "24"
+          ],
+          "explanation": "主審ヴァレンティン・イワノフは、史上屈指の荒れた試合でイエローカード16枚とレッドカード4枚、合計20枚を提示しました。"
+        },
+        "ko": {
+          "question": "2006년 '뉘른베르크의 전투'(포르투갈 대 네덜란드)는 한 경기 최다 카드 기록을 보유하고 있습니다. 몇 장일까요?",
+          "options": [
+            "12",
+            "16",
+            "20",
+            "24"
+          ],
+          "explanation": "주심 발렌틴 이바노프는 역사상 가장 거칠었던 경기 중 하나에서 옐로카드 16장과 레드카드 4장, 총 20장을 꺼냈습니다."
+        },
+        "pt-BR": {
+          "question": "A 'Batalha de Nuremberg' de 2006 (Portugal x Holanda) detém o recorde de mais cartões em uma partida. Quantos?",
+          "options": [
+            "12",
+            "16",
+            "20",
+            "24"
+          ],
+          "explanation": "O árbitro Valentin Ivanov mostrou 16 cartões amarelos e 4 vermelhos — 20 no total — em uma das partidas mais acaloradas de todos os tempos."
+        },
+        "zh-Hans": {
+          "question": "2006年的“纽伦堡之战”（葡萄牙对阵荷兰）保持着单场比赛出示最多牌数的纪录。共出示了多少张？",
+          "options": [
+            "12",
+            "16",
+            "20",
+            "24"
+          ],
+          "explanation": "主裁判瓦伦丁·伊万诺夫在这场史上最火爆的比赛之一中出示了16张黄牌和4张红牌，总计20张。"
+        }
+      },
+      "i18nSourceHash": "356ddd97f0c83781"
     },
     {
       "id": "c-trophy-weight",
@@ -6140,7 +6243,110 @@
       ],
       "answer": 1,
       "explanation": "The Ballon d'Or is an annual award given to the best football player in the world, voted on by journalists (and later national team captains and coaches). Soviet keeper Lev Yashin, the 'Black Spider,' won it in 1963 — still the only goalkeeper ever to receive the honor.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أي حارس مرمى أسطوري هو الوحيد الذي فاز بجائزة الكرة الذهبية على الإطلاق؟",
+          "options": [
+            "غوردون بانكس",
+            "ليف ياشين",
+            "دينو زوف",
+            "جانلويجي بوفون"
+          ],
+          "explanation": "الكرة الذهبية جائزة سنوية تُمنح لأفضل لاعب كرة قدم في العالم، ويتم التصويت عليها من قبل الصحفيين (ولاحقًا قادة المنتخبات الوطنية ومدربوها). حارس المرمى السوفيتي ليف ياشين، الملقب بـ'العنكبوت الأسود'، فاز بها عام 1963 — ولا يزال حتى اليوم حارس المرمى الوحيد الذي ينال هذا الشرف."
+        },
+        "de": {
+          "question": "Welcher legendäre Torwart ist der einzige Keeper, der jemals den Ballon d'Or gewonnen hat?",
+          "options": [
+            "Gordon Banks",
+            "Lew Jaschin",
+            "Dino Zoff",
+            "Gianluigi Buffon"
+          ],
+          "explanation": "Der Ballon d'Or ist eine jährliche Auszeichnung für den besten Fußballspieler der Welt, über die Journalisten (und später auch Nationaltrainer und Kapitäne) abstimmen. Der sowjetische Torwart Lew Jaschin, die 'Schwarze Spinne', gewann ihn 1963 — bis heute ist er der einzige Torwart, dem diese Ehre zuteilwurde."
+        },
+        "es": {
+          "question": "¿Qué arquero legendario es el único guardameta que ha ganado el Balón de Oro?",
+          "options": [
+            "Gordon Banks",
+            "Lev Yashin",
+            "Dino Zoff",
+            "Gianluigi Buffon"
+          ],
+          "explanation": "El Balón de Oro es un premio anual que se otorga al mejor futbolista del mundo, votado por periodistas (y más tarde también por capitanes y entrenadores de selecciones nacionales). El arquero soviético Lev Yashin, la 'Araña Negra', lo ganó en 1963 — y sigue siendo el único portero que ha recibido este honor."
+        },
+        "es-ES": {
+          "question": "¿Qué portero legendario es el único guardameta que ha ganado el Balón de Oro?",
+          "options": [
+            "Gordon Banks",
+            "Lev Yashin",
+            "Dino Zoff",
+            "Gianluigi Buffon"
+          ],
+          "explanation": "El Balón de Oro es un premio anual que se concede al mejor futbolista del mundo, votado por periodistas (y más tarde también por capitanes y seleccionadores nacionales). El portero soviético Lev Yashin, la 'Araña Negra', lo ganó en 1963 — y sigue siendo el único guardameta que ha recibido este honor."
+        },
+        "fr": {
+          "question": "Quel gardien de but légendaire est le seul portier à avoir jamais remporté le Ballon d'Or ?",
+          "options": [
+            "Gordon Banks",
+            "Lev Yachine",
+            "Dino Zoff",
+            "Gianluigi Buffon"
+          ],
+          "explanation": "Le Ballon d'Or est une récompense annuelle décernée au meilleur footballeur du monde, élu par des journalistes (et plus tard par les capitaines et sélectionneurs des équipes nationales). Le gardien soviétique Lev Yachine, l''Araignée noire', l'a remporté en 1963 — il reste à ce jour le seul gardien à avoir reçu cet honneur."
+        },
+        "it": {
+          "question": "Quale leggendario portiere è l'unico estremo difensore ad aver mai vinto il Pallone d'Oro?",
+          "options": [
+            "Gordon Banks",
+            "Lev Yashin",
+            "Dino Zoff",
+            "Gianluigi Buffon"
+          ],
+          "explanation": "Il Pallone d'Oro è un premio annuale assegnato al miglior calciatore del mondo, votato dai giornalisti (e in seguito anche dai capitani e dai commissari tecnici delle nazionali). Il portiere sovietico Lev Yashin, il 'Ragno Nero', lo vinse nel 1963 — ed è tuttora l'unico portiere ad aver ricevuto questo onore."
+        },
+        "ja": {
+          "question": "バロンドールを受賞した唯一のゴールキーパーである伝説的な守護神は誰でしょう？",
+          "options": [
+            "ゴードン・バンクス",
+            "レフ・ヤシン",
+            "ディノ・ゾフ",
+            "ジャンルイジ・ブッフォン"
+          ],
+          "explanation": "バロンドールは世界最高のサッカー選手に贈られる年間賞で、ジャーナリスト（後には各国代表のキャプテンや監督も）の投票で選ばれます。ソ連のゴールキーパー、レフ・ヤシン、通称『黒蜘蛛』は1963年にこれを受賞し、今なおこの栄誉を手にした唯一のゴールキーパーです。"
+        },
+        "ko": {
+          "question": "발롱도르를 수상한 유일한 골키퍼인 전설적인 수문장은 누구일까요?",
+          "options": [
+            "고든 뱅크스",
+            "레프 야신",
+            "디노 조프",
+            "잔루이지 부폰"
+          ],
+          "explanation": "발롱도르는 세계 최고의 축구 선수에게 매년 수여되는 상으로, 기자단(이후에는 각국 대표팀 주장과 감독 포함)의 투표로 선정됩니다. '검은 거미'라는 별명을 가진 소련의 골키퍼 레프 야신은 1963년에 이 상을 수상했으며, 지금까지도 이 영예를 안은 유일한 골키퍼입니다."
+        },
+        "pt-BR": {
+          "question": "Qual goleiro lendário é o único arqueiro a já ter vencido a Bola de Ouro?",
+          "options": [
+            "Gordon Banks",
+            "Lev Yashin",
+            "Dino Zoff",
+            "Gianluigi Buffon"
+          ],
+          "explanation": "A Bola de Ouro é um prêmio anual concedido ao melhor jogador de futebol do mundo, votado por jornalistas (e mais tarde também por capitães e técnicos de seleções nacionais). O goleiro soviético Lev Yashin, a 'Aranha Negra', venceu em 1963 — e segue sendo o único goleiro a receber essa honraria."
+        },
+        "zh-Hans": {
+          "question": "哪位传奇门将是史上唯一一位赢得金球奖的守门员？",
+          "options": [
+            "戈登·班克斯",
+            "列夫·雅辛",
+            "迪诺·佐夫",
+            "詹路易吉·布冯"
+          ],
+          "explanation": "金球奖是每年颁发给世界最佳足球运动员的奖项，由记者（后来还包括各国国家队队长和主教练）投票评选。绰号‘黑蜘蛛’的苏联门将列夫·雅辛在1963年夺得此奖——至今仍是唯一一位获此殊荣的守门员。"
+        }
+      },
+      "i18nSourceHash": "f239df00a934e293"
     },
     {
       "id": "t-host-confederation",
@@ -6180,7 +6386,110 @@
       ],
       "answer": 1,
       "explanation": "Germany has won four titles: 1954, 1974, 1990, and 2014.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كم عدد الألقاب التي فازت بها ألمانيا؟",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "فازت ألمانيا بأربعة ألقاب: في أعوام 1954 و1974 و1990 و2014."
+        },
+        "de": {
+          "question": "Wie viele Titel hat Deutschland gewonnen?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "Deutschland hat vier Titel gewonnen: 1954, 1974, 1990 und 2014."
+        },
+        "es": {
+          "question": "¿Cuántos títulos ha ganado Alemania?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "Alemania ha ganado cuatro títulos: en 1954, 1974, 1990 y 2014."
+        },
+        "es-ES": {
+          "question": "¿Cuántos títulos ha conseguido Alemania?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "Alemania ha conseguido cuatro títulos: en 1954, 1974, 1990 y 2014."
+        },
+        "fr": {
+          "question": "Combien de titres l'Allemagne a-t-elle remportés ?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "L'Allemagne a remporté quatre titres : en 1954, 1974, 1990 et 2014."
+        },
+        "it": {
+          "question": "Quanti titoli ha vinto la Germania?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "La Germania ha vinto quattro titoli: nel 1954, 1974, 1990 e 2014."
+        },
+        "ja": {
+          "question": "ドイツは何回優勝していますか？",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "ドイツは1954年、1974年、1990年、2014年の4回優勝しています。"
+        },
+        "ko": {
+          "question": "독일은 몇 번의 우승을 차지했나요?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "독일은 1954년, 1974년, 1990년, 2014년에 걸쳐 네 번 우승했습니다."
+        },
+        "pt-BR": {
+          "question": "Quantos títulos a Alemanha conquistou?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "A Alemanha conquistou quatro títulos: em 1954, 1974, 1990 e 2014."
+        },
+        "zh-Hans": {
+          "question": "德国一共夺得过多少次冠军？",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "德国共夺得四次冠军：分别在1954年、1974年、1990年和2014年。"
+        }
+      },
+      "i18nSourceHash": "b3a948d8a64c7d9d"
     },
     {
       "id": "t-senegal-2002",
@@ -6207,7 +6516,110 @@
       ],
       "answer": 1,
       "explanation": "Geoff Hurst scored three for England against West Germany — a feat unmatched for 56 years until Mbappé's hat-trick in 2022.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من سجّل أول هاتريك في نهائي البطولة عام 1966؟",
+          "options": [
+            "بوبي تشارلتون",
+            "جيف هيرست",
+            "أوزيبيو",
+            "فرانز بكنباور"
+          ],
+          "explanation": "سجّل جيف هيرست ثلاثة أهداف لإنجلترا ضد ألمانيا الغربية — إنجاز لم يتكرر طوال 56 عامًا حتى هاتريك مبابي عام 2022."
+        },
+        "de": {
+          "question": "Wer erzielte 1966 den ersten Hattrick in einem Turnierfinale?",
+          "options": [
+            "Bobby Charlton",
+            "Geoff Hurst",
+            "Eusébio",
+            "Franz Beckenbauer"
+          ],
+          "explanation": "Geoff Hurst erzielte drei Tore für England gegen Westdeutschland — eine Leistung, die 56 Jahre lang unerreicht blieb, bis Mbappé 2022 einen Hattrick schoss."
+        },
+        "es": {
+          "question": "¿Quién marcó el primer hat-trick en una final de torneo, en 1966?",
+          "options": [
+            "Bobby Charlton",
+            "Geoff Hurst",
+            "Eusébio",
+            "Franz Beckenbauer"
+          ],
+          "explanation": "Geoff Hurst marcó tres goles para Inglaterra contra Alemania Occidental, una hazaña que nadie igualó durante 56 años hasta el hat-trick de Mbappé en 2022."
+        },
+        "es-ES": {
+          "question": "¿Quién marcó el primer hat-trick en una final de torneo, en 1966?",
+          "options": [
+            "Bobby Charlton",
+            "Geoff Hurst",
+            "Eusébio",
+            "Franz Beckenbauer"
+          ],
+          "explanation": "Geoff Hurst marcó tres goles para Inglaterra ante Alemania Occidental, una gesta que nadie igualó en 56 años hasta el hat-trick de Mbappé en 2022."
+        },
+        "fr": {
+          "question": "Qui a inscrit le premier triplé lors d'une finale de tournoi, en 1966 ?",
+          "options": [
+            "Bobby Charlton",
+            "Geoff Hurst",
+            "Eusébio",
+            "Franz Beckenbauer"
+          ],
+          "explanation": "Geoff Hurst a marqué trois buts pour l'Angleterre face à l'Allemagne de l'Ouest — un exploit resté inégalé pendant 56 ans, jusqu'au triplé de Mbappé en 2022."
+        },
+        "it": {
+          "question": "Chi segnò la prima tripletta in una finale del torneo, nel 1966?",
+          "options": [
+            "Bobby Charlton",
+            "Geoff Hurst",
+            "Eusébio",
+            "Franz Beckenbauer"
+          ],
+          "explanation": "Geoff Hurst segnò tre gol per l'Inghilterra contro la Germania Ovest — un'impresa rimasta ineguagliata per 56 anni, fino alla tripletta di Mbappé nel 2022."
+        },
+        "ja": {
+          "question": "1966年、トーナメントの決勝で初めてハットトリックを達成したのは誰でしょう？",
+          "options": [
+            "ボビー・チャールトン",
+            "ジェフ・ハースト",
+            "エウゼビオ",
+            "フランツ・ベッケンバウアー"
+          ],
+          "explanation": "ジェフ・ハーストは西ドイツ戦でイングランドのために3点を決めました。これは2022年にエムバペがハットトリックを達成するまで、56年間誰も並ぶことのなかった偉業です。"
+        },
+        "ko": {
+          "question": "1966년 토너먼트 결승전에서 최초로 해트트릭을 기록한 선수는 누구일까요?",
+          "options": [
+            "보비 찰턴",
+            "제프 허스트",
+            "에우제비우",
+            "프란츠 베켄바워"
+          ],
+          "explanation": "제프 허스트는 서독을 상대로 잉글랜드에 3골을 안겼습니다. 이는 2022년 음바페가 해트트릭을 기록하기 전까지 56년 동안 아무도 따라잡지 못한 업적입니다."
+        },
+        "pt-BR": {
+          "question": "Quem marcou o primeiro hat-trick em uma final de torneio, em 1966?",
+          "options": [
+            "Bobby Charlton",
+            "Geoff Hurst",
+            "Eusébio",
+            "Franz Beckenbauer"
+          ],
+          "explanation": "Geoff Hurst marcou três gols pela Inglaterra contra a Alemanha Ocidental — um feito que ficou sem igual por 56 anos, até o hat-trick de Mbappé em 2022."
+        },
+        "zh-Hans": {
+          "question": "1966年，谁在锦标赛决赛中上演了首个帽子戏法？",
+          "options": [
+            "博比·查尔顿",
+            "杰夫·赫斯特",
+            "尤西比奥",
+            "弗朗茨·贝肯鲍尔"
+          ],
+          "explanation": "杰夫·赫斯特在对阵西德的比赛中为英格兰攻入三球——这一壮举在长达56年间无人能及，直到2022年姆巴佩上演帽子戏法。"
+        }
+      },
+      "i18nSourceHash": "8bde447732f97429"
     },
     {
       "id": "r-who-advances",
@@ -6221,7 +6633,110 @@
       ],
       "answer": 2,
       "explanation": "The top two from each of the 12 groups (24) plus the 8 best third-placed teams advance — 32 in all. In 2022 with 32 teams, only 16 teams advanced to the Round of 16 knockout stage.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كم عدد المنتخبات المتأهلة إلى دور الـ32 من أصل 48 منتخبًا في 2026؟",
+          "options": [
+            "16",
+            "24",
+            "32",
+            "48"
+          ],
+          "explanation": "يتأهل المنتخبان الأولان من كل مجموعة من المجموعات الـ12 (24 منتخبًا) إضافةً إلى أفضل 8 منتخبات حلّت في المركز الثالث — أي 32 منتخبًا في المجموع. وفي 2022 بمشاركة 32 منتخبًا، تأهّل 16 منتخبًا فقط إلى دور الـ16 من الأدوار الإقصائية."
+        },
+        "de": {
+          "question": "Wie viele der 48 Teams erreichen 2026 das Achtelfinale (Runde der letzten 32)?",
+          "options": [
+            "16",
+            "24",
+            "32",
+            "48"
+          ],
+          "explanation": "Die jeweils zwei Besten aus den 12 Gruppen (24) sowie die 8 besten Gruppendritten ziehen weiter — insgesamt 32 Teams. 2022 mit 32 Teams kamen nur 16 Teams in die K.-o.-Runde der letzten 16."
+        },
+        "es": {
+          "question": "¿Cuántos de los 48 equipos llegan a los dieciseisavos de final (ronda de 32) en 2026?",
+          "options": [
+            "16",
+            "24",
+            "32",
+            "48"
+          ],
+          "explanation": "Los dos primeros de cada uno de los 12 grupos (24) más los 8 mejores terceros avanzan: 32 en total. En 2022, con 32 equipos, solo 16 pasaron a los octavos de final de la fase eliminatoria."
+        },
+        "es-ES": {
+          "question": "¿Cuántos de los 48 equipos llegan a los dieciseisavos de final (ronda de 32) en 2026?",
+          "options": [
+            "16",
+            "24",
+            "32",
+            "48"
+          ],
+          "explanation": "Los dos primeros de cada uno de los 12 grupos (24) más los 8 mejores terceros avanzan: 32 en total. En 2022, con 32 equipos, solo 16 pasaron a los octavos de final de la fase eliminatoria."
+        },
+        "fr": {
+          "question": "Combien des 48 équipes atteignent les seizièmes de finale (tour des 32) en 2026 ?",
+          "options": [
+            "16",
+            "24",
+            "32",
+            "48"
+          ],
+          "explanation": "Les deux premiers de chacun des 12 groupes (24) ainsi que les 8 meilleurs troisièmes se qualifient — soit 32 au total. En 2022, avec 32 équipes, seules 16 accédaient aux huitièmes de finale de la phase à élimination directe."
+        },
+        "it": {
+          "question": "Quante delle 48 squadre raggiungono i sedicesimi di finale (turno dei 32) nel 2026?",
+          "options": [
+            "16",
+            "24",
+            "32",
+            "48"
+          ],
+          "explanation": "Le prime due di ciascuno dei 12 gironi (24) più le 8 migliori terze passano il turno: 32 in tutto. Nel 2022, con 32 squadre, solo 16 accedevano agli ottavi di finale della fase a eliminazione diretta."
+        },
+        "ja": {
+          "question": "2026年、48チームのうちラウンド32に進むのは何チームですか？",
+          "options": [
+            "16",
+            "24",
+            "32",
+            "48"
+          ],
+          "explanation": "12の各グループの上位2チーム（24チーム）に加え、3位チームの上位8チームが進出し、合計32チームとなります。32チームで行われた2022年には、決勝トーナメントのラウンド16に進んだのは16チームのみでした。"
+        },
+        "ko": {
+          "question": "2026년 48개 팀 중 32강에 진출하는 팀은 몇 개입니까?",
+          "options": [
+            "16",
+            "24",
+            "32",
+            "48"
+          ],
+          "explanation": "12개 조 각 상위 2개 팀(24개)에 더해 각 조 3위 중 상위 8개 팀이 진출해 총 32개 팀이 됩니다. 32개 팀이 참가한 2022년에는 16강 토너먼트에 16개 팀만 진출했습니다."
+        },
+        "pt-BR": {
+          "question": "Quantas das 48 seleções chegam às oitavas de final (fase de 32) em 2026?",
+          "options": [
+            "16",
+            "24",
+            "32",
+            "48"
+          ],
+          "explanation": "As duas primeiras de cada um dos 12 grupos (24) mais as 8 melhores terceiras colocadas avançam — 32 no total. Em 2022, com 32 seleções, apenas 16 avançaram às oitavas de final do mata-mata."
+        },
+        "zh-Hans": {
+          "question": "2026年，48支球队中有多少支能进入32强？",
+          "options": [
+            "16",
+            "24",
+            "32",
+            "48"
+          ],
+          "explanation": "12个小组各前两名（24支）加上8支成绩最好的小组第三名晋级——共32支球队。在32支球队参赛的2022年，只有16支球队晋级16强淘汰赛阶段。"
+        }
+      },
+      "i18nSourceHash": "dc97afdf78e12680"
     },
     {
       "id": "h-1970-brazil-final",
