@@ -18910,7 +18910,90 @@
       ],
       "answer": 0,
       "explanation": "True! VAR is limited to reviewing only these four categories of 'clear and obvious errors' or 'serious missed incidents.' 'Mistaken identity' means the referee cautioned or sent off the WRONG player — for example, the referee intends to book the player who committed a foul but mistakenly shows the card to a teammate (often because players were close together or wore similar numbers). VAR can step in to identify the correct offender so that the right player receives the yellow or red card. The referee can consult the pitch-side monitor for a final decision, but VAR cannot intervene for ordinary yellow cards, throw-in decisions, corner kicks, or other routine calls.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "لا يمكن لتقنية حكم الفيديو المساعد (VAR) مراجعة سوى أربعة أنواع من المواقف المؤثرة في نتيجة المباراة: الأهداف، وركلات الجزاء، والبطاقات الحمراء، وحالات الخطأ في تحديد هوية اللاعب.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! تقتصر مراجعة تقنية الفيديو المساعد على هذه الفئات الأربع فقط من 'الأخطاء الواضحة والصريحة' أو 'الحوادث الخطيرة التي غابت عن الحكم'. ويُقصد بـ'الخطأ في تحديد الهوية' أن يُنذر الحكم أو يطرد اللاعب الخطأ — فمثلاً قد ينوي الحكم إنذار اللاعب الذي ارتكب المخالفة لكنه يُشهر البطاقة بالخطأ في وجه زميله (غالبًا لأن اللاعبَين كانا متقاربين أو يرتديان أرقامًا متشابهة). وهنا يمكن لتقنية الفيديو المساعد التدخل لتحديد المخالف الصحيح كي ينال اللاعب المعني البطاقة الصفراء أو الحمراء. ويستطيع الحكم الرجوع إلى الشاشة الجانبية لاتخاذ القرار النهائي، لكن لا يمكن لتقنية الفيديو المساعد التدخل في حالات البطاقات الصفراء الاعتيادية، أو قرارات رمية التماس، أو الركلات الركنية، أو غيرها من القرارات الروتينية."
+        },
+        "de": {
+          "question": "Der VAR darf nur vier Arten von spielentscheidenden Situationen überprüfen: Tore, Elfmeter, Rote Karten und Spielerverwechslungen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Richtig! Der VAR darf ausschließlich diese vier Kategorien von 'klaren und offensichtlichen Fehlern' oder 'schwerwiegenden übersehenen Vorfällen' überprüfen. Eine 'Spielerverwechslung' bedeutet, dass der Schiedsrichter den FALSCHEN Spieler verwarnt oder vom Platz gestellt hat — zum Beispiel will der Schiedsrichter den Spieler verwarnen, der das Foul begangen hat, zeigt die Karte aber versehentlich einem Mitspieler (oft, weil die Spieler eng beieinanderstanden oder ähnliche Nummern trugen). Der VAR kann eingreifen, um den richtigen Übeltäter zu ermitteln, damit der korrekte Spieler die Gelbe oder Rote Karte erhält. Der Schiedsrichter kann den Bildschirm am Spielfeldrand konsultieren, um eine endgültige Entscheidung zu treffen, aber der VAR darf nicht bei gewöhnlichen Gelben Karten, Einwurfentscheidungen, Eckbällen oder anderen Routineentscheidungen eingreifen."
+        },
+        "es": {
+          "question": "El VAR solo puede revisar cuatro tipos de situaciones que cambian el rumbo del partido: goles, penales, tarjetas rojas y errores de identidad.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! El VAR está limitado a revisar únicamente estas cuatro categorías de 'errores claros y manifiestos' o 'incidentes graves no advertidos'. El 'error de identidad' significa que el árbitro amonestó o expulsó al jugador EQUIVOCADO; por ejemplo, el árbitro quiere amonestar al jugador que cometió la falta, pero por error le muestra la tarjeta a un compañero (a menudo porque los jugadores estaban muy cerca o llevaban números parecidos). El VAR puede intervenir para identificar al verdadero infractor y que el jugador correcto reciba la tarjeta amarilla o roja. El árbitro puede consultar el monitor a un costado de la cancha para tomar la decisión final, pero el VAR no puede intervenir en tarjetas amarillas comunes, decisiones de saque de banda, tiros de esquina ni otras jugadas rutinarias."
+        },
+        "es-ES": {
+          "question": "El VAR solo puede revisar cuatro tipos de situaciones que cambian el rumbo del partido: goles, penaltis, tarjetas rojas y errores de identidad.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! El VAR está limitado a revisar únicamente estas cuatro categorías de 'errores claros y manifiestos' o 'incidentes graves no advertidos'. El 'error de identidad' significa que el árbitro amonestó o expulsó al jugador EQUIVOCADO; por ejemplo, el árbitro quiere amonestar al jugador que cometió la falta, pero por error le enseña la tarjeta a un compañero (a menudo porque los jugadores estaban muy cerca o llevaban números parecidos). El VAR puede intervenir para identificar al verdadero infractor y que el jugador correcto reciba la tarjeta amarilla o roja. El árbitro puede consultar el monitor situado junto al campo para tomar la decisión final, pero el VAR no puede intervenir en tarjetas amarillas normales, decisiones de saque de banda, saques de esquina u otras jugadas rutinarias."
+        },
+        "fr": {
+          "question": "L'arbitrage vidéo (VAR) ne peut examiner que quatre types de situations susceptibles de changer le cours du match : les buts, les penaltys, les cartons rouges et les erreurs d'identité.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! La VAR ne peut examiner que ces quatre catégories d'« erreurs claires et manifestes » ou d'« incidents graves non détectés ». L'« erreur d'identité » signifie que l'arbitre a averti ou expulsé le MAUVAIS joueur — par exemple, l'arbitre veut avertir le joueur ayant commis la faute mais brandit le carton par erreur à un coéquipier (souvent parce que les joueurs étaient proches ou portaient des numéros similaires). La VAR peut intervenir pour identifier le véritable fautif afin que le bon joueur reçoive le carton jaune ou rouge. L'arbitre peut consulter l'écran au bord du terrain pour prendre une décision finale, mais la VAR ne peut pas intervenir pour les cartons jaunes ordinaires, les décisions de touche, les corners ou les autres situations de jeu courantes."
+        },
+        "it": {
+          "question": "Il VAR può rivedere solo quattro tipi di situazioni in grado di cambiare l'esito della partita: gol, rigori, cartellini rossi ed errori di identità.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! Il VAR può intervenire solo su queste quattro categorie di 'errori chiari ed evidenti' o 'gravi episodi non visti'. L''errore di identità' significa che l'arbitro ha ammonito o espulso il giocatore SBAGLIATO — per esempio, l'arbitro intende ammonire il giocatore che ha commesso il fallo ma mostra per errore il cartellino a un suo compagno (spesso perché i giocatori erano vicini tra loro o indossavano numeri simili). Il VAR può intervenire per individuare il vero responsabile, così che il giocatore corretto riceva il cartellino giallo o rosso. L'arbitro può consultare il monitor a bordo campo per la decisione finale, ma il VAR non può intervenire su normali cartellini gialli, decisioni sulle rimesse laterali, calci d'angolo o altre situazioni di gioco ordinarie."
+        },
+        "ja": {
+          "question": "VAR が確認できるのは、試合の流れを左右する4種類の状況だけです。すなわち、ゴール、PK、レッドカード、そして人物誤認です。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "正しい！VAR が確認できるのは、この4つのカテゴリーにおける「明白かつ明らかな誤り」または「見逃された重大な事象」だけに限られています。「人物誤認」とは、主審が違う選手に警告や退場を命じてしまうことを指します。たとえば、主審はファウルを犯した選手にカードを出すつもりだったのに、誤ってそのチームメイトにカードを提示してしまう（多くの場合、選手同士が近くにいたり、似た背番号を着けていたりするため）ようなケースです。VAR が介入して本当の反則者を特定し、正しい選手にイエローカードまたはレッドカードが出されるようにできます。主審はピッチ脇のモニターを確認して最終判断を下せますが、VAR は通常のイエローカード、スローインの判定、コーナーキック、その他の日常的な判定には介入できません。"
+        },
+        "ko": {
+          "question": "VAR는 경기의 흐름을 바꿀 수 있는 네 가지 유형의 상황만 검토할 수 있습니다. 바로 골, 페널티킥, 레드카드, 그리고 신원 오인입니다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! VAR는 '명백하고 분명한 오심'이나 '심각하게 놓친 상황'에 해당하는 이 네 가지 범주만 검토할 수 있습니다. '신원 오인'이란 주심이 잘못된 선수에게 경고를 주거나 퇴장시키는 경우를 뜻합니다. 예를 들어 주심이 파울을 범한 선수에게 카드를 주려 했지만 실수로 그 동료 선수에게 카드를 꺼내는 경우(흔히 선수들이 서로 가까이 있었거나 비슷한 등번호를 달고 있었기 때문)가 이에 해당합니다. VAR는 개입하여 실제 반칙을 범한 선수를 가려내고, 올바른 선수가 옐로카드나 레드카드를 받도록 할 수 있습니다. 주심은 경기장 옆 모니터를 확인해 최종 결정을 내릴 수 있지만, VAR는 일반적인 옐로카드, 스로인 판정, 코너킥, 기타 통상적인 판정에는 개입할 수 없습니다."
+        },
+        "pt-BR": {
+          "question": "O VAR só pode revisar quatro tipos de situações capazes de mudar o rumo da partida: gols, pênaltis, cartões vermelhos e erros de identidade.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! O VAR está limitado a revisar apenas essas quatro categorias de 'erros claros e evidentes' ou 'incidentes graves não percebidos'. 'Erro de identidade' significa que o árbitro advertiu ou expulsou o jogador ERRADO — por exemplo, o árbitro pretende advertir o jogador que cometeu a falta, mas, por engano, mostra o cartão a um companheiro de equipe (muitas vezes porque os jogadores estavam próximos ou usavam números parecidos). O VAR pode intervir para identificar o verdadeiro infrator, de modo que o jogador correto receba o cartão amarelo ou vermelho. O árbitro pode consultar o monitor à beira do campo para a decisão final, mas o VAR não pode intervir em cartões amarelos comuns, decisões de lateral, escanteios ou outras marcações de rotina."
+        },
+        "zh-Hans": {
+          "question": "VAR只能回看四类可能改变比赛走向的情形：进球、点球、红牌以及身份误判。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！VAR只能针对这四类「清晰明显的错误」或「严重漏判事件」进行回看。「身份误判」是指裁判向错误的球员出示警告或将其罚下——例如，裁判本想给犯规的球员出牌，却误把牌出示给了他的队友（往往是因为球员相互靠得很近，或球衣号码相似）。此时VAR可以介入，帮助辨认真正的犯规者，从而让正确的球员领到黄牌或红牌。裁判可以查看场边监视器以作出最终决定，但VAR不能介入普通的黄牌、界外球判罚、角球或其他常规判罚。"
+        }
+      },
+      "i18nSourceHash": "13cb5fbe2b81386f"
     },
     {
       "id": "tf-trophy-not-solid-gold",
@@ -19212,7 +19295,90 @@
       "answer": 0,
       "explanation": "True! Since 2019, coaches and other team officials can receive yellow and red cards, just like players. If sent off, the coach must leave the technical area (usually going to the stands) and cannot communicate with the team for the rest of the match. An assistant typically takes over tactical duties.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "يمكن للمدرب أن يحصل على بطاقة حمراء ويُطرد إلى المدرجات خلال المباراة.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! منذ عام 2019، أصبح بإمكان المدربين وأعضاء الجهاز الفني الآخرين الحصول على البطاقات الصفراء والحمراء تماماً مثل اللاعبين. وفي حال الطرد، يتعيّن على المدرب مغادرة المنطقة الفنية (وعادة ما يتجه إلى المدرجات) ولا يمكنه التواصل مع الفريق طوال ما تبقى من المباراة. وعادة ما يتولى أحد المساعدين المهام التكتيكية."
+        },
+        "de": {
+          "question": "Ein Cheftrainer kann eine Rote Karte erhalten und während eines Spiels auf die Tribüne geschickt werden.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Richtig! Seit 2019 können Trainer und andere Teamoffizielle ebenso wie Spieler Gelbe und Rote Karten erhalten. Bei einem Platzverweis muss der Trainer den Innenraum verlassen (meist geht er auf die Tribüne) und darf für den Rest des Spiels nicht mit dem Team kommunizieren. In der Regel übernimmt ein Assistent die taktischen Aufgaben."
+        },
+        "es": {
+          "question": "Un director técnico puede recibir una tarjeta roja y ser enviado a las tribunas durante un partido.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Desde 2019, los entrenadores y otros miembros del cuerpo técnico pueden recibir tarjetas amarillas y rojas, igual que los jugadores. Si lo expulsan, el técnico debe abandonar el área técnica (por lo general se va a las tribunas) y no puede comunicarse con el equipo durante el resto del partido. Por lo general, un asistente se hace cargo de las funciones tácticas."
+        },
+        "es-ES": {
+          "question": "Un entrenador puede recibir una tarjeta roja y ser enviado a la grada durante un partido.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Desde 2019, los entrenadores y otros miembros del cuerpo técnico pueden recibir tarjetas amarillas y rojas, al igual que los jugadores. Si lo expulsan, el entrenador debe abandonar el área técnica (normalmente se va a la grada) y no puede comunicarse con el equipo durante el resto del partido. Por lo general, un ayudante asume las funciones tácticas."
+        },
+        "fr": {
+          "question": "Un entraîneur principal peut recevoir un carton rouge et être renvoyé en tribunes au cours d'un match.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! Depuis 2019, les entraîneurs et autres membres du staff peuvent recevoir des cartons jaunes et rouges, tout comme les joueurs. En cas d'exclusion, l'entraîneur doit quitter la surface technique (il rejoint généralement les tribunes) et ne peut plus communiquer avec l'équipe jusqu'à la fin du match. C'est en général un adjoint qui prend en charge les consignes tactiques."
+        },
+        "it": {
+          "question": "Un allenatore può ricevere un cartellino rosso ed essere mandato in tribuna durante una partita.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! Dal 2019, gli allenatori e gli altri membri dello staff possono ricevere cartellini gialli e rossi, proprio come i giocatori. In caso di espulsione, l'allenatore deve lasciare l'area tecnica (di solito raggiungendo la tribuna) e non può comunicare con la squadra per il resto della partita. Di norma è un assistente ad assumere i compiti tattici."
+        },
+        "ja": {
+          "question": "監督は試合中にレッドカードを受け、スタンドへ退場させられることがある。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "正しい！2019年以降、監督やその他のチームスタッフも選手と同じようにイエローカードやレッドカードを受けるようになりました。退場処分を受けた場合、監督はテクニカルエリアを離れなければならず（通常はスタンドへ移動します）、試合終了までチームと連絡を取ることができません。戦術的な指揮は、通常アシスタントコーチが引き継ぎます。"
+        },
+        "ko": {
+          "question": "감독은 경기 도중 레드카드를 받고 관중석으로 퇴장당할 수 있다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! 2019년부터 감독과 그 밖의 팀 관계자들도 선수와 마찬가지로 옐로카드와 레드카드를 받을 수 있게 되었습니다. 퇴장당하면 감독은 테크니컬 에어리어를 떠나야 하며(보통 관중석으로 이동합니다), 남은 경기 동안 팀과 소통할 수 없습니다. 일반적으로 수석 코치가 전술 지휘를 대신 맡습니다."
+        },
+        "pt-BR": {
+          "question": "Um treinador pode receber um cartão vermelho e ser mandado para a arquibancada durante uma partida.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! Desde 2019, técnicos e outros membros da comissão técnica podem receber cartões amarelos e vermelhos, assim como os jogadores. Se for expulso, o treinador deve deixar a área técnica (normalmente indo para a arquibancada) e não pode se comunicar com a equipe pelo restante da partida. Geralmente, um auxiliar assume as funções táticas."
+        },
+        "zh-Hans": {
+          "question": "主教练在比赛中可能会被出示红牌并被罚上看台。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！自2019年起，教练和其他球队官员也可以像球员一样被出示黄牌和红牌。一旦被罚下，主教练必须离开技术区域（通常是去看台），并且在本场比赛剩余时间内不得与球队进行任何交流。通常由助理教练接手负责战术指挥。"
+        }
+      },
+      "i18nSourceHash": "6fd5b44d1f2a125a"
     },
     {
       "id": "tf-semi-auto-offside-2022",
@@ -20762,7 +20928,110 @@
       "explanation": "Hristo Stoichkov scored 6 goals at the 1994 tournament, sharing the Golden Boot with Russia's Oleg Salenko. His left-footed free kicks were devastating. Earlier that year, he had won the Ballon d'Or while playing for Barcelona. Bulgaria's semi-final run remains one of the great underdog stories.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Hristo_stoichkov-2010.jpg/500px-Hristo_stoichkov-2010.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا المهاجم البلغاري الذي قاد بلاده إلى مركز رابع مذهل عام 1994؟",
+          "options": [
+            "هريستو ستويتشكوف",
+            "إميل كوستادينوف",
+            "يوردان ليتشكوف",
+            "كراسيمير بالاكوف"
+          ],
+          "explanation": "سجّل هريستو ستويتشكوف 6 أهداف في بطولة 1994، متقاسماً الحذاء الذهبي مع الروسي أوليغ سالينكو. كانت ركلاته الحرة بقدمه اليسرى مدمّرة. وفي وقت سابق من ذلك العام، فاز بجائزة الكرة الذهبية وهو يلعب لبرشلونة. ويبقى وصول بلغاريا إلى نصف النهائي واحداً من أعظم قصص الفرق غير المرشّحة."
+        },
+        "de": {
+          "question": "Wer ist dieser bulgarische Stürmer, der sein Land 1994 zu einem bemerkenswerten vierten Platz führte?",
+          "options": [
+            "Hristo Stoichkov",
+            "Emil Kostadinov",
+            "Yordan Letchkov",
+            "Krasimir Balakov"
+          ],
+          "explanation": "Hristo Stoichkov erzielte beim Turnier 1994 sechs Tore und teilte sich den Torschützenkönig-Titel mit dem Russen Oleg Salenko. Seine Freistöße mit dem linken Fuß waren verheerend. Zu Beginn desselben Jahres hatte er als Spieler des FC Barcelona den Ballon d'Or gewonnen. Bulgariens Halbfinal-Lauf gilt bis heute als eine der großen Außenseitergeschichten."
+        },
+        "es": {
+          "question": "¿Quién es este delantero búlgaro que llevó a su país a un sorprendente cuarto puesto en 1994?",
+          "options": [
+            "Hristo Stoichkov",
+            "Emil Kostadinov",
+            "Yordan Letchkov",
+            "Krasimir Balakov"
+          ],
+          "explanation": "Hristo Stoichkov marcó 6 goles en el torneo de 1994 y compartió la Bota de Oro con el ruso Oleg Salenko. Sus tiros libres con la zurda eran demoledores. A principios de ese año había ganado el Balón de Oro mientras jugaba en el Barcelona. La llegada de Bulgaria a las semifinales sigue siendo una de las grandes historias de la sorpresa."
+        },
+        "es-ES": {
+          "question": "¿Quién es este delantero búlgaro que llevó a su país a un sorprendente cuarto puesto en 1994?",
+          "options": [
+            "Hristo Stoichkov",
+            "Emil Kostadinov",
+            "Yordan Letchkov",
+            "Krasimir Balakov"
+          ],
+          "explanation": "Hristo Stoichkov marcó 6 goles en el torneo de 1994 y compartió la Bota de Oro con el ruso Oleg Salenko. Sus lanzamientos de falta con la zurda eran demoledores. A principios de aquel año había ganado el Balón de Oro mientras jugaba en el Barcelona. La gesta de Bulgaria llegando a semifinales sigue siendo una de las grandes historias de un equipo que partía sin ser favorito."
+        },
+        "fr": {
+          "question": "Qui est cet attaquant bulgare qui a mené son pays à une remarquable quatrième place en 1994 ?",
+          "options": [
+            "Hristo Stoichkov",
+            "Emil Kostadinov",
+            "Yordan Letchkov",
+            "Krasimir Balakov"
+          ],
+          "explanation": "Hristo Stoichkov a inscrit 6 buts lors du tournoi de 1994, partageant le Soulier d'or avec le Russe Oleg Salenko. Ses coups francs du pied gauche étaient dévastateurs. Plus tôt cette année-là, il avait remporté le Ballon d'or alors qu'il évoluait au Barça. Le parcours de la Bulgarie jusqu'en demi-finale reste l'une des grandes histoires d'un outsider."
+        },
+        "it": {
+          "question": "Chi è questo attaccante bulgaro che ha guidato il suo Paese a uno straordinario quarto posto nel 1994?",
+          "options": [
+            "Hristo Stoichkov",
+            "Emil Kostadinov",
+            "Yordan Letchkov",
+            "Krasimir Balakov"
+          ],
+          "explanation": "Hristo Stoichkov segnò 6 gol nel torneo del 1994, condividendo la Scarpa d'oro con il russo Oleg Salenko. Le sue punizioni di sinistro erano devastanti. All'inizio di quell'anno aveva vinto il Pallone d'oro mentre giocava nel Barcellona. La cavalcata della Bulgaria fino alla semifinale resta una delle grandi storie di una squadra outsider."
+        },
+        "ja": {
+          "question": "1994年に自国を見事な4位へと導いたこのブルガリアのストライカーは誰でしょう？",
+          "options": [
+            "フリスト・ストイチコフ",
+            "エミル・コスタディノフ",
+            "ヨルダン・レチコフ",
+            "クラシミル・バラコフ"
+          ],
+          "explanation": "フリスト・ストイチコフは1994年の大会で6得点を挙げ、ロシアのオレグ・サレンコと得点王を分け合いました。彼の左足のフリーキックは強烈そのものでした。その年の初めには、バルセロナに在籍しながらバロンドールを受賞しています。ブルガリアの準決勝進出は、今なお語り継がれる大番狂わせの名場面のひとつです。"
+        },
+        "ko": {
+          "question": "1994년 자국을 놀라운 4위로 이끈 이 불가리아 공격수는 누구일까요?",
+          "options": [
+            "흐리스토 스토이치코프",
+            "에밀 코스타디노프",
+            "요르단 레치코프",
+            "크라시미르 발라코프"
+          ],
+          "explanation": "흐리스토 스토이치코프는 1994년 대회에서 6골을 넣어 러시아의 올레크 살렌코와 득점왕을 공동 수상했습니다. 그의 왼발 프리킥은 가공할 위력을 자랑했죠. 그해 초에는 바르셀로나 소속으로 발롱도르까지 수상했습니다. 불가리아의 준결승 진출은 지금도 회자되는 최고의 언더독 스토리 중 하나입니다."
+        },
+        "pt-BR": {
+          "question": "Quem é esse atacante búlgaro que levou seu país a um surpreendente quarto lugar em 1994?",
+          "options": [
+            "Hristo Stoichkov",
+            "Emil Kostadinov",
+            "Yordan Letchkov",
+            "Krasimir Balakov"
+          ],
+          "explanation": "Hristo Stoichkov marcou 6 gols no torneio de 1994, dividindo a Chuteira de Ouro com o russo Oleg Salenko. Suas cobranças de falta com a perna esquerda eram devastadoras. No início daquele ano, ele havia conquistado a Bola de Ouro enquanto jogava pelo Barcelona. A campanha da Bulgária até a semifinal segue como uma das grandes histórias de azarão."
+        },
+        "zh-Hans": {
+          "question": "1994年带领祖国取得惊人第四名的这位保加利亚前锋是谁？",
+          "options": [
+            "赫里斯托·斯托伊奇科夫",
+            "埃米尔·科斯塔迪诺夫",
+            "约尔丹·莱奇科夫",
+            "克拉西米尔·巴拉科夫"
+          ],
+          "explanation": "赫里斯托·斯托伊奇科夫在1994年的赛事中攻入6球，与俄罗斯的奥列格·萨连科共享金靴奖。他的左脚任意球极具威胁。就在那一年早些时候，他在效力巴塞罗那期间荣膺金球奖。保加利亚闯入半决赛的征程，至今仍是最伟大的黑马传奇之一。"
+        }
+      },
+      "i18nSourceHash": "c649ea88bd4388af"
     },
     {
       "id": "img-roger-milla",
