@@ -11792,7 +11792,110 @@
       ],
       "answer": 0,
       "explanation": "The 1970 tournament in Mexico was the first with full color TV broadcasts globally. This is partly why that edition's iconic imagery — Brazil's brilliant yellow shirts, Pelé's artistry, Gordon Banks' legendary save — remains so vivid in football lore. The Telstar match ball was designed with black and white panels specifically for TV visibility.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أي نسخة كانت أول بطولة تُبَث حول العالم بتلفزيون ملوّن؟",
+          "options": [
+            "1970 في المكسيك",
+            "1966 في إنجلترا",
+            "1974 في ألمانيا الغربية",
+            "1978 في الأرجنتين"
+          ],
+          "explanation": "كانت بطولة 1970 في المكسيك أول بطولة تُنقل بالبث التلفزيوني الملوّن بالكامل على مستوى العالم. وهذا جزء من سبب بقاء صورها الأيقونية حاضرة بقوة في ذاكرة كرة القدم — قمصان البرازيل الصفراء الزاهية، وفنون بيليه، والتصدي الأسطوري لغوردون بانكس. وقد صُممت كرة المباراة تيلستار بألواح سوداء وبيضاء خصيصًا لتكون أوضح على شاشة التلفزيون."
+        },
+        "de": {
+          "question": "Welche Ausgabe wurde als erste weltweit im Farbfernsehen übertragen?",
+          "options": [
+            "1970 in Mexiko",
+            "1966 in England",
+            "1974 in Westdeutschland",
+            "1978 in Argentinien"
+          ],
+          "explanation": "Das Turnier 1970 in Mexiko war das erste, das weltweit komplett in Farbe übertragen wurde. Das ist mit ein Grund, warum die ikonischen Bilder dieser Ausgabe — Brasiliens leuchtend gelbe Trikots, Pelés Spielkunst, Gordon Banks' legendäre Parade — bis heute so lebendig in der Fußballgeschichte fortleben. Der Spielball Telstar wurde mit schwarzen und weißen Feldern gestaltet, speziell für die bessere Sichtbarkeit im Fernsehen."
+        },
+        "es": {
+          "question": "¿Cuál fue la primera edición transmitida a todo el mundo en televisión a color?",
+          "options": [
+            "1970 en México",
+            "1966 en Inglaterra",
+            "1974 en Alemania Occidental",
+            "1978 en Argentina"
+          ],
+          "explanation": "El torneo de 1970 en México fue el primero con transmisiones televisivas a todo color en el mundo. En parte por eso las imágenes icónicas de esa edición — las brillantes camisetas amarillas de Brasil, el arte de Pelé, la legendaria atajada de Gordon Banks — siguen tan vivas en la historia del fútbol. El balón Telstar se diseñó con paneles blancos y negros justamente para que se viera mejor en televisión."
+        },
+        "es-ES": {
+          "question": "¿Cuál fue la primera edición que se retransmitió a todo el mundo en televisión en color?",
+          "options": [
+            "1970 en México",
+            "1966 en Inglaterra",
+            "1974 en Alemania Occidental",
+            "1978 en Argentina"
+          ],
+          "explanation": "El torneo de 1970 en México fue el primero con retransmisiones televisivas a todo color en el mundo. En parte por eso las imágenes icónicas de aquella edición — las brillantes camisetas amarillas de Brasil, el arte de Pelé, la legendaria parada de Gordon Banks — siguen tan vivas en la historia del fútbol. El balón Telstar se diseñó con paneles blancos y negros precisamente para que se viera mejor en televisión."
+        },
+        "fr": {
+          "question": "Quelle édition fut la première à être diffusée dans le monde entier en télévision couleur ?",
+          "options": [
+            "1970 au Mexique",
+            "1966 en Angleterre",
+            "1974 en Allemagne de l'Ouest",
+            "1978 en Argentine"
+          ],
+          "explanation": "Le tournoi de 1970 au Mexique fut le premier à être retransmis intégralement en couleur dans le monde entier. C'est en partie pour cela que les images emblématiques de cette édition — les maillots d'un jaune éclatant du Brésil, le génie de Pelé, l'arrêt légendaire de Gordon Banks — restent si vivaces dans la mémoire du football. Le ballon Telstar fut conçu avec des panneaux noirs et blancs précisément pour mieux ressortir à la télévision."
+        },
+        "it": {
+          "question": "Quale edizione fu la prima a essere trasmessa in tutto il mondo a colori in televisione?",
+          "options": [
+            "1970 in Messico",
+            "1966 in Inghilterra",
+            "1974 in Germania Ovest",
+            "1978 in Argentina"
+          ],
+          "explanation": "Il torneo del 1970 in Messico fu il primo con trasmissioni televisive a colori in tutto il mondo. È anche per questo che le immagini iconiche di quell'edizione — le sgargianti maglie gialle del Brasile, le giocate d'arte di Pelé, la parata leggendaria di Gordon Banks — restano così vivide nella storia del calcio. Il pallone Telstar fu progettato con pannelli bianchi e neri proprio per essere più visibile in televisione."
+        },
+        "ja": {
+          "question": "世界中にカラーテレビで放送された最初の大会はどれでしょう？",
+          "options": [
+            "1970年 メキシコ大会",
+            "1966年 イングランド大会",
+            "1974年 西ドイツ大会",
+            "1978年 アルゼンチン大会"
+          ],
+          "explanation": "1970年のメキシコ大会は、世界中でフルカラーのテレビ放送が行われた最初の大会でした。それもあって、この大会の象徴的な映像——ブラジルの鮮やかな黄色いユニフォーム、ペレの芸術的なプレー、ゴードン・バンクスの伝説的なセーブ——は今もサッカーの語り草として鮮明に残っています。試合球テルスターは、テレビ映りを良くするために白と黒のパネルでデザインされました。"
+        },
+        "ko": {
+          "question": "전 세계에 컬러텔레비전으로 중계된 최초의 대회는 무엇일까요?",
+          "options": [
+            "1970년 멕시코 대회",
+            "1966년 잉글랜드 대회",
+            "1974년 서독 대회",
+            "1978년 아르헨티나 대회"
+          ],
+          "explanation": "1970년 멕시코 대회는 전 세계에 완전한 컬러 TV 중계가 이루어진 최초의 대회였습니다. 그 덕분에 이 대회의 상징적인 장면들——브라질의 선명한 노란 유니폼, 펠레의 예술적인 플레이, 고든 뱅크스의 전설적인 선방——이 지금도 축구 역사에서 생생하게 회자됩니다. 공인구 텔스타는 TV 화면에서 더 잘 보이도록 검은색과 흰색 패널로 디자인되었습니다."
+        },
+        "pt-BR": {
+          "question": "Qual edição foi a primeira a ser transmitida para o mundo inteiro em televisão a cores?",
+          "options": [
+            "1970 no México",
+            "1966 na Inglaterra",
+            "1974 na Alemanha Ocidental",
+            "1978 na Argentina"
+          ],
+          "explanation": "O torneio de 1970 no México foi o primeiro com transmissões televisivas totalmente coloridas para o mundo inteiro. Em parte por isso, as imagens icônicas daquela edição — as brilhantes camisas amarelas do Brasil, a arte de Pelé, a defesa lendária de Gordon Banks — continuam tão vivas na história do futebol. A bola Telstar foi projetada com gomos pretos e brancos justamente para ter melhor visibilidade na TV."
+        },
+        "zh-Hans": {
+          "question": "哪一届是首次在全球以彩色电视转播的赛事？",
+          "options": [
+            "1970年墨西哥",
+            "1966年英格兰",
+            "1974年西德",
+            "1978年阿根廷"
+          ],
+          "explanation": "1970年墨西哥赛事是首次在全球进行全彩色电视转播的赛事。这也是那一届的经典画面——巴西鲜艳的黄色球衣、贝利的精湛球技、戈登·班克斯传奇般的扑救——至今仍在足球史上如此鲜活的原因之一。比赛用球“电视之星”（Telstar）专门采用黑白相间的拼块设计，正是为了在电视上更清晰可见。"
+        }
+      },
+      "i18nSourceHash": "15e0bcd5b7dd90e9"
     },
     {
       "id": "h-1930-team-count",
@@ -11806,7 +11909,110 @@
       ],
       "answer": 0,
       "explanation": "Only 13 teams entered the first edition, with just four European nations making the long sea voyage across the Atlantic. Many European countries declined to participate due to the expense and time required for ocean travel, nearly causing a diplomatic rift with South America.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كم عدد الدول التي شاركت في النسخة الافتتاحية لبطولة 1930 في الأوروغواي؟",
+          "options": [
+            "13",
+            "16",
+            "8",
+            "20"
+          ],
+          "explanation": "لم تشارك سوى 13 منتخباً في النسخة الأولى، ولم تخض رحلة بحرية طويلة عبر المحيط الأطلسي سوى أربع دول أوروبية. وقد اعتذرت دول أوروبية كثيرة عن المشاركة بسبب التكلفة والوقت اللازمين للسفر بحراً، مما كاد يتسبب في خلاف دبلوماسي مع أمريكا الجنوبية."
+        },
+        "de": {
+          "question": "Wie viele Nationen nahmen am ersten Turnier 1930 in Uruguay teil?",
+          "options": [
+            "13",
+            "16",
+            "8",
+            "20"
+          ],
+          "explanation": "Nur 13 Mannschaften traten bei der ersten Austragung an, wobei lediglich vier europäische Nationen die lange Seereise über den Atlantik auf sich nahmen. Viele europäische Länder lehnten eine Teilnahme wegen der Kosten und des Zeitaufwands der Schiffsreise ab, was beinahe zu einem diplomatischen Bruch mit Südamerika geführt hätte."
+        },
+        "es": {
+          "question": "¿Cuántas naciones compitieron en la edición inaugural de 1930 en Uruguay?",
+          "options": [
+            "13",
+            "16",
+            "8",
+            "20"
+          ],
+          "explanation": "Solo 13 equipos participaron en la primera edición, y apenas cuatro naciones europeas hicieron el largo viaje en barco a través del Atlántico. Muchos países europeos declinaron participar por el costo y el tiempo que exigía el viaje por mar, lo que casi provocó una ruptura diplomática con Sudamérica."
+        },
+        "es-ES": {
+          "question": "¿Cuántas naciones compitieron en la edición inaugural de 1930 en Uruguay?",
+          "options": [
+            "13",
+            "16",
+            "8",
+            "20"
+          ],
+          "explanation": "Solo 13 equipos tomaron parte en la primera edición, y apenas cuatro naciones europeas se atrevieron con el largo viaje en barco a través del Atlántico. Muchos países europeos renunciaron a participar por el coste y el tiempo que requería la travesía marítima, lo que estuvo a punto de provocar una ruptura diplomática con Sudamérica."
+        },
+        "fr": {
+          "question": "Combien de nations ont participé à la toute première édition du tournoi de 1930 en Uruguay ?",
+          "options": [
+            "13",
+            "16",
+            "8",
+            "20"
+          ],
+          "explanation": "Seules 13 équipes ont pris part à cette première édition, et seulement quatre nations européennes ont effectué le long voyage en bateau à travers l'Atlantique. De nombreux pays européens ont décliné l'invitation en raison du coût et du temps qu'exigeait la traversée maritime, ce qui a failli provoquer une brouille diplomatique avec l'Amérique du Sud."
+        },
+        "it": {
+          "question": "Quante nazioni parteciparono alla prima edizione del torneo del 1930 in Uruguay?",
+          "options": [
+            "13",
+            "16",
+            "8",
+            "20"
+          ],
+          "explanation": "Solo 13 squadre presero parte alla prima edizione, e appena quattro nazioni europee affrontarono il lungo viaggio in nave attraverso l'Atlantico. Molti paesi europei rinunciarono a partecipare per i costi e il tempo richiesti dalla traversata oceanica, rischiando di provocare una frattura diplomatica con il Sud America."
+        },
+        "ja": {
+          "question": "1930年にウルグアイで開催された第1回大会には、いくつの国が参加しましたか？",
+          "options": [
+            "13",
+            "16",
+            "8",
+            "20"
+          ],
+          "explanation": "第1回大会に出場したのはわずか13チームで、大西洋を渡る長い船旅を経て参加したヨーロッパの国はたった4か国でした。多くのヨーロッパ諸国は、海路の費用と所要時間を理由に参加を辞退し、南米との外交関係に亀裂が生じる寸前となりました。"
+        },
+        "ko": {
+          "question": "1930년 우루과이에서 열린 첫 대회에는 몇 개국이 참가했나요?",
+          "options": [
+            "13",
+            "16",
+            "8",
+            "20"
+          ],
+          "explanation": "첫 대회에 출전한 팀은 단 13개국에 불과했으며, 대서양을 건너는 긴 항해를 감행한 유럽 국가는 단 4개국뿐이었습니다. 많은 유럽 국가들이 해상 이동에 드는 비용과 시간을 이유로 참가를 거부했고, 이로 인해 남미와 외교적 갈등이 일어날 뻔했습니다."
+        },
+        "pt-BR": {
+          "question": "Quantas nações disputaram a primeira edição do torneio de 1930, no Uruguai?",
+          "options": [
+            "13",
+            "16",
+            "8",
+            "20"
+          ],
+          "explanation": "Apenas 13 equipes participaram da primeira edição, e somente quatro nações europeias enfrentaram a longa viagem de navio pelo Atlântico. Muitos países europeus recusaram participar devido ao custo e ao tempo exigidos pela travessia marítima, o que quase provocou uma ruptura diplomática com a América do Sul."
+        },
+        "zh-Hans": {
+          "question": "1930年在乌拉圭举办的首届赛事有多少个国家参赛？",
+          "options": [
+            "13",
+            "16",
+            "8",
+            "20"
+          ],
+          "explanation": "首届赛事仅有13支球队参加，其中只有四个欧洲国家不远万里横渡大西洋前来。许多欧洲国家因海上旅途耗资巨大、耗时漫长而拒绝参赛，这一度险些引发与南美洲之间的外交摩擦。"
+        }
+      },
+      "i18nSourceHash": "7fa0bde783d19af8"
     },
     {
       "id": "p-gordon-banks-save",
@@ -11821,7 +12027,110 @@
       "answer": 0,
       "explanation": "England goalkeeper Gordon Banks pulled off an incredible diving save to deny Pelé's downward header in a 1970 group-stage match against Brazil. Pelé himself later called it 'the save of the century.' Despite Banks' heroics, Brazil won the match 1-0 and went on to win the tournament.",
       "media": "https://www.youtube.com/watch?v=HNLam4RAbg8",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "صاحب التصدي المذهل أمام بيليه في بطولة 1970 الذي يُعتبر على نطاق واسع أعظم تصدٍّ في تاريخ كرة القدم، من هو؟",
+          "options": [
+            "غوردون بانكس",
+            "ليف ياشين",
+            "بيتر شيلتون",
+            "دينو زوف"
+          ],
+          "explanation": "نفّذ حارس مرمى منتخب إنجلترا غوردون بانكس تصديًا غاطسًا لا يُصدَّق ليُبعد كرة بيليه الرأسية المتجهة للأسفل في مباراة دور المجموعات عام 1970 أمام البرازيل. وقد وصفه بيليه نفسه لاحقًا بأنه 'تصدي القرن'. ورغم بطولة بانكس، فازت البرازيل بالمباراة 1-0 وتوّجت بطلة للبطولة."
+        },
+        "de": {
+          "question": "Wessen spektakuläre Parade gegen Pelé beim Turnier 1970 gilt weithin als die beste Glanztat der Fußballgeschichte?",
+          "options": [
+            "Gordon Banks",
+            "Lew Jaschin",
+            "Peter Shilton",
+            "Dino Zoff"
+          ],
+          "explanation": "Der englische Torwart Gordon Banks zeigte eine unglaubliche Hechtparade und parierte Pelés nach unten gerichteten Kopfball in einem Gruppenspiel von 1970 gegen Brasilien. Pelé selbst nannte sie später 'die Parade des Jahrhunderts'. Trotz Banks' Heldentat gewann Brasilien das Spiel mit 1:0 und holte später den Turniersieg."
+        },
+        "es": {
+          "question": "¿De quién es la espectacular atajada ante Pelé en el torneo de 1970, considerada por muchos la mejor de la historia del fútbol?",
+          "options": [
+            "Gordon Banks",
+            "Lev Yashin",
+            "Peter Shilton",
+            "Dino Zoff"
+          ],
+          "explanation": "El arquero inglés Gordon Banks hizo una increíble atajada en estirada para desviar el cabezazo a ras de suelo de Pelé en un partido de fase de grupos de 1970 ante Brasil. El propio Pelé la llamó después 'la atajada del siglo'. A pesar de la heroicidad de Banks, Brasil ganó el partido 1-0 y terminó coronándose campeón del torneo."
+        },
+        "es-ES": {
+          "question": "¿De quién es la espectacular parada ante Pelé en el torneo de 1970, considerada por muchos la mejor de la historia del fútbol?",
+          "options": [
+            "Gordon Banks",
+            "Lev Yashin",
+            "Peter Shilton",
+            "Dino Zoff"
+          ],
+          "explanation": "El portero inglés Gordon Banks realizó una increíble parada en estirada para desviar el cabezazo a ras de suelo de Pelé en un partido de la fase de grupos de 1970 contra Brasil. El propio Pelé la calificó más tarde de 'la parada del siglo'. A pesar de la heroicidad de Banks, Brasil ganó el partido 1-0 y acabó proclamándose campeón del torneo."
+        },
+        "fr": {
+          "question": "À qui doit-on l'arrêt spectaculaire face à Pelé lors du tournoi de 1970, largement considéré comme le plus bel arrêt de l'histoire du football ?",
+          "options": [
+            "Gordon Banks",
+            "Lev Yachine",
+            "Peter Shilton",
+            "Dino Zoff"
+          ],
+          "explanation": "Le gardien anglais Gordon Banks a réalisé un incroyable arrêt en plongeant pour détourner la tête piquée de Pelé lors d'un match de phase de groupes en 1970 face au Brésil. Pelé lui-même l'a plus tard qualifié d'« arrêt du siècle ». Malgré l'exploit de Banks, le Brésil a remporté le match 1-0 et a fini par gagner le tournoi."
+        },
+        "it": {
+          "question": "A chi appartiene la spettacolare parata su Pelé al torneo del 1970, considerata da molti la più bella nella storia del calcio?",
+          "options": [
+            "Gordon Banks",
+            "Lev Yashin",
+            "Peter Shilton",
+            "Dino Zoff"
+          ],
+          "explanation": "Il portiere inglese Gordon Banks compì un'incredibile parata in tuffo per respingere il colpo di testa di Pelé diretto verso il basso in una partita della fase a gironi del 1970 contro il Brasile. Lo stesso Pelé la definì poi 'la parata del secolo'. Nonostante l'impresa di Banks, il Brasile vinse la partita 1-0 e si aggiudicò poi il torneo."
+        },
+        "ja": {
+          "question": "1970年大会でペレのシュートを防いだ、サッカー史上最高のセーブと広く称される妙技を見せたのは誰でしょう?",
+          "options": [
+            "ゴードン・バンクス",
+            "レフ・ヤシン",
+            "ピーター・シルトン",
+            "ディノ・ゾフ"
+          ],
+          "explanation": "イングランド代表のゴールキーパー、ゴードン・バンクスは、1970年のブラジルとのグループステージの試合で、ペレが叩きつけたヘディングシュートをダイビングで止めるという信じがたいセーブを見せた。ペレ自身も後にこれを『今世紀最高のセーブ』と称えた。バンクスの活躍にもかかわらず、ブラジルはこの試合を1-0で勝利し、最終的に大会優勝を果たした。"
+        },
+        "ko": {
+          "question": "1970년 대회에서 펠레의 슛을 막아내며 축구 역사상 최고의 선방으로 널리 평가받는 명장면을 만든 선수는 누구일까요?",
+          "options": [
+            "고든 뱅크스",
+            "레프 야신",
+            "피터 실턴",
+            "디노 조프"
+          ],
+          "explanation": "잉글랜드 골키퍼 고든 뱅크스는 1970년 브라질과의 조별 리그 경기에서 펠레가 아래로 꽂은 헤더를 다이빙으로 막아내는 믿기 힘든 선방을 펼쳤다. 펠레 본인도 훗날 이를 '세기의 선방'이라 칭했다. 뱅크스의 영웅적인 활약에도 불구하고 브라질은 그 경기를 1-0으로 이겼고, 결국 대회 우승까지 차지했다."
+        },
+        "pt-BR": {
+          "question": "De quem foi a defesa espetacular contra Pelé no torneio de 1970, amplamente considerada a melhor da história do futebol?",
+          "options": [
+            "Gordon Banks",
+            "Lev Yashin",
+            "Peter Shilton",
+            "Dino Zoff"
+          ],
+          "explanation": "O goleiro inglês Gordon Banks fez uma defesa incrível em um voo para evitar a cabeçada rasteira de Pelé em uma partida da fase de grupos de 1970 contra o Brasil. O próprio Pelé mais tarde a chamou de 'a defesa do século'. Apesar da atuação heroica de Banks, o Brasil venceu a partida por 1 a 0 e acabou conquistando o título do torneio."
+        },
+        "zh-Hans": {
+          "question": "在1970年的赛事中，谁扑出了佩莱的射门，这次精彩扑救被广泛认为是足球史上最伟大的扑救?",
+          "options": [
+            "戈登·班克斯",
+            "列夫·雅辛",
+            "彼得·希尔顿",
+            "迪诺·佐夫"
+          ],
+          "explanation": "在1970年对阵巴西的小组赛中，英格兰门将戈登·班克斯飞身扑出了佩莱向下顶出的头球，完成了一次令人难以置信的扑救。佩莱本人后来称之为'世纪扑救'。尽管班克斯表现英勇，巴西仍以1比0赢得了比赛，并最终夺得赛事冠军。"
+        }
+      },
+      "i18nSourceHash": "c68ad50614cd35bb"
     },
     {
       "id": "p-kempes-78",
@@ -11835,7 +12144,110 @@
       ],
       "answer": 0,
       "explanation": "Mario Kempes was the star of the 1978 tournament on home soil, scoring 6 goals to earn the Golden Boot. Remarkably, he didn't score in the group stage — all 6 came in the second round and final. His two goals in the final against the Netherlands sealed Argentina's first title.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من فاز بالحذاء الذهبي في بطولة 1978 برصيد 6 أهداف، بينها هدفان في النهائي؟",
+          "options": [
+            "ماريو كيمبس",
+            "دانيال باساريلا",
+            "ليوبولدو لوكي",
+            "روب رينسينبرينك"
+          ],
+          "explanation": "كان ماريو كيمبس نجم بطولة 1978 على أرضه، حيث سجل 6 أهداف ليحرز الحذاء الذهبي. والمدهش أنه لم يسجل في دور المجموعات إطلاقًا — جاءت أهدافه الستة جميعها في الدور الثاني والنهائي. وقد حسم هدفاه في المباراة النهائية أمام هولندا أول لقب للأرجنتين."
+        },
+        "de": {
+          "question": "Wer gewann beim Turnier 1978 mit 6 Toren den Goldenen Schuh, darunter 2 im Finale?",
+          "options": [
+            "Mario Kempes",
+            "Daniel Passarella",
+            "Leopoldo Luque",
+            "Rob Rensenbrink"
+          ],
+          "explanation": "Mario Kempes war der Star des Turniers 1978 im eigenen Land und sicherte sich mit 6 Toren den Goldenen Schuh. Bemerkenswert: In der Gruppenphase traf er gar nicht — alle 6 Tore erzielte er in der zweiten Runde und im Finale. Seine beiden Treffer im Finale gegen die Niederlande besiegelten Argentiniens ersten Titel."
+        },
+        "es": {
+          "question": "¿Quién ganó la Bota de Oro en el torneo de 1978 con 6 goles, incluidos 2 en la final?",
+          "options": [
+            "Mario Kempes",
+            "Daniel Passarella",
+            "Leopoldo Luque",
+            "Rob Rensenbrink"
+          ],
+          "explanation": "Mario Kempes fue la gran figura del torneo de 1978 en casa, anotando 6 goles para llevarse la Bota de Oro. Lo curioso es que no marcó en la fase de grupos: sus 6 goles llegaron todos en la segunda ronda y en la final. Sus dos tantos en la final ante los Países Bajos sellaron el primer título de Argentina."
+        },
+        "es-ES": {
+          "question": "¿Quién ganó la Bota de Oro en el torneo de 1978 con 6 goles, dos de ellos en la final?",
+          "options": [
+            "Mario Kempes",
+            "Daniel Passarella",
+            "Leopoldo Luque",
+            "Rob Rensenbrink"
+          ],
+          "explanation": "Mario Kempes fue la gran estrella del torneo de 1978 en su propio país, marcando 6 goles para hacerse con la Bota de Oro. Lo llamativo es que no anotó en la fase de grupos: sus 6 tantos llegaron todos en la segunda ronda y en la final. Sus dos goles en la final ante los Países Bajos sellaron el primer título de Argentina."
+        },
+        "fr": {
+          "question": "Qui a remporté le Soulier d'or lors du tournoi de 1978 avec 6 buts, dont 2 en finale ?",
+          "options": [
+            "Mario Kempes",
+            "Daniel Passarella",
+            "Leopoldo Luque",
+            "Rob Rensenbrink"
+          ],
+          "explanation": "Mario Kempes fut la vedette du tournoi de 1978 à domicile, inscrivant 6 buts pour décrocher le Soulier d'or. Fait remarquable, il n'a pas marqué lors de la phase de groupes : ses 6 buts sont tous venus au second tour et en finale. Ses deux réalisations en finale face aux Pays-Bas ont scellé le premier titre de l'Argentine."
+        },
+        "it": {
+          "question": "Chi ha vinto la Scarpa d'Oro al torneo del 1978 con 6 gol, di cui 2 in finale?",
+          "options": [
+            "Mario Kempes",
+            "Daniel Passarella",
+            "Leopoldo Luque",
+            "Rob Rensenbrink"
+          ],
+          "explanation": "Mario Kempes fu la stella del torneo del 1978 disputato in casa, segnando 6 gol che gli valsero la Scarpa d'Oro. Sorprendentemente, non andò a segno nella fase a gironi: tutte e 6 le reti arrivarono nel secondo turno e in finale. Le sue due marcature nella finale contro i Paesi Bassi sancirono il primo titolo dell'Argentina."
+        },
+        "ja": {
+          "question": "1978年大会で6得点を挙げ、うち2点を決勝で決めて得点王に輝いたのは誰でしょう？",
+          "options": [
+            "マリオ・ケンペス",
+            "ダニエル・パサレラ",
+            "レオポルド・ルケ",
+            "ロブ・レンセンブリンク"
+          ],
+          "explanation": "マリオ・ケンペスは地元開催だった1978年大会の主役で、6得点を挙げて得点王に輝きました。驚くべきことに、グループステージでは無得点で、6得点すべてを2次リーグと決勝で決めました。オランダとの決勝での2ゴールが、アルゼンチン初優勝を決定づけたのです。"
+        },
+        "ko": {
+          "question": "1978년 대회에서 결승전 2골을 포함해 6골을 넣으며 득점왕을 차지한 선수는 누구일까요?",
+          "options": [
+            "마리오 켐페스",
+            "다니엘 파사레야",
+            "레오폴도 루케",
+            "롭 렌센브링크"
+          ],
+          "explanation": "마리오 켐페스는 안방에서 열린 1978년 대회의 주인공으로, 6골을 기록하며 득점왕에 올랐습니다. 놀랍게도 그는 조별리그에서는 득점이 없었고, 6골 모두를 2차 라운드와 결승전에서 터뜨렸습니다. 네덜란드와의 결승전에서 넣은 두 골은 아르헨티나의 첫 우승을 확정지었습니다."
+        },
+        "pt-BR": {
+          "question": "Quem ganhou a Chuteira de Ouro no torneio de 1978 com 6 gols, sendo 2 na final?",
+          "options": [
+            "Mario Kempes",
+            "Daniel Passarella",
+            "Leopoldo Luque",
+            "Rob Rensenbrink"
+          ],
+          "explanation": "Mario Kempes foi a estrela do torneio de 1978 em casa, marcando 6 gols para conquistar a Chuteira de Ouro. Curiosamente, ele não balançou as redes na fase de grupos — todos os 6 gols vieram na segunda fase e na final. Seus dois gols na final contra a Holanda selaram o primeiro título da Argentina."
+        },
+        "zh-Hans": {
+          "question": "在1978年的赛事中，谁打进6球（包括决赛中的2球）荣膺金靴奖？",
+          "options": [
+            "马里奥·肯佩斯",
+            "丹尼尔·帕萨雷拉",
+            "莱奥波尔多·卢克",
+            "罗布·伦森布林克"
+          ],
+          "explanation": "马里奥·肯佩斯是1978年本土赛事的明星，打进6球荣获金靴奖。值得一提的是，他在小组赛中颗粒无收——6粒进球全部来自第二阶段和决赛。他在对阵荷兰的决赛中梅开二度，锁定了阿根廷的首个冠军。"
+        }
+      },
+      "i18nSourceHash": "41e71343d890e82c"
     },
     {
       "id": "p-rossi-82-comeback",
@@ -11849,7 +12261,110 @@
       ],
       "answer": 0,
       "explanation": "Paolo Rossi had served a two-year ban for involvement in a match-fixing scandal before being selected for Spain 1982. He went on one of football's most remarkable redemption arcs — scoring a hat-trick against Brazil, then goals in the semi-final and final. He won the Golden Boot, Golden Ball, and the tournament.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أي مهاجم إيطالي فاز بجائزة الحذاء الذهبي عام 1982 برصيد 6 أهداف بعد عودته من إيقاف بسبب التلاعب بالنتائج؟",
+          "options": [
+            "باولو روسي",
+            "ماركو تارديلي",
+            "أليساندرو ألتوبيلي",
+            "روبرتو بيتيغا"
+          ],
+          "explanation": "قضى باولو روسي عقوبة إيقاف لمدة عامين بسبب تورطه في فضيحة تلاعب بالنتائج قبل أن يتم اختياره لخوض منافسات إسبانيا 1982. وخاض بعدها واحدة من أروع قصص الفداء في تاريخ كرة القدم، إذ سجّل هاتريك في مرمى البرازيل، ثم أهدافاً في نصف النهائي والنهائي. وفاز بالحذاء الذهبي والكرة الذهبية وبلقب البطولة."
+        },
+        "de": {
+          "question": "Welcher italienische Stürmer gewann 1982 den Goldenen Schuh mit 6 Toren, nachdem er von einer Sperre wegen Spielmanipulation zurückgekehrt war?",
+          "options": [
+            "Paolo Rossi",
+            "Marco Tardelli",
+            "Alessandro Altobelli",
+            "Roberto Bettega"
+          ],
+          "explanation": "Paolo Rossi hatte wegen seiner Verwicklung in einen Spielmanipulationsskandal eine zweijährige Sperre verbüßt, bevor er für Spanien 1982 nominiert wurde. Anschließend erlebte er eine der bemerkenswertesten Wiedergutmachungsgeschichten des Fußballs – mit einem Hattrick gegen Brasilien und Toren im Halbfinale und Finale. Er gewann den Goldenen Schuh, den Goldenen Ball und das Turnier."
+        },
+        "es": {
+          "question": "¿Qué delantero italiano ganó la Bota de Oro de 1982 con 6 goles tras regresar de una suspensión por amaño de partidos?",
+          "options": [
+            "Paolo Rossi",
+            "Marco Tardelli",
+            "Alessandro Altobelli",
+            "Roberto Bettega"
+          ],
+          "explanation": "Paolo Rossi había cumplido una suspensión de dos años por su participación en un escándalo de amaño de partidos antes de ser convocado para España 1982. Luego protagonizó una de las redenciones más asombrosas del fútbol: anotó un triplete ante Brasil y goles en la semifinal y la final. Ganó la Bota de Oro, el Balón de Oro y el torneo."
+        },
+        "es-ES": {
+          "question": "¿Qué delantero italiano ganó la Bota de Oro de 1982 con 6 goles tras volver de una sanción por amaño de partidos?",
+          "options": [
+            "Paolo Rossi",
+            "Marco Tardelli",
+            "Alessandro Altobelli",
+            "Roberto Bettega"
+          ],
+          "explanation": "Paolo Rossi había cumplido una sanción de dos años por su implicación en un escándalo de amaño de partidos antes de ser convocado para España 1982. Después protagonizó una de las redenciones más asombrosas del fútbol: marcó un triplete ante Brasil y goles en la semifinal y la final. Ganó la Bota de Oro, el Balón de Oro y el torneo."
+        },
+        "fr": {
+          "question": "Quel attaquant italien a remporté le Soulier d'or 1982 avec 6 buts après son retour d'une suspension pour matchs truqués ?",
+          "options": [
+            "Paolo Rossi",
+            "Marco Tardelli",
+            "Alessandro Altobelli",
+            "Roberto Bettega"
+          ],
+          "explanation": "Paolo Rossi avait purgé une suspension de deux ans pour son implication dans un scandale de matchs truqués avant d'être sélectionné pour l'Espagne 1982. Il a ensuite signé l'une des plus belles rédemptions de l'histoire du football : un triplé contre le Brésil, puis des buts en demi-finale et en finale. Il a remporté le Soulier d'or, le Ballon d'or et le tournoi."
+        },
+        "it": {
+          "question": "Quale attaccante italiano vinse la Scarpa d'Oro del 1982 con 6 gol dopo essere tornato da una squalifica per calcioscommesse?",
+          "options": [
+            "Paolo Rossi",
+            "Marco Tardelli",
+            "Alessandro Altobelli",
+            "Roberto Bettega"
+          ],
+          "explanation": "Paolo Rossi aveva scontato una squalifica di due anni per il suo coinvolgimento nello scandalo del calcioscommesse prima di essere convocato per Spagna 1982. Visse poi una delle redenzioni più straordinarie della storia del calcio: una tripletta contro il Brasile, seguita da gol in semifinale e in finale. Vinse la Scarpa d'Oro, il Pallone d'Oro e il torneo."
+        },
+        "ja": {
+          "question": "八百長による出場停止から復帰し、6得点で1982年の得点王に輝いたイタリアのストライカーは誰でしょう？",
+          "options": [
+            "パオロ・ロッシ",
+            "マルコ・タルデッリ",
+            "アレッサンドロ・アルトベッリ",
+            "ロベルト・ベッテガ"
+          ],
+          "explanation": "パオロ・ロッシは八百長スキャンダルへの関与で2年間の出場停止処分を受けた後、1982年スペイン大会の代表に選ばれました。その後、彼はサッカー史上もっとも見事な復活劇のひとつを演じ、ブラジル戦でハットトリックを決め、さらに準決勝と決勝でも得点しました。彼は得点王、最優秀選手賞、そして大会優勝を手にしました。"
+        },
+        "ko": {
+          "question": "승부조작 출전 정지에서 복귀한 뒤 6골로 1982년 득점왕을 차지한 이탈리아 공격수는 누구일까요?",
+          "options": [
+            "파올로 로시",
+            "마르코 타르델리",
+            "알레산드로 알토벨리",
+            "로베르토 베테가"
+          ],
+          "explanation": "파올로 로시는 승부조작 스캔들에 연루되어 2년간 출전 정지 징계를 받은 뒤 1982년 스페인 대회 대표로 선발되었습니다. 그는 이후 축구 역사상 가장 극적인 부활 스토리 중 하나를 써내려갔는데, 브라질을 상대로 해트트릭을 기록한 뒤 준결승과 결승에서도 골을 넣었습니다. 그는 득점왕, 최우수 선수상, 그리고 대회 우승까지 모두 차지했습니다."
+        },
+        "pt-BR": {
+          "question": "Qual atacante italiano conquistou a Chuteira de Ouro de 1982 com 6 gols após retornar de uma suspensão por manipulação de resultados?",
+          "options": [
+            "Paolo Rossi",
+            "Marco Tardelli",
+            "Alessandro Altobelli",
+            "Roberto Bettega"
+          ],
+          "explanation": "Paolo Rossi cumpriu uma suspensão de dois anos por seu envolvimento em um escândalo de manipulação de resultados antes de ser convocado para a Espanha 1982. Em seguida, viveu uma das redenções mais impressionantes da história do futebol: marcou um hat-trick contra o Brasil e gols na semifinal e na final. Conquistou a Chuteira de Ouro, a Bola de Ouro e o título do torneio."
+        },
+        "zh-Hans": {
+          "question": "哪位意大利前锋在结束因假球被禁赛的处罚复出后，于1982年以6粒进球赢得金靴奖？",
+          "options": [
+            "保罗·罗西",
+            "马尔科·塔尔德利",
+            "亚历山德罗·阿尔托贝利",
+            "罗伯托·贝特加"
+          ],
+          "explanation": "保罗·罗西因卷入假球丑闻被禁赛两年，随后才入选1982年西班牙赛事的阵容。之后他上演了足球史上最非凡的救赎故事之一——对阵巴西时上演帽子戏法，又在半决赛和决赛中接连破门。他最终赢得了金靴奖、金球奖以及赛事冠军。"
+        }
+      },
+      "i18nSourceHash": "80a723c3c251dff3"
     },
     {
       "id": "p-zagallo-first-dual",
