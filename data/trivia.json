@@ -9231,7 +9231,7 @@
       ],
       "answer": 0,
       "explanation": "Only 13 teams entered the first edition, with just four European nations making the long sea voyage across the Atlantic. Many European countries declined to participate due to the expense and time required for ocean travel, nearly causing a diplomatic rift with South America.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "p-gordon-banks-save",
