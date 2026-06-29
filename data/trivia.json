@@ -18160,7 +18160,90 @@
       "answer": 0,
       "explanation": "True! The 1994 final between Brazil and Italy ended 0-0 after extra time, making it the first final decided by penalties. Roberto Baggio's infamous miss sealed Brazil's fourth title. It remains one of the most dramatic moments in football history.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كانت نهائيات 1994 أول نهائي في تاريخ البطولة يُحسم بركلات الترجيح.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! انتهت مباراة نهائي 1994 بين البرازيل وإيطاليا بالتعادل 0-0 بعد الوقت الإضافي، لتصبح أول نهائي يُحسم بركلات الترجيح. وقد حسمت ركلة روبرتو باجيو الشهيرة الضائعة اللقب الرابع للبرازيل. ولا تزال هذه اللحظة من أكثر اللحظات إثارة في تاريخ كرة القدم."
+        },
+        "de": {
+          "question": "Das Finale von 1994 war das erste in der Turniergeschichte, das durch ein Elfmeterschießen entschieden wurde.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Wahr! Das Finale 1994 zwischen Brasilien und Italien endete nach Verlängerung 0:0 und wurde damit zum ersten Endspiel, das im Elfmeterschießen entschieden wurde. Roberto Baggios berühmt-berüchtigter Fehlschuss sicherte Brasilien den vierten Titel. Es bleibt einer der dramatischsten Momente der Fußballgeschichte."
+        },
+        "es": {
+          "question": "La final de 1994 fue la primera en la historia del torneo en definirse por tanda de penales.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! La final de 1994 entre Brasil e Italia terminó 0-0 tras el tiempo extra, convirtiéndose en la primera final definida por penales. El célebre penal fallado por Roberto Baggio le dio a Brasil su cuarto título. Sigue siendo uno de los momentos más dramáticos en la historia del fútbol."
+        },
+        "es-ES": {
+          "question": "La final de 1994 fue la primera en la historia del torneo en decidirse por una tanda de penaltis.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! La final de 1994 entre Brasil e Italia terminó 0-0 tras la prórroga, convirtiéndose en la primera final decidida por penaltis. El célebre penalti fallado por Roberto Baggio le dio a Brasil su cuarto título. Sigue siendo uno de los momentos más dramáticos de la historia del fútbol."
+        },
+        "fr": {
+          "question": "La finale de 1994 fut la première de l'histoire du tournoi à se jouer aux tirs au but.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! La finale de 1994 entre le Brésil et l'Italie s'est terminée sur un score de 0-0 après prolongation, devenant la première finale décidée aux tirs au but. Le tir au but manqué tristement célèbre de Roberto Baggio a offert au Brésil son quatrième titre. Cela reste l'un des moments les plus dramatiques de l'histoire du football."
+        },
+        "it": {
+          "question": "La finale del 1994 fu la prima nella storia del torneo a essere decisa ai calci di rigore.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! La finale del 1994 tra Brasile e Italia terminò 0-0 dopo i tempi supplementari, diventando la prima finale decisa ai rigori. Il celebre rigore sbagliato da Roberto Baggio consegnò al Brasile il quarto titolo. Resta uno dei momenti più drammatici nella storia del calcio."
+        },
+        "ja": {
+          "question": "1994年の決勝は、大会史上初めてPK戦で決着した試合でした。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "正しい！1994年のブラジル対イタリアの決勝は延長戦の末0-0で終わり、PK戦で決着した史上初の決勝となりました。ロベルト・バッジョの悪名高いPK失敗がブラジルの4度目の優勝を決定づけました。これはサッカー史上最も劇的な瞬間の一つとして語り継がれています。"
+        },
+        "ko": {
+          "question": "1994년 결승전은 대회 역사상 처음으로 승부차기로 결정된 경기였습니다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! 1994년 브라질과 이탈리아의 결승전은 연장전까지 0-0으로 끝나 승부차기로 결정된 최초의 결승전이 되었습니다. 로베르토 바조의 그 유명한 실축이 브라질의 네 번째 우승을 확정지었습니다. 이는 축구 역사상 가장 극적인 순간 중 하나로 남아 있습니다."
+        },
+        "pt-BR": {
+          "question": "A final de 1994 foi a primeira na história do torneio a ser decidida nos pênaltis.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! A final de 1994 entre Brasil e Itália terminou em 0 a 0 após a prorrogação, tornando-se a primeira final decidida nos pênaltis. A famosa cobrança perdida de Roberto Baggio garantiu o quarto título do Brasil. Permanece como um dos momentos mais dramáticos da história do futebol."
+        },
+        "zh-Hans": {
+          "question": "1994年的决赛是赛事历史上首场通过点球大战决出胜负的决赛。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！1994年巴西对阵意大利的决赛在加时赛后以0-0结束，成为首场通过点球大战决出胜负的决赛。罗伯托·巴乔那次臭名昭著的射失锁定了巴西队的第四个冠军。这至今仍是足球史上最具戏剧性的时刻之一。"
+        }
+      },
+      "i18nSourceHash": "722a89dbf14295dc"
     },
     {
       "id": "tf-cruyff-never-won",
@@ -18199,7 +18282,90 @@
       "answer": 0,
       "explanation": "True! England's penalty shootout record was notoriously dreadful, losing seven in a row across the tournament and European Championship between 1990 and 2012. The curse was finally broken when they beat Colombia on penalties at the 2018 edition in Russia.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "خسرت إنجلترا سبع ركلات ترجيح متتالية في البطولات الكبرى بين عامي 1990 و2012.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! كان سجل إنجلترا في ركلات الترجيح سيئاً للغاية، حيث خسرت سبع مرات متتالية في كل من البطولة وبطولة أمم أوروبا بين عامي 1990 و2012. وأخيراً كُسرت هذه اللعنة عندما هزمت كولومبيا بركلات الترجيح في نسخة 2018 في روسيا."
+        },
+        "de": {
+          "question": "England verlor zwischen 1990 und 2012 bei großen Turnieren sieben Elfmeterschießen in Folge.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Richtig! Englands Bilanz im Elfmeterschießen war berüchtigt schlecht: Zwischen 1990 und 2012 verlor das Team sieben Mal in Folge, sowohl beim Turnier als auch bei der Europameisterschaft. Der Fluch wurde schließlich gebrochen, als England bei der Ausgabe 2018 in Russland Kolumbien im Elfmeterschießen besiegte."
+        },
+        "es": {
+          "question": "Inglaterra perdió siete tandas de penales consecutivas en torneos importantes entre 1990 y 2012.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! El historial de Inglaterra en las tandas de penales era tristemente célebre por lo malo: perdió siete seguidas entre el torneo y la Eurocopa entre 1990 y 2012. La maldición se rompió finalmente cuando venció a Colombia por penales en la edición de 2018 en Rusia."
+        },
+        "es-ES": {
+          "question": "Inglaterra perdió siete tandas de penaltis consecutivas en grandes torneos entre 1990 y 2012.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! El historial de Inglaterra en las tandas de penaltis era tristemente célebre por lo nefasto: perdió siete seguidas entre el torneo y la Eurocopa entre 1990 y 2012. La maldición se rompió por fin cuando venció a Colombia en los penaltis en la edición de 2018 en Rusia."
+        },
+        "fr": {
+          "question": "L'Angleterre a perdu sept séances de tirs au but consécutives lors de grands tournois entre 1990 et 2012.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! Le bilan de l'Angleterre aux tirs au but était tristement catastrophique : sept défaites d'affilée entre le tournoi et le Championnat d'Europe, de 1990 à 2012. La malédiction a finalement été brisée lorsqu'elle a battu la Colombie aux tirs au but lors de l'édition 2018 en Russie."
+        },
+        "it": {
+          "question": "Tra il 1990 e il 2012 l'Inghilterra ha perso sette serie di rigori consecutive nei grandi tornei.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! Il rendimento dell'Inghilterra ai calci di rigore era tristemente pessimo: sette sconfitte consecutive tra il torneo e il Campionato Europeo dal 1990 al 2012. La maledizione è stata finalmente spezzata quando ha battuto la Colombia ai rigori nell'edizione del 2018 in Russia."
+        },
+        "ja": {
+          "question": "イングランドは1990年から2012年の間、主要な大会でPK戦を7回連続で落としました。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "正しい！イングランドのPK戦の成績は悪名高いほどひどく、1990年から2012年にかけて、大会と欧州選手権を通じて7回連続で敗れました。この呪いは、ロシアで開催された2018年大会でコロンビアにPK戦で勝利したことで、ようやく破られました。"
+        },
+        "ko": {
+          "question": "잉글랜드는 1990년부터 2012년까지 주요 대회에서 승부차기를 일곱 번 연속으로 패했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참! 잉글랜드의 승부차기 기록은 악명 높을 정도로 형편없었으며, 1990년부터 2012년 사이에 대회와 유럽 선수권을 통틀어 일곱 번 연속으로 패했습니다. 이 저주는 러시아에서 열린 2018년 대회에서 콜롬비아를 승부차기로 꺾으면서 마침내 깨졌습니다."
+        },
+        "pt-BR": {
+          "question": "A Inglaterra perdeu sete disputas de pênaltis consecutivas em grandes torneios entre 1990 e 2012.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! O histórico da Inglaterra em disputas de pênaltis era notoriamente péssimo, com sete derrotas seguidas entre o torneio e o Campeonato Europeu de 1990 a 2012. A maldição foi finalmente quebrada quando o time venceu a Colômbia nos pênaltis na edição de 2018, na Rússia."
+        },
+        "zh-Hans": {
+          "question": "在1990年至2012年间，英格兰在大型赛事中连续七次点球大战失利。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！英格兰在点球大战中的战绩糟糕得出了名，从1990年到2012年间，在该项赛事和欧洲锦标赛中连续七次落败。这一魔咒终于在2018年俄罗斯举办的那届赛事中被打破，当时英格兰在点球大战中击败了哥伦比亚。"
+        }
+      },
+      "i18nSourceHash": "f7a187eef2713248"
     },
     {
       "id": "tf-telstar-ball-tv",
@@ -18238,7 +18404,90 @@
       "answer": 0,
       "explanation": "True! The goalkeeper must have at least one foot touching or in line with the goal line when the penalty is taken. This rule, strictly enforced since 2020 with the help of VAR, has led to several penalties being retaken when goalkeepers moved too early.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "في ركلات الترجيح، يجب على حارس المرمى البقاء على خط المرمى حتى يتم ركل الكرة.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! يجب أن تكون إحدى قدمي الحارس على الأقل ملامسة لخط المرمى أو على محاذاته عند تنفيذ ركلة الجزاء. وقد أدى تطبيق هذه القاعدة بصرامة منذ عام 2020 بمساعدة تقنية حكم الفيديو المساعد (VAR) إلى إعادة عدة ركلات جزاء بسبب تحرّك الحراس مبكرًا."
+        },
+        "de": {
+          "question": "Beim Elfmeterschießen muss der Torwart bis zum Schuss auf der Torlinie bleiben.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Richtig! Beim Ausführen des Elfmeters muss mindestens ein Fuß des Torwarts die Torlinie berühren oder auf ihrer Höhe sein. Diese Regel wird seit 2020 mithilfe des Videobeweises (VAR) streng durchgesetzt und hat dazu geführt, dass mehrere Elfmeter wiederholt wurden, weil sich die Torhüter zu früh bewegten."
+        },
+        "es": {
+          "question": "En una tanda de penales, el arquero debe permanecer sobre la línea de gol hasta que se patee el balón.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! El arquero debe tener al menos un pie tocando la línea de gol o a la altura de ella cuando se ejecuta el penal. Esta regla, aplicada estrictamente desde 2020 con la ayuda del VAR, ha provocado que varios penales se repitan porque los arqueros se movieron demasiado pronto."
+        },
+        "es-ES": {
+          "question": "En una tanda de penaltis, el portero debe permanecer sobre la línea de gol hasta que se chute el balón.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! El portero debe tener al menos un pie tocando la línea de gol o a su altura cuando se lanza el penalti. Esta norma, aplicada estrictamente desde 2020 con la ayuda del VAR, ha provocado que varios penaltis se repitan porque los porteros se movieron demasiado pronto."
+        },
+        "fr": {
+          "question": "Lors d'une séance de tirs au but, le gardien doit rester sur sa ligne de but jusqu'à ce que le ballon soit frappé.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! Au moment du tir, le gardien doit avoir au moins un pied en contact avec la ligne de but ou dans son alignement. Cette règle, appliquée strictement depuis 2020 grâce à l'assistance vidéo (VAR), a entraîné le rejeu de plusieurs penalties lorsque les gardiens avançaient trop tôt."
+        },
+        "it": {
+          "question": "Durante i tiri di rigore, il portiere deve restare sulla linea di porta fino a quando il pallone non viene calciato.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! Al momento del tiro il portiere deve avere almeno un piede che tocca la linea di porta o sulla sua stessa altezza. Questa regola, applicata rigorosamente dal 2020 grazie all'aiuto del VAR, ha portato alla ripetizione di diversi rigori quando i portieri si muovevano troppo presto."
+        },
+        "ja": {
+          "question": "PK戦では、ゴールキーパーはボールが蹴られるまでゴールラインの上にとどまらなければならない。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "正しい！ペナルティキックが行われる瞬間、ゴールキーパーは少なくとも片足をゴールライン上に接触させているか、ライン上にそろえていなければなりません。このルールは2020年以降、VARの助けを借りて厳格に運用されており、キーパーが早く動きすぎたために何度もPKがやり直されています。"
+        },
+        "ko": {
+          "question": "승부차기에서 골키퍼는 공이 차일 때까지 골라인 위에 머물러야 한다.",
+          "options": [
+            "맞다",
+            "틀리다"
+          ],
+          "explanation": "맞습니다! 페널티킥을 차는 순간 골키퍼는 최소한 한 발이 골라인에 닿아 있거나 골라인과 같은 선상에 있어야 합니다. 이 규칙은 2020년부터 VAR의 도움으로 엄격하게 적용되고 있으며, 골키퍼가 너무 일찍 움직여 여러 차례 페널티킥이 다시 진행된 사례가 있습니다."
+        },
+        "pt-BR": {
+          "question": "Em uma disputa de pênaltis, o goleiro deve permanecer sobre a linha do gol até que a bola seja chutada.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! O goleiro deve manter pelo menos um pé tocando a linha do gol ou alinhado a ela no momento da cobrança do pênalti. Essa regra, aplicada rigorosamente desde 2020 com a ajuda do VAR, já fez com que vários pênaltis fossem repetidos porque os goleiros se moveram cedo demais."
+        },
+        "zh-Hans": {
+          "question": "在点球大战中，门将必须站在球门线上，直到球被踢出。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！主罚点球时，门将必须至少有一只脚触碰球门线或与球门线持平。自2020年起，这条规则在VAR的协助下被严格执行，已导致多次因门将过早移动而重罚点球的情况。"
+        }
+      },
+      "i18nSourceHash": "773cb40e7b63296b"
     },
     {
       "id": "tf-1966-only-european-host-win",
@@ -18470,7 +18719,90 @@
       "explanation": "True! Fontaine was originally a reserve, but injuries to other players gave him his chance. He seized it spectacularly, scoring 13 goals in just 6 matches — a record that has stood for over 65 years and may never be broken. He scored in every match France played.",
       "type": "true_false",
       "media": "https://www.youtube.com/watch?v=svVA7JiHUFQ",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "سجّل جوست فونتين رقمه القياسي البالغ 13 هدفاً في بطولة 1958 رغم أنه لم يكن المهاجم الأساسي لمنتخب فرنسا.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! كان فونتين في الأصل لاعباً احتياطياً، لكن إصابات لاعبين آخرين منحته فرصته. وقد اغتنمها بشكل مذهل، مسجلاً 13 هدفاً في 6 مباريات فقط — وهو رقم قياسي صمد لأكثر من 65 عاماً وقد لا يُكسر أبداً. لقد سجّل في كل مباراة خاضتها فرنسا."
+        },
+        "de": {
+          "question": "Just Fontaine erzielte beim Turnier 1958 seine Rekordzahl von 13 Toren, obwohl er nicht Frankreichs Stammstürmer war.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Richtig! Fontaine war ursprünglich nur Ersatzspieler, doch Verletzungen anderer Spieler verschafften ihm seine Chance. Er nutzte sie auf spektakuläre Weise und erzielte 13 Tore in nur 6 Spielen — ein Rekord, der seit über 65 Jahren Bestand hat und vielleicht nie gebrochen wird. Er traf in jedem Spiel, das Frankreich bestritt."
+        },
+        "es": {
+          "question": "Just Fontaine marcó su récord de 13 goles en el torneo de 1958 a pesar de no ser el delantero titular de Francia.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Fontaine era originalmente un suplente, pero las lesiones de otros jugadores le dieron su oportunidad. La aprovechó de manera espectacular, marcando 13 goles en apenas 6 partidos, un récord que ha perdurado por más de 65 años y que quizás nunca se rompa. Marcó en todos los partidos que jugó Francia."
+        },
+        "es-ES": {
+          "question": "Just Fontaine marcó su récord de 13 goles en el torneo de 1958 a pesar de no ser el delantero titular de Francia.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Fontaine era en un principio suplente, pero las lesiones de otros jugadores le brindaron su oportunidad. La aprovechó de forma espectacular, marcando 13 goles en tan solo 6 partidos: un récord que se mantiene desde hace más de 65 años y que quizá nunca se rompa. Marcó en todos los partidos que disputó Francia."
+        },
+        "fr": {
+          "question": "Just Fontaine a inscrit son record de 13 buts lors du tournoi de 1958, alors qu'il n'était pas l'attaquant titulaire de la France.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! Fontaine était au départ remplaçant, mais les blessures d'autres joueurs lui ont offert sa chance. Il l'a saisie de façon spectaculaire, en marquant 13 buts en seulement 6 matchs — un record qui tient depuis plus de 65 ans et qui ne sera peut-être jamais battu. Il a marqué dans chaque match disputé par la France."
+        },
+        "it": {
+          "question": "Just Fontaine segnò il suo record di 13 gol nel torneo del 1958, pur non essendo l'attaccante titolare della Francia.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! Fontaine all'inizio era una riserva, ma gli infortuni di altri giocatori gli diedero la sua occasione. La sfruttò in modo spettacolare, segnando 13 gol in appena 6 partite — un record che resiste da oltre 65 anni e che forse non verrà mai battuto. Andò a segno in ogni partita giocata dalla Francia."
+        },
+        "ja": {
+          "question": "ジュスト・フォンテーヌは、フランスの第一候補のストライカーではなかったにもかかわらず、1958年の大会で記録となる13ゴールを決めた。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "正しい！フォンテーヌは元々控え選手でしたが、他の選手の負傷により出場のチャンスが巡ってきました。彼はそれを見事にものにし、わずか6試合で13ゴールを記録しました——これは65年以上破られていない記録で、今後も破られないかもしれません。彼はフランスが戦ったすべての試合で得点しました。"
+        },
+        "ko": {
+          "question": "쥐스트 퐁텐은 프랑스의 주전 공격수가 아니었음에도 1958년 대회에서 13골이라는 기록을 세웠다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! 퐁텐은 원래 후보 선수였지만, 다른 선수들의 부상으로 기회를 얻게 되었습니다. 그는 그 기회를 멋지게 살려 단 6경기에서 13골을 넣었습니다 — 65년 넘게 깨지지 않았으며 앞으로도 영원히 깨지지 않을지 모르는 기록입니다. 그는 프랑스가 치른 모든 경기에서 득점했습니다."
+        },
+        "pt-BR": {
+          "question": "Just Fontaine marcou seus recordes 13 gols no torneio de 1958, apesar de não ser o atacante titular da França.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! Fontaine era originalmente um reserva, mas lesões de outros jogadores lhe deram a chance. Ele a aproveitou de forma espetacular, marcando 13 gols em apenas 6 partidas — um recorde que perdura há mais de 65 anos e que talvez nunca seja quebrado. Ele marcou em todas as partidas que a França disputou."
+        },
+        "zh-Hans": {
+          "question": "尽管儒斯特·方丹并非法国队的首选前锋，他仍在1958年的赛事中打入创纪录的13球。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！方丹起初只是替补球员，但其他球员的伤病给了他机会。他出色地抓住了这次机会，仅用6场比赛就攻入13球——这一纪录已保持了超过65年，或许永远无法被打破。他在法国队踢的每一场比赛中都有进球。"
+        }
+      },
+      "i18nSourceHash": "15f30fc4059aa6a0"
     },
     {
       "id": "tf-finals-extra-time-before-94",
@@ -18483,7 +18815,90 @@
       "answer": 1,
       "explanation": "False! Several finals before 1994 went to extra time, including 1934 (Italy 2-1 Czechoslovakia), 1966 (England 4-2 West Germany), and 1978 (Argentina 3-1 Netherlands). What made 1994 unique was that it was the first final to go to a penalty shootout after extra time.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "قبل عام 1994، لم يكن نهائي البطولة قد احتاج قط إلى وقت إضافي لتحديد الفائز.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "خطأ! العديد من النهائيات قبل عام 1994 ذهبت إلى الوقت الإضافي، بما في ذلك نهائي 1934 (إيطاليا 2-1 تشيكوسلوفاكيا)، و1966 (إنجلترا 4-2 ألمانيا الغربية)، و1978 (الأرجنتين 3-1 هولندا). ما ميّز نهائي 1994 هو أنه كان أول نهائي يُحسم بركلات الترجيح بعد الوقت الإضافي."
+        },
+        "de": {
+          "question": "Vor 1994 hatte das Finale des Turniers nie eine Verlängerung gebraucht, um den Sieger zu ermitteln.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Falsch! Mehrere Endspiele vor 1994 gingen in die Verlängerung, darunter 1934 (Italien 2:1 Tschechoslowakei), 1966 (England 4:2 Westdeutschland) und 1978 (Argentinien 3:1 Niederlande). Das Besondere an 1994 war, dass es das erste Finale war, das nach der Verlängerung im Elfmeterschießen entschieden wurde."
+        },
+        "es": {
+          "question": "Antes de 1994, la final del torneo nunca había necesitado tiempo extra para definir al ganador.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Falso! Varias finales antes de 1994 se fueron a tiempo extra, incluyendo la de 1934 (Italia 2-1 Checoslovaquia), la de 1966 (Inglaterra 4-2 Alemania Occidental) y la de 1978 (Argentina 3-1 Países Bajos). Lo que hizo única a 1994 fue que fue la primera final que se definió por penales tras el tiempo extra."
+        },
+        "es-ES": {
+          "question": "Antes de 1994, la final del torneo nunca había necesitado prórroga para decidir al ganador.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Falso! Varias finales anteriores a 1994 se fueron a la prórroga, incluidas las de 1934 (Italia 2-1 Checoslovaquia), 1966 (Inglaterra 4-2 Alemania Occidental) y 1978 (Argentina 3-1 Países Bajos). Lo que hizo única a 1994 fue que fue la primera final que se decidió en los penaltis tras la prórroga."
+        },
+        "fr": {
+          "question": "Avant 1994, la finale du tournoi n'avait jamais eu besoin de prolongation pour désigner le vainqueur.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Faux ! Plusieurs finales avant 1994 sont allées en prolongation, dont celles de 1934 (Italie 2-1 Tchécoslovaquie), 1966 (Angleterre 4-2 Allemagne de l'Ouest) et 1978 (Argentine 3-1 Pays-Bas). Ce qui a rendu 1994 unique, c'est qu'il s'agissait de la première finale décidée aux tirs au but après la prolongation."
+        },
+        "it": {
+          "question": "Prima del 1994, la finale del torneo non aveva mai avuto bisogno dei tempi supplementari per decidere il vincitore.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Falso! Diverse finali prima del 1994 andarono ai tempi supplementari, tra cui quelle del 1934 (Italia 2-1 Cecoslovacchia), del 1966 (Inghilterra 4-2 Germania Ovest) e del 1978 (Argentina 3-1 Paesi Bassi). Ciò che rese unica quella del 1994 fu che fu la prima finale decisa ai calci di rigore dopo i tempi supplementari."
+        },
+        "ja": {
+          "question": "1994年以前、この大会の決勝戦が勝者を決めるために延長戦を必要としたことは一度もなかった。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "誤り！1994年以前にも、1934年（イタリア 2-1 チェコスロバキア）、1966年（イングランド 4-2 西ドイツ）、1978年（アルゼンチン 3-1 オランダ）など、いくつかの決勝が延長戦にもつれ込んでいます。1994年が特別だったのは、延長戦の末にPK戦で決着がついた初の決勝だったという点です。"
+        },
+        "ko": {
+          "question": "1994년 이전에는 이 대회 결승전에서 승자를 가리기 위해 연장전이 필요했던 적이 단 한 번도 없었다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "거짓! 1994년 이전에도 1934년(이탈리아 2-1 체코슬로바키아), 1966년(잉글랜드 4-2 서독), 1978년(아르헨티나 3-1 네덜란드) 등 여러 결승전이 연장전까지 갔습니다. 1994년이 특별했던 이유는 연장전 후 승부차기로 승부가 가려진 최초의 결승전이었기 때문입니다."
+        },
+        "pt-BR": {
+          "question": "Antes de 1994, a final do torneio nunca havia precisado de prorrogação para decidir o vencedor.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Falso! Várias finais antes de 1994 foram para a prorrogação, incluindo as de 1934 (Itália 2-1 Tchecoslováquia), 1966 (Inglaterra 4-2 Alemanha Ocidental) e 1978 (Argentina 3-1 Holanda). O que tornou 1994 única foi ter sido a primeira final decidida nos pênaltis após a prorrogação."
+        },
+        "zh-Hans": {
+          "question": "在1994年之前，本届赛事的决赛从未需要通过加时赛来决出胜者。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "错误！1994年之前已有多场决赛进入加时赛，包括1934年（意大利2-1捷克斯洛伐克）、1966年（英格兰4-2西德）和1978年（阿根廷3-1荷兰）。1994年的特别之处在于，那是首场在加时赛后通过点球大战决出胜负的决赛。"
+        }
+      },
+      "i18nSourceHash": "bd7a5bb11272da4b"
     },
     {
       "id": "tf-var-four-situations",
