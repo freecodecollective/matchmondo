@@ -2884,7 +2884,8 @@
         "Drawing of lots"
       ],
       "answer": 0,
-      "explanation": "For the 2026 tournament, head-to-head results between tied teams are checked first — a change from previous editions where overall goal difference came first. If head-to-head can't separate them, overall goal difference, goals scored, and fair play follow."
+      "explanation": "For the 2026 tournament, head-to-head results between tied teams are checked first — a change from previous editions where overall goal difference came first. If head-to-head can't separate them, overall goal difference, goals scored, and fair play follow.",
+      "approved": true
     },
     {
       "id": "p-golden-ball-22",
