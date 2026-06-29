@@ -11390,7 +11390,7 @@
       ],
       "answer": 0,
       "explanation": "Play is restarted with a drop ball, given to the team that last touched it. The ball is dropped to one player with all others at least 4 meters away. If the stoppage occurs inside the penalty area, the ball is dropped to the goalkeeper. Before 2019, a contested drop ball was used.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "r-sin-bin-trial",
