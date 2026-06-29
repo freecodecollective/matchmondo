@@ -1068,7 +1068,110 @@
       ],
       "answer": 2,
       "explanation": "Sixteen cities host matches — 11 in the USA, 3 in Mexico, and 2 in Canada.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كم عدد المدن الإجمالي في الدول الثلاث التي تستضيف المباريات في 2026؟",
+          "options": [
+            "12",
+            "14",
+            "16",
+            "18"
+          ],
+          "explanation": "تستضيف ست عشرة مدينة المباريات — 11 في الولايات المتحدة، و3 في المكسيك، و2 في كندا."
+        },
+        "de": {
+          "question": "Wie viele Städte in den drei Gastgeberländern richten 2026 insgesamt Spiele aus?",
+          "options": [
+            "12",
+            "14",
+            "16",
+            "18"
+          ],
+          "explanation": "Sechzehn Städte richten Spiele aus — 11 in den USA, 3 in Mexiko und 2 in Kanada."
+        },
+        "es": {
+          "question": "¿Cuántas ciudades en total, repartidas en tres países, son sede de partidos en 2026?",
+          "options": [
+            "12",
+            "14",
+            "16",
+            "18"
+          ],
+          "explanation": "Dieciséis ciudades son sede de partidos: 11 en Estados Unidos, 3 en México y 2 en Canadá."
+        },
+        "es-ES": {
+          "question": "¿Cuántas ciudades en total, repartidas en tres países, acogen partidos en 2026?",
+          "options": [
+            "12",
+            "14",
+            "16",
+            "18"
+          ],
+          "explanation": "Dieciséis ciudades acogen partidos: 11 en Estados Unidos, 3 en México y 2 en Canadá."
+        },
+        "fr": {
+          "question": "Au total, combien de villes réparties dans trois pays accueillent des matchs en 2026 ?",
+          "options": [
+            "12",
+            "14",
+            "16",
+            "18"
+          ],
+          "explanation": "Seize villes accueillent des matchs : 11 aux États-Unis, 3 au Mexique et 2 au Canada."
+        },
+        "it": {
+          "question": "Quante città in totale, distribuite in tre Paesi, ospitano le partite nel 2026?",
+          "options": [
+            "12",
+            "14",
+            "16",
+            "18"
+          ],
+          "explanation": "Sedici città ospitano le partite: 11 negli Stati Uniti, 3 in Messico e 2 in Canada."
+        },
+        "ja": {
+          "question": "2026年、3か国にまたがって試合を開催する都市は合計でいくつですか？",
+          "options": [
+            "12",
+            "14",
+            "16",
+            "18"
+          ],
+          "explanation": "16の都市が試合を開催します。アメリカで11、メキシコで3、カナダで2です。"
+        },
+        "ko": {
+          "question": "2026년에 세 나라에 걸쳐 경기를 개최하는 도시는 모두 몇 곳인가요?",
+          "options": [
+            "12",
+            "14",
+            "16",
+            "18"
+          ],
+          "explanation": "16개 도시가 경기를 개최합니다 — 미국 11곳, 멕시코 3곳, 캐나다 2곳입니다."
+        },
+        "pt-BR": {
+          "question": "Quantas cidades no total, distribuídas por três países, sediam jogos em 2026?",
+          "options": [
+            "12",
+            "14",
+            "16",
+            "18"
+          ],
+          "explanation": "Dezesseis cidades sediam jogos: 11 nos Estados Unidos, 3 no México e 2 no Canadá."
+        },
+        "zh-Hans": {
+          "question": "2026年，分布在三个国家、共有多少座城市承办比赛？",
+          "options": [
+            "12",
+            "14",
+            "16",
+            "18"
+          ],
+          "explanation": "共有16座城市承办比赛——美国11座、墨西哥3座、加拿大2座。"
+        }
+      },
+      "i18nSourceHash": "e8aeca7772ab020a"
     },
     {
       "id": "c-vuvuzela",
@@ -1201,7 +1304,110 @@
       "answer": 1,
       "explanation": "Hungary's László Kiss scored three goals in 8 minutes against El Salvador in 1982, the fastest hat-trick in tournament history.",
       "media": "https://www.youtube.com/watch?v=oo0njR6JD7Q",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من سجّل أسرع هاتريك في تاريخ البطولة، في 8 دقائق فقط؟",
+          "options": [
+            "غيرد مولر (1970)",
+            "لاسلو كيس (1982)",
+            "كريستيانو رونالدو (2018)",
+            "كيليان مبابي (2022)"
+          ],
+          "explanation": "سجّل المجري لاسلو كيس ثلاثة أهداف في 8 دقائق ضد السلفادور عام 1982، وهو أسرع هاتريك في تاريخ البطولة."
+        },
+        "de": {
+          "question": "Wer erzielte den schnellsten Hattrick in der Turniergeschichte – in nur 8 Minuten?",
+          "options": [
+            "Gerd Müller (1970)",
+            "László Kiss (1982)",
+            "Cristiano Ronaldo (2018)",
+            "Kylian Mbappé (2022)"
+          ],
+          "explanation": "Der Ungar László Kiss erzielte 1982 gegen El Salvador drei Tore in nur 8 Minuten – der schnellste Hattrick der Turniergeschichte."
+        },
+        "es": {
+          "question": "¿Quién marcó el hat-trick más rápido en la historia del torneo, en solo 8 minutos?",
+          "options": [
+            "Gerd Müller (1970)",
+            "László Kiss (1982)",
+            "Cristiano Ronaldo (2018)",
+            "Kylian Mbappé (2022)"
+          ],
+          "explanation": "El húngaro László Kiss marcó tres goles en 8 minutos ante El Salvador en 1982, el hat-trick más rápido en la historia del torneo."
+        },
+        "es-ES": {
+          "question": "¿Quién marcó el hat-trick más rápido de la historia del torneo, en tan solo 8 minutos?",
+          "options": [
+            "Gerd Müller (1970)",
+            "László Kiss (1982)",
+            "Cristiano Ronaldo (2018)",
+            "Kylian Mbappé (2022)"
+          ],
+          "explanation": "El húngaro László Kiss marcó tres goles en 8 minutos frente a El Salvador en 1982, el hat-trick más rápido de la historia del torneo."
+        },
+        "fr": {
+          "question": "Qui a inscrit le triplé le plus rapide de l'histoire du tournoi, en seulement 8 minutes ?",
+          "options": [
+            "Gerd Müller (1970)",
+            "László Kiss (1982)",
+            "Cristiano Ronaldo (2018)",
+            "Kylian Mbappé (2022)"
+          ],
+          "explanation": "Le Hongrois László Kiss a marqué trois buts en 8 minutes face au Salvador en 1982, le triplé le plus rapide de l'histoire du tournoi."
+        },
+        "it": {
+          "question": "Chi ha realizzato la tripletta più veloce nella storia del torneo, in appena 8 minuti?",
+          "options": [
+            "Gerd Müller (1970)",
+            "László Kiss (1982)",
+            "Cristiano Ronaldo (2018)",
+            "Kylian Mbappé (2022)"
+          ],
+          "explanation": "L'ungherese László Kiss segnò tre gol in 8 minuti contro El Salvador nel 1982, la tripletta più veloce nella storia del torneo."
+        },
+        "ja": {
+          "question": "大会史上最速、わずか8分でハットトリックを達成したのは誰でしょう？",
+          "options": [
+            "ゲルト・ミュラー（1970年）",
+            "ラースロー・キシュ（1982年）",
+            "クリスティアーノ・ロナウド（2018年）",
+            "キリアン・エムバペ（2022年）"
+          ],
+          "explanation": "ハンガリーのラースロー・キシュは1982年、エルサルバドル戦でわずか8分間に3ゴールを決め、大会史上最速のハットトリックを達成しました。"
+        },
+        "ko": {
+          "question": "대회 역사상 가장 빠른 단 8분 만의 해트트릭을 기록한 선수는 누구일까요?",
+          "options": [
+            "게르트 뮐러 (1970)",
+            "라슬로 키시 (1982)",
+            "크리스티아누 호날두 (2018)",
+            "킬리안 음바페 (2022)"
+          ],
+          "explanation": "헝가리의 라슬로 키시는 1982년 엘살바도르를 상대로 8분 만에 세 골을 넣으며 대회 역사상 가장 빠른 해트트릭을 기록했습니다."
+        },
+        "pt-BR": {
+          "question": "Quem marcou o hat-trick mais rápido da história do torneio, em apenas 8 minutos?",
+          "options": [
+            "Gerd Müller (1970)",
+            "László Kiss (1982)",
+            "Cristiano Ronaldo (2018)",
+            "Kylian Mbappé (2022)"
+          ],
+          "explanation": "O húngaro László Kiss marcou três gols em 8 minutos contra El Salvador em 1982, o hat-trick mais rápido da história do torneio."
+        },
+        "zh-Hans": {
+          "question": "谁在赛事历史上完成了最快的帽子戏法，仅用了8分钟？",
+          "options": [
+            "盖德·穆勒（1970年）",
+            "拉斯洛·基什（1982年）",
+            "克里斯蒂亚诺·罗纳尔多（2018年）",
+            "基利安·姆巴佩（2022年）"
+          ],
+          "explanation": "匈牙利的拉斯洛·基什在1982年对阵萨尔瓦多的比赛中，8分钟内连入三球，创造了赛事历史上最快的帽子戏法纪录。"
+        }
+      },
+      "i18nSourceHash": "787d973b54b2aeb7"
     },
     {
       "id": "h-golden-goal",
@@ -1215,7 +1421,110 @@
       ],
       "answer": 1,
       "explanation": "The golden goal was a sudden-death rule: in knockout matches, the first team to score during extra time won instantly and play stopped immediately. It was first used at the tournament in 1998, when Laurent Blanc scored one for France against Paraguay. The rule was intended to encourage attacking play in extra time, but it often made teams more cautious, and it was abolished after 2002.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "في أي عام استُخدمت قاعدة الهدف الذهبي لأول مرة في البطولة؟",
+          "options": [
+            "1994",
+            "1998",
+            "2002",
+            "2006"
+          ],
+          "explanation": "كان الهدف الذهبي قاعدة للموت المفاجئ: في مباريات خروج المغلوب، يفوز الفريق الذي يسجل أولاً خلال الوقت الإضافي على الفور وتتوقف المباراة فوراً. استُخدمت هذه القاعدة لأول مرة في البطولة عام 1998، عندما سجّل لوران بلان هدفاً لفرنسا ضد باراغواي. كان الهدف من القاعدة تشجيع اللعب الهجومي في الوقت الإضافي، لكنها غالباً ما جعلت الفرق أكثر حذراً، وأُلغيت بعد عام 2002."
+        },
+        "de": {
+          "question": "In welchem Jahr wurde die Golden-Goal-Regel erstmals beim Turnier angewendet?",
+          "options": [
+            "1994",
+            "1998",
+            "2002",
+            "2006"
+          ],
+          "explanation": "Das Golden Goal war eine Sudden-Death-Regel: In K.-o.-Spielen gewann die Mannschaft, die in der Verlängerung als Erste traf, sofort, und das Spiel wurde umgehend beendet. Sie wurde 1998 erstmals beim Turnier angewendet, als Laurent Blanc für Frankreich gegen Paraguay traf. Die Regel sollte offensiveres Spiel in der Verlängerung fördern, machte die Teams jedoch oft vorsichtiger und wurde nach 2002 abgeschafft."
+        },
+        "es": {
+          "question": "¿En qué año se usó por primera vez la regla del gol de oro en el torneo?",
+          "options": [
+            "1994",
+            "1998",
+            "2002",
+            "2006"
+          ],
+          "explanation": "El gol de oro era una regla de muerte súbita: en los partidos eliminatorios, el primer equipo en anotar durante el tiempo extra ganaba al instante y el juego se detenía de inmediato. Se usó por primera vez en el torneo en 1998, cuando Laurent Blanc marcó uno para Francia contra Paraguay. La regla buscaba fomentar el juego ofensivo en el tiempo extra, pero a menudo volvía a los equipos más cautelosos, y fue abolida después de 2002."
+        },
+        "es-ES": {
+          "question": "¿En qué año se utilizó por primera vez la regla del gol de oro en el torneo?",
+          "options": [
+            "1994",
+            "1998",
+            "2002",
+            "2006"
+          ],
+          "explanation": "El gol de oro era una regla de muerte súbita: en los partidos eliminatorios, el primer equipo en marcar durante la prórroga ganaba al instante y el juego se detenía de inmediato. Se usó por primera vez en el torneo en 1998, cuando Laurent Blanc marcó uno para Francia ante Paraguay. La regla pretendía fomentar el juego ofensivo en la prórroga, pero a menudo hacía a los equipos más cautelosos, y fue abolida tras 2002."
+        },
+        "fr": {
+          "question": "En quelle année la règle du but en or a-t-elle été utilisée pour la première fois lors du tournoi ?",
+          "options": [
+            "1994",
+            "1998",
+            "2002",
+            "2006"
+          ],
+          "explanation": "Le but en or était une règle de mort subite : dans les matchs à élimination directe, la première équipe à marquer pendant la prolongation gagnait instantanément et le jeu s'arrêtait aussitôt. Cette règle a été utilisée pour la première fois lors du tournoi en 1998, lorsque Laurent Blanc en a inscrit un pour la France face au Paraguay. Elle visait à encourager le jeu offensif en prolongation, mais elle rendait souvent les équipes plus prudentes, et elle a été abolie après 2002."
+        },
+        "it": {
+          "question": "In quale anno fu usata per la prima volta la regola del golden goal nel torneo?",
+          "options": [
+            "1994",
+            "1998",
+            "2002",
+            "2006"
+          ],
+          "explanation": "Il golden goal era una regola della morte improvvisa: nelle partite a eliminazione diretta, la prima squadra a segnare durante i tempi supplementari vinceva all'istante e il gioco si fermava immediatamente. Fu usata per la prima volta nel torneo nel 1998, quando Laurent Blanc ne segnò uno per la Francia contro il Paraguay. La regola mirava a incoraggiare il gioco offensivo nei supplementari, ma spesso rendeva le squadre più prudenti, e fu abolita dopo il 2002."
+        },
+        "ja": {
+          "question": "ゴールデンゴールのルールがこの大会で初めて採用されたのは何年ですか？",
+          "options": [
+            "1994",
+            "1998",
+            "2002",
+            "2006"
+          ],
+          "explanation": "ゴールデンゴールはサドンデス方式のルールでした。決勝トーナメントの試合では、延長戦で最初に得点したチームが即座に勝利し、試合はその瞬間に終了しました。この大会で初めて採用されたのは1998年で、フランスのローラン・ブランがパラグアイ戦で決めました。このルールは延長戦での攻撃的なプレーを促すことを狙ったものでしたが、しばしばチームをより慎重にさせ、2002年を最後に廃止されました。"
+        },
+        "ko": {
+          "question": "골든골 규칙이 이 대회에서 처음 적용된 해는 언제인가요?",
+          "options": [
+            "1994",
+            "1998",
+            "2002",
+            "2006"
+          ],
+          "explanation": "골든골은 서든데스 방식의 규칙이었습니다. 토너먼트 경기에서 연장전 중 먼저 득점한 팀이 즉시 승리하고 경기가 그 즉시 종료되었습니다. 이 규칙은 1998년 대회에서 처음 적용되었으며, 당시 로랑 블랑이 프랑스 대표로 파라과이를 상대로 골든골을 기록했습니다. 이 규칙은 연장전에서 공격적인 플레이를 유도하려는 의도였지만, 오히려 팀들을 더 소극적으로 만드는 경우가 많았고, 2002년 이후 폐지되었습니다."
+        },
+        "pt-BR": {
+          "question": "Em que ano a regra do gol de ouro foi usada pela primeira vez no torneio?",
+          "options": [
+            "1994",
+            "1998",
+            "2002",
+            "2006"
+          ],
+          "explanation": "O gol de ouro era uma regra de morte súbita: nas partidas eliminatórias, a primeira equipe a marcar durante a prorrogação vencia instantaneamente e o jogo era interrompido de imediato. Foi usado pela primeira vez no torneio em 1998, quando Laurent Blanc marcou um pela França contra o Paraguai. A regra tinha o objetivo de incentivar o jogo ofensivo na prorrogação, mas muitas vezes deixava as equipes mais cautelosas, e foi abolida após 2002."
+        },
+        "zh-Hans": {
+          "question": "金球制规则在本届赛事中首次启用是在哪一年？",
+          "options": [
+            "1994",
+            "1998",
+            "2002",
+            "2006"
+          ],
+          "explanation": "金球制是一种突然死亡规则：在淘汰赛中，加时赛里率先进球的球队立即获胜，比赛随即结束。该规则在赛事中于1998年首次启用，当时洛朗·布兰为法国对阵巴拉圭时打入一球。这一规则旨在鼓励加时赛中的进攻打法，但往往使球队变得更加保守，并在2002年之后被废除。"
+        }
+      },
+      "i18nSourceHash": "faad0bdfe7c2a4b9"
     },
     {
       "id": "r-lots-tiebreak",
@@ -2637,7 +2946,110 @@
       "answer": 0,
       "explanation": "Türkiye's Hakan Şükür scored after 11 seconds against South Korea in the 2002 third-place match.",
       "media": "https://www.youtube.com/watch?v=SK1aDApXGOQ",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من سجّل أسرع هدف على الإطلاق — بعد 11 ثانية فقط من بداية مباراة عام 2002؟",
+          "options": [
+            "هاكان شوكور",
+            "رونالدو",
+            "ريفالدو",
+            "كريستيان فييري"
+          ],
+          "explanation": "سجّل التركي هاكان شوكور بعد 11 ثانية في مرمى كوريا الجنوبية في مباراة تحديد المركز الثالث عام 2002."
+        },
+        "de": {
+          "question": "Wer erzielte das schnellste Tor aller Zeiten — schon nach nur 11 Sekunden in einem Spiel von 2002?",
+          "options": [
+            "Hakan Şükür",
+            "Ronaldo",
+            "Rivaldo",
+            "Christian Vieri"
+          ],
+          "explanation": "Der Türke Hakan Şükür traf 2002 im Spiel um Platz drei bereits nach 11 Sekunden gegen Südkorea."
+        },
+        "es": {
+          "question": "¿Quién marcó el gol más rápido de la historia, a solo 11 segundos de un partido de 2002?",
+          "options": [
+            "Hakan Şükür",
+            "Ronaldo",
+            "Rivaldo",
+            "Christian Vieri"
+          ],
+          "explanation": "El turco Hakan Şükür anotó a los 11 segundos frente a Corea del Sur en el partido por el tercer puesto de 2002."
+        },
+        "es-ES": {
+          "question": "¿Quién marcó el gol más rápido de la historia, a tan solo 11 segundos de un partido de 2002?",
+          "options": [
+            "Hakan Şükür",
+            "Ronaldo",
+            "Rivaldo",
+            "Christian Vieri"
+          ],
+          "explanation": "El turco Hakan Şükür marcó a los 11 segundos contra Corea del Sur en el partido por el tercer puesto de 2002."
+        },
+        "fr": {
+          "question": "Qui a inscrit le but le plus rapide de l'histoire — à peine 11 secondes après le coup d'envoi d'un match en 2002 ?",
+          "options": [
+            "Hakan Şükür",
+            "Ronaldo",
+            "Rivaldo",
+            "Christian Vieri"
+          ],
+          "explanation": "Le Turc Hakan Şükür a marqué après 11 secondes face à la Corée du Sud lors du match pour la troisième place en 2002."
+        },
+        "it": {
+          "question": "Chi ha segnato il gol più veloce di sempre — dopo appena 11 secondi in una partita del 2002?",
+          "options": [
+            "Hakan Şükür",
+            "Ronaldo",
+            "Rivaldo",
+            "Christian Vieri"
+          ],
+          "explanation": "Il turco Hakan Şükür segnò dopo 11 secondi contro la Corea del Sud nella finale per il terzo posto del 2002."
+        },
+        "ja": {
+          "question": "2002年の試合でわずか11秒で、史上最速のゴールを決めたのは誰？",
+          "options": [
+            "ハカン・シュキュル",
+            "ロナウド",
+            "リバウド",
+            "クリスチャン・ビエリ"
+          ],
+          "explanation": "トルコのハカン・シュキュルが、2002年の3位決定戦で韓国を相手に開始11秒でゴールを決めました。"
+        },
+        "ko": {
+          "question": "2002년 한 경기에서 단 11초 만에 역대 최단 시간 골을 넣은 선수는 누구일까요?",
+          "options": [
+            "하칸 쉬퀴르",
+            "호나우두",
+            "히바우두",
+            "크리스티안 비에리"
+          ],
+          "explanation": "터키의 하칸 쉬퀴르가 2002년 3·4위전에서 대한민국을 상대로 11초 만에 골을 터뜨렸습니다."
+        },
+        "pt-BR": {
+          "question": "Quem marcou o gol mais rápido da história — com apenas 11 segundos de uma partida de 2002?",
+          "options": [
+            "Hakan Şükür",
+            "Ronaldo",
+            "Rivaldo",
+            "Christian Vieri"
+          ],
+          "explanation": "O turco Hakan Şükür marcou aos 11 segundos contra a Coreia do Sul na disputa pelo terceiro lugar em 2002."
+        },
+        "zh-Hans": {
+          "question": "谁打入了史上最快进球——在2002年的一场比赛中仅用11秒？",
+          "options": [
+            "哈坎·苏克",
+            "罗纳尔多",
+            "里瓦尔多",
+            "克里斯蒂安·维耶里"
+          ],
+          "explanation": "土耳其的哈坎·苏克在2002年季军争夺战中对阵韩国，开场仅11秒便破门得分。"
+        }
+      },
+      "i18nSourceHash": "62e421cd28e5efc1"
     },
     {
       "id": "r-points-for-win",
@@ -2885,7 +3297,110 @@
       ],
       "answer": 0,
       "explanation": "For the 2026 tournament, head-to-head results between tied teams are checked first — a change from previous editions where overall goal difference came first. If head-to-head can't separate them, overall goal difference, goals scored, and fair play follow.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "إذا تساوى فريقان في النقاط داخل المجموعة، فما هو معيار الترجيح الأول؟",
+          "options": [
+            "نتيجة المواجهة المباشرة",
+            "فارق الأهداف",
+            "نقاط اللعب النظيف",
+            "القرعة"
+          ],
+          "explanation": "في بطولة Football 2026، يتم النظر أولاً إلى نتائج المواجهات المباشرة بين الفرق المتساوية — وهو تغيير عن النسخ السابقة حيث كان فارق الأهداف الإجمالي يأتي أولاً. وإذا تعذّر الفصل بينها بالمواجهة المباشرة، يُلجأ إلى فارق الأهداف الإجمالي، ثم الأهداف المسجلة، ثم اللعب النظيف."
+        },
+        "de": {
+          "question": "Wenn zwei Mannschaften in einer Gruppe punktgleich sind, welches Kriterium entscheidet zuerst?",
+          "options": [
+            "Direkter Vergleich",
+            "Tordifferenz",
+            "Fair-Play-Wertung",
+            "Losentscheid"
+          ],
+          "explanation": "Beim Turnier 2026 wird zuerst der direkte Vergleich zwischen punktgleichen Mannschaften herangezogen — eine Änderung gegenüber früheren Austragungen, bei denen die Gesamttordifferenz an erster Stelle stand. Lässt sich darüber keine Entscheidung treffen, folgen Gesamttordifferenz, erzielte Tore und Fair Play."
+        },
+        "es": {
+          "question": "Si dos equipos terminan empatados en puntos dentro de un grupo, ¿cuál es el primer criterio de desempate?",
+          "options": [
+            "Resultado entre ellos",
+            "Diferencia de goles",
+            "Puntuación de juego limpio",
+            "Sorteo"
+          ],
+          "explanation": "En el torneo de 2026, primero se revisan los resultados directos entre los equipos empatados, un cambio respecto a ediciones anteriores donde la diferencia de goles general iba primero. Si el enfrentamiento directo no logra separarlos, se aplican la diferencia de goles general, los goles anotados y el juego limpio."
+        },
+        "es-ES": {
+          "question": "Si dos equipos terminan empatados a puntos en un grupo, ¿cuál es el primer criterio de desempate?",
+          "options": [
+            "Resultado entre ellos",
+            "Diferencia de goles",
+            "Puntuación de juego limpio",
+            "Sorteo"
+          ],
+          "explanation": "En el torneo de 2026, primero se comprueban los resultados directos entre los equipos empatados, un cambio respecto a ediciones anteriores en las que la diferencia de goles general iba primero. Si el enfrentamiento directo no consigue separarlos, se recurre a la diferencia de goles general, los goles marcados y el juego limpio."
+        },
+        "fr": {
+          "question": "Si deux équipes terminent à égalité de points dans un groupe, quel est le premier critère de départage ?",
+          "options": [
+            "Résultat de la confrontation directe",
+            "Différence de buts",
+            "Score de fair-play",
+            "Tirage au sort"
+          ],
+          "explanation": "Pour le tournoi 2026, on examine d'abord les résultats de la confrontation directe entre les équipes à égalité — un changement par rapport aux éditions précédentes où la différence de buts générale primait. Si la confrontation directe ne permet pas de les départager, on applique ensuite la différence de buts générale, les buts marqués, puis le fair-play."
+        },
+        "it": {
+          "question": "Se due squadre concludono a pari punti in un girone, qual è il primo criterio per stabilire la classifica?",
+          "options": [
+            "Risultato negli scontri diretti",
+            "Differenza reti",
+            "Punteggio fair-play",
+            "Sorteggio"
+          ],
+          "explanation": "Per il torneo del 2026 vengono considerati per primi gli scontri diretti tra le squadre a pari punti — un cambiamento rispetto alle edizioni precedenti, in cui contava prima la differenza reti complessiva. Se gli scontri diretti non bastano a separarle, si passa alla differenza reti complessiva, ai gol segnati e infine al fair play."
+        },
+        "ja": {
+          "question": "グループ内で2チームが同勝ち点で並んだ場合、最初の順位決定基準は何ですか？",
+          "options": [
+            "直接対決の結果",
+            "得失点差",
+            "フェアプレーポイント",
+            "抽選"
+          ],
+          "explanation": "2026年の大会では、勝ち点が並んだチーム同士の直接対決の結果が最初に確認されます。これは全試合の得失点差が優先されていた過去の大会からの変更点です。直接対決で決まらない場合は、全試合の得失点差、総得点、フェアプレーの順で判定されます。"
+        },
+        "ko": {
+          "question": "한 조에서 두 팀이 승점이 같을 경우, 첫 번째 순위 결정 기준은 무엇인가요?",
+          "options": [
+            "맞대결 결과",
+            "골 득실차",
+            "페어플레이 점수",
+            "추첨"
+          ],
+          "explanation": "2026 대회에서는 승점이 같은 팀들 간의 맞대결 결과를 가장 먼저 확인합니다. 이는 전체 골 득실차를 우선시했던 이전 대회들과 달라진 점입니다. 맞대결로도 순위를 가릴 수 없으면 전체 골 득실차, 득점 수, 페어플레이 순으로 적용됩니다."
+        },
+        "pt-BR": {
+          "question": "Se duas seleções terminam empatadas em pontos dentro de um grupo, qual é o primeiro critério de desempate?",
+          "options": [
+            "Resultado do confronto direto",
+            "Saldo de gols",
+            "Pontuação de fair play",
+            "Sorteio"
+          ],
+          "explanation": "No torneio de 2026, os resultados dos confrontos diretos entre as seleções empatadas são verificados primeiro — uma mudança em relação às edições anteriores, em que o saldo de gols geral vinha em primeiro lugar. Se o confronto direto não desempatar, aplicam-se o saldo de gols geral, os gols marcados e o fair play, nessa ordem."
+        },
+        "zh-Hans": {
+          "question": "如果同一小组中两支球队积分相同，第一个排名决胜规则是什么？",
+          "options": [
+            "相互交锋成绩",
+            "净胜球",
+            "公平竞赛分",
+            "抽签"
+          ],
+          "explanation": "在2026年赛事中，会首先比较积分相同球队之间的相互交锋成绩——这与以往优先比较总净胜球的做法不同。如果相互交锋仍无法分出高下，则依次比较总净胜球、总进球数和公平竞赛分。"
+        }
+      },
+      "i18nSourceHash": "1603103c692ec541"
     },
     {
       "id": "p-golden-ball-22",
@@ -3290,9 +3805,7 @@
       ],
       "answer": 1,
       "explanation": "The Jabulani, used at the 2010 tournament, was criticised by goalkeepers and players for its unpredictable flight path.",
-      "media": "https://www.youtube.com/watch?v=28MtUTnUBuI",
-      "approved": true,
-      "claudeTask": "also make this an image questio. keep this one but add an image question"
+      "needsReview": true
     },
     {
       "id": "h-2010-champion",
@@ -10338,10 +10851,8 @@
         "False"
       ],
       "answer": 0,
-      "explanation": "True! VAR is limited to reviewing only these four categories of 'clear and obvious errors' or 'serious missed incidents.' 'Mistaken identity' means the referee cautioned or sent off the wrong player — for example, showing a card to a teammate instead of the player who actually committed the foul; VAR can step in to ensure the correct player is penalized. The referee can consult the pitch-side monitor for a final decision, but VAR cannot intervene for yellow cards, throw-in decisions, corner kicks, or other routine calls.",
-      "approved": true,
-      "needsReview": true,
-      "claudeTask": "add what mistken idenitity means"
+      "explanation": "True! VAR is limited to reviewing only these four categories of 'clear and obvious errors' or 'serious missed incidents.' 'Mistaken identity' means the referee cautioned or sent off the WRONG player — for example, the referee intends to book the player who committed a foul but mistakenly shows the card to a teammate (often because players were close together or wore similar numbers). VAR can step in to identify the correct offender so that the right player receives the yellow or red card. The referee can consult the pitch-side monitor for a final decision, but VAR cannot intervene for ordinary yellow cards, throw-in decisions, corner kicks, or other routine calls.",
+      "needsReview": true
     },
     {
       "id": "tf-trophy-not-solid-gold",
@@ -12574,6 +13085,20 @@
       ],
       "answer": 1,
       "explanation": "The Jabulani, used at the 2010 tournament, was widely criticized by goalkeepers and players for its erratic aerodynamics and speed, affecting gameplay significantly.",
+      "needsReview": true
+    },
+    {
+      "id": "img-jabulani-match-ball",
+      "category": "culture",
+      "question": "Which official match ball, pictured here, was famously criticised by goalkeepers for its unpredictable flight at the 2010 tournament?",
+      "options": [
+        "Teamgeist",
+        "Brazuca",
+        "Jabulani",
+        "Telstar 18"
+      ],
+      "answer": 2,
+      "explanation": "The Jabulani was the official ball of the 2010 tournament. Goalkeepers in particular complained about its erratic, unpredictable movement through the air.",
       "needsReview": true
     }
   ],
