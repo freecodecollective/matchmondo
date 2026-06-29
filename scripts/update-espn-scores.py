@@ -323,6 +323,14 @@ def main():
         # bit Bosnia v Qatar on 2026-06-23 and Morocco v Haiti on 2026-06-24.
         idx = match_resolver.resolve(matches, home_name, away_name, kickoff_ts)
         matched_m = matches[idx] if idx is not None else None
+
+        # In knockout matches, STATUS_FULL_TIME with tied scores means extra
+        # time is coming — the match isn't over yet.
+        if matched_m and is_finished and status_name == "STATUS_FULL_TIME":
+            if matched_m["n"] >= 73 and home_score == away_score:
+                is_finished = False
+                is_live = True
+
         if matched_m is not None:
             needs_patch = (matched_m["scoreH"] is None or matched_m["scoreA"] is None
                            or is_live
