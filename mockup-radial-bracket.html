@@ -12,19 +12,8 @@
     --canvas-bg: #eceae5;
     --gold: #b8942e;
     --gold-ring: #c9a84c;
-    --gold-glow: rgba(180,140,40,0.12);
-    --spoke: rgba(0,0,0,0.08);
-    --spoke-lit: rgba(0,0,0,0.18);
-    --ring: rgba(0,0,0,0.04);
-    --label: rgba(0,0,0,0.22);
     --text: #222;
     --text-dim: rgba(0,0,0,0.4);
-    --node-stroke: rgba(0,0,0,0.12);
-    --node-empty-fill: rgba(0,0,0,0.03);
-    --node-empty-stroke: rgba(0,0,0,0.1);
-    --junction: rgba(0,0,0,0.1);
-    --score: rgba(140,110,30,0.7);
-    --elim-opacity: 0.25;
   }
 
   body {
@@ -45,86 +34,51 @@
     max-width: 600px;
   }
   .header h1 {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 6px;
+    font-size: 13px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 6px;
   }
-  .header p {
-    font-size: 12px;
-    color: var(--text-dim);
-    line-height: 1.5;
-  }
+  .header p { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
 
   .tabs {
-    display: flex;
-    gap: 2px;
-    background: rgba(0,0,0,0.05);
-    border-radius: 10px;
-    padding: 3px;
-    margin: 14px auto 6px;
+    display: flex; gap: 2px; background: rgba(0,0,0,0.05);
+    border-radius: 10px; padding: 3px; margin: 14px auto 6px;
   }
   .tab {
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: 600;
-    color: rgba(0,0,0,0.4);
-    background: none;
-    border: none;
-    padding: 7px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s;
-    white-space: nowrap;
+    font-family: inherit; font-size: 12px; font-weight: 600;
+    color: rgba(0,0,0,0.4); background: none; border: none;
+    padding: 7px 16px; border-radius: 8px; cursor: pointer;
+    transition: all 0.2s; white-space: nowrap;
   }
   .tab.active {
-    background: #fff;
-    color: var(--text);
+    background: #fff; color: var(--text);
     box-shadow: 0 1px 4px rgba(0,0,0,0.08);
   }
   .tab:hover:not(.active) { color: rgba(0,0,0,0.6); }
 
   .version-label {
-    font-size: 11px;
-    color: var(--text-dim);
-    text-align: center;
-    margin: 2px 0 0;
-    font-style: italic;
+    font-size: 11px; color: var(--text-dim); text-align: center;
+    margin: 2px 0 0; font-style: italic;
   }
 
   .canvas-wrap {
-    width: 100%;
-    max-width: 860px;
-    aspect-ratio: 1;
-    position: relative;
-    margin: 0 auto;
-    padding: 10px;
+    width: 100%; max-width: 900px; aspect-ratio: 1;
+    position: relative; margin: 0 auto; padding: 10px;
   }
 
   canvas {
-    width: 100%;
-    height: 100%;
-    display: block;
-    border-radius: 20px;
-    background: var(--canvas-bg);
+    width: 100%; height: 100%; display: block;
+    border-radius: 20px; background: var(--canvas-bg);
     box-shadow: 0 2px 20px rgba(0,0,0,0.06);
   }
 
   .legend {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 4px 20px 28px;
-    font-size: 11px;
-    color: var(--text-dim);
+    display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+    padding: 4px 20px 28px; font-size: 11px; color: var(--text-dim);
   }
   .legend-item { display: flex; align-items: center; gap: 6px; }
   .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
   .legend-dot.won { border: 2px solid var(--gold-ring); background: #ddd; }
-  .legend-dot.pending { background: var(--node-empty-fill); border: 1.5px dashed var(--node-empty-stroke); }
+  .legend-dot.pending { background: rgba(0,0,0,0.03); border: 1.5px dashed rgba(0,0,0,0.15); }
   .legend-dot.out { background: rgba(0,0,0,0.04); border: 1.5px solid rgba(0,0,0,0.06); }
 </style>
 </head>
@@ -163,6 +117,8 @@ const LABELS = {
   gradient: 'Two-color diagonal gradient per country'
 };
 
+// ── Team data ──
+
 const CODES = {
   'Mexico':'MEX','South Africa':'RSA','Korea Republic':'KOR','Czechia':'CZE',
   'Canada':'CAN','Bosnia and Herzegovina':'BIH','Netherlands':'NED','New Zealand':'NZL',
@@ -192,6 +148,8 @@ const EMOJI = {
   'Argentina':'🇦🇷','Cabo Verde':'🇨🇻','Switzerland':'🇨🇭','Algeria':'🇩🇿',
   'Australia':'🇦🇺','Egypt':'🇪🇬'
 };
+
+// ── Flag stripe definitions ──
 
 const FLAGS = {
   'Mexico':       {t:'v', c:['#006847','#fff','#CE1126']},
@@ -271,9 +229,14 @@ const GRAD_COLORS = {
   'Australia':['#00008B','#FFCD00'],'Egypt':['#CE1126','#000000']
 };
 
-// Official bracket order (from iOS bracketMatchOrder) — consecutive pairs feed into R16 slots
+// ══════════════════════════════════════════════════════════════
+// BRACKET DATA — official order from iOS bracketMatchOrder
+// Consecutive pairs feed the same R16 slot:
+//   [0]+[1]→R16[0], [2]+[3]→R16[1], ... [14]+[15]→R16[7]
+// ══════════════════════════════════════════════════════════════
+
 const R32 = [
-  /* M74 */ {home:'Germany',       away:'Paraguay',               sh:1,    sa:1},   // live
+  /* M74 */ {home:'Germany',       away:'Paraguay',               sh:1,    sa:1},
   /* M77 */ {home:'France',        away:'Sweden',                 sh:null, sa:null},
   /* M73 */ {home:'South Africa',  away:'Canada',                 sh:0,    sa:1},
   /* M75 */ {home:'Netherlands',   away:'Morocco',                sh:null, sa:null},
@@ -291,311 +254,263 @@ const R32 = [
   /* M87 */ {home:'Colombia',      away:'Ghana',                  sh:null, sa:null},
 ];
 
-// R16 known teams in bracket order: [M89, M90, M93, M94, M91, M92, M95, M96]
+// R16 bracket slots [M89, M90, M93, M94, M91, M92, M95, M96]
+// Canada won M73 → feeds slot 1 (M90). Brazil won M76 → feeds slot 4 (M91).
 const R16_KNOWN = [null, 'Canada', null, null, 'Brazil', null, null, null];
 
 // ── Drawing helpers ──
 
 function polar(cx, cy, r, deg) {
-  const rad = (deg - 90) * Math.PI / 180;
+  var rad = (deg - 90) * Math.PI / 180;
   return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
 }
 
 function drawLine(x1, y1, x2, y2, color, width) {
   ctx.beginPath();
-  ctx.moveTo(x1, y1);
-  ctx.lineTo(x2, y2);
-  ctx.strokeStyle = color;
-  ctx.lineWidth = width || 1;
+  ctx.moveTo(x1, y1); ctx.lineTo(x2, y2);
+  ctx.strokeStyle = color; ctx.lineWidth = width || 1;
   ctx.stroke();
 }
 
-function drawRing(cx, cy, r) {
+function drawJunction(x, y, s) {
   ctx.beginPath();
-  ctx.arc(cx, cy, r, 0, Math.PI * 2);
-  ctx.strokeStyle = 'rgba(0,0,0,0.04)';
-  ctx.lineWidth = 0.5;
-  ctx.stroke();
-}
-
-function drawJunction(x, y) {
-  ctx.beginPath();
-  ctx.arc(x, y, 2.5, 0, Math.PI * 2);
-  ctx.fillStyle = 'rgba(0,0,0,0.1)';
+  ctx.arc(x, y, 3 * s, 0, Math.PI * 2);
+  ctx.fillStyle = 'rgba(0,0,0,0.12)';
   ctx.fill();
 }
 
 function drawEmptyNode(x, y, r) {
   ctx.beginPath();
   ctx.arc(x, y, r, 0, Math.PI * 2);
-  ctx.fillStyle = 'rgba(0,0,0,0.02)';
+  ctx.fillStyle = 'rgba(0,0,0,0.025)';
   ctx.fill();
-  ctx.setLineDash([3, 4]);
-  ctx.strokeStyle = 'rgba(0,0,0,0.1)';
-  ctx.lineWidth = 1;
+  ctx.setLineDash([4, 5]);
+  ctx.strokeStyle = 'rgba(0,0,0,0.12)';
+  ctx.lineWidth = 1.5;
   ctx.stroke();
   ctx.setLineDash([]);
 }
 
-function drawScore(x, y, sh, sa) {
-  ctx.font = '700 7px -apple-system, system-ui, sans-serif';
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-  ctx.fillStyle = 'rgba(140,110,30,0.75)';
+function drawScore(x, y, sh, sa, s) {
+  ctx.font = '800 ' + (8*s) + 'px -apple-system, system-ui, sans-serif';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillStyle = 'rgba(140,110,30,0.8)';
   ctx.fillText(sh + '–' + sa, x, y);
 }
 
-// ── Flag renderers ──
+// ── Flag rendering ──
 
 function drawFlagStripes(x, y, r, team) {
-  const f = FLAGS[team];
+  var f = FLAGS[team];
   if (!f) { drawFlagGradient(x, y, r, team); return; }
 
   ctx.save();
-  ctx.beginPath();
-  ctx.arc(x, y, r, 0, Math.PI * 2);
-  ctx.clip();
+  ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.clip();
 
-  const d = r * 2;
-  const l = x - r, t = y - r;
+  var d = r * 2, l = x - r, t = y - r;
 
   switch(f.t) {
     case 'h':
-      ctx.fillStyle = f.c[0]; ctx.fillRect(l, t, d, d/3);
-      ctx.fillStyle = f.c[1]; ctx.fillRect(l, t + d/3, d, d/3);
-      ctx.fillStyle = f.c[2]; ctx.fillRect(l, t + 2*d/3, d, d/3 + 1);
+      ctx.fillStyle=f.c[0]; ctx.fillRect(l,t,d,d/3);
+      ctx.fillStyle=f.c[1]; ctx.fillRect(l,t+d/3,d,d/3);
+      ctx.fillStyle=f.c[2]; ctx.fillRect(l,t+2*d/3,d,d/3+1);
       break;
     case 'h2':
-      ctx.fillStyle = f.c[0]; ctx.fillRect(l, t, d, d/2);
-      ctx.fillStyle = f.c[1]; ctx.fillRect(l, t + d/2, d, d/2);
+      ctx.fillStyle=f.c[0]; ctx.fillRect(l,t,d,d/2);
+      ctx.fillStyle=f.c[1]; ctx.fillRect(l,t+d/2,d,d/2);
       break;
     case 'v':
-      ctx.fillStyle = f.c[0]; ctx.fillRect(l, t, d/3, d);
-      ctx.fillStyle = f.c[1]; ctx.fillRect(l + d/3, t, d/3, d);
-      ctx.fillStyle = f.c[2]; ctx.fillRect(l + 2*d/3, t, d/3 + 1, d);
+      ctx.fillStyle=f.c[0]; ctx.fillRect(l,t,d/3,d);
+      ctx.fillStyle=f.c[1]; ctx.fillRect(l+d/3,t,d/3,d);
+      ctx.fillStyle=f.c[2]; ctx.fillRect(l+2*d/3,t,d/3+1,d);
       break;
     case 'v2':
-      ctx.fillStyle = f.c[0]; ctx.fillRect(l, t, d/2, d);
-      ctx.fillStyle = f.c[1]; ctx.fillRect(l + d/2, t, d/2, d);
+      ctx.fillStyle=f.c[0]; ctx.fillRect(l,t,d/2,d);
+      ctx.fillStyle=f.c[1]; ctx.fillRect(l+d/2,t,d/2,d);
       break;
     case 'solid':
-      ctx.fillStyle = f.bg; ctx.fillRect(l, t, d, d);
-      if (f.accent) {
-        ctx.fillStyle = f.accent;
-        ctx.beginPath(); ctx.arc(x, y, r*0.32, 0, Math.PI*2); ctx.fill();
-      }
+      ctx.fillStyle=f.bg; ctx.fillRect(l,t,d,d);
+      if(f.accent){ctx.fillStyle=f.accent;ctx.beginPath();ctx.arc(x,y,r*0.32,0,Math.PI*2);ctx.fill();}
       break;
     case 'japan':
-      ctx.fillStyle = f.c[0]; ctx.fillRect(l, t, d, d);
-      ctx.fillStyle = f.c[1];
-      ctx.beginPath(); ctx.arc(x, y, r*0.38, 0, Math.PI*2); ctx.fill();
+      ctx.fillStyle=f.c[0];ctx.fillRect(l,t,d,d);
+      ctx.fillStyle=f.c[1];ctx.beginPath();ctx.arc(x,y,r*0.38,0,Math.PI*2);ctx.fill();
       break;
     case 'czech':
-      ctx.fillStyle = '#fff'; ctx.fillRect(l, t, d, d/2);
-      ctx.fillStyle = '#D7141A'; ctx.fillRect(l, t + d/2, d, d/2);
-      ctx.fillStyle = '#11457E';
-      ctx.beginPath(); ctx.moveTo(l, t); ctx.lineTo(x, y); ctx.lineTo(l, t+d); ctx.fill();
+      ctx.fillStyle='#fff';ctx.fillRect(l,t,d,d/2);
+      ctx.fillStyle='#D7141A';ctx.fillRect(l,t+d/2,d,d/2);
+      ctx.fillStyle='#11457E';ctx.beginPath();ctx.moveTo(l,t);ctx.lineTo(x,y);ctx.lineTo(l,t+d);ctx.fill();
       break;
     case 'canada':
-      ctx.fillStyle = '#FF0000'; ctx.fillRect(l, t, d*0.25, d);
-      ctx.fillStyle = '#fff'; ctx.fillRect(l + d*0.25, t, d*0.5, d);
-      ctx.fillStyle = '#FF0000'; ctx.fillRect(l + d*0.75, t, d*0.25, d);
-      ctx.fillStyle = '#FF0000';
-      ctx.beginPath();
-      ctx.moveTo(x, y-r*0.32); ctx.lineTo(x+r*0.18, y); ctx.lineTo(x, y+r*0.32); ctx.lineTo(x-r*0.18, y);
-      ctx.fill();
+      ctx.fillStyle='#FF0000';ctx.fillRect(l,t,d*0.25,d);
+      ctx.fillStyle='#fff';ctx.fillRect(l+d*0.25,t,d*0.5,d);
+      ctx.fillStyle='#FF0000';ctx.fillRect(l+d*0.75,t,d*0.25,d);
+      ctx.fillStyle='#FF0000';ctx.beginPath();
+      ctx.moveTo(x,y-r*0.32);ctx.lineTo(x+r*0.18,y);ctx.lineTo(x,y+r*0.32);ctx.lineTo(x-r*0.18,y);ctx.fill();
       break;
     case 'norway':
-      ctx.fillStyle = '#BA0C2F'; ctx.fillRect(l, t, d, d);
-      ctx.fillStyle = '#fff';
-      ctx.fillRect(l + d*0.28, t, d*0.18, d);
-      ctx.fillRect(l, t + d*0.39, d, d*0.22);
-      ctx.fillStyle = '#00205B';
-      ctx.fillRect(l + d*0.32, t, d*0.1, d);
-      ctx.fillRect(l, t + d*0.43, d, d*0.14);
+      ctx.fillStyle='#BA0C2F';ctx.fillRect(l,t,d,d);
+      ctx.fillStyle='#fff';ctx.fillRect(l+d*0.28,t,d*0.18,d);ctx.fillRect(l,t+d*0.39,d,d*0.22);
+      ctx.fillStyle='#00205B';ctx.fillRect(l+d*0.32,t,d*0.1,d);ctx.fillRect(l,t+d*0.43,d,d*0.14);
       break;
     case 'sweden':
-      ctx.fillStyle = '#006AA7'; ctx.fillRect(l, t, d, d);
-      ctx.fillStyle = '#FECC02';
-      ctx.fillRect(l + d*0.28, t, d*0.16, d);
-      ctx.fillRect(l, t + d*0.4, d, d*0.2);
+      ctx.fillStyle='#006AA7';ctx.fillRect(l,t,d,d);
+      ctx.fillStyle='#FECC02';ctx.fillRect(l+d*0.28,t,d*0.16,d);ctx.fillRect(l,t+d*0.4,d,d*0.2);
       break;
     case 'scotland':
-      ctx.fillStyle = '#005EB8'; ctx.fillRect(l, t, d, d);
-      ctx.fillStyle = '#fff';
-      ctx.lineWidth = r*0.15;
-      ctx.strokeStyle = '#fff';
-      ctx.beginPath(); ctx.moveTo(l, t); ctx.lineTo(l+d, t+d); ctx.stroke();
-      ctx.beginPath(); ctx.moveTo(l+d, t); ctx.lineTo(l, t+d); ctx.stroke();
+      ctx.fillStyle='#005EB8';ctx.fillRect(l,t,d,d);
+      ctx.strokeStyle='#fff';ctx.lineWidth=r*0.15;
+      ctx.beginPath();ctx.moveTo(l,t);ctx.lineTo(l+d,t+d);ctx.stroke();
+      ctx.beginPath();ctx.moveTo(l+d,t);ctx.lineTo(l,t+d);ctx.stroke();
       break;
     case 'england':
-      ctx.fillStyle = '#fff'; ctx.fillRect(l, t, d, d);
-      ctx.fillStyle = '#CF081F';
-      ctx.fillRect(l + d*0.43, t, d*0.14, d);
-      ctx.fillRect(l, t + d*0.43, d, d*0.14);
+      ctx.fillStyle='#fff';ctx.fillRect(l,t,d,d);ctx.fillStyle='#CF081F';
+      ctx.fillRect(l+d*0.43,t,d*0.14,d);ctx.fillRect(l,t+d*0.43,d,d*0.14);
       break;
     case 'usa':
-      for (let s = 0; s < 13; s++) {
-        ctx.fillStyle = s%2===0 ? '#B22234' : '#fff';
-        ctx.fillRect(l, t + s*d/13, d, d/13 + 1);
-      }
-      ctx.fillStyle = '#3C3B6E';
-      ctx.fillRect(l, t, d*0.45, d*0.54);
+      for(var s=0;s<13;s++){ctx.fillStyle=s%2===0?'#B22234':'#fff';ctx.fillRect(l,t+s*d/13,d,d/13+1);}
+      ctx.fillStyle='#3C3B6E';ctx.fillRect(l,t,d*0.45,d*0.54);
       break;
     case 'uruguay':
-      for (let s = 0; s < 9; s++) {
-        ctx.fillStyle = s%2===0 ? '#fff' : '#001489';
-        ctx.fillRect(l, t + s*d/9, d, d/9 + 1);
-      }
-      ctx.fillStyle = '#fff'; ctx.fillRect(l, t, d*0.4, d*0.56);
-      ctx.fillStyle = '#FCD116';
-      ctx.beginPath(); ctx.arc(l+d*0.2, t+d*0.28, r*0.16, 0, Math.PI*2); ctx.fill();
+      for(var s=0;s<9;s++){ctx.fillStyle=s%2===0?'#fff':'#001489';ctx.fillRect(l,t+s*d/9,d,d/9+1);}
+      ctx.fillStyle='#fff';ctx.fillRect(l,t,d*0.4,d*0.56);
+      ctx.fillStyle='#FCD116';ctx.beginPath();ctx.arc(l+d*0.2,t+d*0.28,r*0.16,0,Math.PI*2);ctx.fill();
       break;
     case 'spain':
-      ctx.fillStyle = '#AA151B'; ctx.fillRect(l, t, d, d*0.25);
-      ctx.fillStyle = '#F1BF00'; ctx.fillRect(l, t+d*0.25, d, d*0.5);
-      ctx.fillStyle = '#AA151B'; ctx.fillRect(l, t+d*0.75, d, d*0.25);
+      ctx.fillStyle='#AA151B';ctx.fillRect(l,t,d,d*0.25);
+      ctx.fillStyle='#F1BF00';ctx.fillRect(l,t+d*0.25,d,d*0.5);
+      ctx.fillStyle='#AA151B';ctx.fillRect(l,t+d*0.75,d,d*0.25);
       break;
     case 'portugal':
-      ctx.fillStyle = '#006600'; ctx.fillRect(l, t, d*0.4, d);
-      ctx.fillStyle = '#FF0000'; ctx.fillRect(l+d*0.4, t, d*0.6, d);
-      ctx.fillStyle = '#FFCC00';
-      ctx.beginPath(); ctx.arc(l+d*0.4, y, r*0.22, 0, Math.PI*2); ctx.fill();
+      ctx.fillStyle='#006600';ctx.fillRect(l,t,d*0.4,d);
+      ctx.fillStyle='#FF0000';ctx.fillRect(l+d*0.4,t,d*0.6,d);
+      ctx.fillStyle='#FFCC00';ctx.beginPath();ctx.arc(l+d*0.4,y,r*0.22,0,Math.PI*2);ctx.fill();
       break;
     case 'panama':
-      ctx.fillStyle = '#fff'; ctx.fillRect(l, t, d, d);
-      ctx.fillStyle = '#DA121A'; ctx.fillRect(l+d/2, t, d/2, d/2);
-      ctx.fillStyle = '#003DA5'; ctx.fillRect(l, t+d/2, d/2, d/2);
-      ctx.fillStyle = '#003DA5';
-      ctx.beginPath(); ctx.arc(l+d*0.25, t+d*0.25, r*0.1, 0, Math.PI*2); ctx.fill();
-      ctx.fillStyle = '#DA121A';
-      ctx.beginPath(); ctx.arc(l+d*0.75, t+d*0.75, r*0.1, 0, Math.PI*2); ctx.fill();
+      ctx.fillStyle='#fff';ctx.fillRect(l,t,d,d);
+      ctx.fillStyle='#DA121A';ctx.fillRect(l+d/2,t,d/2,d/2);
+      ctx.fillStyle='#003DA5';ctx.fillRect(l,t+d/2,d/2,d/2);
+      ctx.fillStyle='#003DA5';ctx.beginPath();ctx.arc(l+d*0.25,t+d*0.25,r*0.1,0,Math.PI*2);ctx.fill();
+      ctx.fillStyle='#DA121A';ctx.beginPath();ctx.arc(l+d*0.75,t+d*0.75,r*0.1,0,Math.PI*2);ctx.fill();
       break;
     case 'colombia':
-      ctx.fillStyle = '#FCD116'; ctx.fillRect(l, t, d, d/2);
-      ctx.fillStyle = '#003893'; ctx.fillRect(l, t+d/2, d, d/4);
-      ctx.fillStyle = '#CE1126'; ctx.fillRect(l, t+d*0.75, d, d/4);
+      ctx.fillStyle='#FCD116';ctx.fillRect(l,t,d,d/2);
+      ctx.fillStyle='#003893';ctx.fillRect(l,t+d/2,d,d/4);
+      ctx.fillStyle='#CE1126';ctx.fillRect(l,t+d*0.75,d,d/4);
       break;
     case 'ecuador':
-      ctx.fillStyle = '#FFD100'; ctx.fillRect(l, t, d, d/2);
-      ctx.fillStyle = '#034EA2'; ctx.fillRect(l, t+d/2, d, d/4);
-      ctx.fillStyle = '#CE1126'; ctx.fillRect(l, t+d*0.75, d, d/4);
+      ctx.fillStyle='#FFD100';ctx.fillRect(l,t,d,d/2);
+      ctx.fillStyle='#034EA2';ctx.fillRect(l,t+d/2,d,d/4);
+      ctx.fillStyle='#CE1126';ctx.fillRect(l,t+d*0.75,d,d/4);
       break;
     case 'brazil':
-      ctx.fillStyle = '#009B3A'; ctx.fillRect(l, t, d, d);
-      ctx.fillStyle = '#FEDF00';
-      ctx.beginPath();
-      ctx.moveTo(x, t+d*0.12); ctx.lineTo(l+d*0.9, y);
-      ctx.lineTo(x, t+d*0.88); ctx.lineTo(l+d*0.1, y);
-      ctx.fill();
-      ctx.fillStyle = '#002776';
-      ctx.beginPath(); ctx.arc(x, y, r*0.28, 0, Math.PI*2); ctx.fill();
+      ctx.fillStyle='#009B3A';ctx.fillRect(l,t,d,d);ctx.fillStyle='#FEDF00';
+      ctx.beginPath();ctx.moveTo(x,t+d*0.12);ctx.lineTo(l+d*0.9,y);ctx.lineTo(x,t+d*0.88);ctx.lineTo(l+d*0.1,y);ctx.fill();
+      ctx.fillStyle='#002776';ctx.beginPath();ctx.arc(x,y,r*0.28,0,Math.PI*2);ctx.fill();
       break;
     case 'turkey':
-      ctx.fillStyle = '#E30A17'; ctx.fillRect(l, t, d, d);
-      ctx.fillStyle = '#fff';
-      ctx.beginPath(); ctx.arc(x-r*0.08, y, r*0.3, 0, Math.PI*2); ctx.fill();
-      ctx.fillStyle = '#E30A17';
-      ctx.beginPath(); ctx.arc(x+r*0.03, y, r*0.22, 0, Math.PI*2); ctx.fill();
+      ctx.fillStyle='#E30A17';ctx.fillRect(l,t,d,d);ctx.fillStyle='#fff';
+      ctx.beginPath();ctx.arc(x-r*0.08,y,r*0.3,0,Math.PI*2);ctx.fill();
+      ctx.fillStyle='#E30A17';ctx.beginPath();ctx.arc(x+r*0.03,y,r*0.22,0,Math.PI*2);ctx.fill();
       break;
     case 'jordan':
-      ctx.fillStyle = '#000'; ctx.fillRect(l, t, d, d/3);
-      ctx.fillStyle = '#fff'; ctx.fillRect(l, t+d/3, d, d/3);
-      ctx.fillStyle = '#007A3D'; ctx.fillRect(l, t+2*d/3, d, d/3);
-      ctx.fillStyle = '#CE1126';
-      ctx.beginPath(); ctx.moveTo(l, t); ctx.lineTo(l+d*0.4, y); ctx.lineTo(l, t+d); ctx.fill();
+      ctx.fillStyle='#000';ctx.fillRect(l,t,d,d/3);
+      ctx.fillStyle='#fff';ctx.fillRect(l,t+d/3,d,d/3);
+      ctx.fillStyle='#007A3D';ctx.fillRect(l,t+2*d/3,d,d/3);
+      ctx.fillStyle='#CE1126';ctx.beginPath();ctx.moveTo(l,t);ctx.lineTo(l+d*0.4,y);ctx.lineTo(l,t+d);ctx.fill();
       break;
     case 'congo':
-      ctx.fillStyle = '#007FFF'; ctx.fillRect(l, t, d, d);
-      ctx.fillStyle = '#FCD116'; ctx.lineWidth = r*0.22;
-      ctx.strokeStyle = '#FCD116';
-      ctx.beginPath(); ctx.moveTo(l, t+d); ctx.lineTo(l+d, t); ctx.stroke();
-      ctx.fillStyle = '#CE1021'; ctx.lineWidth = r*0.12;
-      ctx.strokeStyle = '#CE1021';
-      ctx.beginPath(); ctx.moveTo(l, t+d*0.85); ctx.lineTo(l+d*0.85, t); ctx.stroke();
+      ctx.fillStyle='#007FFF';ctx.fillRect(l,t,d,d);
+      ctx.strokeStyle='#FCD116';ctx.lineWidth=r*0.22;
+      ctx.beginPath();ctx.moveTo(l,t+d);ctx.lineTo(l+d,t);ctx.stroke();
+      ctx.strokeStyle='#CE1021';ctx.lineWidth=r*0.12;
+      ctx.beginPath();ctx.moveTo(l,t+d*0.85);ctx.lineTo(l+d*0.85,t);ctx.stroke();
       break;
     case 'swiss':
-      ctx.fillStyle = '#FF0000'; ctx.fillRect(l, t, d, d);
-      ctx.fillStyle = '#fff';
-      ctx.fillRect(x-r*0.1, y-r*0.35, r*0.2, r*0.7);
-      ctx.fillRect(x-r*0.35, y-r*0.1, r*0.7, r*0.2);
+      ctx.fillStyle='#FF0000';ctx.fillRect(l,t,d,d);ctx.fillStyle='#fff';
+      ctx.fillRect(x-r*0.1,y-r*0.35,r*0.2,r*0.7);ctx.fillRect(x-r*0.35,y-r*0.1,r*0.7,r*0.2);
       break;
-    case 'sa': // South Africa
-      ctx.fillStyle = '#002395'; ctx.fillRect(l, t, d, d/2);
-      ctx.fillStyle = '#DE3831'; ctx.fillRect(l, t, d, d*0.17);
-      ctx.fillStyle = '#007A4D'; ctx.fillRect(l, t+d*0.83, d, d*0.17);
-      ctx.fillStyle = '#FFB612'; ctx.fillRect(l, t+d/2, d, d/2);
-      // Y shape simplified
-      ctx.fillStyle = '#007A4D';
-      ctx.beginPath(); ctx.moveTo(l, t+d*0.2); ctx.lineTo(x-r*0.1, y);
-      ctx.lineTo(l+d, y-d*0.15); ctx.lineTo(l+d, y+d*0.15);
-      ctx.lineTo(x-r*0.1, y); ctx.lineTo(l, t+d*0.8); ctx.fill();
+    case 'sa':
+      ctx.fillStyle='#002395';ctx.fillRect(l,t,d,d/2);
+      ctx.fillStyle='#DE3831';ctx.fillRect(l,t,d,d*0.17);
+      ctx.fillStyle='#007A4D';ctx.fillRect(l,t+d*0.83,d,d*0.17);
+      ctx.fillStyle='#FFB612';ctx.fillRect(l,t+d/2,d,d/2);
+      ctx.fillStyle='#007A4D';ctx.beginPath();
+      ctx.moveTo(l,t+d*0.2);ctx.lineTo(x-r*0.1,y);ctx.lineTo(l+d,y-d*0.15);
+      ctx.lineTo(l+d,y+d*0.15);ctx.lineTo(x-r*0.1,y);ctx.lineTo(l,t+d*0.8);ctx.fill();
       break;
     case 'caboverde':
-      ctx.fillStyle = '#003893'; ctx.fillRect(l, t, d, d);
-      ctx.fillStyle = '#fff'; ctx.fillRect(l, t+d*0.6, d, d*0.04);
-      ctx.fillStyle = '#CF2027'; ctx.fillRect(l, t+d*0.66, d, d*0.1);
-      ctx.fillStyle = '#fff'; ctx.fillRect(l, t+d*0.78, d, d*0.04);
+      ctx.fillStyle='#003893';ctx.fillRect(l,t,d,d);
+      ctx.fillStyle='#fff';ctx.fillRect(l,t+d*0.6,d,d*0.04);
+      ctx.fillStyle='#CF2027';ctx.fillRect(l,t+d*0.66,d,d*0.1);
+      ctx.fillStyle='#fff';ctx.fillRect(l,t+d*0.78,d,d*0.04);
       break;
     default:
-      ctx.fillStyle = f.bg || '#888'; ctx.fillRect(l, t, d, d);
+      ctx.fillStyle=f.bg||'#888';ctx.fillRect(l,t,d,d);
   }
-
   ctx.restore();
 }
 
 function drawFlagEmoji(x, y, r, team) {
-  const emoji = EMOJI[team];
-  if (!emoji) return;
+  var emoji = EMOJI[team]; if(!emoji) return;
   ctx.save();
-  ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI*2);
-  ctx.fillStyle = '#e8e6e1'; ctx.fill();
-  ctx.strokeStyle = 'rgba(0,0,0,0.1)'; ctx.lineWidth = 1; ctx.stroke();
-  ctx.font = r * 1.3 + 'px serif';
-  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-  ctx.fillText(emoji, x, y + 1);
+  ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);
+  ctx.fillStyle='#e8e6e1';ctx.fill();
+  ctx.strokeStyle='rgba(0,0,0,0.12)';ctx.lineWidth=1.5;ctx.stroke();
+  ctx.font=r*1.3+'px serif';ctx.textAlign='center';ctx.textBaseline='middle';
+  ctx.fillText(emoji,x,y+1);
   ctx.restore();
 }
 
 function drawFlagGradient(x, y, r, team) {
-  const colors = GRAD_COLORS[team] || ['#888','#aaa'];
-  const grad = ctx.createLinearGradient(x-r, y-r, x+r, y+r);
-  grad.addColorStop(0, colors[0]); grad.addColorStop(1, colors[1]);
-  ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI*2);
-  ctx.fillStyle = grad; ctx.fill();
+  var colors = GRAD_COLORS[team]||['#888','#aaa'];
+  var grad = ctx.createLinearGradient(x-r,y-r,x+r,y+r);
+  grad.addColorStop(0,colors[0]);grad.addColorStop(1,colors[1]);
+  ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fillStyle=grad;ctx.fill();
 }
 
-function drawTeamNode(x, y, team, r, state) {
+function drawTeamNode(x, y, team, r, state, s) {
   ctx.save();
   if (state === 'eliminated') ctx.globalAlpha = 0.25;
+
+  // Shadow for depth
+  if (state !== 'eliminated') {
+    ctx.shadowColor = 'rgba(0,0,0,0.15)';
+    ctx.shadowBlur = 6 * s;
+    ctx.shadowOffsetY = 2 * s;
+  }
 
   if (currentMode === 'stripes') drawFlagStripes(x, y, r, team);
   else if (currentMode === 'emoji') drawFlagEmoji(x, y, r, team);
   else drawFlagGradient(x, y, r, team);
 
-  // Outer stroke
+  ctx.shadowColor = 'transparent'; ctx.shadowBlur = 0; ctx.shadowOffsetY = 0;
+
+  // Outer stroke — thicker, more visible
   ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI*2);
   if (state === 'winner') {
-    ctx.strokeStyle = '#b8942e'; ctx.lineWidth = 2.5; ctx.stroke();
-    ctx.beginPath(); ctx.arc(x, y, r+3, 0, Math.PI*2);
-    ctx.strokeStyle = 'rgba(180,140,40,0.3)'; ctx.lineWidth = 1; ctx.stroke();
+    ctx.strokeStyle = '#b8942e'; ctx.lineWidth = 3; ctx.stroke();
+    ctx.beginPath(); ctx.arc(x, y, r + 4*s, 0, Math.PI*2);
+    ctx.strokeStyle = 'rgba(180,140,40,0.35)'; ctx.lineWidth = 1.5; ctx.stroke();
   } else if (currentMode !== 'emoji') {
-    ctx.strokeStyle = 'rgba(0,0,0,0.15)'; ctx.lineWidth = 1; ctx.stroke();
+    ctx.strokeStyle = 'rgba(0,0,0,0.2)'; ctx.lineWidth = 1.5; ctx.stroke();
   }
 
-  // Country code
-  const code = CODES[team] || team.slice(0,3).toUpperCase();
-  const fontSize = r * 0.68;
-  ctx.font = '900 ' + fontSize + 'px -apple-system, system-ui, sans-serif';
-  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  // Country code — bigger, bolder
+  var code = CODES[team] || team.slice(0,3).toUpperCase();
+  var fontSize = r * 0.75;
 
   if (currentMode === 'emoji') {
-    ctx.font = '800 ' + (r*0.5) + 'px -apple-system, system-ui, sans-serif';
-    ctx.fillStyle = state === 'eliminated' ? 'rgba(0,0,0,0.2)' : 'rgba(0,0,0,0.55)';
-    ctx.fillText(code, x, y + r + r*0.55);
+    ctx.font = '800 ' + (r*0.55) + 'px -apple-system, system-ui, sans-serif';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillStyle = state === 'eliminated' ? 'rgba(0,0,0,0.2)' : 'rgba(0,0,0,0.6)';
+    ctx.fillText(code, x, y + r + r*0.6);
   } else {
-    ctx.lineWidth = 3;
-    ctx.strokeStyle = 'rgba(0,0,0,0.45)';
+    ctx.font = '900 ' + fontSize + 'px -apple-system, system-ui, sans-serif';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    // Thicker outline for readability
+    ctx.lineWidth = 3.5;
+    ctx.strokeStyle = 'rgba(0,0,0,0.5)';
     ctx.strokeText(code, x, y);
     ctx.fillStyle = '#fff';
     ctx.fillText(code, x, y);
@@ -604,11 +519,13 @@ function drawTeamNode(x, y, team, r, state) {
   ctx.restore();
 }
 
-// ── Main draw ──
+// ══════════════════════════════════════════════════════
+// MAIN DRAW
+// ══════════════════════════════════════════════════════
 
 function draw() {
-  const rect = canvas.parentElement.getBoundingClientRect();
-  const size = Math.min(rect.width, rect.height);
+  var rect = canvas.parentElement.getBoundingClientRect();
+  var size = Math.min(rect.width, rect.height);
   canvas.width = size * DPR;
   canvas.height = size * DPR;
   canvas.style.width = size + 'px';
@@ -616,115 +533,188 @@ function draw() {
   ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
   ctx.clearRect(0, 0, size, size);
 
-  const CX = size/2, CY = size/2, s = size/860;
-  const R_R32 = 390*s, R_R16 = 290*s, R_QF = 205*s, R_SF = 140*s;
-  const nR32 = 19*s, nR16 = 15*s, nQF = 14*s, nSF = 13*s;
-  const pairSpan = 10;
+  var CX = size/2, CY = size/2, s = size/900;
 
-  // Rings
-  [R_R16, R_QF, R_SF].forEach(function(r) { drawRing(CX, CY, r); });
+  // Radii — slightly more spread
+  var R_R32 = 400*s, R_R16 = 295*s, R_QF = 210*s, R_SF = 145*s;
+
+  // Node sizes — BIGGER for prominence
+  var nR32 = 22*s, nR16 = 18*s, nQF = 16*s, nSF = 14*s;
+
+  var pairSpan = 11; // degrees between home/away in a match
+
+  // ── Alternating ring bands ──
+  var bands = [
+    { inner: R_SF - 20*s,  outer: R_SF + 18*s,  fill: 'rgba(0,0,0,0.015)' },
+    { inner: R_QF - 18*s,  outer: R_QF + 18*s,  fill: 'rgba(0,0,0,0.025)' },
+    { inner: R_R16 - 20*s, outer: R_R16 + 20*s, fill: 'rgba(0,0,0,0.015)' },
+    { inner: R_R32 - 40*s, outer: R_R32 + 26*s, fill: 'rgba(0,0,0,0.025)' },
+  ];
+  bands.forEach(function(b) {
+    ctx.beginPath();
+    ctx.arc(CX, CY, b.outer, 0, Math.PI*2);
+    ctx.arc(CX, CY, b.inner, 0, Math.PI*2, true);
+    ctx.fillStyle = b.fill;
+    ctx.fill();
+  });
+
+  // Ring lines
+  [R_R16, R_QF, R_SF].forEach(function(r) {
+    ctx.beginPath(); ctx.arc(CX, CY, r, 0, Math.PI*2);
+    ctx.strokeStyle = 'rgba(0,0,0,0.05)'; ctx.lineWidth = 0.5; ctx.stroke();
+  });
 
   // Center glow
-  var glow = ctx.createRadialGradient(CX, CY, 0, CX, CY, 100*s);
-  glow.addColorStop(0, 'rgba(180,140,40,0.1)');
+  var glow = ctx.createRadialGradient(CX, CY, 0, CX, CY, 110*s);
+  glow.addColorStop(0, 'rgba(180,140,40,0.12)');
   glow.addColorStop(0.6, 'rgba(180,140,40,0.03)');
   glow.addColorStop(1, 'rgba(180,140,40,0)');
-  ctx.beginPath(); ctx.arc(CX, CY, 100*s, 0, Math.PI*2);
+  ctx.beginPath(); ctx.arc(CX, CY, 110*s, 0, Math.PI*2);
   ctx.fillStyle = glow; ctx.fill();
 
-  // ── Spokes (behind nodes) ──
-  var r32J = [];
-  for (var i = 0; i < 16; i++) {
-    var base = i*360/16;
-    var hp = polar(CX,CY,R_R32, base-pairSpan/2);
-    var ap = polar(CX,CY,R_R32, base+pairSpan/2);
-    var jp = polar(CX,CY,R_R32-36*s, base);
-    var decided = R32[i].sh !== null;
-    var lc = decided ? 'rgba(0,0,0,0.14)' : 'rgba(0,0,0,0.06)';
-    drawLine(hp[0],hp[1],jp[0],jp[1],lc,1);
-    drawLine(ap[0],ap[1],jp[0],jp[1],lc,1);
-    r32J.push({x:jp[0],y:jp[1],decided:decided});
-  }
+  // ══════════════════════════════════════════════
+  // COMPUTE ALL ANGLES (propagating midpoints)
+  // ══════════════════════════════════════════════
 
-  var r16P = [];
-  for (var i = 0; i < 8; i++) {
-    var angle = i*360/8 + 360/32;
-    var p = polar(CX,CY,R_R16,angle);
-    var j1 = r32J[i*2], j2 = r32J[i*2+1];
-    drawLine(j1.x,j1.y,p[0],p[1], j1.decided?'rgba(0,0,0,0.12)':'rgba(0,0,0,0.05)',1);
-    drawLine(j2.x,j2.y,p[0],p[1], j2.decided?'rgba(0,0,0,0.12)':'rgba(0,0,0,0.05)',1);
-    r16P.push(p);
-  }
+  // R32: 16 positions evenly spaced
+  var r32Angles = [];
+  for (var i = 0; i < 16; i++) r32Angles.push(i * 360 / 16);
 
-  // QF: each node sits at the midpoint angle of its two R16 feeders
+  // R16: midpoint of each consecutive R32 pair
   var r16Angles = [];
-  for (var i = 0; i < 8; i++) r16Angles.push(i*360/8 + 360/32);
-  var qfP = [];
+  for (var i = 0; i < 8; i++) {
+    r16Angles.push((r32Angles[i*2] + r32Angles[i*2+1]) / 2);
+  }
+
+  // QF: midpoint of each consecutive R16 pair
+  var qfAngles = [];
   for (var i = 0; i < 4; i++) {
-    var angle = (r16Angles[i*2] + r16Angles[i*2+1]) / 2;
-    var p = polar(CX,CY,R_QF,angle);
-    drawLine(r16P[i*2][0],r16P[i*2][1],p[0],p[1],'rgba(0,0,0,0.04)',0.8);
-    drawLine(r16P[i*2+1][0],r16P[i*2+1][1],p[0],p[1],'rgba(0,0,0,0.04)',0.8);
-    qfP.push(p);
-    qfP.angle = qfP.angle || [];
-    qfP.angle.push(angle);
+    qfAngles.push((r16Angles[i*2] + r16Angles[i*2+1]) / 2);
   }
 
-  // SF: each node sits at the midpoint angle of its two QF feeders
-  var sfP = [];
+  // SF: midpoint of each consecutive QF pair
+  var sfAngles = [];
   for (var i = 0; i < 2; i++) {
-    var angle = (qfP.angle[i*2] + qfP.angle[i*2+1]) / 2;
-    var p = polar(CX,CY,R_SF,angle);
-    drawLine(qfP[i*2][0],qfP[i*2][1],p[0],p[1],'rgba(0,0,0,0.04)',0.8);
-    drawLine(qfP[i*2+1][0],qfP[i*2+1][1],p[0],p[1],'rgba(0,0,0,0.04)',0.8);
-    sfP.push(p);
+    sfAngles.push((qfAngles[i*2] + qfAngles[i*2+1]) / 2);
   }
 
-  sfP.forEach(function(sf) { drawLine(sf[0],sf[1],CX,CY,'rgba(180,140,40,0.1)',0.8); });
+  // ══════════════════════════════════════════════
+  // DRAW SPOKES (behind nodes)
+  // ══════════════════════════════════════════════
 
-  // ── Nodes ──
+  // R32 match spokes: home + away → junction
+  var r32Junctions = [];
   for (var i = 0; i < 16; i++) {
-    var base = i*360/16;
-    var hp = polar(CX,CY,R_R32,base-pairSpan/2);
-    var ap = polar(CX,CY,R_R32,base+pairSpan/2);
+    var base = r32Angles[i];
+    var hp = polar(CX, CY, R_R32, base - pairSpan/2);
+    var ap = polar(CX, CY, R_R32, base + pairSpan/2);
+    var jp = polar(CX, CY, R_R32 - 38*s, base);
+    var decided = R32[i].sh !== null;
+    var lc = decided ? 'rgba(0,0,0,0.16)' : 'rgba(0,0,0,0.07)';
+    var lw = decided ? 1.5 : 1;
+    drawLine(hp[0], hp[1], jp[0], jp[1], lc, lw);
+    drawLine(ap[0], ap[1], jp[0], jp[1], lc, lw);
+    r32Junctions.push(jp);
+  }
+
+  // R32 junctions → R16 nodes
+  var r16Pos = [];
+  for (var i = 0; i < 8; i++) {
+    var p = polar(CX, CY, R_R16, r16Angles[i]);
+    var j1 = r32Junctions[i*2], j2 = r32Junctions[i*2+1];
+    var d1 = R32[i*2].sh !== null, d2 = R32[i*2+1].sh !== null;
+    drawLine(j1[0], j1[1], p[0], p[1], d1 ? 'rgba(0,0,0,0.14)' : 'rgba(0,0,0,0.06)', d1 ? 1.3 : 1);
+    drawLine(j2[0], j2[1], p[0], p[1], d2 ? 'rgba(0,0,0,0.14)' : 'rgba(0,0,0,0.06)', d2 ? 1.3 : 1);
+    r16Pos.push(p);
+  }
+
+  // R16 → QF
+  var qfPos = [];
+  for (var i = 0; i < 4; i++) {
+    var p = polar(CX, CY, R_QF, qfAngles[i]);
+    drawLine(r16Pos[i*2][0], r16Pos[i*2][1], p[0], p[1], 'rgba(0,0,0,0.05)', 0.8);
+    drawLine(r16Pos[i*2+1][0], r16Pos[i*2+1][1], p[0], p[1], 'rgba(0,0,0,0.05)', 0.8);
+    qfPos.push(p);
+  }
+
+  // QF → SF
+  var sfPos = [];
+  for (var i = 0; i < 2; i++) {
+    var p = polar(CX, CY, R_SF, sfAngles[i]);
+    drawLine(qfPos[i*2][0], qfPos[i*2][1], p[0], p[1], 'rgba(0,0,0,0.05)', 0.8);
+    drawLine(qfPos[i*2+1][0], qfPos[i*2+1][1], p[0], p[1], 'rgba(0,0,0,0.05)', 0.8);
+    sfPos.push(p);
+  }
+
+  // SF → Final (center)
+  sfPos.forEach(function(sf) {
+    drawLine(sf[0], sf[1], CX, CY, 'rgba(180,140,40,0.12)', 1);
+  });
+
+  // ══════════════════════════════════════════════
+  // DRAW NODES (on top of spokes)
+  // ══════════════════════════════════════════════
+
+  // R32 teams
+  for (var i = 0; i < 16; i++) {
+    var base = r32Angles[i];
+    var hp = polar(CX, CY, R_R32, base - pairSpan/2);
+    var ap = polar(CX, CY, R_R32, base + pairSpan/2);
     var m = R32[i];
-    var hw = m.sh!==null && m.sh>m.sa;
-    var aw = m.sh!==null && m.sa>m.sh;
-    drawTeamNode(hp[0],hp[1],m.home,nR32, hw?'winner':(aw?'eliminated':'normal'));
-    drawTeamNode(ap[0],ap[1],m.away,nR32, aw?'winner':(hw?'eliminated':'normal'));
-    drawJunction(r32J[i].x, r32J[i].y);
+    var hw = m.sh !== null && m.sh > m.sa;
+    var aw = m.sh !== null && m.sa > m.sh;
+    drawTeamNode(hp[0], hp[1], m.home, nR32, hw ? 'winner' : (aw ? 'eliminated' : 'normal'), s);
+    drawTeamNode(ap[0], ap[1], m.away, nR32, aw ? 'winner' : (hw ? 'eliminated' : 'normal'), s);
+    drawJunction(r32Junctions[i][0], r32Junctions[i][1], s);
     if (m.sh !== null) {
-      var sp = polar(CX,CY,R_R32-18*s,base);
-      drawScore(sp[0],sp[1],m.sh,m.sa);
+      var sp = polar(CX, CY, R_R32 - 20*s, base);
+      drawScore(sp[0], sp[1], m.sh, m.sa, s);
     }
   }
 
+  // R16 teams
   for (var i = 0; i < 8; i++) {
     var team = R16_KNOWN[i];
-    if (team) drawTeamNode(r16P[i][0],r16P[i][1],team,nR16,'normal');
-    else drawEmptyNode(r16P[i][0],r16P[i][1],nR16);
+    if (team) drawTeamNode(r16Pos[i][0], r16Pos[i][1], team, nR16, 'normal', s);
+    else drawEmptyNode(r16Pos[i][0], r16Pos[i][1], nR16);
   }
 
-  qfP.forEach(function(p) { drawEmptyNode(p[0],p[1],nQF); });
-  sfP.forEach(function(p) { drawEmptyNode(p[0],p[1],nSF); });
+  // QF & SF empty nodes
+  qfPos.forEach(function(p) { drawEmptyNode(p[0], p[1], nQF); });
+  sfPos.forEach(function(p) { drawEmptyNode(p[0], p[1], nSF); });
 
-  // Trophy
-  ctx.font = (32*s) + 'px serif';
+  // ── Trophy at center ──
+  ctx.font = (36*s) + 'px serif';
   ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
   ctx.fillText('\u{1F3C6}', CX, CY - 4*s);
-  ctx.font = '700 ' + (8*s) + 'px -apple-system, system-ui, sans-serif';
-  ctx.fillStyle = 'rgba(160,125,30,0.55)';
-  ctx.fillText('FINAL', CX, CY + 22*s);
+  ctx.font = '700 ' + (9*s) + 'px -apple-system, system-ui, sans-serif';
+  ctx.fillStyle = 'rgba(160,125,30,0.6)';
+  ctx.fillText('FINAL', CX, CY + 24*s);
 
-  // Round labels
-  ctx.font = '700 ' + (7.5*s) + 'px -apple-system, system-ui, sans-serif';
-  ctx.fillStyle = 'rgba(0,0,0,0.18)';
+  // ── Round labels — more prominent ──
   ctx.textAlign = 'center';
-  [[R_R32+22*s,'ROUND OF 32'],[R_R16+16*s,'ROUND OF 16'],
-   [R_QF+14*s,'QUARTER-FINALS'],[R_SF+12*s,'SEMI-FINALS']].forEach(function(pair) {
-    var p = polar(CX,CY,pair[0],270);
-    ctx.fillText(pair[1], p[0], p[1]);
+  var labelData = [
+    { r: R_R32 + 30*s, text: 'ROUND OF 32', size: 9 },
+    { r: R_R16 + 22*s, text: 'ROUND OF 16', size: 8.5 },
+    { r: R_QF  + 20*s, text: 'QUARTER-FINALS', size: 8 },
+    { r: R_SF  + 16*s, text: 'SEMI-FINALS', size: 7.5 },
+  ];
+  labelData.forEach(function(ld) {
+    ctx.font = '700 ' + (ld.size*s) + 'px -apple-system, system-ui, sans-serif';
+    ctx.fillStyle = 'rgba(0,0,0,0.25)';
+    var p = polar(CX, CY, ld.r, 270);
+    ctx.fillText(ld.text, p[0], p[1]);
   });
+
+  // ── Half labels ──
+  ctx.font = '600 ' + (7*s) + 'px -apple-system, system-ui, sans-serif';
+  ctx.fillStyle = 'rgba(0,0,0,0.12)';
+  var halfL = polar(CX, CY, R_QF + 6*s, 0);
+  ctx.save(); ctx.translate(halfL[0], halfL[1]); ctx.rotate(-Math.PI/2);
+  ctx.fillText('LEFT HALF → SF1', 0, 0); ctx.restore();
+  var halfR = polar(CX, CY, R_QF + 6*s, 180);
+  ctx.save(); ctx.translate(halfR[0], halfR[1]); ctx.rotate(Math.PI/2);
+  ctx.fillText('RIGHT HALF → SF2', 0, 0); ctx.restore();
 }
 
 // ── Tab switching ──
@@ -740,6 +730,24 @@ document.querySelectorAll('.tab').forEach(function(tab) {
 
 draw();
 window.addEventListener('resize', draw);
+
+// ── Console verification (open dev tools to see) ──
+(function verify() {
+  var R32_ORDER = [74,77,73,75,83,84,81,82,76,78,79,80,86,88,85,87];
+  var R16_ORDER = [89,90,93,94,91,92,95,96];
+  var R32_TEAMS = {74:['GER','PAR'],77:['FRA','SWE'],73:['RSA','CAN'],75:['NED','MAR'],83:['POR','CRO'],84:['ESP','AUT'],81:['USA','BIH'],82:['BEL','SEN'],76:['BRA','JPN'],78:['CIV','NOR'],79:['MEX','ECU'],80:['ENG','COD'],86:['ARG','CPV'],88:['AUS','EGY'],85:['SUI','ALG'],87:['COL','GHA']};
+  console.log('%c=== BRACKET PATH VERIFICATION ===', 'font-weight:bold;color:#b8942e');
+  for (var i = 0; i < 8; i++) {
+    var a = R32_ORDER[i*2], b = R32_ORDER[i*2+1], r16 = R16_ORDER[i];
+    console.log('R16 M' + r16 + ': W(M' + a + ' ' + R32_TEAMS[a].join('/') + ') vs W(M' + b + ' ' + R32_TEAMS[b].join('/') + ')');
+  }
+  console.log('QF M97: W(M89) vs W(M90)  |  QF M98: W(M93) vs W(M94)');
+  console.log('QF M99: W(M91) vs W(M92)  |  QF M100: W(M95) vs W(M96)');
+  console.log('SF M101: W(M97) vs W(M98)  |  SF M102: W(M99) vs W(M100)');
+  console.log('FINAL M104: W(M101) vs W(M102)');
+  console.log('%c✓ Canada (M73→R16 slot 1/M90) plays NED/MAR winner', 'color:green');
+  console.log('%c✓ Brazil (M76→R16 slot 4/M91) plays CIV/NOR winner', 'color:green');
+})();
 </script>
 
 </body>
