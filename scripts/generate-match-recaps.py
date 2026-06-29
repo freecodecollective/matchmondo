@@ -92,7 +92,11 @@ def load_json(path):
 
 
 def matches_needing_recaps(matches, existing_recaps):
-    """Find completed matches that ended 3+ hours ago without recaps."""
+    """Find completed matches that ended 3+ hours ago without recaps.
+
+    Returns newest matches first so recent games get recaps before
+    the historical backlog.
+    """
     now = datetime.now(timezone.utc)
     need = []
     for m in matches:
@@ -107,6 +111,7 @@ def matches_needing_recaps(matches, existing_recaps):
         ended_approx = kickoff + timedelta(hours=TOTAL_DELAY)
         if now >= ended_approx:
             need.append(m)
+    need.sort(key=lambda m: m["utc"], reverse=True)
     return need
 
 
