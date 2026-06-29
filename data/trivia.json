@@ -4248,7 +4248,110 @@
       ],
       "answer": 2,
       "explanation": "Brazil has appeared in every tournament since 1930 — the only nation with a perfect attendance record.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ما هي الدولة الوحيدة التي شاركت في كل نسخة من نسخ البطولة؟",
+          "options": [
+            "ألمانيا",
+            "الأرجنتين",
+            "البرازيل",
+            "إيطاليا"
+          ],
+          "explanation": "ظهرت البرازيل في كل بطولة منذ عام 1930، وهي الدولة الوحيدة التي تتمتع بسجل حضور كامل."
+        },
+        "de": {
+          "question": "Welche Nation ist die einzige, die an jeder einzelnen Austragung teilgenommen hat?",
+          "options": [
+            "Deutschland",
+            "Argentinien",
+            "Brasilien",
+            "Italien"
+          ],
+          "explanation": "Brasilien war seit 1930 bei jedem Turnier dabei – die einzige Nation mit einer lückenlosen Teilnahmebilanz."
+        },
+        "es": {
+          "question": "¿Cuál es la única nación que ha participado en todas y cada una de las ediciones?",
+          "options": [
+            "Alemania",
+            "Argentina",
+            "Brasil",
+            "Italia"
+          ],
+          "explanation": "Brasil ha estado presente en cada torneo desde 1930, la única nación con un historial de asistencia perfecto."
+        },
+        "es-ES": {
+          "question": "¿Cuál es la única nación que ha participado en todas y cada una de las ediciones?",
+          "options": [
+            "Alemania",
+            "Argentina",
+            "Brasil",
+            "Italia"
+          ],
+          "explanation": "Brasil ha estado presente en cada torneo desde 1930, la única nación con un registro de asistencia perfecto."
+        },
+        "fr": {
+          "question": "Quelle est la seule nation à avoir participé à chaque édition ?",
+          "options": [
+            "Allemagne",
+            "Argentine",
+            "Brésil",
+            "Italie"
+          ],
+          "explanation": "Le Brésil a disputé chaque tournoi depuis 1930 — la seule nation avec une présence sans faute."
+        },
+        "it": {
+          "question": "Qual è l'unica nazione ad aver partecipato a ogni singola edizione?",
+          "options": [
+            "Germania",
+            "Argentina",
+            "Brasile",
+            "Italia"
+          ],
+          "explanation": "Il Brasile ha preso parte a ogni torneo dal 1930: l'unica nazione con una presenza sempre garantita."
+        },
+        "ja": {
+          "question": "すべての大会に出場した唯一の国はどこでしょう？",
+          "options": [
+            "ドイツ",
+            "アルゼンチン",
+            "ブラジル",
+            "イタリア"
+          ],
+          "explanation": "ブラジルは1930年以来、すべての大会に出場しており、皆勤を誇る唯一の国です。"
+        },
+        "ko": {
+          "question": "모든 대회에 빠짐없이 출전한 유일한 나라는 어디일까요?",
+          "options": [
+            "독일",
+            "아르헨티나",
+            "브라질",
+            "이탈리아"
+          ],
+          "explanation": "브라질은 1930년 이후 모든 대회에 출전한, 완벽한 개근 기록을 가진 유일한 나라입니다."
+        },
+        "pt-BR": {
+          "question": "Qual é a única nação a ter participado de todas as edições?",
+          "options": [
+            "Alemanha",
+            "Argentina",
+            "Brasil",
+            "Itália"
+          ],
+          "explanation": "O Brasil esteve presente em todos os torneios desde 1930 — a única nação com participação ininterrupta."
+        },
+        "zh-Hans": {
+          "question": "哪个国家是唯一参加过每一届赛事的国家？",
+          "options": [
+            "德国",
+            "阿根廷",
+            "巴西",
+            "意大利"
+          ],
+          "explanation": "自1930年以来，巴西参加了每一届赛事，是唯一保持全勤纪录的国家。"
+        }
+      },
+      "i18nSourceHash": "e3c8a87f164a1bf4"
     },
     {
       "id": "t-costa-rica-2014",
@@ -4263,7 +4366,110 @@
       "answer": 3,
       "explanation": "Costa Rica won Group D ahead of Uruguay, Italy, and England — all former champions — one of the biggest group-stage shocks ever.",
       "media": "https://www.youtube.com/watch?v=e2KJ4Jxx3AY",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "في عام 2014، تصدّرت كوستاريكا مجموعة ضمّت إيطاليا وإنجلترا وأي بطل سابق آخر؟",
+          "options": [
+            "إسبانيا",
+            "فرنسا",
+            "ألمانيا",
+            "أوروغواي"
+          ],
+          "explanation": "تصدّرت كوستاريكا المجموعة الرابعة متقدمةً على أوروغواي وإيطاليا وإنجلترا — وجميعها أبطال سابقون — في واحدة من أكبر المفاجآت في دور المجموعات على الإطلاق."
+        },
+        "de": {
+          "question": "Costa Rica gewann 2014 eine Gruppe mit Italien, England und welchem weiteren ehemaligen Champion?",
+          "options": [
+            "Spanien",
+            "Frankreich",
+            "Deutschland",
+            "Uruguay"
+          ],
+          "explanation": "Costa Rica setzte sich in Gruppe D vor Uruguay, Italien und England durch – alles frühere Titelträger – in einer der größten Überraschungen der Gruppenphase überhaupt."
+        },
+        "es": {
+          "question": "En 2014, Costa Rica terminó primera en un grupo con Italia, Inglaterra y ¿qué otro excampeón?",
+          "options": [
+            "España",
+            "Francia",
+            "Alemania",
+            "Uruguay"
+          ],
+          "explanation": "Costa Rica ganó el Grupo D por delante de Uruguay, Italia e Inglaterra —todos excampeones—, una de las mayores sorpresas de la historia en la fase de grupos."
+        },
+        "es-ES": {
+          "question": "En 2014, Costa Rica acabó primera de un grupo con Italia, Inglaterra y ¿qué otro excampeón?",
+          "options": [
+            "España",
+            "Francia",
+            "Alemania",
+            "Uruguay"
+          ],
+          "explanation": "Costa Rica ganó el Grupo D por delante de Uruguay, Italia e Inglaterra —todos excampeones—, una de las mayores sorpresas de la historia en la fase de grupos."
+        },
+        "fr": {
+          "question": "En 2014, le Costa Rica a terminé en tête d'un groupe comprenant l'Italie, l'Angleterre et quel autre ancien champion ?",
+          "options": [
+            "Espagne",
+            "France",
+            "Allemagne",
+            "Uruguay"
+          ],
+          "explanation": "Le Costa Rica a remporté le groupe D devant l'Uruguay, l'Italie et l'Angleterre — tous d'anciens champions — l'une des plus grandes surprises de l'histoire en phase de groupes."
+        },
+        "it": {
+          "question": "Nel 2014 la Costa Rica chiuse al primo posto un girone con Italia, Inghilterra e quale altro ex campione?",
+          "options": [
+            "Spagna",
+            "Francia",
+            "Germania",
+            "Uruguay"
+          ],
+          "explanation": "La Costa Rica vinse il Girone D davanti a Uruguay, Italia e Inghilterra — tutte ex campioni — in una delle più clamorose sorprese di sempre nella fase a gironi."
+        },
+        "ja": {
+          "question": "2014年、コスタリカはイタリア、イングランド、そしてもう一つの元優勝国を含むグループを首位で突破しました。その元優勝国はどこ？",
+          "options": [
+            "スペイン",
+            "フランス",
+            "ドイツ",
+            "ウルグアイ"
+          ],
+          "explanation": "コスタリカはウルグアイ、イタリア、イングランドという過去の優勝国すべてを抑えてグループDを首位で通過し、史上最大級のグループステージの番狂わせを演じた。"
+        },
+        "ko": {
+          "question": "2014년 코스타리카는 이탈리아, 잉글랜드, 그리고 또 다른 과거 우승국이 속한 조에서 1위를 차지했습니다. 그 또 다른 우승국은 어디일까요?",
+          "options": [
+            "스페인",
+            "프랑스",
+            "독일",
+            "우루과이"
+          ],
+          "explanation": "코스타리카는 우루과이, 이탈리아, 잉글랜드 등 모두 과거 우승국을 제치고 D조 1위를 차지했으며, 이는 역대 최대의 조별리그 이변 중 하나였습니다."
+        },
+        "pt-BR": {
+          "question": "Em 2014, a Costa Rica liderou um grupo que tinha Itália, Inglaterra e qual outro ex-campeão?",
+          "options": [
+            "Espanha",
+            "França",
+            "Alemanha",
+            "Uruguai"
+          ],
+          "explanation": "A Costa Rica venceu o Grupo D à frente de Uruguai, Itália e Inglaterra — todos ex-campeões — em uma das maiores zebras da história da fase de grupos."
+        },
+        "zh-Hans": {
+          "question": "2014年，哥斯达黎加力压意大利、英格兰以及另一支前冠军球队，以小组头名出线。这另一支前冠军是哪支球队？",
+          "options": [
+            "西班牙",
+            "法国",
+            "德国",
+            "乌拉圭"
+          ],
+          "explanation": "哥斯达黎加在D组中力压乌拉圭、意大利和英格兰——全是昔日冠军——以头名晋级，堪称史上最大的小组赛冷门之一。"
+        }
+      },
+      "i18nSourceHash": "055eababec0e95ad"
     },
     {
       "id": "rec-highest-score",
@@ -4278,7 +4484,110 @@
       "answer": 3,
       "explanation": "Austria beat Switzerland 7–5 in a 1954 quarter-final, producing 12 goals — still the all-time record for a single match.",
       "media": "https://www.youtube.com/watch?v=T-BQWvSyIyI",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ما هي المباراة الأكثر تسجيلاً للأهداف في تاريخ البطولة، بـ 12 هدفاً؟",
+          "options": [
+            "المجر 9–0 كوريا الجنوبية (1954)",
+            "المجر 10–1 السلفادور (1982)",
+            "ألمانيا 7–1 البرازيل (2014)",
+            "النمسا 7–5 سويسرا (1954)"
+          ],
+          "explanation": "تغلبت النمسا على سويسرا 7–5 في الدور ربع النهائي عام 1954، بمجموع 12 هدفاً — وهو رقم قياسي لم يُكسر حتى الآن لمباراة واحدة."
+        },
+        "de": {
+          "question": "Welches ist das torreichste Spiel der Turniergeschichte mit 12 Toren?",
+          "options": [
+            "Ungarn 9–0 Südkorea (1954)",
+            "Ungarn 10–1 El Salvador (1982)",
+            "Deutschland 7–1 Brasilien (2014)",
+            "Österreich 7–5 Schweiz (1954)"
+          ],
+          "explanation": "Österreich besiegte die Schweiz im Viertelfinale 1954 mit 7–5 und erzielte dabei 12 Tore — bis heute der Rekord für ein einzelnes Spiel."
+        },
+        "es": {
+          "question": "¿Cuál es el partido con más goles en la historia del torneo, con 12 goles?",
+          "options": [
+            "Hungría 9–0 Corea del Sur (1954)",
+            "Hungría 10–1 El Salvador (1982)",
+            "Alemania 7–1 Brasil (2014)",
+            "Austria 7–5 Suiza (1954)"
+          ],
+          "explanation": "Austria venció a Suiza 7–5 en un cuartos de final de 1954, con un total de 12 goles, una marca que sigue siendo el récord histórico para un solo partido."
+        },
+        "es-ES": {
+          "question": "¿Cuál es el partido con más goles de la historia del torneo, con 12 goles?",
+          "options": [
+            "Hungría 9–0 Corea del Sur (1954)",
+            "Hungría 10–1 El Salvador (1982)",
+            "Alemania 7–1 Brasil (2014)",
+            "Austria 7–5 Suiza (1954)"
+          ],
+          "explanation": "Austria ganó a Suiza por 7–5 en unos cuartos de final de 1954, sumando 12 goles, una cifra que sigue siendo el récord histórico de un único partido."
+        },
+        "fr": {
+          "question": "Quel est le match le plus prolifique de l'histoire du tournoi, avec 12 buts ?",
+          "options": [
+            "Hongrie 9–0 Corée du Sud (1954)",
+            "Hongrie 10–1 Salvador (1982)",
+            "Allemagne 7–1 Brésil (2014)",
+            "Autriche 7–5 Suisse (1954)"
+          ],
+          "explanation": "L'Autriche a battu la Suisse 7–5 en quart de finale en 1954, pour un total de 12 buts — un record toujours inégalé pour un seul match."
+        },
+        "it": {
+          "question": "Qual è la partita con più gol nella storia del torneo, con 12 reti?",
+          "options": [
+            "Ungheria 9–0 Corea del Sud (1954)",
+            "Ungheria 10–1 El Salvador (1982)",
+            "Germania 7–1 Brasile (2014)",
+            "Austria 7–5 Svizzera (1954)"
+          ],
+          "explanation": "L'Austria batté la Svizzera 7–5 in un quarto di finale del 1954, per un totale di 12 gol: è ancora oggi il record assoluto per una singola partita."
+        },
+        "ja": {
+          "question": "大会史上最多得点の試合は、12得点が記録されたどの試合でしょう？",
+          "options": [
+            "ハンガリー 9–0 韓国（1954年）",
+            "ハンガリー 10–1 エルサルバドル（1982年）",
+            "ドイツ 7–1 ブラジル（2014年）",
+            "オーストリア 7–5 スイス（1954年）"
+          ],
+          "explanation": "オーストリアは1954年の準々決勝でスイスを7–5で破り、計12得点を記録しました。これは今なお1試合における史上最多得点記録です。"
+        },
+        "ko": {
+          "question": "대회 역사상 가장 많은 골이 나온 경기는 12골이 기록된 어느 경기일까요?",
+          "options": [
+            "헝가리 9–0 대한민국 (1954)",
+            "헝가리 10–1 엘살바도르 (1982)",
+            "독일 7–1 브라질 (2014)",
+            "오스트리아 7–5 스위스 (1954)"
+          ],
+          "explanation": "오스트리아는 1954년 8강전에서 스위스를 7–5로 이기며 총 12골을 기록했는데, 이는 지금까지도 단일 경기 최다 득점 기록입니다."
+        },
+        "pt-BR": {
+          "question": "Qual é a partida com mais gols na história do torneio, com 12 gols?",
+          "options": [
+            "Hungria 9–0 Coreia do Sul (1954)",
+            "Hungria 10–1 El Salvador (1982)",
+            "Alemanha 7–1 Brasil (2014)",
+            "Áustria 7–5 Suíça (1954)"
+          ],
+          "explanation": "A Áustria venceu a Suíça por 7–5 nas quartas de final de 1954, somando 12 gols — ainda hoje o recorde de todos os tempos para uma única partida."
+        },
+        "zh-Hans": {
+          "question": "赛事历史上进球最多的比赛是哪场？共打入12粒进球。",
+          "options": [
+            "匈牙利 9–0 韩国（1954年）",
+            "匈牙利 10–1 萨尔瓦多（1982年）",
+            "德国 7–1 巴西（2014年）",
+            "奥地利 7–5 瑞士（1954年）"
+          ],
+          "explanation": "奥地利在1954年四分之一决赛中以7–5击败瑞士，全场共打入12球——至今仍是单场比赛的历史最高进球纪录。"
+        }
+      },
+      "i18nSourceHash": "dc1f8e3c5d472317"
     },
     {
       "id": "v-hard-rock-miami",
@@ -4292,7 +4601,110 @@
       ],
       "answer": 2,
       "explanation": "Hard Rock Stadium in Miami Gardens is home to the Miami Dolphins and has hosted multiple Super Bowls.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ملعب هارد روك، أحد ملاعب بطولة 2026 في ميامي، هو الملعب الرئيسي لأي فريق في دوري كرة القدم الأمريكية (NFL)؟",
+          "options": [
+            "تامبا باي باكانيرز",
+            "جاكسونفيل جاغوارز",
+            "ميامي دولفينز",
+            "كارولينا بانثرز"
+          ],
+          "explanation": "يقع ملعب هارد روك في ميامي غاردنز وهو الملعب الرئيسي لفريق ميامي دولفينز، وقد استضاف عدة مباريات سوبر بول."
+        },
+        "de": {
+          "question": "Das Hard Rock Stadium, ein Austragungsort von Football 2026 in Miami, ist die Heimat welches NFL-Teams?",
+          "options": [
+            "Tampa Bay Buccaneers",
+            "Jacksonville Jaguars",
+            "Miami Dolphins",
+            "Carolina Panthers"
+          ],
+          "explanation": "Das Hard Rock Stadium in Miami Gardens ist die Heimat der Miami Dolphins und war bereits Schauplatz mehrerer Super Bowls."
+        },
+        "es": {
+          "question": "El Hard Rock Stadium, una de las sedes de Football 2026 en Miami, ¿es la casa de qué equipo de la NFL?",
+          "options": [
+            "Tampa Bay Buccaneers",
+            "Jacksonville Jaguars",
+            "Miami Dolphins",
+            "Carolina Panthers"
+          ],
+          "explanation": "El Hard Rock Stadium, ubicado en Miami Gardens, es la casa de los Miami Dolphins y ha sido sede de varios Super Bowls."
+        },
+        "es-ES": {
+          "question": "El Hard Rock Stadium, una de las sedes de Football 2026 en Miami, ¿es el estadio de qué equipo de la NFL?",
+          "options": [
+            "Tampa Bay Buccaneers",
+            "Jacksonville Jaguars",
+            "Miami Dolphins",
+            "Carolina Panthers"
+          ],
+          "explanation": "El Hard Rock Stadium, situado en Miami Gardens, es el estadio de los Miami Dolphins y ha acogido varias Super Bowls."
+        },
+        "fr": {
+          "question": "Le Hard Rock Stadium, l'un des stades de Football 2026 à Miami, est le domicile de quelle équipe de la NFL ?",
+          "options": [
+            "Tampa Bay Buccaneers",
+            "Jacksonville Jaguars",
+            "Miami Dolphins",
+            "Carolina Panthers"
+          ],
+          "explanation": "Le Hard Rock Stadium, situé à Miami Gardens, est le domicile des Miami Dolphins et a accueilli plusieurs Super Bowls."
+        },
+        "it": {
+          "question": "L'Hard Rock Stadium, una delle sedi di Football 2026 a Miami, è lo stadio di quale squadra della NFL?",
+          "options": [
+            "Tampa Bay Buccaneers",
+            "Jacksonville Jaguars",
+            "Miami Dolphins",
+            "Carolina Panthers"
+          ],
+          "explanation": "L'Hard Rock Stadium, a Miami Gardens, è lo stadio dei Miami Dolphins e ha ospitato diversi Super Bowl."
+        },
+        "ja": {
+          "question": "マイアミにあるFootball 2026の会場、ハードロック・スタジアムは、どのNFLチームの本拠地でしょうか？",
+          "options": [
+            "タンパベイ・バッカニアーズ",
+            "ジャクソンビル・ジャガーズ",
+            "マイアミ・ドルフィンズ",
+            "カロライナ・パンサーズ"
+          ],
+          "explanation": "マイアミガーデンズにあるハードロック・スタジアムはマイアミ・ドルフィンズの本拠地で、これまでに複数回のスーパーボウルを開催してきました。"
+        },
+        "ko": {
+          "question": "마이애미에 위치한 Football 2026 개최지인 하드록 스타디움은 어느 NFL 팀의 홈구장일까요?",
+          "options": [
+            "탬파베이 버커니어스",
+            "잭슨빌 재규어스",
+            "마이애미 돌핀스",
+            "캐롤라이나 팬서스"
+          ],
+          "explanation": "마이애미 가든스에 있는 하드록 스타디움은 마이애미 돌핀스의 홈구장이며, 여러 차례 슈퍼볼을 개최한 바 있습니다."
+        },
+        "pt-BR": {
+          "question": "O Hard Rock Stadium, uma das sedes da Football 2026 em Miami, é a casa de qual time da NFL?",
+          "options": [
+            "Tampa Bay Buccaneers",
+            "Jacksonville Jaguars",
+            "Miami Dolphins",
+            "Carolina Panthers"
+          ],
+          "explanation": "O Hard Rock Stadium, em Miami Gardens, é a casa do Miami Dolphins e já sediou vários Super Bowls."
+        },
+        "zh-Hans": {
+          "question": "位于迈阿密的Football 2026球场之一——硬石体育场，是哪支NFL球队的主场？",
+          "options": [
+            "坦帕湾海盗队",
+            "杰克逊维尔美洲虎队",
+            "迈阿密海豚队",
+            "卡罗莱纳黑豹队"
+          ],
+          "explanation": "位于迈阿密花园市的硬石体育场是迈阿密海豚队的主场，并曾多次举办超级碗比赛。"
+        }
+      },
+      "i18nSourceHash": "ce360c6060681e3b"
     },
     {
       "id": "t-brazil-titles-count",
@@ -4306,7 +4718,110 @@
       ],
       "answer": 2,
       "explanation": "Brazil's 5 titles are the most of any nation — and they're the only team to play in every edition.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كم عدد الألقاب التي فازت بها البرازيل؟",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "ألقاب البرازيل الخمسة هي الأكثر بين جميع الدول، وهي المنتخب الوحيد الذي شارك في كل نسخة من البطولة."
+        },
+        "de": {
+          "question": "Wie viele Titel hat Brasilien gewonnen?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "Mit 5 Titeln ist Brasilien Rekordsieger unter allen Nationen – und das einzige Team, das bei jeder Austragung dabei war."
+        },
+        "es": {
+          "question": "¿Cuántos títulos ha ganado Brasil?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "Los 5 títulos de Brasil son la mayor cantidad de cualquier país, y es el único equipo que ha jugado en todas las ediciones."
+        },
+        "es-ES": {
+          "question": "¿Cuántos títulos ha ganado Brasil?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "Los 5 títulos de Brasil son la mayor cantidad de cualquier país, y es el único equipo que ha jugado en todas las ediciones."
+        },
+        "fr": {
+          "question": "Combien de titres le Brésil a-t-il remportés ?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "Avec 5 titres, le Brésil est la nation la plus titrée — et la seule équipe à avoir disputé chaque édition."
+        },
+        "it": {
+          "question": "Quanti titoli ha vinto il Brasile?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "I 5 titoli del Brasile sono il record assoluto tra tutte le nazioni, ed è l'unica squadra ad aver giocato in ogni edizione."
+        },
+        "ja": {
+          "question": "ブラジルは何回優勝していますか？",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "ブラジルの5回の優勝はどの国よりも多く、しかも全大会に出場している唯一のチームです。"
+        },
+        "ko": {
+          "question": "브라질은 몇 번 우승했나요?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "브라질의 5회 우승은 모든 국가 중 최다 기록이며, 모든 대회에 출전한 유일한 팀이기도 합니다."
+        },
+        "pt-BR": {
+          "question": "Quantos títulos o Brasil já conquistou?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "Os 5 títulos do Brasil são o maior número entre todas as seleções — e é o único time a disputar todas as edições."
+        },
+        "zh-Hans": {
+          "question": "巴西一共夺得了多少次冠军？",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "explanation": "巴西的5次夺冠是所有国家中最多的，而且它是唯一一支参加过每一届赛事的球队。"
+        }
+      },
+      "i18nSourceHash": "c97e1832ea074d59"
     },
     {
       "id": "c-jabulani",
