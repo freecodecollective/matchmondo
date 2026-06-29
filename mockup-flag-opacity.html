@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MatchMondo — Flag Opacity Showdown</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    background: #e8e8e8;
+    padding: 40px 20px 60px;
+    color: #222;
+  }
+  h1 { text-align: center; font-size: 28px; margin-bottom: 6px; }
+  .subtitle { text-align: center; font-size: 15px; color: #666; margin-bottom: 40px; max-width: 520px; margin-left: auto; margin-right: auto; }
+
+  .row-header {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto 12px;
+    align-items: end;
+  }
+  .col-label {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .opacity-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    align-items: center;
+  }
+  .opacity-label {
+    font-size: 24px;
+    font-weight: 800;
+    color: #999;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .phone {
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    border: 3px solid #222;
+    aspect-ratio: auto;
+  }
+  .hdr {
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+  }
+  .hdr .flag-bg {
+    position: absolute;
+    inset: 0;
+    background: #1a3a2a;
+  }
+  .hdr .flag-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hdr .gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 40%, transparent 70%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hdr .photo {
+    position: absolute;
+    right: 0; bottom: 0;
+    height: 100%;
+    z-index: 2;
+  }
+  .hdr .photo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: bottom right;
+  }
+  .hdr .back-btn {
+    position: absolute; top: 10px; left: 10px; z-index: 3;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: rgba(0,0,0,0.35); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 600;
+  }
+  .hdr .heart-btn {
+    position: absolute; top: 10px; right: 8px; z-index: 3;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: rgba(0,0,0,0.35); color: rgba(255,255,255,0.9);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+  }
+  .hdr .jersey {
+    position: absolute; bottom: 6px; right: 6px; z-index: 3;
+    width: 26px; height: 26px; border-radius: 50%;
+    background: #fff; color: #1a3a2a;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 800;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  }
+  .hdr .text-area {
+    position: absolute;
+    bottom: 12px; left: 12px;
+    z-index: 3;
+    max-width: 55%;
+  }
+  .hdr .name { font-size: 16px; font-weight: 700; color: #fff; line-height: 1.15; }
+  .hdr .pos { font-size: 10px; color: rgba(255,255,255,0.85); margin-top: 1px; }
+  .hdr .club { font-size: 10px; color: rgba(255,255,255,0.85); }
+  .hdr .pills { display: flex; gap: 4px; margin-top: 4px; }
+  .hdr .pill {
+    font-size: 9px; font-weight: 600;
+    padding: 2px 6px; border-radius: 8px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: #fff;
+  }
+  .body-placeholder {
+    background: #fff;
+    padding: 12px 14px;
+  }
+  .ph-header { font-size: 13px; font-weight: 700; color: #222; margin-bottom: 8px; }
+  .ph-bar { height: 8px; border-radius: 4px; background: #e0e0e0; margin-bottom: 5px; }
+  .w80 { width: 80%; }
+  .w60 { width: 60%; }
+
+  .footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 13px;
+    color: #999;
+  }
+</style>
+</head>
+<body>
+
+<h1>Flag Opacity Showdown</h1>
+<p class="subtitle">Pick one. Jaime and Herman must reach consensus or we ship it at 69% out of spite.</p>
+
+<div class="row-header">
+  <div></div>
+  <div class="col-label">Pulisic (USA)</div>
+  <div class="col-label">Ueda (Japan)</div>
+</div>
+
+<script>
+const players = [
+  {
+    name: "Christian Pulisic",
+    pos: "Midfielder",
+    club: "AC Milan",
+    age: 27,
+    height: '5\'10"',
+    jersey: 10,
+    foxId: 41156,
+    flagCode: "us"
+  },
+  {
+    name: "Ayase Ueda",
+    pos: "Forward",
+    club: "Feyenoord",
+    age: 26,
+    height: "182 cm",
+    jersey: 18,
+    foxId: 70267,
+    flagCode: "jp"
+  }
+];
+
+const opacities = [45, 50, 55, 60, 65, 70, 75, 80];
+
+opacities.forEach(op => {
+  const row = document.createElement('div');
+  row.className = 'opacity-row';
+
+  const label = document.createElement('div');
+  label.className = 'opacity-label';
+  label.textContent = op + '%';
+  row.appendChild(label);
+
+  players.forEach(p => {
+    const phone = document.createElement('div');
+    phone.className = 'phone';
+    phone.innerHTML = `
+      <div class="hdr">
+        <div class="flag-bg">
+          <img src="https://flagcdn.com/w640/${p.flagCode}.png" alt="" style="opacity: ${op / 100}">
+        </div>
+        <div class="gradient-overlay"></div>
+        <div class="photo"><img src="https://b.fssta.com/uploads/application/soccer/headshots/${p.foxId}.png" alt=""></div>
+        <div class="back-btn">‹</div>
+        <div class="heart-btn">♡</div>
+        <div class="jersey">${p.jersey}</div>
+        <div class="text-area">
+          <div class="name">${p.name}</div>
+          <div class="pos">${p.pos}</div>
+          <div class="club">${p.club}</div>
+          <div class="pills">
+            <span class="pill">Age ${p.age}</span>
+            <span class="pill">${p.height}</span>
+          </div>
+        </div>
+      </div>
+      <div class="body-placeholder">
+        <div class="ph-header">🏆 Football 2026</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w60"></div>
+      </div>
+    `;
+    row.appendChild(phone);
+  });
+
+  document.body.appendChild(row);
+});
+</script>
+
+<div class="footer">Reply with your pick or forever hold your peace.</div>
+
+</body>
+</html>
