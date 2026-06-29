@@ -6751,7 +6751,110 @@
       "answer": 1,
       "explanation": "Brazil's 4–1 victory in Mexico City is widely regarded as one of the greatest finals ever played.",
       "media": "https://www.youtube.com/watch?v=nV-YYYJzSGo",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ما هي النتيجة التي فاز بها البرازيل على إيطاليا في نهائي عام 1970 الأسطوري؟",
+          "options": [
+            "3–1",
+            "4–1",
+            "2–0",
+            "3–2"
+          ],
+          "explanation": "يُعتبر فوز البرازيل 4–1 في مدينة مكسيكو على نطاق واسع واحدًا من أعظم المباريات النهائية على الإطلاق."
+        },
+        "de": {
+          "question": "Wie endete das legendäre Finale von 1970, in dem Brasilien gegen Italien gewann?",
+          "options": [
+            "3:1",
+            "4:1",
+            "2:0",
+            "3:2"
+          ],
+          "explanation": "Brasiliens 4:1-Sieg in Mexiko-Stadt gilt weithin als eines der größten Endspiele aller Zeiten."
+        },
+        "es": {
+          "question": "¿Cuál fue el marcador con el que Brasil venció a Italia en la icónica final de 1970?",
+          "options": [
+            "3–1",
+            "4–1",
+            "2–0",
+            "3–2"
+          ],
+          "explanation": "La victoria de Brasil por 4–1 en Ciudad de México es considerada por muchos como una de las mejores finales jamás disputadas."
+        },
+        "es-ES": {
+          "question": "¿Cuál fue el resultado con el que Brasil venció a Italia en la mítica final de 1970?",
+          "options": [
+            "3–1",
+            "4–1",
+            "2–0",
+            "3–2"
+          ],
+          "explanation": "La victoria de Brasil por 4–1 en Ciudad de México está considerada como una de las mejores finales que se han jugado nunca."
+        },
+        "fr": {
+          "question": "Quel était le score lorsque le Brésil a battu l'Italie lors de la mythique finale de 1970 ?",
+          "options": [
+            "3–1",
+            "4–1",
+            "2–0",
+            "3–2"
+          ],
+          "explanation": "La victoire 4–1 du Brésil à Mexico est largement considérée comme l'une des plus grandes finales jamais disputées."
+        },
+        "it": {
+          "question": "Quale fu il punteggio con cui il Brasile batté l'Italia nella leggendaria finale del 1970?",
+          "options": [
+            "3–1",
+            "4–1",
+            "2–0",
+            "3–2"
+          ],
+          "explanation": "La vittoria per 4–1 del Brasile a Città del Messico è considerata da molti una delle più grandi finali mai disputate."
+        },
+        "ja": {
+          "question": "1970年の伝説的な決勝戦でブラジルがイタリアを破ったときのスコアは？",
+          "options": [
+            "3–1",
+            "4–1",
+            "2–0",
+            "3–2"
+          ],
+          "explanation": "メキシコシティでのブラジルの4–1の勝利は、史上最高の決勝戦の一つとして広く称えられています。"
+        },
+        "ko": {
+          "question": "1970년 전설적인 결승전에서 브라질이 이탈리아를 이겼을 때의 스코어는?",
+          "options": [
+            "3–1",
+            "4–1",
+            "2–0",
+            "3–2"
+          ],
+          "explanation": "멕시코시티에서 거둔 브라질의 4–1 승리는 역대 최고의 결승전 중 하나로 널리 평가받습니다."
+        },
+        "pt-BR": {
+          "question": "Qual foi o placar quando o Brasil venceu a Itália na icônica final de 1970?",
+          "options": [
+            "3–1",
+            "4–1",
+            "2–0",
+            "3–2"
+          ],
+          "explanation": "A vitória do Brasil por 4–1 na Cidade do México é amplamente considerada uma das maiores finais já disputadas."
+        },
+        "zh-Hans": {
+          "question": "1970年那场经典决赛中，巴西击败意大利的比分是多少？",
+          "options": [
+            "3–1",
+            "4–1",
+            "2–0",
+            "3–2"
+          ],
+          "explanation": "巴西在墨西哥城以4–1取胜，被广泛认为是有史以来最伟大的决赛之一。"
+        }
+      },
+      "i18nSourceHash": "38466c4f8a66542e"
     },
     {
       "id": "c-panini",
@@ -6831,7 +6934,110 @@
       "answer": 1,
       "explanation": "The 1994 final at the Rose Bowl saw Brazil beat Italy on penalties — the first final decided by a shootout.",
       "media": "https://www.youtube.com/watch?v=624rk4ik3_w",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "استضاف ملعب روز بول في باسادينا نهائي أي بطولة تاريخية؟",
+          "options": [
+            "1990",
+            "1994",
+            "1998",
+            "2002"
+          ],
+          "explanation": "في نهائي 1994 على ملعب روز بول، تغلبت البرازيل على إيطاليا بركلات الترجيح — وهو أول نهائي يُحسم بركلات الترجيح."
+        },
+        "de": {
+          "question": "Im Rose Bowl in Pasadena fand das historische Finale welches Turniers statt?",
+          "options": [
+            "1990",
+            "1994",
+            "1998",
+            "2002"
+          ],
+          "explanation": "Im Finale 1994 im Rose Bowl bezwang Brasilien Italien im Elfmeterschießen — das erste Finale, das durch ein Elfmeterschießen entschieden wurde."
+        },
+        "es": {
+          "question": "El Rose Bowl de Pasadena fue sede de la final de qué torneo histórico?",
+          "options": [
+            "1990",
+            "1994",
+            "1998",
+            "2002"
+          ],
+          "explanation": "En la final de 1994 en el Rose Bowl, Brasil venció a Italia en penales — la primera final definida desde el punto penal."
+        },
+        "es-ES": {
+          "question": "El Rose Bowl de Pasadena acogió la final de qué torneo histórico?",
+          "options": [
+            "1990",
+            "1994",
+            "1998",
+            "2002"
+          ],
+          "explanation": "En la final de 1994 en el Rose Bowl, Brasil derrotó a Italia en los penaltis — la primera final decidida en la tanda de penaltis."
+        },
+        "fr": {
+          "question": "Le Rose Bowl de Pasadena a accueilli la finale de quel tournoi historique ?",
+          "options": [
+            "1990",
+            "1994",
+            "1998",
+            "2002"
+          ],
+          "explanation": "Lors de la finale de 1994 au Rose Bowl, le Brésil a battu l'Italie aux tirs au but — la première finale décidée par une séance de tirs au but."
+        },
+        "it": {
+          "question": "Il Rose Bowl di Pasadena ha ospitato la finale di quale torneo storico?",
+          "options": [
+            "1990",
+            "1994",
+            "1998",
+            "2002"
+          ],
+          "explanation": "Nella finale del 1994 al Rose Bowl, il Brasile batté l'Italia ai rigori — la prima finale decisa ai calci di rigore."
+        },
+        "ja": {
+          "question": "パサデナのローズボウルで開催された歴史的な大会の決勝はどれですか？",
+          "options": [
+            "1990",
+            "1994",
+            "1998",
+            "2002"
+          ],
+          "explanation": "1994年のローズボウルでの決勝では、ブラジルがPK戦でイタリアを破った——PK戦で決着がついた初めての決勝でした。"
+        },
+        "ko": {
+          "question": "패서디나의 로즈볼에서 열린 역사적인 대회 결승전은 어느 해였나요?",
+          "options": [
+            "1990",
+            "1994",
+            "1998",
+            "2002"
+          ],
+          "explanation": "1994년 로즈볼 결승에서 브라질이 승부차기로 이탈리아를 이겼습니다 — 승부차기로 결판난 첫 결승전이었습니다."
+        },
+        "pt-BR": {
+          "question": "O Rose Bowl, em Pasadena, sediou a final de qual torneio histórico?",
+          "options": [
+            "1990",
+            "1994",
+            "1998",
+            "2002"
+          ],
+          "explanation": "Na final de 1994 no Rose Bowl, o Brasil venceu a Itália nos pênaltis — a primeira final decidida nas penalidades."
+        },
+        "zh-Hans": {
+          "question": "帕萨迪纳的玫瑰碗球场举办了哪届历史性赛事的决赛？",
+          "options": [
+            "1990",
+            "1994",
+            "1998",
+            "2002"
+          ],
+          "explanation": "在1994年玫瑰碗球场的决赛中，巴西通过点球大战击败意大利——这是首场以点球大战决出胜负的决赛。"
+        }
+      },
+      "i18nSourceHash": "27aa322bfcca3cfb"
     },
     {
       "id": "p-gerd-muller",
@@ -6976,7 +7182,110 @@
       "answer": 0,
       "explanation": "The USA reached the semi-finals at the inaugural 1930 tournament, losing 6–1 to Argentina.",
       "media": "https://www.youtube.com/watch?v=dhVUR49xLS0",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "في أي عام حققت الولايات المتحدة أفضل نتيجة لها على الإطلاق ببلوغها الدور نصف النهائي؟",
+          "options": [
+            "1930",
+            "1994",
+            "2002",
+            "2014"
+          ],
+          "explanation": "بلغت الولايات المتحدة الدور نصف النهائي في النسخة الافتتاحية عام 1930، حيث خسرت أمام الأرجنتين بنتيجة 6–1."
+        },
+        "de": {
+          "question": "In welchem Jahr erreichten die USA mit dem Einzug ins Halbfinale ihr bestes Ergebnis aller Zeiten?",
+          "options": [
+            "1930",
+            "1994",
+            "2002",
+            "2014"
+          ],
+          "explanation": "Die USA erreichten beim ersten Turnier 1930 das Halbfinale und verloren dort 6:1 gegen Argentinien."
+        },
+        "es": {
+          "question": "¿En qué año lograron los Estados Unidos su mejor resultado histórico, al llegar a las semifinales?",
+          "options": [
+            "1930",
+            "1994",
+            "2002",
+            "2014"
+          ],
+          "explanation": "Estados Unidos llegó a las semifinales en el torneo inaugural de 1930, donde perdió 6 a 1 ante Argentina."
+        },
+        "es-ES": {
+          "question": "¿En qué año consiguió Estados Unidos su mejor resultado de la historia, alcanzando las semifinales?",
+          "options": [
+            "1930",
+            "1994",
+            "2002",
+            "2014"
+          ],
+          "explanation": "Estados Unidos llegó a las semifinales en el torneo inaugural de 1930, donde cayó por 6 a 1 ante Argentina."
+        },
+        "fr": {
+          "question": "En quelle année les États-Unis ont-ils signé leur meilleur résultat de l'histoire en atteignant les demi-finales ?",
+          "options": [
+            "1930",
+            "1994",
+            "2002",
+            "2014"
+          ],
+          "explanation": "Les États-Unis ont atteint les demi-finales lors de la première édition du tournoi en 1930, s'inclinant 6-1 face à l'Argentine."
+        },
+        "it": {
+          "question": "In quale anno gli Stati Uniti hanno ottenuto il loro miglior risultato di sempre, raggiungendo le semifinali?",
+          "options": [
+            "1930",
+            "1994",
+            "2002",
+            "2014"
+          ],
+          "explanation": "Gli Stati Uniti raggiunsero le semifinali nella prima edizione del torneo, nel 1930, perdendo 6-1 contro l'Argentina."
+        },
+        "ja": {
+          "question": "アメリカが準決勝に進出し、自国史上最高の成績を収めたのは何年でしょう？",
+          "options": [
+            "1930",
+            "1994",
+            "2002",
+            "2014"
+          ],
+          "explanation": "アメリカは1930年の第1回大会で準決勝に進出しましたが、アルゼンチンに1対6で敗れました。"
+        },
+        "ko": {
+          "question": "미국이 4강에 진출하며 역대 최고 성적을 거둔 해는 언제일까요?",
+          "options": [
+            "1930",
+            "1994",
+            "2002",
+            "2014"
+          ],
+          "explanation": "미국은 1930년 첫 대회에서 4강에 진출했지만 아르헨티나에 1-6으로 패했습니다."
+        },
+        "pt-BR": {
+          "question": "Em que ano os Estados Unidos alcançaram seu melhor resultado de todos os tempos, chegando às semifinais?",
+          "options": [
+            "1930",
+            "1994",
+            "2002",
+            "2014"
+          ],
+          "explanation": "Os Estados Unidos chegaram às semifinais na edição inaugural de 1930, perdendo por 6 a 1 para a Argentina."
+        },
+        "zh-Hans": {
+          "question": "美国队在哪一年闯入半决赛，取得了队史最佳战绩？",
+          "options": [
+            "1930",
+            "1994",
+            "2002",
+            "2014"
+          ],
+          "explanation": "美国队在1930年的首届赛事中闯入半决赛，但以1比6不敌阿根廷。"
+        }
+      },
+      "i18nSourceHash": "695b3f43c572bebc"
     },
     {
       "id": "p-golden-boot-22",
@@ -7029,7 +7338,110 @@
       ],
       "answer": 2,
       "explanation": "The tournament expanded from 32 to 48 teams for 2026, adding 16 more nations and an extra knockout round.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "نسخة 2026 هي الأولى التي تضم 48 منتخباً. كم عدد المنتخبات التي شاركت في النظام السابق؟",
+          "options": [
+            "24",
+            "28",
+            "32",
+            "36"
+          ],
+          "explanation": "توسّعت البطولة من 32 إلى 48 منتخباً في عام 2026، بإضافة 16 دولة جديدة وجولة إقصائية إضافية."
+        },
+        "de": {
+          "question": "Die Ausgabe 2026 ist die erste mit 48 Mannschaften. Wie viele traten im vorherigen Format an?",
+          "options": [
+            "24",
+            "28",
+            "32",
+            "36"
+          ],
+          "explanation": "Das Turnier wurde für 2026 von 32 auf 48 Mannschaften erweitert, wodurch 16 weitere Nationen und eine zusätzliche K.-o.-Runde hinzukamen."
+        },
+        "es": {
+          "question": "La edición 2026 es la primera con 48 equipos. ¿Cuántos compitieron en el formato anterior?",
+          "options": [
+            "24",
+            "28",
+            "32",
+            "36"
+          ],
+          "explanation": "El torneo se amplió de 32 a 48 equipos para 2026, sumando 16 selecciones más y una ronda eliminatoria adicional."
+        },
+        "es-ES": {
+          "question": "La edición de 2026 es la primera con 48 equipos. ¿Cuántos compitieron en el formato anterior?",
+          "options": [
+            "24",
+            "28",
+            "32",
+            "36"
+          ],
+          "explanation": "El torneo se amplió de 32 a 48 equipos para 2026, añadiendo 16 selecciones más y una ronda eliminatoria adicional."
+        },
+        "fr": {
+          "question": "L'édition 2026 est la première à compter 48 équipes. Combien participaient dans l'ancien format ?",
+          "options": [
+            "24",
+            "28",
+            "32",
+            "36"
+          ],
+          "explanation": "Le tournoi est passé de 32 à 48 équipes pour 2026, ajoutant 16 nations supplémentaires et un tour à élimination directe de plus."
+        },
+        "it": {
+          "question": "L'edizione 2026 è la prima con 48 squadre. Quante partecipavano nel formato precedente?",
+          "options": [
+            "24",
+            "28",
+            "32",
+            "36"
+          ],
+          "explanation": "Il torneo è passato da 32 a 48 squadre per il 2026, aggiungendo 16 nazioni in più e un ulteriore turno a eliminazione diretta."
+        },
+        "ja": {
+          "question": "2026年大会は48チームで行われる初の大会です。以前の方式では何チームが参加していたでしょう？",
+          "options": [
+            "24",
+            "28",
+            "32",
+            "36"
+          ],
+          "explanation": "この大会は2026年に向けて32チームから48チームへ拡大され、16の国が新たに加わり、ノックアウトラウンドが1つ増えました。"
+        },
+        "ko": {
+          "question": "2026년 대회는 48개 팀이 참가하는 첫 번째 대회입니다. 이전 방식에서는 몇 개 팀이 경쟁했을까요?",
+          "options": [
+            "24",
+            "28",
+            "32",
+            "36"
+          ],
+          "explanation": "이 대회는 2026년을 맞아 32개 팀에서 48개 팀으로 확대되어 16개국이 추가되고 토너먼트 라운드가 한 차례 늘어났습니다."
+        },
+        "pt-BR": {
+          "question": "A edição de 2026 é a primeira com 48 equipes. Quantas competiram no formato anterior?",
+          "options": [
+            "24",
+            "28",
+            "32",
+            "36"
+          ],
+          "explanation": "O torneio foi ampliado de 32 para 48 equipes em 2026, somando mais 16 seleções e uma fase eliminatória extra."
+        },
+        "zh-Hans": {
+          "question": "2026年赛事是首次有48支球队参加的版本。在此前的赛制中有多少支球队参赛？",
+          "options": [
+            "24",
+            "28",
+            "32",
+            "36"
+          ],
+          "explanation": "本届赛事在2026年从32支球队扩充至48支，新增了16个参赛国和一轮额外的淘汰赛。"
+        }
+      },
+      "i18nSourceHash": "dba511a245fc1ee1"
     },
     {
       "id": "h-first-edition",
@@ -7733,7 +8145,110 @@
       "answer": 0,
       "explanation": "France's Just Fontaine scored 13 goals at the 1958 tournament — a record that still stands.",
       "media": "https://www.youtube.com/watch?v=svVA7JiHUFQ",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من يحمل الرقم القياسي لأكثر الأهداف تسجيلًا في نسخة واحدة (13)؟",
+          "options": [
+            "جوست فونتين",
+            "بيليه",
+            "ساندور كوتشيش",
+            "غيرد مولر"
+          ],
+          "explanation": "سجّل الفرنسي جوست فونتين 13 هدفًا في بطولة 1958 — وهو رقم قياسي ما زال صامدًا حتى اليوم."
+        },
+        "de": {
+          "question": "Wer hält den Rekord für die meisten Tore bei einer einzigen Austragung (13)?",
+          "options": [
+            "Just Fontaine",
+            "Pelé",
+            "Sándor Kocsis",
+            "Gerd Müller"
+          ],
+          "explanation": "Der Franzose Just Fontaine erzielte beim Turnier 1958 13 Tore — ein Rekord, der bis heute Bestand hat."
+        },
+        "es": {
+          "question": "¿Quién tiene el récord de más goles en una sola edición (13)?",
+          "options": [
+            "Just Fontaine",
+            "Pelé",
+            "Sándor Kocsis",
+            "Gerd Müller"
+          ],
+          "explanation": "El francés Just Fontaine marcó 13 goles en el torneo de 1958, un récord que aún sigue vigente."
+        },
+        "es-ES": {
+          "question": "¿Quién tiene el récord de más goles en una sola edición (13)?",
+          "options": [
+            "Just Fontaine",
+            "Pelé",
+            "Sándor Kocsis",
+            "Gerd Müller"
+          ],
+          "explanation": "El francés Just Fontaine marcó 13 goles en el torneo de 1958, un récord que todavía sigue vigente."
+        },
+        "fr": {
+          "question": "Qui détient le record du plus grand nombre de buts lors d'une seule édition (13) ?",
+          "options": [
+            "Just Fontaine",
+            "Pelé",
+            "Sándor Kocsis",
+            "Gerd Müller"
+          ],
+          "explanation": "Le Français Just Fontaine a inscrit 13 buts lors du tournoi de 1958 — un record qui tient toujours."
+        },
+        "it": {
+          "question": "Chi detiene il record di più gol in una singola edizione (13)?",
+          "options": [
+            "Just Fontaine",
+            "Pelé",
+            "Sándor Kocsis",
+            "Gerd Müller"
+          ],
+          "explanation": "Il francese Just Fontaine segnò 13 gol nel torneo del 1958, un record tuttora imbattuto."
+        },
+        "ja": {
+          "question": "1大会での最多得点記録（13得点）を持っているのは誰でしょう？",
+          "options": [
+            "ジュスト・フォンテーヌ",
+            "ペレ",
+            "シャーンドル・コチシュ",
+            "ゲルト・ミュラー"
+          ],
+          "explanation": "フランスのジュスト・フォンテーヌは1958年の大会で13得点を挙げ、その記録は今なお破られていません。"
+        },
+        "ko": {
+          "question": "단일 대회 최다 득점 기록(13골)을 보유한 선수는 누구일까요?",
+          "options": [
+            "쥐스트 퐁텐",
+            "펠레",
+            "샨도르 코치시",
+            "게르트 뮐러"
+          ],
+          "explanation": "프랑스의 쥐스트 퐁텐은 1958년 대회에서 13골을 기록했으며, 이 기록은 지금까지도 깨지지 않고 있습니다."
+        },
+        "pt-BR": {
+          "question": "Quem detém o recorde de mais gols em uma única edição (13)?",
+          "options": [
+            "Just Fontaine",
+            "Pelé",
+            "Sándor Kocsis",
+            "Gerd Müller"
+          ],
+          "explanation": "O francês Just Fontaine marcou 13 gols no torneio de 1958 — um recorde que permanece até hoje."
+        },
+        "zh-Hans": {
+          "question": "谁保持着单届赛事最多进球（13球）的纪录？",
+          "options": [
+            "朱斯特·方丹",
+            "贝利",
+            "桑多尔·柯奇士",
+            "盖德·穆勒"
+          ],
+          "explanation": "法国球员朱斯特·方丹在1958年的赛事中攻入13球——这一纪录至今无人打破。"
+        }
+      },
+      "i18nSourceHash": "1e6a7a0a6bf1eaa6"
     },
     {
       "id": "r-kickoff-any",
