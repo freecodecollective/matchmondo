@@ -294,7 +294,7 @@ def main():
         comp = comps[0]
         status_name = comp.get("status", {}).get("type", {}).get("name", "")
 
-        is_live = any(s in status_name for s in ("IN_PROGRESS", "HALF", "EXTRA", "PENALT"))
+        is_live = any(s in status_name for s in ("IN_PROGRESS", "HALF", "EXTRA", "PENALT", "OVERTIME"))
         is_finished = status_name in ("STATUS_FULL_TIME", "STATUS_FINAL_AET", "STATUS_FINAL_PEN")
         if not (is_live or is_finished):
             continue
@@ -343,9 +343,13 @@ def main():
                 patched += 1
 
             if is_live:
-                matched_m["isLive"] = True
+                if not matched_m.get("isLive"):
+                    matched_m["isLive"] = True
+                    patched += 1
             elif is_finished:
-                matched_m.pop("isLive", None)
+                if matched_m.get("isLive"):
+                    matched_m.pop("isLive", None)
+                    patched += 1
 
             # Store result type and PK scores for finished matches
             if is_finished:
