@@ -4067,7 +4067,8 @@
         "1938 and 1950"
       ],
       "answer": 0,
-      "explanation": "Uruguay won the inaugural tournament in 1930 on home soil and again in 1950 with the famous 'Maracanazo' in Brazil."
+      "explanation": "Uruguay won the inaugural tournament in 1930 on home soil and again in 1950 with the famous 'Maracanazo' in Brazil.",
+      "approved": true
     },
     {
       "id": "v-metlife-capacity",
