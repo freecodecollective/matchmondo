@@ -1108,7 +1108,8 @@
         "2006"
       ],
       "answer": 1,
-      "explanation": "Laurent Blanc scored a golden goal for France against Paraguay in 1998 — the rule was abolished after 2002."
+      "explanation": "Laurent Blanc scored a golden goal for France against Paraguay in 1998 — the rule was abolished after 2002.",
+      "claudeTask": "say more about what the golden goal is."
     },
     {
       "id": "r-lots-tiebreak",
