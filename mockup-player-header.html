@@ -1328,6 +1328,23 @@
     height: 240px;
   }
 
+  /* Compact big photo — shorter header, no halo */
+  .hdr-c.big-photo.compact {
+    height: 190px;
+  }
+  .hdr-c.big-photo.compact .photo-main {
+    width: 160px; height: 160px;
+  }
+  .hdr-c.big-photo.compact .text-area {
+    right: 150px;
+  }
+  .hdr-c.big-photo.compact .jersey {
+    right: 4px; bottom: 6px;
+  }
+  .hdr-c.big-photo.compact .photo-flag {
+    right: 132px; bottom: 6px;
+  }
+
   /* Flag halo behind big photo — larger to match */
   .hdr-c.big-photo .flag-halo {
     width: 240px; height: 240px;
@@ -1470,6 +1487,38 @@
         <div class="jersey">10</div>
         <div class="photo-flag">🇫🇷</div>
         <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Big photo, compact — no halo, shorter header -->
+<div class="phone-wrap">
+  <div class="phone-label">Big Photo — Compact</div>
+  <div class="phone-sublabel">No halo, no dead space. Header cropped tight — back and heart on the same line, photo fills the right edge.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c big-photo compact">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
+        <div class="jersey">10</div>
+        <div class="photo-flag">🇫🇷</div>
+        <div style="position:absolute;top:12px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
         <div class="text-area">
           <div class="name">Mbappé</div>
           <div class="pos">Forward</div>
