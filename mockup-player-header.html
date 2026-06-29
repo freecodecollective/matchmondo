@@ -1623,6 +1623,40 @@
   .compact-flag-big.fr .stripe:nth-child(2) { left: 33.33%; width: 33.34%; background: #fff; }
   .compact-flag-big.fr .stripe:nth-child(3) { left: 66.67%; width: 33.33%; background: #ED2939; }
 
+  /* Full-bleed flag — covers entire header */
+  .compact-flag-full {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.3;
+    overflow: hidden;
+  }
+  .compact-flag-full .stripe {
+    position: absolute; top: 0; bottom: 0;
+  }
+  .compact-flag-full.fr .stripe:nth-child(1) { left: 0; width: 33.33%; background: #002395; }
+  .compact-flag-full.fr .stripe:nth-child(2) { left: 33.33%; width: 33.34%; background: #fff; }
+  .compact-flag-full.fr .stripe:nth-child(3) { left: 66.67%; width: 33.33%; background: #ED2939; }
+
+  .compact-flag-full.us {
+    background: repeating-linear-gradient(to bottom,
+      #B31942 0%, #B31942 7.69%,
+      #fff 7.69%, #fff 15.38%);
+  }
+  .compact-flag-full.us::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 40%; height: 53.85%;
+    background: #3C3B6E;
+    z-index: 1;
+  }
+
+  .compact-flag-full.ar .stripe { left: 0; width: 100%; bottom: auto; }
+  .compact-flag-full.ar .stripe:nth-child(1) { top: 0; height: 33.33%; background: #75AADB; }
+  .compact-flag-full.ar .stripe:nth-child(2) { top: 33.33%; height: 33.34%; background: #fff; }
+  .compact-flag-full.ar .stripe:nth-child(3) { top: 66.67%; height: 33.33%; background: #75AADB; }
+
   /* Centered flag — horizontally centered in the header */
   .compact-flag-center {
     position: absolute;
@@ -1720,6 +1754,100 @@
           <div class="meta-pills">
             <span class="mpill">Age 27</span>
             <span class="mpill">1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Full-Bleed Flag — Mbappé (France) -->
+<div class="phone-wrap">
+  <div class="phone-label">Full-Bleed Flag — Mbappé (France)</div>
+  <div class="phone-sublabel">Flag covers the entire header at 30% opacity. No pitch visible.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c big-photo compact">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="compact-flag-full fr"><div class="stripe"></div><div class="stripe"></div><div class="stripe"></div></div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
+        <div class="jersey">10</div>
+        <div style="position:absolute;top:12px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Kylian Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Full-Bleed Flag — Pulisic (USA) -->
+<div class="phone-wrap">
+  <div class="phone-label">Full-Bleed Flag — Pulisic (USA)</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c big-photo compact">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="compact-flag-full us"></div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/41156.png" alt=""></div>
+        <div class="jersey">10</div>
+        <div style="position:absolute;top:12px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Christian Pulisic</div>
+          <div class="pos">Midfielder</div>
+          <div class="club">AC Milan</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">5'10"</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Full-Bleed Flag — Messi (Argentina) -->
+<div class="phone-wrap">
+  <div class="phone-label">Full-Bleed Flag — Messi (Argentina)</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c big-photo compact">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="compact-flag-full ar"><div class="stripe"></div><div class="stripe"></div><div class="stripe"></div></div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/711.png" alt=""></div>
+        <div class="jersey">10</div>
+        <div style="position:absolute;top:12px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Lionel Messi</div>
+          <div class="pos">Forward</div>
+          <div class="club">Inter Miami</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 39</span>
+            <span class="mpill">1.70 m</span>
           </div>
         </div>
       </div>
