@@ -10326,7 +10326,7 @@
       ],
       "answer": 0,
       "explanation": "True! VAR is limited to reviewing only these four categories of 'clear and obvious errors' or 'serious missed incidents.' 'Mistaken identity' means the referee cautioned or sent off the wrong player — for example, showing a card to a teammate instead of the player who actually committed the foul; VAR can step in to ensure the correct player is penalized. The referee can consult the pitch-side monitor for a final decision, but VAR cannot intervene for yellow cards, throw-in decisions, corner kicks, or other routine calls.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-trophy-not-solid-gold",
