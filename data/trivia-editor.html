@@ -387,7 +387,13 @@ function mergeLocalIntoRemote(remote) {
   local.questions.forEach(lq => {
     const rq = remoteById[lq.id];
     if (!rq) { remote.questions.push(lq); return; }
-    if (lq.claudeTask && rq.claudeTask) rq.claudeTask = lq.claudeTask;
+    if (lq.approved) {
+      rq.approved = true;
+      rq.needsReview = false;
+      delete rq.claudeTask;
+    } else {
+      if (lq.claudeTask && rq.claudeTask) rq.claudeTask = lq.claudeTask;
+    }
   });
 
   const remotePendingIds = new Set((remote.pendingTasks || []).map(t => t.id));
@@ -1067,15 +1073,23 @@ async function mergeAndRetry(retryCount) {
     const remote = JSON.parse(new TextDecoder().decode(bytes));
     fileSha = gh.sha;
 
-    const localTasks = {};
-    data.questions.forEach(q => { if (q.claudeTask) localTasks[q.id] = q.claudeTask; });
-    const localReview = {};
-    data.questions.forEach(q => { if (q.needsReview) localReview[q.id] = true; });
+    const localStatus = {};
+    data.questions.forEach(q => {
+      localStatus[q.id] = { approved: !!q.approved, needsReview: !!q.needsReview, claudeTask: q.claudeTask };
+    });
 
     const remoteIds = new Set(remote.questions.map(q => q.id));
     remote.questions.forEach(q => {
-      if (localTasks[q.id] && !q.needsReview) q.claudeTask = localTasks[q.id];
-      if (localReview[q.id]) q.needsReview = true;
+      const local = localStatus[q.id];
+      if (!local) return;
+      if (local.approved) {
+        q.approved = true;
+        q.needsReview = false;
+        delete q.claudeTask;
+      } else {
+        if (local.claudeTask && !q.needsReview) q.claudeTask = local.claudeTask;
+        if (local.needsReview) q.needsReview = true;
+      }
     });
     data.questions.forEach(q => {
       if (!remoteIds.has(q.id)) remote.questions.push(q);
