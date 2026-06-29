@@ -11206,7 +11206,110 @@
       ],
       "answer": 0,
       "explanation": "Argentina hosted and won the 1978 edition, defeating the Netherlands 3-1 in extra time at Buenos Aires. The tournament remains one of the most politically controversial, held during Argentina's military dictatorship under Jorge Videla.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أي دولة من أمريكا الجنوبية استضافت البطولة عام 1978؟",
+          "options": [
+            "الأرجنتين",
+            "تشيلي",
+            "كولومبيا",
+            "البرازيل"
+          ],
+          "explanation": "استضافت الأرجنتين نسخة 1978 وتوّجت بطلاً لها، إذ تغلبت على هولندا بنتيجة 3-1 في الوقت الإضافي في بوينس آيرس. وتظل هذه البطولة من أكثر النسخ إثارة للجدل سياسياً، إذ أُقيمت خلال فترة الحكم العسكري الديكتاتوري في الأرجنتين بقيادة خورخي فيديلا."
+        },
+        "de": {
+          "question": "Welches südamerikanische Land war 1978 Gastgeber des Turniers?",
+          "options": [
+            "Argentinien",
+            "Chile",
+            "Kolumbien",
+            "Brasilien"
+          ],
+          "explanation": "Argentinien war 1978 Gastgeber und gewann den Titel mit einem 3:1-Sieg nach Verlängerung gegen die Niederlande in Buenos Aires. Das Turnier zählt nach wie vor zu den politisch umstrittensten, da es während der Militärdiktatur Argentiniens unter Jorge Videla stattfand."
+        },
+        "es": {
+          "question": "¿Qué país sudamericano fue sede del torneo en 1978?",
+          "options": [
+            "Argentina",
+            "Chile",
+            "Colombia",
+            "Brasil"
+          ],
+          "explanation": "Argentina fue la sede y se consagró campeona de la edición de 1978, al vencer a los Países Bajos 3-1 en tiempo extra en Buenos Aires. El torneo sigue siendo uno de los más controvertidos políticamente, ya que se disputó durante la dictadura militar argentina encabezada por Jorge Videla."
+        },
+        "es-ES": {
+          "question": "¿Qué país sudamericano fue la sede del torneo en 1978?",
+          "options": [
+            "Argentina",
+            "Chile",
+            "Colombia",
+            "Brasil"
+          ],
+          "explanation": "Argentina fue la anfitriona y se proclamó campeona de la edición de 1978, al derrotar a los Países Bajos por 3-1 en la prórroga en Buenos Aires. El torneo sigue siendo uno de los más polémicos políticamente, ya que se disputó durante la dictadura militar argentina encabezada por Jorge Videla."
+        },
+        "fr": {
+          "question": "Quelle nation sud-américaine a accueilli le tournoi en 1978 ?",
+          "options": [
+            "Argentine",
+            "Chili",
+            "Colombie",
+            "Brésil"
+          ],
+          "explanation": "L'Argentine a accueilli et remporté l'édition 1978, en battant les Pays-Bas 3-1 après prolongation à Buenos Aires. Ce tournoi demeure l'un des plus controversés politiquement, puisqu'il s'est déroulé sous la dictature militaire argentine dirigée par Jorge Videla."
+        },
+        "it": {
+          "question": "Quale nazione sudamericana ha ospitato il torneo nel 1978?",
+          "options": [
+            "Argentina",
+            "Cile",
+            "Colombia",
+            "Brasile"
+          ],
+          "explanation": "L'Argentina ha ospitato e vinto l'edizione del 1978, battendo i Paesi Bassi 3-1 ai tempi supplementari a Buenos Aires. Il torneo resta uno dei più controversi sul piano politico, essendosi svolto durante la dittatura militare argentina guidata da Jorge Videla."
+        },
+        "ja": {
+          "question": "1978年に大会を開催した南米の国はどこですか？",
+          "options": [
+            "アルゼンチン",
+            "チリ",
+            "コロンビア",
+            "ブラジル"
+          ],
+          "explanation": "アルゼンチンが1978年大会を開催し、ブエノスアイレスで延長戦の末オランダを3対1で破って優勝しました。この大会はホルヘ・ビデラ率いるアルゼンチンの軍事独裁政権下で開催されたため、政治的に最も物議を醸した大会の一つとして語り継がれています。"
+        },
+        "ko": {
+          "question": "1978년 대회를 개최한 남미 국가는 어디일까요?",
+          "options": [
+            "아르헨티나",
+            "칠레",
+            "콜롬비아",
+            "브라질"
+          ],
+          "explanation": "아르헨티나는 1978년 대회를 개최하고 우승까지 차지했으며, 부에노스아이레스에서 열린 결승에서 연장전 끝에 네덜란드를 3-1로 꺾었습니다. 이 대회는 호르헤 비델라가 이끌던 아르헨티나 군사 독재 정권하에서 열려 정치적으로 가장 논란이 많았던 대회 중 하나로 남아 있습니다."
+        },
+        "pt-BR": {
+          "question": "Qual nação sul-americana sediou o torneio em 1978?",
+          "options": [
+            "Argentina",
+            "Chile",
+            "Colômbia",
+            "Brasil"
+          ],
+          "explanation": "A Argentina sediou e venceu a edição de 1978, derrotando a Holanda por 3 a 1 na prorrogação em Buenos Aires. O torneio continua sendo um dos mais controversos politicamente, por ter sido realizado durante a ditadura militar argentina comandada por Jorge Videla."
+        },
+        "zh-Hans": {
+          "question": "哪个南美国家在1978年举办了这届赛事？",
+          "options": [
+            "阿根廷",
+            "智利",
+            "哥伦比亚",
+            "巴西"
+          ],
+          "explanation": "阿根廷举办了1978年这届赛事并夺得冠军，在布宜诺斯艾利斯的决赛中经过加时赛以3比1击败荷兰。由于这届赛事是在豪尔赫·维德拉领导的阿根廷军事独裁统治期间举行的，它至今仍是政治上最具争议的赛事之一。"
+        }
+      },
+      "i18nSourceHash": "498194b4f8e49ff8"
     },
     {
       "id": "h-1982-expansion",
@@ -11220,7 +11323,110 @@
       ],
       "answer": 0,
       "explanation": "Spain 1982 increased the field from 16 to 24 teams, introducing a second group stage before the semi-finals. The 24-team format lasted four editions (1982-1994) before expanding to 32 in France 1998.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كانت نسخة 1982 في إسبانيا الأولى التي تتوسع لأكثر من 16 منتخباً. كم عدد المنتخبات التي شاركت؟",
+          "options": [
+            "24",
+            "20",
+            "28",
+            "32"
+          ],
+          "explanation": "رفعت إسبانيا 1982 عدد المنتخبات من 16 إلى 24، مع استحداث دور مجموعات ثانٍ قبل الدور نصف النهائي. واستمر نظام الـ24 منتخباً لأربع نسخ (1982-1994) قبل أن يتوسع إلى 32 في فرنسا 1998."
+        },
+        "de": {
+          "question": "Die Ausgabe 1982 in Spanien war die erste, die über 16 Mannschaften hinaus erweitert wurde. Wie viele nahmen teil?",
+          "options": [
+            "24",
+            "20",
+            "28",
+            "32"
+          ],
+          "explanation": "Spanien 1982 vergrößerte das Teilnehmerfeld von 16 auf 24 Mannschaften und führte eine zweite Gruppenphase vor dem Halbfinale ein. Das Format mit 24 Teams hielt sich über vier Ausgaben (1982-1994), bevor es bei Frankreich 1998 auf 32 erweitert wurde."
+        },
+        "es": {
+          "question": "La edición de 1982 en España fue la primera en superar los 16 equipos. ¿Cuántos compitieron?",
+          "options": [
+            "24",
+            "20",
+            "28",
+            "32"
+          ],
+          "explanation": "España 1982 amplió el número de participantes de 16 a 24 equipos, e introdujo una segunda fase de grupos antes de las semifinales. El formato de 24 equipos se mantuvo durante cuatro ediciones (1982-1994) antes de ampliarse a 32 en Francia 1998."
+        },
+        "es-ES": {
+          "question": "La edición de 1982 en España fue la primera en superar los 16 equipos. ¿Cuántos compitieron?",
+          "options": [
+            "24",
+            "20",
+            "28",
+            "32"
+          ],
+          "explanation": "España 1982 amplió el número de participantes de 16 a 24 equipos e introdujo una segunda fase de grupos antes de las semifinales. El formato de 24 equipos se mantuvo durante cuatro ediciones (1982-1994) antes de ampliarse a 32 en Francia 1998."
+        },
+        "fr": {
+          "question": "L'édition de 1982 en Espagne a été la première à dépasser les 16 équipes. Combien ont participé ?",
+          "options": [
+            "24",
+            "20",
+            "28",
+            "32"
+          ],
+          "explanation": "L'Espagne 1982 a porté le nombre de participants de 16 à 24 équipes, en introduisant une deuxième phase de groupes avant les demi-finales. Le format à 24 équipes a duré quatre éditions (1982-1994) avant de passer à 32 lors de la France 1998."
+        },
+        "it": {
+          "question": "L'edizione del 1982 in Spagna fu la prima ad andare oltre le 16 squadre. Quante parteciparono?",
+          "options": [
+            "24",
+            "20",
+            "28",
+            "32"
+          ],
+          "explanation": "La Spagna 1982 portò il numero di partecipanti da 16 a 24 squadre, introducendo una seconda fase a gironi prima delle semifinali. Il formato a 24 squadre durò quattro edizioni (1982-1994) prima di ampliarsi a 32 con la Francia 1998."
+        },
+        "ja": {
+          "question": "1982年のスペイン大会は、初めて16チームの枠を超えて拡大した大会でした。何チームが参加したでしょう？",
+          "options": [
+            "24",
+            "20",
+            "28",
+            "32"
+          ],
+          "explanation": "スペイン1982は出場枠を16から24チームに増やし、準決勝の前に2次グループステージを導入しました。24チーム制は4大会（1982〜1994年）続き、フランス1998で32チームに拡大されました。"
+        },
+        "ko": {
+          "question": "1982년 스페인 대회는 처음으로 16개 팀을 넘어 확대된 대회였습니다. 몇 개 팀이 참가했을까요?",
+          "options": [
+            "24",
+            "20",
+            "28",
+            "32"
+          ],
+          "explanation": "스페인 1982는 참가 팀을 16개에서 24개로 늘리고 준결승 전에 2차 조별 리그를 도입했습니다. 24개 팀 방식은 네 개 대회(1982~1994년) 동안 이어진 뒤 프랑스 1998에서 32개로 확대되었습니다."
+        },
+        "pt-BR": {
+          "question": "A edição de 1982 na Espanha foi a primeira a ultrapassar as 16 seleções. Quantas competiram?",
+          "options": [
+            "24",
+            "20",
+            "28",
+            "32"
+          ],
+          "explanation": "A Espanha 1982 aumentou o número de participantes de 16 para 24 seleções, introduzindo uma segunda fase de grupos antes das semifinais. O formato de 24 seleções durou quatro edições (1982-1994) antes de ser ampliado para 32 na França 1998."
+        },
+        "zh-Hans": {
+          "question": "1982年西班牙那届是首次突破16支球队规模的赛事。当时有多少支球队参赛？",
+          "options": [
+            "24",
+            "20",
+            "28",
+            "32"
+          ],
+          "explanation": "西班牙1982将参赛球队从16支增加到24支，并在半决赛前引入了第二轮小组赛。24支球队的赛制延续了四届（1982-1994年），之后在1998年法国扩大到32支。"
+        }
+      },
+      "i18nSourceHash": "1eba88d01fab40cb"
     },
     {
       "id": "h-battle-santiago",
@@ -11235,7 +11441,110 @@
       "answer": 0,
       "explanation": "The 1962 group-stage clash between host nation Chile and Italy was so violent that police had to intervene on the pitch. Two Italian players were sent off. BBC commentator David Coleman famously introduced the footage by calling it 'the most stupid, appalling, disgusting, and disgraceful exhibition of football.'",
       "media": "https://www.youtube.com/watch?v=T5jVMSlpZhg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كانت 'معركة سانتياغو' الشهيرة في بطولة عام 1962 مباراة عنيفة بشكل سيئ السمعة بين أي بلدين؟",
+          "options": [
+            "تشيلي وإيطاليا",
+            "البرازيل والأرجنتين",
+            "إنجلترا وألمانيا الغربية",
+            "أوروغواي والأرجنتين"
+          ],
+          "explanation": "كانت مواجهة دور المجموعات عام 1962 بين البلد المضيف تشيلي وإيطاليا عنيفة لدرجة أن الشرطة اضطرت للتدخل داخل الملعب. وطُرد لاعبان إيطاليان. وقد اشتهر المعلق ديفيد كولمان من هيئة الإذاعة البريطانية بوصفه للقطات قائلاً إنها 'أغبى وأبشع وأقذر وأكثر عروض كرة القدم إخزاءً.'"
+        },
+        "de": {
+          "question": "Die berüchtigte 'Schlacht von Santiago' beim Turnier von 1962 war ein berühmt-berüchtigtes Gewaltspiel zwischen welchen beiden Ländern?",
+          "options": [
+            "Chile und Italien",
+            "Brasilien und Argentinien",
+            "England und Westdeutschland",
+            "Uruguay und Argentinien"
+          ],
+          "explanation": "Das Gruppenspiel von 1962 zwischen Gastgeber Chile und Italien war so brutal, dass die Polizei auf dem Spielfeld eingreifen musste. Zwei italienische Spieler wurden vom Platz gestellt. Der BBC-Kommentator David Coleman leitete die Aufnahmen mit den berühmt gewordenen Worten ein, es sei 'die dümmste, entsetzlichste, widerlichste und schändlichste Vorstellung von Fußball.'"
+        },
+        "es": {
+          "question": "La tristemente célebre 'Batalla de Santiago' en el torneo de 1962 fue un partido notoriamente violento entre cuáles dos países?",
+          "options": [
+            "Chile e Italia",
+            "Brasil y Argentina",
+            "Inglaterra y Alemania Occidental",
+            "Uruguay y Argentina"
+          ],
+          "explanation": "El choque de fase de grupos de 1962 entre el anfitrión Chile e Italia fue tan violento que la policía tuvo que intervenir en el campo. Dos jugadores italianos fueron expulsados. El comentarista de la BBC David Coleman presentó las imágenes con una frase que se hizo famosa, llamándolo 'la exhibición de fútbol más estúpida, espantosa, repugnante y vergonzosa.'"
+        },
+        "es-ES": {
+          "question": "La tristemente célebre 'Batalla de Santiago' en el torneo de 1962 fue un partido famosamente violento entre qué dos países?",
+          "options": [
+            "Chile e Italia",
+            "Brasil y Argentina",
+            "Inglaterra y Alemania Occidental",
+            "Uruguay y Argentina"
+          ],
+          "explanation": "El enfrentamiento de la fase de grupos de 1962 entre el anfitrión Chile e Italia fue tan violento que la policía tuvo que intervenir en el terreno de juego. Dos jugadores italianos fueron expulsados. El comentarista de la BBC David Coleman presentó las imágenes con una frase que se hizo célebre, calificándolo de 'la exhibición de fútbol más estúpida, espantosa, repugnante y vergonzosa.'"
+        },
+        "fr": {
+          "question": "La tristement célèbre 'Bataille de Santiago' lors du tournoi de 1962 fut un match d'une violence notoire entre quels deux pays ?",
+          "options": [
+            "Le Chili et l'Italie",
+            "Le Brésil et l'Argentine",
+            "L'Angleterre et l'Allemagne de l'Ouest",
+            "L'Uruguay et l'Argentine"
+          ],
+          "explanation": "Le match de phase de groupes de 1962 entre le pays hôte, le Chili, et l'Italie fut si violent que la police dut intervenir sur le terrain. Deux joueurs italiens furent expulsés. Le commentateur de la BBC David Coleman a présenté les images par une phrase restée célèbre, les qualifiant de 'l'exhibition de football la plus stupide, atroce, dégoûtante et honteuse.'"
+        },
+        "it": {
+          "question": "La famigerata 'Battaglia di Santiago' al torneo del 1962 fu una partita tristemente nota per la sua violenza tra quali due nazioni?",
+          "options": [
+            "Cile e Italia",
+            "Brasile e Argentina",
+            "Inghilterra e Germania Ovest",
+            "Uruguay e Argentina"
+          ],
+          "explanation": "Lo scontro della fase a gironi del 1962 tra il Cile padrone di casa e l'Italia fu così violento che la polizia dovette intervenire sul campo. Due giocatori italiani furono espulsi. Il telecronista della BBC David Coleman introdusse le immagini con una frase rimasta celebre, definendole 'la più stupida, terribile, disgustosa e vergognosa esibizione di calcio.'"
+        },
+        "ja": {
+          "question": "1962年大会で起きた悪名高い『サンティアゴの戦い』は、どの2か国の間で繰り広げられた極めて荒れた試合だったでしょうか？",
+          "options": [
+            "チリとイタリア",
+            "ブラジルとアルゼンチン",
+            "イングランドと西ドイツ",
+            "ウルグアイとアルゼンチン"
+          ],
+          "explanation": "1962年のグループステージで開催国チリとイタリアが激突した試合はあまりにも荒れたため、警察がピッチに介入せざるを得ませんでした。イタリアの選手2人が退場処分を受けました。BBCの解説者デビッド・コールマンは、その映像を紹介する際に『これまでで最も愚かで、ひどく、不快で、恥ずべきサッカーの見世物だ』と語ったことで知られています。"
+        },
+        "ko": {
+          "question": "1962년 대회에서 벌어진 악명 높은 '산티아고의 전투'는 어느 두 나라 사이의 매우 폭력적인 경기로 유명했을까요?",
+          "options": [
+            "칠레와 이탈리아",
+            "브라질과 아르헨티나",
+            "잉글랜드와 서독",
+            "우루과이와 아르헨티나"
+          ],
+          "explanation": "1962년 조별리그에서 개최국 칠레와 이탈리아가 맞붙은 경기는 너무나 폭력적이어서 경찰이 그라운드 안으로 들어와 개입해야 했습니다. 이탈리아 선수 두 명이 퇴장당했습니다. BBC 해설자 데이비드 콜먼은 그 영상을 소개하며 '지금까지 본 가장 어리석고, 끔찍하고, 역겹고, 수치스러운 축구 경기'라고 표현한 것으로 유명합니다."
+        },
+        "pt-BR": {
+          "question": "A infame 'Batalha de Santiago' no torneio de 1962 foi uma partida notoriamente violenta entre quais dois países?",
+          "options": [
+            "Chile e Itália",
+            "Brasil e Argentina",
+            "Inglaterra e Alemanha Ocidental",
+            "Uruguai e Argentina"
+          ],
+          "explanation": "O confronto da fase de grupos de 1962 entre o anfitrião Chile e a Itália foi tão violento que a polícia precisou intervir dentro de campo. Dois jogadores italianos foram expulsos. O comentarista da BBC David Coleman ficou famoso ao apresentar as imagens chamando aquilo de 'a exibição de futebol mais estúpida, terrível, repugnante e vergonhosa.'"
+        },
+        "zh-Hans": {
+          "question": "1962年赛事中那场臭名昭著的'圣地亚哥之战'是哪两个国家之间一场以暴力著称的比赛？",
+          "options": [
+            "智利和意大利",
+            "巴西和阿根廷",
+            "英格兰和西德",
+            "乌拉圭和阿根廷"
+          ],
+          "explanation": "1962年东道主智利与意大利的小组赛冲突极为暴力，以至于警察不得不进入球场进行干预。两名意大利球员被罚下场。BBC评论员大卫·科尔曼在介绍这段画面时说出了一句广为流传的话，称其为'最愚蠢、最骇人、最令人作呕、最丢人的足球表演。'"
+        }
+      },
+      "i18nSourceHash": "db30cd8135e1dabe"
     },
     {
       "id": "h-disgrace-gijon",
@@ -11249,7 +11558,110 @@
       ],
       "answer": 0,
       "explanation": "After West Germany scored early, both teams appeared to stop competing, knowing a narrow German win would send both through at Algeria's expense. The scandal led to a permanent rule change — from 1986 onward, final group-stage matches in each group kick off simultaneously.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ارتبطت 'فضيحة خيخون' في بطولة 1982 بمباراة مشبوهة بين ألمانيا الغربية وأي منتخب آخر؟",
+          "options": [
+            "النمسا",
+            "فرنسا",
+            "هولندا",
+            "إسبانيا"
+          ],
+          "explanation": "بعد أن سجلت ألمانيا الغربية مبكرًا، بدا أن كلا المنتخبين توقفا عن المنافسة، إذ كان فوز ألماني ضئيل كفيلاً بتأهلهما معًا على حساب الجزائر. أدت هذه الفضيحة إلى تغيير دائم في القواعد، فمنذ عام 1986 صارت المباريات الأخيرة في كل مجموعة تنطلق في الوقت نفسه."
+        },
+        "de": {
+          "question": "Die 'Schande von Gijón' beim Turnier 1982 betraf ein verdächtiges Spiel zwischen Westdeutschland und welcher anderen Mannschaft?",
+          "options": [
+            "Österreich",
+            "Frankreich",
+            "Niederlande",
+            "Spanien"
+          ],
+          "explanation": "Nachdem Westdeutschland früh in Führung gegangen war, schienen beide Teams das Spielen einzustellen, weil ein knapper deutscher Sieg beide auf Kosten Algeriens weiterbringen würde. Der Skandal führte zu einer dauerhaften Regeländerung: Seit 1986 werden die letzten Spiele jeder Gruppe zeitgleich angepfiffen."
+        },
+        "es": {
+          "question": "El 'Desastre de Gijón' en el torneo de 1982 involucró un partido sospechoso entre Alemania Occidental y ¿qué otra selección?",
+          "options": [
+            "Austria",
+            "Francia",
+            "Países Bajos",
+            "España"
+          ],
+          "explanation": "Tras el gol tempranero de Alemania Occidental, ambos equipos parecieron dejar de competir, sabiendo que una victoria alemana por poco margen los clasificaría a ambos a costa de Argelia. El escándalo provocó un cambio permanente en el reglamento: desde 1986, los últimos partidos de cada grupo se juegan de forma simultánea."
+        },
+        "es-ES": {
+          "question": "El 'Desastre de Gijón' en el torneo de 1982 involucró un partido sospechoso entre Alemania Occidental y ¿qué otra selección?",
+          "options": [
+            "Austria",
+            "Francia",
+            "Países Bajos",
+            "España"
+          ],
+          "explanation": "Después de que Alemania Occidental marcara pronto, ambos equipos parecieron dejar de competir, conscientes de que una victoria alemana por la mínima los clasificaría a los dos a costa de Argelia. El escándalo provocó un cambio permanente en el reglamento: desde 1986, los últimos partidos de cada grupo se disputan de forma simultánea."
+        },
+        "fr": {
+          "question": "La 'Honte de Gijón' lors du tournoi de 1982 a impliqué un match suspect entre l'Allemagne de l'Ouest et quelle autre équipe ?",
+          "options": [
+            "Autriche",
+            "France",
+            "Pays-Bas",
+            "Espagne"
+          ],
+          "explanation": "Après l'ouverture du score précoce de l'Allemagne de l'Ouest, les deux équipes ont semblé cesser de jouer, sachant qu'une victoire allemande sur un score étriqué les qualifierait toutes les deux au détriment de l'Algérie. Le scandale a entraîné un changement définitif des règles : depuis 1986, les derniers matchs de chaque groupe débutent en même temps."
+        },
+        "it": {
+          "question": "La 'Vergogna di Gijón' al torneo del 1982 riguardò una partita sospetta tra la Germania Ovest e quale altra squadra?",
+          "options": [
+            "Austria",
+            "Francia",
+            "Paesi Bassi",
+            "Spagna"
+          ],
+          "explanation": "Dopo il gol in avvio della Germania Ovest, entrambe le squadre sembrarono smettere di giocare, sapendo che una vittoria tedesca di misura le avrebbe qualificate entrambe a spese dell'Algeria. Lo scandalo portò a una modifica permanente del regolamento: dal 1986 le ultime partite di ogni girone iniziano in contemporanea."
+        },
+        "ja": {
+          "question": "1982年大会の「ヒホンの恥」は、西ドイツとどのチームとの間で行われた不審な試合に関わるものですか？",
+          "options": [
+            "オーストリア",
+            "フランス",
+            "オランダ",
+            "スペイン"
+          ],
+          "explanation": "西ドイツが早い時間に得点すると、両チームは戦うのをやめたように見えました。僅差の西ドイツ勝利ならアルジェリアを蹴落として両国とも勝ち上がれると分かっていたからです。このスキャンダルを受けて恒久的なルール変更が行われ、1986年以降は各組の最終戦が同時刻にキックオフされるようになりました。"
+        },
+        "ko": {
+          "question": "1982년 대회의 '히혼의 수치'는 서독과 어느 팀 사이의 의심스러운 경기와 관련이 있나요?",
+          "options": [
+            "오스트리아",
+            "프랑스",
+            "네덜란드",
+            "스페인"
+          ],
+          "explanation": "서독이 일찍 득점한 뒤 두 팀은 더 이상 경쟁하지 않는 듯 보였습니다. 서독의 근소한 승리면 알제리를 밀어내고 두 팀 모두 진출할 수 있다는 것을 알았기 때문입니다. 이 추문으로 영구적인 규정 변경이 이루어졌고, 1986년부터는 각 조의 마지막 경기가 동시에 시작됩니다."
+        },
+        "pt-BR": {
+          "question": "A 'Vergonha de Gijón' no torneio de 1982 envolveu uma partida suspeita entre a Alemanha Ocidental e qual outra seleção?",
+          "options": [
+            "Áustria",
+            "França",
+            "Holanda",
+            "Espanha"
+          ],
+          "explanation": "Depois que a Alemanha Ocidental marcou cedo, as duas equipes pareceram parar de competir, sabendo que uma vitória alemã por placar apertado classificaria ambas às custas da Argélia. O escândalo levou a uma mudança permanente nas regras: a partir de 1986, os últimos jogos de cada grupo passaram a começar simultaneamente."
+        },
+        "zh-Hans": {
+          "question": "1982年赛事中的“希洪之耻”涉及西德与哪支球队之间一场可疑的比赛？",
+          "options": [
+            "奥地利",
+            "法国",
+            "荷兰",
+            "西班牙"
+          ],
+          "explanation": "在西德早早进球后，两队似乎都不再积极争胜，因为他们都清楚：只要西德小比分获胜，两队就能携手出线，把阿尔及利亚淘汰出局。这一丑闻促成了一项永久性规则改变——自1986年起，每个小组的末轮比赛都在同一时间开球。"
+        }
+      },
+      "i18nSourceHash": "e310748c28268bca"
     },
     {
       "id": "h-italia-90-goals",
@@ -11263,7 +11675,110 @@
       ],
       "answer": 0,
       "explanation": "Italia 90 averaged just 2.21 goals per game, the lowest in tournament history. The ultra-defensive style prompted several rule changes, including awarding three points for a win instead of two (introduced in 1994) and the back-pass rule banning goalkeepers from handling deliberate passes from teammates.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "سجّلت نسخة عام 1990 في إيطاليا رقماً قياسياً آنذاك لأقل متوسط أهداف في المباراة. كم بلغ تقريباً؟",
+          "options": [
+            "2.21",
+            "2.54",
+            "1.98",
+            "2.67"
+          ],
+          "explanation": "بلغ متوسط الأهداف في إيطاليا 90 نحو 2.21 هدف في المباراة فقط، وهو الأدنى في تاريخ البطولة. وقد دفع الأسلوب الدفاعي المفرط إلى عدة تغييرات في القوانين، منها منح ثلاث نقاط للفوز بدلاً من نقطتين (طُبِّق عام 1994) وقاعدة التمريرة الخلفية التي تمنع حراس المرمى من التقاط التمريرات المتعمدة من زملائهم."
+        },
+        "de": {
+          "question": "Die Ausgabe 1990 in Italien stellte einen damaligen Rekord für die wenigsten Tore pro Spiel im Schnitt auf. Wie viele waren es ungefähr?",
+          "options": [
+            "2,21",
+            "2,54",
+            "1,98",
+            "2,67"
+          ],
+          "explanation": "Bei Italia 90 fielen im Schnitt nur 2,21 Tore pro Spiel – der niedrigste Wert in der Turniergeschichte. Die extrem defensive Spielweise führte zu mehreren Regeländerungen, darunter drei statt zwei Punkte für einen Sieg (1994 eingeführt) und die Rückpassregel, die es Torhütern verbietet, absichtliche Pässe von Mitspielern mit der Hand aufzunehmen."
+        },
+        "es": {
+          "question": "La edición de 1990 en Italia estableció un récord de entonces por el menor promedio de goles por partido. ¿Cuántos aproximadamente?",
+          "options": [
+            "2.21",
+            "2.54",
+            "1.98",
+            "2.67"
+          ],
+          "explanation": "Italia 90 promedió apenas 2.21 goles por partido, el más bajo en la historia del torneo. El estilo ultradefensivo impulsó varios cambios en las reglas, como otorgar tres puntos por victoria en lugar de dos (introducido en 1994) y la regla del pase atrás, que prohíbe a los porteros tomar con las manos los pases deliberados de sus compañeros."
+        },
+        "es-ES": {
+          "question": "La edición de 1990 en Italia marcó un récord de entonces por el menor promedio de goles por partido. ¿Cuántos aproximadamente?",
+          "options": [
+            "2,21",
+            "2,54",
+            "1,98",
+            "2,67"
+          ],
+          "explanation": "Italia 90 promedió tan solo 2,21 goles por partido, la cifra más baja de la historia del torneo. El estilo ultradefensivo propició varios cambios en las reglas, como conceder tres puntos por victoria en lugar de dos (introducido en 1994) y la regla del pase atrás, que prohíbe a los porteros coger con las manos los pases deliberados de sus compañeros."
+        },
+        "fr": {
+          "question": "L'édition de 1990 en Italie a établi un record de l'époque pour le plus faible nombre moyen de buts par match. Combien environ ?",
+          "options": [
+            "2,21",
+            "2,54",
+            "1,98",
+            "2,67"
+          ],
+          "explanation": "Italia 90 n'a affiché qu'une moyenne de 2,21 buts par match, la plus basse de l'histoire du tournoi. Le style ultra-défensif a entraîné plusieurs changements de règles, dont l'attribution de trois points pour une victoire au lieu de deux (instaurée en 1994) et la règle de la passe en retrait interdisant aux gardiens de saisir à la main les passes volontaires de leurs coéquipiers."
+        },
+        "it": {
+          "question": "L'edizione del 1990 in Italia stabilì un record per l'epoca per la media gol a partita più bassa. Quanti circa?",
+          "options": [
+            "2,21",
+            "2,54",
+            "1,98",
+            "2,67"
+          ],
+          "explanation": "Italia 90 fece registrare appena 2,21 gol di media a partita, la più bassa nella storia del torneo. Lo stile ultradifensivo portò a diverse modifiche regolamentari, tra cui l'assegnazione di tre punti per la vittoria anziché due (introdotta nel 1994) e la regola del retropassaggio, che vieta ai portieri di prendere con le mani i passaggi intenzionali dei compagni."
+        },
+        "ja": {
+          "question": "1990年のイタリア大会は、1試合あたりの平均得点が当時最少という記録を打ち立てました。およそ何点でしょう？",
+          "options": [
+            "2.21",
+            "2.54",
+            "1.98",
+            "2.67"
+          ],
+          "explanation": "イタリア90は1試合平均わずか2.21得点で、大会史上最低を記録しました。極端な守備的スタイルがいくつかのルール変更を促し、勝利チームへの勝ち点を2から3に変更（1994年導入）したり、味方からの意図的なパスをゴールキーパーが手で扱うことを禁じるバックパス・ルールが導入されたりしました。"
+        },
+        "ko": {
+          "question": "1990년 이탈리아 대회는 경기당 평균 득점이 가장 적은 당시 기록을 세웠습니다. 대략 몇 골이었을까요?",
+          "options": [
+            "2.21",
+            "2.54",
+            "1.98",
+            "2.67"
+          ],
+          "explanation": "이탈리아 90은 경기당 평균 단 2.21골로, 대회 역사상 최저치를 기록했습니다. 극도로 수비적인 스타일은 여러 규칙 변경을 불러왔는데, 승리 시 승점을 2점에서 3점으로 바꾼 것(1994년 도입)과 골키퍼가 동료의 의도적인 패스를 손으로 잡지 못하도록 한 백패스 규칙 등이 그것입니다."
+        },
+        "pt-BR": {
+          "question": "A edição de 1990 na Itália estabeleceu um recorde da época pela menor média de gols por jogo. Quantos aproximadamente?",
+          "options": [
+            "2,21",
+            "2,54",
+            "1,98",
+            "2,67"
+          ],
+          "explanation": "A Itália 90 teve média de apenas 2,21 gols por jogo, a mais baixa da história do torneio. O estilo ultradefensivo motivou várias mudanças nas regras, incluindo a concessão de três pontos por vitória em vez de dois (adotada em 1994) e a regra do recuo, que proíbe os goleiros de pegar com as mãos passes deliberados dos companheiros."
+        },
+        "zh-Hans": {
+          "question": "1990年在意大利举办的赛事创下了当时场均进球最少的纪录。大约是多少？",
+          "options": [
+            "2.21",
+            "2.54",
+            "1.98",
+            "2.67"
+          ],
+          "explanation": "意大利90场均仅有2.21个进球，是赛事史上的最低纪录。极端防守的风格促成了多项规则变革，包括将胜场积分由2分改为3分（1994年开始实行），以及禁止门将用手接住队友故意回传球的回传球规则。"
+        }
+      },
+      "i18nSourceHash": "4b38d0aabd840eec"
     },
     {
       "id": "h-first-color-broadcast",
