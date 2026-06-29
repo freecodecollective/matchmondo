@@ -3420,7 +3420,8 @@
         "2026"
       ],
       "answer": 1,
-      "explanation": "VAR made its tournament debut in Russia in 2018, reviewing goals, penalties, red cards, and mistaken identity."
+      "explanation": "VAR made its tournament debut in Russia in 2018, reviewing goals, penalties, red cards, and mistaken identity.",
+      "approved": true
     },
     {
       "id": "r-var-meaning",
