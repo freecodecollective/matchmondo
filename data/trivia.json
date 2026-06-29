@@ -11376,7 +11376,7 @@
       ],
       "answer": 0,
       "explanation": "Under the current Laws of the Game, a goal is disallowed if it is scored immediately after the ball accidentally touches the scorer's teammate's hand or arm, even if the handball is unintentional. This rule was introduced to remove ambiguity about accidental handballs in the build-up to goals.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "r-drop-ball",
