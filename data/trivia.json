@@ -8446,8 +8446,7 @@
       ],
       "answer": 0,
       "explanation": "Law 12 states goalkeepers must release the ball within 6 seconds of controlling it with their hands. This is widely considered the least-enforced rule in football — referees typically warn before penalizing, and the infraction results in an indirect free kick. Time-wasting goalkeepers have led to calls for stricter enforcement.",
-      "approved": true,
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "r-advantage-play",
