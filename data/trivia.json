@@ -1215,7 +1215,7 @@
       ],
       "answer": 1,
       "explanation": "The golden goal was a sudden-death rule: in knockout matches, the first team to score during extra time won instantly and play stopped immediately. It was first used at the tournament in 1998, when Laurent Blanc scored one for France against Paraguay. The rule was intended to encourage attacking play in extra time, but it often made teams more cautious, and it was abolished after 2002.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "r-lots-tiebreak",
