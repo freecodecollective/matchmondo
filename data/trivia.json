@@ -8429,7 +8429,7 @@
       ],
       "answer": 0,
       "explanation": "A goal cannot be scored directly from a throw-in. If the ball enters the opponent's goal directly from a throw-in without being touched by another player, a goal kick is awarded. If it enters the thrower's own goal, a corner kick is given. The throw-in is the only restart in football performed with the hands.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "r-keeper-6-seconds",
