@@ -11545,7 +11545,7 @@
       "answer": 0,
       "explanation": "True! The 1994 final between Brazil and Italy ended 0-0 after extra time, making it the first final decided by penalties. Roberto Baggio's infamous miss sealed Brazil's fourth title. It remains one of the most dramatic moments in football history.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-cruyff-never-won",
