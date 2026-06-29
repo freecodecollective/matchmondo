@@ -4595,7 +4595,8 @@
       ],
       "answer": 1,
       "explanation": "Soviet keeper Lev Yashin, the 'Black Spider,' won the Ballon d'Or in 1963 — still the only goalkeeper ever awarded it.",
-      "media": "https://www.youtube.com/watch?v=2L4i-6mcrx0"
+      "media": "https://www.youtube.com/watch?v=2L4i-6mcrx0",
+      "claudeTask": "explain what the ballon dor is"
     },
     {
       "id": "t-host-confederation",
