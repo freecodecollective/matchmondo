@@ -10628,7 +10628,7 @@
       "answer": 0,
       "explanation": "True! Since 2019, coaches and other team officials can receive yellow and red cards, just like players. If sent off, the coach must leave the technical area (usually going to the stands) and cannot communicate with the team for the rest of the match. An assistant typically takes over tactical duties.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-semi-auto-offside-2022",
