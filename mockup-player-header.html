@@ -255,12 +255,9 @@
     position: absolute; left: 16px; bottom: 18px; z-index: 2;
     right: 146px;
   }
-  .hdr-c .flag-name {
-    display: flex; align-items: baseline; gap: 7px;
-  }
-  .hdr-c .flag-name .flg { font-size: 18px; flex-shrink: 0; align-self: center; }
   .hdr-c .name { font-size: 22px; font-weight: 800; letter-spacing: -0.3px; line-height: 1.15; }
-  .hdr-c .pos { font-size: 14px; opacity: 0.9; margin-top: 4px; font-weight: 500; }
+  .hdr-c .pos { font-size: 13px; opacity: 0.9; margin-top: 4px; font-weight: 500; }
+  .hdr-c .club { font-size: 13px; opacity: 0.75; margin-top: 1px; }
   .hdr-c .meta-pills {
     display: flex; gap: 6px; margin-top: 6px;
   }
@@ -268,6 +265,12 @@
     font-size: 11px; font-weight: 600;
     padding: 3px 8px; border-radius: 6px;
     background: rgba(255,255,255,0.15);
+  }
+  .hdr-c .photo-flag {
+    position: absolute; right: 122px; bottom: 12px;
+    font-size: 20px;
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.4));
+    z-index: 3;
   }
   .hdr-c .gradient-fade {
     position: absolute; left: 0; right: 0; bottom: 0; height: 60%;
@@ -595,17 +598,16 @@
           <img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt="">
         </div>
         <div class="jersey">10</div>
+        <div class="photo-flag">🇫🇷</div>
         <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
         <div class="text-area">
-          <div class="flag-name">
-            <span class="flg">🇫🇷</span>
-            <div class="name">Mbappé</div>
-          </div>
-          <div class="pos">Forward · Real Madrid</div>
+          <div class="name">Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
           <div class="meta-pills">
             <span class="mpill">Age 27</span>
             <span class="mpill">1.78 m</span>
-            <span class="mpill">#10</span>
+            <span class="mpill">Bondy, France</span>
           </div>
         </div>
       </div>
@@ -778,14 +780,16 @@
         <div class="gradient-fade"></div>
         <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
         <div class="jersey">10</div>
+        <div class="photo-flag">🇫🇷</div>
         <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
         <div class="text-area">
-          <div class="flag-name"><span class="flg">🇫🇷</span><div class="name">Mbappé</div></div>
-          <div class="pos">Forward · Real Madrid</div>
+          <div class="name">Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
           <div class="meta-pills">
             <span class="mpill">Age 27</span>
             <span class="mpill">1.78 m</span>
-            <span class="mpill">#10</span>
+            <span class="mpill">Bondy, France</span>
           </div>
         </div>
       </div>
@@ -809,14 +813,16 @@
         <div class="gradient-fade"></div>
         <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/3643.png" alt=""></div>
         <div class="jersey">20</div>
+        <div class="photo-flag">🇨🇴</div>
         <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
         <div class="text-area">
-          <div class="flag-name"><span class="flg">🇨🇴</span><div class="name">Juan Fernando Quintero</div></div>
-          <div class="pos">Attacking midfielder · River Plate</div>
+          <div class="name">Juan Fernando Quintero</div>
+          <div class="pos">Attacking midfielder</div>
+          <div class="club">River Plate</div>
           <div class="meta-pills">
             <span class="mpill">Age 33</span>
             <span class="mpill">1.68 m</span>
-            <span class="mpill">#20</span>
+            <span class="mpill">Medellín, Colombia</span>
           </div>
         </div>
       </div>
@@ -840,14 +846,16 @@
         <div class="gradient-fade"></div>
         <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/13248.png" alt=""></div>
         <div class="jersey">10</div>
+        <div class="photo-flag">🇺🇾</div>
         <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
         <div class="text-area">
-          <div class="flag-name"><span class="flg">🇺🇾</span><div class="name">Giorgian de Arrascaeta</div></div>
-          <div class="pos">Attacking midfielder · Flamengo</div>
+          <div class="name">Giorgian de Arrascaeta</div>
+          <div class="pos">Attacking midfielder</div>
+          <div class="club">Flamengo</div>
           <div class="meta-pills">
             <span class="mpill">Age 32</span>
             <span class="mpill">1.72 m</span>
-            <span class="mpill">#10</span>
+            <span class="mpill">Nuevo Berlín, Uruguay</span>
           </div>
         </div>
       </div>
@@ -871,14 +879,16 @@
         <div class="gradient-fade"></div>
         <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/77519.png" alt=""></div>
         <div class="jersey">16</div>
+        <div class="photo-flag">🇳🇴</div>
         <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
         <div class="text-area">
-          <div class="flag-name"><span class="flg">🇳🇴</span><div class="name">Marcus Holmgren Pedersen</div></div>
-          <div class="pos">Right-back · Torino</div>
+          <div class="name">Marcus Holmgren Pedersen</div>
+          <div class="pos">Right-back</div>
+          <div class="club">Torino</div>
           <div class="meta-pills">
             <span class="mpill">Age 24</span>
             <span class="mpill">1.83 m</span>
-            <span class="mpill">#16</span>
+            <span class="mpill">Mandal, Norway</span>
           </div>
         </div>
       </div>
@@ -902,14 +912,16 @@
         <div class="gradient-fade"></div>
         <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/30255.png" alt=""></div>
         <div class="jersey">17</div>
+        <div class="photo-flag">🇵🇾</div>
         <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
         <div class="text-area">
-          <div class="flag-name"><span class="flg">🇵🇾</span><div class="name">Alejandro Romero Gamarra</div></div>
-          <div class="pos">Forward · Cruz Azul</div>
+          <div class="name">Alejandro Romero Gamarra</div>
+          <div class="pos">Forward</div>
+          <div class="club">Cruz Azul</div>
           <div class="meta-pills">
             <span class="mpill">Age 31</span>
             <span class="mpill">1.72 m</span>
-            <span class="mpill">#17</span>
+            <span class="mpill">Asunción, Paraguay</span>
           </div>
         </div>
       </div>
@@ -933,14 +945,16 @@
         <div class="gradient-fade"></div>
         <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/111953.png" alt=""></div>
         <div class="jersey">26</div>
+        <div class="photo-flag">🇧🇪</div>
         <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
         <div class="text-area">
-          <div class="flag-name"><span class="flg">🇧🇪</span><div class="name">Matias Fernandez-Pardo</div></div>
-          <div class="pos">Left winger · Lille</div>
+          <div class="name">Matias Fernandez-Pardo</div>
+          <div class="pos">Left winger</div>
+          <div class="club">Lille</div>
           <div class="meta-pills">
             <span class="mpill">Age 19</span>
             <span class="mpill">1.80 m</span>
-            <span class="mpill">#26</span>
+            <span class="mpill">Leuven, Belgium</span>
           </div>
         </div>
       </div>
