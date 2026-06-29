@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-29 22:47 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-06-29 23:07 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -975,7 +975,7 @@ window.WC_MATCHES = [
     "venue": "Gillette Stadium",
     "city": "Foxborough (Boston), MA",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 2,
+    "scoreH": 1,
     "scoreA": 1,
     "isLive": true
   },
@@ -1166,7 +1166,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-04T21:00:00Z",
     "stage": "Round of 16",
     "group": null,
-    "home": "Germany",
+    "home": "To be announced",
     "away": "To be announced",
     "venue": "Lincoln Financial Field",
     "city": "Philadelphia, PA",
