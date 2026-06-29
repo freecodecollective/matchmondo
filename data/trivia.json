@@ -15777,7 +15777,90 @@
       "answer": 0,
       "explanation": "True! Referees at the 2022 tournament added significantly more stoppage time than in any previous edition. England vs Iran saw a total of 27 minutes added across both halves. The approach was intended to maximize actual playing time by accounting for goal celebrations, substitutions, VAR reviews, and time-wasting. This trend has continued into subsequent editions.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "في نسخة 2022 التي أُقيمت في قطر، أضافت عدة مباريات أكثر من 10 دقائق كوقت بدل ضائع في شوط واحد.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! أضاف الحكام في بطولة 2022 وقتًا بدل ضائع أكبر بكثير من أي نسخة سابقة. ففي مباراة إنجلترا ضد إيران أُضيف ما مجموعه 27 دقيقة عبر الشوطين. وكان الهدف من هذا النهج تعظيم وقت اللعب الفعلي من خلال احتساب الوقت المستهلك في الاحتفالات بالأهداف والتبديلات ومراجعات حكم الفيديو المساعد وإضاعة الوقت. وقد استمر هذا الاتجاه في النسخ اللاحقة."
+        },
+        "de": {
+          "question": "Bei der Ausgabe 2022 in Katar gab es in mehreren Spielen über 10 Minuten Nachspielzeit in einer einzigen Halbzeit.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Wahr! Die Schiedsrichter beim Turnier 2022 fügten deutlich mehr Nachspielzeit hinzu als bei jeder früheren Ausgabe. Bei England gegen Iran kamen über beide Halbzeiten insgesamt 27 Minuten zusammen. Damit sollte die tatsächliche Spielzeit maximiert werden, indem Torjubel, Auswechslungen, VAR-Überprüfungen und Zeitspiel berücksichtigt wurden. Dieser Trend hat sich bei den folgenden Ausgaben fortgesetzt."
+        },
+        "es": {
+          "question": "En la edición de 2022 en Catar, varios partidos tuvieron más de 10 minutos de tiempo añadido en una sola mitad.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Los árbitros del torneo de 2022 agregaron mucho más tiempo de descuento que en cualquier edición anterior. En el Inglaterra vs. Irán se sumaron un total de 27 minutos entre ambos tiempos. El objetivo de este enfoque era maximizar el tiempo real de juego, considerando las celebraciones de goles, las sustituciones, las revisiones del VAR y la pérdida de tiempo. Esta tendencia ha continuado en las ediciones posteriores."
+        },
+        "es-ES": {
+          "question": "En la edición de 2022 en Catar, varios partidos tuvieron más de 10 minutos de tiempo añadido en una sola mitad.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Los árbitros del torneo de 2022 añadieron mucho más tiempo de descuento que en cualquier edición anterior. En el Inglaterra contra Irán se sumaron un total de 27 minutos entre las dos mitades. El objetivo de este enfoque era maximizar el tiempo real de juego, teniendo en cuenta las celebraciones de los goles, los cambios, las revisiones del VAR y las pérdidas de tiempo. Esta tendencia ha continuado en las ediciones posteriores."
+        },
+        "fr": {
+          "question": "Lors de l'édition 2022 au Qatar, plusieurs matchs ont vu plus de 10 minutes de temps additionnel ajoutées à une seule mi-temps.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! Les arbitres du tournoi 2022 ont ajouté nettement plus de temps additionnel que lors de toute édition précédente. Le match Angleterre-Iran a vu un total de 27 minutes ajoutées sur les deux mi-temps. Cette approche visait à maximiser le temps de jeu réel en tenant compte des célébrations de buts, des remplacements, des recours à l'assistance vidéo et des pertes de temps. Cette tendance s'est poursuivie lors des éditions suivantes."
+        },
+        "it": {
+          "question": "Nell'edizione del 2022 in Qatar, in diverse partite sono stati aggiunti più di 10 minuti di recupero in un solo tempo.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! Gli arbitri del torneo del 2022 hanno concesso molto più tempo di recupero rispetto a qualsiasi edizione precedente. In Inghilterra-Iran sono stati aggiunti complessivamente 27 minuti tra i due tempi. L'obiettivo di questo approccio era massimizzare il tempo di gioco effettivo, tenendo conto delle esultanze per i gol, delle sostituzioni, delle revisioni al VAR e delle perdite di tempo. Questa tendenza è proseguita nelle edizioni successive."
+        },
+        "ja": {
+          "question": "カタールで開催された2022年大会では、複数の試合で1つのハーフに10分以上のアディショナルタイムが加えられました。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "正しい！2022年大会の審判は、過去のどの大会よりも大幅に長いアディショナルタイムを加えました。イングランド対イランの試合では、両ハーフ合わせて合計27分が追加されました。この方針は、ゴール後の歓喜、選手交代、VARによる確認、時間稼ぎなどを考慮し、実際のプレー時間を最大化することを目的としていました。この傾向はその後の大会でも続いています。"
+        },
+        "ko": {
+          "question": "카타르에서 열린 2022년 대회에서는 여러 경기에서 한 하프에만 10분 이상의 추가 시간이 주어졌습니다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! 2022년 대회의 심판들은 이전 어느 대회보다 훨씬 많은 추가 시간을 부여했습니다. 잉글랜드 대 이란 경기에서는 양 하프를 합쳐 총 27분이 추가되었습니다. 이러한 방식은 골 세리머니, 선수 교체, VAR 판독, 시간 지연 등을 반영하여 실제 경기 시간을 최대한 늘리기 위한 것이었습니다. 이 추세는 이후 대회에서도 계속 이어지고 있습니다."
+        },
+        "pt-BR": {
+          "question": "Na edição de 2022 no Catar, várias partidas tiveram mais de 10 minutos de acréscimo em um único tempo.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! Os árbitros do torneio de 2022 acrescentaram muito mais tempo do que em qualquer edição anterior. Em Inglaterra x Irã, foram adicionados 27 minutos no total entre os dois tempos. A intenção dessa abordagem era maximizar o tempo real de jogo, levando em conta comemorações de gols, substituições, revisões do VAR e perda de tempo. Essa tendência continuou nas edições seguintes."
+        },
+        "zh-Hans": {
+          "question": "在2022年卡塔尔举办的赛事中，有多场比赛单个半场的补时超过了10分钟。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！2022年赛事的裁判员补时明显多于以往任何一届。在英格兰对阵伊朗的比赛中，上下半场共补时27分钟。这种做法旨在通过计入进球庆祝、换人、VAR回看以及拖延时间等因素，最大限度地延长实际比赛时间。这一趋势在随后的赛事中得以延续。"
+        }
+      },
+      "i18nSourceHash": "f23849c80fef0021"
     },
     {
       "id": "img-maradona",
@@ -16269,7 +16352,110 @@
       "explanation": "Gianluigi Buffon was the rock of Italy's 2006 triumph, conceding just two goals in the entire tournament (one an own goal, the other a Zidane penalty). He played in five editions (1998-2014), earning 176 caps for Italy — a record. His longevity was remarkable: he was still playing professional football into his mid-40s.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Gianluigi_Buffon_%2831784615942%29_%28cropped%29.jpg/500px-Gianluigi_Buffon_%2831784615942%29_%28cropped%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو حارس المرمى الإيطالي الذي توّج باللقب في بطولة 2006 ويُعدّ من أعظم الحرّاس على الإطلاق؟",
+          "options": [
+            "جانلويجي بوفون",
+            "إيكر كاسياس",
+            "مانويل نوير",
+            "تيبو كورتوا"
+          ],
+          "explanation": "كان جانلويجي بوفون الركيزة الصلبة في تتويج إيطاليا عام 2006، إذ لم تستقبل شباكه سوى هدفين طوال البطولة (أحدهما هدف في مرمى منتخبه، والآخر من ركلة جزاء سجّلها زيدان). شارك في خمس نسخ (1998-2014)، وخاض 176 مباراة دولية مع إيطاليا — وهو رقم قياسي. وكان طول مسيرته أمرًا لافتًا، فقد ظل يلعب كرة القدم الاحترافية حتى منتصف الأربعينيات من عمره."
+        },
+        "de": {
+          "question": "Wer ist dieser italienische Torwart, der das Turnier 2006 gewann und als einer der besten Schlussmänner aller Zeiten gilt?",
+          "options": [
+            "Gianluigi Buffon",
+            "Iker Casillas",
+            "Manuel Neuer",
+            "Thibaut Courtois"
+          ],
+          "explanation": "Gianluigi Buffon war der Fels in der Brandung beim italienischen Triumph 2006 und kassierte im gesamten Turnier nur zwei Gegentore (eines ein Eigentor, das andere ein Elfmeter von Zidane). Er nahm an fünf Endrunden teil (1998-2014) und kam auf 176 Länderspiele für Italien — ein Rekord. Seine Langlebigkeit war bemerkenswert: Er spielte noch bis Mitte 40 Profifußball."
+        },
+        "es": {
+          "question": "¿Quién es este arquero italiano que ganó el torneo en 2006 y es considerado uno de los mejores guardametas de la historia?",
+          "options": [
+            "Gianluigi Buffon",
+            "Iker Casillas",
+            "Manuel Neuer",
+            "Thibaut Courtois"
+          ],
+          "explanation": "Gianluigi Buffon fue el pilar del triunfo de Italia en 2006, recibiendo apenas dos goles en todo el torneo (uno en propia puerta y el otro un penal de Zidane). Disputó cinco ediciones (1998-2014) y acumuló 176 partidos con Italia, un récord. Su longevidad fue notable: siguió jugando fútbol profesional hasta entrado en los 40 años."
+        },
+        "es-ES": {
+          "question": "¿Quién es este portero italiano que ganó el torneo en 2006 y está considerado uno de los mejores guardametas de la historia?",
+          "options": [
+            "Gianluigi Buffon",
+            "Iker Casillas",
+            "Manuel Neuer",
+            "Thibaut Courtois"
+          ],
+          "explanation": "Gianluigi Buffon fue el pilar del triunfo de Italia en 2006, encajando tan solo dos goles en todo el torneo (uno en propia puerta y el otro de penalti de Zidane). Disputó cinco ediciones (1998-2014) y reunió 176 internacionalidades con Italia, todo un récord. Su longevidad fue extraordinaria: siguió jugando al fútbol profesional ya bien entrado en la cuarentena."
+        },
+        "fr": {
+          "question": "Qui est ce gardien italien qui a remporté le tournoi en 2006 et qui est considéré comme l'un des meilleurs portiers de tous les temps ?",
+          "options": [
+            "Gianluigi Buffon",
+            "Iker Casillas",
+            "Manuel Neuer",
+            "Thibaut Courtois"
+          ],
+          "explanation": "Gianluigi Buffon fut le roc du triomphe italien en 2006, n'encaissant que deux buts sur l'ensemble du tournoi (un but contre son camp et un penalty de Zidane). Il a disputé cinq éditions (1998-2014) et compte 176 sélections avec l'Italie — un record. Sa longévité fut remarquable : il jouait encore au football professionnel au milieu de la quarantaine."
+        },
+        "it": {
+          "question": "Chi è questo portiere italiano che ha vinto il torneo nel 2006 ed è considerato uno dei più grandi estremi difensori di sempre?",
+          "options": [
+            "Gianluigi Buffon",
+            "Iker Casillas",
+            "Manuel Neuer",
+            "Thibaut Courtois"
+          ],
+          "explanation": "Gianluigi Buffon fu la roccia del trionfo azzurro del 2006, subendo appena due gol in tutto il torneo (uno un autogol, l'altro un rigore di Zidane). Ha partecipato a cinque edizioni (1998-2014), collezionando 176 presenze con l'Italia — un record. La sua longevità è stata straordinaria: ha continuato a giocare a calcio professionistico fino a oltre i 40 anni."
+        },
+        "ja": {
+          "question": "2006年の大会で優勝し、史上最高のゴールキーパーの一人とされるこのイタリア人選手は誰でしょう？",
+          "options": [
+            "ジャンルイジ・ブッフォン",
+            "イケル・カシージャス",
+            "マヌエル・ノイアー",
+            "ティボ・クルトワ"
+          ],
+          "explanation": "ジャンルイジ・ブッフォンは2006年のイタリア優勝を支えた鉄壁の守護神で、大会を通じて失点はわずか2点（うち1点はオウンゴール、もう1点はジダンのPK）だけでした。彼は5度の大会（1998年〜2014年）に出場し、イタリア代表として176試合に出場する記録を打ち立てました。その息の長さは驚異的で、40代半ばになってもプロサッカーの第一線でプレーし続けました。"
+        },
+        "ko": {
+          "question": "2006년 대회에서 우승했으며 역사상 최고의 골키퍼 중 한 명으로 꼽히는 이 이탈리아 골키퍼는 누구일까요?",
+          "options": [
+            "잔루이지 부폰",
+            "이케르 카시야스",
+            "마누엘 노이어",
+            "티보 쿠르투아"
+          ],
+          "explanation": "잔루이지 부폰은 2006년 이탈리아 우승의 든든한 버팀목으로, 대회 전체에서 단 두 골(하나는 자책골, 다른 하나는 지단의 페널티킥)만 허용했습니다. 그는 다섯 차례 대회(1998~2014)에 출전했고 이탈리아 대표로 176경기를 뛰며 기록을 세웠습니다. 그의 롱런은 놀라웠는데, 40대 중반까지도 프로 축구 선수로 뛰었습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é esse goleiro italiano que venceu o torneio em 2006 e é considerado um dos maiores arqueiros de todos os tempos?",
+          "options": [
+            "Gianluigi Buffon",
+            "Iker Casillas",
+            "Manuel Neuer",
+            "Thibaut Courtois"
+          ],
+          "explanation": "Gianluigi Buffon foi o pilar do título da Itália em 2006, sofrendo apenas dois gols em todo o torneo (um contra e o outro de pênalti cobrado por Zidane). Ele disputou cinco edições (1998-2014) e acumulou 176 jogos pela Itália — um recorde. Sua longevidade foi notável: ele continuou jogando futebol profissional já com mais de 40 anos."
+        },
+        "zh-Hans": {
+          "question": "这位在2006年赛事中夺冠、被誉为史上最伟大门将之一的意大利门将是谁？",
+          "options": [
+            "吉安路易吉·布冯",
+            "伊克尔·卡西利亚斯",
+            "曼努埃尔·诺伊尔",
+            "蒂博·库尔图瓦"
+          ],
+          "explanation": "吉安路易吉·布冯是意大利2006年夺冠的中流砥柱，整届赛事仅失两球（其中一球是乌龙球，另一球是齐达内主罚的点球）。他参加了五届赛事（1998年至2014年），代表意大利出场176次，创下纪录。他的职业生涯之长令人惊叹：直到40多岁仍在踢职业足球。"
+        }
+      },
+      "i18nSourceHash": "9d509f0b6d4d1d50"
     },
     {
       "id": "h-1938-final",
@@ -16297,7 +16483,110 @@
       ],
       "answer": 0,
       "explanation": "Chile hosted the 1962 edition despite the massive 1960 Valdivia earthquake, the strongest ever recorded at magnitude 9.5. Chile's organizing committee famously argued 'Because we have nothing, we will do everything' to keep the hosting rights. Brazil won the tournament for the second time.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ما هي الدولة التي استضافت بطولة عام 1962، والتي تولّت التنظيم رغم الزلزال المدمّر الذي ضربها عام 1960؟",
+          "options": [
+            "تشيلي",
+            "الأرجنتين",
+            "كولومبيا",
+            "بيرو"
+          ],
+          "explanation": "استضافت تشيلي نسخة عام 1962 رغم زلزال فالديفيا الهائل عام 1960، وهو الأقوى المسجّل على الإطلاق بقوة بلغت 9.5 درجة. واشتهرت اللجنة المنظّمة التشيلية بمقولتها 'لأننا لا نملك شيئًا، سنفعل كل شيء' للحفاظ على حقوق الاستضافة. وفازت البرازيل بالبطولة للمرة الثانية."
+        },
+        "de": {
+          "question": "Welches Land richtete das Turnier 1962 aus und sprang trotz des verheerenden Erdbebens von 1960 ein?",
+          "options": [
+            "Chile",
+            "Argentinien",
+            "Kolumbien",
+            "Peru"
+          ],
+          "explanation": "Chile richtete die Ausgabe von 1962 aus, trotz des gewaltigen Erdbebens von Valdivia 1960, das mit einer Stärke von 9,5 das stärkste jemals gemessene war. Das chilenische Organisationskomitee argumentierte bekanntlich 'Gerade weil wir nichts haben, werden wir alles tun', um die Austragungsrechte zu behalten. Brasilien gewann das Turnier zum zweiten Mal."
+        },
+        "es": {
+          "question": "¿Qué país fue sede del torneo de 1962, asumiendo la organización a pesar del devastador terremoto de 1960?",
+          "options": [
+            "Chile",
+            "Argentina",
+            "Colombia",
+            "Perú"
+          ],
+          "explanation": "Chile fue sede de la edición de 1962 pese al enorme terremoto de Valdivia de 1960, el más fuerte jamás registrado, con una magnitud de 9.5. El comité organizador chileno se hizo célebre al argumentar 'Porque no tenemos nada, lo haremos todo' para conservar la sede. Brasil ganó el torneo por segunda vez."
+        },
+        "es-ES": {
+          "question": "¿Qué país acogió el torneo de 1962, asumiendo la organización a pesar del devastador terremoto de 1960?",
+          "options": [
+            "Chile",
+            "Argentina",
+            "Colombia",
+            "Perú"
+          ],
+          "explanation": "Chile acogió la edición de 1962 pese al enorme terremoto de Valdivia de 1960, el más fuerte jamás registrado, con una magnitud de 9,5. El comité organizador chileno se hizo célebre al argumentar 'Porque no tenemos nada, lo haremos todo' para conservar la sede. Brasil ganó el torneo por segunda vez."
+        },
+        "fr": {
+          "question": "Quel pays a accueilli le tournoi de 1962, prenant le relais malgré le tremblement de terre dévastateur de 1960 ?",
+          "options": [
+            "Chili",
+            "Argentine",
+            "Colombie",
+            "Pérou"
+          ],
+          "explanation": "Le Chili a accueilli l'édition de 1962 malgré l'énorme séisme de Valdivia en 1960, le plus puissant jamais enregistré avec une magnitude de 9,5. Le comité d'organisation chilien a lancé sa célèbre formule 'Parce que nous n'avons rien, nous ferons tout' pour conserver l'organisation. Le Brésil a remporté le tournoi pour la deuxième fois."
+        },
+        "it": {
+          "question": "Quale Paese ha ospitato il torneo del 1962, facendosi avanti nonostante il devastante terremoto del 1960?",
+          "options": [
+            "Cile",
+            "Argentina",
+            "Colombia",
+            "Perù"
+          ],
+          "explanation": "Il Cile ospitò l'edizione del 1962 nonostante l'enorme terremoto di Valdivia del 1960, il più forte mai registrato con una magnitudo di 9,5. Il comitato organizzatore cileno divenne celebre per la frase 'Proprio perché non abbiamo nulla, faremo tutto' pur di mantenere i diritti di organizzazione. Il Brasile vinse il torneo per la seconda volta."
+        },
+        "ja": {
+          "question": "1960年の壊滅的な地震にもかかわらず開催を引き受け、1962年大会を主催した国はどこでしょう？",
+          "options": [
+            "チリ",
+            "アルゼンチン",
+            "コロンビア",
+            "ペルー"
+          ],
+          "explanation": "チリは1960年のバルディビア地震という、マグニチュード9.5という観測史上最強の巨大地震に見舞われながらも、1962年大会を開催しました。チリの組織委員会は開催権を守るため「我々には何もないからこそ、すべてをやり遂げる」と訴えたことで有名です。この大会ではブラジルが2度目の優勝を果たしました。"
+        },
+        "ko": {
+          "question": "1960년의 참혹한 지진에도 불구하고 개최를 떠맡아 1962년 대회를 주최한 나라는 어디일까요?",
+          "options": [
+            "칠레",
+            "아르헨티나",
+            "콜롬비아",
+            "페루"
+          ],
+          "explanation": "칠레는 관측 사상 가장 강력한 규모 9.5의 1960년 발디비아 대지진을 겪었음에도 1962년 대회를 개최했습니다. 칠레 조직위원회는 개최권을 지키기 위해 '우리에게 아무것도 없기에, 우리는 모든 것을 해낼 것이다'라고 주장한 것으로 유명합니다. 이 대회에서는 브라질이 두 번째 우승을 차지했습니다."
+        },
+        "pt-BR": {
+          "question": "Qual país sediou o torneio de 1962, assumindo a organização apesar do devastador terremoto de 1960?",
+          "options": [
+            "Chile",
+            "Argentina",
+            "Colômbia",
+            "Peru"
+          ],
+          "explanation": "O Chile sediou a edição de 1962 apesar do enorme terremoto de Valdívia em 1960, o mais forte já registrado, com magnitude 9,5. O comitê organizador chileno ficou famoso ao argumentar 'Justamente porque não temos nada, faremos tudo' para manter os direitos de sediar o torneio. O Brasil venceu a competição pela segunda vez."
+        },
+        "zh-Hans": {
+          "question": "哪个国家在遭受1960年毁灭性地震后仍挺身而出，承办了1962年的赛事？",
+          "options": [
+            "智利",
+            "阿根廷",
+            "哥伦比亚",
+            "秘鲁"
+          ],
+          "explanation": "智利在经历1960年瓦尔迪维亚大地震后仍承办了1962年那届赛事。这场地震震级达9.5级，是有记录以来最强的地震。智利组委会留下名言：'正因为我们一无所有，所以我们将竭尽全力'，以此保住了主办权。巴西在那届赛事中第二次夺冠。"
+        }
+      },
+      "i18nSourceHash": "31c824d16af1780a"
     },
     {
       "id": "h-1998-expansion",
@@ -16339,7 +16628,110 @@
       ],
       "answer": 0,
       "explanation": "Uruguay hosted and won the first-ever edition in 1930, defeating Argentina 4-2 in the final in Montevideo. Only 13 teams participated, and many European nations declined to attend due to the long sea voyage across the Atlantic. Uruguay had already won Olympic gold in football in 1924 and 1928.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ما هي الدولة التي استضافت النسخة الافتتاحية لعام 1930 وفازت بها في آنٍ واحد؟",
+          "options": [
+            "الأوروغواي",
+            "الأرجنتين",
+            "البرازيل",
+            "إيطاليا"
+          ],
+          "explanation": "استضافت الأوروغواي أول نسخة على الإطلاق عام 1930 وفازت بها، إذ هزمت الأرجنتين 4-2 في النهائي بمدينة مونتيفيديو. لم يشارك سوى 13 منتخباً، وامتنعت العديد من الدول الأوروبية عن الحضور بسبب الرحلة البحرية الطويلة عبر المحيط الأطلسي. وكانت الأوروغواي قد فازت بالفعل بذهبية كرة القدم الأولمبية في عامي 1924 و1928."
+        },
+        "de": {
+          "question": "Welches Land war Gastgeber des ersten Turniers 1930 und gewann es zugleich?",
+          "options": [
+            "Uruguay",
+            "Argentinien",
+            "Brasilien",
+            "Italien"
+          ],
+          "explanation": "Uruguay richtete die allererste Ausgabe 1930 aus und gewann sie auch, mit einem 4:2-Sieg gegen Argentinien im Finale von Montevideo. Es nahmen nur 13 Mannschaften teil, und viele europäische Nationen verzichteten wegen der langen Seereise über den Atlantik auf eine Teilnahme. Uruguay hatte zudem bereits 1924 und 1928 Olympiagold im Fußball gewonnen."
+        },
+        "es": {
+          "question": "¿Qué país fue a la vez anfitrión y campeón del torneo inaugural de 1930?",
+          "options": [
+            "Uruguay",
+            "Argentina",
+            "Brasil",
+            "Italia"
+          ],
+          "explanation": "Uruguay organizó y ganó la primera edición de la historia en 1930, al vencer a Argentina por 4-2 en la final disputada en Montevideo. Solo participaron 13 selecciones, y muchas naciones europeas renunciaron a asistir por el largo viaje en barco a través del Atlántico. Además, Uruguay ya había conquistado el oro olímpico en fútbol en 1924 y 1928."
+        },
+        "es-ES": {
+          "question": "¿Qué país fue a la vez anfitrión y campeón del torneo inaugural de 1930?",
+          "options": [
+            "Uruguay",
+            "Argentina",
+            "Brasil",
+            "Italia"
+          ],
+          "explanation": "Uruguay organizó y ganó la primera edición de la historia en 1930, tras vencer a Argentina por 4-2 en la final disputada en Montevideo. Solo participaron 13 selecciones, y muchas naciones europeas renunciaron a asistir por el largo viaje en barco a través del Atlántico. Además, Uruguay ya había conquistado el oro olímpico en fútbol en 1924 y 1928."
+        },
+        "fr": {
+          "question": "Quel pays a à la fois organisé et remporté le tout premier tournoi de 1930 ?",
+          "options": [
+            "Uruguay",
+            "Argentine",
+            "Brésil",
+            "Italie"
+          ],
+          "explanation": "L'Uruguay a organisé et remporté la toute première édition en 1930, en battant l'Argentine 4-2 en finale à Montevideo. Seules 13 équipes ont participé, et de nombreuses nations européennes ont renoncé à venir en raison du long voyage en bateau à travers l'Atlantique. L'Uruguay avait déjà décroché l'or olympique en football en 1924 et 1928."
+        },
+        "it": {
+          "question": "Quale paese ospitò e vinse al tempo stesso il torneo inaugurale del 1930?",
+          "options": [
+            "Uruguay",
+            "Argentina",
+            "Brasile",
+            "Italia"
+          ],
+          "explanation": "L'Uruguay ospitò e vinse la primissima edizione nel 1930, battendo l'Argentina per 4-2 nella finale di Montevideo. Parteciparono soltanto 13 squadre, e molte nazioni europee rinunciarono a presentarsi a causa del lungo viaggio in nave attraverso l'Atlantico. L'Uruguay aveva inoltre già conquistato l'oro olimpico nel calcio nel 1924 e nel 1928."
+        },
+        "ja": {
+          "question": "1930年の記念すべき第1回大会で、開催国でありながら優勝も果たした国はどこでしょう？",
+          "options": [
+            "ウルグアイ",
+            "アルゼンチン",
+            "ブラジル",
+            "イタリア"
+          ],
+          "explanation": "ウルグアイは1930年の史上初の大会を開催し、自ら優勝も果たしました。モンテビデオでの決勝でアルゼンチンを4対2で破ったのです。参加したのはわずか13チームで、多くのヨーロッパ諸国は大西洋を渡る長い船旅を理由に出場を辞退しました。ウルグアイはすでに1924年と1928年のオリンピックでサッカー金メダルを獲得していました。"
+        },
+        "ko": {
+          "question": "1930년 첫 번째 대회를 개최하면서 동시에 우승까지 차지한 나라는 어디일까요?",
+          "options": [
+            "우루과이",
+            "아르헨티나",
+            "브라질",
+            "이탈리아"
+          ],
+          "explanation": "우루과이는 1930년 사상 첫 대회를 개최하고 우승까지 차지했으며, 몬테비데오에서 열린 결승에서 아르헨티나를 4-2로 이겼습니다. 참가한 팀은 단 13개국뿐이었고, 많은 유럽 국가들은 대서양을 가로지르는 긴 배 여행 때문에 참가를 포기했습니다. 우루과이는 이미 1924년과 1928년 올림픽 축구에서 금메달을 따낸 바 있습니다."
+        },
+        "pt-BR": {
+          "question": "Qual país sediou e venceu, ao mesmo tempo, o torneio inaugural de 1930?",
+          "options": [
+            "Uruguai",
+            "Argentina",
+            "Brasil",
+            "Itália"
+          ],
+          "explanation": "O Uruguai sediou e venceu a primeira edição da história, em 1930, derrotando a Argentina por 4 a 2 na final disputada em Montevidéu. Apenas 13 seleções participaram, e muitas nações europeias declinaram do convite por causa da longa viagem de navio pelo Atlântico. O Uruguai já havia conquistado o ouro olímpico no futebol em 1924 e 1928."
+        },
+        "zh-Hans": {
+          "question": "哪个国家既是1930年首届赛事的东道主，又夺得了那届冠军？",
+          "options": [
+            "乌拉圭",
+            "阿根廷",
+            "巴西",
+            "意大利"
+          ],
+          "explanation": "乌拉圭主办了1930年的史上首届赛事，并最终夺冠，在蒙得维的亚举行的决赛中以4比2击败阿根廷。当时仅有13支球队参赛，许多欧洲国家因横渡大西洋的漫长海上旅程而拒绝出席。在此之前，乌拉圭已分别在1924年和1928年奥运会上夺得足球金牌。"
+        }
+      },
+      "i18nSourceHash": "c53c98819fcbc112"
     },
     {
       "id": "p-ronaldo-98-fit",
@@ -16368,7 +16760,110 @@
       "answer": 0,
       "explanation": "Andrés Iniesta scored in the 116th minute to beat the Netherlands 1-0 in the 2010 final. He revealed a message on his undershirt reading 'Dani Jarque siempre con nosotros' (Dani Jarque always with us), honoring his friend and fellow Spanish footballer who had died of a heart attack the previous year.",
       "media": "https://www.youtube.com/watch?v=6-EqlQMPmDI",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من سجّل هدف الفوز في نهائي 2010، مانحًا إسبانيا لقبها الأول؟",
+          "options": [
+            "أندريس إنييستا",
+            "دافيد فيا",
+            "تشافي",
+            "فيرناندو توريس"
+          ],
+          "explanation": "سجّل أندريس إنييستا في الدقيقة 116 ليفوز على هولندا بنتيجة 1-0 في نهائي 2010. وكشف عن رسالة على قميصه الداخلي كُتب عليها 'Dani Jarque siempre con nosotros' (داني خاركي معنا دائمًا)، تكريمًا لصديقه وزميله اللاعب الإسباني الذي توفي بنوبة قلبية في العام السابق."
+        },
+        "de": {
+          "question": "Wer erzielte im Finale 2010 das Siegtor und sicherte Spanien seinen ersten Titel?",
+          "options": [
+            "Andrés Iniesta",
+            "David Villa",
+            "Xavi",
+            "Fernando Torres"
+          ],
+          "explanation": "Andrés Iniesta traf in der 116. Minute und besiegte die Niederlande im Finale 2010 mit 1:0. Er zeigte eine Botschaft auf seinem Unterhemd: 'Dani Jarque siempre con nosotros' (Dani Jarque immer bei uns) – zu Ehren seines Freundes und spanischen Fußballerkollegen, der im Jahr zuvor an einem Herzinfarkt gestorben war."
+        },
+        "es": {
+          "question": "¿Quién marcó el gol de la victoria en la final de 2010, dándole a España su primer título?",
+          "options": [
+            "Andrés Iniesta",
+            "David Villa",
+            "Xavi",
+            "Fernando Torres"
+          ],
+          "explanation": "Andrés Iniesta marcó en el minuto 116 para vencer a los Países Bajos 1-0 en la final de 2010. Reveló un mensaje en su camiseta interior que decía 'Dani Jarque siempre con nosotros', en homenaje a su amigo y compañero futbolista español que había fallecido de un infarto el año anterior."
+        },
+        "es-ES": {
+          "question": "¿Quién marcó el gol de la victoria en la final de 2010, dándole a España su primer título?",
+          "options": [
+            "Andrés Iniesta",
+            "David Villa",
+            "Xavi",
+            "Fernando Torres"
+          ],
+          "explanation": "Andrés Iniesta marcó en el minuto 116 para vencer a los Países Bajos por 1-0 en la final de 2010. Mostró un mensaje en su camiseta interior que decía 'Dani Jarque siempre con nosotros', en homenaje a su amigo y compañero futbolista español que había fallecido de un infarto el año anterior."
+        },
+        "fr": {
+          "question": "Qui a marqué le but de la victoire lors de la finale de 2010, offrant à l'Espagne son premier titre ?",
+          "options": [
+            "Andrés Iniesta",
+            "David Villa",
+            "Xavi",
+            "Fernando Torres"
+          ],
+          "explanation": "Andrés Iniesta a marqué à la 116e minute pour battre les Pays-Bas 1-0 en finale de 2010. Il a dévoilé un message sur son maillot de corps : 'Dani Jarque siempre con nosotros' (Dani Jarque toujours avec nous), en hommage à son ami et coéquipier footballeur espagnol décédé d'une crise cardiaque l'année précédente."
+        },
+        "it": {
+          "question": "Chi ha segnato il gol decisivo nella finale del 2010, regalando alla Spagna il suo primo titolo?",
+          "options": [
+            "Andrés Iniesta",
+            "David Villa",
+            "Xavi",
+            "Fernando Torres"
+          ],
+          "explanation": "Andrés Iniesta ha segnato al 116° minuto, battendo i Paesi Bassi 1-0 nella finale del 2010. Ha mostrato un messaggio sulla sua maglietta intima con la scritta 'Dani Jarque siempre con nosotros' (Dani Jarque sempre con noi), in omaggio al suo amico e collega calciatore spagnolo morto d'infarto l'anno precedente."
+        },
+        "ja": {
+          "question": "2010年の決勝で決勝ゴールを決め、スペインに初優勝をもたらしたのは誰でしょう？",
+          "options": [
+            "アンドレス・イニエスタ",
+            "ダビド・ビジャ",
+            "シャビ",
+            "フェルナンド・トーレス"
+          ],
+          "explanation": "アンドレス・イニエスタは2010年の決勝の116分にゴールを決め、オランダを1-0で破りました。彼はアンダーシャツに書かれた『Dani Jarque siempre con nosotros』（ダニ・ハルケはいつも我々とともに）というメッセージを掲げ、前年に心臓発作で亡くなった友人でスペイン人サッカー選手仲間に敬意を表しました。"
+        },
+        "ko": {
+          "question": "2010년 결승전에서 결승골을 넣어 스페인에 첫 우승을 안긴 선수는 누구일까요?",
+          "options": [
+            "안드레스 이니에스타",
+            "다비드 비야",
+            "차비",
+            "페르난도 토레스"
+          ],
+          "explanation": "안드레스 이니에스타는 2010년 결승전 116분에 골을 넣어 네덜란드를 1-0으로 꺾었습니다. 그는 속옷에 적힌 'Dani Jarque siempre con nosotros'(다니 하르케 언제나 우리와 함께)라는 메시지를 드러내며, 전년에 심장마비로 세상을 떠난 친구이자 동료 스페인 축구 선수를 기렸습니다."
+        },
+        "pt-BR": {
+          "question": "Quem marcou o gol da vitória na final de 2010, dando à Espanha seu primeiro título?",
+          "options": [
+            "Andrés Iniesta",
+            "David Villa",
+            "Xavi",
+            "Fernando Torres"
+          ],
+          "explanation": "Andrés Iniesta marcou aos 116 minutos para vencer a Holanda por 1 a 0 na final de 2010. Ele revelou uma mensagem em sua camiseta por baixo do uniforme com os dizeres 'Dani Jarque siempre con nosotros' (Dani Jarque sempre conosco), em homenagem ao seu amigo e colega futebolista espanhol que havia falecido de um ataque cardíaco no ano anterior."
+        },
+        "zh-Hans": {
+          "question": "在2010年决赛中打进制胜球、为西班牙赢得首个冠军的是谁？",
+          "options": [
+            "安德烈斯·伊涅斯塔",
+            "大卫·比利亚",
+            "哈维",
+            "费尔南多·托雷斯"
+          ],
+          "explanation": "安德烈斯·伊涅斯塔在2010年决赛第116分钟攻入一球，以1比0击败荷兰。他亮出了内衣上的一行字：'Dani Jarque siempre con nosotros'（达尼·哈尔克永远与我们同在），以纪念前一年因心脏病去世的好友兼西班牙球员同伴。"
+        }
+      },
+      "i18nSourceHash": "05a3df60b0b0f46b"
     },
     {
       "id": "p-bergkamp-1998",
