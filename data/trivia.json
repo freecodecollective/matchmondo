@@ -9998,8 +9998,7 @@
         "They point to the center circle"
       ],
       "answer": 0,
-      "explanation": "The advantage signal — both arms extended forward and upward — tells players that the referee saw the foul but is allowing play to continue because stopping would disadvantage the fouled team. If the expected advantage doesn't materialize within a few seconds, the referee can still come back and award the original free kick.",
-      "needsReview": true
+      "explanation": "The advantage signal — both arms extended forward and upward — tells players that the referee saw the foul but is allowing play to continue because stopping would disadvantage the fouled team. If the expected advantage doesn't materialize within a few seconds, the referee can still come back and award the original free kick."
     },
     {
       "id": "r-penalty-rebound",
