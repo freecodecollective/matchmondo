@@ -3427,7 +3427,110 @@
       ],
       "answer": 1,
       "explanation": "A sent-off player cannot be replaced — the team plays a player down, and the player is suspended for at least the next match.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "عندما يحصل لاعب على بطاقة حمراء، يجب على الفريق أن…",
+          "options": [
+            "يُدخل لاعبًا بديلاً",
+            "يلعب بنقص لاعب لبقية المباراة",
+            "يستبدله بعد 10 دقائق",
+            "يعترض على الفور"
+          ],
+          "explanation": "لا يمكن استبدال اللاعب المطرود — يلعب الفريق منقوصًا بلاعب، ويُوقف اللاعب عن المباراة التالية على الأقل."
+        },
+        "de": {
+          "question": "Wenn ein Spieler die Rote Karte sieht, muss die Mannschaft…",
+          "options": [
+            "Einen Ersatzspieler einwechseln",
+            "Den Rest des Spiels mit einem Mann weniger spielen",
+            "Ihn nach 10 Minuten ersetzen",
+            "Sofort Einspruch einlegen"
+          ],
+          "explanation": "Ein vom Platz gestellter Spieler darf nicht ersetzt werden — die Mannschaft spielt in Unterzahl, und der Spieler ist für mindestens das nächste Spiel gesperrt."
+        },
+        "es": {
+          "question": "Cuando a un jugador le muestran una tarjeta roja, el equipo debe…",
+          "options": [
+            "Meter a un suplente",
+            "Jugar con un hombre menos el resto del partido",
+            "Reemplazarlo después de 10 minutos",
+            "Apelar de inmediato"
+          ],
+          "explanation": "Un jugador expulsado no puede ser reemplazado: el equipo juega con uno menos y el jugador queda suspendido al menos para el siguiente partido."
+        },
+        "es-ES": {
+          "question": "Cuando a un jugador le muestran una tarjeta roja, el equipo debe…",
+          "options": [
+            "Meter a un suplente",
+            "Jugar con un hombre menos el resto del partido",
+            "Sustituirlo a los 10 minutos",
+            "Apelar de inmediato"
+          ],
+          "explanation": "A un jugador expulsado no se le puede sustituir: el equipo juega con uno menos y el jugador queda sancionado al menos para el siguiente partido."
+        },
+        "fr": {
+          "question": "Lorsqu'un joueur reçoit un carton rouge, l'équipe doit…",
+          "options": [
+            "Faire entrer un remplaçant",
+            "Jouer en infériorité numérique le reste du match",
+            "Le remplacer après 10 minutes",
+            "Faire appel immédiatement"
+          ],
+          "explanation": "Un joueur expulsé ne peut pas être remplacé : l'équipe joue en infériorité numérique, et le joueur est suspendu pour au moins le match suivant."
+        },
+        "it": {
+          "question": "Quando a un giocatore viene mostrato un cartellino rosso, la squadra deve…",
+          "options": [
+            "Far entrare un sostituto",
+            "Giocare in inferiorità numerica per il resto della partita",
+            "Sostituirlo dopo 10 minuti",
+            "Fare ricorso immediatamente"
+          ],
+          "explanation": "Un giocatore espulso non può essere sostituito: la squadra gioca in inferiorità numerica e il giocatore viene squalificato per almeno la partita successiva."
+        },
+        "ja": {
+          "question": "選手にレッドカードが提示されたとき、そのチームは…",
+          "options": [
+            "交代選手を投入する",
+            "残りの試合を一人少ない状態で戦う",
+            "10分後にその選手を交代させる",
+            "ただちに抗議する"
+          ],
+          "explanation": "退場した選手は交代できません。チームは一人少ない状態で戦い、その選手は少なくとも次の試合の出場停止となります。"
+        },
+        "ko": {
+          "question": "선수가 레드카드를 받으면, 그 팀은…",
+          "options": [
+            "교체 선수를 투입한다",
+            "남은 경기를 한 명 적은 인원으로 치른다",
+            "10분 후에 그 선수를 교체한다",
+            "즉시 항의한다"
+          ],
+          "explanation": "퇴장당한 선수는 교체할 수 없습니다. 팀은 한 명이 부족한 상태로 경기하며, 해당 선수는 최소한 다음 경기 출전 정지를 받습니다."
+        },
+        "pt-BR": {
+          "question": "Quando um jogador recebe um cartão vermelho, a equipe deve…",
+          "options": [
+            "Colocar um substituto em campo",
+            "Jogar com um a menos no restante da partida",
+            "Substituí-lo após 10 minutos",
+            "Recorrer imediatamente"
+          ],
+          "explanation": "Um jogador expulso não pode ser substituído — a equipe joga com um a menos, e o jogador fica suspenso por pelo menos a próxima partida."
+        },
+        "zh-Hans": {
+          "question": "当一名球员被出示红牌时，球队必须……",
+          "options": [
+            "换上一名替补球员",
+            "在余下的比赛中少打一人",
+            "在10分钟后将其替换",
+            "立即提出申诉"
+          ],
+          "explanation": "被罚下场的球员不能被替换——球队只能少打一人，且该球员至少会被停赛下一场比赛。"
+        }
+      },
+      "i18nSourceHash": "854449de1e90fddd"
     },
     {
       "id": "r-extra-time",
@@ -3441,7 +3544,110 @@
       ],
       "answer": 2,
       "explanation": "From the Round of 32 on, a tie goes to two 15-minute periods of extra time, then a penalty shootout if still level.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "إذا انتهت مباراة خروج المغلوب بالتعادل بعد 90 دقيقة، فماذا يحدث بعد ذلك؟",
+          "options": [
+            "ركلات الترجيح مباشرة",
+            "إعادة المباراة",
+            "شوطان إضافيان مدة كل منهما 15 دقيقة",
+            "الهدف الذهبي"
+          ],
+          "explanation": "اعتبارًا من دور الـ32، يُحسم التعادل بشوطين إضافيين مدة كل منهما 15 دقيقة، ثم بركلات الترجيح إذا استمر التعادل."
+        },
+        "de": {
+          "question": "Wenn ein K.-o.-Spiel nach 90 Minuten unentschieden steht, wie geht es weiter?",
+          "options": [
+            "Direkt ins Elfmeterschießen",
+            "Ein Wiederholungsspiel",
+            "Zwei Verlängerungen von je 15 Minuten",
+            "Golden Goal"
+          ],
+          "explanation": "Ab dem Sechzehntelfinale folgt bei einem Unentschieden eine Verlängerung mit zwei Halbzeiten von je 15 Minuten und danach ein Elfmeterschießen, falls es immer noch unentschieden steht."
+        },
+        "es": {
+          "question": "Si un partido de eliminación directa termina empatado tras 90 minutos, ¿qué sucede a continuación?",
+          "options": [
+            "Directo a los penales",
+            "Un partido de desempate",
+            "Dos tiempos suplementarios de 15 minutos",
+            "Gol de oro"
+          ],
+          "explanation": "Desde los dieciseisavos de final, un empate se define con dos tiempos suplementarios de 15 minutos y, si persiste la igualdad, una tanda de penales."
+        },
+        "es-ES": {
+          "question": "Si un partido de eliminatoria termina empatado tras 90 minutos, ¿qué ocurre a continuación?",
+          "options": [
+            "Directos a los penaltis",
+            "Un partido de repetición",
+            "Dos prórrogas de 15 minutos",
+            "Gol de oro"
+          ],
+          "explanation": "A partir de los dieciseisavos de final, un empate se resuelve con dos prórrogas de 15 minutos y, si la igualdad persiste, una tanda de penaltis."
+        },
+        "fr": {
+          "question": "Si un match à élimination directe est à égalité après 90 minutes, que se passe-t-il ensuite ?",
+          "options": [
+            "Directement aux tirs au but",
+            "Un match à rejouer",
+            "Deux prolongations de 15 minutes",
+            "But en or"
+          ],
+          "explanation": "À partir des seizièmes de finale, une égalité se joue en deux prolongations de 15 minutes, puis lors d'une séance de tirs au but si le score reste nul."
+        },
+        "it": {
+          "question": "Se una partita a eliminazione diretta è in parità dopo 90 minuti, cosa succede dopo?",
+          "options": [
+            "Direttamente ai rigori",
+            "Una ripetizione della partita",
+            "Due tempi supplementari da 15 minuti",
+            "Golden goal"
+          ],
+          "explanation": "Dai sedicesimi di finale in poi, un pareggio si risolve con due tempi supplementari da 15 minuti e, se permane la parità, con i calci di rigore."
+        },
+        "ja": {
+          "question": "ノックアウト方式の試合が90分終了時点で同点だった場合、次に何が起こりますか？",
+          "options": [
+            "すぐにPK戦へ",
+            "再試合",
+            "15分ハーフ2本の延長戦",
+            "ゴールデンゴール"
+          ],
+          "explanation": "ラウンド32以降は、同点の場合に15分ハーフ2本の延長戦が行われ、それでも決着がつかなければPK戦となります。"
+        },
+        "ko": {
+          "question": "토너먼트 경기가 90분 후에도 동점이면 다음에 무슨 일이 일어나나요?",
+          "options": [
+            "곧바로 승부차기",
+            "재경기",
+            "15분씩 두 번의 연장전",
+            "골든골"
+          ],
+          "explanation": "32강전부터는 동점일 경우 15분씩 두 차례 연장전을 치르며, 그래도 동점이면 승부차기로 결정됩니다."
+        },
+        "pt-BR": {
+          "question": "Se uma partida de mata-mata está empatada após 90 minutos, o que acontece em seguida?",
+          "options": [
+            "Direto para os pênaltis",
+            "Uma partida de desempate",
+            "Dois tempos de 15 minutos de prorrogação",
+            "Gol de ouro"
+          ],
+          "explanation": "A partir das oitavas de 32, um empate vai para dois tempos de 15 minutos de prorrogação e, se a igualdade persistir, para a disputa de pênaltis."
+        },
+        "zh-Hans": {
+          "question": "如果淘汰赛比赛在90分钟后仍是平局，接下来会怎样？",
+          "options": [
+            "直接进入点球大战",
+            "重赛一场",
+            "进行两个15分钟的加时赛",
+            "金球制"
+          ],
+          "explanation": "从32强淘汰赛开始，平局将进行两个15分钟的加时赛，若仍然战平，则通过点球大战决出胜负。"
+        }
+      },
+      "i18nSourceHash": "11b62c0af206af2d"
     },
     {
       "id": "t-opener-azteca",
@@ -3456,7 +3662,110 @@
       "answer": 0,
       "explanation": "Mexico City's Estadio Azteca opens the tournament — a venue that has hosted two previous finals.",
       "media": "https://www.youtube.com/watch?v=j2K1Jhxux1k",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ما الملعب التاريخي الذي استضاف مباراة الافتتاح في 2026؟",
+          "options": [
+            "إستاديو أزتيكا، مدينة مكسيكو",
+            "ملعب ميت لايف، نيوجيرسي",
+            "روز باول، باسادينا",
+            "بي سي بليس، فانكوفر"
+          ],
+          "explanation": "يفتتح ملعب إستاديو أزتيكا في مدينة مكسيكو البطولة، وهو ملعب سبق أن استضاف نهائيين من قبل."
+        },
+        "de": {
+          "question": "Welches historische Stadion war Austragungsort des Eröffnungsspiels 2026?",
+          "options": [
+            "Estadio Azteca, Mexiko-Stadt",
+            "MetLife Stadium, New Jersey",
+            "Rose Bowl, Pasadena",
+            "BC Place, Vancouver"
+          ],
+          "explanation": "Das Estadio Azteca in Mexiko-Stadt eröffnet das Turnier – ein Stadion, das bereits zwei Endspiele ausgetragen hat."
+        },
+        "es": {
+          "question": "¿Qué estadio histórico fue sede del partido inaugural en 2026?",
+          "options": [
+            "Estadio Azteca, Ciudad de México",
+            "MetLife Stadium, Nueva Jersey",
+            "Rose Bowl, Pasadena",
+            "BC Place, Vancouver"
+          ],
+          "explanation": "El Estadio Azteca de la Ciudad de México abre el torneo, un escenario que ya ha sido sede de dos finales anteriores."
+        },
+        "es-ES": {
+          "question": "¿Qué estadio histórico acogió el partido inaugural en 2026?",
+          "options": [
+            "Estadio Azteca, Ciudad de México",
+            "MetLife Stadium, Nueva Jersey",
+            "Rose Bowl, Pasadena",
+            "BC Place, Vancouver"
+          ],
+          "explanation": "El Estadio Azteca de Ciudad de México inaugura el torneo, un recinto que ya ha albergado dos finales anteriores."
+        },
+        "fr": {
+          "question": "Quel stade historique a accueilli le match d'ouverture en 2026 ?",
+          "options": [
+            "Estadio Azteca, Mexico",
+            "MetLife Stadium, New Jersey",
+            "Rose Bowl, Pasadena",
+            "BC Place, Vancouver"
+          ],
+          "explanation": "L'Estadio Azteca de Mexico ouvre le tournoi, une enceinte qui a déjà accueilli deux finales par le passé."
+        },
+        "it": {
+          "question": "Quale stadio storico ha ospitato la partita inaugurale nel 2026?",
+          "options": [
+            "Estadio Azteca, Città del Messico",
+            "MetLife Stadium, New Jersey",
+            "Rose Bowl, Pasadena",
+            "BC Place, Vancouver"
+          ],
+          "explanation": "L'Estadio Azteca di Città del Messico inaugura il torneo, un impianto che in passato ha già ospitato due finali."
+        },
+        "ja": {
+          "question": "2026年の開幕戦を開催した歴史的なスタジアムはどれですか？",
+          "options": [
+            "エスタディオ・アステカ（メキシコシティ）",
+            "メットライフ・スタジアム（ニュージャージー）",
+            "ローズボウル（パサデナ）",
+            "BCプレイス（バンクーバー）"
+          ],
+          "explanation": "メキシコシティのエスタディオ・アステカが大会の幕開けを飾ります。過去に2度の決勝戦を開催した会場です。"
+        },
+        "ko": {
+          "question": "2026년 개막전이 열린 역사적인 경기장은 어디일까요?",
+          "options": [
+            "에스타디오 아스테카, 멕시코시티",
+            "메트라이프 스타디움, 뉴저지",
+            "로즈 볼, 패서디나",
+            "BC 플레이스, 밴쿠버"
+          ],
+          "explanation": "멕시코시티의 에스타디오 아스테카가 대회의 막을 엽니다. 과거 두 차례 결승전을 개최했던 경기장입니다."
+        },
+        "pt-BR": {
+          "question": "Qual estádio histórico sediou a partida de abertura em 2026?",
+          "options": [
+            "Estadio Azteca, Cidade do México",
+            "MetLife Stadium, Nova Jersey",
+            "Rose Bowl, Pasadena",
+            "BC Place, Vancouver"
+          ],
+          "explanation": "O Estadio Azteca, na Cidade do México, abre o torneio — um palco que já recebeu duas finais anteriores."
+        },
+        "zh-Hans": {
+          "question": "2026年的揭幕战在哪座历史悠久的球场举行？",
+          "options": [
+            "阿兹特克体育场，墨西哥城",
+            "大都会人寿体育场，新泽西",
+            "玫瑰碗体育场，帕萨迪纳",
+            "BC 体育馆，温哥华"
+          ],
+          "explanation": "墨西哥城的阿兹特克体育场拉开本届赛事的帷幕——这座球场此前曾两度举办过决赛。"
+        }
+      },
+      "i18nSourceHash": "dfb4161c4fce864c"
     },
     {
       "id": "p-deschamps-dual",
@@ -3704,7 +4013,110 @@
       ],
       "answer": 1,
       "explanation": "Italy won on home soil in 1934 and retained the title in France in 1938 — the first nation to win back-to-back. Brazil later achieved the same feat in 1958 and 1962, and France won back-to-back in 2018 and would have in 2022 but were eliminated in the final on penalties.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أي دولة فازت بلقبين متتاليين عامي 1934 و1938؟",
+          "options": [
+            "فرنسا",
+            "إيطاليا",
+            "ألمانيا",
+            "إسبانيا"
+          ],
+          "explanation": "فازت إيطاليا على أرضها عام 1934 ثم حافظت على اللقب في فرنسا عام 1938، لتكون أول دولة تحرز لقبين متتاليين. وحقق المنتخب البرازيلي لاحقاً الإنجاز نفسه عامي 1958 و1962، كما فازت فرنسا بلقبين متتاليين عام 2018 وكانت ستكرر ذلك عام 2022 لولا خروجها في النهائي بركلات الترجيح."
+        },
+        "de": {
+          "question": "Welche Nation gewann 1934 und 1938 zwei Titel in Folge?",
+          "options": [
+            "Frankreich",
+            "Italien",
+            "Deutschland",
+            "Spanien"
+          ],
+          "explanation": "Italien siegte 1934 im eigenen Land und verteidigte den Titel 1938 in Frankreich – als erste Nation gelang ihnen damit der Titelgewinn in Folge. Brasilien schaffte später dasselbe Kunststück 1958 und 1962, und Frankreich gewann 2018 und 2022 in Folge … fast, denn 2022 schied das Team erst im Finale im Elfmeterschießen aus."
+        },
+        "es": {
+          "question": "¿Qué selección ganó títulos consecutivos en 1934 y 1938?",
+          "options": [
+            "Francia",
+            "Italia",
+            "Alemania",
+            "España"
+          ],
+          "explanation": "Italia ganó en casa en 1934 y retuvo el título en Francia en 1938, convirtiéndose en la primera selección en lograr títulos consecutivos. Brasil repetiría esa hazaña en 1958 y 1962, y Francia ganó de forma consecutiva en 2018 y habría repetido en 2022, pero cayó eliminada en la final por penales."
+        },
+        "es-ES": {
+          "question": "¿Qué selección ganó títulos consecutivos en 1934 y 1938?",
+          "options": [
+            "Francia",
+            "Italia",
+            "Alemania",
+            "España"
+          ],
+          "explanation": "Italia venció en casa en 1934 y revalidó el título en Francia en 1938, siendo la primera selección en lograr títulos consecutivos. Brasil repetiría esa gesta en 1958 y 1962, y Francia ganó dos veces seguidas en 2018 y lo habría hecho en 2022, pero cayó eliminada en la final en los penaltis."
+        },
+        "fr": {
+          "question": "Quelle nation a remporté deux titres consécutifs en 1934 et 1938 ?",
+          "options": [
+            "France",
+            "Italie",
+            "Allemagne",
+            "Espagne"
+          ],
+          "explanation": "L'Italie a gagné à domicile en 1934 puis conservé son titre en France en 1938, devenant la première nation à enchaîner deux sacres. Le Brésil a réussi le même exploit en 1958 et 1962, et la France a triomphé en 2018 et aurait pu rééditer en 2022, mais elle s'est inclinée en finale aux tirs au but."
+        },
+        "it": {
+          "question": "Quale nazionale ha vinto due titoli consecutivi nel 1934 e nel 1938?",
+          "options": [
+            "Francia",
+            "Italia",
+            "Germania",
+            "Spagna"
+          ],
+          "explanation": "L'Italia vinse in casa nel 1934 e confermò il titolo in Francia nel 1938, diventando la prima nazionale a ottenere due successi di fila. Il Brasile ripeté poi l'impresa nel 1958 e nel 1962, mentre la Francia trionfò nel 2018 e avrebbe potuto fare il bis nel 2022, ma venne eliminata in finale ai rigori."
+        },
+        "ja": {
+          "question": "1934年と1938年に連覇を達成したのはどの国でしょう？",
+          "options": [
+            "フランス",
+            "イタリア",
+            "ドイツ",
+            "スペイン"
+          ],
+          "explanation": "イタリアは1934年に地元開催で優勝し、1938年にはフランスでも王座を守り、史上初めて連覇を成し遂げた国となりました。その後、ブラジルが1958年と1962年に同じ偉業を達成し、フランスも2018年に優勝。2022年も連覇に迫りましたが、決勝でPK戦の末に敗れました。"
+        },
+        "ko": {
+          "question": "1934년과 1938년에 2연패를 달성한 나라는 어디일까요?",
+          "options": [
+            "프랑스",
+            "이탈리아",
+            "독일",
+            "스페인"
+          ],
+          "explanation": "이탈리아는 1934년 홈에서 우승한 뒤 1938년 프랑스에서도 타이틀을 지켜내며 최초로 2연패를 달성한 나라가 되었습니다. 이후 브라질이 1958년과 1962년에 같은 위업을 이뤘고, 프랑스는 2018년에 우승해 2022년에도 2연패에 도전했지만 결승에서 승부차기 끝에 탈락했습니다."
+        },
+        "pt-BR": {
+          "question": "Qual seleção conquistou títulos consecutivos em 1934 e 1938?",
+          "options": [
+            "França",
+            "Itália",
+            "Alemanha",
+            "Espanha"
+          ],
+          "explanation": "A Itália venceu em casa em 1934 e manteve o título na França em 1938, tornando-se a primeira seleção a conquistar títulos consecutivos. O Brasil repetiria o feito em 1958 e 1962, e a França venceu de forma consecutiva em 2018 e teria repetido em 2022, mas foi eliminada na final nos pênaltis."
+        },
+        "zh-Hans": {
+          "question": "哪个国家在1934年和1938年实现了卫冕？",
+          "options": [
+            "法国",
+            "意大利",
+            "德国",
+            "西班牙"
+          ],
+          "explanation": "意大利于1934年在本土夺冠，并在1938年的法国成功卫冕，成为首个连续夺冠的国家。此后巴西在1958年和1962年完成了同样的壮举，法国也在2018年夺冠，本有望在2022年卫冕，却在决赛中点球大战惜败出局。"
+        }
+      },
+      "i18nSourceHash": "17ee5000c0a18053"
     },
     {
       "id": "h-1966-england",
@@ -3719,7 +4131,110 @@
       "answer": 1,
       "explanation": "England won on home soil in 1966, beating West Germany 4–2 after extra time.",
       "media": "https://www.youtube.com/watch?v=C0aK2IgORGA",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "في أي عام أحرزت إنجلترا لقبها الوحيد؟",
+          "options": [
+            "1962",
+            "1966",
+            "1970",
+            "1974"
+          ],
+          "explanation": "فازت إنجلترا على أرضها عام 1966، بعد تغلبها على ألمانيا الغربية 4–2 في الوقت الإضافي."
+        },
+        "de": {
+          "question": "In welchem Jahr gewann England seinen einzigen Titel?",
+          "options": [
+            "1962",
+            "1966",
+            "1970",
+            "1974"
+          ],
+          "explanation": "England siegte 1966 im eigenen Land und schlug Westdeutschland nach Verlängerung mit 4:2."
+        },
+        "es": {
+          "question": "¿En qué año ganó Inglaterra su único título?",
+          "options": [
+            "1962",
+            "1966",
+            "1970",
+            "1974"
+          ],
+          "explanation": "Inglaterra ganó como local en 1966, venciendo a Alemania Occidental 4–2 tras la prórroga."
+        },
+        "es-ES": {
+          "question": "¿En qué año conquistó Inglaterra su único título?",
+          "options": [
+            "1962",
+            "1966",
+            "1970",
+            "1974"
+          ],
+          "explanation": "Inglaterra ganó en casa en 1966, batiendo a Alemania Occidental por 4–2 tras la prórroga."
+        },
+        "fr": {
+          "question": "En quelle année l'Angleterre a-t-elle remporté son unique titre ?",
+          "options": [
+            "1962",
+            "1966",
+            "1970",
+            "1974"
+          ],
+          "explanation": "L'Angleterre l'a emporté à domicile en 1966, en battant l'Allemagne de l'Ouest 4–2 après prolongation."
+        },
+        "it": {
+          "question": "In quale anno l'Inghilterra ha conquistato il suo unico titolo?",
+          "options": [
+            "1962",
+            "1966",
+            "1970",
+            "1974"
+          ],
+          "explanation": "L'Inghilterra ha vinto in casa nel 1966, battendo la Germania Ovest per 4–2 dopo i tempi supplementari."
+        },
+        "ja": {
+          "question": "イングランドが唯一のタイトルを獲得したのは何年ですか？",
+          "options": [
+            "1962",
+            "1966",
+            "1970",
+            "1974"
+          ],
+          "explanation": "イングランドは1966年に地元開催で優勝し、延長戦の末に西ドイツを4対2で破りました。"
+        },
+        "ko": {
+          "question": "잉글랜드가 유일한 우승을 차지한 해는 언제인가요?",
+          "options": [
+            "1962",
+            "1966",
+            "1970",
+            "1974"
+          ],
+          "explanation": "잉글랜드는 1966년 자국에서 열린 대회에서 연장전 끝에 서독을 4–2로 꺾고 우승했습니다."
+        },
+        "pt-BR": {
+          "question": "Em que ano a Inglaterra conquistou seu único título?",
+          "options": [
+            "1962",
+            "1966",
+            "1970",
+            "1974"
+          ],
+          "explanation": "A Inglaterra venceu em casa em 1966, batendo a Alemanha Ocidental por 4–2 na prorrogação."
+        },
+        "zh-Hans": {
+          "question": "英格兰是在哪一年赢得了唯一的一次冠军？",
+          "options": [
+            "1962",
+            "1966",
+            "1970",
+            "1974"
+          ],
+          "explanation": "英格兰于1966年在本土夺冠，在加时赛中以4比2击败了西德。"
+        }
+      },
+      "i18nSourceHash": "d10c3228f29f2108"
     },
     {
       "id": "t-brazil-every-edition",
@@ -4594,9 +5109,8 @@
         "Gianluigi Buffon"
       ],
       "answer": 1,
-      "explanation": "Soviet keeper Lev Yashin, the 'Black Spider,' won the Ballon d'Or in 1963 — still the only goalkeeper ever awarded it.",
-      "media": "https://www.youtube.com/watch?v=2L4i-6mcrx0",
-      "claudeTask": "explain what the ballon dor is"
+      "explanation": "The Ballon d'Or is an annual award given to the best football player in the world, voted on by journalists (and later national team captains and coaches). Soviet keeper Lev Yashin, the 'Black Spider,' won it in 1963 — still the only goalkeeper ever to receive the honor.",
+      "needsReview": true
     },
     {
       "id": "t-host-confederation",
