@@ -964,5 +964,337 @@
 
 </div>
 
+<!-- ============== FLAG HALO VARIANTS ============== -->
+<div class="section-divider" style="margin-top:32px">Option C — Flag Halo Variants</div>
+<div class="section-note">Replace the faded headshot halo with the country flag. Four treatments: flat circle, wavy, soft glow, and full-bleed.</div>
+
+<style>
+  /* Flag halo — shared base */
+  .hdr-c .flag-halo {
+    position: absolute; right: -20px; bottom: -10px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 0.25;
+  }
+
+  /* Variant 1: Flat flag circle */
+  .flag-halo-flat .stripe {
+    position: absolute; top: 0; bottom: 0;
+  }
+  .flag-halo-flat.fr .stripe:nth-child(1) { left: 0; width: 33.33%; background: #002395; }
+  .flag-halo-flat.fr .stripe:nth-child(2) { left: 33.33%; width: 33.34%; background: #fff; }
+  .flag-halo-flat.fr .stripe:nth-child(3) { left: 66.67%; width: 33.33%; background: #ED2939; }
+
+  /* Variant 2: Wavy flag (SVG filter) */
+  .flag-halo-wavy {
+    opacity: 0.3;
+  }
+  .flag-halo-wavy svg { width: 100%; height: 100%; }
+
+  /* Variant 3: Soft glow — flag colors as radial gradient */
+  .flag-halo-glow {
+    opacity: 0.35;
+    border-radius: 50%;
+    filter: blur(8px);
+  }
+  .flag-halo-glow.fr {
+    background: radial-gradient(circle at 30% 50%, #002395 0%, #002395 25%, #fff 25%, #fff 50%, #ED2939 50%, #ED2939 100%);
+  }
+
+  /* Variant 4: Full-bleed flag (not clipped to circle) */
+  .flag-halo-bleed {
+    position: absolute;
+    right: -30px; bottom: -20px;
+    width: 240px; height: 180px;
+    border-radius: 16px;
+    overflow: hidden;
+    opacity: 0.18;
+  }
+  .flag-halo-bleed .stripe {
+    position: absolute; top: 0; bottom: 0;
+  }
+  .flag-halo-bleed.fr .stripe:nth-child(1) { left: 0; width: 33.33%; background: #002395; }
+  .flag-halo-bleed.fr .stripe:nth-child(2) { left: 33.33%; width: 33.34%; background: #fff; }
+  .flag-halo-bleed.fr .stripe:nth-child(3) { left: 66.67%; width: 33.33%; background: #ED2939; }
+
+  /* Variant 5: Wavy flag (CSS animation) */
+  .flag-halo-wave-anim {
+    opacity: 0.3;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .flag-halo-wave-anim .flag-inner {
+    width: 120%; height: 120%;
+    position: absolute; top: -10%; left: -10%;
+    animation: flagWave 3s ease-in-out infinite;
+    transform-origin: left center;
+  }
+  .flag-halo-wave-anim .flag-inner .stripe {
+    position: absolute; top: 0; bottom: 0;
+  }
+  .flag-halo-wave-anim.fr .stripe:nth-child(1) { left: 0; width: 33.33%; background: #002395; }
+  .flag-halo-wave-anim.fr .stripe:nth-child(2) { left: 33.33%; width: 33.34%; background: #fff; }
+  .flag-halo-wave-anim.fr .stripe:nth-child(3) { left: 66.67%; width: 33.33%; background: #ED2939; }
+  @keyframes flagWave {
+    0%, 100% { transform: perspective(300px) rotateY(0deg) skewY(0deg); }
+    25% { transform: perspective(300px) rotateY(5deg) skewY(2deg); }
+    50% { transform: perspective(300px) rotateY(-3deg) skewY(-1deg); }
+    75% { transform: perspective(300px) rotateY(4deg) skewY(1.5deg); }
+  }
+
+  /* Variant 6: Wavy flag with SVG displacement + ripple */
+  .flag-halo-ripple {
+    opacity: 0.3;
+  }
+  .flag-halo-ripple svg { width: 100%; height: 100%; }
+</style>
+
+<!-- Hidden SVG filter for wavy distortion -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <filter id="wave-filter">
+      <feTurbulence type="turbulence" baseFrequency="0.015 0.04" numOctaves="3" seed="2" result="turbulence"/>
+      <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="18" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="ripple-filter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.06" numOctaves="4" seed="5" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="25" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<div class="phones">
+
+<!-- 1. Flat flag circle -->
+<div class="phone-wrap">
+  <div class="phone-label">Flat Flag Circle</div>
+  <div class="phone-sublabel">Country flag in a large circle behind the headshot, same position as the old headshot halo.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="flag-halo flag-halo-flat fr">
+          <div class="stripe"></div><div class="stripe"></div><div class="stripe"></div>
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
+        <div class="jersey">10</div>
+        <div class="photo-flag">🇫🇷</div>
+        <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. Wavy flag (SVG displacement) -->
+<div class="phone-wrap">
+  <div class="phone-label">Wavy Flag (Displaced)</div>
+  <div class="phone-sublabel">Flag with SVG turbulence displacement — looks like fabric rippling in the wind.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="flag-halo flag-halo-wavy">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <clipPath id="circle-clip-1"><circle cx="100" cy="100" r="100"/></clipPath>
+            </defs>
+            <g clip-path="url(#circle-clip-1)" filter="url(#wave-filter)">
+              <rect x="0" y="0" width="67" height="200" fill="#002395"/>
+              <rect x="67" y="0" width="66" height="200" fill="#fff"/>
+              <rect x="133" y="0" width="67" height="200" fill="#ED2939"/>
+            </g>
+          </svg>
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
+        <div class="jersey">10</div>
+        <div class="photo-flag">🇫🇷</div>
+        <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. Soft glow -->
+<div class="phone-wrap">
+  <div class="phone-label">Soft Glow</div>
+  <div class="phone-sublabel">Flag colors as a blurred radial gradient — subtle, painterly feel behind the headshot.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="flag-halo flag-halo-glow fr"></div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
+        <div class="jersey">10</div>
+        <div class="photo-flag">🇫🇷</div>
+        <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. Full-bleed flag (rectangular, not circle) -->
+<div class="phone-wrap">
+  <div class="phone-label">Full-Bleed Rectangle</div>
+  <div class="phone-sublabel">Flag as a rounded rectangle extending wider than the headshot. More like a banner behind the player.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="flag-halo-bleed fr">
+          <div class="stripe"></div><div class="stripe"></div><div class="stripe"></div>
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
+        <div class="jersey">10</div>
+        <div class="photo-flag">🇫🇷</div>
+        <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. CSS animated wave -->
+<div class="phone-wrap">
+  <div class="phone-label">Animated Wave</div>
+  <div class="phone-sublabel">Flag gently waves using CSS perspective transforms — subtle motion that catches the eye.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="flag-halo flag-halo-wave-anim fr">
+          <div class="flag-inner">
+            <div class="stripe"></div><div class="stripe"></div><div class="stripe"></div>
+          </div>
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
+        <div class="jersey">10</div>
+        <div class="photo-flag">🇫🇷</div>
+        <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. Ripple wave (stronger displacement) -->
+<div class="phone-wrap">
+  <div class="phone-label">Ripple Wave</div>
+  <div class="phone-sublabel">Stronger SVG displacement — flag looks like it's fluttering in a gust of wind.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="flag-halo flag-halo-ripple">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <clipPath id="circle-clip-2"><circle cx="100" cy="100" r="100"/></clipPath>
+            </defs>
+            <g clip-path="url(#circle-clip-2)" filter="url(#ripple-filter)">
+              <rect x="0" y="0" width="67" height="200" fill="#002395"/>
+              <rect x="67" y="0" width="66" height="200" fill="#fff"/>
+              <rect x="133" y="0" width="67" height="200" fill="#ED2939"/>
+            </g>
+          </svg>
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
+        <div class="jersey">10</div>
+        <div class="photo-flag">🇫🇷</div>
+        <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
 </body>
 </html>
