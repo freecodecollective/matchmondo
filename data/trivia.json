@@ -16891,7 +16891,110 @@
       ],
       "answer": 0,
       "explanation": "Davor Šuker's 6 goals earned him the Golden Boot as Croatia finished third in their first-ever tournament appearance in 1998. His delicate chip over Danish goalkeeper Peter Schmeichel in the quarter-final is one of the tournament's most elegant goals.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من فاز بجائزة الحذاء الذهبي في بطولة 1998 برصيد 6 أهداف، قائداً كرواتيا إلى المركز الثالث في أول مشاركة لها؟",
+          "options": [
+            "دافور شوكر",
+            "زفونيمير بوبان",
+            "روبرت بروسينيتشكي",
+            "ألين بوكشيتش"
+          ],
+          "explanation": "حصد دافور شوكر جائزة الحذاء الذهبي بفضل أهدافه الستة بينما حلّت كرواتيا في المركز الثالث في أول ظهور لها على الإطلاق عام 1998. ويُعدّ هدفه الرقيق بكرة مقوّسة فوق حارس المرمى الدنماركي بيتر شمايكل في الدور ربع النهائي من أجمل أهداف البطولة وأكثرها أناقة."
+        },
+        "de": {
+          "question": "Wer gewann beim Turnier 1998 mit 6 Toren den Goldenen Schuh und führte Kroatien bei seiner Premiere auf den dritten Platz?",
+          "options": [
+            "Davor Šuker",
+            "Zvonimir Boban",
+            "Robert Prosinečki",
+            "Alen Bokšić"
+          ],
+          "explanation": "Mit seinen 6 Toren sicherte sich Davor Šuker den Goldenen Schuh, während Kroatien bei seiner ersten Turnierteilnahme 1998 den dritten Platz belegte. Sein gefühlvoller Heber über den dänischen Torwart Peter Schmeichel im Viertelfinale zählt zu den elegantesten Toren des Turniers."
+        },
+        "es": {
+          "question": "¿Quién ganó la Bota de Oro en el torneo de 1998 con 6 goles, llevando a Croacia al tercer puesto en su debut?",
+          "options": [
+            "Davor Šuker",
+            "Zvonimir Boban",
+            "Robert Prosinečki",
+            "Alen Bokšić"
+          ],
+          "explanation": "Los 6 goles de Davor Šuker le valieron la Bota de Oro mientras Croacia terminaba tercera en su primera participación en un torneo, en 1998. Su delicada vaselina por encima del arquero danés Peter Schmeichel en los cuartos de final es uno de los goles más elegantes del torneo."
+        },
+        "es-ES": {
+          "question": "¿Quién ganó la Bota de Oro en el torneo de 1998 con 6 goles, llevando a Croacia al tercer puesto en su debut?",
+          "options": [
+            "Davor Šuker",
+            "Zvonimir Boban",
+            "Robert Prosinečki",
+            "Alen Bokšić"
+          ],
+          "explanation": "Los 6 goles de Davor Šuker le valieron la Bota de Oro mientras Croacia terminaba tercera en su primera participación en un torneo, en 1998. Su delicada vaselina por encima del portero danés Peter Schmeichel en los cuartos de final es uno de los goles más elegantes del torneo."
+        },
+        "fr": {
+          "question": "Qui a remporté le Soulier d'or lors du tournoi de 1998 avec 6 buts, menant la Croatie à la troisième place pour ses débuts ?",
+          "options": [
+            "Davor Šuker",
+            "Zvonimir Boban",
+            "Robert Prosinečki",
+            "Alen Bokšić"
+          ],
+          "explanation": "Les 6 buts de Davor Šuker lui ont valu le Soulier d'or, tandis que la Croatie terminait troisième pour sa toute première participation à un tournoi, en 1998. Son délicat lob par-dessus le gardien danois Peter Schmeichel en quart de finale reste l'un des buts les plus élégants du tournoi."
+        },
+        "it": {
+          "question": "Chi vinse la Scarpa d'Oro al torneo del 1998 con 6 gol, trascinando la Croazia al terzo posto al suo esordio?",
+          "options": [
+            "Davor Šuker",
+            "Zvonimir Boban",
+            "Robert Prosinečki",
+            "Alen Bokšić"
+          ],
+          "explanation": "I 6 gol di Davor Šuker gli valsero la Scarpa d'Oro, mentre la Croazia chiudeva al terzo posto alla sua primissima partecipazione a un torneo, nel 1998. Il suo delicato pallonetto sopra il portiere danese Peter Schmeichel nei quarti di finale è uno dei gol più eleganti del torneo."
+        },
+        "ja": {
+          "question": "1998年の大会で6得点を挙げて得点王に輝き、初出場のクロアチアを3位に導いたのは誰でしょう？",
+          "options": [
+            "ダボル・シューケル",
+            "ズボニミル・ボバン",
+            "ロベルト・プロシネチキ",
+            "アレン・ボクシッチ"
+          ],
+          "explanation": "ダボル・シューケルは6得点を挙げて得点王に輝き、クロアチアは1998年の大会初出場で3位を獲得しました。準々決勝でデンマークのGKペーター・シュマイケルの頭上を越えた繊細なループシュートは、大会で最も美しいゴールのひとつとされています。"
+        },
+        "ko": {
+          "question": "1998년 대회에서 6골을 기록하며 득점왕에 올라 크로아티아를 첫 출전 만에 3위로 이끈 선수는 누구일까요?",
+          "options": [
+            "다보르 슈케르",
+            "즈보니미르 보반",
+            "로베르트 프로시네츠키",
+            "알렌 복시치"
+          ],
+          "explanation": "다보르 슈케르는 6골을 넣어 득점왕을 차지했고, 크로아티아는 1998년 첫 대회 출전 만에 3위에 올랐습니다. 8강전에서 덴마크 골키퍼 페터 슈마이켈의 머리 위로 넘긴 그의 섬세한 칩슛은 대회에서 가장 우아한 골 중 하나로 꼽힙니다."
+        },
+        "pt-BR": {
+          "question": "Quem venceu a Chuteira de Ouro no torneio de 1998 com 6 gols, levando a Croácia ao terceiro lugar em sua estreia?",
+          "options": [
+            "Davor Šuker",
+            "Zvonimir Boban",
+            "Robert Prosinečki",
+            "Alen Bokšić"
+          ],
+          "explanation": "Os 6 gols de Davor Šuker lhe renderam a Chuteira de Ouro, enquanto a Croácia terminava em terceiro lugar em sua primeira participação em um torneio, em 1998. Sua delicada cavadinha por cima do goleiro dinamarquês Peter Schmeichel nas quartas de final é um dos gols mais elegantes do torneio."
+        },
+        "zh-Hans": {
+          "question": "在1998年的赛事中，谁打入6球荣膺金靴奖，并率领克罗地亚在首次参赛时取得季军？",
+          "options": [
+            "达沃·苏克",
+            "兹沃尼米尔·博班",
+            "罗伯特·普罗辛内茨基",
+            "阿伦·博克西奇"
+          ],
+          "explanation": "达沃·苏克凭借6粒进球荣获金靴奖，而克罗地亚在1998年首次参赛便夺得季军。他在四分之一决赛中将球轻巧地挑过丹麦门将彼得·舒梅切尔头顶的那粒进球，被誉为本届赛事最优雅的进球之一。"
+        }
+      },
+      "i18nSourceHash": "da49b2e854dd5908"
     },
     {
       "id": "t-australia-confederation",
@@ -16933,7 +17036,110 @@
       ],
       "answer": 0,
       "explanation": "Italy became synonymous with 'catenaccio' (meaning 'door bolt'), a highly organized defensive system built around a sweeper (libero) behind the back line. The approach prioritized clean sheets and counter-attacks, helping Italy win the 1982 tournament and influencing defensive tactics worldwide.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أي منتخب وطني اشتهر بأسلوب اللعب الدفاعي المعروف بـ'الكاتيناتشيو'؟",
+          "options": [
+            "إيطاليا",
+            "إسبانيا",
+            "ألمانيا",
+            "إنجلترا"
+          ],
+          "explanation": "ارتبط اسم إيطاليا بأسلوب 'الكاتيناتشيو' (ويعني 'مزلاج الباب')، وهو نظام دفاعي شديد التنظيم يقوم على وجود لاعب حر (ليبيرو) خلف خط الدفاع. ركّز هذا الأسلوب على عدم استقبال الأهداف والهجمات المرتدة، مما ساعد إيطاليا على الفوز ببطولة 1982 وأثّر في التكتيكات الدفاعية حول العالم."
+        },
+        "de": {
+          "question": "Welche Nationalmannschaft wurde für ihren defensiven Spielstil, den 'Catenaccio', berühmt?",
+          "options": [
+            "Italien",
+            "Spanien",
+            "Deutschland",
+            "England"
+          ],
+          "explanation": "Italien wurde zum Inbegriff des 'Catenaccio' (zu Deutsch 'Türriegel'), eines hochorganisierten Defensivsystems, das auf einem Libero hinter der Abwehrkette aufbaute. Der Ansatz setzte auf zu null gespielte Partien und Konter, verhalf Italien zum Titel beim Turnier 1982 und prägte defensive Taktiken weltweit."
+        },
+        "es": {
+          "question": "¿La selección de qué país se hizo famosa por el estilo de juego defensivo conocido como 'catenaccio'?",
+          "options": [
+            "Italia",
+            "España",
+            "Alemania",
+            "Inglaterra"
+          ],
+          "explanation": "Italia se volvió sinónimo del 'catenaccio' (que significa 'cerrojo'), un sistema defensivo muy organizado construido en torno a un líbero ubicado detrás de la línea defensiva. El planteamiento priorizaba dejar la portería en cero y los contraataques, lo que ayudó a Italia a ganar el torneo de 1982 e influyó en las tácticas defensivas de todo el mundo."
+        },
+        "es-ES": {
+          "question": "¿La selección de qué país se hizo famosa por el estilo de juego defensivo conocido como 'catenaccio'?",
+          "options": [
+            "Italia",
+            "España",
+            "Alemania",
+            "Inglaterra"
+          ],
+          "explanation": "Italia se convirtió en sinónimo del 'catenaccio' (que significa 'cerrojo'), un sistema defensivo muy organizado construido en torno a un líbero situado por detrás de la línea defensiva. El planteamiento priorizaba dejar la portería a cero y los contraataques, lo que ayudó a Italia a ganar el torneo de 1982 e influyó en las tácticas defensivas de todo el mundo."
+        },
+        "fr": {
+          "question": "L'équipe nationale de quel pays est devenue célèbre pour son style de jeu défensif, le 'catenaccio' ?",
+          "options": [
+            "Italie",
+            "Espagne",
+            "Allemagne",
+            "Angleterre"
+          ],
+          "explanation": "L'Italie est devenue synonyme du 'catenaccio' (qui signifie 'verrou'), un système défensif très organisé articulé autour d'un libéro placé derrière la ligne défensive. Cette approche privilégiait les clean sheets et les contre-attaques, aidant l'Italie à remporter le tournoi de 1982 et influençant les tactiques défensives dans le monde entier."
+        },
+        "it": {
+          "question": "La nazionale di quale Paese è diventata celebre per lo stile di gioco difensivo chiamato 'catenaccio'?",
+          "options": [
+            "Italia",
+            "Spagna",
+            "Germania",
+            "Inghilterra"
+          ],
+          "explanation": "L'Italia è diventata sinonimo di 'catenaccio' (letteralmente 'chiavistello'), un sistema difensivo estremamente organizzato imperniato su un libero schierato dietro la linea difensiva. Questo approccio privilegiava la porta inviolata e i contropiedi, aiutando l'Italia a vincere il torneo del 1982 e influenzando le tattiche difensive in tutto il mondo."
+        },
+        "ja": {
+          "question": "守備的な戦術『カテナチオ』で有名になったのは、どの国の代表チームですか？",
+          "options": [
+            "イタリア",
+            "スペイン",
+            "ドイツ",
+            "イングランド"
+          ],
+          "explanation": "イタリアは『カテナチオ』（『かんぬき』の意味）の代名詞となりました。これはディフェンスラインの背後にスイーパー（リベロ）を置く、極めて組織化された守備システムです。無失点とカウンター攻撃を重視するこのスタイルは、イタリアの1982年大会優勝を支え、世界中の守備戦術に影響を与えました。"
+        },
+        "ko": {
+          "question": "수비적인 '카테나치오' 전술로 유명해진 나라의 대표팀은 어디일까요?",
+          "options": [
+            "이탈리아",
+            "스페인",
+            "독일",
+            "잉글랜드"
+          ],
+          "explanation": "이탈리아는 '카테나치오'('빗장'이라는 뜻)의 대명사가 되었습니다. 이는 수비 라인 뒤에 스위퍼(리베로)를 두는 고도로 조직화된 수비 시스템입니다. 무실점과 역습을 우선시한 이 방식은 이탈리아가 1982년 대회에서 우승하는 데 기여했고, 전 세계 수비 전술에 영향을 미쳤습니다."
+        },
+        "pt-BR": {
+          "question": "A seleção nacional de qual país ficou famosa pelo estilo de jogo defensivo conhecido como 'catenaccio'?",
+          "options": [
+            "Itália",
+            "Espanha",
+            "Alemanha",
+            "Inglaterra"
+          ],
+          "explanation": "A Itália tornou-se sinônimo do 'catenaccio' (que significa 'ferrolho'), um sistema defensivo altamente organizado construído em torno de um líbero posicionado atrás da linha de defesa. A abordagem priorizava não sofrer gols e os contra-ataques, ajudando a Itália a vencer o torneio de 1982 e influenciando as táticas defensivas em todo o mundo."
+        },
+        "zh-Hans": {
+          "question": "哪个国家的国家队因防守型的“链式防守”（catenaccio）打法而闻名？",
+          "options": [
+            "意大利",
+            "西班牙",
+            "德国",
+            "英格兰"
+          ],
+          "explanation": "意大利成了“链式防守”（catenaccio，意为“门闩”）的代名词，这是一套高度组织化的防守体系，核心是在后防线身后设置一名自由人（清道夫）。这种打法注重零失球和快速反击，帮助意大利赢得了1982年赛事冠军，并影响了世界各地的防守战术。"
+        }
+      },
+      "i18nSourceHash": "d7842cf3d135dd50"
     },
     {
       "id": "t-total-football",
@@ -16947,7 +17153,110 @@
       ],
       "answer": 0,
       "explanation": "Total Football, where any outfield player could take over any other's role, dazzled the world at the 1974 tournament. Led by Johan Cruyff, the Netherlands reached the final but lost 2-1 to host nation West Germany. The philosophy has influenced coaches from Sacchi to Guardiola ever since.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ما البطولة التي شهدت أول ظهور لنظام 'الكرة الشاملة' الثوري الذي ابتكره منتخب هولندا؟",
+          "options": [
+            "1974 في ألمانيا الغربية",
+            "1970 في المكسيك",
+            "1978 في الأرجنتين",
+            "1966 في إنجلترا"
+          ],
+          "explanation": "الكرة الشاملة، حيث يستطيع أي لاعب في الملعب أداء دور أي زميل آخر، أبهرت العالم في بطولة 1974. وبقيادة يوهان كرويف، بلغت هولندا النهائي لكنها خسرت 1-2 أمام المنتخب المضيف ألمانيا الغربية. وقد ألهمت هذه الفلسفة المدربين منذ ذلك الحين، من ساكي إلى غوارديولا."
+        },
+        "de": {
+          "question": "Bei welchem Turnier feierte das revolutionäre 'totale Fußball'-System der Niederlande seine Premiere?",
+          "options": [
+            "1974 in Westdeutschland",
+            "1970 in Mexiko",
+            "1978 in Argentinien",
+            "1966 in England"
+          ],
+          "explanation": "Der totale Fußball, bei dem jeder Feldspieler die Rolle jedes anderen übernehmen konnte, begeisterte beim Turnier 1974 die ganze Welt. Angeführt von Johan Cruyff erreichten die Niederlande das Finale, verloren aber mit 1:2 gegen Gastgeber Westdeutschland. Diese Philosophie hat seither Trainer von Sacchi bis Guardiola geprägt."
+        },
+        "es": {
+          "question": "¿En qué torneo debutó el revolucionario sistema del 'Fútbol Total' de los Países Bajos?",
+          "options": [
+            "1974 en Alemania Occidental",
+            "1970 en México",
+            "1978 en Argentina",
+            "1966 en Inglaterra"
+          ],
+          "explanation": "El Fútbol Total, en el que cualquier jugador de campo podía asumir el rol de otro, deslumbró al mundo en el torneo de 1974. Liderados por Johan Cruyff, los Países Bajos llegaron a la final, pero perdieron 2-1 ante el anfitrión, Alemania Occidental. Esa filosofía ha influido en entrenadores desde Sacchi hasta Guardiola desde entonces."
+        },
+        "es-ES": {
+          "question": "¿En qué torneo debutó el revolucionario sistema del 'Fútbol Total' de los Países Bajos?",
+          "options": [
+            "1974 en Alemania Occidental",
+            "1970 en México",
+            "1978 en Argentina",
+            "1966 en Inglaterra"
+          ],
+          "explanation": "El Fútbol Total, en el que cualquier jugador de campo podía asumir el papel de otro, deslumbró al mundo en el torneo de 1974. Liderados por Johan Cruyff, los Países Bajos alcanzaron la final, pero cayeron 2-1 ante la anfitriona, Alemania Occidental. Desde entonces, esa filosofía ha influido en entrenadores desde Sacchi hasta Guardiola."
+        },
+        "fr": {
+          "question": "Lors de quel tournoi le révolutionnaire système du « football total » des Pays-Bas a-t-il fait ses débuts ?",
+          "options": [
+            "1974 en Allemagne de l'Ouest",
+            "1970 au Mexique",
+            "1978 en Argentine",
+            "1966 en Angleterre"
+          ],
+          "explanation": "Le football total, où chaque joueur de champ pouvait endosser le rôle d'un autre, a émerveillé le monde lors du tournoi de 1974. Emmenés par Johan Cruyff, les Pays-Bas ont atteint la finale, mais se sont inclinés 2-1 face au pays hôte, l'Allemagne de l'Ouest. Cette philosophie a depuis influencé des entraîneurs de Sacchi à Guardiola."
+        },
+        "it": {
+          "question": "In quale torneo ha debuttato il rivoluzionario sistema del 'Calcio Totale' dei Paesi Bassi?",
+          "options": [
+            "1974 in Germania Ovest",
+            "1970 in Messico",
+            "1978 in Argentina",
+            "1966 in Inghilterra"
+          ],
+          "explanation": "Il Calcio Totale, in cui ogni giocatore di movimento poteva ricoprire il ruolo di un altro, incantò il mondo nel torneo del 1974. Guidati da Johan Cruyff, i Paesi Bassi raggiunsero la finale ma persero 2-1 contro i padroni di casa della Germania Ovest. Da allora questa filosofia ha influenzato allenatori da Sacchi a Guardiola."
+        },
+        "ja": {
+          "question": "オランダの革命的な「トータルフットボール」システムが初めて披露されたのはどの大会ですか？",
+          "options": [
+            "1974年 西ドイツ",
+            "1970年 メキシコ",
+            "1978年 アルゼンチン",
+            "1966年 イングランド"
+          ],
+          "explanation": "どのフィールドプレーヤーも他の選手の役割を担えるトータルフットボールは、1974年の大会で世界を魅了しました。ヨハン・クライフ率いるオランダは決勝に進出しましたが、開催国の西ドイツに1-2で敗れました。この哲学はその後、サッキからグアルディオラに至るまで、多くの監督に影響を与え続けています。"
+        },
+        "ko": {
+          "question": "네덜란드의 혁명적인 '토탈 풋볼' 시스템이 처음 선보인 대회는 어디일까요?",
+          "options": [
+            "1974년 서독",
+            "1970년 멕시코",
+            "1978년 아르헨티나",
+            "1966년 잉글랜드"
+          ],
+          "explanation": "어느 필드 플레이어든 다른 선수의 역할을 대신할 수 있었던 토탈 풋볼은 1974년 대회에서 전 세계를 매료시켰습니다. 요한 크루이프가 이끄는 네덜란드는 결승에 올랐지만 개최국 서독에 1-2로 패했습니다. 이 철학은 그 이후로 사키부터 과르디올라에 이르기까지 수많은 감독들에게 영향을 끼쳐왔습니다."
+        },
+        "pt-BR": {
+          "question": "Em qual torneio estreou o revolucionário sistema do 'Futebol Total' da Holanda?",
+          "options": [
+            "1974 na Alemanha Ocidental",
+            "1970 no México",
+            "1978 na Argentina",
+            "1966 na Inglaterra"
+          ],
+          "explanation": "O Futebol Total, no qual qualquer jogador de linha podia assumir a função de outro, encantou o mundo no torneio de 1974. Liderada por Johan Cruyff, a Holanda chegou à final, mas perdeu por 2 a 1 para a anfitriã Alemanha Ocidental. Desde então, essa filosofia influenciou técnicos de Sacchi a Guardiola."
+        },
+        "zh-Hans": {
+          "question": "荷兰革命性的“全攻全守”体系首次亮相是在哪届赛事？",
+          "options": [
+            "1974年西德",
+            "1970年墨西哥",
+            "1978年阿根廷",
+            "1966年英格兰"
+          ],
+          "explanation": "全攻全守战术中，任何一名场上球员都能胜任他人的位置，这一打法在1974年的赛事上惊艳了世界。在约翰·克鲁伊夫的带领下，荷兰队闯入决赛，但以1比2不敌东道主西德。此后，这一理念影响了从萨基到瓜迪奥拉的众多教练。"
+        }
+      },
+      "i18nSourceHash": "0029f90c824df4f9"
     },
     {
       "id": "r-handball-buildup",
@@ -16961,7 +17270,110 @@
       ],
       "answer": 0,
       "explanation": "Under the current Laws of the Game, a goal is disallowed if it is scored immediately after the ball accidentally touches the scorer's teammate's hand or arm, even if the handball is unintentional. This rule was introduced to remove ambiguity about accidental handballs in the build-up to goals.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "وفقاً للقوانين الحالية، إذا لمس لاعب الكرة بيده عن غير قصد ثم سجل زميله هدفاً، فماذا يحدث؟",
+          "options": [
+            "يُلغى الهدف",
+            "يُحتسب الهدف",
+            "يقرر الحكم حسب كل حالة على حدة",
+            "تُحتسب ركلة جزاء بدلاً من ذلك"
+          ],
+          "explanation": "بموجب قوانين اللعبة الحالية، يُلغى الهدف إذا سُجّل مباشرة بعد أن تلمس الكرة يد أو ذراع زميل المسجِّل عن غير قصد، حتى وإن كانت لمسة اليد غير متعمدة. وقد أُدخلت هذه القاعدة لإزالة الغموض بشأن لمسات اليد العَرَضية في سياق بناء الأهداف."
+        },
+        "de": {
+          "question": "Wenn ein Spieler nach den aktuellen Regeln den Ball versehentlich mit der Hand berührt und dann ein Mitspieler ein Tor erzielt, was passiert dann?",
+          "options": [
+            "Das Tor wird nicht anerkannt",
+            "Das Tor zählt",
+            "Der Schiedsrichter entscheidet von Fall zu Fall",
+            "Stattdessen gibt es einen Elfmeter"
+          ],
+          "explanation": "Nach den aktuellen Spielregeln wird ein Tor nicht anerkannt, wenn es unmittelbar erzielt wird, nachdem der Ball versehentlich die Hand oder den Arm eines Mitspielers des Torschützen berührt hat – selbst wenn das Handspiel unabsichtlich war. Diese Regel wurde eingeführt, um Unklarheiten bei versehentlichen Handspielen im Vorfeld von Toren zu beseitigen."
+        },
+        "es": {
+          "question": "Según las reglas actuales, si un jugador toca el balón con la mano de forma accidental y luego un compañero anota, ¿qué sucede?",
+          "options": [
+            "El gol se anula",
+            "El gol es válido",
+            "El árbitro decide caso por caso",
+            "Se concede un penal en su lugar"
+          ],
+          "explanation": "Según las Reglas de Juego actuales, un gol se anula si se marca inmediatamente después de que el balón toque accidentalmente la mano o el brazo de un compañero del goleador, incluso si el toque de mano es involuntario. Esta regla se introdujo para eliminar la ambigüedad sobre las manos accidentales en la jugada previa a un gol."
+        },
+        "es-ES": {
+          "question": "Según las reglas actuales, si un jugador toca el balón con la mano de forma accidental y luego un compañero marca, ¿qué ocurre?",
+          "options": [
+            "El gol se anula",
+            "El gol es válido",
+            "El árbitro decide caso por caso",
+            "Se concede un penalti en su lugar"
+          ],
+          "explanation": "Según las Reglas de Juego actuales, un gol se anula si se marca inmediatamente después de que el balón toque accidentalmente la mano o el brazo de un compañero del goleador, aunque el toque de mano sea involuntario. Esta regla se introdujo para eliminar la ambigüedad sobre las manos accidentales en la jugada previa a un gol."
+        },
+        "fr": {
+          "question": "Selon les règles actuelles, si un joueur touche accidentellement le ballon de la main et qu'un coéquipier marque ensuite, que se passe-t-il ?",
+          "options": [
+            "Le but est refusé",
+            "Le but est validé",
+            "L'arbitre décide au cas par cas",
+            "Un penalty est accordé à la place"
+          ],
+          "explanation": "Selon les Lois du Jeu actuelles, un but est refusé s'il est marqué immédiatement après que le ballon a touché accidentellement la main ou le bras d'un coéquipier du buteur, même si la main est involontaire. Cette règle a été introduite pour lever toute ambiguïté concernant les mains accidentelles dans l'action menant au but."
+        },
+        "it": {
+          "question": "Secondo le regole attuali, se un giocatore tocca accidentalmente il pallone con la mano e poi un compagno segna, cosa succede?",
+          "options": [
+            "Il gol viene annullato",
+            "Il gol è valido",
+            "L'arbitro decide caso per caso",
+            "Viene assegnato un rigore al suo posto"
+          ],
+          "explanation": "Secondo le attuali Regole del Gioco, un gol viene annullato se segnato immediatamente dopo che il pallone ha toccato accidentalmente la mano o il braccio di un compagno del marcatore, anche se il tocco di mano è involontario. Questa regola è stata introdotta per eliminare le ambiguità sui tocchi di mano accidentali nell'azione che porta al gol."
+        },
+        "ja": {
+          "question": "現行ルールでは、選手が誤ってボールを手に当て、その後チームメイトが得点した場合、どうなりますか？",
+          "options": [
+            "得点は無効になる",
+            "得点は認められる",
+            "審判が状況ごとに判断する",
+            "代わりにPKが与えられる"
+          ],
+          "explanation": "現行の競技規則では、得点者のチームメイトの手や腕に偶発的にボールが触れた直後に得点が決まった場合、たとえそのハンドが意図的でなくても得点は無効になります。このルールは、得点に至る過程での偶発的なハンドに関する曖昧さをなくすために導入されました。"
+        },
+        "ko": {
+          "question": "현행 규칙에 따르면, 선수가 실수로 공을 손에 맞춘 뒤 동료가 득점하면 어떻게 되나요?",
+          "options": [
+            "골이 무효 처리된다",
+            "골이 인정된다",
+            "심판이 상황에 따라 판단한다",
+            "대신 페널티킥이 주어진다"
+          ],
+          "explanation": "현행 경기 규칙에 따르면, 득점자의 동료 손이나 팔에 공이 우연히 닿은 직후 득점이 이루어지면 그 핸드볼이 고의가 아니더라도 골은 무효 처리됩니다. 이 규칙은 득점으로 이어지는 과정에서 발생하는 우발적 핸드볼에 대한 모호함을 없애기 위해 도입되었습니다."
+        },
+        "pt-BR": {
+          "question": "Pelas regras atuais, se um jogador toca a bola com a mão acidentalmente e depois um companheiro marca, o que acontece?",
+          "options": [
+            "O gol é anulado",
+            "O gol é válido",
+            "O árbitro decide caso a caso",
+            "Um pênalti é concedido no lugar"
+          ],
+          "explanation": "Pelas Regras do Jogo atuais, um gol é anulado se for marcado imediatamente após a bola tocar acidentalmente a mão ou o braço de um companheiro do autor do gol, mesmo que o toque de mão seja involuntário. Essa regra foi introduzida para eliminar ambiguidades sobre toques de mão acidentais na jogada que antecede o gol."
+        },
+        "zh-Hans": {
+          "question": "根据现行规则，如果一名球员无意中手球，随后队友进球，会发生什么？",
+          "options": [
+            "进球无效",
+            "进球有效",
+            "由裁判逐案判定",
+            "改判罚点球"
+          ],
+          "explanation": "根据现行的足球竞赛规则，如果在进球者的队友无意中用手或手臂触球后立即破门得分，即使该手球并非故意，进球也将被判无效。这条规则的引入是为了消除在进球过程中对于无意手球的判罚模糊性。"
+        }
+      },
+      "i18nSourceHash": "d6fefd03b2dfd65a"
     },
     {
       "id": "r-drop-ball",
@@ -16975,7 +17387,110 @@
       ],
       "answer": 0,
       "explanation": "Play is restarted with a drop ball, given to the team that last touched it. The ball is dropped to one player with all others at least 4 meters away. If the stoppage occurs inside the penalty area, the ball is dropped to the goalkeeper. Before 2019, a contested drop ball was used.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "عندما يوقف الحكم اللعب لسبب غير المخالفة (مثل الإصابة)، كيف تُستأنف اللعبة؟",
+          "options": [
+            "إسقاط الكرة",
+            "ركلة حرة للفريق المستحوذ على الكرة",
+            "رمية تماس لأقرب فريق",
+            "ركلة مرمى"
+          ],
+          "explanation": "تُستأنف اللعبة بإسقاط الكرة، التي تُمنح للفريق الذي لمسها آخر مرة. تُسقط الكرة للاعب واحد مع وجود جميع اللاعبين الآخرين على بعد 4 أمتار على الأقل. وإذا حدث التوقف داخل منطقة الجزاء، تُسقط الكرة لحارس المرمى. وقبل عام 2019، كان يُستخدم إسقاط كرة متنازع عليها."
+        },
+        "de": {
+          "question": "Wenn der Schiedsrichter das Spiel aus einem anderen Grund als einem Foul unterbricht (z. B. Verletzung), wie wird das Spiel fortgesetzt?",
+          "options": [
+            "Ein Schiedsrichterball",
+            "Ein Freistoß für die ballbesitzende Mannschaft",
+            "Ein Einwurf für die nächstgelegene Mannschaft",
+            "Ein Abstoß"
+          ],
+          "explanation": "Das Spiel wird mit einem Schiedsrichterball fortgesetzt, der der Mannschaft zufällt, die den Ball zuletzt berührt hat. Der Ball wird für einen einzelnen Spieler fallen gelassen, während alle anderen mindestens 4 Meter entfernt stehen. Erfolgt die Unterbrechung innerhalb des Strafraums, wird der Ball dem Torwart zugespielt. Vor 2019 wurde ein umkämpfter Schiedsrichterball verwendet."
+        },
+        "es": {
+          "question": "Cuando el árbitro detiene el juego por un motivo distinto a una falta (por ejemplo, una lesión), ¿cómo se reanuda el juego?",
+          "options": [
+            "Un balón a tierra",
+            "Un tiro libre para el equipo en posesión",
+            "Un saque de banda para el equipo más cercano",
+            "Un saque de meta"
+          ],
+          "explanation": "El juego se reanuda con un balón a tierra, otorgado al equipo que tocó el balón por última vez. El balón se deja caer para un solo jugador, con todos los demás a por lo menos 4 metros de distancia. Si la interrupción ocurre dentro del área penal, el balón se entrega al portero. Antes de 2019, se usaba un balón a tierra disputado."
+        },
+        "es-ES": {
+          "question": "Cuando el árbitro detiene el juego por un motivo distinto a una falta (por ejemplo, una lesión), ¿cómo se reanuda el juego?",
+          "options": [
+            "Un balón a tierra",
+            "Un tiro libre para el equipo en posesión",
+            "Un saque de banda para el equipo más cercano",
+            "Un saque de puerta"
+          ],
+          "explanation": "El juego se reanuda con un balón a tierra, concedido al equipo que tocó el balón por última vez. El balón se deja caer para un solo jugador, con todos los demás a al menos 4 metros de distancia. Si la interrupción se produce dentro del área de penalti, el balón se entrega al portero. Antes de 2019, se utilizaba un balón a tierra disputado."
+        },
+        "fr": {
+          "question": "Lorsque l'arbitre interrompt le jeu pour une raison autre qu'une faute (par exemple, une blessure), comment le jeu reprend-il ?",
+          "options": [
+            "Une balle à terre",
+            "Un coup franc pour l'équipe en possession",
+            "Une rentrée de touche pour l'équipe la plus proche",
+            "Un coup de pied de but"
+          ],
+          "explanation": "Le jeu reprend par une balle à terre, accordée à l'équipe qui a touché le ballon en dernier. Le ballon est lâché vers un seul joueur, tous les autres se tenant à au moins 4 mètres. Si l'arrêt survient dans la surface de réparation, le ballon est remis au gardien. Avant 2019, on utilisait une balle à terre disputée."
+        },
+        "it": {
+          "question": "Quando l'arbitro ferma il gioco per un motivo diverso da un fallo (ad esempio un infortunio), come si riprende il gioco?",
+          "options": [
+            "Una rimessa con palla a terra",
+            "Un calcio di punizione per la squadra in possesso",
+            "Una rimessa laterale per la squadra più vicina",
+            "Un calcio di rinvio"
+          ],
+          "explanation": "Il gioco riprende con una rimessa con palla a terra, assegnata alla squadra che ha toccato per ultima il pallone. Il pallone viene fatto cadere verso un solo giocatore, con tutti gli altri ad almeno 4 metri di distanza. Se l'interruzione avviene all'interno dell'area di rigore, il pallone viene consegnato al portiere. Prima del 2019 si utilizzava una palla a terra contesa."
+        },
+        "ja": {
+          "question": "審判が反則以外の理由（例えば負傷）でプレーを止めた場合、プレーはどのように再開されますか？",
+          "options": [
+            "ドロップボール",
+            "ボールを保持していたチームへのフリーキック",
+            "最も近いチームへのスローイン",
+            "ゴールキック"
+          ],
+          "explanation": "プレーは、最後にボールに触れたチームに与えられるドロップボールで再開されます。ボールは1人の選手に対して落とされ、他の全員は少なくとも4メートル離れていなければなりません。停止がペナルティエリア内で起きた場合、ボールはゴールキーパーに落とされます。2019年以前は、互いに競り合うドロップボールが用いられていました。"
+        },
+        "ko": {
+          "question": "심판이 반칙이 아닌 다른 이유(예: 부상)로 경기를 중단했을 때, 경기는 어떻게 재개되나요?",
+          "options": [
+            "드롭볼",
+            "볼을 점유한 팀의 프리킥",
+            "가장 가까운 팀의 스로인",
+            "골킥"
+          ],
+          "explanation": "경기는 마지막으로 볼을 건드린 팀에게 주어지는 드롭볼로 재개됩니다. 볼은 한 명의 선수에게 떨어뜨리며, 다른 모든 선수는 최소 4미터 떨어져 있어야 합니다. 중단이 페널티 에어리어 안에서 발생하면 볼은 골키퍼에게 떨어뜨립니다. 2019년 이전에는 서로 경합하는 드롭볼이 사용되었습니다."
+        },
+        "pt-BR": {
+          "question": "Quando o árbitro paralisa o jogo por um motivo que não seja uma falta (por exemplo, uma lesão), como o jogo é reiniciado?",
+          "options": [
+            "Uma bola ao chão",
+            "Uma cobrança de falta para a equipe com a posse de bola",
+            "Um arremesso lateral para a equipe mais próxima",
+            "Um tiro de meta"
+          ],
+          "explanation": "O jogo é reiniciado com uma bola ao chão, concedida à equipe que tocou a bola por último. A bola é deixada cair para um único jogador, com todos os demais a pelo menos 4 metros de distância. Se a paralisação ocorrer dentro da área penal, a bola é entregue ao goleiro. Antes de 2019, usava-se uma bola ao chão disputada."
+        },
+        "zh-Hans": {
+          "question": "当裁判因犯规以外的原因（例如受伤）暂停比赛时，比赛如何重新开始？",
+          "options": [
+            "坠球",
+            "判给控球一方的任意球",
+            "判给最近一方的掷界外球",
+            "球门球"
+          ],
+          "explanation": "比赛以坠球的方式重新开始，坠球判给最后触球的一方。球落向一名球员，其他所有球员必须保持至少4米的距离。如果暂停发生在罚球区内，则将球坠向守门员。2019年之前，采用的是双方争抢的坠球方式。"
+        }
+      },
+      "i18nSourceHash": "09dead6107a30edb"
     },
     {
       "id": "r-sin-bin-trial",
