@@ -226,12 +226,38 @@ def build_prompt(match, all_matches, facts):
     )
     date_str = kickoff.strftime("%B %-d, %Y")
 
+    result = match.get("result")
+    pkH, pkA = match.get("pkH"), match.get("pkA")
+
+    # Build score line with ET/PK detail
+    score_line = f"Match {match['n']}: {home} {sh}-{sa} {away}"
+    if result == "PEN" and pkH is not None and pkA is not None:
+        score_line += f" (after extra time; penalty shootout: {home} {pkH}-{pkA} {away})"
+    elif result == "AET":
+        score_line += " (after extra time)"
+
     context_parts = [
-        f"Match {match['n']}: {home} {sh}-{sa} {away}",
+        score_line,
         f"Stage: {stage_label}" + (f" ({match['group']})" if match.get("group") else ""),
         f"Date: {date_str}",
         f"Venue: {match['venue']}, {match['city']}",
     ]
+
+    # Add extra time / penalty context
+    if result == "PEN" and pkH is not None and pkA is not None:
+        pk_winner = home if pkH > pkA else away
+        pk_loser = away if pkH > pkA else home
+        context_parts.append(
+            f"\nThis match went to penalties after extra time. "
+            f"The score was level at {sh}-{sa} after 120 minutes. "
+            f"Penalty shootout: {home} {pkH}-{pkA} {away}. "
+            f"{pk_winner} win on penalties, {pk_loser} eliminated."
+        )
+    elif result == "AET":
+        context_parts.append(
+            f"\nThis match was decided in extra time (120 minutes). "
+            f"The match could not be settled in regular 90 minutes."
+        )
 
     # Add match facts if available
     match_facts = facts.get(n, {}).get("facts", [])
@@ -252,8 +278,14 @@ def build_prompt(match, all_matches, facts):
             winner, loser = home, away
         elif sa > sh:
             winner, loser = away, home
+        elif pkH is not None and pkA is not None:
+            # Tied after ET, decided by penalties
+            if pkH > pkA:
+                winner, loser = home, away
+            else:
+                winner, loser = away, home
         else:
-            winner, loser = None, None  # draw / penalties
+            winner, loser = None, None
 
         next_info = find_next_match_info(match, all_matches)
         if next_info and winner:

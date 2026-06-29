@@ -161,6 +161,13 @@ def _match_winner(m: dict) -> str | None:
         return m["home"]
     if m["scoreA"] > m["scoreH"]:
         return m["away"]
+    # Tied on aggregate — check penalty shootout
+    pkH, pkA = m.get("pkH"), m.get("pkA")
+    if pkH is not None and pkA is not None:
+        if pkH > pkA:
+            return m["home"]
+        if pkA > pkH:
+            return m["away"]
     return None
 
 
@@ -171,6 +178,13 @@ def _match_loser(m: dict) -> str | None:
         return m["away"]
     if m["scoreA"] > m["scoreH"]:
         return m["home"]
+    # Tied on aggregate — check penalty shootout
+    pkH, pkA = m.get("pkH"), m.get("pkA")
+    if pkH is not None and pkA is not None:
+        if pkH > pkA:
+            return m["away"]
+        if pkA > pkH:
+            return m["home"]
     return None
 
 
@@ -259,7 +273,7 @@ def main():
         status_name = comp.get("status", {}).get("type", {}).get("name", "")
 
         is_live = any(s in status_name for s in ("IN_PROGRESS", "HALF", "EXTRA", "PENALT"))
-        is_finished = status_name == "STATUS_FULL_TIME"
+        is_finished = status_name in ("STATUS_FULL_TIME", "STATUS_FINAL_AET", "STATUS_FINAL_PEN")
         if not (is_live or is_finished):
             continue
 
@@ -297,7 +311,22 @@ def main():
                 tag = "LIVE" if is_live else "FT"
                 print(f"  PATCH: Match {matched_m['n']} {matched_m['home']} vs {matched_m['away']} -> {home_score}-{away_score} ({tag})")
                 patched += 1
+
+            # Store result type and PK scores for finished matches
             if is_finished:
+                if status_name == "STATUS_FINAL_PEN":
+                    pk_home = int(home.get("shootoutScore", 0))
+                    pk_away = int(away.get("shootoutScore", 0))
+                    matched_m["pkH"] = pk_home
+                    matched_m["pkA"] = pk_away
+                    matched_m["result"] = "PEN"
+                    print(f"  PEN: Match {matched_m['n']} penalties {pk_home}-{pk_away}")
+                elif status_name == "STATUS_FINAL_AET":
+                    matched_m["result"] = "AET"
+                elif matched_m["n"] >= 73:
+                    # FT result tag only for knockout matches
+                    matched_m["result"] = "FT"
+
                 newly_ft.append(int(matched_m["n"]))
 
     bracket_resolved = propagate_bracket_winners(matches)
