@@ -5110,7 +5110,7 @@
       ],
       "answer": 1,
       "explanation": "The Ballon d'Or is an annual award given to the best football player in the world, voted on by journalists (and later national team captains and coaches). Soviet keeper Lev Yashin, the 'Black Spider,' won it in 1963 — still the only goalkeeper ever to receive the honor.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "t-host-confederation",
