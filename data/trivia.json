@@ -8466,7 +8466,7 @@
       ],
       "answer": 0,
       "explanation": "In regular play and extra time, if a penalty hits the post, crossbar, or rebounds off the goalkeeper, the ball is live and any player — including the kicker — can score from it. In a penalty shootout, however, there are no rebounds: each kick ends once the ball stops moving forward, goes out of play, or the goalkeeper makes a clear save.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "v-guadalajara-culture",
