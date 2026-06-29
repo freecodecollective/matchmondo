@@ -12963,7 +12963,110 @@
       ],
       "answer": 0,
       "explanation": "Saudi Arabia came from behind to beat Lionel Messi's Argentina 2-1 in one of the most stunning results in tournament history. Both Saudi goals came within five minutes of each other early in the second half. The day was declared a national holiday in Saudi Arabia. Argentina recovered from the shock to win the entire tournament.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أي دولة حققت واحدة من أكبر المفاجآت في تاريخ البطولة بفوزها على الأرجنتين 2-1 في أولى مبارياتها بدور المجموعات عام 2022؟",
+          "options": [
+            "السعودية",
+            "قطر",
+            "تونس",
+            "إيران"
+          ],
+          "explanation": "نجحت السعودية في قلب تأخرها إلى فوز على الأرجنتين بقيادة ليونيل ميسي بنتيجة 2-1، في واحدة من أكثر النتائج إثارة للدهشة في تاريخ البطولة. جاء هدفا السعودية في غضون خمس دقائق من بعضهما في بداية الشوط الثاني. وأُعلن ذلك اليوم عطلة وطنية في السعودية. وتعافت الأرجنتين من الصدمة لتتوّج بطلة للبطولة بأكملها."
+        },
+        "de": {
+          "question": "Welche Nation sorgte für eine der größten Überraschungen der Turniergeschichte, indem sie Argentinien im Auftaktspiel der Gruppenphase 2022 mit 2:1 besiegte?",
+          "options": [
+            "Saudi-Arabien",
+            "Katar",
+            "Tunesien",
+            "Iran"
+          ],
+          "explanation": "Saudi-Arabien drehte einen Rückstand und besiegte das Argentinien von Lionel Messi mit 2:1 – eines der überraschendsten Ergebnisse der Turniergeschichte. Beide saudischen Tore fielen früh in der zweiten Halbzeit innerhalb von fünf Minuten. Der Tag wurde in Saudi-Arabien zum nationalen Feiertag erklärt. Argentinien erholte sich vom Schock und gewann am Ende das gesamte Turnier."
+        },
+        "es": {
+          "question": "¿Qué selección protagonizó una de las mayores sorpresas en la historia del torneo al vencer a Argentina 2-1 en su debut de grupo en 2022?",
+          "options": [
+            "Arabia Saudita",
+            "Catar",
+            "Túnez",
+            "Irán"
+          ],
+          "explanation": "Arabia Saudita remontó para vencer 2-1 a la Argentina de Lionel Messi, en uno de los resultados más impactantes en la historia del torneo. Los dos goles saudíes llegaron con cinco minutos de diferencia al inicio del segundo tiempo. Ese día fue declarado feriado nacional en Arabia Saudita. Argentina se recuperó del golpe y terminó ganando todo el torneo."
+        },
+        "es-ES": {
+          "question": "¿Qué selección protagonizó una de las mayores sorpresas de la historia del torneo al derrotar a Argentina por 2-1 en su debut de grupo en 2022?",
+          "options": [
+            "Arabia Saudí",
+            "Catar",
+            "Túnez",
+            "Irán"
+          ],
+          "explanation": "Arabia Saudí remontó para vencer por 2-1 a la Argentina de Lionel Messi, en uno de los resultados más sorprendentes de la historia del torneo. Los dos goles saudíes llegaron con cinco minutos de diferencia al inicio de la segunda parte. Aquel día se declaró festivo nacional en Arabia Saudí. Argentina se recuperó del golpe y acabó ganando todo el torneo."
+        },
+        "fr": {
+          "question": "Quelle nation a provoqué l'une des plus grandes surprises de l'histoire du tournoi en battant l'Argentine 2-1 lors de son premier match de groupe en 2022 ?",
+          "options": [
+            "Arabie saoudite",
+            "Qatar",
+            "Tunisie",
+            "Iran"
+          ],
+          "explanation": "L'Arabie saoudite est revenue au score pour battre l'Argentine de Lionel Messi 2-1, signant l'un des résultats les plus stupéfiants de l'histoire du tournoi. Les deux buts saoudiens ont été inscrits à cinq minutes d'intervalle en début de seconde période. Cette journée a été décrétée jour férié national en Arabie saoudite. L'Argentine s'est remise de ce choc pour finalement remporter tout le tournoi."
+        },
+        "it": {
+          "question": "Quale nazione firmò una delle più grandi sorprese nella storia del torneo battendo l'Argentina 2-1 nella sua gara d'esordio del girone nel 2022?",
+          "options": [
+            "Arabia Saudita",
+            "Qatar",
+            "Tunisia",
+            "Iran"
+          ],
+          "explanation": "L'Arabia Saudita rimontò e batté l'Argentina di Lionel Messi per 2-1, in uno dei risultati più clamorosi nella storia del torneo. Entrambi i gol sauditi arrivarono a cinque minuti di distanza all'inizio del secondo tempo. Quel giorno fu proclamato festa nazionale in Arabia Saudita. L'Argentina si riprese dallo shock e finì per vincere l'intero torneo."
+        },
+        "ja": {
+          "question": "2022年のグループ初戦でアルゼンチンを2対1で破り、大会史上屈指の大番狂わせを演じた国はどこでしょう？",
+          "options": [
+            "サウジアラビア",
+            "カタール",
+            "チュニジア",
+            "イラン"
+          ],
+          "explanation": "サウジアラビアは逆転でリオネル・メッシ擁するアルゼンチンを2対1で下し、大会史上もっとも衝撃的な結果のひとつを生み出しました。サウジアラビアの2得点はいずれも後半開始直後、わずか5分の間に決まりました。この日はサウジアラビアで国民の祝日に定められました。アルゼンチンはこの衝撃から立ち直り、最終的に大会全体を制しました。"
+        },
+        "ko": {
+          "question": "2022년 조별리그 첫 경기에서 아르헨티나를 2-1로 꺾으며 대회 역사상 최대 이변 중 하나를 일으킨 나라는 어디일까요?",
+          "options": [
+            "사우디아라비아",
+            "카타르",
+            "튀니지",
+            "이란"
+          ],
+          "explanation": "사우디아라비아는 역전에 성공하며 리오넬 메시가 이끄는 아르헨티나를 2-1로 꺾었고, 이는 대회 역사상 가장 충격적인 결과 중 하나였습니다. 사우디아라비아의 두 골은 모두 후반 초반 5분 안에 터졌습니다. 그날은 사우디아라비아에서 국경일로 선포되었습니다. 아르헨티나는 이 충격을 딛고 일어나 결국 대회 전체 우승을 차지했습니다."
+        },
+        "pt-BR": {
+          "question": "Qual seleção protagonizou uma das maiores zebras da história do torneo ao vencer a Argentina por 2 a 1 na estreia da fase de grupos em 2022?",
+          "options": [
+            "Arábia Saudita",
+            "Catar",
+            "Tunísia",
+            "Irã"
+          ],
+          "explanation": "A Arábia Saudita buscou o resultado e venceu a Argentina de Lionel Messi por 2 a 1, num dos resultados mais surpreendentes da história do torneio. Os dois gols sauditas saíram com cinco minutos de diferença no início do segundo tempo. O dia foi decretado feriado nacional na Arábia Saudita. A Argentina se recuperou do baque e acabou conquistando todo o torneio."
+        },
+        "zh-Hans": {
+          "question": "哪个国家在2022年小组赛首场比赛中以2比1击败阿根廷，制造了赛事史上最大冷门之一？",
+          "options": [
+            "沙特阿拉伯",
+            "卡塔尔",
+            "突尼斯",
+            "伊朗"
+          ],
+          "explanation": "沙特阿拉伯在落后的情况下逆转，以2比1击败了由利昂内尔·梅西领衔的阿根廷，成为赛事史上最令人震惊的结果之一。沙特的两粒进球在下半场开场不久、五分钟之内相继打入。这一天被沙特阿拉伯宣布为全国假日。阿根廷从这场震撼中重整旗鼓，最终夺得了整届赛事的冠军。"
+        }
+      },
+      "i18nSourceHash": "31a25f118395c643"
     },
     {
       "id": "t-usa-1994-attendance",
@@ -12977,7 +13080,110 @@
       ],
       "answer": 0,
       "explanation": "The 1994 edition drew over 3.58 million total spectators, a record that has endured for over 30 years. The average attendance of nearly 69,000 per match was boosted by the use of massive American football stadiums. This record may finally be broken in 2026, with even larger US stadiums and 104 matches (vs. 52 in 1994).",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "حققت بطولة 1994 في الولايات المتحدة رقماً قياسياً ما زال صامداً حتى اليوم. ما هو؟",
+          "options": [
+            "أعلى حضور جماهيري إجمالي",
+            "أكبر عدد من الأهداف المسجلة",
+            "أكبر عدد من البطاقات الحمراء",
+            "أكبر عدد من ركلات الترجيح"
+          ],
+          "explanation": "اجتذبت نسخة 1994 أكثر من 3.58 مليون متفرج إجمالاً، وهو رقم قياسي صمد لأكثر من 30 عاماً. وقد ساهمت ملاعب كرة القدم الأمريكية الضخمة في رفع متوسط الحضور إلى ما يقارب 69,000 متفرج في كل مباراة. وقد يُكسر هذا الرقم أخيراً في 2026، مع ملاعب أمريكية أكبر و104 مباريات (مقابل 52 في 1994)."
+        },
+        "de": {
+          "question": "Das Turnier 1994 in den USA stellte einen Rekord auf, der bis heute Bestand hat. Welcher war es?",
+          "options": [
+            "Höchste Gesamtzuschauerzahl",
+            "Meiste erzielte Tore",
+            "Meiste gezeigte rote Karten",
+            "Meiste Elfmeterschießen"
+          ],
+          "explanation": "Die Ausgabe von 1994 zog insgesamt über 3,58 Millionen Zuschauer an – ein Rekord, der seit über 30 Jahren Bestand hat. Der Zuschauerschnitt von fast 69.000 pro Spiel wurde durch die Nutzung riesiger American-Football-Stadien begünstigt. Dieser Rekord könnte 2026 endlich gebrochen werden, mit noch größeren US-Stadien und 104 Spielen (gegenüber 52 im Jahr 1994)."
+        },
+        "es": {
+          "question": "El torneo de 1994 en Estados Unidos estableció un récord que todavía se mantiene. ¿Cuál fue?",
+          "options": [
+            "Mayor asistencia total",
+            "Más goles anotados",
+            "Más tarjetas rojas mostradas",
+            "Más definiciones por penales"
+          ],
+          "explanation": "La edición de 1994 atrajo a más de 3.58 millones de espectadores en total, un récord que se ha mantenido por más de 30 años. El promedio de asistencia de casi 69,000 por partido se vio impulsado por el uso de enormes estadios de fútbol americano. Este récord podría finalmente caer en 2026, con estadios estadounidenses aún más grandes y 104 partidos (frente a los 52 de 1994)."
+        },
+        "es-ES": {
+          "question": "El torneo de 1994 en Estados Unidos estableció un récord que aún se mantiene. ¿Cuál fue?",
+          "options": [
+            "Mayor asistencia total",
+            "Más goles marcados",
+            "Más tarjetas rojas mostradas",
+            "Más tandas de penaltis"
+          ],
+          "explanation": "La edición de 1994 atrajo a más de 3,58 millones de espectadores en total, un récord que se ha mantenido durante más de 30 años. La asistencia media de casi 69.000 por partido se vio impulsada por el uso de enormes estadios de fútbol americano. Este récord podría caer por fin en 2026, con estadios estadounidenses aún mayores y 104 partidos (frente a los 52 de 1994)."
+        },
+        "fr": {
+          "question": "Le tournoi de 1994 aux États-Unis a établi un record qui tient toujours. Lequel ?",
+          "options": [
+            "Plus forte affluence totale",
+            "Plus grand nombre de buts marqués",
+            "Plus grand nombre de cartons rouges",
+            "Plus grand nombre de séances de tirs au but"
+          ],
+          "explanation": "L'édition de 1994 a attiré plus de 3,58 millions de spectateurs au total, un record qui perdure depuis plus de 30 ans. L'affluence moyenne de près de 69 000 personnes par match a été portée par l'utilisation d'immenses stades de football américain. Ce record pourrait enfin être battu en 2026, avec des stades américains encore plus grands et 104 matchs (contre 52 en 1994)."
+        },
+        "it": {
+          "question": "Il torneo del 1994 negli Stati Uniti stabilì un record che resiste ancora oggi. Quale?",
+          "options": [
+            "Maggiore affluenza totale di pubblico",
+            "Maggior numero di gol segnati",
+            "Maggior numero di cartellini rossi",
+            "Maggior numero di calci di rigore"
+          ],
+          "explanation": "L'edizione del 1994 attirò oltre 3,58 milioni di spettatori complessivi, un record che resiste da più di 30 anni. La media di quasi 69.000 spettatori a partita fu favorita dall'uso degli enormi stadi di football americano. Questo record potrebbe finalmente essere battuto nel 2026, con stadi statunitensi ancora più grandi e 104 partite (contro le 52 del 1994)."
+        },
+        "ja": {
+          "question": "1994年にアメリカで開催された大会は、今も破られていない記録を打ち立てました。それは何でしょう?",
+          "options": [
+            "総観客動員数の最多記録",
+            "総得点数の最多記録",
+            "レッドカード提示数の最多記録",
+            "PK戦の最多記録"
+          ],
+          "explanation": "1994年大会は総計358万人を超える観客を集め、その記録は30年以上にわたり破られていません。1試合平均約69,000人という観客数は、巨大なアメリカンフットボール用スタジアムを使用したことで押し上げられました。この記録は、さらに大きなアメリカのスタジアムと104試合(1994年は52試合)を擁する2026年大会でついに更新されるかもしれません。"
+        },
+        "ko": {
+          "question": "1994년 미국에서 열린 대회는 아직도 깨지지 않은 기록을 세웠습니다. 무엇이었을까요?",
+          "options": [
+            "최다 총 관중 수",
+            "최다 득점 수",
+            "최다 레드카드 수",
+            "최다 승부차기 횟수"
+          ],
+          "explanation": "1994년 대회는 총 358만 명이 넘는 관중을 모았으며, 이 기록은 30년 넘게 유지되고 있습니다. 경기당 평균 약 69,000명이라는 관중 수는 거대한 미식축구 경기장을 활용한 덕분에 크게 늘었습니다. 이 기록은 더 큰 미국 경기장과 104경기(1994년의 52경기 대비)가 열리는 2026년 대회에서 마침내 깨질 수도 있습니다."
+        },
+        "pt-BR": {
+          "question": "O torneio de 1994 nos Estados Unidos estabeleceu um recorde que ainda se mantém. Qual foi ele?",
+          "options": [
+            "Maior público total",
+            "Mais gols marcados",
+            "Mais cartões vermelhos exibidos",
+            "Mais disputas de pênaltis"
+          ],
+          "explanation": "A edição de 1994 atraiu mais de 3,58 milhões de espectadores no total, um recorde que perdura há mais de 30 anos. A média de público de quase 69.000 por partida foi impulsionada pelo uso de enormes estádios de futebol americano. Esse recorde pode finalmente ser quebrado em 2026, com estádios norte-americanos ainda maiores e 104 partidas (contra 52 em 1994)."
+        },
+        "zh-Hans": {
+          "question": "1994年在美国举办的赛事创下了一项至今仍未被打破的纪录。是什么纪录?",
+          "options": [
+            "最高总观众人数",
+            "最多进球数",
+            "最多红牌数",
+            "最多点球大战次数"
+          ],
+          "explanation": "1994年那届赛事吸引了总计超过358万名观众,这一纪录已保持超过30年。得益于使用了巨大的美式橄榄球体育场,场均观众人数接近69,000人。随着美国体育场更加庞大以及比赛场次增至104场(1994年为52场),这一纪录有望在2026年最终被打破。"
+        }
+      },
+      "i18nSourceHash": "8260cf2c1b2a188b"
     },
     {
       "id": "t-north-korea-2010",
@@ -12991,7 +13197,110 @@
       ],
       "answer": 0,
       "explanation": "North Korea's return was painful: they lost to Brazil 2-1 (after briefly leading!), Portugal 7-0, and Ivory Coast 3-0. The 7-0 thrashing by Portugal was one of the most lopsided results in modern tournament history. Their previous appearance had been the famous 1966 run where they stunned Italy.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "عندما عادت كوريا الشمالية إلى البطولة في عام 2010 بعد غياب دام 44 عامًا، ماذا حدث؟",
+          "options": [
+            "خسرت مبارياتها الثلاث في دور المجموعات",
+            "تأهلت إلى دور الستة عشر",
+            "تعادلت في مبارياتها الثلاث",
+            "هزمت فريقًا واحدًا لكنها أُقصيت"
+          ],
+          "explanation": "كانت عودة كوريا الشمالية مؤلمة: خسرت أمام البرازيل 2-1 (بعد أن تقدمت في النتيجة لفترة وجيزة!)، وأمام البرتغال 7-0، وأمام ساحل العاج 3-0. وكانت الهزيمة بنتيجة 7-0 أمام البرتغال واحدة من أكثر النتائج تباينًا في تاريخ البطولة الحديث. أما ظهورها السابق فكان المشوار الشهير عام 1966 عندما صدمت إيطاليا."
+        },
+        "de": {
+          "question": "Als Nordkorea 2010 nach 44 Jahren Abwesenheit zum Turnier zurückkehrte, was geschah?",
+          "options": [
+            "Sie verloren alle drei Gruppenspiele",
+            "Sie zogen ins Achtelfinale ein",
+            "Sie spielten alle drei Spiele unentschieden",
+            "Sie schlugen ein Team, schieden aber aus"
+          ],
+          "explanation": "Nordkoreas Rückkehr verlief schmerzhaft: Sie verloren gegen Brasilien mit 1:2 (nachdem sie kurz geführt hatten!), gegen Portugal mit 0:7 und gegen die Elfenbeinküste mit 0:3. Die 0:7-Klatsche gegen Portugal war eines der einseitigsten Ergebnisse der modernen Turniergeschichte. Ihr vorheriger Auftritt war der berühmte Lauf von 1966, als sie Italien schockierten."
+        },
+        "es": {
+          "question": "Cuando Corea del Norte regresó al torneo en 2010 tras 44 años de ausencia, ¿qué pasó?",
+          "options": [
+            "Perdieron los tres partidos de la fase de grupos",
+            "Avanzaron a los octavos de final",
+            "Empataron los tres partidos",
+            "Le ganaron a un equipo pero quedaron eliminados"
+          ],
+          "explanation": "El regreso de Corea del Norte fue doloroso: perdieron 2-1 ante Brasil (¡después de ir ganando por un momento!), 7-0 ante Portugal y 3-0 ante Costa de Marfil. La goleada 7-0 de Portugal fue uno de los resultados más desiguales en la historia moderna del torneo. Su participación anterior había sido la famosa hazaña de 1966, cuando sorprendieron a Italia."
+        },
+        "es-ES": {
+          "question": "Cuando Corea del Norte regresó al torneo en 2010 tras 44 años de ausencia, ¿qué ocurrió?",
+          "options": [
+            "Perdieron los tres partidos de la fase de grupos",
+            "Avanzaron a los octavos de final",
+            "Empataron los tres partidos",
+            "Vencieron a un equipo pero quedaron eliminados"
+          ],
+          "explanation": "El regreso de Corea del Norte fue doloroso: perdieron 2-1 ante Brasil (¡después de ir ganando por un momento!), 7-0 ante Portugal y 3-0 ante Costa de Marfil. La goleada por 7-0 de Portugal fue uno de los resultados más desiguales de la historia moderna del torneo. Su anterior participación había sido la famosa gesta de 1966, cuando dejaron atónita a Italia."
+        },
+        "fr": {
+          "question": "Lorsque la Corée du Nord est revenue au tournoi en 2010 après 44 ans d'absence, que s'est-il passé ?",
+          "options": [
+            "Elle a perdu ses trois matchs de poule",
+            "Elle s'est qualifiée pour les huitièmes de finale",
+            "Elle a fait match nul lors de ses trois rencontres",
+            "Elle a battu une équipe mais a été éliminée"
+          ],
+          "explanation": "Le retour de la Corée du Nord fut douloureux : elle s'est inclinée 2-1 face au Brésil (après avoir brièvement mené !), 7-0 contre le Portugal et 3-0 face à la Côte d'Ivoire. La déroute 7-0 infligée par le Portugal fut l'un des résultats les plus déséquilibrés de l'histoire moderne du tournoi. Sa précédente apparition remontait au célèbre parcours de 1966, où elle avait créé la surprise en éliminant l'Italie."
+        },
+        "it": {
+          "question": "Quando la Corea del Nord tornò al torneo nel 2010 dopo 44 anni di assenza, cosa accadde?",
+          "options": [
+            "Perse tutte e tre le partite del girone",
+            "Si qualificò agli ottavi di finale",
+            "Pareggiò tutte e tre le partite",
+            "Batté una squadra ma fu eliminata"
+          ],
+          "explanation": "Il ritorno della Corea del Nord fu doloroso: perse 2-1 con il Brasile (dopo essere passata brevemente in vantaggio!), 7-0 con il Portogallo e 3-0 con la Costa d'Avorio. La sconfitta per 7-0 contro il Portogallo fu uno dei risultati più squilibrati nella storia moderna del torneo. La sua precedente apparizione era stata la celebre cavalcata del 1966, quando sbalordì l'Italia."
+        },
+        "ja": {
+          "question": "北朝鮮が44年ぶりに2010年の大会へ復帰したとき、何が起きたでしょう？",
+          "options": [
+            "グループステージで3試合すべてに敗れた",
+            "ベスト16に進出した",
+            "3試合すべて引き分けた",
+            "1チームに勝ったが敗退した"
+          ],
+          "explanation": "北朝鮮の復帰はほろ苦いものだった。ブラジルに1-2で（一時はリードしていたのに！）、ポルトガルに0-7、コートジボワールに0-3で敗れた。ポルトガルに0-7で大敗したこの試合は、近代の大会史上でも屈指の一方的な結果だった。前回の出場は、イタリアを驚かせた1966年の名高い快進撃だった。"
+        },
+        "ko": {
+          "question": "북한이 44년 만인 2010년에 대회로 복귀했을 때, 무슨 일이 있었을까요?",
+          "options": [
+            "조별리그 세 경기를 모두 패했다",
+            "16강에 진출했다",
+            "세 경기를 모두 비겼다",
+            "한 팀을 이겼지만 탈락했다"
+          ],
+          "explanation": "북한의 복귀는 쓰라렸다. 브라질에 1-2로(잠시 앞서 나가기도 했다!), 포르투갈에 0-7로, 코트디부아르에 0-3으로 패했다. 포르투갈에 0-7로 당한 대패는 현대 대회 역사상 가장 일방적인 결과 중 하나였다. 이전 출전은 이탈리아를 충격에 빠뜨린 1966년의 유명한 활약이었다."
+        },
+        "pt-BR": {
+          "question": "Quando a Coreia do Norte voltou ao torneio em 2010 após 44 anos de ausência, o que aconteceu?",
+          "options": [
+            "Perderam as três partidas da fase de grupos",
+            "Avançaram às oitavas de final",
+            "Empataram as três partidas",
+            "Venceram uma equipe, mas foram eliminados"
+          ],
+          "explanation": "O retorno da Coreia do Norte foi doloroso: perderam por 2 a 1 para o Brasil (depois de chegarem a liderar!), por 7 a 0 para Portugal e por 3 a 0 para a Costa do Marfim. A goleada de 7 a 0 imposta por Portugal foi um dos resultados mais desiguais da história moderna do torneio. Sua participação anterior havia sido a famosa campanha de 1966, quando surpreenderam a Itália."
+        },
+        "zh-Hans": {
+          "question": "朝鲜在阔别44年后于2010年重返本届赛事，结果如何？",
+          "options": [
+            "小组赛三场全负",
+            "晋级16强",
+            "三场比赛全部战平",
+            "击败一支球队但仍被淘汰"
+          ],
+          "explanation": "朝鲜的回归十分痛苦：他们以1比2不敌巴西（一度还曾领先！），0比7惨败给葡萄牙，又0比3输给科特迪瓦。0比7负于葡萄牙是现代赛事史上最悬殊的比分之一。他们上一次亮相是1966年那次著名的征程，当时他们曾爆冷淘汰意大利。"
+        }
+      },
+      "i18nSourceHash": "2b78a8746cbb8bbf"
     },
     {
       "id": "t-morocco-2022",
@@ -13005,7 +13314,110 @@
       ],
       "answer": 0,
       "explanation": "Morocco's 2022 run was sensational — they topped a group containing Belgium and Croatia, then knocked out Spain on penalties and Portugal 1-0 before losing to France in the semi-finals. They became the first African and first Arab nation to reach a tournament semi-final, igniting celebrations across the continent and the Arab world.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أي دولة أفريقية صنعت التاريخ في عام 2022 بأن أصبحت أول دولة من قارتها تصل إلى نصف نهائي البطولة؟",
+          "options": [
+            "المغرب",
+            "السنغال",
+            "غانا",
+            "الكاميرون"
+          ],
+          "explanation": "كانت مسيرة المغرب في 2022 مذهلة — تصدّر المنتخب مجموعة ضمّت بلجيكا وكرواتيا، ثم أقصى إسبانيا بركلات الترجيح والبرتغال بهدف نظيف قبل أن يخسر أمام فرنسا في نصف النهائي. أصبح المغرب أول دولة أفريقية وأول دولة عربية تصل إلى نصف نهائي البطولة، مشعلاً الاحتفالات في أنحاء القارة والعالم العربي."
+        },
+        "de": {
+          "question": "Welche afrikanische Nation schrieb 2022 Geschichte, indem sie als erste ihres Kontinents das Halbfinale eines Turniers erreichte?",
+          "options": [
+            "Marokko",
+            "Senegal",
+            "Ghana",
+            "Kamerun"
+          ],
+          "explanation": "Marokkos Lauf im Jahr 2022 war sensationell — die Mannschaft gewann eine Gruppe mit Belgien und Kroatien, schaltete dann Spanien im Elfmeterschießen und Portugal mit 1:0 aus, bevor sie im Halbfinale gegen Frankreich verlor. Marokko wurde die erste afrikanische und erste arabische Nation, die das Halbfinale eines Turniers erreichte, und löste damit Jubel auf dem ganzen Kontinent und in der arabischen Welt aus."
+        },
+        "es": {
+          "question": "¿Qué nación africana hizo historia en 2022 al convertirse en la primera de su continente en alcanzar las semifinales de un torneo?",
+          "options": [
+            "Marruecos",
+            "Senegal",
+            "Ghana",
+            "Camerún"
+          ],
+          "explanation": "La campaña de Marruecos en 2022 fue sensacional: lideró un grupo que incluía a Bélgica y Croacia, luego eliminó a España en los penales y a Portugal por 1-0 antes de caer ante Francia en las semifinales. Se convirtió en la primera nación africana y la primera árabe en llegar a las semifinales de un torneo, desatando celebraciones en todo el continente y el mundo árabe."
+        },
+        "es-ES": {
+          "question": "¿Qué nación africana hizo historia en 2022 al convertirse en la primera de su continente en alcanzar las semifinales de un torneo?",
+          "options": [
+            "Marruecos",
+            "Senegal",
+            "Ghana",
+            "Camerún"
+          ],
+          "explanation": "La trayectoria de Marruecos en 2022 fue sensacional: encabezó un grupo en el que estaban Bélgica y Croacia, después eliminó a España en los penaltis y a Portugal por 1-0 antes de caer frente a Francia en las semifinales. Se convirtió en la primera nación africana y la primera árabe en llegar a las semifinales de un torneo, desatando celebraciones por todo el continente y el mundo árabe."
+        },
+        "fr": {
+          "question": "Quelle nation africaine est entrée dans l'histoire en 2022 en devenant la première de son continent à atteindre les demi-finales d'un tournoi ?",
+          "options": [
+            "Maroc",
+            "Sénégal",
+            "Ghana",
+            "Cameroun"
+          ],
+          "explanation": "Le parcours du Maroc en 2022 fut sensationnel : l'équipe a terminé en tête d'un groupe comprenant la Belgique et la Croatie, puis a éliminé l'Espagne aux tirs au but et le Portugal 1-0 avant de s'incliner face à la France en demi-finales. Le Maroc est devenu la première nation africaine et la première nation arabe à atteindre les demi-finales d'un tournoi, déclenchant des célébrations dans tout le continent et le monde arabe."
+        },
+        "it": {
+          "question": "Quale nazione africana è entrata nella storia nel 2022 diventando la prima del suo continente a raggiungere le semifinali di un torneo?",
+          "options": [
+            "Marocco",
+            "Senegal",
+            "Ghana",
+            "Camerun"
+          ],
+          "explanation": "Il cammino del Marocco nel 2022 è stato sensazionale: ha chiuso al primo posto un girone che comprendeva Belgio e Croazia, poi ha eliminato la Spagna ai rigori e il Portogallo per 1-0 prima di perdere contro la Francia in semifinale. È diventata la prima nazione africana e la prima araba a raggiungere le semifinali di un torneo, scatenando festeggiamenti in tutto il continente e nel mondo arabo."
+        },
+        "ja": {
+          "question": "2022年、自国の大陸から初めてトーナメントの準決勝に進出し、歴史に名を刻んだアフリカの国はどこでしょう？",
+          "options": [
+            "モロッコ",
+            "セネガル",
+            "ガーナ",
+            "カメルーン"
+          ],
+          "explanation": "2022年のモロッコの快進撃は衝撃的だった。ベルギーとクロアチアを含むグループを首位で突破し、スペインをPK戦で、ポルトガルを1-0で下した後、準決勝でフランスに敗れた。アフリカ勢として、そしてアラブ勢として初めてトーナメントの準決勝に到達し、大陸全土とアラブ世界に歓喜を巻き起こした。"
+        },
+        "ko": {
+          "question": "2022년, 자국 대륙에서 최초로 토너먼트 준결승에 진출하며 역사를 새로 쓴 아프리카 국가는 어디일까요?",
+          "options": [
+            "모로코",
+            "세네갈",
+            "가나",
+            "카메룬"
+          ],
+          "explanation": "2022년 모로코의 행보는 그야말로 센세이션이었다. 벨기에와 크로아티아가 속한 조에서 1위로 통과한 뒤 스페인을 승부차기로, 포르투갈을 1-0으로 꺾었고, 준결승에서 프랑스에 패했다. 모로코는 아프리카 국가이자 아랍 국가로서는 최초로 토너먼트 준결승에 진출하며 대륙 전역과 아랍 세계에 환희를 불러일으켰다."
+        },
+        "pt-BR": {
+          "question": "Qual nação africana fez história em 2022 ao se tornar a primeira de seu continente a chegar às semifinais de um torneio?",
+          "options": [
+            "Marrocos",
+            "Senegal",
+            "Gana",
+            "Camarões"
+          ],
+          "explanation": "A campanha de Marrocos em 2022 foi sensacional — a equipe liderou um grupo com Bélgica e Croácia, depois eliminou a Espanha nos pênaltis e Portugal por 1 a 0 antes de perder para a França nas semifinais. Tornou-se a primeira nação africana e a primeira árabe a alcançar as semifinais de um torneio, provocando comemorações por todo o continente e o mundo árabe."
+        },
+        "zh-Hans": {
+          "question": "2022年，哪个非洲国家创造历史，成为该大陆首支闯入赛事半决赛的球队？",
+          "options": [
+            "摩洛哥",
+            "塞内加尔",
+            "加纳",
+            "喀麦隆"
+          ],
+          "explanation": "摩洛哥在2022年的征程令人惊叹——他们力压比利时和克罗地亚所在的小组登顶，随后在点球大战中淘汰西班牙，又以1比0击败葡萄牙，最终在半决赛不敌法国。他们成为首支闯入赛事半决赛的非洲球队，也是首支阿拉伯球队，点燃了整个非洲大陆和阿拉伯世界的庆祝热潮。"
+        }
+      },
+      "i18nSourceHash": "446d95daf1e1119f"
     },
     {
       "id": "t-most-appearances-no-title",
@@ -13019,7 +13431,110 @@
       ],
       "answer": 0,
       "explanation": "Mexico has appeared at 18 editions — more than any nation that hasn't lifted the trophy. Despite being frequent hosts and consistent qualifiers from CONCACAF, Mexico has a so-called 'quinto partido' (fifth match) curse, having been eliminated in the Round of 16 in seven consecutive tournaments from 1994 to 2018.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ما هي الدولة التي شاركت في أكبر عدد من نسخ البطولة دون أن تفوز بها على الإطلاق؟",
+          "options": [
+            "المكسيك",
+            "هولندا",
+            "سويسرا",
+            "بلجيكا"
+          ],
+          "explanation": "شاركت المكسيك في 18 نسخة، وهو رقم أكبر من أي منتخب لم يرفع الكأس قط. ورغم استضافتها المتكررة للبطولة وتأهلها الدائم من منطقة الكونكاكاف، تعاني المكسيك مما يُعرف بلعنة 'المباراة الخامسة' (quinto partido)، إذ خرجت من دور الستة عشر في سبع بطولات متتالية من عام 1994 إلى 2018."
+        },
+        "de": {
+          "question": "Welches Land hat an den meisten Ausgaben des Turniers teilgenommen, ohne es jemals zu gewinnen?",
+          "options": [
+            "Mexiko",
+            "Niederlande",
+            "Schweiz",
+            "Belgien"
+          ],
+          "explanation": "Mexiko hat an 18 Ausgaben teilgenommen – mehr als jede andere Nation, die den Pokal nie in die Höhe gestemmt hat. Obwohl Mexiko häufig Gastgeber war und sich regelmäßig über die CONCACAF qualifizierte, leidet das Land unter dem sogenannten 'Quinto-Partido'-Fluch (fünftes Spiel): Von 1994 bis 2018 schied es in sieben aufeinanderfolgenden Turnieren im Achtelfinale aus."
+        },
+        "es": {
+          "question": "¿Qué país ha participado en más ediciones del torneo sin haberlo ganado nunca?",
+          "options": [
+            "México",
+            "Países Bajos",
+            "Suiza",
+            "Bélgica"
+          ],
+          "explanation": "México ha participado en 18 ediciones, más que cualquier otra selección que no haya levantado el trofeo. A pesar de ser anfitrión en varias ocasiones y de clasificar habitualmente desde la CONCACAF, México arrastra la llamada maldición del 'quinto partido', ya que fue eliminado en octavos de final en siete torneos consecutivos, de 1994 a 2018."
+        },
+        "es-ES": {
+          "question": "¿Qué país ha participado en más ediciones del torneo sin haberlo ganado nunca?",
+          "options": [
+            "México",
+            "Países Bajos",
+            "Suiza",
+            "Bélgica"
+          ],
+          "explanation": "México ha disputado 18 ediciones, más que cualquier otra selección que no haya levantado el trofeo. Pese a haber sido anfitrión en varias ocasiones y clasificarse con regularidad desde la CONCACAF, México arrastra la llamada maldición del 'quinto partido', pues cayó en octavos de final en siete torneos consecutivos, de 1994 a 2018."
+        },
+        "fr": {
+          "question": "Quel pays a participé au plus grand nombre d'éditions du tournoi sans jamais le remporter ?",
+          "options": [
+            "Mexique",
+            "Pays-Bas",
+            "Suisse",
+            "Belgique"
+          ],
+          "explanation": "Le Mexique a participé à 18 éditions, soit plus que toute autre nation n'ayant jamais soulevé le trophée. Bien qu'il ait souvent été pays hôte et qu'il se qualifie régulièrement via la CONCACAF, le Mexique traîne la fameuse malédiction du 'quinto partido' (cinquième match) : il a été éliminé en huitièmes de finale lors de sept tournois consécutifs, de 1994 à 2018."
+        },
+        "it": {
+          "question": "Quale nazione ha partecipato al maggior numero di edizioni del torneo senza averlo mai vinto?",
+          "options": [
+            "Messico",
+            "Paesi Bassi",
+            "Svizzera",
+            "Belgio"
+          ],
+          "explanation": "Il Messico ha partecipato a 18 edizioni, più di qualsiasi altra nazionale che non abbia mai alzato il trofeo. Pur essendo stato più volte paese ospitante e pur qualificandosi regolarmente dalla CONCACAF, il Messico è perseguitato dalla cosiddetta maledizione del 'quinto partido' (quinta partita): è stato eliminato agli ottavi di finale in sette tornei consecutivi, dal 1994 al 2018."
+        },
+        "ja": {
+          "question": "優勝経験がないまま、最も多くの大会に出場している国はどこでしょう？",
+          "options": [
+            "メキシコ",
+            "オランダ",
+            "スイス",
+            "ベルギー"
+          ],
+          "explanation": "メキシコは18回出場しており、これは優勝経験のない国の中で最多です。何度も開催国を務め、CONCACAFから安定して予選を突破してきたにもかかわらず、メキシコにはいわゆる『キント・パルティード（5試合目）』のジンクスがあり、1994年から2018年まで7大会連続でベスト16（ラウンド16）で敗退しています。"
+        },
+        "ko": {
+          "question": "한 번도 우승하지 못한 채 가장 많은 대회에 출전한 나라는 어디일까요?",
+          "options": [
+            "멕시코",
+            "네덜란드",
+            "스위스",
+            "벨기에"
+          ],
+          "explanation": "멕시코는 18회 출전했으며, 이는 우승 트로피를 들어 올린 적이 없는 나라 중 가장 많은 횟수입니다. 여러 차례 개최국을 맡았고 CONCACAF에서 꾸준히 본선에 진출했음에도, 멕시코는 이른바 '킨토 파르티도(다섯 번째 경기)'의 저주를 안고 있으며, 1994년부터 2018년까지 7개 대회 연속으로 16강에서 탈락했습니다."
+        },
+        "pt-BR": {
+          "question": "Qual país participou do maior número de edições do torneio sem nunca tê-lo vencido?",
+          "options": [
+            "México",
+            "Holanda",
+            "Suíça",
+            "Bélgica"
+          ],
+          "explanation": "O México participou de 18 edições — mais do que qualquer outra seleção que nunca ergueu o troféu. Apesar de ter sido sede várias vezes e de se classificar com regularidade pela CONCACAF, o México carrega a chamada maldição do 'quinto partido' (quinta partida), tendo sido eliminado nas oitavas de final em sete torneios consecutivos, de 1994 a 2018."
+        },
+        "zh-Hans": {
+          "question": "哪个国家参加过最多届赛事却从未夺冠？",
+          "options": [
+            "墨西哥",
+            "荷兰",
+            "瑞士",
+            "比利时"
+          ],
+          "explanation": "墨西哥已参加了18届赛事，是所有从未捧起奖杯的球队中参赛次数最多的。尽管墨西哥多次担任东道主并稳定地从中北美及加勒比海地区（CONCACAF）出线，却深受所谓“第五场比赛”（quinto partido）魔咒的困扰——从1994年到2018年，连续七届赛事都止步于16强。"
+        }
+      },
+      "i18nSourceHash": "fe4634ddd51e7dce"
     },
     {
       "id": "t-japan-2022-group",
