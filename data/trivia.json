@@ -4836,7 +4836,110 @@
       "answer": 1,
       "explanation": "The Jabulani, used at the 2010 tournament, was criticised by goalkeepers and players for its unpredictable flight path.",
       "media": "https://www.youtube.com/watch?v=28MtUTnUBuI",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كانت الكرة المثيرة للجدل 'جابولاني' هي الكرة الرسمية لمباريات أي نسخة؟",
+          "options": [
+            "2006",
+            "2010",
+            "2014",
+            "2018"
+          ],
+          "explanation": "تعرضت كرة جابولاني، التي استُخدمت في بطولة 2010، لانتقادات من حراس المرمى واللاعبين بسبب مسارها غير المتوقع في الطيران."
+        },
+        "de": {
+          "question": "Der umstrittene 'Jabulani' war der offizielle Spielball welcher Ausgabe?",
+          "options": [
+            "2006",
+            "2010",
+            "2014",
+            "2018"
+          ],
+          "explanation": "Der beim Turnier 2010 eingesetzte Jabulani wurde von Torhütern und Spielern wegen seiner unberechenbaren Flugbahn kritisiert."
+        },
+        "es": {
+          "question": "El polémico 'Jabulani' fue el balón oficial de partido de ¿qué edición?",
+          "options": [
+            "2006",
+            "2010",
+            "2014",
+            "2018"
+          ],
+          "explanation": "El Jabulani, usado en el torneo de 2010, fue criticado por arqueros y jugadores debido a su trayectoria de vuelo impredecible."
+        },
+        "es-ES": {
+          "question": "El polémico 'Jabulani' fue el balón oficial de partido de ¿qué edición?",
+          "options": [
+            "2006",
+            "2010",
+            "2014",
+            "2018"
+          ],
+          "explanation": "El Jabulani, empleado en el torneo de 2010, fue criticado por porteros y jugadores por su trayectoria de vuelo impredecible."
+        },
+        "fr": {
+          "question": "Le controversé 'Jabulani' était le ballon officiel de quelle édition ?",
+          "options": [
+            "2006",
+            "2010",
+            "2014",
+            "2018"
+          ],
+          "explanation": "Le Jabulani, utilisé lors du tournoi de 2010, a été critiqué par les gardiens et les joueurs pour sa trajectoire de vol imprévisible."
+        },
+        "it": {
+          "question": "Il controverso 'Jabulani' fu il pallone ufficiale di quale edizione?",
+          "options": [
+            "2006",
+            "2010",
+            "2014",
+            "2018"
+          ],
+          "explanation": "Il Jabulani, usato nel torneo del 2010, fu criticato da portieri e giocatori per la sua traiettoria di volo imprevedibile."
+        },
+        "ja": {
+          "question": "物議を醸した「ジャブラニ」は、どの大会の公式試合球でしたか？",
+          "options": [
+            "2006",
+            "2010",
+            "2014",
+            "2018"
+          ],
+          "explanation": "2010年の大会で使用されたジャブラニは、予測できない飛び方をするとして、ゴールキーパーや選手たちから批判を浴びました。"
+        },
+        "ko": {
+          "question": "논란이 되었던 '자불라니'는 어느 대회의 공식 경기구였을까요?",
+          "options": [
+            "2006",
+            "2010",
+            "2014",
+            "2018"
+          ],
+          "explanation": "2010년 대회에서 사용된 자불라니는 예측할 수 없는 비행 궤적 때문에 골키퍼와 선수들로부터 비판을 받았습니다."
+        },
+        "pt-BR": {
+          "question": "A polêmica 'Jabulani' foi a bola oficial de qual edição?",
+          "options": [
+            "2006",
+            "2010",
+            "2014",
+            "2018"
+          ],
+          "explanation": "A Jabulani, usada no torneio de 2010, foi criticada por goleiros e jogadores devido à sua trajetória de voo imprevisível."
+        },
+        "zh-Hans": {
+          "question": "备受争议的“普天同庆”（Jabulani）是哪一届赛事的官方比赛用球？",
+          "options": [
+            "2006",
+            "2010",
+            "2014",
+            "2018"
+          ],
+          "explanation": "普天同庆用球在2010年的赛事中使用，因其飞行轨迹难以预测而受到门将和球员的批评。"
+        }
+      },
+      "i18nSourceHash": "a79add28c9ae6600"
     },
     {
       "id": "h-2010-champion",
@@ -4967,7 +5070,110 @@
       ],
       "answer": 1,
       "explanation": "VAR made its tournament debut in Russia in 2018, reviewing goals, penalties, red cards, and mistaken identity.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "في أي نسخة استُخدمت تقنية حكم الفيديو المساعد (VAR) لأول مرة؟",
+          "options": [
+            "2014",
+            "2018",
+            "2022",
+            "2026"
+          ],
+          "explanation": "ظهرت تقنية حكم الفيديو المساعد لأول مرة في البطولة المقامة في روسيا عام 2018، حيث استُخدمت لمراجعة الأهداف وركلات الجزاء والبطاقات الحمراء وحالات الخطأ في تحديد هوية اللاعب."
+        },
+        "de": {
+          "question": "Bei welcher Ausgabe kam der Videobeweis (VAR) zum ersten Mal zum Einsatz?",
+          "options": [
+            "2014",
+            "2018",
+            "2022",
+            "2026"
+          ],
+          "explanation": "Der Videobeweis feierte 2018 in Russland seine Premiere beim Turnier und überprüfte Tore, Elfmeter, Rote Karten und Verwechslungen von Spielern."
+        },
+        "es": {
+          "question": "¿En qué edición se utilizó por primera vez el VAR (árbitro asistente de video)?",
+          "options": [
+            "2014",
+            "2018",
+            "2022",
+            "2026"
+          ],
+          "explanation": "El VAR debutó en el torneo en Rusia en 2018, revisando goles, penales, tarjetas rojas y casos de identidad equivocada."
+        },
+        "es-ES": {
+          "question": "¿En qué edición se usó por primera vez el VAR (videoarbitraje)?",
+          "options": [
+            "2014",
+            "2018",
+            "2022",
+            "2026"
+          ],
+          "explanation": "El VAR se estrenó en el torneo de Rusia en 2018, revisando goles, penaltis, tarjetas rojas y casos de identidad equivocada."
+        },
+        "fr": {
+          "question": "Lors de quelle édition l'assistance vidéo à l'arbitrage (VAR) a-t-elle été utilisée pour la première fois ?",
+          "options": [
+            "2014",
+            "2018",
+            "2022",
+            "2026"
+          ],
+          "explanation": "La VAR a fait ses débuts lors du tournoi en Russie en 2018, en examinant les buts, les penalties, les cartons rouges et les erreurs sur l'identité des joueurs."
+        },
+        "it": {
+          "question": "In quale edizione è stato utilizzato per la prima volta il VAR (videoassistente arbitrale)?",
+          "options": [
+            "2014",
+            "2018",
+            "2022",
+            "2026"
+          ],
+          "explanation": "Il VAR ha esordito nel torneo in Russia nel 2018, controllando gol, rigori, cartellini rossi e casi di errata identificazione dei giocatori."
+        },
+        "ja": {
+          "question": "ビデオ・アシスタント・レフェリー（VAR）が初めて使用された大会はどれですか？",
+          "options": [
+            "2014",
+            "2018",
+            "2022",
+            "2026"
+          ],
+          "explanation": "VARは2018年のロシア大会で初めて導入され、ゴール、ペナルティ、レッドカード、選手の誤認などの判定をチェックしました。"
+        },
+        "ko": {
+          "question": "비디오 보조 심판(VAR)이 처음 사용된 대회는 언제입니까?",
+          "options": [
+            "2014",
+            "2018",
+            "2022",
+            "2026"
+          ],
+          "explanation": "VAR은 2018년 러시아 대회에서 처음 도입되어 골, 페널티킥, 레드카드, 선수 오인 상황을 검토했습니다."
+        },
+        "pt-BR": {
+          "question": "Em qual edição o VAR (árbitro assistente de vídeo) foi usado pela primeira vez?",
+          "options": [
+            "2014",
+            "2018",
+            "2022",
+            "2026"
+          ],
+          "explanation": "O VAR estreou no torneio na Rússia em 2018, revisando gols, pênaltis, cartões vermelhos e casos de identidade trocada."
+        },
+        "zh-Hans": {
+          "question": "视频助理裁判（VAR）首次启用是在哪一届赛事？",
+          "options": [
+            "2014",
+            "2018",
+            "2022",
+            "2026"
+          ],
+          "explanation": "VAR 于 2018 年在俄罗斯举办的赛事中首次亮相，用于审查进球、点球、红牌以及球员身份误判等情况。"
+        }
+      },
+      "i18nSourceHash": "5d8287f4fe509f36"
     },
     {
       "id": "r-var-meaning",
@@ -5098,7 +5304,110 @@
       ],
       "answer": 0,
       "explanation": "Uruguay won the inaugural tournament in 1930 on home soil and again in 1950 with the famous 'Maracanazo' in Brazil.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "فازت أوروغواي بلقبين. في أي عامين؟",
+          "options": [
+            "1930 و1950",
+            "1934 و1950",
+            "1930 و1954",
+            "1938 و1950"
+          ],
+          "explanation": "فازت أوروغواي بالنسخة الافتتاحية للبطولة عام 1930 على أرضها، ثم مرة أخرى عام 1950 بفضل 'الماراكانازو' الشهير في البرازيل."
+        },
+        "de": {
+          "question": "Uruguay gewann zwei Titel. In welchen Jahren?",
+          "options": [
+            "1930 und 1950",
+            "1934 und 1950",
+            "1930 und 1954",
+            "1938 und 1950"
+          ],
+          "explanation": "Uruguay gewann 1930 das erste Turnier im eigenen Land und 1950 erneut durch das berühmte 'Maracanazo' in Brasilien."
+        },
+        "es": {
+          "question": "Uruguay ganó dos títulos. ¿En qué años?",
+          "options": [
+            "1930 y 1950",
+            "1934 y 1950",
+            "1930 y 1954",
+            "1938 y 1950"
+          ],
+          "explanation": "Uruguay ganó el torneo inaugural en 1930 como local y de nuevo en 1950 con el famoso 'Maracanazo' en Brasil."
+        },
+        "es-ES": {
+          "question": "Uruguay ganó dos títulos. ¿En qué años?",
+          "options": [
+            "1930 y 1950",
+            "1934 y 1950",
+            "1930 y 1954",
+            "1938 y 1950"
+          ],
+          "explanation": "Uruguay ganó el torneo inaugural en 1930 jugando en casa y de nuevo en 1950 con el célebre 'Maracanazo' en Brasil."
+        },
+        "fr": {
+          "question": "L'Uruguay a remporté deux titres. En quelles années ?",
+          "options": [
+            "1930 et 1950",
+            "1934 et 1950",
+            "1930 et 1954",
+            "1938 et 1950"
+          ],
+          "explanation": "L'Uruguay a remporté le tout premier tournoi en 1930 à domicile, puis de nouveau en 1950 grâce au fameux 'Maracanazo' au Brésil."
+        },
+        "it": {
+          "question": "L'Uruguay ha vinto due titoli. In quali anni?",
+          "options": [
+            "1930 e 1950",
+            "1934 e 1950",
+            "1930 e 1954",
+            "1938 e 1950"
+          ],
+          "explanation": "L'Uruguay vinse il primo torneo nel 1930 in casa e di nuovo nel 1950 con il celebre 'Maracanazo' in Brasile."
+        },
+        "ja": {
+          "question": "ウルグアイは2度の優勝を果たしました。それは何年でしょう？",
+          "options": [
+            "1930年と1950年",
+            "1934年と1950年",
+            "1930年と1954年",
+            "1938年と1950年"
+          ],
+          "explanation": "ウルグアイは1930年に自国開催の第1回大会で優勝し、1950年にはブラジルで有名な『マラカナソ』を演じて再び優勝しました。"
+        },
+        "ko": {
+          "question": "우루과이는 두 번 우승했습니다. 어느 해였을까요?",
+          "options": [
+            "1930년과 1950년",
+            "1934년과 1950년",
+            "1930년과 1954년",
+            "1938년과 1950년"
+          ],
+          "explanation": "우루과이는 1930년 자국에서 열린 첫 대회에서 우승했고, 1950년에는 브라질에서 그 유명한 '마라카낭(Maracanazo)'으로 다시 우승했습니다."
+        },
+        "pt-BR": {
+          "question": "O Uruguai conquistou dois títulos. Em quais anos?",
+          "options": [
+            "1930 e 1950",
+            "1934 e 1950",
+            "1930 e 1954",
+            "1938 e 1950"
+          ],
+          "explanation": "O Uruguai venceu o torneio inaugural em 1930 jogando em casa e novamente em 1950 com o famoso 'Maracanazo' no Brasil."
+        },
+        "zh-Hans": {
+          "question": "乌拉圭赢得了两次冠军。是在哪两年？",
+          "options": [
+            "1930年和1950年",
+            "1934年和1950年",
+            "1930年和1954年",
+            "1938年和1950年"
+          ],
+          "explanation": "乌拉圭在1930年于本土举办的首届赛事中夺冠，又在1950年凭借巴西著名的‘马拉卡纳惨案’再度封王。"
+        }
+      },
+      "i18nSourceHash": "05067aa5da92ad20"
     },
     {
       "id": "v-metlife-capacity",
@@ -5230,7 +5539,110 @@
       "answer": 2,
       "explanation": "The shock 7–1 result came in Belo Horizonte — one of the most stunning scorelines in the sport's history.",
       "media": "https://www.youtube.com/watch?v=21H3iJmKcGA",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "اشتهرت ألمانيا بسحقها للبرازيل 7–1 في نصف نهائي 2014. أين أُقيمت تلك المباراة؟",
+          "options": [
+            "ريو دي جانيرو",
+            "ساو باولو",
+            "بيلو هوريزونتي",
+            "برازيليا"
+          ],
+          "explanation": "جاءت النتيجة الصادمة 7–1 في بيلو هوريزونتي — وهي واحدة من أكثر النتائج إذهالاً في تاريخ هذه اللعبة."
+        },
+        "de": {
+          "question": "Deutschland deklassierte Brasilien im Halbfinale 2014 bekanntlich mit 7:1. Wo fand das Spiel statt?",
+          "options": [
+            "Rio de Janeiro",
+            "São Paulo",
+            "Belo Horizonte",
+            "Brasília"
+          ],
+          "explanation": "Das schockierende 7:1 fiel in Belo Horizonte — eines der verblüffendsten Ergebnisse der Sportgeschichte."
+        },
+        "es": {
+          "question": "Alemania goleó de forma memorable a Brasil 7–1 en una semifinal de 2014. ¿Dónde se jugó?",
+          "options": [
+            "Río de Janeiro",
+            "São Paulo",
+            "Belo Horizonte",
+            "Brasilia"
+          ],
+          "explanation": "El impactante 7–1 se dio en Belo Horizonte, uno de los marcadores más asombrosos en la historia del deporte."
+        },
+        "es-ES": {
+          "question": "Alemania goleó de forma memorable a Brasil por 7–1 en una semifinal de 2014. ¿Dónde se disputó?",
+          "options": [
+            "Río de Janeiro",
+            "São Paulo",
+            "Belo Horizonte",
+            "Brasilia"
+          ],
+          "explanation": "El impactante 7–1 se produjo en Belo Horizonte, uno de los resultados más asombrosos de la historia del deporte."
+        },
+        "fr": {
+          "question": "L'Allemagne a célèbrement écrasé le Brésil 7–1 en demi-finale en 2014. Où ce match s'est-il joué ?",
+          "options": [
+            "Rio de Janeiro",
+            "São Paulo",
+            "Belo Horizonte",
+            "Brasília"
+          ],
+          "explanation": "Le score choc de 7–1 a été enregistré à Belo Horizonte — l'un des résultats les plus stupéfiants de l'histoire du sport."
+        },
+        "it": {
+          "question": "La Germania travolse clamorosamente il Brasile per 7–1 in una semifinale del 2014. Dove si giocò?",
+          "options": [
+            "Rio de Janeiro",
+            "San Paolo",
+            "Belo Horizonte",
+            "Brasília"
+          ],
+          "explanation": "Lo sconvolgente 7–1 arrivò a Belo Horizonte, uno dei punteggi più incredibili nella storia di questo sport."
+        },
+        "ja": {
+          "question": "ドイツは2014年の準決勝でブラジルを7対1で大破したことで有名です。この試合はどこで行われたでしょう？",
+          "options": [
+            "リオデジャネイロ",
+            "サンパウロ",
+            "ベロオリゾンテ",
+            "ブラジリア"
+          ],
+          "explanation": "衝撃の7対1という結果が生まれたのはベロオリゾンテで、サッカー史上最も驚くべきスコアの一つです。"
+        },
+        "ko": {
+          "question": "독일은 2014년 준결승에서 브라질을 7-1로 대파한 것으로 유명합니다. 이 경기는 어디에서 열렸을까요?",
+          "options": [
+            "리우데자네이루",
+            "상파울루",
+            "벨루오리존치",
+            "브라질리아"
+          ],
+          "explanation": "충격적인 7-1 결과는 벨루오리존치에서 나왔으며, 이는 스포츠 역사상 가장 놀라운 스코어 중 하나입니다."
+        },
+        "pt-BR": {
+          "question": "A Alemanha goleou o Brasil por 7 a 1 em uma famosa semifinal de 2014. Onde a partida foi disputada?",
+          "options": [
+            "Rio de Janeiro",
+            "São Paulo",
+            "Belo Horizonte",
+            "Brasília"
+          ],
+          "explanation": "O chocante placar de 7 a 1 aconteceu em Belo Horizonte — um dos resultados mais impressionantes da história do esporte."
+        },
+        "zh-Hans": {
+          "question": "德国在2014年的一场半决赛中以7比1大胜巴西，举世闻名。这场比赛在哪里举行？",
+          "options": [
+            "里约热内卢",
+            "圣保罗",
+            "贝洛奥里藏特",
+            "巴西利亚"
+          ],
+          "explanation": "这场令人震惊的7比1发生在贝洛奥里藏特，是这项运动历史上最惊人的比分之一。"
+        }
+      },
+      "i18nSourceHash": "b382797bf9c7fff5"
     },
     {
       "id": "p-youngest-final",
@@ -5362,7 +5774,110 @@
       "answer": 1,
       "explanation": "Puskás was the star of Hungary's 'Golden Team' that reached the 1954 final, though they lost to West Germany despite being heavy favorites.",
       "media": "https://www.youtube.com/watch?v=EAh9_qxC-T8",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أي أسطورة مجرية سجّل 84 هدفاً في 85 مباراة دولية وتألّق في بطولة 1954؟",
+          "options": [
+            "شاندور كوتشيش",
+            "فيرينتس بوشكاش",
+            "ناندور هيدِغكوتي",
+            "زولتان تسيبور"
+          ],
+          "explanation": "كان بوشكاش نجم 'الفريق الذهبي' المجري الذي بلغ نهائي 1954، لكنهم خسروا أمام ألمانيا الغربية رغم أنهم كانوا المرشحين الأوفر حظاً."
+        },
+        "de": {
+          "question": "Welcher legendäre Ungar erzielte 84 Tore in 85 Länderspielen und glänzte beim Turnier 1954?",
+          "options": [
+            "Sándor Kocsis",
+            "Ferenc Puskás",
+            "Nándor Hidegkuti",
+            "Zoltán Czibor"
+          ],
+          "explanation": "Puskás war der Star der ungarischen 'Goldenen Elf', die das Finale 1954 erreichte, dort aber trotz klarer Favoritenrolle gegen Westdeutschland verlor."
+        },
+        "es": {
+          "question": "¿Qué legendario húngaro marcó 84 goles en 85 partidos internacionales y brilló en el torneo de 1954?",
+          "options": [
+            "Sándor Kocsis",
+            "Ferenc Puskás",
+            "Nándor Hidegkuti",
+            "Zoltán Czibor"
+          ],
+          "explanation": "Puskás fue la estrella del 'Equipo de Oro' de Hungría que llegó a la final de 1954, aunque cayeron ante Alemania Occidental pese a ser los grandes favoritos."
+        },
+        "es-ES": {
+          "question": "¿Qué legendario húngaro marcó 84 goles en 85 partidos internacionales y brilló en el torneo de 1954?",
+          "options": [
+            "Sándor Kocsis",
+            "Ferenc Puskás",
+            "Nándor Hidegkuti",
+            "Zoltán Czibor"
+          ],
+          "explanation": "Puskás fue la estrella del 'Equipo de Oro' de Hungría que alcanzó la final de 1954, aunque perdieron contra Alemania Occidental a pesar de ser los grandes favoritos."
+        },
+        "fr": {
+          "question": "Quel légendaire Hongrois a inscrit 84 buts en 85 sélections et a brillé lors du tournoi de 1954 ?",
+          "options": [
+            "Sándor Kocsis",
+            "Ferenc Puskás",
+            "Nándor Hidegkuti",
+            "Zoltán Czibor"
+          ],
+          "explanation": "Puskás était la vedette de l'« Équipe d'Or » hongroise qui a atteint la finale de 1954, mais elle s'est inclinée face à l'Allemagne de l'Ouest malgré son statut de grande favorite."
+        },
+        "it": {
+          "question": "Quale leggendario ungherese segnò 84 gol in 85 partite con la nazionale e fu protagonista del torneo del 1954?",
+          "options": [
+            "Sándor Kocsis",
+            "Ferenc Puskás",
+            "Nándor Hidegkuti",
+            "Zoltán Czibor"
+          ],
+          "explanation": "Puskás fu la stella della 'Squadra d'Oro' ungherese che raggiunse la finale del 1954, ma perse contro la Germania Ovest pur essendo nettamente favorita."
+        },
+        "ja": {
+          "question": "85試合の国際試合で84ゴールを決め、1954年の大会で活躍した伝説的なハンガリー人は誰でしょう？",
+          "options": [
+            "シャーンドル・コチシュ",
+            "フェレンツ・プスカシュ",
+            "ナーンドル・ヒデクチ",
+            "ゾルターン・ツィボル"
+          ],
+          "explanation": "プスカシュは1954年の決勝に進出したハンガリーの『黄金チーム』のスターでした。圧倒的な優勝候補でありながら、決勝では西ドイツに敗れました。"
+        },
+        "ko": {
+          "question": "85번의 국가대표 경기에서 84골을 넣고 1954년 대회에서 활약한 전설적인 헝가리 선수는 누구일까요?",
+          "options": [
+            "샨도르 코치시",
+            "페렌츠 푸슈카시",
+            "난도르 히데그쿠티",
+            "졸탄 치보르"
+          ],
+          "explanation": "푸슈카시는 1954년 결승에 오른 헝가리 '황금팀'의 스타였지만, 압도적인 우승 후보였음에도 결승에서 서독에 패했습니다."
+        },
+        "pt-BR": {
+          "question": "Qual lendário húngaro marcou 84 gols em 85 partidas internacionais e brilhou no torneio de 1954?",
+          "options": [
+            "Sándor Kocsis",
+            "Ferenc Puskás",
+            "Nándor Hidegkuti",
+            "Zoltán Czibor"
+          ],
+          "explanation": "Puskás foi o astro do 'Time de Ouro' da Hungria que chegou à final de 1954, mas perdeu para a Alemanha Ocidental mesmo sendo amplo favorito."
+        },
+        "zh-Hans": {
+          "question": "哪位传奇匈牙利球员在85场国家队比赛中攻入84球，并在1954年的赛事中大放异彩？",
+          "options": [
+            "山多尔·柯奇士",
+            "费伦茨·普斯卡什",
+            "南多尔·希代古蒂",
+            "佐尔坦·齐博尔"
+          ],
+          "explanation": "普斯卡什是匈牙利'黄金之队'的核心，该队闯入了1954年决赛，但尽管是大热门，最终还是输给了西德。"
+        }
+      },
+      "i18nSourceHash": "8002e9e547ec7474"
     },
     {
       "id": "rec-nuremberg",
