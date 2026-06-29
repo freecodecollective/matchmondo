@@ -519,6 +519,52 @@
     display: flex; gap: 6px; margin-top: 10px;
   }
 
+  /* ==============================
+     OPTION H — Full Flag (no pitch)
+     ============================== */
+  .hdr-h {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    height: 200px;
+  }
+  .hdr-h .flag-bg {
+    position: absolute; inset: 0; z-index: 0;
+  }
+  .hdr-h .flag-bg img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+  .hdr-h .overlay {
+    position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);
+    pointer-events: none;
+  }
+  .hdr-h .flag-main {
+    position: absolute; right: 20px; bottom: 20px;
+    width: 100px; height: 68px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+    border: 2px solid rgba(255,255,255,0.35);
+    z-index: 3;
+  }
+  .hdr-h .flag-main img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-h .text-area {
+    position: absolute; left: 16px; bottom: 18px; z-index: 3;
+    right: 140px;
+  }
+  .hdr-h .name {
+    font-size: 24px; font-weight: 800; letter-spacing: -0.3px; line-height: 1.15;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  }
+  .hdr-h .rank {
+    font-size: 12px; opacity: 0.85; margin-top: 3px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  }
+  .hdr-h .record {
+    display: flex; gap: 6px; margin-top: 8px;
+  }
+
 </style>
 </head>
 <body>
@@ -876,6 +922,124 @@
         <div class="ph-bar w80"></div>
         <div class="ph-bar w80"></div>
         <div class="ph-bar w80"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- OPTION H — Full Flag (no pitch) -->
+<div class="phone-wrap">
+  <div class="phone-label">H — Full Flag</div>
+  <div class="phone-sublabel">Flag fills entire header background. Dark gradient overlay for text legibility. No pitch stripes or markings — the flag IS the texture.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-h">
+        <div class="back-btn">&#8249;</div>
+        <div class="flag-bg"><img src="https://flagcdn.com/w640/ar.png" alt=""></div>
+        <div class="overlay"></div>
+        <div class="flag-main"><img src="https://flagcdn.com/w320/ar.png" alt="Argentina"></div>
+        <div class="text-area">
+          <div class="name">Argentina</div>
+          <div class="rank">#1 World Ranking</div>
+          <div class="record">
+            <span class="mpill">W3 D0 L0</span>
+            <span class="mpill">GF 8 · GA 1</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w80"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- ============== FULL FLAG STRESS TESTS ============== -->
+<div class="section-divider" style="margin-top:32px">Option H (Full Flag) — Different Countries</div>
+<div class="section-note">Testing the full-flag header with busy (USA), minimal (Japan), and saturated (Brazil) flags</div>
+
+<div class="phones">
+
+<div class="phone-wrap">
+  <div class="phone-label">H — USA</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-h">
+        <div class="back-btn">&#8249;</div>
+        <div class="flag-bg"><img src="https://flagcdn.com/w640/us.png" alt=""></div>
+        <div class="overlay"></div>
+        <div class="flag-main"><img src="https://flagcdn.com/w320/us.png" alt="USA"></div>
+        <div class="text-area">
+          <div class="name">USA</div>
+          <div class="rank">#11 World Ranking</div>
+          <div class="record">
+            <span class="mpill">W2 D1 L0</span>
+            <span class="mpill">GF 5 · GA 2</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w80"></div><div class="ph-bar w80"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="phone-wrap">
+  <div class="phone-label">H — Japan</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-h">
+        <div class="back-btn">&#8249;</div>
+        <div class="flag-bg"><img src="https://flagcdn.com/w640/jp.png" alt=""></div>
+        <div class="overlay"></div>
+        <div class="flag-main"><img src="https://flagcdn.com/w320/jp.png" alt="Japan"></div>
+        <div class="text-area">
+          <div class="name">Japan</div>
+          <div class="rank">#15 World Ranking</div>
+          <div class="record">
+            <span class="mpill">W1 D1 L1</span>
+            <span class="mpill">GF 4 · GA 4</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w80"></div><div class="ph-bar w80"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="phone-wrap">
+  <div class="phone-label">H — Brazil</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-h">
+        <div class="back-btn">&#8249;</div>
+        <div class="flag-bg"><img src="https://flagcdn.com/w640/br.png" alt=""></div>
+        <div class="overlay"></div>
+        <div class="flag-main"><img src="https://flagcdn.com/w320/br.png" alt="Brazil"></div>
+        <div class="text-area">
+          <div class="name">Brazil</div>
+          <div class="rank">#5 World Ranking</div>
+          <div class="record">
+            <span class="mpill">W2 D0 L1</span>
+            <span class="mpill">GF 6 · GA 3</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">&#x1F4C5;</span> Schedule</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w80"></div><div class="ph-bar w80"></div>
       </div>
     </div>
   </div>
