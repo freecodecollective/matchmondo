@@ -543,13 +543,15 @@ function draw() {
 
   var pairSpan = 11; // degrees between home/away in a match
 
-  // ── Alternating ring bands — full rings between rounds ──
+  // ── Alternating ring bands — light blue / light grey ──
+  var BLUE_BAND = 'rgba(180,210,240,0.35)';
+  var GREY_BAND = 'rgba(0,0,0,0.045)';
   var bands = [
-    { inner: 0,              outer: R_SF - 8*s,   fill: 'rgba(180,140,40,0.04)' },
-    { inner: R_SF - 8*s,     outer: (R_SF+R_QF)/2, fill: 'rgba(0,0,0,0.04)' },
-    { inner: (R_SF+R_QF)/2,  outer: (R_QF+R_R16)/2, fill: 'rgba(0,0,0,0.07)' },
-    { inner: (R_QF+R_R16)/2, outer: (R_R16+R_R32)/2, fill: 'rgba(0,0,0,0.04)' },
-    { inner: (R_R16+R_R32)/2, outer: R_R32 + 34*s, fill: 'rgba(0,0,0,0.07)' },
+    { inner: 0,              outer: R_SF - 8*s,    fill: 'rgba(180,140,40,0.04)' },
+    { inner: R_SF - 8*s,     outer: (R_SF+R_QF)/2, fill: BLUE_BAND },
+    { inner: (R_SF+R_QF)/2,  outer: (R_QF+R_R16)/2, fill: GREY_BAND },
+    { inner: (R_QF+R_R16)/2, outer: (R_R16+R_R32)/2, fill: BLUE_BAND },
+    { inner: (R_R16+R_R32)/2, outer: R_R32 + 34*s, fill: GREY_BAND },
   ];
   bands.forEach(function(b) {
     ctx.beginPath();
@@ -693,14 +695,15 @@ function draw() {
   ctx.fillText('FINAL', CX, CY + 24*s);
 
   // ── Curved round labels along arcs ──
-  function drawCurvedText(text, radius, startDeg, letterSpacingDeg, fontSize, color) {
+  // Top arc: letters face outward (readable from outside looking in)
+  function drawCurvedTextTop(text, radius, centerDeg, letterSpacingDeg, fontSize, color) {
     ctx.save();
-    ctx.font = '700 ' + fontSize + 'px -apple-system, system-ui, sans-serif';
+    ctx.font = '800 ' + fontSize + 'px -apple-system, system-ui, sans-serif';
     ctx.fillStyle = color;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     var totalSpan = (text.length - 1) * letterSpacingDeg;
-    var curDeg = startDeg - totalSpan / 2;
+    var curDeg = centerDeg - totalSpan / 2;
     for (var c = 0; c < text.length; c++) {
       var rad = (curDeg - 90) * Math.PI / 180;
       var x = CX + radius * Math.cos(rad);
@@ -714,12 +717,44 @@ function draw() {
     }
     ctx.restore();
   }
+  // Bottom arc: letters flipped so they read left-to-right from outside
+  function drawCurvedTextBottom(text, radius, centerDeg, letterSpacingDeg, fontSize, color) {
+    ctx.save();
+    ctx.font = '800 ' + fontSize + 'px -apple-system, system-ui, sans-serif';
+    ctx.fillStyle = color;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    var totalSpan = (text.length - 1) * letterSpacingDeg;
+    var curDeg = centerDeg + totalSpan / 2;
+    for (var c = 0; c < text.length; c++) {
+      var rad = (curDeg - 90) * Math.PI / 180;
+      var x = CX + radius * Math.cos(rad);
+      var y = CY + radius * Math.sin(rad);
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(rad - Math.PI / 2);
+      ctx.fillText(text[c], 0, 0);
+      ctx.restore();
+      curDeg -= letterSpacingDeg;
+    }
+    ctx.restore();
+  }
 
-  var labelColor = 'rgba(0,0,0,0.22)';
-  drawCurvedText('R O U N D   O F   3 2', (R_R16+R_R32)/2 + 2*s, 270, 3.2, 10*s, labelColor);
-  drawCurvedText('R O U N D   O F   1 6', (R_QF+R_R16)/2, 270, 3.8, 9.5*s, labelColor);
-  drawCurvedText('Q U A R T E R - F I N A L S', (R_SF+R_QF)/2, 270, 3.2, 8.5*s, labelColor);
-  drawCurvedText('S E M I - F I N A L S', R_SF - 14*s, 270, 4.2, 7.5*s, labelColor);
+  var labelColor = 'rgba(0,0,0,0.13)';
+  var bandMid_R32 = ((R_R16+R_R32)/2 + R_R32 + 34*s) / 2;
+  var bandMid_R16 = ((R_QF+R_R16)/2 + (R_R16+R_R32)/2) / 2;
+  var bandMid_QF  = ((R_SF+R_QF)/2 + (R_QF+R_R16)/2) / 2;
+  var bandMid_SF  = (R_SF - 8*s + (R_SF+R_QF)/2) / 2;
+  // Top labels (0° = top of circle)
+  drawCurvedTextTop('ROUND OF 32', bandMid_R32, 0, 5, 17*s, labelColor);
+  drawCurvedTextTop('ROUND OF 16', bandMid_R16, 0, 6, 15*s, labelColor);
+  drawCurvedTextTop('QUARTER-FINALS', bandMid_QF, 0, 4.5, 12*s, labelColor);
+  drawCurvedTextTop('SEMI-FINALS', bandMid_SF, 0, 6, 10*s, labelColor);
+  // Bottom labels (180° = bottom)
+  drawCurvedTextBottom('ROUND OF 32', bandMid_R32, 180, 5, 17*s, labelColor);
+  drawCurvedTextBottom('ROUND OF 16', bandMid_R16, 180, 6, 15*s, labelColor);
+  drawCurvedTextBottom('QUARTER-FINALS', bandMid_QF, 180, 4.5, 12*s, labelColor);
+  drawCurvedTextBottom('SEMI-FINALS', bandMid_SF, 180, 6, 10*s, labelColor);
 }
 
 // ── Tab switching ──
