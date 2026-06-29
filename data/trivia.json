@@ -13548,7 +13548,110 @@
       ],
       "answer": 0,
       "explanation": "Japan came from behind to beat Germany 2-1 and Spain 2-1 in Group E, winning the group and sending Germany home. Both comebacks followed an identical pattern — falling behind 1-0 in the first half, then scoring twice after halftime. Japan's tactical flexibility, with coach Hajime Moriyasu making bold substitutions, was key.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "في بطولة 2022، أذهلت اليابان العالم بفوزها على أيٍّ من هذين البطلين السابقين في دور المجموعات؟",
+          "options": [
+            "ألمانيا وإسبانيا",
+            "فرنسا والبرازيل",
+            "إيطاليا وإنجلترا",
+            "الأرجنتين وألمانيا"
+          ],
+          "explanation": "قلبت اليابان تأخرها إلى فوز على ألمانيا 2-1 وإسبانيا 2-1 في المجموعة الخامسة، فتصدرت المجموعة وأقصت ألمانيا من البطولة. وجاءت العودتان وفق النمط نفسه تمامًا — التأخر 1-0 في الشوط الأول، ثم تسجيل هدفين بعد الاستراحة. وكانت المرونة التكتيكية لليابان، مع التبديلات الجريئة التي أجراها المدرب هاجيمي موريياسو، عاملًا حاسمًا."
+        },
+        "de": {
+          "question": "Beim Turnier 2022 versetzte Japan die Welt in Staunen, indem es welche beiden ehemaligen Champions in der Gruppenphase besiegte?",
+          "options": [
+            "Deutschland und Spanien",
+            "Frankreich und Brasilien",
+            "Italien und England",
+            "Argentinien und Deutschland"
+          ],
+          "explanation": "Japan drehte beide Spiele und besiegte Deutschland mit 2:1 und Spanien mit 2:1 in Gruppe E, gewann die Gruppe und schickte Deutschland nach Hause. Beide Aufholjagden folgten demselben Muster — zunächst ein 0:1-Rückstand in der ersten Halbzeit, dann zwei Tore nach der Pause. Entscheidend war Japans taktische Flexibilität mit den mutigen Auswechslungen von Trainer Hajime Moriyasu."
+        },
+        "es": {
+          "question": "En el torneo de 2022, Japón asombró al mundo al vencer a ¿cuáles dos excampeones en la fase de grupos?",
+          "options": [
+            "Alemania y España",
+            "Francia y Brasil",
+            "Italia e Inglaterra",
+            "Argentina y Alemania"
+          ],
+          "explanation": "Japón remontó para vencer a Alemania 2-1 y a España 2-1 en el Grupo E, ganando el grupo y eliminando a Alemania. Ambas remontadas siguieron el mismo patrón: ir abajo 1-0 en el primer tiempo y luego marcar dos veces tras el descanso. La flexibilidad táctica de Japón, con los audaces cambios del entrenador Hajime Moriyasu, fue clave."
+        },
+        "es-ES": {
+          "question": "En el torneo de 2022, Japón asombró al mundo al vencer a ¿cuáles dos excampeones en la fase de grupos?",
+          "options": [
+            "Alemania y España",
+            "Francia y Brasil",
+            "Italia e Inglaterra",
+            "Argentina y Alemania"
+          ],
+          "explanation": "Japón remontó para ganar a Alemania por 2-1 y a España por 2-1 en el Grupo E, terminando primero de grupo y eliminando a Alemania. Ambas remontadas siguieron el mismo patrón: ponerse 1-0 por detrás en la primera parte y luego marcar dos goles tras el descanso. La flexibilidad táctica de Japón, con los atrevidos cambios del seleccionador Hajime Moriyasu, fue clave."
+        },
+        "fr": {
+          "question": "Lors du tournoi de 2022, le Japon a stupéfié le monde en battant lesquels de ces deux anciens champions en phase de groupes ?",
+          "options": [
+            "L'Allemagne et l'Espagne",
+            "La France et le Brésil",
+            "L'Italie et l'Angleterre",
+            "L'Argentine et l'Allemagne"
+          ],
+          "explanation": "Le Japon a renversé la situation pour battre l'Allemagne 2-1 et l'Espagne 2-1 dans le groupe E, remportant le groupe et éliminant l'Allemagne. Les deux remontées ont suivi exactement le même scénario : menés 1-0 en première mi-temps, puis deux buts inscrits après la pause. La flexibilité tactique du Japon, avec les changements audacieux de l'entraîneur Hajime Moriyasu, a été déterminante."
+        },
+        "it": {
+          "question": "Al torneo del 2022, il Giappone ha sbalordito il mondo battendo quali due ex campioni nella fase a gironi?",
+          "options": [
+            "Germania e Spagna",
+            "Francia e Brasile",
+            "Italia e Inghilterra",
+            "Argentina e Germania"
+          ],
+          "explanation": "Il Giappone ha rimontato battendo la Germania 2-1 e la Spagna 2-1 nel Gruppo E, vincendo il girone ed eliminando la Germania. Entrambe le rimonte hanno seguito lo stesso identico copione: sotto di 1-0 nel primo tempo, poi due gol nella ripresa. La flessibilità tattica del Giappone, con i cambi coraggiosi del ct Hajime Moriyasu, è stata decisiva."
+        },
+        "ja": {
+          "question": "2022年の大会で、日本はグループステージでどの2つの元優勝国を破り、世界を驚かせたでしょう？",
+          "options": [
+            "ドイツとスペイン",
+            "フランスとブラジル",
+            "イタリアとイングランド",
+            "アルゼンチンとドイツ"
+          ],
+          "explanation": "日本はグループEでドイツに2-1、スペインに2-1で逆転勝利を収め、グループ首位で通過し、ドイツを敗退させました。どちらの逆転劇も同じ展開で、前半に1-0とリードを許した後、後半に2点を挙げました。森保一監督による大胆な交代など、日本の戦術的な柔軟性が鍵となりました。"
+        },
+        "ko": {
+          "question": "2022년 대회에서 일본은 조별리그에서 어느 두 전 우승국을 꺾으며 세계를 놀라게 했을까요?",
+          "options": [
+            "독일과 스페인",
+            "프랑스와 브라질",
+            "이탈리아와 잉글랜드",
+            "아르헨티나와 독일"
+          ],
+          "explanation": "일본은 E조에서 독일을 2-1, 스페인을 2-1로 역전승하며 조 1위로 통과해 독일을 탈락시켰습니다. 두 차례의 역전 모두 똑같은 흐름이었는데, 전반에 0-1로 끌려가다가 후반에 두 골을 몰아넣었습니다. 모리야스 하지메 감독의 과감한 교체 등 일본의 전술적 유연성이 결정적이었습니다."
+        },
+        "pt-BR": {
+          "question": "No torneio de 2022, o Japão chocou o mundo ao vencer quais dois ex-campeões na fase de grupos?",
+          "options": [
+            "Alemanha e Espanha",
+            "França e Brasil",
+            "Itália e Inglaterra",
+            "Argentina e Alemanha"
+          ],
+          "explanation": "O Japão buscou a virada para vencer a Alemanha por 2 a 1 e a Espanha por 2 a 1 no Grupo E, ficando em primeiro e eliminando a Alemanha. As duas viradas seguiram exatamente o mesmo roteiro: ficar atrás por 1 a 0 no primeiro tempo e depois marcar dois gols após o intervalo. A flexibilidade tática do Japão, com as substituições ousadas do técnico Hajime Moriyasu, foi decisiva."
+        },
+        "zh-Hans": {
+          "question": "在2022年的赛事中，日本队在小组赛阶段击败了哪两支前冠军球队，震惊了全世界？",
+          "options": [
+            "德国和西班牙",
+            "法国和巴西",
+            "意大利和英格兰",
+            "阿根廷和德国"
+          ],
+          "explanation": "日本队在E组完成逆转，以2-1战胜德国、2-1战胜西班牙，夺得小组头名并将德国淘汰出局。两场逆转的剧本如出一辙——上半场先以0-1落后，下半场连进两球。日本队的战术灵活性，加上主教练森保一的大胆换人，成为取胜的关键。"
+        }
+      },
+      "i18nSourceHash": "29382ee99433cf0a"
     },
     {
       "id": "r-corner-kick-awarded",
@@ -13562,7 +13665,110 @@
       ],
       "answer": 0,
       "explanation": "When a defender is the last to touch the ball before it crosses their own goal line, the attacking team gets a corner kick from the nearest corner arc. If an attacker was the last to touch it, the defending team receives a goal kick instead. Corners are a valuable attacking weapon — roughly 3% result in a goal at the professional level.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "تُحتسب ركلة ركنية عندما تتجاوز الكرة خط المرمى (دون تسجيل هدف) ويكون آخر من لمسها هو؟",
+          "options": [
+            "لاعب من الفريق المدافع",
+            "لاعب من الفريق المهاجم",
+            "حارس المرمى فقط",
+            "أي من الفريقين"
+          ],
+          "explanation": "عندما يكون المدافع آخر من يلمس الكرة قبل تجاوزها خط مرماه، يحصل الفريق المهاجم على ركلة ركنية من أقرب قوس ركني. أما إذا كان المهاجم آخر من لمسها، فيحصل الفريق المدافع على ركلة مرمى بدلاً من ذلك. وتُعد الركنيات سلاحاً هجومياً قيّماً، إذ يُسفر نحو 3% منها عن هدف على المستوى الاحترافي."
+        },
+        "de": {
+          "question": "Ein Eckstoß wird verhängt, wenn der Ball die Torlinie überquert (ohne dass ein Tor fällt) und zuletzt von wem berührt wurde?",
+          "options": [
+            "Einem Spieler der verteidigenden Mannschaft",
+            "Einem Spieler der angreifenden Mannschaft",
+            "Nur dem Torwart",
+            "Einer beliebigen Mannschaft"
+          ],
+          "explanation": "Berührt ein Verteidiger den Ball zuletzt, bevor dieser die eigene Torlinie überquert, erhält die angreifende Mannschaft einen Eckstoß vom nächstgelegenen Eckbogen. Berührt ihn zuletzt ein Angreifer, gibt es stattdessen einen Abstoß für die verteidigende Mannschaft. Ecken sind eine wertvolle Angriffswaffe – im Profifußball führen etwa 3 % von ihnen zu einem Tor."
+        },
+        "es": {
+          "question": "Se concede un tiro de esquina cuando el balón cruza la línea de meta (sin que se marque gol) y fue tocado por última vez por…",
+          "options": [
+            "Un jugador defensor",
+            "Un jugador atacante",
+            "Solo el arquero",
+            "Cualquiera de los dos equipos"
+          ],
+          "explanation": "Cuando un defensor es el último en tocar el balón antes de que cruce su propia línea de meta, el equipo atacante recibe un tiro de esquina desde el arco de esquina más cercano. Si el último en tocarlo fue un atacante, el equipo defensor recibe en cambio un saque de meta. Los córners son un arma ofensiva valiosa: alrededor del 3% terminan en gol a nivel profesional."
+        },
+        "es-ES": {
+          "question": "Se concede un saque de esquina cuando el balón cruza la línea de meta (sin que se marque gol) y fue tocado por última vez por…",
+          "options": [
+            "Un jugador defensor",
+            "Un jugador atacante",
+            "Solo el portero",
+            "Cualquiera de los dos equipos"
+          ],
+          "explanation": "Cuando un defensor es el último en tocar el balón antes de que cruce su propia línea de meta, el equipo atacante saca un córner desde el cuarto de círculo más cercano. Si el último en tocarlo fue un atacante, el equipo defensor recibe en su lugar un saque de puerta. Los córners son un arma ofensiva valiosa: alrededor del 3% acaban en gol a nivel profesional."
+        },
+        "fr": {
+          "question": "Un corner est accordé lorsque le ballon franchit la ligne de but (sans qu'un but soit marqué) et qu'il a été touché en dernier par qui ?",
+          "options": [
+            "Un joueur de l'équipe qui défend",
+            "Un joueur de l'équipe qui attaque",
+            "Le gardien uniquement",
+            "L'une ou l'autre équipe"
+          ],
+          "explanation": "Lorsqu'un défenseur est le dernier à toucher le ballon avant qu'il ne franchisse sa propre ligne de but, l'équipe attaquante obtient un corner depuis l'arc de cercle le plus proche. Si c'est un attaquant qui l'a touché en dernier, l'équipe défensive bénéficie alors d'un coup de pied de but. Les corners sont une arme offensive précieuse : environ 3 % d'entre eux débouchent sur un but au niveau professionnel."
+        },
+        "it": {
+          "question": "Un calcio d'angolo viene assegnato quando il pallone supera la linea di porta (senza che venga segnato un gol) ed è stato toccato per ultimo da chi?",
+          "options": [
+            "Un giocatore della squadra in difesa",
+            "Un giocatore della squadra in attacco",
+            "Soltanto il portiere",
+            "Una delle due squadre"
+          ],
+          "explanation": "Quando un difensore è l'ultimo a toccare il pallone prima che superi la propria linea di porta, la squadra attaccante ottiene un calcio d'angolo dall'arco d'angolo più vicino. Se invece l'ultimo a toccarlo è stato un attaccante, la squadra in difesa riceve un rinvio dal fondo. I corner sono un'arma offensiva preziosa: a livello professionistico circa il 3% si trasforma in gol."
+        },
+        "ja": {
+          "question": "コーナーキックは、ボールがゴールラインを越えた（得点にはならなかった）際に、最後に触れたのが誰だった場合に与えられますか？",
+          "options": [
+            "守備側の選手",
+            "攻撃側の選手",
+            "ゴールキーパーのみ",
+            "どちらのチームでも"
+          ],
+          "explanation": "守備側の選手が自陣のゴールラインを越える前に最後にボールに触れた場合、攻撃側のチームは最も近いコーナーアークからコーナーキックを得ます。一方、最後に触れたのが攻撃側の選手であれば、守備側のチームにはゴールキックが与えられます。コーナーキックは貴重な攻撃手段であり、プロレベルではおよそ3%が得点につながります。"
+        },
+        "ko": {
+          "question": "공이 골라인을 넘어가고(득점은 되지 않은 채) 마지막으로 누가 공을 건드렸을 때 코너킥이 주어지나요?",
+          "options": [
+            "수비 팀 선수",
+            "공격 팀 선수",
+            "골키퍼만",
+            "어느 팀이든"
+          ],
+          "explanation": "수비수가 자기 진영의 골라인을 넘기 전에 마지막으로 공을 건드린 경우, 공격 팀은 가장 가까운 코너 아크에서 코너킥을 얻습니다. 반대로 공격수가 마지막으로 건드렸다면 수비 팀이 골킥을 받게 됩니다. 코너킥은 귀중한 공격 무기로, 프로 수준에서 약 3%가 득점으로 이어집니다."
+        },
+        "pt-BR": {
+          "question": "Um escanteio é concedido quando a bola cruza a linha de fundo (sem que um gol seja marcado) e foi tocada por último por quem?",
+          "options": [
+            "Um jogador da defesa",
+            "Um jogador do ataque",
+            "Apenas o goleiro",
+            "Qualquer um dos times"
+          ],
+          "explanation": "Quando um defensor é o último a tocar na bola antes de ela cruzar a própria linha de fundo, o time atacante ganha um escanteio a partir do arco de canto mais próximo. Se o último a tocar foi um atacante, o time defensor recebe um tiro de meta. Os escanteios são uma arma ofensiva valiosa — cerca de 3% resultam em gol no nível profissional."
+        },
+        "zh-Hans": {
+          "question": "当球越过球门线（且没有进球）时，最后触球的是谁会判罚角球？",
+          "options": [
+            "防守方球员",
+            "进攻方球员",
+            "仅守门员",
+            "任意一方球队"
+          ],
+          "explanation": "当防守球员在球越过本方球门线前最后触球时，进攻方将在最近的角球弧获得一个角球。如果最后触球的是进攻球员，则防守方获得球门球。角球是一种宝贵的进攻武器——在职业水平上，约有3%的角球能转化为进球。"
+        }
+      },
+      "i18nSourceHash": "b7972a16d2b0a51f"
     },
     {
       "id": "r-throw-in-no-goal",
@@ -13576,7 +13782,110 @@
       ],
       "answer": 0,
       "explanation": "A goal cannot be scored directly from a throw-in. If the ball enters the opponent's goal directly from a throw-in without being touched by another player, a goal kick is awarded. If it enters the thrower's own goal, a corner kick is given. The throw-in is the only restart in football performed with the hands.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "هل يمكن تسجيل هدف مباشرة من رمية التماس؟",
+          "options": [
+            "لا، أبداً",
+            "نعم، يُحتسب بشكل طبيعي",
+            "فقط في الوقت الإضافي",
+            "فقط إذا ارتدّت الكرة قبل عبور الخط"
+          ],
+          "explanation": "لا يمكن تسجيل هدف مباشرة من رمية التماس. فإذا دخلت الكرة مرمى الخصم مباشرة من رمية تماس دون أن يلمسها لاعب آخر، تُحتسب ركلة مرمى. وإذا دخلت مرمى الفريق الذي رماها، تُحتسب ركلة ركنية. ورمية التماس هي الطريقة الوحيدة لاستئناف اللعب في كرة القدم التي تُؤدّى باليدين."
+        },
+        "de": {
+          "question": "Kann direkt aus einem Einwurf ein Tor erzielt werden?",
+          "options": [
+            "Nein, niemals",
+            "Ja, es zählt ganz normal",
+            "Nur in der Verlängerung",
+            "Nur wenn der Ball vor der Linie aufspringt"
+          ],
+          "explanation": "Aus einem Einwurf kann nicht direkt ein Tor erzielt werden. Geht der Ball direkt aus einem Einwurf ins gegnerische Tor, ohne dass ihn ein anderer Spieler berührt hat, gibt es Abstoß. Geht er ins eigene Tor, gibt es Eckstoß. Der Einwurf ist die einzige Spielfortsetzung im Fußball, die mit den Händen ausgeführt wird."
+        },
+        "es": {
+          "question": "¿Se puede anotar un gol directamente desde un saque de banda?",
+          "options": [
+            "No, nunca",
+            "Sí, cuenta normalmente",
+            "Solo en el tiempo extra",
+            "Solo si la pelota pica antes de cruzar la línea"
+          ],
+          "explanation": "No se puede anotar un gol directamente desde un saque de banda. Si la pelota entra directamente en la portería rival desde un saque de banda sin que la toque otro jugador, se concede un saque de meta. Si entra en la propia portería, se concede un tiro de esquina. El saque de banda es la única reanudación del juego en el fútbol que se ejecuta con las manos."
+        },
+        "es-ES": {
+          "question": "¿Se puede marcar un gol directamente desde un saque de banda?",
+          "options": [
+            "No, nunca",
+            "Sí, cuenta con normalidad",
+            "Solo en la prórroga",
+            "Solo si el balón bota antes de cruzar la línea"
+          ],
+          "explanation": "No se puede marcar un gol directamente desde un saque de banda. Si el balón entra directamente en la portería rival desde un saque de banda sin que lo toque otro jugador, se concede saque de puerta. Si entra en la propia portería, se concede córner. El saque de banda es la única reanudación del juego en el fútbol que se ejecuta con las manos."
+        },
+        "fr": {
+          "question": "Peut-on marquer un but directement sur une touche ?",
+          "options": [
+            "Non, jamais",
+            "Oui, il compte normalement",
+            "Uniquement en prolongation",
+            "Uniquement si le ballon rebondit avant de franchir la ligne"
+          ],
+          "explanation": "On ne peut pas marquer un but directement sur une touche. Si le ballon pénètre directement dans le but adverse sur une touche sans avoir été touché par un autre joueur, un coup de pied de but est accordé. S'il entre dans son propre but, un corner est accordé. La touche est la seule reprise du jeu au football qui s'effectue avec les mains."
+        },
+        "it": {
+          "question": "Si può segnare un gol direttamente da una rimessa laterale?",
+          "options": [
+            "No, mai",
+            "Sì, conta normalmente",
+            "Solo nei tempi supplementari",
+            "Solo se il pallone rimbalza prima di superare la linea"
+          ],
+          "explanation": "Non si può segnare un gol direttamente da una rimessa laterale. Se il pallone entra direttamente nella porta avversaria da una rimessa laterale senza essere toccato da un altro giocatore, viene assegnato un rinvio dal fondo. Se entra nella propria porta, viene assegnato un calcio d'angolo. La rimessa laterale è l'unica ripresa di gioco nel calcio eseguita con le mani."
+        },
+        "ja": {
+          "question": "スローインから直接ゴールを決めることはできますか？",
+          "options": [
+            "いいえ、決してできません",
+            "はい、通常通り得点になります",
+            "延長戦のときのみ",
+            "ラインを越える前にバウンドした場合のみ"
+          ],
+          "explanation": "スローインから直接ゴールを決めることはできません。スローインから他の選手に触れずにボールが直接相手ゴールに入った場合は、ゴールキックが与えられます。自陣のゴールに入った場合は、コーナーキックが与えられます。スローインはサッカーで手を使って行われる唯一のリスタートです。"
+        },
+        "ko": {
+          "question": "스로인에서 직접 골을 넣을 수 있나요?",
+          "options": [
+            "아니요, 절대 안 됩니다",
+            "네, 정상적으로 인정됩니다",
+            "연장전에서만 가능합니다",
+            "라인을 넘기 전에 바운드된 경우에만"
+          ],
+          "explanation": "스로인에서 직접 골을 넣을 수는 없습니다. 스로인한 공이 다른 선수에게 닿지 않고 곧바로 상대 골대로 들어가면 골킥이 주어집니다. 자기 팀 골대로 들어가면 코너킥이 주어집니다. 스로인은 축구에서 손을 사용해 경기를 재개하는 유일한 방법입니다."
+        },
+        "pt-BR": {
+          "question": "É possível marcar um gol diretamente de um arremesso lateral?",
+          "options": [
+            "Não, nunca",
+            "Sim, conta normalmente",
+            "Somente na prorrogação",
+            "Somente se a bola quicar antes de cruzar a linha"
+          ],
+          "explanation": "Não é possível marcar um gol diretamente de um arremesso lateral. Se a bola entrar diretamente no gol adversário a partir de um arremesso lateral sem ser tocada por outro jogador, é marcado tiro de meta. Se entrar no próprio gol, é marcado escanteio. O arremesso lateral é a única reposição de bola no futebol executada com as mãos."
+        },
+        "zh-Hans": {
+          "question": "界外球可以直接打进球门得分吗？",
+          "options": [
+            "不，绝对不行",
+            "可以，正常计分",
+            "只有在加时赛中可以",
+            "只有在越过门线前弹地时才算"
+          ],
+          "explanation": "界外球不能直接得分。如果界外球抛出后未经其他球员触碰直接进入对方球门，则判球门球。如果直接进入本方球门，则判角球。界外球是足球比赛中唯一用手完成的重新开球方式。"
+        }
+      },
+      "i18nSourceHash": "5d6521476c9c94b5"
     },
     {
       "id": "r-keeper-6-seconds",
@@ -13590,7 +13899,110 @@
       ],
       "answer": 0,
       "explanation": "Law 12 states goalkeepers must release the ball within 6 seconds of controlling it with their hands. This is widely considered the least-enforced rule in football — referees typically warn before penalizing, and the infraction results in an indirect free kick. Time-wasting goalkeepers have led to calls for stricter enforcement.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "بمجرد أن يمسك حارس المرمى بالكرة، كم ثانية لديه لإطلاقها؟",
+          "options": [
+            "6 ثوانٍ",
+            "10 ثوانٍ",
+            "4 ثوانٍ",
+            "12 ثانية"
+          ],
+          "explanation": "تنص القاعدة 12 على أنه يجب على حراس المرمى التخلص من الكرة خلال 6 ثوانٍ من التحكم بها بأيديهم. ويُعتبر هذا على نطاق واسع أقل القوانين تطبيقًا في كرة القدم — إذ عادةً ما يحذّر الحكام قبل المعاقبة، وينتج عن المخالفة ركلة حرة غير مباشرة. وقد أدى تضييع الوقت من قبل بعض الحراس إلى مطالبات بتطبيق أكثر صرامة."
+        },
+        "de": {
+          "question": "Wie viele Sekunden hat ein Torwart Zeit, den Ball wieder freizugeben, sobald er ihn aufgenommen hat?",
+          "options": [
+            "6 Sekunden",
+            "10 Sekunden",
+            "4 Sekunden",
+            "12 Sekunden"
+          ],
+          "explanation": "Regel 12 besagt, dass Torhüter den Ball innerhalb von 6 Sekunden freigeben müssen, nachdem sie ihn mit den Händen kontrolliert haben. Dies gilt weithin als die am wenigsten durchgesetzte Regel im Fußball – Schiedsrichter verwarnen meist, bevor sie eingreifen, und der Verstoß wird mit einem indirekten Freistoß geahndet. Zeitspiel von Torhütern hat zu Forderungen nach einer strengeren Durchsetzung geführt."
+        },
+        "es": {
+          "question": "Una vez que el arquero toma el balón, ¿cuántos segundos tiene para soltarlo?",
+          "options": [
+            "6 segundos",
+            "10 segundos",
+            "4 segundos",
+            "12 segundos"
+          ],
+          "explanation": "La Regla 12 establece que los arqueros deben soltar el balón dentro de los 6 segundos posteriores a controlarlo con las manos. Esta es considerada por muchos como la regla menos aplicada del fútbol: los árbitros suelen advertir antes de sancionar, y la infracción se castiga con un tiro libre indirecto. La pérdida de tiempo por parte de los arqueros ha generado pedidos de una aplicación más estricta."
+        },
+        "es-ES": {
+          "question": "Una vez que el portero coge el balón, ¿cuántos segundos tiene para soltarlo?",
+          "options": [
+            "6 segundos",
+            "10 segundos",
+            "4 segundos",
+            "12 segundos"
+          ],
+          "explanation": "La Regla 12 establece que los porteros deben soltar el balón en un plazo de 6 segundos desde que lo controlan con las manos. Está considerada por muchos como la norma menos aplicada del fútbol: los árbitros suelen advertir antes de sancionar, y la infracción se castiga con un libre indirecto. La pérdida de tiempo de los porteros ha provocado peticiones de una aplicación más estricta."
+        },
+        "fr": {
+          "question": "Une fois que le gardien a pris le ballon en main, de combien de secondes dispose-t-il pour s'en dessaisir ?",
+          "options": [
+            "6 secondes",
+            "10 secondes",
+            "4 secondes",
+            "12 secondes"
+          ],
+          "explanation": "La Loi 12 stipule que les gardiens doivent relâcher le ballon dans les 6 secondes après l'avoir contrôlé des mains. C'est largement considéré comme la règle la moins appliquée du football : les arbitres avertissent généralement avant de sanctionner, et l'infraction donne lieu à un coup franc indirect. Les pertes de temps des gardiens ont conduit à des appels pour une application plus stricte."
+        },
+        "it": {
+          "question": "Una volta che il portiere prende la palla, quanti secondi ha per rilasciarla?",
+          "options": [
+            "6 secondi",
+            "10 secondi",
+            "4 secondi",
+            "12 secondi"
+          ],
+          "explanation": "La Regola 12 stabilisce che i portieri devono rilasciare il pallone entro 6 secondi da quando lo controllano con le mani. È ampiamente considerata la regola meno applicata del calcio: gli arbitri di solito avvertono prima di sanzionare, e l'infrazione comporta un calcio di punizione indiretto. Le perdite di tempo dei portieri hanno portato a richieste di un'applicazione più rigorosa."
+        },
+        "ja": {
+          "question": "ゴールキーパーがボールを手にしてから、それを手放すまでに与えられる時間は何秒？",
+          "options": [
+            "6秒",
+            "10秒",
+            "4秒",
+            "12秒"
+          ],
+          "explanation": "競技規則第12条では、ゴールキーパーは手でボールをコントロールしてから6秒以内に手放さなければならないと定められています。これはサッカーで最も適用されにくいルールと広く見なされており、主審は罰則を科す前に警告するのが一般的で、違反した場合は間接フリーキックが与えられます。ゴールキーパーの時間稼ぎは、より厳格な適用を求める声につながっています。"
+        },
+        "ko": {
+          "question": "골키퍼가 공을 잡은 후 공을 놓기까지 주어지는 시간은 몇 초일까요?",
+          "options": [
+            "6초",
+            "10초",
+            "4초",
+            "12초"
+          ],
+          "explanation": "경기 규칙 제12조에 따르면 골키퍼는 손으로 공을 제어한 뒤 6초 이내에 공을 놓아야 합니다. 이는 축구에서 가장 적용이 잘 되지 않는 규칙으로 널리 여겨지며, 심판은 보통 벌칙을 주기 전에 경고를 하고, 위반 시 간접 프리킥이 주어집니다. 골키퍼의 시간 끌기로 인해 더 엄격한 적용을 요구하는 목소리가 나오고 있습니다."
+        },
+        "pt-BR": {
+          "question": "Depois que o goleiro pega a bola, quantos segundos ele tem para liberá-la?",
+          "options": [
+            "6 segundos",
+            "10 segundos",
+            "4 segundos",
+            "12 segundos"
+          ],
+          "explanation": "A Regra 12 determina que os goleiros devem soltar a bola dentro de 6 segundos após controlá-la com as mãos. Essa é amplamente considerada a regra menos aplicada do futebol — os árbitros geralmente advertem antes de punir, e a infração resulta em um tiro livre indireto. A perda de tempo por parte dos goleiros tem gerado pedidos por uma aplicação mais rigorosa."
+        },
+        "zh-Hans": {
+          "question": "门将拿到球后，有多少秒的时间将球释放出去？",
+          "options": [
+            "6秒",
+            "10秒",
+            "4秒",
+            "12秒"
+          ],
+          "explanation": "第12条规则规定，门将在用手控制球后必须在6秒内将球释放出去。这被普遍认为是足球中执行最不严格的规则——裁判通常会先警告再处罚，违规会判罚间接任意球。门将拖延时间的行为引发了要求更严格执行的呼声。"
+        }
+      },
+      "i18nSourceHash": "65a0f91eae825014"
     },
     {
       "id": "r-advantage-play",
@@ -13605,7 +14017,110 @@
       "answer": 0,
       "explanation": "The advantage signal — both arms extended forward and upward — tells players that the referee saw the foul but is allowing play to continue because stopping would disadvantage the fouled team. If the expected advantage doesn't materialize within a few seconds, the referee can still come back and award the original free kick.",
       "media": "https://www.youtube.com/watch?v=raf6HScX1kg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "عندما يرى الحكم مخالفة لكن الفريق المتعرض لها يحتفظ بالكرة في وضع مناسب، ماذا يشير؟",
+          "options": [
+            "يمد ذراعيه إلى الأمام",
+            "يصفر بالصافرة مرتين",
+            "يلوّح ببطاقة صفراء فوق رأسه",
+            "يشير إلى دائرة المنتصف"
+          ],
+          "explanation": "إشارة الأفضلية — مد الذراعين إلى الأمام وللأعلى — تخبر اللاعبين بأن الحكم رأى المخالفة لكنه يسمح باستمرار اللعب لأن إيقافه سيضر بالفريق المتعرض للمخالفة. وإذا لم تتحقق الأفضلية المتوقعة خلال ثوانٍ قليلة، يمكن للحكم العودة واحتساب الركلة الحرة الأصلية."
+        },
+        "de": {
+          "question": "Wenn der Schiedsrichter ein Foul sieht, das gefoulte Team aber in einer günstigen Position im Ballbesitz bleibt, was signalisiert er?",
+          "options": [
+            "Er streckt beide Arme nach vorne",
+            "Er pfeift zweimal",
+            "Er schwenkt eine Gelbe Karte über dem Kopf",
+            "Er zeigt auf den Mittelkreis"
+          ],
+          "explanation": "Das Vorteilszeichen — beide Arme nach vorne und oben gestreckt — signalisiert den Spielern, dass der Schiedsrichter das Foul gesehen hat, das Spiel aber weiterlaufen lässt, weil ein Abpfiff das gefoulte Team benachteiligen würde. Stellt sich der erwartete Vorteil innerhalb weniger Sekunden nicht ein, kann der Schiedsrichter dennoch zurückkommen und den ursprünglichen Freistoß geben."
+        },
+        "es": {
+          "question": "Cuando el árbitro ve una falta pero el equipo que la recibió conserva el balón en una posición favorable, ¿qué señala?",
+          "options": [
+            "Extiende ambos brazos hacia adelante",
+            "Pita dos veces",
+            "Agita una tarjeta amarilla por encima de la cabeza",
+            "Señala el círculo central"
+          ],
+          "explanation": "La señal de ventaja — ambos brazos extendidos hacia adelante y hacia arriba — les indica a los jugadores que el árbitro vio la falta, pero permite que el juego continúe porque detenerlo perjudicaría al equipo agredido. Si la ventaja esperada no se concreta en unos pocos segundos, el árbitro todavía puede regresar y conceder el tiro libre original."
+        },
+        "es-ES": {
+          "question": "Cuando el árbitro ve una falta pero el equipo que la recibe mantiene la posesión en una posición favorable, ¿qué señala?",
+          "options": [
+            "Extiende ambos brazos hacia delante",
+            "Pita dos veces",
+            "Agita una tarjeta amarilla por encima de la cabeza",
+            "Señala al círculo central"
+          ],
+          "explanation": "La señal de ventaja — ambos brazos extendidos hacia delante y hacia arriba — indica a los jugadores que el árbitro ha visto la falta, pero deja seguir el juego porque detenerlo perjudicaría al equipo que ha sufrido la falta. Si la ventaja esperada no se materializa en unos pocos segundos, el árbitro aún puede volver atrás y conceder el tiro libre original."
+        },
+        "fr": {
+          "question": "Lorsque l'arbitre voit une faute mais que l'équipe victime conserve le ballon dans une position favorable, que signale-t-il ?",
+          "options": [
+            "Il tend les deux bras vers l'avant",
+            "Il siffle deux fois",
+            "Il brandit un carton jaune au-dessus de sa tête",
+            "Il désigne le rond central"
+          ],
+          "explanation": "Le signal de l'avantage — les deux bras tendus vers l'avant et vers le haut — indique aux joueurs que l'arbitre a vu la faute mais laisse le jeu se poursuivre, car l'arrêter pénaliserait l'équipe victime. Si l'avantage attendu ne se concrétise pas en quelques secondes, l'arbitre peut tout de même revenir en arrière et accorder le coup franc initial."
+        },
+        "it": {
+          "question": "Quando l'arbitro vede un fallo ma la squadra che lo ha subito mantiene il possesso in una posizione favorevole, cosa segnala?",
+          "options": [
+            "Tende entrambe le braccia in avanti",
+            "Fischia due volte",
+            "Agita un cartellino giallo sopra la testa",
+            "Indica il cerchio di centrocampo"
+          ],
+          "explanation": "Il segnale del vantaggio — entrambe le braccia tese in avanti e verso l'alto — indica ai giocatori che l'arbitro ha visto il fallo ma lascia proseguire il gioco perché interromperlo penalizzerebbe la squadra che ha subito il fallo. Se il vantaggio previsto non si concretizza entro pochi secondi, l'arbitro può comunque tornare indietro e assegnare il calcio di punizione originario."
+        },
+        "ja": {
+          "question": "主審がファウルを見たものの、ファウルを受けたチームが有利な位置でボールを保持し続けている場合、何を示しますか？",
+          "options": [
+            "両腕を前方に伸ばす",
+            "笛を2回吹く",
+            "頭上でイエローカードを振る",
+            "センターサークルを指さす"
+          ],
+          "explanation": "アドバンテージのシグナル——両腕を前方かつ上方に伸ばす動作——は、主審がファウルを見たものの、プレーを止めるとファウルを受けたチームが不利になるため、プレーの続行を認めていることを選手に伝えます。期待したアドバンテージが数秒以内に得られなかった場合、主審はあらためて元のファウルに戻り、フリーキックを与えることができます。"
+        },
+        "ko": {
+          "question": "주심이 파울을 봤지만 파울을 당한 팀이 유리한 위치에서 볼을 계속 점유하고 있을 때, 무엇을 신호로 보내나요?",
+          "options": [
+            "양팔을 앞으로 뻗는다",
+            "휘슬을 두 번 분다",
+            "머리 위로 옐로카드를 흔든다",
+            "센터서클을 가리킨다"
+          ],
+          "explanation": "어드밴티지 신호—양팔을 앞쪽 위로 뻗는 동작—는 주심이 파울을 봤지만 경기를 중단하면 파울을 당한 팀이 불리해지기 때문에 플레이를 계속하도록 허용한다는 것을 선수들에게 알리는 것입니다. 기대했던 이점이 몇 초 안에 실현되지 않으면, 주심은 다시 돌아가 원래의 프리킥을 선언할 수 있습니다."
+        },
+        "pt-BR": {
+          "question": "Quando o árbitro vê uma falta, mas a equipe que a sofreu mantém a posse da bola em uma posição favorável, o que ele sinaliza?",
+          "options": [
+            "Estende os dois braços para frente",
+            "Apita duas vezes",
+            "Balança um cartão amarelo acima da cabeça",
+            "Aponta para o círculo central"
+          ],
+          "explanation": "O sinal de vantagem — os dois braços estendidos para frente e para cima — indica aos jogadores que o árbitro viu a falta, mas permite que o jogo continue porque pará-lo prejudicaria a equipe que sofreu a falta. Se a vantagem esperada não se concretizar em poucos segundos, o árbitro ainda pode voltar atrás e marcar a falta original."
+        },
+        "zh-Hans": {
+          "question": "当裁判看到犯规，但被侵犯的球队在有利位置继续控球时，他会做出什么手势？",
+          "options": [
+            "双臂向前伸出",
+            "吹两声哨",
+            "在头顶挥舞黄牌",
+            "指向中圈"
+          ],
+          "explanation": "有利进攻手势——双臂向前并向上伸出——是在告诉球员，裁判看到了犯规，但允许比赛继续进行，因为此时中断比赛反而会让被侵犯的球队吃亏。如果预期的有利局面在几秒钟内没有出现，裁判仍可回过头来判罚最初的任意球。"
+        }
+      },
+      "i18nSourceHash": "94dbb9849c467f90"
     },
     {
       "id": "r-penalty-rebound",
