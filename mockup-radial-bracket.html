@@ -656,18 +656,24 @@ function draw() {
     r16P.push(p);
   }
 
+  // QF: each node sits at the midpoint angle of its two R16 feeders
+  var r16Angles = [];
+  for (var i = 0; i < 8; i++) r16Angles.push(i*360/8 + 360/32);
   var qfP = [];
   for (var i = 0; i < 4; i++) {
-    var angle = i*360/4 + 360/16 + 360/32;
+    var angle = (r16Angles[i*2] + r16Angles[i*2+1]) / 2;
     var p = polar(CX,CY,R_QF,angle);
     drawLine(r16P[i*2][0],r16P[i*2][1],p[0],p[1],'rgba(0,0,0,0.04)',0.8);
     drawLine(r16P[i*2+1][0],r16P[i*2+1][1],p[0],p[1],'rgba(0,0,0,0.04)',0.8);
     qfP.push(p);
+    qfP.angle = qfP.angle || [];
+    qfP.angle.push(angle);
   }
 
+  // SF: each node sits at the midpoint angle of its two QF feeders
   var sfP = [];
   for (var i = 0; i < 2; i++) {
-    var angle = i*360/2 + 360/8 + 360/32;
+    var angle = (qfP.angle[i*2] + qfP.angle[i*2+1]) / 2;
     var p = polar(CX,CY,R_SF,angle);
     drawLine(qfP[i*2][0],qfP[i*2][1],p[0],p[1],'rgba(0,0,0,0.04)',0.8);
     drawLine(qfP[i*2+1][0],qfP[i*2+1][1],p[0],p[1],'rgba(0,0,0,0.04)',0.8);
