@@ -14134,7 +14134,110 @@
       ],
       "answer": 0,
       "explanation": "In regular play and extra time, if a penalty hits the post, crossbar, or rebounds off the goalkeeper, the ball is live and any player — including the kicker — can score from it. In a penalty shootout, however, there are no rebounds: each kick ends once the ball stops moving forward, goes out of play, or the goalkeeper makes a clear save.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أثناء اللعب العادي، إذا ارتدت ركلة الجزاء عن القائم، فهل يمكن للاعب المنفّذ أن يسجل من الكرة المرتدة؟",
+          "options": [
+            "نعم، يمكن لأي لاعب أن يلعب الكرة المرتدة",
+            "لا، فالركلة انتهت",
+            "زملاء الفريق فقط يمكنهم التسجيل، وليس المنفّذ",
+            "حارس المرمى فقط هو من يمكنه لمسها بعد ذلك"
+          ],
+          "explanation": "في اللعب العادي والوقت الإضافي، إذا اصطدمت ركلة الجزاء بالقائم أو العارضة أو ارتدت عن حارس المرمى، تبقى الكرة في اللعب ويمكن لأي لاعب — بما في ذلك المنفّذ — أن يسجل منها. أما في ركلات الترجيح فلا توجد كرات مرتدة: تنتهي كل ركلة بمجرد توقف الكرة عن التحرك للأمام، أو خروجها من الملعب، أو تصدي حارس المرمى لها بوضوح."
+        },
+        "de": {
+          "question": "Wenn ein Strafstoß im regulären Spiel an den Pfosten prallt und zurückspringt, darf der Schütze den Abpraller verwerten und ein Tor erzielen?",
+          "options": [
+            "Ja, jeder Spieler darf den Abpraller spielen",
+            "Nein, der Schuss ist tot",
+            "Nur Mitspieler dürfen treffen, nicht der Schütze",
+            "Nur der Torwart darf ihn als Nächstes berühren"
+          ],
+          "explanation": "Im regulären Spiel und in der Verlängerung bleibt der Ball im Spiel, wenn ein Strafstoß an den Pfosten oder die Latte prallt oder vom Torwart abprallt – jeder Spieler, auch der Schütze, darf daraus ein Tor erzielen. Beim Elfmeterschießen hingegen gibt es keine Abpraller: Jeder Schuss endet, sobald der Ball nicht mehr nach vorne rollt, ins Aus geht oder der Torwart ihn klar pariert."
+        },
+        "es": {
+          "question": "Durante el juego normal, si un penal pega en el poste y rebota, ¿puede el ejecutor anotar con el rebote?",
+          "options": [
+            "Sí, cualquier jugador puede jugar el rebote",
+            "No, la jugada está muerta",
+            "Solo los compañeros pueden anotar, no el ejecutor",
+            "Solo el arquero puede tocarla a continuación"
+          ],
+          "explanation": "En el juego normal y en el tiempo extra, si un penal pega en el poste, el travesaño o rebota en el arquero, la pelota sigue viva y cualquier jugador —incluido el ejecutor— puede anotar. En una tanda de penales, en cambio, no hay rebotes: cada disparo termina en cuanto la pelota deja de avanzar, sale del campo o el arquero hace una atajada clara."
+        },
+        "es-ES": {
+          "question": "Durante el juego normal, si un penalti golpea el poste y rebota, ¿puede el lanzador marcar con el rechace?",
+          "options": [
+            "Sí, cualquier jugador puede jugar el rechace",
+            "No, la jugada está muerta",
+            "Solo los compañeros pueden marcar, no el lanzador",
+            "Solo el portero puede tocarla a continuación"
+          ],
+          "explanation": "En el juego normal y en la prórroga, si un penalti golpea el poste, el larguero o rebota en el portero, el balón sigue vivo y cualquier jugador —incluido el lanzador— puede marcar. En una tanda de penaltis, sin embargo, no hay rechaces: cada lanzamiento termina en cuanto el balón deja de avanzar, sale del terreno de juego o el portero hace una parada clara."
+        },
+        "fr": {
+          "question": "Pendant le jeu normal, si un penalty touche le poteau et rebondit, le tireur peut-il marquer sur le rebond ?",
+          "options": [
+            "Oui, n'importe quel joueur peut jouer le rebond",
+            "Non, le tir est mort",
+            "Seuls les coéquipiers peuvent marquer, pas le tireur",
+            "Seul le gardien peut la toucher ensuite"
+          ],
+          "explanation": "En jeu normal et en prolongation, si un penalty heurte le poteau, la barre transversale ou rebondit sur le gardien, le ballon reste en jeu et n'importe quel joueur — y compris le tireur — peut marquer. Lors d'une séance de tirs au but, en revanche, il n'y a pas de rebond : chaque tir prend fin dès que le ballon cesse d'avancer, sort du jeu ou que le gardien effectue un arrêt net."
+        },
+        "it": {
+          "question": "Durante il gioco normale, se un rigore colpisce il palo e rimbalza indietro, il tiratore può segnare sulla ribattuta?",
+          "options": [
+            "Sì, qualsiasi giocatore può giocare la ribattuta",
+            "No, il tiro è morto",
+            "Solo i compagni possono segnare, non il tiratore",
+            "Solo il portiere può toccarla per primo"
+          ],
+          "explanation": "Nel gioco normale e nei tempi supplementari, se un rigore colpisce il palo, la traversa o rimbalza sul portiere, il pallone è ancora in gioco e qualsiasi giocatore — compreso il tiratore — può segnare. Nei tiri di rigore, invece, non ci sono ribattute: ogni tiro si conclude non appena il pallone smette di avanzare, esce dal campo o il portiere compie una parata netta."
+        },
+        "ja": {
+          "question": "通常のプレー中、ペナルティーキックがポストに当たって跳ね返った場合、キッカーはそのリバウンドから得点できますか？",
+          "options": [
+            "はい、どの選手でもリバウンドをプレーできる",
+            "いいえ、そのキックは終了している",
+            "得点できるのはチームメイトだけで、キッカーは不可",
+            "次にボールに触れられるのはゴールキーパーだけ"
+          ],
+          "explanation": "通常のプレーおよび延長戦では、ペナルティーキックがポストやクロスバーに当たったり、ゴールキーパーに弾かれたりした場合、ボールはインプレーのままで、キッカーを含むどの選手でも得点できます。一方、PK戦ではリバウンドはありません。各キックは、ボールが前進を止めるか、フィールド外に出るか、ゴールキーパーが明確にセーブした時点で終了します。"
+        },
+        "ko": {
+          "question": "정규 플레이 중 페널티킥이 골포스트를 맞고 튕겨 나왔을 때, 키커가 그 리바운드로 득점할 수 있을까요?",
+          "options": [
+            "예, 어떤 선수든 리바운드를 처리할 수 있다",
+            "아니요, 그 킥은 종료된 것이다",
+            "동료만 득점할 수 있고 키커는 안 된다",
+            "다음으로 공을 만질 수 있는 것은 골키퍼뿐이다"
+          ],
+          "explanation": "정규 플레이와 연장전에서는 페널티킥이 골포스트나 크로스바를 맞거나 골키퍼에게 막혀 튕겨 나와도 공은 살아 있으며, 키커를 포함한 어떤 선수든 그 공으로 득점할 수 있습니다. 그러나 승부차기에서는 리바운드가 없습니다. 각 킥은 공이 더 이상 앞으로 나아가지 않거나, 경기장 밖으로 나가거나, 골키퍼가 확실히 막아내는 순간 종료됩니다."
+        },
+        "pt-BR": {
+          "question": "Durante o jogo normal, se uma cobrança de pênalti bate na trave e volta, o cobrador pode marcar no rebote?",
+          "options": [
+            "Sim, qualquer jogador pode jogar o rebote",
+            "Não, a jogada está morta",
+            "Apenas os companheiros podem marcar, não o cobrador",
+            "Apenas o goleiro pode tocar nela em seguida"
+          ],
+          "explanation": "No jogo normal e na prorrogação, se um pênalti bate na trave, no travessão ou volta do goleiro, a bola continua viva e qualquer jogador — inclusive o cobrador — pode marcar. Já na disputa de pênaltis não há rebotes: cada cobrança termina assim que a bola para de avançar, sai de campo ou o goleiro faz uma defesa clara."
+        },
+        "zh-Hans": {
+          "question": "在常规比赛中，如果点球击中门柱弹回，主罚队员可以利用回弹球进球吗？",
+          "options": [
+            "可以，任何球员都能处理这个回弹球",
+            "不可以，这次罚球已经死球",
+            "只有队友能进球，主罚队员不行",
+            "接下来只有守门员才能触球"
+          ],
+          "explanation": "在常规比赛和加时赛中，如果点球击中门柱、横梁，或被守门员扑出弹回，皮球仍处于活球状态，包括主罚队员在内的任何球员都可以借此进球。但在点球大战中则没有回弹球：每次罚球一旦皮球停止向前移动、出界，或被守门员明确扑出，便告结束。"
+        }
+      },
+      "i18nSourceHash": "e433529a16d59bbb"
     },
     {
       "id": "v-guadalajara-culture",
@@ -14148,7 +14251,110 @@
       ],
       "answer": 0,
       "explanation": "Guadalajara, capital of Mexico's Jalisco state, is the cultural birthplace of both mariachi music and tequila (produced from blue agave grown in surrounding Jalisco highlands). Mexico's second-largest city, it also hosted group-stage matches in both 1970 and 1986.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "غوادالاخارا، إحدى المدن المُضيفة لبطولة Football 2026، تُعرف بأنها مهد أي اثنين من أشهر الرموز الثقافية المكسيكية؟",
+          "options": [
+            "موسيقى الماريّاتشي والتكيلا",
+            "رقص السالسا والمسكال",
+            "مصارعة لوتشا ليبري والتشوروس",
+            "يوم الموتى والبينياتا"
+          ],
+          "explanation": "غوادالاخارا، عاصمة ولاية خاليسكو المكسيكية، هي المهد الثقافي لكل من موسيقى الماريّاتشي والتكيلا (التي تُنتج من الأغاف الأزرق الذي يُزرع في مرتفعات خاليسكو المحيطة بها). وهي ثاني أكبر مدن المكسيك، واستضافت أيضًا مباريات دور المجموعات في عامي 1970 و1986."
+        },
+        "de": {
+          "question": "Guadalajara, eine der Gastgeberstädte von Football 2026, gilt als Geburtsort welcher zwei ikonischer mexikanischer Kulturexporte?",
+          "options": [
+            "Mariachi-Musik und Tequila",
+            "Salsa-Tanz und Mezcal",
+            "Lucha Libre und Churros",
+            "Día de los Muertos und Piñatas"
+          ],
+          "explanation": "Guadalajara, die Hauptstadt des mexikanischen Bundesstaates Jalisco, ist die kulturelle Wiege sowohl der Mariachi-Musik als auch des Tequila (hergestellt aus blauer Agave, die im umliegenden Hochland von Jalisco angebaut wird). Als zweitgrößte Stadt Mexikos trug sie zudem 1970 und 1986 Gruppenspiele aus."
+        },
+        "es": {
+          "question": "Guadalajara, una de las ciudades sede de Football 2026, es conocida como la cuna de cuáles dos íconos culturales mexicanos?",
+          "options": [
+            "La música de mariachi y el tequila",
+            "El baile de salsa y el mezcal",
+            "La lucha libre y los churros",
+            "El Día de los Muertos y las piñatas"
+          ],
+          "explanation": "Guadalajara, capital del estado mexicano de Jalisco, es la cuna cultural tanto de la música de mariachi como del tequila (producido a partir del agave azul cultivado en los altos de Jalisco que la rodean). Es la segunda ciudad más grande de México y también albergó partidos de la fase de grupos en 1970 y 1986."
+        },
+        "es-ES": {
+          "question": "Guadalajara, una de las ciudades anfitrionas de Football 2026, es conocida como la cuna de ¿cuáles dos iconos culturales mexicanos?",
+          "options": [
+            "La música de mariachi y el tequila",
+            "El baile de salsa y el mezcal",
+            "La lucha libre y los churros",
+            "El Día de los Muertos y las piñatas"
+          ],
+          "explanation": "Guadalajara, capital del estado mexicano de Jalisco, es la cuna cultural tanto de la música de mariachi como del tequila (elaborado a partir del agave azul que se cultiva en los Altos de Jalisco que la rodean). Es la segunda ciudad más grande de México y también acogió partidos de la fase de grupos en 1970 y 1986."
+        },
+        "fr": {
+          "question": "Guadalajara, l'une des villes hôtes de Football 2026, est connue comme le berceau de quels deux symboles culturels mexicains emblématiques ?",
+          "options": [
+            "La musique mariachi et la tequila",
+            "La danse salsa et le mezcal",
+            "La lucha libre et les churros",
+            "Le Día de los Muertos et les piñatas"
+          ],
+          "explanation": "Guadalajara, capitale de l'État mexicain de Jalisco, est le berceau culturel à la fois de la musique mariachi et de la tequila (produite à partir de l'agave bleu cultivé sur les hauts plateaux environnants du Jalisco). Deuxième plus grande ville du Mexique, elle a également accueilli des matchs de phase de groupes en 1970 et en 1986."
+        },
+        "it": {
+          "question": "Guadalajara, una delle città ospitanti di Football 2026, è nota come la culla di quali due iconici simboli culturali messicani?",
+          "options": [
+            "La musica mariachi e la tequila",
+            "Il ballo salsa e il mezcal",
+            "La lucha libre e i churros",
+            "Il Día de los Muertos e le piñatas"
+          ],
+          "explanation": "Guadalajara, capitale dello stato messicano di Jalisco, è la culla culturale sia della musica mariachi sia della tequila (prodotta dall'agave blu coltivata sugli altopiani circostanti del Jalisco). Seconda città più grande del Messico, ha inoltre ospitato partite della fase a gironi sia nel 1970 sia nel 1986."
+        },
+        "ja": {
+          "question": "Football 2026の開催都市の一つであるグアダラハラは、メキシコを代表する二つの文化の発祥地として知られていますが、それはどれでしょう？",
+          "options": [
+            "マリアッチ音楽とテキーラ",
+            "サルサダンスとメスカル",
+            "ルチャ・リブレとチュロス",
+            "死者の日とピニャータ"
+          ],
+          "explanation": "メキシコのハリスコ州の州都グアダラハラは、マリアッチ音楽とテキーラ（周辺のハリスコ高地で栽培されるブルーアガベから造られる）の文化的発祥地です。メキシコ第二の都市であり、1970年と1986年にはグループステージの試合も開催しました。"
+        },
+        "ko": {
+          "question": "Football 2026 개최 도시 중 하나인 과달라하라는 멕시코를 대표하는 어떤 두 가지 문화 상징의 발상지로 알려져 있을까요?",
+          "options": [
+            "마리아치 음악과 테킬라",
+            "살사 춤과 메스칼",
+            "루차 리브레와 추로스",
+            "죽은 자의 날과 피냐타"
+          ],
+          "explanation": "멕시코 할리스코주의 주도인 과달라하라는 마리아치 음악과 테킬라(주변 할리스코 고원에서 재배되는 블루 아가베로 만듦) 모두의 문화적 발상지입니다. 멕시코 제2의 도시인 이곳은 1970년과 1986년에도 조별 리그 경기를 개최했습니다."
+        },
+        "pt-BR": {
+          "question": "Guadalajara, uma das cidades-sede do Football 2026, é conhecida como o berço de quais dois ícones culturais mexicanos?",
+          "options": [
+            "A música mariachi e a tequila",
+            "A dança salsa e o mezcal",
+            "A luta livre (lucha libre) e os churros",
+            "O Día de los Muertos e as piñatas"
+          ],
+          "explanation": "Guadalajara, capital do estado mexicano de Jalisco, é o berço cultural tanto da música mariachi quanto da tequila (produzida a partir do agave-azul cultivado nas terras altas de Jalisco ao redor). Segunda maior cidade do México, ela também recebeu jogos da fase de grupos em 1970 e 1986."
+        },
+        "zh-Hans": {
+          "question": "瓜达拉哈拉是Football 2026的主办城市之一，它被誉为哪两项标志性墨西哥文化符号的发源地？",
+          "options": [
+            "马里亚奇音乐与龙舌兰酒（特基拉）",
+            "萨尔萨舞与梅斯卡尔酒",
+            "墨西哥摔角（自由式摔角）与吉事果",
+            "亡灵节与皮纳塔"
+          ],
+          "explanation": "瓜达拉哈拉是墨西哥哈利斯科州的首府，是马里亚奇音乐和龙舌兰酒（用周边哈利斯科高地种植的蓝色龙舌兰酿造）的文化发源地。作为墨西哥第二大城市，它还在1970年和1986年举办过小组赛阶段的比赛。"
+        }
+      },
+      "i18nSourceHash": "585c8c9ec3660d35"
     },
     {
       "id": "v-estadio-akron-chivas",
@@ -14162,7 +14368,110 @@
       ],
       "answer": 0,
       "explanation": "Estadio Akron is home to Chivas, one of Mexico's most beloved clubs and famously the only major Mexican team to field exclusively Mexican-born players — no foreign imports allowed. The modern stadium, which opened in 2010, seats around 49,850 and features a striking volcanic-inspired design.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ملعب أكرون، أحد ملاعب بطولة Football 2026 في غوادالاخارا، هو الملعب الذي يستضيف مباريات أي نادٍ مكسيكي شهير؟",
+          "options": [
+            "كلوب ديبورتيفو غوادالاخارا (تشيفاس)",
+            "كلوب أمريكا",
+            "كروز أزول",
+            "بوماس أونام"
+          ],
+          "explanation": "ملعب أكرون هو موطن نادي تشيفاس، أحد أكثر الأندية المكسيكية محبوبية، والمعروف بأنه الفريق المكسيكي الكبير الوحيد الذي يضم لاعبين مولودين في المكسيك حصرًا — دون السماح بأي محترفين أجانب. افتُتح هذا الملعب الحديث عام 2010، ويتسع لنحو 49,850 متفرجًا، ويتميز بتصميم لافت مستوحى من البراكين."
+        },
+        "de": {
+          "question": "Das Estadio Akron, ein Austragungsort von Football 2026 in Guadalajara, ist die Heimstätte welches berühmten mexikanischen Vereins?",
+          "options": [
+            "Club Deportivo Guadalajara (Chivas)",
+            "Club América",
+            "Cruz Azul",
+            "UNAM Pumas"
+          ],
+          "explanation": "Das Estadio Akron ist die Heimat von Chivas, einem der beliebtesten Vereine Mexikos und bekannt als das einzige große mexikanische Team, das ausschließlich in Mexiko geborene Spieler einsetzt — ausländische Profis sind nicht erlaubt. Das moderne Stadion wurde 2010 eröffnet, bietet rund 49.850 Zuschauern Platz und besticht durch ein markantes, von Vulkanen inspiriertes Design."
+        },
+        "es": {
+          "question": "El Estadio Akron, una de las sedes de Football 2026 en Guadalajara, es el estadio de qué famoso club mexicano?",
+          "options": [
+            "Club Deportivo Guadalajara (Chivas)",
+            "Club América",
+            "Cruz Azul",
+            "UNAM Pumas"
+          ],
+          "explanation": "El Estadio Akron es la casa de Chivas, uno de los clubes más queridos de México y famoso por ser el único equipo grande mexicano que alinea exclusivamente a jugadores nacidos en México, sin extranjeros permitidos. El moderno estadio, inaugurado en 2010, tiene capacidad para unos 49.850 espectadores y destaca por su llamativo diseño inspirado en los volcanes."
+        },
+        "es-ES": {
+          "question": "El Estadio Akron, una de las sedes de Football 2026 en Guadalajara, es el estadio de qué famoso club mexicano?",
+          "options": [
+            "Club Deportivo Guadalajara (Chivas)",
+            "Club América",
+            "Cruz Azul",
+            "UNAM Pumas"
+          ],
+          "explanation": "El Estadio Akron es la casa del Chivas, uno de los clubes más queridos de México y célebre por ser el único equipo grande mexicano que alinea exclusivamente a jugadores nacidos en México, sin extranjeros permitidos. El moderno estadio, inaugurado en 2010, tiene capacidad para unos 49.850 espectadores y destaca por su llamativo diseño inspirado en los volcanes."
+        },
+        "fr": {
+          "question": "L'Estadio Akron, l'une des enceintes de Football 2026 à Guadalajara, est le stade de quel célèbre club mexicain ?",
+          "options": [
+            "Club Deportivo Guadalajara (Chivas)",
+            "Club América",
+            "Cruz Azul",
+            "UNAM Pumas"
+          ],
+          "explanation": "L'Estadio Akron est le domicile de Chivas, l'un des clubs les plus aimés du Mexique et réputé pour être la seule grande équipe mexicaine à aligner exclusivement des joueurs nés au Mexique — aucun étranger autorisé. Ce stade moderne, inauguré en 2010, peut accueillir environ 49 850 spectateurs et se distingue par un design saisissant inspiré des volcans."
+        },
+        "it": {
+          "question": "L'Estadio Akron, una delle sedi di Football 2026 a Guadalajara, è lo stadio di quale famoso club messicano?",
+          "options": [
+            "Club Deportivo Guadalajara (Chivas)",
+            "Club América",
+            "Cruz Azul",
+            "UNAM Pumas"
+          ],
+          "explanation": "L'Estadio Akron è la casa del Chivas, uno dei club più amati del Messico e celebre per essere l'unica grande squadra messicana a schierare esclusivamente giocatori nati in Messico, senza alcun straniero. Lo stadio moderno, inaugurato nel 2010, può ospitare circa 49.850 spettatori e si distingue per un suggestivo design ispirato ai vulcani."
+        },
+        "ja": {
+          "question": "グアダラハラにあるFootball 2026の会場、エスタディオ・アクロンは、どの有名なメキシコのクラブの本拠地でしょうか？",
+          "options": [
+            "クラブ・デポルティーボ・グアダラハラ（チーバス）",
+            "クラブ・アメリカ",
+            "クルス・アスル",
+            "UNAMプーマス"
+          ],
+          "explanation": "エスタディオ・アクロンはチーバスの本拠地で、メキシコで最も愛されるクラブのひとつです。外国人選手を一切起用せず、メキシコ生まれの選手のみで戦う唯一の主要メキシコクラブとして知られています。2010年に開場したこの近代的なスタジアムは約49,850人を収容でき、火山をモチーフにした印象的なデザインが特徴です。"
+        },
+        "ko": {
+          "question": "과달라하라에 있는 Football 2026 경기장인 에스타디오 아크론은 어느 유명한 멕시코 클럽의 홈구장일까요?",
+          "options": [
+            "클루브 데포르티보 과달라하라 (치바스)",
+            "클루브 아메리카",
+            "크루스 아술",
+            "UNAM 푸마스"
+          ],
+          "explanation": "에스타디오 아크론은 멕시코에서 가장 사랑받는 클럽 중 하나인 치바스의 홈구장으로, 외국인 선수를 일절 기용하지 않고 멕시코 출생 선수만으로 팀을 꾸리는 유일한 주요 멕시코 클럽으로 유명합니다. 2010년에 개장한 이 현대적인 경기장은 약 49,850명을 수용하며 화산에서 영감을 받은 인상적인 디자인이 돋보입니다."
+        },
+        "pt-BR": {
+          "question": "O Estadio Akron, uma das sedes da Football 2026 em Guadalajara, é o estádio de qual famoso clube mexicano?",
+          "options": [
+            "Club Deportivo Guadalajara (Chivas)",
+            "Club América",
+            "Cruz Azul",
+            "UNAM Pumas"
+          ],
+          "explanation": "O Estadio Akron é a casa do Chivas, um dos clubes mais queridos do México e famoso por ser a única grande equipe mexicana a escalar exclusivamente jogadores nascidos no México — sem nenhum estrangeiro permitido. O moderno estádio, inaugurado em 2010, comporta cerca de 49.850 espectadores e se destaca por um marcante projeto inspirado em vulcões."
+        },
+        "zh-Hans": {
+          "question": "位于瓜达拉哈拉的Football 2026比赛场地阿克隆球场，是哪家著名墨西哥俱乐部的主场？",
+          "options": [
+            "瓜达拉哈拉体育俱乐部（芝华士）",
+            "美洲俱乐部",
+            "蓝十字",
+            "UNAM美洲狮"
+          ],
+          "explanation": "阿克隆球场是芝华士的主场，这是墨西哥最受喜爱的俱乐部之一，并以唯一一支只起用墨西哥本土出生球员、不引进任何外籍球员的墨西哥主要球队而闻名。这座现代化球场于2010年启用，可容纳约49,850名观众，其灵感源自火山的独特设计令人印象深刻。"
+        }
+      },
+      "i18nSourceHash": "f9cd2e1383408ec6"
     },
     {
       "id": "v-gillette-boston",
@@ -14176,7 +14485,110 @@
       ],
       "answer": 0,
       "explanation": "Gillette Stadium sits in Foxborough, Massachusetts, about 30 miles southwest of downtown Boston. Seating approximately 65,878, it's also home to the New England Revolution of MLS. The nearby Foxboro Stadium (now demolished) hosted matches during the 1994 edition; Gillette replaced it in 2002.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ملعب جيليت، أحد ملاعب نسخة 2026 بالقرب من بوسطن، هو المعقل الرئيسي لأي فريق في دوري كرة القدم الأمريكية NFL؟",
+          "options": [
+            "نيو إنغلاند باتريوتس",
+            "نيويورك جاينتس",
+            "فيلادلفيا إيغلز",
+            "بالتيمور رايفنز"
+          ],
+          "explanation": "يقع ملعب جيليت في مدينة فوكسبورو بولاية ماساتشوستس، على بُعد نحو 30 ميلاً جنوب غرب وسط بوسطن. وتبلغ سعته حوالي 65,878 متفرجاً، وهو أيضاً المعقل الرئيسي لفريق نيو إنغلاند ريفوليوشن في دوري MLS. كان ملعب فوكسبورو القريب (الذي هُدم الآن) قد استضاف مباريات خلال نسخة 1994، وحلّ ملعب جيليت محله عام 2002."
+        },
+        "de": {
+          "question": "Das Gillette Stadium, ein Austragungsort 2026 in der Nähe von Boston, ist die Heimstätte welches NFL-Teams?",
+          "options": [
+            "New England Patriots",
+            "New York Giants",
+            "Philadelphia Eagles",
+            "Baltimore Ravens"
+          ],
+          "explanation": "Das Gillette Stadium liegt in Foxborough, Massachusetts, rund 30 Meilen südwestlich der Innenstadt von Boston. Mit etwa 65.878 Plätzen ist es zudem die Heimat von New England Revolution aus der MLS. Das nahegelegene Foxboro Stadium (heute abgerissen) war Spielstätte bei der Austragung 1994; das Gillette Stadium ersetzte es im Jahr 2002."
+        },
+        "es": {
+          "question": "El Gillette Stadium, una de las sedes de 2026 cerca de Boston, es la casa de ¿qué equipo de la NFL?",
+          "options": [
+            "New England Patriots",
+            "New York Giants",
+            "Philadelphia Eagles",
+            "Baltimore Ravens"
+          ],
+          "explanation": "El Gillette Stadium está en Foxborough, Massachusetts, a unas 30 millas al suroeste del centro de Boston. Con capacidad para unos 65.878 espectadores, también es la casa del New England Revolution de la MLS. El cercano Foxboro Stadium (hoy demolido) albergó partidos durante la edición de 1994; el Gillette lo reemplazó en 2002."
+        },
+        "es-ES": {
+          "question": "El Gillette Stadium, una de las sedes de 2026 cerca de Boston, es el estadio de ¿qué equipo de la NFL?",
+          "options": [
+            "New England Patriots",
+            "New York Giants",
+            "Philadelphia Eagles",
+            "Baltimore Ravens"
+          ],
+          "explanation": "El Gillette Stadium se encuentra en Foxborough, Massachusetts, a unas 30 millas al suroeste del centro de Boston. Con un aforo de unos 65.878 espectadores, también es la sede del New England Revolution de la MLS. El cercano Foxboro Stadium (hoy derribado) acogió partidos durante la edición de 1994; el Gillette lo sustituyó en 2002."
+        },
+        "fr": {
+          "question": "Le Gillette Stadium, l'un des sites de 2026 près de Boston, est l'enceinte de quelle équipe de la NFL ?",
+          "options": [
+            "New England Patriots",
+            "New York Giants",
+            "Philadelphia Eagles",
+            "Baltimore Ravens"
+          ],
+          "explanation": "Le Gillette Stadium se situe à Foxborough, dans le Massachusetts, à une trentaine de miles au sud-ouest du centre de Boston. D'une capacité d'environ 65 878 places, il accueille aussi le New England Revolution de la MLS. Le Foxboro Stadium voisin (aujourd'hui démoli) avait accueilli des matchs lors de l'édition de 1994 ; le Gillette l'a remplacé en 2002."
+        },
+        "it": {
+          "question": "Il Gillette Stadium, una delle sedi del 2026 vicino a Boston, è la casa di quale squadra della NFL?",
+          "options": [
+            "New England Patriots",
+            "New York Giants",
+            "Philadelphia Eagles",
+            "Baltimore Ravens"
+          ],
+          "explanation": "Il Gillette Stadium si trova a Foxborough, in Massachusetts, a circa 30 miglia a sud-ovest del centro di Boston. Con una capienza di circa 65.878 posti, ospita anche i New England Revolution della MLS. Il vicino Foxboro Stadium (oggi demolito) ospitò alcune partite durante l'edizione del 1994; il Gillette lo sostituì nel 2002."
+        },
+        "ja": {
+          "question": "ボストン近郊にある2026年の開催地、ジレット・スタジアムを本拠地とするNFLチームはどれですか？",
+          "options": [
+            "ニューイングランド・ペイトリオッツ",
+            "ニューヨーク・ジャイアンツ",
+            "フィラデルフィア・イーグルス",
+            "ボルチモア・レイブンズ"
+          ],
+          "explanation": "ジレット・スタジアムはマサチューセッツ州フォックスボロにあり、ボストン中心部から南西へ約30マイルの位置にあります。収容人数は約65,878人で、MLSのニューイングランド・レボリューションの本拠地でもあります。近くにあったフォックスボロ・スタジアム（現在は解体済み）は1994年大会の試合を開催し、ジレットは2002年にこれに代わって完成しました。"
+        },
+        "ko": {
+          "question": "보스턴 인근에 위치한 2026년 개최 경기장 질레트 스타디움은 어느 NFL 팀의 홈구장일까요?",
+          "options": [
+            "뉴잉글랜드 패트리어츠",
+            "뉴욕 자이언츠",
+            "필라델피아 이글스",
+            "볼티모어 레이븐스"
+          ],
+          "explanation": "질레트 스타디움은 매사추세츠주 폭스버러에 위치하며, 보스턴 도심에서 남서쪽으로 약 30마일 떨어져 있습니다. 약 65,878석 규모로, MLS의 뉴잉글랜드 레볼루션의 홈구장이기도 합니다. 인근에 있던 폭스버러 스타디움(현재는 철거됨)은 1994년 대회 경기를 개최했으며, 질레트가 2002년에 그 자리를 대신했습니다."
+        },
+        "pt-BR": {
+          "question": "O Gillette Stadium, uma das sedes de 2026 perto de Boston, é a casa de qual time da NFL?",
+          "options": [
+            "New England Patriots",
+            "New York Giants",
+            "Philadelphia Eagles",
+            "Baltimore Ravens"
+          ],
+          "explanation": "O Gillette Stadium fica em Foxborough, Massachusetts, cerca de 30 milhas a sudoeste do centro de Boston. Com capacidade para aproximadamente 65.878 pessoas, também é a casa do New England Revolution, da MLS. O próximo Foxboro Stadium (hoje demolido) sediou partidas durante a edição de 1994; o Gillette o substituiu em 2002."
+        },
+        "zh-Hans": {
+          "question": "位于波士顿附近的2026年比赛场地吉列体育场，是哪支NFL球队的主场？",
+          "options": [
+            "新英格兰爱国者",
+            "纽约巨人",
+            "费城老鹰",
+            "巴尔的摩乌鸦"
+          ],
+          "explanation": "吉列体育场位于马萨诸塞州福克斯堡，距波士顿市中心西南约30英里。它可容纳约65,878名观众，同时也是MLS新英格兰革命队的主场。附近的福克斯堡体育场（现已拆除）曾举办1994年那届赛事的比赛；吉列体育场于2002年取而代之。"
+        }
+      },
+      "i18nSourceHash": "be61730c6ff9b088"
     },
     {
       "id": "v-estadio-bbva-monterrey",
@@ -14205,7 +14617,110 @@
       "answer": 0,
       "explanation": "Russia's Oleg Salenko scored 5 goals in a 6-1 win over Cameroon at the 1994 tournament, a record that still stands. Remarkably, Russia was eliminated in the group stage despite Salenko's heroics. He shared the Golden Boot that year with Bulgaria's Hristo Stoichkov, each finishing with 6 goals.",
       "media": "https://www.youtube.com/watch?v=H1Kk0wMeDWs",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ما هو أكبر عدد من الأهداف سجّلها لاعب واحد في مباراة واحدة بالبطولة؟",
+          "options": [
+            "5",
+            "4",
+            "6",
+            "3"
+          ],
+          "explanation": "سجّل الروسي أوليغ سالينكو 5 أهداف في فوز فريقه 6-1 على الكاميرون في نسخة 1994، وهو رقم قياسي لا يزال قائماً حتى الآن. والمدهش أن روسيا خرجت من دور المجموعات رغم بطولات سالينكو. وقد تقاسم لقب الحذاء الذهبي في تلك السنة مع البلغاري هريستو ستويتشكوف، إذ أنهى كلٌّ منهما برصيد 6 أهداف."
+        },
+        "de": {
+          "question": "Was ist die höchste Anzahl an Toren, die ein einzelner Spieler in einem Turnierspiel erzielt hat?",
+          "options": [
+            "5",
+            "4",
+            "6",
+            "3"
+          ],
+          "explanation": "Der Russe Oleg Salenko erzielte beim Turnier 1994 fünf Tore beim 6:1-Sieg gegen Kamerun – ein Rekord, der bis heute Bestand hat. Bemerkenswert ist, dass Russland trotz Salenkos Glanzleistung in der Gruppenphase ausschied. Den Goldenen Schuh teilte er sich in jenem Jahr mit dem Bulgaren Hristo Stoitschkow, beide kamen auf 6 Tore."
+        },
+        "es": {
+          "question": "¿Cuál es la mayor cantidad de goles que ha marcado un solo jugador en un partido del torneo?",
+          "options": [
+            "5",
+            "4",
+            "6",
+            "3"
+          ],
+          "explanation": "El ruso Oleg Salenko marcó 5 goles en la victoria por 6-1 sobre Camerún en el torneo de 1994, un récord que sigue vigente. Lo curioso es que Rusia quedó eliminada en la fase de grupos a pesar de la hazaña de Salenko. Ese año compartió la Bota de Oro con el búlgaro Hristo Stoichkov, ambos con 6 goles."
+        },
+        "es-ES": {
+          "question": "¿Cuál es la mayor cantidad de goles que ha marcado un solo jugador en un partido del torneo?",
+          "options": [
+            "5",
+            "4",
+            "6",
+            "3"
+          ],
+          "explanation": "El ruso Oleg Salenko marcó 5 goles en la victoria por 6-1 ante Camerún en el torneo de 1994, un récord que aún sigue vigente. Lo llamativo es que Rusia cayó eliminada en la fase de grupos pese a la gesta de Salenko. Aquel año compartió la Bota de Oro con el búlgaro Hristo Stoichkov, ambos con 6 goles."
+        },
+        "fr": {
+          "question": "Quel est le plus grand nombre de buts marqués par un seul joueur lors d'un match du tournoi ?",
+          "options": [
+            "5",
+            "4",
+            "6",
+            "3"
+          ],
+          "explanation": "Le Russe Oleg Salenko a inscrit 5 buts lors de la victoire 6-1 contre le Cameroun au tournoi de 1994, un record qui tient toujours. Fait remarquable, la Russie a été éliminée dès la phase de groupes malgré l'exploit de Salenko. Cette année-là, il a partagé le Soulier d'or avec le Bulgare Hristo Stoïtchkov, chacun terminant avec 6 buts."
+        },
+        "it": {
+          "question": "Qual è il maggior numero di gol segnati da un singolo giocatore in una partita del torneo?",
+          "options": [
+            "5",
+            "4",
+            "6",
+            "3"
+          ],
+          "explanation": "Il russo Oleg Salenko segnò 5 gol nella vittoria per 6-1 sul Camerun al torneo del 1994, un record tuttora imbattuto. Sorprendentemente, la Russia fu eliminata già nella fase a gironi nonostante l'impresa di Salenko. Quell'anno condivise la Scarpa d'Oro con il bulgaro Hristo Stoichkov, entrambi a quota 6 gol."
+        },
+        "ja": {
+          "question": "大会の1試合で1人の選手が記録した最多得点は何点でしょう？",
+          "options": [
+            "5",
+            "4",
+            "6",
+            "3"
+          ],
+          "explanation": "ロシアのオレグ・サレンコは1994年大会のカメルーン戦で6-1の勝利の中5得点を挙げ、その記録は今なお破られていません。驚くべきことに、サレンコの大活躍にもかかわらずロシアはグループステージで敗退しました。彼はこの年、ブルガリアのフリスト・ストイチコフと得点王（ゴールデンブーツ）を分け合い、ともに6得点で終えました。"
+        },
+        "ko": {
+          "question": "대회 한 경기에서 한 선수가 기록한 최다 득점은 몇 골일까요?",
+          "options": [
+            "5",
+            "4",
+            "6",
+            "3"
+          ],
+          "explanation": "러시아의 올레그 살렌코는 1994년 대회 카메룬전에서 6-1 승리 속에 5골을 넣었고, 이 기록은 지금까지 깨지지 않고 있습니다. 놀랍게도 살렌코의 맹활약에도 불구하고 러시아는 조별리그에서 탈락했습니다. 그는 그해 불가리아의 흐리스토 스토이치코프와 득점왕(골든 부트)을 공유했으며, 둘 다 6골로 마쳤습니다."
+        },
+        "pt-BR": {
+          "question": "Qual é o maior número de gols marcados por um único jogador em uma partida do torneio?",
+          "options": [
+            "5",
+            "4",
+            "6",
+            "3"
+          ],
+          "explanation": "O russo Oleg Salenko marcou 5 gols na vitória por 6 a 1 sobre Camarões no torneio de 1994, um recorde que continua de pé até hoje. Curiosamente, a Rússia foi eliminada na fase de grupos apesar da façanha de Salenko. Naquele ano, ele dividiu a Chuteira de Ouro com o búlgaro Hristo Stoichkov, ambos terminando com 6 gols."
+        },
+        "zh-Hans": {
+          "question": "在本届赛事的单场比赛中，单名球员打进的最多进球数是多少？",
+          "options": [
+            "5",
+            "4",
+            "6",
+            "3"
+          ],
+          "explanation": "俄罗斯球员奥列格·萨连科在1994年的赛事中以6比1战胜喀麦隆的比赛里独中5球，这一纪录至今无人打破。令人惊讶的是，尽管萨连科表现神勇，俄罗斯仍在小组赛阶段被淘汰。那一年他与保加利亚的赫里斯托·斯托伊奇科夫并列获得金靴奖，两人均以6球收官。"
+        }
+      },
+      "i18nSourceHash": "8cf2a9df0e0c43bd"
     },
     {
       "id": "rec-own-goals-2018",
