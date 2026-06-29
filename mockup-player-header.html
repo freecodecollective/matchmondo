@@ -1618,6 +1618,62 @@
   .compact-flag-big.fr .stripe:nth-child(1) { left: 0; width: 33.33%; background: #002395; }
   .compact-flag-big.fr .stripe:nth-child(2) { left: 33.33%; width: 33.34%; background: #fff; }
   .compact-flag-big.fr .stripe:nth-child(3) { left: 66.67%; width: 33.33%; background: #ED2939; }
+
+  /* Centered flag — horizontally centered in the header */
+  .compact-flag-center {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px; height: 95px;
+    z-index: 0;
+    opacity: 0.3;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .compact-flag-center .stripe {
+    position: absolute; top: 0; bottom: 0;
+  }
+  .compact-flag-center.fr .stripe:nth-child(1) { left: 0; width: 33.33%; background: #002395; }
+  .compact-flag-center.fr .stripe:nth-child(2) { left: 33.33%; width: 33.34%; background: #fff; }
+  .compact-flag-center.fr .stripe:nth-child(3) { left: 66.67%; width: 33.33%; background: #ED2939; }
+
+  /* Centered flag with sway */
+  .compact-flag-center-sway {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px; height: 95px;
+    z-index: 0;
+    opacity: 0.3;
+    border-radius: 3px;
+    overflow: hidden;
+    transform-origin: center center;
+    animation: flag-sway 4s ease-in-out infinite;
+  }
+  .compact-flag-center-sway .stripe {
+    position: absolute; top: 0; bottom: 0;
+  }
+  .compact-flag-center-sway.fr .stripe:nth-child(1) { left: 0; width: 33.33%; background: #002395; }
+  .compact-flag-center-sway.fr .stripe:nth-child(2) { left: 33.33%; width: 33.34%; background: #fff; }
+  .compact-flag-center-sway.fr .stripe:nth-child(3) { left: 66.67%; width: 33.33%; background: #ED2939; }
+
+  /* Centered flag with ripple */
+  .compact-flag-center-ripple {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px; height: 95px;
+    z-index: 0;
+    opacity: 0.3;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .compact-flag-center-ripple .stripe {
+    position: absolute; top: 0; bottom: 0;
+  }
+  .compact-flag-center-ripple.fr .stripe:nth-child(1) { left: 0; width: 33.33%; background: #002395; animation: stripe-ripple-1 3s ease-in-out infinite; }
+  .compact-flag-center-ripple.fr .stripe:nth-child(2) { left: 33.33%; width: 33.34%; background: #fff; animation: stripe-ripple-2 3s ease-in-out 0.3s infinite; }
+  .compact-flag-center-ripple.fr .stripe:nth-child(3) { left: 66.67%; width: 33.33%; background: #ED2939; animation: stripe-ripple-3 3s ease-in-out 0.6s infinite; }
 </style>
 
 <!-- Big photo, compact — no halo, shorter header -->
@@ -1633,6 +1689,102 @@
         <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
         <div class="jersey">10</div>
         <div class="photo-flag">🇫🇷</div>
+        <div style="position:absolute;top:12px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Compact + centered flag, no badge -->
+<div class="phone-wrap">
+  <div class="phone-label">Centered Flag — Static</div>
+  <div class="phone-sublabel">Flag centered in the header, no flag badge on headshot.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c big-photo compact">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="compact-flag-center fr"><div class="stripe"></div><div class="stripe"></div><div class="stripe"></div></div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
+        <div class="jersey">10</div>
+        <div style="position:absolute;top:12px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Compact + centered flag sway, no badge -->
+<div class="phone-wrap">
+  <div class="phone-label">Centered Flag — Sway</div>
+  <div class="phone-sublabel">Centered flag gently sways, no flag badge on headshot.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c big-photo compact">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="compact-flag-center-sway fr"><div class="stripe"></div><div class="stripe"></div><div class="stripe"></div></div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
+        <div class="jersey">10</div>
+        <div style="position:absolute;top:12px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="name">Mbappé</div>
+          <div class="pos">Forward</div>
+          <div class="club">Real Madrid</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div><div class="ph-bar w60"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Compact + centered flag ripple, no badge -->
+<div class="phone-wrap">
+  <div class="phone-label">Centered Flag — Ripple</div>
+  <div class="phone-sublabel">Centered flag with per-stripe ripple, no flag badge on headshot.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c big-photo compact">
+        <div class="back-btn">‹</div>
+        <div class="bg"><div class="turf-pattern"></div><div class="pitch-line"></div></div>
+        <div class="compact-flag-center-ripple fr"><div class="stripe"></div><div class="stripe"></div><div class="stripe"></div></div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main"><img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt=""></div>
+        <div class="jersey">10</div>
         <div style="position:absolute;top:12px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
         <div class="text-area">
           <div class="name">Mbappé</div>
