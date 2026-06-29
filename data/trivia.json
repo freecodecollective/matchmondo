@@ -2925,7 +2925,8 @@
         "Golden goal"
       ],
       "answer": 2,
-      "explanation": "From the Round of 32 on, a tie goes to two 15-minute periods of extra time, then a penalty shootout if still level."
+      "explanation": "From the Round of 32 on, a tie goes to two 15-minute periods of extra time, then a penalty shootout if still level.",
+      "approved": true
     },
     {
       "id": "t-opener-azteca",
