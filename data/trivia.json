@@ -12378,7 +12378,110 @@
       ],
       "answer": 0,
       "explanation": "Brazilian Mário Zagallo won as a player in 1958 and 1962, then coached Brazil to victory in 1970 — the first person to achieve this double. Franz Beckenbauer later matched the feat (1974/1990), followed by Didier Deschamps (1998/2018). Johan Cruyff, despite being one of the greatest players, never won the tournament.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو أول شخص في التاريخ يفوز بالبطولة لاعباً ومدرباً على حد سواء؟",
+          "options": [
+            "ماريو زاغالو",
+            "فرانتس بكنباور",
+            "ديدييه ديشان",
+            "يوهان كرويف"
+          ],
+          "explanation": "فاز البرازيلي ماريو زاغالو باللقب لاعباً في عامي 1958 و1962، ثم قاد البرازيل مدرباً إلى التتويج عام 1970 — ليكون أول من يحقق هذه الثنائية. وعادل فرانتس بكنباور هذا الإنجاز لاحقاً (1974/1990)، تبعه ديدييه ديشان (1998/2018). أما يوهان كرويف، فرغم كونه أحد أعظم اللاعبين، لم يفز بالبطولة قط."
+        },
+        "de": {
+          "question": "Wer war die erste Person der Geschichte, die das Turnier sowohl als Spieler als auch als Cheftrainer gewann?",
+          "options": [
+            "Mário Zagallo",
+            "Franz Beckenbauer",
+            "Didier Deschamps",
+            "Johan Cruyff"
+          ],
+          "explanation": "Der Brasilianer Mário Zagallo gewann 1958 und 1962 als Spieler und führte Brasilien 1970 als Trainer zum Titel — als erste Person mit diesem Doppelerfolg. Franz Beckenbauer gelang dies später ebenfalls (1974/1990), gefolgt von Didier Deschamps (1998/2018). Johan Cruyff hingegen gewann das Turnier nie, obwohl er einer der größten Spieler aller Zeiten war."
+        },
+        "es": {
+          "question": "¿Quién fue la primera persona en la historia en ganar el torneo como jugador y como director técnico?",
+          "options": [
+            "Mário Zagallo",
+            "Franz Beckenbauer",
+            "Didier Deschamps",
+            "Johan Cruyff"
+          ],
+          "explanation": "El brasileño Mário Zagallo ganó como jugador en 1958 y 1962, y luego dirigió a Brasil al título en 1970, convirtiéndose en la primera persona en lograr ese doblete. Franz Beckenbauer igualó la hazaña más tarde (1974/1990), seguido por Didier Deschamps (1998/2018). Johan Cruyff, a pesar de ser uno de los mejores jugadores de la historia, nunca ganó el torneo."
+        },
+        "es-ES": {
+          "question": "¿Quién fue la primera persona de la historia en ganar el torneo tanto como jugador como en calidad de seleccionador?",
+          "options": [
+            "Mário Zagallo",
+            "Franz Beckenbauer",
+            "Didier Deschamps",
+            "Johan Cruyff"
+          ],
+          "explanation": "El brasileño Mário Zagallo ganó como jugador en 1958 y 1962, y después llevó a Brasil al título en 1970 como entrenador, siendo la primera persona en conseguir ese doblete. Franz Beckenbauer igualó la gesta más tarde (1974/1990), seguido de Didier Deschamps (1998/2018). Johan Cruyff, pese a ser uno de los mejores jugadores de la historia, nunca ganó el torneo."
+        },
+        "fr": {
+          "question": "Qui a été la première personne de l'histoire à remporter le tournoi à la fois comme joueur et comme sélectionneur ?",
+          "options": [
+            "Mário Zagallo",
+            "Franz Beckenbauer",
+            "Didier Deschamps",
+            "Johan Cruyff"
+          ],
+          "explanation": "Le Brésilien Mário Zagallo a gagné comme joueur en 1958 et 1962, avant de mener le Brésil au titre en 1970 en tant qu'entraîneur — devenant la première personne à réussir ce doublé. Franz Beckenbauer a ensuite égalé cet exploit (1974/1990), suivi de Didier Deschamps (1998/2018). Johan Cruyff, pourtant l'un des plus grands joueurs de l'histoire, n'a jamais remporté le tournoi."
+        },
+        "it": {
+          "question": "Chi è stata la prima persona nella storia a vincere il torneo sia da giocatore che da commissario tecnico?",
+          "options": [
+            "Mário Zagallo",
+            "Franz Beckenbauer",
+            "Didier Deschamps",
+            "Johan Cruyff"
+          ],
+          "explanation": "Il brasiliano Mário Zagallo ha vinto da giocatore nel 1958 e nel 1962, poi ha guidato il Brasile al trionfo nel 1970 da allenatore, diventando la prima persona a centrare questa doppietta. Franz Beckenbauer ha eguagliato l'impresa in seguito (1974/1990), seguito da Didier Deschamps (1998/2018). Johan Cruyff, pur essendo uno dei più grandi giocatori di sempre, non ha mai vinto il torneo."
+        },
+        "ja": {
+          "question": "選手と監督の両方の立場で大会を制した史上初の人物は誰でしょう？",
+          "options": [
+            "マリオ・ザガロ",
+            "フランツ・ベッケンバウアー",
+            "ディディエ・デシャン",
+            "ヨハン・クライフ"
+          ],
+          "explanation": "ブラジルのマリオ・ザガロは1958年と1962年に選手として優勝し、その後1970年には監督としてブラジルを優勝に導きました。これを成し遂げた史上初の人物です。後にフランツ・ベッケンバウアーが同じ偉業を達成し（1974年／1990年）、続いてディディエ・デシャンも成功させました（1998年／2018年）。ヨハン・クライフは史上最高の選手の一人でありながら、この大会を制したことはありませんでした。"
+        },
+        "ko": {
+          "question": "선수와 감독으로 모두 대회 우승을 차지한 역사상 최초의 인물은 누구일까요?",
+          "options": [
+            "마리우 자갈루",
+            "프란츠 베켄바워",
+            "디디에 데샹",
+            "요한 크라위프"
+          ],
+          "explanation": "브라질의 마리우 자갈루는 1958년과 1962년에 선수로 우승했고, 이후 1970년에는 감독으로 브라질을 우승으로 이끌며 이 진기록을 처음으로 달성한 인물이 되었습니다. 이후 프란츠 베켄바워가 같은 위업을 이뤘고(1974/1990), 뒤이어 디디에 데샹도 성공했습니다(1998/2018). 요한 크라위프는 역대 최고의 선수 중 한 명이었지만 이 대회에서 우승한 적은 없습니다."
+        },
+        "pt-BR": {
+          "question": "Quem foi a primeira pessoa da história a vencer o torneio como jogador e como técnico?",
+          "options": [
+            "Mário Zagallo",
+            "Franz Beckenbauer",
+            "Didier Deschamps",
+            "Johan Cruyff"
+          ],
+          "explanation": "O brasileiro Mário Zagallo venceu como jogador em 1958 e 1962 e depois levou o Brasil ao título em 1970 como técnico — tornando-se a primeira pessoa a conquistar essa dobradinha. Franz Beckenbauer igualou o feito mais tarde (1974/1990), seguido por Didier Deschamps (1998/2018). Johan Cruyff, apesar de ser um dos maiores jogadores de todos os tempos, nunca venceu o torneio."
+        },
+        "zh-Hans": {
+          "question": "历史上第一位以球员和主教练双重身份夺得本项赛事冠军的人是谁？",
+          "options": [
+            "马里奥·扎加洛",
+            "弗朗茨·贝肯鲍尔",
+            "迪迪埃·德尚",
+            "约翰·克鲁伊夫"
+          ],
+          "explanation": "巴西的马里奥·扎加洛在1958年和1962年以球员身份夺冠，随后在1970年作为主教练率领巴西问鼎——成为历史上首位实现这一双重荣誉的人。弗朗茨·贝肯鲍尔后来也做到了这一点（1974/1990），随后是迪迪埃·德尚（1998/2018）。约翰·克鲁伊夫虽然是历史上最伟大的球员之一，却从未赢得过这项赛事的冠军。"
+        }
+      },
+      "i18nSourceHash": "fcd296f89b002090"
     },
     {
       "id": "p-garrincha-1962",
@@ -12392,7 +12495,110 @@
       ],
       "answer": 0,
       "explanation": "Garrincha, nicknamed 'Alegria do Povo' (Joy of the People), was the undisputed star of the 1962 tournament after Pelé suffered a groin injury in the second group match. Despite having legs of different lengths due to a childhood illness, Garrincha's dribbling was mesmerizing, and he scored in both the quarter-final and semi-final.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "عندما أُصيب بيليه خلال بطولة 1962، أيُّ جناح برازيلي تقدّم ليقود المنتخب إلى النصر؟",
+          "options": [
+            "غارينشا",
+            "جايرزينيو",
+            "ريفالدو",
+            "روماريو"
+          ],
+          "explanation": "غارينشا، الملقّب بـ'فرحة الشعب' (Alegria do Povo)، كان النجم الأبرز بلا منازع في بطولة 1962 بعد أن تعرّض بيليه لإصابة في الفخذ خلال المباراة الثانية من دور المجموعات. ورغم أن ساقيه كانتا بطولين مختلفين بسبب مرض أصابه في طفولته، إلا أن مراوغاته كانت ساحرة، وقد سجّل في كل من مباراتي ربع النهائي ونصف النهائي."
+        },
+        "de": {
+          "question": "Als sich Pelé beim Turnier 1962 verletzte, welcher brasilianische Flügelspieler übernahm das Kommando und führte die Mannschaft zum Sieg?",
+          "options": [
+            "Garrincha",
+            "Jairzinho",
+            "Rivaldo",
+            "Romário"
+          ],
+          "explanation": "Garrincha, mit dem Spitznamen 'Alegria do Povo' (Freude des Volkes), war der unbestrittene Star des Turniers 1962, nachdem sich Pelé im zweiten Gruppenspiel eine Leistenverletzung zugezogen hatte. Obwohl seine Beine wegen einer Krankheit in der Kindheit unterschiedlich lang waren, war sein Dribbling betörend, und er traf sowohl im Viertelfinale als auch im Halbfinale."
+        },
+        "es": {
+          "question": "Cuando Pelé se lesionó durante el torneo de 1962, ¿qué extremo brasileño dio un paso al frente para llevar al equipo a la victoria?",
+          "options": [
+            "Garrincha",
+            "Jairzinho",
+            "Rivaldo",
+            "Romário"
+          ],
+          "explanation": "Garrincha, apodado 'Alegria do Povo' (Alegría del Pueblo), fue la estrella indiscutible del torneo de 1962 luego de que Pelé sufriera una lesión en la ingle en el segundo partido de la fase de grupos. A pesar de tener las piernas de distinta longitud por una enfermedad de la infancia, el regate de Garrincha era hipnotizante, y anotó tanto en cuartos de final como en semifinales."
+        },
+        "es-ES": {
+          "question": "Cuando Pelé se lesionó durante el torneo de 1962, ¿qué extremo brasileño dio un paso al frente para llevar al equipo a la victoria?",
+          "options": [
+            "Garrincha",
+            "Jairzinho",
+            "Rivaldo",
+            "Romário"
+          ],
+          "explanation": "Garrincha, apodado 'Alegria do Povo' (Alegría del Pueblo), fue la estrella indiscutible del torneo de 1962 después de que Pelé sufriera una lesión en la ingle en el segundo partido de la fase de grupos. A pesar de tener las piernas de distinta longitud por una enfermedad de la infancia, el regate de Garrincha era hipnotizante, y marcó tanto en cuartos de final como en semifinales."
+        },
+        "fr": {
+          "question": "Lorsque Pelé s'est blessé pendant le tournoi de 1962, quel ailier brésilien a pris le relais pour mener l'équipe à la victoire ?",
+          "options": [
+            "Garrincha",
+            "Jairzinho",
+            "Rivaldo",
+            "Romário"
+          ],
+          "explanation": "Garrincha, surnommé 'Alegria do Povo' (la Joie du Peuple), fut la vedette incontestée du tournoi de 1962 après que Pelé eut subi une blessure à l'aine lors du deuxième match de poule. Bien qu'il ait eu les jambes de longueurs différentes à cause d'une maladie d'enfance, le dribble de Garrincha était envoutant, et il marqua aussi bien en quart de finale qu'en demi-finale."
+        },
+        "it": {
+          "question": "Quando Pelé si infortunò durante il torneo del 1962, quale ala brasiliana si fece avanti per guidare la squadra alla vittoria?",
+          "options": [
+            "Garrincha",
+            "Jairzinho",
+            "Rivaldo",
+            "Romário"
+          ],
+          "explanation": "Garrincha, soprannominato 'Alegria do Povo' (la Gioia del Popolo), fu la stella indiscussa del torneo del 1962 dopo che Pelé subì un infortunio all'inguine nella seconda partita del girone. Nonostante avesse le gambe di lunghezza diversa a causa di una malattia infantile, il dribbling di Garrincha era ipnotico, e andò a segno sia nei quarti di finale sia in semifinale."
+        },
+        "ja": {
+          "question": "1962年の大会でペレが負傷した際、チームを勝利へ導いたブラジルのウインガーは誰でしょう？",
+          "options": [
+            "ガリンシャ",
+            "ジャイルジーニョ",
+            "リバウド",
+            "ロマーリオ"
+          ],
+          "explanation": "「アレグリア・ド・ポーヴォ（民衆の喜び）」の愛称で知られるガリンシャは、ペレがグループリーグ第2戦で股関節を負傷した後、1962年大会で文句なしのスターとなりました。幼少期の病気の影響で両脚の長さが違ったにもかかわらず、彼のドリブルは見る者を魅了し、準々決勝と準決勝の両方でゴールを決めました。"
+        },
+        "ko": {
+          "question": "1962년 대회에서 펠레가 부상을 당했을 때, 팀을 승리로 이끈 브라질의 윙어는 누구일까요?",
+          "options": [
+            "가힌샤",
+            "자이르지뉴",
+            "히바우두",
+            "호마리우"
+          ],
+          "explanation": "'알레그리아 두 포부(국민의 기쁨)'라는 별명으로 불린 가힌샤는 펠레가 조별리그 2차전에서 사타구니 부상을 당한 뒤 1962년 대회의 명실상부한 스타였습니다. 어린 시절 병으로 양다리 길이가 달랐음에도 그의 드리블은 보는 이를 사로잡았고, 8강전과 4강전에서 모두 골을 넣었습니다."
+        },
+        "pt-BR": {
+          "question": "Quando Pelé se machucou durante o torneio de 1962, qual ponta brasileiro assumiu a responsabilidade e levou a equipe à vitória?",
+          "options": [
+            "Garrincha",
+            "Jairzinho",
+            "Rivaldo",
+            "Romário"
+          ],
+          "explanation": "Garrincha, apelidado de 'Alegria do Povo', foi o astro indiscutível do torneio de 1962 depois que Pelé sofreu uma lesão na virilha no segundo jogo da fase de grupos. Apesar de ter pernas de comprimentos diferentes por causa de uma doença na infância, o drible de Garrincha era hipnotizante, e ele marcou tanto nas quartas de final quanto na semifinal."
+        },
+        "zh-Hans": {
+          "question": "在1962年的赛事中，当贝利受伤后，是哪位巴西边锋挺身而出，带领球队夺冠？",
+          "options": [
+            "加林查",
+            "雅伊尔津霍",
+            "里瓦尔多",
+            "罗马里奥"
+          ],
+          "explanation": "绰号为「人民的快乐」（Alegria do Povo）的加林查，在贝利于小组赛第二场比赛中遭遇腹股沟伤病后，成为1962年赛事当之无愧的明星。尽管他因儿时的疾病而双腿长短不一，但他的盘带令人目眩神迷，并在四分之一决赛和半决赛中均有进球。"
+        }
+      },
+      "i18nSourceHash": "d6b0924263c96489"
     },
     {
       "id": "p-klose-four-editions",
@@ -12406,7 +12612,110 @@
       ],
       "answer": 0,
       "explanation": "Klose scored across four straight editions: 5 goals in 2002, 5 in 2006, 4 in 2010, and 2 in 2014. Born in Opole, Poland, he moved to Germany as a child and became one of the tournament's most prolific scorers. His trademark acrobatic somersault celebration became iconic.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "سجّل المهاجم الألماني ميروسلاف كلوزه في أربع نسخ متتالية. ما هي؟",
+          "options": [
+            "2002، 2006، 2010، 2014",
+            "1998، 2002، 2006، 2010",
+            "2006، 2010، 2014، 2018",
+            "1994، 1998، 2002، 2006"
+          ],
+          "explanation": "سجّل كلوزه في أربع نسخ متتالية: 5 أهداف عام 2002، و5 عام 2006، و4 عام 2010، وهدفان عام 2014. وُلد في أوبوله ببولندا، وانتقل إلى ألمانيا في طفولته ليصبح أحد أكثر الهدافين غزارة في البطولة. وقد أصبحت احتفالاته بالشقلبة البهلوانية علامته المميزة وأيقونة لا تُنسى."
+        },
+        "de": {
+          "question": "Der deutsche Stürmer Miroslav Klose traf bei vier aufeinanderfolgenden Turnieren. Welche waren das?",
+          "options": [
+            "2002, 2006, 2010, 2014",
+            "1998, 2002, 2006, 2010",
+            "2006, 2010, 2014, 2018",
+            "1994, 1998, 2002, 2006"
+          ],
+          "explanation": "Klose traf in vier aufeinanderfolgenden Turnieren: 5 Tore 2002, 5 im Jahr 2006, 4 im Jahr 2010 und 2 im Jahr 2014. Geboren im polnischen Oppeln, kam er als Kind nach Deutschland und wurde zu einem der treffsichersten Torjäger des Turniers. Sein typischer akrobatischer Salto-Jubel wurde zum Markenzeichen."
+        },
+        "es": {
+          "question": "El delantero alemán Miroslav Klose marcó en cuatro ediciones consecutivas. ¿Cuáles fueron?",
+          "options": [
+            "2002, 2006, 2010, 2014",
+            "1998, 2002, 2006, 2010",
+            "2006, 2010, 2014, 2018",
+            "1994, 1998, 2002, 2006"
+          ],
+          "explanation": "Klose anotó en cuatro ediciones seguidas: 5 goles en 2002, 5 en 2006, 4 en 2010 y 2 en 2014. Nacido en Opole, Polonia, se mudó a Alemania de niño y se convirtió en uno de los máximos goleadores del torneo. Su característica celebración con un salto mortal acrobático se volvió icónica."
+        },
+        "es-ES": {
+          "question": "El delantero alemán Miroslav Klose marcó en cuatro ediciones consecutivas. ¿Cuáles fueron?",
+          "options": [
+            "2002, 2006, 2010, 2014",
+            "1998, 2002, 2006, 2010",
+            "2006, 2010, 2014, 2018",
+            "1994, 1998, 2002, 2006"
+          ],
+          "explanation": "Klose marcó en cuatro ediciones seguidas: 5 goles en 2002, 5 en 2006, 4 en 2010 y 2 en 2014. Nacido en Opole (Polonia), se trasladó a Alemania de niño y se convirtió en uno de los goleadores más prolíficos del torneo. Su característica celebración con una voltereta acrobática se hizo icónica."
+        },
+        "fr": {
+          "question": "L'attaquant allemand Miroslav Klose a marqué lors de quatre éditions consécutives. Lesquelles ?",
+          "options": [
+            "2002, 2006, 2010, 2014",
+            "1998, 2002, 2006, 2010",
+            "2006, 2010, 2014, 2018",
+            "1994, 1998, 2002, 2006"
+          ],
+          "explanation": "Klose a marqué lors de quatre éditions d'affilée : 5 buts en 2002, 5 en 2006, 4 en 2010 et 2 en 2014. Né à Opole, en Pologne, il a déménagé en Allemagne enfant et est devenu l'un des buteurs les plus prolifiques du tournoi. Sa célèbre célébration, un salto acrobatique, est devenue emblématique."
+        },
+        "it": {
+          "question": "L'attaccante tedesco Miroslav Klose ha segnato in quattro edizioni consecutive. Quali sono state?",
+          "options": [
+            "2002, 2006, 2010, 2014",
+            "1998, 2002, 2006, 2010",
+            "2006, 2010, 2014, 2018",
+            "1994, 1998, 2002, 2006"
+          ],
+          "explanation": "Klose è andato a segno in quattro edizioni di fila: 5 gol nel 2002, 5 nel 2006, 4 nel 2010 e 2 nel 2014. Nato a Opole, in Polonia, si trasferì in Germania da bambino e divenne uno dei marcatori più prolifici del torneo. La sua caratteristica esultanza con la capriola acrobatica è diventata iconica."
+        },
+        "ja": {
+          "question": "ドイツのストライカー、ミロスラフ・クローゼは4大会連続でゴールを決めました。それはどの大会でしょう？",
+          "options": [
+            "2002年、2006年、2010年、2014年",
+            "1998年、2002年、2006年、2010年",
+            "2006年、2010年、2014年、2018年",
+            "1994年、1998年、2002年、2006年"
+          ],
+          "explanation": "クローゼは4大会連続で得点を挙げました。2002年に5点、2006年に5点、2010年に4点、2014年に2点です。ポーランドのオポーレで生まれ、幼い頃にドイツへ移り、この大会で最も多くのゴールを決めた選手の一人となりました。彼の代名詞であるアクロバティックな宙返りのゴールパフォーマンスは象徴的なものになりました。"
+        },
+        "ko": {
+          "question": "독일의 공격수 미로슬라프 클로제는 4개 대회 연속으로 득점했습니다. 어느 대회들이었을까요?",
+          "options": [
+            "2002, 2006, 2010, 2014",
+            "1998, 2002, 2006, 2010",
+            "2006, 2010, 2014, 2018",
+            "1994, 1998, 2002, 2006"
+          ],
+          "explanation": "클로제는 4개 대회 연속으로 골을 넣었습니다. 2002년 5골, 2006년 5골, 2010년 4골, 2014년 2골입니다. 폴란드 오폴레에서 태어나 어린 시절 독일로 이주한 그는 이 대회 역사상 가장 많은 골을 기록한 선수 중 한 명이 되었습니다. 그의 트레이드마크인 공중제비 골 세리머니는 상징적인 장면이 되었습니다."
+        },
+        "pt-BR": {
+          "question": "O atacante alemão Miroslav Klose marcou em quatro edições consecutivas. Quais foram elas?",
+          "options": [
+            "2002, 2006, 2010, 2014",
+            "1998, 2002, 2006, 2010",
+            "2006, 2010, 2014, 2018",
+            "1994, 1998, 2002, 2006"
+          ],
+          "explanation": "Klose marcou em quatro edições seguidas: 5 gols em 2002, 5 em 2006, 4 em 2010 e 2 em 2014. Nascido em Opole, na Polônia, mudou-se para a Alemanha ainda criança e se tornou um dos maiores goleadores do torneio. Sua marcante comemoração com um salto mortal acrobático virou um ícone."
+        },
+        "zh-Hans": {
+          "question": "德国前锋米罗斯拉夫·克洛泽连续四届赛事都有进球。是哪四届？",
+          "options": [
+            "2002、2006、2010、2014",
+            "1998、2002、2006、2010",
+            "2006、2010、2014、2018",
+            "1994、1998、2002、2006"
+          ],
+          "explanation": "克洛泽连续四届赛事都有进球：2002年打入5球，2006年5球，2010年4球，2014年2球。他出生于波兰奥波莱，幼年时移居德国，成为该赛事历史上最高产的射手之一。他标志性的空翻进球庆祝动作也成为经典。"
+        }
+      },
+      "i18nSourceHash": "cb1e2f2e9a21c19f"
     },
     {
       "id": "p-baggio-penalty-94",
@@ -12420,7 +12729,110 @@
       ],
       "answer": 0,
       "explanation": "Roberto Baggio blazed his penalty over the crossbar in the 1994 final shootout, giving Brazil a 3-2 victory. It remains one of football's most heartbreaking moments. Despite the miss, Baggio had almost single-handedly carried Italy to the final, scoring 5 goals in the knockout rounds including a last-minute equalizer against Nigeria.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من أهدر ركلة الترجيح الحاسمة في نهائي 1994 ليمنح البرازيل اللقب؟",
+          "options": [
+            "روبرتو باجيو",
+            "فرانكو باريزي",
+            "جوزيبي سيغنوري",
+            "دينو باجيو"
+          ],
+          "explanation": "أطاح روبرتو باجيو بركلته فوق العارضة في نهائي 1994، ليمنح البرازيل الفوز بنتيجة 3-2. وتظل تلك واحدة من أكثر اللحظات إيلامًا في تاريخ كرة القدم. ورغم هذا الإخفاق، كان باجيو قد قاد إيطاليا إلى النهائي بمفرده تقريبًا، مسجلًا 5 أهداف في الأدوار الإقصائية بينها هدف تعادل في الدقائق الأخيرة أمام نيجيريا."
+        },
+        "de": {
+          "question": "Wer verschoss im Elfmeterschießen des Endspiels von 1994 den entscheidenden Strafstoß und schenkte Brasilien den Titel?",
+          "options": [
+            "Roberto Baggio",
+            "Franco Baresi",
+            "Giuseppe Signori",
+            "Dino Baggio"
+          ],
+          "explanation": "Roberto Baggio jagte seinen Elfmeter im Finale 1994 über die Latte und bescherte Brasilien einen 3:2-Sieg. Es bleibt einer der bittersten Momente der Fußballgeschichte. Trotz des Fehlschusses hatte Baggio Italien fast im Alleingang ins Finale geführt und in der K.-o.-Runde 5 Tore erzielt, darunter ein Ausgleich in letzter Minute gegen Nigeria."
+        },
+        "es": {
+          "question": "¿Quién falló el penal decisivo en la tanda de la final de 1994 y le entregó el título a Brasil?",
+          "options": [
+            "Roberto Baggio",
+            "Franco Baresi",
+            "Giuseppe Signori",
+            "Dino Baggio"
+          ],
+          "explanation": "Roberto Baggio mandó su penal por encima del travesaño en la tanda de la final de 1994, dándole a Brasil una victoria por 3 a 2. Sigue siendo uno de los momentos más desgarradores del fútbol. A pesar del fallo, Baggio había llevado a Italia a la final casi en solitario, marcando 5 goles en las rondas eliminatorias, incluido un empate sobre la hora ante Nigeria."
+        },
+        "es-ES": {
+          "question": "¿Quién falló el penalti decisivo en la tanda de la final de 1994 y entregó el título a Brasil?",
+          "options": [
+            "Roberto Baggio",
+            "Franco Baresi",
+            "Giuseppe Signori",
+            "Dino Baggio"
+          ],
+          "explanation": "Roberto Baggio mandó su penalti por encima del larguero en la tanda de la final de 1994, dando a Brasil una victoria por 3 a 2. Sigue siendo uno de los momentos más dolorosos del fútbol. Pese al fallo, Baggio había llevado a Italia a la final casi en solitario, marcando 5 goles en las rondas eliminatorias, incluido un empate en el último minuto ante Nigeria."
+        },
+        "fr": {
+          "question": "Qui a manqué le tir au but décisif lors de la séance de la finale de 1994, offrant le titre au Brésil ?",
+          "options": [
+            "Roberto Baggio",
+            "Franco Baresi",
+            "Giuseppe Signori",
+            "Dino Baggio"
+          ],
+          "explanation": "Roberto Baggio a envoyé son tir au but au-dessus de la barre transversale lors de la séance de la finale de 1994, offrant au Brésil une victoire 3-2. Cela reste l'un des moments les plus déchirants du football. Malgré ce raté, Baggio avait porté l'Italie en finale presque à lui seul, inscrivant 5 buts lors des phases à élimination directe, dont une égalisation à la dernière minute face au Nigeria."
+        },
+        "it": {
+          "question": "Chi sbagliò il rigore decisivo nella lotteria della finale del 1994, consegnando il titolo al Brasile?",
+          "options": [
+            "Roberto Baggio",
+            "Franco Baresi",
+            "Giuseppe Signori",
+            "Dino Baggio"
+          ],
+          "explanation": "Roberto Baggio calciò il suo rigore sopra la traversa nella lotteria della finale del 1994, regalando al Brasile una vittoria per 3-2. Resta uno dei momenti più strazianti del calcio. Nonostante l'errore, Baggio aveva trascinato l'Italia in finale quasi da solo, segnando 5 gol nelle fasi a eliminazione diretta, compreso un pareggio all'ultimo minuto contro la Nigeria."
+        },
+        "ja": {
+          "question": "1994年の決勝のPK戦で決定的なペナルティを外し、ブラジルに優勝をもたらしたのは誰?",
+          "options": [
+            "ロベルト・バッジョ",
+            "フランコ・バレージ",
+            "ジュゼッペ・シニョーリ",
+            "ディノ・バッジョ"
+          ],
+          "explanation": "ロベルト・バッジョは1994年の決勝のPK戦で自身のキックをクロスバーの上に大きく外し、ブラジルに3対2の勝利をもたらしました。これはサッカー史上最も胸が締め付けられる瞬間の一つとして語り継がれています。この失敗にもかかわらず、バッジョはほぼ一人でイタリアを決勝へと導き、ナイジェリア戦での土壇場の同点ゴールを含め、決勝トーナメントで5ゴールを挙げていました。"
+        },
+        "ko": {
+          "question": "1994년 결승 승부차기에서 결정적인 페널티킥을 실축해 브라질에 우승을 안긴 선수는?",
+          "options": [
+            "로베르토 바조",
+            "프랑코 바레시",
+            "주세페 시뇨리",
+            "디노 바조"
+          ],
+          "explanation": "로베르토 바조는 1994년 결승 승부차기에서 자신의 페널티킥을 크로스바 위로 날려보내며 브라질에 3-2 승리를 안겼습니다. 이는 축구 역사상 가장 가슴 아픈 순간 중 하나로 남아 있습니다. 비록 실축했지만, 바조는 거의 혼자 힘으로 이탈리아를 결승까지 이끌었으며, 나이지리아전에서의 막판 동점골을 포함해 토너먼트 라운드에서 5골을 기록했습니다."
+        },
+        "pt-BR": {
+          "question": "Quem perdeu o pênalti decisivo na disputa da final de 1994, entregando o título ao Brasil?",
+          "options": [
+            "Roberto Baggio",
+            "Franco Baresi",
+            "Giuseppe Signori",
+            "Dino Baggio"
+          ],
+          "explanation": "Roberto Baggio mandou sua cobrança por cima do travessão na disputa de pênaltis da final de 1994, dando ao Brasil a vitória por 3 a 2. Esse continua sendo um dos momentos mais dolorosos do futebol. Apesar da falha, Baggio havia carregado a Itália até a final praticamente sozinho, marcando 5 gols nas fases de mata-mata, incluindo um empate nos minutos finais contra a Nigéria."
+        },
+        "zh-Hans": {
+          "question": "在1994年决赛的点球大战中，谁罚丢了决定性的点球，将冠军拱手让给巴西？",
+          "options": [
+            "罗伯托·巴乔",
+            "弗朗哥·巴雷西",
+            "朱塞佩·西尼奥里",
+            "迪诺·巴乔"
+          ],
+          "explanation": "在1994年决赛的点球大战中，罗伯托·巴乔把点球高高射出横梁，使巴西以3比2获胜。这至今仍是足球史上最令人心碎的时刻之一。尽管罚失了这粒点球，巴乔几乎是凭一己之力将意大利带进了决赛，在淘汰赛阶段攻入5球，其中包括对阵尼日利亚时最后时刻的扳平进球。"
+        }
+      },
+      "i18nSourceHash": "abcfc55abfb466c2"
     },
     {
       "id": "t-west-germany-last",
@@ -12434,7 +12846,110 @@
       ],
       "answer": 0,
       "explanation": "West Germany won the 1990 tournament in Italy — their third title — just months before German reunification in October 1990. The unified German team first competed under simply 'Germany' at the 1994 edition in the United States.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ما هي آخر بطولة شاركت فيها ألمانيا تحت اسم 'ألمانيا الغربية' قبل إعادة التوحيد؟",
+          "options": [
+            "1990",
+            "1986",
+            "1994",
+            "1974"
+          ],
+          "explanation": "فازت ألمانيا الغربية ببطولة عام 1990 في إيطاليا — وهو لقبها الثالث — قبل أشهر فقط من إعادة توحيد ألمانيا في أكتوبر 1990. وقد شارك المنتخب الألماني الموحّد لأول مرة تحت اسم 'ألمانيا' فقط في نسخة عام 1994 في الولايات المتحدة."
+        },
+        "de": {
+          "question": "Bei welchem Turnier trat Deutschland zum letzten Mal als „Westdeutschland“ an, bevor es zur Wiedervereinigung kam?",
+          "options": [
+            "1990",
+            "1986",
+            "1994",
+            "1974"
+          ],
+          "explanation": "Westdeutschland gewann das Turnier 1990 in Italien — den dritten Titel — nur wenige Monate vor der deutschen Wiedervereinigung im Oktober 1990. Die vereinte deutsche Mannschaft trat erstmals bei der Ausgabe 1994 in den USA schlicht als „Deutschland“ an."
+        },
+        "es": {
+          "question": "¿Cuál fue el último torneo en el que Alemania participó como 'Alemania Occidental' antes de la reunificación?",
+          "options": [
+            "1990",
+            "1986",
+            "1994",
+            "1974"
+          ],
+          "explanation": "Alemania Occidental ganó el torneo de 1990 en Italia —su tercer título— apenas meses antes de la reunificación alemana en octubre de 1990. El equipo alemán unificado compitió por primera vez simplemente como 'Alemania' en la edición de 1994 en Estados Unidos."
+        },
+        "es-ES": {
+          "question": "¿Cuál fue el último torneo en el que Alemania participó como 'Alemania Occidental' antes de la reunificación?",
+          "options": [
+            "1990",
+            "1986",
+            "1994",
+            "1974"
+          ],
+          "explanation": "Alemania Occidental ganó el torneo de 1990 en Italia —su tercer título— apenas unos meses antes de la reunificación alemana en octubre de 1990. La selección alemana unificada compitió por primera vez simplemente como 'Alemania' en la edición de 1994 en Estados Unidos."
+        },
+        "fr": {
+          "question": "Quel a été le dernier tournoi auquel l'Allemagne a participé sous le nom d'« Allemagne de l'Ouest » avant la réunification ?",
+          "options": [
+            "1990",
+            "1986",
+            "1994",
+            "1974"
+          ],
+          "explanation": "L'Allemagne de l'Ouest a remporté le tournoi de 1990 en Italie — son troisième titre — quelques mois seulement avant la réunification allemande d'octobre 1990. L'équipe allemande unifiée a disputé pour la première fois sous le simple nom d'« Allemagne » l'édition de 1994 aux États-Unis."
+        },
+        "it": {
+          "question": "Qual è stato l'ultimo torneo a cui la Germania ha partecipato come 'Germania Ovest' prima della riunificazione?",
+          "options": [
+            "1990",
+            "1986",
+            "1994",
+            "1974"
+          ],
+          "explanation": "La Germania Ovest vinse il torneo del 1990 in Italia — il suo terzo titolo — appena pochi mesi prima della riunificazione tedesca dell'ottobre 1990. La nazionale tedesca unificata gareggiò per la prima volta semplicemente come 'Germania' nell'edizione del 1994 negli Stati Uniti."
+        },
+        "ja": {
+          "question": "ドイツが統一前に「西ドイツ」として出場した最後の大会はどれですか？",
+          "options": [
+            "1990年",
+            "1986年",
+            "1994年",
+            "1974年"
+          ],
+          "explanation": "西ドイツは1990年のイタリア大会で優勝し、これが3度目のタイトルでした。その数か月後の1990年10月にドイツは再統一されました。統一されたドイツ代表が単に「ドイツ」として初めて出場したのは、1994年のアメリカ大会でした。"
+        },
+        "ko": {
+          "question": "독일이 통일 전 '서독'으로 출전한 마지막 대회는 무엇이었나요?",
+          "options": [
+            "1990년",
+            "1986년",
+            "1994년",
+            "1974년"
+          ],
+          "explanation": "서독은 1990년 이탈리아 대회에서 우승하며 세 번째 우승을 차지했는데, 이는 1990년 10월 독일 통일을 불과 몇 달 앞둔 시점이었습니다. 통일된 독일 대표팀은 1994년 미국 대회에서 처음으로 단순히 '독일'이라는 이름으로 출전했습니다."
+        },
+        "pt-BR": {
+          "question": "Qual foi o último torneio em que a Alemanha participou como 'Alemanha Ocidental' antes da reunificação?",
+          "options": [
+            "1990",
+            "1986",
+            "1994",
+            "1974"
+          ],
+          "explanation": "A Alemanha Ocidental venceu o torneio de 1990 na Itália — seu terceiro título — apenas alguns meses antes da reunificação alemã em outubro de 1990. A seleção alemã unificada competiu pela primeira vez simplesmente como 'Alemanha' na edição de 1994 nos Estados Unidos."
+        },
+        "zh-Hans": {
+          "question": "德国在统一之前以“西德”身份参加的最后一届赛事是哪一届？",
+          "options": [
+            "1990年",
+            "1986年",
+            "1994年",
+            "1974年"
+          ],
+          "explanation": "西德在1990年意大利举办的赛事中夺冠——这是他们的第三个冠军——仅仅几个月后，德国便于1990年10月实现了统一。统一后的德国队首次以简单的“德国”名义参赛是在1994年的美国赛事上。"
+        }
+      },
+      "i18nSourceHash": "f3b65b2f1ea2ced2"
     },
     {
       "id": "t-saudi-2022-upset",
