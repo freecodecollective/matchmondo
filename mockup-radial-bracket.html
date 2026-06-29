@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radial Bracket — Football 2026</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #f5f4f1;
+    --canvas-bg: #eceae5;
+    --gold: #b8942e;
+    --gold-ring: #c9a84c;
+    --gold-glow: rgba(180,140,40,0.12);
+    --spoke: rgba(0,0,0,0.08);
+    --spoke-lit: rgba(0,0,0,0.18);
+    --ring: rgba(0,0,0,0.04);
+    --label: rgba(0,0,0,0.22);
+    --text: #222;
+    --text-dim: rgba(0,0,0,0.4);
+    --node-stroke: rgba(0,0,0,0.12);
+    --node-empty-fill: rgba(0,0,0,0.03);
+    --node-empty-stroke: rgba(0,0,0,0.1);
+    --junction: rgba(0,0,0,0.1);
+    --score: rgba(140,110,30,0.7);
+    --elim-opacity: 0.25;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, system-ui, 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .header {
+    text-align: center;
+    padding: 28px 20px 4px;
+    max-width: 600px;
+  }
+  .header h1 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .header p {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  .tabs {
+    display: flex;
+    gap: 2px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 10px;
+    padding: 3px;
+    margin: 14px auto 6px;
+  }
+  .tab {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.4);
+    background: none;
+    border: none;
+    padding: 7px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .tab.active {
+    background: #fff;
+    color: var(--text);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  .tab:hover:not(.active) { color: rgba(0,0,0,0.6); }
+
+  .version-label {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-align: center;
+    margin: 2px 0 0;
+    font-style: italic;
+  }
+
+  .canvas-wrap {
+    width: 100%;
+    max-width: 860px;
+    aspect-ratio: 1;
+    position: relative;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 20px;
+    background: var(--canvas-bg);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  }
+
+  .legend {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 4px 20px 28px;
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .legend-dot.won { border: 2px solid var(--gold-ring); background: #ddd; }
+  .legend-dot.pending { background: var(--node-empty-fill); border: 1.5px dashed var(--node-empty-stroke); }
+  .legend-dot.out { background: rgba(0,0,0,0.04); border: 1.5px solid rgba(0,0,0,0.06); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Knockout Bracket</h1>
+  <p>Round of 32 through Final &middot; Decided matches show scores</p>
+  <div class="tabs">
+    <button class="tab active" data-mode="stripes">A &middot; Flag Stripes</button>
+    <button class="tab" data-mode="emoji">B &middot; Flag Emoji</button>
+    <button class="tab" data-mode="gradient">C &middot; Gradient</button>
+  </div>
+</div>
+<div class="version-label" id="versionLabel">Accurate flag stripe patterns clipped to circles, country code overlay</div>
+
+<div class="canvas-wrap">
+  <canvas id="bracket"></canvas>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot won"></div> Advancing</div>
+  <div class="legend-item"><div class="legend-dot pending"></div> TBD</div>
+  <div class="legend-item"><div class="legend-dot out"></div> Eliminated</div>
+</div>
+
+<script>
+const canvas = document.getElementById('bracket');
+const ctx = canvas.getContext('2d');
+const DPR = window.devicePixelRatio || 1;
+let currentMode = 'stripes';
+
+const LABELS = {
+  stripes: 'Accurate flag stripe patterns clipped to circles, country code overlay',
+  emoji: 'Native flag emoji with country code — rendering varies by OS',
+  gradient: 'Two-color diagonal gradient per country'
+};
+
+const CODES = {
+  'Mexico':'MEX','South Africa':'RSA','Korea Republic':'KOR','Czechia':'CZE',
+  'Canada':'CAN','Bosnia and Herzegovina':'BIH','Netherlands':'NED','New Zealand':'NZL',
+  'Germany':'GER','Scotland':'SCO','Brazil':'BRA','Japan':'JPN','Paraguay':'PAR',
+  'Curaçao':'CUW','France':'FRA','Uzbekistan':'UZB','Sweden':'SWE','Türkiye':'TUR',
+  "Côte d'Ivoire":'CIV','Iraq':'IRQ','Norway':'NOR','Haiti':'HAI',
+  'USA':'USA','Uruguay':'URU','England':'ENG','Jordan':'JOR',
+  'Ecuador':'ECU','Qatar':'QAT','Congo DR':'COD','IR Iran':'IRN',
+  'Belgium':'BEL','Saudi Arabia':'KSA','Senegal':'SEN','Panama':'PAN',
+  'Spain':'ESP','Tunisia':'TUN','Austria':'AUT','Ghana':'GHA',
+  'Portugal':'POR','Morocco':'MAR','Croatia':'CRO','Colombia':'COL',
+  'Argentina':'ARG','Cabo Verde':'CPV','Switzerland':'SUI','Algeria':'ALG',
+  'Australia':'AUS','Egypt':'EGY'
+};
+
+const EMOJI = {
+  'Mexico':'🇲🇽','South Africa':'🇿🇦','Korea Republic':'🇰🇷','Czechia':'🇨🇿',
+  'Canada':'🇨🇦','Bosnia and Herzegovina':'🇧🇦','Netherlands':'🇳🇱','New Zealand':'🇳🇿',
+  'Germany':'🇩🇪','Scotland':'🏴󠁧󠁢󠁳󠁣󠁴󠁿','Brazil':'🇧🇷','Japan':'🇯🇵','Paraguay':'🇵🇾',
+  'Curaçao':'🇨🇼','France':'🇫🇷','Uzbekistan':'🇺🇿','Sweden':'🇸🇪','Türkiye':'🇹🇷',
+  "Côte d'Ivoire":'🇨🇮','Iraq':'🇮🇶','Norway':'🇳🇴','Haiti':'🇭🇹',
+  'USA':'🇺🇸','Uruguay':'🇺🇾','England':'🏴󠁧󠁢󠁥󠁮󠁧󠁿','Jordan':'🇯🇴',
+  'Ecuador':'🇪🇨','Qatar':'🇶🇦','Congo DR':'🇨🇩','IR Iran':'🇮🇷',
+  'Belgium':'🇧🇪','Saudi Arabia':'🇸🇦','Senegal':'🇸🇳','Panama':'🇵🇦',
+  'Spain':'🇪🇸','Tunisia':'🇹🇳','Austria':'🇦🇹','Ghana':'🇬🇭',
+  'Portugal':'🇵🇹','Morocco':'🇲🇦','Croatia':'🇭🇷','Colombia':'🇨🇴',
+  'Argentina':'🇦🇷','Cabo Verde':'🇨🇻','Switzerland':'🇨🇭','Algeria':'🇩🇿',
+  'Australia':'🇦🇺','Egypt':'🇪🇬'
+};
+
+const FLAGS = {
+  'Mexico':       {t:'v', c:['#006847','#fff','#CE1126']},
+  'South Africa': {t:'sa', c:['#DE3831','#fff','#007A4D','#002395','#FFB612']},
+  'Korea Republic':{t:'japan', c:['#fff','#C60C30']},
+  'Czechia':      {t:'czech', c:['#fff','#D7141A','#11457E']},
+  'Canada':       {t:'canada', c:['#FF0000','#fff']},
+  'Bosnia and Herzegovina':{t:'solid', bg:'#002395', accent:'#FECB00'},
+  'Netherlands':  {t:'h', c:['#AE1C28','#fff','#21468B']},
+  'New Zealand':  {t:'solid', bg:'#00247D', accent:'#CC142B'},
+  'Germany':      {t:'h', c:['#000','#DD0000','#FFCC00']},
+  'Scotland':     {t:'scotland', c:['#005EB8','#fff']},
+  'Brazil':       {t:'brazil', c:['#009B3A','#FEDF00']},
+  'Japan':        {t:'japan', c:['#fff','#BC002D']},
+  'Paraguay':     {t:'h', c:['#D52B1E','#fff','#0038A8']},
+  'Curaçao':      {t:'solid', bg:'#002B7F', accent:'#F9E814'},
+  'France':       {t:'v', c:['#002395','#fff','#ED2939']},
+  'Uzbekistan':   {t:'h', c:['#1EB53A','#fff','#0099B5']},
+  'Sweden':       {t:'sweden', c:['#006AA7','#FECC02']},
+  'Türkiye':      {t:'turkey', c:['#E30A17','#fff']},
+  "Côte d'Ivoire":{t:'v', c:['#F77F00','#fff','#009E60']},
+  'Iraq':         {t:'h', c:['#CE1126','#fff','#007A3D']},
+  'Norway':       {t:'norway', c:['#BA0C2F','#fff','#00205B']},
+  'Haiti':        {t:'h2', c:['#00209F','#D21034']},
+  'USA':          {t:'usa', c:['#3C3B6E','#B22234','#fff']},
+  'Uruguay':      {t:'uruguay', c:['#001489','#fff','#FCD116']},
+  'England':      {t:'england', c:['#fff','#CF081F']},
+  'Jordan':       {t:'jordan', c:['#000','#fff','#007A3D','#CE1126']},
+  'Ecuador':      {t:'ecuador', c:['#FFD100','#034EA2','#CE1126']},
+  'Qatar':        {t:'solid', bg:'#8D1B3D', accent:'#fff'},
+  'Congo DR':     {t:'congo', c:['#007FFF','#CE1021','#FCD116']},
+  'IR Iran':      {t:'h', c:['#239F40','#fff','#DA0000']},
+  'Belgium':      {t:'v', c:['#2D2926','#FDDA24','#EF3340']},
+  'Saudi Arabia': {t:'solid', bg:'#006C35', accent:'#fff'},
+  'Senegal':      {t:'v', c:['#00853F','#FDEF42','#E31B23']},
+  'Panama':       {t:'panama', c:['#fff','#DA121A','#003DA5']},
+  'Spain':        {t:'spain', c:['#AA151B','#F1BF00']},
+  'Tunisia':      {t:'solid', bg:'#E70013', accent:'#fff'},
+  'Austria':      {t:'h', c:['#ED2939','#fff','#ED2939']},
+  'Ghana':        {t:'h', c:['#EF3340','#FCD116','#009739']},
+  'Portugal':     {t:'portugal', c:['#006600','#FF0000','#FFCC00']},
+  'Morocco':      {t:'solid', bg:'#C1272D', accent:'#006233'},
+  'Croatia':      {t:'h', c:['#FF0000','#fff','#171796']},
+  'Colombia':     {t:'colombia', c:['#FCD116','#003893','#CE1126']},
+  'Argentina':    {t:'h', c:['#74ACDF','#fff','#74ACDF']},
+  'Cabo Verde':   {t:'caboverde', c:['#003893','#fff','#CF2027','#FCD116']},
+  'Switzerland':  {t:'swiss', c:['#FF0000','#fff']},
+  'Algeria':      {t:'v2', c:['#006233','#fff']},
+  'Australia':    {t:'solid', bg:'#00008B', accent:'#fff'},
+  'Egypt':        {t:'h', c:['#CE1126','#fff','#000']},
+};
+
+const GRAD_COLORS = {
+  'Mexico':['#006847','#CE1126'],'South Africa':['#007749','#FFB81C'],
+  'Korea Republic':['#C60C30','#003478'],'Czechia':['#11457E','#D7141A'],
+  'Canada':['#FF0000','#FFFFFF'],'Bosnia and Herzegovina':['#002395','#FECB00'],
+  'Netherlands':['#AE1C28','#21468B'],'New Zealand':['#00247D','#CC142B'],
+  'Germany':['#DD0000','#FFCC00'],'Scotland':['#005EB8','#FFFFFF'],
+  'Brazil':['#009B3A','#FEDF00'],'Japan':['#BC002D','#FFFFFF'],
+  'Paraguay':['#D52B1E','#0038A8'],'Curaçao':['#002B7F','#F9E814'],
+  'France':['#002395','#ED2939'],'Uzbekistan':['#1EB53A','#0099B5'],
+  'Sweden':['#006AA7','#FECC02'],'Türkiye':['#E30A17','#FFFFFF'],
+  "Côte d'Ivoire":['#F77F00','#009E60'],'Iraq':['#CE1126','#007A3D'],
+  'Norway':['#BA0C2F','#00205B'],'Haiti':['#00209F','#D21034'],
+  'USA':['#3C3B6E','#B22234'],'Uruguay':['#001489','#5BCEFA'],
+  'England':['#FFFFFF','#CF081F'],'Jordan':['#007A3D','#CE1126'],
+  'Ecuador':['#FFD100','#034EA2'],'Qatar':['#8D1B3D','#FFFFFF'],
+  'Congo DR':['#007FFF','#CE1021'],'IR Iran':['#239F40','#DA0000'],
+  'Belgium':['#2D2926','#FDDA24'],'Saudi Arabia':['#006C35','#FFFFFF'],
+  'Senegal':['#00853F','#FDEF42'],'Panama':['#DA121A','#003DA5'],
+  'Spain':['#AA151B','#F1BF00'],'Tunisia':['#E70013','#FFFFFF'],
+  'Austria':['#ED2939','#FFFFFF'],'Ghana':['#006B3F','#FCD116'],
+  'Portugal':['#006600','#FF0000'],'Morocco':['#C1272D','#006233'],
+  'Croatia':['#FF0000','#171796'],'Colombia':['#FCD116','#003893'],
+  'Argentina':['#74ACDF','#F6B40E'],'Cabo Verde':['#003893','#CF2027'],
+  'Switzerland':['#FF0000','#FFFFFF'],'Algeria':['#006233','#D21034'],
+  'Australia':['#00008B','#FFCD00'],'Egypt':['#CE1126','#000000']
+};
+
+const R32 = [
+  {home:'South Africa', away:'Canada', sh:0, sa:1},
+  {home:'Germany', away:'Paraguay', sh:0, sa:1},
+  {home:'Brazil', away:'Japan', sh:2, sa:1},
+  {home:'Netherlands', away:'Morocco', sh:null, sa:null},
+  {home:'France', away:'Sweden', sh:null, sa:null},
+  {home:"Côte d'Ivoire", away:'Norway', sh:null, sa:null},
+  {home:'Mexico', away:'Ecuador', sh:null, sa:null},
+  {home:'England', away:'Congo DR', sh:null, sa:null},
+  {home:'USA', away:'Bosnia and Herzegovina', sh:null, sa:null},
+  {home:'Belgium', away:'Senegal', sh:null, sa:null},
+  {home:'Spain', away:'Austria', sh:null, sa:null},
+  {home:'Portugal', away:'Croatia', sh:null, sa:null},
+  {home:'Argentina', away:'Cabo Verde', sh:null, sa:null},
+  {home:'Switzerland', away:'Algeria', sh:null, sa:null},
+  {home:'Colombia', away:'Ghana', sh:null, sa:null},
+  {home:'Australia', away:'Egypt', sh:null, sa:null},
+];
+
+const R16_KNOWN = ['Canada','Paraguay','Brazil',null,null,null,null,null];
+
+// ── Drawing helpers ──
+
+function polar(cx, cy, r, deg) {
+  const rad = (deg - 90) * Math.PI / 180;
+  return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
+}
+
+function drawLine(x1, y1, x2, y2, color, width) {
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.lineTo(x2, y2);
+  ctx.strokeStyle = color;
+  ctx.lineWidth = width || 1;
+  ctx.stroke();
+}
+
+function drawRing(cx, cy, r) {
+  ctx.beginPath();
+  ctx.arc(cx, cy, r, 0, Math.PI * 2);
+  ctx.strokeStyle = 'rgba(0,0,0,0.04)';
+  ctx.lineWidth = 0.5;
+  ctx.stroke();
+}
+
+function drawJunction(x, y) {
+  ctx.beginPath();
+  ctx.arc(x, y, 2.5, 0, Math.PI * 2);
+  ctx.fillStyle = 'rgba(0,0,0,0.1)';
+  ctx.fill();
+}
+
+function drawEmptyNode(x, y, r) {
+  ctx.beginPath();
+  ctx.arc(x, y, r, 0, Math.PI * 2);
+  ctx.fillStyle = 'rgba(0,0,0,0.02)';
+  ctx.fill();
+  ctx.setLineDash([3, 4]);
+  ctx.strokeStyle = 'rgba(0,0,0,0.1)';
+  ctx.lineWidth = 1;
+  ctx.stroke();
+  ctx.setLineDash([]);
+}
+
+function drawScore(x, y, sh, sa) {
+  ctx.font = '700 7px -apple-system, system-ui, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillStyle = 'rgba(140,110,30,0.75)';
+  ctx.fillText(sh + '–' + sa, x, y);
+}
+
+// ── Flag renderers ──
+
+function drawFlagStripes(x, y, r, team) {
+  const f = FLAGS[team];
+  if (!f) { drawFlagGradient(x, y, r, team); return; }
+
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(x, y, r, 0, Math.PI * 2);
+  ctx.clip();
+
+  const d = r * 2;
+  const l = x - r, t = y - r;
+
+  switch(f.t) {
+    case 'h':
+      ctx.fillStyle = f.c[0]; ctx.fillRect(l, t, d, d/3);
+      ctx.fillStyle = f.c[1]; ctx.fillRect(l, t + d/3, d, d/3);
+      ctx.fillStyle = f.c[2]; ctx.fillRect(l, t + 2*d/3, d, d/3 + 1);
+      break;
+    case 'h2':
+      ctx.fillStyle = f.c[0]; ctx.fillRect(l, t, d, d/2);
+      ctx.fillStyle = f.c[1]; ctx.fillRect(l, t + d/2, d, d/2);
+      break;
+    case 'v':
+      ctx.fillStyle = f.c[0]; ctx.fillRect(l, t, d/3, d);
+      ctx.fillStyle = f.c[1]; ctx.fillRect(l + d/3, t, d/3, d);
+      ctx.fillStyle = f.c[2]; ctx.fillRect(l + 2*d/3, t, d/3 + 1, d);
+      break;
+    case 'v2':
+      ctx.fillStyle = f.c[0]; ctx.fillRect(l, t, d/2, d);
+      ctx.fillStyle = f.c[1]; ctx.fillRect(l + d/2, t, d/2, d);
+      break;
+    case 'solid':
+      ctx.fillStyle = f.bg; ctx.fillRect(l, t, d, d);
+      if (f.accent) {
+        ctx.fillStyle = f.accent;
+        ctx.beginPath(); ctx.arc(x, y, r*0.32, 0, Math.PI*2); ctx.fill();
+      }
+      break;
+    case 'japan':
+      ctx.fillStyle = f.c[0]; ctx.fillRect(l, t, d, d);
+      ctx.fillStyle = f.c[1];
+      ctx.beginPath(); ctx.arc(x, y, r*0.38, 0, Math.PI*2); ctx.fill();
+      break;
+    case 'czech':
+      ctx.fillStyle = '#fff'; ctx.fillRect(l, t, d, d/2);
+      ctx.fillStyle = '#D7141A'; ctx.fillRect(l, t + d/2, d, d/2);
+      ctx.fillStyle = '#11457E';
+      ctx.beginPath(); ctx.moveTo(l, t); ctx.lineTo(x, y); ctx.lineTo(l, t+d); ctx.fill();
+      break;
+    case 'canada':
+      ctx.fillStyle = '#FF0000'; ctx.fillRect(l, t, d*0.25, d);
+      ctx.fillStyle = '#fff'; ctx.fillRect(l + d*0.25, t, d*0.5, d);
+      ctx.fillStyle = '#FF0000'; ctx.fillRect(l + d*0.75, t, d*0.25, d);
+      ctx.fillStyle = '#FF0000';
+      ctx.beginPath();
+      ctx.moveTo(x, y-r*0.32); ctx.lineTo(x+r*0.18, y); ctx.lineTo(x, y+r*0.32); ctx.lineTo(x-r*0.18, y);
+      ctx.fill();
+      break;
+    case 'norway':
+      ctx.fillStyle = '#BA0C2F'; ctx.fillRect(l, t, d, d);
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(l + d*0.28, t, d*0.18, d);
+      ctx.fillRect(l, t + d*0.39, d, d*0.22);
+      ctx.fillStyle = '#00205B';
+      ctx.fillRect(l + d*0.32, t, d*0.1, d);
+      ctx.fillRect(l, t + d*0.43, d, d*0.14);
+      break;
+    case 'sweden':
+      ctx.fillStyle = '#006AA7'; ctx.fillRect(l, t, d, d);
+      ctx.fillStyle = '#FECC02';
+      ctx.fillRect(l + d*0.28, t, d*0.16, d);
+      ctx.fillRect(l, t + d*0.4, d, d*0.2);
+      break;
+    case 'scotland':
+      ctx.fillStyle = '#005EB8'; ctx.fillRect(l, t, d, d);
+      ctx.fillStyle = '#fff';
+      ctx.lineWidth = r*0.15;
+      ctx.strokeStyle = '#fff';
+      ctx.beginPath(); ctx.moveTo(l, t); ctx.lineTo(l+d, t+d); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(l+d, t); ctx.lineTo(l, t+d); ctx.stroke();
+      break;
+    case 'england':
+      ctx.fillStyle = '#fff'; ctx.fillRect(l, t, d, d);
+      ctx.fillStyle = '#CF081F';
+      ctx.fillRect(l + d*0.43, t, d*0.14, d);
+      ctx.fillRect(l, t + d*0.43, d, d*0.14);
+      break;
+    case 'usa':
+      for (let s = 0; s < 13; s++) {
+        ctx.fillStyle = s%2===0 ? '#B22234' : '#fff';
+        ctx.fillRect(l, t + s*d/13, d, d/13 + 1);
+      }
+      ctx.fillStyle = '#3C3B6E';
+      ctx.fillRect(l, t, d*0.45, d*0.54);
+      break;
+    case 'uruguay':
+      for (let s = 0; s < 9; s++) {
+        ctx.fillStyle = s%2===0 ? '#fff' : '#001489';
+        ctx.fillRect(l, t + s*d/9, d, d/9 + 1);
+      }
+      ctx.fillStyle = '#fff'; ctx.fillRect(l, t, d*0.4, d*0.56);
+      ctx.fillStyle = '#FCD116';
+      ctx.beginPath(); ctx.arc(l+d*0.2, t+d*0.28, r*0.16, 0, Math.PI*2); ctx.fill();
+      break;
+    case 'spain':
+      ctx.fillStyle = '#AA151B'; ctx.fillRect(l, t, d, d*0.25);
+      ctx.fillStyle = '#F1BF00'; ctx.fillRect(l, t+d*0.25, d, d*0.5);
+      ctx.fillStyle = '#AA151B'; ctx.fillRect(l, t+d*0.75, d, d*0.25);
+      break;
+    case 'portugal':
+      ctx.fillStyle = '#006600'; ctx.fillRect(l, t, d*0.4, d);
+      ctx.fillStyle = '#FF0000'; ctx.fillRect(l+d*0.4, t, d*0.6, d);
+      ctx.fillStyle = '#FFCC00';
+      ctx.beginPath(); ctx.arc(l+d*0.4, y, r*0.22, 0, Math.PI*2); ctx.fill();
+      break;
+    case 'panama':
+      ctx.fillStyle = '#fff'; ctx.fillRect(l, t, d, d);
+      ctx.fillStyle = '#DA121A'; ctx.fillRect(l+d/2, t, d/2, d/2);
+      ctx.fillStyle = '#003DA5'; ctx.fillRect(l, t+d/2, d/2, d/2);
+      ctx.fillStyle = '#003DA5';
+      ctx.beginPath(); ctx.arc(l+d*0.25, t+d*0.25, r*0.1, 0, Math.PI*2); ctx.fill();
+      ctx.fillStyle = '#DA121A';
+      ctx.beginPath(); ctx.arc(l+d*0.75, t+d*0.75, r*0.1, 0, Math.PI*2); ctx.fill();
+      break;
+    case 'colombia':
+      ctx.fillStyle = '#FCD116'; ctx.fillRect(l, t, d, d/2);
+      ctx.fillStyle = '#003893'; ctx.fillRect(l, t+d/2, d, d/4);
+      ctx.fillStyle = '#CE1126'; ctx.fillRect(l, t+d*0.75, d, d/4);
+      break;
+    case 'ecuador':
+      ctx.fillStyle = '#FFD100'; ctx.fillRect(l, t, d, d/2);
+      ctx.fillStyle = '#034EA2'; ctx.fillRect(l, t+d/2, d, d/4);
+      ctx.fillStyle = '#CE1126'; ctx.fillRect(l, t+d*0.75, d, d/4);
+      break;
+    case 'brazil':
+      ctx.fillStyle = '#009B3A'; ctx.fillRect(l, t, d, d);
+      ctx.fillStyle = '#FEDF00';
+      ctx.beginPath();
+      ctx.moveTo(x, t+d*0.12); ctx.lineTo(l+d*0.9, y);
+      ctx.lineTo(x, t+d*0.88); ctx.lineTo(l+d*0.1, y);
+      ctx.fill();
+      ctx.fillStyle = '#002776';
+      ctx.beginPath(); ctx.arc(x, y, r*0.28, 0, Math.PI*2); ctx.fill();
+      break;
+    case 'turkey':
+      ctx.fillStyle = '#E30A17'; ctx.fillRect(l, t, d, d);
+      ctx.fillStyle = '#fff';
+      ctx.beginPath(); ctx.arc(x-r*0.08, y, r*0.3, 0, Math.PI*2); ctx.fill();
+      ctx.fillStyle = '#E30A17';
+      ctx.beginPath(); ctx.arc(x+r*0.03, y, r*0.22, 0, Math.PI*2); ctx.fill();
+      break;
+    case 'jordan':
+      ctx.fillStyle = '#000'; ctx.fillRect(l, t, d, d/3);
+      ctx.fillStyle = '#fff'; ctx.fillRect(l, t+d/3, d, d/3);
+      ctx.fillStyle = '#007A3D'; ctx.fillRect(l, t+2*d/3, d, d/3);
+      ctx.fillStyle = '#CE1126';
+      ctx.beginPath(); ctx.moveTo(l, t); ctx.lineTo(l+d*0.4, y); ctx.lineTo(l, t+d); ctx.fill();
+      break;
+    case 'congo':
+      ctx.fillStyle = '#007FFF'; ctx.fillRect(l, t, d, d);
+      ctx.fillStyle = '#FCD116'; ctx.lineWidth = r*0.22;
+      ctx.strokeStyle = '#FCD116';
+      ctx.beginPath(); ctx.moveTo(l, t+d); ctx.lineTo(l+d, t); ctx.stroke();
+      ctx.fillStyle = '#CE1021'; ctx.lineWidth = r*0.12;
+      ctx.strokeStyle = '#CE1021';
+      ctx.beginPath(); ctx.moveTo(l, t+d*0.85); ctx.lineTo(l+d*0.85, t); ctx.stroke();
+      break;
+    case 'swiss':
+      ctx.fillStyle = '#FF0000'; ctx.fillRect(l, t, d, d);
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(x-r*0.1, y-r*0.35, r*0.2, r*0.7);
+      ctx.fillRect(x-r*0.35, y-r*0.1, r*0.7, r*0.2);
+      break;
+    case 'sa': // South Africa
+      ctx.fillStyle = '#002395'; ctx.fillRect(l, t, d, d/2);
+      ctx.fillStyle = '#DE3831'; ctx.fillRect(l, t, d, d*0.17);
+      ctx.fillStyle = '#007A4D'; ctx.fillRect(l, t+d*0.83, d, d*0.17);
+      ctx.fillStyle = '#FFB612'; ctx.fillRect(l, t+d/2, d, d/2);
+      // Y shape simplified
+      ctx.fillStyle = '#007A4D';
+      ctx.beginPath(); ctx.moveTo(l, t+d*0.2); ctx.lineTo(x-r*0.1, y);
+      ctx.lineTo(l+d, y-d*0.15); ctx.lineTo(l+d, y+d*0.15);
+      ctx.lineTo(x-r*0.1, y); ctx.lineTo(l, t+d*0.8); ctx.fill();
+      break;
+    case 'caboverde':
+      ctx.fillStyle = '#003893'; ctx.fillRect(l, t, d, d);
+      ctx.fillStyle = '#fff'; ctx.fillRect(l, t+d*0.6, d, d*0.04);
+      ctx.fillStyle = '#CF2027'; ctx.fillRect(l, t+d*0.66, d, d*0.1);
+      ctx.fillStyle = '#fff'; ctx.fillRect(l, t+d*0.78, d, d*0.04);
+      break;
+    default:
+      ctx.fillStyle = f.bg || '#888'; ctx.fillRect(l, t, d, d);
+  }
+
+  ctx.restore();
+}
+
+function drawFlagEmoji(x, y, r, team) {
+  const emoji = EMOJI[team];
+  if (!emoji) return;
+  ctx.save();
+  ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI*2);
+  ctx.fillStyle = '#e8e6e1'; ctx.fill();
+  ctx.strokeStyle = 'rgba(0,0,0,0.1)'; ctx.lineWidth = 1; ctx.stroke();
+  ctx.font = r * 1.3 + 'px serif';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(emoji, x, y + 1);
+  ctx.restore();
+}
+
+function drawFlagGradient(x, y, r, team) {
+  const colors = GRAD_COLORS[team] || ['#888','#aaa'];
+  const grad = ctx.createLinearGradient(x-r, y-r, x+r, y+r);
+  grad.addColorStop(0, colors[0]); grad.addColorStop(1, colors[1]);
+  ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI*2);
+  ctx.fillStyle = grad; ctx.fill();
+}
+
+function drawTeamNode(x, y, team, r, state) {
+  ctx.save();
+  if (state === 'eliminated') ctx.globalAlpha = 0.25;
+
+  if (currentMode === 'stripes') drawFlagStripes(x, y, r, team);
+  else if (currentMode === 'emoji') drawFlagEmoji(x, y, r, team);
+  else drawFlagGradient(x, y, r, team);
+
+  // Outer stroke
+  ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI*2);
+  if (state === 'winner') {
+    ctx.strokeStyle = '#b8942e'; ctx.lineWidth = 2.5; ctx.stroke();
+    ctx.beginPath(); ctx.arc(x, y, r+3, 0, Math.PI*2);
+    ctx.strokeStyle = 'rgba(180,140,40,0.3)'; ctx.lineWidth = 1; ctx.stroke();
+  } else if (currentMode !== 'emoji') {
+    ctx.strokeStyle = 'rgba(0,0,0,0.15)'; ctx.lineWidth = 1; ctx.stroke();
+  }
+
+  // Country code
+  const code = CODES[team] || team.slice(0,3).toUpperCase();
+  const fontSize = r * 0.68;
+  ctx.font = '900 ' + fontSize + 'px -apple-system, system-ui, sans-serif';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+
+  if (currentMode === 'emoji') {
+    ctx.font = '800 ' + (r*0.5) + 'px -apple-system, system-ui, sans-serif';
+    ctx.fillStyle = state === 'eliminated' ? 'rgba(0,0,0,0.2)' : 'rgba(0,0,0,0.55)';
+    ctx.fillText(code, x, y + r + r*0.55);
+  } else {
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = 'rgba(0,0,0,0.45)';
+    ctx.strokeText(code, x, y);
+    ctx.fillStyle = '#fff';
+    ctx.fillText(code, x, y);
+  }
+
+  ctx.restore();
+}
+
+// ── Main draw ──
+
+function draw() {
+  const rect = canvas.parentElement.getBoundingClientRect();
+  const size = Math.min(rect.width, rect.height);
+  canvas.width = size * DPR;
+  canvas.height = size * DPR;
+  canvas.style.width = size + 'px';
+  canvas.style.height = size + 'px';
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  ctx.clearRect(0, 0, size, size);
+
+  const CX = size/2, CY = size/2, s = size/860;
+  const R_R32 = 390*s, R_R16 = 290*s, R_QF = 205*s, R_SF = 140*s;
+  const nR32 = 19*s, nR16 = 15*s, nQF = 14*s, nSF = 13*s;
+  const pairSpan = 10;
+
+  // Rings
+  [R_R16, R_QF, R_SF].forEach(function(r) { drawRing(CX, CY, r); });
+
+  // Center glow
+  var glow = ctx.createRadialGradient(CX, CY, 0, CX, CY, 100*s);
+  glow.addColorStop(0, 'rgba(180,140,40,0.1)');
+  glow.addColorStop(0.6, 'rgba(180,140,40,0.03)');
+  glow.addColorStop(1, 'rgba(180,140,40,0)');
+  ctx.beginPath(); ctx.arc(CX, CY, 100*s, 0, Math.PI*2);
+  ctx.fillStyle = glow; ctx.fill();
+
+  // ── Spokes (behind nodes) ──
+  var r32J = [];
+  for (var i = 0; i < 16; i++) {
+    var base = i*360/16;
+    var hp = polar(CX,CY,R_R32, base-pairSpan/2);
+    var ap = polar(CX,CY,R_R32, base+pairSpan/2);
+    var jp = polar(CX,CY,R_R32-36*s, base);
+    var decided = R32[i].sh !== null;
+    var lc = decided ? 'rgba(0,0,0,0.14)' : 'rgba(0,0,0,0.06)';
+    drawLine(hp[0],hp[1],jp[0],jp[1],lc,1);
+    drawLine(ap[0],ap[1],jp[0],jp[1],lc,1);
+    r32J.push({x:jp[0],y:jp[1],decided:decided});
+  }
+
+  var r16P = [];
+  for (var i = 0; i < 8; i++) {
+    var angle = i*360/8 + 360/32;
+    var p = polar(CX,CY,R_R16,angle);
+    var j1 = r32J[i*2], j2 = r32J[i*2+1];
+    drawLine(j1.x,j1.y,p[0],p[1], j1.decided?'rgba(0,0,0,0.12)':'rgba(0,0,0,0.05)',1);
+    drawLine(j2.x,j2.y,p[0],p[1], j2.decided?'rgba(0,0,0,0.12)':'rgba(0,0,0,0.05)',1);
+    r16P.push(p);
+  }
+
+  var qfP = [];
+  for (var i = 0; i < 4; i++) {
+    var angle = i*360/4 + 360/16 + 360/32;
+    var p = polar(CX,CY,R_QF,angle);
+    drawLine(r16P[i*2][0],r16P[i*2][1],p[0],p[1],'rgba(0,0,0,0.04)',0.8);
+    drawLine(r16P[i*2+1][0],r16P[i*2+1][1],p[0],p[1],'rgba(0,0,0,0.04)',0.8);
+    qfP.push(p);
+  }
+
+  var sfP = [];
+  for (var i = 0; i < 2; i++) {
+    var angle = i*360/2 + 360/8 + 360/32;
+    var p = polar(CX,CY,R_SF,angle);
+    drawLine(qfP[i*2][0],qfP[i*2][1],p[0],p[1],'rgba(0,0,0,0.04)',0.8);
+    drawLine(qfP[i*2+1][0],qfP[i*2+1][1],p[0],p[1],'rgba(0,0,0,0.04)',0.8);
+    sfP.push(p);
+  }
+
+  sfP.forEach(function(sf) { drawLine(sf[0],sf[1],CX,CY,'rgba(180,140,40,0.1)',0.8); });
+
+  // ── Nodes ──
+  for (var i = 0; i < 16; i++) {
+    var base = i*360/16;
+    var hp = polar(CX,CY,R_R32,base-pairSpan/2);
+    var ap = polar(CX,CY,R_R32,base+pairSpan/2);
+    var m = R32[i];
+    var hw = m.sh!==null && m.sh>m.sa;
+    var aw = m.sh!==null && m.sa>m.sh;
+    drawTeamNode(hp[0],hp[1],m.home,nR32, hw?'winner':(aw?'eliminated':'normal'));
+    drawTeamNode(ap[0],ap[1],m.away,nR32, aw?'winner':(hw?'eliminated':'normal'));
+    drawJunction(r32J[i].x, r32J[i].y);
+    if (m.sh !== null) {
+      var sp = polar(CX,CY,R_R32-18*s,base);
+      drawScore(sp[0],sp[1],m.sh,m.sa);
+    }
+  }
+
+  for (var i = 0; i < 8; i++) {
+    var team = R16_KNOWN[i];
+    if (team) drawTeamNode(r16P[i][0],r16P[i][1],team,nR16,'normal');
+    else drawEmptyNode(r16P[i][0],r16P[i][1],nR16);
+  }
+
+  qfP.forEach(function(p) { drawEmptyNode(p[0],p[1],nQF); });
+  sfP.forEach(function(p) { drawEmptyNode(p[0],p[1],nSF); });
+
+  // Trophy
+  ctx.font = (32*s) + 'px serif';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText('\u{1F3C6}', CX, CY - 4*s);
+  ctx.font = '700 ' + (8*s) + 'px -apple-system, system-ui, sans-serif';
+  ctx.fillStyle = 'rgba(160,125,30,0.55)';
+  ctx.fillText('FINAL', CX, CY + 22*s);
+
+  // Round labels
+  ctx.font = '700 ' + (7.5*s) + 'px -apple-system, system-ui, sans-serif';
+  ctx.fillStyle = 'rgba(0,0,0,0.18)';
+  ctx.textAlign = 'center';
+  [[R_R32+22*s,'ROUND OF 32'],[R_R16+16*s,'ROUND OF 16'],
+   [R_QF+14*s,'QUARTER-FINALS'],[R_SF+12*s,'SEMI-FINALS']].forEach(function(pair) {
+    var p = polar(CX,CY,pair[0],270);
+    ctx.fillText(pair[1], p[0], p[1]);
+  });
+}
+
+// ── Tab switching ──
+document.querySelectorAll('.tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+    tab.classList.add('active');
+    currentMode = tab.dataset.mode;
+    document.getElementById('versionLabel').textContent = LABELS[currentMode];
+    draw();
+  });
+});
+
+draw();
+window.addEventListener('resize', draw);
+</script>
+
+</body>
+</html>
