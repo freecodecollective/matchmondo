@@ -293,10 +293,8 @@ def leaderboard(code):
     if st != 200:
         return None
     grp = parse(grp_doc)
-    pool_type = grp.get("type", "both")
     pred_exact = int(grp.get("predExact", 3))
     pred_result = int(grp.get("predResult", 1))
-    trivia_pts = int(grp.get("triviaCorrect", 1))
     pool_start = grp.get("startDate")
 
     st, ml = fs("GET", f"/groups/{code}/members", params={"pageSize": "300"})
@@ -306,35 +304,18 @@ def leaderboard(code):
         did = mdoc["name"].split("/")[-1]
         info = parse(mdoc)
         member_joined = info.get("joinedAt", "")
-        effective_start = max(pool_start or "", member_joined) or None
+        effective_start = pool_start or None
 
         st_u, udoc = fs("GET", f"/users/{did}")
         user_info = parse(udoc) if st_u == 200 else {}
         live_name = user_info.get("displayName") or info.get("displayName", "?")
 
-        predict = 0
-        trivia = 0
-        exact = 0
-        pred_results = 0
-        graded = 0
-
-        if pool_type in ("predictions", "both"):
-            pp = predict_points_pool(did, effective_start, pred_exact, pred_result)
-            predict = pp["points"]
-            exact = pp["exact"]
-            pred_results = pp["results"]
-            graded = pp["graded"]
-
-        if pool_type in ("trivia", "both"):
-            user_trivia = int(user_info.get("triviaCorrect", 0))
-            baseline = int(info.get("triviaBaseline", 0))
-            trivia = max(0, user_trivia - baseline) * trivia_pts
+        pp = predict_points_pool(did, effective_start, pred_exact, pred_result)
 
         rows.append({
             "displayName": live_name,
-            "predict": predict, "trivia": trivia,
-            "points": predict + trivia,
-            "exact": exact, "results": pred_results, "graded": graded,
+            "points": pp["points"],
+            "exact": pp["exact"], "results": pp["results"], "graded": pp["graded"],
         })
     rows.sort(key=lambda r: (-r["points"], -r["exact"], r["displayName"].lower()))
     for i, r in enumerate(rows):
@@ -434,6 +415,9 @@ class Handler(BaseHTTPRequestHandler):
             return self.group_get(parts[2])
         if len(parts) == 4 and parts[:2] == ["api", "groups"] and parts[3] == "leaderboard":
             return self.leaderboard_get(parts[2])
+        if len(parts) == 4 and parts[:2] == ["api", "groups"] and parts[3] == "match-picks":
+            q = urllib.parse.parse_qs(u.query)
+            return self.match_picks_get(parts[2], (q.get("matchN") or [""])[0])
         self.send_json(404, {"error": "not found"})
 
     def do_POST(self):
@@ -543,23 +527,18 @@ class Handler(BaseHTTPRequestHandler):
         dn = (body.get("displayName") or "Host").strip()[:40]
         if not did:
             return self.send_json(400, {"error": "deviceId required"})
-        pool_type = body.get("type", "both")
-        if pool_type not in ("predictions", "trivia", "both"):
-            pool_type = "both"
         pred_exact = max(0, min(10, int(body.get("predExact", 3))))
         pred_result = max(0, min(10, int(body.get("predResult", 1))))
-        trivia_correct = max(0, min(10, int(body.get("triviaCorrect", 1))))
         start_date = (body.get("startDate") or "").strip()[:24]
 
+        icon = (body.get("icon") or "⚽").strip()[:8]
         code = None
         for _ in range(10):
             cand = f"{random.choice(ADJ)}-{random.choice(ANIM)}"
-            icon = (body.get("icon") or "⚽").strip()[:8]
-        doc = {
+            doc = {
                 "name": name, "createdAt": now_iso(), "createdBy": did,
-                "type": pool_type, "icon": icon,
+                "type": "predictions", "icon": icon,
                 "predExact": pred_exact, "predResult": pred_result,
-                "triviaCorrect": trivia_correct,
             }
             if start_date:
                 doc["startDate"] = start_date
@@ -571,14 +550,8 @@ class Handler(BaseHTTPRequestHandler):
                 break
         if not code:
             return self.send_json(500, {"error": "could not allocate a code, try again"})
-        # Snapshot trivia baseline for the creator
-        trivia_baseline = 0
-        st2, udoc = fs("GET", f"/users/{did}")
-        if st2 == 200:
-            trivia_baseline = int(parse(udoc).get("triviaCorrect", 0))
         fs("PATCH", f"/groups/{code}/members/{did}",
-           body=docbody({"displayName": dn, "joinedAt": now_iso(),
-                         "triviaBaseline": trivia_baseline}))
+           body=docbody({"displayName": dn, "joinedAt": now_iso()}))
         self.send_json(200, {"code": code, "name": name})
 
     def group_get(self, code):
@@ -590,11 +563,9 @@ class Handler(BaseHTTPRequestHandler):
         n = len(ml.get("documents", [])) if st == 200 else 0
         self.send_json(200, {
             "code": code, "name": d.get("name"), "members": n,
-            "type": d.get("type", "both"),
             "icon": d.get("icon", "⚽"),
             "predExact": int(d.get("predExact", 3)),
             "predResult": int(d.get("predResult", 1)),
-            "triviaCorrect": int(d.get("triviaCorrect", 1)),
             "startDate": d.get("startDate", ""),
             "createdBy": d.get("createdBy", ""),
         })
@@ -607,13 +578,8 @@ class Handler(BaseHTTPRequestHandler):
         st, _ = fs("GET", f"/groups/{code}")
         if st != 200:
             return self.send_json(404, {"error": "group not found"})
-        trivia_baseline = 0
-        st2, udoc = fs("GET", f"/users/{did}")
-        if st2 == 200:
-            trivia_baseline = int(parse(udoc).get("triviaCorrect", 0))
         fs("PATCH", f"/groups/{code}/members/{did}",
-           body=docbody({"displayName": dn, "joinedAt": now_iso(),
-                         "triviaBaseline": trivia_baseline}))
+           body=docbody({"displayName": dn, "joinedAt": now_iso()}))
         self.send_json(200, {"ok": True, "code": code})
 
     def group_delete(self, code, did):
@@ -645,14 +611,10 @@ class Handler(BaseHTTPRequestHandler):
             return self.send_json(403, {"error": "only the pool creator can edit it"})
         if "name" in body:
             d["name"] = (body["name"] or "My Pool").strip()[:60]
-        if "type" in body and body["type"] in ("predictions", "trivia", "both"):
-            d["type"] = body["type"]
         if "predExact" in body:
             d["predExact"] = max(0, min(10, int(body["predExact"])))
         if "predResult" in body:
             d["predResult"] = max(0, min(10, int(body["predResult"])))
-        if "triviaCorrect" in body:
-            d["triviaCorrect"] = max(0, min(10, int(body["triviaCorrect"])))
         if "startDate" in body:
             d["startDate"] = (body["startDate"] or "").strip()[:24]
         if "icon" in body:
@@ -713,11 +675,9 @@ class Handler(BaseHTTPRequestHandler):
                 pools.append({
                     "code": gcode, "name": g.get("name", ""),
                     "members": n,
-                    "type": g.get("type", "both"),
                     "icon": g.get("icon", "⚽"),
                     "predExact": int(g.get("predExact", 3)),
                     "predResult": int(g.get("predResult", 1)),
-                    "triviaCorrect": int(g.get("triviaCorrect", 1)),
                     "startDate": g.get("startDate", ""),
                     "createdBy": g.get("createdBy", ""),
                 })
@@ -731,9 +691,66 @@ class Handler(BaseHTTPRequestHandler):
         d = parse(doc)
         self.send_json(200, {
             "code": code, "name": d.get("name"),
-            "type": d.get("type", "both"),
             "leaderboard": rows,
         })
+
+    def match_picks_get(self, code, match_n):
+        if not match_n:
+            return self.send_json(400, {"error": "matchN required"})
+        st, grp_doc = fs("GET", f"/groups/{code}")
+        if st != 200:
+            return self.send_json(404, {"error": "group not found"})
+        grp = parse(grp_doc)
+        pred_exact = int(grp.get("predExact", 3))
+        pred_result = int(grp.get("predResult", 1))
+        pool_start = grp.get("startDate")
+
+        all_matches = _all_matches()
+        m = all_matches.get(int(match_n)) if match_n.isdigit() else None
+        if m and pool_start and m.get("utc", "") < pool_start:
+            return self.send_json(200, {"matchN": match_n, "picks": [], "excluded": True})
+
+        res = results()
+        actual = res.get(match_n)
+
+        st, ml = fs("GET", f"/groups/{code}/members", params={"pageSize": "300"})
+        members = ml.get("documents", []) if st == 200 else []
+        picks_out = []
+        for mdoc in members:
+            did = mdoc["name"].split("/")[-1]
+            info = parse(mdoc)
+            st_u, udoc = fs("GET", f"/users/{did}")
+            user_info = parse(udoc) if st_u == 200 else {}
+            live_name = user_info.get("displayName") or info.get("displayName", "?")
+
+            st_p, pdoc = fs("GET", f"/picks/{did}/matches/{match_n}")
+            pick = parse(pdoc) if st_p == 200 else None
+
+            entry = {"displayName": live_name, "deviceId": did}
+            if pick:
+                entry["scoreH"] = pick.get("scoreH")
+                entry["scoreA"] = pick.get("scoreA")
+                entry["result"] = pick.get("result")
+                if actual:
+                    pts, ex, rr = score_pick(pick, actual)
+                    if ex:
+                        entry["points"] = pred_exact
+                    elif rr:
+                        entry["points"] = pred_result
+                    else:
+                        entry["points"] = 0
+                    entry["exactHit"] = bool(ex)
+                    entry["resultHit"] = bool(rr)
+            else:
+                entry["noPick"] = True
+                if actual:
+                    entry["points"] = 0
+                    entry["exactHit"] = False
+                    entry["resultHit"] = False
+
+            picks_out.append(entry)
+
+        self.send_json(200, {"matchN": match_n, "picks": picks_out})
 
     # ---- picks -------------------------------------------------------------
     def picks_put(self):
