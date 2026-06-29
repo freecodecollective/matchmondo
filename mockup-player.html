@@ -869,5 +869,356 @@
 </div>
 </div>
 
+<!-- ============== OPTION E — FULL PROFILE ============== -->
+<div class="page-title" style="margin-top:32px">Option E — Full Profile</div>
+<div class="page-subtitle">Everything in one view: hero tournament stats + game log, international career numbers, career journey timeline, tournament history badges, honors cabinet, and bio.</div>
+
+<style>
+  /* ---- International Profile ---- */
+  .intl-row {
+    display: flex; gap: 0; margin-bottom: 4px;
+  }
+  .intl-stat {
+    flex: 1; text-align: center;
+    padding: 14px 4px;
+    position: relative;
+  }
+  .intl-stat::after {
+    content: '';
+    position: absolute; right: 0; top: 20%; bottom: 20%;
+    width: 1px; background: rgba(0,0,0,0.06);
+  }
+  .intl-stat:last-child::after { display: none; }
+  .intl-stat .iv {
+    font-size: 26px; font-weight: 800; color: #333;
+    font-variant-numeric: tabular-nums;
+  }
+  .intl-stat .il {
+    font-size: 10px; font-weight: 600; color: #999;
+    text-transform: uppercase; letter-spacing: 0.3px; margin-top: 2px;
+  }
+  .intl-stat .isub {
+    font-size: 10px; color: #bbb; margin-top: 1px;
+  }
+
+  /* ---- Career Journey ---- */
+  .career-timeline { position: relative; padding-left: 20px; }
+  .career-timeline::before {
+    content: '';
+    position: absolute; left: 5px; top: 8px; bottom: 8px;
+    width: 2px; background: rgba(0,0,0,0.08); border-radius: 1px;
+  }
+  .career-stop {
+    position: relative;
+    padding: 6px 0 10px 12px;
+  }
+  .career-stop::before {
+    content: '';
+    position: absolute; left: -20px; top: 12px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: #fff; border: 2.5px solid var(--accent);
+    box-shadow: 0 0 0 3px rgba(15,110,86,0.08);
+  }
+  .career-stop.current::before {
+    background: var(--accent);
+    box-shadow: 0 0 0 3px rgba(15,110,86,0.15);
+  }
+  .career-club {
+    font-size: 14px; font-weight: 700; color: #222;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .career-club .cflag { font-size: 14px; }
+  .career-years {
+    font-size: 12px; color: #999; margin-top: 1px;
+  }
+
+  /* ---- Tournament History ---- */
+  .tourney-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tourney-chip {
+    font-size: 12px; font-weight: 600;
+    padding: 5px 10px; border-radius: 8px;
+    background: #f0f0f0; color: #555;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .tourney-chip.gold { background: linear-gradient(135deg, #fff8e1, #ffe082); color: #7c6200; }
+  .tourney-chip.silver { background: linear-gradient(135deg, #f5f5f5, #e0e0e0); color: #555; }
+  .tourney-chip.current { background: rgba(15,110,86,0.1); color: var(--accent-readable); border: 1.5px solid rgba(15,110,86,0.2); }
+  .tourney-chip .ticon { font-size: 12px; }
+
+  /* ---- Honors ---- */
+  .honors-list { display: flex; flex-direction: column; gap: 0; }
+  .honor-item {
+    display: flex; align-items: flex-start; gap: 8px;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+    font-size: 13px; color: #444;
+    line-height: 1.35;
+  }
+  .honor-item:last-child { border-bottom: none; }
+  .honor-icon {
+    font-size: 14px; flex-shrink: 0; margin-top: 1px;
+  }
+  .honor-highlight { font-weight: 600; color: #222; }
+
+  /* ---- Form sparkline ---- */
+  .form-row {
+    display: flex; align-items: flex-end; gap: 6px;
+    padding: 8px 0 4px;
+    justify-content: center;
+  }
+  .form-bar-wrap {
+    display: flex; flex-direction: column; align-items: center; gap: 3px;
+    flex: 1;
+  }
+  .form-bar {
+    width: 100%; border-radius: 4px 4px 0 0;
+    min-height: 4px;
+    transition: height 0.3s;
+  }
+  .form-bar.goals { background: linear-gradient(to top, #0F6E56, #1aab7a); }
+  .form-bar.assists { background: #4a9ee5; }
+  .form-bar.yc { background: #e0a800; }
+  .form-bar.none { background: #e8e8e8; }
+  .form-label { font-size: 9px; color: #bbb; font-weight: 600; }
+  .form-legend {
+    display: flex; gap: 12px; justify-content: center;
+    margin-top: 8px; font-size: 10px; color: #999;
+  }
+  .form-legend-dot {
+    width: 8px; height: 8px; border-radius: 2px;
+    display: inline-block; margin-right: 3px; vertical-align: middle;
+  }
+</style>
+
+<div class="phones">
+<div class="phone-wrap">
+  <div class="phone-label">Mbappé — Full Profile</div>
+  <div class="phone">
+    <div class="content">
+      <div class="player-header">
+        <div class="back-btn">‹</div>
+        <div class="header-inner">
+          <div class="header-photo">
+            <img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt="">
+            <div class="jersey-badge">10</div>
+          </div>
+          <div class="header-info">
+            <div class="header-name">⚽ Mbappé</div>
+            <div class="header-meta">Forward · Real Madrid</div>
+            <div class="header-meta2">Age 27 · 1.78 m · Bondy, France</div>
+            <div class="header-country">
+              <span class="flag">🇫🇷</span> France
+              <span class="heart-btn" style="margin-left:auto">♡</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+
+        <!-- Tournament Stats + Game Log -->
+        <div class="card">
+          <div class="card-header"><span class="icon">🏆</span> Football 2026</div>
+          <div class="card-body">
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="hv">4</div>
+                <div class="hl">Goals</div>
+                <div class="hsub">in 4 apps</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hv">1</div>
+                <div class="hl">Assist</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hv">8</div>
+                <div class="hl">On Target</div>
+                <div class="hsub">of 14 shots</div>
+              </div>
+            </div>
+
+            <!-- Form sparkline -->
+            <div class="form-row">
+              <div class="form-bar-wrap">
+                <div class="form-bar goals" style="height:24px" title="1 goal, 1 assist"></div>
+                <div class="form-label">SEN</div>
+              </div>
+              <div class="form-bar-wrap">
+                <div class="form-bar goals" style="height:40px" title="2 goals"></div>
+                <div class="form-label">IRQ</div>
+              </div>
+              <div class="form-bar-wrap">
+                <div class="form-bar yc" style="height:6px" title="Yellow card"></div>
+                <div class="form-label">NOR</div>
+              </div>
+              <div class="form-bar-wrap">
+                <div class="form-bar goals" style="height:24px" title="1 goal"></div>
+                <div class="form-label">SWE</div>
+              </div>
+            </div>
+            <div class="form-legend">
+              <span><span class="form-legend-dot" style="background:#0F6E56"></span>Goals</span>
+              <span><span class="form-legend-dot" style="background:#4a9ee5"></span>Assists</span>
+              <span><span class="form-legend-dot" style="background:#e0a800"></span>Cards</span>
+            </div>
+
+            <div class="section-label" style="margin-top:14px">Game Log</div>
+            <div class="game-row">
+              <div class="game-stage-dot group"></div>
+              <span class="game-flag">🇸🇳</span>
+              <div class="game-text">
+                <div class="game-opp-line">vs Senegal</div>
+                <div class="game-comp-line">Group I · Jun 14</div>
+              </div>
+              <div class="game-badges">
+                <span class="game-badge g">⚽ 1</span>
+                <span class="game-badge a">👟 1</span>
+              </div>
+              <div class="game-score W">2-0</div>
+            </div>
+            <div class="game-row">
+              <div class="game-stage-dot group"></div>
+              <span class="game-flag">🇮🇶</span>
+              <div class="game-text">
+                <div class="game-opp-line">vs Iraq</div>
+                <div class="game-comp-line">Group I · Jun 18</div>
+              </div>
+              <div class="game-badges">
+                <span class="game-badge g">⚽ 2</span>
+              </div>
+              <div class="game-score W">3-1</div>
+            </div>
+            <div class="game-row">
+              <div class="game-stage-dot group"></div>
+              <span class="game-flag">🇳🇴</span>
+              <div class="game-text">
+                <div class="game-opp-line">@ Norway</div>
+                <div class="game-comp-line">Group I · Jun 22</div>
+              </div>
+              <div class="game-badges">
+                <span class="game-badge y">🟨</span>
+              </div>
+              <div class="game-score D">1-1</div>
+            </div>
+            <div class="game-row">
+              <div class="game-stage-dot r32"></div>
+              <span class="game-flag">🇸🇪</span>
+              <div class="game-text">
+                <div class="game-opp-line">vs Sweden</div>
+                <div class="game-comp-line">Rd of 32 · Jun 26</div>
+              </div>
+              <div class="game-badges">
+                <span class="game-badge g">⚽ 1</span>
+              </div>
+              <div class="game-score W">2-1</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- International Profile -->
+        <div class="card">
+          <div class="card-header"><span class="icon">🇫🇷</span> International Career</div>
+          <div class="card-body">
+            <div class="intl-row">
+              <div class="intl-stat">
+                <div class="iv">99</div>
+                <div class="il">Caps</div>
+              </div>
+              <div class="intl-stat">
+                <div class="iv">58</div>
+                <div class="il">Goals</div>
+                <div class="isub">all-time record</div>
+              </div>
+              <div class="intl-stat">
+                <div class="iv">0.59</div>
+                <div class="il">Per Game</div>
+              </div>
+            </div>
+            <div class="section-label" style="margin-top: 8px">Tournament History</div>
+            <div class="tourney-chips">
+              <span class="tourney-chip gold"><span class="ticon">🏆</span> 2018 Winner</span>
+              <span class="tourney-chip">Euro 2020</span>
+              <span class="tourney-chip silver"><span class="ticon">🥈</span> 2022 Runner-up</span>
+              <span class="tourney-chip">Nations League 2024</span>
+              <span class="tourney-chip current"><span class="ticon">⚽</span> 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Career Journey -->
+        <div class="card">
+          <div class="card-header"><span class="icon">📍</span> Career Journey</div>
+          <div class="card-body">
+            <div class="career-timeline">
+              <div class="career-stop current">
+                <div class="career-club"><span class="cflag">🇪🇸</span> Real Madrid</div>
+                <div class="career-years">2024–present</div>
+              </div>
+              <div class="career-stop">
+                <div class="career-club"><span class="cflag">🇫🇷</span> Paris Saint-Germain</div>
+                <div class="career-years">2017–2024</div>
+              </div>
+              <div class="career-stop">
+                <div class="career-club"><span class="cflag">🇫🇷</span> AS Monaco</div>
+                <div class="career-years">2015–2017</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Honors -->
+        <div class="card">
+          <div class="card-header"><span class="icon">🥇</span> Honors</div>
+          <div class="card-body">
+            <div class="honors-list">
+              <div class="honor-item">
+                <span class="honor-icon">🏆</span>
+                <div><span class="honor-highlight">2018 Tournament Winner</span><br>Best Young Player</div>
+              </div>
+              <div class="honor-item">
+                <span class="honor-icon">🥇</span>
+                <div><span class="honor-highlight">2022 Tournament Golden Boot</span></div>
+              </div>
+              <div class="honor-item">
+                <span class="honor-icon">🏆</span>
+                <div><span class="honor-highlight">La Liga</span> 2024–25 (Real Madrid)</div>
+              </div>
+              <div class="honor-item">
+                <span class="honor-icon">🏆</span>
+                <div><span class="honor-highlight">Ligue 1</span> ×7 (PSG, Monaco)</div>
+              </div>
+              <div class="honor-item">
+                <span class="honor-icon">👟</span>
+                <div><span class="honor-highlight">European Golden Shoe</span> 2024–25</div>
+              </div>
+              <div class="honor-item">
+                <span class="honor-icon">👟</span>
+                <div><span class="honor-highlight">La Liga Pichichi</span> 2024–25, 2025–26</div>
+              </div>
+              <div class="honor-item">
+                <span class="honor-icon">⚽</span>
+                <div><span class="honor-highlight">Champions League top scorer</span> 2025–26</div>
+              </div>
+              <div class="honor-item">
+                <span class="honor-icon">🇫🇷</span>
+                <div><span class="honor-highlight">France all-time top scorer</span> (58 goals)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="card">
+          <div class="card-header"><span class="icon">ℹ️</span> About</div>
+          <div class="card-body">
+            <div class="about-text">France's captain and all-time leading scorer with 99 caps and 58 goals. A generational talent who combines explosive pace with clinical finishing, he won the 2018 tournament as a teenager, claimed the Golden Boot in 2022, and moved to Real Madrid in 2024 where he has continued to dominate. He enters 2026 seeking to become only the third player to win the tournament twice.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
 </body>
 </html>
