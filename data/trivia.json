@@ -4159,7 +4159,8 @@
         "48"
       ],
       "answer": 2,
-      "explanation": "The top two from each of the 12 groups (24) plus the 8 best third-placed teams advance — 32 in all."
+      "explanation": "The top two from each of the 12 groups (24) plus the 8 best third-placed teams advance — 32 in all.",
+      "claudeTask": "indicate how many were in 2022"
     },
     {
       "id": "h-1970-brazil-final",
