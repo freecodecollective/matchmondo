@@ -778,21 +778,36 @@ class Handler(BaseHTTPRequestHandler):
         out = []
         for pdoc in picks:
             mn = pdoc["name"].split("/")[-1]
-            if mn not in res:
-                continue
             m = all_matches.get(int(mn)) if mn.isdigit() else None
             if m and pool_start and m.get("utc", "") < pool_start:
                 continue
             pick = parse(pdoc)
-            aH, aA = res[mn]
-            pts, ex, rr = score_pick(pick, res[mn])
-            entry = {
-                "matchN": int(mn),
-                "scoreH": aH, "scoreA": aA,
-                "pickH": pick.get("scoreH"), "pickA": pick.get("scoreA"),
-                "points": pred_exact if ex else (pred_result if rr else 0),
-                "exactHit": bool(ex), "resultHit": bool(rr),
-            }
+
+            is_live = m.get("isLive", False) if m else False
+            is_graded = mn in res
+
+            if not is_graded and not is_live:
+                continue
+
+            entry = {"matchN": int(mn)}
+            if is_graded:
+                aH, aA = res[mn]
+                pts, ex, rr = score_pick(pick, res[mn])
+                entry["scoreH"] = aH
+                entry["scoreA"] = aA
+                entry["points"] = pred_exact if ex else (pred_result if rr else 0)
+                entry["exactHit"] = bool(ex)
+                entry["resultHit"] = bool(rr)
+            else:
+                entry["scoreH"] = m.get("scoreH", 0) if m else 0
+                entry["scoreA"] = m.get("scoreA", 0) if m else 0
+                entry["points"] = 0
+                entry["exactHit"] = False
+                entry["resultHit"] = False
+                entry["isLive"] = True
+
+            entry["pickH"] = pick.get("scoreH")
+            entry["pickA"] = pick.get("scoreA")
             pk = pick.get("pkWinner")
             if pk:
                 entry["pickPkWinner"] = pk
