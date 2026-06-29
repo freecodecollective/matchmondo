@@ -10251,7 +10251,7 @@
       "answer": 0,
       "explanation": "True! The card system wasn't introduced until the 1970 edition in Mexico. Before that, referees communicated cautions and dismissals verbally or with gestures. The card system was invented by English referee Ken Aston, who was inspired by traffic lights while driving home after a particularly confusing 1966 match.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-pele-injured-62",
