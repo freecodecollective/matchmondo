@@ -200,7 +200,7 @@ def results():
             arr = json.loads(r.read())
         m = {}
         for x in arr:
-            if x.get("scoreH") is not None and x.get("scoreA") is not None:
+            if x.get("scoreH") is not None and x.get("scoreA") is not None and not x.get("isLive"):
                 m[str(x["n"])] = (int(x["scoreH"]), int(x["scoreA"]))
         _res["data"] = m
         _res["ts"] = now
@@ -731,6 +731,9 @@ class Handler(BaseHTTPRequestHandler):
                 entry["scoreH"] = pick.get("scoreH")
                 entry["scoreA"] = pick.get("scoreA")
                 entry["result"] = pick.get("result")
+                pk = pick.get("pkWinner")
+                if pk:
+                    entry["pkWinner"] = pk
                 if actual:
                     pts, ex, rr = score_pick(pick, actual)
                     if ex:
