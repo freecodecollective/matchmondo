@@ -313,6 +313,7 @@ def leaderboard(code):
         pp = predict_points_pool(did, effective_start, pred_exact, pred_result)
 
         rows.append({
+            "deviceId": did,
             "displayName": live_name,
             "points": pp["points"],
             "exact": pp["exact"], "results": pp["results"], "graded": pp["graded"],
@@ -418,6 +419,9 @@ class Handler(BaseHTTPRequestHandler):
         if len(parts) == 4 and parts[:2] == ["api", "groups"] and parts[3] == "match-picks":
             q = urllib.parse.parse_qs(u.query)
             return self.match_picks_get(parts[2], (q.get("matchN") or [""])[0])
+        if len(parts) == 4 and parts[:2] == ["api", "groups"] and parts[3] == "member-results":
+            q = urllib.parse.parse_qs(u.query)
+            return self.member_results_get(parts[2], (q.get("deviceId") or [""])[0])
         self.send_json(404, {"error": "not found"})
 
     def do_POST(self):
@@ -754,6 +758,57 @@ class Handler(BaseHTTPRequestHandler):
             picks_out.append(entry)
 
         self.send_json(200, {"matchN": match_n, "picks": picks_out})
+
+    def member_results_get(self, code, device_id):
+        if not device_id:
+            return self.send_json(400, {"error": "deviceId required"})
+        st, grp_doc = fs("GET", f"/groups/{code}")
+        if st != 200:
+            return self.send_json(404, {"error": "group not found"})
+        grp = parse(grp_doc)
+        pred_exact = int(grp.get("predExact", 3))
+        pred_result = int(grp.get("predResult", 1))
+        pool_start = grp.get("startDate")
+
+        res = results()
+        all_matches = _all_matches()
+        st_p, pl = fs("GET", f"/picks/{device_id}/matches", params={"pageSize": "300"})
+        picks = pl.get("documents", []) if st_p == 200 else []
+
+        out = []
+        for pdoc in picks:
+            mn = pdoc["name"].split("/")[-1]
+            if mn not in res:
+                continue
+            m = all_matches.get(int(mn)) if mn.isdigit() else None
+            if m and pool_start and m.get("utc", "") < pool_start:
+                continue
+            pick = parse(pdoc)
+            aH, aA = res[mn]
+            pts, ex, rr = score_pick(pick, res[mn])
+            entry = {
+                "matchN": int(mn),
+                "scoreH": aH, "scoreA": aA,
+                "pickH": pick.get("scoreH"), "pickA": pick.get("scoreA"),
+                "points": pred_exact if ex else (pred_result if rr else 0),
+                "exactHit": bool(ex), "resultHit": bool(rr),
+            }
+            pk = pick.get("pkWinner")
+            if pk:
+                entry["pickPkWinner"] = pk
+            if m:
+                entry["home"] = m.get("home", "")
+                entry["away"] = m.get("away", "")
+                entry["utc"] = m.get("utc", "")
+                if m.get("result"):
+                    entry["result"] = m["result"]
+                if m.get("pkH") is not None:
+                    entry["pkH"] = m["pkH"]
+                if m.get("pkA") is not None:
+                    entry["pkA"] = m["pkA"]
+            out.append(entry)
+        out.sort(key=lambda x: x.get("utc", ""), reverse=True)
+        self.send_json(200, {"deviceId": device_id, "matches": out})
 
     # ---- picks -------------------------------------------------------------
     def picks_put(self):
