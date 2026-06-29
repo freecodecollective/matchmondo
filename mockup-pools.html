@@ -152,6 +152,12 @@
   .step-val { font-size: 15px; font-weight: 800; color: #222; width: 22px; text-align: center; }
   .pts-default-note { font-size: 10.5px; color: #b8b4ab; margin-left: 6px; }
 
+  /* icon picker */
+  .icon-picker { display: flex; gap: 8px; flex-wrap: wrap; }
+  .icon-opt { width: 44px; height: 44px; border-radius: 12px; border: 1.5px solid #e2ded5; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 22px; cursor: pointer; transition: all 0.12s; }
+  .icon-opt:hover { border-color: #bbb; }
+  .icon-opt.sel { border-color: #3A6F9A; background: rgba(58,111,154,0.07); box-shadow: 0 0 0 3px rgba(58,111,154,0.10); }
+
   /* date picker stub */
   .date-card { background: #fff; border-radius: 11px; padding: 11px 13px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); display: flex; align-items: center; gap: 10px; cursor: pointer; }
   .date-ic { font-size: 22px; }
@@ -229,6 +235,33 @@
   .note { background: #f6f5f2; border-radius: 10px; padding: 10px 12px; font-size: 11.5px; color: #777; line-height: 1.5; }
   .note strong { color: #3A6F9A; }
 
+  /* standings detail rows */
+  .st-row { display: flex; align-items: center; gap: 10px; padding: 10px 12px; }
+  .st-row + .st-row { border-top: 1px solid #f5f3ee; }
+  .st-rank { font-size: 13px; font-weight: 700; color: #aaa; width: 20px; text-align: center; flex-shrink: 0; }
+  .st-rank.r1 { color: #d4a017; }
+  .st-rank.r2 { color: #a4a3a0; }
+  .st-rank.r3 { color: #b87c4c; }
+  .st-av { width: 32px; height: 32px; border-radius: 50%; background: #ECEAE6; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #6a6a6a; flex-shrink: 0; }
+  .st-info { flex: 1; min-width: 0; }
+  .st-name { font-size: 14px; font-weight: 700; }
+  .st-split { font-size: 10.5px; color: #999; margin-top: 1px; }
+  .st-pts { font-size: 15px; font-weight: 800; color: #3A6F9A; flex-shrink: 0; }
+  .st-move { font-size: 10px; font-weight: 700; flex-shrink: 0; width: 28px; text-align: center; }
+  .st-move.up { color: #2EA56A; }
+  .st-move.down { color: #DC3545; }
+  .st-move.flat { color: #ccc; }
+  .st-row.you { background: rgba(58,111,154,0.06); border-radius: 10px; margin: 2px -4px; padding: 10px 16px; }
+  .st-row.you .st-name { color: #3A6F9A; }
+
+  .st-card { background: #fff; border-radius: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); overflow: hidden; }
+
+  /* pool info compact */
+  .pool-info-row { display: flex; gap: 12px; padding: 12px; }
+  .pool-info-stat { flex: 1; text-align: center; }
+  .pool-info-stat .val { font-size: 15px; font-weight: 800; color: #fff; }
+  .pool-info-stat .lbl { font-size: 10px; color: rgba(255,255,255,0.75); margin-top: 2px; }
+
   /* recommendation block */
   .recommend { max-width: 760px; margin: 40px auto 0; background: #eef5fb; border: 1px solid #cfe0ef; border-radius: 14px; padding: 18px 22px; }
   .recommend h4 { font-size: 14px; color: #2c5a82; margin-bottom: 8px; }
@@ -237,6 +270,10 @@
   .recommend strong { color: #234e72; }
   .recommend code { background: rgba(58,111,154,0.10); color: #2c5a82; padding: 1px 6px; border-radius: 4px; font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
   .recommend ul { margin: 6px 0 0 22px; font-size: 13px; color: #45596b; line-height: 1.7; }
+
+  .foot-link { text-align: center; margin: 36px 0 10px; font-size: 13px; }
+  .foot-link a { color: #3A6F9A; text-decoration: none; font-weight: 600; }
+  .foot-link a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -429,6 +466,18 @@
 
         <div class="field-label">Pool Name</div>
         <input class="field" value="Boston Office" />
+
+        <div class="field-label">Pool Icon</div>
+        <div class="icon-picker">
+          <div class="icon-opt sel">⚽</div>
+          <div class="icon-opt">🏆</div>
+          <div class="icon-opt">🎯</div>
+          <div class="icon-opt">🧠</div>
+          <div class="icon-opt">🔥</div>
+          <div class="icon-opt">⭐</div>
+          <div class="icon-opt">🦁</div>
+          <div class="icon-opt">🌍</div>
+        </div>
 
         <div class="field-label">What's the pool for?</div>
         <div class="chip-row">
@@ -661,7 +710,7 @@
   <div class="option-wrap">
     <div class="option-label">
       <h3>B · Pool standings</h3>
-      <p>Per-pool leaderboard — points scored under this pool's rules, with predictions / trivia split.</p>
+      <p>Per-pool leaderboard with prediction / trivia split, movement arrows, and the pool's scoring config at the top.</p>
     </div>
     <div class="phone"><div class="phone-inner">
       <div class="status-bar"><span class="status-time">9:41</span></div>
@@ -677,42 +726,125 @@
           <div class="sub-tab sel">Standings</div>
         </div>
 
-        <div class="pool-hero" style="margin-bottom:16px;">
-          <h4>🏆 Boston Office</h4>
+        <div class="pool-hero" style="margin-bottom:14px;">
+          <h4>⚽ Boston Office</h4>
           <div class="ph-sub">Started Jun 30 · 14 people · Both</div>
-          <div style="display:flex;gap:14px;margin-top:12px;font-size:11px;opacity:0.9;">
-            <div><strong style="font-size:14px;display:block;">3·5·1</strong>Pred. pts</div>
-            <div><strong style="font-size:14px;display:block;">1·5</strong>Triv. pts</div>
-            <div><strong style="font-size:14px;display:block;">Both</strong>Counts</div>
+          <div class="pool-info-row" style="margin:-2px -4px -6px;padding:12px 0 0;">
+            <div class="pool-info-stat"><div class="val">3·5·1</div><div class="lbl">Pred. pts</div></div>
+            <div class="pool-info-stat"><div class="val">1·5</div><div class="lbl">Triv. pts</div></div>
+            <div class="pool-info-stat"><div class="val">Both</div><div class="lbl">Counts</div></div>
           </div>
         </div>
 
-        <div class="lb-row you" style="margin-bottom:6px;border:none;">
-          <div class="lb-rank r1">1</div>
-          <div class="lb-av" style="background:rgba(58,111,154,0.14);color:#3A6F9A;">CH</div>
-          <div class="lb-nm">You</div>
-          <div style="display:flex;gap:8px;align-items:center;font-size:10px;color:#999;font-weight:600;">
-            <span style="color:#3A6F9A;font-weight:800;font-size:13px;">86</span>
-            <span>54p · 32t</span>
+        <!-- You, pinned at top -->
+        <div class="st-card" style="margin-bottom:10px;">
+          <div class="st-row you">
+            <div class="st-rank r1">1</div>
+            <div class="st-av" style="background:rgba(58,111,154,0.14);color:#3A6F9A;">CH</div>
+            <div class="st-info">
+              <div class="st-name">You</div>
+              <div class="st-split">54 pred · 32 trivia · 2 exact</div>
+            </div>
+            <div class="st-pts">86</div>
           </div>
         </div>
 
-        <div class="zip-card open" style="margin-bottom:0;">
-          <div class="zip-body" style="max-height:1400px;"><div class="zip-body-inner" style="border-top:none;padding-top:4px;">
-            <div class="lb-row"><div class="lb-rank r2">2</div><div class="lb-av">HS</div><div class="lb-nm">Heather</div><div class="lb-pts">81</div></div>
-            <div class="lb-row"><div class="lb-rank r3">3</div><div class="lb-av">PB</div><div class="lb-nm">Phil</div><div class="lb-pts">74</div></div>
-            <div class="lb-row"><div class="lb-rank">4</div><div class="lb-av">BC</div><div class="lb-nm">Becah</div><div class="lb-pts">68</div></div>
-            <div class="lb-row"><div class="lb-rank">5</div><div class="lb-av">JM</div><div class="lb-nm">James</div><div class="lb-pts">52</div></div>
-            <div class="lb-row"><div class="lb-rank">6</div><div class="lb-av">JH</div><div class="lb-nm">Jahan</div><div class="lb-pts">49</div></div>
-            <div class="lb-row"><div class="lb-rank">7</div><div class="lb-av">MK</div><div class="lb-nm">Mike</div><div class="lb-pts">44</div></div>
-            <div class="lb-row"><div class="lb-rank">8</div><div class="lb-av">TC</div><div class="lb-nm">Tracy</div><div class="lb-pts">41</div></div>
-            <div class="lb-row"><div class="lb-rank">9</div><div class="lb-av">NL</div><div class="lb-nm">Nora L.</div><div class="lb-pts">38</div></div>
-            <div class="lb-row"><div class="lb-rank">10</div><div class="lb-av">DR</div><div class="lb-nm">Drew</div><div class="lb-pts">35</div></div>
-            <div style="font-size:11px;color:#999;text-align:center;padding:6px 0 0;">+ 4 more</div>
-          </div></div>
+        <!-- Everyone else -->
+        <div class="st-card">
+          <div class="st-row">
+            <div class="st-rank r2">2</div>
+            <div class="st-av">HS</div>
+            <div class="st-info">
+              <div class="st-name">Heather</div>
+              <div class="st-split">48 pred · 33 trivia · 1 exact</div>
+            </div>
+            <div class="st-move up">▲ 1</div>
+            <div class="st-pts">81</div>
+          </div>
+          <div class="st-row">
+            <div class="st-rank r3">3</div>
+            <div class="st-av">PB</div>
+            <div class="st-info">
+              <div class="st-name">Phil</div>
+              <div class="st-split">50 pred · 24 trivia · 1 exact</div>
+            </div>
+            <div class="st-move down">▼ 1</div>
+            <div class="st-pts">74</div>
+          </div>
+          <div class="st-row">
+            <div class="st-rank">4</div>
+            <div class="st-av">BC</div>
+            <div class="st-info">
+              <div class="st-name">Becah</div>
+              <div class="st-split">39 pred · 29 trivia</div>
+            </div>
+            <div class="st-move flat">—</div>
+            <div class="st-pts">68</div>
+          </div>
+          <div class="st-row">
+            <div class="st-rank">5</div>
+            <div class="st-av">JM</div>
+            <div class="st-info">
+              <div class="st-name">James</div>
+              <div class="st-split">30 pred · 22 trivia</div>
+            </div>
+            <div class="st-move up">▲ 2</div>
+            <div class="st-pts">52</div>
+          </div>
+          <div class="st-row">
+            <div class="st-rank">6</div>
+            <div class="st-av">JH</div>
+            <div class="st-info">
+              <div class="st-name">Jahan</div>
+              <div class="st-split">28 pred · 21 trivia</div>
+            </div>
+            <div class="st-move down">▼ 1</div>
+            <div class="st-pts">49</div>
+          </div>
+          <div class="st-row">
+            <div class="st-rank">7</div>
+            <div class="st-av">MK</div>
+            <div class="st-info">
+              <div class="st-name">Mike</div>
+              <div class="st-split">26 pred · 18 trivia</div>
+            </div>
+            <div class="st-move flat">—</div>
+            <div class="st-pts">44</div>
+          </div>
+          <div class="st-row">
+            <div class="st-rank">8</div>
+            <div class="st-av">TC</div>
+            <div class="st-info">
+              <div class="st-name">Tracy</div>
+              <div class="st-split">22 pred · 19 trivia</div>
+            </div>
+            <div class="st-move down">▼ 2</div>
+            <div class="st-pts">41</div>
+          </div>
+          <div class="st-row">
+            <div class="st-rank">9</div>
+            <div class="st-av">NL</div>
+            <div class="st-info">
+              <div class="st-name">Nora L.</div>
+              <div class="st-split">20 pred · 18 trivia</div>
+            </div>
+            <div class="st-move flat">—</div>
+            <div class="st-pts">38</div>
+          </div>
+          <div class="st-row">
+            <div class="st-rank">10</div>
+            <div class="st-av">DR</div>
+            <div class="st-info">
+              <div class="st-name">Drew</div>
+              <div class="st-split">18 pred · 17 trivia</div>
+            </div>
+            <div class="st-move up">▲ 1</div>
+            <div class="st-pts">35</div>
+          </div>
+          <div style="font-size:11px;color:#999;text-align:center;padding:8px 0;">+ 4 more</div>
         </div>
 
-        <div class="note" style="margin-top:14px;">A user's picks &amp; trivia answers are the <strong>same across every pool they're in</strong> — but each pool scores them with its own point values, so the same answer can be worth different totals in different pools.</div>
+        <div class="note" style="margin-top:14px;">Picks &amp; trivia answers are <strong>the same across every pool</strong> — but each pool scores them with its own point values.</div>
 
       </div>
       <div class="home-bar"><div class="home-indicator"></div></div>
@@ -730,6 +862,17 @@
   <p><strong>4. "Both" pools split the leaderboard total</strong> or just sum predictions+trivia? Right now I'm summing (54p + 32t = 86). Could also tab them.</p>
   <p><strong>5. Auto-pick fallback uses FIFA ranking</strong> — what about knockouts where one team has already advanced from a less obvious path? FIFA rank still works but might pick the "wrong" favorite occasionally. Acceptable, I think.</p>
 </div>
+
+<div class="foot-link"><a href="mockups.html">← Back to all mockups</a></div>
+
+<script>
+document.querySelectorAll('.icon-opt').forEach(el => {
+  el.addEventListener('click', () => {
+    el.closest('.icon-picker').querySelectorAll('.icon-opt').forEach(o => o.classList.remove('sel'));
+    el.classList.add('sel');
+  });
+});
+</script>
 
 </body>
 </html>
