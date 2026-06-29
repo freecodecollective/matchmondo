@@ -243,13 +243,6 @@ def predict_points(did):
     return {"points": pts, "exact": ex, "results": rc, "graded": graded}
 
 
-def _start_of_day(iso):
-    """Truncate an ISO-8601 timestamp to midnight UTC of that day."""
-    if iso and len(iso) >= 10:
-        return iso[:10] + "T00:00:00Z"
-    return iso
-
-
 def predict_points_pool(did, start_iso, pred_exact=3, pred_result=1):
     """Like predict_points but only counts matches with kickoff >= start_iso
     and uses custom point values."""
@@ -257,14 +250,13 @@ def predict_points_pool(did, start_iso, pred_exact=3, pred_result=1):
     st, pl = fs("GET", f"/picks/{did}/matches", params={"pageSize": "300"})
     picks = pl.get("documents", []) if st == 200 else []
     all_matches = _all_matches()
-    start_day = _start_of_day(start_iso)
     pts = ex = rc = graded = 0
     for pdoc in picks:
         mn = pdoc["name"].split("/")[-1]
         if mn not in res:
             continue
         m = all_matches.get(int(mn)) if mn.isdigit() else None
-        if m and start_day and m.get("utc", "") < start_day:
+        if m and start_iso and m.get("utc", "") < start_iso:
             continue
         sp, se, sr = score_pick(parse(pdoc), res[mn])
         if se:
@@ -711,7 +703,7 @@ class Handler(BaseHTTPRequestHandler):
         grp = parse(grp_doc)
         pred_exact = int(grp.get("predExact", 3))
         pred_result = int(grp.get("predResult", 1))
-        pool_start = _start_of_day(grp.get("startDate"))
+        pool_start = grp.get("startDate")
 
         all_matches = _all_matches()
         m = all_matches.get(int(match_n)) if match_n.isdigit() else None

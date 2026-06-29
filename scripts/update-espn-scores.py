@@ -312,6 +312,11 @@ def main():
                 print(f"  PATCH: Match {matched_m['n']} {matched_m['home']} vs {matched_m['away']} -> {home_score}-{away_score} ({tag})")
                 patched += 1
 
+            if is_live:
+                matched_m["isLive"] = True
+            elif is_finished:
+                matched_m.pop("isLive", None)
+
             # Store result type and PK scores for finished matches
             if is_finished:
                 if status_name == "STATUS_FINAL_PEN":
