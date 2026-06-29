@@ -17504,7 +17504,110 @@
       ],
       "answer": 0,
       "explanation": "The 'sin bin' or temporary dismissal sends a cautioned player off the pitch for a set period (usually 10 minutes), similar to rugby. While trialed in lower leagues, it has not yet been adopted at the senior tournament level. Proponents argue it would reduce cynical fouls without the harshness of a full red card.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ما هي القاعدة التجريبية التي تسمح للاعب بمغادرة الملعب مؤقتًا لفترة محددة كعقوبة؟",
+          "options": [
+            "دكة العقاب (الطرد المؤقت)",
+            "البطاقة البرتقالية",
+            "الركلة الفنية",
+            "فترة التهدئة"
+          ],
+          "explanation": "تقضي قاعدة 'دكة العقاب' أو الطرد المؤقت بإخراج اللاعب الذي تلقى إنذارًا من الملعب لفترة محددة (عادة 10 دقائق)، على غرار رياضة الرغبي. ورغم تجربتها في الدوريات الأدنى، إلا أنها لم تُعتمد بعد على مستوى البطولات الكبرى. ويرى المؤيدون أنها ستقلل من الأخطاء المتعمدة دون قسوة البطاقة الحمراء الكاملة."
+        },
+        "de": {
+          "question": "Welche experimentelle Regel erlaubt es einem Spieler, das Spielfeld als Strafe vorübergehend für einen festgelegten Zeitraum zu verlassen?",
+          "options": [
+            "Sin Bin (Zeitstrafe)",
+            "Orange Karte",
+            "Technischer Strafstoß",
+            "Abkühlungsphase"
+          ],
+          "explanation": "Die 'Sin Bin' oder Zeitstrafe schickt einen verwarnten Spieler für einen festgelegten Zeitraum (meist 10 Minuten) vom Platz, ähnlich wie im Rugby. Sie wurde in unteren Ligen erprobt, aber auf höchster Turnierebene noch nicht eingeführt. Befürworter argumentieren, dass sie taktische Fouls reduzieren würde, ohne die Härte einer kompletten Roten Karte."
+        },
+        "es": {
+          "question": "¿Qué regla experimental permite que un jugador abandone temporalmente el campo durante un período determinado como castigo?",
+          "options": [
+            "Sin bin (expulsión temporal)",
+            "Tarjeta naranja",
+            "Penalización técnica",
+            "Período de enfriamiento"
+          ],
+          "explanation": "El 'sin bin' o expulsión temporal saca del campo a un jugador amonestado durante un período determinado (normalmente 10 minutos), de forma parecida al rugby. Aunque se ha probado en ligas menores, todavía no se ha adoptado en el nivel de torneos de primera categoría. Sus defensores argumentan que reduciría las faltas tácticas sin la dureza de una tarjeta roja completa."
+        },
+        "es-ES": {
+          "question": "¿Qué regla experimental permite que un jugador abandone temporalmente el terreno de juego durante un período determinado como castigo?",
+          "options": [
+            "Sin bin (expulsión temporal)",
+            "Tarjeta naranja",
+            "Sanción técnica",
+            "Período de enfriamiento"
+          ],
+          "explanation": "El 'sin bin' o expulsión temporal manda fuera del campo a un jugador amonestado durante un período determinado (normalmente 10 minutos), de forma similar al rugby. Aunque se ha probado en ligas inferiores, todavía no se ha adoptado a nivel de los grandes torneos. Sus partidarios sostienen que reduciría las faltas tácticas sin la dureza de una tarjeta roja completa."
+        },
+        "fr": {
+          "question": "Quelle règle expérimentale permet à un joueur de quitter temporairement le terrain pendant une durée déterminée à titre de sanction ?",
+          "options": [
+            "Sin bin (exclusion temporaire)",
+            "Carton orange",
+            "Pénalité technique",
+            "Temps d'apaisement"
+          ],
+          "explanation": "Le 'sin bin', ou exclusion temporaire, renvoie un joueur averti hors du terrain pour une durée déterminée (généralement 10 minutes), comme au rugby. Testée dans les divisions inférieures, cette règle n'a pas encore été adoptée au niveau des grands tournois. Ses partisans estiment qu'elle réduirait les fautes tactiques sans la sévérité d'un carton rouge définitif."
+        },
+        "it": {
+          "question": "Quale regola sperimentale consente a un giocatore di lasciare temporaneamente il campo per un periodo prestabilito come punizione?",
+          "options": [
+            "Sin bin (espulsione temporanea)",
+            "Cartellino arancione",
+            "Penalità tecnica",
+            "Periodo di raffreddamento"
+          ],
+          "explanation": "Il 'sin bin' o espulsione temporanea manda fuori dal campo un giocatore ammonito per un periodo prestabilito (di solito 10 minuti), in modo simile al rugby. Sperimentata nelle leghe minori, non è ancora stata adottata a livello dei grandi tornei. I sostenitori affermano che ridurrebbe i falli tattici senza la durezza di un cartellino rosso vero e proprio."
+        },
+        "ja": {
+          "question": "選手が罰として一定時間ピッチを一時的に離れることを認める実験的なルールは何ですか？",
+          "options": [
+            "シンビン（一時退場）",
+            "オレンジカード",
+            "テクニカルペナルティ",
+            "クーリングオフ期間"
+          ],
+          "explanation": "「シンビン」または一時退場は、ラグビーと同様に、警告を受けた選手を一定時間（通常10分）ピッチの外に退かせるものです。下位リーグでは試験的に導入されていますが、トップレベルの大会ではまだ採用されていません。支持者は、完全なレッドカードほど厳しくなく、戦術的なファウルを減らせると主張しています。"
+        },
+        "ko": {
+          "question": "선수가 처벌로 일정 시간 동안 일시적으로 경기장을 떠나도록 허용하는 실험적 규칙은 무엇입니까?",
+          "options": [
+            "신빈(일시 퇴장)",
+            "오렌지 카드",
+            "테크니컬 페널티",
+            "쿨링오프 기간"
+          ],
+          "explanation": "'신빈' 또는 일시 퇴장은 럭비와 비슷하게 경고를 받은 선수를 일정 시간(보통 10분) 동안 경기장 밖으로 내보내는 제도입니다. 하위 리그에서 시범 운영되었지만, 아직 최상위 대회 수준에서는 도입되지 않았습니다. 지지자들은 완전한 레드카드만큼 가혹하지 않으면서도 의도적인 반칙을 줄일 수 있다고 주장합니다."
+        },
+        "pt-BR": {
+          "question": "Qual regra experimental permite que um jogador deixe o campo temporariamente por um período determinado como punição?",
+          "options": [
+            "Sin bin (expulsão temporária)",
+            "Cartão laranja",
+            "Penalidade técnica",
+            "Período de resfriamento"
+          ],
+          "explanation": "O 'sin bin', ou expulsão temporária, manda um jogador advertido para fora do campo por um período determinado (geralmente 10 minutos), de forma parecida com o rúgbi. Embora tenha sido testado em divisões inferiores, ainda não foi adotado no nível dos grandes torneios. Os defensores argumentam que reduziria as faltas táticas sem a severidade de um cartão vermelho completo."
+        },
+        "zh-Hans": {
+          "question": "哪一项实验性规则允许球员作为处罚在规定时间内暂时离场？",
+          "options": [
+            "罚出席（临时离场）",
+            "橙牌",
+            "技术性点球",
+            "冷静期"
+          ],
+          "explanation": "「罚出席」即临时离场，会将受到警告的球员罚出场地一段规定时间（通常为10分钟），类似于橄榄球的做法。这一规则曾在低级别联赛中试行，但尚未在顶级赛事层面采用。支持者认为，它能在不像红牌那样严厉的情况下减少战术犯规。"
+        }
+      },
+      "i18nSourceHash": "72d3e0cd5638dc29"
     },
     {
       "id": "v-nrg-houston",
@@ -17547,7 +17650,110 @@
       "answer": 0,
       "explanation": "Turkey's Hakan Şükür scored after just 11 seconds in the 2002 third-place match against South Korea. The record has stood for over two decades. The second-fastest was Clint Dempsey's goal after 29 seconds for the USA against Ghana in 2014.",
       "media": "https://www.youtube.com/watch?v=fXNxufuCJbs",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من سجّل أسرع هدف في تاريخ البطولة، حيث هزّ الشباك بعد 11 ثانية فقط؟",
+          "options": [
+            "هاكان شوكور",
+            "كلينت ديمبسي",
+            "فالون بهرامي",
+            "روبي برادي"
+          ],
+          "explanation": "سجّل التركي هاكان شوكور هدفه بعد 11 ثانية فقط في مباراة تحديد المركز الثالث عام 2002 أمام كوريا الجنوبية. وقد صمد هذا الرقم القياسي لأكثر من عقدين. أما ثاني أسرع هدف فكان لكلينت ديمبسي بعد 29 ثانية لصالح الولايات المتحدة أمام غانا عام 2014."
+        },
+        "de": {
+          "question": "Wer erzielte das schnellste Tor in der Turniergeschichte und traf bereits nach nur 11 Sekunden?",
+          "options": [
+            "Hakan Şükür",
+            "Clint Dempsey",
+            "Valon Behrami",
+            "Robbie Brady"
+          ],
+          "explanation": "Der Türke Hakan Şükür traf 2002 im Spiel um Platz drei gegen Südkorea schon nach nur 11 Sekunden. Dieser Rekord hat über zwei Jahrzehnte Bestand. Das zweitschnellste Tor erzielte Clint Dempsey nach 29 Sekunden für die USA gegen Ghana im Jahr 2014."
+        },
+        "es": {
+          "question": "¿Quién marcó el gol más rápido en la historia del torneo, anotando tras apenas 11 segundos?",
+          "options": [
+            "Hakan Şükür",
+            "Clint Dempsey",
+            "Valon Behrami",
+            "Robbie Brady"
+          ],
+          "explanation": "El turco Hakan Şükür marcó tras apenas 11 segundos en el partido por el tercer puesto de 2002 frente a Corea del Sur. El récord se ha mantenido por más de dos décadas. El segundo más rápido fue el gol de Clint Dempsey a los 29 segundos para Estados Unidos contra Ghana en 2014."
+        },
+        "es-ES": {
+          "question": "¿Quién marcó el gol más rápido de la historia del torneo, anotando tras solo 11 segundos?",
+          "options": [
+            "Hakan Şükür",
+            "Clint Dempsey",
+            "Valon Behrami",
+            "Robbie Brady"
+          ],
+          "explanation": "El turco Hakan Şükür marcó tras solo 11 segundos en el partido por el tercer puesto de 2002 contra Corea del Sur. El récord se ha mantenido durante más de dos décadas. El segundo más rápido fue el gol de Clint Dempsey a los 29 segundos para Estados Unidos frente a Ghana en 2014."
+        },
+        "fr": {
+          "question": "Qui a inscrit le but le plus rapide de l'histoire du tournoi, en marquant après seulement 11 secondes ?",
+          "options": [
+            "Hakan Şükür",
+            "Clint Dempsey",
+            "Valon Behrami",
+            "Robbie Brady"
+          ],
+          "explanation": "Le Turc Hakan Şükür a marqué après seulement 11 secondes lors du match pour la troisième place en 2002 contre la Corée du Sud. Ce record tient depuis plus de vingt ans. Le deuxième but le plus rapide fut celui de Clint Dempsey après 29 secondes pour les États-Unis face au Ghana en 2014."
+        },
+        "it": {
+          "question": "Chi ha segnato il gol più veloce nella storia del torneo, andando a rete dopo soli 11 secondi?",
+          "options": [
+            "Hakan Şükür",
+            "Clint Dempsey",
+            "Valon Behrami",
+            "Robbie Brady"
+          ],
+          "explanation": "Il turco Hakan Şükür ha segnato dopo soli 11 secondi nella finale per il terzo posto del 2002 contro la Corea del Sud. Il record resiste da oltre vent'anni. Il secondo più veloce è stato il gol di Clint Dempsey dopo 29 secondi per gli Stati Uniti contro il Ghana nel 2014."
+        },
+        "ja": {
+          "question": "大会史上最速のゴールを、わずか11秒で決めたのは誰でしょう？",
+          "options": [
+            "ハカン・シュキュル",
+            "クリント・デンプシー",
+            "ヴァロン・ベーラミ",
+            "ロビー・ブレイディ"
+          ],
+          "explanation": "トルコのハカン・シュキュルは、2002年の3位決定戦で韓国を相手にわずか11秒でゴールを決めました。この記録は20年以上にわたって破られていません。2番目に速いのは、2014年にアメリカ代表としてガーナ戦で29秒で決めたクリント・デンプシーのゴールです。"
+        },
+        "ko": {
+          "question": "대회 역사상 가장 빠른 골을 단 11초 만에 터뜨린 선수는 누구일까요?",
+          "options": [
+            "하칸 쉬퀴르",
+            "클린트 뎀프시",
+            "발론 베흐라미",
+            "로비 브래디"
+          ],
+          "explanation": "터키의 하칸 쉬퀴르는 2002년 대한민국과의 3·4위전에서 단 11초 만에 골을 넣었습니다. 이 기록은 20년 넘게 깨지지 않고 있습니다. 두 번째로 빠른 골은 2014년 가나전에서 미국 대표로 29초 만에 득점한 클린트 뎀프시의 골입니다."
+        },
+        "pt-BR": {
+          "question": "Quem marcou o gol mais rápido da história do torneio, balançando as redes após apenas 11 segundos?",
+          "options": [
+            "Hakan Şükür",
+            "Clint Dempsey",
+            "Valon Behrami",
+            "Robbie Brady"
+          ],
+          "explanation": "O turco Hakan Şükür marcou após apenas 11 segundos na disputa pelo terceiro lugar em 2002 contra a Coreia do Sul. O recorde resiste há mais de duas décadas. O segundo mais rápido foi o gol de Clint Dempsey aos 29 segundos pelos Estados Unidos contra Gana em 2014."
+        },
+        "zh-Hans": {
+          "question": "谁打进了赛事历史上最快的进球，仅用11秒就破门得分？",
+          "options": [
+            "哈坎·苏克",
+            "克林特·邓普西",
+            "瓦隆·贝赫拉米",
+            "罗比·布雷迪"
+          ],
+          "explanation": "土耳其的哈坎·苏克在2002年对阵韩国的季军争夺战中仅用11秒便攻入一球。这一纪录已保持了二十多年。第二快的进球是克林特·邓普西在2014年代表美国对阵加纳时29秒攻入的。"
+        }
+      },
+      "i18nSourceHash": "8ec74231fb404c10"
     },
     {
       "id": "rec-oldest-scorer",
@@ -17561,7 +17767,110 @@
       ],
       "answer": 0,
       "explanation": "Cameroon's Roger Milla scored against Russia at the 1994 tournament aged 42 years and 39 days, making him the oldest scorer in tournament history. He had originally retired but came out of retirement for the 1990 tournament at age 38, where he became a global icon with his corner-flag dancing celebrations.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو أكبر لاعب سناً يسجل هدفاً في البطولة، حيث سجل وعمره 42 عاماً؟",
+          "options": [
+            "روجيه ميلا",
+            "عصام الحضري",
+            "دينو زوف",
+            "بيتر شيلتون"
+          ],
+          "explanation": "سجل الكاميروني روجيه ميلا في مرمى روسيا خلال بطولة عام 1994 وعمره 42 عاماً و39 يوماً، ليصبح أكبر مسجل سناً في تاريخ البطولة. كان قد اعتزل في البداية، لكنه عاد من اعتزاله للمشاركة في بطولة عام 1990 وعمره 38 عاماً، حيث أصبح أيقونة عالمية باحتفالاته الراقصة قرب راية الزاوية."
+        },
+        "de": {
+          "question": "Wer ist der älteste Spieler, der beim Turnier ein Tor erzielte – im Alter von 42 Jahren?",
+          "options": [
+            "Roger Milla",
+            "Essam El-Hadary",
+            "Dino Zoff",
+            "Peter Shilton"
+          ],
+          "explanation": "Der Kameruner Roger Milla traf beim Turnier 1994 gegen Russland im Alter von 42 Jahren und 39 Tagen und wurde damit zum ältesten Torschützen der Turniergeschichte. Eigentlich hatte er seine Karriere bereits beendet, kehrte aber für das Turnier 1990 mit 38 Jahren zurück, wo er mit seinen Tanzeinlagen an der Eckfahne zu einer weltweiten Ikone wurde."
+        },
+        "es": {
+          "question": "¿Quién es el jugador de mayor edad en anotar en el torneo, marcando un gol a los 42 años?",
+          "options": [
+            "Roger Milla",
+            "Essam El-Hadary",
+            "Dino Zoff",
+            "Peter Shilton"
+          ],
+          "explanation": "El camerunés Roger Milla anotó ante Rusia en el torneo de 1994 con 42 años y 39 días, convirtiéndose en el goleador de mayor edad en la historia del torneo. Originalmente se había retirado, pero volvió para el torneo de 1990 a los 38 años, donde se convirtió en un ícono mundial con sus bailes en el banderín de córner."
+        },
+        "es-ES": {
+          "question": "¿Quién es el jugador de más edad en marcar en el torneo, anotando un gol a los 42 años?",
+          "options": [
+            "Roger Milla",
+            "Essam El-Hadary",
+            "Dino Zoff",
+            "Peter Shilton"
+          ],
+          "explanation": "El camerunés Roger Milla marcó ante Rusia en el torneo de 1994 con 42 años y 39 días, convirtiéndose en el goleador de más edad en la historia del torneo. En principio se había retirado, pero volvió para el torneo de 1990 con 38 años, donde se convirtió en un icono mundial con sus bailes junto al banderín de córner."
+        },
+        "fr": {
+          "question": "Qui est le joueur le plus âgé à avoir marqué lors du tournoi, en inscrivant un but à 42 ans ?",
+          "options": [
+            "Roger Milla",
+            "Essam El-Hadary",
+            "Dino Zoff",
+            "Peter Shilton"
+          ],
+          "explanation": "Le Camerounais Roger Milla a marqué contre la Russie lors du tournoi de 1994 à l'âge de 42 ans et 39 jours, devenant le buteur le plus âgé de l'histoire du tournoi. Il avait initialement pris sa retraite, mais il est revenu pour le tournoi de 1990 à 38 ans, où il est devenu une icône mondiale grâce à ses danses au poteau de corner."
+        },
+        "it": {
+          "question": "Chi è il giocatore più anziano ad aver segnato nel torneo, realizzando un gol a 42 anni?",
+          "options": [
+            "Roger Milla",
+            "Essam El-Hadary",
+            "Dino Zoff",
+            "Peter Shilton"
+          ],
+          "explanation": "Il camerunese Roger Milla segnò contro la Russia al torneo del 1994 all'età di 42 anni e 39 giorni, diventando il marcatore più anziano nella storia del torneo. Si era inizialmente ritirato, ma tornò in campo per il torneo del 1990 a 38 anni, dove divenne un'icona mondiale con i suoi balli accanto alla bandierina del corner."
+        },
+        "ja": {
+          "question": "大会で得点を挙げた最年長選手は誰でしょう？42歳でゴールを決めた人物です。",
+          "options": [
+            "ロジェ・ミラ",
+            "エサム・エル・ハダリー",
+            "ディノ・ゾフ",
+            "ピーター・シルトン"
+          ],
+          "explanation": "カメルーンのロジェ・ミラは1994年の大会でロシア戦に42歳39日で得点し、大会史上最年長得点者となりました。彼は一度引退していましたが、38歳のときに1990年大会で復帰し、コーナーフラッグでのダンスのパフォーマンスで世界的なアイコンとなりました。"
+        },
+        "ko": {
+          "question": "대회에서 골을 넣은 최고령 선수는 누구일까요? 42세에 골을 기록했습니다.",
+          "options": [
+            "로제 밀라",
+            "에삼 엘 하다리",
+            "디노 조프",
+            "피터 실턴"
+          ],
+          "explanation": "카메룬의 로제 밀라는 1994년 대회에서 42세 39일의 나이로 러시아를 상대로 득점하며 대회 역사상 최고령 득점자가 되었습니다. 그는 한때 은퇴했지만 38세였던 1990년 대회에 복귀해 코너 깃발 옆에서 춤추는 세리머니로 세계적인 아이콘이 되었습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é o jogador mais velho a marcar no torneio, balançando as redes aos 42 anos?",
+          "options": [
+            "Roger Milla",
+            "Essam El-Hadary",
+            "Dino Zoff",
+            "Peter Shilton"
+          ],
+          "explanation": "O camaronês Roger Milla marcou contra a Rússia no torneio de 1994 aos 42 anos e 39 dias, tornando-se o artilheiro mais velho da história do torneio. Ele havia se aposentado, mas voltou para o torneio de 1990 aos 38 anos, onde se tornou um ícone mundial com suas danças na bandeirinha de escanteio."
+        },
+        "zh-Hans": {
+          "question": "谁是在本届赛事中进球的最年长球员？他在42岁时攻入一球。",
+          "options": [
+            "罗杰·米拉",
+            "埃萨姆·哈达里",
+            "迪诺·佐夫",
+            "彼得·希尔顿"
+          ],
+          "explanation": "喀麦隆的罗杰·米拉在1994年的赛事中对阵俄罗斯时打入一球，当时他42岁零39天，成为赛事历史上年龄最大的进球者。他原本已经退役，但在38岁时为1990年的赛事复出，并凭借在角旗边的舞蹈庆祝动作成为全球偶像。"
+        }
+      },
+      "i18nSourceHash": "1288c19c2ac9d416"
     },
     {
       "id": "c-commentary-gooool",
@@ -17576,7 +17885,110 @@
       "answer": 0,
       "explanation": "The extended 'GOOOOOOL!' call is a hallmark of Latin American football commentary, where commentators routinely hold the word for 10-30 seconds. The tradition dates back to radio broadcasts where the sustained call was both celebration and signal, ensuring listeners knew a goal had been scored even through static.",
       "media": "https://www.youtube.com/watch?v=8AMIrxx3gx8",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "صيحة الاحتفال الطويلة الممتدة 'غووووول!' ترتبط أكثر بالمعلّقين من أي منطقة؟",
+          "options": [
+            "أمريكا اللاتينية",
+            "أوروبا",
+            "الشرق الأوسط",
+            "آسيا"
+          ],
+          "explanation": "تُعد صيحة 'غووووول!' الممتدة سمة مميزة للتعليق الكروي في أمريكا اللاتينية، حيث يطيل المعلّقون نطق الكلمة لمدة تتراوح بين 10 و30 ثانية. ويعود هذا التقليد إلى البث الإذاعي حيث كانت الصيحة المطوّلة احتفالاً وإشارة في آن واحد، تضمن أن يعرف المستمعون أن هدفاً قد سُجِّل حتى وسط التشويش."
+        },
+        "de": {
+          "question": "Der lang gezogene Jubelruf 'TOOOOOOR!' wird am ehesten mit Kommentatoren aus welcher Region in Verbindung gebracht?",
+          "options": [
+            "Lateinamerika",
+            "Europa",
+            "Naher Osten",
+            "Asien"
+          ],
+          "explanation": "Der gedehnte 'TOOOOOOR!'-Ruf ist ein Markenzeichen der lateinamerikanischen Fußballkommentare, wo Kommentatoren das Wort regelmäßig 10 bis 30 Sekunden lang halten. Die Tradition geht auf die Radioübertragungen zurück, bei denen der ausgedehnte Ruf zugleich Jubel und Signal war und sicherstellte, dass die Hörer auch durch das Rauschen hindurch erfuhren, dass ein Tor gefallen war."
+        },
+        "es": {
+          "question": "El largo y prolongado grito de '¡GOOOOOOL!' se asocia sobre todo con los comentaristas de qué región?",
+          "options": [
+            "América Latina",
+            "Europa",
+            "Medio Oriente",
+            "Asia"
+          ],
+          "explanation": "El extendido grito de '¡GOOOOOOL!' es un sello del relato futbolístico latinoamericano, donde los comentaristas suelen sostener la palabra entre 10 y 30 segundos. La tradición se remonta a las transmisiones de radio, donde el grito prolongado era a la vez celebración y señal, asegurando que los oyentes supieran que se había marcado un gol incluso entre la estática."
+        },
+        "es-ES": {
+          "question": "El largo y prolongado grito de '¡GOOOOOOL!' se asocia sobre todo con los comentaristas de qué región?",
+          "options": [
+            "América Latina",
+            "Europa",
+            "Oriente Medio",
+            "Asia"
+          ],
+          "explanation": "El extendido grito de '¡GOOOOOOL!' es una seña de identidad de la narración futbolística latinoamericana, donde los comentaristas suelen mantener la palabra entre 10 y 30 segundos. La tradición se remonta a las retransmisiones de radio, donde el grito prolongado era a la vez celebración y señal, garantizando que los oyentes supieran que se había marcado un gol incluso entre las interferencias."
+        },
+        "fr": {
+          "question": "Le long cri de joie 'BUUUUUUT !' interminable est surtout associé aux commentateurs de quelle région ?",
+          "options": [
+            "Amérique latine",
+            "Europe",
+            "Moyen-Orient",
+            "Asie"
+          ],
+          "explanation": "Le cri prolongé de 'BUUUUUUT !' est une marque de fabrique des commentaires de football latino-américains, où les commentateurs tiennent couramment le mot pendant 10 à 30 secondes. Cette tradition remonte aux retransmissions radio, où le cri soutenu était à la fois célébration et signal, garantissant que les auditeurs sachent qu'un but avait été marqué, même à travers les grésillements."
+        },
+        "it": {
+          "question": "Il lungo e prolungato grido di esultanza 'GOOOOOOL!' è associato soprattutto ai telecronisti di quale regione?",
+          "options": [
+            "America Latina",
+            "Europa",
+            "Medio Oriente",
+            "Asia"
+          ],
+          "explanation": "Il prolungato grido 'GOOOOOOL!' è un marchio di fabbrica della telecronaca calcistica latinoamericana, dove i commentatori tengono abitualmente la parola per 10-30 secondi. La tradizione risale alle radiocronache, dove l'urlo prolungato era al tempo stesso esultanza e segnale, garantendo che gli ascoltatori sapessero che era stato segnato un gol anche tra i disturbi della trasmissione."
+        },
+        "ja": {
+          "question": "長く引き伸ばす『ゴオオオオール！』という歓喜の叫びは、どの地域の実況アナウンサーと最も結びついていますか？",
+          "options": [
+            "ラテンアメリカ",
+            "ヨーロッパ",
+            "中東",
+            "アジア"
+          ],
+          "explanation": "引き伸ばされた『ゴオオオオール！』の叫びは、ラテンアメリカのサッカー実況の代名詞であり、実況者は日常的にこの言葉を10〜30秒も伸ばします。この伝統はラジオ中継にさかのぼり、長く伸ばす叫びは歓喜であると同時に合図でもあり、雑音の中でもリスナーにゴールが決まったことを確実に伝えるものでした。"
+        },
+        "ko": {
+          "question": "길게 늘여 외치는 '고오오오올!' 환호 멘트는 어느 지역 해설자들과 가장 깊이 연관되어 있나요?",
+          "options": [
+            "라틴아메리카",
+            "유럽",
+            "중동",
+            "아시아"
+          ],
+          "explanation": "길게 늘어지는 '고오오오올!' 외침은 라틴아메리카 축구 중계의 상징으로, 해설자들은 흔히 이 단어를 10~30초 동안 끌곤 합니다. 이 전통은 라디오 중계 시절로 거슬러 올라가는데, 길게 이어지는 외침은 환호이자 신호였으며, 잡음 속에서도 청취자들이 골이 들어갔음을 확실히 알 수 있게 해 주었습니다."
+        },
+        "pt-BR": {
+          "question": "O longo e prolongado grito de comemoração 'GOOOOOOL!' é mais associado aos narradores de qual região?",
+          "options": [
+            "América Latina",
+            "Europa",
+            "Oriente Médio",
+            "Ásia"
+          ],
+          "explanation": "O prolongado grito de 'GOOOOOOL!' é uma marca registrada da narração de futebol latino-americana, onde os narradores costumam sustentar a palavra por 10 a 30 segundos. A tradição remonta às transmissões de rádio, em que o grito prolongado era ao mesmo tempo comemoração e sinal, garantindo que os ouvintes soubessem que um gol havia sido marcado mesmo em meio aos chiados."
+        },
+        "zh-Hans": {
+          "question": "拖得很长的'进球啦——！'庆祝呐喊，最常与哪个地区的解说员联系在一起？",
+          "options": [
+            "拉丁美洲",
+            "欧洲",
+            "中东",
+            "亚洲"
+          ],
+          "explanation": "拖长的'进球啦——！'呐喊是拉丁美洲足球解说的标志，解说员常常把这个词拖上10到30秒。这一传统可追溯到广播时代，当时持续的呐喊既是庆祝又是信号，确保听众即使在杂音中也能知道有人进球了。"
+        }
+      },
+      "i18nSourceHash": "d82a9778cae4da22"
     },
     {
       "id": "c-shirt-swap",
@@ -17604,7 +18016,110 @@
       ],
       "answer": 0,
       "explanation": "The vuvuzela is a plastic horn popular with South African football fans. Its constant buzzing sound at the 2010 tournament in South Africa was both celebrated as authentic local culture and criticized for drowning out crowd noise and commentary. Some broadcasters added audio filters to reduce the sound.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "بوق الفوفوزيلا، الذي أحدث صوت طنين مميزًا طوال بطولة 2010، ينتمي إلى أي بلد؟",
+          "options": [
+            "جنوب أفريقيا",
+            "البرازيل",
+            "نيجيريا",
+            "المكسيك"
+          ],
+          "explanation": "الفوفوزيلا بوق بلاستيكي محبوب لدى مشجعي كرة القدم في جنوب أفريقيا. وقد لقي صوت طنينه المتواصل في بطولة 2010 المقامة في جنوب أفريقيا احتفاءً باعتباره جزءًا من الثقافة المحلية الأصيلة، كما تعرّض لانتقادات لأنه كان يطغى على أصوات الجماهير والتعليق. وأضاف بعض المذيعين مرشحات صوتية لتقليل هذا الضجيج."
+        },
+        "de": {
+          "question": "Die Vuvuzela, die während des Turniers 2010 für ihren unverwechselbaren Summton sorgte, stammt aus welchem Land?",
+          "options": [
+            "Südafrika",
+            "Brasilien",
+            "Nigeria",
+            "Mexiko"
+          ],
+          "explanation": "Die Vuvuzela ist eine Plastiktröte, die bei südafrikanischen Fußballfans sehr beliebt ist. Ihr dauerhaftes Summen beim Turnier 2010 in Südafrika wurde einerseits als Teil der authentischen lokalen Kultur gefeiert, andererseits dafür kritisiert, dass es Publikumsgeräusche und Kommentare übertönte. Einige Sender setzten Audiofilter ein, um den Lärm zu dämpfen."
+        },
+        "es": {
+          "question": "La vuvuzela, que produjo un característico zumbido durante todo el torneo de 2010, ¿de qué país proviene?",
+          "options": [
+            "Sudáfrica",
+            "Brasil",
+            "Nigeria",
+            "México"
+          ],
+          "explanation": "La vuvuzela es una corneta de plástico muy popular entre los hinchas sudafricanos. Su zumbido constante durante el torneo de 2010 en Sudáfrica fue celebrado como parte de la auténtica cultura local, pero también criticado por tapar el sonido del público y los comentarios. Algunas cadenas agregaron filtros de audio para reducir ese ruido."
+        },
+        "es-ES": {
+          "question": "La vuvuzela, que generó un característico zumbido durante todo el torneo de 2010, ¿de qué país procede?",
+          "options": [
+            "Sudáfrica",
+            "Brasil",
+            "Nigeria",
+            "México"
+          ],
+          "explanation": "La vuvuzela es una trompeta de plástico muy popular entre los aficionados sudafricanos al fútbol. Su zumbido constante durante el torneo de 2010 celebrado en Sudáfrica se celebró como parte de la auténtica cultura local, pero también se criticó por ahogar el sonido del público y de los comentarios. Algunas cadenas añadieron filtros de audio para reducir ese ruido."
+        },
+        "fr": {
+          "question": "La vuvuzela, qui a produit un bourdonnement caractéristique tout au long du tournoi de 2010, vient de quel pays ?",
+          "options": [
+            "Afrique du Sud",
+            "Brésil",
+            "Nigeria",
+            "Mexique"
+          ],
+          "explanation": "La vuvuzela est une trompette en plastique très populaire auprès des supporters de football sud-africains. Son bourdonnement incessant lors du tournoi de 2010 en Afrique du Sud a été à la fois célébré comme un élément authentique de la culture locale et critiqué parce qu'il couvrait les bruits de la foule et les commentaires. Certains diffuseurs ont ajouté des filtres audio pour atténuer ce son."
+        },
+        "it": {
+          "question": "La vuvuzela, che ha prodotto un caratteristico ronzio per tutto il torneo del 2010, proviene da quale Paese?",
+          "options": [
+            "Sudafrica",
+            "Brasile",
+            "Nigeria",
+            "Messico"
+          ],
+          "explanation": "La vuvuzela è una tromba di plastica molto amata dai tifosi di calcio sudafricani. Il suo ronzio costante durante il torneo del 2010 in Sudafrica è stato celebrato come parte dell'autentica cultura locale, ma anche criticato perché copriva il rumore del pubblico e le telecronache. Alcune emittenti hanno aggiunto filtri audio per ridurre quel suono."
+        },
+        "ja": {
+          "question": "2010年の大会を通じて独特のブーンという音を響かせたブブゼラというホーンは、どの国のものですか？",
+          "options": [
+            "南アフリカ",
+            "ブラジル",
+            "ナイジェリア",
+            "メキシコ"
+          ],
+          "explanation": "ブブゼラは南アフリカのサッカーファンに人気のプラスチック製ホーンです。南アフリカで開催された2010年の大会で鳴り続けたその音は、本場の地元文化として称賛される一方で、観客の歓声や実況をかき消すとして批判もされました。一部の放送局はその音を抑えるために音声フィルターを加えました。"
+        },
+        "ko": {
+          "question": "2010년 대회 내내 독특한 윙윙거리는 소리를 낸 부부젤라 나팔은 어느 나라의 것일까요?",
+          "options": [
+            "남아프리카공화국",
+            "브라질",
+            "나이지리아",
+            "멕시코"
+          ],
+          "explanation": "부부젤라는 남아프리카공화국 축구 팬들에게 인기 있는 플라스틱 나팔입니다. 남아공에서 열린 2010년 대회에서 끊임없이 울리던 그 소리는 진정한 현지 문화로 환영받기도 했지만, 관중의 함성과 중계 해설을 묻어버린다는 이유로 비판받기도 했습니다. 일부 방송사는 그 소리를 줄이기 위해 오디오 필터를 추가했습니다."
+        },
+        "pt-BR": {
+          "question": "A vuvuzela, que produziu um zumbido característico ao longo de todo o torneio de 2010, é de qual país?",
+          "options": [
+            "África do Sul",
+            "Brasil",
+            "Nigéria",
+            "México"
+          ],
+          "explanation": "A vuvuzela é uma corneta de plástico muito popular entre os torcedores de futebol sul-africanos. Seu zumbido constante durante o torneio de 2010 na África do Sul foi celebrado como parte da autêntica cultura local, mas também criticado por abafar o som da torcida e da narração. Algumas emissoras adicionaram filtros de áudio para reduzir esse barulho."
+        },
+        "zh-Hans": {
+          "question": "在2010年的赛事期间持续发出独特嗡嗡声的呜呜祖拉号角来自哪个国家？",
+          "options": [
+            "南非",
+            "巴西",
+            "尼日利亚",
+            "墨西哥"
+          ],
+          "explanation": "呜呜祖拉是一种深受南非球迷喜爱的塑料号角。在2010年南非举办的赛事中，它持续不断的嗡嗡声既被赞誉为正宗的本地文化，也因盖过现场观众的呼喊声和解说声而受到批评。一些转播机构添加了音频滤波器来削弱这种声音。"
+        }
+      },
+      "i18nSourceHash": "226ad133f79ea7a3"
     },
     {
       "id": "p-klose-record-goals",
