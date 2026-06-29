@@ -3259,7 +3259,8 @@
         "Carolina Panthers"
       ],
       "answer": 2,
-      "explanation": "Hard Rock Stadium in Miami Gardens is home to the Miami Dolphins and has hosted multiple Super Bowls."
+      "explanation": "Hard Rock Stadium in Miami Gardens is home to the Miami Dolphins and has hosted multiple Super Bowls.",
+      "approved": true
     },
     {
       "id": "t-brazil-titles-count",
