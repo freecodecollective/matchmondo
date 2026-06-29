@@ -3187,7 +3187,8 @@
         "Spain"
       ],
       "answer": 1,
-      "explanation": "Italy won on home soil in 1934 and retained the title in France in 1938 — the first nation to win back-to-back."
+      "explanation": "Italy won on home soil in 1934 and retained the title in France in 1938 — the first nation to win back-to-back.",
+      "claudeTask": "indicate if any other nation(s) have done it also"
     },
     {
       "id": "h-1966-england",
