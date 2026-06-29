@@ -14748,7 +14748,110 @@
       ],
       "answer": 0,
       "explanation": "The 1958 final saw 7 goals as a 17-year-old Pelé scored twice and Vavá added two more in Brazil's 5-2 demolition of host nation Sweden. It was Brazil's first title and announced them as a football superpower. The 2022 final matched the drama with 6 goals (3-3) but needed penalties to decide the winner.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أي نهائي شهد أكبر عدد من الأهداف الإجمالية (باستثناء ركلات الترجيح)؟",
+          "options": [
+            "1958 — البرازيل 5، السويد 2",
+            "2022 — الأرجنتين 3، فرنسا 3",
+            "1966 — إنجلترا 4، ألمانيا الغربية 2",
+            "2018 — فرنسا 4، كرواتيا 2"
+          ],
+          "explanation": "شهد نهائي 1958 سبعة أهداف، حيث سجّل بيليه البالغ من العمر 17 عامًا هدفين وأضاف فافا هدفين آخرين في اكتساح البرازيل للسويد المضيفة بنتيجة 5-2. كان ذلك أول لقب للبرازيل وأعلن عنها كقوة كروية عظمى. أما نهائي 2022 فقد جاراه في الإثارة بستة أهداف (3-3)، لكنه احتاج إلى ركلات الترجيح لتحديد الفائز."
+        },
+        "de": {
+          "question": "In welchem Finale fielen insgesamt die meisten Tore (ohne Elfmeterschießen)?",
+          "options": [
+            "1958 — Brasilien 5, Schweden 2",
+            "2022 — Argentinien 3, Frankreich 3",
+            "1966 — England 4, Westdeutschland 2",
+            "2018 — Frankreich 4, Kroatien 2"
+          ],
+          "explanation": "Im Finale von 1958 fielen 7 Tore: Der 17-jährige Pelé traf doppelt und Vavá steuerte zwei weitere bei, als Brasilien Gastgeber Schweden mit 5:2 vorführte. Es war Brasiliens erster Titel und kündigte das Land als Fußball-Supermacht an. Das Finale von 2022 stand der Dramatik mit 6 Toren (3:3) in nichts nach, doch erst das Elfmeterschießen entschied den Sieger."
+        },
+        "es": {
+          "question": "¿Qué final tuvo la mayor cantidad de goles en total (sin contar las tandas de penales)?",
+          "options": [
+            "1958 — Brasil 5, Suecia 2",
+            "2022 — Argentina 3, Francia 3",
+            "1966 — Inglaterra 4, Alemania Occidental 2",
+            "2018 — Francia 4, Croacia 2"
+          ],
+          "explanation": "La final de 1958 tuvo 7 goles, ya que un Pelé de 17 años marcó dos veces y Vavá sumó otros dos en la goleada de Brasil por 5-2 ante la anfitriona Suecia. Fue el primer título de Brasil y los consagró como una potencia del fútbol. La final de 2022 igualó el drama con 6 goles (3-3), pero necesitó los penales para definir al ganador."
+        },
+        "es-ES": {
+          "question": "¿Qué final tuvo el mayor número de goles en total (sin contar las tandas de penaltis)?",
+          "options": [
+            "1958 — Brasil 5, Suecia 2",
+            "2022 — Argentina 3, Francia 3",
+            "1966 — Inglaterra 4, Alemania Occidental 2",
+            "2018 — Francia 4, Croacia 2"
+          ],
+          "explanation": "La final de 1958 vio 7 goles, ya que un Pelé de 17 años marcó dos veces y Vavá añadió otros dos en la goleada de Brasil por 5-2 ante la anfitriona Suecia. Fue el primer título de Brasil y los anunció como una superpotencia del fútbol. La final de 2022 igualó el dramatismo con 6 goles (3-3), pero necesitó los penaltis para decidir al ganador."
+        },
+        "fr": {
+          "question": "Quelle finale a vu le plus grand nombre de buts au total (hors séances de tirs au but) ?",
+          "options": [
+            "1958 — Brésil 5, Suède 2",
+            "2022 — Argentine 3, France 3",
+            "1966 — Angleterre 4, Allemagne de l'Ouest 2",
+            "2018 — France 4, Croatie 2"
+          ],
+          "explanation": "La finale de 1958 a vu 7 buts inscrits : Pelé, alors âgé de 17 ans, a marqué deux fois et Vavá en a ajouté deux autres lors de la démonstration du Brésil, vainqueur 5-2 face au pays hôte, la Suède. Ce fut le premier titre du Brésil, qui s'affirmait ainsi comme une superpuissance du football. La finale de 2022 a égalé ce suspense avec 6 buts (3-3), mais il a fallu les tirs au but pour départager les deux équipes."
+        },
+        "it": {
+          "question": "Quale finale ha prodotto il maggior numero di gol totali (escludendo i tiri di rigore)?",
+          "options": [
+            "1958 — Brasile 5, Svezia 2",
+            "2022 — Argentina 3, Francia 3",
+            "1966 — Inghilterra 4, Germania Ovest 2",
+            "2018 — Francia 4, Croazia 2"
+          ],
+          "explanation": "La finale del 1958 vide 7 gol: il diciassettenne Pelé segnò una doppietta e Vavá aggiunse altre due reti nella netta vittoria del Brasile per 5-2 sulla Svezia padrona di casa. Fu il primo titolo del Brasile, che si affermò così come una superpotenza del calcio. La finale del 2022 eguagliò quel dramma con 6 gol (3-3), ma servirono i rigori per decretare il vincitore."
+        },
+        "ja": {
+          "question": "（PK戦を除いて）最も多くの総得点が生まれた決勝はどれでしょう？",
+          "options": [
+            "1958年 — ブラジル 5、スウェーデン 2",
+            "2022年 — アルゼンチン 3、フランス 3",
+            "1966年 — イングランド 4、西ドイツ 2",
+            "2018年 — フランス 4、クロアチア 2"
+          ],
+          "explanation": "1958年の決勝では7得点が生まれ、17歳のペレが2得点、ヴァヴァがさらに2得点を加え、ブラジルが開催国スウェーデンを5対2で圧倒しました。これはブラジル初の優勝であり、彼らがサッカーの超大国であることを世界に知らしめました。2022年の決勝も6得点（3対3）という劇的な展開で並びましたが、勝者を決めるにはPK戦が必要でした。"
+        },
+        "ko": {
+          "question": "(승부차기를 제외하고) 총 득점이 가장 많이 나온 결승전은 무엇일까요?",
+          "options": [
+            "1958년 — 브라질 5, 스웨덴 2",
+            "2022년 — 아르헨티나 3, 프랑스 3",
+            "1966년 — 잉글랜드 4, 서독 2",
+            "2018년 — 프랑스 4, 크로아티아 2"
+          ],
+          "explanation": "1958년 결승전에서는 7골이 터졌는데, 17세의 펠레가 두 골을 넣고 바바가 두 골을 추가하며 브라질이 개최국 스웨덴을 5-2로 완파했습니다. 이는 브라질의 첫 우승이었으며, 그들이 축구 강국임을 세계에 알렸습니다. 2022년 결승전도 6골(3-3)로 못지않은 드라마를 연출했지만, 승자를 가리기 위해 승부차기가 필요했습니다."
+        },
+        "pt-BR": {
+          "question": "Qual final teve o maior número de gols no total (sem contar as disputas de pênaltis)?",
+          "options": [
+            "1958 — Brasil 5, Suécia 2",
+            "2022 — Argentina 3, França 3",
+            "1966 — Inglaterra 4, Alemanha Ocidental 2",
+            "2018 — França 4, Croácia 2"
+          ],
+          "explanation": "A final de 1958 teve 7 gols, com Pelé, então com 17 anos, marcando duas vezes e Vavá acrescentando mais dois na goleada do Brasil por 5 a 2 sobre a anfitriã Suécia. Foi o primeiro título do Brasil e o anunciou como uma superpotência do futebol. A final de 2022 igualou o drama com 6 gols (3 a 3), mas precisou dos pênaltis para definir o vencedor."
+        },
+        "zh-Hans": {
+          "question": "哪场决赛打进的总进球数最多（不计点球大战）？",
+          "options": [
+            "1958年 — 巴西 5，瑞典 2",
+            "2022年 — 阿根廷 3，法国 3",
+            "1966年 — 英格兰 4，西德 2",
+            "2018年 — 法国 4，克罗地亚 2"
+          ],
+          "explanation": "1958年的决赛共打进7球，年仅17岁的贝利梅开二度，瓦瓦也再添两球，巴西以5比2大胜东道主瑞典。这是巴西首次夺冠，宣告了他们作为足球超级强国的崛起。2022年的决赛同样充满戏剧性，打进6球（3比3），但最终需要通过点球大战才决出胜者。"
+        }
+      },
+      "i18nSourceHash": "50693a0087409494"
     },
     {
       "id": "c-first-mascot-1966",
@@ -14776,7 +14879,110 @@
       ],
       "answer": 0,
       "explanation": "Adidas has supplied every official ball since the 1970 Telstar, which became iconic with its black-and-white panel design for TV visibility. Each edition gets a uniquely designed ball — the Tango (1978-1998 era), Jabulani (2010), Brazuca (2014), Al Rihla (2022) — and the designs always spark lively debate among players and fans.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ما الشركة التي صنعت كرة المباريات الرسمية في كل نسخة منذ عام 1970؟",
+          "options": [
+            "أديداس",
+            "نايكي",
+            "بوما",
+            "أمبرو"
+          ],
+          "explanation": "زوّدت أديداس كل كرة رسمية منذ كرة تيلستار عام 1970، التي أصبحت أيقونية بتصميم ألواحها بالأبيض والأسود لتكون أوضح على شاشات التلفاز. وتحظى كل نسخة بكرة ذات تصميم فريد — تانغو (حقبة 1978-1998)، وجابولاني (2010)، وبرازوكا (2014)، والريحلة (2022) — وتثير هذه التصاميم دائماً نقاشاً حيوياً بين اللاعبين والجماهير."
+        },
+        "de": {
+          "question": "Welches Unternehmen stellt seit 1970 bei jeder Austragung den offiziellen Spielball her?",
+          "options": [
+            "Adidas",
+            "Nike",
+            "Puma",
+            "Umbro"
+          ],
+          "explanation": "Adidas liefert seit dem Telstar von 1970 jeden offiziellen Ball. Dieser wurde mit seinem schwarz-weißen Panel-Design für die TV-Sichtbarkeit zur Ikone. Jede Austragung bekommt einen einzigartig gestalteten Ball — den Tango (Ära 1978-1998), Jabulani (2010), Brazuca (2014) und Al Rihla (2022) — und die Designs lösen unter Spielern und Fans stets lebhafte Diskussionen aus."
+        },
+        "es": {
+          "question": "¿Qué empresa ha fabricado el balón oficial de cada edición desde 1970?",
+          "options": [
+            "Adidas",
+            "Nike",
+            "Puma",
+            "Umbro"
+          ],
+          "explanation": "Adidas ha provisto cada balón oficial desde el Telstar de 1970, que se volvió icónico por su diseño de paneles en blanco y negro para destacar en televisión. Cada edición tiene un balón con diseño único — el Tango (era 1978-1998), Jabulani (2010), Brazuca (2014), Al Rihla (2022) — y los diseños siempre generan animados debates entre jugadores y aficionados."
+        },
+        "es-ES": {
+          "question": "¿Qué empresa ha fabricado el balón oficial de cada edición desde 1970?",
+          "options": [
+            "Adidas",
+            "Nike",
+            "Puma",
+            "Umbro"
+          ],
+          "explanation": "Adidas ha suministrado cada balón oficial desde el Telstar de 1970, que se convirtió en un icono por su diseño de paneles en blanco y negro para verse mejor en televisión. Cada edición tiene un balón de diseño único — el Tango (época 1978-1998), Jabulani (2010), Brazuca (2014), Al Rihla (2022) — y los diseños siempre provocan animados debates entre jugadores y aficionados."
+        },
+        "fr": {
+          "question": "Quelle entreprise a fabriqué le ballon officiel de chaque édition depuis 1970 ?",
+          "options": [
+            "Adidas",
+            "Nike",
+            "Puma",
+            "Umbro"
+          ],
+          "explanation": "Adidas fournit chaque ballon officiel depuis le Telstar de 1970, devenu emblématique grâce à son design en panneaux noir et blanc qui le rendait plus visible à la télévision. Chaque édition a droit à un ballon au design unique — le Tango (époque 1978-1998), le Jabulani (2010), le Brazuca (2014), l'Al Rihla (2022) — et ces designs suscitent toujours de vifs débats parmi les joueurs et les supporters."
+        },
+        "it": {
+          "question": "Quale azienda ha prodotto il pallone ufficiale di ogni edizione dal 1970?",
+          "options": [
+            "Adidas",
+            "Nike",
+            "Puma",
+            "Umbro"
+          ],
+          "explanation": "Adidas ha fornito ogni pallone ufficiale fin dal Telstar del 1970, diventato iconico per il suo design a pannelli bianchi e neri pensato per la visibilità in TV. Ogni edizione ha un pallone dal design unico — il Tango (era 1978-1998), il Jabulani (2010), il Brazuca (2014), l'Al Rihla (2022) — e i design accendono sempre vivaci dibattiti tra giocatori e tifosi."
+        },
+        "ja": {
+          "question": "1970年以来、毎大会の公式試合球を製造してきた企業はどこですか？",
+          "options": [
+            "アディダス",
+            "ナイキ",
+            "プーマ",
+            "アンブロ"
+          ],
+          "explanation": "アディダスは1970年のテルスター以来、すべての公式球を供給してきました。テルスターはテレビ映りを考えた白黒のパネルデザインで象徴的な存在となりました。各大会ごとに独自のデザインのボールが登場し、タンゴ（1978〜1998年期）、ジャブラニ（2010年）、ブラズーカ（2014年）、アル・リフラ（2022年）などがあり、そのデザインは常に選手やファンの間で活発な議論を呼んでいます。"
+        },
+        "ko": {
+          "question": "1970년 이후 매 대회의 공식 경기구를 제조해 온 기업은 어디입니까?",
+          "options": [
+            "아디다스",
+            "나이키",
+            "푸마",
+            "엄브로"
+          ],
+          "explanation": "아디다스는 1970년 텔스타 이후 모든 공식 경기구를 공급해 왔습니다. 텔스타는 TV 화면에서 잘 보이도록 한 흑백 패널 디자인으로 상징적인 존재가 되었습니다. 각 대회마다 고유한 디자인의 공이 등장하는데, 탱고(1978~1998년 시대), 자불라니(2010), 브라주카(2014), 알 릴라(2022) 등이 있으며, 이 디자인들은 늘 선수와 팬들 사이에서 뜨거운 논쟁을 불러일으킵니다."
+        },
+        "pt-BR": {
+          "question": "Qual empresa fabricou a bola oficial de cada edição desde 1970?",
+          "options": [
+            "Adidas",
+            "Nike",
+            "Puma",
+            "Umbro"
+          ],
+          "explanation": "A Adidas fornece todas as bolas oficiais desde a Telstar de 1970, que se tornou icônica com seu design de gomos em preto e branco para melhor visibilidade na TV. Cada edição ganha uma bola de design exclusivo — a Tango (era 1978-1998), a Jabulani (2010), a Brazuca (2014), a Al Rihla (2022) — e os designs sempre provocam debates acalorados entre jogadores e torcedores."
+        },
+        "zh-Hans": {
+          "question": "自1970年以来，哪家公司为每届赛事制造了官方比赛用球？",
+          "options": [
+            "阿迪达斯",
+            "耐克",
+            "彪马",
+            "茵宝"
+          ],
+          "explanation": "自1970年的特拉斯特（Telstar）以来，阿迪达斯一直供应每一颗官方用球。特拉斯特凭借为提升电视画面可见度而设计的黑白拼块图案成为经典。每届赛事都会推出独特设计的用球——探戈（Tango，1978-1998年代）、普天同庆（Jabulani，2010）、桑巴荣耀（Brazuca，2014）、逐梦之旅（Al Rihla，2022）——这些设计总能在球员和球迷之间引发热烈讨论。"
+        }
+      },
+      "i18nSourceHash": "6f7acd0cedbcb07a"
     },
     {
       "id": "tf-uruguay-first-host-winner",
@@ -14886,7 +15092,90 @@
       "answer": 0,
       "explanation": "True! The card system wasn't introduced until the 1970 edition in Mexico. Before that, referees communicated cautions and dismissals verbally or with gestures. The card system was invented by English referee Ken Aston, who was inspired by traffic lights while driving home after a particularly confusing 1966 match.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "لم تُشهر أي بطاقات صفراء أو حمراء في بطولة 1930.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! لم يُعتمد نظام البطاقات إلا في نسخة 1970 بالمكسيك. قبل ذلك، كان الحكام ينقلون الإنذارات وقرارات الطرد شفهياً أو بالإشارات. وقد ابتكر نظام البطاقات الحكم الإنجليزي كين أستون، الذي استلهم الفكرة من إشارات المرور أثناء قيادته عائداً إلى المنزل بعد مباراة مربكة بشكل خاص عام 1966."
+        },
+        "de": {
+          "question": "Beim Turnier von 1930 wurden weder gelbe noch rote Karten gezeigt.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Richtig! Das Kartensystem wurde erst bei der Ausgabe 1970 in Mexiko eingeführt. Davor teilten die Schiedsrichter Verwarnungen und Platzverweise mündlich oder mit Gesten mit. Erfunden wurde das Kartensystem vom englischen Schiedsrichter Ken Aston, der sich von einer Ampel inspirieren ließ, als er nach einem besonders verwirrenden Spiel von 1966 nach Hause fuhr."
+        },
+        "es": {
+          "question": "En el torneo de 1930 no se mostró ninguna tarjeta amarilla ni roja.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! El sistema de tarjetas no se introdujo sino hasta la edición de 1970 en México. Antes de eso, los árbitros comunicaban las amonestaciones y expulsiones de forma verbal o con gestos. El sistema de tarjetas fue ideado por el árbitro inglés Ken Aston, quien se inspiró en un semáforo mientras conducía de regreso a casa tras un partido especialmente confuso de 1966."
+        },
+        "es-ES": {
+          "question": "En el torneo de 1930 no se mostró ninguna tarjeta amarilla ni roja.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! El sistema de tarjetas no se introdujo hasta la edición de 1970 en México. Antes de eso, los árbitros comunicaban las amonestaciones y expulsiones de palabra o mediante gestos. El sistema de tarjetas lo ideó el árbitro inglés Ken Aston, que se inspiró en un semáforo mientras conducía de vuelta a casa tras un partido especialmente confuso de 1966."
+        },
+        "fr": {
+          "question": "Aucun carton jaune ou rouge n'a été brandi lors du tournoi de 1930.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! Le système de cartons n'a été introduit qu'à l'édition de 1970 au Mexique. Avant cela, les arbitres signifiaient les avertissements et les expulsions verbalement ou par des gestes. Le système de cartons a été imaginé par l'arbitre anglais Ken Aston, qui s'est inspiré des feux de circulation alors qu'il rentrait chez lui après un match particulièrement confus en 1966."
+        },
+        "it": {
+          "question": "Nel torneo del 1930 non venne mostrato alcun cartellino giallo o rosso.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! Il sistema dei cartellini fu introdotto solo con l'edizione del 1970 in Messico. Prima di allora, gli arbitri comunicavano ammonizioni ed espulsioni a voce o con i gesti. Il sistema dei cartellini fu ideato dall'arbitro inglese Ken Aston, che si ispirò a un semaforo mentre tornava a casa in auto dopo una partita particolarmente confusa del 1966."
+        },
+        "ja": {
+          "question": "1930年の大会では、イエローカードもレッドカードも一度も提示されませんでした。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "正しいです！カード制が導入されたのは1970年のメキシコ大会になってからでした。それ以前は、審判は警告や退場を口頭やジェスチャーで伝えていました。このカード制を考案したのはイングランド人審判のケン・アストンで、彼は1966年の特に混乱した試合のあと、帰宅途中に運転しながら信号機から着想を得たのです。"
+        },
+        "ko": {
+          "question": "1930년 대회에서는 옐로카드나 레드카드가 한 장도 나오지 않았다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! 카드 제도는 1970년 멕시코 대회에 이르러서야 도입되었습니다. 그 전까지 심판들은 경고와 퇴장을 말이나 몸짓으로 전달했습니다. 카드 제도는 잉글랜드 심판 켄 아스턴이 고안한 것으로, 그는 유난히 혼란스러웠던 1966년 경기 후 집으로 운전해 가던 중 신호등에서 영감을 얻었습니다."
+        },
+        "pt-BR": {
+          "question": "No torneio de 1930, nenhum cartão amarelo ou vermelho foi mostrado.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! O sistema de cartões só foi introduzido na edição de 1970, no México. Antes disso, os árbitros comunicavam advertências e expulsões verbalmente ou por gestos. O sistema de cartões foi idealizado pelo árbitro inglês Ken Aston, que se inspirou em um semáforo enquanto dirigia de volta para casa após uma partida especialmente confusa em 1966."
+        },
+        "zh-Hans": {
+          "question": "在1930年的赛事中，没有出示过任何黄牌或红牌。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！红黄牌制度直到1970年墨西哥那届赛事才被引入。在此之前，裁判通过口头或手势来传达警告和罚下决定。这套牌制由英格兰裁判肯·阿斯顿（Ken Aston）发明，他在1966年一场格外混乱的比赛后驾车回家途中，从交通信号灯获得了灵感。"
+        }
+      },
+      "i18nSourceHash": "920c3913f487df98"
     },
     {
       "id": "tf-pele-injured-62",
@@ -15296,7 +15585,90 @@
       "answer": 1,
       "explanation": "False! Five of six confederations have had semi-finalists: UEFA (Europe), CONMEBOL (South America), CONCACAF (USA in 1930), AFC (South Korea in 2002), and CAF (Morocco in 2022). The only confederation without a semi-finalist is OFC (Oceania), whose top footballing nation, Australia, moved to the Asian confederation in 2006.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "وصلت فرق من جميع الاتحادات الكروية الستة إلى الدور نصف النهائي في البطولة.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "خطأ! خمسة من أصل ستة اتحادات كان لها ممثلون في الدور نصف النهائي: الاتحاد الأوروبي (UEFA)، واتحاد أمريكا الجنوبية (CONMEBOL)، واتحاد أمريكا الشمالية والوسطى والكاريبي (CONCACAF) عبر الولايات المتحدة عام 1930، والاتحاد الآسيوي (AFC) عبر كوريا الجنوبية عام 2002، والاتحاد الأفريقي (CAF) عبر المغرب عام 2022. الاتحاد الوحيد الذي لم يصل أي من فرقه إلى نصف النهائي هو اتحاد أوقيانوسيا (OFC)، الذي انتقلت دولته الكروية الأبرز، أستراليا، إلى الاتحاد الآسيوي عام 2006."
+        },
+        "de": {
+          "question": "Mannschaften aus allen sechs Fußballkonföderationen haben das Halbfinale des Turniers erreicht.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Falsch! Fünf von sechs Konföderationen hatten Halbfinalisten: UEFA (Europa), CONMEBOL (Südamerika), CONCACAF (USA 1930), AFC (Südkorea 2002) und CAF (Marokko 2022). Die einzige Konföderation ohne Halbfinalist ist die OFC (Ozeanien), deren stärkste Fußballnation, Australien, 2006 in den asiatischen Verband wechselte."
+        },
+        "es": {
+          "question": "Equipos de las seis confederaciones futbolísticas han llegado a las semifinales del torneo.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Falso! Cinco de las seis confederaciones han tenido semifinalistas: la UEFA (Europa), la CONMEBOL (Sudamérica), la CONCACAF (Estados Unidos en 1930), la AFC (Corea del Sur en 2002) y la CAF (Marruecos en 2022). La única confederación sin semifinalista es la OFC (Oceanía), cuya principal potencia futbolística, Australia, se pasó a la confederación asiática en 2006."
+        },
+        "es-ES": {
+          "question": "Equipos de las seis confederaciones futbolísticas han llegado a las semifinales del torneo.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Falso! Cinco de las seis confederaciones han tenido semifinalistas: la UEFA (Europa), la CONMEBOL (Sudamérica), la CONCACAF (Estados Unidos en 1930), la AFC (Corea del Sur en 2002) y la CAF (Marruecos en 2022). La única confederación sin semifinalista es la OFC (Oceanía), cuya principal potencia futbolística, Australia, se pasó a la confederación asiática en 2006."
+        },
+        "fr": {
+          "question": "Des équipes des six confédérations de football ont atteint les demi-finales du tournoi.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Faux ! Cinq des six confédérations ont eu des demi-finalistes : l'UEFA (Europe), la CONMEBOL (Amérique du Sud), la CONCACAF (les États-Unis en 1930), l'AFC (la Corée du Sud en 2002) et la CAF (le Maroc en 2022). La seule confédération sans demi-finaliste est l'OFC (Océanie), dont la principale nation footballistique, l'Australie, a rejoint la confédération asiatique en 2006."
+        },
+        "it": {
+          "question": "Squadre di tutte e sei le confederazioni calcistiche hanno raggiunto le semifinali del torneo.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Falso! Cinque delle sei confederazioni hanno avuto semifinaliste: UEFA (Europa), CONMEBOL (Sud America), CONCACAF (gli Stati Uniti nel 1930), AFC (la Corea del Sud nel 2002) e CAF (il Marocco nel 2022). L'unica confederazione senza una semifinalista è l'OFC (Oceania), la cui principale nazione calcistica, l'Australia, è passata alla confederazione asiatica nel 2006."
+        },
+        "ja": {
+          "question": "6つあるサッカー連盟すべてから、大会の準決勝に進出したチームが存在する。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "誤りです！準決勝進出国を出したのは6連盟のうち5連盟です。UEFA（ヨーロッパ）、CONMEBOL（南米）、CONCACAF（1930年のアメリカ）、AFC（2002年の韓国）、そしてCAF（2022年のモロッコ）です。準決勝進出国を出していない唯一の連盟はOFC（オセアニア）で、その最強のサッカー国であるオーストラリアは2006年にアジア連盟へ移籍しました。"
+        },
+        "ko": {
+          "question": "여섯 개 축구 연맹 모두에서 이 대회 준결승에 진출한 팀이 있었다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "거짓입니다! 여섯 개 연맹 중 다섯 개 연맹이 준결승 진출국을 배출했습니다. UEFA(유럽), CONMEBOL(남미), CONCACAF(1930년 미국), AFC(2002년 대한민국), 그리고 CAF(2022년 모로코)입니다. 준결승 진출국이 없는 유일한 연맹은 OFC(오세아니아)인데, 이 지역 최강 축구 국가인 호주는 2006년 아시아 연맹으로 이적했습니다."
+        },
+        "pt-BR": {
+          "question": "Seleções de todas as seis confederações de futebol já chegaram às semifinais do torneio.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Falso! Cinco das seis confederações tiveram semifinalistas: UEFA (Europa), CONMEBOL (América do Sul), CONCACAF (Estados Unidos em 1930), AFC (Coreia do Sul em 2002) e CAF (Marrocos em 2022). A única confederação sem um semifinalista é a OFC (Oceania), cuja principal nação no futebol, a Austrália, migrou para a confederação asiática em 2006."
+        },
+        "zh-Hans": {
+          "question": "六大足球协会都有球队闯入过本赛事的半决赛。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "错误！六大足联中有五个产生过半决赛球队：欧足联（UEFA，欧洲）、南美足联（CONMEBOL，南美洲）、中北美及加勒比海足联（CONCACAF，1930年的美国）、亚足联（AFC，2002年的韩国）以及非洲足联（CAF，2022年的摩洛哥）。唯一没有半决赛球队的是大洋洲足联（OFC），其足球实力最强的国家澳大利亚已于2006年转入亚洲足联。"
+        }
+      },
+      "i18nSourceHash": "8eabf5a890b016cc"
     },
     {
       "id": "tf-golden-goal-abolished",
@@ -15309,7 +15681,90 @@
       "answer": 0,
       "explanation": "True! The golden goal rule, where the first team to score in extra time immediately won, was used at the 1998 and 2002 editions. It was abolished in 2004 due to criticism that it made teams overly defensive in extra time, afraid one mistake would end the match. The 2006 edition returned to the traditional full 30-minute extra-time format.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "تم إلغاء قاعدة الهدف الذهبي (الموت المفاجئ في الوقت الإضافي) بعد بطولة 2002.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! قاعدة الهدف الذهبي، حيث يفوز الفريق الذي يسجل أولاً في الوقت الإضافي فوراً، استُخدمت في نسختي 1998 و2002. وأُلغيت عام 2004 بسبب الانتقادات بأنها جعلت الفرق دفاعية بشكل مفرط في الوقت الإضافي خوفاً من أن يؤدي خطأ واحد إلى إنهاء المباراة. وعادت نسخة 2006 إلى الصيغة التقليدية للوقت الإضافي الكامل البالغ 30 دقيقة."
+        },
+        "de": {
+          "question": "Die Golden-Goal-Regel (Sudden Death in der Verlängerung) wurde nach dem Turnier 2002 abgeschafft.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Richtig! Die Golden-Goal-Regel, bei der die Mannschaft, die in der Verlängerung zuerst trifft, sofort gewinnt, wurde bei den Ausgaben 1998 und 2002 angewendet. Sie wurde 2004 abgeschafft, weil kritisiert wurde, dass sie die Teams in der Verlängerung zu defensiv machte, aus Angst, ein einziger Fehler könnte das Spiel beenden. Die Ausgabe 2006 kehrte zum traditionellen Format mit vollen 30 Minuten Verlängerung zurück."
+        },
+        "es": {
+          "question": "La regla del gol de oro (muerte súbita en el tiempo extra) fue abolida tras el torneo de 2002.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! La regla del gol de oro, en la que el primer equipo en anotar en el tiempo extra ganaba de inmediato, se usó en las ediciones de 1998 y 2002. Fue abolida en 2004 debido a las críticas de que hacía que los equipos jugaran demasiado a la defensiva en el tiempo extra, por temor a que un solo error terminara el partido. La edición de 2006 volvió al formato tradicional de 30 minutos completos de tiempo extra."
+        },
+        "es-ES": {
+          "question": "La regla del gol de oro (muerte súbita en la prórroga) fue abolida tras el torneo de 2002.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! La regla del gol de oro, en la que el primer equipo en marcar en la prórroga ganaba de inmediato, se usó en las ediciones de 1998 y 2002. Fue abolida en 2004 debido a las críticas de que hacía que los equipos jugaran demasiado a la defensiva en la prórroga, por miedo a que un solo error terminara el partido. La edición de 2006 volvió al formato tradicional de los 30 minutos completos de prórroga."
+        },
+        "fr": {
+          "question": "La règle du but en or (mort subite en prolongation) a été abolie après le tournoi de 2002.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! La règle du but en or, selon laquelle la première équipe à marquer en prolongation gagnait immédiatement, a été utilisée lors des éditions de 1998 et 2002. Elle a été abolie en 2004 à la suite de critiques selon lesquelles elle rendait les équipes trop défensives en prolongation, par crainte qu'une seule erreur ne mette fin au match. L'édition de 2006 est revenue au format traditionnel des 30 minutes complètes de prolongation."
+        },
+        "it": {
+          "question": "La regola del golden goal (morte improvvisa nei tempi supplementari) è stata abolita dopo il torneo del 2002.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! La regola del golden goal, secondo cui la prima squadra a segnare nei tempi supplementari vinceva immediatamente, è stata usata nelle edizioni del 1998 e del 2002. È stata abolita nel 2004 a causa delle critiche secondo cui rendeva le squadre troppo difensive nei supplementari, per paura che un singolo errore potesse decidere la partita. L'edizione del 2006 è tornata al formato tradizionale dei 30 minuti completi di tempi supplementari."
+        },
+        "ja": {
+          "question": "ゴールデンゴール方式（延長戦のサドンデス）は2002年大会の後に廃止された。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "正しい！延長戦で最初に得点したチームが即座に勝利するゴールデンゴール方式は、1998年と2002年大会で採用されました。延長戦でチームが過度に守備的になり、たった一つのミスで試合が終わってしまうことを恐れるという批判から、2004年に廃止されました。2006年大会では、従来の30分間フルの延長戦方式に戻されました。"
+        },
+        "ko": {
+          "question": "골든골 규정(연장전 서든데스)은 2002년 대회 이후 폐지되었다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! 연장전에서 먼저 득점한 팀이 즉시 승리하는 골든골 규정은 1998년과 2002년 대회에서 사용되었습니다. 한 번의 실수로 경기가 끝날까 두려워 팀들이 연장전에서 지나치게 수비적으로 임하게 만든다는 비판으로 인해 2004년에 폐지되었습니다. 2006년 대회에서는 전통적인 30분 풀타임 연장전 방식으로 돌아갔습니다."
+        },
+        "pt-BR": {
+          "question": "A regra do gol de ouro (morte súbita na prorrogação) foi abolida após o torneio de 2002.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! A regra do gol de ouro, em que a primeira equipe a marcar na prorrogação vencia imediatamente, foi usada nas edições de 1998 e 2002. Ela foi abolida em 2004 devido às críticas de que tornava as equipes excessivamente defensivas na prorrogação, com medo de que um único erro encerrasse a partida. A edição de 2006 voltou ao formato tradicional de 30 minutos completos de prorrogação."
+        },
+        "zh-Hans": {
+          "question": "金球制规则（加时赛中的突然死亡法）在2002年赛事后被废除。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！金球制规则规定加时赛中率先进球的球队立即获胜，这一规则在1998年和2002年两届赛事中使用。由于有批评认为该规则使球队在加时赛中过于保守，担心一个失误就会终结比赛，因此该规则于2004年被废除。2006年的赛事则恢复了传统的完整30分钟加时赛模式。"
+        }
+      },
+      "i18nSourceHash": "8355fbc732eb5aa7"
     },
     {
       "id": "tf-added-time-2022",
