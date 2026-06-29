@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MatchMondo — Player Header Redesign</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif; background: #e8e8e8; padding: 24px 0 48px; -webkit-font-smoothing: antialiased; }
+
+  .page-title { text-align: center; font-size: 22px; font-weight: 700; color: #333; padding: 20px 0 4px; }
+  .page-subtitle { text-align: center; font-size: 13px; color: #888; margin-bottom: 28px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.5; padding: 0 20px; }
+
+  .phones { display: flex; flex-wrap: wrap; gap: 36px; justify-content: center; padding: 0 20px 40px; }
+
+  .phone {
+    width: 375px;
+    background: #e8ece8;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15), 0 2px 8px rgba(0,0,0,0.1);
+    border: 6px solid #1a1a1a;
+  }
+  .phone-label { text-align: center; font-size: 14px; font-weight: 600; color: #555; margin-bottom: 4px; }
+  .phone-sublabel { text-align: center; font-size: 12px; color: #999; margin-bottom: 12px; max-width: 340px; margin-left: auto; margin-right: auto; line-height: 1.4; }
+  .phone-wrap { display: flex; flex-direction: column; align-items: center; }
+
+  .content { background: #e8ece8; }
+
+  :root {
+    --accent: #0F6E56;
+    --accent-dark: #0B3D28;
+    --accent-readable: #0B6E4F;
+  }
+
+  .back-btn {
+    position: absolute; top: 12px; left: 12px; z-index: 2;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: rgba(0,0,0,0.35); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 600;
+  }
+  .heart-btn { font-size: 22px; cursor: pointer; color: rgba(255,255,255,0.8); }
+
+  /* Placeholder content below each header */
+  .placeholder-card {
+    margin: 16px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.06);
+    padding: 14px;
+  }
+  .ph-header { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+  .ph-icon { font-size: 12px; color: var(--accent-readable); }
+  .ph-bar { height: 10px; background: #f0f0f0; border-radius: 5px; margin-bottom: 8px; }
+  .ph-bar.w60 { width: 60%; }
+  .ph-bar.w80 { width: 80%; }
+  .ph-bar.w45 { width: 45%; }
+
+  /* Shared turf pattern */
+  .turf-pattern {
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(90deg,
+      transparent 0, transparent 46px,
+      rgba(255,255,255,0.05) 46px, rgba(255,255,255,0.05) 92px);
+    pointer-events: none;
+  }
+  .pitch-line {
+    position: absolute;
+    right: 14%; top: 0; bottom: 0;
+    width: 1.5px;
+    background: rgba(255,255,255,0.15);
+    pointer-events: none;
+  }
+  .pitch-circle {
+    position: absolute;
+    right: calc(14% - 40px); top: 50%; transform: translateY(-50%);
+    width: 80px; height: 80px; border-radius: 50%;
+    border: 1.5px solid rgba(255,255,255,0.12);
+    pointer-events: none;
+  }
+
+  /* ==============================
+     CURRENT (for reference)
+     ============================== */
+  .hdr-current {
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #1D9E75 100%);
+    padding: 48px 16px 18px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .hdr-current .inner {
+    position: relative; z-index: 1;
+    display: flex; align-items: flex-end; gap: 12px;
+  }
+  .hdr-current .photo {
+    width: 64px; height: 64px; border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.4);
+    overflow: hidden; flex-shrink: 0; position: relative;
+  }
+  .hdr-current .photo img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-current .jersey-sm {
+    position: absolute; bottom: -2px; left: -3px;
+    background: #fff; color: var(--accent-dark);
+    font-size: 11px; font-weight: 800;
+    padding: 2px 5px; border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  }
+  .hdr-current .info { flex: 1; min-width: 0; }
+  .hdr-current .name { font-size: 20px; font-weight: 700; display: flex; align-items: center; gap: 6px; }
+  .hdr-current .meta { font-size: 13px; opacity: 0.85; margin-top: 2px; }
+  .hdr-current .meta2 { font-size: 12px; opacity: 0.75; margin-top: 1px; }
+  .hdr-current .country { font-size: 12px; opacity: 0.85; margin-top: 4px; display: flex; align-items: center; gap: 6px; }
+
+  /* ==============================
+     OPTION A — Centered Hero
+     ============================== */
+  .hdr-a {
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #1D9E75 100%);
+    padding: 48px 16px 22px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hdr-a .inner { position: relative; z-index: 1; }
+  .hdr-a .photo-ring {
+    width: 96px; height: 96px; border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.5);
+    overflow: hidden; margin: 0 auto 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    position: relative;
+  }
+  .hdr-a .photo-ring img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-a .jersey-badge {
+    position: absolute; bottom: 2px; right: -2px;
+    background: #fff; color: var(--accent-dark);
+    font-size: 13px; font-weight: 800;
+    width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    border: 2px solid rgba(255,255,255,0.3);
+  }
+  .hdr-a .name { font-size: 24px; font-weight: 800; letter-spacing: -0.3px; }
+  .hdr-a .pos-club { font-size: 13px; opacity: 0.85; margin-top: 3px; }
+  .hdr-a .meta-row {
+    display: flex; justify-content: center; gap: 16px;
+    margin-top: 8px; font-size: 12px; opacity: 0.75;
+  }
+  .hdr-a .meta-row .sep { opacity: 0.4; }
+  .hdr-a .flag-row {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    margin-top: 6px; font-size: 12px; opacity: 0.85;
+  }
+  .hdr-a .actions {
+    position: absolute; top: 48px; right: 16px; z-index: 2;
+  }
+
+  /* ==============================
+     OPTION B — Big Photo + Clean Stack
+     ============================== */
+  .hdr-b {
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #1D9E75 100%);
+    padding: 48px 16px 20px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .hdr-b .inner {
+    position: relative; z-index: 1;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .hdr-b .photo-wrap {
+    position: relative; flex-shrink: 0;
+  }
+  .hdr-b .photo {
+    width: 88px; height: 88px; border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.45);
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  }
+  .hdr-b .photo img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-b .jersey {
+    position: absolute; top: -4px; right: -4px;
+    background: #fff; color: var(--accent-dark);
+    font-size: 14px; font-weight: 800;
+    width: 30px; height: 30px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border: 2px solid rgba(15,110,86,0.15);
+  }
+  .hdr-b .info { flex: 1; min-width: 0; }
+  .hdr-b .name-row {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .hdr-b .flag-lg { font-size: 20px; }
+  .hdr-b .name { font-size: 22px; font-weight: 800; letter-spacing: -0.3px; }
+  .hdr-b .pos { font-size: 14px; opacity: 0.9; margin-top: 2px; font-weight: 500; }
+  .hdr-b .club { font-size: 12px; opacity: 0.7; margin-top: 1px; }
+  .hdr-b .chips {
+    display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap;
+  }
+  .hdr-b .chip {
+    font-size: 11px; font-weight: 600;
+    padding: 3px 8px; border-radius: 6px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(4px);
+    display: flex; align-items: center; gap: 3px;
+  }
+  .hdr-b .actions {
+    position: absolute; top: 48px; right: 16px; z-index: 2;
+  }
+
+  /* ==============================
+     OPTION C — Banner Crop
+     ============================== */
+  .hdr-c {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    height: 220px;
+  }
+  .hdr-c .bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #1D9E75 100%);
+  }
+  .hdr-c .photo-bg {
+    position: absolute; right: -20px; bottom: -10px;
+    width: 200px; height: 200px;
+    opacity: 0.2;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .hdr-c .photo-bg img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-c .photo-main {
+    position: absolute; right: 20px; bottom: 16px;
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.4);
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+  }
+  .hdr-c .photo-main img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-c .jersey {
+    position: absolute; right: 18px; bottom: 12px;
+    background: #fff; color: var(--accent-dark);
+    font-size: 14px; font-weight: 800;
+    width: 30px; height: 30px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    z-index: 3;
+  }
+  .hdr-c .text-area {
+    position: absolute; left: 16px; bottom: 18px; z-index: 2;
+    max-width: 55%;
+  }
+  .hdr-c .flag-name {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .hdr-c .flag-name .flg { font-size: 22px; }
+  .hdr-c .name { font-size: 26px; font-weight: 800; letter-spacing: -0.3px; line-height: 1.1; }
+  .hdr-c .pos { font-size: 14px; opacity: 0.9; margin-top: 4px; font-weight: 500; }
+  .hdr-c .meta-pills {
+    display: flex; gap: 6px; margin-top: 6px;
+  }
+  .hdr-c .mpill {
+    font-size: 11px; font-weight: 600;
+    padding: 3px 8px; border-radius: 6px;
+    background: rgba(255,255,255,0.15);
+  }
+  .hdr-c .gradient-fade {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 60%;
+    background: linear-gradient(to top, rgba(11,61,40,0.7), transparent);
+    z-index: 1; pointer-events: none;
+  }
+
+  /* ==============================
+     OPTION D — Stats in Header
+     ============================== */
+  .hdr-d {
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #1D9E75 100%);
+    padding: 48px 16px 0;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .hdr-d .inner {
+    position: relative; z-index: 1;
+    display: flex; align-items: center; gap: 14px;
+    padding-bottom: 14px;
+  }
+  .hdr-d .photo-wrap { position: relative; flex-shrink: 0; }
+  .hdr-d .photo {
+    width: 80px; height: 80px; border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.45);
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  }
+  .hdr-d .photo img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-d .jersey {
+    position: absolute; top: -2px; right: -6px;
+    background: #fff; color: var(--accent-dark);
+    font-size: 13px; font-weight: 800;
+    width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  .hdr-d .info { flex: 1; min-width: 0; }
+  .hdr-d .name-row { display: flex; align-items: center; gap: 8px; }
+  .hdr-d .flag-lg { font-size: 18px; }
+  .hdr-d .name { font-size: 22px; font-weight: 800; letter-spacing: -0.3px; }
+  .hdr-d .pos { font-size: 13px; opacity: 0.85; margin-top: 2px; }
+  .hdr-d .meta { font-size: 11px; opacity: 0.7; margin-top: 1px; }
+  .hdr-d .stat-strip {
+    position: relative; z-index: 1;
+    display: flex; gap: 0;
+    background: rgba(0,0,0,0.15);
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .hdr-d .sstat {
+    flex: 1; text-align: center;
+    padding: 10px 4px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .hdr-d .sstat:last-child { border-right: none; }
+  .hdr-d .sstat .sv { font-size: 18px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .hdr-d .sstat .sl { font-size: 9px; font-weight: 600; opacity: 0.65; text-transform: uppercase; letter-spacing: 0.3px; margin-top: 1px; }
+
+  /* ==============================
+     OPTION E — Two-Tone Split
+     ============================== */
+  .hdr-e {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+  }
+  .hdr-e .gradient-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #1D9E75 100%);
+  }
+  .hdr-e .top-row {
+    position: relative; z-index: 1;
+    display: flex; align-items: center;
+    padding: 48px 16px 14px;
+    gap: 14px;
+  }
+  .hdr-e .photo-wrap { position: relative; flex-shrink: 0; }
+  .hdr-e .photo {
+    width: 72px; height: 72px; border-radius: 50%;
+    border: 2.5px solid rgba(255,255,255,0.45);
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  }
+  .hdr-e .photo img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-e .jersey {
+    position: absolute; top: -2px; right: -4px;
+    background: #fff; color: var(--accent-dark);
+    font-size: 12px; font-weight: 800;
+    width: 26px; height: 26px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  .hdr-e .info { flex: 1; min-width: 0; }
+  .hdr-e .name-row { display: flex; align-items: center; gap: 7px; }
+  .hdr-e .flag-lg { font-size: 18px; }
+  .hdr-e .name { font-size: 22px; font-weight: 800; letter-spacing: -0.3px; }
+  .hdr-e .pos { font-size: 13px; opacity: 0.85; margin-top: 2px; }
+  .hdr-e .meta { font-size: 11px; opacity: 0.7; margin-top: 1px; }
+  .hdr-e .bottom-strip {
+    position: relative; z-index: 1;
+    background: #fff;
+    display: flex; gap: 0;
+    border-radius: 16px 16px 0 0;
+    margin-top: -2px;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.06);
+  }
+  .hdr-e .bstat {
+    flex: 1; text-align: center;
+    padding: 12px 4px;
+    border-right: 1px solid rgba(0,0,0,0.05);
+  }
+  .hdr-e .bstat:last-child { border-right: none; }
+  .hdr-e .bstat .sv { font-size: 18px; font-weight: 800; color: var(--accent-readable); font-variant-numeric: tabular-nums; }
+  .hdr-e .bstat .sl { font-size: 9px; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 0.3px; margin-top: 1px; }
+
+  /* ==============================
+     OPTION F — Jersey Number Prominent
+     ============================== */
+  .hdr-f {
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #1D9E75 100%);
+    padding: 48px 16px 20px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .hdr-f .inner {
+    position: relative; z-index: 1;
+    display: flex; gap: 14px;
+  }
+  .hdr-f .left-col {
+    display: flex; flex-direction: column; align-items: center;
+    flex-shrink: 0; width: 80px;
+  }
+  .hdr-f .photo {
+    width: 72px; height: 72px; border-radius: 50%;
+    border: 2.5px solid rgba(255,255,255,0.45);
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  }
+  .hdr-f .photo img { width: 100%; height: 100%; object-fit: cover; }
+  .hdr-f .jersey-pill {
+    margin-top: 6px;
+    background: rgba(255,255,255,0.2);
+    border: 1.5px solid rgba(255,255,255,0.35);
+    border-radius: 8px;
+    padding: 2px 12px;
+    font-size: 16px; font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
+    backdrop-filter: blur(4px);
+  }
+  .hdr-f .info { flex: 1; min-width: 0; padding-top: 4px; }
+  .hdr-f .name-row { display: flex; align-items: center; gap: 8px; }
+  .hdr-f .flag-lg { font-size: 20px; }
+  .hdr-f .name { font-size: 22px; font-weight: 800; letter-spacing: -0.3px; }
+  .hdr-f .pos { font-size: 14px; opacity: 0.9; margin-top: 3px; font-weight: 500; }
+  .hdr-f .club { font-size: 12px; opacity: 0.7; margin-top: 1px; }
+  .hdr-f .detail-row {
+    display: flex; gap: 12px; margin-top: 8px;
+    font-size: 11px; opacity: 0.7;
+  }
+  .hdr-f .actions {
+    position: absolute; top: 48px; right: 16px; z-index: 2;
+  }
+
+  .section-divider {
+    text-align: center; font-size: 18px; font-weight: 700; color: #333;
+    padding: 32px 0 4px;
+  }
+  .section-note {
+    text-align: center; font-size: 12px; color: #999; margin-bottom: 24px;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-title">Player Header — Redesign Options</div>
+<div class="page-subtitle">Six header layout options. Each shows the same Mbappé data; compare photo size, jersey number visibility, and information hierarchy.</div>
+
+<div class="section-divider">Current Design (for reference)</div>
+<div class="section-note">Small photo, tiny jersey badge at bottom-left, text crammed to the right</div>
+
+<div class="phones">
+<div class="phone-wrap">
+  <div class="phone-label">Current</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-current">
+        <div class="back-btn">‹</div>
+        <div class="turf-pattern"></div>
+        <div class="pitch-line"></div>
+        <div class="inner">
+          <div class="photo">
+            <img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt="">
+            <div class="jersey-sm">10</div>
+          </div>
+          <div class="info">
+            <div class="name">⚽ Mbappé</div>
+            <div class="meta">Forward · Paris Saint-Germain</div>
+            <div class="meta2">Age 27 · 1.78 m</div>
+            <div class="country">
+              <span style="font-size:14px">🇫🇷</span> France
+              <span class="heart-btn" style="margin-left:auto">♡</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w60"></div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w45"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="section-divider">Redesign Options</div>
+<div class="section-note">Click/scroll through — jersey number is prominent in every option</div>
+
+<div class="phones">
+
+<!-- OPTION A — Centered Hero -->
+<div class="phone-wrap">
+  <div class="phone-label">A — Centered Hero</div>
+  <div class="phone-sublabel">Large centered photo, name front and center. Clean and bold, like a sports card.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-a">
+        <div class="back-btn">‹</div>
+        <div class="turf-pattern"></div>
+        <div class="pitch-line"></div>
+        <div class="actions"><span class="heart-btn">♡</span></div>
+        <div class="inner">
+          <div class="photo-ring">
+            <img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt="">
+            <div class="jersey-badge">10</div>
+          </div>
+          <div class="name">Mbappé</div>
+          <div class="pos-club">Forward · Real Madrid</div>
+          <div class="meta-row">
+            <span>🇫🇷 France</span>
+            <span class="sep">·</span>
+            <span>Age 27</span>
+            <span class="sep">·</span>
+            <span>1.78 m</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w60"></div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w45"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION B — Big Photo + Clean Stack -->
+<div class="phone-wrap">
+  <div class="phone-label">B — Big Photo + Info Chips</div>
+  <div class="phone-sublabel">Larger photo with jersey at top-right, flag next to name, meta as frosted chips.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-b">
+        <div class="back-btn">‹</div>
+        <div class="turf-pattern"></div>
+        <div class="pitch-line"></div>
+        <div class="actions"><span class="heart-btn">♡</span></div>
+        <div class="inner">
+          <div class="photo-wrap">
+            <div class="photo">
+              <img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt="">
+            </div>
+            <div class="jersey">10</div>
+          </div>
+          <div class="info">
+            <div class="name-row">
+              <span class="flag-lg">🇫🇷</span>
+              <span class="name">Mbappé</span>
+            </div>
+            <div class="pos">Forward</div>
+            <div class="club">Real Madrid · La Liga</div>
+            <div class="chips">
+              <span class="chip">Age 27</span>
+              <span class="chip">1.78 m</span>
+              <span class="chip">Bondy, France</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w60"></div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w45"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION C — Banner with Large Photo -->
+<div class="phone-wrap">
+  <div class="phone-label">C — Editorial Banner</div>
+  <div class="phone-sublabel">Taller banner with large photo on the right, text fading up from the bottom. ESPN/Athletic vibe.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-c">
+        <div class="back-btn">‹</div>
+        <div class="bg">
+          <div class="turf-pattern"></div>
+          <div class="pitch-line"></div>
+        </div>
+        <div class="photo-bg">
+          <img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt="">
+        </div>
+        <div class="gradient-fade"></div>
+        <div class="photo-main">
+          <img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt="">
+        </div>
+        <div class="jersey">10</div>
+        <div style="position:absolute;top:48px;right:16px;z-index:3"><span class="heart-btn">♡</span></div>
+        <div class="text-area">
+          <div class="flag-name">
+            <span class="flg">🇫🇷</span>
+            <div class="name">Mbappé</div>
+          </div>
+          <div class="pos">Forward · Real Madrid</div>
+          <div class="meta-pills">
+            <span class="mpill">Age 27</span>
+            <span class="mpill">1.78 m</span>
+            <span class="mpill">#10</span>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w60"></div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w45"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION D — Stats in Header -->
+<div class="phone-wrap">
+  <div class="phone-label">D — Stats Strip</div>
+  <div class="phone-sublabel">Key tournament stats integrated into the header as a dark strip. Info-dense without scrolling.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-d">
+        <div class="back-btn">‹</div>
+        <div class="turf-pattern"></div>
+        <div class="pitch-line"></div>
+        <div style="position:absolute;top:48px;right:16px;z-index:2"><span class="heart-btn">♡</span></div>
+        <div class="inner">
+          <div class="photo-wrap">
+            <div class="photo">
+              <img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt="">
+            </div>
+            <div class="jersey">10</div>
+          </div>
+          <div class="info">
+            <div class="name-row">
+              <span class="flag-lg">🇫🇷</span>
+              <span class="name">Mbappé</span>
+            </div>
+            <div class="pos">Forward · Real Madrid</div>
+            <div class="meta">Age 27 · 1.78 m · Bondy, France</div>
+          </div>
+        </div>
+        <div class="stat-strip">
+          <div class="sstat"><div class="sv">4</div><div class="sl">Goals</div></div>
+          <div class="sstat"><div class="sv">1</div><div class="sl">Assist</div></div>
+          <div class="sstat"><div class="sv">4</div><div class="sl">Apps</div></div>
+          <div class="sstat"><div class="sv">8</div><div class="sl">On Target</div></div>
+          <div class="sstat"><div class="sv">99</div><div class="sl">Caps</div></div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w60"></div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w45"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION E — Two-Tone Split -->
+<div class="phone-wrap">
+  <div class="phone-label">E — Two-Tone Split</div>
+  <div class="phone-sublabel">Green header flows into white stat strip with rounded top edge. Stats bridge header and content.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-e">
+        <div class="gradient-bg">
+          <div class="turf-pattern"></div>
+          <div class="pitch-line"></div>
+        </div>
+        <div class="back-btn">‹</div>
+        <div style="position:absolute;top:48px;right:16px;z-index:2"><span class="heart-btn">♡</span></div>
+        <div class="top-row">
+          <div class="photo-wrap">
+            <div class="photo">
+              <img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt="">
+            </div>
+            <div class="jersey">10</div>
+          </div>
+          <div class="info">
+            <div class="name-row">
+              <span class="flag-lg">🇫🇷</span>
+              <span class="name">Mbappé</span>
+            </div>
+            <div class="pos">Forward · Real Madrid</div>
+            <div class="meta">Age 27 · 1.78 m · Bondy, France</div>
+          </div>
+        </div>
+        <div class="bottom-strip">
+          <div class="bstat"><div class="sv">4</div><div class="sl">Goals</div></div>
+          <div class="bstat"><div class="sv">1</div><div class="sl">Assist</div></div>
+          <div class="bstat"><div class="sv">4</div><div class="sl">Apps</div></div>
+          <div class="bstat"><div class="sv">8</div><div class="sl">On Target</div></div>
+          <div class="bstat"><div class="sv">99</div><div class="sl">Caps</div></div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w60"></div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w45"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION F — Jersey Number Prominent -->
+<div class="phone-wrap">
+  <div class="phone-label">F — Jersey Pill Below Photo</div>
+  <div class="phone-sublabel">Photo and jersey number stacked vertically in a left column. Clean separation, number unmissable.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="hdr-f">
+        <div class="back-btn">‹</div>
+        <div class="turf-pattern"></div>
+        <div class="pitch-line"></div>
+        <div class="actions"><span class="heart-btn">♡</span></div>
+        <div class="inner">
+          <div class="left-col">
+            <div class="photo">
+              <img src="https://b.fssta.com/uploads/application/soccer/headshots/40670.png" alt="">
+            </div>
+            <div class="jersey-pill">10</div>
+          </div>
+          <div class="info">
+            <div class="name-row">
+              <span class="flag-lg">🇫🇷</span>
+              <span class="name">Mbappé</span>
+            </div>
+            <div class="pos">Forward</div>
+            <div class="club">Real Madrid · La Liga</div>
+            <div class="detail-row">
+              <span>Age 27</span>
+              <span>1.78 m</span>
+              <span>Bondy, France</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder-card">
+        <div class="ph-header"><span class="ph-icon">🏆</span> Football 2026</div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w60"></div>
+        <div class="ph-bar w80"></div>
+        <div class="ph-bar w45"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
