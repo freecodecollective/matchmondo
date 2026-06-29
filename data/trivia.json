@@ -951,7 +951,110 @@
       ],
       "answer": 1,
       "explanation": "Germany pioneered official Fan Fests in 2006, with hundreds of thousands gathering in public viewing areas across host cities.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "في أي بطولة قُدِّمت لأول مرة مهرجانات المشجعين الرسمية للمشاهدة في الهواء الطلق على الشاشات العملاقة؟",
+          "options": [
+            "2002",
+            "2006",
+            "2010",
+            "2014"
+          ],
+          "explanation": "كانت ألمانيا رائدة في تنظيم مهرجانات المشجعين الرسمية عام 2006، حيث تجمّع مئات الآلاف في مناطق المشاهدة العامة عبر المدن المضيفة."
+        },
+        "de": {
+          "question": "Bei welchem Turnier wurden die offiziellen Fanfeste mit Großbildleinwänden unter freiem Himmel erstmals eingeführt?",
+          "options": [
+            "2002",
+            "2006",
+            "2010",
+            "2014"
+          ],
+          "explanation": "Deutschland war 2006 Vorreiter bei den offiziellen Fanfesten, bei denen sich Hunderttausende auf öffentlichen Übertragungsflächen in den Austragungsstädten versammelten."
+        },
+        "es": {
+          "question": "¿En qué torneo se presentaron por primera vez los festivales oficiales para aficionados con pantallas gigantes al aire libre?",
+          "options": [
+            "2002",
+            "2006",
+            "2010",
+            "2014"
+          ],
+          "explanation": "Alemania fue pionera con los Fan Fests oficiales en 2006, cuando cientos de miles de personas se reunieron en zonas de visionado público por todas las ciudades sede."
+        },
+        "es-ES": {
+          "question": "¿En qué torneo se presentaron por primera vez los festivales oficiales para aficionados con pantallas gigantes al aire libre?",
+          "options": [
+            "2002",
+            "2006",
+            "2010",
+            "2014"
+          ],
+          "explanation": "Alemania fue pionera con los Fan Fests oficiales en 2006, cuando cientos de miles de personas se congregaron en zonas de visionado público por todas las ciudades anfitrionas."
+        },
+        "fr": {
+          "question": "Lors de quel tournoi les festivals officiels pour supporters avec écrans géants en plein air ont-ils été introduits pour la première fois ?",
+          "options": [
+            "2002",
+            "2006",
+            "2010",
+            "2014"
+          ],
+          "explanation": "L'Allemagne a été pionnière des Fan Fests officiels en 2006, rassemblant des centaines de milliers de personnes dans les zones de retransmission publiques des villes hôtes."
+        },
+        "it": {
+          "question": "In quale torneo sono stati introdotti per la prima volta i festival ufficiali per i tifosi con maxischermi all'aperto?",
+          "options": [
+            "2002",
+            "2006",
+            "2010",
+            "2014"
+          ],
+          "explanation": "La Germania è stata pioniera dei Fan Fest ufficiali nel 2006, con centinaia di migliaia di persone riunite nelle aree di visione pubblica delle città ospitanti."
+        },
+        "ja": {
+          "question": "屋外の大型スクリーンで観戦する公式ファンフェスティバルが初めて導入されたのはどの大会ですか？",
+          "options": [
+            "2002年",
+            "2006年",
+            "2010年",
+            "2014年"
+          ],
+          "explanation": "ドイツは2006年に公式ファンフェストを先駆けて開催し、開催各都市のパブリックビューイング会場に数十万人が集まりました。"
+        },
+        "ko": {
+          "question": "대형 야외 스크린으로 경기를 관람하는 공식 팬 페스티벌이 처음 도입된 대회는 무엇일까요?",
+          "options": [
+            "2002년",
+            "2006년",
+            "2010년",
+            "2014년"
+          ],
+          "explanation": "독일은 2006년에 공식 팬 페스트를 처음으로 선보였으며, 개최 도시 곳곳의 공공 관람 구역에 수십만 명이 모였습니다."
+        },
+        "pt-BR": {
+          "question": "Em qual torneio os festivais oficiais para torcedores com telões ao ar livre foram introduzidos pela primeira vez?",
+          "options": [
+            "2002",
+            "2006",
+            "2010",
+            "2014"
+          ],
+          "explanation": "A Alemanha foi pioneira nos Fan Fests oficiais em 2006, reunindo centenas de milhares de pessoas em áreas de exibição pública pelas cidades-sede."
+        },
+        "zh-Hans": {
+          "question": "供大屏幕户外观赛的官方球迷狂欢节最早是在哪届赛事上推出的？",
+          "options": [
+            "2002年",
+            "2006年",
+            "2010年",
+            "2014年"
+          ],
+          "explanation": "德国于2006年率先举办官方球迷狂欢节，数十万人聚集在各主办城市的公共观赛区。"
+        }
+      },
+      "i18nSourceHash": "f243f4a2e047cca7"
     },
     {
       "id": "v-total-cities",
@@ -1108,8 +1211,8 @@
         "2006"
       ],
       "answer": 1,
-      "explanation": "Laurent Blanc scored a golden goal for France against Paraguay in 1998 — the rule was abolished after 2002.",
-      "claudeTask": "say more about what the golden goal is."
+      "explanation": "The golden goal was a sudden-death rule: in knockout matches, the first team to score during extra time won instantly and play stopped immediately. It was first used at the tournament in 1998, when Laurent Blanc scored one for France against Paraguay. The rule was intended to encourage attacking play in extra time, but it often made teams more cautious, and it was abolished after 2002.",
+      "needsReview": true
     },
     {
       "id": "r-lots-tiebreak",
