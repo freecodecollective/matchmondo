@@ -960,33 +960,34 @@
   }
   .honor-highlight { font-weight: 600; color: #222; }
 
-  /* ---- Form sparkline ---- */
-  .form-row {
-    display: flex; align-items: flex-end; gap: 6px;
-    padding: 8px 0 4px;
-    justify-content: center;
+  /* ---- Collapsible sections ---- */
+  .card-header.collapsible {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
   }
-  .form-bar-wrap {
-    display: flex; flex-direction: column; align-items: center; gap: 3px;
-    flex: 1;
+  .card-header.collapsible::after {
+    content: '';
+    margin-left: auto;
+    width: 8px; height: 8px;
+    border-right: 2px solid #bbb;
+    border-bottom: 2px solid #bbb;
+    transform: rotate(45deg);
+    transition: transform 0.2s;
+    flex-shrink: 0;
   }
-  .form-bar {
-    width: 100%; border-radius: 4px 4px 0 0;
-    min-height: 4px;
-    transition: height 0.3s;
+  .card-header.collapsible.collapsed::after {
+    transform: rotate(-45deg);
   }
-  .form-bar.goals { background: linear-gradient(to top, #0F6E56, #1aab7a); }
-  .form-bar.assists { background: #4a9ee5; }
-  .form-bar.yc { background: #e0a800; }
-  .form-bar.none { background: #e8e8e8; }
-  .form-label { font-size: 9px; color: #bbb; font-weight: 600; }
-  .form-legend {
-    display: flex; gap: 12px; justify-content: center;
-    margin-top: 8px; font-size: 10px; color: #999;
+  .card-body.collapsible-body {
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.2s ease;
+    max-height: 2000px;
   }
-  .form-legend-dot {
-    width: 8px; height: 8px; border-radius: 2px;
-    display: inline-block; margin-right: 3px; vertical-align: middle;
+  .card-body.collapsible-body.collapsed {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 </style>
 
@@ -1017,8 +1018,8 @@
 
         <!-- Tournament Stats + Game Log -->
         <div class="card">
-          <div class="card-header"><span class="icon">🏆</span> Football 2026</div>
-          <div class="card-body">
+          <div class="card-header collapsible"><span class="icon">🏆</span> Football 2026</div>
+          <div class="card-body collapsible-body">
             <div class="hero-stats">
               <div class="hero-stat">
                 <div class="hv">4</div>
@@ -1036,32 +1037,7 @@
               </div>
             </div>
 
-            <!-- Form sparkline -->
-            <div class="form-row">
-              <div class="form-bar-wrap">
-                <div class="form-bar goals" style="height:24px" title="1 goal, 1 assist"></div>
-                <div class="form-label">SEN</div>
-              </div>
-              <div class="form-bar-wrap">
-                <div class="form-bar goals" style="height:40px" title="2 goals"></div>
-                <div class="form-label">IRQ</div>
-              </div>
-              <div class="form-bar-wrap">
-                <div class="form-bar yc" style="height:6px" title="Yellow card"></div>
-                <div class="form-label">NOR</div>
-              </div>
-              <div class="form-bar-wrap">
-                <div class="form-bar goals" style="height:24px" title="1 goal"></div>
-                <div class="form-label">SWE</div>
-              </div>
-            </div>
-            <div class="form-legend">
-              <span><span class="form-legend-dot" style="background:#0F6E56"></span>Goals</span>
-              <span><span class="form-legend-dot" style="background:#4a9ee5"></span>Assists</span>
-              <span><span class="form-legend-dot" style="background:#e0a800"></span>Cards</span>
-            </div>
-
-            <div class="section-label" style="margin-top:14px">Game Log</div>
+            <div class="section-label">Game Log</div>
             <div class="game-row">
               <div class="game-stage-dot group"></div>
               <span class="game-flag">🇸🇳</span>
@@ -1116,8 +1092,8 @@
 
         <!-- International Profile -->
         <div class="card">
-          <div class="card-header"><span class="icon">🇫🇷</span> International Career</div>
-          <div class="card-body">
+          <div class="card-header collapsible"><span class="icon">🇫🇷</span> International Career</div>
+          <div class="card-body collapsible-body">
             <div class="intl-row">
               <div class="intl-stat">
                 <div class="iv">99</div>
@@ -1135,19 +1111,19 @@
             </div>
             <div class="section-label" style="margin-top: 8px">Tournament History</div>
             <div class="tourney-chips">
-              <span class="tourney-chip gold"><span class="ticon">🏆</span> 2018 Winner</span>
+              <span class="tourney-chip gold"><span class="ticon">🏆</span> Football 2018 — Winner</span>
               <span class="tourney-chip">Euro 2020</span>
-              <span class="tourney-chip silver"><span class="ticon">🥈</span> 2022 Runner-up</span>
+              <span class="tourney-chip silver"><span class="ticon">🥈</span> Football 2022 — Runner-up</span>
               <span class="tourney-chip">Nations League 2024</span>
-              <span class="tourney-chip current"><span class="ticon">⚽</span> 2026</span>
+              <span class="tourney-chip current"><span class="ticon">⚽</span> Football 2026</span>
             </div>
           </div>
         </div>
 
         <!-- Career Journey -->
         <div class="card">
-          <div class="card-header"><span class="icon">📍</span> Career Journey</div>
-          <div class="card-body">
+          <div class="card-header collapsible"><span class="icon">📍</span> Career Journey</div>
+          <div class="card-body collapsible-body">
             <div class="career-timeline">
               <div class="career-stop current">
                 <div class="career-club"><span class="cflag">🇪🇸</span> Real Madrid</div>
@@ -1167,8 +1143,8 @@
 
         <!-- Honors -->
         <div class="card">
-          <div class="card-header"><span class="icon">🥇</span> Honors</div>
-          <div class="card-body">
+          <div class="card-header collapsible"><span class="icon">🥇</span> Honors</div>
+          <div class="card-body collapsible-body">
             <div class="honors-list">
               <div class="honor-item">
                 <span class="honor-icon">🏆</span>
@@ -1208,8 +1184,8 @@
 
         <!-- About -->
         <div class="card">
-          <div class="card-header"><span class="icon">ℹ️</span> About</div>
-          <div class="card-body">
+          <div class="card-header collapsible"><span class="icon">ℹ️</span> About</div>
+          <div class="card-body collapsible-body">
             <div class="about-text">France's captain and all-time leading scorer with 99 caps and 58 goals. A generational talent who combines explosive pace with clinical finishing, he won the 2018 tournament as a teenager, claimed the Golden Boot in 2022, and moved to Real Madrid in 2024 where he has continued to dominate. He enters 2026 seeking to become only the third player to win the tournament twice.</div>
           </div>
         </div>
@@ -1220,5 +1196,16 @@
 </div>
 </div>
 
+<script>
+document.querySelectorAll('.card-header.collapsible').forEach(header => {
+  header.addEventListener('click', () => {
+    header.classList.toggle('collapsed');
+    const body = header.nextElementSibling;
+    if (body && body.classList.contains('collapsible-body')) {
+      body.classList.toggle('collapsed');
+    }
+  });
+});
+</script>
 </body>
 </html>
