@@ -80,11 +80,107 @@
     "home": "Brazil",
     "away": "Japan",
     "facts": [
+      "Japan have never won a knockout match in tournament history, losing all four attempts: Turkey in 2002 (0-1), Paraguay in 2010 (penalties), Belgium in 2018 (2-3), and Croatia in 2022 (penalties). A win over Brazil would be a historic first.",
       "Brazil have won 11 of 14 all-time meetings with Japan, scoring 29 goals to Japan's 9.",
       "Their only previous World Cup meeting was in the 2006 group stage, where Brazil won 4-1 with a Ronaldo double.",
       "Japan stunned Brazil 3-2 in a friendly in October 2025, coming from 2-0 down at half-time — their first-ever win over the five-time champions.",
       "Japan's football development was heavily influenced by Brazil, most notably when Zico arrived in 1991 and played a pivotal role in growing the sport there.",
       "Vinícius Jr has four goals in this tournament, all coming in Brazil's back-to-back 3-0 group-stage wins."
+    ]
+  },
+  "77": {
+    "home": "France",
+    "away": "Sweden",
+    "facts": [
+      "Sweden's best tournament finish was runners-up in 1958 as hosts, but they have not won a knockout match since beating Switzerland in the 2018 round of 16.",
+      "France and Sweden have met once before at this stage of a major tournament — France won 2-0 in the Euro 2012 group stage."
+    ]
+  },
+  "78": {
+    "home": "Côte d'Ivoire",
+    "away": "Norway",
+    "facts": [
+      "Côte d'Ivoire are playing in a knockout match at this tournament for the first time in their history, having been eliminated in the group stage in all three previous appearances (2006, 2010, 2014).",
+      "Norway have not won a knockout match in tournament history — their only appearance in the knockout rounds was a 1-0 loss to Italy in the 1998 round of 16."
+    ]
+  },
+  "79": {
+    "home": "Mexico",
+    "away": "Ecuador",
+    "facts": [
+      "Mexico have been eliminated in the round of 16 in seven consecutive tournaments (1994-2022), a streak known as the 'fifth game curse.' This Round of 32 is a new format — but the pressure to finally break through to the later rounds remains.",
+      "Ecuador have never won a knockout match — their only appearance was a 1-0 loss to England in the 2006 round of 16."
+    ]
+  },
+  "80": {
+    "home": "England",
+    "away": "Congo DR",
+    "facts": [
+      "Congo DR (as Zaire) appeared at the tournament once before in 1974 but were eliminated in the group stage, losing all three matches. This is their first-ever knockout match.",
+      "England have reached at least the round of 16 in six of their last seven tournament appearances."
+    ]
+  },
+  "81": {
+    "home": "USA",
+    "away": "Bosnia and Herzegovina",
+    "facts": [
+      "Bosnia and Herzegovina are playing in a knockout match for the first time in their history — their only previous tournament appearance was a group-stage exit in 2014.",
+      "The USA's best knockout run was the 2002 quarterfinals, when they beat Mexico 2-0 in the round of 16 before losing to Germany. They were eliminated in the round of 16 in 2010 (Ghana), 2014 (Belgium), and 2022 (Netherlands)."
+    ]
+  },
+  "82": {
+    "home": "Belgium",
+    "away": "Senegal",
+    "facts": [
+      "Senegal reached the quarterfinals on their tournament debut in 2002 — including a famous 1-0 upset of holders France in the opening match — but have not won a knockout match since."
+    ]
+  },
+  "83": {
+    "home": "Portugal",
+    "away": "Croatia",
+    "facts": [
+      "Croatia have reached the final in two of the last three tournaments (2018, 2022), winning four knockout matches in that run.",
+      "Portugal reached the semi-finals in 2006 (beating Netherlands and England en route) and the quarterfinals in 2022 (beating Switzerland 6-1), but have also fallen in the round of 16 in 2010 (Spain) and 2018 (Uruguay)."
+    ]
+  },
+  "84": {
+    "home": "Spain",
+    "away": "Austria",
+    "facts": [
+      "Austria have not won a knockout match since the 1954 tournament, when they beat hosts Switzerland 7-5 in the quarterfinals — the highest-scoring match in tournament history.",
+      "Spain have won 5 of their last 6 knockout matches at major tournaments."
+    ]
+  },
+  "85": {
+    "home": "Switzerland",
+    "away": "Algeria",
+    "facts": [
+      "Algeria have never won a knockout match — their only appearance was a 2-1 extra-time loss to Germany in the 2014 round of 16.",
+      "Switzerland have reached the knockout stage in four of the last five tournaments (2006, 2014, 2018, 2022) but have never won a knockout match at this tournament — losing in the round of 16 each time (Ukraine on penalties in 2006, Argentina in 2014, Sweden in 2018, Portugal 1-6 in 2022)."
+    ]
+  },
+  "86": {
+    "home": "Argentina",
+    "away": "Cabo Verde",
+    "facts": [
+      "Cabo Verde are making their tournament debut and will be playing in a knockout match for the first time — one of the smallest nations (population ~600,000) ever to reach this stage.",
+      "Argentina have won 9 of their last 11 knockout matches at this tournament, including the entire 2022 title run."
+    ]
+  },
+  "87": {
+    "home": "Colombia",
+    "away": "Ghana",
+    "facts": [
+      "Ghana have not won a knockout match since 2010, when they beat the USA 2-1 in extra time to reach the quarterfinals — where Asamoah Gyan's missed penalty after Luis Suárez's deliberate handball denied them a historic semi-final.",
+      "Colombia reached the quarterfinals in 2014 with James Rodriguez winning the Golden Boot, but were eliminated in the round of 16 in 2018."
+    ]
+  },
+  "88": {
+    "home": "Australia",
+    "away": "Egypt",
+    "facts": [
+      "Egypt are playing in a knockout match for the first time in their tournament history — despite being the most successful African nation in continental competition (7 Africa Cup of Nations titles), they have never advanced past the group stage.",
+      "Australia have never won a knockout match — losing to Italy (2006) and Argentina (2022) in the round of 16."
     ]
   }
 }
