@@ -11584,7 +11584,7 @@
       "answer": 0,
       "explanation": "True! England's penalty shootout record was notoriously dreadful, losing seven in a row across the tournament and European Championship between 1990 and 2012. The curse was finally broken when they beat Colombia on penalties at the 2018 edition in Russia.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-telstar-ball-tv",
