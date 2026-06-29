@@ -1,0 +1,41 @@
+name: Generate match recaps
+
+on:
+  schedule:
+    - cron: "15 * * * *"   # every hour at :15 (offset from score updates at :00/:15/:30/:45)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: match-recaps
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate recaps for completed matches
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 scripts/generate-match-recaps.py
+
+      - name: Commit and push if anything changed
+        run: |
+          if [ -n "$(git status --porcelain data/match-recaps.json)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/match-recaps.json
+            git commit -m "Auto-generate match recaps ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+            git push
+            echo "Pushed updated match-recaps.json."
+          else
+            echo "No new recaps."
+          fi
