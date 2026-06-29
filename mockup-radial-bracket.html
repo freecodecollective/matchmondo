@@ -271,26 +271,28 @@ const GRAD_COLORS = {
   'Australia':['#00008B','#FFCD00'],'Egypt':['#CE1126','#000000']
 };
 
+// Official bracket order (from iOS bracketMatchOrder) — consecutive pairs feed into R16 slots
 const R32 = [
-  {home:'South Africa', away:'Canada', sh:0, sa:1},
-  {home:'Germany', away:'Paraguay', sh:0, sa:1},
-  {home:'Brazil', away:'Japan', sh:2, sa:1},
-  {home:'Netherlands', away:'Morocco', sh:null, sa:null},
-  {home:'France', away:'Sweden', sh:null, sa:null},
-  {home:"Côte d'Ivoire", away:'Norway', sh:null, sa:null},
-  {home:'Mexico', away:'Ecuador', sh:null, sa:null},
-  {home:'England', away:'Congo DR', sh:null, sa:null},
-  {home:'USA', away:'Bosnia and Herzegovina', sh:null, sa:null},
-  {home:'Belgium', away:'Senegal', sh:null, sa:null},
-  {home:'Spain', away:'Austria', sh:null, sa:null},
-  {home:'Portugal', away:'Croatia', sh:null, sa:null},
-  {home:'Argentina', away:'Cabo Verde', sh:null, sa:null},
-  {home:'Switzerland', away:'Algeria', sh:null, sa:null},
-  {home:'Colombia', away:'Ghana', sh:null, sa:null},
-  {home:'Australia', away:'Egypt', sh:null, sa:null},
+  /* M74 */ {home:'Germany',       away:'Paraguay',               sh:1,    sa:1},   // live
+  /* M77 */ {home:'France',        away:'Sweden',                 sh:null, sa:null},
+  /* M73 */ {home:'South Africa',  away:'Canada',                 sh:0,    sa:1},
+  /* M75 */ {home:'Netherlands',   away:'Morocco',                sh:null, sa:null},
+  /* M83 */ {home:'Portugal',      away:'Croatia',                sh:null, sa:null},
+  /* M84 */ {home:'Spain',         away:'Austria',                sh:null, sa:null},
+  /* M81 */ {home:'USA',           away:'Bosnia and Herzegovina', sh:null, sa:null},
+  /* M82 */ {home:'Belgium',       away:'Senegal',                sh:null, sa:null},
+  /* M76 */ {home:'Brazil',        away:'Japan',                  sh:2,    sa:1},
+  /* M78 */ {home:"Côte d'Ivoire", away:'Norway',                 sh:null, sa:null},
+  /* M79 */ {home:'Mexico',        away:'Ecuador',                sh:null, sa:null},
+  /* M80 */ {home:'England',       away:'Congo DR',               sh:null, sa:null},
+  /* M86 */ {home:'Argentina',     away:'Cabo Verde',             sh:null, sa:null},
+  /* M88 */ {home:'Australia',     away:'Egypt',                  sh:null, sa:null},
+  /* M85 */ {home:'Switzerland',   away:'Algeria',                sh:null, sa:null},
+  /* M87 */ {home:'Colombia',      away:'Ghana',                  sh:null, sa:null},
 ];
 
-const R16_KNOWN = ['Canada','Paraguay','Brazil',null,null,null,null,null];
+// R16 known teams in bracket order: [M89, M90, M93, M94, M91, M92, M95, M96]
+const R16_KNOWN = [null, 'Canada', null, null, 'Brazil', null, null, null];
 
 // ── Drawing helpers ──
 
