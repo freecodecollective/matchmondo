@@ -8115,7 +8115,8 @@
       ],
       "answer": 0,
       "explanation": "Argentina hosted and won the 1978 edition, defeating the Netherlands 3-1 in extra time at Buenos Aires. The tournament remains one of the most politically controversial, held during Argentina's military dictatorship under Jorge Videla.",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "h-1982-expansion",
@@ -8144,7 +8145,8 @@
       "answer": 0,
       "explanation": "The 1962 group-stage clash between host nation Chile and Italy was so violent that police had to intervene on the pitch. Two Italian players were sent off. BBC commentator David Coleman famously introduced the footage by calling it 'the most stupid, appalling, disgusting, and disgraceful exhibition of football.'",
       "media": "https://www.youtube.com/watch?v=T5jVMSlpZhg",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "h-disgrace-gijon",
@@ -8158,7 +8160,8 @@
       ],
       "answer": 0,
       "explanation": "After West Germany scored early, both teams appeared to stop competing, knowing a narrow German win would send both through at Algeria's expense. The scandal led to a permanent rule change — from 1986 onward, final group-stage matches in each group kick off simultaneously.",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "h-italia-90-goals",
@@ -8172,7 +8175,8 @@
       ],
       "answer": 0,
       "explanation": "Italia 90 averaged just 2.21 goals per game, the lowest in tournament history. The ultra-defensive style prompted several rule changes, including awarding three points for a win instead of two (introduced in 1994) and the back-pass rule banning goalkeepers from handling deliberate passes from teammates.",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "h-first-color-broadcast",
@@ -8186,7 +8190,8 @@
       ],
       "answer": 0,
       "explanation": "The 1970 tournament in Mexico was the first with full color TV broadcasts globally. This is partly why that edition's iconic imagery — Brazil's brilliant yellow shirts, Pelé's artistry, Gordon Banks' legendary save — remains so vivid in football lore. The Telstar match ball was designed with black and white panels specifically for TV visibility.",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "h-1930-team-count",
@@ -8228,7 +8233,8 @@
       ],
       "answer": 0,
       "explanation": "Mario Kempes was the star of the 1978 tournament on home soil, scoring 6 goals to earn the Golden Boot. Remarkably, he didn't score in the group stage — all 6 came in the second round and final. His two goals in the final against the Netherlands sealed Argentina's first title.",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "p-rossi-82-comeback",
@@ -8256,7 +8262,8 @@
       ],
       "answer": 0,
       "explanation": "Brazilian Mário Zagallo won as a player in 1958 and 1962, then coached Brazil to victory in 1970 — the first person to achieve this double. Franz Beckenbauer later matched the feat (1974/1990), followed by Didier Deschamps (1998/2018). Johan Cruyff, despite being one of the greatest players, never won the tournament.",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "p-garrincha-1962",
@@ -8270,7 +8277,8 @@
       ],
       "answer": 0,
       "explanation": "Garrincha, nicknamed 'Alegria do Povo' (Joy of the People), was the undisputed star of the 1962 tournament after Pelé suffered a groin injury in the second group match. Despite having legs of different lengths due to a childhood illness, Garrincha's dribbling was mesmerizing, and he scored in both the quarter-final and semi-final.",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "p-klose-four-editions",
@@ -8284,7 +8292,8 @@
       ],
       "answer": 0,
       "explanation": "Klose scored across four straight editions: 5 goals in 2002, 5 in 2006, 4 in 2010, and 2 in 2014. Born in Opole, Poland, he moved to Germany as a child and became one of the tournament's most prolific scorers. His trademark acrobatic somersault celebration became iconic.",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "p-baggio-penalty-94",
@@ -8340,7 +8349,8 @@
       ],
       "answer": 0,
       "explanation": "The 1994 edition drew over 3.58 million total spectators, a record that has endured for over 30 years. The average attendance of nearly 69,000 per match was boosted by the use of massive American football stadiums. This record may finally be broken in 2026, with even larger US stadiums and 104 matches (vs. 52 in 1994).",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "t-north-korea-2010",
@@ -8368,7 +8378,8 @@
       ],
       "answer": 0,
       "explanation": "Morocco's 2022 run was sensational — they topped a group containing Belgium and Croatia, then knocked out Spain on penalties and Portugal 1-0 before losing to France in the semi-finals. They became the first African and first Arab nation to reach a tournament semi-final, igniting celebrations across the continent and the Arab world.",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "t-most-appearances-no-title",
@@ -8382,7 +8393,8 @@
       ],
       "answer": 0,
       "explanation": "Mexico has appeared at 18 editions — more than any nation that hasn't lifted the trophy. Despite being frequent hosts and consistent qualifiers from CONCACAF, Mexico has a so-called 'quinto partido' (fifth match) curse, having been eliminated in the Round of 16 in seven consecutive tournaments from 1994 to 2018.",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "t-japan-2022-group",
@@ -8438,7 +8450,8 @@
       ],
       "answer": 0,
       "explanation": "Law 12 states goalkeepers must release the ball within 6 seconds of controlling it with their hands. This is widely considered the least-enforced rule in football — referees typically warn before penalizing, and the infraction results in an indirect free kick. Time-wasting goalkeepers have led to calls for stricter enforcement.",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "r-advantage-play",
@@ -8466,7 +8479,8 @@
       ],
       "answer": 0,
       "explanation": "In regular play and extra time, if a penalty hits the post, crossbar, or rebounds off the goalkeeper, the ball is live and any player — including the kicker — can score from it. In a penalty shootout, however, there are no rebounds: each kick ends once the ball stops moving forward, goes out of play, or the goalkeeper makes a clear save.",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "v-guadalajara-culture",
@@ -9729,7 +9743,8 @@
       "answer": 0,
       "explanation": "Andrés Iniesta scored in the 116th minute to beat the Netherlands 1-0 in the 2010 final. He revealed a message on his undershirt reading 'Dani Jarque siempre con nosotros' (Dani Jarque always with us), honoring his friend and fellow Spanish footballer who had died of a heart attack the previous year.",
       "media": "https://www.youtube.com/watch?v=6-EqlQMPmDI",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "p-bergkamp-1998",
@@ -10304,7 +10319,8 @@
       "explanation": "True! Fontaine was originally a reserve, but injuries to other players gave him his chance. He seized it spectacularly, scoring 13 goals in just 6 matches — a record that has stood for over 65 years and may never be broken. He scored in every match France played.",
       "type": "true_false",
       "media": "https://www.youtube.com/watch?v=svVA7JiHUFQ",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "tf-finals-extra-time-before-94",
@@ -10317,7 +10333,8 @@
       "answer": 1,
       "explanation": "False! Several finals before 1994 went to extra time, including 1934 (Italy 2-1 Czechoslovakia), 1966 (England 4-2 West Germany), and 1978 (Argentina 3-1 Netherlands). What made 1994 unique was that it was the first final to go to a penalty shootout after extra time.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "tf-var-four-situations",
@@ -10329,7 +10346,9 @@
       ],
       "answer": 0,
       "explanation": "True! VAR is limited to reviewing only these four categories of 'clear and obvious errors' or 'serious missed incidents.' 'Mistaken identity' means the referee cautioned or sent off the wrong player — for example, showing a card to a teammate instead of the player who actually committed the foul; VAR can step in to ensure the correct player is penalized. The referee can consult the pitch-side monitor for a final decision, but VAR cannot intervene for yellow cards, throw-in decisions, corner kicks, or other routine calls.",
-      "approved": true
+      "approved": true,
+      "needsReview": true,
+      "claudeTask": "add what mistken idenitity means"
     },
     {
       "id": "tf-trophy-not-solid-gold",
@@ -10631,7 +10650,8 @@
       "answer": 0,
       "explanation": "True! Since 2019, coaches and other team officials can receive yellow and red cards, just like players. If sent off, the coach must leave the technical area (usually going to the stands) and cannot communicate with the team for the rest of the match. An assistant typically takes over tactical duties.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "needsReview": true
     },
     {
       "id": "tf-semi-auto-offside-2022",
