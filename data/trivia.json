@@ -9929,8 +9929,7 @@
       ],
       "answer": 0,
       "explanation": "Mexico has appeared at 18 editions — more than any nation that hasn't lifted the trophy. Despite being frequent hosts and consistent qualifiers from CONCACAF, Mexico has a so-called 'quinto partido' (fifth match) curse, having been eliminated in the Round of 16 in seven consecutive tournaments from 1994 to 2018.",
-      "approved": true,
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "t-japan-2022-group",
@@ -10014,8 +10013,7 @@
       ],
       "answer": 0,
       "explanation": "In regular play and extra time, if a penalty hits the post, crossbar, or rebounds off the goalkeeper, the ball is live and any player — including the kicker — can score from it. In a penalty shootout, however, there are no rebounds: each kick ends once the ball stops moving forward, goes out of play, or the goalkeeper makes a clear save.",
-      "approved": true,
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "v-guadalajara-culture",
@@ -11278,8 +11276,7 @@
       "answer": 0,
       "explanation": "Andrés Iniesta scored in the 116th minute to beat the Netherlands 1-0 in the 2010 final. He revealed a message on his undershirt reading 'Dani Jarque siempre con nosotros' (Dani Jarque always with us), honoring his friend and fellow Spanish footballer who had died of a heart attack the previous year.",
       "media": "https://www.youtube.com/watch?v=6-EqlQMPmDI",
-      "approved": true,
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "p-bergkamp-1998",
@@ -11855,8 +11852,7 @@
       "explanation": "True! Fontaine was originally a reserve, but injuries to other players gave him his chance. He seized it spectacularly, scoring 13 goals in just 6 matches — a record that has stood for over 65 years and may never be broken. He scored in every match France played.",
       "type": "true_false",
       "media": "https://www.youtube.com/watch?v=svVA7JiHUFQ",
-      "approved": true,
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-finals-extra-time-before-94",
@@ -11869,8 +11865,7 @@
       "answer": 1,
       "explanation": "False! Several finals before 1994 went to extra time, including 1934 (Italy 2-1 Czechoslovakia), 1966 (England 4-2 West Germany), and 1978 (Argentina 3-1 Netherlands). What made 1994 unique was that it was the first final to go to a penalty shootout after extra time.",
       "type": "true_false",
-      "approved": true,
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-var-four-situations",
@@ -12184,8 +12179,7 @@
       "answer": 0,
       "explanation": "True! Since 2019, coaches and other team officials can receive yellow and red cards, just like players. If sent off, the coach must leave the technical area (usually going to the stands) and cannot communicate with the team for the rest of the match. An assistant typically takes over tactical duties.",
       "type": "true_false",
-      "approved": true,
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-semi-auto-offside-2022",
