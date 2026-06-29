@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MatchMondo — Player Detail Mockup</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif; background: #e8e8e8; padding: 24px 0 48px; -webkit-font-smoothing: antialiased; }
+
+  .page-title { text-align: center; font-size: 22px; font-weight: 700; color: #333; padding: 20px 0 4px; }
+  .page-subtitle { text-align: center; font-size: 13px; color: #888; margin-bottom: 28px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.5; padding: 0 20px; }
+
+  .phones { display: flex; flex-wrap: wrap; gap: 36px; justify-content: center; padding: 0 20px 40px; }
+
+  .phone {
+    width: 375px;
+    background: #e8ece8;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15), 0 2px 8px rgba(0,0,0,0.1);
+    border: 6px solid #1a1a1a;
+    position: relative;
+  }
+  .phone-label { text-align: center; font-size: 14px; font-weight: 600; color: #555; margin-bottom: 8px; }
+  .phone-sublabel { text-align: center; font-size: 12px; color: #999; margin-bottom: 12px; max-width: 340px; margin-left: auto; margin-right: auto; line-height: 1.4; }
+  .phone-wrap { display: flex; flex-direction: column; align-items: center; }
+
+  .content { background: #e8ece8; overflow-y: auto; }
+
+  /* ---- Theme colors ---- */
+  :root {
+    --accent: #0F6E56;
+    --accent-dark: #0B3D28;
+    --accent-readable: #0B6E4F;
+    --pitch-bg: #e8ece8;
+  }
+
+  /* ---- Header banner ---- */
+  .player-header {
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, #1D9E75 100%);
+    padding: 48px 16px 18px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .player-header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(90deg,
+      transparent 0, transparent 46px,
+      rgba(255,255,255,0.05) 46px, rgba(255,255,255,0.05) 92px);
+  }
+  .player-header::after {
+    content: '';
+    position: absolute;
+    right: 14%; top: 0; bottom: 0;
+    width: 1.5px;
+    background: rgba(255,255,255,0.15);
+  }
+
+  .header-inner { position: relative; z-index: 1; display: flex; align-items: flex-end; gap: 12px; }
+  .header-photo {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.4);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px; font-weight: 900; color: #fff;
+    position: relative; flex-shrink: 0;
+    overflow: hidden;
+  }
+  .header-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .jersey-badge {
+    position: absolute; bottom: -2px; left: -3px;
+    background: #fff; color: var(--accent-dark);
+    font-size: 11px; font-weight: 800;
+    padding: 2px 5px; border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  }
+
+  .header-info { flex: 1; min-width: 0; }
+  .header-name { font-size: 20px; font-weight: 700; display: flex; align-items: center; gap: 6px; }
+  .header-meta { font-size: 13px; opacity: 0.85; margin-top: 2px; }
+  .header-meta2 { font-size: 12px; opacity: 0.75; margin-top: 1px; }
+  .header-country { font-size: 12px; opacity: 0.85; margin-top: 4px; display: flex; align-items: center; gap: 6px; }
+  .header-country .flag { font-size: 14px; }
+  .heart-btn { font-size: 22px; margin-left: auto; cursor: pointer; }
+  .back-btn {
+    position: absolute; top: 12px; left: 12px; z-index: 2;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: rgba(0,0,0,0.35); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 600;
+  }
+
+  /* ---- Cards ---- */
+  .cards { padding: 16px; display: flex; flex-direction: column; gap: 16px; }
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.06);
+    overflow: hidden;
+  }
+  .card-header {
+    padding: 12px 14px 10px;
+    display: flex; align-items: center; gap: 6px;
+    font-size: 14px; font-weight: 700;
+  }
+  .card-header .icon { font-size: 12px; color: var(--accent-readable); }
+  .card-body { padding: 0 14px 14px; }
+
+  /* ---- About card ---- */
+  .about-text { font-size: 14px; color: #666; line-height: 1.55; }
+
+  /* ---- Stat pills (current design for comparison) ---- */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+  }
+  .stat-pill {
+    background: rgba(15,110,86,0.06);
+    border-radius: 8px;
+    padding: 10px 4px;
+    text-align: center;
+  }
+  .stat-pill .val { font-size: 22px; font-weight: 700; color: var(--accent-readable); font-variant-numeric: tabular-nums; }
+  .stat-pill .lbl { font-size: 10px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 0.3px; margin-top: 3px; display: flex; align-items: center; justify-content: center; gap: 3px; }
+  .stat-pill .lbl .emoji { font-size: 10px; }
+
+  /* ---- Option A: Match Log Table ---- */
+  .match-log { width: 100%; }
+  .match-log-header {
+    display: grid;
+    grid-template-columns: 1fr 32px 32px 32px 32px 32px;
+    padding: 6px 0;
+    font-size: 10px;
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .match-log-header > div { text-align: center; }
+  .match-log-header > div:first-child { text-align: left; }
+  .match-log-row {
+    display: grid;
+    grid-template-columns: 1fr 32px 32px 32px 32px 32px;
+    padding: 8px 0;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+    align-items: center;
+  }
+  .match-log-row:last-child { border-bottom: none; }
+  .match-log-row > div { text-align: center; font-variant-numeric: tabular-nums; }
+  .match-log-row > div:first-child { text-align: left; }
+  .match-info-cell { display: flex; flex-direction: column; gap: 1px; }
+  .match-opponent { font-weight: 600; font-size: 13px; color: #222; }
+  .match-result-tag { font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 4px; display: inline-block; margin-left: 5px; }
+  .match-result-tag.W { background: #d4edda; color: #155724; }
+  .match-result-tag.D { background: #fff3cd; color: #856404; }
+  .match-result-tag.L { background: #f8d7da; color: #721c24; }
+  .match-comp { font-size: 10px; color: #999; }
+  .match-sub { font-size: 10px; color: #999; font-style: italic; }
+  .stat-dot { font-weight: 700; color: var(--accent-readable); }
+  .stat-dot.zero { color: #ccc; font-weight: 400; }
+  .stat-dot.card-y { color: #e0a800; }
+  .stat-dot.card-r { color: #dc3545; }
+
+  .match-log-total {
+    display: grid;
+    grid-template-columns: 1fr 32px 32px 32px 32px 32px;
+    padding: 8px 0 4px;
+    font-size: 12px;
+    font-weight: 700;
+    border-top: 2px solid rgba(0,0,0,0.1);
+    color: var(--accent-readable);
+  }
+  .match-log-total > div { text-align: center; font-variant-numeric: tabular-nums; }
+  .match-log-total > div:first-child { text-align: left; color: #666; font-weight: 600; }
+
+  /* ---- Option B: Match Timeline Cards ---- */
+  .timeline-list { display: flex; flex-direction: column; gap: 8px; }
+  .timeline-match {
+    display: flex; align-items: stretch; gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+  }
+  .timeline-match:last-child { border-bottom: none; }
+  .timeline-date-col {
+    width: 42px; flex-shrink: 0;
+    display: flex; flex-direction: column; align-items: center;
+    padding-top: 2px;
+  }
+  .timeline-day { font-size: 10px; color: #999; font-weight: 600; text-transform: uppercase; }
+  .timeline-num { font-size: 18px; font-weight: 800; color: #333; }
+  .timeline-month { font-size: 9px; color: #bbb; font-weight: 600; text-transform: uppercase; }
+  .timeline-body { flex: 1; min-width: 0; }
+  .timeline-top { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+  .timeline-opponent { font-size: 14px; font-weight: 700; color: #222; }
+  .timeline-score { font-size: 13px; font-weight: 700; color: #222; margin-left: auto; }
+  .timeline-score .score-result { font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 4px; margin-left: 5px; }
+  .timeline-comp { font-size: 11px; color: #999; margin-bottom: 6px; }
+  .timeline-stats { display: flex; flex-wrap: wrap; gap: 6px; }
+  .timeline-stat {
+    font-size: 11px; font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 6px;
+    display: flex; align-items: center; gap: 3px;
+  }
+  .timeline-stat.goal { background: #d4edda; color: #155724; }
+  .timeline-stat.assist { background: #cce5ff; color: #004085; }
+  .timeline-stat.yc { background: #fff3cd; color: #856404; }
+  .timeline-stat.rc { background: #f8d7da; color: #721c24; }
+  .timeline-stat.save { background: #d1ecf1; color: #0c5460; }
+  .timeline-stat.shots { background: #f0f0f0; color: #555; }
+  .timeline-stat.sub { background: #f8f8f8; color: #999; }
+  .timeline-stat.motm { background: linear-gradient(135deg, #fff8e1, #ffe082); color: #7c6200; }
+  .timeline-mins { font-size: 11px; color: #bbb; margin-top: 2px; }
+
+  /* ---- Option C: Horizontal summary bar + expandable log ---- */
+  .summary-bar {
+    display: flex;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  .summary-item {
+    flex: 1;
+    padding: 12px 6px;
+    text-align: center;
+    background: rgba(15,110,86,0.06);
+    border-right: 1px solid rgba(0,0,0,0.04);
+  }
+  .summary-item:last-child { border-right: none; }
+  .summary-item .sv { font-size: 20px; font-weight: 700; color: var(--accent-readable); font-variant-numeric: tabular-nums; }
+  .summary-item .sl { font-size: 9px; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 0.3px; margin-top: 2px; }
+
+  .compact-log { width: 100%; }
+  .compact-row {
+    display: flex; align-items: center;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+    gap: 8px;
+  }
+  .compact-row:last-child { border-bottom: none; }
+  .compact-flag { font-size: 16px; flex-shrink: 0; }
+  .compact-opp { font-size: 13px; font-weight: 600; color: #222; flex: 1; min-width: 0; }
+  .compact-score-box {
+    font-size: 12px; font-weight: 700;
+    padding: 2px 7px; border-radius: 4px;
+    flex-shrink: 0;
+  }
+  .compact-score-box.W { background: #d4edda; color: #155724; }
+  .compact-score-box.D { background: #fff3cd; color: #856404; }
+  .compact-score-box.L { background: #f8d7da; color: #721c24; }
+  .compact-events {
+    display: flex; gap: 3px; flex-shrink: 0;
+  }
+  .compact-event {
+    font-size: 12px;
+    width: 22px; height: 22px;
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .compact-event.goal { background: #d4edda; }
+  .compact-event.assist { background: #cce5ff; }
+  .compact-event.yc { background: #fff3cd; }
+
+  /* ---- Section header ---- */
+  .section-label {
+    font-size: 11px; font-weight: 700; color: #aaa;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    padding: 0 0 8px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    margin-bottom: 8px;
+  }
+
+  /* ---- Option D: merged stats + timeline ---- */
+  .hero-stats {
+    display: flex; gap: 0; margin-bottom: 14px;
+  }
+  .hero-stat {
+    flex: 1; text-align: center;
+    padding: 14px 4px;
+    position: relative;
+  }
+  .hero-stat::after {
+    content: '';
+    position: absolute; right: 0; top: 20%; bottom: 20%;
+    width: 1px; background: rgba(0,0,0,0.06);
+  }
+  .hero-stat:last-child::after { display: none; }
+  .hero-stat .hv {
+    font-size: 28px; font-weight: 800; color: var(--accent-readable);
+    font-variant-numeric: tabular-nums;
+  }
+  .hero-stat .hl {
+    font-size: 10px; font-weight: 600; color: #999;
+    text-transform: uppercase; letter-spacing: 0.3px; margin-top: 2px;
+  }
+  .hero-stat .hsub {
+    font-size: 10px; color: #bbb; margin-top: 1px;
+  }
+
+  .game-row {
+    display: flex; align-items: center; gap: 8px;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+  }
+  .game-row:last-child { border-bottom: none; }
+  .game-stage-dot {
+    width: 4px; height: 4px; border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .game-stage-dot.group { background: #0F6E56; }
+  .game-stage-dot.r32 { background: #2563eb; }
+  .game-stage-dot.r16 { background: #0891b2; }
+  .game-flag { font-size: 18px; flex-shrink: 0; }
+  .game-text { flex: 1; min-width: 0; }
+  .game-opp-line { font-size: 13px; font-weight: 600; color: #222; display: flex; align-items: center; gap: 4px; }
+  .game-comp-line { font-size: 10px; color: #bbb; }
+  .game-badges { display: flex; gap: 3px; flex-shrink: 0; }
+  .game-badge {
+    font-size: 11px; padding: 2px 6px; border-radius: 5px;
+    font-weight: 600;
+  }
+  .game-badge.g { background: #d4edda; color: #155724; }
+  .game-badge.a { background: #cce5ff; color: #004085; }
+  .game-badge.y { background: #fff3cd; color: #856404; }
+  .game-badge.s { background: #d1ecf1; color: #0c5460; }
+  .game-badge.m { background: #f0f0f0; color: #555; }
+  .game-score {
+    font-size: 13px; font-weight: 700;
+    padding: 3px 8px; border-radius: 6px; flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+  .game-score.W { background: #d4edda; color: #155724; }
+  .game-score.D { background: #fff3cd; color: #856404; }
+  .game-score.L { background: #f8d7da; color: #721c24; }
+</style>
+</head>
+<body>
+
+<div class="page-title">Player Detail — Redesign Options</div>
+<div class="page-subtitle">Four layout options for the player detail view, all featuring a per-match tournament game log showing goals, assists, cards, and key stats.</div>
+
+<div class="phones">
+
+<!-- ============== OPTION A ============== -->
+<div class="phone-wrap">
+  <div class="phone-label">Option A — Tabular Game Log</div>
+  <div class="phone-sublabel">Compact spreadsheet-style table. Dense and scannable — every stat visible at once.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="player-header">
+        <div class="back-btn">‹</div>
+        <div class="header-inner">
+          <div class="header-photo">
+            <img src="https://a.espncdn.com/combiner/i?img=/i/headshots/soccer/players/full/219847.png&w=130&h=95" alt="">
+            <div class="jersey-badge">10</div>
+          </div>
+          <div class="header-info">
+            <div class="header-name">⚽ Mbappé</div>
+            <div class="header-meta">Forward · Paris Saint-Germain</div>
+            <div class="header-meta2">Age 27 · 1.78 m</div>
+            <div class="header-country">
+              <span class="flag">🇫🇷</span> France
+              <span class="heart-btn" style="margin-left:auto">♡</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-header"><span class="icon">🏆</span> Football 2026</div>
+          <div class="card-body">
+            <div class="match-log">
+              <div class="match-log-header">
+                <div>Match</div>
+                <div>⚽</div>
+                <div>👟</div>
+                <div>🎯</div>
+                <div>💥</div>
+                <div>🟨</div>
+              </div>
+              <div class="match-log-row">
+                <div class="match-info-cell">
+                  <div><span class="match-opponent">vs Senegal</span> <span class="match-result-tag W">2-0</span></div>
+                  <div class="match-comp">Group I</div>
+                </div>
+                <div class="stat-dot">1</div>
+                <div class="stat-dot">1</div>
+                <div class="stat-dot">2</div>
+                <div class="stat-dot">4</div>
+                <div class="stat-dot zero">—</div>
+              </div>
+              <div class="match-log-row">
+                <div class="match-info-cell">
+                  <div><span class="match-opponent">vs Iraq</span> <span class="match-result-tag W">3-1</span></div>
+                  <div class="match-comp">Group I</div>
+                </div>
+                <div class="stat-dot">2</div>
+                <div class="stat-dot zero">—</div>
+                <div class="stat-dot">3</div>
+                <div class="stat-dot">5</div>
+                <div class="stat-dot zero">—</div>
+              </div>
+              <div class="match-log-row">
+                <div class="match-info-cell">
+                  <div><span class="match-opponent">@ Norway</span> <span class="match-result-tag D">1-1</span></div>
+                  <div class="match-comp">Group I</div>
+                </div>
+                <div class="stat-dot zero">—</div>
+                <div class="stat-dot zero">—</div>
+                <div class="stat-dot">1</div>
+                <div class="stat-dot">2</div>
+                <div class="stat-dot card-y">1</div>
+              </div>
+              <div class="match-log-row">
+                <div class="match-info-cell">
+                  <div><span class="match-opponent">vs Sweden</span> <span class="match-result-tag W">2-1</span></div>
+                  <div class="match-comp">Round of 32</div>
+                </div>
+                <div class="stat-dot">1</div>
+                <div class="stat-dot zero">—</div>
+                <div class="stat-dot">2</div>
+                <div class="stat-dot">3</div>
+                <div class="stat-dot zero">—</div>
+              </div>
+              <div class="match-log-total">
+                <div>4 Apps</div>
+                <div>4</div>
+                <div>1</div>
+                <div>8</div>
+                <div>14</div>
+                <div style="color:#e0a800">1</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="icon">ℹ️</span> About</div>
+          <div class="card-body">
+            <div class="about-text">France's captain and all-time leading scorer. A generational talent who combines explosive pace with clinical finishing, he has already won multiple Ligue 1 titles and reached a Champions League final.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============== OPTION B ============== -->
+<div class="phone-wrap">
+  <div class="phone-label">Option B — Timeline Cards</div>
+  <div class="phone-sublabel">Each match as a mini-card with date column, colored event badges, and minutes played.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="player-header">
+        <div class="back-btn">‹</div>
+        <div class="header-inner">
+          <div class="header-photo">
+            <img src="https://a.espncdn.com/combiner/i?img=/i/headshots/soccer/players/full/219847.png&w=130&h=95" alt="">
+            <div class="jersey-badge">10</div>
+          </div>
+          <div class="header-info">
+            <div class="header-name">⚽ Mbappé</div>
+            <div class="header-meta">Forward · Paris Saint-Germain</div>
+            <div class="header-meta2">Age 27 · 1.78 m</div>
+            <div class="header-country">
+              <span class="flag">🇫🇷</span> France
+              <span class="heart-btn" style="margin-left:auto">♡</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-header"><span class="icon">🏆</span> Football 2026</div>
+          <div class="card-body">
+            <div class="timeline-list">
+              <div class="timeline-match">
+                <div class="timeline-date-col">
+                  <div class="timeline-day">Sat</div>
+                  <div class="timeline-num">14</div>
+                  <div class="timeline-month">Jun</div>
+                </div>
+                <div class="timeline-body">
+                  <div class="timeline-top">
+                    <span style="font-size:16px">🇸🇳</span>
+                    <span class="timeline-opponent">vs Senegal</span>
+                    <span class="timeline-score">2-0 <span class="score-result" style="background:#d4edda;color:#155724">W</span></span>
+                  </div>
+                  <div class="timeline-comp">Group I · MetLife Stadium</div>
+                  <div class="timeline-stats">
+                    <span class="timeline-stat goal">⚽ Goal (23')</span>
+                    <span class="timeline-stat assist">👟 Assist (67')</span>
+                  </div>
+                  <div class="timeline-mins">90 mins played</div>
+                </div>
+              </div>
+              <div class="timeline-match">
+                <div class="timeline-date-col">
+                  <div class="timeline-day">Wed</div>
+                  <div class="timeline-num">18</div>
+                  <div class="timeline-month">Jun</div>
+                </div>
+                <div class="timeline-body">
+                  <div class="timeline-top">
+                    <span style="font-size:16px">🇮🇶</span>
+                    <span class="timeline-opponent">vs Iraq</span>
+                    <span class="timeline-score">3-1 <span class="score-result" style="background:#d4edda;color:#155724">W</span></span>
+                  </div>
+                  <div class="timeline-comp">Group I · Lincoln Financial Field</div>
+                  <div class="timeline-stats">
+                    <span class="timeline-stat goal">⚽ Goal (12')</span>
+                    <span class="timeline-stat goal">⚽ Goal (55')</span>
+                  </div>
+                  <div class="timeline-mins">78 mins played (sub off 78')</div>
+                </div>
+              </div>
+              <div class="timeline-match">
+                <div class="timeline-date-col">
+                  <div class="timeline-day">Sun</div>
+                  <div class="timeline-num">22</div>
+                  <div class="timeline-month">Jun</div>
+                </div>
+                <div class="timeline-body">
+                  <div class="timeline-top">
+                    <span style="font-size:16px">🇳🇴</span>
+                    <span class="timeline-opponent">@ Norway</span>
+                    <span class="timeline-score">1-1 <span class="score-result" style="background:#fff3cd;color:#856404">D</span></span>
+                  </div>
+                  <div class="timeline-comp">Group I · Gillette Stadium</div>
+                  <div class="timeline-stats">
+                    <span class="timeline-stat yc">🟨 Yellow (41')</span>
+                    <span class="timeline-stat shots">🎯 2 shots on target</span>
+                  </div>
+                  <div class="timeline-mins">90 mins played</div>
+                </div>
+              </div>
+              <div class="timeline-match">
+                <div class="timeline-date-col">
+                  <div class="timeline-day">Thu</div>
+                  <div class="timeline-num">26</div>
+                  <div class="timeline-month">Jun</div>
+                </div>
+                <div class="timeline-body">
+                  <div class="timeline-top">
+                    <span style="font-size:16px">🇸🇪</span>
+                    <span class="timeline-opponent">vs Sweden</span>
+                    <span class="timeline-score">2-1 <span class="score-result" style="background:#d4edda;color:#155724">W</span></span>
+                  </div>
+                  <div class="timeline-comp">Round of 32 · MetLife Stadium</div>
+                  <div class="timeline-stats">
+                    <span class="timeline-stat goal">⚽ Goal (71')</span>
+                  </div>
+                  <div class="timeline-mins">90 mins played</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="icon">ℹ️</span> About</div>
+          <div class="card-body">
+            <div class="about-text">France's captain and all-time leading scorer. A generational talent who combines explosive pace with clinical finishing.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============== OPTION C ============== -->
+<div class="phone-wrap">
+  <div class="phone-label">Option C — Summary Bar + Compact Log</div>
+  <div class="phone-sublabel">Big totals up top, compact match rows with inline event icons below. Best of both worlds.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="player-header">
+        <div class="back-btn">‹</div>
+        <div class="header-inner">
+          <div class="header-photo">
+            <img src="https://a.espncdn.com/combiner/i?img=/i/headshots/soccer/players/full/219847.png&w=130&h=95" alt="">
+            <div class="jersey-badge">10</div>
+          </div>
+          <div class="header-info">
+            <div class="header-name">⚽ Mbappé</div>
+            <div class="header-meta">Forward · Paris Saint-Germain</div>
+            <div class="header-meta2">Age 27 · 1.78 m</div>
+            <div class="header-country">
+              <span class="flag">🇫🇷</span> France
+              <span class="heart-btn" style="margin-left:auto">♡</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-header"><span class="icon">🏆</span> Football 2026</div>
+          <div class="card-body">
+            <div class="summary-bar">
+              <div class="summary-item"><div class="sv">4</div><div class="sl">Apps</div></div>
+              <div class="summary-item"><div class="sv">4</div><div class="sl">Goals</div></div>
+              <div class="summary-item"><div class="sv">1</div><div class="sl">Assists</div></div>
+              <div class="summary-item"><div class="sv">8</div><div class="sl">On Target</div></div>
+              <div class="summary-item"><div class="sv">1</div><div class="sl">Yellows</div></div>
+            </div>
+
+            <div class="section-label">Match-by-Match</div>
+            <div class="compact-log">
+              <div class="compact-row">
+                <span class="compact-flag">🇸🇳</span>
+                <span class="compact-opp">vs Senegal</span>
+                <div class="compact-events">
+                  <span class="compact-event goal">⚽</span>
+                  <span class="compact-event assist">👟</span>
+                </div>
+                <span class="compact-score-box W">2-0</span>
+              </div>
+              <div class="compact-row">
+                <span class="compact-flag">🇮🇶</span>
+                <span class="compact-opp">vs Iraq</span>
+                <div class="compact-events">
+                  <span class="compact-event goal">⚽</span>
+                  <span class="compact-event goal">⚽</span>
+                </div>
+                <span class="compact-score-box W">3-1</span>
+              </div>
+              <div class="compact-row">
+                <span class="compact-flag">🇳🇴</span>
+                <span class="compact-opp">@ Norway</span>
+                <div class="compact-events">
+                  <span class="compact-event yc">🟨</span>
+                </div>
+                <span class="compact-score-box D">1-1</span>
+              </div>
+              <div class="compact-row">
+                <span class="compact-flag">🇸🇪</span>
+                <span class="compact-opp">vs Sweden</span>
+                <div class="compact-events">
+                  <span class="compact-event goal">⚽</span>
+                </div>
+                <span class="compact-score-box W">2-1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="icon">ℹ️</span> About</div>
+          <div class="card-body">
+            <div class="about-text">France's captain and all-time leading scorer. A generational talent who combines explosive pace with clinical finishing, he has already won multiple Ligue 1 titles and reached a Champions League final.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============== OPTION D ============== -->
+<div class="phone-wrap">
+  <div class="phone-label">Option D — Hero Numbers + Event Badges</div>
+  <div class="phone-sublabel">Large hero stats as the lead, then each match with colored event badges. Emphasizes the totals.</div>
+  <div class="phone">
+    <div class="content">
+      <div class="player-header">
+        <div class="back-btn">‹</div>
+        <div class="header-inner">
+          <div class="header-photo">
+            <img src="https://a.espncdn.com/combiner/i?img=/i/headshots/soccer/players/full/219847.png&w=130&h=95" alt="">
+            <div class="jersey-badge">10</div>
+          </div>
+          <div class="header-info">
+            <div class="header-name">⚽ Mbappé</div>
+            <div class="header-meta">Forward · Paris Saint-Germain</div>
+            <div class="header-meta2">Age 27 · 1.78 m</div>
+            <div class="header-country">
+              <span class="flag">🇫🇷</span> France
+              <span class="heart-btn" style="margin-left:auto">♡</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-header"><span class="icon">🏆</span> Football 2026</div>
+          <div class="card-body">
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="hv">4</div>
+                <div class="hl">Goals</div>
+                <div class="hsub">in 4 apps</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hv">1</div>
+                <div class="hl">Assist</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hv">8</div>
+                <div class="hl">On Target</div>
+                <div class="hsub">of 14 shots</div>
+              </div>
+            </div>
+
+            <div class="section-label">Game Log</div>
+            <div class="game-row">
+              <div class="game-stage-dot group"></div>
+              <span class="game-flag">🇸🇳</span>
+              <div class="game-text">
+                <div class="game-opp-line">vs Senegal</div>
+                <div class="game-comp-line">Group I · Jun 14</div>
+              </div>
+              <div class="game-badges">
+                <span class="game-badge g">⚽ 1</span>
+                <span class="game-badge a">👟 1</span>
+              </div>
+              <div class="game-score W">2-0</div>
+            </div>
+            <div class="game-row">
+              <div class="game-stage-dot group"></div>
+              <span class="game-flag">🇮🇶</span>
+              <div class="game-text">
+                <div class="game-opp-line">vs Iraq</div>
+                <div class="game-comp-line">Group I · Jun 18</div>
+              </div>
+              <div class="game-badges">
+                <span class="game-badge g">⚽ 2</span>
+              </div>
+              <div class="game-score W">3-1</div>
+            </div>
+            <div class="game-row">
+              <div class="game-stage-dot group"></div>
+              <span class="game-flag">🇳🇴</span>
+              <div class="game-text">
+                <div class="game-opp-line">@ Norway</div>
+                <div class="game-comp-line">Group I · Jun 22</div>
+              </div>
+              <div class="game-badges">
+                <span class="game-badge y">🟨</span>
+              </div>
+              <div class="game-score D">1-1</div>
+            </div>
+            <div class="game-row">
+              <div class="game-stage-dot r32"></div>
+              <span class="game-flag">🇸🇪</span>
+              <div class="game-text">
+                <div class="game-opp-line">vs Sweden</div>
+                <div class="game-comp-line">Rd of 32 · Jun 26</div>
+              </div>
+              <div class="game-badges">
+                <span class="game-badge g">⚽ 1</span>
+              </div>
+              <div class="game-score W">2-1</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="icon">ℹ️</span> About</div>
+          <div class="card-body">
+            <div class="about-text">France's captain and all-time leading scorer. A generational talent who combines explosive pace with clinical finishing, he has already won multiple Ligue 1 titles and reached a Champions League final.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- ============== GK Example ============== -->
+<div class="page-title" style="margin-top:24px">Goalkeeper Variant — Option D</div>
+<div class="page-subtitle">Same layout adapts for keepers: saves, clean sheets, and goals conceded replace shooting stats.</div>
+
+<div class="phones">
+<div class="phone-wrap">
+  <div class="phone-label">Donnarumma (GK)</div>
+  <div class="phone">
+    <div class="content">
+      <div class="player-header" style="background: linear-gradient(135deg, #0B3D28 0%, #0F6E56 60%, #1D9E75 100%);">
+        <div class="back-btn">‹</div>
+        <div class="header-inner">
+          <div class="header-photo">
+            <span style="font-size:28px;font-weight:900">1</span>
+            <div class="jersey-badge">1</div>
+          </div>
+          <div class="header-info">
+            <div class="header-name">⚽ Donnarumma</div>
+            <div class="header-meta">Goalkeeper · Paris Saint-Germain</div>
+            <div class="header-meta2">Age 27 · 1.96 m</div>
+            <div class="header-country">
+              <span class="flag">🇮🇹</span> Italy
+              <span class="heart-btn" style="margin-left:auto">♡</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-header"><span class="icon">🏆</span> Football 2026</div>
+          <div class="card-body">
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="hv">12</div>
+                <div class="hl">Saves</div>
+                <div class="hsub">in 3 apps</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hv">1</div>
+                <div class="hl">Clean Sheet</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hv">2</div>
+                <div class="hl">Conceded</div>
+                <div class="hsub">0.67 per game</div>
+              </div>
+            </div>
+
+            <div class="section-label">Game Log</div>
+            <div class="game-row">
+              <div class="game-stage-dot group"></div>
+              <span class="game-flag">🇧🇪</span>
+              <div class="game-text">
+                <div class="game-opp-line">vs Belgium</div>
+                <div class="game-comp-line">Group F · Jun 15</div>
+              </div>
+              <div class="game-badges">
+                <span class="game-badge s">🧤 5 saves</span>
+              </div>
+              <div class="game-score W">1-0</div>
+            </div>
+            <div class="game-row">
+              <div class="game-stage-dot group"></div>
+              <span class="game-flag">🇳🇿</span>
+              <div class="game-text">
+                <div class="game-opp-line">vs New Zealand</div>
+                <div class="game-comp-line">Group F · Jun 19</div>
+              </div>
+              <div class="game-badges">
+                <span class="game-badge s">🧤 3 saves</span>
+                <span class="game-badge m">🧹 CS</span>
+              </div>
+              <div class="game-score W">2-0</div>
+            </div>
+            <div class="game-row">
+              <div class="game-stage-dot group"></div>
+              <span class="game-flag">🇪🇨</span>
+              <div class="game-text">
+                <div class="game-opp-line">vs Ecuador</div>
+                <div class="game-comp-line">Group F · Jun 23</div>
+              </div>
+              <div class="game-badges">
+                <span class="game-badge s">🧤 4 saves</span>
+              </div>
+              <div class="game-score D">2-2</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="icon">ℹ️</span> About</div>
+          <div class="card-body">
+            <div class="about-text">Italy's first-choice goalkeeper and the Euro 2020 Player of the Tournament. An imposing presence between the posts at 1.96m with remarkable reflexes and commanding distribution.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
