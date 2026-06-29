@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pool Reveals — picks &amp; scoring breakdown</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    padding: 24px 20px 60px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .greeting {
+    max-width: 1100px;
+    margin: 0 auto 14px;
+    background: #fff8e1;
+    border: 1px solid #f2e3a8;
+    border-radius: 14px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .greeting h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .greeting p { font-size: 13.5px; color: #6b6450; line-height: 1.55; }
+  .greeting p + p { margin-top: 8px; }
+  .greeting strong { color: #3A6F9A; }
+
+  h2.page-h { font-size: 17px; font-weight: 600; text-align: center; color: #444; margin: 36px auto 4px; }
+  .page-sub { text-align: center; font-size: 13px; color: #999; margin: 0 auto 22px; max-width: 720px; line-height: 1.5; }
+
+  .options { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; max-width: 1200px; margin: 26px auto 0; }
+  .option-wrap { flex: 0 0 340px; }
+  .option-label { text-align: center; margin-bottom: 8px; }
+  .option-label h3 { font-size: 16px; font-weight: 600; color: #3A6F9A; }
+  .option-label p { font-size: 12px; color: #999; margin-top: 4px; line-height: 1.4; min-height: 44px; padding: 0 6px; }
+
+  .phone {
+    width: 340px; background: #F2F0EC; border-radius: 36px; overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06); padding: 12px;
+  }
+  .phone-inner { border-radius: 26px; overflow: hidden; background: #F2F0EC; }
+  .status-bar { height: 54px; background: #3A6F9A; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px; }
+  .status-time { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.8); }
+  .header-banner { position: relative; background: linear-gradient(135deg, #3A6F9A, #5A9FC9); padding: 16px 16px 14px; text-align: center; }
+  .header-banner h3 { color: #fff; font-size: 21px; font-weight: 600; letter-spacing: 0.3px; }
+  .header-banner .sub { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 500; margin-top: 3px; }
+  .back-chev { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.9); font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 2px; }
+
+  .content { padding: 12px; background: #F2F0EC; height: 588px; overflow-y: auto; }
+  .content::-webkit-scrollbar { width: 0; }
+
+  .home-bar { height: 34px; background: #f2f0ec; border-radius: 0 0 26px 26px; display: flex; justify-content: center; padding-top: 6px; }
+  .home-indicator { width: 120px; height: 5px; background: #ccc; border-radius: 3px; }
+
+  /* ---- segment toggle ---- */
+  .seg-toggle {
+    display: flex; background: rgba(0,0,0,0.06); border-radius: 9px; padding: 2px; margin-bottom: 14px;
+  }
+  .seg-toggle .seg {
+    flex: 1; text-align: center; font-size: 12px; font-weight: 600; color: #888;
+    padding: 7px 0; border-radius: 7px; cursor: pointer; transition: all 0.15s;
+  }
+  .seg-toggle .seg.active { background: #fff; color: #3A6F9A; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+
+  /* ---- match header card ---- */
+  .match-hdr {
+    background: #fff; border-radius: 14px; padding: 14px 16px 12px; margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .match-hdr-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .match-hdr-stage { font-size: 10.5px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.5px; }
+  .match-hdr-status { font-size: 10.5px; font-weight: 700; }
+  .match-hdr-status.live { color: #DC3545; }
+  .match-hdr-status.final { color: #2EA56A; }
+  .match-hdr-teams { display: flex; align-items: center; justify-content: center; gap: 14px; }
+  .match-hdr-team { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+  .match-hdr-team .flag { width: 36px; height: 26px; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; color: #fff; box-shadow: 0 0 0 0.5px rgba(0,0,0,0.1); }
+  .match-hdr-team .name { font-size: 12px; font-weight: 700; color: #444; }
+  .match-hdr-score { font-size: 28px; font-weight: 800; color: #222; letter-spacing: 2px; font-variant-numeric: tabular-nums; }
+  .match-hdr-score .dim { color: #ccc; }
+
+  /* ---- section label ---- */
+  .sec-label { font-size: 11px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.6px; padding: 4px 2px 10px; }
+
+  /* ---- picks grid (everyone's picks) ---- */
+  .picks-card { background: #fff; border-radius: 14px; padding: 0; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); overflow: hidden; }
+  .pick-row { display: flex; align-items: center; padding: 10px 14px; gap: 10px; }
+  .pick-row + .pick-row { border-top: 1px solid #f3f1ec; }
+  .pick-row.you { background: rgba(58,111,154,0.05); }
+  .pick-av { width: 28px; height: 28px; border-radius: 50%; background: #ECEAE6; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #8a8a8a; flex-shrink: 0; }
+  .pick-av.you { background: rgba(58,111,154,0.14); color: #3A6F9A; }
+  .pick-name { flex: 1; font-size: 13px; font-weight: 600; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pick-name.you { color: #3A6F9A; }
+  .pick-pred { font-size: 13px; font-weight: 700; color: #222; width: 36px; text-align: center; font-variant-numeric: tabular-nums; letter-spacing: 1px; flex-shrink: 0; }
+  .pick-outcome { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+  .pick-tag { font-size: 10px; font-weight: 700; padding: 3px 7px; border-radius: 10px; white-space: nowrap; }
+  .pick-tag.exact { background: rgba(46,165,106,0.14); color: #1e7a4d; }
+  .pick-tag.result { background: rgba(58,111,154,0.12); color: #3A6F9A; }
+  .pick-tag.miss { background: rgba(150,150,150,0.10); color: #aaa; }
+  .pick-tag.auto { background: rgba(212,160,23,0.12); color: #a17a06; font-size: 9px; }
+  .pick-pts { font-size: 13px; font-weight: 800; width: 28px; text-align: right; font-variant-numeric: tabular-nums; flex-shrink: 0; }
+  .pick-pts.pos { color: #1e7a4d; }
+  .pick-pts.zero { color: #ccc; }
+
+  /* ---- scoring breakdown card ---- */
+  .score-card { background: #fff; border-radius: 14px; padding: 14px 16px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .score-card-hdr { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .score-card-hdr .av { width: 34px; height: 34px; border-radius: 50%; background: rgba(58,111,154,0.14); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #3A6F9A; flex-shrink: 0; }
+  .score-card-hdr .nm { font-size: 15px; font-weight: 700; flex: 1; }
+  .score-card-hdr .total { font-size: 20px; font-weight: 800; color: #3A6F9A; }
+  .score-card-hdr .total small { font-size: 11px; font-weight: 600; color: #999; }
+
+  .score-line { display: flex; align-items: center; padding: 7px 0; gap: 8px; }
+  .score-line + .score-line { border-top: 1px solid #f6f5f2; }
+  .score-line .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .score-line .dot.green { background: #2EA56A; }
+  .score-line .dot.blue { background: #3A6F9A; }
+  .score-line .dot.amber { background: #D4A017; }
+  .score-line .dot.red { background: #DC3545; }
+  .score-line .dot.grey { background: #ccc; }
+  .score-line .desc { flex: 1; font-size: 12px; color: #555; }
+  .score-line .desc strong { color: #222; font-weight: 700; }
+  .score-line .pts { font-size: 13px; font-weight: 800; width: 32px; text-align: right; font-variant-numeric: tabular-nums; }
+  .score-line .pts.pos { color: #1e7a4d; }
+  .score-line .pts.zero { color: #ccc; }
+
+  .score-match { background: #f6f5f2; border-radius: 10px; padding: 10px 12px; margin-bottom: 10px; }
+  .score-match-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px; }
+  .score-match-teams { font-size: 12px; font-weight: 700; color: #444; }
+  .score-match-result { font-size: 12px; font-weight: 700; color: #888; }
+  .score-match-pick { font-size: 11px; color: #888; margin-top: 3px; }
+  .score-match-pick strong { color: #555; }
+
+  /* ---- cumulative hero ---- */
+  .cum-hero { background: linear-gradient(135deg, #3A6F9A, #6BB0D6); border-radius: 16px; padding: 16px; margin-bottom: 14px; color: #fff; box-shadow: 0 3px 12px rgba(58,111,154,0.25); position: relative; overflow: hidden; }
+  .cum-hero .ball { position: absolute; right: -12px; bottom: -16px; font-size: 80px; opacity: 0.12; }
+  .cum-hero .eyebrow { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85; margin-bottom: 6px; }
+  .cum-hero .total { font-size: 36px; font-weight: 800; line-height: 1; }
+  .cum-hero .total small { font-size: 14px; font-weight: 600; opacity: 0.85; }
+  .cum-stats { display: flex; gap: 16px; margin-top: 12px; position: relative; z-index: 1; }
+  .cum-stats .cs .n { font-size: 16px; font-weight: 700; }
+  .cum-stats .cs .l { font-size: 10px; opacity: 0.8; }
+
+  /* ---- filter pills ---- */
+  .filter-row { display: flex; gap: 6px; margin-bottom: 12px; overflow-x: auto; padding-bottom: 2px; }
+  .filter-row::-webkit-scrollbar { display: none; }
+  .fpill { font-size: 11px; font-weight: 600; padding: 6px 11px; border-radius: 20px; background: #fff; color: #888; white-space: nowrap; cursor: pointer; border: 1px solid #e8e5de; transition: all 0.12s; flex-shrink: 0; }
+  .fpill.active { background: #3A6F9A; color: #fff; border-color: #3A6F9A; }
+
+  /* ---- match accordion ---- */
+  .match-acc { background: #fff; border-radius: 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); overflow: hidden; }
+  .match-acc-hdr { display: flex; align-items: center; padding: 11px 14px; gap: 8px; cursor: pointer; }
+  .match-acc-hdr .teams { flex: 1; font-size: 13px; font-weight: 700; }
+  .match-acc-hdr .score { font-size: 13px; font-weight: 800; color: #222; font-variant-numeric: tabular-nums; }
+  .match-acc-hdr .my-pts { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 10px; }
+  .match-acc-hdr .my-pts.pos { background: rgba(46,165,106,0.14); color: #1e7a4d; }
+  .match-acc-hdr .my-pts.zero { background: rgba(150,150,150,0.10); color: #aaa; }
+  .match-acc-body { border-top: 1px solid #f3f1ec; padding: 10px 14px; display: none; }
+  .match-acc.open .match-acc-body { display: block; }
+  .match-acc-chev { font-size: 14px; color: #ccc; transition: transform 0.2s; }
+  .match-acc.open .match-acc-chev { transform: rotate(90deg); }
+
+  .breakdown-row { display: flex; align-items: center; gap: 6px; padding: 5px 0; }
+  .breakdown-row .label { flex: 1; font-size: 11.5px; color: #666; }
+  .breakdown-row .val { font-size: 12px; font-weight: 700; width: 32px; text-align: right; font-variant-numeric: tabular-nums; }
+  .breakdown-row .val.pos { color: #1e7a4d; }
+  .breakdown-row .val.zero { color: #ccc; }
+  .my-pick-echo { font-size: 11px; color: #888; margin-bottom: 6px; }
+  .my-pick-echo strong { color: #555; }
+</style>
+</head>
+<body>
+
+<div class="greeting">
+  <h1>Pool Reveals — what did everyone pick, and how did they score?</h1>
+  <p>Two new views that open up once picks are locked and matches are underway.
+     <strong>Screen A</strong> shows everyone's picks for a single match (the "big reveal" moment).
+     <strong>Screen B</strong> shows your personal scoring breakdown — match-by-match,
+     which points you earned and which you missed. <strong>Screen C</strong> is the same idea but
+     for the full pool — tap any match to expand everyone's picks + points.</p>
+</div>
+
+<h2 class="page-h">1 &middot; After kickoff: the reveal</h2>
+<p class="page-sub">Once a match kicks off, picks lock and everyone can see what everyone else predicted. Tap any match from the pool to see this.</p>
+
+<div class="options">
+
+  <!-- SCREEN A: Everyone's picks for a single match -->
+  <div class="option-wrap">
+    <div class="option-label">
+      <h3>A &middot; During match (live)</h3>
+      <p>Picks revealed, no scores yet. The tension builds as the match unfolds.</p>
+    </div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">9:41</span></div>
+      <div class="header-banner">
+        <span class="back-chev">&#8249; Boston Office</span>
+        <h3>Match Picks</h3>
+      </div>
+      <div class="content">
+
+        <div class="match-hdr">
+          <div class="match-hdr-top">
+            <span class="match-hdr-stage">Round of 32</span>
+            <span class="match-hdr-status live">&#9679; 58'</span>
+          </div>
+          <div class="match-hdr-teams">
+            <div class="match-hdr-team">
+              <div class="flag" style="background:#009c3b;">BRA</div>
+              <div class="name">Brazil</div>
+            </div>
+            <div class="match-hdr-score">1 <span class="dim">-</span> 1</div>
+            <div class="match-hdr-team">
+              <div class="flag" style="background:#bc002d;">JPN</div>
+              <div class="name">Japan</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec-label">Everyone's picks (6)</div>
+
+        <div class="picks-card">
+          <div class="pick-row you">
+            <div class="pick-av you">CH</div>
+            <div class="pick-name you">You</div>
+            <div class="pick-pred">2–1</div>
+            <div class="pick-outcome"><span class="pick-tag result">BRA win</span></div>
+          </div>
+          <div class="pick-row">
+            <div class="pick-av">HB</div>
+            <div class="pick-name">Heather</div>
+            <div class="pick-pred">1–0</div>
+            <div class="pick-outcome"><span class="pick-tag result">BRA win</span></div>
+          </div>
+          <div class="pick-row">
+            <div class="pick-av">JM</div>
+            <div class="pick-name">James</div>
+            <div class="pick-pred">1–2</div>
+            <div class="pick-outcome"><span class="pick-tag result">JPN win</span></div>
+          </div>
+          <div class="pick-row">
+            <div class="pick-av">SS</div>
+            <div class="pick-name">Sarah</div>
+            <div class="pick-pred">1–1</div>
+            <div class="pick-outcome"><span class="pick-tag result">Draw</span></div>
+          </div>
+          <div class="pick-row">
+            <div class="pick-av">MK</div>
+            <div class="pick-name">Mike</div>
+            <div class="pick-pred">3–0</div>
+            <div class="pick-outcome"><span class="pick-tag result">BRA win</span></div>
+          </div>
+          <div class="pick-row">
+            <div class="pick-av" style="color:#a17a06;background:rgba(212,160,23,0.12);">DL</div>
+            <div class="pick-name" style="color:#a17a06;">David</div>
+            <div class="pick-pred" style="color:#a17a06;">1–0</div>
+            <div class="pick-outcome"><span class="pick-tag auto">AUTO</span><span class="pick-tag result" style="font-size:9px;">BRA win</span></div>
+          </div>
+        </div>
+
+        <div style="background:#fff;border-radius:14px;padding:12px 14px;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+          <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Pick summary</div>
+          <div style="display:flex;gap:6px;">
+            <div style="flex:1;background:#f6f5f2;border-radius:8px;padding:8px 10px;text-align:center;">
+              <div style="font-size:16px;font-weight:800;color:#3A6F9A;">4</div>
+              <div style="font-size:10px;color:#888;font-weight:600;">BRA win</div>
+            </div>
+            <div style="flex:1;background:#f6f5f2;border-radius:8px;padding:8px 10px;text-align:center;">
+              <div style="font-size:16px;font-weight:800;color:#888;">1</div>
+              <div style="font-size:10px;color:#888;font-weight:600;">Draw</div>
+            </div>
+            <div style="flex:1;background:#f6f5f2;border-radius:8px;padding:8px 10px;text-align:center;">
+              <div style="font-size:16px;font-weight:800;color:#E08A3C;">1</div>
+              <div style="font-size:10px;color:#888;font-weight:600;">JPN win</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="home-bar"><div class="home-indicator"></div></div>
+    </div></div>
+  </div>
+
+  <!-- SCREEN A2: After final whistle -->
+  <div class="option-wrap">
+    <div class="option-label">
+      <h3>A2 &middot; After final whistle</h3>
+      <p>Match is over — points appear next to each pick. Green for hits, grey for misses.</p>
+    </div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">9:41</span></div>
+      <div class="header-banner">
+        <span class="back-chev">&#8249; Boston Office</span>
+        <h3>Match Picks</h3>
+      </div>
+      <div class="content">
+
+        <div class="match-hdr">
+          <div class="match-hdr-top">
+            <span class="match-hdr-stage">Round of 32</span>
+            <span class="match-hdr-status final">Full time</span>
+          </div>
+          <div class="match-hdr-teams">
+            <div class="match-hdr-team">
+              <div class="flag" style="background:#009c3b;">BRA</div>
+              <div class="name">Brazil</div>
+            </div>
+            <div class="match-hdr-score">2 <span class="dim">-</span> 1</div>
+            <div class="match-hdr-team">
+              <div class="flag" style="background:#bc002d;">JPN</div>
+              <div class="name">Japan</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec-label">Everyone's picks (6)</div>
+
+        <div class="picks-card">
+          <div class="pick-row you">
+            <div class="pick-av you">CH</div>
+            <div class="pick-name you">You</div>
+            <div class="pick-pred">2–1</div>
+            <div class="pick-outcome"><span class="pick-tag exact">Exact!</span></div>
+            <div class="pick-pts pos">+8</div>
+          </div>
+          <div class="pick-row">
+            <div class="pick-av">HB</div>
+            <div class="pick-name">Heather</div>
+            <div class="pick-pred">1–0</div>
+            <div class="pick-outcome"><span class="pick-tag result">Result</span></div>
+            <div class="pick-pts pos">+3</div>
+          </div>
+          <div class="pick-row">
+            <div class="pick-av">JM</div>
+            <div class="pick-name">James</div>
+            <div class="pick-pred">1–2</div>
+            <div class="pick-outcome"><span class="pick-tag miss">Miss</span></div>
+            <div class="pick-pts zero">0</div>
+          </div>
+          <div class="pick-row">
+            <div class="pick-av">SS</div>
+            <div class="pick-name">Sarah</div>
+            <div class="pick-pred">1–1</div>
+            <div class="pick-outcome"><span class="pick-tag miss">Miss</span></div>
+            <div class="pick-pts zero">0</div>
+          </div>
+          <div class="pick-row">
+            <div class="pick-av">MK</div>
+            <div class="pick-name">Mike</div>
+            <div class="pick-pred">3–0</div>
+            <div class="pick-outcome"><span class="pick-tag result">Result</span></div>
+            <div class="pick-pts pos">+3</div>
+          </div>
+          <div class="pick-row">
+            <div class="pick-av" style="color:#a17a06;background:rgba(212,160,23,0.12);">DL</div>
+            <div class="pick-name" style="color:#a17a06;">David</div>
+            <div class="pick-pred" style="color:#a17a06;">1–0</div>
+            <div class="pick-outcome"><span class="pick-tag auto">AUTO</span></div>
+            <div class="pick-pts pos" style="color:#a17a06;">+1</div>
+          </div>
+        </div>
+
+        <div style="background:#fff;border-radius:14px;padding:12px 14px;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+          <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px;">Scoring rules</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <div style="font-size:11px;font-weight:600;padding:5px 10px;border-radius:8px;background:#f6f5f2;color:#555;">Exact score <strong style="color:#1e7a4d;">+5</strong></div>
+            <div style="font-size:11px;font-weight:600;padding:5px 10px;border-radius:8px;background:#f6f5f2;color:#555;">Correct result <strong style="color:#3A6F9A;">+3</strong></div>
+            <div style="font-size:11px;font-weight:600;padding:5px 10px;border-radius:8px;background:#f6f5f2;color:#555;">Auto-pick <strong style="color:#a17a06;">+1</strong></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="home-bar"><div class="home-indicator"></div></div>
+    </div></div>
+  </div>
+
+  <!-- SCREEN B: Your scoring breakdown -->
+  <div class="option-wrap">
+    <div class="option-label">
+      <h3>B &middot; Your scoring breakdown</h3>
+      <p>Tap "My Points" from the pool standings to see how you earned (or missed) every point.</p>
+    </div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">9:41</span></div>
+      <div class="header-banner">
+        <span class="back-chev">&#8249; Boston Office</span>
+        <h3>My Points</h3>
+      </div>
+      <div class="content">
+
+        <div class="cum-hero">
+          <div class="eyebrow">Your prediction score</div>
+          <div class="total">42 <small>pts</small></div>
+          <div class="cum-stats">
+            <div class="cs"><div class="n">2</div><div class="l">Exact scores</div></div>
+            <div class="cs"><div class="n">8</div><div class="l">Correct results</div></div>
+            <div class="cs"><div class="n">3</div><div class="l">Missed</div></div>
+          </div>
+          <div class="ball">&#9917;</div>
+        </div>
+
+        <div class="filter-row">
+          <div class="fpill active">All matches</div>
+          <div class="fpill">Group stage</div>
+          <div class="fpill">Round of 32</div>
+          <div class="fpill">Exact only</div>
+        </div>
+
+        <!-- match 76 -->
+        <div class="match-acc open">
+          <div class="match-acc-hdr" onclick="this.parentElement.classList.toggle('open')">
+            <div class="teams">Brazil 2–1 Japan</div>
+            <div class="my-pts pos">+8</div>
+            <div class="match-acc-chev">&#8250;</div>
+          </div>
+          <div class="match-acc-body">
+            <div class="my-pick-echo">Your pick: <strong>2–1 (BRA win)</strong></div>
+            <div class="breakdown-row">
+              <div class="dot green" style="width:8px;height:8px;border-radius:50;flex-shrink:0;background:#2EA56A;"></div>
+              <div class="label">Exact score match</div>
+              <div class="val pos">+5</div>
+            </div>
+            <div class="breakdown-row">
+              <div class="dot blue" style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:#3A6F9A;"></div>
+              <div class="label">Correct result (BRA win)</div>
+              <div class="val pos">+3</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- match 74 -->
+        <div class="match-acc">
+          <div class="match-acc-hdr" onclick="this.parentElement.classList.toggle('open')">
+            <div class="teams">Germany 3–0 Paraguay</div>
+            <div class="my-pts pos">+3</div>
+            <div class="match-acc-chev">&#8250;</div>
+          </div>
+          <div class="match-acc-body">
+            <div class="my-pick-echo">Your pick: <strong>2–0 (GER win)</strong></div>
+            <div class="breakdown-row">
+              <div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:#ccc;"></div>
+              <div class="label">Exact score match</div>
+              <div class="val zero">0</div>
+            </div>
+            <div class="breakdown-row">
+              <div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:#3A6F9A;"></div>
+              <div class="label">Correct result (GER win)</div>
+              <div class="val pos">+3</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- match 75 -->
+        <div class="match-acc">
+          <div class="match-acc-hdr" onclick="this.parentElement.classList.toggle('open')">
+            <div class="teams">Netherlands 1–2 Morocco</div>
+            <div class="my-pts zero">0</div>
+            <div class="match-acc-chev">&#8250;</div>
+          </div>
+          <div class="match-acc-body">
+            <div class="my-pick-echo">Your pick: <strong>2–1 (NED win)</strong></div>
+            <div class="breakdown-row">
+              <div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:#ccc;"></div>
+              <div class="label">Exact score match</div>
+              <div class="val zero">0</div>
+            </div>
+            <div class="breakdown-row">
+              <div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:#DC3545;"></div>
+              <div class="label">Wrong result (picked NED)</div>
+              <div class="val zero">0</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- match 73 -->
+        <div class="match-acc">
+          <div class="match-acc-hdr" onclick="this.parentElement.classList.toggle('open')">
+            <div class="teams">S. Africa 0–1 Canada</div>
+            <div class="my-pts pos">+3</div>
+            <div class="match-acc-chev">&#8250;</div>
+          </div>
+          <div class="match-acc-body">
+            <div class="my-pick-echo">Your pick: <strong>0–2 (CAN win)</strong></div>
+            <div class="breakdown-row">
+              <div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:#ccc;"></div>
+              <div class="label">Exact score match</div>
+              <div class="val zero">0</div>
+            </div>
+            <div class="breakdown-row">
+              <div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:#3A6F9A;"></div>
+              <div class="label">Correct result (CAN win)</div>
+              <div class="val pos">+3</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- group stage examples -->
+        <div class="match-acc">
+          <div class="match-acc-hdr" onclick="this.parentElement.classList.toggle('open')">
+            <div class="teams">France 4–1 Norway</div>
+            <div class="my-pts pos">+8</div>
+            <div class="match-acc-chev">&#8250;</div>
+          </div>
+          <div class="match-acc-body">
+            <div class="my-pick-echo">Your pick: <strong>4–1 (FRA win)</strong></div>
+            <div class="breakdown-row">
+              <div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:#2EA56A;"></div>
+              <div class="label">Exact score match</div>
+              <div class="val pos">+5</div>
+            </div>
+            <div class="breakdown-row">
+              <div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:#3A6F9A;"></div>
+              <div class="label">Correct result (FRA win)</div>
+              <div class="val pos">+3</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="match-acc">
+          <div class="match-acc-hdr" onclick="this.parentElement.classList.toggle('open')">
+            <div class="teams">USA 4–1 Paraguay</div>
+            <div class="my-pts pos">+3</div>
+            <div class="match-acc-chev">&#8250;</div>
+          </div>
+          <div class="match-acc-body">
+            <div class="my-pick-echo">Your pick: <strong>2–0 (USA win)</strong></div>
+            <div class="breakdown-row">
+              <div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:#ccc;"></div>
+              <div class="label">Exact score match</div>
+              <div class="val zero">0</div>
+            </div>
+            <div class="breakdown-row">
+              <div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:#3A6F9A;"></div>
+              <div class="label">Correct result (USA win)</div>
+              <div class="val pos">+3</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="home-bar"><div class="home-indicator"></div></div>
+    </div></div>
+  </div>
+
+</div>
+
+
+<h2 class="page-h">2 &middot; Pool-wide view: all matches, all members</h2>
+<p class="page-sub">From the pool detail, a "Results" tab shows every completed match with picks from everyone. Tap to expand.</p>
+
+<div class="options" style="justify-content:center;">
+
+  <!-- SCREEN C: Pool results tab -->
+  <div class="option-wrap">
+    <div class="option-label">
+      <h3>C &middot; Results tab on pool detail</h3>
+      <p>Alongside "Standings" and "Upcoming" — a results feed showing settled matches and everyone's picks.</p>
+    </div>
+    <div class="phone"><div class="phone-inner">
+      <div class="status-bar"><span class="status-time">9:41</span></div>
+      <div class="header-banner">
+        <span class="back-chev">&#8249; Pools</span>
+        <h3>Boston Office</h3>
+        <div class="sub">6 members &middot; Both</div>
+      </div>
+      <div class="content">
+
+        <div class="seg-toggle">
+          <div class="seg">Standings</div>
+          <div class="seg active">Results</div>
+          <div class="seg">Upcoming</div>
+        </div>
+
+        <div class="sec-label">Round of 32 &middot; June 29</div>
+
+        <!-- Expanded match -->
+        <div class="match-acc open">
+          <div class="match-acc-hdr" onclick="this.parentElement.classList.toggle('open')">
+            <div class="teams">Brazil 2–1 Japan</div>
+            <div class="score" style="font-size:12px;font-weight:700;color:#2EA56A;">FT</div>
+            <div class="match-acc-chev">&#8250;</div>
+          </div>
+          <div class="match-acc-body" style="padding:0;">
+            <div class="pick-row you" style="padding:8px 14px;">
+              <div class="pick-av you" style="width:24px;height:24px;font-size:9px;">CH</div>
+              <div class="pick-name you" style="font-size:12px;">You</div>
+              <div class="pick-pred" style="font-size:12px;">2–1</div>
+              <div class="pick-outcome"><span class="pick-tag exact" style="font-size:9px;">Exact!</span></div>
+              <div class="pick-pts pos" style="font-size:12px;">+8</div>
+            </div>
+            <div class="pick-row" style="padding:8px 14px;">
+              <div class="pick-av" style="width:24px;height:24px;font-size:9px;">HB</div>
+              <div class="pick-name" style="font-size:12px;">Heather</div>
+              <div class="pick-pred" style="font-size:12px;">1–0</div>
+              <div class="pick-outcome"><span class="pick-tag result" style="font-size:9px;">Result</span></div>
+              <div class="pick-pts pos" style="font-size:12px;">+3</div>
+            </div>
+            <div class="pick-row" style="padding:8px 14px;">
+              <div class="pick-av" style="width:24px;height:24px;font-size:9px;">JM</div>
+              <div class="pick-name" style="font-size:12px;">James</div>
+              <div class="pick-pred" style="font-size:12px;">1–2</div>
+              <div class="pick-outcome"><span class="pick-tag miss" style="font-size:9px;">Miss</span></div>
+              <div class="pick-pts zero" style="font-size:12px;">0</div>
+            </div>
+            <div class="pick-row" style="padding:8px 14px;">
+              <div class="pick-av" style="width:24px;height:24px;font-size:9px;">SS</div>
+              <div class="pick-name" style="font-size:12px;">Sarah</div>
+              <div class="pick-pred" style="font-size:12px;">1–1</div>
+              <div class="pick-outcome"><span class="pick-tag miss" style="font-size:9px;">Miss</span></div>
+              <div class="pick-pts zero" style="font-size:12px;">0</div>
+            </div>
+            <div class="pick-row" style="padding:8px 14px;">
+              <div class="pick-av" style="width:24px;height:24px;font-size:9px;">MK</div>
+              <div class="pick-name" style="font-size:12px;">Mike</div>
+              <div class="pick-pred" style="font-size:12px;">3–0</div>
+              <div class="pick-outcome"><span class="pick-tag result" style="font-size:9px;">Result</span></div>
+              <div class="pick-pts pos" style="font-size:12px;">+3</div>
+            </div>
+            <div class="pick-row" style="padding:8px 14px;">
+              <div class="pick-av" style="width:24px;height:24px;font-size:9px;color:#a17a06;background:rgba(212,160,23,0.12);">DL</div>
+              <div class="pick-name" style="font-size:12px;color:#a17a06;">David</div>
+              <div class="pick-pred" style="font-size:12px;color:#a17a06;">1–0</div>
+              <div class="pick-outcome"><span class="pick-tag auto">AUTO</span></div>
+              <div class="pick-pts pos" style="font-size:12px;color:#a17a06;">+1</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collapsed matches -->
+        <div class="match-acc">
+          <div class="match-acc-hdr" onclick="this.parentElement.classList.toggle('open')">
+            <div class="teams">Germany 3–0 Paraguay</div>
+            <div class="score" style="font-size:12px;font-weight:700;color:#2EA56A;">FT</div>
+            <div class="match-acc-chev">&#8250;</div>
+          </div>
+          <div class="match-acc-body" style="padding:0;">
+            <div class="pick-row" style="padding:8px 14px;">
+              <div class="pick-av you" style="width:24px;height:24px;font-size:9px;">CH</div>
+              <div class="pick-name you" style="font-size:12px;">You: 2–0</div>
+              <div class="pick-outcome"><span class="pick-tag result" style="font-size:9px;">Result</span></div>
+              <div class="pick-pts pos" style="font-size:12px;">+3</div>
+            </div>
+            <div class="pick-row" style="padding:8px 14px;">
+              <div class="pick-av" style="width:24px;height:24px;font-size:9px;">HB</div>
+              <div class="pick-name" style="font-size:12px;">Heather: 3–0</div>
+              <div class="pick-outcome"><span class="pick-tag exact" style="font-size:9px;">Exact!</span></div>
+              <div class="pick-pts pos" style="font-size:12px;">+8</div>
+            </div>
+            <div class="pick-row" style="padding:8px 14px;">
+              <div class="pick-av" style="width:24px;height:24px;font-size:9px;">JM</div>
+              <div class="pick-name" style="font-size:12px;">James: 2–1</div>
+              <div class="pick-outcome"><span class="pick-tag result" style="font-size:9px;">Result</span></div>
+              <div class="pick-pts pos" style="font-size:12px;">+3</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec-label">Round of 32 &middot; June 28</div>
+
+        <div class="match-acc">
+          <div class="match-acc-hdr" onclick="this.parentElement.classList.toggle('open')">
+            <div class="teams">S. Africa 0–1 Canada</div>
+            <div class="score" style="font-size:12px;font-weight:700;color:#2EA56A;">FT</div>
+            <div class="match-acc-chev">&#8250;</div>
+          </div>
+          <div class="match-acc-body" style="padding:0;">
+            <div class="pick-row" style="padding:8px 14px;">
+              <div class="pick-av you" style="width:24px;height:24px;font-size:9px;">CH</div>
+              <div class="pick-name you" style="font-size:12px;">You: 0–2</div>
+              <div class="pick-outcome"><span class="pick-tag result" style="font-size:9px;">Result</span></div>
+              <div class="pick-pts pos" style="font-size:12px;">+3</div>
+            </div>
+            <div class="pick-row" style="padding:8px 14px;">
+              <div class="pick-av" style="width:24px;height:24px;font-size:9px;">HB</div>
+              <div class="pick-name" style="font-size:12px;">Heather: 1–1</div>
+              <div class="pick-outcome"><span class="pick-tag miss" style="font-size:9px;">Miss</span></div>
+              <div class="pick-pts zero" style="font-size:12px;">0</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="home-bar"><div class="home-indicator"></div></div>
+    </div></div>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll('.match-acc-hdr').forEach(h => {
+  h.addEventListener('click', () => h.parentElement.classList.toggle('open'));
+});
+</script>
+
+</body>
+</html>
