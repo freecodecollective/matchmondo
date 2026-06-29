@@ -308,6 +308,10 @@ def leaderboard(code):
         member_joined = info.get("joinedAt", "")
         effective_start = max(pool_start or "", member_joined) or None
 
+        st_u, udoc = fs("GET", f"/users/{did}")
+        user_info = parse(udoc) if st_u == 200 else {}
+        live_name = user_info.get("displayName") or info.get("displayName", "?")
+
         predict = 0
         trivia = 0
         exact = 0
@@ -322,13 +326,12 @@ def leaderboard(code):
             graded = pp["graded"]
 
         if pool_type in ("trivia", "both"):
-            st2, udoc = fs("GET", f"/users/{did}")
-            user_trivia = int(parse(udoc).get("triviaCorrect", 0)) if st2 == 200 else 0
+            user_trivia = int(user_info.get("triviaCorrect", 0))
             baseline = int(info.get("triviaBaseline", 0))
             trivia = max(0, user_trivia - baseline) * trivia_pts
 
         rows.append({
-            "displayName": info.get("displayName", "?"),
+            "displayName": live_name,
             "predict": predict, "trivia": trivia,
             "points": predict + trivia,
             "exact": exact, "results": pred_results, "graded": graded,
