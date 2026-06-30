@@ -972,7 +972,10 @@
     "city": "Foxborough (Boston), MA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 1
+    "scoreA": 1,
+    "pkH": 3,
+    "pkA": 4,
+    "result": "PEN"
   },
   {
     "n": 75,
