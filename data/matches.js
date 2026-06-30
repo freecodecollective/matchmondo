@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-30 21:08 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-06-30 21:46 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1021,7 +1021,7 @@ window.WC_MATCHES = [
     "venue": "MetLife Stadium",
     "city": "East Rutherford, NJ",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 0,
+    "scoreH": 1,
     "scoreA": 0,
     "isLive": true
   },
@@ -1174,7 +1174,7 @@ window.WC_MATCHES = [
     "stage": "Round of 16",
     "group": null,
     "home": "Paraguay",
-    "away": "To be announced",
+    "away": "France",
     "venue": "Lincoln Financial Field",
     "city": "Philadelphia, PA",
     "tv": "FOX · Telemundo (ES)",

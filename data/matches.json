@@ -1019,7 +1019,7 @@
     "venue": "MetLife Stadium",
     "city": "East Rutherford, NJ",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 0,
+    "scoreH": 1,
     "scoreA": 0,
     "isLive": true
   },
@@ -1172,7 +1172,7 @@
     "stage": "Round of 16",
     "group": null,
     "home": "Paraguay",
-    "away": "To be announced",
+    "away": "France",
     "venue": "Lincoln Financial Field",
     "city": "Philadelphia, PA",
     "tv": "FOX · Telemundo (ES)",
