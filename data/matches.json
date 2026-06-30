@@ -946,8 +946,7 @@
     "city": "Inglewood (Los Angeles), CA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 1,
-    "result": "FT"
+    "scoreA": 1
   },
   {
     "n": 76,
@@ -960,8 +959,7 @@
     "city": "Houston, TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 2,
-    "scoreA": 1,
-    "result": "FT"
+    "scoreA": 1
   },
   {
     "n": 74,
@@ -974,10 +972,7 @@
     "city": "Foxborough (Boston), MA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 1,
-    "pkH": 3,
-    "pkA": 4,
-    "result": "PEN"
+    "scoreA": 1
   },
   {
     "n": 75,
@@ -990,10 +985,7 @@
     "city": "Monterrey, Mexico",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 1,
-    "pkH": 2,
-    "pkA": 3,
-    "result": "PEN"
+    "scoreA": 1
   },
   {
     "n": 78,
@@ -1006,8 +998,7 @@
     "city": "Arlington (Dallas), TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 2,
-    "result": "FT"
+    "scoreA": 2
   },
   {
     "n": 77,
