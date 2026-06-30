@@ -1019,9 +1019,9 @@
     "venue": "MetLife Stadium",
     "city": "East Rutherford, NJ",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 2,
+    "scoreH": 3,
     "scoreA": 0,
-    "isLive": true
+    "result": "FT"
   },
   {
     "n": 79,

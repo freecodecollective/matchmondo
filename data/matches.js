@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-30 22:29 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-06-30 22:58 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1021,9 +1021,9 @@ window.WC_MATCHES = [
     "venue": "MetLife Stadium",
     "city": "East Rutherford, NJ",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 2,
+    "scoreH": 3,
     "scoreA": 0,
-    "isLive": true
+    "result": "FT"
   },
   {
     "n": 79,
