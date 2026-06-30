@@ -201,7 +201,15 @@ def results():
         m = {}
         for x in arr:
             if x.get("scoreH") is not None and x.get("scoreA") is not None and not x.get("isLive"):
-                m[str(x["n"])] = (int(x["scoreH"]), int(x["scoreA"]))
+                pk_winner = None
+                pkH = x.get("pkH")
+                pkA = x.get("pkA")
+                if pkH is not None and pkA is not None:
+                    if pkH > pkA:
+                        pk_winner = "H"
+                    elif pkA > pkH:
+                        pk_winner = "A"
+                m[str(x["n"])] = (int(x["scoreH"]), int(x["scoreA"]), pk_winner)
         _res["data"] = m
         _res["ts"] = now
         return m
@@ -211,15 +219,29 @@ def results():
 
 def score_pick(pick, actual):
     """Returns (points, exact_hit, result_hit). Exact score +3, correct result +1."""
-    aH, aA = actual
-    actual_res = "H" if aH > aA else ("A" if aA > aH else "D")
+    aH, aA = actual[0], actual[1]
+    pk_winner = actual[2] if len(actual) > 2 else None
     sh = pick.get("scoreH")
     sa = pick.get("scoreA")
     if sh is not None and sa is not None and int(sh) == aH and int(sa) == aA:
         return 3, 1, 1
+    if pk_winner:
+        picked_winner = None
+        if sh is not None and sa is not None:
+            sh, sa = int(sh), int(sa)
+            if sh > sa:
+                picked_winner = "H"
+            elif sa > sh:
+                picked_winner = "A"
+            else:
+                picked_winner = pick.get("pkWinner")
+        if picked_winner == pk_winner:
+            return 1, 0, 1
+        return 0, 0, 0
+    actual_res = "H" if aH > aA else ("A" if aA > aH else "D")
     pr = pick.get("result")
     if pr is None and sh is not None and sa is not None:
-        pr = "H" if sh > sa else ("A" if sa > sh else "D")
+        pr = "H" if int(sh) > int(sa) else ("A" if int(sa) > int(sh) else "D")
     if pr == actual_res:
         return 1, 0, 1
     return 0, 0, 0
