@@ -218,33 +218,33 @@ def results():
 
 
 def score_pick(pick, actual):
-    """Returns (points, exact_hit, result_hit). Exact score +3, correct result +1."""
+    """Returns (exact_hit, result_hit) independently. Callers combine with point values."""
     aH, aA = actual[0], actual[1]
     pk_winner = actual[2] if len(actual) > 2 else None
     sh = pick.get("scoreH")
     sa = pick.get("scoreA")
-    if sh is not None and sa is not None and int(sh) == aH and int(sa) == aA:
-        return 3, 1, 1
+
+    exact = (sh is not None and sa is not None and int(sh) == aH and int(sa) == aA)
+
     if pk_winner:
         picked_winner = None
         if sh is not None and sa is not None:
-            sh, sa = int(sh), int(sa)
-            if sh > sa:
+            psh, psa = int(sh), int(sa)
+            if psh > psa:
                 picked_winner = "H"
-            elif sa > sh:
+            elif psa > psh:
                 picked_winner = "A"
             else:
                 picked_winner = pick.get("pkWinner")
-        if picked_winner == pk_winner:
-            return 1, 0, 1
-        return 0, 0, 0
-    actual_res = "H" if aH > aA else ("A" if aA > aH else "D")
-    pr = pick.get("result")
-    if pr is None and sh is not None and sa is not None:
-        pr = "H" if int(sh) > int(sa) else ("A" if int(sa) > int(sh) else "D")
-    if pr == actual_res:
-        return 1, 0, 1
-    return 0, 0, 0
+        result = (picked_winner == pk_winner)
+    else:
+        actual_res = "H" if aH > aA else ("A" if aA > aH else "D")
+        pr = pick.get("result")
+        if pr is None and sh is not None and sa is not None:
+            pr = "H" if int(sh) > int(sa) else ("A" if int(sa) > int(sh) else "D")
+        result = (pr == actual_res)
+
+    return int(exact), int(result)
 
 
 def predict_points(did):
@@ -257,8 +257,8 @@ def predict_points(did):
         mn = pdoc["name"].split("/")[-1]
         if mn not in res:
             continue
-        sp, se, sr = score_pick(parse(pdoc), res[mn])
-        pts += sp
+        se, sr = score_pick(parse(pdoc), res[mn])
+        pts += se * 3 + sr * 1
         ex += se
         rc += sr
         graded += 1
@@ -280,11 +280,8 @@ def predict_points_pool(did, start_iso, pred_exact=3, pred_result=1):
         m = all_matches.get(int(mn)) if mn.isdigit() else None
         if m and start_iso and m.get("utc", "") < start_iso:
             continue
-        sp, se, sr = score_pick(parse(pdoc), res[mn])
-        if se:
-            pts += pred_exact
-        elif sr:
-            pts += pred_result
+        se, sr = score_pick(parse(pdoc), res[mn])
+        pts += se * pred_exact + sr * pred_result
         ex += se
         rc += sr
         graded += 1
@@ -761,13 +758,8 @@ class Handler(BaseHTTPRequestHandler):
                 if pk:
                     entry["pkWinner"] = pk
                 if actual:
-                    pts, ex, rr = score_pick(pick, actual)
-                    if ex:
-                        entry["points"] = pred_exact
-                    elif rr:
-                        entry["points"] = pred_result
-                    else:
-                        entry["points"] = 0
+                    ex, rr = score_pick(pick, actual)
+                    entry["points"] = ex * pred_exact + rr * pred_result
                     entry["exactHit"] = bool(ex)
                     entry["resultHit"] = bool(rr)
             else:
@@ -813,11 +805,11 @@ class Handler(BaseHTTPRequestHandler):
 
             entry = {"matchN": int(mn)}
             if is_graded:
-                aH, aA = res[mn]
-                pts, ex, rr = score_pick(pick, res[mn])
+                aH, aA = res[mn][0], res[mn][1]
+                ex, rr = score_pick(pick, res[mn])
                 entry["scoreH"] = aH
                 entry["scoreA"] = aA
-                entry["points"] = pred_exact if ex else (pred_result if rr else 0)
+                entry["points"] = ex * pred_exact + rr * pred_result
                 entry["exactHit"] = bool(ex)
                 entry["resultHit"] = bool(rr)
             else:
