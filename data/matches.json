@@ -946,8 +946,7 @@
     "city": "Inglewood (Los Angeles), CA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 1,
-    "result": "FT"
+    "scoreA": 1
   },
   {
     "n": 76,
@@ -960,8 +959,7 @@
     "city": "Houston, TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 2,
-    "scoreA": 1,
-    "result": "FT"
+    "scoreA": 1
   },
   {
     "n": 74,
@@ -974,10 +972,7 @@
     "city": "Foxborough (Boston), MA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 1,
-    "pkH": 3,
-    "pkA": 4,
-    "result": "PEN"
+    "scoreA": 1
   },
   {
     "n": 75,
@@ -989,9 +984,8 @@
     "venue": "Estadio BBVA",
     "city": "Monterrey, Mexico",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 1,
-    "scoreA": 1,
-    "isLive": true
+    "scoreH": null,
+    "scoreA": null
   },
   {
     "n": 78,

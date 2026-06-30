@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-30 03:03 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-06-30 03:46 UTC by scripts/update-data.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -948,8 +948,7 @@ window.WC_MATCHES = [
     "city": "Inglewood (Los Angeles), CA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 1,
-    "result": "FT"
+    "scoreA": 1
   },
   {
     "n": 76,
@@ -962,8 +961,7 @@ window.WC_MATCHES = [
     "city": "Houston, TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 2,
-    "scoreA": 1,
-    "result": "FT"
+    "scoreA": 1
   },
   {
     "n": 74,
@@ -976,10 +974,7 @@ window.WC_MATCHES = [
     "city": "Foxborough (Boston), MA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 1,
-    "pkH": 3,
-    "pkA": 4,
-    "result": "PEN"
+    "scoreA": 1
   },
   {
     "n": 75,
@@ -991,9 +986,8 @@ window.WC_MATCHES = [
     "venue": "Estadio BBVA",
     "city": "Monterrey, Mexico",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 1,
-    "scoreA": 1,
-    "isLive": true
+    "scoreH": null,
+    "scoreA": null
   },
   {
     "n": 78,
