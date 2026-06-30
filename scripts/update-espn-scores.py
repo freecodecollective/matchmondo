@@ -294,7 +294,7 @@ def main():
         comp = comps[0]
         status_name = comp.get("status", {}).get("type", {}).get("name", "")
 
-        is_live = any(s in status_name for s in ("IN_PROGRESS", "HALF", "EXTRA", "PENALT", "OVERTIME"))
+        is_live = any(s in status_name for s in ("IN_PROGRESS", "HALF", "EXTRA", "PENALT", "OVERTIME", "END_OF_REGULATION"))
         is_finished = status_name in ("STATUS_FULL_TIME", "STATUS_FINAL_AET", "STATUS_FINAL_PEN")
         if not (is_live or is_finished):
             continue
