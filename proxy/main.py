@@ -192,14 +192,14 @@ _res = {}
 
 
 def results():
+    """Final scores for grading predictions. Uses _all_matches() which includes ESPN overlay."""
     now = time.time()
     if "data" in _res and _res.get("ts", 0) > now - 60:
         return _res["data"]
     try:
-        with urllib.request.urlopen(RESULTS_URL, timeout=15) as r:
-            arr = json.loads(r.read())
+        all_m = _all_matches()
         m = {}
-        for x in arr:
+        for x in all_m.values():
             if x.get("scoreH") is not None and x.get("scoreA") is not None and not x.get("isLive"):
                 pk_winner = None
                 pkH = x.get("pkH")
@@ -290,21 +290,108 @@ def predict_points_pool(did, start_iso, pred_exact=3, pred_result=1):
 
 _matches_cache = {}
 
+ESPN_API = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard"
+ESPN_TEAM_MAP = {
+    "South Korea": "Korea Republic", "United States": "USA",
+    "Bosnia-Herzegovina": "Bosnia and Herzegovina", "Cape Verde": "Cabo Verde",
+    "Ivory Coast": "Côte d'Ivoire", "Iran": "IR Iran",
+}
+_espn_cache = {}
+
+
+def _fetch_espn_live():
+    """Fetch live/recent scores from ESPN, cached 60s."""
+    now = time.time()
+    if "data" in _espn_cache and _espn_cache.get("ts", 0) > now - 60:
+        return _espn_cache["data"]
+    today = datetime.datetime.now(datetime.timezone.utc)
+    dates = [
+        (today - datetime.timedelta(days=1)).strftime("%Y%m%d"),
+        today.strftime("%Y%m%d"),
+        (today + datetime.timedelta(days=1)).strftime("%Y%m%d"),
+    ]
+    updates = {}
+    for d in dates:
+        try:
+            url = f"{ESPN_API}?dates={d}"
+            req = urllib.request.Request(url, headers={"User-Agent": "MatchMondo-proxy/1.0"})
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                events = json.loads(resp.read()).get("events", [])
+            for event in events:
+                comps = event.get("competitions", [])
+                if not comps:
+                    continue
+                comp = comps[0]
+                status_name = comp.get("status", {}).get("type", {}).get("name", "")
+                is_live = any(s in status_name for s in
+                    ("IN_PROGRESS", "HALF", "EXTRA", "PENALT", "OVERTIME", "END_OF_REGULATION"))
+                is_finished = status_name in ("STATUS_FULL_TIME", "STATUS_FINAL_AET", "STATUS_FINAL_PEN")
+                if not (is_live or is_finished):
+                    continue
+                competitors = comp.get("competitors", [])
+                home = next((c for c in competitors if c.get("homeAway") == "home"), None)
+                away = next((c for c in competitors if c.get("homeAway") == "away"), None)
+                if not home or not away:
+                    continue
+                home_name = ESPN_TEAM_MAP.get(home.get("team", {}).get("displayName", ""),
+                                              home.get("team", {}).get("displayName", ""))
+                away_name = ESPN_TEAM_MAP.get(away.get("team", {}).get("displayName", ""),
+                                              away.get("team", {}).get("displayName", ""))
+                update = {
+                    "home": home_name, "away": away_name,
+                    "scoreH": int(home.get("score") or "0"),
+                    "scoreA": int(away.get("score") or "0"),
+                    "isLive": is_live if is_live else None,
+                }
+                if is_finished and status_name == "STATUS_FINAL_PEN":
+                    update["pkH"] = int(home.get("shootoutScore", 0))
+                    update["pkA"] = int(away.get("shootoutScore", 0))
+                    update["result"] = "PEN"
+                elif is_finished and status_name == "STATUS_FINAL_AET":
+                    update["result"] = "AET"
+                if is_finished and is_live:
+                    pass
+                elif is_finished and status_name == "STATUS_FULL_TIME":
+                    hsc, asc = update["scoreH"], update["scoreA"]
+                    if hsc == asc:
+                        update["isLive"] = True
+                        is_finished = False
+                updates[(home_name, away_name)] = update
+        except Exception:
+            continue
+    _espn_cache["data"] = updates
+    _espn_cache["ts"] = now
+    return updates
+
 
 def _all_matches():
-    """Cached dict of match n → match object from matches.json."""
+    """Cached dict of match n → match object from matches.json, with ESPN live overlay."""
     now = time.time()
-    if "data" in _matches_cache and _matches_cache.get("ts", 0) > now - 60:
-        return _matches_cache["data"]
-    try:
-        with urllib.request.urlopen(RESULTS_URL, timeout=15) as r:
-            arr = json.loads(r.read())
-        m = {int(x["n"]): x for x in arr if "n" in x}
-        _matches_cache["data"] = m
-        _matches_cache["ts"] = now
-        return m
-    except Exception:
-        return _matches_cache.get("data", {})
+    if not ("data" in _matches_cache and _matches_cache.get("ts", 0) > now - 60):
+        try:
+            with urllib.request.urlopen(RESULTS_URL, timeout=15) as r:
+                arr = json.loads(r.read())
+            _matches_cache["data"] = {int(x["n"]): x for x in arr if "n" in x}
+            _matches_cache["ts"] = now
+        except Exception:
+            pass
+    m = _matches_cache.get("data", {})
+
+    espn = _fetch_espn_live()
+    for match in m.values():
+        key = (match.get("home"), match.get("away"))
+        if key in espn:
+            u = espn[key]
+            match["scoreH"] = u["scoreH"]
+            match["scoreA"] = u["scoreA"]
+            match["isLive"] = u.get("isLive")
+            if "pkH" in u:
+                match["pkH"] = u["pkH"]
+            if "pkA" in u:
+                match["pkA"] = u["pkA"]
+            if "result" in u:
+                match["result"] = u["result"]
+    return m
 
 
 def leaderboard(code):
