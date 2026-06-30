@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-30 18:56 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-06-30 19:40 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1009,7 +1009,7 @@ window.WC_MATCHES = [
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
     "scoreA": 2,
-    "isLive": true
+    "result": "FT"
   },
   {
     "n": 77,
