@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-06-30 03:46 UTC by scripts/update-data.py
+// Regenerated 2026-06-30 05:26 UTC by scripts/update-data.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -986,8 +986,8 @@ window.WC_MATCHES = [
     "venue": "Estadio BBVA",
     "city": "Monterrey, Mexico",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 1,
+    "scoreA": 1
   },
   {
     "n": 78,
@@ -1151,7 +1151,7 @@ window.WC_MATCHES = [
     "stage": "Round of 16",
     "group": null,
     "home": "Canada",
-    "away": "To be announced",
+    "away": "Morocco",
     "venue": "NRG Stadium",
     "city": "Houston, TX",
     "tv": "FOX · Telemundo (ES)",

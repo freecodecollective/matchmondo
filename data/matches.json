@@ -985,10 +985,7 @@
     "city": "Monterrey, Mexico",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 1,
-    "pkH": 2,
-    "pkA": 3,
-    "result": "PEN"
+    "scoreA": 1
   },
   {
     "n": 78,
@@ -1152,7 +1149,7 @@
     "stage": "Round of 16",
     "group": null,
     "home": "Canada",
-    "away": "To be announced",
+    "away": "Morocco",
     "venue": "NRG Stadium",
     "city": "Houston, TX",
     "tv": "FOX · Telemundo (ES)",
