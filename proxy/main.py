@@ -798,9 +798,10 @@ class Handler(BaseHTTPRequestHandler):
             pick = parse(pdoc)
 
             is_live = m.get("isLive", False) if m else False
+            has_score = bool(m.get("scoreH") is not None and m.get("scoreA") is not None) if m else False
             is_graded = mn in res
 
-            if not is_graded and not is_live:
+            if not is_graded and not is_live and not has_score:
                 continue
 
             entry = {"matchN": int(mn)}
@@ -818,7 +819,7 @@ class Handler(BaseHTTPRequestHandler):
                 entry["points"] = 0
                 entry["exactHit"] = False
                 entry["resultHit"] = False
-                entry["isLive"] = True
+                entry["isLive"] = is_live
 
             entry["pickH"] = pick.get("scoreH")
             entry["pickA"] = pick.get("scoreA")
