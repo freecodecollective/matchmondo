@@ -984,8 +984,11 @@
     "venue": "Estadio BBVA",
     "city": "Monterrey, Mexico",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 1,
+    "scoreA": 1,
+    "pkH": 2,
+    "pkA": 3,
+    "result": "PEN"
   },
   {
     "n": 78,
