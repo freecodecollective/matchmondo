@@ -946,7 +946,8 @@
     "city": "Inglewood (Los Angeles), CA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 1
+    "scoreA": 1,
+    "result": "FT"
   },
   {
     "n": 76,
@@ -959,7 +960,8 @@
     "city": "Houston, TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 2,
-    "scoreA": 1
+    "scoreA": 1,
+    "result": "FT"
   },
   {
     "n": 74,
@@ -972,7 +974,10 @@
     "city": "Foxborough (Boston), MA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 1
+    "scoreA": 1,
+    "pkH": 3,
+    "pkA": 4,
+    "result": "PEN"
   },
   {
     "n": 75,
@@ -985,7 +990,10 @@
     "city": "Monterrey, Mexico",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 1
+    "scoreA": 1,
+    "pkH": 2,
+    "pkA": 3,
+    "result": "PEN"
   },
   {
     "n": 78,
@@ -998,7 +1006,8 @@
     "city": "Arlington (Dallas), TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 2
+    "scoreA": 2,
+    "result": "FT"
   },
   {
     "n": 77,
@@ -1010,8 +1019,9 @@
     "venue": "MetLife Stadium",
     "city": "East Rutherford, NJ",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 0,
+    "scoreA": 0,
+    "isLive": true
   },
   {
     "n": 79,
