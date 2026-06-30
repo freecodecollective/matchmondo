@@ -1006,7 +1006,7 @@
     "city": "Arlington (Dallas), TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 0,
+    "scoreA": 1,
     "isLive": true
   },
   {
@@ -1184,7 +1184,7 @@
     "stage": "Round of 16",
     "group": null,
     "home": "Brazil",
-    "away": "To be announced",
+    "away": "Norway",
     "venue": "MetLife Stadium",
     "city": "East Rutherford, NJ",
     "tv": "FOX · Telemundo (ES)",
