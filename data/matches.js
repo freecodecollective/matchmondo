@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-01 11:24 UTC by scripts/update-data.py
+// Regenerated 2026-07-01 12:24 UTC by scripts/update-data.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1017,7 +1017,7 @@ window.WC_MATCHES = [
   },
   {
     "n": 79,
-    "utc": "2026-07-01T01:00:00Z",
+    "utc": "2026-07-01T02:00:00Z",
     "stage": "Round of 32",
     "group": null,
     "home": "Mexico",
