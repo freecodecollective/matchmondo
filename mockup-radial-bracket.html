@@ -6,36 +6,20 @@
 <title>Radial Bracket — Football 2026</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  :root {
-    --bg: #f5f4f1;
-    --text: #222;
-  }
-
+  :root { --bg: #f5f4f1; }
   body {
     background: var(--bg);
-    color: var(--text);
     font-family: -apple-system, system-ui, 'Helvetica Neue', sans-serif;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; align-items: center; justify-content: center;
     -webkit-font-smoothing: antialiased;
     overflow: hidden;
   }
-
   canvas { display: block; cursor: pointer; }
-
   #hint {
-    position: fixed;
-    bottom: 14px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(0,0,0,0.25);
-    font: 500 11px/1 system-ui, sans-serif;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    pointer-events: none;
+    position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%);
+    color: rgba(0,0,0,0.22); font: 500 11px/1 system-ui; letter-spacing: 0.06em;
+    text-transform: uppercase; pointer-events: none;
   }
 </style>
 </head>
@@ -46,71 +30,59 @@
 const canvas = document.getElementById('c');
 const ctx = canvas.getContext('2d');
 const DPR = window.devicePixelRatio || 1;
-let S, CX, CY, SCALE;
+let S, CX, CY, SC;
 
 function resize() {
   const side = Math.min(window.innerWidth, window.innerHeight);
   S = Math.max(side, 700);
-  canvas.width = S * DPR;
-  canvas.height = S * DPR;
-  canvas.style.width = S + 'px';
-  canvas.style.height = S + 'px';
+  canvas.width = S * DPR; canvas.height = S * DPR;
+  canvas.style.width = S + 'px'; canvas.style.height = S + 'px';
   ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-  CX = S / 2; CY = S / 2;
-  SCALE = S / 900;
+  CX = S / 2; CY = S / 2; SC = S / 900;
 }
 
+// --- Data ---
 const bracketOrder = [74,77,73,75, 83,84,81,82, 76,78,79,80, 86,88,85,87];
-
-const matches = {
-  74:{home:'Germany',away:'Paraguay',sH:1,sA:1,result:'PEN',pkH:3,pkA:4},
-  77:{home:'France',away:'Sweden',sH:3,sA:0},
-  73:{home:'South Africa',away:'Canada',sH:0,sA:1},
-  75:{home:'Netherlands',away:'Morocco',sH:1,sA:1,result:'PEN',pkH:3,pkA:4},
-  83:{home:'Portugal',away:'Croatia'},
-  84:{home:'Spain',away:'Austria'},
-  81:{home:'USA',away:'Bosnia and Herzegovina'},
-  82:{home:'Belgium',away:'Senegal'},
-  76:{home:'Brazil',away:'Japan',sH:2,sA:1},
-  78:{home:'Côte d\'Ivoire',away:'Norway',sH:1,sA:2},
-  79:{home:'Mexico',away:'Ecuador',sH:2,sA:0},
-  80:{home:'England',away:'Congo DR'},
-  86:{home:'Argentina',away:'Cabo Verde'},
-  88:{home:'Australia',away:'Egypt'},
-  85:{home:'Switzerland',away:'Algeria'},
-  87:{home:'Colombia',away:'Ghana'},
-  89:{home:'Paraguay',away:'France'},
-  90:{home:'Canada',away:'Morocco'},
-  91:{home:'Brazil',away:'Norway'},
-  92:{home:'Mexico',away:'TBD'},
-  93:{home:'TBD',away:'TBD'},94:{home:'TBD',away:'TBD'},
-  95:{home:'TBD',away:'TBD'},96:{home:'TBD',away:'TBD'},
-  97:{home:'TBD',away:'TBD'},98:{home:'TBD',away:'TBD'},
-  99:{home:'TBD',away:'TBD'},100:{home:'TBD',away:'TBD'},
-  101:{home:'TBD',away:'TBD'},102:{home:'TBD',away:'TBD'},
-  104:{home:'TBD',away:'TBD'},
-};
-
 const r16Order = [89,90,93,94,91,92,95,96];
-const qfOrder = [97,98,99,100];
-const sfOrder = [101,102];
+const qfOrder = [97,98,99,100], sfOrder = [101,102];
+
+const M = {
+  74:{h:'Germany',a:'Paraguay',sH:1,sA:1,r:'PEN',pH:3,pA:4},
+  77:{h:'France',a:'Sweden',sH:3,sA:0},
+  73:{h:'South Africa',a:'Canada',sH:0,sA:1},
+  75:{h:'Netherlands',a:'Morocco',sH:1,sA:1,r:'PEN',pH:3,pA:4},
+  83:{h:'Portugal',a:'Croatia'},84:{h:'Spain',a:'Austria'},
+  81:{h:'USA',a:'Bosnia and Herzegovina'},82:{h:'Belgium',a:'Senegal'},
+  76:{h:'Brazil',a:'Japan',sH:2,sA:1},
+  78:{h:'Côte d\'Ivoire',a:'Norway',sH:1,sA:2},
+  79:{h:'Mexico',a:'Ecuador',sH:2,sA:0},
+  80:{h:'England',a:'Congo DR'},
+  86:{h:'Argentina',a:'Cabo Verde'},88:{h:'Australia',a:'Egypt'},
+  85:{h:'Switzerland',a:'Algeria'},87:{h:'Colombia',a:'Ghana'},
+  89:{h:'Paraguay',a:'France'},90:{h:'Canada',a:'Morocco'},
+  91:{h:'Brazil',a:'Norway'},92:{h:'Mexico',a:'TBD'},
+  93:{h:'TBD',a:'TBD'},94:{h:'TBD',a:'TBD'},
+  95:{h:'TBD',a:'TBD'},96:{h:'TBD',a:'TBD'},
+  97:{h:'TBD',a:'TBD'},98:{h:'TBD',a:'TBD'},
+  99:{h:'TBD',a:'TBD'},100:{h:'TBD',a:'TBD'},
+  101:{h:'TBD',a:'TBD'},102:{h:'TBD',a:'TBD'},
+  104:{h:'TBD',a:'TBD'},
+};
 
 const codes = {
   'Algeria':'ALG','Argentina':'ARG','Australia':'AUS','Austria':'AUT',
   'Belgium':'BEL','Bosnia and Herzegovina':'BIH','Brazil':'BRA',
   'Cabo Verde':'CPV','Canada':'CAN','Colombia':'COL','Congo DR':'COD',
-  'Croatia':'CRO','Curaçao':'CUW','Côte d\'Ivoire':'CIV','Czechia':'CZE',
+  'Croatia':'CRO','Côte d\'Ivoire':'CIV','Czechia':'CZE',
   'Ecuador':'ECU','Egypt':'EGY','England':'ENG','France':'FRA',
-  'Germany':'GER','Ghana':'GHA','Haiti':'HAI','IR Iran':'IRN',
-  'Iraq':'IRQ','Japan':'JPN','Jordan':'JOR','Korea Republic':'KOR',
-  'Mexico':'MEX','Morocco':'MAR','Netherlands':'NED','New Zealand':'NZL',
-  'Norway':'NOR','Panama':'PAN','Paraguay':'PAR','Portugal':'POR',
-  'Qatar':'QAT','Saudi Arabia':'KSA','Scotland':'SCO','Senegal':'SEN',
+  'Germany':'GER','Ghana':'GHA','Japan':'JPN','Mexico':'MEX',
+  'Morocco':'MAR','Netherlands':'NED','Norway':'NOR','Paraguay':'PAR',
+  'Portugal':'POR','Saudi Arabia':'KSA','Scotland':'SCO','Senegal':'SEN',
   'South Africa':'RSA','Spain':'ESP','Sweden':'SWE','Switzerland':'SUI',
-  'Tunisia':'TUN','Türkiye':'TUR','USA':'USA','Uruguay':'URU','Uzbekistan':'UZB',
+  'USA':'USA','Uruguay':'URU',
 };
 
-const primaryColors = {
+const pColor = {
   'Algeria':'#00882a','Argentina':'#74b8ed','Australia':'#003078','Austria':'#cc0000',
   'Belgium':'#cc0000','Bosnia and Herzegovina':'#002688','Brazil':'#008c33',
   'Cabo Verde':'#003488','Canada':'#cc0000','Colombia':'#ffc700','Congo DR':'#0066cc',
@@ -125,469 +97,485 @@ const primaryColors = {
   'Uruguay':'#4d80cc','Uzbekistan':'#0066b3',
 };
 
-function matchWinner(m) {
-  if (m.sH == null || m.sA == null) return null;
-  if (m.result === 'PEN') {
-    if (m.pkH != null && m.pkA != null) return m.pkH > m.pkA ? m.home : m.away;
-    return null;
-  }
-  if (m.sH > m.sA) return m.home;
-  if (m.sA > m.sH) return m.away;
+function winner(m) {
+  if (!m || m.sH == null) return null;
+  if (m.r === 'PEN') return m.pH > m.pA ? m.h : m.a;
+  if (m.sH > m.sA) return m.h;
+  if (m.sA > m.sH) return m.a;
   return null;
 }
-
 function isReal(t) { return t && t !== 'TBD' && !t.startsWith('To be'); }
+function tc(t) { return t ? (pColor[t] || '#888') : 'rgba(0,0,0,0.06)'; }
 
-const flagImages = {};
-let flagsLoaded = 0;
-
+// --- Flags ---
+const flagImg = {};
+let flagN = 0;
 function loadFlags() {
-  const allTeams = new Set();
-  for (const m of Object.values(matches)) {
-    if (isReal(m.home)) allTeams.add(m.home);
-    if (isReal(m.away)) allTeams.add(m.away);
-  }
-  const total = allTeams.size;
-  for (const team of allTeams) {
-    const code = codes[team] || team.substring(0,3).toUpperCase();
-    const img = new Image();
-    img.crossOrigin = 'anonymous';
-    img.onload = () => { flagImages[team] = img; flagsLoaded++; if (flagsLoaded >= total) draw(); };
-    img.onerror = () => { flagsLoaded++; if (flagsLoaded >= total) draw(); };
-    img.src = `https://img.uefa.com/imgml/flags/140x140/${code}.png`;
+  const teams = new Set();
+  for (const m of Object.values(M)) { if (isReal(m.h)) teams.add(m.h); if (isReal(m.a)) teams.add(m.a); }
+  const total = teams.size;
+  for (const t of teams) {
+    const c = codes[t] || t.substring(0,3).toUpperCase();
+    const img = new Image(); img.crossOrigin = 'anonymous';
+    img.onload = () => { flagImg[t] = img; if (++flagN >= total) draw(); };
+    img.onerror = () => { if (++flagN >= total) draw(); };
+    img.src = `https://img.uefa.com/imgml/flags/140x140/${c}.png`;
   }
 }
 
-let selectedTeams = new Set();
+let selected = new Set();
 
-function polar(r, deg) {
+// --- Geometry helpers ---
+function pol(r, deg) {
   const rad = (deg - 90) * Math.PI / 180;
   return { x: CX + r * Math.cos(rad), y: CY + r * Math.sin(rad) };
 }
-
-function drawLine(from, to, color, width) {
-  ctx.beginPath();
-  ctx.moveTo(from.x, from.y);
-  ctx.lineTo(to.x, to.y);
-  ctx.strokeStyle = color;
-  ctx.lineWidth = width;
-  ctx.lineCap = 'round';
-  ctx.stroke();
+function line(a, b, color, w) {
+  ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+  ctx.strokeStyle = color; ctx.lineWidth = w; ctx.lineCap = 'round'; ctx.stroke();
+}
+function arc(radius, deg1, deg2, color, w) {
+  const r1 = (deg1 - 90) * Math.PI / 180;
+  const r2 = (deg2 - 90) * Math.PI / 180;
+  ctx.beginPath(); ctx.arc(CX, CY, radius, r1, r2);
+  ctx.strokeStyle = color; ctx.lineWidth = w; ctx.lineCap = 'round'; ctx.stroke();
 }
 
-function teamColor(team) {
-  if (!team) return 'rgba(0,0,0,0.06)';
-  return primaryColors[team] || '#888';
-}
-
+// --- Main draw ---
 function draw() {
   ctx.clearRect(0, 0, S, S);
 
-  const rR32 = 400*SCALE, rR16 = 295*SCALE, rQF = 210*SCALE, rSF = 145*SCALE;
-  const nR32 = 22*SCALE, nR16 = 18*SCALE, nQF = 16*SCALE, nSF = 14*SCALE;
-  const ps32 = 11, ps16 = 8, psQF = 14, psSF = 16;
+  const rR32 = 400*SC, rR16 = 295*SC, rQF = 210*SC, rSF = 145*SC;
+  const nR32 = 22*SC, nR16 = 18*SC, nQF = 16*SC, nSF = 14*SC;
+  const ps32 = 11; // pair span for R32 home/away within a match
 
-  const undecided = 'rgba(0,0,0,0.06)';
-  const undecidedW = 1.5;
-  const decidedW = 3 * SCALE;
+  // Bracket connector radii (where the arc lives)
+  const bR32 = rR32 - 22*SC;
+  const bR16 = rR16 - 18*SC;
+  const bQF  = rQF  - 14*SC;
+  const bSF  = rSF  - 10*SC;
 
-  // Ring bands
+  const neu = 'rgba(0,0,0,0.07)';
+  const neuW = 1.5;
+  const decW = 3 * SC;
+
+  // Angles
+  const a32 = Array.from({length:16}, (_,i) => i * 360 / 16);
+  // R16 node angles = R32 midpoint angles (where R32 bracket arms end)
+  // R16 pair j: home at a32[j*2], away at a32[j*2+1]
+  const a16mid = Array.from({length:8}, (_,i) => (a32[i*2] + a32[i*2+1]) / 2);
+  // QF node angles = R16 midpoint angles
+  const aQFmid = Array.from({length:4}, (_,i) => (a16mid[i*2] + a16mid[i*2+1]) / 2);
+  // SF node angles = QF midpoint angles
+  const aSFmid = Array.from({length:2}, (_,i) => (aQFmid[i*2] + aQFmid[i*2+1]) / 2);
+
+  // --- Ring bands ---
   const bands = [
-    [0, rSF - 8*SCALE, 'rgba(180,145,42,0.04)'],
-    [rSF - 8*SCALE, (rSF+rQF)/2, 'rgba(100,140,200,0.07)'],
-    [(rSF+rQF)/2, (rQF+rR16)/2, 'rgba(0,0,0,0.02)'],
+    [0, rSF - 8*SC, 'rgba(180,145,42,0.04)'],
+    [rSF - 8*SC, (rSF+rQF)/2, 'rgba(100,140,200,0.07)'],
+    [(rSF+rQF)/2, (rQF+rR16)/2, 'rgba(0,0,0,0.018)'],
     [(rQF+rR16)/2, (rR16+rR32)/2, 'rgba(100,140,200,0.07)'],
-    [(rR16+rR32)/2, rR32+34*SCALE, 'rgba(0,0,0,0.02)'],
+    [(rR16+rR32)/2, rR32+34*SC, 'rgba(0,0,0,0.018)'],
   ];
   for (const [inner, outer, fill] of bands) {
-    ctx.beginPath();
-    ctx.arc(CX, CY, outer, 0, Math.PI*2);
+    ctx.beginPath(); ctx.arc(CX, CY, outer, 0, Math.PI*2);
     ctx.arc(CX, CY, inner, 0, Math.PI*2, true);
-    ctx.fillStyle = fill;
-    ctx.fill();
+    ctx.fillStyle = fill; ctx.fill();
   }
   for (const r of [rR16, rQF, rSF]) {
-    ctx.beginPath();
-    ctx.arc(CX, CY, r, 0, Math.PI*2);
-    ctx.strokeStyle = 'rgba(0,0,0,0.04)';
-    ctx.lineWidth = 0.5;
-    ctx.stroke();
+    ctx.beginPath(); ctx.arc(CX, CY, r, 0, Math.PI*2);
+    ctx.strokeStyle = 'rgba(0,0,0,0.035)'; ctx.lineWidth = 0.5; ctx.stroke();
   }
-
   // Center glow
-  const glowR = 110*SCALE;
-  const grad = ctx.createRadialGradient(CX, CY, 0, CX, CY, glowR);
-  grad.addColorStop(0, 'rgba(180,145,42,0.12)');
-  grad.addColorStop(0.5, 'rgba(180,145,42,0.03)');
-  grad.addColorStop(1, 'rgba(180,145,42,0)');
-  ctx.fillStyle = grad;
-  ctx.beginPath();
-  ctx.arc(CX, CY, glowR, 0, Math.PI*2);
-  ctx.fill();
+  const g = ctx.createRadialGradient(CX, CY, 0, CX, CY, 110*SC);
+  g.addColorStop(0, 'rgba(180,145,42,0.12)');
+  g.addColorStop(0.5, 'rgba(180,145,42,0.03)');
+  g.addColorStop(1, 'rgba(180,145,42,0)');
+  ctx.fillStyle = g; ctx.beginPath(); ctx.arc(CX, CY, 110*SC, 0, Math.PI*2); ctx.fill();
 
-  const r32A = Array.from({length:16}, (_,i) => i*360/16);
-  const r16A = Array.from({length:8}, (_,i) => (r32A[i*2]+r32A[i*2+1])/2);
-  const qfA = Array.from({length:4}, (_,i) => (r16A[i*2]+r16A[i*2+1])/2);
-  const sfA = Array.from({length:2}, (_,i) => (qfA[i*2]+qfA[i*2+1])/2);
+  // ============ BRACKET CONNECTORS ============
 
-  // R32 spokes
-  const r32Junctions = [];
-  const r32Winners = [];
+  // --- R32 brackets ---
+  // Each R32 match i: home/away at rR32, bracket at bR32, arm to rR16
+  const r32w = []; // winners per R32 slot
   for (let i = 0; i < 16; i++) {
-    const base = r32A[i];
-    const hp = polar(rR32, base - ps32/2);
-    const ap = polar(rR32, base + ps32/2);
-    const jp = polar(rR32 - 38*SCALE, base);
-    const m = matches[bracketOrder[i]];
-    const winner = m ? matchWinner(m) : null;
-    r32Winners.push(winner);
-    if (winner) {
-      const wc = teamColor(winner);
-      const homeWon = winner === m.home;
-      drawLine(homeWon ? hp : ap, jp, wc, decidedW);
-      drawLine(homeWon ? ap : hp, jp, 'rgba(0,0,0,0.04)', 1);
+    const m = M[bracketOrder[i]];
+    const hAng = a32[i] - ps32/2;
+    const aAng = a32[i] + ps32/2;
+    const midAng = a32[i];
+    const hNode = pol(rR32, hAng);
+    const aNode = pol(rR32, aAng);
+    const hBrk = pol(bR32, hAng);
+    const aBrk = pol(bR32, aAng);
+    const midBrk = pol(bR32, midAng);
+    const armEnd = pol(rR16, midAng); // where this bracket's arm ends = R16 node pos
+
+    const w = m ? winner(m) : null;
+    r32w.push(w);
+
+    if (w) {
+      const wc = tc(w);
+      const homeWon = w === m.h;
+      // Loser stub (underneath)
+      line(homeWon ? aNode : hNode, homeWon ? aBrk : hBrk, 'rgba(0,0,0,0.04)', 1);
+      // Winner stub
+      line(homeWon ? hNode : aNode, homeWon ? hBrk : aBrk, wc, decW);
+      // Full arc in winner color
+      arc(bR32, hAng, aAng, wc, decW);
+      // Arm to R16
+      line(midBrk, armEnd, wc, decW);
     } else {
-      drawLine(hp, jp, undecided, undecidedW);
-      drawLine(ap, jp, undecided, undecidedW);
+      line(hNode, hBrk, neu, neuW);
+      line(aNode, aBrk, neu, neuW);
+      arc(bR32, hAng, aAng, neu, neuW);
+      line(midBrk, armEnd, neu, neuW);
     }
-    r32Junctions.push(jp);
   }
 
-  // R32→R16
-  const r16HP = [], r16AP = [], r16Junc = [];
-  for (let i = 0; i < 8; i++) {
-    const base = r16A[i];
-    const hp = polar(rR16, base - ps16/2);
-    const ap = polar(rR16, base + ps16/2);
-    const jp = polar(rR16 - 30*SCALE, base);
-    const w1 = r32Winners[i*2], w2 = r32Winners[i*2+1];
-    drawLine(r32Junctions[i*2], hp, w1 ? teamColor(w1) : undecided, w1 ? decidedW : undecidedW);
-    drawLine(r32Junctions[i*2+1], ap, w2 ? teamColor(w2) : undecided, w2 ? decidedW : undecidedW);
+  // --- R16 brackets ---
+  // R16 pair j: home at (rR16, a32[j*2]), away at (rR16, a32[j*2+1])
+  const r16w = [];
+  for (let j = 0; j < 8; j++) {
+    const hAng = a32[j*2];
+    const aAng = a32[j*2+1];
+    const midAng = a16mid[j];
+    const hNode = pol(rR16, hAng);
+    const aNode = pol(rR16, aAng);
+    const hBrk = pol(bR16, hAng);
+    const aBrk = pol(bR16, aAng);
+    const midBrk = pol(bR16, midAng);
+    const armEnd = pol(rQF, midAng);
 
-    const r16m = matches[r16Order[i]];
-    const r16w = r16m ? matchWinner(r16m) : null;
-    if (r16w) {
-      const wc = teamColor(r16w);
-      const homeWon = r16w === r16m.home;
-      drawLine(homeWon ? hp : ap, jp, wc, decidedW);
-      drawLine(homeWon ? ap : hp, jp, 'rgba(0,0,0,0.04)', 1);
+    const m = M[r16Order[j]];
+    const w = m ? winner(m) : null;
+    r16w.push(w);
+
+    if (w) {
+      const wc = tc(w);
+      const homeWon = w === m.h;
+      line(homeWon ? aNode : hNode, homeWon ? aBrk : hBrk, 'rgba(0,0,0,0.04)', 1);
+      line(homeWon ? hNode : aNode, homeWon ? hBrk : aBrk, wc, decW);
+      arc(bR16, hAng, aAng, wc, decW);
+      line(midBrk, armEnd, wc, decW);
     } else {
-      drawLine(hp, jp, undecided, undecidedW);
-      drawLine(ap, jp, undecided, undecidedW);
+      line(hNode, hBrk, neu, neuW);
+      line(aNode, aBrk, neu, neuW);
+      arc(bR16, hAng, aAng, neu, neuW);
+      line(midBrk, armEnd, neu, neuW);
     }
-    r16HP.push(hp); r16AP.push(ap); r16Junc.push(jp);
   }
 
-  const r16Winners = r16Order.map(n => { const m = matches[n]; return m ? matchWinner(m) : null; });
+  // --- QF brackets ---
+  const qfw = [];
+  for (let k = 0; k < 4; k++) {
+    const hAng = a16mid[k*2];
+    const aAng = a16mid[k*2+1];
+    const midAng = aQFmid[k];
+    const hNode = pol(rQF, hAng);
+    const aNode = pol(rQF, aAng);
+    const hBrk = pol(bQF, hAng);
+    const aBrk = pol(bQF, aAng);
+    const midBrk = pol(bQF, midAng);
+    const armEnd = pol(rSF, midAng);
 
-  // R16→QF
-  const qfHP = [], qfAP = [], qfJunc = [];
-  for (let i = 0; i < 4; i++) {
-    const base = qfA[i];
-    const hp = polar(rQF, base - psQF/2);
-    const ap = polar(rQF, base + psQF/2);
-    const jp = polar(rQF - 24*SCALE, base);
-    const w1 = r16Winners[i*2], w2 = r16Winners[i*2+1];
-    drawLine(r16Junc[i*2], hp, w1 ? teamColor(w1) : undecided, w1 ? decidedW : undecidedW);
-    drawLine(r16Junc[i*2+1], ap, w2 ? teamColor(w2) : undecided, w2 ? decidedW : undecidedW);
-    drawLine(hp, jp, undecided, undecidedW);
-    drawLine(ap, jp, undecided, undecidedW);
-    qfHP.push(hp); qfAP.push(ap); qfJunc.push(jp);
+    const m = M[qfOrder[k]];
+    const w = m ? winner(m) : null;
+    qfw.push(w);
+
+    if (w) {
+      const wc = tc(w);
+      const homeWon = w === m.h;
+      line(homeWon ? aNode : hNode, homeWon ? aBrk : hBrk, 'rgba(0,0,0,0.04)', 1);
+      line(homeWon ? hNode : aNode, homeWon ? hBrk : aBrk, wc, decW);
+      arc(bQF, hAng, aAng, wc, decW);
+      line(midBrk, armEnd, wc, decW);
+    } else {
+      line(hNode, hBrk, neu, neuW);
+      line(aNode, aBrk, neu, neuW);
+      arc(bQF, hAng, aAng, neu, neuW);
+      line(midBrk, armEnd, neu, neuW);
+    }
   }
 
-  // QF→SF
-  const sfHP = [], sfAP = [], sfJunc = [];
-  for (let i = 0; i < 2; i++) {
-    const base = sfA[i];
-    const hp = polar(rSF, base - psSF/2);
-    const ap = polar(rSF, base + psSF/2);
-    const jp = polar(rSF - 20*SCALE, base);
-    drawLine(qfJunc[i*2], hp, undecided, undecidedW);
-    drawLine(qfJunc[i*2+1], ap, undecided, undecidedW);
-    drawLine(hp, jp, undecided, undecidedW);
-    drawLine(ap, jp, undecided, undecidedW);
-    sfHP.push(hp); sfAP.push(ap); sfJunc.push(jp);
+  // --- SF brackets ---
+  for (let l = 0; l < 2; l++) {
+    const hAng = aQFmid[l*2];
+    const aAng = aQFmid[l*2+1];
+    const midAng = aSFmid[l];
+    const hNode = pol(rSF, hAng);
+    const aNode = pol(rSF, aAng);
+    const hBrk = pol(bSF, hAng);
+    const aBrk = pol(bSF, aAng);
+    const midBrk = pol(bSF, midAng);
+    const armEnd = { x: CX, y: CY };
+
+    const m = M[sfOrder[l]];
+    const w = m ? winner(m) : null;
+
+    if (w) {
+      const wc = tc(w);
+      const homeWon = w === m.h;
+      line(homeWon ? aNode : hNode, homeWon ? aBrk : hBrk, 'rgba(0,0,0,0.04)', 1);
+      line(homeWon ? hNode : aNode, homeWon ? hBrk : aBrk, wc, decW);
+      arc(bSF, hAng, aAng, wc, decW);
+      line(midBrk, armEnd, wc, decW);
+    } else {
+      line(hNode, hBrk, neu, neuW);
+      line(aNode, aBrk, neu, neuW);
+      arc(bSF, hAng, aAng, neu, neuW);
+      line(midBrk, armEnd, 'rgba(180,145,42,0.1)', neuW);
+    }
   }
 
-  // SF→Final
-  for (const jp of sfJunc) {
-    drawLine(jp, {x:CX,y:CY}, 'rgba(180,145,42,0.1)', undecidedW);
-  }
+  // ============ NODES ============
 
-  // Junction dots
-  function drawJunction(pt) {
-    const r = 3*SCALE;
-    ctx.beginPath();
-    ctx.arc(pt.x, pt.y, r, 0, Math.PI*2);
-    ctx.fillStyle = 'rgba(0,0,0,0.08)';
-    ctx.fill();
-  }
-
-  // Draw nodes
-  function drawTeamNode(pt, team, radius, state) {
+  function drawNode(pt, team, radius, state) {
     if (!isReal(team)) { drawEmpty(pt, radius); return; }
     ctx.save();
-    ctx.beginPath();
-    ctx.arc(pt.x, pt.y, radius, 0, Math.PI*2);
-    ctx.clip();
-
-    if (flagImages[team]) {
-      ctx.drawImage(flagImages[team], pt.x - radius, pt.y - radius, radius*2, radius*2);
+    ctx.beginPath(); ctx.arc(pt.x, pt.y, radius, 0, Math.PI*2); ctx.clip();
+    if (flagImg[team]) {
+      ctx.drawImage(flagImg[team], pt.x-radius, pt.y-radius, radius*2, radius*2);
     } else {
       ctx.fillStyle = '#bbb';
-      ctx.fillRect(pt.x - radius, pt.y - radius, radius*2, radius*2);
+      ctx.fillRect(pt.x-radius, pt.y-radius, radius*2, radius*2);
     }
-
-    if (state === 'eliminated') {
+    if (state === 'elim') {
       ctx.fillStyle = 'rgba(245,244,241,0.55)';
-      ctx.fillRect(pt.x - radius, pt.y - radius, radius*2, radius*2);
+      ctx.fillRect(pt.x-radius, pt.y-radius, radius*2, radius*2);
     }
     ctx.restore();
-
-    ctx.beginPath();
-    ctx.arc(pt.x, pt.y, radius, 0, Math.PI*2);
-    if (state === 'winner') {
-      ctx.strokeStyle = '#b5912a';
-      ctx.lineWidth = 3;
-    } else if (state === 'eliminated') {
-      ctx.strokeStyle = 'rgba(0,0,0,0.08)';
-      ctx.lineWidth = 1.5;
-    } else {
-      ctx.strokeStyle = 'rgba(0,0,0,0.18)';
-      ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.arc(pt.x, pt.y, radius, 0, Math.PI*2);
+    ctx.strokeStyle = state === 'win' ? '#b5912a' : (state === 'elim' ? 'rgba(0,0,0,0.08)' : 'rgba(0,0,0,0.18)');
+    ctx.lineWidth = state === 'win' ? 3 : 1.5; ctx.stroke();
+    if (selected.has(team)) {
+      ctx.beginPath(); ctx.arc(pt.x, pt.y, radius+4*SC, 0, Math.PI*2);
+      ctx.strokeStyle = tc(team); ctx.lineWidth = 3*SC; ctx.stroke();
     }
-    ctx.stroke();
-
-    if (selectedTeams.has(team)) {
-      ctx.beginPath();
-      ctx.arc(pt.x, pt.y, radius + 4*SCALE, 0, Math.PI*2);
-      ctx.strokeStyle = teamColor(team);
-      ctx.lineWidth = 3*SCALE;
-      ctx.stroke();
-    }
-
-    if (!flagImages[team]) {
+    if (!flagImg[team]) {
       const code = codes[team] || team.substring(0,3).toUpperCase();
-      const fontSize = radius * 0.75;
-      ctx.font = `900 ${fontSize}px system-ui, sans-serif`;
-      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.fillStyle = `rgba(0,0,0,${state==='eliminated'?0.3:0.6})`;
-      ctx.fillText(code, pt.x+0.8, pt.y+0.8);
-      ctx.fillStyle = `rgba(255,255,255,${state==='eliminated'?0.4:0.9})`;
-      ctx.fillText(code, pt.x, pt.y);
+      ctx.font = `900 ${radius*0.75}px system-ui`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillStyle = 'rgba(0,0,0,0.6)'; ctx.fillText(code, pt.x+0.8, pt.y+0.8);
+      ctx.fillStyle = 'rgba(255,255,255,0.9)'; ctx.fillText(code, pt.x, pt.y);
     }
   }
 
   function drawEmpty(pt, radius) {
-    ctx.beginPath();
-    ctx.arc(pt.x, pt.y, radius, 0, Math.PI*2);
-    ctx.setLineDash([3,3]);
-    ctx.strokeStyle = 'rgba(0,0,0,0.06)';
-    ctx.lineWidth = 1.5;
-    ctx.stroke();
-    ctx.setLineDash([]);
+    ctx.beginPath(); ctx.arc(pt.x, pt.y, radius, 0, Math.PI*2);
+    ctx.setLineDash([3,3]); ctx.strokeStyle = 'rgba(0,0,0,0.06)'; ctx.lineWidth = 1.5;
+    ctx.stroke(); ctx.setLineDash([]);
   }
 
   function drawScore(pt, m) {
-    let label = `${m.sH}–${m.sA}`;
-    if (m.pkH != null) label += ` (${m.pkH}–${m.pkA} PK)`;
-    ctx.font = `700 ${8*SCALE}px system-ui, sans-serif`;
-    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillStyle = 'rgba(0,0,0,0.35)';
-    ctx.fillText(label, pt.x, pt.y);
+    let s = `${m.sH}–${m.sA}`;
+    if (m.pH != null) s += ` (${m.pH}–${m.pA} PK)`;
+    ctx.font = `700 ${8*SC}px system-ui`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillStyle = 'rgba(0,0,0,0.3)'; ctx.fillText(s, pt.x, pt.y);
   }
 
   // R32 nodes
   for (let i = 0; i < 16; i++) {
-    const base = r32A[i];
-    const hp = polar(rR32, base - ps32/2);
-    const ap = polar(rR32, base + ps32/2);
-    const m = matches[bracketOrder[i]];
+    const m = M[bracketOrder[i]];
     if (!m) continue;
-    const winner = matchWinner(m);
-    const homeWon = winner === m.home;
-    const awayWon = winner === m.away;
-    drawTeamNode(hp, m.home, nR32, homeWon ? 'winner' : (awayWon ? 'eliminated' : 'normal'));
-    drawTeamNode(ap, m.away, nR32, awayWon ? 'winner' : (homeWon ? 'eliminated' : 'normal'));
-    drawJunction(r32Junctions[i]);
-    if (m.sH != null) drawScore(polar(rR32 - 20*SCALE, base), m);
+    const w = winner(m);
+    const hP = pol(rR32, a32[i] - ps32/2);
+    const aP = pol(rR32, a32[i] + ps32/2);
+    drawNode(hP, m.h, nR32, w === m.h ? 'win' : (w === m.a ? 'elim' : ''));
+    drawNode(aP, m.a, nR32, w === m.a ? 'win' : (w === m.h ? 'elim' : ''));
+    if (m.sH != null) drawScore(pol(rR32 - 12*SC, a32[i]), m);
   }
 
-  // R16 nodes
-  for (let i = 0; i < 8; i++) {
-    const t1 = r32Winners[i*2], t2 = r32Winners[i*2+1];
-    if (t1) drawTeamNode(r16HP[i], t1, nR16, 'normal');
-    else drawEmpty(r16HP[i], nR16);
-    if (t2) drawTeamNode(r16AP[i], t2, nR16, 'normal');
-    else drawEmpty(r16AP[i], nR16);
-    drawJunction(r16Junc[i]);
+  // R16 nodes (at a32[i] angles on rR16 ring)
+  for (let j = 0; j < 8; j++) {
+    const t1 = r32w[j*2], t2 = r32w[j*2+1];
+    const r16m = M[r16Order[j]];
+    const r16win = r16m ? winner(r16m) : null;
+    if (t1) drawNode(pol(rR16, a32[j*2]), t1, nR16, r16win && r16win !== t1 ? 'elim' : (r16win === t1 ? 'win' : ''));
+    else drawEmpty(pol(rR16, a32[j*2]), nR16);
+    if (t2) drawNode(pol(rR16, a32[j*2+1]), t2, nR16, r16win && r16win !== t2 ? 'elim' : (r16win === t2 ? 'win' : ''));
+    else drawEmpty(pol(rR16, a32[j*2+1]), nR16);
   }
 
-  // QF nodes
-  for (let i = 0; i < 4; i++) {
-    const m = matches[qfOrder[i]];
-    if (m && isReal(m.home)) drawTeamNode(qfHP[i], m.home, nQF, 'normal');
-    else drawEmpty(qfHP[i], nQF);
-    if (m && isReal(m.away)) drawTeamNode(qfAP[i], m.away, nQF, 'normal');
-    else drawEmpty(qfAP[i], nQF);
-    drawJunction(qfJunc[i]);
+  // QF nodes (at a16mid[j] angles on rQF ring)
+  for (let k = 0; k < 4; k++) {
+    const m = M[qfOrder[k]];
+    const t1 = m && isReal(m.h) ? m.h : null;
+    const t2 = m && isReal(m.a) ? m.a : null;
+    if (t1) drawNode(pol(rQF, a16mid[k*2]), t1, nQF, '');
+    else drawEmpty(pol(rQF, a16mid[k*2]), nQF);
+    if (t2) drawNode(pol(rQF, a16mid[k*2+1]), t2, nQF, '');
+    else drawEmpty(pol(rQF, a16mid[k*2+1]), nQF);
   }
 
-  // SF nodes
-  for (let i = 0; i < 2; i++) {
-    drawEmpty(sfHP[i], nSF);
-    drawEmpty(sfAP[i], nSF);
-    drawJunction(sfJunc[i]);
+  // SF nodes (at aQFmid[k] on rSF ring)
+  for (let l = 0; l < 2; l++) {
+    drawEmpty(pol(rSF, aQFmid[l*2]), nSF);
+    drawEmpty(pol(rSF, aQFmid[l*2+1]), nSF);
   }
 
   // Trophy
-  ctx.font = `${36*SCALE}px serif`;
-  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-  ctx.fillText('\u{1F3C6}', CX, CY - 4*SCALE);
-  ctx.font = `900 ${9*SCALE}px system-ui, sans-serif`;
-  ctx.fillStyle = 'rgba(160,125,30,0.5)';
-  ctx.fillText('FINAL', CX, CY + 24*SCALE);
+  ctx.font = `${36*SC}px serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText('\u{1F3C6}', CX, CY - 4*SC);
+  ctx.font = `900 ${9*SC}px system-ui`; ctx.fillStyle = 'rgba(160,125,30,0.5)';
+  ctx.fillText('FINAL', CX, CY + 24*SC);
 
   // Curved labels
-  function drawCurved(text, radius, centerDeg, spacing, fontSize, top) {
-    const chars = text.split('');
-    const totalSpan = (chars.length - 1) * spacing;
-    ctx.font = `900 ${fontSize}px system-ui, sans-serif`;
-    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillStyle = 'rgba(0,0,0,0.12)';
-    for (let i = 0; i < chars.length; i++) {
-      let deg = top
-        ? centerDeg - totalSpan/2 + i*spacing
-        : centerDeg + totalSpan/2 - i*spacing;
-      const rad = (deg - 90) * Math.PI / 180;
-      const x = CX + radius * Math.cos(rad);
-      const y = CY + radius * Math.sin(rad);
-      ctx.save();
-      ctx.translate(x, y);
+  function curved(text, radius, cDeg, sp, fs, top) {
+    const ch = text.split(''), span = (ch.length-1)*sp;
+    ctx.font = `900 ${fs}px system-ui`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillStyle = 'rgba(0,0,0,0.1)';
+    for (let i = 0; i < ch.length; i++) {
+      const deg = top ? cDeg - span/2 + i*sp : cDeg + span/2 - i*sp;
+      const rad = (deg-90)*Math.PI/180;
+      ctx.save(); ctx.translate(CX+radius*Math.cos(rad), CY+radius*Math.sin(rad));
       ctx.rotate(rad + (top ? Math.PI/2 : -Math.PI/2));
-      ctx.fillText(chars[i], 0, 0);
-      ctx.restore();
+      ctx.fillText(ch[i], 0, 0); ctx.restore();
     }
   }
+  const lR32 = ((rR16+rR32)/2 + rR32+34*SC)/2;
+  const lR16 = ((rQF+rR16)/2 + (rR16+rR32)/2)/2;
+  const lQF = ((rSF+rQF)/2 + (rQF+rR16)/2)/2;
+  const lSF = (rSF-8*SC + (rSF+rQF)/2)/2;
+  curved('ROUND OF 32', lR32, 0, 5, 17*SC, true);
+  curved('ROUND OF 32', lR32, 180, 5, 17*SC, false);
+  curved('ROUND OF 16', lR16, 0, 6, 15*SC, true);
+  curved('ROUND OF 16', lR16, 180, 6, 15*SC, false);
+  curved('QUARTER-FINALS', lQF, 0, 4.5, 12*SC, true);
+  curved('QUARTER-FINALS', lQF, 180, 4.5, 12*SC, false);
+  curved('SEMI-FINALS', lSF, 0, 6, 10*SC, true);
+  curved('SEMI-FINALS', lSF, 180, 6, 10*SC, false);
 
-  const labelR32 = ((rR16+rR32)/2 + rR32+34*SCALE) / 2;
-  const labelR16 = ((rQF+rR16)/2 + (rR16+rR32)/2) / 2;
-  const labelQF = ((rSF+rQF)/2 + (rQF+rR16)/2) / 2;
-  const labelSF = (rSF-8*SCALE + (rSF+rQF)/2) / 2;
-  drawCurved('ROUND OF 32', labelR32, 0, 5, 17*SCALE, true);
-  drawCurved('ROUND OF 32', labelR32, 180, 5, 17*SCALE, false);
-  drawCurved('ROUND OF 16', labelR16, 0, 6, 15*SCALE, true);
-  drawCurved('ROUND OF 16', labelR16, 180, 6, 15*SCALE, false);
-  drawCurved('QUARTER-FINALS', labelQF, 0, 4.5, 12*SCALE, true);
-  drawCurved('QUARTER-FINALS', labelQF, 180, 4.5, 12*SCALE, false);
-  drawCurved('SEMI-FINALS', labelSF, 0, 6, 10*SCALE, true);
-  drawCurved('SEMI-FINALS', labelSF, 180, 6, 10*SCALE, false);
-
-  // Highlight paths for selected teams
-  if (selectedTeams.size > 0) {
-    const teamSlots = {};
+  // ============ HIGHLIGHT PATHS ============
+  if (selected.size > 0) {
+    const slots = {};
     for (let i = 0; i < 16; i++) {
-      const m = matches[bracketOrder[i]];
-      if (m) { teamSlots[m.home] = i*2; teamSlots[m.away] = i*2+1; }
+      const m = M[bracketOrder[i]]; if (!m) continue;
+      slots[m.h] = i*2; slots[m.a] = i*2+1;
     }
-    const hColors = ['#ff7300','#00bfff','#ff2888','#4df233'];
-    let idx = 0;
-    for (const team of selectedTeams) {
-      const slot = teamSlots[team];
-      if (slot == null) continue;
-      const hc = hColors[idx % hColors.length]; idx++;
-      const r32Idx = Math.floor(slot/2);
-      const r32Home = slot % 2 === 0;
-      const pts = [];
-      const b32 = r32A[r32Idx];
-      pts.push(polar(rR32, b32 + (r32Home ? -ps32/2 : ps32/2)));
-      pts.push(polar(rR32-38*SCALE, b32));
-      const r16Idx = Math.floor(r32Idx/2);
-      const r16Home = r32Idx % 2 === 0;
-      const b16 = r16A[r16Idx];
-      pts.push(polar(rR16, b16 + (r16Home ? -ps16/2 : ps16/2)));
-      pts.push(polar(rR16-30*SCALE, b16));
-      const qfIdx2 = Math.floor(r16Idx/2);
-      const qfHome = r16Idx % 2 === 0;
-      const bqf = qfA[qfIdx2];
-      pts.push(polar(rQF, bqf + (qfHome ? -psQF/2 : psQF/2)));
-      pts.push(polar(rQF-24*SCALE, bqf));
-      const sfIdx = Math.floor(qfIdx2/2);
-      const sfHome = qfIdx2 % 2 === 0;
-      const bsf = sfA[sfIdx];
-      pts.push(polar(rSF, bsf + (sfHome ? -psSF/2 : psSF/2)));
-      pts.push(polar(rSF-20*SCALE, bsf));
-      pts.push({x:CX,y:CY});
+    const hcols = ['#ff7300','#00bfff','#ff2888','#4df233'];
+    let ci = 0;
+    for (const team of selected) {
+      const slot = slots[team]; if (slot == null) continue;
+      const hc = hcols[ci++ % hcols.length];
 
-      ctx.beginPath();
-      ctx.moveTo(pts[0].x, pts[0].y);
-      for (let j = 1; j < pts.length; j++) ctx.lineTo(pts[j].x, pts[j].y);
-      ctx.strokeStyle = hc + '30';
-      ctx.lineWidth = 14*SCALE;
-      ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-      ctx.stroke();
-      ctx.strokeStyle = hc + 'cc';
-      ctx.lineWidth = 4.5*SCALE;
-      ctx.stroke();
+      // Trace through each round's bracket: node → bracket point → arc midpoint → arm → next node
+      const r32i = Math.floor(slot/2);
+      const isHome = slot % 2 === 0;
+      const teamAng = a32[r32i] + (isHome ? -ps32/2 : ps32/2);
 
-      const nodeR = [nR32, nR16, nQF, nSF];
-      for (let j = 0; j < 4; j++) {
-        const pt = pts[j*2];
-        const r = nodeR[j] + 5*SCALE;
+      // R32 path
+      const p0 = pol(rR32, teamAng);
+      const p1 = pol(bR32, teamAng);
+      const p2 = pol(bR32, a32[r32i]); // bracket midpoint
+      const p3 = pol(rR16, a32[r32i]); // R16 node
+
+      // R16 path
+      const r16j = Math.floor(r32i/2);
+      const r16mid = a16mid[r16j];
+      const p4 = pol(bR16, a32[r32i]);
+      const p5 = pol(bR16, r16mid);
+      const p6 = pol(rQF, r16mid);
+
+      // QF path
+      const qfk = Math.floor(r16j/2);
+      const qfmid = aQFmid[qfk];
+      const p7 = pol(bQF, r16mid);
+      const p8 = pol(bQF, qfmid);
+      const p9 = pol(rSF, qfmid);
+
+      // SF path
+      const sfl = Math.floor(qfk/2);
+      const sfmid = aSFmid[sfl];
+      const p10 = pol(bSF, qfmid);
+      const p11 = pol(bSF, sfmid);
+      const p12 = {x:CX, y:CY};
+
+      // Draw segments
+      const segs = [[p0,p1],[p2,p3],[p3,p4],[p5,p6],[p6,p7],[p8,p9],[p9,p10],[p11,p12]];
+      // Draw arcs: R32 bracket arc, R16 bracket arc, QF bracket arc, SF bracket arc
+      const arcs = [
+        [bR32, teamAng, a32[r32i]],
+        [bR16, a32[r32i], r16mid],
+        [bQF, r16mid, qfmid],
+        [bSF, qfmid, sfmid],
+      ];
+
+      // Glow
+      for (const [a,b] of segs) {
+        line(a, b, hc + '25', 12*SC);
+      }
+      for (const [r, d1, d2] of arcs) {
+        const minD = Math.min(d1,d2), maxD = Math.max(d1,d2);
         ctx.beginPath();
-        ctx.arc(pt.x, pt.y, r, 0, Math.PI*2);
-        ctx.strokeStyle = hc;
-        ctx.lineWidth = 3*SCALE;
-        ctx.stroke();
+        ctx.arc(CX, CY, r, (minD-90)*Math.PI/180, (maxD-90)*Math.PI/180);
+        ctx.strokeStyle = hc + '25'; ctx.lineWidth = 12*SC; ctx.lineCap = 'round'; ctx.stroke();
+      }
+      // Solid
+      for (const [a,b] of segs) {
+        line(a, b, hc + 'cc', 4*SC);
+      }
+      for (const [r, d1, d2] of arcs) {
+        const minD = Math.min(d1,d2), maxD = Math.max(d1,d2);
+        ctx.beginPath();
+        ctx.arc(CX, CY, r, (minD-90)*Math.PI/180, (maxD-90)*Math.PI/180);
+        ctx.strokeStyle = hc + 'cc'; ctx.lineWidth = 4*SC; ctx.lineCap = 'round'; ctx.stroke();
+      }
+
+      // Rings at node positions
+      const nodePts = [
+        [p0, nR32], [p3, nR16], [p6, nQF], [p9, nSF]
+      ];
+      for (const [pt, nr] of nodePts) {
+        ctx.beginPath(); ctx.arc(pt.x, pt.y, nr+5*SC, 0, Math.PI*2);
+        ctx.strokeStyle = hc; ctx.lineWidth = 3*SC; ctx.stroke();
       }
     }
   }
 }
 
-// Tap handling
+// --- Tap ---
 canvas.addEventListener('click', (e) => {
   const rect = canvas.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
+  const x = e.clientX - rect.left, y = e.clientY - rect.top;
+  const rR32 = 400*SC, rR16 = 295*SC, rQF = 210*SC, rSF = 145*SC;
+  const nR32 = 22*SC, nR16 = 18*SC, nQF = 16*SC, nSF = 14*SC;
+  const ps32 = 11;
+  const a32 = Array.from({length:16}, (_,i) => i*360/16);
+  const a16mid = Array.from({length:8}, (_,i) => (a32[i*2]+a32[i*2+1])/2);
 
-  const rR32 = 400*SCALE, rR16 = 295*SCALE;
-  const nR32 = 22*SCALE, nR16 = 18*SCALE;
-  const ps32 = 11, ps16 = 8;
-  const r32A = Array.from({length:16}, (_,i) => i*360/16);
-  const r16A = Array.from({length:8}, (_,i) => (r32A[i*2]+r32A[i*2+1])/2);
-
-  const pad = 14;
+  const pad = 16;
   let best = null, bestD = Infinity;
-  function dist(p) { return Math.sqrt((x-p.x)**2 + (y-p.y)**2); }
+  function d(p) { return Math.sqrt((x-p.x)**2+(y-p.y)**2); }
 
+  // R32
   for (let i = 0; i < 16; i++) {
-    const m = matches[bracketOrder[i]];
-    if (!m) continue;
-    const b = r32A[i];
-    let d = dist(polar(rR32, b - ps32/2));
-    if (d < nR32+pad && d < bestD) { bestD = d; best = m.home; }
-    d = dist(polar(rR32, b + ps32/2));
-    if (d < nR32+pad && d < bestD) { bestD = d; best = m.away; }
+    const m = M[bracketOrder[i]]; if (!m) continue;
+    let dd = d(pol(rR32, a32[i]-ps32/2));
+    if (dd < nR32+pad && dd < bestD) { bestD=dd; best=m.h; }
+    dd = d(pol(rR32, a32[i]+ps32/2));
+    if (dd < nR32+pad && dd < bestD) { bestD=dd; best=m.a; }
   }
-  for (let i = 0; i < 8; i++) {
-    const w1 = matchWinner(matches[bracketOrder[i*2]]);
-    const w2 = matchWinner(matches[bracketOrder[i*2+1]]);
-    const b = r16A[i];
-    if (w1) { let d = dist(polar(rR16, b-ps16/2)); if (d < nR16+pad && d < bestD) { bestD=d; best=w1; } }
-    if (w2) { let d = dist(polar(rR16, b+ps16/2)); if (d < nR16+pad && d < bestD) { bestD=d; best=w2; } }
+  // R16
+  for (let j = 0; j < 8; j++) {
+    const w1 = winner(M[bracketOrder[j*2]]);
+    const w2 = winner(M[bracketOrder[j*2+1]]);
+    if (w1) { let dd = d(pol(rR16, a32[j*2])); if (dd < nR16+pad && dd < bestD) { bestD=dd; best=w1; } }
+    if (w2) { let dd = d(pol(rR16, a32[j*2+1])); if (dd < nR16+pad && dd < bestD) { bestD=dd; best=w2; } }
+  }
+  // QF
+  for (let k = 0; k < 4; k++) {
+    const m = M[qfOrder[k]]; if (!m) continue;
+    if (isReal(m.h)) { let dd = d(pol(rQF, a16mid[k*2])); if (dd < nQF+pad && dd < bestD) { bestD=dd; best=m.h; } }
+    if (isReal(m.a)) { let dd = d(pol(rQF, a16mid[k*2+1])); if (dd < nQF+pad && dd < bestD) { bestD=dd; best=m.a; } }
   }
 
   if (best && isReal(best)) {
-    if (selectedTeams.has(best)) selectedTeams.delete(best);
-    else selectedTeams.add(best);
+    if (selected.has(best)) selected.delete(best); else selected.add(best);
     draw();
   }
 });
 
 window.addEventListener('resize', () => { resize(); draw(); });
-resize();
-loadFlags();
-setTimeout(draw, 100);
+resize(); loadFlags(); setTimeout(draw, 100);
 </script>
 </body>
 </html>
