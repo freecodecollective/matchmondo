@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-01 03:47 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-07-01 05:36 UTC by scripts/update-data.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -948,8 +948,7 @@ window.WC_MATCHES = [
     "city": "Inglewood (Los Angeles), CA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 1,
-    "result": "FT"
+    "scoreA": 1
   },
   {
     "n": 76,
@@ -962,8 +961,7 @@ window.WC_MATCHES = [
     "city": "Houston, TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 2,
-    "scoreA": 1,
-    "result": "FT"
+    "scoreA": 1
   },
   {
     "n": 74,
@@ -976,10 +974,7 @@ window.WC_MATCHES = [
     "city": "Foxborough (Boston), MA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 1,
-    "result": "PEN",
-    "pkH": 3,
-    "pkA": 4
+    "scoreA": 1
   },
   {
     "n": 75,
@@ -992,10 +987,7 @@ window.WC_MATCHES = [
     "city": "Monterrey, Mexico",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 1,
-    "result": "PEN",
-    "pkH": 2,
-    "pkA": 3
+    "scoreA": 1
   },
   {
     "n": 78,
@@ -1008,8 +1000,7 @@ window.WC_MATCHES = [
     "city": "Arlington (Dallas), TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 2,
-    "result": "FT"
+    "scoreA": 2
   },
   {
     "n": 77,
@@ -1022,8 +1013,7 @@ window.WC_MATCHES = [
     "city": "East Rutherford, NJ",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 3,
-    "scoreA": 0,
-    "result": "FT"
+    "scoreA": 0
   },
   {
     "n": 79,
@@ -1036,8 +1026,7 @@ window.WC_MATCHES = [
     "city": "Mexico City, Mexico",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 2,
-    "scoreA": 0,
-    "isLive": true
+    "scoreA": 0
   },
   {
     "n": 80,
