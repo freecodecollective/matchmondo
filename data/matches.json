@@ -1047,9 +1047,9 @@
     "venue": "Mercedes-Benz Stadium",
     "city": "Atlanta, GA",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 0,
+    "scoreH": 2,
     "scoreA": 1,
-    "isLive": true
+    "result": "FT"
   },
   {
     "n": 82,
@@ -1200,7 +1200,7 @@
     "stage": "Round of 16",
     "group": null,
     "home": "Mexico",
-    "away": "Congo DR",
+    "away": "England",
     "venue": "Estadio Azteca",
     "city": "Mexico City, Mexico",
     "tv": "FOX · Telemundo (ES)",

@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-01 17:17 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-07-01 18:12 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1049,9 +1049,9 @@ window.WC_MATCHES = [
     "venue": "Mercedes-Benz Stadium",
     "city": "Atlanta, GA",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 0,
+    "scoreH": 2,
     "scoreA": 1,
-    "isLive": true
+    "result": "FT"
   },
   {
     "n": 82,
@@ -1202,7 +1202,7 @@ window.WC_MATCHES = [
     "stage": "Round of 16",
     "group": null,
     "home": "Mexico",
-    "away": "Congo DR",
+    "away": "England",
     "venue": "Estadio Azteca",
     "city": "Mexico City, Mexico",
     "tv": "FOX · Telemundo (ES)",
