@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-01 22:31 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-07-01 23:10 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1063,9 +1063,9 @@ window.WC_MATCHES = [
     "venue": "Lumen Field",
     "city": "Seattle, WA",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 2,
+    "scoreH": 3,
     "scoreA": 2,
-    "isLive": true
+    "result": "AET"
   },
   {
     "n": 81,
@@ -1229,7 +1229,7 @@ window.WC_MATCHES = [
     "stage": "Round of 16",
     "group": null,
     "home": "To be announced",
-    "away": "To be announced",
+    "away": "Belgium",
     "venue": "Lumen Field",
     "city": "Seattle, WA",
     "tv": "FOX · Telemundo (ES)",
