@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Map Bracket — Football 2026</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, system-ui, 'Helvetica Neue', sans-serif;
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    -webkit-font-smoothing: antialiased;
+    transition: background 0.5s;
+  }
+  #controls {
+    position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 6px; z-index: 10;
+  }
+  .btn {
+    padding: 7px 16px; border: none; border-radius: 20px;
+    font: 600 12px/1 system-ui; cursor: pointer;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .btn.active { transform: scale(1.05); }
+  #roundToggles {
+    position: fixed; top: 56px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 8px; z-index: 10;
+  }
+  .rnd {
+    padding: 4px 12px; border-radius: 12px; border: none;
+    font: 500 10px/1 system-ui; cursor: pointer;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    opacity: 0.7; transition: all 0.2s;
+  }
+  .rnd.on { opacity: 1; transform: scale(1.05); }
+  canvas { display: block; }
+  #hint {
+    position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%);
+    font: 500 11px/1 system-ui; letter-spacing: 0.06em;
+    text-transform: uppercase; pointer-events: none;
+    transition: color 0.5s;
+  }
+</style>
+</head>
+<body>
+<div id="controls">
+  <button class="btn" data-mode="sky" onclick="setMode('sky')">Sky Routes</button>
+  <button class="btn" data-mode="clean" onclick="setMode('clean')">Clean</button>
+  <button class="btn" data-mode="atlas" onclick="setMode('atlas')">Atlas</button>
+</div>
+<div id="roundToggles">
+  <button class="rnd on" data-r="r32" onclick="toggleRound('r32')">R32</button>
+  <button class="rnd on" data-r="r16" onclick="toggleRound('r16')">R16</button>
+  <button class="rnd on" data-r="qf" onclick="toggleRound('qf')">QF</button>
+  <button class="rnd on" data-r="sf" onclick="toggleRound('sf')">SF</button>
+  <span style="width:1px;height:16px;background:rgba(128,128,128,0.3);margin:0 4px"></span>
+  <button class="rnd on" id="lblBtn" onclick="toggleLabels()">Labels</button>
+</div>
+<canvas id="c"></canvas>
+<div id="hint">Tap a flag to highlight its path</div>
+<script>
+const C = document.getElementById('c'), ctx = C.getContext('2d');
+const DPR = window.devicePixelRatio || 1;
+let W, H, mode = 'sky';
+let rounds = {r32:true, r16:true, qf:true, sf:true};
+let showLabels = true;
+let selected = null;
+
+// Simplified continent outlines [lon, lat]
+const MAP = [
+  // North America
+  {pts:[[-140,60],[-130,55],[-125,49],[-122,42],[-120,36],[-117,32],[-112,28],[-107,22],[-100,18],[-95,16],[-90,15],[-86,15],[-83,18],[-82,22],[-81,25],[-78,28],[-75,32],[-72,40],[-68,44],[-64,46],[-60,47],[-56,50],[-55,52],[-58,55],[-62,58],[-68,61],[-75,63],[-80,66],[-90,69],[-100,71],[-110,70],[-120,64],[-130,58],[-140,60]]},
+  // Greenland
+  {pts:[[-55,60],[-45,60],[-38,64],[-25,70],[-20,76],[-22,82],[-35,84],[-50,80],[-55,72],[-55,60]]},
+  // Central America
+  {pts:[[-95,16],[-92,15],[-90,14],[-87,14],[-84,11],[-82,9],[-80,8],[-79,9],[-82,10],[-86,12],[-90,14],[-95,16]]},
+  // South America
+  {pts:[[-80,10],[-78,7],[-75,4],[-73,1],[-70,-3],[-74,-6],[-76,-12],[-76,-16],[-72,-19],[-70,-22],[-65,-28],[-59,-33],[-57,-37],[-62,-42],[-67,-48],[-72,-54],[-67,-55],[-63,-52],[-58,-38],[-55,-33],[-50,-26],[-47,-23],[-43,-22],[-40,-16],[-37,-12],[-35,-6],[-45,0],[-50,2],[-55,5],[-60,8],[-66,11],[-73,12],[-80,10]]},
+  // Europe mainland
+  {pts:[[-10,36],[-6,37],[-2,37],[0,39],[2,43],[5,44],[8,46],[12,46],[15,45],[18,42],[20,40],[22,38],[24,38],[26,40],[28,42],[28,45],[25,48],[20,50],[15,54],[12,56],[10,56],[12,60],[15,64],[16,68],[20,70],[25,72],[30,71],[35,70],[40,66],[38,60],[33,56],[30,52],[30,48],[28,44],[26,40]]},
+  // British Isles
+  {pts:[[-8,50],[-5,50],[-2,51],[1,52],[2,53],[0,54],[-2,56],[-4,57],[-5,58],[-7,58],[-8,56],[-10,54],[-10,52],[-8,50]]},
+  // Ireland
+  {pts:[[-10,52],[-8,52],[-6,53],[-6,54],[-8,55],[-10,54],[-10,52]]},
+  // Scandinavia
+  {pts:[[5,58],[8,58],[10,60],[12,64],[14,66],[16,68],[18,70],[22,70],[25,72],[28,71],[30,70],[30,67],[26,64],[22,62],[18,59],[14,56],[10,56],[5,58]]},
+  // Iceland
+  {pts:[[-24,64],[-18,65],[-14,66],[-16,64],[-20,63],[-24,64]]},
+  // Africa
+  {pts:[[-17,15],[-17,12],[-15,10],[-10,6],[-5,5],[0,5],[5,5],[8,4],[10,2],[10,5],[15,7],[20,10],[28,10],[33,10],[36,10],[40,12],[44,12],[50,8],[50,2],[46,-2],[42,-6],[40,-11],[37,-18],[34,-24],[30,-30],[28,-33],[25,-34],[20,-35],[18,-34],[16,-29],[14,-22],[12,-14],[10,-5],[8,4],[5,5],[2,5],[-5,5],[-10,6],[-15,10],[-17,13],[-17,15]]},
+  // Madagascar
+  {pts:[[44,-13],[48,-15],[50,-20],[48,-25],[44,-24],[43,-18],[44,-13]]},
+  // Asia (mainland)
+  {pts:[[28,42],[30,38],[34,36],[38,38],[42,38],[45,40],[50,38],[55,30],[60,26],[62,22],[65,24],[68,28],[72,34],[76,30],[80,22],[84,18],[86,20],[90,22],[92,18],[96,16],[100,14],[103,10],[105,5],[106,2],[108,5],[110,12],[114,20],[118,28],[120,32],[125,35],[128,38],[130,42],[132,44],[135,42],[138,38],[140,40],[142,44],[143,48],[148,52],[155,56],[162,62],[170,66],[180,67],[180,52],[170,55],[160,54],[152,50],[145,48],[140,45],[140,50],[135,55],[128,52],[120,50],[110,50],[100,50],[90,50],[82,52],[76,56],[70,56],[65,54],[60,50],[55,46],[50,42],[45,42],[40,42],[35,42],[30,42],[28,42]]},
+  // India
+  {pts:[[68,28],[72,28],[76,30],[80,22],[82,16],[80,10],[78,8],[76,10],[73,14],[70,20],[68,24],[68,28]]},
+  // SE Asia peninsula
+  {pts:[[100,14],[102,12],[104,8],[105,5],[106,2],[105,2],[102,7],[100,10],[98,14],[100,14]]},
+  // Japan
+  {pts:[[130,32],[132,34],[134,36],[136,36],[138,38],[140,40],[142,44],[142,42],[140,38],[138,36],[136,34],[134,32],[132,30],[130,32]]},
+  // Australia
+  {pts:[[115,-22],[118,-17],[124,-14],[130,-12],[135,-12],[140,-15],[145,-16],[150,-22],[153,-27],[152,-32],[148,-37],[140,-38],[134,-36],[128,-34],[122,-32],[118,-28],[115,-24],[115,-22]]},
+  // New Zealand
+  {pts:[[166,-35],[168,-37],[172,-42],[175,-45],[174,-46],[170,-44],[168,-40],[166,-37],[166,-35]]},
+  // Indonesia
+  {pts:[[96,-4],[100,-6],[105,-7],[110,-7],[115,-8],[118,-8],[120,-5],[118,-3],[114,-4],[110,-6],[105,-6],[100,-4],[96,-4]]},
+  // Philippines
+  {pts:[[118,10],[120,14],[122,18],[124,18],[122,14],[120,8],[118,10]]},
+  // Sri Lanka
+  {pts:[[80,8],[81,7],[82,8],[81,9],[80,8]]},
+  // Cuba/Caribbean
+  {pts:[[-85,22],[-82,22],[-78,20],[-74,19],[-74,20],[-78,21],[-82,23],[-85,22]]},
+];
+
+// Team positions [lon, lat]
+const P = {
+  'USA':[-98,38],'Canada':[-105,55],'Mexico':[-102,23],
+  'Brazil':[-50,-12],'Argentina':[-64,-34],'Colombia':[-74,4],
+  'Ecuador':[-80,-2],'Paraguay':[-58,-23],'Uruguay':[-56,-33],
+  'England':[-1,53],'Scotland':[-5,57],'France':[2,47],
+  'Germany':[10,52],'Spain':[-4,40],'Portugal':[-10,39],
+  'Netherlands':[6,53],'Belgium':[3,51],'Switzerland':[8,47],
+  'Austria':[15,48],'Croatia':[16,45],'Bosnia and Herzegovina':[18,44],
+  'Sweden':[16,62],'Norway':[9,64],'Czechia':[15,50],
+  'Morocco':[-6,32],'Algeria':[3,28],'Egypt':[31,27],
+  'South Africa':[25,-30],'Senegal':[-15,14],'Ghana':[-2,8],
+  "Côte d'Ivoire":[-6,7],'Congo DR':[24,-3],'Cabo Verde':[-24,16],
+  'Saudi Arabia':[45,24],'Japan':[138,36],'Australia':[134,-25],
+  'Uzbekistan':[65,41],'South Korea':[127,36],
+};
+
+const codes = {
+  'Algeria':'ALG','Argentina':'ARG','Australia':'AUS','Austria':'AUT',
+  'Belgium':'BEL','Bosnia and Herzegovina':'BIH','Brazil':'BRA',
+  'Cabo Verde':'CPV','Canada':'CAN','Colombia':'COL','Congo DR':'COD',
+  'Croatia':'CRO',"Côte d'Ivoire":'CIV','Czechia':'CZE',
+  'Ecuador':'ECU','Egypt':'EGY','England':'ENG','France':'FRA',
+  'Germany':'GER','Ghana':'GHA','Japan':'JPN','Mexico':'MEX',
+  'Morocco':'MAR','Netherlands':'NED','Norway':'NOR','Paraguay':'PAR',
+  'Portugal':'POR','Saudi Arabia':'KSA','Scotland':'SCO','Senegal':'SEN',
+  'South Africa':'RSA','Spain':'ESP','Sweden':'SWE','Switzerland':'SUI',
+  'USA':'USA','Uruguay':'URU',
+};
+
+const pc = {
+  'Algeria':'#00882a','Argentina':'#74b8ed','Australia':'#003078','Austria':'#cc0000',
+  'Belgium':'#cc0000','Bosnia and Herzegovina':'#002688','Brazil':'#008c33',
+  'Cabo Verde':'#003488','Canada':'#cc0000','Colombia':'#ffc700','Congo DR':'#0066cc',
+  'Croatia':'#cc0000',"Côte d'Ivoire":'#ff8000','Ecuador':'#004da8',
+  'Egypt':'#cc0000','England':'#cc0000','France':'#002688','Germany':'#cc0000',
+  'Ghana':'#cc2828','Japan':'#cc0000','Mexico':'#006434','Morocco':'#cc0000',
+  'Netherlands':'#ff6600','Norway':'#cc0000','Paraguay':'#cc0000',
+  'Portugal':'#006834','Saudi Arabia':'#006b2e','Scotland':'#002688',
+  'Senegal':'#006b2e','South Africa':'#006b2e','Spain':'#cc0000',
+  'Sweden':'#005a9c','Switzerland':'#cc0000','USA':'#002670',
+};
+
+// Match data
+const R32 = [
+  {id:74,h:'Germany',a:'Paraguay',sH:1,sA:1,r:'PEN',pH:3,pA:4},
+  {id:77,h:'France',a:'Sweden',sH:3,sA:0},
+  {id:73,h:'South Africa',a:'Canada',sH:0,sA:1},
+  {id:75,h:'Netherlands',a:'Morocco',sH:1,sA:1,r:'PEN',pH:3,pA:4},
+  {id:83,h:'Portugal',a:'Croatia'},
+  {id:84,h:'Spain',a:'Austria'},
+  {id:81,h:'USA',a:'Bosnia and Herzegovina'},
+  {id:82,h:'Belgium',a:'Senegal'},
+  {id:76,h:'Brazil',a:'Japan',sH:2,sA:1},
+  {id:78,h:"Côte d'Ivoire",a:'Norway',sH:1,sA:2},
+  {id:79,h:'Mexico',a:'Ecuador',sH:2,sA:0},
+  {id:80,h:'England',a:'Congo DR'},
+  {id:86,h:'Argentina',a:'Cabo Verde'},
+  {id:88,h:'Australia',a:'Egypt'},
+  {id:85,h:'Switzerland',a:'Algeria'},
+  {id:87,h:'Colombia',a:'Ghana'},
+];
+
+const R16M = [
+  {id:89,h:'Paraguay',a:'France'},
+  {id:90,h:'Canada',a:'Morocco'},
+  {id:91,h:'Brazil',a:'Norway'},
+  {id:92,h:'Mexico',a:'TBD'},
+  {id:93,h:'TBD',a:'TBD'},
+  {id:94,h:'TBD',a:'TBD'},
+  {id:95,h:'TBD',a:'TBD'},
+  {id:96,h:'TBD',a:'TBD'},
+];
+
+function winner(m) {
+  if (!m || m.sH == null) return null;
+  if (m.r === 'PEN') return m.pH > m.pA ? m.h : m.a;
+  return m.sH > m.sA ? m.h : (m.sA > m.sH ? m.a : null);
+}
+function isR(t) { return t && t !== 'TBD'; }
+
+// Flags
+const flagImg = {};
+let flagN = 0, flagTotal = 0;
+function loadFlags() {
+  const teams = new Set();
+  for (const m of R32) { teams.add(m.h); teams.add(m.a); }
+  for (const m of R16M) { if (isR(m.h)) teams.add(m.h); if (isR(m.a)) teams.add(m.a); }
+  flagTotal = teams.size;
+  for (const t of teams) {
+    if (!P[t]) continue;
+    const c = codes[t] || t.substring(0,3).toUpperCase();
+    const img = new Image(); img.crossOrigin = 'anonymous';
+    img.onload = () => { flagImg[t] = img; if (++flagN >= flagTotal) draw(); };
+    img.onerror = () => { if (++flagN >= flagTotal) draw(); };
+    img.src = `https://img.uefa.com/imgml/flags/140x140/${c}.png`;
+  }
+}
+
+// Projection
+function proj(lon, lat) {
+  const pad = 40;
+  const x = pad + ((lon + 180) / 360) * (W - pad*2);
+  const y = pad + ((90 - lat) / 180) * (H - pad*2);
+  return [x, y];
+}
+
+// Theme configs
+const themes = {
+  sky: {
+    bg: '#0a1628',
+    land: 'rgba(30,60,100,0.25)',
+    landStroke: 'rgba(60,120,200,0.15)',
+    coast: 'rgba(60,130,220,0.08)',
+    grid: 'rgba(40,80,150,0.06)',
+    text: 'rgba(100,160,255,0.3)',
+    hint: 'rgba(100,160,255,0.25)',
+    btnBg: 'rgba(30,60,120,0.6)', btnTxt: '#6aa4ff', btnABg: '#1a4a9a', btnATxt: '#fff',
+    rndBg: 'rgba(30,60,120,0.4)', rndTxt: '#4488cc',
+    rounds: { r32: '#2299ff', r16: '#00cc88', qf: '#ff9922', sf: '#ff3366' },
+    nodeRing: 'rgba(100,160,255,0.5)',
+    glow: true,
+  },
+  clean: {
+    bg: '#f5f4f1',
+    land: '#e8e6e0',
+    landStroke: '#d5d3cc',
+    coast: null,
+    grid: 'rgba(0,0,0,0.03)',
+    text: 'rgba(0,0,0,0.1)',
+    hint: 'rgba(0,0,0,0.2)',
+    btnBg: '#e8e6e0', btnTxt: '#666', btnABg: '#333', btnATxt: '#fff',
+    rndBg: '#e8e6e0', rndTxt: '#888',
+    rounds: { r32: '#3377cc', r16: '#22aa66', qf: '#dd7711', sf: '#cc2255' },
+    nodeRing: 'rgba(0,0,0,0.2)',
+    glow: false,
+  },
+  atlas: {
+    bg: '#ffffff',
+    land: '#c5dff0',
+    landStroke: '#90bbd8',
+    coast: null,
+    grid: 'rgba(0,80,160,0.04)',
+    text: 'rgba(0,60,120,0.15)',
+    hint: 'rgba(0,60,120,0.25)',
+    btnBg: '#ddeeff', btnTxt: '#336699', btnABg: '#336699', btnATxt: '#fff',
+    rndBg: '#ddeeff', rndTxt: '#336699',
+    rounds: { r32: '#1166bb', r16: '#11885f', qf: '#cc7700', sf: '#bb1144' },
+    nodeRing: 'rgba(0,60,120,0.3)',
+    glow: false,
+  }
+};
+
+function setMode(m) {
+  mode = m;
+  updateUI(); draw();
+}
+function toggleRound(r) {
+  rounds[r] = !rounds[r];
+  updateUI(); draw();
+}
+function toggleLabels() {
+  showLabels = !showLabels;
+  updateUI(); draw();
+}
+function updateUI() {
+  const t = themes[mode];
+  document.body.style.background = t.bg;
+  document.getElementById('hint').style.color = t.hint;
+  document.querySelectorAll('.btn').forEach(b => {
+    const active = b.dataset.mode === mode;
+    b.style.background = active ? t.btnABg : t.btnBg;
+    b.style.color = active ? t.btnATxt : t.btnTxt;
+    b.classList.toggle('active', active);
+  });
+  document.querySelectorAll('.rnd').forEach(b => {
+    if (b.id === 'lblBtn') return;
+    const on = rounds[b.dataset.r];
+    const rc = t.rounds[b.dataset.r];
+    b.style.background = on ? rc : t.rndBg;
+    b.style.color = on ? '#fff' : t.rndTxt;
+    b.classList.toggle('on', on);
+  });
+  const lb = document.getElementById('lblBtn');
+  lb.style.background = showLabels ? t.btnABg : t.rndBg;
+  lb.style.color = showLabels ? t.btnATxt : t.rndTxt;
+  lb.classList.toggle('on', showLabels);
+}
+
+function resize() {
+  W = window.innerWidth; H = window.innerHeight;
+  C.width = W * DPR; C.height = H * DPR;
+  C.style.width = W + 'px'; C.style.height = H + 'px';
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+}
+
+function draw() {
+  const t = themes[mode];
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = t.bg;
+  ctx.fillRect(0, 0, W, H);
+
+  // Grid lines
+  if (t.grid) {
+    ctx.strokeStyle = t.grid; ctx.lineWidth = 0.5;
+    for (let lon = -180; lon <= 180; lon += 30) {
+      const [x] = proj(lon, 0);
+      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+    }
+    for (let lat = -60; lat <= 80; lat += 30) {
+      const [,y] = proj(0, lat);
+      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+    }
+  }
+
+  // Continents
+  for (const c of MAP) {
+    ctx.beginPath();
+    const pts = c.pts.map(([lo,la]) => proj(lo,la));
+    ctx.moveTo(pts[0][0], pts[0][1]);
+    for (let i = 1; i < pts.length; i++) ctx.lineTo(pts[i][0], pts[i][1]);
+    ctx.closePath();
+    ctx.fillStyle = t.land; ctx.fill();
+    if (t.landStroke) { ctx.strokeStyle = t.landStroke; ctx.lineWidth = 1; ctx.stroke(); }
+  }
+
+  // Coast glow (sky mode)
+  if (t.coast) {
+    for (const c of MAP) {
+      ctx.beginPath();
+      const pts = c.pts.map(([lo,la]) => proj(lo,la));
+      ctx.moveTo(pts[0][0], pts[0][1]);
+      for (let i = 1; i < pts.length; i++) ctx.lineTo(pts[i][0], pts[i][1]);
+      ctx.closePath();
+      ctx.strokeStyle = t.coast; ctx.lineWidth = 6; ctx.stroke();
+    }
+  }
+
+  // --- Connection lines ---
+  function drawConn(t1, t2, color, width, decided, round) {
+    const p1 = P[t1], p2 = P[t2];
+    if (!p1 || !p2) return;
+    const [x1,y1] = proj(p1[0], p1[1]);
+    const [x2,y2] = proj(p2[0], p2[1]);
+
+    if (t.glow && decided) {
+      ctx.save();
+      ctx.shadowColor = color; ctx.shadowBlur = 16;
+      drawLine(x1,y1,x2,y2, color, width+2, decided);
+      ctx.restore();
+    }
+    drawLine(x1,y1,x2,y2, color, width, decided);
+  }
+
+  function drawLine(x1,y1,x2,y2, color, w, decided) {
+    const dx = x2-x1, dy = y2-y1;
+    const dist = Math.sqrt(dx*dx+dy*dy);
+
+    ctx.beginPath();
+    if (mode === 'sky') {
+      // Curved arcs (flight route style)
+      const mx = (x1+x2)/2, my = (y1+y2)/2;
+      const bow = -dist * 0.18;
+      ctx.moveTo(x1, y1);
+      ctx.quadraticCurveTo(mx, my + bow, x2, y2);
+    } else {
+      // Straight lines
+      ctx.moveTo(x1, y1); ctx.lineTo(x2, y2);
+    }
+    ctx.strokeStyle = color;
+    ctx.lineWidth = w;
+    ctx.lineCap = 'round';
+    if (!decided) ctx.setLineDash([4, 6]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  const rc = t.rounds;
+
+  // R32 connections
+  if (rounds.r32) {
+    for (const m of R32) {
+      const w = winner(m);
+      const dec = w != null;
+      const col = dec ? (pc[w] || rc.r32) : rc.r32;
+      const alpha = dec ? '' : '55';
+      const lw = dec ? 2.5 : 1.2;
+      if (selected && m.h !== selected && m.a !== selected) {
+        drawConn(m.h, m.a, col + '15', 0.8, false, 'r32');
+      } else {
+        drawConn(m.h, m.a, col + alpha, lw, dec, 'r32');
+      }
+    }
+  }
+
+  // R16 connections
+  if (rounds.r16) {
+    for (const m of R16M) {
+      if (!isR(m.h) || !isR(m.a)) continue;
+      const w = winner(m);
+      const dec = w != null;
+      const col = dec ? (pc[w] || rc.r16) : rc.r16;
+      const alpha = dec ? '' : '55';
+      const lw = dec ? 3 : 1.5;
+      if (selected && m.h !== selected && m.a !== selected) {
+        drawConn(m.h, m.a, col + '15', 0.8, false, 'r16');
+      } else {
+        drawConn(m.h, m.a, col + alpha, lw, dec, 'r16');
+      }
+    }
+  }
+
+  // --- Team nodes ---
+  const nr = Math.max(8, W * 0.012);
+
+  function drawNode(team, highlight) {
+    if (!P[team]) return;
+    const [x, y] = proj(P[team][0], P[team][1]);
+
+    // Check if eliminated in R32
+    let elim = false;
+    for (const m of R32) {
+      const w = winner(m);
+      if (w && ((m.h === team && w !== team) || (m.a === team && w !== team))) elim = true;
+    }
+
+    ctx.save();
+    if (highlight) {
+      ctx.beginPath(); ctx.arc(x, y, nr+6, 0, Math.PI*2);
+      ctx.strokeStyle = pc[team] || '#fff'; ctx.lineWidth = 3; ctx.stroke();
+      if (t.glow) { ctx.shadowColor = pc[team] || '#fff'; ctx.shadowBlur = 20; ctx.stroke(); }
+    }
+
+    // Flag circle
+    ctx.beginPath(); ctx.arc(x, y, nr, 0, Math.PI*2); ctx.clip();
+    if (flagImg[team]) {
+      ctx.drawImage(flagImg[team], x-nr, y-nr, nr*2, nr*2);
+    } else {
+      ctx.fillStyle = pc[team] || '#888';
+      ctx.fillRect(x-nr, y-nr, nr*2, nr*2);
+    }
+    if (elim) {
+      ctx.fillStyle = mode === 'sky' ? 'rgba(10,22,40,0.55)' : 'rgba(245,244,241,0.55)';
+      ctx.fillRect(x-nr, y-nr, nr*2, nr*2);
+    }
+    ctx.restore();
+
+    // Ring
+    ctx.beginPath(); ctx.arc(x, y, nr, 0, Math.PI*2);
+    ctx.strokeStyle = elim ? (mode === 'sky' ? 'rgba(60,80,120,0.3)' : 'rgba(0,0,0,0.08)') : t.nodeRing;
+    ctx.lineWidth = 1.5; ctx.stroke();
+
+    // Label
+    if (showLabels && (mode !== 'sky' || highlight)) {
+      const code = codes[team] || team.substring(0,3).toUpperCase();
+      ctx.font = `700 ${Math.max(8, nr*0.65)}px system-ui`;
+      ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+      const ly = y + nr + 4;
+      if (mode === 'sky') {
+        ctx.fillStyle = 'rgba(150,200,255,0.7)';
+      } else {
+        ctx.fillStyle = elim ? 'rgba(0,0,0,0.15)' : 'rgba(0,0,0,0.5)';
+      }
+      ctx.fillText(code, x, ly);
+    }
+  }
+
+  // Draw all nodes
+  const allTeams = new Set();
+  for (const m of R32) { allTeams.add(m.h); allTeams.add(m.a); }
+  for (const m of R16M) { if (isR(m.h)) allTeams.add(m.h); if (isR(m.a)) allTeams.add(m.a); }
+
+  for (const team of allTeams) {
+    drawNode(team, team === selected);
+  }
+
+  // Title
+  ctx.font = `200 ${Math.max(12, W*0.014)}px system-ui`;
+  ctx.textAlign = 'left'; ctx.textBaseline = 'top';
+  ctx.fillStyle = t.text;
+  ctx.fillText('FOOTBALL 2026 — KNOCKOUT BRACKET', 20, H - 30);
+}
+
+// Click handler
+C.addEventListener('click', (e) => {
+  const rect = C.getBoundingClientRect();
+  const x = e.clientX - rect.left, y = e.clientY - rect.top;
+  const nr = Math.max(8, W * 0.012);
+
+  let best = null, bestD = Infinity;
+  const allTeams = new Set();
+  for (const m of R32) { allTeams.add(m.h); allTeams.add(m.a); }
+  for (const m of R16M) { if (isR(m.h)) allTeams.add(m.h); if (isR(m.a)) allTeams.add(m.a); }
+
+  for (const team of allTeams) {
+    if (!P[team]) continue;
+    const [px, py] = proj(P[team][0], P[team][1]);
+    const d = Math.sqrt((x-px)**2 + (y-py)**2);
+    if (d < nr + 12 && d < bestD) { bestD = d; best = team; }
+  }
+
+  selected = (best === selected) ? null : best;
+  draw();
+});
+
+window.addEventListener('resize', () => { resize(); draw(); });
+resize(); updateUI(); loadFlags();
+setTimeout(draw, 200);
+</script>
+</body>
+</html>
