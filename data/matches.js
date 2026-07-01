@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-01 02:21 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-07-01 03:47 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -977,9 +977,9 @@ window.WC_MATCHES = [
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
     "scoreA": 1,
+    "result": "PEN",
     "pkH": 3,
-    "pkA": 4,
-    "result": "PEN"
+    "pkA": 4
   },
   {
     "n": 75,
@@ -993,9 +993,9 @@ window.WC_MATCHES = [
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
     "scoreA": 1,
+    "result": "PEN",
     "pkH": 2,
-    "pkA": 3,
-    "result": "PEN"
+    "pkA": 3
   },
   {
     "n": 78,
@@ -1035,7 +1035,7 @@ window.WC_MATCHES = [
     "venue": "Estadio Azteca",
     "city": "Mexico City, Mexico",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 0,
+    "scoreH": 2,
     "scoreA": 0,
     "isLive": true
   },
@@ -1200,7 +1200,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-06T00:00:00Z",
     "stage": "Round of 16",
     "group": null,
-    "home": "To be announced",
+    "home": "Mexico",
     "away": "To be announced",
     "venue": "Estadio Azteca",
     "city": "Mexico City, Mexico",
