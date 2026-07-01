@@ -9,11 +9,7 @@
 
   :root {
     --bg: #f5f4f1;
-    --canvas-bg: #eceae5;
-    --gold: #b8942e;
-    --gold-ring: #c9a84c;
     --text: #222;
-    --text-dim: rgba(0,0,0,0.4);
   }
 
   body {
@@ -25,820 +21,573 @@
     flex-direction: column;
     align-items: center;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
-  .header {
-    text-align: center;
-    padding: 28px 20px 4px;
-    max-width: 600px;
-  }
-  .header h1 {
-    font-size: 13px; font-weight: 700; letter-spacing: 3px;
-    text-transform: uppercase; color: var(--gold); margin-bottom: 6px;
-  }
-  .header p { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+  canvas { display: block; cursor: pointer; }
 
-  .tabs {
-    display: flex; gap: 2px; background: rgba(0,0,0,0.05);
-    border-radius: 10px; padding: 3px; margin: 14px auto 6px;
+  #hint {
+    position: fixed;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(0,0,0,0.25);
+    font: 500 11px/1 system-ui, sans-serif;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    pointer-events: none;
   }
-  .tab {
-    font-family: inherit; font-size: 12px; font-weight: 600;
-    color: rgba(0,0,0,0.4); background: none; border: none;
-    padding: 7px 16px; border-radius: 8px; cursor: pointer;
-    transition: all 0.2s; white-space: nowrap;
-  }
-  .tab.active {
-    background: #fff; color: var(--text);
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-  }
-  .tab:hover:not(.active) { color: rgba(0,0,0,0.6); }
-
-  .version-label {
-    font-size: 11px; color: var(--text-dim); text-align: center;
-    margin: 2px 0 0; font-style: italic;
-  }
-
-  .canvas-wrap {
-    width: 100%; max-width: 900px; aspect-ratio: 1;
-    position: relative; margin: 0 auto; padding: 10px;
-  }
-
-  canvas {
-    width: 100%; height: 100%; display: block;
-    border-radius: 20px; background: var(--canvas-bg);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
-  }
-
-  .legend {
-    display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
-    padding: 4px 20px 28px; font-size: 11px; color: var(--text-dim);
-  }
-  .legend-item { display: flex; align-items: center; gap: 6px; }
-  .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
-  .legend-dot.won { border: 2px solid var(--gold-ring); background: #ddd; }
-  .legend-dot.pending { background: rgba(0,0,0,0.03); border: 1.5px dashed rgba(0,0,0,0.15); }
-  .legend-dot.out { background: rgba(0,0,0,0.04); border: 1.5px solid rgba(0,0,0,0.06); }
 </style>
 </head>
 <body>
-
-<div class="header">
-  <h1>Knockout Bracket</h1>
-  <p>Round of 32 through Final &middot; Decided matches show scores</p>
-  <div class="tabs">
-    <button class="tab active" data-mode="stripes">A &middot; Flag Stripes</button>
-    <button class="tab" data-mode="emoji">B &middot; Flag Emoji</button>
-    <button class="tab" data-mode="gradient">C &middot; Gradient</button>
-  </div>
-</div>
-<div class="version-label" id="versionLabel">Accurate flag stripe patterns clipped to circles, country code overlay</div>
-
-<div class="canvas-wrap">
-  <canvas id="bracket"></canvas>
-</div>
-
-<div class="legend">
-  <div class="legend-item"><div class="legend-dot won"></div> Advancing</div>
-  <div class="legend-item"><div class="legend-dot pending"></div> TBD</div>
-  <div class="legend-item"><div class="legend-dot out"></div> Eliminated</div>
-</div>
-
+<canvas id="c"></canvas>
+<div id="hint">Tap a flag to trace its path to the final</div>
 <script>
-const canvas = document.getElementById('bracket');
+const canvas = document.getElementById('c');
 const ctx = canvas.getContext('2d');
 const DPR = window.devicePixelRatio || 1;
-let currentMode = 'stripes';
+let S, CX, CY, SCALE;
 
-const LABELS = {
-  stripes: 'Accurate flag stripe patterns clipped to circles, country code overlay',
-  emoji: 'Native flag emoji with country code — rendering varies by OS',
-  gradient: 'Two-color diagonal gradient per country'
-};
-
-// ── Team data ──
-
-const CODES = {
-  'Mexico':'MEX','South Africa':'RSA','Korea Republic':'KOR','Czechia':'CZE',
-  'Canada':'CAN','Bosnia and Herzegovina':'BIH','Netherlands':'NED','New Zealand':'NZL',
-  'Germany':'GER','Scotland':'SCO','Brazil':'BRA','Japan':'JPN','Paraguay':'PAR',
-  'Curaçao':'CUW','France':'FRA','Uzbekistan':'UZB','Sweden':'SWE','Türkiye':'TUR',
-  "Côte d'Ivoire":'CIV','Iraq':'IRQ','Norway':'NOR','Haiti':'HAI',
-  'USA':'USA','Uruguay':'URU','England':'ENG','Jordan':'JOR',
-  'Ecuador':'ECU','Qatar':'QAT','Congo DR':'COD','IR Iran':'IRN',
-  'Belgium':'BEL','Saudi Arabia':'KSA','Senegal':'SEN','Panama':'PAN',
-  'Spain':'ESP','Tunisia':'TUN','Austria':'AUT','Ghana':'GHA',
-  'Portugal':'POR','Morocco':'MAR','Croatia':'CRO','Colombia':'COL',
-  'Argentina':'ARG','Cabo Verde':'CPV','Switzerland':'SUI','Algeria':'ALG',
-  'Australia':'AUS','Egypt':'EGY'
-};
-
-const EMOJI = {
-  'Mexico':'🇲🇽','South Africa':'🇿🇦','Korea Republic':'🇰🇷','Czechia':'🇨🇿',
-  'Canada':'🇨🇦','Bosnia and Herzegovina':'🇧🇦','Netherlands':'🇳🇱','New Zealand':'🇳🇿',
-  'Germany':'🇩🇪','Scotland':'🏴󠁧󠁢󠁳󠁣󠁴󠁿','Brazil':'🇧🇷','Japan':'🇯🇵','Paraguay':'🇵🇾',
-  'Curaçao':'🇨🇼','France':'🇫🇷','Uzbekistan':'🇺🇿','Sweden':'🇸🇪','Türkiye':'🇹🇷',
-  "Côte d'Ivoire":'🇨🇮','Iraq':'🇮🇶','Norway':'🇳🇴','Haiti':'🇭🇹',
-  'USA':'🇺🇸','Uruguay':'🇺🇾','England':'🏴󠁧󠁢󠁥󠁮󠁧󠁿','Jordan':'🇯🇴',
-  'Ecuador':'🇪🇨','Qatar':'🇶🇦','Congo DR':'🇨🇩','IR Iran':'🇮🇷',
-  'Belgium':'🇧🇪','Saudi Arabia':'🇸🇦','Senegal':'🇸🇳','Panama':'🇵🇦',
-  'Spain':'🇪🇸','Tunisia':'🇹🇳','Austria':'🇦🇹','Ghana':'🇬🇭',
-  'Portugal':'🇵🇹','Morocco':'🇲🇦','Croatia':'🇭🇷','Colombia':'🇨🇴',
-  'Argentina':'🇦🇷','Cabo Verde':'🇨🇻','Switzerland':'🇨🇭','Algeria':'🇩🇿',
-  'Australia':'🇦🇺','Egypt':'🇪🇬'
-};
-
-// ── Flag stripe definitions ──
-
-const FLAGS = {
-  'Mexico':       {t:'v', c:['#006847','#fff','#CE1126']},
-  'South Africa': {t:'sa', c:['#DE3831','#fff','#007A4D','#002395','#FFB612']},
-  'Korea Republic':{t:'japan', c:['#fff','#C60C30']},
-  'Czechia':      {t:'czech', c:['#fff','#D7141A','#11457E']},
-  'Canada':       {t:'canada', c:['#FF0000','#fff']},
-  'Bosnia and Herzegovina':{t:'solid', bg:'#002395', accent:'#FECB00'},
-  'Netherlands':  {t:'h', c:['#AE1C28','#fff','#21468B']},
-  'New Zealand':  {t:'solid', bg:'#00247D', accent:'#CC142B'},
-  'Germany':      {t:'h', c:['#000','#DD0000','#FFCC00']},
-  'Scotland':     {t:'scotland', c:['#005EB8','#fff']},
-  'Brazil':       {t:'brazil', c:['#009B3A','#FEDF00']},
-  'Japan':        {t:'japan', c:['#fff','#BC002D']},
-  'Paraguay':     {t:'h', c:['#D52B1E','#fff','#0038A8']},
-  'Curaçao':      {t:'solid', bg:'#002B7F', accent:'#F9E814'},
-  'France':       {t:'v', c:['#002395','#fff','#ED2939']},
-  'Uzbekistan':   {t:'h', c:['#1EB53A','#fff','#0099B5']},
-  'Sweden':       {t:'sweden', c:['#006AA7','#FECC02']},
-  'Türkiye':      {t:'turkey', c:['#E30A17','#fff']},
-  "Côte d'Ivoire":{t:'v', c:['#F77F00','#fff','#009E60']},
-  'Iraq':         {t:'h', c:['#CE1126','#fff','#007A3D']},
-  'Norway':       {t:'norway', c:['#BA0C2F','#fff','#00205B']},
-  'Haiti':        {t:'h2', c:['#00209F','#D21034']},
-  'USA':          {t:'usa', c:['#3C3B6E','#B22234','#fff']},
-  'Uruguay':      {t:'uruguay', c:['#001489','#fff','#FCD116']},
-  'England':      {t:'england', c:['#fff','#CF081F']},
-  'Jordan':       {t:'jordan', c:['#000','#fff','#007A3D','#CE1126']},
-  'Ecuador':      {t:'ecuador', c:['#FFD100','#034EA2','#CE1126']},
-  'Qatar':        {t:'solid', bg:'#8D1B3D', accent:'#fff'},
-  'Congo DR':     {t:'congo', c:['#007FFF','#CE1021','#FCD116']},
-  'IR Iran':      {t:'h', c:['#239F40','#fff','#DA0000']},
-  'Belgium':      {t:'v', c:['#2D2926','#FDDA24','#EF3340']},
-  'Saudi Arabia': {t:'solid', bg:'#006C35', accent:'#fff'},
-  'Senegal':      {t:'v', c:['#00853F','#FDEF42','#E31B23']},
-  'Panama':       {t:'panama', c:['#fff','#DA121A','#003DA5']},
-  'Spain':        {t:'spain', c:['#AA151B','#F1BF00']},
-  'Tunisia':      {t:'solid', bg:'#E70013', accent:'#fff'},
-  'Austria':      {t:'h', c:['#ED2939','#fff','#ED2939']},
-  'Ghana':        {t:'h', c:['#EF3340','#FCD116','#009739']},
-  'Portugal':     {t:'portugal', c:['#006600','#FF0000','#FFCC00']},
-  'Morocco':      {t:'solid', bg:'#C1272D', accent:'#006233'},
-  'Croatia':      {t:'h', c:['#FF0000','#fff','#171796']},
-  'Colombia':     {t:'colombia', c:['#FCD116','#003893','#CE1126']},
-  'Argentina':    {t:'h', c:['#74ACDF','#fff','#74ACDF']},
-  'Cabo Verde':   {t:'caboverde', c:['#003893','#fff','#CF2027','#FCD116']},
-  'Switzerland':  {t:'swiss', c:['#FF0000','#fff']},
-  'Algeria':      {t:'v2', c:['#006233','#fff']},
-  'Australia':    {t:'solid', bg:'#00008B', accent:'#fff'},
-  'Egypt':        {t:'h', c:['#CE1126','#fff','#000']},
-};
-
-const GRAD_COLORS = {
-  'Mexico':['#006847','#CE1126'],'South Africa':['#007749','#FFB81C'],
-  'Korea Republic':['#C60C30','#003478'],'Czechia':['#11457E','#D7141A'],
-  'Canada':['#FF0000','#FFFFFF'],'Bosnia and Herzegovina':['#002395','#FECB00'],
-  'Netherlands':['#AE1C28','#21468B'],'New Zealand':['#00247D','#CC142B'],
-  'Germany':['#DD0000','#FFCC00'],'Scotland':['#005EB8','#FFFFFF'],
-  'Brazil':['#009B3A','#FEDF00'],'Japan':['#BC002D','#FFFFFF'],
-  'Paraguay':['#D52B1E','#0038A8'],'Curaçao':['#002B7F','#F9E814'],
-  'France':['#002395','#ED2939'],'Uzbekistan':['#1EB53A','#0099B5'],
-  'Sweden':['#006AA7','#FECC02'],'Türkiye':['#E30A17','#FFFFFF'],
-  "Côte d'Ivoire":['#F77F00','#009E60'],'Iraq':['#CE1126','#007A3D'],
-  'Norway':['#BA0C2F','#00205B'],'Haiti':['#00209F','#D21034'],
-  'USA':['#3C3B6E','#B22234'],'Uruguay':['#001489','#5BCEFA'],
-  'England':['#FFFFFF','#CF081F'],'Jordan':['#007A3D','#CE1126'],
-  'Ecuador':['#FFD100','#034EA2'],'Qatar':['#8D1B3D','#FFFFFF'],
-  'Congo DR':['#007FFF','#CE1021'],'IR Iran':['#239F40','#DA0000'],
-  'Belgium':['#2D2926','#FDDA24'],'Saudi Arabia':['#006C35','#FFFFFF'],
-  'Senegal':['#00853F','#FDEF42'],'Panama':['#DA121A','#003DA5'],
-  'Spain':['#AA151B','#F1BF00'],'Tunisia':['#E70013','#FFFFFF'],
-  'Austria':['#ED2939','#FFFFFF'],'Ghana':['#006B3F','#FCD116'],
-  'Portugal':['#006600','#FF0000'],'Morocco':['#C1272D','#006233'],
-  'Croatia':['#FF0000','#171796'],'Colombia':['#FCD116','#003893'],
-  'Argentina':['#74ACDF','#F6B40E'],'Cabo Verde':['#003893','#CF2027'],
-  'Switzerland':['#FF0000','#FFFFFF'],'Algeria':['#006233','#D21034'],
-  'Australia':['#00008B','#FFCD00'],'Egypt':['#CE1126','#000000']
-};
-
-// ══════════════════════════════════════════════════════════════
-// BRACKET DATA — official order from iOS bracketMatchOrder
-// Consecutive pairs feed the same R16 slot:
-//   [0]+[1]→R16[0], [2]+[3]→R16[1], ... [14]+[15]→R16[7]
-// ══════════════════════════════════════════════════════════════
-
-const R32 = [
-  /* M74 */ {home:'Germany',       away:'Paraguay',               sh:1,    sa:1},
-  /* M77 */ {home:'France',        away:'Sweden',                 sh:null, sa:null},
-  /* M73 */ {home:'South Africa',  away:'Canada',                 sh:0,    sa:1},
-  /* M75 */ {home:'Netherlands',   away:'Morocco',                sh:null, sa:null},
-  /* M83 */ {home:'Portugal',      away:'Croatia',                sh:null, sa:null},
-  /* M84 */ {home:'Spain',         away:'Austria',                sh:null, sa:null},
-  /* M81 */ {home:'USA',           away:'Bosnia and Herzegovina', sh:null, sa:null},
-  /* M82 */ {home:'Belgium',       away:'Senegal',                sh:null, sa:null},
-  /* M76 */ {home:'Brazil',        away:'Japan',                  sh:2,    sa:1},
-  /* M78 */ {home:"Côte d'Ivoire", away:'Norway',                 sh:null, sa:null},
-  /* M79 */ {home:'Mexico',        away:'Ecuador',                sh:null, sa:null},
-  /* M80 */ {home:'England',       away:'Congo DR',               sh:null, sa:null},
-  /* M86 */ {home:'Argentina',     away:'Cabo Verde',             sh:null, sa:null},
-  /* M88 */ {home:'Australia',     away:'Egypt',                  sh:null, sa:null},
-  /* M85 */ {home:'Switzerland',   away:'Algeria',                sh:null, sa:null},
-  /* M87 */ {home:'Colombia',      away:'Ghana',                  sh:null, sa:null},
-];
-
-// R16 bracket slots [M89, M90, M93, M94, M91, M92, M95, M96]
-// R16 teams computed dynamically from R32 results in draw()
-
-// ── Drawing helpers ──
-
-function polar(cx, cy, r, deg) {
-  var rad = (deg - 90) * Math.PI / 180;
-  return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
+function resize() {
+  const side = Math.min(window.innerWidth, window.innerHeight);
+  S = Math.max(side, 700);
+  canvas.width = S * DPR;
+  canvas.height = S * DPR;
+  canvas.style.width = S + 'px';
+  canvas.style.height = S + 'px';
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  CX = S / 2; CY = S / 2;
+  SCALE = S / 900;
 }
 
-function drawLine(x1, y1, x2, y2, color, width) {
+const bracketOrder = [74,77,73,75, 83,84,81,82, 76,78,79,80, 86,88,85,87];
+
+const matches = {
+  74:{home:'Germany',away:'Paraguay',sH:1,sA:1,result:'PEN',pkH:3,pkA:4},
+  77:{home:'France',away:'Sweden',sH:3,sA:0},
+  73:{home:'South Africa',away:'Canada',sH:0,sA:1},
+  75:{home:'Netherlands',away:'Morocco',sH:1,sA:1,result:'PEN',pkH:3,pkA:4},
+  83:{home:'Portugal',away:'Croatia'},
+  84:{home:'Spain',away:'Austria'},
+  81:{home:'USA',away:'Bosnia and Herzegovina'},
+  82:{home:'Belgium',away:'Senegal'},
+  76:{home:'Brazil',away:'Japan',sH:2,sA:1},
+  78:{home:'Côte d\'Ivoire',away:'Norway',sH:1,sA:2},
+  79:{home:'Mexico',away:'Ecuador',sH:2,sA:0},
+  80:{home:'England',away:'Congo DR'},
+  86:{home:'Argentina',away:'Cabo Verde'},
+  88:{home:'Australia',away:'Egypt'},
+  85:{home:'Switzerland',away:'Algeria'},
+  87:{home:'Colombia',away:'Ghana'},
+  89:{home:'Paraguay',away:'France'},
+  90:{home:'Canada',away:'Morocco'},
+  91:{home:'Brazil',away:'Norway'},
+  92:{home:'Mexico',away:'TBD'},
+  93:{home:'TBD',away:'TBD'},94:{home:'TBD',away:'TBD'},
+  95:{home:'TBD',away:'TBD'},96:{home:'TBD',away:'TBD'},
+  97:{home:'TBD',away:'TBD'},98:{home:'TBD',away:'TBD'},
+  99:{home:'TBD',away:'TBD'},100:{home:'TBD',away:'TBD'},
+  101:{home:'TBD',away:'TBD'},102:{home:'TBD',away:'TBD'},
+  104:{home:'TBD',away:'TBD'},
+};
+
+const r16Order = [89,90,93,94,91,92,95,96];
+const qfOrder = [97,98,99,100];
+const sfOrder = [101,102];
+
+const codes = {
+  'Algeria':'ALG','Argentina':'ARG','Australia':'AUS','Austria':'AUT',
+  'Belgium':'BEL','Bosnia and Herzegovina':'BIH','Brazil':'BRA',
+  'Cabo Verde':'CPV','Canada':'CAN','Colombia':'COL','Congo DR':'COD',
+  'Croatia':'CRO','Curaçao':'CUW','Côte d\'Ivoire':'CIV','Czechia':'CZE',
+  'Ecuador':'ECU','Egypt':'EGY','England':'ENG','France':'FRA',
+  'Germany':'GER','Ghana':'GHA','Haiti':'HAI','IR Iran':'IRN',
+  'Iraq':'IRQ','Japan':'JPN','Jordan':'JOR','Korea Republic':'KOR',
+  'Mexico':'MEX','Morocco':'MAR','Netherlands':'NED','New Zealand':'NZL',
+  'Norway':'NOR','Panama':'PAN','Paraguay':'PAR','Portugal':'POR',
+  'Qatar':'QAT','Saudi Arabia':'KSA','Scotland':'SCO','Senegal':'SEN',
+  'South Africa':'RSA','Spain':'ESP','Sweden':'SWE','Switzerland':'SUI',
+  'Tunisia':'TUN','Türkiye':'TUR','USA':'USA','Uruguay':'URU','Uzbekistan':'UZB',
+};
+
+const primaryColors = {
+  'Algeria':'#00882a','Argentina':'#74b8ed','Australia':'#003078','Austria':'#cc0000',
+  'Belgium':'#cc0000','Bosnia and Herzegovina':'#002688','Brazil':'#008c33',
+  'Cabo Verde':'#003488','Canada':'#cc0000','Colombia':'#ffc700','Congo DR':'#0066cc',
+  'Croatia':'#cc0000','Côte d\'Ivoire':'#ff8000','Czechia':'#cc0000',
+  'Ecuador':'#004da8','Egypt':'#cc0000','England':'#cc0000',
+  'France':'#002688','Germany':'#cc0000','Ghana':'#cc2828',
+  'Japan':'#cc0000','Mexico':'#006434','Morocco':'#cc0000',
+  'Netherlands':'#ff6600','Norway':'#cc0000','Paraguay':'#cc0000',
+  'Portugal':'#006834','Saudi Arabia':'#006b2e','Scotland':'#002688',
+  'Senegal':'#006b2e','South Africa':'#006b2e','Spain':'#cc0000',
+  'Sweden':'#005a9c','Switzerland':'#cc0000','USA':'#002670',
+  'Uruguay':'#4d80cc','Uzbekistan':'#0066b3',
+};
+
+function matchWinner(m) {
+  if (m.sH == null || m.sA == null) return null;
+  if (m.result === 'PEN') {
+    if (m.pkH != null && m.pkA != null) return m.pkH > m.pkA ? m.home : m.away;
+    return null;
+  }
+  if (m.sH > m.sA) return m.home;
+  if (m.sA > m.sH) return m.away;
+  return null;
+}
+
+function isReal(t) { return t && t !== 'TBD' && !t.startsWith('To be'); }
+
+const flagImages = {};
+let flagsLoaded = 0;
+
+function loadFlags() {
+  const allTeams = new Set();
+  for (const m of Object.values(matches)) {
+    if (isReal(m.home)) allTeams.add(m.home);
+    if (isReal(m.away)) allTeams.add(m.away);
+  }
+  const total = allTeams.size;
+  for (const team of allTeams) {
+    const code = codes[team] || team.substring(0,3).toUpperCase();
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => { flagImages[team] = img; flagsLoaded++; if (flagsLoaded >= total) draw(); };
+    img.onerror = () => { flagsLoaded++; if (flagsLoaded >= total) draw(); };
+    img.src = `https://img.uefa.com/imgml/flags/140x140/${code}.png`;
+  }
+}
+
+let selectedTeams = new Set();
+
+function polar(r, deg) {
+  const rad = (deg - 90) * Math.PI / 180;
+  return { x: CX + r * Math.cos(rad), y: CY + r * Math.sin(rad) };
+}
+
+function drawLine(from, to, color, width) {
   ctx.beginPath();
-  ctx.moveTo(x1, y1); ctx.lineTo(x2, y2);
-  ctx.strokeStyle = color; ctx.lineWidth = width || 1;
+  ctx.moveTo(from.x, from.y);
+  ctx.lineTo(to.x, to.y);
+  ctx.strokeStyle = color;
+  ctx.lineWidth = width;
+  ctx.lineCap = 'round';
   ctx.stroke();
 }
 
-function drawJunction(x, y, s) {
-  ctx.beginPath();
-  ctx.arc(x, y, 3 * s, 0, Math.PI * 2);
-  ctx.fillStyle = 'rgba(0,0,0,0.12)';
-  ctx.fill();
+function teamColor(team) {
+  if (!team) return 'rgba(0,0,0,0.06)';
+  return primaryColors[team] || '#888';
 }
-
-function drawEmptyNode(x, y, r) {
-  ctx.beginPath();
-  ctx.arc(x, y, r, 0, Math.PI * 2);
-  ctx.fillStyle = 'rgba(0,0,0,0.025)';
-  ctx.fill();
-  ctx.setLineDash([4, 5]);
-  ctx.strokeStyle = 'rgba(0,0,0,0.12)';
-  ctx.lineWidth = 1.5;
-  ctx.stroke();
-  ctx.setLineDash([]);
-}
-
-function drawScore(x, y, sh, sa, s) {
-  ctx.font = '800 ' + (8*s) + 'px -apple-system, system-ui, sans-serif';
-  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-  ctx.fillStyle = 'rgba(140,110,30,0.8)';
-  ctx.fillText(sh + '–' + sa, x, y);
-}
-
-// ── Flag rendering ──
-
-function drawFlagStripes(x, y, r, team) {
-  var f = FLAGS[team];
-  if (!f) { drawFlagGradient(x, y, r, team); return; }
-
-  ctx.save();
-  ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.clip();
-
-  var d = r * 2, l = x - r, t = y - r;
-
-  switch(f.t) {
-    case 'h':
-      ctx.fillStyle=f.c[0]; ctx.fillRect(l,t,d,d/3);
-      ctx.fillStyle=f.c[1]; ctx.fillRect(l,t+d/3,d,d/3);
-      ctx.fillStyle=f.c[2]; ctx.fillRect(l,t+2*d/3,d,d/3+1);
-      break;
-    case 'h2':
-      ctx.fillStyle=f.c[0]; ctx.fillRect(l,t,d,d/2);
-      ctx.fillStyle=f.c[1]; ctx.fillRect(l,t+d/2,d,d/2);
-      break;
-    case 'v':
-      ctx.fillStyle=f.c[0]; ctx.fillRect(l,t,d/3,d);
-      ctx.fillStyle=f.c[1]; ctx.fillRect(l+d/3,t,d/3,d);
-      ctx.fillStyle=f.c[2]; ctx.fillRect(l+2*d/3,t,d/3+1,d);
-      break;
-    case 'v2':
-      ctx.fillStyle=f.c[0]; ctx.fillRect(l,t,d/2,d);
-      ctx.fillStyle=f.c[1]; ctx.fillRect(l+d/2,t,d/2,d);
-      break;
-    case 'solid':
-      ctx.fillStyle=f.bg; ctx.fillRect(l,t,d,d);
-      if(f.accent){ctx.fillStyle=f.accent;ctx.beginPath();ctx.arc(x,y,r*0.32,0,Math.PI*2);ctx.fill();}
-      break;
-    case 'japan':
-      ctx.fillStyle=f.c[0];ctx.fillRect(l,t,d,d);
-      ctx.fillStyle=f.c[1];ctx.beginPath();ctx.arc(x,y,r*0.38,0,Math.PI*2);ctx.fill();
-      break;
-    case 'czech':
-      ctx.fillStyle='#fff';ctx.fillRect(l,t,d,d/2);
-      ctx.fillStyle='#D7141A';ctx.fillRect(l,t+d/2,d,d/2);
-      ctx.fillStyle='#11457E';ctx.beginPath();ctx.moveTo(l,t);ctx.lineTo(x,y);ctx.lineTo(l,t+d);ctx.fill();
-      break;
-    case 'canada':
-      ctx.fillStyle='#FF0000';ctx.fillRect(l,t,d*0.25,d);
-      ctx.fillStyle='#fff';ctx.fillRect(l+d*0.25,t,d*0.5,d);
-      ctx.fillStyle='#FF0000';ctx.fillRect(l+d*0.75,t,d*0.25,d);
-      ctx.fillStyle='#FF0000';ctx.beginPath();
-      ctx.moveTo(x,y-r*0.32);ctx.lineTo(x+r*0.18,y);ctx.lineTo(x,y+r*0.32);ctx.lineTo(x-r*0.18,y);ctx.fill();
-      break;
-    case 'norway':
-      ctx.fillStyle='#BA0C2F';ctx.fillRect(l,t,d,d);
-      ctx.fillStyle='#fff';ctx.fillRect(l+d*0.28,t,d*0.18,d);ctx.fillRect(l,t+d*0.39,d,d*0.22);
-      ctx.fillStyle='#00205B';ctx.fillRect(l+d*0.32,t,d*0.1,d);ctx.fillRect(l,t+d*0.43,d,d*0.14);
-      break;
-    case 'sweden':
-      ctx.fillStyle='#006AA7';ctx.fillRect(l,t,d,d);
-      ctx.fillStyle='#FECC02';ctx.fillRect(l+d*0.28,t,d*0.16,d);ctx.fillRect(l,t+d*0.4,d,d*0.2);
-      break;
-    case 'scotland':
-      ctx.fillStyle='#005EB8';ctx.fillRect(l,t,d,d);
-      ctx.strokeStyle='#fff';ctx.lineWidth=r*0.15;
-      ctx.beginPath();ctx.moveTo(l,t);ctx.lineTo(l+d,t+d);ctx.stroke();
-      ctx.beginPath();ctx.moveTo(l+d,t);ctx.lineTo(l,t+d);ctx.stroke();
-      break;
-    case 'england':
-      ctx.fillStyle='#fff';ctx.fillRect(l,t,d,d);ctx.fillStyle='#CF081F';
-      ctx.fillRect(l+d*0.43,t,d*0.14,d);ctx.fillRect(l,t+d*0.43,d,d*0.14);
-      break;
-    case 'usa':
-      for(var s=0;s<13;s++){ctx.fillStyle=s%2===0?'#B22234':'#fff';ctx.fillRect(l,t+s*d/13,d,d/13+1);}
-      ctx.fillStyle='#3C3B6E';ctx.fillRect(l,t,d*0.45,d*0.54);
-      break;
-    case 'uruguay':
-      for(var s=0;s<9;s++){ctx.fillStyle=s%2===0?'#fff':'#001489';ctx.fillRect(l,t+s*d/9,d,d/9+1);}
-      ctx.fillStyle='#fff';ctx.fillRect(l,t,d*0.4,d*0.56);
-      ctx.fillStyle='#FCD116';ctx.beginPath();ctx.arc(l+d*0.2,t+d*0.28,r*0.16,0,Math.PI*2);ctx.fill();
-      break;
-    case 'spain':
-      ctx.fillStyle='#AA151B';ctx.fillRect(l,t,d,d*0.25);
-      ctx.fillStyle='#F1BF00';ctx.fillRect(l,t+d*0.25,d,d*0.5);
-      ctx.fillStyle='#AA151B';ctx.fillRect(l,t+d*0.75,d,d*0.25);
-      break;
-    case 'portugal':
-      ctx.fillStyle='#006600';ctx.fillRect(l,t,d*0.4,d);
-      ctx.fillStyle='#FF0000';ctx.fillRect(l+d*0.4,t,d*0.6,d);
-      ctx.fillStyle='#FFCC00';ctx.beginPath();ctx.arc(l+d*0.4,y,r*0.22,0,Math.PI*2);ctx.fill();
-      break;
-    case 'panama':
-      ctx.fillStyle='#fff';ctx.fillRect(l,t,d,d);
-      ctx.fillStyle='#DA121A';ctx.fillRect(l+d/2,t,d/2,d/2);
-      ctx.fillStyle='#003DA5';ctx.fillRect(l,t+d/2,d/2,d/2);
-      ctx.fillStyle='#003DA5';ctx.beginPath();ctx.arc(l+d*0.25,t+d*0.25,r*0.1,0,Math.PI*2);ctx.fill();
-      ctx.fillStyle='#DA121A';ctx.beginPath();ctx.arc(l+d*0.75,t+d*0.75,r*0.1,0,Math.PI*2);ctx.fill();
-      break;
-    case 'colombia':
-      ctx.fillStyle='#FCD116';ctx.fillRect(l,t,d,d/2);
-      ctx.fillStyle='#003893';ctx.fillRect(l,t+d/2,d,d/4);
-      ctx.fillStyle='#CE1126';ctx.fillRect(l,t+d*0.75,d,d/4);
-      break;
-    case 'ecuador':
-      ctx.fillStyle='#FFD100';ctx.fillRect(l,t,d,d/2);
-      ctx.fillStyle='#034EA2';ctx.fillRect(l,t+d/2,d,d/4);
-      ctx.fillStyle='#CE1126';ctx.fillRect(l,t+d*0.75,d,d/4);
-      break;
-    case 'brazil':
-      ctx.fillStyle='#009B3A';ctx.fillRect(l,t,d,d);ctx.fillStyle='#FEDF00';
-      ctx.beginPath();ctx.moveTo(x,t+d*0.12);ctx.lineTo(l+d*0.9,y);ctx.lineTo(x,t+d*0.88);ctx.lineTo(l+d*0.1,y);ctx.fill();
-      ctx.fillStyle='#002776';ctx.beginPath();ctx.arc(x,y,r*0.28,0,Math.PI*2);ctx.fill();
-      break;
-    case 'turkey':
-      ctx.fillStyle='#E30A17';ctx.fillRect(l,t,d,d);ctx.fillStyle='#fff';
-      ctx.beginPath();ctx.arc(x-r*0.08,y,r*0.3,0,Math.PI*2);ctx.fill();
-      ctx.fillStyle='#E30A17';ctx.beginPath();ctx.arc(x+r*0.03,y,r*0.22,0,Math.PI*2);ctx.fill();
-      break;
-    case 'jordan':
-      ctx.fillStyle='#000';ctx.fillRect(l,t,d,d/3);
-      ctx.fillStyle='#fff';ctx.fillRect(l,t+d/3,d,d/3);
-      ctx.fillStyle='#007A3D';ctx.fillRect(l,t+2*d/3,d,d/3);
-      ctx.fillStyle='#CE1126';ctx.beginPath();ctx.moveTo(l,t);ctx.lineTo(l+d*0.4,y);ctx.lineTo(l,t+d);ctx.fill();
-      break;
-    case 'congo':
-      ctx.fillStyle='#007FFF';ctx.fillRect(l,t,d,d);
-      ctx.strokeStyle='#FCD116';ctx.lineWidth=r*0.22;
-      ctx.beginPath();ctx.moveTo(l,t+d);ctx.lineTo(l+d,t);ctx.stroke();
-      ctx.strokeStyle='#CE1021';ctx.lineWidth=r*0.12;
-      ctx.beginPath();ctx.moveTo(l,t+d*0.85);ctx.lineTo(l+d*0.85,t);ctx.stroke();
-      break;
-    case 'swiss':
-      ctx.fillStyle='#FF0000';ctx.fillRect(l,t,d,d);ctx.fillStyle='#fff';
-      ctx.fillRect(x-r*0.1,y-r*0.35,r*0.2,r*0.7);ctx.fillRect(x-r*0.35,y-r*0.1,r*0.7,r*0.2);
-      break;
-    case 'sa':
-      ctx.fillStyle='#002395';ctx.fillRect(l,t,d,d/2);
-      ctx.fillStyle='#DE3831';ctx.fillRect(l,t,d,d*0.17);
-      ctx.fillStyle='#007A4D';ctx.fillRect(l,t+d*0.83,d,d*0.17);
-      ctx.fillStyle='#FFB612';ctx.fillRect(l,t+d/2,d,d/2);
-      ctx.fillStyle='#007A4D';ctx.beginPath();
-      ctx.moveTo(l,t+d*0.2);ctx.lineTo(x-r*0.1,y);ctx.lineTo(l+d,y-d*0.15);
-      ctx.lineTo(l+d,y+d*0.15);ctx.lineTo(x-r*0.1,y);ctx.lineTo(l,t+d*0.8);ctx.fill();
-      break;
-    case 'caboverde':
-      ctx.fillStyle='#003893';ctx.fillRect(l,t,d,d);
-      ctx.fillStyle='#fff';ctx.fillRect(l,t+d*0.6,d,d*0.04);
-      ctx.fillStyle='#CF2027';ctx.fillRect(l,t+d*0.66,d,d*0.1);
-      ctx.fillStyle='#fff';ctx.fillRect(l,t+d*0.78,d,d*0.04);
-      break;
-    default:
-      ctx.fillStyle=f.bg||'#888';ctx.fillRect(l,t,d,d);
-  }
-  ctx.restore();
-}
-
-function drawFlagEmoji(x, y, r, team) {
-  var emoji = EMOJI[team]; if(!emoji) return;
-  ctx.save();
-  ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);
-  ctx.fillStyle='#e8e6e1';ctx.fill();
-  ctx.strokeStyle='rgba(0,0,0,0.12)';ctx.lineWidth=1.5;ctx.stroke();
-  ctx.font=r*1.3+'px serif';ctx.textAlign='center';ctx.textBaseline='middle';
-  ctx.fillText(emoji,x,y+1);
-  ctx.restore();
-}
-
-function drawFlagGradient(x, y, r, team) {
-  var colors = GRAD_COLORS[team]||['#888','#aaa'];
-  var grad = ctx.createLinearGradient(x-r,y-r,x+r,y+r);
-  grad.addColorStop(0,colors[0]);grad.addColorStop(1,colors[1]);
-  ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fillStyle=grad;ctx.fill();
-}
-
-function drawTeamNode(x, y, team, r, state, s) {
-  ctx.save();
-  if (state === 'eliminated') ctx.globalAlpha = 0.25;
-
-  // Shadow for depth
-  if (state !== 'eliminated') {
-    ctx.shadowColor = 'rgba(0,0,0,0.15)';
-    ctx.shadowBlur = 6 * s;
-    ctx.shadowOffsetY = 2 * s;
-  }
-
-  if (currentMode === 'stripes') drawFlagStripes(x, y, r, team);
-  else if (currentMode === 'emoji') drawFlagEmoji(x, y, r, team);
-  else drawFlagGradient(x, y, r, team);
-
-  ctx.shadowColor = 'transparent'; ctx.shadowBlur = 0; ctx.shadowOffsetY = 0;
-
-  // Outer stroke — thicker, more visible
-  ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI*2);
-  if (state === 'winner') {
-    ctx.strokeStyle = '#b8942e'; ctx.lineWidth = 3; ctx.stroke();
-    ctx.beginPath(); ctx.arc(x, y, r + 4*s, 0, Math.PI*2);
-    ctx.strokeStyle = 'rgba(180,140,40,0.35)'; ctx.lineWidth = 1.5; ctx.stroke();
-  } else if (currentMode !== 'emoji') {
-    ctx.strokeStyle = 'rgba(0,0,0,0.2)'; ctx.lineWidth = 1.5; ctx.stroke();
-  }
-
-  // Country code — bigger, bolder
-  var code = CODES[team] || team.slice(0,3).toUpperCase();
-  var fontSize = r * 0.75;
-
-  if (currentMode === 'emoji') {
-    ctx.font = '800 ' + (r*0.55) + 'px -apple-system, system-ui, sans-serif';
-    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillStyle = state === 'eliminated' ? 'rgba(0,0,0,0.2)' : 'rgba(0,0,0,0.6)';
-    ctx.fillText(code, x, y + r + r*0.6);
-  } else {
-    ctx.font = '900 ' + fontSize + 'px -apple-system, system-ui, sans-serif';
-    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    // Thicker outline for readability
-    ctx.lineWidth = 3.5;
-    ctx.strokeStyle = 'rgba(0,0,0,0.5)';
-    ctx.strokeText(code, x, y);
-    ctx.fillStyle = '#fff';
-    ctx.fillText(code, x, y);
-  }
-
-  ctx.restore();
-}
-
-// ══════════════════════════════════════════════════════
-// MAIN DRAW
-// ══════════════════════════════════════════════════════
 
 function draw() {
-  var rect = canvas.parentElement.getBoundingClientRect();
-  var size = Math.min(rect.width, rect.height);
-  canvas.width = size * DPR;
-  canvas.height = size * DPR;
-  canvas.style.width = size + 'px';
-  canvas.style.height = size + 'px';
-  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-  ctx.clearRect(0, 0, size, size);
+  ctx.clearRect(0, 0, S, S);
 
-  var CX = size/2, CY = size/2, s = size/900;
+  const rR32 = 400*SCALE, rR16 = 295*SCALE, rQF = 210*SCALE, rSF = 145*SCALE;
+  const nR32 = 22*SCALE, nR16 = 18*SCALE, nQF = 16*SCALE, nSF = 14*SCALE;
+  const ps32 = 11, ps16 = 8, psQF = 14, psSF = 16;
 
-  // Radii — slightly more spread
-  var R_R32 = 400*s, R_R16 = 295*s, R_QF = 210*s, R_SF = 145*s;
+  const undecided = 'rgba(0,0,0,0.06)';
+  const undecidedW = 1.5;
+  const decidedW = 3 * SCALE;
 
-  // Node sizes — BIGGER for prominence
-  var nR32 = 22*s, nR16 = 18*s, nQF = 16*s, nSF = 14*s;
-
-  var pairSpan = 11; // degrees between home/away in a match
-
-  // ── Alternating ring bands — light blue / light grey ──
-  var BLUE_BAND = 'rgba(180,210,240,0.35)';
-  var GREY_BAND = 'rgba(0,0,0,0.045)';
-  var bands = [
-    { inner: 0,              outer: R_SF - 8*s,    fill: 'rgba(180,140,40,0.04)' },
-    { inner: R_SF - 8*s,     outer: (R_SF+R_QF)/2, fill: BLUE_BAND },
-    { inner: (R_SF+R_QF)/2,  outer: (R_QF+R_R16)/2, fill: GREY_BAND },
-    { inner: (R_QF+R_R16)/2, outer: (R_R16+R_R32)/2, fill: BLUE_BAND },
-    { inner: (R_R16+R_R32)/2, outer: R_R32 + 34*s, fill: GREY_BAND },
+  // Ring bands
+  const bands = [
+    [0, rSF - 8*SCALE, 'rgba(180,145,42,0.04)'],
+    [rSF - 8*SCALE, (rSF+rQF)/2, 'rgba(100,140,200,0.07)'],
+    [(rSF+rQF)/2, (rQF+rR16)/2, 'rgba(0,0,0,0.02)'],
+    [(rQF+rR16)/2, (rR16+rR32)/2, 'rgba(100,140,200,0.07)'],
+    [(rR16+rR32)/2, rR32+34*SCALE, 'rgba(0,0,0,0.02)'],
   ];
-  bands.forEach(function(b) {
+  for (const [inner, outer, fill] of bands) {
     ctx.beginPath();
-    ctx.arc(CX, CY, b.outer, 0, Math.PI*2);
-    ctx.arc(CX, CY, b.inner, 0, Math.PI*2, true);
-    ctx.fillStyle = b.fill;
+    ctx.arc(CX, CY, outer, 0, Math.PI*2);
+    ctx.arc(CX, CY, inner, 0, Math.PI*2, true);
+    ctx.fillStyle = fill;
     ctx.fill();
-  });
-
-  // Ring lines
-  [R_R16, R_QF, R_SF].forEach(function(r) {
-    ctx.beginPath(); ctx.arc(CX, CY, r, 0, Math.PI*2);
-    ctx.strokeStyle = 'rgba(0,0,0,0.05)'; ctx.lineWidth = 0.5; ctx.stroke();
-  });
+  }
+  for (const r of [rR16, rQF, rSF]) {
+    ctx.beginPath();
+    ctx.arc(CX, CY, r, 0, Math.PI*2);
+    ctx.strokeStyle = 'rgba(0,0,0,0.04)';
+    ctx.lineWidth = 0.5;
+    ctx.stroke();
+  }
 
   // Center glow
-  var glow = ctx.createRadialGradient(CX, CY, 0, CX, CY, 110*s);
-  glow.addColorStop(0, 'rgba(180,140,40,0.12)');
-  glow.addColorStop(0.6, 'rgba(180,140,40,0.03)');
-  glow.addColorStop(1, 'rgba(180,140,40,0)');
-  ctx.beginPath(); ctx.arc(CX, CY, 110*s, 0, Math.PI*2);
-  ctx.fillStyle = glow; ctx.fill();
+  const glowR = 110*SCALE;
+  const grad = ctx.createRadialGradient(CX, CY, 0, CX, CY, glowR);
+  grad.addColorStop(0, 'rgba(180,145,42,0.12)');
+  grad.addColorStop(0.5, 'rgba(180,145,42,0.03)');
+  grad.addColorStop(1, 'rgba(180,145,42,0)');
+  ctx.fillStyle = grad;
+  ctx.beginPath();
+  ctx.arc(CX, CY, glowR, 0, Math.PI*2);
+  ctx.fill();
 
-  // ══════════════════════════════════════════════
-  // COMPUTE ALL ANGLES (propagating midpoints)
-  // ══════════════════════════════════════════════
+  const r32A = Array.from({length:16}, (_,i) => i*360/16);
+  const r16A = Array.from({length:8}, (_,i) => (r32A[i*2]+r32A[i*2+1])/2);
+  const qfA = Array.from({length:4}, (_,i) => (r16A[i*2]+r16A[i*2+1])/2);
+  const sfA = Array.from({length:2}, (_,i) => (qfA[i*2]+qfA[i*2+1])/2);
 
-  // R32: 16 positions evenly spaced
-  var r32Angles = [];
-  for (var i = 0; i < 16; i++) r32Angles.push(i * 360 / 16);
-
-  // R16: midpoint of each consecutive R32 pair
-  var r16Angles = [];
-  for (var i = 0; i < 8; i++) {
-    r16Angles.push((r32Angles[i*2] + r32Angles[i*2+1]) / 2);
-  }
-
-  // QF: midpoint of each consecutive R16 pair
-  var qfAngles = [];
-  for (var i = 0; i < 4; i++) {
-    qfAngles.push((r16Angles[i*2] + r16Angles[i*2+1]) / 2);
-  }
-
-  // SF: midpoint of each consecutive QF pair
-  var sfAngles = [];
-  for (var i = 0; i < 2; i++) {
-    sfAngles.push((qfAngles[i*2] + qfAngles[i*2+1]) / 2);
-  }
-
-  // ══════════════════════════════════════════════
-  // DRAW SPOKES (behind nodes)
-  // ══════════════════════════════════════════════
-
-  // R32 match spokes: home + away → junction
-  var r32Junctions = [];
-  for (var i = 0; i < 16; i++) {
-    var base = r32Angles[i];
-    var hp = polar(CX, CY, R_R32, base - pairSpan/2);
-    var ap = polar(CX, CY, R_R32, base + pairSpan/2);
-    var jp = polar(CX, CY, R_R32 - 38*s, base);
-    var decided = R32[i].sh !== null;
-    var lc = decided ? 'rgba(0,0,0,0.16)' : 'rgba(0,0,0,0.07)';
-    var lw = decided ? 1.5 : 1;
-    drawLine(hp[0], hp[1], jp[0], jp[1], lc, lw);
-    drawLine(ap[0], ap[1], jp[0], jp[1], lc, lw);
+  // R32 spokes
+  const r32Junctions = [];
+  const r32Winners = [];
+  for (let i = 0; i < 16; i++) {
+    const base = r32A[i];
+    const hp = polar(rR32, base - ps32/2);
+    const ap = polar(rR32, base + ps32/2);
+    const jp = polar(rR32 - 38*SCALE, base);
+    const m = matches[bracketOrder[i]];
+    const winner = m ? matchWinner(m) : null;
+    r32Winners.push(winner);
+    if (winner) {
+      const wc = teamColor(winner);
+      const homeWon = winner === m.home;
+      drawLine(homeWon ? hp : ap, jp, wc, decidedW);
+      drawLine(homeWon ? ap : hp, jp, 'rgba(0,0,0,0.04)', 1);
+    } else {
+      drawLine(hp, jp, undecided, undecidedW);
+      drawLine(ap, jp, undecided, undecidedW);
+    }
     r32Junctions.push(jp);
   }
 
-  // Compute R16 teams from R32 results (two per R16 match)
-  function r32Winner(m) {
-    if (m.sh === null) return null;
-    if (m.sh > m.sa) return m.home;
-    if (m.sa > m.sh) return m.away;
-    return null; // draw = still live / undecided
-  }
-  var r16Teams = [];
-  for (var i = 0; i < 8; i++) {
-    r16Teams.push({ home: r32Winner(R32[i*2]), away: r32Winner(R32[i*2+1]) });
-  }
+  // R32→R16
+  const r16HP = [], r16AP = [], r16Junc = [];
+  for (let i = 0; i < 8; i++) {
+    const base = r16A[i];
+    const hp = polar(rR16, base - ps16/2);
+    const ap = polar(rR16, base + ps16/2);
+    const jp = polar(rR16 - 30*SCALE, base);
+    const w1 = r32Winners[i*2], w2 = r32Winners[i*2+1];
+    drawLine(r32Junctions[i*2], hp, w1 ? teamColor(w1) : undecided, w1 ? decidedW : undecidedW);
+    drawLine(r32Junctions[i*2+1], ap, w2 ? teamColor(w2) : undecided, w2 ? decidedW : undecidedW);
 
-  // R16 pair spread (smaller than R32 since the ring is tighter)
-  var r16PairSpan = 8;
-
-  // R32 junctions → R16 pair nodes
-  var r16HomePos = [], r16AwayPos = [], r16Junctions = [];
-  for (var i = 0; i < 8; i++) {
-    var base = r16Angles[i];
-    var hp = polar(CX, CY, R_R16, base - r16PairSpan/2);
-    var ap = polar(CX, CY, R_R16, base + r16PairSpan/2);
-    var jp = polar(CX, CY, R_R16 - 30*s, base);
-    var j1 = r32Junctions[i*2], j2 = r32Junctions[i*2+1];
-    var d1 = R32[i*2].sh !== null, d2 = R32[i*2+1].sh !== null;
-    drawLine(j1[0], j1[1], hp[0], hp[1], d1 ? 'rgba(0,0,0,0.14)' : 'rgba(0,0,0,0.06)', d1 ? 1.3 : 1);
-    drawLine(j2[0], j2[1], ap[0], ap[1], d2 ? 'rgba(0,0,0,0.14)' : 'rgba(0,0,0,0.06)', d2 ? 1.3 : 1);
-    drawLine(hp[0], hp[1], jp[0], jp[1], 'rgba(0,0,0,0.06)', 0.8);
-    drawLine(ap[0], ap[1], jp[0], jp[1], 'rgba(0,0,0,0.06)', 0.8);
-    r16HomePos.push(hp);
-    r16AwayPos.push(ap);
-    r16Junctions.push(jp);
+    const r16m = matches[r16Order[i]];
+    const r16w = r16m ? matchWinner(r16m) : null;
+    if (r16w) {
+      const wc = teamColor(r16w);
+      const homeWon = r16w === r16m.home;
+      drawLine(homeWon ? hp : ap, jp, wc, decidedW);
+      drawLine(homeWon ? ap : hp, jp, 'rgba(0,0,0,0.04)', 1);
+    } else {
+      drawLine(hp, jp, undecided, undecidedW);
+      drawLine(ap, jp, undecided, undecidedW);
+    }
+    r16HP.push(hp); r16AP.push(ap); r16Junc.push(jp);
   }
 
-  // R16 junctions → QF pairs
-  var qfPairSpan = 14;
-  var qfHomePos = [], qfAwayPos = [], qfJunctions = [];
-  for (var i = 0; i < 4; i++) {
-    var base = qfAngles[i];
-    var hp = polar(CX, CY, R_QF, base - qfPairSpan/2);
-    var ap = polar(CX, CY, R_QF, base + qfPairSpan/2);
-    var jp = polar(CX, CY, R_QF - 24*s, base);
-    drawLine(r16Junctions[i*2][0], r16Junctions[i*2][1], hp[0], hp[1], 'rgba(0,0,0,0.05)', 0.8);
-    drawLine(r16Junctions[i*2+1][0], r16Junctions[i*2+1][1], ap[0], ap[1], 'rgba(0,0,0,0.05)', 0.8);
-    drawLine(hp[0], hp[1], jp[0], jp[1], 'rgba(0,0,0,0.05)', 0.8);
-    drawLine(ap[0], ap[1], jp[0], jp[1], 'rgba(0,0,0,0.05)', 0.8);
-    qfHomePos.push(hp);
-    qfAwayPos.push(ap);
-    qfJunctions.push(jp);
+  const r16Winners = r16Order.map(n => { const m = matches[n]; return m ? matchWinner(m) : null; });
+
+  // R16→QF
+  const qfHP = [], qfAP = [], qfJunc = [];
+  for (let i = 0; i < 4; i++) {
+    const base = qfA[i];
+    const hp = polar(rQF, base - psQF/2);
+    const ap = polar(rQF, base + psQF/2);
+    const jp = polar(rQF - 24*SCALE, base);
+    const w1 = r16Winners[i*2], w2 = r16Winners[i*2+1];
+    drawLine(r16Junc[i*2], hp, w1 ? teamColor(w1) : undecided, w1 ? decidedW : undecidedW);
+    drawLine(r16Junc[i*2+1], ap, w2 ? teamColor(w2) : undecided, w2 ? decidedW : undecidedW);
+    drawLine(hp, jp, undecided, undecidedW);
+    drawLine(ap, jp, undecided, undecidedW);
+    qfHP.push(hp); qfAP.push(ap); qfJunc.push(jp);
   }
 
-  // QF junctions → SF pairs
-  var sfPairSpan = 16;
-  var sfHomePos = [], sfAwayPos = [], sfJunctions = [];
-  for (var i = 0; i < 2; i++) {
-    var base = sfAngles[i];
-    var hp = polar(CX, CY, R_SF, base - sfPairSpan/2);
-    var ap = polar(CX, CY, R_SF, base + sfPairSpan/2);
-    var jp = polar(CX, CY, R_SF - 20*s, base);
-    drawLine(qfJunctions[i*2][0], qfJunctions[i*2][1], hp[0], hp[1], 'rgba(0,0,0,0.05)', 0.8);
-    drawLine(qfJunctions[i*2+1][0], qfJunctions[i*2+1][1], ap[0], ap[1], 'rgba(0,0,0,0.05)', 0.8);
-    drawLine(hp[0], hp[1], jp[0], jp[1], 'rgba(0,0,0,0.05)', 0.8);
-    drawLine(ap[0], ap[1], jp[0], jp[1], 'rgba(0,0,0,0.05)', 0.8);
-    sfHomePos.push(hp);
-    sfAwayPos.push(ap);
-    sfJunctions.push(jp);
+  // QF→SF
+  const sfHP = [], sfAP = [], sfJunc = [];
+  for (let i = 0; i < 2; i++) {
+    const base = sfA[i];
+    const hp = polar(rSF, base - psSF/2);
+    const ap = polar(rSF, base + psSF/2);
+    const jp = polar(rSF - 20*SCALE, base);
+    drawLine(qfJunc[i*2], hp, undecided, undecidedW);
+    drawLine(qfJunc[i*2+1], ap, undecided, undecidedW);
+    drawLine(hp, jp, undecided, undecidedW);
+    drawLine(ap, jp, undecided, undecidedW);
+    sfHP.push(hp); sfAP.push(ap); sfJunc.push(jp);
   }
 
-  // SF junctions → Final (center)
-  sfJunctions.forEach(function(jp) {
-    drawLine(jp[0], jp[1], CX, CY, 'rgba(180,140,40,0.12)', 1);
-  });
+  // SF→Final
+  for (const jp of sfJunc) {
+    drawLine(jp, {x:CX,y:CY}, 'rgba(180,145,42,0.1)', undecidedW);
+  }
 
-  // ══════════════════════════════════════════════
-  // DRAW NODES (on top of spokes)
-  // ══════════════════════════════════════════════
+  // Junction dots
+  function drawJunction(pt) {
+    const r = 3*SCALE;
+    ctx.beginPath();
+    ctx.arc(pt.x, pt.y, r, 0, Math.PI*2);
+    ctx.fillStyle = 'rgba(0,0,0,0.08)';
+    ctx.fill();
+  }
 
-  // R32 teams
-  for (var i = 0; i < 16; i++) {
-    var base = r32Angles[i];
-    var hp = polar(CX, CY, R_R32, base - pairSpan/2);
-    var ap = polar(CX, CY, R_R32, base + pairSpan/2);
-    var m = R32[i];
-    var hw = m.sh !== null && m.sh > m.sa;
-    var aw = m.sh !== null && m.sa > m.sh;
-    drawTeamNode(hp[0], hp[1], m.home, nR32, hw ? 'winner' : (aw ? 'eliminated' : 'normal'), s);
-    drawTeamNode(ap[0], ap[1], m.away, nR32, aw ? 'winner' : (hw ? 'eliminated' : 'normal'), s);
-    drawJunction(r32Junctions[i][0], r32Junctions[i][1], s);
-    if (m.sh !== null) {
-      var sp = polar(CX, CY, R_R32 - 20*s, base);
-      drawScore(sp[0], sp[1], m.sh, m.sa, s);
+  // Draw nodes
+  function drawTeamNode(pt, team, radius, state) {
+    if (!isReal(team)) { drawEmpty(pt, radius); return; }
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(pt.x, pt.y, radius, 0, Math.PI*2);
+    ctx.clip();
+
+    if (flagImages[team]) {
+      ctx.drawImage(flagImages[team], pt.x - radius, pt.y - radius, radius*2, radius*2);
+    } else {
+      ctx.fillStyle = '#bbb';
+      ctx.fillRect(pt.x - radius, pt.y - radius, radius*2, radius*2);
+    }
+
+    if (state === 'eliminated') {
+      ctx.fillStyle = 'rgba(245,244,241,0.55)';
+      ctx.fillRect(pt.x - radius, pt.y - radius, radius*2, radius*2);
+    }
+    ctx.restore();
+
+    ctx.beginPath();
+    ctx.arc(pt.x, pt.y, radius, 0, Math.PI*2);
+    if (state === 'winner') {
+      ctx.strokeStyle = '#b5912a';
+      ctx.lineWidth = 3;
+    } else if (state === 'eliminated') {
+      ctx.strokeStyle = 'rgba(0,0,0,0.08)';
+      ctx.lineWidth = 1.5;
+    } else {
+      ctx.strokeStyle = 'rgba(0,0,0,0.18)';
+      ctx.lineWidth = 1.5;
+    }
+    ctx.stroke();
+
+    if (selectedTeams.has(team)) {
+      ctx.beginPath();
+      ctx.arc(pt.x, pt.y, radius + 4*SCALE, 0, Math.PI*2);
+      ctx.strokeStyle = teamColor(team);
+      ctx.lineWidth = 3*SCALE;
+      ctx.stroke();
+    }
+
+    if (!flagImages[team]) {
+      const code = codes[team] || team.substring(0,3).toUpperCase();
+      const fontSize = radius * 0.75;
+      ctx.font = `900 ${fontSize}px system-ui, sans-serif`;
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillStyle = `rgba(0,0,0,${state==='eliminated'?0.3:0.6})`;
+      ctx.fillText(code, pt.x+0.8, pt.y+0.8);
+      ctx.fillStyle = `rgba(255,255,255,${state==='eliminated'?0.4:0.9})`;
+      ctx.fillText(code, pt.x, pt.y);
     }
   }
 
-  // R16 teams (pairs)
-  for (var i = 0; i < 8; i++) {
-    var r16m = r16Teams[i];
-    if (r16m.home) drawTeamNode(r16HomePos[i][0], r16HomePos[i][1], r16m.home, nR16, 'normal', s);
-    else drawEmptyNode(r16HomePos[i][0], r16HomePos[i][1], nR16);
-    if (r16m.away) drawTeamNode(r16AwayPos[i][0], r16AwayPos[i][1], r16m.away, nR16, 'normal', s);
-    else drawEmptyNode(r16AwayPos[i][0], r16AwayPos[i][1], nR16);
-    drawJunction(r16Junctions[i][0], r16Junctions[i][1], s);
+  function drawEmpty(pt, radius) {
+    ctx.beginPath();
+    ctx.arc(pt.x, pt.y, radius, 0, Math.PI*2);
+    ctx.setLineDash([3,3]);
+    ctx.strokeStyle = 'rgba(0,0,0,0.06)';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+    ctx.setLineDash([]);
   }
 
-  // QF pairs
-  for (var i = 0; i < 4; i++) {
-    drawEmptyNode(qfHomePos[i][0], qfHomePos[i][1], nQF);
-    drawEmptyNode(qfAwayPos[i][0], qfAwayPos[i][1], nQF);
-    drawJunction(qfJunctions[i][0], qfJunctions[i][1], s);
+  function drawScore(pt, m) {
+    let label = `${m.sH}–${m.sA}`;
+    if (m.pkH != null) label += ` (${m.pkH}–${m.pkA} PK)`;
+    ctx.font = `700 ${8*SCALE}px system-ui, sans-serif`;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillStyle = 'rgba(0,0,0,0.35)';
+    ctx.fillText(label, pt.x, pt.y);
   }
 
-  // SF pairs
-  for (var i = 0; i < 2; i++) {
-    drawEmptyNode(sfHomePos[i][0], sfHomePos[i][1], nSF);
-    drawEmptyNode(sfAwayPos[i][0], sfAwayPos[i][1], nSF);
-    drawJunction(sfJunctions[i][0], sfJunctions[i][1], s);
+  // R32 nodes
+  for (let i = 0; i < 16; i++) {
+    const base = r32A[i];
+    const hp = polar(rR32, base - ps32/2);
+    const ap = polar(rR32, base + ps32/2);
+    const m = matches[bracketOrder[i]];
+    if (!m) continue;
+    const winner = matchWinner(m);
+    const homeWon = winner === m.home;
+    const awayWon = winner === m.away;
+    drawTeamNode(hp, m.home, nR32, homeWon ? 'winner' : (awayWon ? 'eliminated' : 'normal'));
+    drawTeamNode(ap, m.away, nR32, awayWon ? 'winner' : (homeWon ? 'eliminated' : 'normal'));
+    drawJunction(r32Junctions[i]);
+    if (m.sH != null) drawScore(polar(rR32 - 20*SCALE, base), m);
   }
 
-  // ── Trophy at center ──
-  ctx.font = (36*s) + 'px serif';
+  // R16 nodes
+  for (let i = 0; i < 8; i++) {
+    const t1 = r32Winners[i*2], t2 = r32Winners[i*2+1];
+    if (t1) drawTeamNode(r16HP[i], t1, nR16, 'normal');
+    else drawEmpty(r16HP[i], nR16);
+    if (t2) drawTeamNode(r16AP[i], t2, nR16, 'normal');
+    else drawEmpty(r16AP[i], nR16);
+    drawJunction(r16Junc[i]);
+  }
+
+  // QF nodes
+  for (let i = 0; i < 4; i++) {
+    const m = matches[qfOrder[i]];
+    if (m && isReal(m.home)) drawTeamNode(qfHP[i], m.home, nQF, 'normal');
+    else drawEmpty(qfHP[i], nQF);
+    if (m && isReal(m.away)) drawTeamNode(qfAP[i], m.away, nQF, 'normal');
+    else drawEmpty(qfAP[i], nQF);
+    drawJunction(qfJunc[i]);
+  }
+
+  // SF nodes
+  for (let i = 0; i < 2; i++) {
+    drawEmpty(sfHP[i], nSF);
+    drawEmpty(sfAP[i], nSF);
+    drawJunction(sfJunc[i]);
+  }
+
+  // Trophy
+  ctx.font = `${36*SCALE}px serif`;
   ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-  ctx.fillText('\u{1F3C6}', CX, CY - 4*s);
-  ctx.font = '700 ' + (9*s) + 'px -apple-system, system-ui, sans-serif';
-  ctx.fillStyle = 'rgba(160,125,30,0.6)';
-  ctx.fillText('FINAL', CX, CY + 24*s);
+  ctx.fillText('\u{1F3C6}', CX, CY - 4*SCALE);
+  ctx.font = `900 ${9*SCALE}px system-ui, sans-serif`;
+  ctx.fillStyle = 'rgba(160,125,30,0.5)';
+  ctx.fillText('FINAL', CX, CY + 24*SCALE);
 
-  // ── Curved round labels along arcs ──
-  // Top arc: letters face outward (readable from outside looking in)
-  function drawCurvedTextTop(text, radius, centerDeg, letterSpacingDeg, fontSize, color) {
-    ctx.save();
-    ctx.font = '800 ' + fontSize + 'px -apple-system, system-ui, sans-serif';
-    ctx.fillStyle = color;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    var totalSpan = (text.length - 1) * letterSpacingDeg;
-    var curDeg = centerDeg - totalSpan / 2;
-    for (var c = 0; c < text.length; c++) {
-      var rad = (curDeg - 90) * Math.PI / 180;
-      var x = CX + radius * Math.cos(rad);
-      var y = CY + radius * Math.sin(rad);
+  // Curved labels
+  function drawCurved(text, radius, centerDeg, spacing, fontSize, top) {
+    const chars = text.split('');
+    const totalSpan = (chars.length - 1) * spacing;
+    ctx.font = `900 ${fontSize}px system-ui, sans-serif`;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillStyle = 'rgba(0,0,0,0.12)';
+    for (let i = 0; i < chars.length; i++) {
+      let deg = top
+        ? centerDeg - totalSpan/2 + i*spacing
+        : centerDeg + totalSpan/2 - i*spacing;
+      const rad = (deg - 90) * Math.PI / 180;
+      const x = CX + radius * Math.cos(rad);
+      const y = CY + radius * Math.sin(rad);
       ctx.save();
       ctx.translate(x, y);
-      ctx.rotate(rad + Math.PI / 2);
-      ctx.fillText(text[c], 0, 0);
+      ctx.rotate(rad + (top ? Math.PI/2 : -Math.PI/2));
+      ctx.fillText(chars[i], 0, 0);
       ctx.restore();
-      curDeg += letterSpacingDeg;
     }
-    ctx.restore();
-  }
-  // Bottom arc: letters flipped so they read left-to-right from outside
-  function drawCurvedTextBottom(text, radius, centerDeg, letterSpacingDeg, fontSize, color) {
-    ctx.save();
-    ctx.font = '800 ' + fontSize + 'px -apple-system, system-ui, sans-serif';
-    ctx.fillStyle = color;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    var totalSpan = (text.length - 1) * letterSpacingDeg;
-    var curDeg = centerDeg + totalSpan / 2;
-    for (var c = 0; c < text.length; c++) {
-      var rad = (curDeg - 90) * Math.PI / 180;
-      var x = CX + radius * Math.cos(rad);
-      var y = CY + radius * Math.sin(rad);
-      ctx.save();
-      ctx.translate(x, y);
-      ctx.rotate(rad - Math.PI / 2);
-      ctx.fillText(text[c], 0, 0);
-      ctx.restore();
-      curDeg -= letterSpacingDeg;
-    }
-    ctx.restore();
   }
 
-  var labelColor = 'rgba(0,0,0,0.55)';
-  var bandMid_R32 = ((R_R16+R_R32)/2 + R_R32 + 34*s) / 2;
-  var bandMid_R16 = ((R_QF+R_R16)/2 + (R_R16+R_R32)/2) / 2;
-  var bandMid_QF  = ((R_SF+R_QF)/2 + (R_QF+R_R16)/2) / 2;
-  var bandMid_SF  = (R_SF - 8*s + (R_SF+R_QF)/2) / 2;
-  // Top labels (0° = top of circle)
-  drawCurvedTextTop('ROUND OF 32', bandMid_R32, 0, 5, 17*s, labelColor);
-  drawCurvedTextTop('ROUND OF 16', bandMid_R16, 0, 6, 15*s, labelColor);
-  drawCurvedTextTop('QUARTER-FINALS', bandMid_QF, 0, 4.5, 12*s, labelColor);
-  drawCurvedTextTop('SEMI-FINALS', bandMid_SF, 0, 6, 10*s, labelColor);
-  // Bottom labels (180° = bottom)
-  drawCurvedTextBottom('ROUND OF 32', bandMid_R32, 180, 5, 17*s, labelColor);
-  drawCurvedTextBottom('ROUND OF 16', bandMid_R16, 180, 6, 15*s, labelColor);
-  drawCurvedTextBottom('QUARTER-FINALS', bandMid_QF, 180, 4.5, 12*s, labelColor);
-  drawCurvedTextBottom('SEMI-FINALS', bandMid_SF, 180, 6, 10*s, labelColor);
+  const labelR32 = ((rR16+rR32)/2 + rR32+34*SCALE) / 2;
+  const labelR16 = ((rQF+rR16)/2 + (rR16+rR32)/2) / 2;
+  const labelQF = ((rSF+rQF)/2 + (rQF+rR16)/2) / 2;
+  const labelSF = (rSF-8*SCALE + (rSF+rQF)/2) / 2;
+  drawCurved('ROUND OF 32', labelR32, 0, 5, 17*SCALE, true);
+  drawCurved('ROUND OF 32', labelR32, 180, 5, 17*SCALE, false);
+  drawCurved('ROUND OF 16', labelR16, 0, 6, 15*SCALE, true);
+  drawCurved('ROUND OF 16', labelR16, 180, 6, 15*SCALE, false);
+  drawCurved('QUARTER-FINALS', labelQF, 0, 4.5, 12*SCALE, true);
+  drawCurved('QUARTER-FINALS', labelQF, 180, 4.5, 12*SCALE, false);
+  drawCurved('SEMI-FINALS', labelSF, 0, 6, 10*SCALE, true);
+  drawCurved('SEMI-FINALS', labelSF, 180, 6, 10*SCALE, false);
+
+  // Highlight paths for selected teams
+  if (selectedTeams.size > 0) {
+    const teamSlots = {};
+    for (let i = 0; i < 16; i++) {
+      const m = matches[bracketOrder[i]];
+      if (m) { teamSlots[m.home] = i*2; teamSlots[m.away] = i*2+1; }
+    }
+    const hColors = ['#ff7300','#00bfff','#ff2888','#4df233'];
+    let idx = 0;
+    for (const team of selectedTeams) {
+      const slot = teamSlots[team];
+      if (slot == null) continue;
+      const hc = hColors[idx % hColors.length]; idx++;
+      const r32Idx = Math.floor(slot/2);
+      const r32Home = slot % 2 === 0;
+      const pts = [];
+      const b32 = r32A[r32Idx];
+      pts.push(polar(rR32, b32 + (r32Home ? -ps32/2 : ps32/2)));
+      pts.push(polar(rR32-38*SCALE, b32));
+      const r16Idx = Math.floor(r32Idx/2);
+      const r16Home = r32Idx % 2 === 0;
+      const b16 = r16A[r16Idx];
+      pts.push(polar(rR16, b16 + (r16Home ? -ps16/2 : ps16/2)));
+      pts.push(polar(rR16-30*SCALE, b16));
+      const qfIdx2 = Math.floor(r16Idx/2);
+      const qfHome = r16Idx % 2 === 0;
+      const bqf = qfA[qfIdx2];
+      pts.push(polar(rQF, bqf + (qfHome ? -psQF/2 : psQF/2)));
+      pts.push(polar(rQF-24*SCALE, bqf));
+      const sfIdx = Math.floor(qfIdx2/2);
+      const sfHome = qfIdx2 % 2 === 0;
+      const bsf = sfA[sfIdx];
+      pts.push(polar(rSF, bsf + (sfHome ? -psSF/2 : psSF/2)));
+      pts.push(polar(rSF-20*SCALE, bsf));
+      pts.push({x:CX,y:CY});
+
+      ctx.beginPath();
+      ctx.moveTo(pts[0].x, pts[0].y);
+      for (let j = 1; j < pts.length; j++) ctx.lineTo(pts[j].x, pts[j].y);
+      ctx.strokeStyle = hc + '30';
+      ctx.lineWidth = 14*SCALE;
+      ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+      ctx.stroke();
+      ctx.strokeStyle = hc + 'cc';
+      ctx.lineWidth = 4.5*SCALE;
+      ctx.stroke();
+
+      const nodeR = [nR32, nR16, nQF, nSF];
+      for (let j = 0; j < 4; j++) {
+        const pt = pts[j*2];
+        const r = nodeR[j] + 5*SCALE;
+        ctx.beginPath();
+        ctx.arc(pt.x, pt.y, r, 0, Math.PI*2);
+        ctx.strokeStyle = hc;
+        ctx.lineWidth = 3*SCALE;
+        ctx.stroke();
+      }
+    }
+  }
 }
 
-// ── Tab switching ──
-document.querySelectorAll('.tab').forEach(function(tab) {
-  tab.addEventListener('click', function() {
-    document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
-    tab.classList.add('active');
-    currentMode = tab.dataset.mode;
-    document.getElementById('versionLabel').textContent = LABELS[currentMode];
+// Tap handling
+canvas.addEventListener('click', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  const rR32 = 400*SCALE, rR16 = 295*SCALE;
+  const nR32 = 22*SCALE, nR16 = 18*SCALE;
+  const ps32 = 11, ps16 = 8;
+  const r32A = Array.from({length:16}, (_,i) => i*360/16);
+  const r16A = Array.from({length:8}, (_,i) => (r32A[i*2]+r32A[i*2+1])/2);
+
+  const pad = 14;
+  let best = null, bestD = Infinity;
+  function dist(p) { return Math.sqrt((x-p.x)**2 + (y-p.y)**2); }
+
+  for (let i = 0; i < 16; i++) {
+    const m = matches[bracketOrder[i]];
+    if (!m) continue;
+    const b = r32A[i];
+    let d = dist(polar(rR32, b - ps32/2));
+    if (d < nR32+pad && d < bestD) { bestD = d; best = m.home; }
+    d = dist(polar(rR32, b + ps32/2));
+    if (d < nR32+pad && d < bestD) { bestD = d; best = m.away; }
+  }
+  for (let i = 0; i < 8; i++) {
+    const w1 = matchWinner(matches[bracketOrder[i*2]]);
+    const w2 = matchWinner(matches[bracketOrder[i*2+1]]);
+    const b = r16A[i];
+    if (w1) { let d = dist(polar(rR16, b-ps16/2)); if (d < nR16+pad && d < bestD) { bestD=d; best=w1; } }
+    if (w2) { let d = dist(polar(rR16, b+ps16/2)); if (d < nR16+pad && d < bestD) { bestD=d; best=w2; } }
+  }
+
+  if (best && isReal(best)) {
+    if (selectedTeams.has(best)) selectedTeams.delete(best);
+    else selectedTeams.add(best);
     draw();
-  });
+  }
 });
 
-draw();
-window.addEventListener('resize', draw);
-
-// ── Console verification (open dev tools to see) ──
-(function verify() {
-  var R32_ORDER = [74,77,73,75,83,84,81,82,76,78,79,80,86,88,85,87];
-  var R16_ORDER = [89,90,93,94,91,92,95,96];
-  var R32_TEAMS = {74:['GER','PAR'],77:['FRA','SWE'],73:['RSA','CAN'],75:['NED','MAR'],83:['POR','CRO'],84:['ESP','AUT'],81:['USA','BIH'],82:['BEL','SEN'],76:['BRA','JPN'],78:['CIV','NOR'],79:['MEX','ECU'],80:['ENG','COD'],86:['ARG','CPV'],88:['AUS','EGY'],85:['SUI','ALG'],87:['COL','GHA']};
-  console.log('%c=== BRACKET PATH VERIFICATION ===', 'font-weight:bold;color:#b8942e');
-  for (var i = 0; i < 8; i++) {
-    var a = R32_ORDER[i*2], b = R32_ORDER[i*2+1], r16 = R16_ORDER[i];
-    console.log('R16 M' + r16 + ': W(M' + a + ' ' + R32_TEAMS[a].join('/') + ') vs W(M' + b + ' ' + R32_TEAMS[b].join('/') + ')');
-  }
-  console.log('QF M97: W(M89) vs W(M90)  |  QF M98: W(M93) vs W(M94)');
-  console.log('QF M99: W(M91) vs W(M92)  |  QF M100: W(M95) vs W(M96)');
-  console.log('SF M101: W(M97) vs W(M98)  |  SF M102: W(M99) vs W(M100)');
-  console.log('FINAL M104: W(M101) vs W(M102)');
-  console.log('%c✓ Canada (M73→R16 slot 1/M90) plays NED/MAR winner', 'color:green');
-  console.log('%c✓ Brazil (M76→R16 slot 4/M91) plays CIV/NOR winner', 'color:green');
-})();
+window.addEventListener('resize', () => { resize(); draw(); });
+resize();
+loadFlags();
+setTimeout(draw, 100);
 </script>
-
 </body>
 </html>
