@@ -356,10 +356,13 @@ def main():
                 if status_name == "STATUS_FINAL_PEN":
                     pk_home = int(home.get("shootoutScore", 0))
                     pk_away = int(away.get("shootoutScore", 0))
-                    matched_m["pkH"] = pk_home
-                    matched_m["pkA"] = pk_away
                     matched_m["result"] = "PEN"
-                    print(f"  PEN: Match {matched_m['n']} penalties {pk_home}-{pk_away}")
+                    if pk_home != pk_away and (pk_home > 0 or pk_away > 0):
+                        matched_m["pkH"] = pk_home
+                        matched_m["pkA"] = pk_away
+                        print(f"  PEN: Match {matched_m['n']} penalties {pk_home}-{pk_away}")
+                    else:
+                        print(f"  PEN: Match {matched_m['n']} shootout scores not yet available ({pk_home}-{pk_away})")
                 elif status_name == "STATUS_FINAL_AET":
                     matched_m["result"] = "AET"
                 elif matched_m["n"] >= 73:
