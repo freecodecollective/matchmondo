@@ -3,47 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radial Bracket — Football 2026</title>
+<title>Bracket — Football 2026</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  :root { --bg: #f5f4f1; }
   body {
-    background: var(--bg);
+    background: #f5f4f1;
     font-family: -apple-system, system-ui, 'Helvetica Neue', sans-serif;
     min-height: 100vh;
     display: flex; align-items: center; justify-content: center;
     -webkit-font-smoothing: antialiased;
-    overflow: hidden;
+    overflow: auto;
   }
   canvas { display: block; cursor: pointer; }
-  #hint {
-    position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%);
-    color: rgba(0,0,0,0.22); font: 500 11px/1 system-ui; letter-spacing: 0.06em;
-    text-transform: uppercase; pointer-events: none;
-  }
 </style>
 </head>
 <body>
 <canvas id="c"></canvas>
-<div id="hint">Tap a flag to trace its path to the final</div>
 <script>
-const canvas = document.getElementById('c');
-const ctx = canvas.getContext('2d');
+const C = document.getElementById('c'), ctx = C.getContext('2d');
 const DPR = window.devicePixelRatio || 1;
-let S, CX, CY, SC;
+let W, H;
 
-function resize() {
-  const side = Math.min(window.innerWidth, window.innerHeight);
-  S = Math.max(side, 700);
-  canvas.width = S * DPR; canvas.height = S * DPR;
-  canvas.style.width = S + 'px'; canvas.style.height = S + 'px';
-  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-  CX = S / 2; CY = S / 2; SC = S / 900;
-}
-
-// --- Data ---
 const bracketOrder = [74,77,73,75, 83,84,81,82, 76,78,79,80, 86,88,85,87];
-const r16Order = [89,90,93,94,91,92,95,96];
+const r16Order = [89,90,93,94, 91,92,95,96];
 const qfOrder = [97,98,99,100], sfOrder = [101,102];
 
 const M = {
@@ -54,7 +36,7 @@ const M = {
   83:{h:'Portugal',a:'Croatia'},84:{h:'Spain',a:'Austria'},
   81:{h:'USA',a:'Bosnia and Herzegovina'},82:{h:'Belgium',a:'Senegal'},
   76:{h:'Brazil',a:'Japan',sH:2,sA:1},
-  78:{h:'Côte d\'Ivoire',a:'Norway',sH:1,sA:2},
+  78:{h:"Côte d'Ivoire",a:'Norway',sH:1,sA:2},
   79:{h:'Mexico',a:'Ecuador',sH:2,sA:0},
   80:{h:'England',a:'Congo DR'},
   86:{h:'Argentina',a:'Cabo Verde'},88:{h:'Australia',a:'Egypt'},
@@ -73,7 +55,7 @@ const codes = {
   'Algeria':'ALG','Argentina':'ARG','Australia':'AUS','Austria':'AUT',
   'Belgium':'BEL','Bosnia and Herzegovina':'BIH','Brazil':'BRA',
   'Cabo Verde':'CPV','Canada':'CAN','Colombia':'COL','Congo DR':'COD',
-  'Croatia':'CRO','Côte d\'Ivoire':'CIV','Czechia':'CZE',
+  'Croatia':'CRO',"Côte d'Ivoire":'CIV','Czechia':'CZE',
   'Ecuador':'ECU','Egypt':'EGY','England':'ENG','France':'FRA',
   'Germany':'GER','Ghana':'GHA','Japan':'JPN','Mexico':'MEX',
   'Morocco':'MAR','Netherlands':'NED','Norway':'NOR','Paraguay':'PAR',
@@ -82,37 +64,31 @@ const codes = {
   'USA':'USA','Uruguay':'URU',
 };
 
-const pColor = {
+const pc = {
   'Algeria':'#00882a','Argentina':'#74b8ed','Australia':'#003078','Austria':'#cc0000',
   'Belgium':'#cc0000','Bosnia and Herzegovina':'#002688','Brazil':'#008c33',
   'Cabo Verde':'#003488','Canada':'#cc0000','Colombia':'#ffc700','Congo DR':'#0066cc',
-  'Croatia':'#cc0000','Côte d\'Ivoire':'#ff8000','Czechia':'#cc0000',
-  'Ecuador':'#004da8','Egypt':'#cc0000','England':'#cc0000',
-  'France':'#002688','Germany':'#cc0000','Ghana':'#cc2828',
-  'Japan':'#cc0000','Mexico':'#006434','Morocco':'#cc0000',
+  'Croatia':'#cc0000',"Côte d'Ivoire":'#ff8000','Ecuador':'#004da8',
+  'Egypt':'#cc0000','England':'#cc0000','France':'#002688','Germany':'#cc0000',
+  'Ghana':'#cc2828','Japan':'#cc0000','Mexico':'#006434','Morocco':'#cc0000',
   'Netherlands':'#ff6600','Norway':'#cc0000','Paraguay':'#cc0000',
   'Portugal':'#006834','Saudi Arabia':'#006b2e','Scotland':'#002688',
   'Senegal':'#006b2e','South Africa':'#006b2e','Spain':'#cc0000',
   'Sweden':'#005a9c','Switzerland':'#cc0000','USA':'#002670',
-  'Uruguay':'#4d80cc','Uzbekistan':'#0066b3',
 };
 
 function winner(m) {
   if (!m || m.sH == null) return null;
   if (m.r === 'PEN') return m.pH > m.pA ? m.h : m.a;
-  if (m.sH > m.sA) return m.h;
-  if (m.sA > m.sH) return m.a;
-  return null;
+  return m.sH > m.sA ? m.h : (m.sA > m.sH ? m.a : null);
 }
-function isReal(t) { return t && t !== 'TBD' && !t.startsWith('To be'); }
-function tc(t) { return t ? (pColor[t] || '#888') : 'rgba(0,0,0,0.06)'; }
+function isR(t) { return t && t !== 'TBD'; }
 
-// --- Flags ---
 const flagImg = {};
 let flagN = 0;
 function loadFlags() {
   const teams = new Set();
-  for (const m of Object.values(M)) { if (isReal(m.h)) teams.add(m.h); if (isReal(m.a)) teams.add(m.a); }
+  for (const v of Object.values(M)) { if (isR(v.h)) teams.add(v.h); if (isR(v.a)) teams.add(v.a); }
   const total = teams.size;
   for (const t of teams) {
     const c = codes[t] || t.substring(0,3).toUpperCase();
@@ -123,459 +99,423 @@ function loadFlags() {
   }
 }
 
-let selected = new Set();
+let selected = null;
 
-// --- Geometry helpers ---
-function pol(r, deg) {
-  const rad = (deg - 90) * Math.PI / 180;
-  return { x: CX + r * Math.cos(rad), y: CY + r * Math.sin(rad) };
-}
-function line(a, b, color, w) {
-  ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
-  ctx.strokeStyle = color; ctx.lineWidth = w; ctx.lineCap = 'round'; ctx.stroke();
-}
-function arc(radius, deg1, deg2, color, w) {
-  const r1 = (deg1 - 90) * Math.PI / 180;
-  const r2 = (deg2 - 90) * Math.PI / 180;
-  ctx.beginPath(); ctx.arc(CX, CY, radius, r1, r2);
-  ctx.strokeStyle = color; ctx.lineWidth = w; ctx.lineCap = 'round'; ctx.stroke();
+function resize() {
+  W = Math.max(window.innerWidth, 900);
+  H = Math.max(window.innerHeight, 700);
+  C.width = W * DPR; C.height = H * DPR;
+  C.style.width = W + 'px'; C.style.height = H + 'px';
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
 }
 
-// --- Main draw ---
 function draw() {
-  ctx.clearRect(0, 0, S, S);
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = '#f5f4f1'; ctx.fillRect(0, 0, W, H);
 
-  const rR32 = 400*SC, rR16 = 295*SC, rQF = 210*SC, rSF = 145*SC;
-  const nR32 = 22*SC, nR16 = 18*SC, nQF = 16*SC, nSF = 14*SC;
-  const ps32 = 11; // pair span for R32 home/away within a match
+  const nr = 16; // node radius
+  const topM = 50, botM = 40;
+  const usableH = H - topM - botM;
+  const teamSpacing = usableH / 16; // 16 teams per side
 
-  // Bracket connector radii (where the arc lives)
-  const bR32 = rR32 - 22*SC;
-  const bR16 = rR16 - 18*SC;
-  const bQF  = rQF  - 14*SC;
-  const bSF  = rSF  - 10*SC;
+  // Column x positions
+  const gap = W * 0.08; // gap between columns
+  const sideW = (W - gap) / 2;
+  const colW = sideW / 5; // 5 zones: teams, bracket, R16, bracket, QF... but let's be precise
 
-  const neu = 'rgba(0,0,0,0.07)';
+  // Left side columns
+  const lTeam = 90;
+  const lBrk1 = lTeam + 70;
+  const lR16 = lBrk1 + 60;
+  const lBrk2 = lR16 + 60;
+  const lQF = lBrk2 + 50;
+  const lBrk3 = lQF + 50;
+  const lSF = lBrk3 + 40;
+
+  // Right side (mirrored)
+  const rTeam = W - 90;
+  const rBrk1 = rTeam - 70;
+  const rR16 = rBrk1 - 60;
+  const rBrk2 = rR16 - 60;
+  const rQF = rBrk2 - 50;
+  const rBrk3 = rQF - 50;
+  const rSF = rBrk3 - 40;
+
+  const cx = W / 2;
+
+  // Vertical positions for left side teams (16 teams, 8 pairs)
+  const lY = [];
+  for (let i = 0; i < 16; i++) lY.push(topM + (i + 0.5) * teamSpacing);
+
+  // R32 pair midpoints
+  const lR32mid = [];
+  for (let i = 0; i < 8; i++) lR32mid.push((lY[i*2] + lY[i*2+1]) / 2);
+
+  // R16 pair midpoints
+  const lR16mid = [];
+  for (let i = 0; i < 4; i++) lR16mid.push((lR32mid[i*2] + lR32mid[i*2+1]) / 2);
+
+  // QF pair midpoints
+  const lQFmid = [];
+  for (let i = 0; i < 2; i++) lQFmid.push((lR16mid[i*2] + lR16mid[i*2+1]) / 2);
+
+  // SF midpoint
+  const lSFmid = (lQFmid[0] + lQFmid[1]) / 2;
+
+  // Right side (same y positions)
+  const rY = lY.slice();
+  const rR32mid = lR32mid.slice();
+  const rR16mid = lR16mid.slice();
+  const rQFmid = lQFmid.slice();
+  const rSFmid = lSFmid;
+
+  const neu = 'rgba(0,0,0,0.08)';
   const neuW = 1.5;
-  const decW = 3 * SC;
+  const decW = 3;
 
-  // Angles
-  const a32 = Array.from({length:16}, (_,i) => i * 360 / 16);
-  // R16 node angles = R32 midpoint angles (where R32 bracket arms end)
-  // R16 pair j: home at a32[j*2], away at a32[j*2+1]
-  const a16mid = Array.from({length:8}, (_,i) => (a32[i*2] + a32[i*2+1]) / 2);
-  // QF node angles = R16 midpoint angles
-  const aQFmid = Array.from({length:4}, (_,i) => (a16mid[i*2] + a16mid[i*2+1]) / 2);
-  // SF node angles = QF midpoint angles
-  const aSFmid = Array.from({length:2}, (_,i) => (aQFmid[i*2] + aQFmid[i*2+1]) / 2);
-
-  // --- Ring bands ---
-  const bands = [
-    [0, rSF - 8*SC, 'rgba(180,145,42,0.04)'],
-    [rSF - 8*SC, (rSF+rQF)/2, 'rgba(100,140,200,0.07)'],
-    [(rSF+rQF)/2, (rQF+rR16)/2, 'rgba(0,0,0,0.018)'],
-    [(rQF+rR16)/2, (rR16+rR32)/2, 'rgba(100,140,200,0.07)'],
-    [(rR16+rR32)/2, rR32+34*SC, 'rgba(0,0,0,0.018)'],
-  ];
-  for (const [inner, outer, fill] of bands) {
-    ctx.beginPath(); ctx.arc(CX, CY, outer, 0, Math.PI*2);
-    ctx.arc(CX, CY, inner, 0, Math.PI*2, true);
-    ctx.fillStyle = fill; ctx.fill();
+  // === BRACKET LINES ===
+  function hLine(x1, x2, y, color, w) {
+    ctx.beginPath(); ctx.moveTo(x1, y); ctx.lineTo(x2, y);
+    ctx.strokeStyle = color; ctx.lineWidth = w; ctx.lineCap = 'round'; ctx.stroke();
   }
-  for (const r of [rR16, rQF, rSF]) {
-    ctx.beginPath(); ctx.arc(CX, CY, r, 0, Math.PI*2);
-    ctx.strokeStyle = 'rgba(0,0,0,0.035)'; ctx.lineWidth = 0.5; ctx.stroke();
+  function vLine(x, y1, y2, color, w) {
+    ctx.beginPath(); ctx.moveTo(x, y1); ctx.lineTo(x, y2);
+    ctx.strokeStyle = color; ctx.lineWidth = w; ctx.lineCap = 'round'; ctx.stroke();
   }
-  // Center glow
-  const g = ctx.createRadialGradient(CX, CY, 0, CX, CY, 110*SC);
-  g.addColorStop(0, 'rgba(180,145,42,0.12)');
-  g.addColorStop(0.5, 'rgba(180,145,42,0.03)');
-  g.addColorStop(1, 'rgba(180,145,42,0)');
-  ctx.fillStyle = g; ctx.beginPath(); ctx.arc(CX, CY, 110*SC, 0, Math.PI*2); ctx.fill();
 
-  // ============ BRACKET CONNECTORS ============
-
-  // --- R32 brackets ---
-  // Each R32 match i: home/away at rR32, bracket at bR32, arm to rR16
-  const r32w = []; // winners per R32 slot
-  for (let i = 0; i < 16; i++) {
-    const m = M[bracketOrder[i]];
-    const hAng = a32[i] - ps32/2;
-    const aAng = a32[i] + ps32/2;
-    const midAng = a32[i];
-    const hNode = pol(rR32, hAng);
-    const aNode = pol(rR32, aAng);
-    const hBrk = pol(bR32, hAng);
-    const aBrk = pol(bR32, aAng);
-    const midBrk = pol(bR32, midAng);
-    const armEnd = pol(rR16, midAng); // where this bracket's arm ends = R16 node pos
-
-    const w = m ? winner(m) : null;
-    r32w.push(w);
-
-    if (w) {
-      const wc = tc(w);
-      const homeWon = w === m.h;
-      // Loser stub (underneath)
-      line(homeWon ? aNode : hNode, homeWon ? aBrk : hBrk, 'rgba(0,0,0,0.04)', 1);
-      // Winner stub
-      line(homeWon ? hNode : aNode, homeWon ? hBrk : aBrk, wc, decW);
-      // Full arc in winner color
-      arc(bR32, hAng, aAng, wc, decW);
-      // Arm to R16
-      line(midBrk, armEnd, wc, decW);
+  function bracketPair(teamX, brkX, nextX, y1, y2, midY, w, color, loserColor, homeWon, decided, side) {
+    const dir = side === 'left' ? 1 : -1;
+    if (decided) {
+      // Loser horizontal
+      const loserY = homeWon ? y2 : y1;
+      const winnerY = homeWon ? y1 : y2;
+      hLine(teamX + dir*nr, brkX, loserY, loserColor, 1);
+      // Winner horizontal
+      hLine(teamX + dir*nr, brkX, winnerY, color, w);
+      // Vertical connector
+      vLine(brkX, y1, y2, color, w);
+      // Arm to next round
+      hLine(brkX, nextX - dir*nr, midY, color, w);
     } else {
-      line(hNode, hBrk, neu, neuW);
-      line(aNode, aBrk, neu, neuW);
-      arc(bR32, hAng, aAng, neu, neuW);
-      line(midBrk, armEnd, neu, neuW);
+      hLine(teamX + dir*nr, brkX, y1, neu, neuW);
+      hLine(teamX + dir*nr, brkX, y2, neu, neuW);
+      vLine(brkX, y1, y2, neu, neuW);
+      hLine(brkX, nextX, midY, neu, neuW);
     }
   }
 
-  // --- R16 brackets ---
-  // R16 pair j: home at (rR16, a32[j*2]), away at (rR16, a32[j*2+1])
-  const r16w = [];
-  for (let j = 0; j < 8; j++) {
-    const hAng = a32[j*2];
-    const aAng = a32[j*2+1];
-    const midAng = a16mid[j];
-    const hNode = pol(rR16, hAng);
-    const aNode = pol(rR16, aAng);
-    const hBrk = pol(bR16, hAng);
-    const aBrk = pol(bR16, aAng);
-    const midBrk = pol(bR16, midAng);
-    const armEnd = pol(rQF, midAng);
+  // --- Left side R32 ---
+  const r32w = [];
+  for (let i = 0; i < 8; i++) {
+    const m = M[bracketOrder[i]];
+    const w = m ? winner(m) : null;
+    r32w.push(w);
+    const y1 = lY[i*2], y2 = lY[i*2+1];
+    const mid = lR32mid[i];
+    if (w) {
+      const wc = pc[w] || '#888';
+      bracketPair(lTeam, lBrk1, lR16, y1, y2, mid, decW, wc, 'rgba(0,0,0,0.04)', w===m.h, true, 'left');
+    } else {
+      bracketPair(lTeam, lBrk1, lR16, y1, y2, mid, neuW, neu, neu, false, false, 'left');
+    }
+  }
 
+  // --- Left side R16 ---
+  const r16w = [];
+  for (let j = 0; j < 4; j++) {
     const m = M[r16Order[j]];
     const w = m ? winner(m) : null;
     r16w.push(w);
-
+    const y1 = lR32mid[j*2], y2 = lR32mid[j*2+1];
+    const mid = lR16mid[j];
     if (w) {
-      const wc = tc(w);
-      const homeWon = w === m.h;
-      line(homeWon ? aNode : hNode, homeWon ? aBrk : hBrk, 'rgba(0,0,0,0.04)', 1);
-      line(homeWon ? hNode : aNode, homeWon ? hBrk : aBrk, wc, decW);
-      arc(bR16, hAng, aAng, wc, decW);
-      line(midBrk, armEnd, wc, decW);
+      const wc = pc[w] || '#888';
+      bracketPair(lR16, lBrk2, lQF, y1, y2, mid, decW, wc, 'rgba(0,0,0,0.04)', w===m.h, true, 'left');
     } else {
-      line(hNode, hBrk, neu, neuW);
-      line(aNode, aBrk, neu, neuW);
-      arc(bR16, hAng, aAng, neu, neuW);
-      line(midBrk, armEnd, neu, neuW);
+      bracketPair(lR16, lBrk2, lQF, y1, y2, mid, neuW, neu, neu, false, false, 'left');
     }
   }
 
-  // --- QF brackets ---
-  const qfw = [];
-  for (let k = 0; k < 4; k++) {
-    const hAng = a16mid[k*2];
-    const aAng = a16mid[k*2+1];
-    const midAng = aQFmid[k];
-    const hNode = pol(rQF, hAng);
-    const aNode = pol(rQF, aAng);
-    const hBrk = pol(bQF, hAng);
-    const aBrk = pol(bQF, aAng);
-    const midBrk = pol(bQF, midAng);
-    const armEnd = pol(rSF, midAng);
-
+  // --- Left side QF ---
+  for (let k = 0; k < 2; k++) {
     const m = M[qfOrder[k]];
     const w = m ? winner(m) : null;
-    qfw.push(w);
-
+    const y1 = lR16mid[k*2], y2 = lR16mid[k*2+1];
+    const mid = lQFmid[k];
     if (w) {
-      const wc = tc(w);
-      const homeWon = w === m.h;
-      line(homeWon ? aNode : hNode, homeWon ? aBrk : hBrk, 'rgba(0,0,0,0.04)', 1);
-      line(homeWon ? hNode : aNode, homeWon ? hBrk : aBrk, wc, decW);
-      arc(bQF, hAng, aAng, wc, decW);
-      line(midBrk, armEnd, wc, decW);
+      const wc = pc[w] || '#888';
+      bracketPair(lQF, lBrk3, lSF, y1, y2, mid, decW, wc, 'rgba(0,0,0,0.04)', w===m.h, true, 'left');
     } else {
-      line(hNode, hBrk, neu, neuW);
-      line(aNode, aBrk, neu, neuW);
-      arc(bQF, hAng, aAng, neu, neuW);
-      line(midBrk, armEnd, neu, neuW);
+      bracketPair(lQF, lBrk3, lSF, y1, y2, mid, neuW, neu, neu, false, false, 'left');
     }
   }
 
-  // --- SF brackets ---
-  for (let l = 0; l < 2; l++) {
-    const hAng = aQFmid[l*2];
-    const aAng = aQFmid[l*2+1];
-    const midAng = aSFmid[l];
-    const hNode = pol(rSF, hAng);
-    const aNode = pol(rSF, aAng);
-    const hBrk = pol(bSF, hAng);
-    const aBrk = pol(bSF, aAng);
-    const midBrk = pol(bSF, midAng);
-    const armEnd = { x: CX, y: CY };
-
-    const m = M[sfOrder[l]];
+  // --- Left side SF ---
+  {
+    const m = M[sfOrder[0]];
     const w = m ? winner(m) : null;
-
+    const y1 = lQFmid[0], y2 = lQFmid[1];
+    const mid = lSFmid;
     if (w) {
-      const wc = tc(w);
-      const homeWon = w === m.h;
-      line(homeWon ? aNode : hNode, homeWon ? aBrk : hBrk, 'rgba(0,0,0,0.04)', 1);
-      line(homeWon ? hNode : aNode, homeWon ? hBrk : aBrk, wc, decW);
-      arc(bSF, hAng, aAng, wc, decW);
-      line(midBrk, armEnd, wc, decW);
+      const wc = pc[w] || '#888';
+      hLine(lSF + nr, cx, mid, wc, decW);
     } else {
-      line(hNode, hBrk, neu, neuW);
-      line(aNode, aBrk, neu, neuW);
-      arc(bSF, hAng, aAng, neu, neuW);
-      line(midBrk, armEnd, 'rgba(180,145,42,0.1)', neuW);
+      hLine(lSF, cx, mid, 'rgba(180,145,42,0.1)', neuW);
     }
   }
 
-  // ============ NODES ============
-
-  function drawNode(pt, team, radius, state) {
-    if (!isReal(team)) { drawEmpty(pt, radius); return; }
-    ctx.save();
-    ctx.beginPath(); ctx.arc(pt.x, pt.y, radius, 0, Math.PI*2); ctx.clip();
-    if (flagImg[team]) {
-      ctx.drawImage(flagImg[team], pt.x-radius, pt.y-radius, radius*2, radius*2);
+  // --- Right side R32 ---
+  const r32wr = [];
+  for (let i = 0; i < 8; i++) {
+    const m = M[bracketOrder[i+8]];
+    const w = m ? winner(m) : null;
+    r32wr.push(w);
+    const y1 = rY[i*2], y2 = rY[i*2+1];
+    const mid = rR32mid[i];
+    if (w) {
+      const wc = pc[w] || '#888';
+      bracketPair(rTeam, rBrk1, rR16, y1, y2, mid, decW, wc, 'rgba(0,0,0,0.04)', w===m.h, true, 'right');
     } else {
-      ctx.fillStyle = '#bbb';
-      ctx.fillRect(pt.x-radius, pt.y-radius, radius*2, radius*2);
+      bracketPair(rTeam, rBrk1, rR16, y1, y2, mid, neuW, neu, neu, false, false, 'right');
+    }
+  }
+
+  // --- Right side R16 ---
+  const r16wr = [];
+  for (let j = 0; j < 4; j++) {
+    const m = M[r16Order[j+4]];
+    const w = m ? winner(m) : null;
+    r16wr.push(w);
+    const y1 = rR32mid[j*2], y2 = rR32mid[j*2+1];
+    const mid = rR16mid[j];
+    if (w) {
+      const wc = pc[w] || '#888';
+      bracketPair(rR16, rBrk2, rQF, y1, y2, mid, decW, wc, 'rgba(0,0,0,0.04)', w===m.h, true, 'right');
+    } else {
+      bracketPair(rR16, rBrk2, rQF, y1, y2, mid, neuW, neu, neu, false, false, 'right');
+    }
+  }
+
+  // --- Right side QF ---
+  for (let k = 0; k < 2; k++) {
+    const m = M[qfOrder[k+2]];
+    const w = m ? winner(m) : null;
+    const y1 = rR16mid[k*2], y2 = rR16mid[k*2+1];
+    const mid = rQFmid[k];
+    if (w) {
+      const wc = pc[w] || '#888';
+      bracketPair(rQF, rBrk3, rSF, y1, y2, mid, decW, wc, 'rgba(0,0,0,0.04)', w===m.h, true, 'right');
+    } else {
+      bracketPair(rQF, rBrk3, rSF, y1, y2, mid, neuW, neu, neu, false, false, 'right');
+    }
+  }
+
+  // --- Right side SF ---
+  {
+    const m = M[sfOrder[1]];
+    const w = m ? winner(m) : null;
+    const y1 = rQFmid[0], y2 = rQFmid[1];
+    const mid = rSFmid;
+    if (w) {
+      const wc = pc[w] || '#888';
+      hLine(rSF - nr, cx, mid, wc, decW);
+    } else {
+      hLine(rSF, cx, mid, 'rgba(180,145,42,0.1)', neuW);
+    }
+  }
+
+  // === NODES ===
+  function drawNode(x, y, team, state) {
+    if (!isR(team)) { drawEmpty(x, y); return; }
+    ctx.save();
+    ctx.beginPath(); ctx.arc(x, y, nr, 0, Math.PI*2); ctx.clip();
+    if (flagImg[team]) {
+      ctx.drawImage(flagImg[team], x-nr, y-nr, nr*2, nr*2);
+    } else {
+      ctx.fillStyle = pc[team] || '#bbb';
+      ctx.fillRect(x-nr, y-nr, nr*2, nr*2);
     }
     if (state === 'elim') {
       ctx.fillStyle = 'rgba(245,244,241,0.55)';
-      ctx.fillRect(pt.x-radius, pt.y-radius, radius*2, radius*2);
+      ctx.fillRect(x-nr, y-nr, nr*2, nr*2);
     }
     ctx.restore();
-    ctx.beginPath(); ctx.arc(pt.x, pt.y, radius, 0, Math.PI*2);
-    ctx.strokeStyle = state === 'win' ? '#b5912a' : (state === 'elim' ? 'rgba(0,0,0,0.08)' : 'rgba(0,0,0,0.18)');
-    ctx.lineWidth = state === 'win' ? 3 : 1.5; ctx.stroke();
-    if (selected.has(team)) {
-      ctx.beginPath(); ctx.arc(pt.x, pt.y, radius+4*SC, 0, Math.PI*2);
-      ctx.strokeStyle = tc(team); ctx.lineWidth = 3*SC; ctx.stroke();
-    }
-    if (!flagImg[team]) {
-      const code = codes[team] || team.substring(0,3).toUpperCase();
-      ctx.font = `900 ${radius*0.75}px system-ui`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.fillStyle = 'rgba(0,0,0,0.6)'; ctx.fillText(code, pt.x+0.8, pt.y+0.8);
-      ctx.fillStyle = 'rgba(255,255,255,0.9)'; ctx.fillText(code, pt.x, pt.y);
+    ctx.beginPath(); ctx.arc(x, y, nr, 0, Math.PI*2);
+    ctx.strokeStyle = state === 'win' ? '#b5912a' : (state === 'elim' ? 'rgba(0,0,0,0.06)' : 'rgba(0,0,0,0.15)');
+    ctx.lineWidth = state === 'win' ? 2.5 : 1; ctx.stroke();
+    if (selected === team) {
+      ctx.beginPath(); ctx.arc(x, y, nr+4, 0, Math.PI*2);
+      ctx.strokeStyle = pc[team] || '#888'; ctx.lineWidth = 3; ctx.stroke();
     }
   }
 
-  function drawEmpty(pt, radius) {
-    ctx.beginPath(); ctx.arc(pt.x, pt.y, radius, 0, Math.PI*2);
-    ctx.setLineDash([3,3]); ctx.strokeStyle = 'rgba(0,0,0,0.06)'; ctx.lineWidth = 1.5;
+  function drawEmpty(x, y) {
+    ctx.beginPath(); ctx.arc(x, y, nr, 0, Math.PI*2);
+    ctx.setLineDash([3,3]); ctx.strokeStyle = 'rgba(0,0,0,0.06)'; ctx.lineWidth = 1;
     ctx.stroke(); ctx.setLineDash([]);
   }
 
-  function drawScore(pt, m) {
-    let s = `${m.sH}–${m.sA}`;
-    if (m.pH != null) s += ` (${m.pH}–${m.pA} PK)`;
-    ctx.font = `700 ${8*SC}px system-ui`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillStyle = 'rgba(0,0,0,0.3)'; ctx.fillText(s, pt.x, pt.y);
+  function label(x, y, text, align) {
+    ctx.font = '600 10px system-ui'; ctx.textAlign = align; ctx.textBaseline = 'middle';
+    ctx.fillStyle = 'rgba(0,0,0,0.4)';
+    ctx.fillText(text, x, y);
   }
 
-  // R32 nodes
-  for (let i = 0; i < 16; i++) {
+  function score(x, y, m) {
+    if (!m || m.sH == null) return;
+    let s = `${m.sH}–${m.sA}`;
+    if (m.pH != null) s += ` PK`;
+    ctx.font = '700 8px system-ui'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillStyle = 'rgba(0,0,0,0.22)'; ctx.fillText(s, x, y);
+  }
+
+  // Left R32 nodes
+  for (let i = 0; i < 8; i++) {
     const m = M[bracketOrder[i]];
     if (!m) continue;
     const w = winner(m);
-    const hP = pol(rR32, a32[i] - ps32/2);
-    const aP = pol(rR32, a32[i] + ps32/2);
-    drawNode(hP, m.h, nR32, w === m.h ? 'win' : (w === m.a ? 'elim' : ''));
-    drawNode(aP, m.a, nR32, w === m.a ? 'win' : (w === m.h ? 'elim' : ''));
-    if (m.sH != null) drawScore(pol(rR32 - 12*SC, a32[i]), m);
+    drawNode(lTeam, lY[i*2], m.h, w === m.h ? 'win' : (w === m.a ? 'elim' : ''));
+    drawNode(lTeam, lY[i*2+1], m.a, w === m.a ? 'win' : (w === m.h ? 'elim' : ''));
+    label(lTeam - nr - 6, lY[i*2], codes[m.h] || m.h.substring(0,3).toUpperCase(), 'right');
+    label(lTeam - nr - 6, lY[i*2+1], codes[m.a] || m.a.substring(0,3).toUpperCase(), 'right');
+    score(lTeam + 38, lR32mid[i], m);
   }
 
-  // R16 nodes (at a32[i] angles on rR16 ring)
-  for (let j = 0; j < 8; j++) {
+  // Left R16 nodes
+  for (let j = 0; j < 4; j++) {
     const t1 = r32w[j*2], t2 = r32w[j*2+1];
     const r16m = M[r16Order[j]];
     const r16win = r16m ? winner(r16m) : null;
-    if (t1) drawNode(pol(rR16, a32[j*2]), t1, nR16, r16win && r16win !== t1 ? 'elim' : (r16win === t1 ? 'win' : ''));
-    else drawEmpty(pol(rR16, a32[j*2]), nR16);
-    if (t2) drawNode(pol(rR16, a32[j*2+1]), t2, nR16, r16win && r16win !== t2 ? 'elim' : (r16win === t2 ? 'win' : ''));
-    else drawEmpty(pol(rR16, a32[j*2+1]), nR16);
+    if (t1) {
+      drawNode(lR16, lR32mid[j*2], t1, r16win && r16win!==t1 ? 'elim' : (r16win===t1 ? 'win' : ''));
+      label(lR16 - nr - 6, lR32mid[j*2], codes[t1] || '', 'right');
+    } else drawEmpty(lR16, lR32mid[j*2]);
+    if (t2) {
+      drawNode(lR16, lR32mid[j*2+1], t2, r16win && r16win!==t2 ? 'elim' : (r16win===t2 ? 'win' : ''));
+      label(lR16 - nr - 6, lR32mid[j*2+1], codes[t2] || '', 'right');
+    } else drawEmpty(lR16, lR32mid[j*2+1]);
   }
 
-  // QF nodes (at a16mid[j] angles on rQF ring)
-  for (let k = 0; k < 4; k++) {
-    const m = M[qfOrder[k]];
-    const t1 = m && isReal(m.h) ? m.h : null;
-    const t2 = m && isReal(m.a) ? m.a : null;
-    if (t1) drawNode(pol(rQF, a16mid[k*2]), t1, nQF, '');
-    else drawEmpty(pol(rQF, a16mid[k*2]), nQF);
-    if (t2) drawNode(pol(rQF, a16mid[k*2+1]), t2, nQF, '');
-    else drawEmpty(pol(rQF, a16mid[k*2+1]), nQF);
+  // Left QF nodes
+  for (let k = 0; k < 2; k++) {
+    const qfm = M[qfOrder[k]];
+    const t1 = qfm && isR(qfm.h) ? qfm.h : null;
+    const t2 = qfm && isR(qfm.a) ? qfm.a : null;
+    if (t1) drawNode(lQF, lR16mid[k*2], t1, '');
+    else drawEmpty(lQF, lR16mid[k*2]);
+    if (t2) drawNode(lQF, lR16mid[k*2+1], t2, '');
+    else drawEmpty(lQF, lR16mid[k*2+1]);
   }
 
-  // SF nodes (at aQFmid[k] on rSF ring)
-  for (let l = 0; l < 2; l++) {
-    drawEmpty(pol(rSF, aQFmid[l*2]), nSF);
-    drawEmpty(pol(rSF, aQFmid[l*2+1]), nSF);
+  // Left SF nodes
+  drawEmpty(lSF, lQFmid[0]);
+  drawEmpty(lSF, lQFmid[1]);
+
+  // Right R32 nodes
+  for (let i = 0; i < 8; i++) {
+    const m = M[bracketOrder[i+8]];
+    if (!m) continue;
+    const w = winner(m);
+    drawNode(rTeam, rY[i*2], m.h, w === m.h ? 'win' : (w === m.a ? 'elim' : ''));
+    drawNode(rTeam, rY[i*2+1], m.a, w === m.a ? 'win' : (w === m.h ? 'elim' : ''));
+    label(rTeam + nr + 6, rY[i*2], codes[m.h] || m.h.substring(0,3).toUpperCase(), 'left');
+    label(rTeam + nr + 6, rY[i*2+1], codes[m.a] || m.a.substring(0,3).toUpperCase(), 'left');
+    score(rTeam - 38, rR32mid[i], m);
   }
 
-  // Trophy
-  ctx.font = `${36*SC}px serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-  ctx.fillText('\u{1F3C6}', CX, CY - 4*SC);
-  ctx.font = `900 ${9*SC}px system-ui`; ctx.fillStyle = 'rgba(160,125,30,0.5)';
-  ctx.fillText('FINAL', CX, CY + 24*SC);
-
-  // Curved labels
-  function curved(text, radius, cDeg, sp, fs, top) {
-    const ch = text.split(''), span = (ch.length-1)*sp;
-    ctx.font = `900 ${fs}px system-ui`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillStyle = 'rgba(0,0,0,0.1)';
-    for (let i = 0; i < ch.length; i++) {
-      const deg = top ? cDeg - span/2 + i*sp : cDeg + span/2 - i*sp;
-      const rad = (deg-90)*Math.PI/180;
-      ctx.save(); ctx.translate(CX+radius*Math.cos(rad), CY+radius*Math.sin(rad));
-      ctx.rotate(rad + (top ? Math.PI/2 : -Math.PI/2));
-      ctx.fillText(ch[i], 0, 0); ctx.restore();
-    }
+  // Right R16 nodes
+  for (let j = 0; j < 4; j++) {
+    const t1 = r32wr[j*2], t2 = r32wr[j*2+1];
+    const r16m = M[r16Order[j+4]];
+    const r16win = r16m ? winner(r16m) : null;
+    if (t1) {
+      drawNode(rR16, rR32mid[j*2], t1, r16win && r16win!==t1 ? 'elim' : (r16win===t1 ? 'win' : ''));
+      label(rR16 + nr + 6, rR32mid[j*2], codes[t1] || '', 'left');
+    } else drawEmpty(rR16, rR32mid[j*2]);
+    if (t2) {
+      drawNode(rR16, rR32mid[j*2+1], t2, r16win && r16win!==t2 ? 'elim' : (r16win===t2 ? 'win' : ''));
+      label(rR16 + nr + 6, rR32mid[j*2+1], codes[t2] || '', 'left');
+    } else drawEmpty(rR16, rR32mid[j*2+1]);
   }
-  const lR32 = ((rR16+rR32)/2 + rR32+34*SC)/2;
-  const lR16 = ((rQF+rR16)/2 + (rR16+rR32)/2)/2;
-  const lQF = ((rSF+rQF)/2 + (rQF+rR16)/2)/2;
-  const lSF = (rSF-8*SC + (rSF+rQF)/2)/2;
-  curved('ROUND OF 32', lR32, 0, 5, 17*SC, true);
-  curved('ROUND OF 32', lR32, 180, 5, 17*SC, false);
-  curved('ROUND OF 16', lR16, 0, 6, 15*SC, true);
-  curved('ROUND OF 16', lR16, 180, 6, 15*SC, false);
-  curved('QUARTER-FINALS', lQF, 0, 4.5, 12*SC, true);
-  curved('QUARTER-FINALS', lQF, 180, 4.5, 12*SC, false);
-  curved('SEMI-FINALS', lSF, 0, 6, 10*SC, true);
-  curved('SEMI-FINALS', lSF, 180, 6, 10*SC, false);
 
-  // ============ HIGHLIGHT PATHS ============
-  if (selected.size > 0) {
-    const slots = {};
-    for (let i = 0; i < 16; i++) {
-      const m = M[bracketOrder[i]]; if (!m) continue;
-      slots[m.h] = i*2; slots[m.a] = i*2+1;
-    }
-    const hcols = ['#ff7300','#00bfff','#ff2888','#4df233'];
-    let ci = 0;
-    for (const team of selected) {
-      const slot = slots[team]; if (slot == null) continue;
-      const hc = hcols[ci++ % hcols.length];
-
-      // Trace through each round's bracket: node → bracket point → arc midpoint → arm → next node
-      const r32i = Math.floor(slot/2);
-      const isHome = slot % 2 === 0;
-      const teamAng = a32[r32i] + (isHome ? -ps32/2 : ps32/2);
-
-      // R32 path
-      const p0 = pol(rR32, teamAng);
-      const p1 = pol(bR32, teamAng);
-      const p2 = pol(bR32, a32[r32i]); // bracket midpoint
-      const p3 = pol(rR16, a32[r32i]); // R16 node
-
-      // R16 path
-      const r16j = Math.floor(r32i/2);
-      const r16mid = a16mid[r16j];
-      const p4 = pol(bR16, a32[r32i]);
-      const p5 = pol(bR16, r16mid);
-      const p6 = pol(rQF, r16mid);
-
-      // QF path
-      const qfk = Math.floor(r16j/2);
-      const qfmid = aQFmid[qfk];
-      const p7 = pol(bQF, r16mid);
-      const p8 = pol(bQF, qfmid);
-      const p9 = pol(rSF, qfmid);
-
-      // SF path
-      const sfl = Math.floor(qfk/2);
-      const sfmid = aSFmid[sfl];
-      const p10 = pol(bSF, qfmid);
-      const p11 = pol(bSF, sfmid);
-      const p12 = {x:CX, y:CY};
-
-      // Draw segments
-      const segs = [[p0,p1],[p2,p3],[p3,p4],[p5,p6],[p6,p7],[p8,p9],[p9,p10],[p11,p12]];
-      // Draw arcs: R32 bracket arc, R16 bracket arc, QF bracket arc, SF bracket arc
-      const arcs = [
-        [bR32, teamAng, a32[r32i]],
-        [bR16, a32[r32i], r16mid],
-        [bQF, r16mid, qfmid],
-        [bSF, qfmid, sfmid],
-      ];
-
-      // Glow
-      for (const [a,b] of segs) {
-        line(a, b, hc + '25', 12*SC);
-      }
-      for (const [r, d1, d2] of arcs) {
-        const minD = Math.min(d1,d2), maxD = Math.max(d1,d2);
-        ctx.beginPath();
-        ctx.arc(CX, CY, r, (minD-90)*Math.PI/180, (maxD-90)*Math.PI/180);
-        ctx.strokeStyle = hc + '25'; ctx.lineWidth = 12*SC; ctx.lineCap = 'round'; ctx.stroke();
-      }
-      // Solid
-      for (const [a,b] of segs) {
-        line(a, b, hc + 'cc', 4*SC);
-      }
-      for (const [r, d1, d2] of arcs) {
-        const minD = Math.min(d1,d2), maxD = Math.max(d1,d2);
-        ctx.beginPath();
-        ctx.arc(CX, CY, r, (minD-90)*Math.PI/180, (maxD-90)*Math.PI/180);
-        ctx.strokeStyle = hc + 'cc'; ctx.lineWidth = 4*SC; ctx.lineCap = 'round'; ctx.stroke();
-      }
-
-      // Rings at node positions
-      const nodePts = [
-        [p0, nR32], [p3, nR16], [p6, nQF], [p9, nSF]
-      ];
-      for (const [pt, nr] of nodePts) {
-        ctx.beginPath(); ctx.arc(pt.x, pt.y, nr+5*SC, 0, Math.PI*2);
-        ctx.strokeStyle = hc; ctx.lineWidth = 3*SC; ctx.stroke();
-      }
-    }
+  // Right QF nodes
+  for (let k = 0; k < 2; k++) {
+    const qfm = M[qfOrder[k+2]];
+    const t1 = qfm && isR(qfm.h) ? qfm.h : null;
+    const t2 = qfm && isR(qfm.a) ? qfm.a : null;
+    if (t1) drawNode(rQF, rR16mid[k*2], t1, '');
+    else drawEmpty(rQF, rR16mid[k*2]);
+    if (t2) drawNode(rQF, rR16mid[k*2+1], t2, '');
+    else drawEmpty(rQF, rR16mid[k*2+1]);
   }
+
+  // Right SF nodes
+  drawEmpty(rSF, rQFmid[0]);
+  drawEmpty(rSF, rQFmid[1]);
+
+  // Trophy at center
+  const finalY = (lSFmid + rSFmid) / 2;
+  ctx.font = '32px serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText('\u{1F3C6}', cx, finalY - 4);
+  ctx.font = '900 9px system-ui'; ctx.fillStyle = 'rgba(160,125,30,0.45)';
+  ctx.fillText('FINAL', cx, finalY + 22);
+
+  // Round labels
+  ctx.font = '700 10px system-ui'; ctx.fillStyle = 'rgba(0,0,0,0.07)';
+  ctx.textAlign = 'center';
+  ctx.fillText('ROUND OF 32', lTeam, topM - 16);
+  ctx.fillText('R16', lR16, topM - 16);
+  ctx.fillText('QF', lQF, topM - 16);
+  ctx.fillText('SF', lSF, topM - 16);
+  ctx.fillText('ROUND OF 32', rTeam, topM - 16);
+  ctx.fillText('R16', rR16, topM - 16);
+  ctx.fillText('QF', rQF, topM - 16);
+  ctx.fillText('SF', rSF, topM - 16);
 }
 
-// --- Tap ---
-canvas.addEventListener('click', (e) => {
-  const rect = canvas.getBoundingClientRect();
+// Click handler
+C.addEventListener('click', (e) => {
+  const rect = C.getBoundingClientRect();
   const x = e.clientX - rect.left, y = e.clientY - rect.top;
-  const rR32 = 400*SC, rR16 = 295*SC, rQF = 210*SC, rSF = 145*SC;
-  const nR32 = 22*SC, nR16 = 18*SC, nQF = 16*SC, nSF = 14*SC;
-  const ps32 = 11;
-  const a32 = Array.from({length:16}, (_,i) => i*360/16);
-  const a16mid = Array.from({length:8}, (_,i) => (a32[i*2]+a32[i*2+1])/2);
+  const nr = 16;
 
-  const pad = 16;
+  const topM = 50, botM = 40;
+  const usableH = H - topM - botM;
+  const teamSpacing = usableH / 16;
+  const lTeam = 90, rTeam = W - 90;
+
+  const lY = [];
+  for (let i = 0; i < 16; i++) lY.push(topM + (i + 0.5) * teamSpacing);
+
   let best = null, bestD = Infinity;
-  function d(p) { return Math.sqrt((x-p.x)**2+(y-p.y)**2); }
+  function d(px, py) { return Math.sqrt((x-px)**2 + (y-py)**2); }
 
-  // R32
-  for (let i = 0; i < 16; i++) {
+  // Check R32 left
+  for (let i = 0; i < 8; i++) {
     const m = M[bracketOrder[i]]; if (!m) continue;
-    let dd = d(pol(rR32, a32[i]-ps32/2));
-    if (dd < nR32+pad && dd < bestD) { bestD=dd; best=m.h; }
-    dd = d(pol(rR32, a32[i]+ps32/2));
-    if (dd < nR32+pad && dd < bestD) { bestD=dd; best=m.a; }
+    let dd = d(lTeam, lY[i*2]);
+    if (dd < nr+12 && dd < bestD) { bestD=dd; best=m.h; }
+    dd = d(lTeam, lY[i*2+1]);
+    if (dd < nr+12 && dd < bestD) { bestD=dd; best=m.a; }
   }
-  // R16
-  for (let j = 0; j < 8; j++) {
-    const w1 = winner(M[bracketOrder[j*2]]);
-    const w2 = winner(M[bracketOrder[j*2+1]]);
-    if (w1) { let dd = d(pol(rR16, a32[j*2])); if (dd < nR16+pad && dd < bestD) { bestD=dd; best=w1; } }
-    if (w2) { let dd = d(pol(rR16, a32[j*2+1])); if (dd < nR16+pad && dd < bestD) { bestD=dd; best=w2; } }
-  }
-  // QF
-  for (let k = 0; k < 4; k++) {
-    const m = M[qfOrder[k]]; if (!m) continue;
-    if (isReal(m.h)) { let dd = d(pol(rQF, a16mid[k*2])); if (dd < nQF+pad && dd < bestD) { bestD=dd; best=m.h; } }
-    if (isReal(m.a)) { let dd = d(pol(rQF, a16mid[k*2+1])); if (dd < nQF+pad && dd < bestD) { bestD=dd; best=m.a; } }
+  // Check R32 right
+  for (let i = 0; i < 8; i++) {
+    const m = M[bracketOrder[i+8]]; if (!m) continue;
+    let dd = d(rTeam, lY[i*2]);
+    if (dd < nr+12 && dd < bestD) { bestD=dd; best=m.h; }
+    dd = d(rTeam, lY[i*2+1]);
+    if (dd < nr+12 && dd < bestD) { bestD=dd; best=m.a; }
   }
 
-  if (best && isReal(best)) {
-    if (selected.has(best)) selected.delete(best); else selected.add(best);
+  if (best && isR(best)) {
+    selected = (best === selected) ? null : best;
     draw();
   }
 });
 
 window.addEventListener('resize', () => { resize(); draw(); });
-resize(); loadFlags(); setTimeout(draw, 100);
+resize(); loadFlags();
+setTimeout(draw, 100);
 </script>
 </body>
 </html>
