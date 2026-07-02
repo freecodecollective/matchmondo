@@ -23424,7 +23424,90 @@
       "explanation": "Germany routed Curaçao 7-1 at NRG Stadium in Houston, the biggest winning margin of the entire group stage. Canada's 6-0 win over Qatar was the second largest.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nrg_stadium.jpg/640px-nrg_stadium.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كان فوز ألمانيا على كوراساو بنتيجة 7-1 أكبر فارق فوز في دور المجموعات ببطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "اكتسحت ألمانيا كوراساو بنتيجة 7-1 على ملعب NRG في هيوستن، وهو أكبر فارق فوز في دور المجموعات بأكمله. وجاء فوز كندا على قطر بنتيجة 6-0 في المرتبة الثانية."
+        },
+        "de": {
+          "question": "Deutschlands 7:1-Sieg über Curaçao war der höchste Sieg in der Gruppenphase von Football 2026.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Deutschland fertigte Curaçao im NRG Stadium in Houston mit 7:1 ab – der höchste Sieg der gesamten Gruppenphase. Kanadas 6:0-Erfolg über Katar war der zweithöchste."
+        },
+        "es": {
+          "question": "La victoria de Alemania por 7-1 sobre Curazao fue el margen de triunfo más amplio en la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Alemania goleó a Curazao 7-1 en el NRG Stadium de Houston, el margen de victoria más amplio de toda la fase de grupos. El 6-0 de Canadá sobre Catar fue el segundo mayor."
+        },
+        "es-ES": {
+          "question": "La victoria de Alemania por 7-1 sobre Curazao fue el mayor margen de triunfo en la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Alemania goleó a Curazao por 7-1 en el NRG Stadium de Houston, el mayor margen de victoria de toda la fase de grupos. El 6-0 de Canadá ante Catar fue el segundo mayor."
+        },
+        "fr": {
+          "question": "La victoire 7-1 de l'Allemagne face à Curaçao a été le plus grand écart de la phase de groupes de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "L'Allemagne a écrasé Curaçao 7-1 au NRG Stadium de Houston, le plus grand écart de toute la phase de groupes. La victoire 6-0 du Canada contre le Qatar fut la deuxième plus large."
+        },
+        "it": {
+          "question": "La vittoria per 7-1 della Germania sul Curaçao è stato il divario più ampio nella fase a gironi di Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "La Germania ha travolto il Curaçao 7-1 all'NRG Stadium di Houston, il divario di vittoria più ampio dell'intera fase a gironi. Il 6-0 del Canada sul Qatar è stato il secondo più netto."
+        },
+        "ja": {
+          "question": "ドイツがキュラソーを7対1で下した試合は、Football 2026のグループステージで最も大きな点差の勝利だった。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "ドイツはヒューストンのNRGスタジアムでキュラソーを7対1で圧倒し、これはグループステージ全体で最大の点差の勝利でした。カナダがカタールを6対0で破った試合が2番目に大きな点差でした。"
+        },
+        "ko": {
+          "question": "독일이 쿠라소를 7-1로 꺾은 것은 Football 2026 조별 리그 최대 점수 차 승리였다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "독일은 휴스턴의 NRG 스타디움에서 쿠라소를 7-1로 대파했으며, 이는 조별 리그 전체에서 가장 큰 점수 차 승리였습니다. 캐나다가 카타르를 6-0으로 이긴 경기가 두 번째로 큰 점수 차였습니다."
+        },
+        "pt-BR": {
+          "question": "A vitória da Alemanha por 7 a 1 sobre Curaçao foi a maior diferença de gols na fase de grupos da Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A Alemanha atropelou Curaçao por 7 a 1 no NRG Stadium, em Houston, a maior diferença de gols de toda a fase de grupos. A vitória do Canadá por 6 a 0 sobre o Catar foi a segunda maior."
+        },
+        "zh-Hans": {
+          "question": "德国以7比1战胜库拉索，是Football 2026小组赛中分差最大的一场胜利。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "德国在休斯敦的NRG体育场以7比1大胜库拉索，是整个小组赛中分差最大的胜利。加拿大以6比0战胜卡塔尔位列第二。"
+        }
+      },
+      "i18nSourceHash": "748b9fac3c60dbff"
     },
     {
       "id": "tf-2026-canada-qatar",
@@ -23438,7 +23521,90 @@
       "explanation": "Canada thrashed Qatar 6-0 at BC Place in Vancouver, the largest victory in Canadian tournament history. It was also Qatar's heaviest defeat at the tournament.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/BC_Place_2015_Women%27s_FIFA_World_Cup.jpg/640px-BC_Place_2015_Women%27s_FIFA_World_Cup.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "فازت كندا على قطر بنتيجة 6-0، وهو أكبر انتصار لها على الإطلاق في البطولة.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "سحقت كندا قطر بنتيجة 6-0 في ملعب بي سي بليس في فانكوفر، وهو أكبر فوز في تاريخ كندا بالبطولة. كما كان أثقل هزيمة لقطر في البطولة."
+        },
+        "de": {
+          "question": "Kanada besiegte Katar mit 6:0 – der höchste Sieg des Landes in der Geschichte des Turniers.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Kanada fegte Katar im BC Place in Vancouver mit 6:0 vom Platz, der größte Sieg der kanadischen Turniergeschichte. Es war zugleich die höchste Niederlage Katars im Turnier."
+        },
+        "es": {
+          "question": "Canadá venció a Qatar por 6-0, su mayor victoria en la historia del torneo.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Canadá goleó 6-0 a Qatar en el BC Place de Vancouver, la mayor victoria de su historia en el torneo. También fue la peor derrota de Qatar en la competencia."
+        },
+        "es-ES": {
+          "question": "Canadá venció a Catar por 6-0, su mayor victoria en la historia del torneo.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Canadá goleó 6-0 a Catar en el BC Place de Vancouver, la mayor victoria de su historia en el torneo. También fue la peor derrota de Catar en la competición."
+        },
+        "fr": {
+          "question": "Le Canada a battu le Qatar 6-0, sa plus large victoire de l'histoire dans le tournoi.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Le Canada a écrasé le Qatar 6-0 au BC Place de Vancouver, la plus large victoire de l'histoire canadienne dans le tournoi. Ce fut aussi la plus lourde défaite du Qatar dans la compétition."
+        },
+        "it": {
+          "question": "Il Canada ha battuto il Qatar per 6-0, la sua vittoria più larga di sempre nel torneo.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Il Canada ha travolto il Qatar per 6-0 al BC Place di Vancouver, la più grande vittoria nella storia canadese del torneo. È stata anche la sconfitta più pesante del Qatar nella competizione."
+        },
+        "ja": {
+          "question": "カナダはカタールを6対0で下し、大会史上最大の勝利を挙げた。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "カナダはバンクーバーのBCプレイスでカタールを6対0で圧倒し、これは大会におけるカナダ史上最大の勝利となった。同時にカタールにとっては大会史上最も大きな敗戦でもあった。"
+        },
+        "ko": {
+          "question": "캐나다가 카타르를 6-0으로 꺾으며 대회 역사상 최대 승리를 거뒀다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "캐나다는 밴쿠버 BC 플레이스에서 카타르를 6-0으로 대파했으며, 이는 대회 역사상 캐나다의 최대 승리였다. 또한 카타르로서는 대회 최다 실점 패배이기도 했다."
+        },
+        "pt-BR": {
+          "question": "O Canadá venceu o Catar por 6 a 0, sua maior vitória na história do torneio.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "O Canadá goleou o Catar por 6 a 0 no BC Place, em Vancouver, a maior vitória da história canadense no torneio. Foi também a pior derrota do Catar na competição."
+        },
+        "zh-Hans": {
+          "question": "加拿大6比0击败卡塔尔，创下该队在本届赛事史上的最大胜利。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "加拿大在温哥华的BC Place球场以6比0大胜卡塔尔，这是加拿大在该赛事历史上的最大胜利，同时也是卡塔尔在赛事中的最惨败绩。"
+        }
+      },
+      "i18nSourceHash": "ac711d39b0795e02"
     },
     {
       "id": "tf-2026-metlife-final",
@@ -23452,7 +23618,90 @@
       "explanation": "MetLife Stadium in East Rutherford, New Jersey — just outside New York City — will host the Football 2026 final on July 19. With a capacity of over 82,000, it is one of the largest venues in the tournament.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Metlife_stadium_%28Aerial_view%29.jpg/640px-Metlife_stadium_%28Aerial_view%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ستقام مباراة نهائي Football 2026 في ملعب MetLife بولاية نيو جيرسي.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "سيستضيف ملعب MetLife في إيست ذرفورد بولاية نيو جيرسي — على مشارف مدينة نيويورك — نهائي Football 2026 في 19 يوليو. وبطاقة استيعابية تتجاوز 82,000 متفرج، يُعد أحد أكبر ملاعب البطولة."
+        },
+        "de": {
+          "question": "Das Finale von Football 2026 wird im MetLife Stadium in New Jersey ausgetragen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Das MetLife Stadium in East Rutherford, New Jersey — direkt vor den Toren von New York City — richtet am 19. Juli das Finale von Football 2026 aus. Mit einem Fassungsvermögen von über 82.000 Zuschauern ist es eine der größten Spielstätten des Turniers."
+        },
+        "es": {
+          "question": "La final de Football 2026 se jugará en el MetLife Stadium de Nueva Jersey.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "El MetLife Stadium, en East Rutherford, Nueva Jersey —a las afueras de la ciudad de Nueva York—, será la sede de la final de Football 2026 el 19 de julio. Con una capacidad de más de 82,000 espectadores, es uno de los estadios más grandes del torneo."
+        },
+        "es-ES": {
+          "question": "La final de Football 2026 se jugará en el MetLife Stadium de Nueva Jersey.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "El MetLife Stadium, en East Rutherford, Nueva Jersey —a las afueras de la ciudad de Nueva York—, acogerá la final de Football 2026 el 19 de julio. Con un aforo de más de 82.000 espectadores, es uno de los estadios más grandes del torneo."
+        },
+        "fr": {
+          "question": "La finale de Football 2026 se disputera au MetLife Stadium, dans le New Jersey.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Le MetLife Stadium, situé à East Rutherford, dans le New Jersey — aux portes de New York — accueillera la finale de Football 2026 le 19 juillet. Avec une capacité de plus de 82 000 places, c'est l'une des plus grandes enceintes du tournoi."
+        },
+        "it": {
+          "question": "La finale di Football 2026 si giocherà al MetLife Stadium nel New Jersey.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Il MetLife Stadium di East Rutherford, nel New Jersey — appena fuori New York City — ospiterà la finale di Football 2026 il 19 luglio. Con una capienza di oltre 82.000 spettatori, è uno degli impianti più grandi del torneo."
+        },
+        "ja": {
+          "question": "Football 2026の決勝は、ニュージャージー州のメットライフ・スタジアムで行われる。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "ニューヨーク市のすぐ郊外、ニュージャージー州イーストラザフォードにあるメットライフ・スタジアムが、7月19日にFootball 2026の決勝を開催します。収容人数は82,000人を超え、大会でも最大級の会場のひとつです。"
+        },
+        "ko": {
+          "question": "Football 2026 결승전은 뉴저지주의 메트라이프 스타디움에서 열린다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "뉴욕시 바로 외곽에 위치한 뉴저지주 이스트러더퍼드의 메트라이프 스타디움이 7월 19일 Football 2026 결승전을 개최합니다. 8만 2천 명이 넘는 수용 인원을 갖춰 이번 대회에서 가장 큰 경기장 중 하나입니다."
+        },
+        "pt-BR": {
+          "question": "A final da Football 2026 será disputada no MetLife Stadium, em Nova Jersey.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "O MetLife Stadium, em East Rutherford, Nova Jersey — nos arredores da cidade de Nova York — vai receber a final da Football 2026 no dia 19 de julho. Com capacidade para mais de 82.000 pessoas, é um dos maiores estádios do torneio."
+        },
+        "zh-Hans": {
+          "question": "Football 2026 的决赛将在新泽西州的大都会人寿体育场举行。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "位于新泽西州东拉瑟福德、紧邻纽约市的大都会人寿体育场（MetLife Stadium）将于7月19日举办 Football 2026 的决赛。该体育场可容纳超过82,000名观众，是本届赛事最大的场馆之一。"
+        }
+      },
+      "i18nSourceHash": "e501fc6fe82a4a7b"
     },
     {
       "id": "tf-2026-france-perfect-group",
@@ -23465,7 +23714,90 @@
       "answer": 0,
       "explanation": "France topped Group I with a perfect 9 points, beating Senegal 3-1, Iraq (via Norway's result helped them), then Norway 4-1, and accumulating 10 goals in the process. They were one of three teams to achieve a perfect group stage record alongside Mexico and Argentina.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "فازت فرنسا بجميع مبارياتها الثلاث في دور المجموعات في بطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "تصدرت فرنسا المجموعة التاسعة برصيد كامل بلغ 9 نقاط، حيث فازت على السنغال 3-1، والعراق (بفضل نتيجة النرويج التي ساعدتها)، ثم على النرويج 4-1، وسجّلت 10 أهداف خلال مشوارها. وكانت واحدة من ثلاثة منتخبات حققت سجلاً مثالياً في دور المجموعات إلى جانب المكسيك والأرجنتين."
+        },
+        "de": {
+          "question": "Frankreich gewann bei Football 2026 alle drei Gruppenspiele.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Frankreich führte die Gruppe I mit perfekten 9 Punkten an, schlug Senegal mit 3:1, den Irak (das Ergebnis Norwegens half dabei) und anschließend Norwegen mit 4:1, wobei insgesamt 10 Tore erzielt wurden. Neben Mexiko und Argentinien war Frankreich eine von drei Mannschaften mit einer makellosen Gruppenphase."
+        },
+        "es": {
+          "question": "Francia ganó los tres partidos de su fase de grupos en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Francia lideró el Grupo I con unos perfectos 9 puntos, venciendo a Senegal 3-1, a Irak (el resultado de Noruega les ayudó) y luego a Noruega 4-1, sumando 10 goles en el proceso. Fue uno de los tres equipos que logró un registro perfecto en la fase de grupos, junto con México y Argentina."
+        },
+        "es-ES": {
+          "question": "Francia ganó los tres partidos de su fase de grupos en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Francia encabezó el Grupo I con unos perfectos 9 puntos, venciendo a Senegal por 3-1, a Irak (el resultado de Noruega les ayudó) y después a Noruega por 4-1, acumulando 10 goles en el camino. Fue uno de los tres equipos que logró un registro perfecto en la fase de grupos, junto a México y Argentina."
+        },
+        "fr": {
+          "question": "La France a remporté ses trois matchs de la phase de groupes lors de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "La France a terminé en tête du Groupe I avec un parfait total de 9 points, battant le Sénégal 3-1, l'Irak (aidée par le résultat de la Norvège), puis la Norvège 4-1, en inscrivant 10 buts au passage. Elle fut l'une des trois équipes à réaliser un parcours parfait en phase de groupes, aux côtés du Mexique et de l'Argentine."
+        },
+        "it": {
+          "question": "La Francia ha vinto tutte e tre le partite della fase a gironi a Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "La Francia ha chiuso in testa il Girone I con un perfetto bottino di 9 punti, battendo il Senegal 3-1, l'Iraq (grazie anche al risultato della Norvegia) e poi la Norvegia 4-1, realizzando 10 gol nel percorso. È stata una delle tre squadre a ottenere un percorso perfetto nella fase a gironi, insieme a Messico e Argentina."
+        },
+        "ja": {
+          "question": "フランスはFootball 2026のグループステージ3試合すべてに勝利した。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "フランスは勝ち点9の完璧な成績でグループIを首位で通過し、セネガルに3-1、イラクに（ノルウェーの結果にも助けられ）、そしてノルウェーに4-1で勝利し、その過程で10得点を挙げた。メキシコ、アルゼンチンと並び、グループステージを全勝で終えた3チームのうちの1つだった。"
+        },
+        "ko": {
+          "question": "프랑스는 Football 2026 조별 리그 3경기를 모두 승리했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "프랑스는 완벽한 승점 9점으로 I조 1위를 차지했다. 세네갈을 3-1로, 이라크를(노르웨이의 결과도 도움이 됐다) 이긴 뒤 노르웨이를 4-1로 꺾으며 그 과정에서 10골을 넣었다. 프랑스는 멕시코, 아르헨티나와 함께 조별 리그를 전승으로 마친 세 팀 중 하나였다."
+        },
+        "pt-BR": {
+          "question": "A França venceu todas as três partidas da fase de grupos na Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A França liderou o Grupo I com perfeitos 9 pontos, vencendo Senegal por 3 a 1, o Iraque (com a ajuda do resultado da Noruega) e depois a Noruega por 4 a 1, marcando 10 gols no processo. Foi uma das três seleções a conquistar uma campanha perfeita na fase de grupos, ao lado de México e Argentina."
+        },
+        "zh-Hans": {
+          "question": "法国在 Football 2026 小组赛的三场比赛中全部获胜。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "法国以全胜积9分的完美战绩位居I组头名，先是3比1击败塞内加尔，随后战胜伊拉克（挪威的比赛结果也帮了忙），接着又以4比1击败挪威，其间共打入10球。法国是与墨西哥和阿根廷并列的三支在小组赛阶段取得全胜战绩的球队之一。"
+        }
+      },
+      "i18nSourceHash": "c894f89aa09ee11c"
     },
     {
       "id": "tf-2026-mexico-zero-conceded",
@@ -23479,7 +23811,90 @@
       "explanation": "Mexico were the only team to keep a perfect defensive record in the group stage, winning 2-0 vs South Africa, 1-0 vs Korea Republic, and 3-0 vs Czechia — conceding zero goals while scoring six.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Estadio_Akron_02-07-2022_cabecera_sur_lado_derecho_%283%29.jpg/640px-Estadio_Akron_02-07-2022_cabecera_sur_lado_derecho_%283%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "فازت المكسيك بمبارياتها الثلاث في دور المجموعات دون أن تستقبل أي هدف.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "كانت المكسيك الفريق الوحيد الذي حافظ على شباكه نظيفة تمامًا في دور المجموعات، إذ فازت 2-0 على جنوب أفريقيا، و1-0 على جمهورية كوريا، و3-0 على التشيك — دون أن تستقبل أي هدف بينما سجّلت ستة أهداف."
+        },
+        "de": {
+          "question": "Mexiko gewann alle drei Gruppenspiele, ohne ein einziges Gegentor zu kassieren.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Mexiko war die einzige Mannschaft mit einer makellosen Abwehrbilanz in der Gruppenphase: 2:0 gegen Südafrika, 1:0 gegen die Republik Korea und 3:0 gegen Tschechien — kein Gegentor bei sechs eigenen Treffern."
+        },
+        "es": {
+          "question": "México ganó los tres partidos de la fase de grupos sin recibir un solo gol.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "México fue el único equipo que mantuvo un registro defensivo impecable en la fase de grupos: ganó 2-0 a Sudáfrica, 1-0 a la República de Corea y 3-0 a Chequia, sin encajar goles y anotando seis."
+        },
+        "es-ES": {
+          "question": "México ganó los tres partidos de la fase de grupos sin encajar un solo gol.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "México fue el único equipo que mantuvo un registro defensivo impecable en la fase de grupos: venció 2-0 a Sudáfrica, 1-0 a la República de Corea y 3-0 a Chequia, sin recibir ningún gol y marcando seis."
+        },
+        "fr": {
+          "question": "Le Mexique a remporté ses trois matchs de phase de groupes sans encaisser le moindre but.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Le Mexique a été la seule équipe à conserver un bilan défensif parfait en phase de groupes : victoires 2-0 contre l'Afrique du Sud, 1-0 contre la République de Corée et 3-0 contre la Tchéquie — aucun but encaissé et six inscrits."
+        },
+        "it": {
+          "question": "Il Messico ha vinto tutte e tre le partite della fase a gironi senza subire neanche un gol.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Il Messico è stata l'unica squadra a mantenere un rendimento difensivo perfetto nella fase a gironi: 2-0 contro il Sudafrica, 1-0 contro la Repubblica di Corea e 3-0 contro la Cechia — zero gol subiti e sei realizzati."
+        },
+        "ja": {
+          "question": "メキシコはグループステージの3試合すべてに勝利し、1点も失点しなかった。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "メキシコはグループステージで唯一、完璧な守備記録を維持したチームだった。南アフリカに2-0、韓国に1-0、チェコに3-0で勝利し、失点ゼロで6得点を挙げた。"
+        },
+        "ko": {
+          "question": "멕시코는 조별 리그 세 경기를 모두 이기면서 단 한 골도 실점하지 않았다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "멕시코는 조별 리그에서 완벽한 수비 기록을 유지한 유일한 팀으로, 남아프리카공화국에 2-0, 대한민국에 1-0, 체코에 3-0으로 승리했다. 실점 없이 6골을 넣었다."
+        },
+        "pt-BR": {
+          "question": "O México venceu os três jogos da fase de grupos sem sofrer nenhum gol.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "O México foi a única seleção a manter um retrospecto defensivo impecável na fase de grupos: venceu a África do Sul por 2 a 0, a República da Coreia por 1 a 0 e a Tchéquia por 3 a 0 — sem sofrer gols e marcando seis."
+        },
+        "zh-Hans": {
+          "question": "墨西哥赢下了小组赛的全部三场比赛，且一球未失。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "墨西哥是小组赛阶段唯一保持零失球完美防守纪录的球队：2比0战胜南非，1比0击败韩国，3比0大胜捷克——一球未失，同时打进六球。"
+        }
+      },
+      "i18nSourceHash": "1fbc19da8b5403e4"
     },
     {
       "id": "tf-2026-panama-no-goals",
