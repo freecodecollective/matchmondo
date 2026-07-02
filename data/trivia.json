@@ -22622,7 +22622,110 @@
       "explanation": "Rivaldo was one-third of Brazil's famous 'Three Rs' attack (with Ronaldo and Ronaldinho) that won the 2002 tournament. He scored 5 goals at the 2002 edition, including a stunning overhead kick against Belgium. He had previously won the Ballon d'Or in 1999.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Rivaldo_bunyodkor_2010.jpg/500px-Rivaldo_bunyodkor_2010.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا المهاجم البرازيلي الذي توّج باللقب عام 2002 إلى جانب رونالدو ورونالدينيو؟",
+          "options": [
+            "ريفالدو",
+            "كاكا",
+            "أدريانو",
+            "روماريو"
+          ],
+          "explanation": "كان ريفالدو أحد ثلاثي الهجوم البرازيلي الشهير المعروف بـ'الثلاثي R' (مع رونالدو ورونالدينيو) الذي فاز بنسخة 2002. سجّل 5 أهداف في تلك النسخة، من بينها ضربة مقصية رائعة ضد بلجيكا. وكان قد فاز سابقًا بجائزة الكرة الذهبية عام 1999."
+        },
+        "de": {
+          "question": "Wer ist dieser brasilianische Stürmer, der 2002 zusammen mit Ronaldo und Ronaldinho das Turnier gewann?",
+          "options": [
+            "Rivaldo",
+            "Kaká",
+            "Adriano",
+            "Romário"
+          ],
+          "explanation": "Rivaldo war Teil von Brasiliens berühmtem 'Drei-R'-Angriff (mit Ronaldo und Ronaldinho), der das Turnier 2002 gewann. Bei dieser Ausgabe erzielte er 5 Tore, darunter einen spektakulären Fallrückzieher gegen Belgien. Zuvor hatte er 1999 den Ballon d'Or gewonnen."
+        },
+        "es": {
+          "question": "¿Quién es este delantero brasileño que ganó el torneo en 2002 junto a Ronaldo y Ronaldinho?",
+          "options": [
+            "Rivaldo",
+            "Kaká",
+            "Adriano",
+            "Romário"
+          ],
+          "explanation": "Rivaldo fue una tercera parte del famoso ataque de las 'Tres R' de Brasil (junto a Ronaldo y Ronaldinho) que ganó el torneo de 2002. Marcó 5 goles en aquella edición, incluida una espectacular chilena ante Bélgica. Anteriormente había ganado el Balón de Oro en 1999."
+        },
+        "es-ES": {
+          "question": "¿Quién es este delantero brasileño que ganó el torneo en 2002 junto a Ronaldo y Ronaldinho?",
+          "options": [
+            "Rivaldo",
+            "Kaká",
+            "Adriano",
+            "Romário"
+          ],
+          "explanation": "Rivaldo formó parte del célebre ataque de las 'Tres R' de Brasil (con Ronaldo y Ronaldinho) que ganó el torneo de 2002. Marcó 5 goles en aquella edición, incluida una espectacular chilena ante Bélgica. Antes había ganado el Balón de Oro en 1999."
+        },
+        "fr": {
+          "question": "Qui est cet attaquant brésilien qui a remporté le tournoi en 2002 aux côtés de Ronaldo et Ronaldinho ?",
+          "options": [
+            "Rivaldo",
+            "Kaká",
+            "Adriano",
+            "Romário"
+          ],
+          "explanation": "Rivaldo faisait partie de la célèbre attaque des 'Trois R' du Brésil (avec Ronaldo et Ronaldinho) qui a remporté le tournoi 2002. Il a inscrit 5 buts lors de cette édition, dont un superbe retourné acrobatique contre la Belgique. Il avait auparavant remporté le Ballon d'Or en 1999."
+        },
+        "it": {
+          "question": "Chi è questo attaccante brasiliano che ha vinto il torneo nel 2002 insieme a Ronaldo e Ronaldinho?",
+          "options": [
+            "Rivaldo",
+            "Kaká",
+            "Adriano",
+            "Romário"
+          ],
+          "explanation": "Rivaldo faceva parte del celebre attacco delle 'Tre R' del Brasile (con Ronaldo e Ronaldinho) che vinse il torneo del 2002. In quell'edizione segnò 5 gol, tra cui una splendida rovesciata contro il Belgio. In precedenza aveva vinto il Pallone d'Oro nel 1999."
+        },
+        "ja": {
+          "question": "2002年にロナウド、ロナウジーニョとともに大会を制したこのブラジル代表のフォワードは誰でしょう？",
+          "options": [
+            "リバウド",
+            "カカ",
+            "アドリアーノ",
+            "ロマーリオ"
+          ],
+          "explanation": "リバウドは、2002年大会を制したブラジルの有名な攻撃陣「3R」（ロナウド、ロナウジーニョとともに）の一人でした。彼はその大会で5得点を挙げ、ベルギー戦では見事なオーバーヘッドキックも決めました。彼は1999年にバロンドールを受賞していました。"
+        },
+        "ko": {
+          "question": "2002년에 호나우두, 호나우지뉴와 함께 대회에서 우승한 이 브라질 공격수는 누구일까요?",
+          "options": [
+            "히바우두",
+            "카카",
+            "아드리아누",
+            "호마리우"
+          ],
+          "explanation": "히바우두는 2002년 대회에서 우승한 브라질의 유명한 공격진 '3R'(호나우두, 호나우지뉴와 함께)의 한 축이었습니다. 그는 그 대회에서 5골을 기록했으며, 벨기에전에서는 멋진 오버헤드킥 골을 넣기도 했습니다. 그는 앞서 1999년에 발롱도르를 수상한 바 있습니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este atacante brasileiro que venceu o torneio em 2002 ao lado de Ronaldo e Ronaldinho?",
+          "options": [
+            "Rivaldo",
+            "Kaká",
+            "Adriano",
+            "Romário"
+          ],
+          "explanation": "Rivaldo era um dos integrantes do famoso ataque dos 'Três R' do Brasil (com Ronaldo e Ronaldinho) que venceu o torneio de 2002. Ele marcou 5 gols naquela edição, incluindo uma bela bicicleta contra a Bélgica. Antes disso, havia conquistado a Bola de Ouro em 1999."
+        },
+        "zh-Hans": {
+          "question": "这位在2002年与罗纳尔多和罗纳尔迪尼奥一同夺得赛事冠军的巴西前锋是谁？",
+          "options": [
+            "里瓦尔多",
+            "卡卡",
+            "阿德里亚诺",
+            "罗马里奥"
+          ],
+          "explanation": "里瓦尔多是巴西著名的'3R'攻击组合（与罗纳尔多和罗纳尔迪尼奥）中的一员，他们赢得了2002年那届赛事。他在那届比赛中打进5球，其中包括一记对阵比利时的精彩倒钩射门。他此前曾在1999年荣膺金球奖。"
+        }
+      },
+      "i18nSourceHash": "ff5b4b0dff239779"
     },
     {
       "id": "img-raul",
@@ -22934,7 +23037,90 @@
       "explanation": "Mexico hosted the opening match at the iconic Estadio Azteca on June 11, defeating South Africa 2-0. The Azteca has now hosted opening matches in 1970, 1986, and 2026.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Vista_a%C3%A9rea_del_Estadio_Azteca_-_2026_-_02.jpg/640px-Vista_a%C3%A9rea_del_Estadio_Azteca_-_2026_-_02.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أُقيمت مباراة افتتاح Football 2026 على ملعب أزتيكا في مدينة مكسيكو.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "استضافت المكسيك مباراة الافتتاح على ملعب أزتيكا الشهير في 11 يونيو، وفازت على جنوب أفريقيا 2-0. وبذلك يكون ملعب أزتيكا قد استضاف مباريات الافتتاح في أعوام 1970 و1986 و2026."
+        },
+        "de": {
+          "question": "Das Eröffnungsspiel von Football 2026 fand im Estadio Azteca in Mexiko-Stadt statt.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Mexiko war Gastgeber des Eröffnungsspiels im legendären Estadio Azteca am 11. Juni und besiegte Südafrika mit 2:0. Das Azteca hat nun Eröffnungsspiele in den Jahren 1970, 1986 und 2026 ausgetragen."
+        },
+        "es": {
+          "question": "El partido inaugural de Football 2026 se jugó en el Estadio Azteca de la Ciudad de México.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "México fue anfitrión del partido inaugural en el icónico Estadio Azteca el 11 de junio, venciendo a Sudáfrica 2-0. El Azteca ha albergado ahora partidos inaugurales en 1970, 1986 y 2026."
+        },
+        "es-ES": {
+          "question": "El partido inaugural de Football 2026 se disputó en el Estadio Azteca de Ciudad de México.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "México acogió el partido inaugural en el emblemático Estadio Azteca el 11 de junio, derrotando a Sudáfrica por 2-0. El Azteca ha albergado ya partidos inaugurales en 1970, 1986 y 2026."
+        },
+        "fr": {
+          "question": "Le match d'ouverture de Football 2026 s'est joué à l'Estadio Azteca, à Mexico.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Le Mexique a accueilli le match d'ouverture dans le mythique Estadio Azteca le 11 juin, battant l'Afrique du Sud 2-0. L'Azteca a désormais accueilli les matchs d'ouverture en 1970, 1986 et 2026."
+        },
+        "it": {
+          "question": "La partita inaugurale di Football 2026 si è giocata all'Estadio Azteca di Città del Messico.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Il Messico ha ospitato la partita inaugurale nel leggendario Estadio Azteca l'11 giugno, battendo il Sudafrica per 2-0. L'Azteca ha ora ospitato le partite inaugurali nel 1970, nel 1986 e nel 2026."
+        },
+        "ja": {
+          "question": "Football 2026の開幕戦は、メキシコシティのエスタディオ・アステカで行われた。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "メキシコは6月11日、象徴的なエスタディオ・アステカで開幕戦を開催し、南アフリカを2対0で下した。アステカはこれで1970年、1986年、そして2026年に開幕戦を開催したことになる。"
+        },
+        "ko": {
+          "question": "Football 2026의 개막전은 멕시코시티의 에스타디오 아스테카에서 열렸다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "멕시코는 6월 11일 상징적인 에스타디오 아스테카에서 개막전을 개최해 남아프리카공화국을 2-0으로 꺾었다. 아스테카는 이로써 1970년, 1986년, 그리고 2026년에 개막전을 개최한 경기장이 되었다."
+        },
+        "pt-BR": {
+          "question": "A partida de abertura da Football 2026 foi disputada no Estádio Azteca, na Cidade do México.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "O México sediou a partida de abertura no icônico Estádio Azteca em 11 de junho, vencendo a África do Sul por 2 a 0. O Azteca já sediou partidas de abertura em 1970, 1986 e 2026."
+        },
+        "zh-Hans": {
+          "question": "Football 2026 的揭幕战在墨西哥城的阿兹特克体育场举行。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "墨西哥于6月11日在标志性的阿兹特克体育场承办揭幕战，以2比0击败南非。阿兹特克体育场至此已在1970年、1986年和2026年承办过揭幕战。"
+        }
+      },
+      "i18nSourceHash": "5ceefbbf31e09723"
     },
     {
       "id": "tf-2026-mexico-opening-win",
@@ -22947,7 +23133,90 @@
       "answer": 0,
       "explanation": "Mexico kicked off the tournament with a 2-0 victory over South Africa at Estadio Azteca on June 11, 2026. As hosts, Mexico set the tone with a confident opening performance.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "فازت المكسيك في المباراة الافتتاحية لبطولة Football 2026 بتغلبها على جنوب أفريقيا بنتيجة 2-0.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "افتتحت المكسيك البطولة بفوز 2-0 على جنوب أفريقيا في إستاد أزتيكا يوم 11 يونيو 2026. وبصفتها البلد المضيف، فرضت المكسيك إيقاعها بأداء افتتاحي واثق."
+        },
+        "de": {
+          "question": "Mexiko gewann das Eröffnungsspiel von Football 2026 mit 2:0 gegen Südafrika.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Mexiko eröffnete das Turnier am 11. Juni 2026 mit einem 2:0-Sieg über Südafrika im Estadio Azteca. Als Gastgeber gab Mexiko mit einer souveränen Auftaktleistung den Ton an."
+        },
+        "es": {
+          "question": "México ganó el partido inaugural de Football 2026, venciendo a Sudáfrica por 2-0.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "México inauguró el torneo con una victoria de 2-0 sobre Sudáfrica en el Estadio Azteca el 11 de junio de 2026. Como anfitrión, México marcó la pauta con una actuación de apertura contundente."
+        },
+        "es-ES": {
+          "question": "México ganó el partido inaugural de Football 2026, venciendo a Sudáfrica por 2-0.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "México inauguró el torneo con una victoria por 2-0 sobre Sudáfrica en el Estadio Azteca el 11 de junio de 2026. Como anfitrión, México marcó el ritmo con una contundente actuación en el estreno."
+        },
+        "fr": {
+          "question": "Le Mexique a remporté le match d'ouverture de Football 2026 en battant l'Afrique du Sud 2-0.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Le Mexique a lancé le tournoi avec une victoire 2-0 sur l'Afrique du Sud au Estadio Azteca le 11 juin 2026. En tant que pays hôte, le Mexique a donné le ton avec une prestation d'ouverture pleine d'assurance."
+        },
+        "it": {
+          "question": "Il Messico ha vinto la partita inaugurale di Football 2026, battendo il Sudafrica per 2-0.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Il Messico ha aperto il torneo con una vittoria per 2-0 sul Sudafrica all'Estadio Azteca l'11 giugno 2026. Da paese ospitante, il Messico ha dettato il ritmo con una prestazione d'esordio convincente."
+        },
+        "ja": {
+          "question": "メキシコはFootball 2026の開幕戦で南アフリカを2-0で下して勝利した。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "メキシコは2026年6月11日、エスタディオ・アステカで南アフリカを2-0で破り、大会の幕開けを飾った。開催国として、メキシコは自信あふれる開幕パフォーマンスで流れを作った。"
+        },
+        "ko": {
+          "question": "멕시코는 Football 2026 개막전에서 남아프리카공화국을 2-0으로 꺾고 승리했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "멕시코는 2026년 6월 11일 에스타디오 아스테카에서 남아프리카공화국을 2-0으로 이기며 대회의 문을 열었다. 개최국인 멕시코는 자신감 넘치는 개막 경기로 분위기를 주도했다."
+        },
+        "pt-BR": {
+          "question": "O México venceu a partida de abertura da Football 2026, derrotando a África do Sul por 2 a 0.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "O México abriu o torneio com uma vitória por 2 a 0 sobre a África do Sul no Estádio Azteca, em 11 de junho de 2026. Como anfitrião, o México deu o tom com uma atuação de estreia confiante."
+        },
+        "zh-Hans": {
+          "question": "墨西哥在 Football 2026 的揭幕战中以 2-0 击败南非取得胜利。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "2026 年 6 月 11 日，墨西哥在阿兹特克体育场以 2-0 战胜南非，为本届赛事拉开序幕。作为东道主，墨西哥以一场自信的揭幕战表现奠定了基调。"
+        }
+      },
+      "i18nSourceHash": "a769fe14e9b0d9b4"
     },
     {
       "id": "tf-2026-12-groups",
@@ -22961,7 +23230,90 @@
       "explanation": "With the expansion to 48 teams, the tournament uses 12 groups of four (Groups A through L), up from 8 groups in the previous 32-team format.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Levi%27s_Stadium_in_February_2016_prior_to_Super_Bowl_50_%2824398261729%29.jpg/640px-Levi%27s_Stadium_in_February_2016_prior_to_Super_Bowl_50_%2824398261729%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "تضم بطولة Football 2026 اثنتي عشرة مجموعة، تتألف كل منها من أربعة منتخبات.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "مع التوسع إلى 48 منتخبًا، تعتمد البطولة على 12 مجموعة من أربعة منتخبات (المجموعات من A إلى L)، بدلًا من 8 مجموعات في النظام السابق المكوّن من 32 منتخبًا."
+        },
+        "de": {
+          "question": "Bei Football 2026 gibt es 12 Gruppen mit jeweils vier Mannschaften.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Mit der Aufstockung auf 48 Mannschaften umfasst das Turnier 12 Vierergruppen (Gruppe A bis L) – zuvor waren es im 32er-Format nur 8 Gruppen."
+        },
+        "es": {
+          "question": "Football 2026 cuenta con 12 grupos de cuatro equipos cada uno.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Con la ampliación a 48 equipos, el torneo se organiza en 12 grupos de cuatro (del Grupo A al L), frente a los 8 grupos del anterior formato de 32 equipos."
+        },
+        "es-ES": {
+          "question": "Football 2026 cuenta con 12 grupos de cuatro equipos cada uno.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Con la ampliación a 48 equipos, el torneo se organiza en 12 grupos de cuatro (del Grupo A al L), frente a los 8 grupos del anterior formato de 32 equipos."
+        },
+        "fr": {
+          "question": "Football 2026 comprend 12 groupes de quatre équipes chacun.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Avec le passage à 48 équipes, le tournoi se dispute en 12 groupes de quatre (des groupes A à L), contre 8 groupes dans le précédent format à 32 équipes."
+        },
+        "it": {
+          "question": "Football 2026 prevede 12 gironi da quattro squadre ciascuno.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Con l'ampliamento a 48 squadre, il torneo si articola in 12 gironi da quattro (dai gironi A a L), rispetto agli 8 gironi del precedente formato a 32 squadre."
+        },
+        "ja": {
+          "question": "Football 2026 は、それぞれ4チームからなる12のグループで構成されている。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "48チームへの拡大に伴い、大会は4チームずつの12グループ（グループAからLまで）で行われる。これは、以前の32チーム方式での8グループから増えたものだ。"
+        },
+        "ko": {
+          "question": "Football 2026은 각 4개 팀으로 구성된 12개 조로 진행된다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "48개 팀으로 확대되면서 이 대회는 4개 팀씩 12개 조(A조부터 L조까지)로 치러지며, 이는 이전 32개 팀 방식의 8개 조에서 늘어난 것이다."
+        },
+        "pt-BR": {
+          "question": "A Football 2026 conta com 12 grupos de quatro seleções cada.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Com a ampliação para 48 seleções, o torneio é disputado em 12 grupos de quatro (do Grupo A ao L), em vez dos 8 grupos do formato anterior, com 32 seleções."
+        },
+        "zh-Hans": {
+          "question": "Football 2026 由12个小组组成，每组四支球队。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "随着参赛队伍扩大到48支，本届赛事采用12个四队小组（A组至L组），相比此前32队赛制的8个小组有所增加。"
+        }
+      },
+      "i18nSourceHash": "06cecc68962941b2"
     },
     {
       "id": "tf-2026-usa-paraguay",
@@ -22975,7 +23327,90 @@
       "explanation": "The USA kicked off their home tournament with an emphatic 4-1 win over Paraguay at SoFi Stadium in Los Angeles, the biggest opening-match win by a host nation since 2006.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/SoFi_Stadium_2023.jpg/640px-SoFi_Stadium_2023.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "افتتحت الولايات المتحدة مشوارها في بطولة Football 2026 بالفوز على باراغواي بنتيجة 4-1.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "استهلت الولايات المتحدة بطولتها على أرضها بفوز كاسح بنتيجة 4-1 على باراغواي في ملعب SoFi Stadium بمدينة لوس أنجلوس، وهو أكبر فوز في مباراة افتتاحية لدولة مضيفة منذ عام 2006."
+        },
+        "de": {
+          "question": "Die USA starteten mit einem 4:1-Sieg gegen Paraguay in ihre Football-2026-Kampagne.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Die USA eröffneten ihr Heimturnier mit einem eindrucksvollen 4:1-Sieg gegen Paraguay im SoFi Stadium in Los Angeles – der höchste Auftaktsieg eines Gastgeberlandes seit 2006."
+        },
+        "es": {
+          "question": "Estados Unidos comenzó su campaña en Football 2026 con una victoria de 4-1 sobre Paraguay.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Estados Unidos arrancó su torneo como local con una contundente victoria de 4-1 sobre Paraguay en el SoFi Stadium de Los Ángeles, el triunfo más amplio de una anfitriona en un partido inaugural desde 2006."
+        },
+        "es-ES": {
+          "question": "Estados Unidos comenzó su andadura en Football 2026 con una victoria por 4-1 sobre Paraguay.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Estados Unidos inauguró su torneo como anfitrión con una contundente victoria por 4-1 sobre Paraguay en el SoFi Stadium de Los Ángeles, la mayor goleada de un país anfitrión en un partido inaugural desde 2006."
+        },
+        "fr": {
+          "question": "Les États-Unis ont lancé leur campagne à Football 2026 par une victoire 4-1 contre le Paraguay.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Les États-Unis ont entamé leur tournoi à domicile par une éclatante victoire 4-1 contre le Paraguay au SoFi Stadium de Los Angeles, la plus large victoire d'un pays hôte en match d'ouverture depuis 2006."
+        },
+        "it": {
+          "question": "Gli Stati Uniti hanno aperto il loro cammino in Football 2026 con una vittoria per 4-1 sul Paraguay.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Gli Stati Uniti hanno inaugurato il loro torneo casalingo con un netto 4-1 sul Paraguay al SoFi Stadium di Los Angeles, la vittoria più ampia di una nazione ospitante in una partita inaugurale dal 2006."
+        },
+        "ja": {
+          "question": "アメリカはFootball 2026の初戦でパラグアイに4-1で勝利し、大会をスタートさせた。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "アメリカはロサンゼルスのSoFiスタジアムでパラグアイを4-1と圧倒し、地元開催の大会を白星でスタートさせた。これは2006年以降、開催国による開幕戦での最大の勝利となった。"
+        },
+        "ko": {
+          "question": "미국은 Football 2026 첫 경기에서 파라과이를 4-1로 꺾으며 대회를 시작했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "미국은 로스앤젤레스의 SoFi 스타디움에서 파라과이를 4-1로 압도하며 홈 대회를 승리로 시작했다. 이는 2006년 이후 개최국이 개막전에서 거둔 가장 큰 승리다."
+        },
+        "pt-BR": {
+          "question": "Os Estados Unidos começaram sua campanha na Football 2026 com uma vitória de 4 a 1 sobre o Paraguai.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Os Estados Unidos estrearam no torneio em casa com uma vitória convincente de 4 a 1 sobre o Paraguai no SoFi Stadium, em Los Angeles, a maior vitória de um país-sede em uma partida de abertura desde 2006."
+        },
+        "zh-Hans": {
+          "question": "美国队在 Football 2026 揭幕战中以 4-1 战胜巴拉圭，开启了他们的赛程。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "美国队在洛杉矶的 SoFi 体育场以 4-1 大胜巴拉圭，为本土举办的赛事赢得开门红，这是自 2006 年以来东道主在揭幕战中取得的最大比分胜利。"
+        }
+      },
+      "i18nSourceHash": "264d8ea659422eda"
     },
     {
       "id": "tf-2026-germany-curacao",
