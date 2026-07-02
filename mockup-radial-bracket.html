@@ -287,6 +287,51 @@ function draw() {
     dot(fx, fy, alpha);
   }
 
+  // === selected team: full path to the final in their flag color ===
+  if (selected) {
+    let slot = -1;
+    for (let i = 0; i < 16 && slot < 0; i++) {
+      const m = M[bracketOrder[i]];
+      if (!m) continue;
+      if (m.h === selected) slot = i * 2;
+      else if (m.a === selected) slot = i * 2 + 1;
+    }
+    if (slot >= 0) {
+      const col = pc[selected] || '#888';
+      const pairIdx = slot >> 1, r16Idx = pairIdx >> 1, qfIdx = r16Idx >> 1, sfIdx = qfIdx >> 1;
+      const mid = (p1, p2) => [(p1[0]+p2[0])/2, (p1[1]+p2[1])/2];
+      const mid1 = mid(pt(slotA(pairIdx*2), rC1), pt(slotA(pairIdx*2+1), rC1));
+      const mid2 = mid(pt(pairMid[r16Idx*2], rC2), pt(pairMid[r16Idx*2+1], rC2));
+      const mid3 = mid(pt(r16MatchA[qfIdx*2], rC3), pt(r16MatchA[qfIdx*2+1], rC3));
+      const mid4 = mid(pt(qfMatchA[sfIdx*2], rC4), pt(qfMatchA[sfIdx*2+1], rC4));
+      const pts = [
+        pt(slotA(slot), rTeam), pt(slotA(slot), rC1), mid1,
+        pt(pairMid[pairIdx], r16r), pt(pairMid[pairIdx], rC2), mid2,
+        pt(r16MatchA[r16Idx], rQF), pt(r16MatchA[r16Idx], rC3), mid3,
+        pt(qfMatchA[qfIdx], rSF), pt(qfMatchA[qfIdx], rC4), mid4,
+        [cx, cy],
+      ];
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(pts[0][0], pts[0][1]);
+      for (const p of pts.slice(1)) ctx.lineTo(p[0], p[1]);
+      ctx.strokeStyle = col; ctx.globalAlpha = 0.22;
+      ctx.lineWidth = Math.max(9, R * 0.026); ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+      ctx.stroke();
+      ctx.globalAlpha = 0.9;
+      ctx.lineWidth = Math.max(3.5, R * 0.010);
+      ctx.stroke();
+      ctx.restore();
+      // rings at the node positions along the path
+      const ringR = [nr, nr16, nrQF, nrSF];
+      for (let j = 0; j < 4; j++) {
+        const p = pts[j * 3];
+        ctx.beginPath(); ctx.arc(p[0], p[1], ringR[j] + 4, 0, Math.PI*2);
+        ctx.strokeStyle = col; ctx.lineWidth = 3; ctx.stroke();
+      }
+    }
+  }
+
   // === nodes ===
   function drawNode(a, r, team, nodeR, state, dim) {
     const [x, y] = pt(a, r);
@@ -404,51 +449,6 @@ function draw() {
   for (let k = 0; k < 4; k++) {
     const w = winner(M[qfOrder[k]]);
     drawNode(qfMatchA[k], rSF, w, nrSF, '', selected != null && w !== selected);
-  }
-
-  // === selected team: full path to the final in their flag color ===
-  if (selected) {
-    let slot = -1;
-    for (let i = 0; i < 16 && slot < 0; i++) {
-      const m = M[bracketOrder[i]];
-      if (!m) continue;
-      if (m.h === selected) slot = i * 2;
-      else if (m.a === selected) slot = i * 2 + 1;
-    }
-    if (slot >= 0) {
-      const col = pc[selected] || '#888';
-      const pairIdx = slot >> 1, r16Idx = pairIdx >> 1, qfIdx = r16Idx >> 1, sfIdx = qfIdx >> 1;
-      const mid = (p1, p2) => [(p1[0]+p2[0])/2, (p1[1]+p2[1])/2];
-      const mid1 = mid(pt(slotA(pairIdx*2), rC1), pt(slotA(pairIdx*2+1), rC1));
-      const mid2 = mid(pt(pairMid[r16Idx*2], rC2), pt(pairMid[r16Idx*2+1], rC2));
-      const mid3 = mid(pt(r16MatchA[qfIdx*2], rC3), pt(r16MatchA[qfIdx*2+1], rC3));
-      const mid4 = mid(pt(qfMatchA[sfIdx*2], rC4), pt(qfMatchA[sfIdx*2+1], rC4));
-      const pts = [
-        pt(slotA(slot), rTeam), pt(slotA(slot), rC1), mid1,
-        pt(pairMid[pairIdx], r16r), pt(pairMid[pairIdx], rC2), mid2,
-        pt(r16MatchA[r16Idx], rQF), pt(r16MatchA[r16Idx], rC3), mid3,
-        pt(qfMatchA[qfIdx], rSF), pt(qfMatchA[qfIdx], rC4), mid4,
-        [cx, cy],
-      ];
-      ctx.save();
-      ctx.beginPath();
-      ctx.moveTo(pts[0][0], pts[0][1]);
-      for (const p of pts.slice(1)) ctx.lineTo(p[0], p[1]);
-      ctx.strokeStyle = col; ctx.globalAlpha = 0.22;
-      ctx.lineWidth = Math.max(9, R * 0.026); ctx.lineJoin = 'round'; ctx.lineCap = 'round';
-      ctx.stroke();
-      ctx.globalAlpha = 0.9;
-      ctx.lineWidth = Math.max(3.5, R * 0.010);
-      ctx.stroke();
-      ctx.restore();
-      // rings at the node positions along the path
-      const ringR = [nr, nr16, nrQF, nrSF];
-      for (let j = 0; j < 4; j++) {
-        const p = pts[j * 3];
-        ctx.beginPath(); ctx.arc(p[0], p[1], ringR[j] + 4, 0, Math.PI*2);
-        ctx.strokeStyle = col; ctx.lineWidth = 3; ctx.stroke();
-      }
-    }
   }
 
   // === center trophy ===
