@@ -8371,7 +8371,8 @@
         "13"
       ],
       "answer": 2,
-      "explanation": "Eleven US cities host matches, from New York/New Jersey and Los Angeles to Dallas, Houston, Atlanta, Miami, Seattle, Philadelphia, Kansas City, the San Francisco Bay Area, and Boston."
+      "explanation": "Eleven US cities host matches, from New York/New Jersey and Los Angeles to Dallas, Houston, Atlanta, Miami, Seattle, Philadelphia, Kansas City, the San Francisco Bay Area, and Boston.",
+      "approved": true
     },
     {
       "id": "v-canada-cities",
