@@ -115,6 +115,29 @@ function winner(m) {
   return m.sH > m.sA ? m.h : (m.sA > m.sH ? m.a : null);
 }
 function isR(t) { return t && t !== 'TBD'; }
+
+// a team is eliminated once they lose any decided match on their route
+function isEliminated(team) {
+  for (let i = 0; i < 16; i++) {
+    const m = M[bracketOrder[i]];
+    if (!m || (m.h !== team && m.a !== team)) continue;
+    const w32 = winner(m);
+    if (w32 == null) return false;
+    if (w32 !== team) return true;
+    const later = [
+      [r16Order, Math.floor(i / 2)],
+      [qfOrder, Math.floor(i / 4)],
+      [sfOrder, Math.floor(i / 8)],
+    ];
+    for (const [order, idx] of later) {
+      const rw = winner(M[order[idx]]);
+      if (rw == null) return false;
+      if (rw !== team) return true;
+    }
+    return false;
+  }
+  return false;
+}
 function scoreText(m) {
   if (!m || m.sH == null) return null;
   let s = `${m.sH}–${m.sA}`;
@@ -239,8 +262,8 @@ function draw() {
     ctx.strokeStyle = 'rgba(0,0,0,0.05)'; ctx.lineWidth = 1; ctx.stroke();
   }
 
-  const neu = 'rgba(0,0,0,0.09)';
-  const neuW = 1.5, decW = Math.max(2.5, R * 0.008);
+  const neu = 'rgba(0,0,0,0.22)';
+  const neuW = 1.8, decW = Math.max(2.5, R * 0.008);
 
   // ring angle helpers
   const pairMid = [];
@@ -275,8 +298,8 @@ function draw() {
       const homeWon = w === m.h;
       const wcx = homeWon ? c1x : c2x, wcy = homeWon ? c1y : c2y;
       const lcx = homeWon ? c2x : c1x, lcy = homeWon ? c2y : c1y;
-      line(homeWon ? s2x : s1x, homeWon ? s2y : s1y, lcx, lcy, 'rgba(0,0,0,0.05)', 1.2, alpha);
-      line(lcx, lcy, mx, my, 'rgba(0,0,0,0.05)', 1.2, alpha);
+      line(homeWon ? s2x : s1x, homeWon ? s2y : s1y, lcx, lcy, 'rgba(0,0,0,0.12)', 1.2, alpha);
+      line(lcx, lcy, mx, my, 'rgba(0,0,0,0.12)', 1.2, alpha);
       line(homeWon ? s1x : s2x, homeWon ? s1y : s2y, wcx, wcy, col, decW, alpha);
       line(wcx, wcy, mx, my, col, decW, alpha);
       line(mx, my, nx, ny, col, decW, alpha);
@@ -337,7 +360,7 @@ function draw() {
     if (dim) ctx.globalAlpha = 0.35;
     if (!isR(team)) {
       ctx.beginPath(); ctx.arc(x, y, nodeR, 0, Math.PI*2);
-      ctx.setLineDash([3,3]); ctx.strokeStyle = 'rgba(0,0,0,0.10)'; ctx.lineWidth = 1;
+      ctx.setLineDash([3,3]); ctx.strokeStyle = 'rgba(0,0,0,0.18)'; ctx.lineWidth = 1;
       ctx.stroke(); ctx.setLineDash([]);
       ctx.restore(); return;
     }
@@ -407,12 +430,15 @@ function draw() {
       const state = w === team ? 'win' : (w ? 'elim' : '');
       const nodeDim = dim && team !== selected;
       drawNode(a, rTeam, team, nr, state, nodeDim);
-      // championship stars wrapped around the flag circle, just outside it
+      // name wraps just outside the flag; stars wrap outside the name
+      drawName(a, rTeam, team, nr, true, 0, nodeDim);
       const nStars = STARS[team];
       const starSize = Math.max(3.5, R * 0.0115);
       if (nStars) {
         const [x0, y0] = pt(a, rTeam);
-        const rBadge = nr + Math.max(4, R * 0.0135);
+        const gap = Math.max(4, R * 0.0135);
+        const nameBand = showNames ? Math.max(8, R * 0.0215) + 3 : 0;
+        const rBadge = nr + gap + nameBand + starSize * 0.9;
         const step = (starSize * 2.3) / rBadge;
         ctx.save();
         if (nodeDim) ctx.globalAlpha = 0.35;
@@ -422,8 +448,6 @@ function draw() {
         }
         ctx.restore();
       }
-      // name wraps outside the flag, beyond the stars when present
-      drawName(a, rTeam, team, nr, true, nStars ? starSize * 2.2 : 0, nodeDim);
     }
   }
 
@@ -435,20 +459,17 @@ function draw() {
     const state = w && r16w ? (r16w === w ? 'win' : 'elim') : '';
     const dim = selected != null && w !== selected;
     drawNode(pairMid[i], r16r, w, nr16, state, dim);
-    if (w) drawName(pairMid[i], r16r, w, nr16, false, 0, dim);
   }
   // QF slot nodes (R16 winners)
   for (let j = 0; j < 8; j++) {
     const w = winner(M[r16Order[j]]);
     const dim = selected != null && w !== selected;
     drawNode(r16MatchA[j], rQF, w, nrQF, '', dim);
-    if (w) drawName(r16MatchA[j], rQF, w, nrQF, false, 0, dim);
   }
   // SF slot nodes (QF winners)
   for (let k = 0; k < 4; k++) {
     const w = winner(M[qfOrder[k]]);
     drawNode(qfMatchA[k], rSF, w, nrSF, '', selected != null && w !== selected);
-    if (w) drawName(qfMatchA[k], rSF, w, nrSF, false, 0, selected != null && w !== selected);
   }
 
   // === score labels (toggleable, next to the winner's stub, above the nodes) ===
@@ -563,6 +584,8 @@ C.addEventListener('click', (e) => {
       if (d < nr + 10 && d < bestD) { bestD = d; best = team; }
     }
   }
+  // eliminated teams have no path to the final — ignore taps on them
+  if (best && isEliminated(best)) return;
   selected = (best === selected) ? null : best;
   draw();
 });
