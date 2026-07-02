@@ -161,8 +161,11 @@ function loadFlags() {
   }
 }
 
-// 32 outer slots, starting at top, clockwise
+// 32 outer slots, starting at top, clockwise — plus the inner-ring slot angles
 function slotA(i) { return (-90 + (i + 0.5) * 11.25) * Math.PI / 180; }
+function pairMidA(i) { return (-90 + (2 * i + 1) * 11.25) * Math.PI / 180; }
+function r16SlotA(j) { return (-90 + (4 * j + 2) * 11.25) * Math.PI / 180; }
+function qfSlotA(k) { return (-90 + (8 * k + 4) * 11.25) * Math.PI / 180; }
 function pt(a, r) { return [cx + r * Math.cos(a), cy + r * Math.sin(a)]; }
 
 function toggleNames() {
@@ -571,19 +574,27 @@ C.addEventListener('click', (e) => {
   const rect = C.getBoundingClientRect();
   const x = e.clientX - rect.left, y = e.clientY - rect.top;
   const nr = Math.max(10, R * 0.0521);
-  const rTeam = R * 0.8934;
+  const nr16 = Math.max(9, R * 0.0427), nrQF = Math.max(8, R * 0.0379), nrSF = Math.max(7, R * 0.0332);
+  const rTeam = R * 0.8934, r16r = R * 0.6706, rQF = R * 0.4668, rSF = R * 0.301;
 
   let best = null, bestD = Infinity;
+  function test(a, r, nodeR, team) {
+    if (!isR(team)) return;
+    const [px, py] = pt(a, r);
+    const d = Math.sqrt((x-px)**2 + (y-py)**2);
+    if (d < nodeR + 10 && d < bestD) { bestD = d; best = team; }
+  }
+  // a live team's flag is clickable on every ring it appears on
   for (let i = 0; i < 16; i++) {
     const m = M[bracketOrder[i]];
     if (!m) continue;
-    for (const [slot, team] of [[i*2, m.h], [i*2+1, m.a]]) {
-      if (!isR(team)) continue;
-      const [px, py] = pt(slotA(slot), rTeam);
-      const d = Math.sqrt((x-px)**2 + (y-py)**2);
-      if (d < nr + 10 && d < bestD) { bestD = d; best = team; }
-    }
+    test(slotA(i*2), rTeam, nr, m.h);
+    test(slotA(i*2+1), rTeam, nr, m.a);
+    test(pairMidA(i), r16r, nr16, winner(m));
   }
+  for (let j = 0; j < 8; j++) test(r16SlotA(j), rQF, nrQF, winner(M[r16Order[j]]));
+  for (let k = 0; k < 4; k++) test(qfSlotA(k), rSF, nrSF, winner(M[qfOrder[k]]));
+
   // eliminated teams have no path to the final — ignore taps on them
   if (best && isEliminated(best)) return;
   selected = (best === selected) ? null : best;
