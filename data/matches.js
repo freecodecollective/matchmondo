@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-02 18:57 UTC by scripts/update-data.py
+// Regenerated 2026-07-02 20:22 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -948,7 +948,8 @@ window.WC_MATCHES = [
     "city": "Inglewood (Los Angeles), CA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 1
+    "scoreA": 1,
+    "result": "FT"
   },
   {
     "n": 76,
@@ -961,7 +962,8 @@ window.WC_MATCHES = [
     "city": "Houston, TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 2,
-    "scoreA": 1
+    "scoreA": 1,
+    "result": "FT"
   },
   {
     "n": 74,
@@ -974,7 +976,10 @@ window.WC_MATCHES = [
     "city": "Foxborough (Boston), MA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 1
+    "scoreA": 1,
+    "result": "PEN",
+    "pkH": 3,
+    "pkA": 4
   },
   {
     "n": 75,
@@ -987,7 +992,10 @@ window.WC_MATCHES = [
     "city": "Monterrey, Mexico",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 1
+    "scoreA": 1,
+    "result": "PEN",
+    "pkH": 2,
+    "pkA": 3
   },
   {
     "n": 78,
@@ -1000,7 +1008,8 @@ window.WC_MATCHES = [
     "city": "Arlington (Dallas), TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 2
+    "scoreA": 2,
+    "result": "FT"
   },
   {
     "n": 77,
@@ -1013,7 +1022,8 @@ window.WC_MATCHES = [
     "city": "East Rutherford, NJ",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 3,
-    "scoreA": 0
+    "scoreA": 0,
+    "result": "FT"
   },
   {
     "n": 79,
@@ -1026,7 +1036,8 @@ window.WC_MATCHES = [
     "city": "Mexico City, Mexico",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 2,
-    "scoreA": 0
+    "scoreA": 0,
+    "result": "FT"
   },
   {
     "n": 80,
@@ -1039,7 +1050,8 @@ window.WC_MATCHES = [
     "city": "Atlanta, GA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 2,
-    "scoreA": 1
+    "scoreA": 1,
+    "result": "FT"
   },
   {
     "n": 82,
@@ -1052,7 +1064,8 @@ window.WC_MATCHES = [
     "city": "Seattle, WA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 3,
-    "scoreA": 2
+    "scoreA": 2,
+    "result": "AET"
   },
   {
     "n": 81,
@@ -1065,7 +1078,8 @@ window.WC_MATCHES = [
     "city": "Santa Clara (SF Bay Area), CA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 2,
-    "scoreA": 0
+    "scoreA": 0,
+    "result": "FT"
   },
   {
     "n": 84,
@@ -1077,8 +1091,9 @@ window.WC_MATCHES = [
     "venue": "SoFi Stadium",
     "city": "Inglewood (Los Angeles), CA",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 1,
+    "scoreA": 0,
+    "isLive": true
   },
   {
     "n": 83,
@@ -1203,7 +1218,7 @@ window.WC_MATCHES = [
     "stage": "Round of 16",
     "group": null,
     "home": "To be announced",
-    "away": "To be announced",
+    "away": "Spain",
     "venue": "AT&T Stadium",
     "city": "Arlington (Dallas), TX",
     "tv": "FOX · Telemundo (ES)",
