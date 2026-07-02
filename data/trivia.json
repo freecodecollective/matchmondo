@@ -8450,7 +8450,8 @@
         "5"
       ],
       "answer": 1,
-      "explanation": "Mexico hosts matches in three cities — Mexico City (Estadio Azteca), Guadalajara (Estadio Akron), and Monterrey (Estadio BBVA)."
+      "explanation": "Mexico hosts matches in three cities — Mexico City (Estadio Azteca), Guadalajara (Estadio Akron), and Monterrey (Estadio BBVA).",
+      "approved": true
     },
     {
       "id": "p-ronaldo-brazil-15",
