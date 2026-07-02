@@ -23907,7 +23907,90 @@
       "answer": 0,
       "explanation": "Panama were shut out in all three group matches: 0-1 to Ghana, 0-1 to Croatia, and 0-2 to England. They were the only team at Football 2026 to finish the group stage without scoring.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "لم تسجل بنما أي هدف خلال دور المجموعات في بطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "خرجت بنما دون تسجيل أي هدف في مبارياتها الثلاث بدور المجموعات: 0-1 أمام غانا، و0-1 أمام كرواتيا، و0-2 أمام إنجلترا. كانت المنتخب الوحيد في بطولة Football 2026 الذي أنهى دور المجموعات دون تسجيل أي هدف."
+        },
+        "de": {
+          "question": "Panama erzielte während der Gruppenphase von Football 2026 kein einziges Tor.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Panama blieb in allen drei Gruppenspielen ohne Torerfolg: 0:1 gegen Ghana, 0:1 gegen Kroatien und 0:2 gegen England. Es war die einzige Mannschaft bei Football 2026, die die Gruppenphase ohne eigenen Treffer beendete."
+        },
+        "es": {
+          "question": "Panamá no marcó ni un solo gol durante la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Panamá se quedó sin anotar en sus tres partidos de la fase de grupos: 0-1 ante Ghana, 0-1 ante Croacia y 0-2 ante Inglaterra. Fue el único equipo en Football 2026 que terminó la fase de grupos sin marcar."
+        },
+        "es-ES": {
+          "question": "Panamá no marcó ni un solo gol durante la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Panamá se quedó sin marcar en sus tres partidos de la fase de grupos: 0-1 ante Ghana, 0-1 ante Croacia y 0-2 ante Inglaterra. Fue el único equipo en Football 2026 que terminó la fase de grupos sin anotar."
+        },
+        "fr": {
+          "question": "Le Panama n'a pas marqué le moindre but lors de la phase de groupes de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Le Panama est resté muet lors de ses trois matchs de poule : 0-1 face au Ghana, 0-1 face à la Croatie et 0-2 face à l'Angleterre. Ce fut la seule équipe de Football 2026 à terminer la phase de groupes sans inscrire le moindre but."
+        },
+        "it": {
+          "question": "Panama non ha segnato neanche un gol durante la fase a gironi di Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Panama è rimasta a secco in tutte e tre le partite del girone: 0-1 con il Ghana, 0-1 con la Croazia e 0-2 con l'Inghilterra. È stata l'unica squadra a Football 2026 a concludere la fase a gironi senza segnare."
+        },
+        "ja": {
+          "question": "パナマはFootball 2026のグループステージで1点も得点できなかった。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "パナマはグループステージの3試合すべてで無得点に終わった。ガーナに0対1、クロアチアに0対1、イングランドに0対2。Football 2026でグループステージを1点も奪えずに終えた唯一のチームだった。"
+        },
+        "ko": {
+          "question": "파나마는 Football 2026 조별리그에서 단 한 골도 넣지 못했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "파나마는 조별리그 세 경기에서 모두 무득점에 그쳤다: 가나에 0-1, 크로아티아에 0-1, 잉글랜드에 0-2. 파나마는 Football 2026에서 득점 없이 조별리그를 마친 유일한 팀이었다."
+        },
+        "pt-BR": {
+          "question": "O Panamá não marcou um único gol durante a fase de grupos da Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "O Panamá ficou sem marcar em todas as três partidas da fase de grupos: 0 a 1 para Gana, 0 a 1 para a Croácia e 0 a 2 para a Inglaterra. Foi a única seleção na Football 2026 a encerrar a fase de grupos sem balançar as redes."
+        },
+        "zh-Hans": {
+          "question": "巴拿马在Football 2026小组赛阶段一球未进。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "巴拿马在小组赛三场比赛中均未能取得进球：0比1负于加纳，0比1负于克罗地亚，0比2负于英格兰。他们是Football 2026上唯一一支小组赛未进一球就结束征程的球队。"
+        }
+      },
+      "i18nSourceHash": "3bd76f4d032b6bc8"
     },
     {
       "id": "tf-2026-england-croatia",
@@ -23921,7 +24004,90 @@
       "explanation": "England started their campaign with a thrilling 4-2 victory over Croatia at AT&T Stadium in Arlington, Texas. It was the highest-scoring match of the opening round of group fixtures.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Arlington_June_2020_4_%28AT%26T_Stadium%29.jpg/640px-Arlington_June_2020_4_%28AT%26T_Stadium%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "هزمت إنجلترا كرواتيا بنتيجة 4-2 في أول مبارياتها بدور المجموعات في Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "بدأت إنجلترا مشوارها بفوز مثير بنتيجة 4-2 على كرواتيا في ملعب AT&T بمدينة أرلينغتون بولاية تكساس. وكانت أكثر مباريات الجولة الأولى من مباريات دور المجموعات تسجيلاً للأهداف."
+        },
+        "de": {
+          "question": "England besiegte Kroatien im ersten Gruppenspiel bei Football 2026 mit 4:2.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "England startete seine Kampagne mit einem packenden 4:2-Sieg über Kroatien im AT&T Stadium in Arlington, Texas. Es war das torreichste Spiel der ersten Runde der Gruppenpartien."
+        },
+        "es": {
+          "question": "Inglaterra venció a Croacia 4-2 en su primer partido de la fase de grupos en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Inglaterra comenzó su participación con una emocionante victoria por 4-2 sobre Croacia en el AT&T Stadium de Arlington, Texas. Fue el partido con más goles de la primera jornada de la fase de grupos."
+        },
+        "es-ES": {
+          "question": "Inglaterra derrotó a Croacia por 4-2 en su primer partido de la fase de grupos en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Inglaterra comenzó su andadura con una emocionante victoria por 4-2 ante Croacia en el AT&T Stadium de Arlington, Texas. Fue el partido con más goles de la primera jornada de la fase de grupos."
+        },
+        "fr": {
+          "question": "L'Angleterre a battu la Croatie 4-2 lors de son premier match de groupe à Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "L'Angleterre a débuté sa campagne par une victoire palpitante 4-2 face à la Croatie à l'AT&T Stadium d'Arlington, au Texas. Ce fut le match le plus prolifique de la première journée de la phase de groupes."
+        },
+        "it": {
+          "question": "L'Inghilterra ha battuto la Croazia 4-2 nella prima partita del girone a Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "L'Inghilterra ha iniziato il suo cammino con un'emozionante vittoria per 4-2 sulla Croazia all'AT&T Stadium di Arlington, in Texas. È stata la partita con più gol della prima giornata della fase a gironi."
+        },
+        "ja": {
+          "question": "イングランドはFootball 2026のグループステージ初戦でクロアチアを4対2で破った。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "イングランドはテキサス州アーリントンのAT&Tスタジアムでクロアチアを4対2で下すスリリングな勝利で大会をスタートさせた。これはグループステージ第1節で最も得点の多い試合だった。"
+        },
+        "ko": {
+          "question": "잉글랜드는 Football 2026 조별리그 첫 경기에서 크로아티아를 4-2로 물리쳤다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "잉글랜드는 텍사스주 알링턴의 AT&T 스타디움에서 크로아티아를 4-2로 꺾는 짜릿한 승리로 대회 여정을 시작했다. 이는 조별리그 1차전 경기 중 가장 많은 득점이 나온 경기였다."
+        },
+        "pt-BR": {
+          "question": "A Inglaterra venceu a Croácia por 4 a 2 em sua primeira partida da fase de grupos no Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A Inglaterra começou sua campanha com uma emocionante vitória por 4 a 2 sobre a Croácia no AT&T Stadium, em Arlington, no Texas. Foi a partida com mais gols da primeira rodada da fase de grupos."
+        },
+        "zh-Hans": {
+          "question": "英格兰在Football 2026小组赛首场比赛中以4比2击败克罗地亚。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "英格兰在得克萨斯州阿灵顿的AT&T球场以4比2战胜克罗地亚，为本届赛事拉开精彩序幕。这是小组赛首轮比赛中进球最多的一场。"
+        }
+      },
+      "i18nSourceHash": "a3a496c6b880731d"
     },
     {
       "id": "tf-2026-spain-saudi",
@@ -23935,7 +24101,90 @@
       "explanation": "Spain dominated Saudi Arabia 4-0 at Mercedes-Benz Stadium in Atlanta in their second group match, one of the most convincing performances of the group stage.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Mercedes_Benz_Stadium_time_lapse_capture_2017-08-13.jpg/640px-Mercedes_Benz_Stadium_time_lapse_capture_2017-08-13.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "فازت إسبانيا على المملكة العربية السعودية 4-0 في دور المجموعات ضمن بطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "سيطرت إسبانيا على المملكة العربية السعودية وفازت عليها 4-0 على ملعب مرسيدس-بنز في أتلانتا في مباراتها الثانية بدور المجموعات، في واحد من أكثر العروض إقناعًا في دور المجموعات."
+        },
+        "de": {
+          "question": "Spanien besiegte Saudi-Arabien in der Gruppenphase von Football 2026 mit 4:0.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Spanien dominierte Saudi-Arabien in seinem zweiten Gruppenspiel im Mercedes-Benz Stadium in Atlanta mit 4:0 – eine der überzeugendsten Leistungen der Gruppenphase."
+        },
+        "es": {
+          "question": "España venció a Arabia Saudita 4-0 en la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "España dominó a Arabia Saudita por 4-0 en el Mercedes-Benz Stadium de Atlanta en su segundo partido de grupo, una de las actuaciones más convincentes de la fase de grupos."
+        },
+        "es-ES": {
+          "question": "España ganó a Arabia Saudí 4-0 en la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "España dominó a Arabia Saudí por 4-0 en el Mercedes-Benz Stadium de Atlanta en su segundo partido de grupo, una de las actuaciones más convincentes de la fase de grupos."
+        },
+        "fr": {
+          "question": "L'Espagne a battu l'Arabie saoudite 4-0 lors de la phase de groupes de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "L'Espagne a dominé l'Arabie saoudite 4-0 au Mercedes-Benz Stadium d'Atlanta lors de son deuxième match de groupe, l'une des performances les plus convaincantes de la phase de groupes."
+        },
+        "it": {
+          "question": "La Spagna ha battuto l'Arabia Saudita 4-0 nella fase a gironi di Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "La Spagna ha dominato l'Arabia Saudita per 4-0 al Mercedes-Benz Stadium di Atlanta nella sua seconda partita del girone, una delle prestazioni più convincenti della fase a gironi."
+        },
+        "ja": {
+          "question": "スペインはFootball 2026のグループステージでサウジアラビアに4-0で勝利した。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "スペインはグループステージ第2戦、アトランタのメルセデス・ベンツ・スタジアムでサウジアラビアを4-0で圧倒し、グループステージで最も説得力のあるパフォーマンスの一つを見せた。"
+        },
+        "ko": {
+          "question": "스페인은 Football 2026 조별리그에서 사우디아라비아를 4-0으로 이겼다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "스페인은 조별리그 두 번째 경기에서 애틀랜타의 메르세데스-벤츠 스타디움에서 사우디아라비아를 4-0으로 압도하며 조별리그에서 가장 인상적인 경기력 중 하나를 선보였다."
+        },
+        "pt-BR": {
+          "question": "A Espanha venceu a Arábia Saudita por 4 a 0 na fase de grupos do Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A Espanha dominou a Arábia Saudita por 4 a 0 no Mercedes-Benz Stadium, em Atlanta, em sua segunda partida da fase de grupos, uma das atuações mais convincentes dessa fase."
+        },
+        "zh-Hans": {
+          "question": "西班牙在Football 2026小组赛中以4-0战胜沙特阿拉伯。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "西班牙在小组赛第二场比赛中于亚特兰大的梅赛德斯-奔驰体育场以4-0完胜沙特阿拉伯，这是小组赛阶段最具说服力的表现之一。"
+        }
+      },
+      "i18nSourceHash": "d6b9b6583d7c3b03"
     },
     {
       "id": "tf-2026-tunisia-winless",
@@ -23948,7 +24197,90 @@
       "answer": 0,
       "explanation": "Tunisia finished bottom of Group F with zero points, losing 1-5 to Sweden, 0-4 to Japan, and 1-3 to the Netherlands. Their 2 goals scored and 12 conceded made for the worst goal difference in the group stage.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "خسرت تونس مبارياتها الثلاث في دور المجموعات ضمن بطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "احتلت تونس المركز الأخير في المجموعة السادسة بدون أي نقطة، حيث خسرت 1-5 أمام السويد، و0-4 أمام اليابان، و1-3 أمام هولندا. وبتسجيلها هدفين فقط واستقبالها 12 هدفًا، سجّلت أسوأ فارق أهداف في دور المجموعات."
+        },
+        "de": {
+          "question": "Tunesien verlor bei Football 2026 alle drei Gruppenspiele.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Tunesien beendete die Gruppe F ohne Punkte als Letzter und verlor 1:5 gegen Schweden, 0:4 gegen Japan und 1:3 gegen die Niederlande. Mit nur 2 erzielten und 12 kassierten Toren hatte das Team die schlechteste Tordifferenz der Gruppenphase."
+        },
+        "es": {
+          "question": "Túnez perdió los tres partidos de la fase de grupos en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Túnez terminó último en el Grupo F con cero puntos, tras caer 1-5 ante Suecia, 0-4 ante Japón y 1-3 ante Países Bajos. Con solo 2 goles a favor y 12 en contra, registró la peor diferencia de goles de la fase de grupos."
+        },
+        "es-ES": {
+          "question": "Túnez perdió los tres partidos de la fase de grupos en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Túnez acabó última en el Grupo F con cero puntos, tras caer 1-5 ante Suecia, 0-4 ante Japón y 1-3 ante los Países Bajos. Con solo 2 goles a favor y 12 en contra, firmó la peor diferencia de goles de la fase de grupos."
+        },
+        "fr": {
+          "question": "La Tunisie a perdu ses trois matchs de phase de groupes lors de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "La Tunisie a terminé dernière du groupe F avec zéro point, s'inclinant 1-5 face à la Suède, 0-4 contre le Japon et 1-3 devant les Pays-Bas. Avec seulement 2 buts marqués et 12 encaissés, elle a affiché la pire différence de buts de la phase de groupes."
+        },
+        "it": {
+          "question": "La Tunisia ha perso tutte e tre le partite della fase a gironi a Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "La Tunisia ha chiuso all'ultimo posto nel Gruppo F con zero punti, perdendo 1-5 contro la Svezia, 0-4 contro il Giappone e 1-3 contro i Paesi Bassi. Con soli 2 gol fatti e 12 subiti, ha avuto la peggior differenza reti della fase a gironi."
+        },
+        "ja": {
+          "question": "チュニジアはFootball 2026のグループステージで3試合すべてに敗れた。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "チュニジアは勝ち点0でグループFの最下位に終わり、スウェーデンに1-5、日本に0-4、オランダに1-3で敗れた。得点はわずか2、失点は12で、グループステージ最悪の得失点差となった。"
+        },
+        "ko": {
+          "question": "튀니지는 Football 2026 조별 리그에서 세 경기를 모두 패했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "튀니지는 승점 0으로 F조 최하위에 그쳤으며, 스웨덴에 1-5, 일본에 0-4, 네덜란드에 1-3으로 패했다. 단 2골을 넣고 12골을 내주며 조별 리그 최악의 골 득실을 기록했다."
+        },
+        "pt-BR": {
+          "question": "A Tunísia perdeu todos os três jogos da fase de grupos na Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A Tunísia terminou em último no Grupo F com zero ponto, perdendo por 1 a 5 para a Suécia, 0 a 4 para o Japão e 1 a 3 para a Holanda. Com apenas 2 gols marcados e 12 sofridos, teve o pior saldo de gols da fase de grupos."
+        },
+        "zh-Hans": {
+          "question": "突尼斯在 Football 2026 小组赛中三场比赛全部落败。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "突尼斯以零积分位列 F 组垫底，1比5负于瑞典，0比4负于日本，1比3负于荷兰。他们仅打进 2 球却丢了 12 球，是小组赛中净胜球最差的球队。"
+        }
+      },
+      "i18nSourceHash": "551a019c71cdbdae"
     },
     {
       "id": "tf-2026-seven-goalless",
@@ -23961,7 +24293,90 @@
       "answer": 0,
       "explanation": "Seven matches ended 0-0 in the group stage, including Spain vs Cabo Verde, England vs Ghana, Colombia vs Portugal, and Belgium vs IR Iran. Despite the high number of draws, the tournament still averaged nearly 3 goals per match.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "انتهت سبع مباريات بالتعادل السلبي (0-0) بالضبط خلال دور المجموعات في Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "انتهت سبع مباريات بنتيجة 0-0 في دور المجموعات، من بينها إسبانيا ضد كابو فيردي، وإنجلترا ضد غانا، وكولومبيا ضد البرتغال، وبلجيكا ضد إيران. ورغم العدد الكبير من التعادلات، ظل معدل الأهداف في البطولة قريباً من 3 أهداف لكل مباراة."
+        },
+        "de": {
+          "question": "In der Gruppenphase von Football 2026 gab es genau sieben torlose Unentschieden (0:0).",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Sieben Spiele endeten in der Gruppenphase 0:0, darunter Spanien gegen Kap Verde, England gegen Ghana, Kolumbien gegen Portugal und Belgien gegen Iran. Trotz der hohen Zahl an Unentschieden lag der Turnierschnitt weiterhin bei fast 3 Toren pro Spiel."
+        },
+        "es": {
+          "question": "Hubo exactamente siete empates sin goles (0-0) durante la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Siete partidos terminaron 0-0 en la fase de grupos, incluyendo España vs. Cabo Verde, Inglaterra vs. Ghana, Colombia vs. Portugal y Bélgica vs. Irán. A pesar de la gran cantidad de empates, el torneo aún promedió casi 3 goles por partido."
+        },
+        "es-ES": {
+          "question": "Hubo exactamente siete empates sin goles (0-0) durante la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Siete partidos acabaron 0-0 en la fase de grupos, incluidos España contra Cabo Verde, Inglaterra contra Ghana, Colombia contra Portugal y Bélgica contra Irán. A pesar del elevado número de empates, el torneo siguió promediando casi 3 goles por partido."
+        },
+        "fr": {
+          "question": "Il y a eu exactement sept matchs nuls et vierges (0-0) lors de la phase de groupes de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Sept matchs se sont soldés par un 0-0 lors de la phase de groupes, dont Espagne - Cap-Vert, Angleterre - Ghana, Colombie - Portugal et Belgique - Iran. Malgré ce grand nombre de matchs nuls, le tournoi a tout de même affiché une moyenne de près de 3 buts par rencontre."
+        },
+        "it": {
+          "question": "Ci sono stati esattamente sette pareggi a reti bianche (0-0) durante la fase a gironi di Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Sette partite sono finite 0-0 nella fase a gironi, tra cui Spagna-Capo Verde, Inghilterra-Ghana, Colombia-Portogallo e Belgio-Iran. Nonostante l'elevato numero di pareggi, il torneo ha comunque registrato una media di quasi 3 gol a partita."
+        },
+        "ja": {
+          "question": "Football 2026のグループステージでは、スコアレスドロー（0-0）がちょうど7試合ありました。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "グループステージでは、スペイン対カーボベルデ、イングランド対ガーナ、コロンビア対ポルトガル、ベルギー対イランなど、7試合が0-0で終わりました。引き分けが多かったにもかかわらず、大会全体の平均得点は1試合あたり約3ゴールに達していました。"
+        },
+        "ko": {
+          "question": "Football 2026 조별리그에서 정확히 일곱 경기가 무득점 무승부(0-0)로 끝났습니다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "조별리그에서 스페인 대 카보베르데, 잉글랜드 대 가나, 콜롬비아 대 포르투갈, 벨기에 대 이란을 포함해 일곱 경기가 0-0으로 끝났습니다. 무승부가 많았음에도 대회 평균 득점은 경기당 거의 3골에 달했습니다."
+        },
+        "pt-BR": {
+          "question": "Houve exatamente sete empates sem gols (0-0) durante a fase de grupos da Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Sete partidas terminaram em 0-0 na fase de grupos, incluindo Espanha x Cabo Verde, Inglaterra x Gana, Colômbia x Portugal e Bélgica x Irã. Apesar do grande número de empates, o torneio ainda teve uma média de quase 3 gols por partida."
+        },
+        "zh-Hans": {
+          "question": "在Football 2026小组赛阶段，恰好有七场比赛以0-0的无进球平局收场。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "小组赛阶段共有七场比赛以0-0结束，包括西班牙对佛得角、英格兰对加纳、哥伦比亚对葡萄牙以及比利时对伊朗。尽管平局数量众多，本届赛事场均进球仍接近3球。"
+        }
+      },
+      "i18nSourceHash": "4b88d52f8355db92"
     },
     {
       "id": "tf-2026-round-of-32",
