@@ -18279,7 +18279,7 @@
       "answer": 1,
       "explanation": "False! Yellow card accumulations are traditionally wiped after the quarter-final stage, ensuring no player misses the semi-final or final due to bookings from earlier rounds. Only a direct red card would cause a suspension in the latter stages.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-england-penalty-curse",
