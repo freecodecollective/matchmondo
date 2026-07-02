@@ -17641,7 +17641,7 @@
       ],
       "answer": 0,
       "explanation": "BMO Field in Toronto is home to Toronto FC and the Canadian national teams. Originally built for the 2007 Under-20 tournament, the stadium has been expanded several times and now seats over 30,000. It's being further expanded for 2026 to meet capacity requirements.",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "rec-fastest-goal",
@@ -21442,9 +21442,9 @@
         "False"
       ],
       "answer": 0,
+      "explanation": "Mexico hosted the opening match at the iconic Estadio Azteca on June 11, defeating South Africa 2-0. The Azteca has now hosted opening matches in 1970, 1986, and 2026.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Vista_a%C3%A9rea_del_Estadio_Azteca_-_2026_-_02.jpg/640px-Vista_a%C3%A9rea_del_Estadio_Azteca_-_2026_-_02.jpg",
-      "explanation": "Mexico hosted the opening match at the iconic Estadio Azteca on June 11, defeating South Africa 2-0. The Azteca has now hosted opening matches in 1970, 1986, and 2026.",
       "approved": true
     },
     {
@@ -21456,8 +21456,8 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "Mexico kicked off the tournament with a 2-0 victory over South Africa at Estadio Azteca on June 11, 2026. As hosts, Mexico set the tone with a confident opening performance.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21469,10 +21469,10 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "With the expansion to 48 teams, the tournament uses 12 groups of four (Groups A through L), up from 8 groups in the previous 32-team format.",
-      "approved": true,
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Levi%27s_Stadium_in_February_2016_prior_to_Super_Bowl_50_%2824398261729%29.jpg/640px-Levi%27s_Stadium_in_February_2016_prior_to_Super_Bowl_50_%2824398261729%29.jpg"
+      "type": "true_false",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Levi%27s_Stadium_in_February_2016_prior_to_Super_Bowl_50_%2824398261729%29.jpg/640px-Levi%27s_Stadium_in_February_2016_prior_to_Super_Bowl_50_%2824398261729%29.jpg",
+      "approved": true
     },
     {
       "id": "tf-2026-usa-paraguay",
@@ -21483,9 +21483,9 @@
         "False"
       ],
       "answer": 0,
+      "explanation": "The USA kicked off their home tournament with an emphatic 4-1 win over Paraguay at SoFi Stadium in Los Angeles, the biggest opening-match win by a host nation since 2006.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/SoFi_Stadium_2023.jpg/640px-SoFi_Stadium_2023.jpg",
-      "explanation": "The USA kicked off their home tournament with an emphatic 4-1 win over Paraguay at SoFi Stadium in Los Angeles, the biggest opening-match win by a host nation since 2006.",
       "approved": true
     },
     {
@@ -21497,10 +21497,10 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "Germany routed Curaçao 7-1 at NRG Stadium in Houston, the biggest winning margin of the entire group stage. Canada's 6-0 win over Qatar was the second largest.",
-      "approved": true,
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nrg_stadium.jpg/640px-nrg_stadium.jpg"
+      "type": "true_false",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nrg_stadium.jpg/640px-nrg_stadium.jpg",
+      "approved": true
     },
     {
       "id": "tf-2026-canada-qatar",
@@ -21511,10 +21511,10 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "Canada thrashed Qatar 6-0 at BC Place in Vancouver, the largest victory in Canadian tournament history. It was also Qatar's heaviest defeat at the tournament.",
-      "approved": true,
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/BC_Place_2015_Women%27s_FIFA_World_Cup.jpg/640px-BC_Place_2015_Women%27s_FIFA_World_Cup.jpg"
+      "type": "true_false",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/BC_Place_2015_Women%27s_FIFA_World_Cup.jpg/640px-BC_Place_2015_Women%27s_FIFA_World_Cup.jpg",
+      "approved": true
     },
     {
       "id": "tf-2026-metlife-final",
@@ -21525,9 +21525,9 @@
         "False"
       ],
       "answer": 0,
+      "explanation": "MetLife Stadium in East Rutherford, New Jersey — just outside New York City — will host the Football 2026 final on July 19. With a capacity of over 82,000, it is one of the largest venues in the tournament.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Metlife_stadium_%28Aerial_view%29.jpg/640px-Metlife_stadium_%28Aerial_view%29.jpg",
-      "explanation": "MetLife Stadium in East Rutherford, New Jersey — just outside New York City — will host the Football 2026 final on July 19. With a capacity of over 82,000, it is one of the largest venues in the tournament.",
       "approved": true
     },
     {
@@ -21539,8 +21539,8 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "France topped Group I with a perfect 9 points, beating Senegal 3-1, Iraq (via Norway's result helped them), then Norway 4-1, and accumulating 10 goals in the process. They were one of three teams to achieve a perfect group stage record alongside Mexico and Argentina.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21552,10 +21552,10 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "Mexico were the only team to keep a perfect defensive record in the group stage, winning 2-0 vs South Africa, 1-0 vs Korea Republic, and 3-0 vs Czechia — conceding zero goals while scoring six.",
-      "approved": true,
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Estadio_Akron_02-07-2022_cabecera_sur_lado_derecho_%283%29.jpg/640px-Estadio_Akron_02-07-2022_cabecera_sur_lado_derecho_%283%29.jpg"
+      "type": "true_false",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Estadio_Akron_02-07-2022_cabecera_sur_lado_derecho_%283%29.jpg/640px-Estadio_Akron_02-07-2022_cabecera_sur_lado_derecho_%283%29.jpg",
+      "approved": true
     },
     {
       "id": "tf-2026-panama-no-goals",
@@ -21566,8 +21566,8 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "Panama were shut out in all three group matches: 0-1 to Ghana, 0-1 to Croatia, and 0-2 to England. They were the only team at Football 2026 to finish the group stage without scoring.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21579,9 +21579,9 @@
         "False"
       ],
       "answer": 0,
+      "explanation": "England started their campaign with a thrilling 4-2 victory over Croatia at AT&T Stadium in Arlington, Texas. It was the highest-scoring match of the opening round of group fixtures.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Arlington_June_2020_4_%28AT%26T_Stadium%29.jpg/640px-Arlington_June_2020_4_%28AT%26T_Stadium%29.jpg",
-      "explanation": "England started their campaign with a thrilling 4-2 victory over Croatia at AT&T Stadium in Arlington, Texas. It was the highest-scoring match of the opening round of group fixtures.",
       "approved": true
     },
     {
@@ -21593,10 +21593,10 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "Spain dominated Saudi Arabia 4-0 at Mercedes-Benz Stadium in Atlanta in their second group match, one of the most convincing performances of the group stage.",
-      "approved": true,
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Mercedes_Benz_Stadium_time_lapse_capture_2017-08-13.jpg/640px-Mercedes_Benz_Stadium_time_lapse_capture_2017-08-13.jpg"
+      "type": "true_false",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Mercedes_Benz_Stadium_time_lapse_capture_2017-08-13.jpg/640px-Mercedes_Benz_Stadium_time_lapse_capture_2017-08-13.jpg",
+      "approved": true
     },
     {
       "id": "tf-2026-tunisia-winless",
@@ -21607,8 +21607,8 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "Tunisia finished bottom of Group F with zero points, losing 1-5 to Sweden, 0-4 to Japan, and 1-3 to the Netherlands. Their 2 goals scored and 12 conceded made for the worst goal difference in the group stage.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21620,8 +21620,8 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "Seven matches ended 0-0 in the group stage, including Spain vs Cabo Verde, England vs Ghana, Colombia vs Portugal, and Belgium vs IR Iran. Despite the high number of draws, the tournament still averaged nearly 3 goals per match.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21633,8 +21633,8 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "With 48 teams and 32 advancing from the group stage, a Round of 32 was needed before the traditional Round of 16. Previous tournaments with 32 teams went directly from groups to the Round of 16.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21646,10 +21646,10 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "The Group J thriller between Algeria and Austria finished 3-3 at Arrowhead Stadium in Kansas City, the only draw with six total goals in the entire group stage.",
-      "approved": true,
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Aerial_view_of_Arrowhead_Stadium_08-31-2013.jpg/640px-Aerial_view_of_Arrowhead_Stadium_08-31-2013.jpg"
+      "type": "true_false",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Aerial_view_of_Arrowhead_Stadium_08-31-2013.jpg/640px-Aerial_view_of_Arrowhead_Stadium_08-31-2013.jpg",
+      "approved": true
     },
     {
       "id": "tf-2026-cabo-verde-debut",
@@ -21660,8 +21660,8 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "The tiny island nation of Cabo Verde (population ~600,000) qualified for the tournament for the first time in their history, drawn into Group H alongside Spain, Uruguay, and Saudi Arabia.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21673,8 +21673,8 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "Despite being four-time champions, Italy missed out on Football 2026, their third consecutive failure to qualify following absences in 2018 and 2022.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21686,10 +21686,10 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "All three hosts advanced to the Round of 16: USA beat Bosnia and Herzegovina 2-0, Mexico beat Ecuador 2-0, and Canada beat South Africa 1-0.",
-      "approved": true,
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Vista_a%C3%A9rea_del_Estadio_Azteca_-_2026_-_02.jpg/640px-Vista_a%C3%A9rea_del_Estadio_Azteca_-_2026_-_02.jpg"
+      "type": "true_false",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Vista_a%C3%A9rea_del_Estadio_Azteca_-_2026_-_02.jpg/640px-Vista_a%C3%A9rea_del_Estadio_Azteca_-_2026_-_02.jpg",
+      "approved": true
     },
     {
       "id": "tf-2026-norway-return",
@@ -21700,8 +21700,8 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "Norway had not qualified for the tournament since France 1998, a 28-year absence. Led by stars like Erling Haaland, they returned in style, finishing second in Group I behind France.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21713,10 +21713,10 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "Brazil and Morocco actually drew 1-1 at MetLife Stadium in their Group C opener. Morocco held firm against the five-time champions in a result that set the tone for a competitive group.",
-      "approved": true,
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Metlife_stadium_%28Aerial_view%29.jpg/640px-Metlife_stadium_%28Aerial_view%29.jpg"
+      "type": "true_false",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Metlife_stadium_%28Aerial_view%29.jpg/640px-Metlife_stadium_%28Aerial_view%29.jpg",
+      "approved": true
     },
     {
       "id": "tf-2026-usa-unbeaten-group",
@@ -21727,8 +21727,8 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "Despite strong wins against Paraguay (4-1) and Australia (2-0), the USA lost their final group match to Türkiye 3-2 at SoFi Stadium. They still advanced as Group D winners with 6 points.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21740,8 +21740,8 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "The Netherlands won Group F with 7 points (2 wins, 1 draw). Japan finished second with 5 points. Despite Japan's 4-0 thrashing of Tunisia, the Netherlands' 5-1 win over Sweden proved decisive.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21753,9 +21753,9 @@
         "False"
       ],
       "answer": 1,
+      "explanation": "The opening match was played at Estadio Azteca in Mexico City, not SoFi Stadium. SoFi hosted several group matches including the USA's opener against Paraguay.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/SoFi_Stadium_2023.jpg/640px-SoFi_Stadium_2023.jpg",
-      "explanation": "The opening match was played at Estadio Azteca in Mexico City, not SoFi Stadium. SoFi hosted several group matches including the USA's opener against Paraguay.",
       "approved": true
     },
     {
@@ -21767,8 +21767,8 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "Haiti previously appeared at the 1974 tournament in West Germany, where they lost all three group matches. Football 2026 marks their second-ever tournament appearance, 52 years after their first.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21780,8 +21780,8 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "Mexico won the opening match 2-0 against South Africa at Estadio Azteca. The last time an opening match ended in a draw was South Africa 1-1 Mexico in 2010.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21793,8 +21793,8 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "Uruguay were eliminated in the group stage with just 2 points from 3 matches in Group H (1-1 Saudi Arabia draw, 2-2 Cabo Verde draw, 0-1 loss to Spain). It was a shocking early exit for the two-time champions.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21806,8 +21806,8 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "Qatar finished last in Group B with just 1 point, following a 1-1 draw with Switzerland, a 0-6 loss to Canada, and a 1-3 loss to Bosnia and Herzegovina.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21819,10 +21819,10 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "The USA played two matches at SoFi Stadium (vs Paraguay and vs Türkiye) but their second match against Australia was held at Lumen Field in Seattle.",
-      "approved": true,
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/2026_FIFA_World_Cup_-_Belgium_v._Egypt_in_Seattle_-_04.jpg/640px-2026_FIFA_World_Cup_-_Belgium_v._Egypt_in_Seattle_-_04.jpg"
+      "type": "true_false",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/2026_FIFA_World_Cup_-_Belgium_v._Egypt_in_Seattle_-_04.jpg/640px-2026_FIFA_World_Cup_-_Belgium_v._Egypt_in_Seattle_-_04.jpg",
+      "approved": true
     },
     {
       "id": "tf-2026-curacao-scoreless",
@@ -21833,8 +21833,8 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "Curaçao scored 1 goal across their three group matches — in their 1-7 defeat to Germany. They drew 0-0 with Ecuador and lost 0-2 to Côte d'Ivoire in the other two.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21846,8 +21846,8 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "Germany scored 10 goals in the group stage — 7 against Curaçao, 2 against Côte d'Ivoire, and 1 against Ecuador. They were one of the most prolific teams in the group phase.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21859,8 +21859,8 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "Argentina had one of the tightest defenses in the group stage, conceding just 1 goal across three matches (3-0 vs Algeria, 2-0 vs Austria, 3-1 vs Jordan). Only Mexico (0 goals conceded) had a better defensive record.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21872,10 +21872,10 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "Switzerland actually won Group B with 7 points (drew with Qatar, beat Bosnia 4-1, beat Canada 2-1). Qatar finished bottom with just 1 point.",
-      "approved": true,
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/SoFi_Stadium_2023.jpg/640px-SoFi_Stadium_2023.jpg"
+      "type": "true_false",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/SoFi_Stadium_2023.jpg/640px-SoFi_Stadium_2023.jpg",
+      "approved": true
     },
     {
       "id": "tf-2026-england-drew-opener",
@@ -21886,10 +21886,10 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "England won their opening match 4-2 against Croatia at AT&T Stadium in Arlington, Texas. Their goalless draw came in their second match against Ghana.",
-      "approved": true,
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Gillette_Stadium_%28Top_View%29.jpg/640px-Gillette_Stadium_%28Top_View%29.jpg"
+      "type": "true_false",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Gillette_Stadium_%28Top_View%29.jpg/640px-Gillette_Stadium_%28Top_View%29.jpg",
+      "approved": true
     },
     {
       "id": "tf-2026-senegal-won-group",
@@ -21900,10 +21900,10 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "France won Group I with a perfect 9 points. Senegal finished third with 3 points (beat Iraq 5-0, lost to France 1-3 and Norway 2-3), but still advanced as one of the best third-placed teams.",
-      "approved": true,
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Lincoln_Financial_Field_%28Aerial_view%29.jpg/640px-Lincoln_Financial_Field_%28Aerial_view%29.jpg"
+      "type": "true_false",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Lincoln_Financial_Field_%28Aerial_view%29.jpg/640px-Lincoln_Financial_Field_%28Aerial_view%29.jpg",
+      "approved": true
     },
     {
       "id": "tf-2026-ten-groups",
@@ -21914,8 +21914,8 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "Football 2026 uses 12 groups of four teams each (Groups A through L), not 10 groups of five. The 48 teams are divided into 12 groups, with the top two from each group plus the eight best third-placed teams advancing to a Round of 32.",
+      "type": "true_false",
       "approved": true
     },
     {
@@ -21927,10 +21927,10 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "Colombia and Portugal played to a cagey 0-0 draw in their final Group K match at Hard Rock Stadium. Colombia won the group on 7 points (ahead of Portugal's 5) thanks to their earlier wins over Congo DR and Uzbekistan.",
-      "approved": true,
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Hard_Rock_Stadium_for_Super_Bowl_LIV_%2849606710103%29.jpg/640px-Hard_Rock_Stadium_for_Super_Bowl_LIV_%2849606710103%29.jpg"
+      "type": "true_false",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Hard_Rock_Stadium_for_Super_Bowl_LIV_%2849606710103%29.jpg/640px-Hard_Rock_Stadium_for_Super_Bowl_LIV_%2849606710103%29.jpg",
+      "approved": true
     },
     {
       "id": "tf-2026-morocco-eliminated",
@@ -21941,10 +21941,10 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "Morocco finished second in Group C with 7 points, equal with Brazil. They advanced to the knockout rounds after holding Brazil to a 1-1 draw, beating Scotland 1-0, and thrashing Haiti 4-2.",
-      "approved": true,
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Mexico_Guadalupe_Monterrey_Estadio_BBVA_Bancomer_fifa_world_cup_2026_6.JPG/640px-Mexico_Guadalupe_Monterrey_Estadio_BBVA_Bancomer_fifa_world_cup_2026_6.JPG"
+      "type": "true_false",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Mexico_Guadalupe_Monterrey_Estadio_BBVA_Bancomer_fifa_world_cup_2026_6.JPG/640px-Mexico_Guadalupe_Monterrey_Estadio_BBVA_Bancomer_fifa_world_cup_2026_6.JPG",
+      "approved": true
     },
     {
       "id": "tf-2026-canada-lost-qatar",
@@ -21955,10 +21955,10 @@
         "False"
       ],
       "answer": 1,
-      "type": "true_false",
       "explanation": "Canada emphatically beat Qatar 6-0 at BC Place in Vancouver — one of the most lopsided results of the tournament. It was Canada's biggest-ever win at the tournament.",
-      "approved": true,
-      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Toronto_BMO_Field_in_2024.jpg/640px-Toronto_BMO_Field_in_2024.jpg"
+      "type": "true_false",
+      "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Toronto_BMO_Field_in_2024.jpg/640px-Toronto_BMO_Field_in_2024.jpg",
+      "approved": true
     },
     {
       "id": "tf-2026-curacao-first",
@@ -21969,8 +21969,8 @@
         "False"
       ],
       "answer": 0,
-      "type": "true_false",
       "explanation": "The Caribbean island nation of Curaçao (population ~150,000) qualified for the tournament for the first time ever, drawn into Group E with Germany, Côte d'Ivoire, and Ecuador.",
+      "type": "true_false",
       "approved": true
     }
   ],
