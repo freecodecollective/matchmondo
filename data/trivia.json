@@ -6360,7 +6360,110 @@
       ],
       "answer": 2,
       "explanation": "The USA, Canada, and Mexico are all members of CONCACAF — the Confederation of North, Central American and Caribbean Association Football.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "إلى أي اتحاد كروي تنتمي جميع الدول الثلاث المستضيفة لبطولة 2026؟",
+          "options": [
+            "الاتحاد الأوروبي (UEFA)",
+            "اتحاد أمريكا الجنوبية (CONMEBOL)",
+            "اتحاد أمريكا الشمالية والوسطى والكاريبي (CONCACAF)",
+            "الاتحاد الآسيوي (AFC)"
+          ],
+          "explanation": "الولايات المتحدة وكندا والمكسيك جميعها أعضاء في كونكاكاف — اتحاد أمريكا الشمالية والوسطى والكاريبي لكرة القدم."
+        },
+        "de": {
+          "question": "Zu welchem Fußballverband gehören alle drei Gastgeberländer von 2026?",
+          "options": [
+            "UEFA",
+            "CONMEBOL",
+            "CONCACAF",
+            "AFC"
+          ],
+          "explanation": "Die USA, Kanada und Mexiko sind alle Mitglieder der CONCACAF – dem Fußballverband für Nord- und Mittelamerika sowie die Karibik."
+        },
+        "es": {
+          "question": "¿A qué confederación de fútbol pertenecen los tres países anfitriones de 2026?",
+          "options": [
+            "UEFA",
+            "CONMEBOL",
+            "CONCACAF",
+            "AFC"
+          ],
+          "explanation": "Estados Unidos, Canadá y México son miembros de la CONCACAF, la Confederación de Fútbol de Norteamérica, Centroamérica y el Caribe."
+        },
+        "es-ES": {
+          "question": "¿A qué confederación de fútbol pertenecen los tres países anfitriones de 2026?",
+          "options": [
+            "UEFA",
+            "CONMEBOL",
+            "CONCACAF",
+            "AFC"
+          ],
+          "explanation": "Estados Unidos, Canadá y México son miembros de la CONCACAF, la Confederación de Fútbol de Norteamérica, Centroamérica y el Caribe."
+        },
+        "fr": {
+          "question": "À quelle confédération de football appartiennent les trois pays hôtes de 2026 ?",
+          "options": [
+            "UEFA",
+            "CONMEBOL",
+            "CONCACAF",
+            "AFC"
+          ],
+          "explanation": "Les États-Unis, le Canada et le Mexique sont tous membres de la CONCACAF, la Confédération de football d'Amérique du Nord, d'Amérique centrale et des Caraïbes."
+        },
+        "it": {
+          "question": "A quale confederazione calcistica appartengono tutte e tre le nazioni ospitanti del 2026?",
+          "options": [
+            "UEFA",
+            "CONMEBOL",
+            "CONCACAF",
+            "AFC"
+          ],
+          "explanation": "Stati Uniti, Canada e Messico sono tutti membri della CONCACAF, la Confederazione calcistica del Nord America, dell'America Centrale e dei Caraibi."
+        },
+        "ja": {
+          "question": "2026年の開催3か国は、いずれもどのサッカー連盟に所属していますか？",
+          "options": [
+            "UEFA（欧州）",
+            "CONMEBOL（南米）",
+            "CONCACAF（北中米カリブ海）",
+            "AFC（アジア）"
+          ],
+          "explanation": "アメリカ、カナダ、メキシコはいずれもCONCACAF（北中米カリブ海サッカー連盟）に所属しています。"
+        },
+        "ko": {
+          "question": "2026년 개최 3개국은 모두 어느 축구 연맹에 소속되어 있나요？",
+          "options": [
+            "UEFA(유럽)",
+            "CONMEBOL(남미)",
+            "CONCACAF(북중미카리브)",
+            "AFC(아시아)"
+          ],
+          "explanation": "미국, 캐나다, 멕시코는 모두 CONCACAF(북중미카리브 축구 연맹) 소속입니다."
+        },
+        "pt-BR": {
+          "question": "A qual confederação de futebol pertencem os três países-sede de 2026?",
+          "options": [
+            "UEFA",
+            "CONMEBOL",
+            "CONCACAF",
+            "AFC"
+          ],
+          "explanation": "Estados Unidos, Canadá e México são todos membros da CONCACAF, a Confederação de Futebol da América do Norte, Central e Caribe."
+        },
+        "zh-Hans": {
+          "question": "2026年的三个主办国都属于哪个足球联合会？",
+          "options": [
+            "欧洲足联（UEFA）",
+            "南美足联（CONMEBOL）",
+            "中北美及加勒比海足联（CONCACAF）",
+            "亚洲足联（AFC）"
+          ],
+          "explanation": "美国、加拿大和墨西哥都是中北美及加勒比海足球联合会（CONCACAF）的成员。"
+        }
+      },
+      "i18nSourceHash": "c0e9387e2e2ea800"
     },
     {
       "id": "rec-goals-per-game",
@@ -6504,7 +6607,110 @@
       ],
       "answer": 2,
       "explanation": "Senegal beat France 1–0 in the tournament opener — one of the biggest upsets in the competition's history.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أي دولة أفريقية صدمت حاملة اللقب فرنسا في مباراة افتتاح 2002؟",
+          "options": [
+            "الكاميرون",
+            "نيجيريا",
+            "السنغال",
+            "غانا"
+          ],
+          "explanation": "فازت السنغال على فرنسا 1–0 في مباراة الافتتاح — واحدة من أكبر المفاجآت في تاريخ البطولة."
+        },
+        "de": {
+          "question": "Welche afrikanische Nation überraschte Titelverteidiger Frankreich im Eröffnungsspiel 2002?",
+          "options": [
+            "Kamerun",
+            "Nigeria",
+            "Senegal",
+            "Ghana"
+          ],
+          "explanation": "Senegal besiegte Frankreich im Eröffnungsspiel mit 1:0 — eine der größten Überraschungen in der Geschichte des Turniers."
+        },
+        "es": {
+          "question": "¿Qué selección africana sorprendió a la campeona defensora Francia en el partido inaugural de 2002?",
+          "options": [
+            "Camerún",
+            "Nigeria",
+            "Senegal",
+            "Ghana"
+          ],
+          "explanation": "Senegal venció a Francia 1–0 en el partido inaugural, una de las mayores sorpresas en la historia del torneo."
+        },
+        "es-ES": {
+          "question": "¿Qué selección africana sorprendió a la vigente campeona Francia en el partido inaugural de 2002?",
+          "options": [
+            "Camerún",
+            "Nigeria",
+            "Senegal",
+            "Ghana"
+          ],
+          "explanation": "Senegal derrotó a Francia por 1–0 en el partido inaugural, una de las mayores sorpresas de la historia del torneo."
+        },
+        "fr": {
+          "question": "Quelle nation africaine a créé la surprise face à la France, championne en titre, lors du match d'ouverture de 2002 ?",
+          "options": [
+            "Cameroun",
+            "Nigeria",
+            "Sénégal",
+            "Ghana"
+          ],
+          "explanation": "Le Sénégal a battu la France 1–0 lors du match d'ouverture — l'une des plus grandes surprises de l'histoire de la compétition."
+        },
+        "it": {
+          "question": "Quale nazione africana sorprese la Francia campione in carica nella partita inaugurale del 2002?",
+          "options": [
+            "Camerun",
+            "Nigeria",
+            "Senegal",
+            "Ghana"
+          ],
+          "explanation": "Il Senegal batté la Francia 1–0 nella gara d'apertura — una delle più clamorose sorprese nella storia del torneo."
+        },
+        "ja": {
+          "question": "2002年の開幕戦で、前回王者フランスを驚かせたアフリカの国はどこ？",
+          "options": [
+            "カメルーン",
+            "ナイジェリア",
+            "セネガル",
+            "ガーナ"
+          ],
+          "explanation": "セネガルは開幕戦でフランスを1対0で下した——大会史上最大級の番狂わせの一つだ。"
+        },
+        "ko": {
+          "question": "2002년 개막전에서 디펜딩 챔피언 프랑스를 충격에 빠뜨린 아프리카 국가는?",
+          "options": [
+            "카메룬",
+            "나이지리아",
+            "세네갈",
+            "가나"
+          ],
+          "explanation": "세네갈은 개막전에서 프랑스를 1–0으로 꺾었다 — 대회 역사상 최대의 이변 중 하나였다."
+        },
+        "pt-BR": {
+          "question": "Qual seleção africana surpreendeu a atual campeã França na partida de abertura de 2002?",
+          "options": [
+            "Camarões",
+            "Nigéria",
+            "Senegal",
+            "Gana"
+          ],
+          "explanation": "Senegal venceu a França por 1 a 0 na abertura do torneio — uma das maiores zebras da história da competição."
+        },
+        "zh-Hans": {
+          "question": "在2002年的揭幕战中，哪个非洲国家爆冷击败了卫冕冠军法国？",
+          "options": [
+            "喀麦隆",
+            "尼日利亚",
+            "塞内加尔",
+            "加纳"
+          ],
+          "explanation": "塞内加尔在揭幕战中以1比0击败法国——这是赛事历史上最大的冷门之一。"
+        }
+      },
+      "i18nSourceHash": "a23bb4eb96569b6f"
     },
     {
       "id": "p-hurst-final",
@@ -6870,7 +7076,110 @@
       ],
       "answer": 1,
       "explanation": "Italian company Panini first published a tournament sticker album for the 1970 edition in Mexico, starting a global collecting tradition.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "منذ أي عام تنتج شركة بانيني ألبومات ملصقات قابلة للجمع خاصة بالبطولة؟",
+          "options": [
+            "1930",
+            "1970",
+            "2000",
+            "2026"
+          ],
+          "explanation": "أصدرت الشركة الإيطالية بانيني أول ألبوم ملصقات للبطولة في نسخة عام 1970 بالمكسيك، لتبدأ بذلك تقليدًا عالميًا في جمع الملصقات."
+        },
+        "de": {
+          "question": "Seit welchem Jahr produziert Panini Sammelsticker-Alben für das Turnier?",
+          "options": [
+            "1930",
+            "1970",
+            "2000",
+            "2026"
+          ],
+          "explanation": "Das italienische Unternehmen Panini veröffentlichte zur Ausgabe 1970 in Mexiko das erste Sticker-Album für das Turnier und begründete damit eine weltweite Sammeltradition."
+        },
+        "es": {
+          "question": "¿Desde qué año Panini produce álbumes de figuritas coleccionables del torneo?",
+          "options": [
+            "1930",
+            "1970",
+            "2000",
+            "2026"
+          ],
+          "explanation": "La empresa italiana Panini publicó el primer álbum de figuritas del torneo para la edición de 1970 en México, dando inicio a una tradición coleccionista a nivel mundial."
+        },
+        "es-ES": {
+          "question": "¿Desde qué año produce Panini álbumes de cromos coleccionables del torneo?",
+          "options": [
+            "1930",
+            "1970",
+            "2000",
+            "2026"
+          ],
+          "explanation": "La empresa italiana Panini publicó el primer álbum de cromos del torneo para la edición de 1970 en México, dando comienzo a una tradición coleccionista mundial."
+        },
+        "fr": {
+          "question": "Depuis quelle année Panini produit-elle des albums d'autocollants à collectionner pour le tournoi ?",
+          "options": [
+            "1930",
+            "1970",
+            "2000",
+            "2026"
+          ],
+          "explanation": "L'entreprise italienne Panini a publié son premier album d'autocollants du tournoi pour l'édition de 1970 au Mexique, lançant ainsi une tradition de collection mondiale."
+        },
+        "it": {
+          "question": "Da quale anno Panini produce album di figurine da collezione dedicati al torneo?",
+          "options": [
+            "1930",
+            "1970",
+            "2000",
+            "2026"
+          ],
+          "explanation": "L'azienda italiana Panini pubblicò il primo album di figurine del torneo per l'edizione del 1970 in Messico, dando il via a una tradizione collezionistica di portata globale."
+        },
+        "ja": {
+          "question": "パニーニがこの大会のコレクション用ステッカーアルバムを制作し始めたのは何年からですか？",
+          "options": [
+            "1930",
+            "1970",
+            "2000",
+            "2026"
+          ],
+          "explanation": "イタリアの企業パニーニは、1970年のメキシコ大会で初めて大会のステッカーアルバムを発売し、世界的な収集文化の先駆けとなりました。"
+        },
+        "ko": {
+          "question": "파니니가 이 대회의 수집용 스티커 앨범을 제작하기 시작한 해는 언제인가요?",
+          "options": [
+            "1930",
+            "1970",
+            "2000",
+            "2026"
+          ],
+          "explanation": "이탈리아 기업 파니니는 1970년 멕시코 대회를 위해 처음으로 대회 스티커 앨범을 발행하며 전 세계적인 수집 문화를 열었습니다."
+        },
+        "pt-BR": {
+          "question": "Desde que ano a Panini produz álbuns de figurinhas colecionáveis do torneio?",
+          "options": [
+            "1930",
+            "1970",
+            "2000",
+            "2026"
+          ],
+          "explanation": "A empresa italiana Panini lançou o primeiro álbum de figurinhas do torneio para a edição de 1970 no México, dando início a uma tradição de colecionismo mundial."
+        },
+        "zh-Hans": {
+          "question": "帕尼尼从哪一年开始为该赛事制作可收藏的贴纸册？",
+          "options": [
+            "1930",
+            "1970",
+            "2000",
+            "2026"
+          ],
+          "explanation": "意大利公司帕尼尼在1970年墨西哥赛事时首次发行了该赛事的贴纸册，由此开创了一项全球性的收藏传统。"
+        }
+      },
+      "i18nSourceHash": "57ee8fe0d2074686"
     },
     {
       "id": "rec-oldest-player",
@@ -6923,7 +7232,110 @@
       ],
       "answer": 2,
       "explanation": "2026 expanded the field from 32 to 48 nations, making it the largest edition ever.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كم عدد المنتخبات المشاركة في نسخة 2026؟",
+          "options": [
+            "32",
+            "40",
+            "48",
+            "64"
+          ],
+          "explanation": "وسّعت نسخة 2026 عدد المشاركين من 32 إلى 48 منتخباً، لتصبح أكبر نسخة على الإطلاق."
+        },
+        "de": {
+          "question": "Wie viele Mannschaften nehmen an der Ausgabe 2026 teil?",
+          "options": [
+            "32",
+            "40",
+            "48",
+            "64"
+          ],
+          "explanation": "2026 wurde das Teilnehmerfeld von 32 auf 48 Nationen erweitert und damit zur bislang größten Ausgabe."
+        },
+        "es": {
+          "question": "¿Cuántas selecciones compiten en la edición de 2026?",
+          "options": [
+            "32",
+            "40",
+            "48",
+            "64"
+          ],
+          "explanation": "En 2026 se amplió el número de participantes de 32 a 48 naciones, convirtiéndola en la edición más grande de la historia."
+        },
+        "es-ES": {
+          "question": "¿Cuántas selecciones compiten en la edición de 2026?",
+          "options": [
+            "32",
+            "40",
+            "48",
+            "64"
+          ],
+          "explanation": "En 2026 se amplió el número de participantes de 32 a 48 naciones, lo que la convierte en la edición más grande de la historia."
+        },
+        "fr": {
+          "question": "Combien d'équipes s'affrontent lors de l'édition 2026 ?",
+          "options": [
+            "32",
+            "40",
+            "48",
+            "64"
+          ],
+          "explanation": "En 2026, le nombre de participants est passé de 32 à 48 nations, ce qui en fait la plus grande édition jamais organisée."
+        },
+        "it": {
+          "question": "Quante squadre partecipano all'edizione 2026?",
+          "options": [
+            "32",
+            "40",
+            "48",
+            "64"
+          ],
+          "explanation": "Nel 2026 il numero di partecipanti è passato da 32 a 48 nazioni, rendendola l'edizione più grande di sempre."
+        },
+        "ja": {
+          "question": "2026年大会には何チームが出場しますか？",
+          "options": [
+            "32",
+            "40",
+            "48",
+            "64"
+          ],
+          "explanation": "2026年大会は出場国が32から48に拡大され、史上最大規模の大会となりました。"
+        },
+        "ko": {
+          "question": "2026년 대회에는 몇 개 팀이 출전하나요?",
+          "options": [
+            "32",
+            "40",
+            "48",
+            "64"
+          ],
+          "explanation": "2026년 대회는 출전국이 32개국에서 48개국으로 확대되어 역대 최대 규모의 대회가 되었습니다."
+        },
+        "pt-BR": {
+          "question": "Quantas seleções disputam a edição de 2026?",
+          "options": [
+            "32",
+            "40",
+            "48",
+            "64"
+          ],
+          "explanation": "Em 2026, o número de participantes foi ampliado de 32 para 48 nações, tornando-a a maior edição de todos os tempos."
+        },
+        "zh-Hans": {
+          "question": "2026年赛事共有多少支球队参赛？",
+          "options": [
+            "32",
+            "40",
+            "48",
+            "64"
+          ],
+          "explanation": "2026年赛事将参赛球队从32支扩大到48支，成为史上规模最大的一届。"
+        }
+      },
+      "i18nSourceHash": "cb1208c086de6ebf"
     },
     {
       "id": "v-rose-bowl-94",
@@ -7459,7 +7871,110 @@
       ],
       "answer": 2,
       "explanation": "Uruguay hosted and won the inaugural 1930 tournament on home soil.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أين أُقيمت النسخة الأولى على الإطلاق عام 1930؟",
+          "options": [
+            "البرازيل",
+            "إيطاليا",
+            "الأوروغواي",
+            "فرنسا"
+          ],
+          "explanation": "استضافت الأوروغواي البطولة الافتتاحية عام 1930 وفازت بها على أرضها."
+        },
+        "de": {
+          "question": "Wo fand die allererste Ausgabe im Jahr 1930 statt?",
+          "options": [
+            "Brasilien",
+            "Italien",
+            "Uruguay",
+            "Frankreich"
+          ],
+          "explanation": "Uruguay war Gastgeber des ersten Turniers 1930 und gewann es im eigenen Land."
+        },
+        "es": {
+          "question": "¿Dónde se disputó la primera edición, en 1930?",
+          "options": [
+            "Brasil",
+            "Italia",
+            "Uruguay",
+            "Francia"
+          ],
+          "explanation": "Uruguay fue anfitrión y ganó el torneo inaugural de 1930 en casa."
+        },
+        "es-ES": {
+          "question": "¿Dónde se celebró la primera edición, en 1930?",
+          "options": [
+            "Brasil",
+            "Italia",
+            "Uruguay",
+            "Francia"
+          ],
+          "explanation": "Uruguay organizó y ganó el torneo inaugural de 1930 en su propio país."
+        },
+        "fr": {
+          "question": "Où s'est tenue la toute première édition, en 1930 ?",
+          "options": [
+            "Brésil",
+            "Italie",
+            "Uruguay",
+            "France"
+          ],
+          "explanation": "L'Uruguay a accueilli et remporté le tournoi inaugural de 1930 à domicile."
+        },
+        "it": {
+          "question": "Dove si tenne la primissima edizione, nel 1930?",
+          "options": [
+            "Brasile",
+            "Italia",
+            "Uruguay",
+            "Francia"
+          ],
+          "explanation": "L'Uruguay ospitò e vinse il torneo inaugurale del 1930 in casa."
+        },
+        "ja": {
+          "question": "1930年に開催された記念すべき第1回大会はどこで行われましたか？",
+          "options": [
+            "ブラジル",
+            "イタリア",
+            "ウルグアイ",
+            "フランス"
+          ],
+          "explanation": "ウルグアイは1930年の第1回大会を自国で開催し、優勝しました。"
+        },
+        "ko": {
+          "question": "1930년에 열린 최초의 대회는 어디에서 개최되었나요?",
+          "options": [
+            "브라질",
+            "이탈리아",
+            "우루과이",
+            "프랑스"
+          ],
+          "explanation": "우루과이는 1930년 첫 대회를 자국에서 개최하고 우승했습니다."
+        },
+        "pt-BR": {
+          "question": "Onde foi realizada a primeiríssima edição, em 1930?",
+          "options": [
+            "Brasil",
+            "Itália",
+            "Uruguai",
+            "França"
+          ],
+          "explanation": "O Uruguai sediou e venceu o torneio inaugural de 1930 em casa."
+        },
+        "zh-Hans": {
+          "question": "1930年举办的首届赛事在哪里进行？",
+          "options": [
+            "巴西",
+            "意大利",
+            "乌拉圭",
+            "法国"
+          ],
+          "explanation": "乌拉圭主办了1930年的首届赛事，并在主场夺冠。"
+        }
+      },
+      "i18nSourceHash": "cb68e67402f2a041"
     },
     {
       "id": "h-maracanazo",
