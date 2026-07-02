@@ -38,18 +38,19 @@ const M = {
   74:{h:'Germany',a:'Paraguay',sH:1,sA:1,r:'PEN',pH:3,pA:4},
   77:{h:'France',a:'Sweden',sH:3,sA:0},
   73:{h:'South Africa',a:'Canada',sH:0,sA:1},
-  75:{h:'Netherlands',a:'Morocco',sH:1,sA:1,r:'PEN',pH:3,pA:4},
+  75:{h:'Netherlands',a:'Morocco',sH:1,sA:1,r:'PEN',pH:2,pA:3},
   83:{h:'Portugal',a:'Croatia'},84:{h:'Spain',a:'Austria'},
-  81:{h:'USA',a:'Bosnia and Herzegovina'},82:{h:'Belgium',a:'Senegal'},
+  81:{h:'USA',a:'Bosnia and Herzegovina',sH:1,sA:0},
+  82:{h:'Belgium',a:'Senegal',sH:3,sA:2,r:'AET'},
   76:{h:'Brazil',a:'Japan',sH:2,sA:1},
   78:{h:"Côte d'Ivoire",a:'Norway',sH:1,sA:2},
   79:{h:'Mexico',a:'Ecuador',sH:2,sA:0},
-  80:{h:'England',a:'Congo DR'},
+  80:{h:'England',a:'Congo DR',sH:2,sA:1},
   86:{h:'Argentina',a:'Cabo Verde'},88:{h:'Australia',a:'Egypt'},
   85:{h:'Switzerland',a:'Algeria'},87:{h:'Colombia',a:'Ghana'},
   89:{h:'Paraguay',a:'France'},90:{h:'Canada',a:'Morocco'},
-  91:{h:'Brazil',a:'Norway'},92:{h:'Mexico',a:'TBD'},
-  93:{h:'TBD',a:'TBD'},94:{h:'TBD',a:'TBD'},
+  91:{h:'Brazil',a:'Norway'},92:{h:'Mexico',a:'England'},
+  93:{h:'TBD',a:'TBD'},94:{h:'USA',a:'Belgium'},
   95:{h:'TBD',a:'TBD'},96:{h:'TBD',a:'TBD'},
   97:{h:'TBD',a:'TBD'},98:{h:'TBD',a:'TBD'},
   99:{h:'TBD',a:'TBD'},100:{h:'TBD',a:'TBD'},
@@ -92,6 +93,7 @@ function scoreText(m) {
   if (!m || m.sH == null) return null;
   let s = `${m.sH}–${m.sA}`;
   if (m.pH != null) s += ` (${m.pH}–${m.pA} PK)`;
+  else if (m.r === 'AET') s += ' AET';
   return s;
 }
 
@@ -272,10 +274,10 @@ function draw() {
     const s = scoreText(m);
     if (!w || !s) continue;
     const aWin = w === m.h ? slotA(i*2) : slotA(i*2+1);
-    const rMid = (rTeam - nr + rC1) / 2;
+    const rMid = rC1 + (rTeam - nr - rC1) * 0.42;
     let [x, y] = pt(aWin, rMid);
     const perp = aWin + (aWin < pairMid[i] ? -1 : 1) * Math.PI / 2;
-    x += Math.cos(perp) * 13; y += Math.sin(perp) * 13;
+    x += Math.cos(perp) * 16; y += Math.sin(perp) * 16;
     ctx.save();
     ctx.globalAlpha = dimFor(m) ? 0.1 : 1;
     ctx.font = `700 ${Math.max(8, R*0.021)}px system-ui`;
