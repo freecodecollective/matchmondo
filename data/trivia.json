@@ -25353,7 +25353,90 @@
       "answer": 1,
       "explanation": "Haiti previously appeared at the 1974 tournament in West Germany, where they lost all three group matches. Football 2026 marks their second-ever tournament appearance, 52 years after their first.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ظهرت هايتي في البطولة لأول مرة في Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "سبق أن ظهرت هايتي في بطولة عام 1974 في ألمانيا الغربية، حيث خسرت جميع مبارياتها الثلاث في دور المجموعات. ويُعد Football 2026 ظهورها الثاني على الإطلاق في البطولة، بعد 52 عامًا من ظهورها الأول."
+        },
+        "de": {
+          "question": "Haiti nahm bei Football 2026 zum ersten Mal am Turnier teil.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Haiti hatte bereits 1974 in Westdeutschland am Turnier teilgenommen und verlor dort alle drei Gruppenspiele. Football 2026 ist somit die insgesamt zweite Turnierteilnahme, 52 Jahre nach der ersten."
+        },
+        "es": {
+          "question": "Haití participó en el torneo por primera vez en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Haití ya había participado en el torneo de 1974 en Alemania Occidental, donde perdió los tres partidos de la fase de grupos. Football 2026 marca su segunda participación en el torneo, 52 años después de la primera."
+        },
+        "es-ES": {
+          "question": "Haití participó en el torneo por primera vez en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Haití ya había participado en el torneo de 1974 en Alemania Occidental, donde perdió los tres partidos de la fase de grupos. Football 2026 supone su segunda participación en el torneo, 52 años después de la primera."
+        },
+        "fr": {
+          "question": "Haïti a participé au tournoi pour la première fois lors de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Haïti avait déjà participé au tournoi de 1974 en Allemagne de l'Ouest, où l'équipe avait perdu ses trois matchs de poule. Football 2026 marque sa deuxième participation à un tournoi, 52 ans après la première."
+        },
+        "it": {
+          "question": "Haiti ha partecipato al torneo per la prima volta a Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Haiti aveva già partecipato al torneo del 1974 in Germania Ovest, dove perse tutte e tre le partite del girone. Football 2026 segna la sua seconda partecipazione in assoluto a un torneo, 52 anni dopo la prima."
+        },
+        "ja": {
+          "question": "ハイチは Football 2026 で初めて大会に出場した。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "ハイチは1974年の西ドイツ大会にすでに出場しており、グループステージの3試合すべてに敗れた。Football 2026 は初出場から52年ぶり、通算2度目の大会出場となる。"
+        },
+        "ko": {
+          "question": "아이티는 Football 2026에서 처음으로 대회에 출전했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "아이티는 이미 1974년 서독 대회에 출전한 바 있으며, 당시 조별리그 세 경기를 모두 패했다. Football 2026은 첫 출전 이후 52년 만이자 통산 두 번째 대회 출전이다."
+        },
+        "pt-BR": {
+          "question": "O Haiti participou do torneio pela primeira vez na Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "O Haiti já havia participado do torneio de 1974 na Alemanha Ocidental, onde perdeu as três partidas da fase de grupos. A Football 2026 marca sua segunda participação em um torneio, 52 anos após a primeira."
+        },
+        "zh-Hans": {
+          "question": "海地在 Football 2026 首次亮相该赛事。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "海地此前曾参加过1974年在西德举办的赛事，当时在小组赛三场比赛中全部落败。Football 2026 是海地历史上第二次参赛，距首次亮相已过去52年。"
+        }
+      },
+      "i18nSourceHash": "9de44d96c48992ee"
     },
     {
       "id": "tf-2026-opener-draw",
@@ -25366,7 +25449,90 @@
       "answer": 1,
       "explanation": "Mexico won the opening match 2-0 against South Africa at Estadio Azteca. The last time an opening match ended in a draw was South Africa 1-1 Mexico in 2010.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "انتهت المباراة الافتتاحية لبطولة Football 2026 بالتعادل.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "فازت المكسيك في المباراة الافتتاحية بنتيجة 2-0 على جنوب أفريقيا على ملعب أزتيكا. آخر مرة انتهت فيها مباراة افتتاحية بالتعادل كانت جنوب أفريقيا 1-1 المكسيك عام 2010."
+        },
+        "de": {
+          "question": "Das Eröffnungsspiel von Football 2026 endete unentschieden.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Mexiko gewann das Eröffnungsspiel im Estadio Azteca mit 2:0 gegen Südafrika. Das letzte Mal, dass ein Eröffnungsspiel unentschieden endete, war 2010 beim 1:1 zwischen Südafrika und Mexiko."
+        },
+        "es": {
+          "question": "El partido inaugural de Football 2026 terminó en empate.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "México ganó el partido inaugural 2-0 ante Sudáfrica en el Estadio Azteca. La última vez que un partido inaugural terminó en empate fue el 1-1 entre Sudáfrica y México en 2010."
+        },
+        "es-ES": {
+          "question": "El partido inaugural de Football 2026 terminó en empate.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "México ganó el partido inaugural por 2-0 ante Sudáfrica en el Estadio Azteca. La última vez que un partido inaugural acabó en empate fue el 1-1 entre Sudáfrica y México en 2010."
+        },
+        "fr": {
+          "question": "Le match d'ouverture de Football 2026 s'est terminé sur un match nul.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Le Mexique a remporté le match d'ouverture 2-0 face à l'Afrique du Sud au Stade Azteca. La dernière fois qu'un match d'ouverture s'est soldé par un nul remonte à 2010, avec un 1-1 entre l'Afrique du Sud et le Mexique."
+        },
+        "it": {
+          "question": "La partita inaugurale di Football 2026 è finita in pareggio.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Il Messico ha vinto la partita inaugurale 2-0 contro il Sudafrica all'Estadio Azteca. L'ultima volta che una partita inaugurale è finita in pareggio è stato nel 2010, con l'1-1 tra Sudafrica e Messico."
+        },
+        "ja": {
+          "question": "Football 2026の開幕戦は引き分けに終わった。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "メキシコはエスタディオ・アステカで行われた開幕戦で南アフリカに2-0で勝利しました。開幕戦が引き分けに終わったのは、2010年の南アフリカ対メキシコの1-1が最後です。"
+        },
+        "ko": {
+          "question": "Football 2026 개막전은 무승부로 끝났다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "멕시코는 아스테카 스타디움에서 열린 개막전에서 남아프리카공화국을 2-0으로 꺾었습니다. 개막전이 무승부로 끝난 마지막 사례는 2010년 남아프리카공화국과 멕시코의 1-1 경기였습니다."
+        },
+        "pt-BR": {
+          "question": "A partida de abertura da Football 2026 terminou empatada.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "O México venceu a partida de abertura por 2 a 0 contra a África do Sul no Estádio Azteca. A última vez que uma partida de abertura terminou empatada foi em 2010, no 1 a 1 entre África do Sul e México."
+        },
+        "zh-Hans": {
+          "question": "Football 2026 的揭幕战以平局收场。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "墨西哥在阿兹特克体育场的揭幕战中以2比0战胜南非。上一次揭幕战以平局收场是在2010年，南非1比1战平墨西哥。"
+        }
+      },
+      "i18nSourceHash": "6942aaca60076cfb"
     },
     {
       "id": "tf-2026-uruguay-advanced",
@@ -25379,7 +25545,90 @@
       "answer": 1,
       "explanation": "Uruguay were eliminated in the group stage with just 2 points from 3 matches in Group H (1-1 Saudi Arabia draw, 2-2 Cabo Verde draw, 0-1 loss to Spain). It was a shocking early exit for the two-time champions.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "تأهّل المنتخب الأوروغوياني، بطل مرتين، إلى الأدوار الإقصائية في بطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "خرجت الأوروغواي من دور المجموعات بنقطتين فقط من ثلاث مباريات في المجموعة H (تعادل 1-1 مع السعودية، وتعادل 2-2 مع الرأس الأخضر، وخسارة 0-1 أمام إسبانيا). لقد كان خروجًا مبكرًا صادمًا للبطل الذي توّج مرتين."
+        },
+        "de": {
+          "question": "Der zweimalige Titelträger Uruguay zog bei Football 2026 in die K.-o.-Runde ein.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Uruguay schied bereits in der Gruppenphase aus – mit nur 2 Punkten aus 3 Spielen in Gruppe H (1:1 gegen Saudi-Arabien, 2:2 gegen Kap Verde, 0:1-Niederlage gegen Spanien). Für den zweimaligen Titelträger war es ein schockierendes frühes Aus."
+        },
+        "es": {
+          "question": "Uruguay, bicampeón, avanzó a las rondas eliminatorias en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Uruguay quedó eliminado en la fase de grupos con apenas 2 puntos en 3 partidos del Grupo H (empate 1-1 con Arabia Saudita, empate 2-2 con Cabo Verde y derrota 0-1 ante España). Fue una salida temprana impactante para el bicampeón."
+        },
+        "es-ES": {
+          "question": "Uruguay, bicampeón, avanzó a las rondas eliminatorias en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Uruguay quedó eliminado en la fase de grupos con solo 2 puntos en 3 partidos del Grupo H (empate 1-1 con Arabia Saudí, empate 2-2 con Cabo Verde y derrota 0-1 frente a España). Fue una eliminación temprana impactante para el bicampeón."
+        },
+        "fr": {
+          "question": "Double championne, l'Uruguay s'est qualifiée pour les phases à élimination directe de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "L'Uruguay a été éliminée dès la phase de groupes avec seulement 2 points en 3 matchs dans le groupe H (match nul 1-1 contre l'Arabie saoudite, match nul 2-2 contre le Cap-Vert, défaite 0-1 face à l'Espagne). Une sortie précoce choquante pour la double championne."
+        },
+        "it": {
+          "question": "L'Uruguay, due volte campione, si è qualificato alle fasi a eliminazione diretta di Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "L'Uruguay è stato eliminato nella fase a gironi con soli 2 punti in 3 partite nel Girone H (pareggio 1-1 con l'Arabia Saudita, pareggio 2-2 con Capo Verde, sconfitta 0-1 contro la Spagna). Un'uscita anticipata sconvolgente per la due volte campione."
+        },
+        "ja": {
+          "question": "2度の優勝を誇るウルグアイは、Football 2026で決勝トーナメントに進出した。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "ウルグアイはグループHの3試合でわずか2ポイントに終わり、グループステージで敗退した（サウジアラビアと1-1で引き分け、カーボベルデと2-2で引き分け、スペインに0-1で敗北）。2度の優勝経験を持つ強豪にとって衝撃的な早期敗退となった。"
+        },
+        "ko": {
+          "question": "두 차례 우승을 차지한 우루과이가 Football 2026에서 토너먼트(결선) 라운드에 진출했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "우루과이는 H조 3경기에서 단 2점에 그치며 조별 리그에서 탈락했다(사우디아라비아와 1-1 무승부, 카보베르데와 2-2 무승부, 스페인에 0-1 패배). 두 차례 우승에 빛나는 강호에게는 충격적인 조기 탈락이었다."
+        },
+        "pt-BR": {
+          "question": "O bicampeão Uruguai avançou às fases eliminatórias na Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "O Uruguai foi eliminado na fase de grupos com apenas 2 pontos em 3 jogos no Grupo H (empate por 1 a 1 com a Arábia Saudita, empate por 2 a 2 com Cabo Verde e derrota por 0 a 1 para a Espanha). Foi uma eliminação precoce chocante para o bicampeão."
+        },
+        "zh-Hans": {
+          "question": "两届冠军乌拉圭在 Football 2026 中晋级淘汰赛阶段。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "乌拉圭在H组3场比赛中仅获得2分，在小组赛阶段便遭淘汰（1比1战平沙特阿拉伯，2比2战平佛得角，0比1不敌西班牙）。对于这支两届冠军球队来说，这是一次令人震惊的早早出局。"
+        }
+      },
+      "i18nSourceHash": "6353708f24a40651"
     },
     {
       "id": "tf-2026-qatar-advanced",
@@ -25392,7 +25641,90 @@
       "answer": 1,
       "explanation": "Qatar finished last in Group B with just 1 point, following a 1-1 draw with Switzerland, a 0-6 loss to Canada, and a 1-3 loss to Bosnia and Herzegovina.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "تأهل حامل لقب آسيا منتخب قطر من مجموعته في بطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "احتلت قطر المركز الأخير في المجموعة الثانية برصيد نقطة واحدة فقط، بعد تعادل 1-1 مع سويسرا، وخسارة 0-6 أمام كندا، وخسارة 1-3 أمام البوسنة والهرسك."
+        },
+        "de": {
+          "question": "Der amtierende Asienmeister Katar hat sich bei Football 2026 aus seiner Gruppe für die nächste Runde qualifiziert.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Katar wurde mit nur 1 Punkt Letzter der Gruppe B – nach einem 1:1 gegen die Schweiz, einer 0:6-Niederlage gegen Kanada und einer 1:3-Niederlage gegen Bosnien und Herzegowina."
+        },
+        "es": {
+          "question": "Catar, el campeón asiático vigente, avanzó desde su grupo en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Catar terminó último en el Grupo B con apenas 1 punto, tras un empate 1-1 con Suiza, una derrota 0-6 ante Canadá y una caída 1-3 frente a Bosnia y Herzegovina."
+        },
+        "es-ES": {
+          "question": "Catar, el vigente campeón asiático, se clasificó desde su grupo en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Catar acabó último en el Grupo B con tan solo 1 punto, tras empatar 1-1 con Suiza, perder 0-6 ante Canadá y caer 1-3 frente a Bosnia y Herzegovina."
+        },
+        "fr": {
+          "question": "Le Qatar, champion d'Asie en titre, a franchi le cap des poules à Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Le Qatar a terminé dernier du groupe B avec seulement 1 point, après un match nul 1-1 contre la Suisse, une défaite 0-6 face au Canada et une défaite 1-3 contre la Bosnie-Herzégovine."
+        },
+        "it": {
+          "question": "Il Qatar, campione d'Asia in carica, ha superato il girone a Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Il Qatar ha chiuso all'ultimo posto nel Gruppo B con appena 1 punto, dopo il pareggio 1-1 con la Svizzera, la sconfitta per 0-6 contro il Canada e quella per 1-3 contro la Bosnia ed Erzegovina."
+        },
+        "ja": {
+          "question": "アジア王者のカタールは、Football 2026でグループを突破した。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "カタールはスイスと1-1で引き分け、カナダに0-6で敗れ、ボスニア・ヘルツェゴビナに1-3で敗れた末、わずか勝ち点1でグループB最下位に終わった。"
+        },
+        "ko": {
+          "question": "아시아 챔피언 카타르는 Football 2026에서 조별리그를 통과했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "카타르는 스위스와 1-1로 비기고, 캐나다에 0-6으로 패했으며, 보스니아 헤르체고비나에 1-3으로 지면서 승점 1점에 그쳐 B조 최하위로 마감했다."
+        },
+        "pt-BR": {
+          "question": "O Catar, atual campeão asiático, avançou de seu grupo na Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "O Catar terminou em último no Grupo B com apenas 1 ponto, após um empate por 1 a 1 com a Suíça, uma derrota por 6 a 0 para o Canadá e uma derrota por 3 a 1 para a Bósnia e Herzegovina."
+        },
+        "zh-Hans": {
+          "question": "卫冕亚洲冠军卡塔尔在 Football 2026 中从小组出线。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "卡塔尔以1-1战平瑞士、0-6负于加拿大、1-3不敌波斯尼亚和黑塞哥维那，仅积1分，位列B组末位。"
+        }
+      },
+      "i18nSourceHash": "1609e989c15f6c00"
     },
     {
       "id": "tf-2026-usa-all-sofi",
@@ -25406,7 +25738,90 @@
       "explanation": "The USA played two matches at SoFi Stadium (vs Paraguay and vs Türkiye) but their second match against Australia was held at Lumen Field in Seattle.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/2026_FIFA_World_Cup_-_Belgium_v._Egypt_in_Seattle_-_04.jpg/640px-2026_FIFA_World_Cup_-_Belgium_v._Egypt_in_Seattle_-_04.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "لعب منتخب الولايات المتحدة جميع مبارياته الثلاث في دور المجموعات على ملعب سوفاي في لوس أنجلوس.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "لعب منتخب الولايات المتحدة مباراتين على ملعب سوفاي (ضد باراغواي وضد تركيا)، لكن مباراته الثانية ضد أستراليا أُقيمت على ملعب لومن فيلد في سياتل."
+        },
+        "de": {
+          "question": "Die USA bestritten alle drei Gruppenspiele im SoFi Stadium in Los Angeles.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Die USA trugen zwei Spiele im SoFi Stadium aus (gegen Paraguay und gegen die Türkei), doch ihr zweites Spiel gegen Australien fand im Lumen Field in Seattle statt."
+        },
+        "es": {
+          "question": "Estados Unidos jugó sus tres partidos de la fase de grupos en el SoFi Stadium de Los Ángeles.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Estados Unidos jugó dos partidos en el SoFi Stadium (contra Paraguay y contra Turquía), pero su segundo partido contra Australia se disputó en el Lumen Field de Seattle."
+        },
+        "es-ES": {
+          "question": "Estados Unidos jugó sus tres partidos de la fase de grupos en el SoFi Stadium de Los Ángeles.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Estados Unidos disputó dos partidos en el SoFi Stadium (contra Paraguay y contra Turquía), pero su segundo encuentro ante Australia se celebró en el Lumen Field de Seattle."
+        },
+        "fr": {
+          "question": "Les États-Unis ont disputé leurs trois matchs de phase de groupes au SoFi Stadium de Los Angeles.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Les États-Unis ont joué deux matchs au SoFi Stadium (contre le Paraguay et contre la Turquie), mais leur deuxième rencontre face à l'Australie s'est déroulée au Lumen Field de Seattle."
+        },
+        "it": {
+          "question": "Gli USA hanno giocato tutte e tre le partite della fase a gironi al SoFi Stadium di Los Angeles.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Gli USA hanno giocato due partite al SoFi Stadium (contro il Paraguay e contro la Turchia), ma la loro seconda gara contro l'Australia si è svolta al Lumen Field di Seattle."
+        },
+        "ja": {
+          "question": "アメリカはグループステージの3試合すべてをロサンゼルスのソーファイ・スタジアムで戦った。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "アメリカはソーファイ・スタジアムで2試合（パラグアイ戦とトルコ戦）を戦ったが、オーストラリアとの2試合目はシアトルのルーメン・フィールドで行われた。"
+        },
+        "ko": {
+          "question": "미국은 조별 리그 세 경기를 모두 로스앤젤레스의 소파이 스타디움에서 치렀다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "미국은 소파이 스타디움에서 두 경기(파라과이전과 튀르키예전)를 치렀지만, 호주와의 두 번째 경기는 시애틀의 루멘 필드에서 열렸다."
+        },
+        "pt-BR": {
+          "question": "Os Estados Unidos jogaram todas as três partidas da fase de grupos no SoFi Stadium, em Los Angeles.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Os Estados Unidos jogaram duas partidas no SoFi Stadium (contra o Paraguai e contra a Turquia), mas seu segundo jogo, contra a Austrália, foi realizado no Lumen Field, em Seattle."
+        },
+        "zh-Hans": {
+          "question": "美国队在洛杉矶的SoFi体育场进行了小组赛的全部三场比赛。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "美国队在SoFi体育场踢了两场比赛（对阵巴拉圭和土耳其），但他们对阵澳大利亚的第二场比赛是在西雅图的Lumen球场进行的。"
+        }
+      },
+      "i18nSourceHash": "3258dbada4a8e35c"
     },
     {
       "id": "tf-2026-curacao-scoreless",
