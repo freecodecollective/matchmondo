@@ -7458,7 +7458,8 @@
         "France"
       ],
       "answer": 2,
-      "explanation": "Uruguay hosted and won the inaugural 1930 tournament on home soil."
+      "explanation": "Uruguay hosted and won the inaugural 1930 tournament on home soil.",
+      "approved": true
     },
     {
       "id": "h-maracanazo",
