@@ -183,9 +183,11 @@ function draw() {
   const nr = Math.max(10, R * 0.0521);
   const nr16 = Math.max(9, R * 0.0427), nrQF = Math.max(8, R * 0.0379), nrSF = Math.max(7, R * 0.0332);
 
-  // uniform black bracket lines with dots at the 90-degree corners
+  // uniform black bracket lines with dots at the 90-degree corners;
+  // the winner's route overlays in their flag color
   const lineCol = '#1a1a1a';
   const lineW = Math.max(1.6, R * 0.005);
+  const decW = Math.max(2.5, R * 0.008);
   const dotR = Math.max(2.5, R * 0.0075);
 
   // ring angle helpers
@@ -206,30 +208,44 @@ function draw() {
     ctx.restore();
   }
 
-  function dot(x, y, alpha, r) {
+  function dot(x, y, alpha, col) {
     ctx.save();
     if (alpha != null) ctx.globalAlpha = alpha;
-    ctx.beginPath(); ctx.arc(x, y, r || dotR, 0, Math.PI*2);
-    ctx.fillStyle = lineCol; ctx.fill();
+    ctx.beginPath(); ctx.arc(x, y, dotR, 0, Math.PI*2);
+    ctx.fillStyle = col || lineCol; ctx.fill();
     ctx.restore();
   }
 
   // boxy connector: radial stubs, straight chord, straight arm inward —
-  // all black, with dots where the lines turn 90 degrees
+  // black skeleton with corner dots; the winner's stub, half-chord, and arm
+  // overlay in their flag color
   function connector(a1, a2, rNode, nodeR, rChord, aNext, rNext, nextR, m, dim) {
     const alpha = dim ? 0.12 : 1;
     const [s1x, s1y] = pt(a1, rNode - nodeR), [c1x, c1y] = pt(a1, rChord);
     const [s2x, s2y] = pt(a2, rNode - nodeR), [c2x, c2y] = pt(a2, rChord);
     const mx = (c1x + c2x) / 2, my = (c1y + c2y) / 2;
-    const occupied = winner(m) != null;
-    const [nx, ny] = pt(aNext, occupied ? rNext + nextR : rNext);
+    const w = winner(m);
+    const [nx, ny] = pt(aNext, w ? rNext + nextR : rNext);
 
     line(s1x, s1y, c1x, c1y, lineCol, lineW, alpha);
     line(s2x, s2y, c2x, c2y, lineCol, lineW, alpha);
     line(c1x, c1y, c2x, c2y, lineCol, lineW, alpha);
     line(mx, my, nx, ny, lineCol, lineW, alpha);
-    dot(c1x, c1y, alpha);
-    dot(c2x, c2y, alpha);
+
+    if (w) {
+      const col = pc[w] || '#888';
+      const homeWon = w === m.h;
+      const wsx = homeWon ? s1x : s2x, wsy = homeWon ? s1y : s2y;
+      const wcx = homeWon ? c1x : c2x, wcy = homeWon ? c1y : c2y;
+      line(wsx, wsy, wcx, wcy, col, decW, alpha);
+      line(wcx, wcy, mx, my, col, decW, alpha);
+      line(mx, my, nx, ny, col, decW, alpha);
+      dot(homeWon ? c2x : c1x, homeWon ? c2y : c1y, alpha);
+      dot(wcx, wcy, alpha, col);
+    } else {
+      dot(c1x, c1y, alpha);
+      dot(c2x, c2y, alpha);
+    }
   }
 
   const dimFor = (m) => selected != null && !(m && (m.h === selected || m.a === selected));
