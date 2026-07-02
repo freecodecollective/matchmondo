@@ -8248,7 +8248,110 @@
       ],
       "answer": 1,
       "explanation": "BC Place in Vancouver features a retractable roof, ensuring matches can be played regardless of weather.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أي ملعب كندي في بطولة 2026 يتميز بسقف قابل للطي؟",
+          "options": [
+            "ملعب بي إم أو، تورونتو",
+            "بي سي بليس، فانكوفر",
+            "الملعب الأولمبي، مونتريال",
+            "ملعب الكومنولث، إدمونتون"
+          ],
+          "explanation": "يتميز ملعب بي سي بليس في فانكوفر بسقف قابل للطي، مما يضمن إقامة المباريات بغض النظر عن الأحوال الجوية."
+        },
+        "de": {
+          "question": "Welches kanadische Stadion von 2026 verfügt über ein einziehbares Dach?",
+          "options": [
+            "BMO Field, Toronto",
+            "BC Place, Vancouver",
+            "Olympiastadion, Montreal",
+            "Commonwealth Stadium, Edmonton"
+          ],
+          "explanation": "Das BC Place in Vancouver besitzt ein einziehbares Dach, sodass Spiele unabhängig vom Wetter ausgetragen werden können."
+        },
+        "es": {
+          "question": "¿Qué sede canadiense de 2026 cuenta con un techo retráctil?",
+          "options": [
+            "BMO Field, Toronto",
+            "BC Place, Vancouver",
+            "Estadio Olímpico, Montreal",
+            "Commonwealth Stadium, Edmonton"
+          ],
+          "explanation": "El BC Place de Vancouver cuenta con un techo retráctil, lo que permite disputar los partidos sin importar el clima."
+        },
+        "es-ES": {
+          "question": "¿Qué sede canadiense de 2026 dispone de un techo retráctil?",
+          "options": [
+            "BMO Field, Toronto",
+            "BC Place, Vancouver",
+            "Estadio Olímpico, Montreal",
+            "Commonwealth Stadium, Edmonton"
+          ],
+          "explanation": "El BC Place de Vancouver dispone de un techo retráctil, lo que permite disputar los partidos sea cual sea el tiempo."
+        },
+        "fr": {
+          "question": "Quel stade canadien de 2026 est doté d'un toit rétractable ?",
+          "options": [
+            "BMO Field, Toronto",
+            "BC Place, Vancouver",
+            "Stade olympique, Montréal",
+            "Commonwealth Stadium, Edmonton"
+          ],
+          "explanation": "Le BC Place de Vancouver possède un toit rétractable, ce qui permet de disputer les matchs quelles que soient les conditions météo."
+        },
+        "it": {
+          "question": "Quale sede canadese del 2026 è dotata di un tetto retrattile?",
+          "options": [
+            "BMO Field, Toronto",
+            "BC Place, Vancouver",
+            "Stadio Olimpico, Montréal",
+            "Commonwealth Stadium, Edmonton"
+          ],
+          "explanation": "Il BC Place di Vancouver è dotato di un tetto retrattile, che consente di disputare le partite indipendentemente dalle condizioni meteo."
+        },
+        "ja": {
+          "question": "2026年のカナダの会場のうち、開閉式屋根を備えているのはどれですか？",
+          "options": [
+            "BMOフィールド（トロント）",
+            "BCプレイス（バンクーバー）",
+            "オリンピックスタジアム（モントリオール）",
+            "コモンウェルス・スタジアム（エドモントン）"
+          ],
+          "explanation": "バンクーバーのBCプレイスは開閉式屋根を備えており、天候に関係なく試合を行うことができます。"
+        },
+        "ko": {
+          "question": "2026년 캐나다 개최지 중 개폐식 지붕을 갖춘 곳은 어디일까요?",
+          "options": [
+            "BMO 필드, 토론토",
+            "BC 플레이스, 밴쿠버",
+            "올림픽 스타디움, 몬트리올",
+            "커먼웰스 스타디움, 에드먼턴"
+          ],
+          "explanation": "밴쿠버의 BC 플레이스는 개폐식 지붕을 갖추고 있어 날씨와 관계없이 경기를 치를 수 있습니다."
+        },
+        "pt-BR": {
+          "question": "Qual sede canadense de 2026 possui um teto retrátil?",
+          "options": [
+            "BMO Field, Toronto",
+            "BC Place, Vancouver",
+            "Estádio Olímpico, Montreal",
+            "Commonwealth Stadium, Edmonton"
+          ],
+          "explanation": "O BC Place, em Vancouver, possui um teto retrátil, garantindo que as partidas possam ser disputadas independentemente do clima."
+        },
+        "zh-Hans": {
+          "question": "2026年加拿大的哪座球场设有可伸缩顶棚？",
+          "options": [
+            "BMO球场，多伦多",
+            "BC Place球场，温哥华",
+            "奥林匹克体育场，蒙特利尔",
+            "英联邦体育场，埃德蒙顿"
+          ],
+          "explanation": "温哥华的BC Place球场设有可伸缩顶棚，可确保比赛在任何天气条件下都能照常进行。"
+        }
+      },
+      "i18nSourceHash": "3719afdc3078b2ef"
     },
     {
       "id": "h-korea-2002",
@@ -8887,7 +8990,110 @@
       ],
       "answer": 2,
       "explanation": "Eleven US cities host matches, from New York/New Jersey and Los Angeles to Dallas, Houston, Atlanta, Miami, Seattle, Philadelphia, Kansas City, the San Francisco Bay Area, and Boston.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كم عدد المدن في الولايات المتحدة التي تستضيف مباريات في 2026؟",
+          "options": [
+            "8",
+            "9",
+            "11",
+            "13"
+          ],
+          "explanation": "تستضيف إحدى عشرة مدينة أمريكية المباريات، من نيويورك/نيوجيرسي ولوس أنجلوس إلى دالاس وهيوستن وأتلانتا وميامي وسياتل وفيلادلفيا وكانساس سيتي ومنطقة خليج سان فرانسيسكو وبوسطن."
+        },
+        "de": {
+          "question": "Wie viele Städte in den USA sind 2026 Austragungsorte von Spielen?",
+          "options": [
+            "8",
+            "9",
+            "11",
+            "13"
+          ],
+          "explanation": "Elf US-Städte tragen Spiele aus: von New York/New Jersey und Los Angeles über Dallas, Houston, Atlanta, Miami, Seattle, Philadelphia und Kansas City bis zur San Francisco Bay Area und Boston."
+        },
+        "es": {
+          "question": "¿Cuántas ciudades de Estados Unidos son sede de partidos en 2026?",
+          "options": [
+            "8",
+            "9",
+            "11",
+            "13"
+          ],
+          "explanation": "Once ciudades estadounidenses son sede de partidos: desde Nueva York/Nueva Jersey y Los Ángeles hasta Dallas, Houston, Atlanta, Miami, Seattle, Filadelfia, Kansas City, el área de la bahía de San Francisco y Boston."
+        },
+        "es-ES": {
+          "question": "¿Cuántas ciudades de Estados Unidos acogen partidos en 2026?",
+          "options": [
+            "8",
+            "9",
+            "11",
+            "13"
+          ],
+          "explanation": "Once ciudades estadounidenses acogen partidos: desde Nueva York/Nueva Jersey y Los Ángeles hasta Dallas, Houston, Atlanta, Miami, Seattle, Filadelfia, Kansas City, el área de la bahía de San Francisco y Boston."
+        },
+        "fr": {
+          "question": "Combien de villes des États-Unis accueillent des matchs en 2026 ?",
+          "options": [
+            "8",
+            "9",
+            "11",
+            "13"
+          ],
+          "explanation": "Onze villes américaines accueillent des matchs, de New York/New Jersey et Los Angeles à Dallas, Houston, Atlanta, Miami, Seattle, Philadelphie, Kansas City, la baie de San Francisco et Boston."
+        },
+        "it": {
+          "question": "Quante città degli Stati Uniti ospitano partite nel 2026?",
+          "options": [
+            "8",
+            "9",
+            "11",
+            "13"
+          ],
+          "explanation": "Undici città statunitensi ospitano le partite, da New York/New Jersey e Los Angeles fino a Dallas, Houston, Atlanta, Miami, Seattle, Filadelfia, Kansas City, l'area della baia di San Francisco e Boston."
+        },
+        "ja": {
+          "question": "2026年にアメリカ合衆国で試合を開催する都市はいくつありますか？",
+          "options": [
+            "8",
+            "9",
+            "11",
+            "13"
+          ],
+          "explanation": "アメリカの11都市が試合を開催します。ニューヨーク／ニュージャージー、ロサンゼルスをはじめ、ダラス、ヒューストン、アトランタ、マイアミ、シアトル、フィラデルフィア、カンザスシティ、サンフランシスコ・ベイエリア、ボストンです。"
+        },
+        "ko": {
+          "question": "2026년에 미국에서 경기를 개최하는 도시는 몇 곳입니까?",
+          "options": [
+            "8",
+            "9",
+            "11",
+            "13"
+          ],
+          "explanation": "미국의 11개 도시가 경기를 개최합니다. 뉴욕/뉴저지와 로스앤젤레스를 비롯해 댈러스, 휴스턴, 애틀랜타, 마이애미, 시애틀, 필라델피아, 캔자스시티, 샌프란시스코 베이 지역, 보스턴입니다."
+        },
+        "pt-BR": {
+          "question": "Quantas cidades dos Estados Unidos sediam partidas em 2026?",
+          "options": [
+            "8",
+            "9",
+            "11",
+            "13"
+          ],
+          "explanation": "Onze cidades americanas sediam partidas: de Nova York/Nova Jersey e Los Angeles a Dallas, Houston, Atlanta, Miami, Seattle, Filadélfia, Kansas City, a região da Baía de São Francisco e Boston."
+        },
+        "zh-Hans": {
+          "question": "2026年美国有多少座城市承办比赛？",
+          "options": [
+            "8",
+            "9",
+            "11",
+            "13"
+          ],
+          "explanation": "美国有十一座城市承办比赛，包括纽约/新泽西、洛杉矶、达拉斯、休斯顿、亚特兰大、迈阿密、西雅图、费城、堪萨斯城、旧金山湾区和波士顿。"
+        }
+      },
+      "i18nSourceHash": "04c999c0fb428832"
     },
     {
       "id": "v-canada-cities",
@@ -8966,7 +9172,110 @@
       ],
       "answer": 1,
       "explanation": "Mexico hosts matches in three cities — Mexico City (Estadio Azteca), Guadalajara (Estadio Akron), and Monterrey (Estadio BBVA).",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كم عدد المدن المكسيكية التي تستضيف المباريات في 2026؟",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "explanation": "تستضيف المكسيك المباريات في ثلاث مدن — مكسيكو سيتي (إستاد أزتيكا)، وغوادالاخارا (إستاد أكرون)، ومونتيري (إستاد بي بي في إيه)."
+        },
+        "de": {
+          "question": "Wie viele mexikanische Städte tragen 2026 Spiele aus?",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "explanation": "Mexiko trägt Spiele in drei Städten aus — Mexiko-Stadt (Estadio Azteca), Guadalajara (Estadio Akron) und Monterrey (Estadio BBVA)."
+        },
+        "es": {
+          "question": "¿Cuántas ciudades mexicanas serán sede de partidos en 2026?",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "explanation": "México será sede de partidos en tres ciudades: Ciudad de México (Estadio Azteca), Guadalajara (Estadio Akron) y Monterrey (Estadio BBVA)."
+        },
+        "es-ES": {
+          "question": "¿Cuántas ciudades mexicanas acogerán partidos en 2026?",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "explanation": "México acoge partidos en tres ciudades: Ciudad de México (Estadio Azteca), Guadalajara (Estadio Akron) y Monterrey (Estadio BBVA)."
+        },
+        "fr": {
+          "question": "Combien de villes mexicaines accueillent des matchs en 2026 ?",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "explanation": "Le Mexique accueille des matchs dans trois villes : Mexico (Estadio Azteca), Guadalajara (Estadio Akron) et Monterrey (Estadio BBVA)."
+        },
+        "it": {
+          "question": "Quante città messicane ospitano partite nel 2026?",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "explanation": "Il Messico ospita partite in tre città: Città del Messico (Estadio Azteca), Guadalajara (Estadio Akron) e Monterrey (Estadio BBVA)."
+        },
+        "ja": {
+          "question": "2026年に試合が開催されるメキシコの都市はいくつですか？",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "explanation": "メキシコでは3つの都市で試合が行われます——メキシコシティ（エスタディオ・アステカ）、グアダラハラ（エスタディオ・アクロン）、モンテレイ（エスタディオBBVA）です。"
+        },
+        "ko": {
+          "question": "2026년에 경기를 개최하는 멕시코 도시는 몇 곳인가요?",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "explanation": "멕시코는 세 도시에서 경기를 개최합니다 — 멕시코시티(에스타디오 아스테카), 과달라하라(에스타디오 아크론), 몬테레이(에스타디오 BBVA)입니다."
+        },
+        "pt-BR": {
+          "question": "Quantas cidades mexicanas vão sediar partidas em 2026?",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "explanation": "O México sedia partidas em três cidades — Cidade do México (Estádio Azteca), Guadalajara (Estádio Akron) e Monterrey (Estádio BBVA)."
+        },
+        "zh-Hans": {
+          "question": "2026年墨西哥有多少座城市承办比赛？",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "explanation": "墨西哥在三座城市承办比赛——墨西哥城（阿兹特克体育场）、瓜达拉哈拉（阿克隆体育场）和蒙特雷（BBVA体育场）。"
+        }
+      },
+      "i18nSourceHash": "147d17bc1509541a"
     },
     {
       "id": "p-ronaldo-brazil-15",
@@ -9045,7 +9354,110 @@
       ],
       "answer": 2,
       "explanation": "The 48-team format means 104 matches — up from 64 in the previous 32-team era.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "كم عدد المباريات التي ستُقام في بطولة 2026؟",
+          "options": [
+            "64",
+            "80",
+            "104",
+            "128"
+          ],
+          "explanation": "يعني نظام الـ48 منتخبًا إقامة 104 مباريات، مقارنةً بـ64 مباراة في حقبة الـ32 منتخبًا السابقة."
+        },
+        "de": {
+          "question": "Wie viele Spiele werden beim Turnier 2026 ausgetragen?",
+          "options": [
+            "64",
+            "80",
+            "104",
+            "128"
+          ],
+          "explanation": "Das Format mit 48 Mannschaften bedeutet 104 Spiele – ein Anstieg von 64 in der früheren Ära mit 32 Teams."
+        },
+        "es": {
+          "question": "¿Cuántos partidos se jugarán en el torneo de 2026?",
+          "options": [
+            "64",
+            "80",
+            "104",
+            "128"
+          ],
+          "explanation": "El formato de 48 selecciones supone 104 partidos, frente a los 64 de la era anterior con 32 equipos."
+        },
+        "es-ES": {
+          "question": "¿Cuántos partidos se disputarán en el torneo de 2026?",
+          "options": [
+            "64",
+            "80",
+            "104",
+            "128"
+          ],
+          "explanation": "El formato de 48 selecciones implica 104 partidos, frente a los 64 de la anterior etapa con 32 equipos."
+        },
+        "fr": {
+          "question": "Combien de matchs seront disputés lors du tournoi 2026 ?",
+          "options": [
+            "64",
+            "80",
+            "104",
+            "128"
+          ],
+          "explanation": "Le format à 48 équipes porte le total à 104 matchs, contre 64 à l'époque précédente des 32 équipes."
+        },
+        "it": {
+          "question": "Quante partite si disputeranno al torneo del 2026?",
+          "options": [
+            "64",
+            "80",
+            "104",
+            "128"
+          ],
+          "explanation": "Il formato a 48 squadre prevede 104 partite, rispetto alle 64 dell'era precedente con 32 squadre."
+        },
+        "ja": {
+          "question": "2026年の大会では何試合が行われますか？",
+          "options": [
+            "64",
+            "80",
+            "104",
+            "128"
+          ],
+          "explanation": "48チーム制により試合数は104に。以前の32チーム時代の64試合から増加しました。"
+        },
+        "ko": {
+          "question": "2026년 대회에서는 몇 경기가 치러지나요?",
+          "options": [
+            "64",
+            "80",
+            "104",
+            "128"
+          ],
+          "explanation": "48개 팀 방식으로 경기 수가 104경기로 늘었습니다. 이전 32개 팀 시절의 64경기에서 증가한 수치입니다."
+        },
+        "pt-BR": {
+          "question": "Quantas partidas serão disputadas no torneio de 2026?",
+          "options": [
+            "64",
+            "80",
+            "104",
+            "128"
+          ],
+          "explanation": "O formato com 48 seleções resulta em 104 partidas, contra as 64 da era anterior com 32 equipes."
+        },
+        "zh-Hans": {
+          "question": "2026年赛事将进行多少场比赛？",
+          "options": [
+            "64",
+            "80",
+            "104",
+            "128"
+          ],
+          "explanation": "48支球队的赛制意味着共104场比赛，比此前32队时代的64场有所增加。"
+        }
+      },
+      "i18nSourceHash": "3d137a4b6d566c49"
     },
     {
       "id": "rec-fastest-red",
@@ -9072,7 +9484,110 @@
       ],
       "answer": 2,
       "explanation": "The final is set for MetLife Stadium in East Rutherford, New Jersey, just outside New York City.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أين ستُقام مباراة نهائي 2026؟",
+          "options": [
+            "روز بول، باسادينا",
+            "ملعب AT&T، دالاس",
+            "ملعب ميت لايف، نيوجيرسي",
+            "ملعب سوفاي، لوس أنجلوس"
+          ],
+          "explanation": "من المقرر أن تُقام المباراة النهائية في ملعب ميت لايف بمدينة إيست رذرفورد بولاية نيوجيرسي، على مقربة من مدينة نيويورك."
+        },
+        "de": {
+          "question": "Wo wird das Finale 2026 ausgetragen?",
+          "options": [
+            "Rose Bowl, Pasadena",
+            "AT&T Stadium, Dallas",
+            "MetLife Stadium, New Jersey",
+            "SoFi Stadium, Los Angeles"
+          ],
+          "explanation": "Das Finale ist für das MetLife Stadium in East Rutherford, New Jersey, direkt vor den Toren von New York City, angesetzt."
+        },
+        "es": {
+          "question": "¿Dónde se jugará la final de 2026?",
+          "options": [
+            "Rose Bowl, Pasadena",
+            "AT&T Stadium, Dallas",
+            "MetLife Stadium, Nueva Jersey",
+            "SoFi Stadium, Los Ángeles"
+          ],
+          "explanation": "La final se disputará en el MetLife Stadium de East Rutherford, Nueva Jersey, muy cerca de la ciudad de Nueva York."
+        },
+        "es-ES": {
+          "question": "¿Dónde se disputará la final de 2026?",
+          "options": [
+            "Rose Bowl, Pasadena",
+            "AT&T Stadium, Dallas",
+            "MetLife Stadium, Nueva Jersey",
+            "SoFi Stadium, Los Ángeles"
+          ],
+          "explanation": "La final está prevista en el MetLife Stadium de East Rutherford, Nueva Jersey, a las afueras de la ciudad de Nueva York."
+        },
+        "fr": {
+          "question": "Où se jouera la finale de 2026 ?",
+          "options": [
+            "Rose Bowl, Pasadena",
+            "AT&T Stadium, Dallas",
+            "MetLife Stadium, New Jersey",
+            "SoFi Stadium, Los Angeles"
+          ],
+          "explanation": "La finale est prévue au MetLife Stadium d'East Rutherford, dans le New Jersey, juste aux portes de New York."
+        },
+        "it": {
+          "question": "Dove si giocherà la finale del 2026?",
+          "options": [
+            "Rose Bowl, Pasadena",
+            "AT&T Stadium, Dallas",
+            "MetLife Stadium, New Jersey",
+            "SoFi Stadium, Los Angeles"
+          ],
+          "explanation": "La finale è in programma al MetLife Stadium di East Rutherford, nel New Jersey, appena fuori New York City."
+        },
+        "ja": {
+          "question": "2026年の決勝はどこで行われますか？",
+          "options": [
+            "ローズボウル、パサデナ",
+            "AT&Tスタジアム、ダラス",
+            "メットライフ・スタジアム、ニュージャージー",
+            "ソーファイ・スタジアム、ロサンゼルス"
+          ],
+          "explanation": "決勝はニューヨーク市郊外、ニュージャージー州イーストラザフォードのメットライフ・スタジアムで開催される予定です。"
+        },
+        "ko": {
+          "question": "2026년 결승전은 어디에서 열리나요?",
+          "options": [
+            "로즈볼, 패서디나",
+            "AT&T 스타디움, 댈러스",
+            "메트라이프 스타디움, 뉴저지",
+            "소파이 스타디움, 로스앤젤레스"
+          ],
+          "explanation": "결승전은 뉴욕시 바로 외곽에 위치한 뉴저지주 이스트러더퍼드의 메트라이프 스타디움에서 열릴 예정입니다."
+        },
+        "pt-BR": {
+          "question": "Onde será disputada a final de 2026?",
+          "options": [
+            "Rose Bowl, Pasadena",
+            "AT&T Stadium, Dallas",
+            "MetLife Stadium, Nova Jersey",
+            "SoFi Stadium, Los Angeles"
+          ],
+          "explanation": "A final está marcada para o MetLife Stadium, em East Rutherford, Nova Jersey, bem próximo à cidade de Nova York."
+        },
+        "zh-Hans": {
+          "question": "2026年决赛将在哪里举行？",
+          "options": [
+            "玫瑰碗体育场，帕萨迪纳",
+            "AT&T体育场，达拉斯",
+            "大都会人寿体育场，新泽西",
+            "SoFi体育场，洛杉矶"
+          ],
+          "explanation": "决赛定于新泽西州东拉瑟福德的大都会人寿体育场举行，就在纽约市郊外。"
+        }
+      },
+      "i18nSourceHash": "07fdf9343a6e17b3"
     },
     {
       "id": "t-italy-count",
