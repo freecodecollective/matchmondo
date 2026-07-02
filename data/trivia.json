@@ -7732,7 +7732,8 @@
         "Commonwealth Stadium, Edmonton"
       ],
       "answer": 1,
-      "explanation": "BC Place in Vancouver features a retractable roof, ensuring matches can be played regardless of weather."
+      "explanation": "BC Place in Vancouver features a retractable roof, ensuring matches can be played regardless of weather.",
+      "approved": true
     },
     {
       "id": "h-korea-2002",
