@@ -15,18 +15,6 @@
     overflow: hidden;
   }
   canvas { display: block; cursor: pointer; }
-  #controls {
-    position: fixed; top: 16px; left: 16px;
-    display: flex; gap: 6px; z-index: 10;
-  }
-  .tgl {
-    padding: 6px 14px; border: none; border-radius: 16px;
-    font: 600 11px/1 system-ui; cursor: pointer;
-    letter-spacing: 0.05em; text-transform: uppercase;
-    background: #e8e6e0; color: #999;
-    transition: all 0.15s;
-  }
-  .tgl.on { background: #333; color: #fff; }
   #hint {
     position: fixed; bottom: 16px; left: 16px;
     color: rgba(0,0,0,0.3); font: 500 11px/1 system-ui; letter-spacing: 0.06em;
@@ -36,17 +24,12 @@
 </style>
 </head>
 <body>
-<div id="controls">
-  <button class="tgl on" id="tglNames" onclick="toggleNames()">Names</button>
-  <button class="tgl on" id="tglScores" onclick="toggleScores()">Scores</button>
-</div>
 <canvas id="c"></canvas>
 <div id="hint">Tap a flag to trace its path to the final</div>
 <script>
 const C = document.getElementById('c'), ctx = C.getContext('2d');
 const DPR = window.devicePixelRatio || 1;
 let W, H, cx, cy, R;
-let showNames = true, showScores = true;
 let selected = null;
 
 const bracketOrder = [74,77,73,75, 83,84,81,82, 76,78,79,80, 86,88,85,87];
@@ -138,14 +121,6 @@ function isEliminated(team) {
   }
   return false;
 }
-function scoreText(m) {
-  if (!m || m.sH == null) return null;
-  let s = `${m.sH}–${m.sA}`;
-  if (m.pH != null) s += ` (${m.pH}–${m.pA} PK)`;
-  else if (m.r === 'AET') s += ' AET';
-  return s;
-}
-
 const flagImg = {};
 let flagN = 0;
 function loadFlags() {
@@ -167,17 +142,6 @@ function pairMidA(i) { return (-90 + (2 * i + 1) * 11.25) * Math.PI / 180; }
 function r16SlotA(j) { return (-90 + (4 * j + 2) * 11.25) * Math.PI / 180; }
 function qfSlotA(k) { return (-90 + (8 * k + 4) * 11.25) * Math.PI / 180; }
 function pt(a, r) { return [cx + r * Math.cos(a), cy + r * Math.sin(a)]; }
-
-function toggleNames() {
-  showNames = !showNames;
-  document.getElementById('tglNames').classList.toggle('on', showNames);
-  draw();
-}
-function toggleScores() {
-  showScores = !showScores;
-  document.getElementById('tglScores').classList.toggle('on', showScores);
-  draw();
-}
 
 function resize() {
   W = window.innerWidth; H = window.innerHeight;
@@ -413,7 +377,7 @@ function draw() {
   // country name wrapped around the flag: outside it on the outer ring,
   // around the inner side for the inner rounds
   function drawName(a, ringR, team, nodeR, outward, extraGap, dim) {
-    if (!showNames || !isR(team)) return;
+    if (!isR(team)) return;
     const size = Math.max(8, R * 0.0215);
     const gap = Math.max(4, R * 0.0135) + (extraGap || 0);
     const r = nodeR + gap + size / 2;
@@ -440,7 +404,7 @@ function draw() {
       if (nStars) {
         const [x0, y0] = pt(a, rTeam);
         const gap = Math.max(4, R * 0.0135);
-        const nameBand = showNames ? Math.max(8, R * 0.0215) + 3 : 0;
+        const nameBand = Math.max(8, R * 0.0215) + 3;
         const rBadge = nr + gap + nameBand + starSize * 0.9;
         const step = (starSize * 2.3) / rBadge;
         ctx.save();
@@ -473,45 +437,6 @@ function draw() {
   for (let k = 0; k < 4; k++) {
     const w = winner(M[qfOrder[k]]);
     drawNode(qfMatchA[k], rSF, w, nrSF, '', selected != null && w !== selected);
-  }
-
-  // === score labels (toggleable, next to the winner's stub, above the nodes) ===
-  if (showScores) {
-    function roundScore(m, aWin, aMid, rNode, nodeR, rChord) {
-      const s = scoreText(m);
-      if (!s) return;
-      const rMid = rChord + (rNode - nodeR - rChord) * 0.28;
-      let [x, y] = pt(aWin, rMid);
-      const perp = aWin + (aWin < aMid ? -1 : 1) * Math.PI / 2;
-      x += Math.cos(perp) * 20; y += Math.sin(perp) * 20;
-      ctx.save();
-      ctx.globalAlpha = dimFor(m) ? 0.1 : 1;
-      ctx.font = `700 ${Math.max(8, R*0.021)}px system-ui`;
-      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.lineWidth = 3; ctx.strokeStyle = 'rgba(245,244,241,0.85)';
-      ctx.strokeText(s, x, y);
-      ctx.fillStyle = 'rgba(0,0,0,0.4)';
-      ctx.fillText(s, x, y);
-      ctx.restore();
-    }
-    for (let i = 0; i < 16; i++) {
-      const m = M[bracketOrder[i]];
-      const w = winner(m);
-      if (!w) continue;
-      roundScore(m, w === m.h ? slotA(i*2) : slotA(i*2+1), pairMid[i], rTeam, nr, rC1);
-    }
-    for (let j = 0; j < 8; j++) {
-      const m = M[r16Order[j]];
-      const w = winner(m);
-      if (!w) continue;
-      roundScore(m, w === m.h ? pairMid[j*2] : pairMid[j*2+1], r16MatchA[j], r16r, nr16, rC2);
-    }
-    for (let k = 0; k < 4; k++) {
-      const m = M[qfOrder[k]];
-      const w = winner(m);
-      if (!w) continue;
-      roundScore(m, w === m.h ? r16MatchA[k*2] : r16MatchA[k*2+1], qfMatchA[k], rQF, nrQF, rC3);
-    }
   }
 
   // === selected team: full path to the final in their flag color ===
