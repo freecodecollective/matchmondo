@@ -18401,7 +18401,7 @@
       "answer": 0,
       "explanation": "True! The offside rule only applies in the opponent's half. A player standing in their own half can never be offside, regardless of where the defenders are positioned. This is why teams sometimes push their defensive line very high up the pitch — any opponent behind the ball in their own half is always onside.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-goalkeeper-line-penalty",
