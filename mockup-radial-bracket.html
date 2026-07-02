@@ -15,6 +15,18 @@
     overflow: hidden;
   }
   canvas { display: block; cursor: pointer; }
+  #controls {
+    position: fixed; top: 14px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 6px; z-index: 10;
+  }
+  .tgl {
+    padding: 6px 14px; border: none; border-radius: 16px;
+    font: 600 11px/1 system-ui; cursor: pointer;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    background: #e8e6e0; color: #999;
+    transition: all 0.15s;
+  }
+  .tgl.on { background: #333; color: #fff; }
   #hint {
     position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%);
     color: rgba(0,0,0,0.22); font: 500 11px/1 system-ui; letter-spacing: 0.06em;
@@ -23,12 +35,18 @@
 </style>
 </head>
 <body>
+<div id="controls">
+  <button class="tgl on" id="tglNames" onclick="toggleNames()">Names</button>
+  <button class="tgl on" id="tglScores" onclick="toggleScores()">Scores</button>
+</div>
 <canvas id="c"></canvas>
 <div id="hint">Tap a flag to trace its path to the final</div>
 <script>
 const C = document.getElementById('c'), ctx = C.getContext('2d');
 const DPR = window.devicePixelRatio || 1;
 let W, H, cx, cy, R;
+let showNames = true, showScores = true;
+let selected = null;
 
 const bracketOrder = [74,77,73,75, 83,84,81,82, 76,78,79,80, 86,88,85,87];
 const r16Order = [89,90,93,94, 91,92,95,96];
@@ -83,6 +101,13 @@ const pc = {
   'Sweden':'#005a9c','Switzerland':'#cc0000','USA':'#002670',
 };
 
+// world championship counts — shown as jersey stars outside the flag
+const STARS = {
+  'Brazil':5,'Germany':4,'Argentina':3,'France':2,'Uruguay':2,'England':1,'Spain':1,
+};
+
+const shortName = (t) => t === 'Bosnia and Herzegovina' ? 'Bosnia' : t;
+
 function winner(m) {
   if (!m || m.sH == null) return null;
   if (m.r === 'PEN') return m.pH > m.pA ? m.h : m.a;
@@ -112,11 +137,20 @@ function loadFlags() {
   }
 }
 
-let selected = null;
-
 // 32 outer slots, starting at top, clockwise
 function slotA(i) { return (-90 + (i + 0.5) * 11.25) * Math.PI / 180; }
 function pt(a, r) { return [cx + r * Math.cos(a), cy + r * Math.sin(a)]; }
+
+function toggleNames() {
+  showNames = !showNames;
+  document.getElementById('tglNames').classList.toggle('on', showNames);
+  draw();
+}
+function toggleScores() {
+  showScores = !showScores;
+  document.getElementById('tglScores').classList.toggle('on', showScores);
+  draw();
+}
 
 function resize() {
   W = window.innerWidth; H = window.innerHeight;
@@ -150,18 +184,65 @@ function arcText(text, r, centerA, flipped, size, color) {
   }
 }
 
+// 5-point star, rotated so one point aims along `rot`
+function drawStar(x, y, r, rot) {
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.rotate(rot + Math.PI / 2);
+  ctx.beginPath();
+  for (let i = 0; i < 10; i++) {
+    const rr = i % 2 === 0 ? r : r * 0.44;
+    const a = -Math.PI / 2 + i * Math.PI / 5;
+    const px = rr * Math.cos(a), py = rr * Math.sin(a);
+    if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+  }
+  ctx.closePath();
+  ctx.fillStyle = '#b5912a';
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(0,0,0,0.2)';
+  ctx.lineWidth = 0.5;
+  ctx.stroke();
+  ctx.restore();
+}
+
 function draw() {
   ctx.clearRect(0, 0, W, H);
   ctx.fillStyle = '#f5f4f1'; ctx.fillRect(0, 0, W, H);
 
-  const nr = Math.max(10, R * 0.045);
-  const nr16 = nr * 0.85, nrQF = nr * 0.78, nrSF = nr * 0.72;
-  const rTeam = R * 0.92, rC1 = R * 0.82;   // R32 nodes, R32 chord
-  const r16r = R * 0.645, rC2 = R * 0.569;  // R16 nodes, R16 chord
-  const rQF = R * 0.425, rC3 = R * 0.36;    // QF nodes, QF chord
-  const rSF = R * 0.235, rC4 = R * 0.155;   // SF nodes, SF chord
+  // node rings centered in their band; chord rings between rounds
+  const B0 = R * 1.005, B1 = R * 0.782, B2 = R * 0.5569, B3 = R * 0.3791, B4 = R * 0.2227;
+  const rTeam = R * 0.8934, r16r = R * 0.6706, rQF = R * 0.4668, rSF = R * 0.301;
+  const rC1 = R * 0.801, rC2 = R * 0.5758, rC3 = R * 0.3957, rC4 = R * 0.1611;
+  const nr = Math.max(10, R * 0.0521);
+  const nr16 = Math.max(9, R * 0.0427), nrQF = Math.max(8, R * 0.0379), nrSF = Math.max(7, R * 0.0332);
+  const rStars = R * 0.955;
 
-  // ring positions: 16 R32-pair midpoints → 8 R16-match midpoints → 4 QF → 2 SF
+  // === ring bands — each round's nodes sit at the radial center of its band ===
+  const bands = [
+    [B0, '#e9e5d9'],  // group stage (sand)
+    [B1, '#dfe7f3'],  // round of 16 (blue)
+    [B2, '#eae6da'],  // quarter-finals (sand)
+    [B3, '#dce5f1'],  // semi-finals (blue)
+    [B4, '#efe9d3'],  // final (gold)
+  ];
+  for (const [br, col] of bands) {
+    ctx.beginPath(); ctx.arc(cx, cy, br, 0, Math.PI*2);
+    ctx.fillStyle = col; ctx.fill();
+  }
+  const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, R * 0.20);
+  g.addColorStop(0, 'rgba(246,233,182,0.95)');
+  g.addColorStop(1, 'rgba(246,233,182,0)');
+  ctx.beginPath(); ctx.arc(cx, cy, R * 0.20, 0, Math.PI*2);
+  ctx.fillStyle = g; ctx.fill();
+  for (const r of [B1, B2, B3, B4]) {
+    ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI*2);
+    ctx.strokeStyle = 'rgba(0,0,0,0.05)'; ctx.lineWidth = 1; ctx.stroke();
+  }
+
+  const neu = 'rgba(0,0,0,0.09)';
+  const neuW = 1.5, decW = Math.max(2.5, R * 0.008);
+
+  // ring angle helpers
   const pairMid = [];
   for (let i = 0; i < 16; i++) pairMid.push((slotA(i*2) + slotA(i*2+1)) / 2);
   const r16MatchA = [];
@@ -171,33 +252,6 @@ function draw() {
   const sfMatchA = [];
   for (let s = 0; s < 2; s++) sfMatchA.push((qfMatchA[s*2] + qfMatchA[s*2+1]) / 2);
 
-  // === ring bands — boundaries at the node rings, alternating shades so
-  // each round reads as its own ring ===
-  const bands = [
-    [R * 1.005, '#e9e5d9'],  // outer rim (sand)
-    [rTeam,     '#dfe7f3'],  // R32 → R16 (blue)
-    [r16r,      '#eae6da'],  // R16 → QF (sand)
-    [rQF,       '#dce5f1'],  // QF → SF (blue)
-    [rSF,       '#efe9d3'],  // SF → final (gold)
-  ];
-  for (const [br, col] of bands) {
-    ctx.beginPath(); ctx.arc(cx, cy, br, 0, Math.PI*2);
-    ctx.fillStyle = col; ctx.fill();
-  }
-  const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, R * 0.22);
-  g.addColorStop(0, 'rgba(246,233,182,0.95)');
-  g.addColorStop(1, 'rgba(246,233,182,0)');
-  ctx.beginPath(); ctx.arc(cx, cy, R * 0.22, 0, Math.PI*2);
-  ctx.fillStyle = g; ctx.fill();
-  // crisp edges at the band boundaries
-  for (const r of [rTeam, r16r, rQF, rSF]) {
-    ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI*2);
-    ctx.strokeStyle = 'rgba(0,0,0,0.05)'; ctx.lineWidth = 1; ctx.stroke();
-  }
-
-  const neu = 'rgba(0,0,0,0.09)';
-  const neuW = 1.5, decW = Math.max(2.5, R * 0.008);
-
   function line(x1, y1, x2, y2, color, w, alpha) {
     ctx.save();
     if (alpha != null) ctx.globalAlpha = alpha;
@@ -206,8 +260,8 @@ function draw() {
     ctx.restore();
   }
 
-  // boxy connector: radial stubs from both nodes to the chord radius,
-  // straight chord between them, straight arm from chord midpoint to next node
+  // boxy connector: radial stubs, straight chord, straight arm inward.
+  // winner's color stops at the chord midpoint — the loser's side stays faint.
   function connector(a1, a2, rNode, nodeR, rChord, aNext, rNext, nextR, m, dim) {
     const w = winner(m);
     const alpha = dim ? 0.12 : 1;
@@ -221,10 +275,8 @@ function draw() {
       const homeWon = w === m.h;
       const wcx = homeWon ? c1x : c2x, wcy = homeWon ? c1y : c2y;
       const lcx = homeWon ? c2x : c1x, lcy = homeWon ? c2y : c1y;
-      // loser's stub and half-chord stay uncolored
       line(homeWon ? s2x : s1x, homeWon ? s2y : s1y, lcx, lcy, 'rgba(0,0,0,0.05)', 1.2, alpha);
       line(lcx, lcy, mx, my, 'rgba(0,0,0,0.05)', 1.2, alpha);
-      // winner's stub, half-chord, and arm inward carry the team color
       line(homeWon ? s1x : s2x, homeWon ? s1y : s2y, wcx, wcy, col, decW, alpha);
       line(wcx, wcy, mx, my, col, decW, alpha);
       line(mx, my, nx, ny, col, decW, alpha);
@@ -238,22 +290,22 @@ function draw() {
 
   const dimFor = (m) => selected != null && !(m && (m.h === selected || m.a === selected));
 
-  // R32 pair i (slots 2i, 2i+1) → R16 slot node at pairMid[i]
+  // R32 pair i → R16 slot at pairMid[i]
   for (let i = 0; i < 16; i++) {
     const m = M[bracketOrder[i]];
     connector(slotA(i*2), slotA(i*2+1), rTeam, nr, rC1, pairMid[i], r16r, nr16, m, dimFor(m));
   }
-  // R16 match j joins slot nodes pairMid[2j], pairMid[2j+1] → QF node at r16MatchA[j]
+  // R16 match j → QF slot at r16MatchA[j]
   for (let j = 0; j < 8; j++) {
     const m = M[r16Order[j]];
     connector(pairMid[j*2], pairMid[j*2+1], r16r, nr16, rC2, r16MatchA[j], rQF, nrQF, m, dimFor(m));
   }
-  // QF match k joins r16MatchA[2k], r16MatchA[2k+1] → SF node at qfMatchA[k]
+  // QF match k → SF slot at qfMatchA[k]
   for (let k = 0; k < 4; k++) {
     const m = M[qfOrder[k]];
     connector(r16MatchA[k*2], r16MatchA[k*2+1], rQF, nrQF, rC3, qfMatchA[k], rSF, nrSF, m, selected != null);
   }
-  // SF match s joins qfMatchA[2s], qfMatchA[2s+1] → the final at center
+  // SF match s → the final at center
   for (let s = 0; s < 2; s++) {
     const a1 = qfMatchA[s*2], a2 = qfMatchA[s*2+1];
     const [s1x, s1y] = pt(a1, rSF - nrSF), [c1x, c1y] = pt(a1, rC4);
@@ -267,38 +319,53 @@ function draw() {
     line(mx, my, fx, fy, neu, neuW, alpha);
   }
 
-  // === score labels (next to the winner's stub) ===
-  for (let i = 0; i < 16; i++) {
-    const m = M[bracketOrder[i]];
-    const w = winner(m);
-    const s = scoreText(m);
-    if (!w || !s) continue;
-    const aWin = w === m.h ? slotA(i*2) : slotA(i*2+1);
-    const rMid = rC1 + (rTeam - nr - rC1) * 0.42;
-    let [x, y] = pt(aWin, rMid);
-    const perp = aWin + (aWin < pairMid[i] ? -1 : 1) * Math.PI / 2;
-    x += Math.cos(perp) * 16; y += Math.sin(perp) * 16;
-    ctx.save();
-    ctx.globalAlpha = dimFor(m) ? 0.1 : 1;
-    ctx.font = `700 ${Math.max(8, R*0.021)}px system-ui`;
-    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillStyle = 'rgba(0,0,0,0.35)';
-    ctx.fillText(s, x, y);
-    ctx.restore();
+  // === score labels (toggleable, next to the winner's stub) ===
+  if (showScores) {
+    function roundScore(m, aWin, aMid, rNode, nodeR, rChord) {
+      const s = scoreText(m);
+      if (!s) return;
+      const rMid = rChord + (rNode - nodeR - rChord) * 0.42;
+      let [x, y] = pt(aWin, rMid);
+      const perp = aWin + (aWin < aMid ? -1 : 1) * Math.PI / 2;
+      x += Math.cos(perp) * 15; y += Math.sin(perp) * 15;
+      ctx.save();
+      ctx.globalAlpha = dimFor(m) ? 0.1 : 1;
+      ctx.font = `700 ${Math.max(8, R*0.021)}px system-ui`;
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillStyle = 'rgba(0,0,0,0.35)';
+      ctx.fillText(s, x, y);
+      ctx.restore();
+    }
+    for (let i = 0; i < 16; i++) {
+      const m = M[bracketOrder[i]];
+      const w = winner(m);
+      if (!w) continue;
+      roundScore(m, w === m.h ? slotA(i*2) : slotA(i*2+1), pairMid[i], rTeam, nr, rC1);
+    }
+    for (let j = 0; j < 8; j++) {
+      const m = M[r16Order[j]];
+      const w = winner(m);
+      if (!w) continue;
+      roundScore(m, w === m.h ? pairMid[j*2] : pairMid[j*2+1], r16MatchA[j], r16r, nr16, rC2);
+    }
+    for (let k = 0; k < 4; k++) {
+      const m = M[qfOrder[k]];
+      const w = winner(m);
+      if (!w) continue;
+      roundScore(m, w === m.h ? r16MatchA[k*2] : r16MatchA[k*2+1], qfMatchA[k], rQF, nrQF, rC3);
+    }
   }
 
-  // === curved ring labels — radially centered in their band ===
+  // === curved ring labels — inside their band, clear of the nodes ===
   const lblCol = 'rgba(0,0,0,0.32)';
-  const lblSize = Math.max(10, R * 0.042);
-  const rLbl16 = (rTeam + r16r) / 2;   // center of R32→R16 band
-  const rLblQF = (r16r + rQF) / 2;     // center of R16→QF band
-  const rLblSF = (rQF + rSF) / 2;      // center of QF→SF band
-  arcText('R O U N D   O F   1 6', rLbl16, -Math.PI/2, false, lblSize, lblCol);
-  arcText('R O U N D   O F   1 6', rLbl16,  Math.PI/2, true,  lblSize, lblCol);
-  arcText('Q U A R T E R - F I N A L S', rLblQF, -Math.PI/2, false, lblSize * 0.92, lblCol);
-  arcText('Q U A R T E R - F I N A L S', rLblQF,  Math.PI/2, true,  lblSize * 0.92, lblCol);
-  arcText('S E M I - F I N A L S', rLblSF, -Math.PI/2, false, lblSize * 0.85, lblCol);
-  arcText('S E M I - F I N A L S', rLblSF,  Math.PI/2, true,  lblSize * 0.85, lblCol);
+  arcText('G R O U P   S T A G E', R * 0.985, -Math.PI/2, false, R * 0.030, lblCol);
+  arcText('G R O U P   S T A G E', R * 0.985,  Math.PI/2, true,  R * 0.030, lblCol);
+  arcText('R O U N D   O F   1 6', R * 0.7464, -Math.PI/2, false, R * 0.0355, lblCol);
+  arcText('R O U N D   O F   1 6', R * 0.7464,  Math.PI/2, true,  R * 0.0355, lblCol);
+  arcText('Q U A R T E R - F I N A L S', R * 0.5308, -Math.PI/2, false, R * 0.0284, lblCol);
+  arcText('Q U A R T E R - F I N A L S', R * 0.5308,  Math.PI/2, true,  R * 0.0284, lblCol);
+  arcText('S E M I - F I N A L S', R * 0.3555, -Math.PI/2, false, R * 0.0237, lblCol);
+  arcText('S E M I - F I N A L S', R * 0.3555,  Math.PI/2, true,  R * 0.0237, lblCol);
 
   // === nodes ===
   function drawNode(a, r, team, nodeR, state, dim) {
@@ -323,22 +390,50 @@ function draw() {
     ctx.beginPath(); ctx.arc(x, y, nodeR, 0, Math.PI*2);
     ctx.strokeStyle = state === 'win' ? '#b5912a' : (state === 'elim' ? 'rgba(0,0,0,0.07)' : 'rgba(255,255,255,0.9)');
     ctx.lineWidth = state === 'win' ? 2.5 : 1.5; ctx.stroke();
-    if (selected === team) {
-      ctx.beginPath(); ctx.arc(x, y, nodeR + 4, 0, Math.PI*2);
-      ctx.strokeStyle = pc[team] || '#888'; ctx.lineWidth = 3; ctx.stroke();
-    }
     ctx.restore();
   }
 
-  // R32 team nodes
+  function drawName(a, r, team, nodeR, dim) {
+    if (!showNames || !isR(team)) return;
+    let [x, y] = pt(a, r - nodeR - Math.max(7, R * 0.022));
+    ctx.save();
+    if (dim) ctx.globalAlpha = 0.25;
+    ctx.font = `700 ${Math.max(8, R * 0.0215)}px system-ui`;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillStyle = 'rgba(0,0,0,0.55)';
+    ctx.fillText(shortName(team), x, y);
+    ctx.restore();
+  }
+
+  // R32 team nodes + stars + names
   for (let i = 0; i < 16; i++) {
     const m = M[bracketOrder[i]];
     if (!m) continue;
     const w = winner(m);
     const dim = selected != null && m.h !== selected && m.a !== selected;
-    drawNode(slotA(i*2),   rTeam, m.h, nr, w === m.h ? 'win' : (w ? 'elim' : ''), dim);
-    drawNode(slotA(i*2+1), rTeam, m.a, nr, w === m.a ? 'win' : (w ? 'elim' : ''), dim);
+    for (const [slot, team] of [[i*2, m.h], [i*2+1, m.a]]) {
+      const a = slotA(slot);
+      const state = w === team ? 'win' : (w ? 'elim' : '');
+      const nodeDim = dim && team !== selected;
+      drawNode(a, rTeam, team, nr, state, nodeDim);
+      // championship stars, arced outside the flag
+      const nStars = STARS[team];
+      if (nStars) {
+        const starSize = Math.max(3.5, R * 0.0115);
+        const step = (starSize * 2.4) / rStars;
+        ctx.save();
+        if (nodeDim) ctx.globalAlpha = 0.35;
+        for (let si = 0; si < nStars; si++) {
+          const sa = a + (si - (nStars - 1) / 2) * step;
+          const [sx, sy] = pt(sa, rStars);
+          drawStar(sx, sy, starSize, sa);
+        }
+        ctx.restore();
+      }
+      drawName(a, rTeam, team, nr, nodeDim);
+    }
   }
+
   // R16 slot nodes (R32 pair winners)
   for (let i = 0; i < 16; i++) {
     const w = winner(M[bracketOrder[i]]);
@@ -347,16 +442,65 @@ function draw() {
     const state = w && r16w ? (r16w === w ? 'win' : 'elim') : '';
     const dim = selected != null && w !== selected;
     drawNode(pairMid[i], r16r, w, nr16, state, dim);
+    if (w) drawName(pairMid[i], r16r, w, nr16, dim);
   }
   // QF slot nodes (R16 winners)
   for (let j = 0; j < 8; j++) {
     const w = winner(M[r16Order[j]]);
     const dim = selected != null && w !== selected;
     drawNode(r16MatchA[j], rQF, w, nrQF, '', dim);
+    if (w) drawName(r16MatchA[j], rQF, w, nrQF, dim);
   }
   // SF slot nodes (QF winners)
   for (let k = 0; k < 4; k++) {
-    drawNode(qfMatchA[k], rSF, winner(M[qfOrder[k]]), nrSF, '', selected != null);
+    const w = winner(M[qfOrder[k]]);
+    drawNode(qfMatchA[k], rSF, w, nrSF, '', selected != null && w !== selected);
+    if (w) drawName(qfMatchA[k], rSF, w, nrSF, selected != null && w !== selected);
+  }
+
+  // === selected team: full path to the final in their flag color ===
+  if (selected) {
+    let slot = -1;
+    for (let i = 0; i < 16 && slot < 0; i++) {
+      const m = M[bracketOrder[i]];
+      if (!m) continue;
+      if (m.h === selected) slot = i * 2;
+      else if (m.a === selected) slot = i * 2 + 1;
+    }
+    if (slot >= 0) {
+      const col = pc[selected] || '#888';
+      const pairIdx = slot >> 1, r16Idx = pairIdx >> 1, qfIdx = r16Idx >> 1, sfIdx = qfIdx >> 1;
+      const mid = (p1, p2) => [(p1[0]+p2[0])/2, (p1[1]+p2[1])/2];
+      const mid1 = mid(pt(slotA(pairIdx*2), rC1), pt(slotA(pairIdx*2+1), rC1));
+      const mid2 = mid(pt(pairMid[r16Idx*2], rC2), pt(pairMid[r16Idx*2+1], rC2));
+      const mid3 = mid(pt(r16MatchA[qfIdx*2], rC3), pt(r16MatchA[qfIdx*2+1], rC3));
+      const mid4 = mid(pt(qfMatchA[sfIdx*2], rC4), pt(qfMatchA[sfIdx*2+1], rC4));
+      const pts = [
+        pt(slotA(slot), rTeam), pt(slotA(slot), rC1), mid1,
+        pt(pairMid[pairIdx], r16r), pt(pairMid[pairIdx], rC2), mid2,
+        pt(r16MatchA[r16Idx], rQF), pt(r16MatchA[r16Idx], rC3), mid3,
+        pt(qfMatchA[qfIdx], rSF), pt(qfMatchA[qfIdx], rC4), mid4,
+        [cx, cy],
+      ];
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(pts[0][0], pts[0][1]);
+      for (const p of pts.slice(1)) ctx.lineTo(p[0], p[1]);
+      ctx.strokeStyle = col; ctx.globalAlpha = 0.22;
+      ctx.lineWidth = Math.max(9, R * 0.026); ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+      ctx.stroke();
+      ctx.globalAlpha = 0.9;
+      ctx.lineWidth = Math.max(3.5, R * 0.010);
+      ctx.stroke();
+      ctx.restore();
+      // rings at the node positions along the path
+      const ringR = [nr, nr16, nrQF, nrSF];
+      for (let j = 0; j < 4; j++) {
+        const p = pts[j * 3];
+        ctx.beginPath(); ctx.arc(p[0], p[1], ringR[j] + 4, 0, Math.PI*2);
+        ctx.strokeStyle = col; ctx.lineWidth = 3; ctx.stroke();
+      }
+    }
   }
 
   // === center trophy ===
@@ -373,8 +517,8 @@ function draw() {
 C.addEventListener('click', (e) => {
   const rect = C.getBoundingClientRect();
   const x = e.clientX - rect.left, y = e.clientY - rect.top;
-  const nr = Math.max(10, R * 0.045);
-  const rTeam = R * 0.92;
+  const nr = Math.max(10, R * 0.0521);
+  const rTeam = R * 0.8934;
 
   let best = null, bestD = Infinity;
   for (let i = 0; i < 16; i++) {
