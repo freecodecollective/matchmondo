@@ -177,9 +177,11 @@ function draw() {
   ctx.clearRect(0, 0, W, H);
   ctx.fillStyle = '#f5f4f1'; ctx.fillRect(0, 0, W, H);
 
-  // node rings and chord rings between rounds
-  const rTeam = R * 0.8934, r16r = R * 0.6706, rQF = R * 0.4668, rSF = R * 0.301;
+  // winners sit ON the corner where their next match's chord turns:
+  // each slot ring is the chord ring itself (flags cover the corner dots)
+  const rTeam = R * 0.8934;
   const rC1 = R * 0.801, rC2 = R * 0.5758, rC3 = R * 0.3957, rC4 = R * 0.1611;
+  const r16r = rC2, rQF = rC3, rSF = rC4;
   const nr = Math.max(10, R * 0.0521);
   const nr16 = Math.max(9, R * 0.0427), nrQF = Math.max(8, R * 0.0379), nrSF = Math.max(7, R * 0.0332);
 
@@ -462,7 +464,7 @@ C.addEventListener('click', (e) => {
   const x = e.clientX - rect.left, y = e.clientY - rect.top;
   const nr = Math.max(10, R * 0.0521);
   const nr16 = Math.max(9, R * 0.0427), nrQF = Math.max(8, R * 0.0379), nrSF = Math.max(7, R * 0.0332);
-  const rTeam = R * 0.8934, r16r = R * 0.6706, rQF = R * 0.4668, rSF = R * 0.301;
+  const rTeam = R * 0.8934, r16r = R * 0.5758, rQF = R * 0.3957, rSF = R * 0.1611;
 
   let best = null, bestD = Infinity;
   function test(a, r, nodeR, team) {
