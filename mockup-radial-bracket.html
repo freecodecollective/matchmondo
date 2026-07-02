@@ -319,43 +319,6 @@ function draw() {
     line(mx, my, fx, fy, neu, neuW, alpha);
   }
 
-  // === score labels (toggleable, next to the winner's stub) ===
-  if (showScores) {
-    function roundScore(m, aWin, aMid, rNode, nodeR, rChord) {
-      const s = scoreText(m);
-      if (!s) return;
-      const rMid = rChord + (rNode - nodeR - rChord) * 0.28;
-      let [x, y] = pt(aWin, rMid);
-      const perp = aWin + (aWin < aMid ? -1 : 1) * Math.PI / 2;
-      x += Math.cos(perp) * 16; y += Math.sin(perp) * 16;
-      ctx.save();
-      ctx.globalAlpha = dimFor(m) ? 0.1 : 1;
-      ctx.font = `700 ${Math.max(8, R*0.021)}px system-ui`;
-      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.fillStyle = 'rgba(0,0,0,0.35)';
-      ctx.fillText(s, x, y);
-      ctx.restore();
-    }
-    for (let i = 0; i < 16; i++) {
-      const m = M[bracketOrder[i]];
-      const w = winner(m);
-      if (!w) continue;
-      roundScore(m, w === m.h ? slotA(i*2) : slotA(i*2+1), pairMid[i], rTeam, nr, rC1);
-    }
-    for (let j = 0; j < 8; j++) {
-      const m = M[r16Order[j]];
-      const w = winner(m);
-      if (!w) continue;
-      roundScore(m, w === m.h ? pairMid[j*2] : pairMid[j*2+1], r16MatchA[j], r16r, nr16, rC2);
-    }
-    for (let k = 0; k < 4; k++) {
-      const m = M[qfOrder[k]];
-      const w = winner(m);
-      if (!w) continue;
-      roundScore(m, w === m.h ? r16MatchA[k*2] : r16MatchA[k*2+1], qfMatchA[k], rQF, nrQF, rC3);
-    }
-  }
-
   // === curved ring labels — inside their band, clear of the nodes ===
   const lblCol = 'rgba(0,0,0,0.32)';
   arcText('G R O U P   S T A G E', R * 0.985, -Math.PI/2, false, R * 0.030, lblCol);
@@ -467,6 +430,45 @@ function draw() {
     const w = winner(M[qfOrder[k]]);
     drawNode(qfMatchA[k], rSF, w, nrSF, '', selected != null && w !== selected);
     if (w) drawName(qfMatchA[k], rSF, w, nrSF, selected != null && w !== selected);
+  }
+
+  // === score labels (toggleable, next to the winner's stub, above the nodes) ===
+  if (showScores) {
+    function roundScore(m, aWin, aMid, rNode, nodeR, rChord) {
+      const s = scoreText(m);
+      if (!s) return;
+      const rMid = rChord + (rNode - nodeR - rChord) * 0.28;
+      let [x, y] = pt(aWin, rMid);
+      const perp = aWin + (aWin < aMid ? -1 : 1) * Math.PI / 2;
+      x += Math.cos(perp) * 20; y += Math.sin(perp) * 20;
+      ctx.save();
+      ctx.globalAlpha = dimFor(m) ? 0.1 : 1;
+      ctx.font = `700 ${Math.max(8, R*0.021)}px system-ui`;
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.lineWidth = 3; ctx.strokeStyle = 'rgba(245,244,241,0.85)';
+      ctx.strokeText(s, x, y);
+      ctx.fillStyle = 'rgba(0,0,0,0.4)';
+      ctx.fillText(s, x, y);
+      ctx.restore();
+    }
+    for (let i = 0; i < 16; i++) {
+      const m = M[bracketOrder[i]];
+      const w = winner(m);
+      if (!w) continue;
+      roundScore(m, w === m.h ? slotA(i*2) : slotA(i*2+1), pairMid[i], rTeam, nr, rC1);
+    }
+    for (let j = 0; j < 8; j++) {
+      const m = M[r16Order[j]];
+      const w = winner(m);
+      if (!w) continue;
+      roundScore(m, w === m.h ? pairMid[j*2] : pairMid[j*2+1], r16MatchA[j], r16r, nr16, rC2);
+    }
+    for (let k = 0; k < 4; k++) {
+      const m = M[qfOrder[k]];
+      const w = winner(m);
+      if (!w) continue;
+      roundScore(m, w === m.h ? r16MatchA[k*2] : r16MatchA[k*2+1], qfMatchA[k], rQF, nrQF, rC3);
+    }
   }
 
   // === selected team: full path to the final in their flag color ===
