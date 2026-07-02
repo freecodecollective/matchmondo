@@ -19497,7 +19497,7 @@
       "answer": 0,
       "explanation": "True! Before 1950, Brazil played in white shirts. After the devastating 'Maracanazo' loss to Uruguay, a national newspaper competition was held to design new colors that would represent the Brazilian flag. The result was the iconic yellow shirt with green trim — the 'Canarinha' (Little Canary) — which has been Brazil's identity ever since.",
       "type": "true_false",
-      "needsReview": true
+      "approved": true
     },
     {
       "id": "tf-no-host-group-exit",
