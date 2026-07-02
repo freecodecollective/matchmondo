@@ -156,9 +156,9 @@ function draw() {
 
   const nr = Math.max(10, R * 0.045);
   const nr16 = nr * 0.85, nrQF = nr * 0.78, nrSF = nr * 0.72;
-  const rTeam = R * 0.92, rC1 = R * 0.80;   // R32 nodes, R32 chord
-  const r16r = R * 0.645, rC2 = R * 0.545;  // R16 nodes, R16 chord
-  const rQF = R * 0.425, rC3 = R * 0.335;   // QF nodes, QF chord
+  const rTeam = R * 0.92, rC1 = R * 0.82;   // R32 nodes, R32 chord
+  const r16r = R * 0.645, rC2 = R * 0.569;  // R16 nodes, R16 chord
+  const rQF = R * 0.425, rC3 = R * 0.36;    // QF nodes, QF chord
   const rSF = R * 0.235, rC4 = R * 0.155;   // SF nodes, SF chord
 
   // ring positions: 16 R32-pair midpoints → 8 R16-match midpoints → 4 QF → 2 SF
@@ -171,12 +171,14 @@ function draw() {
   const sfMatchA = [];
   for (let s = 0; s < 2; s++) sfMatchA.push((qfMatchA[s*2] + qfMatchA[s*2+1]) / 2);
 
-  // === ring bands ===
+  // === ring bands — boundaries at the node rings, alternating shades so
+  // each round reads as its own ring ===
   const bands = [
-    [R * 1.005, '#edebe5'],
-    [R * 0.77,  '#e9ebee'],
-    [R * 0.52,  '#e6e9ed'],
-    [R * 0.32,  '#eae8e2'],
+    [R * 1.005, '#e9e5d9'],  // outer rim (sand)
+    [rTeam,     '#dfe7f3'],  // R32 → R16 (blue)
+    [r16r,      '#eae6da'],  // R16 → QF (sand)
+    [rQF,       '#dce5f1'],  // QF → SF (blue)
+    [rSF,       '#efe9d3'],  // SF → final (gold)
   ];
   for (const [br, col] of bands) {
     ctx.beginPath(); ctx.arc(cx, cy, br, 0, Math.PI*2);
@@ -187,16 +189,11 @@ function draw() {
   g.addColorStop(1, 'rgba(246,233,182,0)');
   ctx.beginPath(); ctx.arc(cx, cy, R * 0.22, 0, Math.PI*2);
   ctx.fillStyle = g; ctx.fill();
-
-  // === curved ring labels ===
-  const lblCol = 'rgba(0,0,0,0.10)';
-  const lblSize = Math.max(10, R * 0.042);
-  arcText('R O U N D   O F   1 6', R * 0.725, -Math.PI/2, false, lblSize, lblCol);
-  arcText('R O U N D   O F   1 6', R * 0.725,  Math.PI/2, true,  lblSize, lblCol);
-  arcText('Q U A R T E R - F I N A L S', R * 0.487, -Math.PI/2, false, lblSize * 0.92, lblCol);
-  arcText('Q U A R T E R - F I N A L S', R * 0.487,  Math.PI/2, true,  lblSize * 0.92, lblCol);
-  arcText('S E M I - F I N A L S', R * 0.288, -Math.PI/2, false, lblSize * 0.85, lblCol);
-  arcText('S E M I - F I N A L S', R * 0.288,  Math.PI/2, true,  lblSize * 0.85, lblCol);
+  // crisp edges at the band boundaries
+  for (const r of [rTeam, r16r, rQF, rSF]) {
+    ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI*2);
+    ctx.strokeStyle = 'rgba(0,0,0,0.05)'; ctx.lineWidth = 1; ctx.stroke();
+  }
 
   const neu = 'rgba(0,0,0,0.09)';
   const neuW = 1.5, decW = Math.max(2.5, R * 0.008);
@@ -222,11 +219,14 @@ function draw() {
     if (w) {
       const col = pc[w] || '#888';
       const homeWon = w === m.h;
-      line(homeWon ? s2x : s1x, homeWon ? s2y : s1y,
-           homeWon ? c2x : c1x, homeWon ? c2y : c1y, 'rgba(0,0,0,0.05)', 1.2, alpha);
-      line(homeWon ? s1x : s2x, homeWon ? s1y : s2y,
-           homeWon ? c1x : c2x, homeWon ? c1y : c2y, col, decW, alpha);
-      line(c1x, c1y, c2x, c2y, col, decW, alpha);
+      const wcx = homeWon ? c1x : c2x, wcy = homeWon ? c1y : c2y;
+      const lcx = homeWon ? c2x : c1x, lcy = homeWon ? c2y : c1y;
+      // loser's stub and half-chord stay uncolored
+      line(homeWon ? s2x : s1x, homeWon ? s2y : s1y, lcx, lcy, 'rgba(0,0,0,0.05)', 1.2, alpha);
+      line(lcx, lcy, mx, my, 'rgba(0,0,0,0.05)', 1.2, alpha);
+      // winner's stub, half-chord, and arm inward carry the team color
+      line(homeWon ? s1x : s2x, homeWon ? s1y : s2y, wcx, wcy, col, decW, alpha);
+      line(wcx, wcy, mx, my, col, decW, alpha);
       line(mx, my, nx, ny, col, decW, alpha);
     } else {
       line(s1x, s1y, c1x, c1y, neu, neuW, alpha);
@@ -286,6 +286,19 @@ function draw() {
     ctx.fillText(s, x, y);
     ctx.restore();
   }
+
+  // === curved ring labels — radially centered in their band ===
+  const lblCol = 'rgba(0,0,0,0.32)';
+  const lblSize = Math.max(10, R * 0.042);
+  const rLbl16 = (rTeam + r16r) / 2;   // center of R32→R16 band
+  const rLblQF = (r16r + rQF) / 2;     // center of R16→QF band
+  const rLblSF = (rQF + rSF) / 2;      // center of QF→SF band
+  arcText('R O U N D   O F   1 6', rLbl16, -Math.PI/2, false, lblSize, lblCol);
+  arcText('R O U N D   O F   1 6', rLbl16,  Math.PI/2, true,  lblSize, lblCol);
+  arcText('Q U A R T E R - F I N A L S', rLblQF, -Math.PI/2, false, lblSize * 0.92, lblCol);
+  arcText('Q U A R T E R - F I N A L S', rLblQF,  Math.PI/2, true,  lblSize * 0.92, lblCol);
+  arcText('S E M I - F I N A L S', rLblSF, -Math.PI/2, false, lblSize * 0.85, lblCol);
+  arcText('S E M I - F I N A L S', rLblSF,  Math.PI/2, true,  lblSize * 0.85, lblCol);
 
   // === nodes ===
   function drawNode(a, r, team, nodeR, state, dim) {
