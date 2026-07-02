@@ -8,7 +8,8 @@ import threading
 import urllib.request
 import urllib.parse
 import urllib.error
-from http.server import HTTPServer, BaseHTTPRequestHandler
+from concurrent.futures import ThreadPoolExecutor
+from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 
 # ---------------------------------------------------------------------------
 # Config
@@ -631,6 +632,19 @@ class Handler(BaseHTTPRequestHandler):
         self.send_json(200, {"ok": True, "message": "Workflow triggered"})
 
     # ---- groups (pools) -----------------------------------------------------
+    # Per-device pools index at /user_pools/{did}/pools/{code}. Kept in sync on
+    # create/join/leave/delete so "my pools" is one indexed read instead of a
+    # scan of every group in the database. groups_mine backfills it lazily for
+    # memberships that predate the index.
+    @staticmethod
+    def _index_add(did, code):
+        fs("PATCH", f"/user_pools/{did}/pools/{code}",
+           body=docbody({"joinedAt": now_iso()}))
+
+    @staticmethod
+    def _index_remove(did, code):
+        fs("DELETE", f"/user_pools/{did}/pools/{code}")
+
     def group_create(self, body):
         name = (body.get("name") or "My Pool").strip()[:60]
         did = body.get("deviceId")
@@ -662,6 +676,7 @@ class Handler(BaseHTTPRequestHandler):
             return self.send_json(500, {"error": "could not allocate a code, try again"})
         fs("PATCH", f"/groups/{code}/members/{did}",
            body=docbody({"displayName": dn, "joinedAt": now_iso()}))
+        self._index_add(did, code)
         self.send_json(200, {"code": code, "name": name})
 
     def group_get(self, code):
@@ -690,6 +705,7 @@ class Handler(BaseHTTPRequestHandler):
             return self.send_json(404, {"error": "group not found"})
         fs("PATCH", f"/groups/{code}/members/{did}",
            body=docbody({"displayName": dn, "joinedAt": now_iso()}))
+        self._index_add(did, code)
         self.send_json(200, {"ok": True, "code": code})
 
     def group_delete(self, code, did):
@@ -706,6 +722,7 @@ class Handler(BaseHTTPRequestHandler):
             for mdoc in ml.get("documents", []):
                 mid = mdoc["name"].split("/")[-1]
                 fs("DELETE", f"/groups/{code}/members/{mid}")
+                self._index_remove(mid, code)
         fs("DELETE", f"/groups/{code}")
         self.send_json(200, {"ok": True})
 
@@ -743,54 +760,63 @@ class Handler(BaseHTTPRequestHandler):
         if d.get("createdBy") == did:
             return self.send_json(403, {"error": "creator cannot leave — delete the pool instead"})
         fs("DELETE", f"/groups/{code}/members/{did}")
+        self._index_remove(did, code)
         self.send_json(200, {"ok": True})
+
+    @staticmethod
+    def _pool_summary(gcode, g):
+        """Fetch member count and shape one pool entry (g = parsed group doc)."""
+        st, ml = fs("GET", f"/groups/{gcode}/members", params={"pageSize": "300"})
+        n = len(ml.get("documents", [])) if st == 200 else 0
+        return {
+            "code": gcode, "name": g.get("name", ""),
+            "members": n,
+            "icon": g.get("icon", "⚽"),
+            "predExact": int(g.get("predExact", 3)),
+            "predResult": int(g.get("predResult", 1)),
+            "startDate": g.get("startDate", ""),
+            "createdBy": g.get("createdBy", ""),
+        }
 
     def groups_mine(self, did):
         if not did:
             return self.send_json(400, {"error": "deviceId required"})
-        query = {
-            "structuredQuery": {
-                "from": [{"collectionId": "members", "allDescendants": True}],
-                "where": {
-                    "fieldFilter": {
-                        "field": {"fieldPath": "__name__"},
-                        "op": "EQUAL",
-                        "value": {"referenceValue":
-                            f"{fs_base()}/groups/__PLACEHOLDER__/members/{did}"},
-                    }
-                },
-            }
-        }
-        # Firestore doesn't support a cross-collection member lookup in a single
-        # structured query the way we need. Instead, we use a collection-group
-        # query approach: list all groups and check membership. For the expected
-        # scale (< 1000 groups total) this is fine.
-        # Alternative: maintain a /users/{did}/pools sub-collection as an index.
-        # For now, scan the user's known pools from a lightweight index.
-        #
-        # Simpler approach: keep a pools list in the user doc.
-        # But since we don't have that yet, scan all groups for this device.
-        # This won't scale but works fine for the tournament's lifespan.
+
+        # Fast path: read the device's pools index, then fetch each pool's doc
+        # and member count in parallel — a handful of concurrent reads instead
+        # of a sequential scan of every group in the database.
+        st, il = fs("GET", f"/user_pools/{did}/pools", params={"pageSize": "100"})
+        codes = [d["name"].split("/")[-1] for d in il.get("documents", [])] if st == 200 else []
+
+        if codes:
+            def fetch(gcode):
+                gst, gdoc = fs("GET", f"/groups/{gcode}")
+                if gst != 200:
+                    # Pool was deleted; drop the stale index entry.
+                    self._index_remove(did, gcode)
+                    return None
+                return self._pool_summary(gcode, parse(gdoc))
+            with ThreadPoolExecutor(max_workers=8) as ex:
+                pools = [p for p in ex.map(fetch, codes) if p]
+            return self.send_json(200, {"pools": pools})
+
+        # Fallback (memberships that predate the index): scan all groups, but
+        # with parallel membership checks, and backfill the index so this
+        # device never scans again.
         st, gl = fs("GET", "/groups", params={"pageSize": "500"})
         if st != 200:
             return self.send_json(200, {"pools": []})
-        pools = []
-        for gdoc in gl.get("documents", []):
+
+        def check(gdoc):
             gcode = gdoc["name"].split("/")[-1]
-            st2, mdoc = fs("GET", f"/groups/{gcode}/members/{did}")
-            if st2 == 200:
-                g = parse(gdoc)
-                st3, ml = fs("GET", f"/groups/{gcode}/members", params={"pageSize": "300"})
-                n = len(ml.get("documents", [])) if st3 == 200 else 0
-                pools.append({
-                    "code": gcode, "name": g.get("name", ""),
-                    "members": n,
-                    "icon": g.get("icon", "⚽"),
-                    "predExact": int(g.get("predExact", 3)),
-                    "predResult": int(g.get("predResult", 1)),
-                    "startDate": g.get("startDate", ""),
-                    "createdBy": g.get("createdBy", ""),
-                })
+            mst, _ = fs("GET", f"/groups/{gcode}/members/{did}")
+            if mst != 200:
+                return None
+            self._index_add(did, gcode)
+            return self._pool_summary(gcode, parse(gdoc))
+
+        with ThreadPoolExecutor(max_workers=16) as ex:
+            pools = [p for p in ex.map(check, gl.get("documents", [])) if p]
         self.send_json(200, {"pools": pools})
 
     def leaderboard_get(self, code):
@@ -1273,6 +1299,8 @@ def _ft_subscribers():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
-    server = HTTPServer(("0.0.0.0", port), Handler)
+    # Threading server: a slow request (e.g. a pools scan) must not block
+    # every other client behind it.
+    server = ThreadingHTTPServer(("0.0.0.0", port), Handler)
     print(f"Proxy listening on :{port}")
     server.serve_forever()
