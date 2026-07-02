@@ -324,10 +324,10 @@ function draw() {
     function roundScore(m, aWin, aMid, rNode, nodeR, rChord) {
       const s = scoreText(m);
       if (!s) return;
-      const rMid = rChord + (rNode - nodeR - rChord) * 0.42;
+      const rMid = rChord + (rNode - nodeR - rChord) * 0.28;
       let [x, y] = pt(aWin, rMid);
       const perp = aWin + (aWin < aMid ? -1 : 1) * Math.PI / 2;
-      x += Math.cos(perp) * 15; y += Math.sin(perp) * 15;
+      x += Math.cos(perp) * 16; y += Math.sin(perp) * 16;
       ctx.save();
       ctx.globalAlpha = dimFor(m) ? 0.1 : 1;
       ctx.font = `700 ${Math.max(8, R*0.021)}px system-ui`;
@@ -393,14 +393,25 @@ function draw() {
     ctx.restore();
   }
 
+  // name just inside the node, anchored so the text extends toward the center
+  // (never back across the flag)
   function drawName(a, r, team, nodeR, dim) {
     if (!showNames || !isR(team)) return;
-    let [x, y] = pt(a, r - nodeR - Math.max(7, R * 0.022));
+    const [x, y] = pt(a, r - nodeR - Math.max(4, R * 0.012));
+    const ca = Math.cos(a), sa = Math.sin(a);
     ctx.save();
     if (dim) ctx.globalAlpha = 0.25;
     ctx.font = `700 ${Math.max(8, R * 0.0215)}px system-ui`;
-    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
     ctx.fillStyle = 'rgba(0,0,0,0.55)';
+    if (Math.abs(ca) > Math.abs(sa)) {
+      // east/west node: text runs horizontally toward the center
+      ctx.textAlign = ca > 0 ? 'right' : 'left';
+      ctx.textBaseline = 'middle';
+    } else {
+      // north/south node: text sits below/above the flag, toward the center
+      ctx.textAlign = 'center';
+      ctx.textBaseline = sa > 0 ? 'bottom' : 'top';
+    }
     ctx.fillText(shortName(team), x, y);
     ctx.restore();
   }
