@@ -8529,7 +8529,8 @@
         "128"
       ],
       "answer": 2,
-      "explanation": "The 48-team format means 104 matches — up from 64 in the previous 32-team era."
+      "explanation": "The 48-team format means 104 matches — up from 64 in the previous 32-team era.",
+      "approved": true
     },
     {
       "id": "rec-fastest-red",
@@ -8555,7 +8556,8 @@
         "SoFi Stadium, Los Angeles"
       ],
       "answer": 2,
-      "explanation": "The final is set for MetLife Stadium in East Rutherford, New Jersey, just outside New York City."
+      "explanation": "The final is set for MetLife Stadium in East Rutherford, New Jersey, just outside New York City.",
+      "approved": true
     },
     {
       "id": "t-italy-count",
