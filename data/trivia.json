@@ -6359,7 +6359,8 @@
         "AFC"
       ],
       "answer": 2,
-      "explanation": "The USA, Canada, and Mexico are all members of CONCACAF — the Confederation of North, Central American and Caribbean Association Football."
+      "explanation": "The USA, Canada, and Mexico are all members of CONCACAF — the Confederation of North, Central American and Caribbean Association Football.",
+      "approved": true
     },
     {
       "id": "rec-goals-per-game",
@@ -14602,7 +14603,7 @@
       ],
       "answer": 0,
       "explanation": "Estadio BBVA is home to CF Monterrey, nicknamed 'Rayados' (the striped ones), one of Mexico's most successful clubs. The state-of-the-art stadium opened in 2015 and seats around 51,000. Monterrey, Mexico's third-largest city, is also home to rival club UANL Tigres, who play at the nearby Estadio Universitario.",
-      "approved": true
+      "needsReview": true
     },
     {
       "id": "rec-salenko-five-goals",
@@ -14865,8 +14866,7 @@
       ],
       "answer": 0,
       "explanation": "The 1966 tournament in England introduced the tradition of official mascots with a lion named Willie wearing a Union Jack jersey. Every edition since has had its own mascot, from 1970's Juanito (a boy in a sombrero) to 2022's La'eeb (an animated keffiyeh). The tradition has since spread to nearly every major sporting event.",
-      "media": "https://www.youtube.com/watch?v=4FH6iG-9q1E",
-      "approved": true
+      "needsReview": true
     },
     {
       "id": "c-adidas-ball",
