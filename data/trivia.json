@@ -24389,7 +24389,90 @@
       "answer": 0,
       "explanation": "With 48 teams and 32 advancing from the group stage, a Round of 32 was needed before the traditional Round of 16. Previous tournaments with 32 teams went directly from groups to the Round of 16.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "قدّمت بطولة Football 2026 دور الـ32 الإقصائي لأول مرة في تاريخ البطولة.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "مع مشاركة 48 منتخبًا وتأهل 32 منها من دور المجموعات، أصبح دور الـ32 ضروريًا قبل دور الـ16 التقليدي. أما البطولات السابقة التي ضمّت 32 منتخبًا فكانت تنتقل مباشرة من دور المجموعات إلى دور الـ16."
+        },
+        "de": {
+          "question": "Football 2026 führte ein Sechzehntelfinale (Runde der letzten 32) ein – eine Premiere in der Turniergeschichte.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Bei 48 Teams und 32 Mannschaften, die aus der Gruppenphase weiterkommen, war eine Runde der letzten 32 vor dem traditionellen Achtelfinale nötig. Frühere Turniere mit 32 Teams gingen direkt von der Gruppenphase ins Achtelfinale über."
+        },
+        "es": {
+          "question": "Football 2026 estrenó una ronda de dieciseisavos de final (32avos), algo inédito en la historia del torneo.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Con 48 selecciones y 32 que avanzan desde la fase de grupos, hizo falta una ronda de 32 antes de los tradicionales octavos de final. Los torneos anteriores con 32 equipos pasaban directamente de los grupos a los octavos de final."
+        },
+        "es-ES": {
+          "question": "Football 2026 estrenó una ronda de dieciseisavos de final (32avos), algo inédito en la historia del torneo.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Con 48 selecciones y 32 que se clasifican desde la fase de grupos, fue necesaria una ronda de 32 antes de los tradicionales octavos de final. Los torneos anteriores con 32 equipos pasaban directamente de los grupos a los octavos de final."
+        },
+        "fr": {
+          "question": "Football 2026 a introduit des seizièmes de finale (tour à 32 équipes), une première dans l'histoire du tournoi.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Avec 48 équipes et 32 qualifiées à l'issue de la phase de groupes, un tour à 32 était nécessaire avant les traditionnels huitièmes de finale. Les tournois précédents à 32 équipes passaient directement des groupes aux huitièmes de finale."
+        },
+        "it": {
+          "question": "Football 2026 ha introdotto un turno a eliminazione diretta dei sedicesimi (32 squadre), una novità assoluta nella storia del torneo.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Con 48 squadre e 32 qualificate dalla fase a gironi, era necessario un turno dei sedicesimi prima dei tradizionali ottavi di finale. I tornei precedenti con 32 squadre passavano direttamente dai gironi agli ottavi di finale."
+        },
+        "ja": {
+          "question": "Football 2026では、大会史上初となる32チームによる決勝トーナメント（ラウンド32）が導入された。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "48チームが参加し、グループステージから32チームが勝ち上がるため、従来のラウンド16の前にラウンド32が必要となった。32チームで行われた過去の大会では、グループステージから直接ラウンド16へ進んでいた。"
+        },
+        "ko": {
+          "question": "Football 2026에서는 대회 사상 최초로 32강 토너먼트가 도입되었다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "48개 팀이 참가하고 조별리그에서 32개 팀이 진출하면서, 전통적인 16강 이전에 32강이 필요해졌다. 32개 팀이 참가했던 과거 대회에서는 조별리그에서 곧바로 16강으로 넘어갔다."
+        },
+        "pt-BR": {
+          "question": "A Football 2026 introduziu uma fase de 32 avos de final (Rodada dos 32), algo inédito na história do torneio.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Com 48 seleções e 32 avançando da fase de grupos, foi preciso uma Rodada dos 32 antes das tradicionais oitavas de final. Torneios anteriores com 32 seleções iam direto da fase de grupos para as oitavas de final."
+        },
+        "zh-Hans": {
+          "question": "Football 2026首次设立了32强淘汰赛阶段，这在赛事历史上尚属首次。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "由于有48支球队参赛、32支球队从小组赛晋级，因此在传统的16强赛之前需要增设32强赛。以往32支球队参赛的赛事都是从小组赛直接进入16强赛。"
+        }
+      },
+      "i18nSourceHash": "0c1c818b3255fc5b"
     },
     {
       "id": "tf-2026-algeria-austria-draw",
@@ -24403,7 +24486,90 @@
       "explanation": "The Group J thriller between Algeria and Austria finished 3-3 at Arrowhead Stadium in Kansas City, the only draw with six total goals in the entire group stage.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Aerial_view_of_Arrowhead_Stadium_08-31-2013.jpg/640px-Aerial_view_of_Arrowhead_Stadium_08-31-2013.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "تعادلت الجزائر والنمسا بنتيجة 3-3، وهو التعادل الأكثر تسجيلاً للأهداف في دور المجموعات ببطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "انتهت المباراة المثيرة في المجموعة J بين الجزائر والنمسا بالتعادل 3-3 على ملعب Arrowhead في مدينة كانساس سيتي، وهو التعادل الوحيد الذي شهد ستة أهداف إجمالاً في دور المجموعات بأكمله."
+        },
+        "de": {
+          "question": "Algerien und Österreich trennten sich 3:3 – das torreichste Unentschieden der Gruppenphase von Football 2026.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Der spannende Schlagabtausch der Gruppe J zwischen Algerien und Österreich endete im Arrowhead Stadium in Kansas City 3:3 – das einzige Remis mit insgesamt sechs Toren in der gesamten Gruppenphase."
+        },
+        "es": {
+          "question": "Argelia y Austria empataron 3-3, el empate con más goles de la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "El emocionante partido del Grupo J entre Argelia y Austria terminó 3-3 en el Arrowhead Stadium de Kansas City, el único empate con seis goles en total de toda la fase de grupos."
+        },
+        "es-ES": {
+          "question": "Argelia y Austria empataron 3-3, el empate con más goles de la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "El emocionante partido del Grupo J entre Argelia y Austria acabó 3-3 en el Arrowhead Stadium de Kansas City, el único empate con seis goles en total de toda la fase de grupos."
+        },
+        "fr": {
+          "question": "L'Algérie et l'Autriche ont fait match nul 3-3, le nul le plus prolifique de la phase de groupes de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Le match à suspense du Groupe J entre l'Algérie et l'Autriche s'est terminé sur un 3-3 à l'Arrowhead Stadium de Kansas City, le seul match nul totalisant six buts de toute la phase de groupes."
+        },
+        "it": {
+          "question": "Algeria e Austria hanno pareggiato 3-3, il pareggio con più gol della fase a gironi di Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "L'emozionante sfida del Gruppo J tra Algeria e Austria è finita 3-3 all'Arrowhead Stadium di Kansas City, l'unico pareggio con sei gol complessivi dell'intera fase a gironi."
+        },
+        "ja": {
+          "question": "アルジェリアとオーストリアは3-3で引き分け、これはFootball 2026のグループステージで最多得点の引き分けだった。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "グループJのアルジェリア対オーストリアの好カードは、カンザスシティのアローヘッド・スタジアムで3-3の引き分けに終わり、グループステージ全体で合計6得点を記録した唯一の引き分けとなった。"
+        },
+        "ko": {
+          "question": "알제리와 오스트리아가 3-3으로 비겼으며, 이는 Football 2026 조별 리그에서 가장 많은 득점이 나온 무승부였다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "J조의 알제리와 오스트리아의 흥미진진한 경기는 캔자스시티의 애로헤드 스타디움에서 3-3으로 끝났으며, 조별 리그 전체에서 총 6골이 나온 유일한 무승부였다."
+        },
+        "pt-BR": {
+          "question": "Argélia e Áustria empataram por 3 a 3, o empate com mais gols da fase de grupos da Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "O emocionante jogo do Grupo J entre Argélia e Áustria terminou em 3 a 3 no Arrowhead Stadium, em Kansas City, o único empate com seis gols no total em toda a fase de grupos."
+        },
+        "zh-Hans": {
+          "question": "阿尔及利亚与奥地利战成3比3平局，这是Football 2026小组赛中进球最多的一场平局。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "J组阿尔及利亚对阵奥地利的精彩较量在堪萨斯城的箭头球场以3比3收场，这是整个小组赛中唯一一场总进球达六个的平局。"
+        }
+      },
+      "i18nSourceHash": "88fa8ba01a39b97c"
     },
     {
       "id": "tf-2026-cabo-verde-debut",
@@ -24416,7 +24582,90 @@
       "answer": 0,
       "explanation": "The tiny island nation of Cabo Verde (population ~600,000) qualified for the tournament for the first time in their history, drawn into Group H alongside Spain, Uruguay, and Saudi Arabia.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "شاركت الرأس الأخضر لأول مرة في تاريخها في بطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "تأهلت دولة الرأس الأخضر الجزرية الصغيرة (عدد سكانها نحو 600,000 نسمة) إلى البطولة لأول مرة في تاريخها، حيث أُوقعت في المجموعة H إلى جانب إسبانيا وأوروغواي والسعودية."
+        },
+        "de": {
+          "question": "Kap Verde nahm bei Football 2026 zum allerersten Mal an einem Turnier teil.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Der winzige Inselstaat Kap Verde (rund 600.000 Einwohner) qualifizierte sich zum ersten Mal in seiner Geschichte für das Turnier und wurde in Gruppe H mit Spanien, Uruguay und Saudi-Arabien gelost."
+        },
+        "es": {
+          "question": "Cabo Verde debutó por primera vez en su historia en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "La pequeña nación insular de Cabo Verde (con unos 600,000 habitantes) se clasificó al torneo por primera vez en su historia, quedando en el Grupo H junto a España, Uruguay y Arabia Saudita."
+        },
+        "es-ES": {
+          "question": "Cabo Verde debutó por primera vez en su historia en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "La pequeña nación insular de Cabo Verde (con unos 600.000 habitantes) se clasificó al torneo por primera vez en su historia, quedando encuadrada en el Grupo H junto a España, Uruguay y Arabia Saudí."
+        },
+        "fr": {
+          "question": "Le Cap-Vert a disputé son tout premier tournoi lors de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Le minuscule État insulaire du Cap-Vert (environ 600 000 habitants) s'est qualifié pour le tournoi pour la première fois de son histoire, tombant dans le groupe H aux côtés de l'Espagne, de l'Uruguay et de l'Arabie saoudite."
+        },
+        "it": {
+          "question": "Capo Verde ha disputato la sua primissima partecipazione a un torneo a Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "La piccola nazione insulare di Capo Verde (circa 600.000 abitanti) si è qualificata al torneo per la prima volta nella sua storia, finendo nel Gruppo H insieme a Spagna, Uruguay e Arabia Saudita."
+        },
+        "ja": {
+          "question": "カーボベルデはFootball 2026で史上初めて大会に出場した。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "人口約60万人の小さな島国カーボベルデが、史上初めて大会出場を果たし、スペイン、ウルグアイ、サウジアラビアとともにグループHに入った。"
+        },
+        "ko": {
+          "question": "카보베르데는 Football 2026에서 사상 처음으로 대회에 출전했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "인구 약 60만 명의 작은 섬나라 카보베르데는 역사상 처음으로 대회 진출에 성공해, 스페인, 우루과이, 사우디아라비아와 함께 H조에 편성됐다."
+        },
+        "pt-BR": {
+          "question": "Cabo Verde fez sua primeira participação em um torneio na Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A pequena nação insular de Cabo Verde (com cerca de 600.000 habitantes) se classificou para o torneio pela primeira vez em sua história, caindo no Grupo H ao lado de Espanha, Uruguai e Arábia Saudita."
+        },
+        "zh-Hans": {
+          "question": "佛得角在 Football 2026 上首次亮相该项赛事。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "人口约60万的小岛国佛得角历史上首次晋级该项赛事，并被分入H组，与西班牙、乌拉圭和沙特阿拉伯同组。"
+        }
+      },
+      "i18nSourceHash": "6c19fbbf6bf05c0e"
     },
     {
       "id": "tf-2026-italy-absent",
@@ -24429,7 +24678,90 @@
       "answer": 0,
       "explanation": "Despite being four-time champions, Italy missed out on Football 2026, their third consecutive failure to qualify following absences in 2018 and 2022.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "لم يتأهل منتخب إيطاليا إلى بطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "رغم تتويجه باللقب أربع مرات، غاب المنتخب الإيطالي عن بطولة Football 2026، في ثالث إخفاق متتالٍ له في التأهل بعد غيابه في نسختي 2018 و2022."
+        },
+        "de": {
+          "question": "Italien hat sich nicht für Football 2026 qualifiziert.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Obwohl Italien viermal den Titel geholt hat, verpasste die Mannschaft Football 2026 – das dritte verpasste Turnier in Folge nach den Absenzen 2018 und 2022."
+        },
+        "es": {
+          "question": "Italia no logró clasificar a Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "A pesar de ser cuatro veces campeona, Italia se quedó afuera de Football 2026, su tercera eliminación consecutiva tras las ausencias en 2018 y 2022."
+        },
+        "es-ES": {
+          "question": "Italia no consiguió clasificarse para Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Pese a ser cuatro veces campeona, Italia se quedó fuera de Football 2026, su tercer fracaso consecutivo en la clasificación tras las ausencias de 2018 y 2022."
+        },
+        "fr": {
+          "question": "L'Italie n'a pas réussi à se qualifier pour Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Malgré ses quatre titres, l'Italie a manqué Football 2026, son troisième échec consécutif en qualifications après ses absences en 2018 et 2022."
+        },
+        "it": {
+          "question": "L'Italia non è riuscita a qualificarsi per Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Pur essendo quattro volte campione, l'Italia ha mancato Football 2026, il terzo mancato accesso consecutivo dopo le assenze del 2018 e del 2022."
+        },
+        "ja": {
+          "question": "イタリアはFootball 2026への出場権を逃した。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "4度の優勝を誇るイタリアだが、Football 2026への出場を逃し、2018年と2022年に続く3大会連続の予選敗退となった。"
+        },
+        "ko": {
+          "question": "이탈리아는 Football 2026 본선 진출에 실패했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "네 차례나 우승을 차지한 이탈리아지만 Football 2026 진출에 실패하며, 2018년과 2022년에 이어 3회 연속 예선 탈락을 기록했다."
+        },
+        "pt-BR": {
+          "question": "A Itália não conseguiu se classificar para a Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Apesar de ser tetracampeã, a Itália ficou de fora da Football 2026, seu terceiro fracasso consecutivo na classificação após as ausências em 2018 e 2022."
+        },
+        "zh-Hans": {
+          "question": "意大利未能获得Football 2026的参赛资格。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "尽管曾四次夺冠，意大利仍无缘Football 2026，继2018年和2022年缺席之后，这已是他们连续第三次预选赛出局。"
+        }
+      },
+      "i18nSourceHash": "c67701c795beaf00"
     },
     {
       "id": "tf-2026-hosts-r32-wins",
@@ -24443,7 +24775,90 @@
       "explanation": "All three hosts advanced to the Round of 16: USA beat Bosnia and Herzegovina 2-0, Mexico beat Ecuador 2-0, and Canada beat South Africa 1-0.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Vista_a%C3%A9rea_del_Estadio_Azteca_-_2026_-_02.jpg/640px-Vista_a%C3%A9rea_del_Estadio_Azteca_-_2026_-_02.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "فازت الدول المضيفة الثلاث جميعها (الولايات المتحدة والمكسيك وكندا) بمبارياتها في دور الـ32.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "تأهلت الدول المضيفة الثلاث إلى دور الـ16: فازت الولايات المتحدة على البوسنة والهرسك 2-0، وفازت المكسيك على الإكوادور 2-0، وفازت كندا على جنوب أفريقيا 1-0."
+        },
+        "de": {
+          "question": "Alle drei Gastgeberländer (USA, Mexiko und Kanada) gewannen ihre Spiele im Sechzehntelfinale.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Alle drei Gastgeber zogen ins Achtelfinale ein: Die USA besiegten Bosnien und Herzegowina mit 2:0, Mexiko schlug Ecuador mit 2:0 und Kanada gewann gegen Südafrika mit 1:0."
+        },
+        "es": {
+          "question": "Los tres países anfitriones (Estados Unidos, México y Canadá) ganaron sus partidos de dieciseisavos de final.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Los tres anfitriones avanzaron a los octavos de final: Estados Unidos venció a Bosnia y Herzegovina 2-0, México venció a Ecuador 2-0 y Canadá venció a Sudáfrica 1-0."
+        },
+        "es-ES": {
+          "question": "Los tres países anfitriones (Estados Unidos, México y Canadá) ganaron sus partidos de dieciseisavos de final.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Los tres anfitriones pasaron a los octavos de final: Estados Unidos ganó a Bosnia y Herzegovina 2-0, México ganó a Ecuador 2-0 y Canadá ganó a Sudáfrica 1-0."
+        },
+        "fr": {
+          "question": "Les trois pays hôtes (États-Unis, Mexique et Canada) ont remporté leurs matchs des seizièmes de finale.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Les trois hôtes se sont qualifiés pour les huitièmes de finale : les États-Unis ont battu la Bosnie-Herzégovine 2-0, le Mexique a battu l'Équateur 2-0 et le Canada a battu l'Afrique du Sud 1-0."
+        },
+        "it": {
+          "question": "Tutte e tre le nazioni ospitanti (USA, Messico e Canada) hanno vinto le loro partite dei sedicesimi di finale.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Tutte e tre le nazioni ospitanti si sono qualificate agli ottavi di finale: gli USA hanno battuto la Bosnia ed Erzegovina 2-0, il Messico ha battuto l'Ecuador 2-0 e il Canada ha battuto il Sudafrica 1-0."
+        },
+        "ja": {
+          "question": "開催3か国（アメリカ、メキシコ、カナダ）はすべてベスト32の試合に勝利した。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "開催3か国はすべてベスト16に進出しました。アメリカはボスニア・ヘルツェゴビナに2-0で勝利し、メキシコはエクアドルに2-0で勝利し、カナダは南アフリカに1-0で勝利しました。"
+        },
+        "ko": {
+          "question": "개최 3개국(미국, 멕시코, 캐나다) 모두 32강 경기에서 승리했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "개최 3개국 모두 16강에 진출했습니다. 미국은 보스니아 헤르체고비나를 2-0으로, 멕시코는 에콰도르를 2-0으로, 캐나다는 남아프리카공화국을 1-0으로 이겼습니다."
+        },
+        "pt-BR": {
+          "question": "Todos os três países-sede (EUA, México e Canadá) venceram suas partidas das oitavas de 32 (32 avos de final).",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Todos os três anfitriões avançaram às oitavas de final: os EUA venceram a Bósnia e Herzegovina por 2 a 0, o México venceu o Equador por 2 a 0 e o Canadá venceu a África do Sul por 1 a 0."
+        },
+        "zh-Hans": {
+          "question": "三个东道主（美国、墨西哥和加拿大）都赢得了各自的32强赛。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "三个东道主全部晋级16强：美国2比0击败波斯尼亚和黑塞哥维那，墨西哥2比0击败厄瓜多尔，加拿大1比0击败南非。"
+        }
+      },
+      "i18nSourceHash": "fbf456e588fc9efb"
     },
     {
       "id": "tf-2026-norway-return",
