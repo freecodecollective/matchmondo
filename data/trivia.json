@@ -24871,7 +24871,90 @@
       "answer": 0,
       "explanation": "Norway had not qualified for the tournament since France 1998, a 28-year absence. Led by stars like Erling Haaland, they returned in style, finishing second in Group I behind France.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ظهور النرويج في Football 2026 هو الأول لها منذ نسخة 1998 في فرنسا.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "لم تتأهل النرويج للبطولة منذ فرنسا 1998، أي غياب دام 28 عامًا. وبقيادة نجوم مثل إيرلينغ هالاند، عادت بأسلوب رائع لتحتل المركز الثاني في المجموعة التاسعة خلف فرنسا."
+        },
+        "de": {
+          "question": "Norwegens Teilnahme an Football 2026 ist die erste seit dem Turnier 1998 in Frankreich.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Norwegen hatte sich seit Frankreich 1998 nicht mehr für das Turnier qualifiziert – eine 28-jährige Abwesenheit. Angeführt von Stars wie Erling Haaland kehrten sie stilvoll zurück und wurden in Gruppe I hinter Frankreich Zweiter."
+        },
+        "es": {
+          "question": "La participación de Noruega en Football 2026 es la primera desde el torneo de 1998 en Francia.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Noruega no se clasificaba para el torneo desde Francia 1998, una ausencia de 28 años. Liderados por estrellas como Erling Haaland, regresaron por todo lo alto y terminaron segundos en el Grupo I por detrás de Francia."
+        },
+        "es-ES": {
+          "question": "La participación de Noruega en Football 2026 es la primera desde el torneo de 1998 en Francia.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Noruega no se clasificaba para el torneo desde Francia 1998, una ausencia de 28 años. Liderados por estrellas como Erling Haaland, regresaron por todo lo alto y acabaron segundos en el Grupo I por detrás de Francia."
+        },
+        "fr": {
+          "question": "La participation de la Norvège à Football 2026 est sa première depuis le tournoi de 1998 en France.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "La Norvège ne s'était plus qualifiée pour le tournoi depuis France 1998, soit une absence de 28 ans. Emmenée par des stars comme Erling Haaland, elle a fait un retour remarqué en terminant deuxième du groupe I derrière la France."
+        },
+        "it": {
+          "question": "La partecipazione della Norvegia a Football 2026 è la prima dal torneo del 1998 in Francia.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "La Norvegia non si qualificava al torneo dai tempi di Francia 1998, un'assenza di 28 anni. Guidata da stelle come Erling Haaland, è tornata alla grande chiudendo al secondo posto nel Girone I alle spalle della Francia."
+        },
+        "ja": {
+          "question": "ノルウェーのFootball 2026への出場は、1998年のフランス大会以来となる初めてのものだ。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "ノルウェーは1998年のフランス大会以来この大会に出場できておらず、28年ぶりの復帰となった。アーリング・ハーランドらスターを擁し、堂々の復活を果たしてグループIでフランスに次ぐ2位となった。"
+        },
+        "ko": {
+          "question": "노르웨이의 Football 2026 출전은 1998년 프랑스 대회 이후 처음이다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "노르웨이는 1998년 프랑스 대회 이후 이 대회에 출전하지 못했으며, 28년 만의 복귀였다. 엘링 홀란드 같은 스타들을 앞세워 화려하게 돌아온 그들은 I조에서 프랑스에 이어 2위를 차지했다."
+        },
+        "pt-BR": {
+          "question": "A participação da Noruega no Football 2026 é a primeira desde o torneio de 1998 na França.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A Noruega não se classificava para o torneio desde a França 1998, uma ausência de 28 anos. Comandada por craques como Erling Haaland, voltou com estilo, terminando em segundo no Grupo I atrás da França."
+        },
+        "zh-Hans": {
+          "question": "挪威在 Football 2026 的亮相是自1998年法国赛事以来的首次。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "自1998年法国赛事以来,挪威一直未能获得该赛事的参赛资格,缺席长达28年。在埃尔林·哈兰德等球星的带领下,他们强势回归,在I组中位居法国之后排名第二。"
+        }
+      },
+      "i18nSourceHash": "27c83b7a15e9fc06"
     },
     {
       "id": "tf-2026-brazil-beat-morocco",
@@ -24885,7 +24968,90 @@
       "explanation": "Brazil and Morocco actually drew 1-1 at MetLife Stadium in their Group C opener. Morocco held firm against the five-time champions in a result that set the tone for a competitive group.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Metlife_stadium_%28Aerial_view%29.jpg/640px-Metlife_stadium_%28Aerial_view%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "فازت البرازيل على المغرب بنتيجة 2-1 في مباراتهما الافتتاحية بالمجموعة في Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "في الواقع تعادلت البرازيل والمغرب 1-1 على ملعب MetLife في افتتاح مبارياتهما بالمجموعة الثالثة. صمد المغرب أمام أبطال العالم خمس مرات في نتيجة مهّدت لأجواء منافسة قوية داخل المجموعة."
+        },
+        "de": {
+          "question": "Brasilien besiegte Marokko im Auftaktspiel der Gruppe bei Football 2026 mit 2:1.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Tatsächlich trennten sich Brasilien und Marokko im Gruppe-C-Auftakt im MetLife Stadium 1:1. Marokko hielt gegen den fünffachen Weltmeister stand – ein Ergebnis, das den Ton für eine spannende Gruppe setzte."
+        },
+        "es": {
+          "question": "Brasil venció a Marruecos 2-1 en su partido inaugural de grupo en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "En realidad, Brasil y Marruecos empataron 1-1 en el MetLife Stadium en el debut del Grupo C. Marruecos resistió firme ante el pentacampeón, un resultado que marcó el tono de un grupo muy competitivo."
+        },
+        "es-ES": {
+          "question": "Brasil venció a Marruecos por 2-1 en su primer partido de grupo en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "En realidad, Brasil y Marruecos empataron 1-1 en el MetLife Stadium en su estreno en el Grupo C. Marruecos aguantó con firmeza ante el pentacampeón, un resultado que marcó el tono de un grupo muy competido."
+        },
+        "fr": {
+          "question": "Le Brésil a battu le Maroc 2-1 lors de son premier match de groupe à Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "En réalité, le Brésil et le Maroc ont fait match nul 1-1 au MetLife Stadium pour leur entrée dans le groupe C. Le Maroc a tenu bon face au quintuple champion, un résultat qui a donné le ton d'un groupe très disputé."
+        },
+        "it": {
+          "question": "Il Brasile ha battuto il Marocco 2-1 nella partita d'esordio del girone a Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "In realtà Brasile e Marocco hanno pareggiato 1-1 al MetLife Stadium nell'esordio del Girone C. Il Marocco ha retto contro i cinque volte campioni, un risultato che ha dato il tono a un girone molto combattuto."
+        },
+        "ja": {
+          "question": "ブラジルはFootball 2026のグループ初戦でモロッコに2-1で勝利した。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "実際にはブラジルとモロッコはメットライフ・スタジアムでのグループC初戦で1-1の引き分けだった。モロッコは5度の優勝国相手に踏ん張り、この結果が激しいグループ戦の幕開けを告げた。"
+        },
+        "ko": {
+          "question": "브라질은 Football 2026 조별리그 첫 경기에서 모로코를 2-1로 이겼다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "실제로 브라질과 모로코는 메트라이프 스타디움에서 열린 C조 첫 경기에서 1-1로 비겼다. 모로코는 5회 우승국을 상대로 굳건히 버텼고, 이 결과는 치열한 조별리그의 분위기를 예고했다."
+        },
+        "pt-BR": {
+          "question": "O Brasil venceu Marrocos por 2 a 1 na estreia pela fase de grupos na Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Na verdade, Brasil e Marrocos empataram em 1 a 1 no MetLife Stadium na estreia pelo Grupo C. Marrocos segurou firme contra o pentacampeão, num resultado que deu o tom de um grupo bastante disputado."
+        },
+        "zh-Hans": {
+          "question": "巴西在 Football 2026 小组赛首场比赛中以 2-1 击败摩洛哥。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "实际上,巴西和摩洛哥在大都会人寿球场(MetLife Stadium)的 C 组首场比赛中以 1-1 战平。摩洛哥顶住了这支五届冠军球队,这一结果为一个竞争激烈的小组定下了基调。"
+        }
+      },
+      "i18nSourceHash": "b21423538c70e5ad"
     },
     {
       "id": "tf-2026-usa-unbeaten-group",
@@ -24898,7 +25064,90 @@
       "answer": 1,
       "explanation": "Despite strong wins against Paraguay (4-1) and Australia (2-0), the USA lost their final group match to Türkiye 3-2 at SoFi Stadium. They still advanced as Group D winners with 6 points.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "خرجت الولايات المتحدة دون أي خسارة طوال دور المجموعات في Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "رغم الانتصارات القوية على باراغواي (4-1) وأستراليا (2-0)، خسرت الولايات المتحدة مباراتها الأخيرة في المجموعة أمام تركيا بنتيجة 3-2 على ملعب SoFi Stadium. ومع ذلك تأهلت بصدارة المجموعة D برصيد 6 نقاط."
+        },
+        "de": {
+          "question": "Die USA blieben in der gesamten Gruppenphase von Football 2026 ungeschlagen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Trotz überzeugender Siege gegen Paraguay (4:1) und Australien (2:0) verloren die USA ihr letztes Gruppenspiel gegen die Türkei mit 2:3 im SoFi Stadium. Dennoch zogen sie als Sieger der Gruppe D mit 6 Punkten weiter."
+        },
+        "es": {
+          "question": "Estados Unidos se mantuvo invicto durante toda la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "A pesar de sólidas victorias ante Paraguay (4-1) y Australia (2-0), Estados Unidos perdió su último partido de grupo frente a Turquía por 3-2 en el SoFi Stadium. Aun así, avanzó como líder del Grupo D con 6 puntos."
+        },
+        "es-ES": {
+          "question": "Estados Unidos se mantuvo invicto durante toda la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "A pesar de sus contundentes victorias ante Paraguay (4-1) y Australia (2-0), Estados Unidos perdió su último partido de grupo frente a Turquía por 3-2 en el SoFi Stadium. Aun así, avanzó como primero del Grupo D con 6 puntos."
+        },
+        "fr": {
+          "question": "Les États-Unis sont restés invaincus tout au long de la phase de groupes de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Malgré de belles victoires contre le Paraguay (4-1) et l'Australie (2-0), les États-Unis ont perdu leur dernier match de groupe face à la Turquie 3-2 au SoFi Stadium. Ils se sont tout de même qualifiés en tête du groupe D avec 6 points."
+        },
+        "it": {
+          "question": "Gli Stati Uniti sono rimasti imbattuti per tutta la fase a gironi di Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Nonostante le nette vittorie contro il Paraguay (4-1) e l'Australia (2-0), gli Stati Uniti hanno perso l'ultima partita del girone contro la Turchia per 3-2 al SoFi Stadium. Si sono comunque qualificati come primi del Gruppo D con 6 punti."
+        },
+        "ja": {
+          "question": "アメリカはFootball 2026のグループステージを通して無敗だった。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "パラグアイ（4-1）やオーストラリア（2-0）に大勝したものの、アメリカはSoFiスタジアムでのグループ最終戦でトルコに2-3で敗れた。それでも勝ち点6でグループDの首位として決勝トーナメントに進出した。"
+        },
+        "ko": {
+          "question": "미국은 Football 2026 조별리그 내내 무패를 기록했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "파라과이(4-1)와 호주(2-0)를 상대로 완승을 거뒀지만, 미국은 SoFi 스타디움에서 열린 조별리그 최종전에서 튀르키예에 2-3으로 패했다. 그럼에도 승점 6점으로 D조 1위로 진출했다."
+        },
+        "pt-BR": {
+          "question": "Os Estados Unidos ficaram invictos durante toda a fase de grupos da Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Apesar das vitórias convincentes sobre o Paraguai (4-1) e a Austrália (2-0), os Estados Unidos perderam o último jogo do grupo para a Turquia por 3-2 no SoFi Stadium. Ainda assim, avançaram como líderes do Grupo D com 6 pontos."
+        },
+        "zh-Hans": {
+          "question": "美国在Football 2026的小组赛阶段始终保持不败。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "尽管美国队大胜巴拉圭（4-1）和澳大利亚（2-0），但他们在SoFi体育场的小组赛最后一场以2-3不敌土耳其。不过，他们仍以6分的成绩位居D组头名晋级。"
+        }
+      },
+      "i18nSourceHash": "1c78b71e7ac479b5"
     },
     {
       "id": "tf-2026-japan-won-group-f",
@@ -24911,7 +25160,90 @@
       "answer": 1,
       "explanation": "The Netherlands won Group F with 7 points (2 wins, 1 draw). Japan finished second with 5 points. Despite Japan's 4-0 thrashing of Tunisia, the Netherlands' 5-1 win over Sweden proved decisive.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "فازت اليابان بالمجموعة السادسة في بطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "فازت هولندا بالمجموعة السادسة برصيد 7 نقاط (فوزان وتعادل). وحلّت اليابان ثانية برصيد 5 نقاط. ورغم فوز اليابان الكاسح على تونس بنتيجة 4-0، كان فوز هولندا على السويد 5-1 حاسمًا."
+        },
+        "de": {
+          "question": "Japan hat bei Football 2026 die Gruppe F gewonnen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Die Niederlande gewannen die Gruppe F mit 7 Punkten (2 Siege, 1 Unentschieden). Japan wurde mit 5 Punkten Zweiter. Trotz Japans 4:0-Kantersieg über Tunesien war der 5:1-Sieg der Niederlande gegen Schweden ausschlaggebend."
+        },
+        "es": {
+          "question": "Japón ganó el Grupo F en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Países Bajos ganó el Grupo F con 7 puntos (2 victorias y 1 empate). Japón terminó segundo con 5 puntos. A pesar de la goleada de Japón por 4-0 a Túnez, la victoria de Países Bajos por 5-1 sobre Suecia resultó decisiva."
+        },
+        "es-ES": {
+          "question": "Japón ganó el Grupo F en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Países Bajos ganó el Grupo F con 7 puntos (2 victorias y 1 empate). Japón acabó segundo con 5 puntos. A pesar de la goleada de Japón por 4-0 a Túnez, la victoria de Países Bajos por 5-1 sobre Suecia resultó decisiva."
+        },
+        "fr": {
+          "question": "Le Japon a remporté le groupe F lors de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Les Pays-Bas ont remporté le groupe F avec 7 points (2 victoires, 1 nul). Le Japon a terminé deuxième avec 5 points. Malgré la large victoire du Japon 4-0 face à la Tunisie, le succès 5-1 des Pays-Bas contre la Suède s'est révélé décisif."
+        },
+        "it": {
+          "question": "Il Giappone ha vinto il Girone F a Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "I Paesi Bassi hanno vinto il Girone F con 7 punti (2 vittorie e 1 pareggio). Il Giappone è arrivato secondo con 5 punti. Nonostante il netto 4-0 del Giappone sulla Tunisia, la vittoria per 5-1 dei Paesi Bassi sulla Svezia è risultata decisiva."
+        },
+        "ja": {
+          "question": "日本はFootball 2026でグループFを1位で通過した。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "オランダが勝ち点7（2勝1分）でグループFを制した。日本は勝ち点5で2位に終わった。日本はチュニジアを4-0で圧倒したものの、オランダがスウェーデンに5-1で勝利したことが決め手となった。"
+        },
+        "ko": {
+          "question": "일본은 Football 2026에서 F조 1위를 차지했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "네덜란드가 승점 7점(2승 1무)으로 F조 1위를 차지했다. 일본은 승점 5점으로 2위에 그쳤다. 일본이 튀니지를 4-0으로 대파했음에도, 네덜란드가 스웨덴을 5-1로 꺾은 것이 결정적이었다."
+        },
+        "pt-BR": {
+          "question": "O Japão venceu o Grupo F na Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A Holanda venceu o Grupo F com 7 pontos (2 vitórias e 1 empate). O Japão terminou em segundo com 5 pontos. Apesar da goleada do Japão por 4 a 0 sobre a Tunísia, a vitória da Holanda por 5 a 1 sobre a Suécia foi decisiva."
+        },
+        "zh-Hans": {
+          "question": "日本在Football 2026中以小组第一出线F组。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "荷兰以7分（2胜1平）位居F组第一。日本以5分排名第二。尽管日本4比0大胜突尼斯，但荷兰5比1战胜瑞典成为了关键。"
+        }
+      },
+      "i18nSourceHash": "34365b3e9afe61ce"
     },
     {
       "id": "tf-2026-sofi-opening",
@@ -24925,7 +25257,90 @@
       "explanation": "The opening match was played at Estadio Azteca in Mexico City, not SoFi Stadium. SoFi hosted several group matches including the USA's opener against Paraguay.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/SoFi_Stadium_2023.jpg/640px-SoFi_Stadium_2023.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أُقيمت مباراة افتتاح Football 2026 على ملعب SoFi Stadium في لوس أنجلوس.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "أُقيمت مباراة الافتتاح على ملعب Estadio Azteca في مدينة مكسيكو، وليس على ملعب SoFi. واستضاف ملعب SoFi عدة مباريات في دور المجموعات، منها مباراة الولايات المتحدة الأولى أمام باراغواي."
+        },
+        "de": {
+          "question": "Das Eröffnungsspiel von Football 2026 fand im SoFi Stadium in Los Angeles statt.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Das Eröffnungsspiel fand im Estadio Azteca in Mexiko-Stadt statt, nicht im SoFi Stadium. Das SoFi Stadium war Austragungsort mehrerer Gruppenspiele, darunter das Auftaktspiel der USA gegen Paraguay."
+        },
+        "es": {
+          "question": "El partido inaugural de Football 2026 se disputó en el SoFi Stadium de Los Ángeles.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "El partido inaugural se jugó en el Estadio Azteca de Ciudad de México, no en el SoFi Stadium. El SoFi albergó varios partidos de la fase de grupos, incluido el debut de Estados Unidos ante Paraguay."
+        },
+        "es-ES": {
+          "question": "El partido inaugural de Football 2026 se disputó en el SoFi Stadium de Los Ángeles.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "El partido inaugural se jugó en el Estadio Azteca de Ciudad de México, no en el SoFi Stadium. El SoFi acogió varios partidos de la fase de grupos, incluido el debut de Estados Unidos frente a Paraguay."
+        },
+        "fr": {
+          "question": "Le match d'ouverture de Football 2026 s'est joué au SoFi Stadium de Los Angeles.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Le match d'ouverture s'est déroulé à l'Estadio Azteca de Mexico, et non au SoFi Stadium. Le SoFi a accueilli plusieurs matchs de phase de groupes, dont l'entrée en lice des États-Unis face au Paraguay."
+        },
+        "it": {
+          "question": "La partita inaugurale di Football 2026 si è giocata al SoFi Stadium di Los Angeles.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "La partita inaugurale si è disputata all'Estadio Azteca di Città del Messico, non al SoFi Stadium. Il SoFi ha ospitato diverse gare della fase a gironi, tra cui l'esordio degli Stati Uniti contro il Paraguay."
+        },
+        "ja": {
+          "question": "Football 2026の開幕戦は、ロサンゼルスのSoFiスタジアムで行われた。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "開幕戦はSoFiスタジアムではなく、メキシコシティのエスタディオ・アステカで行われた。SoFiスタジアムはグループステージの複数の試合を開催し、その中にはアメリカ代表のパラグアイ戦の初戦も含まれていた。"
+        },
+        "ko": {
+          "question": "Football 2026 개막전은 로스앤젤레스의 SoFi 스타디움에서 열렸다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "개막전은 SoFi 스타디움이 아니라 멕시코시티의 에스타디오 아스테카에서 열렸다. SoFi 스타디움은 미국의 파라과이전 첫 경기를 포함해 여러 조별리그 경기를 개최했다."
+        },
+        "pt-BR": {
+          "question": "A partida de abertura da Football 2026 foi disputada no SoFi Stadium, em Los Angeles.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A partida de abertura foi disputada no Estadio Azteca, na Cidade do México, e não no SoFi Stadium. O SoFi recebeu várias partidas da fase de grupos, incluindo a estreia dos Estados Unidos contra o Paraguai."
+        },
+        "zh-Hans": {
+          "question": "Football 2026 的揭幕战是在洛杉矶的 SoFi 体育场进行的。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "揭幕战是在墨西哥城的阿兹特克体育场（Estadio Azteca）举行的，而非 SoFi 体育场。SoFi 体育场承办了多场小组赛，其中包括美国队对阵巴拉圭的首场比赛。"
+        }
+      },
+      "i18nSourceHash": "7c56b5f5f898c99a"
     },
     {
       "id": "tf-2026-haiti-first-time",
