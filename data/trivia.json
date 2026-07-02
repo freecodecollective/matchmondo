@@ -18675,7 +18675,110 @@
       ],
       "answer": 0,
       "explanation": "BMO Field in Toronto is home to Toronto FC and the Canadian national teams. Originally built for the 2007 Under-20 tournament, the stadium has been expanded several times and now seats over 30,000. It's being further expanded for 2026 to meet capacity requirements.",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "ملعب BMO Field في تورنتو، أحد ملاعب Football 2026، هو الملعب الذي يستضيف مباريات أي فريق من فرق الدوري الأمريكي للمحترفين (MLS)؟",
+          "options": [
+            "تورنتو إف سي",
+            "سي إف مونتريال",
+            "فانكوفر وايت كابس",
+            "كولومبوس كرو"
+          ],
+          "explanation": "ملعب BMO Field في تورنتو هو معقل نادي تورنتو إف سي والمنتخبات الوطنية الكندية. بُني في الأصل لبطولة تحت 20 عامًا سنة 2007، وقد تم توسيعه عدة مرات ليتسع الآن لأكثر من 30,000 متفرج. ويجري توسيعه أكثر استعدادًا لـ Football 2026 لتلبية متطلبات السعة."
+        },
+        "de": {
+          "question": "Das BMO Field in Toronto, ein Austragungsort von Football 2026, ist die Heimstätte welcher MLS-Mannschaft?",
+          "options": [
+            "Toronto FC",
+            "CF Montréal",
+            "Vancouver Whitecaps",
+            "Columbus Crew"
+          ],
+          "explanation": "Das BMO Field in Toronto ist die Heimat des Toronto FC und der kanadischen Nationalmannschaften. Ursprünglich für das U-20-Turnier 2007 errichtet, wurde das Stadion mehrfach erweitert und fasst nun über 30.000 Zuschauer. Für Football 2026 wird es weiter ausgebaut, um die Kapazitätsanforderungen zu erfüllen."
+        },
+        "es": {
+          "question": "El BMO Field, una de las sedes de Football 2026 en Toronto, ¿es la casa de qué equipo de la MLS?",
+          "options": [
+            "Toronto FC",
+            "CF Montréal",
+            "Vancouver Whitecaps",
+            "Columbus Crew"
+          ],
+          "explanation": "El BMO Field de Toronto es la casa del Toronto FC y de las selecciones nacionales de Canadá. Construido originalmente para el torneo Sub-20 de 2007, el estadio se ha ampliado varias veces y ahora tiene capacidad para más de 30.000 espectadores. Se está ampliando aún más de cara a Football 2026 para cumplir con los requisitos de capacidad."
+        },
+        "es-ES": {
+          "question": "El BMO Field, una de las sedes de Football 2026 en Toronto, ¿es el estadio de qué equipo de la MLS?",
+          "options": [
+            "Toronto FC",
+            "CF Montréal",
+            "Vancouver Whitecaps",
+            "Columbus Crew"
+          ],
+          "explanation": "El BMO Field de Toronto es el estadio del Toronto FC y de las selecciones nacionales de Canadá. Construido originalmente para el torneo sub-20 de 2007, el recinto se ha ampliado varias veces y ahora tiene un aforo de más de 30.000 espectadores. Se está ampliando aún más de cara a Football 2026 para cumplir con los requisitos de capacidad."
+        },
+        "fr": {
+          "question": "Le BMO Field, l'un des stades de Football 2026 à Toronto, est le terrain de quelle équipe de MLS ?",
+          "options": [
+            "Toronto FC",
+            "CF Montréal",
+            "Vancouver Whitecaps",
+            "Columbus Crew"
+          ],
+          "explanation": "Le BMO Field de Toronto accueille le Toronto FC ainsi que les équipes nationales canadiennes. Construit à l'origine pour le tournoi des moins de 20 ans de 2007, le stade a été agrandi à plusieurs reprises et peut désormais accueillir plus de 30 000 spectateurs. Il fait l'objet de nouveaux travaux d'agrandissement en vue de Football 2026 afin de répondre aux exigences de capacité."
+        },
+        "it": {
+          "question": "Il BMO Field, uno degli impianti di Football 2026 a Toronto, è lo stadio di quale squadra della MLS?",
+          "options": [
+            "Toronto FC",
+            "CF Montréal",
+            "Vancouver Whitecaps",
+            "Columbus Crew"
+          ],
+          "explanation": "Il BMO Field di Toronto ospita il Toronto FC e le nazionali canadesi. Costruito originariamente per il torneo Under-20 del 2007, lo stadio è stato ampliato più volte e oggi può ospitare oltre 30.000 spettatori. È in corso un ulteriore ampliamento in vista di Football 2026 per soddisfare i requisiti di capienza."
+        },
+        "ja": {
+          "question": "トロントにあるBMOフィールドはFootball 2026の会場の一つですが、どのMLSチームの本拠地でしょうか？",
+          "options": [
+            "トロントFC",
+            "CFモントリオール",
+            "バンクーバー・ホワイトキャップス",
+            "コロンバス・クルー"
+          ],
+          "explanation": "トロントのBMOフィールドは、トロントFCとカナダ代表チームの本拠地です。もともとは2007年のU-20大会のために建設され、その後何度も拡張が行われ、現在は3万人以上を収容できます。Football 2026に向けて収容能力の基準を満たすため、さらなる拡張が進められています。"
+        },
+        "ko": {
+          "question": "토론토에 있는 BMO 필드는 Football 2026 개최 경기장 중 하나인데, 어느 MLS 팀의 홈구장일까요?",
+          "options": [
+            "토론토 FC",
+            "CF 몬트리올",
+            "밴쿠버 화이트캡스",
+            "컬럼버스 크루"
+          ],
+          "explanation": "토론토의 BMO 필드는 토론토 FC와 캐나다 국가대표팀의 홈구장입니다. 원래 2007년 U-20 대회를 위해 건설되었으며, 이후 여러 차례 확장되어 현재는 3만 명 이상을 수용할 수 있습니다. Football 2026을 앞두고 수용 인원 요건을 충족하기 위해 추가로 확장되고 있습니다."
+        },
+        "pt-BR": {
+          "question": "O BMO Field, uma das sedes de Football 2026 em Toronto, é o estádio de qual time da MLS?",
+          "options": [
+            "Toronto FC",
+            "CF Montréal",
+            "Vancouver Whitecaps",
+            "Columbus Crew"
+          ],
+          "explanation": "O BMO Field, em Toronto, é a casa do Toronto FC e das seleções nacionais do Canadá. Construído originalmente para o torneio Sub-20 de 2007, o estádio já foi ampliado várias vezes e hoje comporta mais de 30.000 torcedores. Ele está passando por novas ampliações para Football 2026 a fim de atender aos requisitos de capacidade."
+        },
+        "zh-Hans": {
+          "question": "位于多伦多的BMO球场是Football 2026的比赛场馆之一，它是哪支MLS球队的主场？",
+          "options": [
+            "多伦多FC",
+            "蒙特利尔CF",
+            "温哥华白帽",
+            "哥伦布机员"
+          ],
+          "explanation": "多伦多的BMO球场是多伦多FC以及加拿大国家队的主场。该球场最初为2007年U-20赛事而建，此后经过多次扩建，如今可容纳超过3万名观众。为满足容量要求，球场正为Football 2026进行进一步扩建。"
+        }
+      },
+      "i18nSourceHash": "71485e121e27f099"
     },
     {
       "id": "rec-fastest-goal",
@@ -19309,7 +19412,90 @@
       "answer": 1,
       "explanation": "False! Yellow card accumulations are traditionally wiped after the quarter-final stage, ensuring no player misses the semi-final or final due to bookings from earlier rounds. Only a direct red card would cause a suspension in the latter stages.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "البطاقات الصفراء المتراكمة خلال البطولة تُنقل إلى المباراة النهائية.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "خطأ! جرت العادة على إلغاء تراكم البطاقات الصفراء بعد مرحلة ربع النهائي، بما يضمن ألا يغيب أي لاعب عن نصف النهائي أو النهائي بسبب إنذارات من الأدوار السابقة. البطاقة الحمراء المباشرة وحدها هي التي تسبب الإيقاف في الأدوار المتأخرة."
+        },
+        "de": {
+          "question": "Während des Turniers gesammelte gelbe Karten werden ins Finale übernommen.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Falsch! Angesammelte gelbe Karten werden traditionell nach dem Viertelfinale gelöscht, sodass kein Spieler das Halbfinale oder Finale wegen Verwarnungen aus früheren Runden verpasst. Nur eine direkte rote Karte würde in den späteren Phasen eine Sperre nach sich ziehen."
+        },
+        "es": {
+          "question": "Las tarjetas amarillas acumuladas durante el torneo se arrastran hasta la final.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Falso! Tradicionalmente, la acumulación de tarjetas amarillas se borra después de los cuartos de final, garantizando que ningún jugador se pierda la semifinal o la final por amonestaciones de rondas anteriores. Solo una tarjeta roja directa provocaría una suspensión en las etapas finales."
+        },
+        "es-ES": {
+          "question": "Las tarjetas amarillas acumuladas durante el torneo se arrastran hasta la final.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Falso! Tradicionalmente, la acumulación de tarjetas amarillas se borra tras los cuartos de final, de modo que ningún jugador se pierda la semifinal o la final por amonestaciones de rondas anteriores. Solo una tarjeta roja directa provocaría una sanción en las últimas fases."
+        },
+        "fr": {
+          "question": "Les cartons jaunes accumulés pendant le tournoi sont reportés jusqu'à la finale.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Faux ! L'accumulation de cartons jaunes est traditionnellement remise à zéro après les quarts de finale, ce qui garantit qu'aucun joueur ne manque la demi-finale ou la finale à cause d'avertissements reçus lors des tours précédents. Seul un carton rouge direct entraînerait une suspension dans les dernières phases."
+        },
+        "it": {
+          "question": "I cartellini gialli accumulati durante il torneo vengono riportati fino alla finale.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Falso! L'accumulo di cartellini gialli viene tradizionalmente azzerato dopo i quarti di finale, così nessun giocatore salta la semifinale o la finale a causa di ammonizioni dei turni precedenti. Solo un cartellino rosso diretto comporterebbe una squalifica nelle fasi finali."
+        },
+        "ja": {
+          "question": "大会中に累積したイエローカードは決勝戦にも引き継がれる。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "誤り！イエローカードの累積は伝統的に準々決勝終了後にリセットされ、前のラウンドでの警告によって準決勝や決勝を欠場する選手が出ないようになっています。終盤のステージで出場停止となるのは、一発レッドカードの場合のみです。"
+        },
+        "ko": {
+          "question": "대회 중 누적된 옐로카드는 결승전까지 이어진다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "거짓! 옐로카드 누적은 전통적으로 8강전이 끝난 후 초기화되어, 이전 라운드의 경고 때문에 준결승이나 결승에 결장하는 선수가 없도록 합니다. 후반 단계에서 출전 정지가 되는 경우는 다이렉트 레드카드뿐입니다."
+        },
+        "pt-BR": {
+          "question": "Os cartões amarelos acumulados durante o torneio são levados até a final.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Falso! O acúmulo de cartões amarelos é tradicionalmente zerado após as quartas de final, garantindo que nenhum jogador perca a semifinal ou a final por advertências de rodadas anteriores. Apenas um cartão vermelho direto causaria uma suspensão nas fases finais."
+        },
+        "zh-Hans": {
+          "question": "比赛期间累积的黄牌会延续到决赛。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "错误！按照惯例，黄牌累积会在四分之一决赛阶段结束后清零，确保没有球员因之前轮次的警告而错过半决赛或决赛。在后续阶段，只有直接红牌才会导致停赛。"
+        }
+      },
+      "i18nSourceHash": "7fda05c86dd41725"
     },
     {
       "id": "tf-england-penalty-curse",
@@ -19431,7 +19617,90 @@
       "answer": 0,
       "explanation": "True! The offside rule only applies in the opponent's half. A player standing in their own half can never be offside, regardless of where the defenders are positioned. This is why teams sometimes push their defensive line very high up the pitch — any opponent behind the ball in their own half is always onside.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "لا يمكن أن يكون اللاعب في موقف تسلل إذا كان في نصف ملعبه.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! قاعدة التسلل تُطبَّق فقط في نصف ملعب الخصم. اللاعب الواقف في نصف ملعبه لا يمكن أن يكون في موقف تسلل أبداً، بغض النظر عن مواقع المدافعين. لهذا السبب تدفع الفرق أحياناً خط دفاعها إلى الأمام بعيداً — فأي خصم خلف الكرة داخل نصف ملعبه يكون دائماً في موقف سليم."
+        },
+        "de": {
+          "question": "Ein Spieler kann nicht im Abseits stehen, wenn er sich in der eigenen Spielfeldhälfte befindet.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Richtig! Die Abseitsregel gilt nur in der gegnerischen Hälfte. Ein Spieler, der in seiner eigenen Hälfte steht, kann niemals im Abseits sein, egal wo sich die Verteidiger befinden. Deshalb schieben Mannschaften ihre Abwehrreihe manchmal sehr weit nach vorne — jeder Gegner, der sich in seiner eigenen Hälfte hinter dem Ball befindet, steht immer regulär."
+        },
+        "es": {
+          "question": "Un jugador no puede estar en posición adelantada si se encuentra en su propia mitad del campo.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! La regla del fuera de juego solo se aplica en la mitad del campo del rival. Un jugador que está en su propia mitad nunca puede estar en posición adelantada, sin importar dónde se ubiquen los defensores. Por eso los equipos a veces adelantan mucho su línea defensiva: cualquier rival que esté detrás del balón en su propia mitad siempre está habilitado."
+        },
+        "es-ES": {
+          "question": "Un jugador no puede estar en fuera de juego si se encuentra en su propio campo.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! La regla del fuera de juego solo se aplica en el campo del rival. Un jugador que está en su propia mitad nunca puede estar en fuera de juego, sin importar dónde se sitúen los defensas. Por eso los equipos a veces adelantan mucho su línea defensiva: cualquier rival que esté por detrás del balón en su propio campo siempre está habilitado."
+        },
+        "fr": {
+          "question": "Un joueur ne peut pas être hors-jeu s'il se trouve dans sa propre moitié de terrain.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! La règle du hors-jeu ne s'applique que dans la moitié de terrain adverse. Un joueur placé dans sa propre moitié ne peut jamais être hors-jeu, quelle que soit la position des défenseurs. C'est pourquoi les équipes font parfois remonter très haut leur ligne défensive : tout adversaire situé derrière le ballon dans sa propre moitié est toujours en position régulière."
+        },
+        "it": {
+          "question": "Un giocatore non può essere in fuorigioco se si trova nella propria metà campo.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! La regola del fuorigioco vale solo nella metà campo avversaria. Un giocatore che si trova nella propria metà non può mai essere in fuorigioco, indipendentemente dalla posizione dei difensori. Ecco perché le squadre a volte alzano molto la linea difensiva: qualsiasi avversario dietro la palla nella propria metà campo è sempre in posizione regolare."
+        },
+        "ja": {
+          "question": "選手は自陣にいる限り、オフサイドになることはない。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "正しい！オフサイドのルールは相手陣内でのみ適用されます。自陣にいる選手は、ディフェンダーがどこにいようとも決してオフサイドにはなりません。だからこそチームは時にディフェンスラインを非常に高く押し上げるのです——自陣でボールより後ろにいる相手選手は常にオンサイドだからです。"
+        },
+        "ko": {
+          "question": "선수가 자기 진영에 있으면 오프사이드가 될 수 없다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참입니다! 오프사이드 규칙은 상대 진영에서만 적용됩니다. 자기 진영에 있는 선수는 수비수들이 어디에 위치해 있든 결코 오프사이드가 되지 않습니다. 그렇기 때문에 팀들은 때때로 수비 라인을 매우 높게 끌어올립니다 — 자기 진영에서 공보다 뒤에 있는 상대 선수는 언제나 온사이드이기 때문입니다."
+        },
+        "pt-BR": {
+          "question": "Um jogador não pode estar impedido se estiver em seu próprio campo de defesa.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! A regra de impedimento só se aplica no campo do adversário. Um jogador que está em seu próprio campo nunca pode estar impedido, não importa onde os defensores estejam posicionados. É por isso que as equipes às vezes adiantam bastante a linha defensiva — qualquer adversário atrás da bola em seu próprio campo está sempre em posição legal."
+        },
+        "zh-Hans": {
+          "question": "只要球员处于本方半场，就不可能越位。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！越位规则只在对方半场生效。处于本方半场的球员无论防守球员位于何处，都绝不会越位。这正是球队有时把防线压得很高的原因——任何在本方半场且位于球后方的对手都始终不越位。"
+        }
+      },
+      "i18nSourceHash": "ffe9f78e639aa4a3"
     },
     {
       "id": "tf-goalkeeper-line-penalty",
@@ -20527,7 +20796,90 @@
       "answer": 0,
       "explanation": "True! Before 1950, Brazil played in white shirts. After the devastating 'Maracanazo' loss to Uruguay, a national newspaper competition was held to design new colors that would represent the Brazilian flag. The result was the iconic yellow shirt with green trim — the 'Canarinha' (Little Canary) — which has been Brazil's identity ever since.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "غيّرت البرازيل ألوان قميصها بعد خسارتها المؤلمة في نهائي 1950 على أرضها.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "صحيح! قبل عام 1950، كانت البرازيل تلعب بقميص أبيض. وبعد الخسارة المدمّرة أمام الأوروغواي فيما عُرف بـ'ماراكانازو'، أُقيمت مسابقة أطلقتها صحيفة وطنية لتصميم ألوان جديدة تمثّل العلم البرازيلي. وكانت النتيجة القميص الأصفر الأيقوني بحواف خضراء — 'الكاناريّنيا' (الكناري الصغير) — الذي أصبح هوية البرازيل منذ ذلك الحين."
+        },
+        "de": {
+          "question": "Brasilien änderte seine Trikotfarben nach der traumatischen Finalniederlage 1950 im eigenen Land.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Richtig! Vor 1950 spielte Brasilien in weißen Trikots. Nach der verheerenden 'Maracanazo'-Niederlage gegen Uruguay wurde ein landesweiter Zeitungswettbewerb ausgeschrieben, um neue Farben zu entwerfen, welche die brasilianische Flagge repräsentieren sollten. Das Ergebnis war das ikonische gelbe Trikot mit grünem Rand — die 'Canarinha' (kleiner Kanarienvogel) — das seither Brasiliens Identität prägt."
+        },
+        "es": {
+          "question": "Brasil cambió los colores de su camiseta tras la traumática derrota en la final de 1950 en casa.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Antes de 1950, Brasil jugaba con camiseta blanca. Tras la devastadora derrota del 'Maracanazo' ante Uruguay, un periódico nacional organizó un concurso para diseñar nuevos colores que representaran la bandera brasileña. El resultado fue la icónica camiseta amarilla con detalles verdes — la 'Canarinha' (Canarito) —, que desde entonces es la identidad de Brasil."
+        },
+        "es-ES": {
+          "question": "Brasil cambió los colores de su camiseta tras la traumática derrota en la final de 1950 en casa.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "¡Verdadero! Antes de 1950, Brasil jugaba con camiseta blanca. Tras la devastadora derrota del 'Maracanazo' frente a Uruguay, un periódico nacional convocó un concurso para diseñar nuevos colores que representaran la bandera brasileña. El resultado fue la icónica camiseta amarilla con ribetes verdes — la 'Canarinha' (Canarito) —, que desde entonces es la identidad de Brasil."
+        },
+        "fr": {
+          "question": "Le Brésil a changé les couleurs de son maillot après la défaite traumatisante en finale de 1950 à domicile.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Vrai ! Avant 1950, le Brésil jouait en maillot blanc. Après la défaite dévastatrice du 'Maracanazo' face à l'Uruguay, un journal national a organisé un concours pour concevoir de nouvelles couleurs représentant le drapeau brésilien. Le résultat fut l'emblématique maillot jaune bordé de vert — la 'Canarinha' (le petit canari) —, devenu depuis l'identité même du Brésil."
+        },
+        "it": {
+          "question": "Il Brasile cambiò i colori della sua maglia dopo la traumatica sconfitta nella finale del 1950 giocata in casa.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Vero! Prima del 1950, il Brasile giocava con la maglia bianca. Dopo la devastante sconfitta del 'Maracanazo' contro l'Uruguay, un quotidiano nazionale indisse un concorso per disegnare nuovi colori che rappresentassero la bandiera brasiliana. Il risultato fu l'iconica maglia gialla con bordi verdi — la 'Canarinha' (piccolo canarino) —, che da allora è l'identità del Brasile."
+        },
+        "ja": {
+          "question": "ブラジルは、1950年に地元で喫した衝撃的な決勝敗退の後、ユニフォームの色を変更した。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "正しい！1950年以前、ブラジルは白いシャツでプレーしていました。ウルグアイに敗れた壊滅的な『マラカナッソ』の後、ブラジル国旗を象徴する新しい色をデザインするための全国紙のコンペが開催されました。その結果生まれたのが、緑の縁取りが施された象徴的な黄色いシャツ——『カナリーニャ』（小さなカナリア）——であり、それ以来ブラジルのアイデンティティであり続けています。"
+        },
+        "ko": {
+          "question": "브라질은 1950년 홈에서 겪은 충격적인 결승 패배 이후 유니폼 색상을 바꾸었다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "참! 1950년 이전 브라질은 흰색 셔츠를 입고 뛰었습니다. 우루과이에 패한 참담한 '마라카낭소' 이후, 브라질 국기를 상징하는 새로운 색상을 디자인하기 위한 전국 신문 공모전이 열렸습니다. 그 결과 탄생한 것이 녹색 테두리를 두른 상징적인 노란색 셔츠 — '카나리냐'(작은 카나리아) — 이며, 이후 줄곧 브라질의 정체성이 되어 왔습니다."
+        },
+        "pt-BR": {
+          "question": "O Brasil mudou as cores de sua camisa após a traumática derrota na final de 1950 em casa.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Verdadeiro! Antes de 1950, o Brasil jogava de camisa branca. Após a devastadora derrota do 'Maracanazo' para o Uruguai, um jornal nacional promoveu um concurso para criar novas cores que representassem a bandeira brasileira. O resultado foi a icônica camisa amarela com detalhes verdes — a 'Canarinha' —, que desde então se tornou a identidade do Brasil."
+        },
+        "zh-Hans": {
+          "question": "巴西在1950年主场遭遇痛心的决赛失利后更换了球衣颜色。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "正确！在1950年之前，巴西身穿白色球衣出战。在负于乌拉圭那场毁灭性的'马拉卡纳打击'（Maracanazo）之后，一家全国性报纸举办了设计比赛，征集能够代表巴西国旗的新颜色。最终诞生了带有绿色镶边的标志性黄色球衣——'Canarinha'（小金丝雀）——从此成为巴西的象征。"
+        }
+      },
+      "i18nSourceHash": "2f1809dc33e81c2a"
     },
     {
       "id": "tf-no-host-group-exit",
@@ -21801,7 +22153,110 @@
       "explanation": "Son Heung-min represented South Korea at the 2014, 2018, and 2022 editions. At the 2022 tournament, he played with a mask protecting a fractured eye socket. He's the highest-scoring Asian player in Premier League history, having surpassed 100 goals for Tottenham Hotspur.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/BFA_2023_-2_Heung-Min_Son_%28cropped%29.jpg/500px-BFA_2023_-2_Heung-Min_Son_%28cropped%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "من هو هذا المهاجم الكوري الجنوبي الذي يُعد أكثر لاعب آسيوي تسجيلاً للأهداف في تاريخ الدوري الإنجليزي الممتاز؟",
+          "options": [
+            "سون هيونغ-مين",
+            "بارك جي-سونغ",
+            "تشا بوم-كون",
+            "كي سونغ-يونغ"
+          ],
+          "explanation": "مثّل سون هيونغ-مين كوريا الجنوبية في نسخ 2014 و2018 و2022. وفي بطولة 2022، لعب مرتدياً قناعاً لحماية عظمة محجر عينه المكسورة. وهو أكثر لاعب آسيوي تسجيلاً للأهداف في تاريخ الدوري الإنجليزي الممتاز، بعدما تجاوز 100 هدف مع توتنهام هوتسبير."
+        },
+        "de": {
+          "question": "Wer ist dieser südkoreanische Stürmer, der der treffsicherste asiatische Torschütze in der Geschichte der Premier League ist?",
+          "options": [
+            "Son Heung-min",
+            "Park Ji-sung",
+            "Cha Bum-kun",
+            "Ki Sung-yueng"
+          ],
+          "explanation": "Son Heung-min vertrat Südkorea bei den Ausgaben 2014, 2018 und 2022. Beim Turnier 2022 spielte er mit einer Maske, die seine gebrochene Augenhöhle schützte. Er ist der torgefährlichste asiatische Spieler in der Geschichte der Premier League und hat für Tottenham Hotspur die Marke von 100 Toren überschritten."
+        },
+        "es": {
+          "question": "¿Quién es este delantero surcoreano que es el máximo goleador asiático en la historia de la Premier League?",
+          "options": [
+            "Son Heung-min",
+            "Park Ji-sung",
+            "Cha Bum-kun",
+            "Ki Sung-yueng"
+          ],
+          "explanation": "Son Heung-min representó a Corea del Sur en las ediciones de 2014, 2018 y 2022. En el torneo de 2022 jugó con una máscara que protegía una fractura en la cuenca del ojo. Es el jugador asiático con más goles en la historia de la Premier League, tras superar los 100 goles con el Tottenham Hotspur."
+        },
+        "es-ES": {
+          "question": "¿Quién es este delantero surcoreano que es el máximo goleador asiático de la historia de la Premier League?",
+          "options": [
+            "Son Heung-min",
+            "Park Ji-sung",
+            "Cha Bum-kun",
+            "Ki Sung-yueng"
+          ],
+          "explanation": "Son Heung-min representó a Corea del Sur en las ediciones de 2014, 2018 y 2022. En el torneo de 2022 jugó con una máscara que protegía una fractura en la cuenca del ojo. Es el jugador asiático con más goles de la historia de la Premier League, tras superar los 100 tantos con el Tottenham Hotspur."
+        },
+        "fr": {
+          "question": "Qui est cet attaquant sud-coréen, le meilleur buteur asiatique de l'histoire de la Premier League ?",
+          "options": [
+            "Son Heung-min",
+            "Park Ji-sung",
+            "Cha Bum-kun",
+            "Ki Sung-yueng"
+          ],
+          "explanation": "Son Heung-min a représenté la Corée du Sud lors des éditions 2014, 2018 et 2022. Lors du tournoi 2022, il a joué avec un masque protégeant une fracture de l'orbite de l'œil. Il est le joueur asiatique le plus prolifique de l'histoire de la Premier League, ayant dépassé les 100 buts avec Tottenham Hotspur."
+        },
+        "it": {
+          "question": "Chi è questo attaccante sudcoreano, il marcatore asiatico più prolifico nella storia della Premier League?",
+          "options": [
+            "Son Heung-min",
+            "Park Ji-sung",
+            "Cha Bum-kun",
+            "Ki Sung-yueng"
+          ],
+          "explanation": "Son Heung-min ha rappresentato la Corea del Sud nelle edizioni del 2014, 2018 e 2022. Nel torneo del 2022 ha giocato con una maschera che proteggeva una frattura all'orbita dell'occhio. È il giocatore asiatico con più gol nella storia della Premier League, avendo superato quota 100 reti con il Tottenham Hotspur."
+        },
+        "ja": {
+          "question": "プレミアリーグ史上最多得点を記録したアジア人選手である、この韓国代表フォワードは誰でしょう？",
+          "options": [
+            "ソン・フンミン",
+            "パク・チソン",
+            "チャ・ボムグン",
+            "キ・ソンヨン"
+          ],
+          "explanation": "ソン・フンミンは2014年、2018年、2022年大会で韓国代表として出場しました。2022年の大会では、眼窩骨折を保護するマスクを着けてプレーしました。彼はプレミアリーグ史上最多得点を記録したアジア人選手で、トッテナム・ホットスパーで100ゴールを突破しました。"
+        },
+        "ko": {
+          "question": "프리미어리그 역사상 아시아 선수 최다 득점을 기록한 이 대한민국 공격수는 누구일까요?",
+          "options": [
+            "손흥민",
+            "박지성",
+            "차범근",
+            "기성용"
+          ],
+          "explanation": "손흥민은 2014년, 2018년, 2022년 대회에서 대한민국 대표로 출전했습니다. 2022년 대회에서는 안와 골절을 보호하는 마스크를 착용하고 뛰었습니다. 그는 토트넘 홋스퍼에서 100골을 넘기며 프리미어리그 역사상 아시아 선수 최다 득점을 기록한 선수입니다."
+        },
+        "pt-BR": {
+          "question": "Quem é este atacante sul-coreano, o maior artilheiro asiático da história da Premier League?",
+          "options": [
+            "Son Heung-min",
+            "Park Ji-sung",
+            "Cha Bum-kun",
+            "Ki Sung-yueng"
+          ],
+          "explanation": "Son Heung-min representou a Coreia do Sul nas edições de 2014, 2018 e 2022. No torneio de 2022, ele jogou usando uma máscara que protegia uma fratura no globo ocular. Ele é o jogador asiático com mais gols na história da Premier League, tendo ultrapassado a marca de 100 gols pelo Tottenham Hotspur."
+        },
+        "zh-Hans": {
+          "question": "这位韩国前锋是英超历史上进球最多的亚洲球员，他是谁？",
+          "options": [
+            "孙兴慜",
+            "朴智星",
+            "车范根",
+            "奇诚庸"
+          ],
+          "explanation": "孙兴慜曾代表韩国参加2014年、2018年和2022年的赛事。在2022年的赛事中，他戴着一副保护眼眶骨折的面罩上场比赛。他是英超历史上进球最多的亚洲球员，在托特纳姆热刺队攻入超过100粒进球。"
+        }
+      },
+      "i18nSourceHash": "c97b7050c208aa2b"
     },
     {
       "id": "img-mane",
