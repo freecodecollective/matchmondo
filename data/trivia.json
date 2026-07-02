@@ -6866,10 +6866,11 @@
         "1930",
         "1970",
         "2000",
-        "1986"
+        "2026"
       ],
       "answer": 1,
-      "explanation": "Italian company Panini first published a tournament sticker album for the 1970 edition in Mexico, starting a global collecting tradition."
+      "explanation": "Italian company Panini first published a tournament sticker album for the 1970 edition in Mexico, starting a global collecting tradition.",
+      "approved": true
     },
     {
       "id": "rec-oldest-player",
@@ -6921,7 +6922,8 @@
         "64"
       ],
       "answer": 2,
-      "explanation": "2026 expanded the field from 32 to 48 nations, making it the largest edition ever."
+      "explanation": "2026 expanded the field from 32 to 48 nations, making it the largest edition ever.",
+      "approved": true
     },
     {
       "id": "v-rose-bowl-94",
