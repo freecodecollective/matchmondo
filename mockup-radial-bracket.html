@@ -219,10 +219,10 @@ function draw() {
   // boxy connector: radial stubs, straight chord, straight arm inward —
   // black skeleton with corner dots; the winner's stub, half-chord, and arm
   // overlay in their flag color
-  function connector(a1, a2, rNode, nodeR, rChord, aNext, rNext, nextR, m, dim) {
+  function connector(a1, a2, rNode, nodeR, rChord, aNext, rNext, nextR, m, dim, occ1, occ2) {
     const alpha = dim ? 0.12 : 1;
-    const [s1x, s1y] = pt(a1, rNode - nodeR), [c1x, c1y] = pt(a1, rChord);
-    const [s2x, s2y] = pt(a2, rNode - nodeR), [c2x, c2y] = pt(a2, rChord);
+    const [s1x, s1y] = pt(a1, occ1 !== false ? rNode - nodeR : rNode), [c1x, c1y] = pt(a1, rChord);
+    const [s2x, s2y] = pt(a2, occ2 !== false ? rNode - nodeR : rNode), [c2x, c2y] = pt(a2, rChord);
     const mx = (c1x + c2x) / 2, my = (c1y + c2y) / 2;
     const w = winner(m);
     const [nx, ny] = pt(aNext, w ? rNext + nextR : rNext);
@@ -258,18 +258,21 @@ function draw() {
   // R16 match j → QF slot at r16MatchA[j]
   for (let j = 0; j < 8; j++) {
     const m = M[r16Order[j]];
-    connector(pairMid[j*2], pairMid[j*2+1], r16r, nr16, rC2, r16MatchA[j], rQF, nrQF, m, dimFor(m));
+    connector(pairMid[j*2], pairMid[j*2+1], r16r, nr16, rC2, r16MatchA[j], rQF, nrQF, m, dimFor(m),
+              winner(M[bracketOrder[j*2]]) != null, winner(M[bracketOrder[j*2+1]]) != null);
   }
   // QF match k → SF slot at qfMatchA[k]
   for (let k = 0; k < 4; k++) {
     const m = M[qfOrder[k]];
-    connector(r16MatchA[k*2], r16MatchA[k*2+1], rQF, nrQF, rC3, qfMatchA[k], rSF, nrSF, m, selected != null);
+    connector(r16MatchA[k*2], r16MatchA[k*2+1], rQF, nrQF, rC3, qfMatchA[k], rSF, nrSF, m, selected != null,
+              winner(M[r16Order[k*2]]) != null, winner(M[r16Order[k*2+1]]) != null);
   }
   // SF match s → the final at center
   for (let s = 0; s < 2; s++) {
     const a1 = qfMatchA[s*2], a2 = qfMatchA[s*2+1];
-    const [s1x, s1y] = pt(a1, rSF - nrSF), [c1x, c1y] = pt(a1, rC4);
-    const [s2x, s2y] = pt(a2, rSF - nrSF), [c2x, c2y] = pt(a2, rC4);
+    const o1 = winner(M[qfOrder[s*2]]) != null, o2 = winner(M[qfOrder[s*2+1]]) != null;
+    const [s1x, s1y] = pt(a1, o1 ? rSF - nrSF : rSF), [c1x, c1y] = pt(a1, rC4);
+    const [s2x, s2y] = pt(a2, o2 ? rSF - nrSF : rSF), [c2x, c2y] = pt(a2, rC4);
     const mx = (c1x + c2x) / 2, my = (c1y + c2y) / 2;
     const [fx, fy] = pt(sfMatchA[s], R * 0.075);
     const alpha = selected != null ? 0.12 : 1;
