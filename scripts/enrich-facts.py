@@ -19,9 +19,13 @@ is included if it appears in 2+ independent sources (or is a verifiable
 historical first / record). Categories:
   - Historical firsts ("first time X has reached the quarterfinals")
   - Head-to-head records ("Brazil have won 11 of 14 meetings with Japan")
-  - Streaks ("Messi has scored in 7 consecutive World Cup matches")
-  - Tournament records ("Kane became England's all-time WC top scorer")
+  - Streaks ("Messi has scored in 7 consecutive tournament matches")
+  - Tournament records ("Kane became England's all-time leading scorer in tournament history")
   - Anniversary facts ("exactly 32 years since they met at USA '94")
+
+NAMING RULE: NEVER use "World Cup" or "FIFA" in any fact text — say
+"the tournament" or "Football 2026" instead. Applies to manually
+written facts as well as generated ones.
 """
 
 import json

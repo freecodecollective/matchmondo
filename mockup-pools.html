@@ -281,7 +281,7 @@
 <div class="greeting">
   <h1><span class="wave">🏆</span> Pools — friend groups for Predictions &amp; Trivia</h1>
   <p>Pools let anyone start a private competition: a name, a 6-char code, the games you want to play (Predictions / Trivia / both), and your own point values.
-     Pre-kickoff, picks are hidden from everyone else in the pool — they unlock the moment the game starts. Forget to pick? You're auto-picked for the higher-FIFA-ranked team to win 1–0; if it hits, you only get the consolation 1&nbsp;pt (not the full 3).</p>
+     Pre-kickoff, picks are hidden from everyone else in the pool — they unlock the moment the game starts. Forget to pick? You're auto-picked for the higher-world-ranked team to win 1–0; if it hits, you only get the consolation 1&nbsp;pt (not the full 3).</p>
   <ul>
     <li><strong>Anyone</strong> creates a pool. They share the code. People join with the code.</li>
     <li>Pool creator sets <strong>name</strong>, <strong>type</strong> (Predictions / Trivia / Both), <strong>point values</strong> (defaults match how the app already scores), and a <strong>start date</strong> — invite people days early.</li>
@@ -436,7 +436,7 @@
           </div>
         </div>
 
-        <div class="note" style="margin-top:6px;">If you don't pick by kickoff, you'll be auto-picked for <strong>the higher-FIFA-ranked team to win 1–0</strong>. Auto-picks that hit pay <strong>1 pt</strong>, not 3 — make your own pick to earn the full points.</div>
+        <div class="note" style="margin-top:6px;">If you don't pick by kickoff, you'll be auto-picked for <strong>the higher-world-ranked team to win 1–0</strong>. Auto-picks that hit pay <strong>1 pt</strong>, not 3 — make your own pick to earn the full points.</div>
 
       </div>
       <div class="home-bar"><div class="home-indicator"></div></div>
@@ -699,7 +699,7 @@
         </div>
 
         <div class="note">
-          <strong>Auto-pick math, in plain English:</strong> James didn't pick FRA–NGA, so he was auto-picked for the higher-FIFA-ranked team (France) at 1–0. France won 3–1, so the pick was right but the score was off. Normally a "right team, wrong score" pays 3 pts — but because it was an auto-pick, James gets <strong>1 pt</strong>.
+          <strong>Auto-pick math, in plain English:</strong> James didn't pick FRA–NGA, so he was auto-picked for the higher-world-ranked team (France) at 1–0. France won 3–1, so the pick was right but the score was off. Normally a "right team, wrong score" pays 3 pts — but because it was an auto-pick, James gets <strong>1 pt</strong>.
         </div>
 
       </div>
@@ -860,7 +860,7 @@
   <p><strong>2. Pool start date for a pool that's already in flight</strong> (e.g. someone creates one on Jun 30 mid-group-stage) — current mock says points count from the chosen start date. If you want pools to be able to "include the whole tournament so far," that's a different toggle. Let me know.</p>
   <p><strong>3. Picks are global, not per-pool.</strong> Simpler implementation, less work for users (no picking the same match 3×) — but it means you can't strategically pick "BRA 5–0" in your office pool and "BRA 1–0" in your sibling pool. I think that's fine; flagging it because it's a load-bearing call.</p>
   <p><strong>4. "Both" pools split the leaderboard total</strong> or just sum predictions+trivia? Right now I'm summing (54p + 32t = 86). Could also tab them.</p>
-  <p><strong>5. Auto-pick fallback uses FIFA ranking</strong> — what about knockouts where one team has already advanced from a less obvious path? FIFA rank still works but might pick the "wrong" favorite occasionally. Acceptable, I think.</p>
+  <p><strong>5. Auto-pick fallback uses world ranking</strong> — what about knockouts where one team has already advanced from a less obvious path? World rank still works but might pick the "wrong" favorite occasionally. Acceptable, I think.</p>
 </div>
 
 <div class="foot-link"><a href="mockups.html">← Back to all mockups</a></div>
