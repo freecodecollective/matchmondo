@@ -25834,7 +25834,90 @@
       "answer": 1,
       "explanation": "Curaçao scored 1 goal across their three group matches — in their 1-7 defeat to Germany. They drew 0-0 with Ecuador and lost 0-2 to Côte d'Ivoire in the other two.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "لم تسجّل كوراساو أي هدف في أيٍّ من مبارياتها الثلاث في دور المجموعات ببطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "سجّلت كوراساو هدفًا واحدًا في مبارياتها الثلاث بدور المجموعات — في خسارتها أمام ألمانيا 1-7. وتعادلت 0-0 مع الإكوادور وخسرت 0-2 أمام ساحل العاج في المباراتين الأخريين."
+        },
+        "de": {
+          "question": "Curaçao gelang bei Football 2026 in keinem seiner drei Gruppenspiele ein Tor.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Curaçao erzielte in seinen drei Gruppenspielen ein Tor — bei der 1:7-Niederlage gegen Deutschland. In den beiden anderen Spielen gab es ein 0:0 gegen Ecuador und eine 0:2-Niederlage gegen die Elfenbeinküste."
+        },
+        "es": {
+          "question": "Curazao no marcó ningún gol en ninguno de sus tres partidos de la fase de grupos en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Curazao marcó 1 gol en sus tres partidos de la fase de grupos: en su derrota por 1-7 ante Alemania. En los otros dos empató 0-0 con Ecuador y perdió 0-2 ante Costa de Marfil."
+        },
+        "es-ES": {
+          "question": "Curazao no marcó ningún gol en ninguno de sus tres partidos de la fase de grupos en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Curazao marcó 1 gol en sus tres partidos de la fase de grupos: en su derrota por 1-7 ante Alemania. En los otros dos empató 0-0 con Ecuador y perdió 0-2 ante Costa de Marfil."
+        },
+        "fr": {
+          "question": "Curaçao n'a inscrit aucun but lors de ses trois matchs de phase de groupes à Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Curaçao a marqué 1 but sur ses trois matchs de poule — lors de sa défaite 1-7 face à l'Allemagne. Lors des deux autres, l'équipe a fait match nul 0-0 contre l'Équateur et s'est inclinée 0-2 face à la Côte d'Ivoire."
+        },
+        "it": {
+          "question": "Curaçao non ha segnato nemmeno un gol in nessuna delle sue tre partite della fase a gironi a Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Curaçao ha segnato 1 gol nelle sue tre partite del girone — nella sconfitta per 1-7 contro la Germania. Nelle altre due ha pareggiato 0-0 con l'Ecuador e perso 0-2 contro la Costa d'Avorio."
+        },
+        "ja": {
+          "question": "キュラソーはFootball 2026のグループステージ3試合すべてで無得点だった。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "キュラソーはグループステージの3試合で1得点を挙げた——ドイツに1-7で敗れた試合でのゴールだ。残る2試合では、エクアドルと0-0で引き分け、コートジボワールに0-2で敗れた。"
+        },
+        "ko": {
+          "question": "쿠라소는 Football 2026 조별 리그 세 경기 모두에서 득점하지 못했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "쿠라소는 조별 리그 세 경기에서 1골을 넣었다 — 독일에 1-7로 패한 경기에서였다. 나머지 두 경기에서는 에콰도르와 0-0으로 비겼고 코트디부아르에 0-2로 패했다."
+        },
+        "pt-BR": {
+          "question": "Curaçao não marcou nenhum gol em nenhuma de suas três partidas da fase de grupos na Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Curaçao marcou 1 gol em suas três partidas da fase de grupos — na derrota por 1 a 7 para a Alemanha. Nas outras duas, empatou em 0 a 0 com o Equador e perdeu por 0 a 2 para a Costa do Marfim."
+        },
+        "zh-Hans": {
+          "question": "在Football 2026的小组赛中，库拉索三场比赛全部未能进球。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "库拉索在三场小组赛中打进1球——是在1比7负于德国的比赛中。另外两场，他们0比0战平厄瓜多尔，0比2不敌科特迪瓦。"
+        }
+      },
+      "i18nSourceHash": "c66b54f12bab1102"
     },
     {
       "id": "tf-2026-germany-five-goals",
@@ -25847,7 +25930,90 @@
       "answer": 1,
       "explanation": "Germany scored 10 goals in the group stage — 7 against Curaçao, 2 against Côte d'Ivoire, and 1 against Ecuador. They were one of the most prolific teams in the group phase.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "سجّلت ألمانيا خمسة أهداف بالضبط طوال دور المجموعات في بطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "سجّلت ألمانيا 10 أهداف في دور المجموعات — 7 في مرمى كوراساو، و2 في مرمى كوت ديفوار، وهدف واحد في مرمى الإكوادور. وكانت من أكثر المنتخبات تهديفًا في دور المجموعات."
+        },
+        "de": {
+          "question": "Deutschland erzielte während der gesamten Gruppenphase von Football 2026 genau fünf Tore.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Deutschland erzielte in der Gruppenphase 10 Tore — 7 gegen Curaçao, 2 gegen die Elfenbeinküste und 1 gegen Ecuador. Damit war das Team eines der treffsichersten der Gruppenphase."
+        },
+        "es": {
+          "question": "Alemania marcó exactamente cinco goles en toda la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Alemania marcó 10 goles en la fase de grupos: 7 a Curazao, 2 a Costa de Marfil y 1 a Ecuador. Fue uno de los equipos más goleadores de la fase de grupos."
+        },
+        "es-ES": {
+          "question": "Alemania marcó exactamente cinco goles en toda la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Alemania marcó 10 goles en la fase de grupos: 7 a Curazao, 2 a Costa de Marfil y 1 a Ecuador. Fue uno de los equipos más goleadores de la fase de grupos."
+        },
+        "fr": {
+          "question": "L'Allemagne a inscrit exactement cinq buts durant toute la phase de groupes de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "L'Allemagne a marqué 10 buts en phase de groupes — 7 contre Curaçao, 2 contre la Côte d'Ivoire et 1 contre l'Équateur. Ce fut l'une des équipes les plus prolifiques de la phase de groupes."
+        },
+        "it": {
+          "question": "La Germania ha segnato esattamente cinque gol durante tutta la fase a gironi di Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "La Germania ha segnato 10 gol nella fase a gironi — 7 contro Curaçao, 2 contro la Costa d'Avorio e 1 contro l'Ecuador. È stata una delle squadre più prolifiche della fase a gironi."
+        },
+        "ja": {
+          "question": "ドイツはFootball 2026のグループステージ全体でちょうど5得点を挙げた。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "ドイツはグループステージで10得点を挙げました——キュラソー戦で7点、コートジボワール戦で2点、エクアドル戦で1点です。グループステージで最も得点力の高いチームの一つでした。"
+        },
+        "ko": {
+          "question": "독일은 Football 2026 조별 리그 전체에서 정확히 5골을 넣었다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "독일은 조별 리그에서 10골을 넣었습니다 — 쿠라사오전 7골, 코트디부아르전 2골, 에콰도르전 1골입니다. 조별 리그에서 가장 득점력이 뛰어난 팀 중 하나였습니다."
+        },
+        "pt-BR": {
+          "question": "A Alemanha marcou exatamente cinco gols durante toda a fase de grupos do Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A Alemanha marcou 10 gols na fase de grupos — 7 contra Curaçao, 2 contra a Costa do Marfim e 1 contra o Equador. Foi uma das equipes mais artilheiras da fase de grupos."
+        },
+        "zh-Hans": {
+          "question": "德国在整个Football 2026小组赛阶段正好打进五粒进球。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "德国在小组赛阶段共打进10球——对阵库拉索攻入7球，对阵科特迪瓦攻入2球，对阵厄瓜多尔攻入1球。他们是小组赛阶段进球效率最高的球队之一。"
+        }
+      },
+      "i18nSourceHash": "ae4c966d7afe6d77"
     },
     {
       "id": "tf-2026-argentina-conceded-three",
@@ -25860,7 +26026,90 @@
       "answer": 1,
       "explanation": "Argentina had one of the tightest defenses in the group stage, conceding just 1 goal across three matches (3-0 vs Algeria, 2-0 vs Austria, 3-1 vs Jordan). Only Mexico (0 goals conceded) had a better defensive record.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "استقبلت الأرجنتين ثلاثة أهداف أو أكثر خلال دور المجموعات في Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "امتلكت الأرجنتين واحدة من أقوى الدفاعات في دور المجموعات، إذ استقبلت هدفاً واحداً فقط في ثلاث مباريات (3-0 ضد الجزائر، 2-0 ضد النمسا، 3-1 ضد الأردن). المكسيك وحدها (دون استقبال أي هدف) كانت تملك سجلاً دفاعياً أفضل."
+        },
+        "de": {
+          "question": "Argentinien kassierte in der Gruppenphase von Football 2026 drei oder mehr Gegentore.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Argentinien hatte eine der stärksten Abwehrreihen der Gruppenphase und kassierte in drei Spielen nur ein einziges Gegentor (3:0 gegen Algerien, 2:0 gegen Österreich, 3:1 gegen Jordanien). Nur Mexiko (kein Gegentor) wies eine bessere Defensivbilanz auf."
+        },
+        "es": {
+          "question": "Argentina recibió tres o más goles durante la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Argentina tuvo una de las defensas más sólidas de la fase de grupos, recibiendo apenas 1 gol en tres partidos (3-0 ante Argelia, 2-0 ante Austria, 3-1 ante Jordania). Solo México (0 goles en contra) tuvo un mejor registro defensivo."
+        },
+        "es-ES": {
+          "question": "Argentina encajó tres o más goles durante la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Argentina contó con una de las defensas más férreas de la fase de grupos, encajando solo 1 gol en tres partidos (3-0 ante Argelia, 2-0 ante Austria, 3-1 ante Jordania). Únicamente México (0 goles encajados) tuvo un mejor registro defensivo."
+        },
+        "fr": {
+          "question": "L'Argentine a encaissé trois buts ou plus durant la phase de groupes de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "L'Argentine possédait l'une des défenses les plus solides de la phase de groupes, n'encaissant qu'un seul but en trois matchs (3-0 contre l'Algérie, 2-0 contre l'Autriche, 3-1 contre la Jordanie). Seul le Mexique (aucun but encaissé) affichait un meilleur bilan défensif."
+        },
+        "it": {
+          "question": "L'Argentina ha subito tre o più gol durante la fase a gironi di Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "L'Argentina ha avuto una delle difese più solide della fase a gironi, subendo appena 1 gol in tre partite (3-0 contro l'Algeria, 2-0 contro l'Austria, 3-1 contro la Giordania). Solo il Messico (0 gol subiti) ha registrato un rendimento difensivo migliore."
+        },
+        "ja": {
+          "question": "アルゼンチンはFootball 2026のグループステージで3失点以上を喫した。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "アルゼンチンはグループステージで最も堅い守備の一つを誇り、3試合でわずか1失点にとどめた（アルジェリア戦3-0、オーストリア戦2-0、ヨルダン戦3-1）。これより優れた守備成績を残したのはメキシコ（無失点）だけだった。"
+        },
+        "ko": {
+          "question": "아르헨티나는 Football 2026 조별 리그에서 3골 이상을 실점했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "아르헨티나는 조별 리그에서 가장 견고한 수비진 중 하나를 자랑하며 세 경기에서 단 1골만 내주었다(알제리전 3-0, 오스트리아전 2-0, 요르단전 3-1). 이보다 나은 수비 기록을 남긴 팀은 멕시코(무실점)뿐이었다."
+        },
+        "pt-BR": {
+          "question": "A Argentina sofreu três ou mais gols durante a fase de grupos da Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A Argentina teve uma das defesas mais sólidas da fase de grupos, sofrendo apenas 1 gol em três jogos (3-0 contra a Argélia, 2-0 contra a Áustria, 3-1 contra a Jordânia). Somente o México (0 gols sofridos) teve um retrospecto defensivo melhor."
+        },
+        "zh-Hans": {
+          "question": "阿根廷在Football 2026小组赛阶段丢了三球或更多。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "阿根廷拥有小组赛阶段最稳固的防线之一，三场比赛仅丢1球（3-0战胜阿尔及利亚，2-0战胜奥地利，3-1战胜约旦）。只有墨西哥（零失球）的防守数据比他们更出色。"
+        }
+      },
+      "i18nSourceHash": "5c3d26f89f1c72a8"
     },
     {
       "id": "tf-2026-switzerland-bottom",
@@ -25874,7 +26123,90 @@
       "explanation": "Switzerland actually won Group B with 7 points (drew with Qatar, beat Bosnia 4-1, beat Canada 2-1). Qatar finished bottom with just 1 point.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/SoFi_Stadium_2023.jpg/640px-SoFi_Stadium_2023.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أنهت سويسرا مبارياتها في قاع المجموعة الثانية (B) في بطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "في الواقع تصدّرت سويسرا المجموعة الثانية (B) برصيد 7 نقاط (تعادلت مع قطر، وفازت على البوسنة 4-1، وعلى كندا 2-1). أما قطر فقد جاءت في القاع بنقطة واحدة فقط."
+        },
+        "de": {
+          "question": "Die Schweiz beendete die Gruppe B bei Football 2026 auf dem letzten Platz.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Tatsächlich gewann die Schweiz die Gruppe B mit 7 Punkten (Unentschieden gegen Katar, 4:1-Sieg gegen Bosnien, 2:1-Sieg gegen Kanada). Katar wurde mit nur 1 Punkt Letzter."
+        },
+        "es": {
+          "question": "Suiza terminó en el último lugar del Grupo B en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "En realidad, Suiza ganó el Grupo B con 7 puntos (empató con Catar, venció a Bosnia 4-1 y a Canadá 2-1). Catar quedó último con apenas 1 punto."
+        },
+        "es-ES": {
+          "question": "Suiza acabó en el último puesto del Grupo B en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "En realidad, Suiza ganó el Grupo B con 7 puntos (empató con Catar, ganó a Bosnia 4-1 y a Canadá 2-1). Catar quedó último con solo 1 punto."
+        },
+        "fr": {
+          "question": "La Suisse a terminé dernière du groupe B lors de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "En réalité, la Suisse a remporté le groupe B avec 7 points (match nul contre le Qatar, victoire 4-1 contre la Bosnie et 2-1 contre le Canada). Le Qatar a fini dernier avec seulement 1 point."
+        },
+        "it": {
+          "question": "La Svizzera ha chiuso all'ultimo posto del Girone B a Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "In realtà la Svizzera ha vinto il Girone B con 7 punti (pareggio con il Qatar, vittoria 4-1 sulla Bosnia e 2-1 sul Canada). Il Qatar è arrivato ultimo con appena 1 punto."
+        },
+        "ja": {
+          "question": "スイスはFootball 2026のグループBを最下位で終えた。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "実際にはスイスは勝ち点7でグループBを首位で通過した（カタールと引き分け、ボスニアに4-1、カナダに2-1で勝利）。カタールはわずか勝ち点1で最下位だった。"
+        },
+        "ko": {
+          "question": "스위스는 Football 2026 B조에서 최하위로 마감했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "실제로는 스위스가 승점 7점으로 B조 1위를 차지했다(카타르와 무승부, 보스니아에 4-1 승, 캐나다에 2-1 승). 카타르가 단 1점으로 최하위였다."
+        },
+        "pt-BR": {
+          "question": "A Suíça terminou em último lugar no Grupo B na Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Na verdade, a Suíça venceu o Grupo B com 7 pontos (empatou com o Catar, venceu a Bósnia por 4 a 1 e o Canadá por 2 a 1). O Catar ficou em último com apenas 1 ponto."
+        },
+        "zh-Hans": {
+          "question": "瑞士在 Football 2026 的 B 组中垫底出局。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "实际上瑞士以 7 分获得 B 组第一（与卡塔尔战平，4-1 击败波斯尼亚，2-1 击败加拿大）。卡塔尔仅积 1 分排名垫底。"
+        }
+      },
+      "i18nSourceHash": "22ec1105e1f2c46b"
     },
     {
       "id": "tf-2026-england-drew-opener",
@@ -25888,7 +26220,90 @@
       "explanation": "England won their opening match 4-2 against Croatia at AT&T Stadium in Arlington, Texas. Their goalless draw came in their second match against Ghana.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Gillette_Stadium_%28Top_View%29.jpg/640px-Gillette_Stadium_%28Top_View%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "تعادلت إنجلترا في مباراتها الافتتاحية في بطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "فازت إنجلترا في مباراتها الافتتاحية بنتيجة 4-2 على كرواتيا في ملعب AT&T بمدينة أرلينغتون بولاية تكساس. أما تعادلها السلبي فقد جاء في مباراتها الثانية أمام غانا."
+        },
+        "de": {
+          "question": "England spielte im Auftaktspiel bei Football 2026 unentschieden.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "England gewann sein Auftaktspiel mit 4:2 gegen Kroatien im AT&T Stadium in Arlington, Texas. Das torlose Unentschieden gab es erst im zweiten Spiel gegen Ghana."
+        },
+        "es": {
+          "question": "Inglaterra empató su partido inaugural en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Inglaterra ganó su partido inaugural 4-2 ante Croacia en el AT&T Stadium de Arlington, Texas. Su empate sin goles llegó en el segundo partido, frente a Ghana."
+        },
+        "es-ES": {
+          "question": "Inglaterra empató su partido inaugural en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Inglaterra ganó su partido inaugural por 4-2 ante Croacia en el AT&T Stadium de Arlington, Texas. Su empate sin goles llegó en el segundo partido, frente a Ghana."
+        },
+        "fr": {
+          "question": "L'Angleterre a fait match nul lors de son match d'ouverture à Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "L'Angleterre a remporté son match d'ouverture 4-2 face à la Croatie à l'AT&T Stadium d'Arlington, au Texas. Son match nul et vierge est survenu lors de sa deuxième rencontre, contre le Ghana."
+        },
+        "it": {
+          "question": "L'Inghilterra ha pareggiato la partita d'esordio a Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "L'Inghilterra ha vinto la partita d'esordio 4-2 contro la Croazia all'AT&T Stadium di Arlington, in Texas. Il pareggio a reti bianche è arrivato nella seconda partita, contro il Ghana."
+        },
+        "ja": {
+          "question": "イングランドはFootball 2026の初戦を引き分けた。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "イングランドは初戦で、テキサス州アーリントンのAT&Tスタジアムでクロアチアを4-2で下しました。スコアレスドローとなったのは、第2戦のガーナ戦でした。"
+        },
+        "ko": {
+          "question": "잉글랜드는 Football 2026 개막전에서 비겼다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "잉글랜드는 텍사스주 알링턴의 AT&T 스타디움에서 열린 개막전에서 크로아티아를 4-2로 이겼습니다. 무득점 무승부는 두 번째 경기인 가나전에서 나왔습니다."
+        },
+        "pt-BR": {
+          "question": "A Inglaterra empatou sua partida de estreia na Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A Inglaterra venceu sua partida de estreia por 4 a 2 contra a Croácia no AT&T Stadium, em Arlington, Texas. O empate sem gols aconteceu na segunda partida, contra Gana."
+        },
+        "zh-Hans": {
+          "question": "英格兰在 Football 2026 的首场比赛中打成平局。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "英格兰在得克萨斯州阿灵顿的 AT&T 体育场以 4-2 战胜克罗地亚，赢得了首场比赛。他们的零比零平局出现在对阵加纳的第二场比赛中。"
+        }
+      },
+      "i18nSourceHash": "6ae0691fdbefd3dd"
     },
     {
       "id": "tf-2026-senegal-won-group",
