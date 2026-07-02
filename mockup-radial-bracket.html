@@ -158,7 +158,7 @@ function resize() {
   C.style.width = W + 'px'; C.style.height = H + 'px';
   ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
   cx = W / 2; cy = H / 2;
-  R = Math.min(W, H) / 2 - 28;
+  R = (Math.min(W, H) / 2 - 8) / 1.045;
 }
 
 // text along an arc; flipped=true renders right-side-up at the bottom of the circle
@@ -210,12 +210,11 @@ function draw() {
   ctx.fillStyle = '#f5f4f1'; ctx.fillRect(0, 0, W, H);
 
   // node rings centered in their band; chord rings between rounds
-  const B0 = R * 1.005, B1 = R * 0.782, B2 = R * 0.5569, B3 = R * 0.3791, B4 = R * 0.2227;
+  const B0 = R * 1.045, B1 = R * 0.782, B2 = R * 0.5569, B3 = R * 0.3791, B4 = R * 0.2227;
   const rTeam = R * 0.8934, r16r = R * 0.6706, rQF = R * 0.4668, rSF = R * 0.301;
   const rC1 = R * 0.801, rC2 = R * 0.5758, rC3 = R * 0.3957, rC4 = R * 0.1611;
   const nr = Math.max(10, R * 0.0521);
   const nr16 = Math.max(9, R * 0.0427), nrQF = Math.max(8, R * 0.0379), nrSF = Math.max(7, R * 0.0332);
-  const rStars = R * 0.955;
 
   // === ring bands — each round's nodes sit at the radial center of its band ===
   const bands = [
@@ -321,8 +320,8 @@ function draw() {
 
   // === curved ring labels — inside their band, clear of the nodes ===
   const lblCol = 'rgba(0,0,0,0.32)';
-  arcText('G R O U P   S T A G E', R * 0.985, -Math.PI/2, false, R * 0.030, lblCol);
-  arcText('G R O U P   S T A G E', R * 0.985,  Math.PI/2, true,  R * 0.030, lblCol);
+  arcText('R O U N D   O F   3 2', R * 1.028, -Math.PI/2, false, R * 0.030, lblCol);
+  arcText('R O U N D   O F   3 2', R * 1.028,  Math.PI/2, true,  R * 0.030, lblCol);
   arcText('R O U N D   O F   1 6', R * 0.7464, -Math.PI/2, false, R * 0.0355, lblCol);
   arcText('R O U N D   O F   1 6', R * 0.7464,  Math.PI/2, true,  R * 0.0355, lblCol);
   arcText('Q U A R T E R - F I N A L S', R * 0.5308, -Math.PI/2, false, R * 0.0284, lblCol);
@@ -356,27 +355,44 @@ function draw() {
     ctx.restore();
   }
 
-  // name just inside the node, anchored so the text extends toward the center
-  // (never back across the flag)
-  function drawName(a, r, team, nodeR, dim) {
-    if (!showNames || !isR(team)) return;
-    const [x, y] = pt(a, r - nodeR - Math.max(4, R * 0.012));
-    const ca = Math.cos(a), sa = Math.sin(a);
+  // text wrapped around a flag circle (like a badge) — apexA is the direction
+  // from the flag's center the text arcs around; reads correctly on any side
+  function badgeText(text, x0, y0, r, apexA, size, color, dim) {
+    const flip = Math.sin(apexA) > 0;
     ctx.save();
     if (dim) ctx.globalAlpha = 0.25;
-    ctx.font = `700 ${Math.max(8, R * 0.0215)}px system-ui`;
-    ctx.fillStyle = 'rgba(0,0,0,0.55)';
-    if (Math.abs(ca) > Math.abs(sa)) {
-      // east/west node: text runs horizontally toward the center
-      ctx.textAlign = ca > 0 ? 'right' : 'left';
-      ctx.textBaseline = 'middle';
-    } else {
-      // north/south node: text sits below/above the flag, toward the center
-      ctx.textAlign = 'center';
-      ctx.textBaseline = sa > 0 ? 'bottom' : 'top';
+    ctx.font = `700 ${size}px system-ui`;
+    ctx.fillStyle = color;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    const ls = size * 0.14;
+    const chars = [...text];
+    const widths = chars.map(ch => ctx.measureText(ch).width + ls);
+    const totalA = (widths.reduce((a,b)=>a+b,0) - ls) / r;
+    let a = flip ? apexA + totalA/2 : apexA - totalA/2;
+    for (let i = 0; i < chars.length; i++) {
+      const halfA = (widths[i]/2) / r * (flip ? -1 : 1);
+      a += halfA;
+      const x = x0 + r * Math.cos(a), y = y0 + r * Math.sin(a);
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(a + (flip ? -Math.PI/2 : Math.PI/2));
+      ctx.fillText(chars[i], 0, 0);
+      ctx.restore();
+      a += halfA;
     }
-    ctx.fillText(shortName(team), x, y);
     ctx.restore();
+  }
+
+  // country name wrapped around the flag: outside it on the outer ring,
+  // around the inner side for the inner rounds
+  function drawName(a, ringR, team, nodeR, outward, extraGap, dim) {
+    if (!showNames || !isR(team)) return;
+    const size = Math.max(8, R * 0.0215);
+    const gap = Math.max(4, R * 0.0135) + (extraGap || 0);
+    const r = nodeR + gap + size / 2;
+    const [x0, y0] = pt(a, ringR);
+    const apexA = outward ? a : a + Math.PI;
+    badgeText(shortName(team), x0, y0, r, apexA, size, 'rgba(0,0,0,0.55)', dim);
   }
 
   // R32 team nodes + stars + names
@@ -390,21 +406,23 @@ function draw() {
       const state = w === team ? 'win' : (w ? 'elim' : '');
       const nodeDim = dim && team !== selected;
       drawNode(a, rTeam, team, nr, state, nodeDim);
-      // championship stars, arced outside the flag
+      // championship stars wrapped around the flag circle, just outside it
       const nStars = STARS[team];
+      const starSize = Math.max(3.5, R * 0.0115);
       if (nStars) {
-        const starSize = Math.max(3.5, R * 0.0115);
-        const step = (starSize * 2.4) / rStars;
+        const [x0, y0] = pt(a, rTeam);
+        const rBadge = nr + Math.max(4, R * 0.0135);
+        const step = (starSize * 2.3) / rBadge;
         ctx.save();
         if (nodeDim) ctx.globalAlpha = 0.35;
         for (let si = 0; si < nStars; si++) {
           const sa = a + (si - (nStars - 1) / 2) * step;
-          const [sx, sy] = pt(sa, rStars);
-          drawStar(sx, sy, starSize, sa);
+          drawStar(x0 + rBadge * Math.cos(sa), y0 + rBadge * Math.sin(sa), starSize, sa);
         }
         ctx.restore();
       }
-      drawName(a, rTeam, team, nr, nodeDim);
+      // name wraps outside the flag, beyond the stars when present
+      drawName(a, rTeam, team, nr, true, nStars ? starSize * 2.2 : 0, nodeDim);
     }
   }
 
@@ -416,20 +434,20 @@ function draw() {
     const state = w && r16w ? (r16w === w ? 'win' : 'elim') : '';
     const dim = selected != null && w !== selected;
     drawNode(pairMid[i], r16r, w, nr16, state, dim);
-    if (w) drawName(pairMid[i], r16r, w, nr16, dim);
+    if (w) drawName(pairMid[i], r16r, w, nr16, false, 0, dim);
   }
   // QF slot nodes (R16 winners)
   for (let j = 0; j < 8; j++) {
     const w = winner(M[r16Order[j]]);
     const dim = selected != null && w !== selected;
     drawNode(r16MatchA[j], rQF, w, nrQF, '', dim);
-    if (w) drawName(r16MatchA[j], rQF, w, nrQF, dim);
+    if (w) drawName(r16MatchA[j], rQF, w, nrQF, false, 0, dim);
   }
   // SF slot nodes (QF winners)
   for (let k = 0; k < 4; k++) {
     const w = winner(M[qfOrder[k]]);
     drawNode(qfMatchA[k], rSF, w, nrSF, '', selected != null && w !== selected);
-    if (w) drawName(qfMatchA[k], rSF, w, nrSF, selected != null && w !== selected);
+    if (w) drawName(qfMatchA[k], rSF, w, nrSF, false, 0, selected != null && w !== selected);
   }
 
   // === score labels (toggleable, next to the winner's stub, above the nodes) ===
