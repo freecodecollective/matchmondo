@@ -26800,7 +26800,90 @@
       "answer": 0,
       "explanation": "The Caribbean island nation of Curaçao (population ~150,000) qualified for the tournament for the first time ever, drawn into Group E with Germany, Côte d'Ivoire, and Ecuador.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "شاركت كوراساو للمرة الأولى في تاريخها في بطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "تأهلت دولة كوراساو الجزيرية الكاريبية (عدد سكانها نحو 150,000 نسمة) إلى البطولة للمرة الأولى على الإطلاق، حيث وقعت في المجموعة E إلى جانب ألمانيا وساحل العاج والإكوادور."
+        },
+        "de": {
+          "question": "Curaçao nahm bei Football 2026 zum allerersten Mal an einem Turnier teil.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Der karibische Inselstaat Curaçao (rund 150.000 Einwohner) qualifizierte sich zum ersten Mal überhaupt für das Turnier und wurde in Gruppe E mit Deutschland, der Elfenbeinküste und Ecuador gelost."
+        },
+        "es": {
+          "question": "Curazao hizo su primera aparición en un torneo en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "La nación insular caribeña de Curazao (con unos 150.000 habitantes) clasificó al torneo por primera vez en su historia y quedó en el Grupo E junto a Alemania, Costa de Marfil y Ecuador."
+        },
+        "es-ES": {
+          "question": "Curazao debutó en un torneo por primera vez en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "El país insular caribeño de Curazao (con unos 150.000 habitantes) se clasificó para el torneo por primera vez en su historia y cayó en el Grupo E junto a Alemania, Costa de Marfil y Ecuador."
+        },
+        "fr": {
+          "question": "Curaçao a disputé son tout premier tournoi lors de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "L'État insulaire caribéen de Curaçao (environ 150 000 habitants) s'est qualifié pour le tournoi pour la toute première fois, et a été versé dans le Groupe E avec l'Allemagne, la Côte d'Ivoire et l'Équateur."
+        },
+        "it": {
+          "question": "Curaçao ha fatto la sua primissima apparizione in un torneo a Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Lo Stato insulare caraibico di Curaçao (circa 150.000 abitanti) si è qualificato al torneo per la prima volta in assoluto, finendo nel Girone E con Germania, Costa d'Avorio ed Ecuador."
+        },
+        "ja": {
+          "question": "キュラソーはFootball 2026で大会初出場を果たした。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "カリブ海の島国キュラソー（人口約15万人）は史上初めて大会出場を決め、ドイツ、コートジボワール、エクアドルとともにグループEに入った。"
+        },
+        "ko": {
+          "question": "쿠라사오는 Football 2026에서 사상 첫 대회 출전을 이뤄냈다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "카리브해의 섬나라 쿠라사오(인구 약 15만 명)는 사상 처음으로 대회 진출에 성공했으며, 독일, 코트디부아르, 에콰도르와 함께 E조에 편성됐다."
+        },
+        "pt-BR": {
+          "question": "Curaçao fez sua primeira participação em um torneio na Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A nação insular caribenha de Curaçao (cerca de 150.000 habitantes) se classificou para o torneio pela primeira vez na história e foi sorteada no Grupo E, ao lado de Alemanha, Costa do Marfim e Equador."
+        },
+        "zh-Hans": {
+          "question": "库拉索在 Football 2026 上首次亮相赛事。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "加勒比岛国库拉索（人口约15万）史上首次获得赛事参赛资格，与德国、科特迪瓦和厄瓜多尔同分在E组。"
+        }
+      },
+      "i18nSourceHash": "c3b94f2ae2e97ec3"
     }
   ],
   "pendingTasks": [
