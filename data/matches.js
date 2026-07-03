@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-03 00:04 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-07-03 04:07 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1105,9 +1105,9 @@ window.WC_MATCHES = [
     "venue": "BMO Field",
     "city": "Toronto, Canada",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 0,
-    "scoreA": 0,
-    "isLive": true
+    "scoreH": 2,
+    "scoreA": 1,
+    "result": "FT"
   },
   {
     "n": 85,
@@ -1119,8 +1119,9 @@ window.WC_MATCHES = [
     "venue": "BC Place",
     "city": "Vancouver, Canada",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 2,
+    "scoreA": 0,
+    "isLive": true
   },
   {
     "n": 88,
@@ -1218,7 +1219,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-06T19:00:00Z",
     "stage": "Round of 16",
     "group": null,
-    "home": "To be announced",
+    "home": "Portugal",
     "away": "Spain",
     "venue": "AT&T Stadium",
     "city": "Arlington (Dallas), TX",
@@ -1257,7 +1258,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-07T20:00:00Z",
     "stage": "Round of 16",
     "group": null,
-    "home": "To be announced",
+    "home": "Switzerland",
     "away": "To be announced",
     "venue": "BC Place",
     "city": "Vancouver, Canada",
