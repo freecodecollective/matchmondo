@@ -26317,7 +26317,90 @@
       "explanation": "France won Group I with a perfect 9 points. Senegal finished third with 3 points (beat Iraq 5-0, lost to France 1-3 and Norway 2-3), but still advanced as one of the best third-placed teams.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Lincoln_Financial_Field_%28Aerial_view%29.jpg/640px-Lincoln_Financial_Field_%28Aerial_view%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "فازت السنغال بالمجموعة الأولى في Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "فازت فرنسا بالمجموعة الأولى برصيد مثالي بلغ 9 نقاط. أنهت السنغال في المركز الثالث برصيد 3 نقاط (فازت على العراق 5-0، وخسرت أمام فرنسا 1-3 وأمام النرويج 2-3)، لكنها تأهلت رغم ذلك كواحدة من أفضل المنتخبات الحاصلة على المركز الثالث."
+        },
+        "de": {
+          "question": "Senegal gewann bei Football 2026 die Gruppe I.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Frankreich gewann die Gruppe I mit makellosen 9 Punkten. Senegal wurde mit 3 Punkten Dritter (5:0 gegen den Irak, 1:3 gegen Frankreich und 2:3 gegen Norwegen), zog aber als einer der besten Gruppendritten dennoch weiter."
+        },
+        "es": {
+          "question": "Senegal ganó el Grupo I en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Francia ganó el Grupo I con un pleno de 9 puntos. Senegal terminó tercero con 3 puntos (venció a Irak 5-0, perdió ante Francia 1-3 y ante Noruega 2-3), pero igual avanzó como uno de los mejores terceros."
+        },
+        "es-ES": {
+          "question": "Senegal ganó el Grupo I en Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Francia ganó el Grupo I con un pleno de 9 puntos. Senegal acabó tercero con 3 puntos (venció a Irak 5-0, perdió ante Francia 1-3 y ante Noruega 2-3), pero aun así avanzó como uno de los mejores terceros."
+        },
+        "fr": {
+          "question": "Le Sénégal a remporté le groupe I lors de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "La France a remporté le groupe I avec un sans-faute de 9 points. Le Sénégal a terminé troisième avec 3 points (victoire 5-0 contre l'Irak, défaites 1-3 face à la France et 2-3 face à la Norvège), mais s'est tout de même qualifié parmi les meilleurs troisièmes."
+        },
+        "it": {
+          "question": "Il Senegal ha vinto il Gruppo I a Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "La Francia ha vinto il Gruppo I con un perfetto punteggio di 9 punti. Il Senegal ha chiuso al terzo posto con 3 punti (5-0 contro l'Iraq, sconfitte 1-3 con la Francia e 2-3 con la Norvegia), ma è comunque passato come una delle migliori terze classificate."
+        },
+        "ja": {
+          "question": "セネガルはFootball 2026のグループIで首位になった。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "グループIは、勝点9の完璧な成績でフランスが首位となった。セネガルは勝点3で3位に終わり（イラクに5-0で勝利、フランスに1-3、ノルウェーに2-3で敗戦）、それでも成績上位の3位チームの一つとして決勝トーナメントに進出した。"
+        },
+        "ko": {
+          "question": "세네갈은 Football 2026 I조에서 1위를 차지했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "I조는 프랑스가 승점 9점의 완벽한 성적으로 1위를 차지했다. 세네갈은 승점 3점으로 3위에 그쳤지만(이라크에 5-0 승리, 프랑스에 1-3, 노르웨이에 2-3 패배), 상위권 3위 팀 중 하나로 다음 라운드에 진출했다."
+        },
+        "pt-BR": {
+          "question": "Senegal venceu o Grupo I na Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "A França venceu o Grupo I com um aproveitamento perfeito de 9 pontos. Senegal terminou em terceiro com 3 pontos (venceu o Iraque por 5 a 0, perdeu para a França por 1 a 3 e para a Noruega por 2 a 3), mas mesmo assim avançou como uma das melhores equipes em terceiro lugar."
+        },
+        "zh-Hans": {
+          "question": "塞内加尔在 Football 2026 上赢得了 I 组第一。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "法国以全胜 9 分的成绩夺得 I 组头名。塞内加尔以 3 分位列小组第三（5-0 击败伊拉克，1-3 不敌法国，2-3 负于挪威），但仍作为成绩最好的小组第三名之一晋级。"
+        }
+      },
+      "i18nSourceHash": "6cb97a5401b3702a"
     },
     {
       "id": "tf-2026-ten-groups",
@@ -26330,7 +26413,90 @@
       "answer": 1,
       "explanation": "Football 2026 uses 12 groups of four teams each (Groups A through L), not 10 groups of five. The 48 teams are divided into 12 groups, with the top two from each group plus the eight best third-placed teams advancing to a Round of 32.",
       "type": "true_false",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "يعتمد Football 2026 نظام 10 مجموعات تضم كل منها خمسة منتخبات.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "يعتمد Football 2026 نظام 12 مجموعة تضم كل منها أربعة منتخبات (المجموعات من A إلى L)، وليس 10 مجموعات من خمسة منتخبات. تُقسَّم المنتخبات الـ48 إلى 12 مجموعة، ويتأهل المنتخبان الأولان من كل مجموعة إضافةً إلى أفضل ثمانية منتخبات حلّت في المركز الثالث إلى دور الـ32."
+        },
+        "de": {
+          "question": "Football 2026 wird in einem Format mit 10 Gruppen zu je fünf Mannschaften ausgetragen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Football 2026 verwendet 12 Gruppen mit je vier Mannschaften (Gruppen A bis L), nicht 10 Gruppen zu je fünf. Die 48 Teams werden in 12 Gruppen aufgeteilt, wobei die beiden Ersten jeder Gruppe sowie die acht besten Gruppendritten ins Sechzehntelfinale (Runde der letzten 32) einziehen."
+        },
+        "es": {
+          "question": "Football 2026 utiliza un formato de 10 grupos con cinco selecciones en cada uno.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Football 2026 usa 12 grupos de cuatro selecciones cada uno (Grupos A al L), no 10 grupos de cinco. Las 48 selecciones se dividen en 12 grupos, y los dos primeros de cada grupo más los ocho mejores terceros avanzan a los dieciseisavos de final (ronda de 32)."
+        },
+        "es-ES": {
+          "question": "Football 2026 utiliza un formato de 10 grupos con cinco selecciones en cada uno.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Football 2026 emplea 12 grupos de cuatro selecciones cada uno (Grupos A al L), no 10 grupos de cinco. Las 48 selecciones se dividen en 12 grupos, y los dos primeros de cada grupo más los ocho mejores terceros pasan a los dieciseisavos de final (ronda de 32)."
+        },
+        "fr": {
+          "question": "Football 2026 se joue selon un format de 10 groupes de cinq équipes chacun.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Football 2026 comporte 12 groupes de quatre équipes chacun (groupes A à L), et non 10 groupes de cinq. Les 48 équipes sont réparties en 12 groupes ; les deux premiers de chaque groupe ainsi que les huit meilleurs troisièmes se qualifient pour les seizièmes de finale (tour des 32)."
+        },
+        "it": {
+          "question": "Football 2026 adotta un format con 10 gironi da cinque squadre ciascuno.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Football 2026 prevede 12 gironi da quattro squadre ciascuno (dai Gironi A a L), non 10 gironi da cinque. Le 48 squadre sono suddivise in 12 gironi: le prime due di ogni girone più le otto migliori terze accedono ai sedicesimi di finale (turno dei 32)."
+        },
+        "ja": {
+          "question": "Football 2026は、5チームずつの10グループという方式を採用している。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "Football 2026が採用しているのは、4チームずつの12グループ（グループAからL）であり、5チームずつの10グループではありません。48チームが12グループに分けられ、各グループの上位2チームに加え、3位チームのうち成績上位8チームがラウンド32へ進出します。"
+        },
+        "ko": {
+          "question": "Football 2026은 각 조에 다섯 팀씩 들어가는 10개 조 방식을 사용한다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "Football 2026은 다섯 팀씩 10개 조가 아니라, 네 팀씩 12개 조(A조부터 L조까지) 방식을 사용합니다. 48개 팀이 12개 조로 나뉘며, 각 조 상위 2개 팀과 각 조 3위 팀 중 성적이 가장 좋은 8개 팀이 32강(라운드 오브 32)에 진출합니다."
+        },
+        "pt-BR": {
+          "question": "O Football 2026 usa um formato de 10 grupos com cinco seleções em cada grupo.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "O Football 2026 usa 12 grupos de quatro seleções cada (Grupos A a L), e não 10 grupos de cinco. As 48 seleções são divididas em 12 grupos, e as duas primeiras de cada grupo, além das oito melhores terceiras colocadas, avançam para as oitavas de 32 (Round of 32)."
+        },
+        "zh-Hans": {
+          "question": "Football 2026 采用 10 个小组、每组五支球队的赛制。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "Football 2026 采用的是 12 个小组、每组四支球队的赛制（A 组至 L 组），而不是 10 个小组、每组五支球队。48 支球队被分为 12 个小组，各小组前两名以及成绩最好的 8 个小组第三名晋级 32 强淘汰赛。"
+        }
+      },
+      "i18nSourceHash": "973283dd8ff34750"
     },
     {
       "id": "tf-2026-colombia-beat-portugal",
@@ -26344,7 +26510,90 @@
       "explanation": "Colombia and Portugal played to a cagey 0-0 draw in their final Group K match at Hard Rock Stadium. Colombia won the group on 7 points (ahead of Portugal's 5) thanks to their earlier wins over Congo DR and Uzbekistan.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Hard_Rock_Stadium_for_Super_Bowl_LIV_%2849606710103%29.jpg/640px-Hard_Rock_Stadium_for_Super_Bowl_LIV_%2849606710103%29.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "هزمت كولومبيا البرتغال في دور المجموعات ببطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "تعادلت كولومبيا والبرتغال بحذر بنتيجة 0-0 في مباراتهما الأخيرة ضمن المجموعة K على ملعب Hard Rock Stadium. وتصدرت كولومبيا المجموعة برصيد 7 نقاط (متقدمة على البرتغال صاحبة الـ5 نقاط) بفضل انتصاراتها السابقة على الكونغو الديمقراطية وأوزبكستان."
+        },
+        "de": {
+          "question": "Kolumbien besiegte Portugal in der Gruppenphase von Football 2026.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Kolumbien und Portugal trennten sich in ihrem letzten Spiel der Gruppe K im Hard Rock Stadium mit einem vorsichtigen 0:0. Kolumbien gewann die Gruppe mit 7 Punkten (vor Portugals 5) dank der vorherigen Siege gegen die DR Kongo und Usbekistan."
+        },
+        "es": {
+          "question": "Colombia venció a Portugal en la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Colombia y Portugal firmaron un cauteloso empate 0-0 en su último partido del Grupo K en el Hard Rock Stadium. Colombia ganó el grupo con 7 puntos (por delante de los 5 de Portugal) gracias a sus victorias previas ante Congo RD y Uzbekistán."
+        },
+        "es-ES": {
+          "question": "Colombia venció a Portugal en la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Colombia y Portugal firmaron un prudente empate a cero en su último partido del Grupo K en el Hard Rock Stadium. Colombia ganó el grupo con 7 puntos (por delante de los 5 de Portugal) gracias a sus victorias previas ante Congo RD y Uzbekistán."
+        },
+        "fr": {
+          "question": "La Colombie a battu le Portugal lors de la phase de groupes de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "La Colombie et le Portugal se sont quittés sur un prudent 0-0 lors de leur dernier match du groupe K au Hard Rock Stadium. La Colombie a terminé en tête du groupe avec 7 points (devant les 5 du Portugal) grâce à ses victoires précédentes contre la RD Congo et l'Ouzbékistan."
+        },
+        "it": {
+          "question": "La Colombia ha sconfitto il Portogallo nella fase a gironi di Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Colombia e Portogallo hanno chiuso con un cauto 0-0 la loro ultima partita del Gruppo K all'Hard Rock Stadium. La Colombia ha vinto il girone con 7 punti (davanti ai 5 del Portogallo) grazie alle precedenti vittorie contro Congo RD e Uzbekistan."
+        },
+        "ja": {
+          "question": "コロンビアはFootball 2026のグループステージでポルトガルを破った。",
+          "options": [
+            "正しい",
+            "誤り"
+          ],
+          "explanation": "コロンビアとポルトガルは、ハードロック・スタジアムでのグループK最終戦で慎重な0-0の引き分けに終わりました。コロンビアはコンゴ民主共和国とウズベキスタンに先に勝利していたことで勝ち点7（ポルトガルの5を上回る）を挙げ、グループ首位となりました。"
+        },
+        "ko": {
+          "question": "콜롬비아는 Football 2026 조별 리그에서 포르투갈을 이겼다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "콜롬비아와 포르투갈은 하드록 스타디움에서 열린 K조 최종전에서 신중한 경기 끝에 0-0으로 비겼습니다. 콜롬비아는 앞선 콩고민주공화국과 우즈베키스탄전 승리 덕분에 승점 7점(포르투갈의 5점보다 앞선)으로 조 1위를 차지했습니다."
+        },
+        "pt-BR": {
+          "question": "A Colômbia derrotou Portugal na fase de grupos da Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Colômbia e Portugal ficaram num cauteloso empate por 0 a 0 na última partida do Grupo K no Hard Rock Stadium. A Colômbia venceu o grupo com 7 pontos (à frente dos 5 de Portugal) graças às vitórias anteriores sobre Congo RD e Uzbequistão."
+        },
+        "zh-Hans": {
+          "question": "哥伦比亚在 Football 2026 小组赛中击败了葡萄牙。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "哥伦比亚和葡萄牙在硬石体育场进行的 K 组末轮比赛中谨慎地以 0-0 战平。凭借此前战胜刚果（金）和乌兹别克斯坦的胜利，哥伦比亚以 7 分（领先葡萄牙的 5 分）夺得小组头名。"
+        }
+      },
+      "i18nSourceHash": "7b22e190aad09176"
     },
     {
       "id": "tf-2026-morocco-eliminated",
@@ -26358,7 +26607,90 @@
       "explanation": "Morocco finished second in Group C with 7 points, equal with Brazil. They advanced to the knockout rounds after holding Brazil to a 1-1 draw, beating Scotland 1-0, and thrashing Haiti 4-2.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Mexico_Guadalupe_Monterrey_Estadio_BBVA_Bancomer_fifa_world_cup_2026_6.JPG/640px-Mexico_Guadalupe_Monterrey_Estadio_BBVA_Bancomer_fifa_world_cup_2026_6.JPG",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "أُقصي المغرب من دور المجموعات في بطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "احتل المغرب المركز الثاني في المجموعة C برصيد 7 نقاط، مناصفةً مع البرازيل. وتأهل إلى الأدوار الإقصائية بعد تعادله مع البرازيل 1-1، وفوزه على اسكتلندا 1-0، واكتساحه هايتي 4-2."
+        },
+        "de": {
+          "question": "Marokko schied bei Football 2026 in der Gruppenphase aus.",
+          "options": [
+            "Wahr",
+            "Falsch"
+          ],
+          "explanation": "Marokko wurde mit 7 Punkten Zweiter der Gruppe C, punktgleich mit Brasilien. Der Einzug in die K.-o.-Runde gelang nach einem 1:1 gegen Brasilien, einem 1:0-Sieg über Schottland und einem klaren 4:2 gegen Haiti."
+        },
+        "es": {
+          "question": "Marruecos quedó eliminado en la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Marruecos terminó segundo en el Grupo C con 7 puntos, igualado con Brasil. Avanzó a las rondas eliminatorias tras empatar 1-1 con Brasil, vencer 1-0 a Escocia y golear 4-2 a Haití."
+        },
+        "es-ES": {
+          "question": "Marruecos quedó eliminado en la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Marruecos terminó segundo en el Grupo C con 7 puntos, empatado con Brasil. Pasó a las rondas eliminatorias tras empatar 1-1 con Brasil, ganar 1-0 a Escocia y golear 4-2 a Haití."
+        },
+        "fr": {
+          "question": "Le Maroc a été éliminé au premier tour de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Le Maroc a terminé deuxième du groupe C avec 7 points, à égalité avec le Brésil. Il s'est qualifié pour les phases à élimination directe après avoir tenu le Brésil en échec 1-1, battu l'Écosse 1-0 et écrasé Haïti 4-2."
+        },
+        "it": {
+          "question": "Il Marocco è stato eliminato nella fase a gironi di Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Il Marocco ha chiuso al secondo posto nel Girone C con 7 punti, a pari merito con il Brasile. Si è qualificato agli scontri diretti dopo aver pareggiato 1-1 con il Brasile, battuto la Scozia 1-0 e travolto Haiti 4-2."
+        },
+        "ja": {
+          "question": "モロッコはFootball 2026のグループステージで敗退した。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "モロッコはグループCを勝ち点7でブラジルと並び、2位で通過した。ブラジルと1-1で引き分け、スコットランドに1-0で勝利し、ハイチを4-2で圧倒して決勝トーナメントに進出した。"
+        },
+        "ko": {
+          "question": "모로코는 Football 2026 조별리그에서 탈락했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "모로코는 승점 7점으로 브라질과 동률을 이루며 C조 2위로 마쳤다. 브라질과 1-1로 비기고 스코틀랜드를 1-0으로 꺾었으며 아이티를 4-2로 대파하면서 토너먼트에 진출했다."
+        },
+        "pt-BR": {
+          "question": "Marrocos foi eliminado na fase de grupos da Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "Marrocos terminou em segundo no Grupo C com 7 pontos, empatado com o Brasil. Avançou para as fases eliminatórias após segurar o empate em 1 a 1 com o Brasil, vencer a Escócia por 1 a 0 e golear o Haiti por 4 a 2."
+        },
+        "zh-Hans": {
+          "question": "摩洛哥在Football 2026的小组赛阶段被淘汰。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "摩洛哥以7分位居C组第二，与巴西同分。他们在与巴西1比1战平、1比0击败苏格兰并以4比2大胜海地后晋级淘汰赛。"
+        }
+      },
+      "i18nSourceHash": "5fe99549de5067df"
     },
     {
       "id": "tf-2026-canada-lost-qatar",
@@ -26372,7 +26704,90 @@
       "explanation": "Canada emphatically beat Qatar 6-0 at BC Place in Vancouver — one of the most lopsided results of the tournament. It was Canada's biggest-ever win at the tournament.",
       "type": "true_false",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Toronto_BMO_Field_in_2024.jpg/640px-Toronto_BMO_Field_in_2024.jpg",
-      "approved": true
+      "approved": true,
+      "translations": {
+        "ar": {
+          "question": "خسرت كندا أمام قطر في دور المجموعات ببطولة Football 2026.",
+          "options": [
+            "صحيح",
+            "خطأ"
+          ],
+          "explanation": "فازت كندا بقوة على قطر بنتيجة 6-0 على ملعب BC Place في فانكوفر — وهي إحدى أكثر النتائج تفاوتاً في البطولة. كان ذلك أكبر فوز لكندا على الإطلاق في البطولة."
+        },
+        "de": {
+          "question": "Kanada verlor in der Gruppenphase von Football 2026 gegen Katar.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "explanation": "Kanada bezwang Katar deutlich mit 6:0 im BC Place in Vancouver — eines der einseitigsten Ergebnisse des Turniers. Es war Kanadas höchster Sieg aller Zeiten bei dem Turnier."
+        },
+        "es": {
+          "question": "Canadá perdió ante Catar en la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Canadá goleó contundentemente a Catar por 6-0 en el BC Place de Vancouver, uno de los resultados más desiguales del torneo. Fue la mayor victoria de Canadá en la historia del torneo."
+        },
+        "es-ES": {
+          "question": "Canadá perdió ante Catar en la fase de grupos de Football 2026.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "explanation": "Canadá goleó de forma contundente a Catar por 6-0 en el BC Place de Vancouver, uno de los resultados más desiguales del torneo. Fue la mayor victoria de Canadá en la historia del torneo."
+        },
+        "fr": {
+          "question": "Le Canada a perdu contre le Qatar lors de la phase de groupes de Football 2026.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "explanation": "Le Canada a largement dominé le Qatar 6-0 au BC Place de Vancouver, l'un des résultats les plus déséquilibrés du tournoi. Ce fut la plus large victoire du Canada dans l'histoire du tournoi."
+        },
+        "it": {
+          "question": "Il Canada ha perso contro il Qatar nella fase a gironi di Football 2026.",
+          "options": [
+            "Vero",
+            "Falso"
+          ],
+          "explanation": "Il Canada ha travolto il Qatar per 6-0 al BC Place di Vancouver, uno dei risultati più netti del torneo. È stata la più grande vittoria di sempre del Canada nel torneo."
+        },
+        "ja": {
+          "question": "カナダはFootball 2026のグループステージでカタールに敗れた。",
+          "options": [
+            "正しい",
+            "間違い"
+          ],
+          "explanation": "カナダはバンクーバーのBCプレースでカタールを6-0と圧倒し、大会でも屈指の一方的な結果となった。これは大会におけるカナダ史上最大の勝利だった。"
+        },
+        "ko": {
+          "question": "캐나다는 Football 2026 조별리그에서 카타르에 패했다.",
+          "options": [
+            "참",
+            "거짓"
+          ],
+          "explanation": "캐나다는 밴쿠버 BC 플레이스에서 카타르를 6-0으로 완파했으며, 이는 대회에서 가장 일방적인 결과 중 하나였다. 대회에서 캐나다가 거둔 역대 최다 점수 차 승리였다."
+        },
+        "pt-BR": {
+          "question": "O Canadá perdeu para o Catar na fase de grupos da Football 2026.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "explanation": "O Canadá goleou o Catar por 6 a 0 no BC Place, em Vancouver — um dos resultados mais desiguais do torneio. Foi a maior vitória do Canadá na história do torneio."
+        },
+        "zh-Hans": {
+          "question": "加拿大在 Football 2026 小组赛中输给了卡塔尔。",
+          "options": [
+            "正确",
+            "错误"
+          ],
+          "explanation": "加拿大在温哥华的 BC Place 球场以 6-0 大胜卡塔尔，是本届赛事最悬殊的比分之一。这也是加拿大在该赛事历史上最大比分的胜利。"
+        }
+      },
+      "i18nSourceHash": "ca788475354e120a"
     },
     {
       "id": "tf-2026-curacao-first",
