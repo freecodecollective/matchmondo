@@ -5,19 +5,30 @@
       {
         "type": "home",
         "imageUrl": "https://www.prosoccer.com/cdn/shop/files/adidas-2026-algeria-mens-stadium-home-soccer-jersey-6696762.webp?v=1767642429&width=1946",
-        "story": "The adidas Algeria home jersey features a white base with green accents and a bold geometric pattern inspired by Saharan desert landscapes — angular paneling across the front evokes sand dunes shifting under the North African sun. The FAF crest and adidas Trefoil sit on opposite sides of the chest, marking the return of the retro logo to the tournament."
+        "story": "The adidas home jersey features a chalk white base overlaid with subtle golden textured vertical stripes evoking wind-carved Saharan sand dunes. 'Algeria' is inscribed in Arabic script at the back of the neck, and the jersey uses the national flag as the chest crest instead of the federation emblem — a cultural first. The retro adidas Trefoil returns to the tournament for the first time in 36 years."
       },
       {
         "type": "away",
-        "imageUrl": "https://www.bestbuysoccer.com/cdn/shop/files/JN4456_1_APPAREL_Photography_Front_Center_View_white.jpg?v=1774020437&width=1214",
-        "story": "The away kit introduces a deep green base overlaid with an intricate all-over pattern drawing from traditional Algerian tilework and arabesque motifs found in the country's historic mosques and palaces. Gold and white accents reference the star and crescent of the Algerian flag."
+        "imageUrl": "https://www.prosoccer.com/cdn/shop/files/adidas-2026-algeria-mens-stadium-away-soccer-jersey-2091034.jpg?v=1781908452&width=600",
+        "story": "A visual tribute to Algeria's diverse geography beyond the desert — rocky terrains, lush oases and Mediterranean coastline. The two-tone green design pairs darker green sleeves and shoulders with a lighter green torso covered in vertical tonal stripes and geometric patterns, while a red ribbed V-neck collar provides a pop of the national flag."
+      },
+      {
+        "type": "warmup",
+        "story": "The adidas pre-match shirt features a light beige base with a swirling graphic pattern in tones of sand and deep green, with solid green sleeves. The abstract pattern is distinct from the match-day shirts, using AEROREADY moisture-wicking technology.",
+        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitWJCYG7PVs3mZ37u-6movQw-MCLcTnTzZLDBgo9vBU4tivUsug7ON0LGLjQ9M8Bb5_CoYZ52UzAWrnHnOgXlDCpqQgmBPqHqgS5HTXnaawtxodnm1-wEIotMfvvLQFaS3fzwq20ulu6Pom3gMXmsMFayx4AoUpg-K_htBxcO5gRQ6QvPwsLTk9DwCbOQ/s1600/adidas-2026-pm-shirt%20%2813%29.jpg",
+        "colorway": "Beige / Sand / Deep Green"
       }
     ],
     "links": [
       {
         "source": "Footy Headlines",
-        "title": "Algeria 2026 home & away kits released",
-        "url": "https://www.footyheadlines.com/2026/02/algeria-2026-kits.html"
+        "title": "Algeria 2026 home kit released",
+        "url": "https://www.footyheadlines.com/2025/10/algeria-2026-kits.html"
+      },
+      {
+        "source": "Football Fashion",
+        "title": "Algeria 2026 jersey: adidas away kit",
+        "url": "https://footballfashion.org/wordpress/2026/05/10/algeria-2026-jersey-adidas-away-kit-world-cup/"
       },
       {
         "source": "ESPN",
@@ -94,7 +105,7 @@
       {
         "type": "away",
         "imageUrl": "https://soccerwearhouse.com/cdn/shop/files/nike-mens-australia-away-stadium-jersey-2026-greenorange-soccerwearhouse-1953837.png?v=1777939634",
-        "story": "The away jersey draws from the colors of an Australian sunrise, blending coral-to-teal gradients across the shirt. The design captures the vast, varied landscape of the continent — from the red outback to the turquoise coast — in a striking color palette that sets it apart from any previous Socceroos kit."
+        "story": "Inspired by Australian sunrises, the away jersey features a striking coral-pink upper chest that fades into deep teal green toward the hem — the same colors seen on an early morning coastal walk. A lenticular federation crest shifts dimensionally with movement, connecting the symbolic weight of the badge to the act of wearing it. Made from 100% textile waste."
       }
     ],
     "links": [
@@ -227,12 +238,12 @@
       {
         "type": "home",
         "imageUrl": "https://kelme.com/cdn/shop/files/Azul.jpg?v=1780493641&width=2000",
-        "story": "Kelme's Bosnia and Herzegovina home kit features a deep navy blue base with a pinstripe pattern of thin vertical lines alternating between white and yellow across the front, echoing the colors of the national flag. Matching white and yellow trim finishes the round collar and sleeve cuffs, and the kit carries the slogan 'Dream Big Dream BiH' reflecting the nation's pride in reaching the tournament."
+        "story": "Kelme's Bosnia and Herzegovina home kit features a deep navy blue base with thin vertical pinstripes alternating between white and yellow across the front. The design draws from the movement of Bosnia's rivers, symbolizing the nation's journey flowing with pride from its roots to the international stage. The kit carries the slogan 'Dream Big Dream BiH' reflecting the nation's pride in reaching the tournament."
       },
       {
         "type": "away",
         "imageUrl": "https://kelme.com/cdn/shop/files/BLANCA.jpg?v=1780493620&width=2000",
-        "story": "The away kit is predominantly white with solid blue raglan-style sleeves and a matching blue V-neck collar. Thin vertical pinstripes in the national colors of blue and yellow run down the front of the body, creating a clean and modern design that pairs tradition with contemporary football aesthetics."
+        "story": "The away kit features a predominantly white base with solid blue raglan-style sleeves and a matching blue V-neck collar. Thin vertical pinstripes in blue and yellow run down the front, keeping the national identity alive while providing contrast. Designed by Sarajevo-based designer Haris Stambolic."
       }
     ],
     "links": [
@@ -243,8 +254,8 @@
       },
       {
         "source": "Kelme",
-        "title": "Bosnia and Herzegovina national team jersey",
-        "url": "https://kelme.com/en/collections/seleccion-de-futbol-de-bosnia-herzegovina"
+        "title": "The new Kelme skin for Bosnia and Herzegovina for Football 2026",
+        "url": "https://kelme.com/en/blogs/news/la-nueva-piel-kelme-de-bosnia-y-herzegovina-para-el-mundial-2026"
       }
     ],
     "videos": [
@@ -494,19 +505,24 @@
       {
         "type": "home",
         "imageUrl": "https://www.prosoccer.com/cdn/shop/files/nike-2026-croatia-mens-stadium-home-soccer-jersey-5204031.jpg?v=1781907488&width=1946",
-        "story": "Nike's Croatia home jersey continues the iconic red-and-white checkerboard pattern (sahovnica) that has defined Croatian football since 1990, refreshed with a modern cut and subtle tonal gradient within each red square. The checkerboard covers the entire front and back of the shirt, with navy blue trim on the crew-neck collar and sleeve cuffs echoing the third color of the Croatian flag."
+        "story": "Nike's Croatia home jersey returns to a classic approach with bold red-and-white checkers running vertically down the center, directly inspired by the kit worn in Croatia's 1990 match against the United States — the nation's inaugural match as an independent country. Solid red sleeves and blue Hyper Royal accents frame the design, with the word 'Obitelj' (Family) printed inside the collar."
       },
       {
         "type": "away",
         "imageUrl": "https://www.prosoccer.com/cdn/shop/files/nike-2026-croatia-mens-stadium-away-soccer-jersey-8449910.jpg?v=1781907132&width=1946",
-        "story": "The away kit arrives in dark navy with a tonal all-over checkerboard pattern rendered in two shades of blue, creating a sophisticated nighttime interpretation of the classic Croatian motif. White accents on the collar, cuffs and Nike Swoosh provide contrast, and 'Hrvatska' is printed inside the back collar."
+        "story": "The away jersey transposes the checkered design onto a deep navy base with tonal two-tone checkers creating a sophisticated, subdued presence. Thin red and lighter blue details run along the sides for national flair. This is the last kit produced by Nike for Croatia, ending a 26-year partnership before adidas takes over in August 2026."
       }
     ],
     "links": [
       {
         "source": "Footy Headlines",
-        "title": "Croatia 2026 home kit released",
-        "url": "https://www.footyheadlines.com/2025/11/croatia-2026-home-kit.html"
+        "title": "Last by Nike: Croatia 2026 home & away kits released",
+        "url": "https://www.footyheadlines.com/2025/06/croatia-2026-kits.html"
+      },
+      {
+        "source": "Football Fashion",
+        "title": "Croatia 2026 Nike home & away kits",
+        "url": "https://footballfashion.org/wordpress/2026/04/26/croatia-world-cup-2026-kit/"
       },
       {
         "source": "ESPN",
@@ -520,8 +536,8 @@
         "youtubeId": "5YQuAfVhKzQ"
       },
       {
-        "title": "Ranking every Nike 2026 away kit",
-        "youtubeId": "c8u6o5R4kKs"
+        "title": "2026 Croatia kit unboxing",
+        "youtubeId": "vc4Rh0Hw44g"
       }
     ]
   },
@@ -531,12 +547,12 @@
       {
         "type": "home",
         "imageUrl": "https://bscstoreusa.com/cdn/shop/files/1w_c090bc7f-bdf8-4d14-9424-99a0e1cc01c6.jpg?v=1772130389&width=1946",
-        "story": "Marathon Sports' Ecuador home jersey is built on the iconic yellow (amarillo) base with a sophisticated horizontal texture pattern across the front. Navy blue trim on the crew-neck collar and sleeve cuffs references the national flag, and all three kits share the motto 'Sonar, Trascender y Hacer Historia' (Dream, Transcend and Make History) printed on the upper back."
+        "story": "Marathon Sports' Ecuador home kit is predominantly yellow with a sophisticated horizontal texture and high-relief crest. A navy collar with red detailing and navy sleeve cuffs with red accents represent the Ecuadorian flag. All three Ecuador kits carry the motto 'Sonar, Trascender y Hacer Historia' (Dream, Transcend and Make History) on the upper back."
       },
       {
         "type": "away",
         "imageUrl": "https://bscstoreusa.com/cdn/shop/files/1w_dca7eaaf-4f00-4f28-81cf-07deb9ffe39d.jpg?v=1772130832&width=1946",
-        "story": "The away jersey features a smart navy blue base with a classic polo collar, and copper-gold accents on the Marathon logo and numbering add a premium touch. The design represents the deep blue of Ecuador's Pacific coastline, with the gold details evoking the country's mineral wealth and Incan heritage."
+        "story": "The away jersey features a deep navy blue base with a subtle tonal pattern and a structured polo-style collar. Copper-gold detailing on the Marathon logo and numbering adds a premium touch. Graphic side panels and advanced Hidrotec moisture-wicking technology complete the design."
       }
     ],
     "links": [
@@ -549,6 +565,11 @@
         "source": "House of Heat",
         "title": "Ecuador's 2026 jerseys are ready for the big stage",
         "url": "https://houseofheat.co/ecuador-2026-world-cup-marathon-jerseys"
+      },
+      {
+        "source": "Football Shirt Culture",
+        "title": "Ecuador 2026 away kit",
+        "url": "https://www.footballshirtculture.com/new-kits/ecuador-2026-world-cup-away-kit.html"
       }
     ],
     "videos": [
@@ -708,12 +729,12 @@
       {
         "type": "home",
         "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/783419/01/mod01/fnd/PNA/fmt/png/Ghana-Home-Mens-Soccer-Jersey",
-        "story": "Ghana's home kit pulls from deep cultural roots, featuring an all-over cobweb graphic inspired by Kwaku Ananse, the legendary spider figure from West African folktales who uses wit and storytelling to overcome larger foes. Created under the creative direction of Ghanaian visual artist Prince Gyasi, the white base carries intersecting lines in red, yellow and green forming the Ananse web pattern across the torso, with the Black Star sitting centrally on the chest."
+        "story": "Ghana's home kit features a predominantly white base with a bold, multicolored graphic of intersecting lines in red, yellow and green inspired by Kente, the iconic woven cloth of Ghanaian heritage. The cobweb-like pattern across the torso is a direct nod to Kwaku Ananse, the legendary spider figure from West African folktales who uses wit and storytelling to overcome larger foes. Designed under the creative direction of renowned Ghanaian visual artist Prince Gyasi."
       },
       {
         "type": "away",
         "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/783425/02/mod01/fnd/PNA/fmt/png/Ghana-Away-Mens-Soccer-Jersey",
-        "story": "The away jersey uses a vivid 'Sunny Yellow' base inspired by the energy of Accra's famous Makola Market, one of the largest open-air markets in West Africa. The fabric is covered in a tonal graphic of traditional Adinkra symbols and geometric shapes drawn from legendary Kente cloth — the hand-woven textile that has represented Ghanaian royalty, spirituality and identity for centuries."
+        "story": "The away jersey introduces a vivid 'Sunny Yellow' base with Archive Gold detailing, drawing inspiration from the vibrant energy of Accra's famous Makola Market. The fabric is covered in an all-over tonal graphic of layered geometric shapes and repeating Adinkra symbols inspired by Kente cloth — the hand-woven textile that has represented Ghanaian royalty, spirituality and identity for centuries."
       },
       {
         "type": "warmup",
@@ -991,7 +1012,7 @@
       {
         "type": "home",
         "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/783165/01/mod01/fnd/PNA/fmt/png/Senegal-Home-Men%27s-Soccer-Jersey",
-        "story": "Senegal's home kit pulls straight from the streets of Dakar, featuring an all-over graphic of geometric shapes, symbols and illustrative elements inspired by the 'Car Rapide' — the iconic hand-painted minibuses that have served as moving folk art across Senegal for decades. The kit hides a remarkable production secret: it is printed inside out, creating muted pastel tones on the exterior while the inside reveals the full-vibrancy pattern in red, yellow and green."
+        "story": "Senegal's home kit features a white base covered in a multicolor graphic inspired by the Car Rapide, the iconic hand-painted minibuses of Dakar that serve as moving folk art. The kit hides a remarkable production secret: it is printed inside out, creating muted pastel tones on the exterior while the inside reveals the full-vibrancy pattern featuring lions, baobab trees and traditional graphics in red, yellow and green."
       },
       {
         "type": "away",
