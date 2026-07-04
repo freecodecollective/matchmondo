@@ -1,4 +1,41 @@
 {
+  "Algeria": {
+    "maker": "adidas",
+    "kits": [
+      {
+        "type": "home",
+        "imageUrl": "https://www.prosoccer.com/cdn/shop/files/adidas-2026-algeria-mens-stadium-home-soccer-jersey-6696762.webp?v=1767642429&width=1946",
+        "story": "The adidas Algeria home jersey features a white base with green accents and a bold geometric pattern inspired by Saharan desert landscapes — angular paneling across the front evokes sand dunes shifting under the North African sun. The FAF crest and adidas Trefoil sit on opposite sides of the chest, marking the return of the retro logo to the tournament."
+      },
+      {
+        "type": "away",
+        "imageUrl": "https://www.bestbuysoccer.com/cdn/shop/files/JN4456_1_APPAREL_Photography_Front_Center_View_white.jpg?v=1774020437&width=1214",
+        "story": "The away kit introduces a deep green base overlaid with an intricate all-over pattern drawing from traditional Algerian tilework and arabesque motifs found in the country's historic mosques and palaces. Gold and white accents reference the star and crescent of the Algerian flag."
+      }
+    ],
+    "links": [
+      {
+        "source": "Footy Headlines",
+        "title": "Algeria 2026 home & away kits released",
+        "url": "https://www.footyheadlines.com/2026/02/algeria-2026-kits.html"
+      },
+      {
+        "source": "ESPN",
+        "title": "Rating adidas' 2026 away shirts: Argentina, Spain, Mexico & more",
+        "url": "https://www.espn.com/soccer/story/_/id/48250592/rating-adidas-2026-world-cup-away-shirts-argentina-spain-mexico"
+      }
+    ],
+    "videos": [
+      {
+        "title": "adidas Algeria 2026 home jersey review",
+        "youtubeId": "NLb6JfSQ8oE"
+      },
+      {
+        "title": "Algeria 2026 adidas away kit",
+        "youtubeId": "zLaqxGKIhQg"
+      }
+    ]
+  },
   "Argentina": {
     "maker": "adidas",
     "kits": [
@@ -43,6 +80,96 @@
       {
         "title": "The new Argentina 2026 home kit (football shirt review)",
         "youtubeId": "Fd0wTRWZvdY"
+      }
+    ]
+  },
+  "Australia": {
+    "maker": "Nike",
+    "kits": [
+      {
+        "type": "home",
+        "imageUrl": "https://soccerwearhouse.com/cdn/shop/files/nike-mens-australia-stadium-home-stadium-jersey-2026-goldmystic-green-soccerwearhouse-7544110.png?v=1776641295",
+        "story": "Nike's Socceroos home shirt pays tribute to the iconic 2006 gold jersey that captured the nation's heart during Australia's run to the round of 16 in Germany. The rich gold base is paired with mystic green accents on the collar and sleeve cuffs, channeling the Total 90 era that defined a generation of Australian football fans."
+      },
+      {
+        "type": "away",
+        "imageUrl": "https://soccerwearhouse.com/cdn/shop/files/nike-mens-australia-away-stadium-jersey-2026-greenorange-soccerwearhouse-1953837.png?v=1777939634",
+        "story": "The away jersey draws from the colors of an Australian sunrise, blending coral-to-teal gradients across the shirt. The design captures the vast, varied landscape of the continent — from the red outback to the turquoise coast — in a striking color palette that sets it apart from any previous Socceroos kit."
+      }
+    ],
+    "links": [
+      {
+        "source": "Football Fashion",
+        "title": "Australia 2026 jersey: Nike home & away kits",
+        "url": "https://footballfashion.org/wordpress/2026/04/18/australia-world-cup-2026-jersey/"
+      },
+      {
+        "source": "Man of Many",
+        "title": "The Socceroos' 2026 kit has been unveiled, with a bold new away strip",
+        "url": "https://manofmany.com/entertainment/sport/nike-australia-2026-socceroos-kits"
+      },
+      {
+        "source": "ESPN",
+        "title": "2026 kit ranking: all 105 jerseys for all 48 teams",
+        "url": "https://www.espn.com/soccer/story/_/id/48352807/world-cup-2026-kit-ranking-canada-mexico-united-states-argentina-australia-brazil-england-france-germany-portugal-spain"
+      }
+    ],
+    "videos": [
+      {
+        "title": "New threads: Socceroos react to bold Nike home kit",
+        "youtubeId": "vtPr2e5Ii_g"
+      },
+      {
+        "title": "The new 2026 national team jerseys are here (review)",
+        "youtubeId": "cTUT1uNoEnw"
+      }
+    ]
+  },
+  "Austria": {
+    "maker": "Puma",
+    "kits": [
+      {
+        "type": "home",
+        "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/783200/01/mod01/fnd/PNA/fmt/png",
+        "story": "Austria's signature red body features a historic first — black sleeves on a home jersey, a bold departure from the traditional all-red look. Red, white and black cuffs on the sleeves reference the Austrian national flag, and the back collar carries the inscription 'Immer wieder Osterreich' ('Austria, again and again')."
+      },
+      {
+        "type": "away",
+        "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/783207/02/mod01/fnd/PNA/fmt/png",
+        "story": "The away kit features a white and light mint-green base with a marble-texture pattern designed to evoke the surfaces of classic Viennese coffeehouse tables. Curved golden geometric lines inspired by Art Nouveau architecture arch across the front, with turquoise and magenta accents throughout — blending Austria's coffeehouse culture with modern streetwear."
+      },
+      {
+        "type": "warmup",
+        "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/783883/12/mod01/fnd/PNA/fmt/png",
+        "colorway": "Puma Navy / Puma Red",
+        "story": "A navy and red pre-match jersey layered with a decorative Art Deco finial pattern over the entire design, featuring dryCELL moisture-wicking technology and 100% recycled material."
+      }
+    ],
+    "links": [
+      {
+        "source": "Footy Headlines",
+        "title": "Austria 2026 home kit released",
+        "url": "https://www.footyheadlines.com/2025/12/puma-austria-2026-world-cup-home-kit.html"
+      },
+      {
+        "source": "Football Fashion",
+        "title": "Austria 2026 away kit",
+        "url": "https://footballfashion.org/wordpress/2026/05/06/austria-2026-jersey-puma-away-kit-world-cup/"
+      },
+      {
+        "source": "The Kitman",
+        "title": "Puma unveils Austria 2026 away kit",
+        "url": "https://www.thekitman.co.uk/puma-unveils-the-stunning-new-austria-2026-away-kit/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Austria home jersey 2026 review",
+        "youtubeId": "1dKfulLU7E8"
+      },
+      {
+        "title": "Every nation's Football 2026 jersey revealed",
+        "youtubeId": "Sxrz9SQnA7A"
       }
     ]
   },
@@ -94,6 +221,43 @@
       }
     ]
   },
+  "Bosnia and Herzegovina": {
+    "maker": "Kelme",
+    "kits": [
+      {
+        "type": "home",
+        "imageUrl": "https://kelme.com/cdn/shop/files/Azul.jpg?v=1780493641&width=2000",
+        "story": "Kelme's Bosnia and Herzegovina home kit features a deep navy blue base with a pinstripe pattern of thin vertical lines alternating between white and yellow across the front, echoing the colors of the national flag. Matching white and yellow trim finishes the round collar and sleeve cuffs, and the kit carries the slogan 'Dream Big Dream BiH' reflecting the nation's pride in reaching the tournament."
+      },
+      {
+        "type": "away",
+        "imageUrl": "https://kelme.com/cdn/shop/files/BLANCA.jpg?v=1780493620&width=2000",
+        "story": "The away kit is predominantly white with solid blue raglan-style sleeves and a matching blue V-neck collar. Thin vertical pinstripes in the national colors of blue and yellow run down the front of the body, creating a clean and modern design that pairs tradition with contemporary football aesthetics."
+      }
+    ],
+    "links": [
+      {
+        "source": "Footy Headlines",
+        "title": "Bosnia and Herzegovina 2026 home & away kits released",
+        "url": "https://www.footyheadlines.com/2026/05/bosnia-2026-away-kit.html"
+      },
+      {
+        "source": "Kelme",
+        "title": "Bosnia and Herzegovina national team jersey",
+        "url": "https://kelme.com/en/collections/seleccion-de-futbol-de-bosnia-herzegovina"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bosnia and Herzegovina 2026 home kit review",
+        "youtubeId": "OrQpxmD3OeA"
+      },
+      {
+        "title": "Bosnia and Herzegovina 2026 kit details",
+        "youtubeId": "HCOIFkdkgzk"
+      }
+    ]
+  },
   "Brazil": {
     "maker": "Nike",
     "kits": [
@@ -141,6 +305,54 @@
       {
         "title": "Nike 2026 Brasil home shirt review",
         "youtubeId": "367tfb49cc0"
+      }
+    ]
+  },
+  "Cabo Verde": {
+    "maker": "Capelli Sport",
+    "kits": [
+      {
+        "type": "home",
+        "imageUrl": "https://capellisport.com/cdn/shop/files/Untitled-1_c180c4e3-926e-49c3-b11c-66f76ad4995c_1800x1800.jpg?v=1776880943",
+        "story": "For the Blue Sharks' first-ever tournament appearance, Capelli Sport designed a deep blue home jersey featuring a geometric triangular pattern representing flight paths connecting the ten volcanic islands of the Cape Verdean archipelago. Red trim on the collar and cuffs echoes the national flag, while the 3D silicone FCVF crest sits over the heart."
+      },
+      {
+        "type": "away",
+        "imageUrl": "https://capellisport.com/cdn/shop/files/away_1800x1800.jpg?v=1776787887",
+        "story": "The away kit is white with a subtle tonal grey version of the same flight-path geometric pattern, paired with blue and red detailing. It represents the clarity and ambition of a small island nation stepping onto the global stage for the first time."
+      },
+      {
+        "type": "warmup",
+        "imageUrl": "https://capellisport.com/cdn/shop/files/CapelliSport_23-03-2026-18-33-05_1800x1800.png?v=1776788184",
+        "colorway": "Blue / White shark jaw pattern",
+        "story": "The pre-match shirt features a blue base covered in an abstract white shark jaw pattern, symbolizing the team's predatory mindset — composed, patient and always hunting — reflecting the determination of a small, fierce team with nothing to lose and everything to gain."
+      }
+    ],
+    "links": [
+      {
+        "source": "Footy Headlines",
+        "title": "Cape Verde 2026 home & away kits released",
+        "url": "https://www.footyheadlines.com/2026/04/new-cape-verde-2026-world-cup-home-away-kits.html"
+      },
+      {
+        "source": "Sportico",
+        "title": "Cape Verde jerseys show Capelli's move from youth soccer to the tournament",
+        "url": "https://www.sportico.com/leagues/soccer/2026/cape-verde-world-cup-jerseys-capelli-sport-1234909716/"
+      },
+      {
+        "source": "Footy Headlines",
+        "title": "Cape Verde 2026 pre-match shirt released",
+        "url": "https://www.footyheadlines.com/2026/04/cape-verde-2026-pm-shirt.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Capelli Sport CEO on designing Cape Verde's jerseys for their tournament debut",
+        "youtubeId": "T3FFoEqD8gQ"
+      },
+      {
+        "title": "Cape Verde 2026 kit unveiled",
+        "youtubeId": "HKcUD66pvFc"
       }
     ]
   },
@@ -236,6 +448,117 @@
       {
         "title": "Colombia's away jersey for the 2026 tournament",
         "youtubeId": "pT1FE5dGtTk"
+      }
+    ]
+  },
+  "Congo DR": {
+    "maker": "Umbro",
+    "kits": [
+      {
+        "type": "home",
+        "imageUrl": "https://umbroteam.com/cdn/shop/files/DRC_WC_HOME_JERSEY_01.jpg?v=1778267812&width=900",
+        "story": "Umbro's Congo DR home jersey celebrates the Leopards' identity with a vibrant light blue base featuring a tone-on-tone leopard-print texture and wavy graphic pattern across the lower half. Bold red trim on the round collar and sleeve cuffs mirrors the Congolese flag, with the FECOFA crest topped by two stars recognizing the nation's historic 1968 and 1974 African championship titles."
+      },
+      {
+        "type": "away",
+        "imageUrl": "https://umbroteam.com/cdn/shop/files/DRC_WC_Away_JERSEY_01.jpg?v=1778267259&width=900",
+        "story": "The away kit features a crisp white base with an eye-catching geometric diamond pattern transitioning from white into subtle blue tones across the lower section. Bright blue accent panels run along the shoulders and sides, creating a clean modern look."
+      }
+    ],
+    "links": [
+      {
+        "source": "Football Fashion",
+        "title": "Congo DR 2026 Umbro home, away & third kits",
+        "url": "https://footballfashion.org/wordpress/2025/12/20/maillot-congo-dr-2026/"
+      },
+      {
+        "source": "Goal",
+        "title": "DR Congo Football 2026 kits: home, away & release dates",
+        "url": "https://www.goal.com/en-us/lists/dr-congo-world-cup-2026-kits/blt408e2c4b4361cf62"
+      }
+    ],
+    "videos": [
+      {
+        "title": "All 48 Football 2026 kits home and away reaction",
+        "youtubeId": "LEOpLL1Ti3E"
+      },
+      {
+        "title": "Every nation's Football 2026 jersey revealed",
+        "youtubeId": "Sxrz9SQnA7A"
+      }
+    ]
+  },
+  "Croatia": {
+    "maker": "Nike",
+    "kits": [
+      {
+        "type": "home",
+        "imageUrl": "https://www.prosoccer.com/cdn/shop/files/nike-2026-croatia-mens-stadium-home-soccer-jersey-5204031.jpg?v=1781907488&width=1946",
+        "story": "Nike's Croatia home jersey continues the iconic red-and-white checkerboard pattern (sahovnica) that has defined Croatian football since 1990, refreshed with a modern cut and subtle tonal gradient within each red square. The checkerboard covers the entire front and back of the shirt, with navy blue trim on the crew-neck collar and sleeve cuffs echoing the third color of the Croatian flag."
+      },
+      {
+        "type": "away",
+        "imageUrl": "https://www.prosoccer.com/cdn/shop/files/nike-2026-croatia-mens-stadium-away-soccer-jersey-8449910.jpg?v=1781907132&width=1946",
+        "story": "The away kit arrives in dark navy with a tonal all-over checkerboard pattern rendered in two shades of blue, creating a sophisticated nighttime interpretation of the classic Croatian motif. White accents on the collar, cuffs and Nike Swoosh provide contrast, and 'Hrvatska' is printed inside the back collar."
+      }
+    ],
+    "links": [
+      {
+        "source": "Footy Headlines",
+        "title": "Croatia 2026 home kit released",
+        "url": "https://www.footyheadlines.com/2025/11/croatia-2026-home-kit.html"
+      },
+      {
+        "source": "ESPN",
+        "title": "2026 kit ranking: all 105 jerseys for all 48 teams",
+        "url": "https://www.espn.com/soccer/story/_/id/48352807/world-cup-2026-kit-ranking-canada-mexico-united-states-argentina-australia-brazil-england-france-germany-portugal-spain"
+      }
+    ],
+    "videos": [
+      {
+        "title": "2026 home kit review: Croatia, France, Uruguay",
+        "youtubeId": "5YQuAfVhKzQ"
+      },
+      {
+        "title": "Ranking every Nike 2026 away kit",
+        "youtubeId": "c8u6o5R4kKs"
+      }
+    ]
+  },
+  "Ecuador": {
+    "maker": "Marathon Sports",
+    "kits": [
+      {
+        "type": "home",
+        "imageUrl": "https://bscstoreusa.com/cdn/shop/files/1w_c090bc7f-bdf8-4d14-9424-99a0e1cc01c6.jpg?v=1772130389&width=1946",
+        "story": "Marathon Sports' Ecuador home jersey is built on the iconic yellow (amarillo) base with a sophisticated horizontal texture pattern across the front. Navy blue trim on the crew-neck collar and sleeve cuffs references the national flag, and all three kits share the motto 'Sonar, Trascender y Hacer Historia' (Dream, Transcend and Make History) printed on the upper back."
+      },
+      {
+        "type": "away",
+        "imageUrl": "https://bscstoreusa.com/cdn/shop/files/1w_dca7eaaf-4f00-4f28-81cf-07deb9ffe39d.jpg?v=1772130832&width=1946",
+        "story": "The away jersey features a smart navy blue base with a classic polo collar, and copper-gold accents on the Marathon logo and numbering add a premium touch. The design represents the deep blue of Ecuador's Pacific coastline, with the gold details evoking the country's mineral wealth and Incan heritage."
+      }
+    ],
+    "links": [
+      {
+        "source": "Footy Headlines",
+        "title": "Ecuador 2026 home, away & third kits released",
+        "url": "https://www.footyheadlines.com/2026/02/ecuador-2026-kits.html"
+      },
+      {
+        "source": "House of Heat",
+        "title": "Ecuador's 2026 jerseys are ready for the big stage",
+        "url": "https://houseofheat.co/ecuador-2026-world-cup-marathon-jerseys"
+      }
+    ],
+    "videos": [
+      {
+        "title": "All 48 Football 2026 kits home and away reaction",
+        "youtubeId": "LEOpLL1Ti3E"
+      },
+      {
+        "title": "Every nation's Football 2026 jersey revealed",
+        "youtubeId": "Sxrz9SQnA7A"
       }
     ]
   },
@@ -376,6 +699,54 @@
       {
         "title": "France 24: France's 2026 jersey unveiled in NYC",
         "youtubeId": "qvvXvaWrJ7A"
+      }
+    ]
+  },
+  "Ghana": {
+    "maker": "Puma",
+    "kits": [
+      {
+        "type": "home",
+        "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/783419/01/mod01/fnd/PNA/fmt/png/Ghana-Home-Mens-Soccer-Jersey",
+        "story": "Ghana's home kit pulls from deep cultural roots, featuring an all-over cobweb graphic inspired by Kwaku Ananse, the legendary spider figure from West African folktales who uses wit and storytelling to overcome larger foes. Created under the creative direction of Ghanaian visual artist Prince Gyasi, the white base carries intersecting lines in red, yellow and green forming the Ananse web pattern across the torso, with the Black Star sitting centrally on the chest."
+      },
+      {
+        "type": "away",
+        "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/783425/02/mod01/fnd/PNA/fmt/png/Ghana-Away-Mens-Soccer-Jersey",
+        "story": "The away jersey uses a vivid 'Sunny Yellow' base inspired by the energy of Accra's famous Makola Market, one of the largest open-air markets in West Africa. The fabric is covered in a tonal graphic of traditional Adinkra symbols and geometric shapes drawn from legendary Kente cloth — the hand-woven textile that has represented Ghanaian royalty, spirituality and identity for centuries."
+      },
+      {
+        "type": "warmup",
+        "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/777204/05/mod01/fnd/PNA/fmt/png/Ghana-Pre-match-Jersey-Men",
+        "colorway": "Dark Crimson / Puma Red",
+        "story": "A dark crimson and red pre-match jersey featuring dryCELL moisture-wicking technology, designed to complement the culturally inspired match-day kits with a sleek warm-up look."
+      }
+    ],
+    "links": [
+      {
+        "source": "Footy Headlines",
+        "title": "Ghana 2026 home & away kits released",
+        "url": "https://www.footyheadlines.com/2026/03/puma-2026-away-kits.html"
+      },
+      {
+        "source": "Goal",
+        "title": "Ghana Football 2026 kits: home, away & release dates",
+        "url": "https://www.goal.com/en-us/lists/ghana-world-cup-2026-kits/blt3062f409676845a3"
+      },
+      {
+        "source": "GhanaWeb",
+        "title": "Puma breaks down culture-inspired Black Stars jerseys",
+        "url": "https://www.ghanaweb.com/GhanaHomePage/SportsArchive/PUMA-breaks-down-culture-inspired-Black-Stars-jerseys-for-2026-World-Cup-2027398"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Ghana Black Stars new jersey review",
+        "youtubeId": "6JFbQpJWwD8"
+      },
+      {
+        "title": "New Black Stars 2026 jersey unveiled — evolution of the iconic kit",
+        "youtubeId": "v7deke79NFY"
       }
     ]
   },
@@ -611,6 +982,54 @@
       {
         "title": "Puma Portugal home jersey unboxing + review",
         "youtubeId": "TtfO6QoCSn4"
+      }
+    ]
+  },
+  "Senegal": {
+    "maker": "Puma",
+    "kits": [
+      {
+        "type": "home",
+        "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/783165/01/mod01/fnd/PNA/fmt/png/Senegal-Home-Men%27s-Soccer-Jersey",
+        "story": "Senegal's home kit pulls straight from the streets of Dakar, featuring an all-over graphic of geometric shapes, symbols and illustrative elements inspired by the 'Car Rapide' — the iconic hand-painted minibuses that have served as moving folk art across Senegal for decades. The kit hides a remarkable production secret: it is printed inside out, creating muted pastel tones on the exterior while the inside reveals the full-vibrancy pattern in red, yellow and green."
+      },
+      {
+        "type": "away",
+        "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/783171/02/mod01/fnd/PNA/fmt/png/Senegal-Away-Men%27s-Soccer-Jersey",
+        "story": "The away kit arrives in the Lions' iconic 'Wild Green' with a striking kaleidoscopic graphic — described by Puma as moving 'like music — rhythm, pride and energy made wearable.' A bold central vertical panel bears geometric and kaleidoscopic shapes inspired by traditional Senegalese textile craftsmanship. A golden star above the FSF crest symbolizes Senegal's continental titles as two-time African champions."
+      },
+      {
+        "type": "warmup",
+        "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/784747/10/mod01/fnd/PNA/fmt/png/Senegal-Pre-Match-Men%27s-Soccer-Jersey",
+        "colorway": "Pele Yellow / Wild Green",
+        "story": "An official warm-up jersey in the national flag's yellow and green, combining Senegalese style with Puma's dryCELL moisture-wicking technology and 100% recycled material."
+      }
+    ],
+    "links": [
+      {
+        "source": "Footy Headlines",
+        "title": "Puma Senegal 2026 kit printed inside out",
+        "url": "https://www.footyheadlines.com/0699243011/puma-senegal-2026-world-cup-kit-printed-inside-out.html"
+      },
+      {
+        "source": "Goal",
+        "title": "Senegal kits: home, away, release dates & prices",
+        "url": "https://www.goal.com/en/lists/senegal-world-cup-2026-kits/blt271807f2e088b2de"
+      },
+      {
+        "source": "ESPN",
+        "title": "Rating Puma's 2026 away shirts: Portugal, Senegal, Morocco & more",
+        "url": "https://www.espn.com/soccer/story/_/id/48259711/rating-puma-2026-world-cup-away-shirts-portugal-senegal-morocco"
+      }
+    ],
+    "videos": [
+      {
+        "title": "All Puma 2026 kits released",
+        "youtubeId": "lwwigCi0TgM"
+      },
+      {
+        "title": "Puma kit launch featuring Senegal",
+        "youtubeId": "tZn7Cz5r_7Q"
       }
     ]
   },
