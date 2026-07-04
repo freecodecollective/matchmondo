@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-04 00:03 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-07-04 04:01 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1149,9 +1149,9 @@ window.WC_MATCHES = [
     "venue": "Hard Rock Stadium",
     "city": "Miami Gardens, FL",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 1,
-    "scoreA": 1,
-    "isLive": true
+    "scoreH": 3,
+    "scoreA": 2,
+    "result": "AET"
   },
   {
     "n": 87,
@@ -1163,8 +1163,9 @@ window.WC_MATCHES = [
     "venue": "Arrowhead Stadium",
     "city": "Kansas City, MO",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 1,
+    "scoreA": 0,
+    "result": "FT"
   },
   {
     "n": 90,
@@ -1249,7 +1250,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-07T16:00:00Z",
     "stage": "Round of 16",
     "group": null,
-    "home": "To be announced",
+    "home": "Argentina",
     "away": "Egypt",
     "venue": "Mercedes-Benz Stadium",
     "city": "Atlanta, GA",
@@ -1263,7 +1264,7 @@ window.WC_MATCHES = [
     "stage": "Round of 16",
     "group": null,
     "home": "Switzerland",
-    "away": "To be announced",
+    "away": "Colombia",
     "venue": "BC Place",
     "city": "Vancouver, Canada",
     "tv": "FOX · Telemundo (ES)",
