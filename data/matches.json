@@ -1190,8 +1190,8 @@
     "city": "Philadelphia, PA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 0,
-    "isLive": true
+    "scoreA": 1,
+    "result": "FT"
   },
   {
     "n": 91,
@@ -1276,7 +1276,7 @@
     "utc": "2026-07-09T20:00:00Z",
     "stage": "Quarter-finals",
     "group": null,
-    "home": "To be announced",
+    "home": "France",
     "away": "Morocco",
     "venue": "Gillette Stadium",
     "city": "Foxborough (Boston), MA",

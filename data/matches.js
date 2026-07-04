@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-04 22:29 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-07-04 23:35 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1192,8 +1192,8 @@ window.WC_MATCHES = [
     "city": "Philadelphia, PA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 0,
-    "isLive": true
+    "scoreA": 1,
+    "result": "FT"
   },
   {
     "n": 91,
@@ -1278,7 +1278,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-09T20:00:00Z",
     "stage": "Quarter-finals",
     "group": null,
-    "home": "To be announced",
+    "home": "France",
     "away": "Morocco",
     "venue": "Gillette Stadium",
     "city": "Foxborough (Boston), MA",
