@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MatchMondo — Jersey Image Approvals</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif; background: #e8e8e8; padding: 0 0 60px; -webkit-font-smoothing: antialiased; }
+
+  .banner {
+    background: linear-gradient(135deg, #12324f 0%, #1d5a8a 60%, #2e7fb8 100%);
+    color: #fff; text-align: center; padding: 34px 20px 26px;
+  }
+  .banner h1 { font-size: 24px; font-weight: 800; }
+  .banner p { font-size: 13px; opacity: 0.85; margin-top: 6px; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.5; }
+
+  .toolbar {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    display: flex; align-items: center; justify-content: center; gap: 14px;
+    padding: 10px 16px; flex-wrap: wrap;
+  }
+  .progress { font-size: 13px; font-weight: 600; color: #444; }
+  .progress b { color: #111; }
+  .tbtn {
+    font-family: inherit; font-size: 12.5px; font-weight: 700;
+    border: 0; border-radius: 8px; padding: 7px 14px; cursor: pointer;
+    background: #12324f; color: #fff;
+  }
+  .tbtn.ghost { background: #eef0f3; color: #444; }
+  .copied { font-size: 12px; color: #0a7a43; font-weight: 700; display: none; }
+
+  .grid {
+    max-width: 1180px; margin: 22px auto 0; padding: 0 16px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 18px;
+  }
+
+  .team-card {
+    background: #fff; border-radius: 14px; overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.07);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .tc-head {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 14px 10px;
+  }
+  .tc-head img.flag { width: 34px; height: 25px; border-radius: 3px; object-fit: cover; box-shadow: 0 1px 4px rgba(0,0,0,0.25); }
+  .tc-head .tname { font-size: 16px; font-weight: 800; color: #111; flex: 1; }
+  .tc-head .brand { font-size: 10px; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; color: #667; background: #f0f1f4; border-radius: 5px; padding: 3px 7px; }
+
+  .jerseys { display: flex; border-top: 1px solid rgba(0,0,0,0.05); }
+  .jslot { flex: 1; padding: 10px 10px 12px; }
+  .jslot + .jslot { border-left: 1px solid rgba(0,0,0,0.05); }
+  .jlabel { font-size: 10px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase; color: #999; margin-bottom: 6px; text-align: center; }
+
+  .jimg-wrap {
+    position: relative; border-radius: 10px; overflow: hidden;
+    background: #f6f6f8; aspect-ratio: 1/1;
+    display: flex; align-items: center; justify-content: center;
+    border: 2px solid transparent;
+    transition: border-color 0.15s;
+  }
+  .jimg-wrap img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .jimg-wrap.state-approved { border-color: #17954f; }
+  .jimg-wrap.state-flagged { border-color: #cf2b3a; opacity: 0.8; }
+  .state-badge {
+    position: absolute; top: 6px; right: 6px;
+    font-size: 11px; font-weight: 800; color: #fff;
+    border-radius: 6px; padding: 2px 7px; display: none;
+  }
+  .state-approved .state-badge.ok { display: block; background: #17954f; }
+  .state-flagged .state-badge.no { display: block; background: #cf2b3a; }
+
+  .missing {
+    font-size: 11px; color: #a33; padding: 12px; text-align: center; line-height: 1.5;
+  }
+
+  .jactions { display: flex; gap: 6px; margin-top: 8px; }
+  .jactions button {
+    flex: 1; font-family: inherit; font-size: 12px; font-weight: 700;
+    border: 1px solid rgba(0,0,0,0.1); border-radius: 7px; padding: 5px 0;
+    background: #fafafa; color: #555; cursor: pointer;
+  }
+  .jactions button.on-ok { background: #e5f6ec; border-color: #17954f; color: #0d6b38; }
+  .jactions button.on-no { background: #fdeaec; border-color: #cf2b3a; color: #a11624; }
+  .jlink { display: block; text-align: center; font-size: 10.5px; color: #1d5a8a; text-decoration: none; margin-top: 7px; font-weight: 600; }
+  .jnote { font-size: 10px; color: #b58a00; margin-top: 6px; text-align: center; line-height: 1.4; }
+
+  .foot {
+    text-align: center; font-size: 12px; color: #888; line-height: 1.6;
+    max-width: 700px; margin: 28px auto 0; padding: 0 20px;
+  }
+  .foot a { color: #1d5a8a; }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <h1>👕 Tournament Kits — jersey image approvals</h1>
+  <p>The 16 teams still alive in Football 2026, with the official home &amp; away replica shirts
+  (product images from Fanatics; FIFA-store/brand-site fallbacks where noted). Tap ✓ or ✗ on each
+  image, then hit <b>Copy feedback</b> and paste the summary back to Claude. Decisions are saved
+  in your browser.</p>
+</div>
+
+<div class="toolbar">
+  <span class="progress"><b id="reviewed">0</b> of <b id="total">0</b> reviewed</span>
+  <button class="tbtn" id="copyBtn">📋 Copy feedback</button>
+  <button class="tbtn ghost" id="resetBtn">Reset</button>
+  <span class="copied" id="copiedMsg">Copied!</span>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="foot">
+  Once images are approved they feed the <b>Tournament Kits</b> team-page section
+  (see the <a href="mockup-team-kits.html">Ghana layout mockup</a>) via <code>data/team-kits.json</code>.
+  Product images are hotlinked from the retailers for this mockup only.
+</div>
+
+<script>
+const TEAMS = [
+  // Ordered by Round-of-16 pairings
+  { team: "Canada", code: "ca", brand: "Nike",
+    home: { imageUrl: "https://static.nike.com/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b79991ba-00fe-4ce5-89b2-87f5f4f88314/WC+CAN+M+STADIUM+HOME+JERSEY.png", productUrl: "https://www.nike.com/t/canada-stadium-home-mens-dri-fit-soccer-jersey-CC7zDLZn/P35887J675-RED", note: "On-model shot (Nike publishes no flat-lay)" },
+    away: { imageUrl: "https://static.nike.com/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d3d13aaa-6021-4b7e-b141-e0b1f5b1ff4a/WC+CAN+M+STADIUM+AWAY+JERSEY.png", productUrl: "https://www.fanatics.com/soccer-national-teams/canada-soccer/-canada-soccer-nike-2026-away-stadium-replica-jersey-black/o-2501+t-76928314+p-9100254934167+z-9-3454369788", note: "On-model shot (black kit)" } },
+  { team: "Morocco", code: "ma", brand: "Puma",
+    home: { imageUrl: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/783317/01/fnd/PNA/fmt/png", productUrl: "https://us.puma.com/us/en/pd/morocco-home-mens-soccer-jersey/783317" },
+    away: { imageUrl: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/783318/02/fnd/PNA/fmt/png", productUrl: "https://us.puma.com/us/en/pd/morocco-away-mens-soccer-jersey/783318", note: "White with gold Amazigh-embroidery print" } },
+  { team: "Paraguay", code: "py", brand: "Puma",
+    home: { imageUrl: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/697015/01/fnd/PNA/fmt/png", productUrl: "https://www.fanatics.com/soccer-national-teams/paraguay-national-team/paraguay-national-team-puma-2026-home-replica-jersey-white/o-1456+t-25496543+p-8088697658352+z-9-3972212060" },
+    away: { imageUrl: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/697019/01/fnd/PNA/fmt/png", productUrl: "https://www.fanatics.com/soccer-national-teams/paraguay-national-team/paraguay-national-team-puma-2026-away-replica-jersey-navy/o-7078+t-25273209+p-579958615345+z-8-1243190561" } },
+  { team: "France", code: "fr", brand: "Nike",
+    home: { imageUrl: "https://static.nike.com/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/cd65203d-b6b3-4197-be62-9b3bcc4a5d9e/FFF+M+NK+DF+JSY+SS+STAD+HM.png", productUrl: "https://www.fanatics.com/soccer-national-teams/france-national-team/france-national-team-nike-2026-home-stadium-replica-jersey-blue/o-3690+t-92946021+p-9177479442835+z-9-1599081966", note: "On-model shot; navy with allover print" },
+    away: { imageUrl: "https://static.nike.com/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b96ef63a-31ff-4c39-8a51-189030756e53/FFF+M+NK+DF+JSY+SS+STAD+AW.png", productUrl: "https://www.fanatics.com/soccer-national-teams/france-national-team/-france-national-team-nike-2026-away-stadium-replica-jersey-green/o-4723+t-25273732+p-2466140556600+z-9-2487992202", note: "On-model shot; Igloo Green with orange accents" } },
+  { team: "Brazil", code: "br", brand: "Nike / Jordan",
+    home: { imageUrl: "https://cdn.shopify.com/s/files/1/0871/5558/files/nike-mens-brazil-home-stadium-jersey-2026-canaryteal-soccerwearhouse-4294154.png?v=1777939808", productUrl: "https://www.fanatics.com/soccer-national-teams/brazil-national-team/brazil-national-team-nike-2026-home-stadium-replica-jersey-yellow/o-2578+t-14053524+p-5766589430030+z-9-93786008" },
+    away: { imageUrl: "https://cdn.shopify.com/s/files/1/0871/5558/files/nike-mens-brazil-2026-away-stadium-jersey-old-royalblack-soccerwearhouse-7284981.jpg?v=1776641353", productUrl: "https://www.fanatics.com/soccer-national-teams/brazil-national-team/brazil-national-team-jordan-brand-2026-away-stadium-replica-jersey-blue/o-7089+t-25503535+p-13110339706+z-7-3171665407", note: "Jordan Brand blue 'poison dart frog' design" } },
+  { team: "Norway", code: "no", brand: "Nike",
+    home: { imageUrl: "https://cdn.shopify.com/s/files/1/0871/5558/files/nike-mens-norway-home-jersey-2026-chile-redwhite-soccerwearhouse-4317733.png?v=1776641294", productUrl: "https://www.fanatics.com/soccer-national-teams/norway-national-team/norway-national-team-nike-2026-home-stadium-replica-jersey-red/o-2556+t-10037319+p-794469764931+z-8-1888701632" },
+    away: { imageUrl: "https://cdn.shopify.com/s/files/1/0871/5558/files/nike-mens-norway-2026-away-stadium-jersey-blackblack-soccerwearhouse-3110592.jpg?v=1776641294", productUrl: "https://www.fanatics.com/soccer-national-teams/norway-national-team/-norway-national-team-nike-2026-away-stadium-replica-jersey-black/o-9245+t-54581708+p-799925459906+z-8-3291140169", note: "All-black kit, black-on-black crest" } },
+  { team: "Mexico", code: "mx", brand: "adidas",
+    home: { imageUrl: "https://cdn.shopify.com/s/files/1/0871/5558/files/adidas-mens-mexico-home-2026-world-cup-jersey-bold-green-soccerwearhouse-6586821.jpg?v=1777941798", productUrl: "https://www.fanatics.com/soccer-national-teams/mexico-national-team/-mexico-national-team-adidas-2026-home-replica-jersey-green/o-3656+t-81167593+p-9122929312555+z-9-2897946229", note: "Bold Green with Aztec Sun Stone motif" },
+    away: { imageUrl: "https://cdn.shopify.com/s/files/1/0871/5558/files/adidas-mens-mexico-2026-away-stadium-jersey-white-soccerwearhouse-4299669.png?v=1776640924", productUrl: "https://www.fanatics.com/soccer-national-teams/mexico-national-team/mexico-national-team-adidas-2026-away-replica-jersey-white/o-9290+t-47502082+p-132292371359+z-8-1104183757" } },
+  { team: "England", code: "gb-eng", brand: "Nike",
+    home: { imageUrl: "https://cdn.shopify.com/s/files/1/0871/5558/files/nike-mens-england-home-stadium-jersey-2026-whiteobsidian-soccerwearhouse-5796845.jpg?v=1776641347", productUrl: "https://soccerwearhouse.com/products/nike-england-2026-home-jersey-ib5290-100", note: "White with tonal 'fabric of England' print" },
+    away: { imageUrl: "https://cdn.shopify.com/s/files/1/0871/5558/files/nike-mens-england-away-stadium-jersey-2026-speed-redobsidian-soccerwearhouse-4245318.webp?v=1776641352", productUrl: "https://soccerwearhouse.com/products/nike-england-2026-away-jersey-ib5361-624", note: "Speed Red" } },
+  { team: "Portugal", code: "pt", brand: "Puma",
+    home: { imageUrl: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/788141/73/fnd/PNA/fmt/png", productUrl: "https://us.puma.com/us/en/pd/portugal-2026-home-player-mens-soccer-jersey/788141", note: "Official photo shows pre-printed #23; red ocean-wave pattern" },
+    away: { imageUrl: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/788146/73/fnd/PNA/fmt/png", productUrl: "https://us.puma.com/us/en/pd/portugal-away-player-mens-soccer-jersey/788146", note: "Official photo shows pre-printed #23; white/lagoon-green waves" } },
+  { team: "Spain", code: "es", brand: "adidas",
+    home: { imageUrl: "https://cdn.shopify.com/s/files/1/0591/0478/8538/files/image_8b6f5358-fe86-4ed5-96dc-051e62e3e943.png?v=1774372373", productUrl: "https://www.fanatics.com/soccer-national-teams/spain-national-team/-spain-national-team-adidas-2026-home-replica-jersey-red/o-3601+t-47401338+p-353370781166+z-8-2066746638", note: "Red with yellow pinstripes + navy sleeves" },
+    away: { imageUrl: "https://cdn.shopify.com/s/files/1/0591/0478/8538/files/image_9010dbcf-a2b4-40d0-a818-43835ebd6047.jpg?v=1775564047", productUrl: "https://www.fanatics.com/soccer-national-teams/spain-national-team/spain-national-team-adidas-2026-away-replica-jersey-white/o-3678+t-36407961+p-911158750201+z-8-1130443191", note: "Off-white with burgundy/gold trim" } },
+  { team: "USA", code: "us", brand: "Nike",
+    home: { imageUrl: "https://cdn.shopify.com/s/files/1/0264/0225/8995/files/USASMZ2604_A.jpg", productUrl: "https://www.fanatics.com/soccer-national-teams/usmnt/-usmnt-nike-2026-home-stadium-replica-jersey-white/o-2545+t-92068393+p-2411924389398+z-9-1246288318", note: "White with red wavy '94-style stripes" },
+    away: { imageUrl: "https://cdn.shopify.com/s/files/1/0264/0225/8995/files/USASMZ2601_A.jpg", productUrl: "https://www.fanatics.com/soccer-national-teams/usmnt/usmnt-nike-2026-away-stadium-replica-jersey-blue/o-2512+t-03065060+p-7977706135509+z-9-1466416927", note: "Navy with tonal stars" } },
+  { team: "Belgium", code: "be", brand: "adidas",
+    home: { imageUrl: "https://cdn.shopify.com/s/files/1/0591/0478/8538/files/image_dde2dcc5-5067-4cf8-b2c9-05bc9461709a.png?v=1774372515", productUrl: "https://www.fanatics.com/soccer-national-teams/belgium-national-team/-belgium-national-team-adidas-fifa-x-world-cup-2026-home-replica-jersey-red/o-3623+t-98342794+p-7944258959963+z-9-505501950" },
+    away: { imageUrl: "https://cdn.shopify.com/s/files/1/0570/1609/0802/files/JM8386_b2b012_plp_clipped_rev_1.png?v=1773928929", productUrl: "https://www.adidas.com/us/belgium-26-away-jersey/JM8386.html", note: "Pastel Magritte-inspired adidas Originals design" } },
+  { team: "Argentina", code: "ar", brand: "adidas",
+    home: { imageUrl: "https://fanatics.frgimages.com/argentina-national-team/mens-adidas-white-argentina-national-team-fifa-x-world-cup-2026-home-replica-jersey_ss5_p-203487737+u-t2cafwuag9dkzgdc8bnl+v-sgbgiqjzcqryyy4fi7br.jpg?_hv=2", productUrl: "https://www.fanatics.com/soccer-national-teams/argentina-national-team/-argentina-national-team-adidas-2026-home-replica-jersey-white/o-2567+t-14386653+p-3577819303863+z-9-2378206592" },
+    away: { imageUrl: "https://cdn.shopify.com/s/files/1/0871/5558/files/adidas-mens-argentina-away-stadium-jersey-2026-blackblue-soccerwearhouse-6546012.png?v=1777939629", productUrl: "https://www.fanatics.com/soccer-national-teams/argentina-national-team/lionel-messi-argentina-national-team-adidas-2026-away-replica-jersey-black/o-4701+t-36165531+p-3555920122278+z-9-2541114096", note: "Black with blue filigree; product link is Messi player version" } },
+  { team: "Egypt", code: "eg", brand: "Puma",
+    home: { imageUrl: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1350,h_1350/global/783552/01/fnd/PNA/fmt/png", productUrl: "https://sportsfanshop.jcpenney.com/soccer-national-teams/egypt-national-team-mens-puma-red-egypt-national-team-2026-home-replica-jersey/o-2589+t-21576863+p-7911256252759+z-9-1696986981", note: "Red with gold pharaoh graphic" },
+    away: { imageUrl: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1350,h_1350/global/783557/02/fnd/PNA/fmt/png", productUrl: "https://www.fanatics.com/soccer-national-teams/egypt-national-team/mohamed-salah-egypt-national-team-puma-2026-away-replica-jersey-white/o-2545+t-21578018+p-1311147663776+z-9-3040966301", note: "White with pyramid pattern; product link is Salah player version" } },
+  { team: "Switzerland", code: "ch", brand: "Puma",
+    home: { imageUrl: "https://fanatics.frgimages.com/switzerland-national-team/mens-puma-red-switzerland-national-team-2026-home-replica-jersey_ss5_p-203501600+u-zwpitj9xizjqips0kh5h+v-crkh5fgn2ju20fsyc6n3.jpg?_hv=2", productUrl: "https://www.fanatics.com/soccer-national-teams/switzerland-national-team/switzerland-national-team-puma-2026-home-replica-jersey-red/o-1490+t-36398043+p-2466582710938+z-9-3622596998" },
+    away: { imageUrl: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1350,h_1350/global/783225/02/fnd/PNA/fmt/png", productUrl: "https://us.puma.com/us/en/pd/switzerland-2026-away-jersey-men/783225", note: "White with UV-reactive green Alps topography" } },
+  { team: "Colombia", code: "co", brand: "adidas",
+    home: { imageUrl: "https://fanatics.frgimages.com/colombia-national-team/mens-adidas-yellow-colombia-national-team-fifa-x-world-cup-2026-home-replica-jersey_ss5_p-203487740+u-ttfvfuexkywplpygecou+v-j5watojmpw9grldulbdm.jpg?_hv=2", productUrl: "https://www.fanatics.com/soccer-national-teams/colombia-national-team/colombia-national-team-adidas-fifa-x-world-cup-2026-home-replica-jersey-yellow/o-3601+t-92056935+p-9122032617646+z-9-4085164545", note: "Photo shows front + back views" },
+    away: { imageUrl: "https://cdn.shopify.com/s/files/1/0736/8385/files/ColombiaNationalTeamFIFAAdidasMen_sBlue202526ReplicaAwayJersey_2.jpg?v=1774497505", productUrl: "https://www.fanatics.com/soccer-national-teams/colombia-national-team/james-rodr%C3%ADguez-colombia-national-team-adidas-2026-away-replica-jersey-turquoise/o-3689+t-25385846+p-5700587663076+z-9-1903368694", note: "Turquoise wave pattern; product link is James Rodríguez player version" } },
+];
+
+const LS_KEY = 'jerseyApprovals2026';
+const state = JSON.parse(localStorage.getItem(LS_KEY) || '{}');
+const save = () => localStorage.setItem(LS_KEY, JSON.stringify(state));
+
+const grid = document.getElementById('grid');
+
+function slotHtml(team, side, j) {
+  if (!j || !j.imageUrl) {
+    return `<div class="jslot"><div class="jlabel">${side}</div>
+      <div class="jimg-wrap"><div class="missing">No image found${j && j.note ? ' — ' + j.note : ''}</div></div></div>`;
+  }
+  const key = team + '|' + side;
+  return `<div class="jslot">
+    <div class="jlabel">${side}</div>
+    <div class="jimg-wrap" id="wrap-${cssId(key)}">
+      <img src="${j.imageUrl}" alt="${team} ${side} jersey" loading="lazy">
+      <span class="state-badge ok">✓</span><span class="state-badge no">✗</span>
+    </div>
+    <div class="jactions">
+      <button data-key="${key}" data-v="approved" id="ok-${cssId(key)}">✓ Approve</button>
+      <button data-key="${key}" data-v="flagged" id="no-${cssId(key)}">✗ Redo</button>
+    </div>
+    <a class="jlink" href="${j.productUrl}" target="_blank" rel="noopener">View product ↗</a>
+    ${j.note ? `<div class="jnote">⚠︎ ${j.note}</div>` : ''}
+  </div>`;
+}
+
+function cssId(s) { return s.replace(/[^a-z0-9]/gi, '_'); }
+
+function render() {
+  grid.innerHTML = TEAMS.map(t => `
+    <div class="team-card">
+      <div class="tc-head">
+        <img class="flag" src="https://flagcdn.com/w160/${t.code}.png" alt="">
+        <span class="tname">${t.team}</span>
+        <span class="brand">${t.brand || ''}</span>
+      </div>
+      <div class="jerseys">${slotHtml(t.team, 'Home', t.home)}${slotHtml(t.team, 'Away', t.away)}</div>
+    </div>`).join('');
+  document.getElementById('total').textContent = TEAMS.reduce((n,t) => n + (t.home&&t.home.imageUrl?1:0) + (t.away&&t.away.imageUrl?1:0), 0);
+  refresh();
+}
+
+function refresh() {
+  let reviewed = 0;
+  TEAMS.forEach(t => ['Home','Away'].forEach(side => {
+    const j = side==='Home'?t.home:t.away;
+    if (!j || !j.imageUrl) return;
+    const key = t.team + '|' + side, v = state[key];
+    if (v) reviewed++;
+    const wrap = document.getElementById('wrap-' + cssId(key));
+    if (!wrap) return;
+    wrap.classList.toggle('state-approved', v==='approved');
+    wrap.classList.toggle('state-flagged', v==='flagged');
+    document.getElementById('ok-' + cssId(key)).classList.toggle('on-ok', v==='approved');
+    document.getElementById('no-' + cssId(key)).classList.toggle('on-no', v==='flagged');
+  }));
+  document.getElementById('reviewed').textContent = reviewed;
+}
+
+grid.addEventListener('click', e => {
+  const btn = e.target.closest('button[data-key]');
+  if (!btn) return;
+  const k = btn.dataset.key, v = btn.dataset.v;
+  state[k] = state[k] === v ? undefined : v;
+  if (!state[k]) delete state[k];
+  save(); refresh();
+});
+
+document.getElementById('copyBtn').addEventListener('click', () => {
+  const lines = ['Jersey image review — Football 2026 (' + new Date().toLocaleDateString() + ')'];
+  TEAMS.forEach(t => ['Home','Away'].forEach(side => {
+    const j = side==='Home'?t.home:t.away;
+    if (!j || !j.imageUrl) { lines.push(`- ${t.team} ${side}: MISSING${j&&j.note?' ('+j.note+')':''}`); return; }
+    const v = state[t.team + '|' + side];
+    lines.push(`- ${t.team} ${side}: ${v==='approved'?'APPROVED ✓':v==='flagged'?'REDO ✗':'(not reviewed)'}`);
+  }));
+  navigator.clipboard.writeText(lines.join('\n')).then(() => {
+    const m = document.getElementById('copiedMsg');
+    m.style.display = 'inline'; setTimeout(() => m.style.display='none', 2000);
+  });
+});
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+  Object.keys(state).forEach(k => delete state[k]); save(); refresh();
+});
+
+render();
+</script>
+
+</body>
+</html>
