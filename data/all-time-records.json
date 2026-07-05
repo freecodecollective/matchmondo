@@ -1,0 +1,62 @@
+{
+  "_updated": "2026-07-04",
+  "_note": "Reference data for fact-checking. Pre-2026 numbers are fixed; 2026 tallies update as tournament progresses.",
+  "all_time_scorers": [
+    {"player": "Lionel Messi", "country": "Argentina", "pre2026": 13, "goals2026": 7, "total": 20, "editions": "2006-2026"},
+    {"player": "Kylian Mbappé", "country": "France", "pre2026": 12, "goals2026": 7, "total": 19, "editions": "2018-2026"},
+    {"player": "Miroslav Klose", "country": "Germany", "pre2026": 16, "goals2026": 0, "total": 16, "editions": "2002-2014"},
+    {"player": "Ronaldo", "country": "Brazil", "pre2026": 15, "goals2026": 0, "total": 15, "editions": "1998-2006"},
+    {"player": "Gerd Müller", "country": "Germany", "pre2026": 14, "goals2026": 0, "total": 14, "editions": "1970-1974"},
+    {"player": "Just Fontaine", "country": "France", "pre2026": 13, "goals2026": 0, "total": 13, "editions": "1958"},
+    {"player": "Harry Kane", "country": "England", "pre2026": 8, "goals2026": 5, "total": 13, "editions": "2018-2026"},
+    {"player": "Pelé", "country": "Brazil", "pre2026": 12, "goals2026": 0, "total": 12, "editions": "1958-1970"},
+    {"player": "Sándor Kocsis", "country": "Hungary", "pre2026": 11, "goals2026": 0, "total": 11, "editions": "1954"},
+    {"player": "Jürgen Klinsmann", "country": "Germany", "pre2026": 11, "goals2026": 0, "total": 11, "editions": "1990-1998"},
+    {"player": "Helmut Rahn", "country": "Germany", "pre2026": 10, "goals2026": 0, "total": 10, "editions": "1954-1958"},
+    {"player": "Gary Lineker", "country": "England", "pre2026": 10, "goals2026": 0, "total": 10, "editions": "1986-1990"},
+    {"player": "Gabriel Batistuta", "country": "Argentina", "pre2026": 10, "goals2026": 0, "total": 10, "editions": "1994-2002"},
+    {"player": "Thomas Müller", "country": "Germany", "pre2026": 10, "goals2026": 0, "total": 10, "editions": "2010-2022"},
+    {"player": "Teofilo Cubillas", "country": "Peru", "pre2026": 10, "goals2026": 0, "total": 10, "editions": "1970-1978"},
+    {"player": "Grzegorz Lato", "country": "Poland", "pre2026": 10, "goals2026": 0, "total": 10, "editions": "1974-1982"},
+    {"player": "Cristiano Ronaldo", "country": "Portugal", "pre2026": 8, "goals2026": 1, "total": 9, "editions": "2006-2026", "_note": "2026 tally may be incomplete"},
+    {"player": "Ousmane Dembélé", "country": "France", "pre2026": 1, "goals2026": 4, "total": 5, "editions": "2022-2026", "_note": "2026 tally may be incomplete"},
+    {"player": "Folarin Balogun", "country": "USA", "pre2026": 0, "goals2026": 3, "total": 3, "editions": "2026", "_note": "2026 tally may be incomplete"},
+    {"player": "Erling Haaland", "country": "Norway", "pre2026": 0, "goals2026": 0, "total": 0, "editions": "2026", "_note": "2026 debut; update tally as tournament progresses"}
+  ],
+  "all_time_appearances": [
+    {"player": "Lionel Messi", "country": "Argentina", "appearances": 30, "_note": "Record holder as of Jul 3 2026"},
+    {"player": "Lothar Matthäus", "country": "Germany", "appearances": 25},
+    {"player": "Miroslav Klose", "country": "Germany", "appearances": 24},
+    {"player": "Paolo Maldini", "country": "Italy", "appearances": 23},
+    {"player": "Cristiano Ronaldo", "country": "Portugal", "appearances": 22, "_note": "2026 tally may be incomplete"},
+    {"player": "Diego Maradona", "country": "Argentina", "appearances": 21},
+    {"player": "Uwe Seeler", "country": "Germany", "appearances": 21},
+    {"player": "Władysław Żmuda", "country": "Poland", "appearances": 21}
+  ],
+  "single_tournament_records": {
+    "most_goals_single_tournament": {"player": "Just Fontaine", "country": "France", "goals": 13, "year": 1958},
+    "most_goals_single_match": {"player": "Oleg Salenko", "country": "Russia", "goals": 5, "year": 1994, "match": "vs Cameroon"},
+    "youngest_scorer": {"player": "Pelé", "country": "Brazil", "age": "17 years 239 days", "year": 1958},
+    "oldest_scorer": {"player": "Roger Milla", "country": "Cameroon", "age": "42 years 39 days", "year": 1994},
+    "most_wins_as_coach": {"coach": "Didier Deschamps", "country": "France", "knockout_wins": 10, "_note": "As of Jul 4 2026"},
+    "highest_scoring_match": {"teams": "Austria vs Switzerland", "score": "7-5", "year": 1954}
+  },
+  "knockout_records": {
+    "most_knockout_goals_since_2018": [
+      {"player": "Kylian Mbappé", "country": "France", "goals": 11},
+      {"player": "Lionel Messi", "country": "Argentina", "goals": 8, "_note": "estimate — verify"}
+    ]
+  },
+  "team_records": {
+    "most_titles": [
+      {"team": "Brazil", "titles": 5, "years": "1958, 1962, 1970, 1994, 2002"},
+      {"team": "Germany", "titles": 4, "years": "1954, 1974, 1990, 2014"},
+      {"team": "Italy", "titles": 4, "years": "1934, 1938, 1982, 2006"},
+      {"team": "Argentina", "titles": 3, "years": "1978, 1986, 2022"},
+      {"team": "France", "titles": 2, "years": "1998, 2018"},
+      {"team": "Uruguay", "titles": 2, "years": "1930, 1950"},
+      {"team": "England", "titles": 1, "years": "1966"},
+      {"team": "Spain", "titles": 1, "years": "2010"}
+    ]
+  }
+}
