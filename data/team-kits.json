@@ -1358,11 +1358,13 @@
       {
         "type": "home",
         "colorway": "Red / White / Blue",
+        "imageUrl": "https://assets.goal.com/images/v3/blt2069e851bb2c5bf7/Panama%202026%20world%20cup%20kit%20.jpg",
         "story": "Marking Reebok's return to the tournament for the first time since 1998, Panama's home jersey features the traditional red with a repeating harpy eagle pattern woven into the fabric from the national team crest. A polo-style collar with white and blue sleeve trims echoes the national flag, while an embossed federation logo pattern runs throughout."
       },
       {
         "type": "away",
         "colorway": "Navy Blue / White / Gold",
+        "imageUrl": "https://assets.goal.com/images/v3/bltd633ff559980f627/Panama%20away%202026%20World%20Cup%20kit.jpg",
         "story": "The away kit features a navy blue base with white side panels and a white polo collar detailed with dark stripes. Gold branding and the national crest complete the design. Panama is the first nation to wear Reebok's Vector logo at the tournament since Paraguay, Chile and Colombia in 1998."
       }
     ],
@@ -1483,6 +1485,7 @@
       {
         "type": "away",
         "colorway": "Sand / Grey / Maroon",
+        "imageUrl": "https://assets.goal.com/images/v3/bltf027b22f41260fb0/Qatar%20Away%20kit%20WC%2026.jpg",
         "story": "An abstract grey wave-like graphic sweeps across Qatar's away jersey, inspired by the geometry and shapes of the desert dune landscape. 'Qatar' is etched in Arabic across the back of the neck as a symbol of national pride and unity. The adidas Trefoil logo adds a heritage touch to this sand-toned design."
       }
     ],
@@ -1517,6 +1520,7 @@
       {
         "type": "away",
         "colorway": "White / Green / Gold",
+        "imageUrl": "https://www.prosoccer.com/cdn/shop/files/adidas-2026-saudi-arabia-mens-stadium-away-soccer-jersey-8657851.jpg?v=1781908409&width=1946",
         "story": "The away kit features a clean white base with gold and green adidas stripes along the shoulders. The Saudi crest and Trefoil logo are rendered in gold, giving the shirt an elegant, premium feel. The design maintains the architectural motifs from the home kit in a more subtle tonal treatment."
       }
     ],
@@ -1982,11 +1986,13 @@
       {
         "type": "home",
         "colorway": "Blue / White / Multicolor",
+        "imageUrl": "https://footykitsbattle.com/kits/uzbekistan.jpg",
         "story": "Produced by domestic brand 7Saber for Uzbekistan's historic first-ever tournament appearance, the home kit arrives in the nation's traditional blue. A large, intricate mosaic pattern is sublimated onto the lower torso, paying homage to the country's stunning historical architecture and famous tiled monuments like the Registan. Multi-colored flag striping adorns the crew-neck collar."
       },
       {
         "type": "away",
         "colorway": "White / Blue / Multicolor",
+        "imageUrl": "https://footykitsbattle.com/kits/lifestyle/uzbekistan-away-female.jpg",
         "story": "The away shirt provides a white alternative with the same architectural mosaic pattern and flag-inspired collar detailing as the home. A distinctive multicolor stripe in teal, green, orange, and white on the collar draws directly from the colors of the Uzbekistan national flag."
       }
     ],
