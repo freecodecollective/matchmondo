@@ -65,7 +65,7 @@ BRACKET = {
 
 def call_claude(prompt):
     payload = {
-        "model": "claude-sonnet-4-6",
+        "model": "claude-opus-4-8",
         "max_tokens": 2048,
         "messages": [{"role": "user", "content": prompt}],
     }

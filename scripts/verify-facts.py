@@ -163,7 +163,7 @@ def call_claude(prompt):
     if not api_key:
         return None
     payload = {
-        "model": "claude-sonnet-4-6",
+        "model": "claude-opus-4-8",
         "max_tokens": 1024,
         "messages": [{"role": "user", "content": prompt}],
     }
