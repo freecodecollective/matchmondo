@@ -541,6 +541,50 @@
       }
     ]
   },
+  "Côte d'Ivoire": {
+    "maker": "Puma",
+    "kits": [
+      {
+        "type": "home",
+        "colorway": "Rickie Orange / Sport Green",
+        "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1000,h_1000/global/783182/01/mod01/fnd/PNA/fmt/png",
+        "story": "The home shirt features an all-over tonal animal-print texture in vivid Rickie Orange, drawing from traditional Ivorian textiles and symbols to create movement, festivity, and warmth. Sport Green trims line the collar and side panels, referencing the tricolor of the Ivorian flag. Part of Puma's 'Collective Joy and Cultural Texture' theme, celebrating the vibrancy of Ivorian life. Made with at least 95% recycled material."
+      },
+      {
+        "type": "away",
+        "colorway": "White / Warm Chestnut",
+        "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1000,h_1000/global/783188/02/mod01/fnd/PNA/fmt/png",
+        "story": "Built on a clean white foundation, the away shirt features an intricate all-over botanical print of palm trees, baobab flowers, and radiating sun-like floral motifs rendered in soft orange and mint green. Inspired by the country's vibrant fashion culture and natural landscapes, the design evokes sunlight filtering through foliage."
+      }
+    ],
+    "links": [
+      {
+        "source": "Goal",
+        "title": "Ivory Coast Football 2026 kits: home, away, release dates & prices",
+        "url": "https://www.goal.com/en-us/lists/ivory-coast-world-cup-2026-kits/blt82b082130076f1e1"
+      },
+      {
+        "source": "SoccerBible",
+        "title": "Do Puma's 2026 Football Kits Deserve More Love?",
+        "url": "https://www.soccerbible.com/performance/football-apparel/2026/03/do-puma-s-2026-world-cup-kits-deserve-more-love/"
+      },
+      {
+        "source": "ESPN",
+        "title": "Rating Puma's 2026 away shirts: Portugal, Senegal, Morocco and more",
+        "url": "https://www.espn.com/soccer/story/_/id/48259711/rating-puma-2026-world-cup-away-shirts-portugal-senegal-morocco"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Group E Home & Away Kits | Germany, Ivory Coast, Ecuador, Curaçao",
+        "youtubeId": "Aq_1UnAK66E"
+      },
+      {
+        "title": "Ivory Coast Home Jersey 26/27 Player Version Review",
+        "youtubeId": "AUBTT6ZoNWA"
+      }
+    ]
+  },
   "Ecuador": {
     "maker": "Marathon Sports",
     "kits": [
@@ -723,6 +767,50 @@
       }
     ]
   },
+  "Germany": {
+    "maker": "adidas",
+    "kits": [
+      {
+        "type": "home",
+        "colorway": "White / Black / Red / Gold",
+        "imageUrl": "https://assets.goal.com/images/v3/bltf1ebe9ab293251b3/adidas%20FIFA%20World%20Cup%202026%20kit%20-%20Germany%203.png?auto=webp&format=pjpg&width=3840&quality=60",
+        "story": "The last-ever adidas Germany home shirt features a clean white base with a striking tricolour diamond and chevron pattern in black, red and gold, echoing the iconic graphics worn by the 1990 and 2014 tournament winners. Four stars above the crest commemorate Germany's victories in 1954, 1974, 1990 and 2014. The kit marks the end of a partnership stretching back to 1954 before Nike takes over in 2027."
+      },
+      {
+        "type": "away",
+        "colorway": "Dark Blue / Aqua",
+        "imageUrl": "https://assets.goal.com/images/v3/blt298524fa97ffcce9/Germany%20Away%20kit%20WC%2026.jpg?auto=webp&format=pjpg&width=3840&quality=60",
+        "story": "Built on Germany's traditional blue training-top heritage, the away kit reimagines diagonal chevrons as an all-over pattern in navy blue with aqua accents. The design references the classic blue quarter-zips worn in 1954, the blue-and-white training tops of the 1960s through 1980s, and the bold coloured training wear of the 1990s. The classic adidas Trefoil returns for this farewell collection."
+      }
+    ],
+    "links": [
+      {
+        "source": "Goal",
+        "title": "Germany Football 2026 kits: home, away, release dates & prices",
+        "url": "https://www.goal.com/en/lists/germany-fifa-world-cup-2026-kits/blt0f626b3aa8922079"
+      },
+      {
+        "source": "Bundesliga",
+        "title": "Germany unveil new dark blue away kit for Football 2026",
+        "url": "https://www.bundesliga.com/en/bundesliga/news/germany-dark-blue-away-jersey-2026-fifa-world-cup-36537"
+      },
+      {
+        "source": "SoccerBible",
+        "title": "adidas Unveil All 22 Federation Home Kits For 2026",
+        "url": "https://www.soccerbible.com/performance/football-apparel/2025/11/adidas-unveil-all-22-federation-home-kits-for-2026/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "The LAST EVER adidas Germany Kits | Football 2026 Kit Review",
+        "youtubeId": "LNjru_nvECI"
+      },
+      {
+        "title": "Football 2026 adidas Germany Home Jersey Unboxing + Review",
+        "youtubeId": "go5RRF-z2CU"
+      }
+    ]
+  },
   "Ghana": {
     "maker": "Puma",
     "kits": [
@@ -768,6 +856,90 @@
       {
         "title": "New Black Stars 2026 jersey unveiled — evolution of the iconic kit",
         "youtubeId": "v7deke79NFY"
+      }
+    ]
+  },
+  "Japan": {
+    "maker": "adidas",
+    "kits": [
+      {
+        "type": "home",
+        "colorway": "Blue / Ash Blue",
+        "imageUrl": "https://assets.goal.com/images/v3/blt1d83560a6f307ecc/adidas%20japan%20national%20kit.jpg?auto=webp&format=pjpg&width=3840&quality=60",
+        "story": "Under the theme 'Beyond the Horizon,' the home jersey uses Japan's classic blue enhanced with ash blue linear details reflecting the famed haze where sky and sea meet along the Japanese coastline. The Japanese flag sits across the back of the neck as a nod to national pride. Built with Climacool+ technology for on-pitch cooling."
+      },
+      {
+        "type": "away",
+        "colorway": "Off-White / Multicolor",
+        "imageUrl": "https://assets.goal.com/images/v3/blt99dac797f96b3852/Japan%20Away%20kit%20WC%2026.jpg?auto=webp&format=pjpg&width=3840&quality=60",
+        "story": "Widely praised as one of the best jerseys of the tournament, the away kit features 12 vertical stripes on an off-white base — 11 fading lines representing each player on the pitch, and a bold 12th central stripe in the red of the Japanese flag symbolizing the fans as the heart of the team. The retro adidas Trefoil logo returns for this collection."
+      }
+    ],
+    "links": [
+      {
+        "source": "Goal",
+        "title": "Japan Football 2026 kits: home, away, release dates & prices",
+        "url": "https://www.goal.com/en/lists/japan-fifa-world-cup-2026-kits/bltf62bdab07e155924"
+      },
+      {
+        "source": "Football Fashion",
+        "title": "Japan Football 2026 jersey: adidas away kit design and details",
+        "url": "https://footballfashion.org/wordpress/2026/04/06/japan-world-cup-2026-adidas-kit/"
+      },
+      {
+        "source": "FourFourTwo",
+        "title": "The Japan away kit is out — and it's a contender for kit of the year",
+        "url": "https://www.fourfourtwo.com/team/adidas-japan-world-cup-2026-away-kit"
+      }
+    ],
+    "videos": [
+      {
+        "title": "This Is the Best Jersey Released for Football 2026",
+        "youtubeId": "HssizoeiA6w"
+      },
+      {
+        "title": "Football 2026 adidas Japan Away Jersey Unboxing + Review",
+        "youtubeId": "zsi9_nsVr8o"
+      }
+    ]
+  },
+  "Korea Republic": {
+    "maker": "Nike",
+    "kits": [
+      {
+        "type": "home",
+        "colorway": "Global Red / Black",
+        "imageUrl": "https://www.footballshirtculture.com/images/cwgallery/5135-south-korea-2026-home-jersey/5135_south_korea_2026_nike_home_kit_a.jpeg",
+        "story": "Centred around Nike's 'Tiger's Ambush' narrative, the home kit arrives in Global Red with an all-over sublimated tiger stripe pattern layered in darker red tones, creating a textured, almost camouflage-like effect with a sense of movement. Black side panels run from the underarm to the hem, edged with narrow white trim. The design blends traditional Korean folklore with modern, aggressive footballing philosophy."
+      },
+      {
+        "type": "away",
+        "colorway": "Space Purple / Violet",
+        "imageUrl": "https://www.footballshirtculture.com/images/cwgallery/5136-south-korea-2026-away-jersey/5136_south_korea_2026_nike_away_kit_0.jpeg",
+        "story": "Where the home kit channels tiger stealth, the away blooms with intention — a floral-inspired graphic in Space Purple channels Korea's emotional and cultural dynamism. The botanical motif represents condensed energy and explosive momentum, while the violet colour is a purposeful choice to reinforce surprise and individuality. Built with Nike's Aero-FIT technology for unprecedented cooling."
+      }
+    ],
+    "links": [
+      {
+        "source": "SoccerBible",
+        "title": "Nike's Korea 2026 Kits Are an Exploration of National Identity",
+        "url": "https://www.soccerbible.com/performance/football-apparel/2026/03/nike-s-korea-2026-kits-are-an-exploration-of-national-identity/"
+      },
+      {
+        "source": "Football Fashion",
+        "title": "South Korea Football 2026 jersey: Nike home & away kits revealed",
+        "url": "https://footballfashion.org/wordpress/2026/04/05/south-korea-world-cup-2026-kit/"
+      },
+      {
+        "source": "Goal",
+        "title": "South Korea Football 2026 kits: home, away, release dates & prices",
+        "url": "https://www.goal.com/en/lists/south-korea-fifa-world-cup-2026-kits/blt521412d0909b5fb2"
+      }
+    ],
+    "videos": [
+      {
+        "title": "South Korea Home & Away Kits for Football 2026",
+        "youtubeId": "EcD-ASE_9OU"
       }
     ]
   },
@@ -864,6 +1036,46 @@
       {
         "title": "Puma unveils new kits for 11 nations, including top African teams",
         "youtubeId": "Yglfhld4rrA"
+      }
+    ]
+  },
+  "Netherlands": {
+    "maker": "Nike",
+    "kits": [
+      {
+        "type": "home",
+        "colorway": "Hyper Crimson / Black",
+        "imageUrl": "https://assets.goal.com/images/v3/blta4fca20fd747e39a/Netherlands%20WC%2026%20Home%20.jpg?auto=webp&format=pjpg&width=3840&quality=60",
+        "story": "Nike engineered a new 'Hyper Crimson' orange specifically for this kit — the most vibrant and saturated shade ever used on a Netherlands jersey. The torso features a geometric lion knit pattern that carries down through the shorts, while a lenticular, iridescent KNVB crest shifts color as the jersey moves. A custom crown graphic inside the collar highlights the federation's royal connection."
+      },
+      {
+        "type": "away",
+        "colorway": "White / Hyper Crimson",
+        "imageUrl": "https://assets.goal.com/images/v3/blta5370ed76fb693e3/Netherlands%20WC%2026%20Away.jpg?auto=webp&format=pjpg&width=3840&quality=60",
+        "story": "Built around the concept of 'microscopic gradients,' the away kit features a white base with a bold horizontal band across the chest that fades through shifting shades of orange. The design reflects Dutch values of precision and experimentation — from Dutch design and architecture to the Total Football philosophy that redefined the global game in the 1970s."
+      }
+    ],
+    "links": [
+      {
+        "source": "Goal",
+        "title": "Netherlands Football 2026 kits: home, away, release dates & prices",
+        "url": "https://www.goal.com/en/lists/netherlands-fifa-world-cup-2026-kits/bltcc5006cbc3137d10"
+      },
+      {
+        "source": "Football Fashion",
+        "title": "Netherlands Football 2026 Nike home & away kits",
+        "url": "https://footballfashion.org/wordpress/2026/03/28/netherlands-world-cup-2026-kit/"
+      },
+      {
+        "source": "SoccerBible",
+        "title": "Did You Miss Any of Nike's 2026 Kits?",
+        "url": "https://www.soccerbible.com/performance/football-apparel/2026/03/did-you-miss-any-of-nike-s-2026-world-cup-kits/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Netherlands Away Jersey 2026 Player Version Review",
+        "youtubeId": "rAXxS6tni4s"
       }
     ]
   },
@@ -1006,6 +1218,50 @@
       }
     ]
   },
+  "Scotland": {
+    "maker": "adidas",
+    "kits": [
+      {
+        "type": "home",
+        "colorway": "Night Sky / White",
+        "imageUrl": "https://www.footballshirtculture.com/images/cwgallery/4655-scotland-2026-adidas-home-kit/4655_scotland_2026_adidas_home_kit_a1.jpg",
+        "story": "The Scotland home kit presents the traditional dark navy base with subtle tonal graphics inspired by the national Saltire, visible across the body and shoulders. A white deep-cut neckline and sleeve cuffs complement the design, while the Scottish flag is placed below the collar on the back. The crest returns to a central position on the chest, produced with adidas Climacool+ and jacquard-knit fabric."
+      },
+      {
+        "type": "away",
+        "colorway": "Trace Scarlet / Purple / White",
+        "imageUrl": "https://www.footballshirtculture.com/images/cwgallery/5140-scotland-2026-away-jersey/5140_scotland_2026_adidas_away_kit_a.jpg",
+        "story": "The away kit marks a return to scarlet red, a color not used for Scotland's away strip since the 1980s. Fine vertical purple pinstripes run throughout the body, adding contrast and a sense of movement. The reintroduction of the adidas Trefoil logo connects the design to some of the brand's most celebrated heritage kits. A thistle graphic on the back of the neck nods to Scotland's national flower, symbolizing resilience."
+      }
+    ],
+    "links": [
+      {
+        "source": "Goal",
+        "title": "Scotland Football 2026 kits: home, away, release dates & prices",
+        "url": "https://www.goal.com/en-us/lists/scotland-fifa-world-cup-2026-kits/bltfb5670f3b5942dc5"
+      },
+      {
+        "source": "Football Fashion",
+        "title": "Scotland 2026 adidas Home Kit",
+        "url": "https://footballfashion.org/wordpress/2025/11/15/scotland-2026-kit/"
+      },
+      {
+        "source": "Football Fashion",
+        "title": "Scotland 2026 jersey: adidas away kit revealed",
+        "url": "https://footballfashion.org/wordpress/2026/05/01/scotland-world-cup-2026-jersey/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Scotland Football 2026 adidas Away Kit",
+        "youtubeId": "04Re-N86joI"
+      },
+      {
+        "title": "Scotland FC Unveils Stunning adidas Kit!",
+        "youtubeId": "PMHcU-d2ZbM"
+      }
+    ]
+  },
   "Senegal": {
     "maker": "Puma",
     "kits": [
@@ -1051,6 +1307,50 @@
       {
         "title": "Puma kit launch featuring Senegal",
         "youtubeId": "tZn7Cz5r_7Q"
+      }
+    ]
+  },
+  "South Africa": {
+    "maker": "adidas",
+    "kits": [
+      {
+        "type": "home",
+        "colorway": "Yellow / Green",
+        "imageUrl": "https://www.footballshirtculture.com/images/cwgallery/5059-south-africa-2026-2027-adidas-home-jersey/5059_south_africa_2026_2027_adidas_home_jersey_a-2.jpg",
+        "story": "Drawing inspiration from the iconic 2010 jersey, the electric yellow home shirt with green trim honors that legacy while stepping into a new era under adidas. Subtle woven graphics throughout the fabric represent the nation's 12 official languages, a powerful reflection of South Africa's diversity, unity, and shared love for football. Features CLIMACOOL+ technology with 3D body-mapped ventilation."
+      },
+      {
+        "type": "away",
+        "colorway": "Team Dark Green / Gold / White",
+        "imageUrl": "https://www.footballshirtculture.com/images/cwgallery/5146-south-africa-2026-away-jersey/5146_south_africa_2026_adidas_away_kit_1.jpeg",
+        "story": "Built on a Team Dark Green base with tonal vertical striping and intricate geometric detailing, the away jersey features a fold-over collar with white trim and gold adidas Three Stripes on the shoulders. The classic white Trefoil logo returns on the chest alongside the SAFA crest, nodding to the heritage of the 2010 era. SoccerBible shot the campaign bringing together different South African subcultures."
+      }
+    ],
+    "links": [
+      {
+        "source": "ESPN",
+        "title": "adidas unveil new South Africa kit ahead of Football 2026",
+        "url": "https://www.espn.com/espn/story/_/id/48087462/adidas-unveil-new-south-africa-kit-ahead-fifa-world-cup-wafcon"
+      },
+      {
+        "source": "SoccerBible",
+        "title": "How SoccerBible Shot adidas x South Africa's 2026 Kit Campaign",
+        "url": "https://www.soccerbible.com/features/2026/04/how-we-marked-adidas-return-to-south-african-football/"
+      },
+      {
+        "source": "Goal",
+        "title": "South Africa Football 2026 kits: home, away, release dates & prices",
+        "url": "https://www.goal.com/en/lists/south-africa-fifa-world-cup-2026-kits/blt7dec236a802ff027"
+      }
+    ],
+    "videos": [
+      {
+        "title": "SAFA unveils new Bafana and Banyana kits",
+        "youtubeId": "W2kRgGUeOyc"
+      },
+      {
+        "title": "Bafana Bafana's NEW adidas Kit — Is This the Start of a Comeback?",
+        "youtubeId": "Pocj-Tqjnaw"
       }
     ]
   },
@@ -1101,6 +1401,46 @@
       }
     ]
   },
+  "Sweden": {
+    "maker": "adidas",
+    "kits": [
+      {
+        "type": "home",
+        "colorway": "Yellow / Royal Blue",
+        "imageUrl": "https://www.footballshirtculture.com/images/cwgallery/4712-sweden-2026-home-shirt/4712_sweden_2026_adidas_home_kit_a.jpg",
+        "story": "The adidas Sweden home jersey uses a bright yellow base with royal blue raglan-style shoulder accents, reworked with a retro 1970s edge. A subtle tone-on-tone floral graphic runs through the fabric, inspired by the daisy-pattern stitching found on vintage denim and traditional Swedish folk dresses from the era. 'SVERIGE' is stamped at the back of the collar in 1970s-inspired typography."
+      },
+      {
+        "type": "away",
+        "colorway": "Royal Blue / Pale Yellow",
+        "imageUrl": "https://www.footballshirtculture.com/images/cwgallery/5171-sweden-2026-away-jersey/5171_sweden_2026_adidas_away_kit_a.jpg",
+        "story": "Three distinct shades of royal blue combine in a vertically structured layout with repeating geometric wave patterns, drawing visual inspiration from 1970s Scandinavian sportswear and Sweden's music-and-culture scene. A pale yellow V-neckline trim and matching shoulder stripes connect it back to the national colors. The adidas Trefoil logo returns to a Swedish jersey for the first time in decades."
+      }
+    ],
+    "links": [
+      {
+        "source": "Football Fashion",
+        "title": "Sweden Football 2026 adidas Home Kit",
+        "url": "https://footballfashion.org/wordpress/2025/11/23/sweden-2026-adidas-kit/"
+      },
+      {
+        "source": "Football Fashion",
+        "title": "Sweden Football 2026 jersey: adidas away kit released",
+        "url": "https://footballfashion.org/wordpress/2026/05/17/sweden-world-cup-2026-jersey-away-kit/"
+      },
+      {
+        "source": "SoccerBible",
+        "title": "adidas Unveil All 22 Federation Home Kits For 2026",
+        "url": "https://www.soccerbible.com/performance/football-apparel/2025/11/adidas-unveil-all-22-federation-home-kits-for-2026/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Football 2026 adidas Sweden Home Jersey Unboxing + Review",
+        "youtubeId": "XzZuJO_l2ZQ"
+      }
+    ]
+  },
   "Switzerland": {
     "maker": "Puma",
     "kits": [
@@ -1140,6 +1480,50 @@
       {
         "title": "I bought & ranked every 2026 jersey",
         "youtubeId": "pBKXW08LVXU"
+      }
+    ]
+  },
+  "Türkiye": {
+    "maker": "Nike",
+    "kits": [
+      {
+        "type": "home",
+        "colorway": "Sport Red / Team Red / White",
+        "imageUrl": "https://www.tff-fanshop.com/media/e0/95/1c/1774416912/nike-tff-tuerkei-trikot-home-wc-2026-rot-f614-io8874-fan-shop-front.png",
+        "story": "The home kit restores Türkiye's classic red identity with a Sport Red and Team Red combination. The torso features a flowing ebru-inspired marbling pattern in contrasting dark and bright red tones, referencing Turkey's centuries-old paper marbling art tradition. A bold horizontal chest band houses the Turkish flag centrally with a white Nike Swoosh below."
+      },
+      {
+        "type": "away",
+        "colorway": "White / Sport Red",
+        "imageUrl": "https://www.tff-fanshop.com/media/9e/d9/4e/1774260866/nike-tff-tuerkei-trikot-away-wc-2026-weiss-f100-io8873-fan-shop-front.png",
+        "story": "The away kit builds on a clean white base with a bold Sport Red horizontal band incorporating the same ebru marbling pattern from the home kit. The Turkish flag sits centrally within the red band, while red side panels extend from the underarm to the hem. The design echoes Turkey's historic 1928 look with a contemporary edge."
+      }
+    ],
+    "links": [
+      {
+        "source": "Football Fashion",
+        "title": "Türkiye Football 2026 Nike jersey: home & away kits revealed",
+        "url": "https://footballfashion.org/wordpress/2026/04/12/turkiye-world-cup-2026-kit/"
+      },
+      {
+        "source": "ESPN",
+        "title": "Football 2026 kit ranking: all 105 jerseys for all 48 teams",
+        "url": "https://www.espn.com/soccer/story/_/id/48352807/world-cup-2026-kit-ranking-canada-mexico-united-states-argentina-australia-brazil-england-france-germany-portugal-spain"
+      },
+      {
+        "source": "SoccerBible",
+        "title": "Nike's Türkiye Kit Reworked by an AI Artist",
+        "url": "https://www.soccerbible.com/interviews/2026/03/nike-s-tuerkiye-kit-reframed-by-ai/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "NIKE KITS FOR TÜRKIYE AT THE 2026 TOURNAMENT",
+        "youtubeId": "KzRGNrXsiWA"
+      },
+      {
+        "title": "Turkey Away Jersey 2026 Fan Version Review",
+        "youtubeId": "Xf3RbRHDh30"
       }
     ]
   },
@@ -1189,6 +1573,50 @@
       {
         "title": "U.S. Soccer unveils the new stars and stripes jerseys",
         "youtubeId": "MONsdihbd1A"
+      }
+    ]
+  },
+  "Uruguay": {
+    "maker": "Nike",
+    "kits": [
+      {
+        "type": "home",
+        "colorway": "Sky Blue / Navy / White",
+        "imageUrl": "https://assets.goal.com/images/v3/bltbe273e4ffaa1bb07/Uruguay%20WC%2026%20home%20kit%20.jpg?auto=webp&format=pjpg&width=3840&quality=60",
+        "story": "A clean execution of Uruguay's iconic Celeste sky blue, paired with navy accents that reinforce clarity and confidence. The design is modelled on several classic Celeste shirts worn through the ages, featuring an immaculate white polo collar and refined touches of navy trim. Imbued with the spirit of garra charrúa — the Uruguayan fighting spirit."
+      },
+      {
+        "type": "away",
+        "colorway": "Obsidian / Navy / Electric Blue",
+        "imageUrl": "https://assets.goal.com/images/v3/blt8ac2588df33754be/Uruguay%20WC%2026%20away%20kit%20.jpg?auto=webp&format=pjpg&width=3840&quality=60",
+        "story": "Inspired by the architectural identity of Montevideo, the away kit features an Obsidian base with geometric graphic elements drawn from Art Deco influences found across the city. Specific nods to the Estadio Centenario and the Torre de los Homenajes appear in light-based shapes drawn from the tower's window formations. A bold wings pattern stretches across the chest, symbolizing ascent and ambition."
+      }
+    ],
+    "links": [
+      {
+        "source": "Goal",
+        "title": "Uruguay Football 2026 kits: home, away, release dates & prices",
+        "url": "https://www.goal.com/en-us/lists/uruguay-fifa-world-cup-2026-kits/blt24c228dc07c1f414"
+      },
+      {
+        "source": "SoccerBible",
+        "title": "Did You Miss Any of Nike's 2026 Kits?",
+        "url": "https://www.soccerbible.com/performance/football-apparel/2026/03/did-you-miss-any-of-nike-s-2026-world-cup-kits/"
+      },
+      {
+        "source": "ESPN",
+        "title": "Football 2026 kit ranking: all 105 jerseys for all 48 teams",
+        "url": "https://www.espn.com/soccer/story/_/id/48352807/world-cup-2026-kit-ranking-canada-mexico-united-states-argentina-australia-brazil-england-france-germany-portugal-spain"
+      }
+    ],
+    "videos": [
+      {
+        "title": "REVIEW of the NIKE URUGUAY JERSEY for Football 2026",
+        "youtubeId": "KMn-qfJ1-d8"
+      },
+      {
+        "title": "2026 NIKE URUGUAY AWAY SHIRT REVIEW",
+        "youtubeId": "uMlzVWFkOjw"
       }
     ]
   }
