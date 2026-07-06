@@ -1232,8 +1232,7 @@
     "city": "Arlington (Dallas), TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 0,
-    "isLive": true
+    "scoreA": 1
   },
   {
     "n": 94,
@@ -1292,7 +1291,7 @@
     "utc": "2026-07-10T19:00:00Z",
     "stage": "Quarter-finals",
     "group": null,
-    "home": "To be announced",
+    "home": "Spain",
     "away": "To be announced",
     "venue": "SoFi Stadium",
     "city": "Inglewood (Los Angeles), CA",
