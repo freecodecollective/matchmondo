@@ -111,6 +111,30 @@ def main() -> None:
 
     rows.sort(key=lambda r: (r["utc"], r["n"]))
 
+    # Preserve score facts that update-espn-scores.py layers on (pkH/pkA/result),
+    # and never let a feed hiccup null-out a score we already have. This file is
+    # REGENERATED from the fixture feed every run, so anything not carried over
+    # here is lost as soon as the match ages out of ESPN's scoreboard window —
+    # that's how the R32 shootout results (and every result:"FT") vanished on
+    # 2026-07-06 and the knockout bracket stopped advancing PK winners.
+    # isLive/liveDetail are deliberately NOT preserved: the ESPN step re-derives
+    # them every run, and dropping them here auto-clears stale live flags.
+    if OUT_JSON.exists():
+        try:
+            prev_by_n = {r["n"]: r for r in json.loads(OUT_JSON.read_text())}
+        except (json.JSONDecodeError, KeyError, TypeError):
+            prev_by_n = {}
+        for r in rows:
+            prev = prev_by_n.get(r["n"])
+            if not prev:
+                continue
+            for key in ("pkH", "pkA", "result"):
+                if key in prev and key not in r:
+                    r[key] = prev[key]
+            for key in ("scoreH", "scoreA"):
+                if r.get(key) is None and prev.get(key) is not None:
+                    r[key] = prev[key]
+
     # Preserve hand-maintained US TV assignments from the existing file.
     if OUT.exists():
         m = re.search(r"window\.WC_MATCHES\s*=\s*(\[.*\]);", OUT.read_text(), re.S)

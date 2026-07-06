@@ -948,7 +948,8 @@ window.WC_MATCHES = [
     "city": "Inglewood (Los Angeles), CA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 1
+    "scoreA": 1,
+    "result": "FT"
   },
   {
     "n": 76,
@@ -961,7 +962,8 @@ window.WC_MATCHES = [
     "city": "Houston, TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 2,
-    "scoreA": 1
+    "scoreA": 1,
+    "result": "FT"
   },
   {
     "n": 74,
@@ -974,7 +976,10 @@ window.WC_MATCHES = [
     "city": "Foxborough (Boston), MA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 1
+    "scoreA": 1,
+    "pkH": 3,
+    "pkA": 4,
+    "result": "PEN"
   },
   {
     "n": 75,
@@ -987,7 +992,10 @@ window.WC_MATCHES = [
     "city": "Monterrey, Mexico",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 1
+    "scoreA": 1,
+    "pkH": 2,
+    "pkA": 3,
+    "result": "PEN"
   },
   {
     "n": 78,
@@ -1000,7 +1008,8 @@ window.WC_MATCHES = [
     "city": "Arlington (Dallas), TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 2
+    "scoreA": 2,
+    "result": "FT"
   },
   {
     "n": 77,
@@ -1013,7 +1022,8 @@ window.WC_MATCHES = [
     "city": "East Rutherford, NJ",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 3,
-    "scoreA": 0
+    "scoreA": 0,
+    "result": "FT"
   },
   {
     "n": 79,
@@ -1026,7 +1036,8 @@ window.WC_MATCHES = [
     "city": "Mexico City, Mexico",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 2,
-    "scoreA": 0
+    "scoreA": 0,
+    "result": "FT"
   },
   {
     "n": 80,
@@ -1039,7 +1050,8 @@ window.WC_MATCHES = [
     "city": "Atlanta, GA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 2,
-    "scoreA": 1
+    "scoreA": 1,
+    "result": "FT"
   },
   {
     "n": 82,
@@ -1052,7 +1064,8 @@ window.WC_MATCHES = [
     "city": "Seattle, WA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 3,
-    "scoreA": 2
+    "scoreA": 2,
+    "result": "AET"
   },
   {
     "n": 81,
@@ -1065,7 +1078,8 @@ window.WC_MATCHES = [
     "city": "Santa Clara (SF Bay Area), CA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 2,
-    "scoreA": 0
+    "scoreA": 0,
+    "result": "FT"
   },
   {
     "n": 84,
@@ -1078,7 +1092,8 @@ window.WC_MATCHES = [
     "city": "Inglewood (Los Angeles), CA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 3,
-    "scoreA": 0
+    "scoreA": 0,
+    "result": "FT"
   },
   {
     "n": 83,
@@ -1091,7 +1106,8 @@ window.WC_MATCHES = [
     "city": "Toronto, Canada",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 2,
-    "scoreA": 1
+    "scoreA": 1,
+    "result": "FT"
   },
   {
     "n": 85,
@@ -1104,7 +1120,8 @@ window.WC_MATCHES = [
     "city": "Vancouver, Canada",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 2,
-    "scoreA": 0
+    "scoreA": 0,
+    "result": "FT"
   },
   {
     "n": 88,
@@ -1117,7 +1134,10 @@ window.WC_MATCHES = [
     "city": "Arlington (Dallas), TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 1
+    "scoreA": 1,
+    "pkH": 2,
+    "pkA": 4,
+    "result": "PEN"
   },
   {
     "n": 86,
@@ -1130,7 +1150,8 @@ window.WC_MATCHES = [
     "city": "Miami Gardens, FL",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 3,
-    "scoreA": 2
+    "scoreA": 2,
+    "result": "AET"
   },
   {
     "n": 87,
@@ -1143,7 +1164,8 @@ window.WC_MATCHES = [
     "city": "Kansas City, MO",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 0
+    "scoreA": 0,
+    "result": "FT"
   },
   {
     "n": 90,
@@ -1156,7 +1178,8 @@ window.WC_MATCHES = [
     "city": "Houston, TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 3
+    "scoreA": 3,
+    "result": "FT"
   },
   {
     "n": 89,
@@ -1169,7 +1192,8 @@ window.WC_MATCHES = [
     "city": "Philadelphia, PA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 1
+    "scoreA": 1,
+    "result": "FT"
   },
   {
     "n": 91,
@@ -1182,7 +1206,8 @@ window.WC_MATCHES = [
     "city": "East Rutherford, NJ",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 2
+    "scoreA": 2,
+    "result": "FT"
   },
   {
     "n": 92,

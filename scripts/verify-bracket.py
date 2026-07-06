@@ -105,6 +105,22 @@ def main():
 
     mismatches = []
 
+    # Data-integrity tripwire: a finished, tied knockout match MUST carry a
+    # decisive penalty shootout — if pkH/pkA are missing, an updater regression
+    # dropped them (it happened 2026-07-06: update-data.py regenerated the file
+    # and the bracket stopped advancing PK winners).
+    for m in knockout:
+        if m.get("isLive") or m.get("scoreH") is None or m.get("scoreA") is None:
+            continue
+        pk_decisive = (m.get("pkH") is not None and m.get("pkA") is not None
+                       and m["pkH"] != m["pkA"])
+        if m["scoreH"] == m["scoreA"] and not pk_decisive:
+            mismatches.append(
+                f"Match {m['n']} ({m['home']} vs {m['away']}) is a finished "
+                f"{m['scoreH']}-{m['scoreA']} knockout tie with no decisive "
+                "penalty result (pkH/pkA missing or tied) — dropped shootout data?"
+            )
+
     for event in all_events:
         comps = event.get("competitions", [])
         if not comps:
