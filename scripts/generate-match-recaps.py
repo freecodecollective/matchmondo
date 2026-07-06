@@ -342,6 +342,7 @@ Rules:
 - 2-3 paragraphs, 150-300 words total
 - Include the score and key match facts/trivia naturally in the text
 - NEVER use "World Cup" or "FIFA" — say "the tournament" or "Football 2026" instead
+- NEVER use "tie" to mean a match/fixture (Americans read it as a draw) — say "match", "game", or "matchup"
 - Be explicit about what the result means: does a team advance, is a team eliminated, what do they need, who do they play next (include day, time in PT, and venue)?
 - For group stage: explain what each team needs going forward, or if the group is decided
 - For knockouts: state clearly who advances and who is eliminated, and who/when/where is the next match

@@ -250,6 +250,16 @@ def verify_all(match_filter=None, use_claude=False):
                 if result:
                     fact_issues.extend(result)
 
+            cleaned_text = re.sub(r'— \*[^*]+\*$', '', fact).strip()
+            if re.search(
+                r'\b(?:knockout|cup|first[- ]leg|second[- ]leg|round of \d+)\s+tie\b',
+                cleaned_text, re.IGNORECASE
+            ):
+                fact_issues.append(
+                    'NAMING: Uses "tie" to mean a match/fixture '
+                    '(Americans read it as a draw) — use "match", "game", or "matchup"'
+                )
+
             if "World Cup" in fact or "FIFA" in fact:
                 if "— *" not in fact.split("World Cup")[0][-20:] if "World Cup" in fact else True:
                     cleaned = re.sub(r'— \*[^*]+\*$', '', fact).strip()
