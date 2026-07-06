@@ -1,6 +1,6 @@
 // Fox Sports headshot IDs for player photos.
-// 1245 players across 48 teams. Base URL: https://b.fssta.com/uploads/application/soccer/headshots/{ID}.png
-window.WC_HEADSHOTS = {
+// 1247 players across 48 teams. Base URL: https://b.fssta.com/uploads/application/soccer/headshots/{ID}.png
+window.WC_HEADSHOTS =  {
   "Algeria": {
     "Oussama Benbot": "141561",
     "Melvin Mastil": "88521",
@@ -110,7 +110,8 @@ window.WC_HEADSHOTS = {
     "Marko Arnautovic": "32",
     "Michael Gregoritsch": "35525",
     "Sasa Kalajdzic": "76216",
-    "Patrick Wimmer": "73802"
+    "Patrick Wimmer": "73802",
+    "Christoph Baumgartner": "69563"
   },
   "Belgium": {
     "Thibaut Courtois": "1097",
@@ -500,7 +501,8 @@ window.WC_HEADSHOTS = {
     "Marcus Rashford": "40554",
     "Bukayo Saka": "68549",
     "Ivan Toney": "5711",
-    "Ollie Watkins": "23039"
+    "Ollie Watkins": "23039",
+    "Tino Livramento": "90393"
   },
   "France": {
     "Mike Maignan": "38275",
@@ -863,7 +865,8 @@ window.WC_HEADSHOTS = {
     "Kosta Barbarouses": "20299",
     "Jesse Randall": "72127",
     "Ben Waine": "69751",
-    "Chris Wood": "6505"
+    "Chris Wood": "6505",
+    "Matt Garbett": "72117"
   },
   "Norway": {
     "Orjan Nyland": "15682",
