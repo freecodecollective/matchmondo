@@ -1,8 +1,8 @@
 // Football 2026 — player profiles for all squad members.
-// 48 teams, 1286 players. Compiled from web research (June 2026).
+// 48 teams, 1248 players. Compiled from web research (June 2026).
 // Featured players include caps, tournament history, honors, and localized bios.
 // Team order/rank come from data/rankings.js.
-window.WC_PLAYERS = {
+window.WC_PLAYERS =  {
   "teams": {
     "Algeria": [
       {
@@ -70,55 +70,6 @@ window.WC_PLAYERS = {
           "AFCON 2019 (Algeria)",
           "AFC Champions League Elite 2025 (Al-Ahli)",
           "PFA Players' Player of the Year 2015-16"
-        ]
-      },
-      {
-        "name": "Mohamed Amoura",
-        "espnId": 315384,
-        "position": "Forward / Striker",
-        "club": "VfL Wolfsburg (Bundesliga, Germany)",
-        "hometown": "Jijel",
-        "why": "Amoura was Algeria's top scorer in Football 2026 qualifying with 10 goals in eight matches, establishing himself as the team's main striker. A quick, mobile forward who thrives on runs in behind, he made a strong impact in the Bundesliga after joining Wolfsburg in 2024. His pace and clinical finishing make him central to Algeria's attack.",
-        "number": 18,
-        "why_es": "Amoura fue el máximo goleador de Argelia en la clasificación al Fútbol 2026 con 10 goles en ocho partidos, consolidándose como el delantero principal del equipo. Un delantero veloz y móvil que prospera con carreras a las espaldas de la defensa, causó un fuerte impacto en la Bundesliga tras unirse al Wolfsburg en 2024. Su velocidad y definición clínica lo sitúan en el centro del ataque argelino.",
-        "why_fr": "Amoura a été le meilleur buteur algérien lors des éliminatoires de la Football 2026 avec 10 buts en huit matchs, s'imposant comme l'attaquant principal de l'équipe. Avant-centre rapide et mobile qui excelle dans les courses dans le dos des défenses, il a eu un fort impact en Bundesliga après avoir rejoint Wolfsburg en 2024. Sa vitesse et sa finition clinique le placent au cœur de l'attaque algérienne.",
-        "why_pt_BR": "Amoura foi o artilheiro da Argélia nas eliminatórias da Futebol 2026 com 10 gols em oito partidas, consolidando-se como o centroavante principal da equipe. Um atacante rápido e móvel que prospera em corridas pelas costas da defesa, causou forte impacto na Bundesliga após se juntar ao Wolfsburg em 2024. Sua velocidade e finalização clínica são centrais para o ataque argelino.",
-        "why_de": "Amoura war Algeriens bester Torschütze in der Qualifikation für Fußball 2026 mit 10 Toren in acht Spielen und etablierte sich als Hauptstürmer des Teams. Ein schneller, beweglicher Stürmer, der vom Laufweg hinter die Abwehrkette lebt, hinterließ er nach seinem Wechsel zu Wolfsburg 2024 einen starken Eindruck in der Bundesliga. Sein Tempo und seine klinische Abschlussqualität machen ihn zum Mittelpunkt von Algeriens Angriff.",
-        "why_it": "Amoura è stato il miglior marcatore dell'Algeria nelle qualificazioni al Calcio 2026 con 10 gol in otto partite, affermandosi come attaccante principale della squadra. Centravanti veloce e mobile, eccelle nelle corse alle spalle della difesa e ha avuto un forte impatto in Bundesliga dopo essere passato al Wolfsburg nel 2024. La sua velocità e la finalizzazione precisa lo rendono centrale per l'attacco algerino.",
-        "why_ja": "Amouraはフットボール2026予選で8試合10ゴールを挙げアルジェリアの最多得点者となり、チームの主要ストライカーとしての地位を確立した。裏へのランニングで力を発揮するスピードのある機動力の高いフォワードで、2024年Wolfsburgに加入後ブンデスリーガでも強烈な印象を残した。そのスピードと決定力がアルジェリアの攻撃の核となっている。",
-        "why_ko": "Amoura는 풋볼 2026 예선에서 8경기 10골로 알제리 최다 득점자로 이름을 올리며 팀의 주전 공격수로 자리매김했다. 뒤 공간으로의 침투와 빠른 움직임이 돋보이는 모바일 포워드로, 2024년 Wolfsburg에 합류한 후 분데스리가에서 강렬한 인상을 남겼다. 그의 스피드와 냉정한 마무리는 알제리 공격의 핵심이다.",
-        "why_zh_Hans": "阿穆拉在2026年足球赛资格赛中以8场比赛攻入10球，成为阿尔及利亚队头号射手，并确立了他作为球队主力前锋的地位。他是一名速度快、机动性强的前锋，善于在身后跑动。2024年加入沃尔夫斯堡后在德甲联赛取得了强劲表现。他的速度和精准的临门一脚使他成为阿尔及利亚进攻的核心。",
-        "why_ar": "سجّل عمورة 10 أهداف في ثماني مباريات ليكون الهداف الأول للجزائر في تصفيات كرة القدم 2026، مرسّخاً نفسه مهاجماً رئيسياً للفريق. مهاجم سريع ومتحرك يزدهر بالجري خلف الدفاعات، وترك بصمة قوية في الدوري الألماني بعد انضمامه لفولفسبورغ عام 2024. سرعته وتهديفه الحاسم يجعلانه محوراً في هجوم الجزائر.",
-        "why_es_ES": "Amoura fue el máximo goleador de Argelia en la clasificación para el Fútbol 2026 con 10 goles en ocho partidos, consolidándose como el delantero centro del equipo. Un ariete rápido y móvil que vive de las carreras a la espalda de la defensa, causó un gran impacto en la Bundesliga tras incorporarse al Wolfsburg en 2024. Su velocidad y definición clínica lo sitúan en el eje del ataque argelino.",
-        "caps": 44,
-        "intlGoals": 19,
-        "tournaments": [
-          "2025 AFCON"
-        ],
-        "clubs": [
-          {
-            "team": "VfL Wolfsburg",
-            "years": "2024-present",
-            "country": "Germany"
-          },
-          {
-            "team": "Union Saint-Gilloise",
-            "years": "2023-2024",
-            "country": "Belgium"
-          },
-          {
-            "team": "FC Lugano",
-            "years": "2021-2023",
-            "country": "Switzerland"
-          },
-          {
-            "team": "ES Sétif",
-            "years": "2019-2021",
-            "country": "Algeria"
-          }
-        ],
-        "honors": [
-          "Belgian First Division A top scorer 2023-24 (Union Saint-Gilloise)"
         ]
       },
       {
@@ -390,62 +341,6 @@ window.WC_PLAYERS = {
           {
             "team": "France U19",
             "years": "2021-2022",
-            "country": null
-          }
-        ]
-      },
-      {
-        "name": "Rayan Ait-Nouri",
-        "espnId": 252095,
-        "position": "Left-back",
-        "club": "Manchester City (Premier League, England)",
-        "hometown": "Montreuil, France; of Algerian descent",
-        "why": "One of Algeria's most prized talents, Ait-Nouri is a dynamic left-back who earned a move to Manchester City after excelling at Wolverhampton Wanderers. He combines blistering pace with technical dribbling ability, often functioning as a winger when in possession. His Premier League pedigree makes him one of Algeria's most important players at Football 2026.",
-        "number": 15,
-        "clubs": [
-          {
-            "team": "Vitória de Guimaraes",
-            "years": "2025-CURRENT",
-            "country": null
-          },
-          {
-            "team": "Feignies",
-            "years": "2025-2026",
-            "country": null
-          },
-          {
-            "team": "Otôho d'Oyo",
-            "years": "2025-2026",
-            "country": null
-          },
-          {
-            "team": "AJ Auxerre",
-            "years": "2021-2022",
-            "country": null
-          },
-          {
-            "team": "Mauritania",
-            "years": "2020-2022",
-            "country": null
-          },
-          {
-            "team": "Mali",
-            "years": "2019-2021",
-            "country": null
-          },
-          {
-            "team": "Panionios",
-            "years": "2018-2020",
-            "country": null
-          },
-          {
-            "team": "Djoliba",
-            "years": "2018-2020",
-            "country": null
-          },
-          {
-            "team": "Orléans",
-            "years": "2017-2018",
             "country": null
           }
         ]
@@ -763,12 +658,52 @@ window.WC_PLAYERS = {
       },
       {
         "name": "Mohamed Amine Amoura",
-        "espnId": null,
+        "espnId": 315384,
         "position": "Forward",
         "club": "VfL Wolfsburg (Bundesliga, Germany)",
         "hometown": "Djelfa, Algeria",
         "why": "One of Algeria's most exciting attackers, Amoura made a rapid rise from Algerian domestic football through Belgium's Royale Union Saint-Gilloise to the Bundesliga with Wolfsburg. He is an explosive, pacey forward who can play across the front line and is lethal in transition. His direct style and goalscoring instinct make him a central figure in Algeria's Football 2026 attack.",
-        "number": 18
+        "number": 18,
+        "why_es": "Amoura fue el máximo goleador de Argelia en la clasificación al Fútbol 2026 con 10 goles en ocho partidos, consolidándose como el delantero principal del equipo. Un delantero veloz y móvil que prospera con carreras a las espaldas de la defensa, causó un fuerte impacto en la Bundesliga tras unirse al Wolfsburg en 2024. Su velocidad y definición clínica lo sitúan en el centro del ataque argelino.",
+        "why_fr": "Amoura a été le meilleur buteur algérien lors des éliminatoires de la Football 2026 avec 10 buts en huit matchs, s'imposant comme l'attaquant principal de l'équipe. Avant-centre rapide et mobile qui excelle dans les courses dans le dos des défenses, il a eu un fort impact en Bundesliga après avoir rejoint Wolfsburg en 2024. Sa vitesse et sa finition clinique le placent au cœur de l'attaque algérienne.",
+        "why_pt_BR": "Amoura foi o artilheiro da Argélia nas eliminatórias da Futebol 2026 com 10 gols em oito partidas, consolidando-se como o centroavante principal da equipe. Um atacante rápido e móvel que prospera em corridas pelas costas da defesa, causou forte impacto na Bundesliga após se juntar ao Wolfsburg em 2024. Sua velocidade e finalização clínica são centrais para o ataque argelino.",
+        "why_de": "Amoura war Algeriens bester Torschütze in der Qualifikation für Fußball 2026 mit 10 Toren in acht Spielen und etablierte sich als Hauptstürmer des Teams. Ein schneller, beweglicher Stürmer, der vom Laufweg hinter die Abwehrkette lebt, hinterließ er nach seinem Wechsel zu Wolfsburg 2024 einen starken Eindruck in der Bundesliga. Sein Tempo und seine klinische Abschlussqualität machen ihn zum Mittelpunkt von Algeriens Angriff.",
+        "why_it": "Amoura è stato il miglior marcatore dell'Algeria nelle qualificazioni al Calcio 2026 con 10 gol in otto partite, affermandosi come attaccante principale della squadra. Centravanti veloce e mobile, eccelle nelle corse alle spalle della difesa e ha avuto un forte impatto in Bundesliga dopo essere passato al Wolfsburg nel 2024. La sua velocità e la finalizzazione precisa lo rendono centrale per l'attacco algerino.",
+        "why_ja": "Amouraはフットボール2026予選で8試合10ゴールを挙げアルジェリアの最多得点者となり、チームの主要ストライカーとしての地位を確立した。裏へのランニングで力を発揮するスピードのある機動力の高いフォワードで、2024年Wolfsburgに加入後ブンデスリーガでも強烈な印象を残した。そのスピードと決定力がアルジェリアの攻撃の核となっている。",
+        "why_ko": "Amoura는 풋볼 2026 예선에서 8경기 10골로 알제리 최다 득점자로 이름을 올리며 팀의 주전 공격수로 자리매김했다. 뒤 공간으로의 침투와 빠른 움직임이 돋보이는 모바일 포워드로, 2024년 Wolfsburg에 합류한 후 분데스리가에서 강렬한 인상을 남겼다. 그의 스피드와 냉정한 마무리는 알제리 공격의 핵심이다.",
+        "why_zh_Hans": "阿穆拉在2026年足球赛资格赛中以8场比赛攻入10球，成为阿尔及利亚队头号射手，并确立了他作为球队主力前锋的地位。他是一名速度快、机动性强的前锋，善于在身后跑动。2024年加入沃尔夫斯堡后在德甲联赛取得了强劲表现。他的速度和精准的临门一脚使他成为阿尔及利亚进攻的核心。",
+        "why_ar": "سجّل عمورة 10 أهداف في ثماني مباريات ليكون الهداف الأول للجزائر في تصفيات كرة القدم 2026، مرسّخاً نفسه مهاجماً رئيسياً للفريق. مهاجم سريع ومتحرك يزدهر بالجري خلف الدفاعات، وترك بصمة قوية في الدوري الألماني بعد انضمامه لفولفسبورغ عام 2024. سرعته وتهديفه الحاسم يجعلانه محوراً في هجوم الجزائر.",
+        "why_es_ES": "Amoura fue el máximo goleador de Argelia en la clasificación para el Fútbol 2026 con 10 goles en ocho partidos, consolidándose como el delantero centro del equipo. Un ariete rápido y móvil que vive de las carreras a la espalda de la defensa, causó un gran impacto en la Bundesliga tras incorporarse al Wolfsburg en 2024. Su velocidad y definición clínica lo sitúan en el eje del ataque argelino.",
+        "caps": 44,
+        "intlGoals": 19,
+        "tournaments": [
+          "2025 AFCON"
+        ],
+        "clubs": [
+          {
+            "team": "VfL Wolfsburg",
+            "years": "2024-present",
+            "country": "Germany"
+          },
+          {
+            "team": "Union Saint-Gilloise",
+            "years": "2023-2024",
+            "country": "Belgium"
+          },
+          {
+            "team": "FC Lugano",
+            "years": "2021-2023",
+            "country": "Switzerland"
+          },
+          {
+            "team": "ES Sétif",
+            "years": "2019-2021",
+            "country": "Algeria"
+          }
+        ],
+        "honors": [
+          "Belgian First Division A top scorer 2023-24 (Union Saint-Gilloise)"
+        ]
       },
       {
         "name": "Adil Boulbina",
@@ -1245,22 +1180,6 @@ window.WC_PLAYERS = {
         "number": 12
       },
       {
-        "name": "Emiliano Martinez",
-        "espnId": 163310,
-        "position": "Goalkeeper",
-        "club": "Aston Villa (Premier League, England)",
-        "hometown": "Mar del Plata, Argentina",
-        "why": "Argentina's first-choice goalkeeper and a master of the big occasion, 'Dibu' Martinez is renowned for his penalty-saving prowess that proved decisive in both the 2021 Copa América and the 2022 tournament in Qatar. A superb shot-stopper with commanding presence and vocal leadership, he has been one of the Premier League's best keepers at Aston Villa. His mental fortitude and experience make him indispensable for Argentina at Football 2026.",
-        "number": 23,
-        "clubs": [
-          {
-            "team": "North Korea U20",
-            "years": "2011-2011",
-            "country": null
-          }
-        ]
-      },
-      {
         "name": "Marcos Senesi",
         "espnId": 241853,
         "position": "Centre-back",
@@ -1531,38 +1450,6 @@ window.WC_PLAYERS = {
         "number": 14
       },
       {
-        "name": "Enzo Fernandez",
-        "espnId": 282517,
-        "position": "Central midfielder",
-        "club": "Chelsea (Premier League, England)",
-        "hometown": "San Martín, Argentina",
-        "why": "The breakout star of the 2022 tournament in Qatar, Enzo Fernández won the Young Player Award and became the most expensive signing in Premier League history when Chelsea paid over £100m for him. He is an exceptionally complete midfielder who combines elegant passing, defensive awareness, and late runs into the box. As the heartbeat of Argentina's midfield, he is one of the most important players for Football 2026.",
-        "number": 24,
-        "clubs": [
-          {
-            "team": "Gokulam Kerala FC",
-            "years": "2017-2019",
-            "country": null
-          }
-        ]
-      },
-      {
-        "name": "Julian Alvarez",
-        "espnId": 282165,
-        "position": "Striker",
-        "club": "Atlético Madrid (La Liga, Spain)",
-        "hometown": "Calchín, Argentina",
-        "why": "A supremely versatile forward who can play as a centre-forward, second striker, or wide attacker, Álvarez scored crucial goals in Argentina's 2022 campaign including a brace in the semi-final. After thriving at Manchester City alongside Haaland, he moved to Atlético Madrid seeking a starring role. His work rate, intelligence, and clinical finishing make him central to Argentina's plans at Football 2026.",
-        "number": 9,
-        "clubs": [
-          {
-            "team": "App State Mountaineers",
-            "years": "2018-2018",
-            "country": null
-          }
-        ]
-      },
-      {
         "name": "Nicolas Gonzalez",
         "espnId": 240706,
         "position": "Winger",
@@ -1691,15 +1578,6 @@ window.WC_PLAYERS = {
             "country": null
           }
         ]
-      },
-      {
-        "name": "Lautaro Martinez",
-        "espnId": 247098,
-        "position": "Striker",
-        "club": "Inter Milan (Serie A, Italy)",
-        "hometown": "Bahía Blanca, Argentina",
-        "why": "Argentina's captain and leading striker, Lautaro Martínez has evolved into one of the world's most complete forwards at Inter Milan, where he has won multiple Serie A titles. He combines explosive finishing, intelligent pressing, and aerial ability, and was the top scorer in Argentina's 2024 Copa América triumph. With Messi's international retirement, Lautaro carries the armband and the goalscoring burden for Football 2026.",
-        "number": 22
       }
     ],
     "Australia": [
@@ -4517,42 +4395,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Jeremy Doku",
-        "espnId": 282469,
-        "position": "Left winger",
-        "club": "Manchester City (Premier League, England)",
-        "hometown": "Borgerhout, Belgium; of Ghanaian descent",
-        "why": "One of the most explosive dribblers in world football, Doku terrorizes defenders with his searing pace, low center of gravity, and unpredictable changes of direction. He moved to Manchester City from Rennes for a substantial fee and has added end product to his electric dribbling ability. His ability to single-handedly break open tight games makes him Belgium's most dangerous attacking weapon at Football 2026.",
-        "number": 11,
-        "clubs": [
-          {
-            "team": "Diamond Harbour FC",
-            "years": "2025-CURRENT",
-            "country": null
-          },
-          {
-            "team": "Churchill Brothers",
-            "years": "2023-2024",
-            "country": null
-          },
-          {
-            "team": "Chennaiyin FC",
-            "years": "2022-2024",
-            "country": null
-          },
-          {
-            "team": "Bengaluru FC",
-            "years": "2020-2022",
-            "country": null
-          },
-          {
-            "team": "Chennai City",
-            "years": "2017-2020",
-            "country": null
-          }
-        ]
-      },
-      {
         "name": "Dodi Lukebakio",
         "espnId": 229443,
         "position": "Right winger",
@@ -5914,61 +5756,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Alisson Becker",
-        "espnId": 196876,
-        "position": "Goalkeeper",
-        "club": "Liverpool (Premier League, England)",
-        "hometown": "Novo Hamburgo, Rio Grande do Sul",
-        "why": "Regarded as one of the best goalkeepers in the world, Alisson has won the Premier League and Champions League with Liverpool and is Brazil's undisputed number one. His shot-stopping, command of the box and excellent distribution make him the calm anchor of the defense. Reliability in big matches gives Brazil a foundation to build their tournament run on.",
-        "number": 1,
-        "why_es": "Considerado uno de los mejores arqueros del mundo, Alisson ha ganado la Premier League y la Champions League con el Liverpool y es el número uno indiscutido de Brasil. Su efectividad bajo los tres palos, su dominio del área y su excelente distribución lo convierten en el ancla tranquila de la defensa. Su confiabilidad en los grandes partidos le da a Brasil una base sobre la cual construir su camino en el torneo.",
-        "why_fr": "Considéré comme l'un des meilleurs gardiens du monde, Alisson a remporté la Premier League et la Champions League avec Liverpool et est le numéro un incontesté du Brésil. Ses arrêts, sa maîtrise de la surface et son excellente distribution en font l'ancre sereine de la défense. Sa fiabilité dans les grands matchs offre au Brésil une base sur laquelle construire son parcours en tournoi.",
-        "why_pt_BR": "Considerado um dos melhores goleiros do mundo, Alisson venceu a Premier League e a Champions League com o Liverpool e é o indiscutível número um do Brasil. Suas defesas, domínio da área e excelente saída de bola fazem dele a âncora tranquila da defesa. Sua confiabilidade em grandes partidas dá ao Brasil uma base sólida para a campanha na torneio.",
-        "why_de": "Als einer der besten Torhüter der Welt angesehen, hat Alisson die Premier League und Champions League mit Liverpool gewonnen und ist Brasiliens unbestrittene Nummer eins. Seine Paraden, seine Beherrschung des Strafraums und seine hervorragende Spieleröffnung machen ihn zum ruhigen Anker der Abwehr. Zuverlässigkeit in großen Spielen gibt Brasilien eine Grundlage, auf der es seinen WM-Lauf aufbauen kann.",
-        "why_it": "Considerato uno dei migliori portieri del mondo, Alisson ha vinto la Premier League e la Champions League con il Liverpool ed è l'indiscusso numero uno del Brasile. Le sue parate, il comando dell'area e un'eccellente distribuzione lo rendono l'ancora tranquilla della difesa. L'affidabilità nelle grandi partite offre al Brasile le fondamenta su cui costruire la propria corsa ai tornei.",
-        "why_ja": "世界最高のゴールキーパーの一人として認められているAlissonはLiverpoolでプレミアリーグとチャンピオンズリーグを制覇し、Brazilの不動の正ゴールキーパーだ。シュートストップ、エリアの支配力、優れた配給力はディフェンスの落ち着いた錨となっている。大一番での信頼感はBrazilに大会ランへの基盤を与える。",
-        "why_ko": "세계 최고 골키퍼 중 한 명으로 인정받는 Alisson은 Liverpool에서 프리미어리그와 챔피언스리그를 우승했으며 브라질의 확고한 주전 골키퍼다. 선방 능력, 박스 장악력, 뛰어난 배급으로 수비의 차분한 닻 역할을 한다. 중요한 경기에서의 안정감은 브라질이 대회 여정을 구축할 기반을 제공한다.",
-        "why_zh_Hans": "阿利松被视为世界最佳门将之一，随利物浦赢得英超和欧冠，是巴西当仁不让的一号门将。他的扑救、对禁区的掌控和出色的发球使他成为防线上冷静的压舱石。他在大赛中的稳定性为巴西的赛事征途奠定了基础。",
-        "why_ar": "يُعدّ أليسون أحد أفضل حرّاس العالم، فاز بالدوري الإنجليزي الممتاز ودوري الأبطال مع ليفربول وهو رقم 1 البرازيل الذي لا خلاف عليه. تصديه للركلات وسيطرته على المنطقة وتوزيعه الممتاز يجعلانه مرساة دفاعية هادئة. الموثوقية في المباريات الكبيرة تمنح البرازيل أساساً لبناء مسيرتها في البطولة.",
-        "why_es_ES": "Considerado uno de los mejores porteros del mundo, Alisson ha ganado la Premier League y la Champions League con el Liverpool y es el número uno indiscutible de Brasil. Sus intervenciones, dominio del área y excelente juego de pies lo convierten en el ancla tranquila de la defensa. Su fiabilidad en los grandes partidos le da a Brasil una base sobre la que construir su recorrido en el torneo.",
-        "caps": 77,
-        "intlGoals": 0,
-        "tournaments": [
-          "2018 (Quarter-final)",
-          "2019 Copa América (Winner)",
-          "2022 (Quarter-final)"
-        ],
-        "clubs": [
-          {
-            "team": "Liverpool",
-            "years": "2018-present",
-            "country": "England"
-          },
-          {
-            "team": "Roma",
-            "years": "2016-2018",
-            "country": "Italy"
-          },
-          {
-            "team": "Internacional",
-            "years": "2013-2016",
-            "country": "Brazil"
-          }
-        ],
-        "honors": [
-          "UEFA Champions League 2018-19 (Liverpool)",
-          "Premier League 2019-20, 2024-25 (Liverpool)",
-          "FA Cup 2021-22 (Liverpool)",
-          "EFL Cup 2021-22, 2023-24 (Liverpool)",
-          "Club Championship 2019 (Liverpool)",
-          "UEFA Super Cup 2019 (Liverpool)",
-          "Copa América 2019 (Brazil)",
-          "Premier League Golden Glove 2018-19, 2021-22 (Liverpool)",
-          "The Best Goalkeeper 2019",
-          "UEFA Goalkeeper of the Year 2019"
-        ]
-      },
-      {
         "name": "Marquinhos",
         "espnId": 159047,
         "position": "Centre-back",
@@ -6149,6 +5936,35 @@ window.WC_PLAYERS = {
             "years": "2012-2015",
             "country": null
           }
+        ],
+        "why_es": "Considerado uno de los mejores arqueros del mundo, Alisson ha ganado la Premier League y la Champions League con el Liverpool y es el número uno indiscutido de Brasil. Su efectividad bajo los tres palos, su dominio del área y su excelente distribución lo convierten en el ancla tranquila de la defensa. Su confiabilidad en los grandes partidos le da a Brasil una base sobre la cual construir su camino en el torneo.",
+        "why_fr": "Considéré comme l'un des meilleurs gardiens du monde, Alisson a remporté la Premier League et la Champions League avec Liverpool et est le numéro un incontesté du Brésil. Ses arrêts, sa maîtrise de la surface et son excellente distribution en font l'ancre sereine de la défense. Sa fiabilité dans les grands matchs offre au Brésil une base sur laquelle construire son parcours en tournoi.",
+        "why_pt_BR": "Considerado um dos melhores goleiros do mundo, Alisson venceu a Premier League e a Champions League com o Liverpool e é o indiscutível número um do Brasil. Suas defesas, domínio da área e excelente saída de bola fazem dele a âncora tranquila da defesa. Sua confiabilidade em grandes partidas dá ao Brasil uma base sólida para a campanha na torneio.",
+        "why_de": "Als einer der besten Torhüter der Welt angesehen, hat Alisson die Premier League und Champions League mit Liverpool gewonnen und ist Brasiliens unbestrittene Nummer eins. Seine Paraden, seine Beherrschung des Strafraums und seine hervorragende Spieleröffnung machen ihn zum ruhigen Anker der Abwehr. Zuverlässigkeit in großen Spielen gibt Brasilien eine Grundlage, auf der es seinen WM-Lauf aufbauen kann.",
+        "why_it": "Considerato uno dei migliori portieri del mondo, Alisson ha vinto la Premier League e la Champions League con il Liverpool ed è l'indiscusso numero uno del Brasile. Le sue parate, il comando dell'area e un'eccellente distribuzione lo rendono l'ancora tranquilla della difesa. L'affidabilità nelle grandi partite offre al Brasile le fondamenta su cui costruire la propria corsa ai tornei.",
+        "why_ja": "世界最高のゴールキーパーの一人として認められているAlissonはLiverpoolでプレミアリーグとチャンピオンズリーグを制覇し、Brazilの不動の正ゴールキーパーだ。シュートストップ、エリアの支配力、優れた配給力はディフェンスの落ち着いた錨となっている。大一番での信頼感はBrazilに大会ランへの基盤を与える。",
+        "why_ko": "세계 최고 골키퍼 중 한 명으로 인정받는 Alisson은 Liverpool에서 프리미어리그와 챔피언스리그를 우승했으며 브라질의 확고한 주전 골키퍼다. 선방 능력, 박스 장악력, 뛰어난 배급으로 수비의 차분한 닻 역할을 한다. 중요한 경기에서의 안정감은 브라질이 대회 여정을 구축할 기반을 제공한다.",
+        "why_zh_Hans": "阿利松被视为世界最佳门将之一，随利物浦赢得英超和欧冠，是巴西当仁不让的一号门将。他的扑救、对禁区的掌控和出色的发球使他成为防线上冷静的压舱石。他在大赛中的稳定性为巴西的赛事征途奠定了基础。",
+        "why_ar": "يُعدّ أليسون أحد أفضل حرّاس العالم، فاز بالدوري الإنجليزي الممتاز ودوري الأبطال مع ليفربول وهو رقم 1 البرازيل الذي لا خلاف عليه. تصديه للركلات وسيطرته على المنطقة وتوزيعه الممتاز يجعلانه مرساة دفاعية هادئة. الموثوقية في المباريات الكبيرة تمنح البرازيل أساساً لبناء مسيرتها في البطولة.",
+        "why_es_ES": "Considerado uno de los mejores porteros del mundo, Alisson ha ganado la Premier League y la Champions League con el Liverpool y es el número uno indiscutible de Brasil. Sus intervenciones, dominio del área y excelente juego de pies lo convierten en el ancla tranquila de la defensa. Su fiabilidad en los grandes partidos le da a Brasil una base sobre la que construir su recorrido en el torneo.",
+        "caps": 77,
+        "intlGoals": 0,
+        "tournaments": [
+          "2018 (Quarter-final)",
+          "2019 Copa América (Winner)",
+          "2022 (Quarter-final)"
+        ],
+        "honors": [
+          "UEFA Champions League 2018-19 (Liverpool)",
+          "Premier League 2019-20, 2024-25 (Liverpool)",
+          "FA Cup 2021-22 (Liverpool)",
+          "EFL Cup 2021-22, 2023-24 (Liverpool)",
+          "Club Championship 2019 (Liverpool)",
+          "UEFA Super Cup 2019 (Liverpool)",
+          "Copa América 2019 (Brazil)",
+          "Premier League Golden Glove 2018-19, 2021-22 (Liverpool)",
+          "The Best Goalkeeper 2019",
+          "UEFA Goalkeeper of the Year 2019"
         ]
       },
       {
@@ -6583,47 +6399,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Bruno Guimaraes",
-        "espnId": 218522,
-        "position": "Central midfielder",
-        "club": "Newcastle United (Premier League, England)",
-        "hometown": "Rio de Janeiro, Brazil",
-        "why": "A technically gifted and combative central midfielder, Bruno Guimaraes has become one of the Premier League's standout players since joining Newcastle from Lyon. He excels at controlling the tempo of the game, pressing opponents, and delivering incisive passes from deep. His blend of creativity and defensive contribution makes him essential for Brazil at Football 2026.",
-        "number": 8,
-        "clubs": [
-          {
-            "team": "Brazil",
-            "years": "2019-2022, 2022-2022, 2023-2026",
-            "country": null
-          },
-          {
-            "team": "Newcastle United",
-            "years": "2021-CURRENT",
-            "country": null
-          },
-          {
-            "team": "Brazil U23",
-            "years": "2021-2021",
-            "country": null
-          },
-          {
-            "team": "Lyon",
-            "years": "2019-2022",
-            "country": null
-          },
-          {
-            "team": "Athletico Paranaense",
-            "years": "2016-2019",
-            "country": null
-          },
-          {
-            "team": "Audax - SP",
-            "years": "2014-2015, 2016-2017",
-            "country": null
-          }
-        ]
-      },
-      {
         "name": "Fabinho",
         "espnId": 176287,
         "position": "Defensive midfielder",
@@ -6735,15 +6510,6 @@ window.WC_PLAYERS = {
             "country": null
           }
         ]
-      },
-      {
-        "name": "Vinicius Junior",
-        "espnId": 248755,
-        "position": "Left winger",
-        "club": "Real Madrid (La Liga, Spain)",
-        "hometown": "Sao Goncalo, Brazil",
-        "why": "One of the most electrifying attackers in world football, Vinicius Junior has been decisive in Real Madrid's Champions League triumphs with his blistering pace, audacious dribbling, and big-game goals. Winner of the Ballon d'Or, he combines raw speed with an ever-improving end product. He is the star of Brazil's attack and a potential tournament sensation at Football 2026.",
-        "number": 7
       },
       {
         "name": "Matheus Cunha",
@@ -9501,62 +9267,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Daniel Munoz",
-        "espnId": 146679,
-        "position": "Right-back",
-        "club": "Crystal Palace (Premier League, England)",
-        "hometown": "Medellin, Colombia",
-        "why": "An explosive right-back who has thrived in the Premier League with Crystal Palace after starring at Genk in Belgium. Daniel Munoz is a dynamic presence who combines strong defensive work with powerful attacking runs and a knack for scoring goals. His energy and Premier League experience make him one of Colombia's key players at Football 2026.",
-        "number": 2,
-        "clubs": [
-          {
-            "team": "Colombia",
-            "years": "2019-2022, 2021-2026",
-            "country": null
-          },
-          {
-            "team": "Crystal Palace",
-            "years": "2023-CURRENT",
-            "country": null
-          },
-          {
-            "team": "Spain U19",
-            "years": "2023-2025",
-            "country": null
-          },
-          {
-            "team": "Spain U17",
-            "years": "2023-2023",
-            "country": null
-          },
-          {
-            "team": "Racing Genk",
-            "years": "2020-2024",
-            "country": null
-          },
-          {
-            "team": "Atlético Nacional",
-            "years": "2018-2021",
-            "country": null
-          },
-          {
-            "team": "Águilas Doradas",
-            "years": "2016-2019",
-            "country": null
-          },
-          {
-            "team": "L.N. Alem",
-            "years": "2010-2011",
-            "country": null
-          },
-          {
-            "team": "Villa Dálmine",
-            "years": "2009-2010",
-            "country": null
-          }
-        ]
-      },
-      {
         "name": "Jhon Lucumi",
         "espnId": 227697,
         "position": "Centre-back",
@@ -9826,47 +9536,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Richard Rios",
-        "espnId": 301520,
-        "position": "Central midfielder",
-        "club": "Benfica (Primeira Liga, Portugal)",
-        "hometown": "Vegachi, Colombia",
-        "why": "A dynamic midfielder who rose to prominence at Palmeiras in Brazil before earning a move to Benfica in Portugal. Richard Rios caught the eye at the 2024 Copa America with his energy, ball-carrying ability, and impressive range of passing. His talent and European experience make him one of Colombia's most important midfielders at Football 2026.",
-        "number": 6,
-        "clubs": [
-          {
-            "team": "Colombia",
-            "years": "2023-2025, 2024-2026",
-            "country": null
-          },
-          {
-            "team": "Benfica",
-            "years": "2025-CURRENT",
-            "country": null
-          },
-          {
-            "team": "Palmeiras",
-            "years": "2022-2025",
-            "country": null
-          },
-          {
-            "team": "Guarani",
-            "years": "2022-2022",
-            "country": null
-          },
-          {
-            "team": "Mazatlán FC",
-            "years": "2020-2023",
-            "country": null
-          },
-          {
-            "team": "Flamengo",
-            "years": "2018-2021",
-            "country": null
-          }
-        ]
-      },
-      {
         "name": "Jorge Carrascal",
         "espnId": 208700,
         "position": "Attacking midfielder",
@@ -9908,27 +9577,6 @@ window.WC_PLAYERS = {
           {
             "team": "Millonarios",
             "years": "2013-2016",
-            "country": null
-          }
-        ]
-      },
-      {
-        "name": "James Rodriguez",
-        "espnId": 178358,
-        "position": "Attacking midfielder",
-        "club": "Minnesota United (MLS, United States)",
-        "hometown": "Cucuta, Colombia",
-        "why": "Colombia's most celebrated player of his generation, James Rodriguez won the Golden Boot at the 2014 tournament in Brazil with six goals, including the iconic volley against Uruguay. He has starred at Porto, Monaco, Real Madrid, and Bayern Munich before joining MLS. His vision, passing range, and dead-ball expertise make him Colombia's creative heartbeat at Football 2026.",
-        "number": 10,
-        "clubs": [
-          {
-            "team": "Adana Demirspor",
-            "years": "2022-2023",
-            "country": null
-          },
-          {
-            "team": "Yeni Malatyaspor",
-            "years": "2017-2018, 2020-2021",
             "country": null
           }
         ]
@@ -10194,86 +9842,6 @@ window.WC_PLAYERS = {
           {
             "team": "Colombia U17",
             "years": "2017-2017",
-            "country": null
-          }
-        ]
-      },
-      {
-        "name": "Luis Diaz",
-        "espnId": 273051,
-        "position": "Left winger",
-        "club": "Bayern Munich (Bundesliga, Germany)",
-        "hometown": "Barrancas, Colombia",
-        "why": "One of the most exciting wingers in world football, Luis Diaz dazzled at Porto and Liverpool before joining Bayern Munich. Known for his electric pace, direct dribbling, and lethal left foot, he can change a game in an instant. Rising from humble beginnings in La Guajira, he has become Colombia's talisman and a constant threat at Football 2026.",
-        "number": 7
-      },
-      {
-        "name": "Jhon Cordoba",
-        "espnId": 176058,
-        "position": "Striker",
-        "club": "Krasnodar (Premier League, Russia)",
-        "hometown": "Istmina, Colombia",
-        "why": "A powerful and experienced striker who has scored goals in the Bundesliga with Koln and Hertha Berlin before moving to Krasnodar. Jhon Cordoba is a physically imposing forward who excels at hold-up play and finishing inside the box. His strength and goalscoring instinct give Colombia a valuable striking option at Football 2026.",
-        "number": 9,
-        "clubs": [
-          {
-            "team": "Colombia",
-            "years": "2019-2022, 2023-2025, 2024-2026",
-            "country": null
-          },
-          {
-            "team": "Instituto (Córdoba)",
-            "years": "2024-CURRENT",
-            "country": null
-          },
-          {
-            "team": "Krasnodar",
-            "years": "2021-2026",
-            "country": null
-          },
-          {
-            "team": "Millonarios",
-            "years": "2023-2025",
-            "country": null
-          },
-          {
-            "team": "Atlético Bucaramanga",
-            "years": "2022-2024",
-            "country": null
-          },
-          {
-            "team": "Hertha Berlin",
-            "years": "2020-2021",
-            "country": null
-          },
-          {
-            "team": "FC Cologne",
-            "years": "2017-2021",
-            "country": null
-          },
-          {
-            "team": "Atlético Huila",
-            "years": "2017-2019, 2020-2021",
-            "country": null
-          },
-          {
-            "team": "Mainz",
-            "years": "2015-2017",
-            "country": null
-          },
-          {
-            "team": "Granada",
-            "years": "2014-2016",
-            "country": null
-          },
-          {
-            "team": "Espanyol",
-            "years": "2013-2014",
-            "country": null
-          },
-          {
-            "team": "Chiapas",
-            "years": "2011-2013",
             "country": null
           }
         ]
@@ -11445,62 +11013,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Cedric Bakambu",
-        "espnId": 147193,
-        "position": "Striker",
-        "club": "Real Betis (La Liga, Spain)",
-        "hometown": "Ivry-sur-Seine, France; Congolese heritage",
-        "why": "One of Congo DR's most accomplished strikers, Cedric Bakambu has scored goals at the highest level with Villarreal, Beijing Guoan, and Marseille. He is a clinical finisher with excellent movement and pace. At 35, his experience, international goals record, and proven quality in La Liga make him a vital presence for Congo DR at Football 2026.",
-        "number": 17,
-        "clubs": [
-          {
-            "team": "Congo DR",
-            "years": "2015-2017, 2018-2019, 2020-2026",
-            "country": null
-          },
-          {
-            "team": "Real Betis",
-            "years": "2023-CURRENT",
-            "country": null
-          },
-          {
-            "team": "Galatasaray",
-            "years": "2023-2024",
-            "country": null
-          },
-          {
-            "team": "Olympiacos",
-            "years": "2022-2023",
-            "country": null
-          },
-          {
-            "team": "Marseille",
-            "years": "2021-2023",
-            "country": null
-          },
-          {
-            "team": "Beijing Guoan",
-            "years": "2017-2021",
-            "country": null
-          },
-          {
-            "team": "Villarreal",
-            "years": "2015-2018",
-            "country": null
-          },
-          {
-            "team": "Sochaux",
-            "years": "2009-2014",
-            "country": null
-          },
-          {
-            "team": "France U20",
-            "years": "2011-2011",
-            "country": null
-          }
-        ]
-      },
-      {
         "name": "Fiston Mayele",
         "espnId": 299324,
         "position": "Striker",
@@ -12596,104 +12108,6 @@ window.WC_PLAYERS = {
         "honors": [
           "King's Cup 2019 (Curaçao)"
         ]
-      },
-      {
-        "name": "Rangelo Janga",
-        "position": "Forward (striker)",
-        "club": "FC Eindhoven (Eerste Divisie, Netherlands)",
-        "hometown": "Born in Rotterdam, Netherlands, to a family of Curaçaoan descent",
-        "why": "Janga is Curaçao's all-time leading goalscorer, the focal point of the attack and the player the team looks to for goals. He has built a journeyman career across the Netherlands, Belgium, Slovakia, Cyprus and Kazakhstan while consistently producing in CONCACAF qualifying. A physical target striker, he gives Curaçao a reliable presence to hold the ball up and finish chances at the highest level.",
-        "number": 20,
-        "why_es": "Janga es el máximo goleador histórico de Curaçao, el punto focal del ataque y el jugador al que el equipo mira para los goles. Ha construido una carrera por varios equipos en los Países Bajos, Bélgica, Eslovaquia, Chipre y Kazajistán mientras producía consistentemente en la clasificación de la CONCACAF. Un delantero referencia físico, le da a Curaçao una presencia confiable para retener el balón y definir las oportunidades al máximo nivel.",
-        "why_fr": "Janga est le meilleur buteur de tous les temps de Curaçao, le point focal de l'attaque et le joueur vers lequel l'équipe se tourne pour les buts. Il a construit une carrière itinérante aux Pays-Bas, en Belgique, en Slovaquie, à Chypre et au Kazakhstan tout en produisant régulièrement lors des éliminatoires de la CONCACAF. Attaquant cible physique, il donne à Curaçao une présence fiable pour conserver le ballon et conclure les occasions au plus haut niveau.",
-        "why_pt_BR": "Janga é o maior artilheiro histórico de Curaçao, o ponto focal do ataque e o jogador que a equipe busca para marcar. Construiu uma carreira itinerante pela Holanda, Bélgica, Eslováquia, Chipre e Cazaquistão, produzindo consistentemente nas eliminatórias da CONCACAF. Um atacante-referência físico, dá a Curaçao presença confiável para segurar a bola e finalizar as chances no mais alto nível.",
-        "why_de": "Janga ist Curaçaos aller-Zeiten-bester Torschütze, der Mittelpunkt des Angriffs und der Spieler, von dem das Team Tore erwartet. Er hat eine Wanderkarriere in den Niederlanden, Belgien, der Slowakei, Zypern und Kasachstan aufgebaut, während er in der CONCACAF-Qualifikation konstant produziert hat. Ein physischer Zielspieler-Stürmer gibt er Curaçao eine zuverlässige Präsenz, um den Ball zu halten und Chancen auf höchstem Niveau zu nutzen.",
-        "why_it": "Janga è il capocannoniere di tutti i tempi di Curaçao, il fulcro dell'attacco e il giocatore a cui la squadra si affida per i gol. Ha costruito una carriera da giramondo tra Paesi Bassi, Belgio, Slovacchia, Cipro e Kazakistan producendo costantemente nelle qualificazioni CONCACAF. Prima punta fisica, garantisce a Curaçao una presenza affidabile per proteggere il pallone e finalizzare le occasioni ai massimi livelli.",
-        "why_ja": "JangaはCuraçaoの歴代最多得点者であり攻撃の焦点として、得点においてチームが頼る選手だ。オランダ、ベルギー、スロバキア、キプロス、カザフスタンでの流浪のキャリアを持ちながら、CONCACAF予選では一貫して結果を出してきた。身体能力が高いターゲットストライカーとして最高レベルでのポストプレーと決定力でCuraçaoに確かな前線の存在感をもたらす。",
-        "why_ko": "Janga는 Curaçao 역대 최다 득점자이자 공격의 핵심으로 팀이 골을 가장 많이 의존하는 선수다. 네덜란드, 벨기에, 슬로바키아, 키프로스, 카자흐스탄에서 떠돌이 커리어를 쌓으며 CONCACAF 예선에서 꾸준히 활약했다. 피지컬한 타깃 스트라이커로 Curaçao에 최고 무대에서 볼을 붙잡고 기회를 마무리할 믿음직한 존재를 제공한다.",
-        "why_zh_Hans": "贾纳是库拉索历史最佳射手，是进攻的支柱，也是球队在进球方面最为依赖的人。他在荷兰、比利时、斯洛伐克、塞浦路斯和哈萨克斯坦辗转效力，同时在北中美洲资格赛上持续输出。他是一名有身体对抗能力的目标型前锋，使库拉索在最高水平的赛事中有一个可靠的支点型球员来持球和把握机会。",
-        "why_ar": "يانغا الهداف التاريخي الأول لكوراساو ومحور الهجوم واللاعب الذي يعتمد عليه الفريق للأهداف. بنى مسيرة ذات طابع ترحالي في هولندا وبلجيكا وسلوفاكيا وقبرص وكازاخستان مع إنتاج منتظم في تصفيات الكونكاكاف. مهاجم رقم 9 جسدي قادر على الاحتفاظ بالكرة وإنهاء الفرص على أعلى المستويات.",
-        "why_es_ES": "Janga es el máximo goleador histórico de Curaçao, el referente del ataque y el jugador al que el equipo busca para marcar. Ha forjado una carrera itinerante por los Países Bajos, Bélgica, Eslovaquia, Chipre y Kazajistán, produciendo con regularidad en la clasificación de la CONCACAF. Un delantero objetivo físico, le da a Curaçao una presencia fiable para retener el balón de espaldas y rematar ocasiones al máximo nivel.",
-        "caps": 53,
-        "intlGoals": 24,
-        "tournaments": [
-          "2026",
-          "2019 CONCACAF Gold Cup (Quarter-finals)"
-        ],
-        "clubs": [
-          {
-            "team": "FC Eindhoven",
-            "years": "2024–",
-            "country": "Netherlands"
-          },
-          {
-            "team": "Nea Salamis Famagusta",
-            "years": "2023–2024",
-            "country": "Cyprus"
-          },
-          {
-            "team": "Bnei Sakhnin",
-            "years": "2023",
-            "country": "Israel"
-          },
-          {
-            "team": "CFR Cluj",
-            "years": "2022–2023",
-            "country": "Romania"
-          },
-          {
-            "team": "Apollon Limassol",
-            "years": "2021–2022",
-            "country": "Cyprus"
-          },
-          {
-            "team": "NEC Nijmegen",
-            "years": "2020–2021",
-            "country": "Netherlands"
-          },
-          {
-            "team": "Lugano",
-            "years": "2020",
-            "country": "Switzerland"
-          },
-          {
-            "team": "FC Astana",
-            "years": "2018–2022",
-            "country": "Kazakhstan"
-          },
-          {
-            "team": "Gent",
-            "years": "2018",
-            "country": "Belgium"
-          },
-          {
-            "team": "AS Trenčín",
-            "years": "2016–2018",
-            "country": "Slovakia"
-          },
-          {
-            "team": "FC Dordrecht",
-            "years": "2015–2016",
-            "country": "Netherlands"
-          },
-          {
-            "team": "Omonia Aradippou",
-            "years": "2014–2015",
-            "country": "Cyprus"
-          },
-          {
-            "team": "Excelsior",
-            "years": "2012–2014",
-            "country": "Netherlands"
-          },
-          {
-            "team": "Willem II",
-            "years": "2010–2012",
-            "country": "Netherlands"
-          }
-        ],
-        "honors": [],
-        "espnId": 151834
       },
       {
         "name": "Eloy Room",
@@ -14099,15 +13513,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Ladislav Krejci",
-        "espnId": 241363,
-        "position": "Centre-back",
-        "club": "Wolverhampton Wanderers (Premier League, England)",
-        "hometown": "Czech Republic",
-        "why": "A versatile left-footed defender who earned a move to the Premier League with Wolverhampton after impressive performances at Sparta Prague and in European competition. Krejci is strong in the air, composed on the ball, and can operate as a centre-back or left-back. His adaptability and physicality are assets for the tournament.",
-        "number": 7
-      },
-      {
         "name": "David Jurasek",
         "espnId": 335996,
         "position": "Left-back",
@@ -14313,27 +13718,6 @@ window.WC_PLAYERS = {
           {
             "team": "Czechia U19",
             "years": "2016-2017",
-            "country": null
-          }
-        ]
-      },
-      {
-        "name": "Tomas Soucek",
-        "espnId": 189753,
-        "position": "Central midfielder",
-        "club": "West Ham United (Premier League, England)",
-        "hometown": "Havlíčkův Brod, Czech Republic",
-        "why": "A towering box-to-box midfielder who has been one of the most important Czech players of his generation, Soucek became a Premier League stalwart at West Ham United. He is renowned for his aerial prowess in both boxes, late runs into the penalty area, and goal-scoring ability from midfield. As captain, he leads from the front for Football 2026.",
-        "number": 22,
-        "clubs": [
-          {
-            "team": "Alebrijes de Oaxaca",
-            "years": "2018-2020",
-            "country": null
-          },
-          {
-            "team": "Zacatepec Siglo XXI",
-            "years": "2013-2014",
             "country": null
           }
         ]
@@ -17975,27 +17359,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Marc Guehi",
-        "espnId": 289018,
-        "position": "Centre-back",
-        "club": "Manchester City (Premier League, England)",
-        "hometown": "Abidjan, Côte d'Ivoire; raised in England",
-        "why": "A composed, elegant centre-back who rose to prominence at Crystal Palace before earning a move to Manchester City. Guehi is strong in the tackle, reads the game superbly, and is an excellent passer from the back. He established himself as a first-choice England defender at Euro 2024 and is a cornerstone of the defense for Football 2026.",
-        "number": 6,
-        "clubs": [
-          {
-            "team": "New York Red Bulls II",
-            "years": "2018-2019, 2023-CURRENT",
-            "country": null
-          },
-          {
-            "team": "Clemson Tigers",
-            "years": "2020-2022",
-            "country": null
-          }
-        ]
-      },
-      {
         "name": "Tino Livramento",
         "espnId": 299641,
         "position": "Right-back",
@@ -19360,93 +18723,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Aurelien Tchouameni",
-        "espnId": 265919,
-        "position": "Defensive midfielder",
-        "club": "Real Madrid (La Liga, Spain)",
-        "hometown": "Rouen, France",
-        "why": "A commanding defensive midfielder who joined Real Madrid from Monaco, Tchouameni anchors the midfield with his exceptional range of passing, tactical intelligence, and ability to win the ball back. He has quickly become indispensable for both club and country, forming part of Real Madrid's Champions League-winning squads. His composure under pressure and leadership belie his young age heading into Football 2026.",
-        "number": 8,
-        "clubs": [
-          {
-            "team": "France",
-            "years": "2019-2022, 2022-2022, 2023-2026",
-            "country": null
-          },
-          {
-            "team": "Real Madrid",
-            "years": "2022-CURRENT",
-            "country": null
-          },
-          {
-            "team": "AS Monaco",
-            "years": "2019-2022",
-            "country": null
-          },
-          {
-            "team": "France U21",
-            "years": "2020-2021",
-            "country": null
-          },
-          {
-            "team": "Bordeaux",
-            "years": "2017-2020",
-            "country": null
-          },
-          {
-            "team": "France U17",
-            "years": "2017-2017",
-            "country": null
-          }
-        ]
-      },
-      {
-        "name": "N'Golo Kante",
-        "espnId": 173556,
-        "position": "Central midfielder",
-        "club": "Fenerbahce (Super Lig, Turkey)",
-        "hometown": "Paris, France",
-        "why": "One of the most beloved midfielders of his generation, Kante is renowned for his relentless energy, ball-winning ability, and humble personality. He was instrumental in Leicester City's miraculous Premier League title and Chelsea's Champions League triumph, and starred in France's 2018 tournament victory. Despite moving to Saudi Arabia and then Turkey later in his career, his unique ability to cover every blade of grass earned him a recall for Football 2026.",
-        "number": 13,
-        "clubs": [
-          {
-            "team": "France",
-            "years": "2014-2017, 2018-2018, 2019-2022, 2023-2026",
-            "country": null
-          },
-          {
-            "team": "Fenerbahce",
-            "years": "2025-CURRENT",
-            "country": null
-          },
-          {
-            "team": "Al Ittihad",
-            "years": "2022-2026",
-            "country": null
-          },
-          {
-            "team": "Chelsea",
-            "years": "2016-2023",
-            "country": null
-          },
-          {
-            "team": "Leicester City",
-            "years": "2015-2016",
-            "country": null
-          },
-          {
-            "team": "Caen",
-            "years": "2013-2015",
-            "country": null
-          },
-          {
-            "team": "Boulogne",
-            "years": "2012-2013",
-            "country": null
-          }
-        ]
-      },
-      {
         "name": "Adrien Rabiot",
         "espnId": 176203,
         "position": "Central midfielder",
@@ -19514,42 +18790,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Ousmane Dembele",
-        "espnId": 229744,
-        "position": "Right winger",
-        "club": "Paris Saint-Germain (Ligue 1, France)",
-        "hometown": "Vernon, France",
-        "why": "An electrifying winger with devastating pace and the rare ability to dribble and shoot with both feet equally well, Dembele has played for Borussia Dortmund, Barcelona, and PSG. His unpredictable dribbling and creativity make him one of the most dangerous attackers in football when in full flow. After a strong spell at PSG, he brings game-changing ability off the wing for France at Football 2026.",
-        "number": 7,
-        "clubs": [
-          {
-            "team": "France",
-            "years": "2014-2018, 2020-2021, 2022-2022, 2023-2026",
-            "country": null
-          },
-          {
-            "team": "Paris Saint-Germain",
-            "years": "2023-CURRENT",
-            "country": null
-          },
-          {
-            "team": "Barcelona",
-            "years": "2017-2023",
-            "country": null
-          },
-          {
-            "team": "Borussia Dortmund",
-            "years": "2016-2017",
-            "country": null
-          },
-          {
-            "team": "Stade Rennais",
-            "years": "2015-2016",
-            "country": null
-          }
-        ]
-      },
-      {
         "name": "Marcus Thuram",
         "espnId": 217331,
         "position": "Striker",
@@ -19591,42 +18831,6 @@ window.WC_PLAYERS = {
           {
             "team": "Sochaux",
             "years": "2014-2017",
-            "country": null
-          },
-          {
-            "team": "France U19",
-            "years": "2015-2016",
-            "country": null
-          }
-        ]
-      },
-      {
-        "name": "Kylian Mbappe",
-        "espnId": 231388,
-        "position": "Forward",
-        "club": "Real Madrid (La Liga, Spain)",
-        "hometown": "Paris, France",
-        "why": "Widely regarded as one of the best players on the planet, Mbappe possesses extraordinary pace, finishing, and big-game mentality. He burst onto the scene as a teenager with Monaco and PSG, winning multiple Ligue 1 titles before fulfilling his dream move to Real Madrid. A Golden Boot winner at the 2022 tournament where he scored a historic hat trick in the final, he leads France's charge at Football 2026.",
-        "number": 10,
-        "clubs": [
-          {
-            "team": "France",
-            "years": "2014-2017, 2016-2017, 2018-2018, 2019-2021, 2022-2022, 2023-2026",
-            "country": null
-          },
-          {
-            "team": "Real Madrid",
-            "years": "2024-CURRENT",
-            "country": null
-          },
-          {
-            "team": "Paris Saint-Germain",
-            "years": "2017-2024",
-            "country": null
-          },
-          {
-            "team": "AS Monaco",
-            "years": "2015-2018",
             "country": null
           },
           {
@@ -21451,15 +20655,6 @@ window.WC_PLAYERS = {
             "country": null
           }
         ]
-      },
-      {
-        "name": "Inaki Williams",
-        "espnId": 202204,
-        "position": "Striker",
-        "club": "Athletic Club (La Liga, Spain)",
-        "hometown": "Bilbao, Spain",
-        "why": "Born in Bilbao to Ghanaian parents, Williams holds the remarkable La Liga record for consecutive appearances, surpassing 250 straight games at one point. A powerful and lightning-fast striker, he spent his entire club career at Athletic Club and chose to represent Ghana after initially playing for Spain at youth level. His elite-level experience and tireless pressing make him Ghana's talisman at Football 2026.",
-        "number": 19
       },
       {
         "name": "Ernest Nuamah",
@@ -28127,47 +27322,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Brahim Diaz",
-        "espnId": 246532,
-        "position": "Attacking midfielder",
-        "club": "Real Madrid (La Liga, Spain)",
-        "hometown": "Malaga, Spain",
-        "why": "Born in Malaga to a Spanish mother and Moroccan father, Diaz moved to Manchester City's academy before signing with Real Madrid in 2019. After three successful loan seasons at AC Milan, he returned to Madrid as a first-team regular and switched his international allegiance to Morocco.",
-        "number": 10,
-        "clubs": [
-          {
-            "team": "Morocco",
-            "years": "2023-2025, 2024-2026",
-            "country": null
-          },
-          {
-            "team": "Real Madrid",
-            "years": "2018-2020, 2023-CURRENT",
-            "country": null
-          },
-          {
-            "team": "AC Milan",
-            "years": "2020-2023",
-            "country": null
-          },
-          {
-            "team": "Spain",
-            "years": "2020-2021",
-            "country": null
-          },
-          {
-            "team": "Spain U21",
-            "years": "2020-2021",
-            "country": null
-          },
-          {
-            "team": "Manchester City",
-            "years": "2016-2019",
-            "country": null
-          }
-        ]
-      },
-      {
         "name": "Yassine Gessime",
         "espnId": 379012,
         "position": "Left winger",
@@ -30695,47 +29849,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Martin Odegaard",
-        "espnId": 235674,
-        "position": "Attacking midfielder / Captain",
-        "club": "Arsenal (Premier League, England)",
-        "hometown": "Drammen, Norway",
-        "why": "Norway's captain and one of the most technically gifted players in world football, Martin Odegaard has been the creative heartbeat of Arsenal's Premier League title challenges. A prodigious talent who signed for Real Madrid at just 16, he has matured into a world-class playmaker with extraordinary vision, passing range, and the ability to score spectacular goals. He is the undisputed leader and star of Norway's squad at Football 2026.",
-        "number": 10,
-        "clubs": [
-          {
-            "team": "Punjab FC",
-            "years": "2023-2024",
-            "country": null
-          },
-          {
-            "team": "Atromitos",
-            "years": "2017-2019, 2021-2023",
-            "country": null
-          },
-          {
-            "team": "Caykur Rizespor",
-            "years": "2019-2021",
-            "country": null
-          },
-          {
-            "team": "Cercle Brugge KSV",
-            "years": "2019-2020",
-            "country": null
-          },
-          {
-            "team": "Greece",
-            "years": "2017-2018",
-            "country": null
-          },
-          {
-            "team": "PAOK Salonika",
-            "years": "2016-2017",
-            "country": null
-          }
-        ]
-      },
-      {
         "name": "Fredrik Aursnes",
         "espnId": 212900,
         "position": "Central midfielder",
@@ -30926,31 +30039,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Alexander Sorloth",
-        "espnId": 193847,
-        "position": "Striker",
-        "club": "Atletico Madrid (La Liga, Spain)",
-        "hometown": "Trondheim, Norway",
-        "why": "A powerful and prolific striker who has been in scintillating form at Atletico Madrid, Alexander Sorloth combines physical dominance with surprising technical quality and clinical finishing. His height and aerial ability make him a nightmare for defenders, while his link-up play has improved dramatically at the top level. He forms a fearsome partnership with Haaland that makes Norway's attack one of the most potent at Football 2026.",
-        "number": 7,
-        "clubs": [
-          {
-            "team": "Anderlecht",
-            "years": "2014-2016",
-            "country": null
-          }
-        ]
-      },
-      {
-        "name": "Jorgen Strand Larsen",
-        "espnId": null,
-        "position": "Striker",
-        "club": "Crystal Palace (Premier League, England)",
-        "hometown": "Bergen, Norway",
-        "why": "A tall and technically gifted striker who has impressed in the Premier League with Crystal Palace after strong seasons in La Liga with Celta Vigo, Jorgen Strand Larsen offers a different dimension to Norway's attack with his hold-up play and aerial presence. His ability to link play and bring others into the game complements the more direct style of Haaland. He provides Norway with an excellent alternative striking option at Football 2026.",
-        "number": 11
-      },
-      {
         "name": "Andreas Schjelderup",
         "espnId": 313415,
         "position": "Forward / Winger",
@@ -31033,63 +30121,6 @@ window.WC_PLAYERS = {
         "honors": [
           "CONCACAF Player of the Year (2024)",
           "2023 Gold Cup Best Player"
-        ]
-      },
-      {
-        "name": "Michael Amir Murillo",
-        "espnId": 216420,
-        "position": "Right-back",
-        "club": "Beşiktaş (Süper Lig, Turkey)",
-        "hometown": "Colón",
-        "why": "An attacking right-back with one of the highest caps tallies in Panama's history, he brings top-level European experience after spells with Marseille, Anderlecht and New York Red Bulls before joining Beşiktaş in early 2026. He combines defensive reliability with overlapping runs and end product, contributing goals and assists from the flank for the national team.",
-        "number": 23,
-        "why_es": "Un lateral derecho atacante con uno de los registros de partidos internacionales más altos de la historia de Panamá, aporta experiencia europea de alto nivel tras etapas con el Marseille, el Anderlecht y el New York Red Bulls antes de unirse al Beşiktaş a principios de 2026. Combina confiabilidad defensiva con desbordes y producción final, contribuyendo con goles y asistencias desde la banda para la selección nacional.",
-        "why_fr": "Arrière droit offensif avec l'un des plus importants totaux de sélections de l'histoire du Panama, il apporte une expérience européenne de haut niveau après des passages à Marseille, Anderlecht et New York Red Bulls avant de rejoindre Beşiktaş début 2026. Il combine fiabilité défensive avec des chevauchements et une production offensive, contribuant buts et passes décisives depuis le flanc pour l'équipe nationale.",
-        "why_pt_BR": "Um lateral-direito ofensivo com um dos maiores históricos de convocações do Panamá, trazendo experiência europeia de alto nível após passagens no Marseille, Anderlecht e New York Red Bulls antes de ingressar no Beşiktaş em início de 2026. Combina confiabilidade defensiva com sobreposições e produção final, contribuindo com gols e assistências pelas pontas para a seleção.",
-        "why_de": "Ein angreifender Rechtsverteidiger mit einer der höchsten Länderspielzahlen in Panamas Geschichte, bringt er Top-Level-Europäer-Erfahrung nach Einsätzen bei Marseille, Anderlecht und New York Red Bulls mit, bevor er Anfang 2026 zu Beşiktaş wechselte. Er kombiniert defensive Zuverlässigkeit mit überlappenden Läufen und Endprodukt und trägt Tore und Vorlagen vom Flügel für die Nationalmannschaft bei.",
-        "why_it": "Un terzino destro offensivo con una delle più alte quantità di presenze nella storia di Panama, porta esperienza europea di alto livello dopo i periodi con Marsiglia, Anderlecht e New York Red Bulls prima di approdare al Beşiktaş all'inizio del 2026. Unisce affidabilità difensiva a sovrapposizioni e qualità conclusiva, contribuendo con gol e assist dalla fascia per la nazionale.",
-        "why_ja": "Panamaの歴史の中でも最多に近いキャップ数を持つ攻撃的な右バックで、Marseille、Anderlecht、New York Red Bullsでのシーズンを経て2026年初頭にBeşiktaşへ加入し最高峰のヨーロッパでの経験をもたらす。守備的な信頼性とオーバーラップランとエンドプロダクトを組み合わせ、代表チームのフランクからのゴールとアシストで貢献する。",
-        "why_ko": "파나마 역사상 가장 많은 캡 중 하나를 보유한 공격형 라이트백으로, Marseille, Anderlecht, New York Red Bulls에서의 최상위 유럽 경험을 갖추고 2026년 초 Beşiktaş에 합류했다. 수비 안정성과 오버래핑 런, 결정력을 결합해 국가대표팀에서 측면에서 골과 어시스트를 기록한다.",
-        "why_zh_Hans": "这是一名进攻型右后卫，是巴拿马历史出场次数最多的球员之一，曾效力马赛、安德莱赫特和纽约红牛，为球队带来高水平的欧洲经验，于2026年初加盟贝西克塔斯。他将防守可靠性与上插跑动和产出能力相结合，为国家队在边路贡献进球和助攻。",
-        "why_ar": "ظهير أيمن هجومي بأحد أعلى أرصدة المشاركات في تاريخ بنما، يُضفي خبرة أوروبية رفيعة المستوى بعد فترات في مرسيليا وأندرليخت ونيويورك ريد بولز قبل الانضمام إلى بيشكتاش مطلع 2026. يجمع الموثوقية الدفاعية بالتداخلات الهجومية والإنتاجية، مُضفياً الأهداف والتمريرات الحاسمة من الجانب للمنتخب الوطني.",
-        "why_es_ES": "Un lateral derecho ofensivo con uno de los registros de internacionalidades más altos de la historia de Panamá, aporta una sólida experiencia europea de alto nivel tras sus etapas en el Marsella, el Anderlecht y el New York Red Bulls antes de incorporarse al Beşiktaş a principios de 2026. Combina fiabilidad defensiva con subidas al ataque y producción ofensiva, contribuyendo con goles y asistencias desde la banda para la selección.",
-        "caps": 91,
-        "intlGoals": 9,
-        "tournaments": [
-          "2018 (Group stage)",
-          "2023 Gold Cup (Runner-up)",
-          "2026"
-        ],
-        "clubs": [
-          {
-            "team": "Beşiktaş",
-            "years": "2026–",
-            "country": "Turkey"
-          },
-          {
-            "team": "Marseille",
-            "years": "2023–2026",
-            "country": "France"
-          },
-          {
-            "team": "Anderlecht",
-            "years": "2020–2023",
-            "country": "Belgium"
-          },
-          {
-            "team": "New York Red Bulls",
-            "years": "2017–2019",
-            "country": "United States"
-          },
-          {
-            "team": "San Francisco FC",
-            "years": "2014–2017",
-            "country": "Panama"
-          }
-        ],
-        "honors": [
-          "Supporters' Shield (2018, with New York Red Bulls)",
-          "MLS All-Star (2018)"
         ]
       },
       {
@@ -31564,7 +30595,55 @@ window.WC_PLAYERS = {
         "club": "Besiktas (Super Lig, Turkey)",
         "hometown": "Colon, Panama",
         "why": "One of Panama's most accomplished international footballers, Amir Murillo has played for top clubs across Europe including Anderlecht and now Besiktas. His pace, defensive solidity, and attacking contributions from right-back make him one of the most complete full-backs in CONCACAF football. His vast experience and professionalism are invaluable for Panama at Football 2026.",
-        "number": 23
+        "number": 23,
+        "why_es": "Un lateral derecho atacante con uno de los registros de partidos internacionales más altos de la historia de Panamá, aporta experiencia europea de alto nivel tras etapas con el Marseille, el Anderlecht y el New York Red Bulls antes de unirse al Beşiktaş a principios de 2026. Combina confiabilidad defensiva con desbordes y producción final, contribuyendo con goles y asistencias desde la banda para la selección nacional.",
+        "why_fr": "Arrière droit offensif avec l'un des plus importants totaux de sélections de l'histoire du Panama, il apporte une expérience européenne de haut niveau après des passages à Marseille, Anderlecht et New York Red Bulls avant de rejoindre Beşiktaş début 2026. Il combine fiabilité défensive avec des chevauchements et une production offensive, contribuant buts et passes décisives depuis le flanc pour l'équipe nationale.",
+        "why_pt_BR": "Um lateral-direito ofensivo com um dos maiores históricos de convocações do Panamá, trazendo experiência europeia de alto nível após passagens no Marseille, Anderlecht e New York Red Bulls antes de ingressar no Beşiktaş em início de 2026. Combina confiabilidade defensiva com sobreposições e produção final, contribuindo com gols e assistências pelas pontas para a seleção.",
+        "why_de": "Ein angreifender Rechtsverteidiger mit einer der höchsten Länderspielzahlen in Panamas Geschichte, bringt er Top-Level-Europäer-Erfahrung nach Einsätzen bei Marseille, Anderlecht und New York Red Bulls mit, bevor er Anfang 2026 zu Beşiktaş wechselte. Er kombiniert defensive Zuverlässigkeit mit überlappenden Läufen und Endprodukt und trägt Tore und Vorlagen vom Flügel für die Nationalmannschaft bei.",
+        "why_it": "Un terzino destro offensivo con una delle più alte quantità di presenze nella storia di Panama, porta esperienza europea di alto livello dopo i periodi con Marsiglia, Anderlecht e New York Red Bulls prima di approdare al Beşiktaş all'inizio del 2026. Unisce affidabilità difensiva a sovrapposizioni e qualità conclusiva, contribuendo con gol e assist dalla fascia per la nazionale.",
+        "why_ja": "Panamaの歴史の中でも最多に近いキャップ数を持つ攻撃的な右バックで、Marseille、Anderlecht、New York Red Bullsでのシーズンを経て2026年初頭にBeşiktaşへ加入し最高峰のヨーロッパでの経験をもたらす。守備的な信頼性とオーバーラップランとエンドプロダクトを組み合わせ、代表チームのフランクからのゴールとアシストで貢献する。",
+        "why_ko": "파나마 역사상 가장 많은 캡 중 하나를 보유한 공격형 라이트백으로, Marseille, Anderlecht, New York Red Bulls에서의 최상위 유럽 경험을 갖추고 2026년 초 Beşiktaş에 합류했다. 수비 안정성과 오버래핑 런, 결정력을 결합해 국가대표팀에서 측면에서 골과 어시스트를 기록한다.",
+        "why_zh_Hans": "这是一名进攻型右后卫，是巴拿马历史出场次数最多的球员之一，曾效力马赛、安德莱赫特和纽约红牛，为球队带来高水平的欧洲经验，于2026年初加盟贝西克塔斯。他将防守可靠性与上插跑动和产出能力相结合，为国家队在边路贡献进球和助攻。",
+        "why_ar": "ظهير أيمن هجومي بأحد أعلى أرصدة المشاركات في تاريخ بنما، يُضفي خبرة أوروبية رفيعة المستوى بعد فترات في مرسيليا وأندرليخت ونيويورك ريد بولز قبل الانضمام إلى بيشكتاش مطلع 2026. يجمع الموثوقية الدفاعية بالتداخلات الهجومية والإنتاجية، مُضفياً الأهداف والتمريرات الحاسمة من الجانب للمنتخب الوطني.",
+        "why_es_ES": "Un lateral derecho ofensivo con uno de los registros de internacionalidades más altos de la historia de Panamá, aporta una sólida experiencia europea de alto nivel tras sus etapas en el Marsella, el Anderlecht y el New York Red Bulls antes de incorporarse al Beşiktaş a principios de 2026. Combina fiabilidad defensiva con subidas al ataque y producción ofensiva, contribuyendo con goles y asistencias desde la banda para la selección.",
+        "caps": 91,
+        "intlGoals": 9,
+        "tournaments": [
+          "2018 (Group stage)",
+          "2023 Gold Cup (Runner-up)",
+          "2026"
+        ],
+        "clubs": [
+          {
+            "team": "Beşiktaş",
+            "years": "2026–",
+            "country": "Turkey"
+          },
+          {
+            "team": "Marseille",
+            "years": "2023–2026",
+            "country": "France"
+          },
+          {
+            "team": "Anderlecht",
+            "years": "2020–2023",
+            "country": "Belgium"
+          },
+          {
+            "team": "New York Red Bulls",
+            "years": "2017–2019",
+            "country": "United States"
+          },
+          {
+            "team": "San Francisco FC",
+            "years": "2014–2017",
+            "country": "Panama"
+          }
+        ],
+        "honors": [
+          "Supporters' Shield (2018, with New York Red Bulls)",
+          "MLS All-Star (2018)"
+        ]
       },
       {
         "name": "Roderick Miller",
@@ -32610,27 +31689,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Gustavo Gomez",
-        "espnId": 162072,
-        "position": "Centre-back / Captain",
-        "club": "Palmeiras (Serie A, Brazil)",
-        "hometown": "Asuncion, Paraguay",
-        "why": "The captain and defensive leader of Paraguay, Gustavo Gomez has been one of the best centre-backs in South American football during his time at Palmeiras, winning multiple Copa Libertadores titles. His aerial dominance, leadership, and goal-scoring ability from set pieces make him a complete defender. He is the rock upon which Paraguay's defense is built at Football 2026.",
-        "number": 15,
-        "clubs": [
-          {
-            "team": "Viktoria Köln",
-            "years": "2015-2016",
-            "country": null
-          },
-          {
-            "team": "Rot-Weiss Essen",
-            "years": "2012-2013",
-            "country": null
-          }
-        ]
-      },
-      {
         "name": "Alexandro Maidana",
         "espnId": 399687,
         "position": "Centre-back",
@@ -32752,15 +31810,6 @@ window.WC_PLAYERS = {
             "country": null
           }
         ]
-      },
-      {
-        "name": "Miguel Almiron",
-        "espnId": 206827,
-        "position": "Attacking midfielder / Winger",
-        "club": "Atlanta United (MLS, United States)",
-        "hometown": "Asuncion, Paraguay",
-        "why": "One of Paraguay's most recognizable and experienced players, Miguel Almiron is a dynamic attacker known for his electric pace and tireless work rate. After a successful spell at Newcastle United in the Premier League, he returned to MLS with Atlanta United. His experience, big-game mentality, and ability to change matches with his speed and directness make him a vital player for Paraguay at Football 2026.",
-        "number": 10
       },
       {
         "name": "Mauricio",
@@ -35539,63 +34588,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Andrew Robertson",
-        "espnId": 104943,
-        "position": "Left-back",
-        "club": "Liverpool (Premier League, England) for the 2025-26 season; signed for Tottenham Hotspur as a free agent effective July 2026",
-        "hometown": "Glasgow",
-        "why": "Scotland's captain and most-capped current player with over 90 appearances, having led the nation to its first tournament since 1998. A serial winner at Liverpool, where he claimed the Premier League and Champions League, he is one of the best attacking full-backs of his generation. His relentless overlapping runs, crossing from the left flank and leadership anchor the Scotland side.",
-        "number": 3,
-        "why_es": "El capitán de Escocia y su jugador con más partidos internacionales en activo con más de 90 apariciones, habiendo llevado a la nación a su primer torneo desde 1998. Un ganador en serie en el Liverpool, donde conquistó la Premier League y la Champions League, es uno de los mejores laterales izquierdos atacantes de su generación. Sus incansables desbordes, centros desde el carril izquierdo y liderazgo anclan al equipo escocés.",
-        "why_fr": "Capitaine de l'Écosse et joueur le plus capé actuel avec plus de 90 apparitions, ayant conduit la nation à sa première tournoi depuis 1998. Vainqueur en série à Liverpool, où il a remporté la Premier League et la Champions League, il est l'un des meilleurs arrières latéraux offensifs de sa génération. Ses chevauchements incessants, ses centres depuis le flanc gauche et son leadership ancrent l'équipe écossaise.",
-        "why_pt_BR": "Capitão e jogador com mais convocações da Escócia com mais de 90 aparições, tendo liderado a nação à sua primeira torneio desde 1998. Múltiplo vencedor no Liverpool, onde conquistou a Premier League e a Champions League, é um dos melhores laterais-esquerdos ofensivos de sua geração. Suas sobreposições incansáveis, cruzamentos pelo flanco esquerdo e liderança são os pilares da seleção escocesa.",
-        "why_de": "Schottlands Kapitän und meisteingesetzter aktueller Spieler mit über 90 Einsätzen, nachdem er die Nation zu ihrer ersten Turnier seit 1998 geführt hat. Als Seriensieger bei Liverpool, wo er Premier League und Champions League gewann, ist er einer der besten angreifenden Außenverteidiger seiner Generation. Seine unermüdlichen überlappenden Läufe, Flanken vom linken Flügel und Führungsqualitäten verankern die schottische Mannschaft.",
-        "why_it": "Capitano della Scozia e giocatore con più presenze in nazionale con oltre 90 apparizioni, avendo guidato la nazione al suo primo torneo dal 1998. Serial vincitore di trofei al Liverpool, dove ha conquistato Premier League e Champions League, è uno dei migliori terzini offensivi della sua generazione. Le sue instancabili sovrapposizioni, i cross dalla fascia sinistra e la leadership ancorono la squadra scozzese.",
-        "why_ja": "90試合以上出場のScotlandのキャプテンで現役最多キャップ選手。国を1998年以来初の大会へ導いた。Liverpoolでプレミアリーグとチャンピオンズリーグを制覇した世代屈指の攻撃的フルバックの一人。左フランクからの絶え間ないオーバーラップラン、クロス、リーダーシップがScotland を支える。",
-        "why_ko": "90경기 이상 출전으로 스코틀랜드 주장이자 현역 최다 출전 선수로 팀을 1998년 이후 첫 번째 대회으로 이끌었다. Liverpool에서 프리미어리그와 챔피언스리그를 잇달아 우승한 시리얼 우승자로 그 세대 최고 공격형 풀백 중 한 명이다. 끊임없는 오버래핑 런, 왼쪽 측면 크로스, 리더십이 스코틀랜드 팀의 닻이 된다.",
-        "why_zh_Hans": "苏格兰队长和出场次数最多的现役球员，出场次数超过90次，带领球队时隔1998年后首次重返赛事。他随利物浦赢得了一系列荣誉，包括英超和欧冠，是同代最优秀的进攻型边后卫之一。他不知疲倦的左路上插跑动、传中和领导力是苏格兰的锚点。",
-        "why_ar": "قائد اسكتلندا وأكثر لاعبيها الحاليين مشاركةً بأكثر من 90 ظهوراً قاد البلاد إلى أول كأس عالم منذ 1998. فائز بعدة ألقاب مع ليفربول بما فيها الدوري الإنجليزي الممتاز ودوري الأبطال، واحد من أفضل الظهراء الأيمن الهجوميين في جيله. تداخلاته الهجومية اللاهثة وعروضه من الجانب الأيسر وقيادته يرسّخون الفريق الاسكتلندي.",
-        "why_es_ES": "Capitán de Escocia y el jugador activo con más internacionalidades, con más de 90 apariciones, habiendo llevado a la nación a su primer torneo desde 1998. Un ganador en serie con el Liverpool, donde se proclamó campeón de la Premier League y la Champions League, es uno de los mejores laterales izquierdos ofensivos de su generación. Sus incansables subidas al ataque, sus centros desde el carril izquierdo y su liderazgo anclan el equipo escocés.",
-        "caps": 92,
-        "intlGoals": 4,
-        "tournaments": [
-          "Euro 2024 (Group stage)",
-          "Euro 2020 (Group stage)"
-        ],
-        "clubs": [
-          {
-            "team": "Liverpool",
-            "years": "2017–2026",
-            "country": "England"
-          },
-          {
-            "team": "Hull City",
-            "years": "2014–2017",
-            "country": "England"
-          },
-          {
-            "team": "Dundee United",
-            "years": "2013–2014",
-            "country": "Scotland"
-          },
-          {
-            "team": "Queen's Park",
-            "years": "2012–2013",
-            "country": "Scotland"
-          }
-        ],
-        "honors": [
-          "UEFA Champions League (2019 with Liverpool)",
-          "Premier League (2020, 2025 with Liverpool)",
-          "FA Cup (2022 with Liverpool)",
-          "EFL Cup (2022, 2024 with Liverpool)",
-          "UEFA Super Cup (2019 with Liverpool)",
-          "Club Championship (2019 with Liverpool)",
-          "FA Community Shield (2022 with Liverpool)",
-          "MBE (2023)"
-        ]
-      },
-      {
         "name": "John McGinn",
         "espnId": 162843,
         "position": "Central/attacking midfielder",
@@ -35841,6 +34833,32 @@ window.WC_PLAYERS = {
             "years": "2012-2013",
             "country": null
           }
+        ],
+        "why_es": "El capitán de Escocia y su jugador con más partidos internacionales en activo con más de 90 apariciones, habiendo llevado a la nación a su primer torneo desde 1998. Un ganador en serie en el Liverpool, donde conquistó la Premier League y la Champions League, es uno de los mejores laterales izquierdos atacantes de su generación. Sus incansables desbordes, centros desde el carril izquierdo y liderazgo anclan al equipo escocés.",
+        "why_fr": "Capitaine de l'Écosse et joueur le plus capé actuel avec plus de 90 apparitions, ayant conduit la nation à sa première tournoi depuis 1998. Vainqueur en série à Liverpool, où il a remporté la Premier League et la Champions League, il est l'un des meilleurs arrières latéraux offensifs de sa génération. Ses chevauchements incessants, ses centres depuis le flanc gauche et son leadership ancrent l'équipe écossaise.",
+        "why_pt_BR": "Capitão e jogador com mais convocações da Escócia com mais de 90 aparições, tendo liderado a nação à sua primeira torneio desde 1998. Múltiplo vencedor no Liverpool, onde conquistou a Premier League e a Champions League, é um dos melhores laterais-esquerdos ofensivos de sua geração. Suas sobreposições incansáveis, cruzamentos pelo flanco esquerdo e liderança são os pilares da seleção escocesa.",
+        "why_de": "Schottlands Kapitän und meisteingesetzter aktueller Spieler mit über 90 Einsätzen, nachdem er die Nation zu ihrer ersten Turnier seit 1998 geführt hat. Als Seriensieger bei Liverpool, wo er Premier League und Champions League gewann, ist er einer der besten angreifenden Außenverteidiger seiner Generation. Seine unermüdlichen überlappenden Läufe, Flanken vom linken Flügel und Führungsqualitäten verankern die schottische Mannschaft.",
+        "why_it": "Capitano della Scozia e giocatore con più presenze in nazionale con oltre 90 apparizioni, avendo guidato la nazione al suo primo torneo dal 1998. Serial vincitore di trofei al Liverpool, dove ha conquistato Premier League e Champions League, è uno dei migliori terzini offensivi della sua generazione. Le sue instancabili sovrapposizioni, i cross dalla fascia sinistra e la leadership ancorono la squadra scozzese.",
+        "why_ja": "90試合以上出場のScotlandのキャプテンで現役最多キャップ選手。国を1998年以来初の大会へ導いた。Liverpoolでプレミアリーグとチャンピオンズリーグを制覇した世代屈指の攻撃的フルバックの一人。左フランクからの絶え間ないオーバーラップラン、クロス、リーダーシップがScotland を支える。",
+        "why_ko": "90경기 이상 출전으로 스코틀랜드 주장이자 현역 최다 출전 선수로 팀을 1998년 이후 첫 번째 대회으로 이끌었다. Liverpool에서 프리미어리그와 챔피언스리그를 잇달아 우승한 시리얼 우승자로 그 세대 최고 공격형 풀백 중 한 명이다. 끊임없는 오버래핑 런, 왼쪽 측면 크로스, 리더십이 스코틀랜드 팀의 닻이 된다.",
+        "why_zh_Hans": "苏格兰队长和出场次数最多的现役球员，出场次数超过90次，带领球队时隔1998年后首次重返赛事。他随利物浦赢得了一系列荣誉，包括英超和欧冠，是同代最优秀的进攻型边后卫之一。他不知疲倦的左路上插跑动、传中和领导力是苏格兰的锚点。",
+        "why_ar": "قائد اسكتلندا وأكثر لاعبيها الحاليين مشاركةً بأكثر من 90 ظهوراً قاد البلاد إلى أول كأس عالم منذ 1998. فائز بعدة ألقاب مع ليفربول بما فيها الدوري الإنجليزي الممتاز ودوري الأبطال، واحد من أفضل الظهراء الأيمن الهجوميين في جيله. تداخلاته الهجومية اللاهثة وعروضه من الجانب الأيسر وقيادته يرسّخون الفريق الاسكتلندي.",
+        "why_es_ES": "Capitán de Escocia y el jugador activo con más internacionalidades, con más de 90 apariciones, habiendo llevado a la nación a su primer torneo desde 1998. Un ganador en serie con el Liverpool, donde se proclamó campeón de la Premier League y la Champions League, es uno de los mejores laterales izquierdos ofensivos de su generación. Sus incansables subidas al ataque, sus centros desde el carril izquierdo y su liderazgo anclan el equipo escocés.",
+        "caps": 92,
+        "intlGoals": 4,
+        "tournaments": [
+          "Euro 2024 (Group stage)",
+          "Euro 2020 (Group stage)"
+        ],
+        "honors": [
+          "UEFA Champions League (2019 with Liverpool)",
+          "Premier League (2020, 2025 with Liverpool)",
+          "FA Cup (2022 with Liverpool)",
+          "EFL Cup (2022, 2024 with Liverpool)",
+          "UEFA Super Cup (2019 with Liverpool)",
+          "Club Championship (2019 with Liverpool)",
+          "FA Community Shield (2022 with Liverpool)",
+          "MBE (2023)"
         ]
       },
       {
@@ -37516,47 +36534,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Sadio Mane",
-        "espnId": 169797,
-        "position": "Forward",
-        "club": "Al-Nassr (Saudi Pro League, Saudi Arabia)",
-        "hometown": "Sédhiou, Senegal",
-        "why": "One of Africa's greatest ever footballers, Mane won the Champions League and Premier League with Liverpool before moving to Bayern Munich and then Al-Nassr. He scored the winning penalty in Senegal's historic 2021 AFCON final triumph. At 34, the legendary attacker remains the Lions of Teranga's spiritual leader at Football 2026.",
-        "number": 10,
-        "clubs": [
-          {
-            "team": "Senegal",
-            "years": "2012-2012, 2016-2017, 2018-2018, 2020-2026",
-            "country": null
-          },
-          {
-            "team": "Al Nassr",
-            "years": "2023-CURRENT",
-            "country": null
-          },
-          {
-            "team": "Bayern München",
-            "years": "2022-2023",
-            "country": null
-          },
-          {
-            "team": "Liverpool",
-            "years": "2016-2022",
-            "country": null
-          },
-          {
-            "team": "Southampton",
-            "years": "2014-2016",
-            "country": null
-          },
-          {
-            "team": "RB Salzburg",
-            "years": "2013-2014",
-            "country": null
-          }
-        ]
-      },
-      {
         "name": "Cherif Ndiaye",
         "espnId": 251924,
         "position": "Striker",
@@ -37634,47 +36611,6 @@ window.WC_PLAYERS = {
           {
             "team": "Boreham Wood",
             "years": "2018-2019",
-            "country": null
-          }
-        ]
-      },
-      {
-        "name": "Ismaila Sarr",
-        "espnId": 241012,
-        "position": "Right winger",
-        "club": "Crystal Palace (Premier League, England)",
-        "hometown": "Saint-Louis, Senegal",
-        "why": "A blistering-paced winger who has terrorized Premier League defences with his speed and directness at Watford, Marseille, and now Crystal Palace. Sarr famously scored twice against Liverpool to end their unbeaten run. He is one of Senegal's most dangerous attackers on the counter at Football 2026.",
-        "number": 18,
-        "clubs": [
-          {
-            "team": "Senegal",
-            "years": "2016-2017, 2018-2018, 2019-2021, 2022-2022, 2023-2026",
-            "country": null
-          },
-          {
-            "team": "Crystal Palace",
-            "years": "2024-CURRENT",
-            "country": null
-          },
-          {
-            "team": "Marseille",
-            "years": "2023-2024",
-            "country": null
-          },
-          {
-            "team": "Watford",
-            "years": "2019-2023",
-            "country": null
-          },
-          {
-            "team": "Stade Rennais",
-            "years": "2017-2019",
-            "country": null
-          },
-          {
-            "team": "Metz",
-            "years": "2016-2017",
             "country": null
           }
         ]
@@ -39632,56 +38568,6 @@ window.WC_PLAYERS = {
         ]
       },
       {
-        "name": "Victor Nilsson Lindelöf",
-        "espnId": 204679,
-        "position": "Centre-back",
-        "club": "Aston Villa (Premier League, England)",
-        "hometown": "Västerås",
-        "why": "Lindelöf is Sweden's captain and defensive leader, having worn the armband since 2021 and marshalled the back line through qualifying. An experienced, composed centre-back comfortable bringing the ball out from the back, he spent years at Manchester United before joining Aston Villa in September 2025. His reading of the game and leadership are central to organising a Swedish defence facing a tough group with the Netherlands and Japan.",
-        "number": 3,
-        "why_es": "Lindelöf es el capitán y líder defensivo de Suecia, habiendo llevado el brazalete desde 2021 y comandado la línea defensiva durante la clasificación. Un defensor central experimentado y sereno que se siente cómodo saliendo con el balón desde atrás, pasó años en el Manchester United antes de unirse al Aston Villa en septiembre de 2025. Su lectura del juego y liderazgo son fundamentales para organizar una defensa sueca que enfrenta un grupo difícil con los Países Bajos y Japón.",
-        "why_fr": "Lindelöf est le capitaine et leader défensif de la Suède, portant le brassard depuis 2021 et marshallant la défense tout au long des éliminatoires. Défenseur central expérimenté et composé à l'aise pour relancer depuis l'arrière, il a passé des années à Manchester United avant de rejoindre Aston Villa en septembre 2025. Sa lecture du jeu et son leadership sont centraux pour organiser une défense suédoise confrontée à un groupe difficile avec les Pays-Bas et le Japon.",
-        "why_pt_BR": "Lindelöf é o capitão e líder defensivo da Suécia, usando a braçadeira desde 2021 e comandando a linha defensiva ao longo das eliminatórias. Um zagueiro experiente e sereno, à vontade para sair jogando, passou anos no Manchester United antes de ingressar no Aston Villa em setembro de 2025. Sua leitura de jogo e liderança são centrais para organizar uma defesa sueca que enfrenta um grupo difícil com Países Baixos e Japão.",
-        "why_de": "Lindelöf ist Schwedens Kapitän und defensiver Anführer, trägt die Armbinde seit 2021 und führte die Abwehrlinie durch die Qualifikation. Ein erfahrener, besonnener Innenverteidiger, der sich dabei wohlfühlt, den Ball von hinten herauszuspielen, verbrachte er Jahre bei Manchester United, bevor er im September 2025 zu Aston Villa wechselte. Sein Spielverständnis und seine Führungsqualitäten sind zentral für die Organisation einer schwedischen Abwehr, die einer schweren Gruppe mit den Niederlanden und Japan gegenübersteht.",
-        "why_it": "Lindelöf è il capitano e il leader difensivo della Svezia, portando la fascia dal 2021 e guidando la linea difensiva attraverso le qualificazioni. Difensore centrale esperto e composto, a suo agio nell'impostare dal basso, ha trascorso anni al Manchester United prima di passare all'Aston Villa nel settembre 2025. La sua lettura del gioco e la leadership sono centrali per organizzare una difesa svedese che affronta un gruppo difficile con Paesi Bassi e Giappone.",
-        "why_ja": "Lindelöfは2021年以来腕章を着けてきたSwedenのキャプテンと守備リーダーで、予選を通じてバックラインを統率した。Manchester Unitedでのキャリアを経て2025年9月にAston Villaへ移籍した、バックラインから前に出るのが得意な経験豊かで落ち着いたセンターバック。そのゲームの読みとリーダーシップはNetherlandsとJapanとの難しいグループに直面するスウェーデンの守備組織の中心だ。",
-        "why_ko": "Lindelöf는 스웨덴의 주장이자 수비 리더로 2021년부터 완장을 차고 예선 과정에서 수비 라인을 지휘했다. 후방에서 볼을 끌어내는 데 편안한 경험 있고 침착한 센터백으로 Manchester United에서 오랫동안 뛴 후 2025년 9월 Aston Villa에 합류했다. 게임 리딩과 리더십은 네덜란드와 일본이 있는 어려운 조에서 스웨덴 수비를 정리하는 데 핵심이다.",
-        "why_zh_Hans": "林德洛夫是瑞典队长和防守领袖，自2021年起担任队长，在资格赛中统率后防线。他是一名经验丰富、从容的中后卫，擅长从后场带球推进，在曼彻斯特联效力多年后于2025年9月加盟阿斯顿维拉。他阅读比赛的能力和领导力是组织面对以荷兰和日本为代表的艰难分组中瑞典防守的核心。",
-        "why_ar": "ليندلوف قائد السويد وزعيمها الدفاعي حاملاً الشارة منذ 2021 وقائداً للخط الخلفي عبر التصفيات. مدافع مركزي مخضرم وهادئ مرتاح للبناء من الخلف، قضى سنوات في مانشستر يونايتد قبل انضمامه إلى أستون فيلا في سبتمبر 2025. قراءته للعبة وقيادته محوريان في تنظيم دفاع سويدي يواجه مجموعة صعبة مع هولندا واليابان.",
-        "why_es_ES": "Lindelöf es el capitán y líder defensivo de Suecia, portando el brazalete desde 2021 y dirigiendo la línea trasera durante la clasificación. Un central experimentado y sereno, cómodo sacando el balón desde atrás, pasó varios años en el Manchester United antes de incorporarse al Aston Villa en septiembre de 2025. Su lectura del juego y su liderazgo son fundamentales para organizar una defensa sueca que afronta un grupo complicado con los Países Bajos y Japón.",
-        "caps": 72,
-        "intlGoals": 3,
-        "tournaments": [
-          "2018 (Quarter-final)",
-          "Euro 2020 (Round of 16)"
-        ],
-        "clubs": [
-          {
-            "team": "Aston Villa",
-            "years": "2025–present",
-            "country": "England"
-          },
-          {
-            "team": "Manchester United",
-            "years": "2017–2025",
-            "country": "England"
-          },
-          {
-            "team": "Benfica",
-            "years": "2012–2017",
-            "country": "Portugal"
-          }
-        ],
-        "honors": [
-          "UEFA Europa League (2026 with Aston Villa)",
-          "Primeira Liga (2014, 2015, 2016 with Benfica)",
-          "Taça de Portugal (2014 with Benfica)",
-          "Taça da Liga (2014, 2015, 2016 with Benfica)",
-          "UEFA U-21 Championship (2015 with Sweden U-21)",
-          "Swedish Footballer of the Year / Guldbollen (2018)"
-        ]
-      },
-      {
         "name": "Anthony Elanga",
         "espnId": 296622,
         "position": "Forward (winger)",
@@ -39983,6 +38869,30 @@ window.WC_PLAYERS = {
             "years": "2015-2015",
             "country": null
           }
+        ],
+        "why_es": "Lindelöf es el capitán y líder defensivo de Suecia, habiendo llevado el brazalete desde 2021 y comandado la línea defensiva durante la clasificación. Un defensor central experimentado y sereno que se siente cómodo saliendo con el balón desde atrás, pasó años en el Manchester United antes de unirse al Aston Villa en septiembre de 2025. Su lectura del juego y liderazgo son fundamentales para organizar una defensa sueca que enfrenta un grupo difícil con los Países Bajos y Japón.",
+        "why_fr": "Lindelöf est le capitaine et leader défensif de la Suède, portant le brassard depuis 2021 et marshallant la défense tout au long des éliminatoires. Défenseur central expérimenté et composé à l'aise pour relancer depuis l'arrière, il a passé des années à Manchester United avant de rejoindre Aston Villa en septembre 2025. Sa lecture du jeu et son leadership sont centraux pour organiser une défense suédoise confrontée à un groupe difficile avec les Pays-Bas et le Japon.",
+        "why_pt_BR": "Lindelöf é o capitão e líder defensivo da Suécia, usando a braçadeira desde 2021 e comandando a linha defensiva ao longo das eliminatórias. Um zagueiro experiente e sereno, à vontade para sair jogando, passou anos no Manchester United antes de ingressar no Aston Villa em setembro de 2025. Sua leitura de jogo e liderança são centrais para organizar uma defesa sueca que enfrenta um grupo difícil com Países Baixos e Japão.",
+        "why_de": "Lindelöf ist Schwedens Kapitän und defensiver Anführer, trägt die Armbinde seit 2021 und führte die Abwehrlinie durch die Qualifikation. Ein erfahrener, besonnener Innenverteidiger, der sich dabei wohlfühlt, den Ball von hinten herauszuspielen, verbrachte er Jahre bei Manchester United, bevor er im September 2025 zu Aston Villa wechselte. Sein Spielverständnis und seine Führungsqualitäten sind zentral für die Organisation einer schwedischen Abwehr, die einer schweren Gruppe mit den Niederlanden und Japan gegenübersteht.",
+        "why_it": "Lindelöf è il capitano e il leader difensivo della Svezia, portando la fascia dal 2021 e guidando la linea difensiva attraverso le qualificazioni. Difensore centrale esperto e composto, a suo agio nell'impostare dal basso, ha trascorso anni al Manchester United prima di passare all'Aston Villa nel settembre 2025. La sua lettura del gioco e la leadership sono centrali per organizzare una difesa svedese che affronta un gruppo difficile con Paesi Bassi e Giappone.",
+        "why_ja": "Lindelöfは2021年以来腕章を着けてきたSwedenのキャプテンと守備リーダーで、予選を通じてバックラインを統率した。Manchester Unitedでのキャリアを経て2025年9月にAston Villaへ移籍した、バックラインから前に出るのが得意な経験豊かで落ち着いたセンターバック。そのゲームの読みとリーダーシップはNetherlandsとJapanとの難しいグループに直面するスウェーデンの守備組織の中心だ。",
+        "why_ko": "Lindelöf는 스웨덴의 주장이자 수비 리더로 2021년부터 완장을 차고 예선 과정에서 수비 라인을 지휘했다. 후방에서 볼을 끌어내는 데 편안한 경험 있고 침착한 센터백으로 Manchester United에서 오랫동안 뛴 후 2025년 9월 Aston Villa에 합류했다. 게임 리딩과 리더십은 네덜란드와 일본이 있는 어려운 조에서 스웨덴 수비를 정리하는 데 핵심이다.",
+        "why_zh_Hans": "林德洛夫是瑞典队长和防守领袖，自2021年起担任队长，在资格赛中统率后防线。他是一名经验丰富、从容的中后卫，擅长从后场带球推进，在曼彻斯特联效力多年后于2025年9月加盟阿斯顿维拉。他阅读比赛的能力和领导力是组织面对以荷兰和日本为代表的艰难分组中瑞典防守的核心。",
+        "why_ar": "ليندلوف قائد السويد وزعيمها الدفاعي حاملاً الشارة منذ 2021 وقائداً للخط الخلفي عبر التصفيات. مدافع مركزي مخضرم وهادئ مرتاح للبناء من الخلف، قضى سنوات في مانشستر يونايتد قبل انضمامه إلى أستون فيلا في سبتمبر 2025. قراءته للعبة وقيادته محوريان في تنظيم دفاع سويدي يواجه مجموعة صعبة مع هولندا واليابان.",
+        "why_es_ES": "Lindelöf es el capitán y líder defensivo de Suecia, portando el brazalete desde 2021 y dirigiendo la línea trasera durante la clasificación. Un central experimentado y sereno, cómodo sacando el balón desde atrás, pasó varios años en el Manchester United antes de incorporarse al Aston Villa en septiembre de 2025. Su lectura del juego y su liderazgo son fundamentales para organizar una defensa sueca que afronta un grupo complicado con los Países Bajos y Japón.",
+        "caps": 72,
+        "intlGoals": 3,
+        "tournaments": [
+          "2018 (Quarter-final)",
+          "Euro 2020 (Round of 16)"
+        ],
+        "honors": [
+          "UEFA Europa League (2026 with Aston Villa)",
+          "Primeira Liga (2014, 2015, 2016 with Benfica)",
+          "Taça de Portugal (2014 with Benfica)",
+          "Taça da Liga (2014, 2015, 2016 with Benfica)",
+          "UEFA U-21 Championship (2015 with Sweden U-21)",
+          "Swedish Footballer of the Year / Guldbollen (2018)"
         ]
       },
       {
@@ -44417,22 +43327,6 @@ window.WC_PLAYERS = {
         "number": 23
       },
       {
-        "name": "Jose Maria Gimenez",
-        "espnId": 211649,
-        "position": "Centre-back",
-        "club": "Atlético Madrid (La Liga, Spain)",
-        "hometown": "Toledo, Uruguay",
-        "why": "A fierce, uncompromising centre-back who has been a cornerstone of Atlético Madrid's famous defense for over a decade. Giménez is aggressive in the tackle, dominant in the air, and a vocal leader on the pitch. He has been one of Uruguay's most important players across multiple tournament cycles and captains the side with intensity.",
-        "number": 2,
-        "clubs": [
-          {
-            "team": "Arizona",
-            "years": "2013-2015",
-            "country": null
-          }
-        ]
-      },
-      {
         "name": "Sebastian Caceres",
         "espnId": 285756,
         "position": "Centre-back",
@@ -45032,52 +43926,6 @@ window.WC_PLAYERS = {
           {
             "team": "St. Pauli",
             "years": "2020-2021",
-            "country": null
-          }
-        ]
-      },
-      {
-        "name": "Darwin Nunez",
-        "espnId": 271788,
-        "position": "Striker",
-        "club": "Al-Hilal (Saudi Pro League, Saudi Arabia)",
-        "hometown": "Artigas, Uruguay",
-        "why": "A devastatingly fast, powerful striker who rose to prominence at Benfica before a big-money move to Liverpool. Núñez is a chaotic, explosive attacker who can score spectacular goals and terrorize defenders with his relentless pressing and movement. He moved to Al-Hilal but remains Uruguay's most dangerous forward and a player who can change any game in an instant.",
-        "number": 9,
-        "clubs": [
-          {
-            "team": "Uruguay",
-            "years": "2019-2022, 2022-2022, 2023-2025, 2026-2026",
-            "country": null
-          },
-          {
-            "team": "Al Hilal",
-            "years": "2025-CURRENT",
-            "country": null
-          },
-          {
-            "team": "Liverpool",
-            "years": "2022-2024, 2024-2025",
-            "country": null
-          },
-          {
-            "team": "Benfica",
-            "years": "2020-2022",
-            "country": null
-          },
-          {
-            "team": "Almería",
-            "years": "2019-2020",
-            "country": null
-          },
-          {
-            "team": "Uruguay U20",
-            "years": "2018-2019",
-            "country": null
-          },
-          {
-            "team": "Peñarol",
-            "years": "2017-2019",
             "country": null
           }
         ]
