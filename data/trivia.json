@@ -116,7 +116,13 @@
           "explanation": "英格兰裁判肯·阿斯顿在1966年那届赛事之后，受交通信号灯的启发设计出了红黄牌制度。它在1970年墨西哥那届赛事中首次亮相。如今，黄牌是一种警告（针对犯规、抗议或拖延时间等行为），同一场比赛中两张黄牌相当于一张红牌。直接红牌则意味着因严重犯规或暴力行为被立即罚下场。自2019年起，视频助理裁判（VAR）也可在回看录像后建议出示牌。"
         }
       },
-      "i18nSourceHash": "2ee24994fc4a3ef0"
+      "i18nSourceHash": "2ee24994fc4a3ef0",
+      "teams": [
+        "Argentina",
+        "England",
+        "Germany",
+        "Mexico"
+      ]
     },
     {
       "id": "h-2026-hosts",
@@ -233,7 +239,12 @@
           "explanation": "2026年赛事是首次由三个国家——美国、加拿大和墨西哥——在16座城市共同举办的赛事。"
         }
       },
-      "i18nSourceHash": "a48471b7b8b388d6"
+      "i18nSourceHash": "a48471b7b8b388d6",
+      "teams": [
+        "Canada",
+        "Mexico",
+        "USA"
+      ]
     },
     {
       "id": "v-mercedes-roof",
@@ -351,7 +362,8 @@
           "explanation": "亚特兰大的梅赛德斯-奔驰体育场于2017年开放，耗资约16亿美元。其可伸缩屋顶由八块三角形的“花瓣”面板组成，像相机光圈一样开合，是同类设计中的首创。该体育场还保持着吉尼斯世界纪录，拥有全球最大的光环式环形视频屏幕——一圈360度环绕场内的LED环屏。"
         }
       },
-      "i18nSourceHash": "bdb745c4e48e669f"
+      "i18nSourceHash": "bdb745c4e48e669f",
+      "teams": []
     },
     {
       "id": "h-2002-cohosts",
@@ -468,7 +480,16 @@
           "explanation": "2002年由韩国和日本联合举办，这是历史上首次由两个国家共同承办这项赛事。巴西在横滨的决赛中以2–0击败德国，赢得创纪录的第五个冠军。罗纳尔多攻入全部两球，并以8粒进球荣膺最佳射手，平息了1998年决赛前那次神秘抽搐之后人们的质疑。东道主韩国一路淘汰西班牙和意大利，闯入半决赛，震惊了全世界。"
         }
       },
-      "i18nSourceHash": "1c25b3c60b43f400"
+      "i18nSourceHash": "1c25b3c60b43f400",
+      "teams": [
+        "Australia",
+        "Brazil",
+        "Germany",
+        "Japan",
+        "Korea Republic",
+        "New Zealand",
+        "Spain"
+      ]
     },
     {
       "id": "t-how-many-groups",
@@ -585,7 +606,8 @@
           "explanation": "2026 年赛事的参赛球队从 32 支扩充到 48 支,分为 12 个四队小组。此前的赛事(自 1998 年起)采用 8 个四队小组。此次扩军获批,旨在让更多国家——尤其是来自非洲、亚洲及规模较小的足联的球队——有机会在最高舞台上竞技。每个小组前两名加上成绩最好的 8 支小组第三名,将晋级新设的 32 强淘汰赛。"
         }
       },
-      "i18nSourceHash": "2e8ce09fe3dd678e"
+      "i18nSourceHash": "2e8ce09fe3dd678e",
+      "teams": []
     },
     {
       "id": "t-defending-champs",
@@ -703,7 +725,14 @@
           "explanation": "阿根廷在2022年夺冠,在卡塔尔那场惊心动魄、3比3战平的决赛后通过点球大战击败法国。这是莱昂内尔·梅西在五届赛事后首次捧杯,为他足球史上最伟大的职业生涯之一画上圆满句号。姆巴佩为法国上演帽子戏法,但仍不足以扭转结局。"
         }
       },
-      "i18nSourceHash": "8b8ad38aa438bdde"
+      "i18nSourceHash": "8b8ad38aa438bdde",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "France",
+        "Germany",
+        "Qatar"
+      ]
     },
     {
       "id": "t-netherlands-finals",
@@ -820,7 +849,13 @@
           "explanation": "荷兰在1974年、1978年和2010年的决赛中失利，是从未夺得冠军的最成功球队。"
         }
       },
-      "i18nSourceHash": "9fec797bc1335462"
+      "i18nSourceHash": "9fec797bc1335462",
+      "teams": [
+        "Belgium",
+        "Netherlands",
+        "Portugal",
+        "USA"
+      ]
     },
     {
       "id": "r-yellow-wiped",
@@ -937,7 +972,8 @@
           "explanation": "单张黄牌会在小组赛阶段后清除，并在四分之一决赛后再次清除，这样早期吃到的警告就不会让球员错过决赛。红牌则不同：直接红牌意味着至少自动停赛一场，但纪律委员会可根据情节严重程度予以延长。这类停赛会跨阶段累计——四分之一决赛中的一张红牌意味着将缺席半决赛，没错，甚至连决赛也会缺席。"
         }
       },
-      "i18nSourceHash": "57e06ecf06b190bf"
+      "i18nSourceHash": "57e06ecf06b190bf",
+      "teams": []
     },
     {
       "id": "c-fan-fest",
@@ -1054,7 +1090,10 @@
           "explanation": "德国于2006年率先举办官方球迷狂欢节，数十万人聚集在各主办城市的公共观赛区。"
         }
       },
-      "i18nSourceHash": "f243f4a2e047cca7"
+      "i18nSourceHash": "f243f4a2e047cca7",
+      "teams": [
+        "Germany"
+      ]
     },
     {
       "id": "v-total-cities",
@@ -1171,7 +1210,12 @@
           "explanation": "共有16座城市承办比赛——美国11座、墨西哥3座、加拿大2座。"
         }
       },
-      "i18nSourceHash": "e8aeca7772ab020a"
+      "i18nSourceHash": "e8aeca7772ab020a",
+      "teams": [
+        "Canada",
+        "Mexico",
+        "USA"
+      ]
     },
     {
       "id": "c-vuvuzela",
@@ -1289,7 +1333,12 @@
           "explanation": "2010年，南非球迷不停地吹响塑料呜呜祖拉号角——有人喜爱，但更多人深恶痛绝。"
         }
       },
-      "i18nSourceHash": "49bffe36202f4440"
+      "i18nSourceHash": "49bffe36202f4440",
+      "teams": [
+        "Brazil",
+        "Germany",
+        "South Africa"
+      ]
     },
     {
       "id": "rec-fastest-hat-trick",
@@ -1407,7 +1456,12 @@
           "explanation": "匈牙利的拉斯洛·基什在1982年对阵萨尔瓦多的比赛中，8分钟内连入三球，创造了赛事历史上最快的帽子戏法纪录。"
         }
       },
-      "i18nSourceHash": "787d973b54b2aeb7"
+      "i18nSourceHash": "787d973b54b2aeb7",
+      "teams": [
+        "France",
+        "Germany",
+        "Portugal"
+      ]
     },
     {
       "id": "h-golden-goal",
@@ -1524,7 +1578,11 @@
           "explanation": "金球制是一种突然死亡规则：在淘汰赛中，加时赛里率先进球的球队立即获胜，比赛随即结束。该规则在赛事中于1998年首次启用，当时洛朗·布兰为法国对阵巴拉圭时打入一球。这一规则旨在鼓励加时赛中的进攻打法，但往往使球队变得更加保守，并在2002年之后被废除。"
         }
       },
-      "i18nSourceHash": "faad0bdfe7c2a4b9"
+      "i18nSourceHash": "faad0bdfe7c2a4b9",
+      "teams": [
+        "France",
+        "Paraguay"
+      ]
     },
     {
       "id": "r-lots-tiebreak",
@@ -1641,7 +1699,8 @@
           "explanation": "如果净胜球、进球数、相互交锋成绩和公平竞赛积分都无法分出高下，就通过抽签决定，不过这种情况从未发生过。"
         }
       },
-      "i18nSourceHash": "ad0fce18e3864f1a"
+      "i18nSourceHash": "ad0fce18e3864f1a",
+      "teams": []
     },
     {
       "id": "h-2014-champion",
@@ -1758,7 +1817,13 @@
           "explanation": "德国在加时赛中以1比0击败阿根廷，马里奥·格策攻入制胜一球。"
         }
       },
-      "i18nSourceHash": "f6641f785cbb92c3"
+      "i18nSourceHash": "f6641f785cbb92c3",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "Germany",
+        "Netherlands"
+      ]
     },
     {
       "id": "h-host-wins",
@@ -1875,7 +1940,14 @@
           "explanation": "东道主共夺冠六次：乌拉圭（1930年）、意大利（1934年）、英格兰（1966年）、西德（1974年）、阿根廷（1978年）和法国（1998年）。"
         }
       },
-      "i18nSourceHash": "04f2b73726188a18"
+      "i18nSourceHash": "04f2b73726188a18",
+      "teams": [
+        "Argentina",
+        "England",
+        "France",
+        "Germany",
+        "Uruguay"
+      ]
     },
     {
       "id": "v-lincoln-philly",
@@ -1992,7 +2064,8 @@
           "explanation": "位于费城的林肯金融球场是老鹰队的主场，将举办小组赛和淘汰赛的比赛。"
         }
       },
-      "i18nSourceHash": "b57fa99e1ea94194"
+      "i18nSourceHash": "b57fa99e1ea94194",
+      "teams": []
     },
     {
       "id": "h-2018-champion",
@@ -2109,7 +2182,13 @@
           "explanation": "法国在决赛中以4比2击败克罗地亚，赢得了队史第二个冠军。"
         }
       },
-      "i18nSourceHash": "2ecbf1a3d9afb2a0"
+      "i18nSourceHash": "2ecbf1a3d9afb2a0",
+      "teams": [
+        "Belgium",
+        "Croatia",
+        "England",
+        "France"
+      ]
     },
     {
       "id": "p-zidane-red",
@@ -2227,7 +2306,10 @@
           "explanation": "齐达内在2006年决赛加时赛中头顶马特拉齐，这成了他职业生涯的最后一个动作——意大利最终通过点球大战获胜。齐达内曾效力于戛纳、波尔多、尤文图斯和皇家马德里，并在皇马打入了冠军联赛决赛史上最精彩的进球之一（2002年的一记左脚凌空抽射）。他后来表示并不后悔那记头顶本身，因为马特拉齐对他母亲和姐妹的侮辱令人无法接受，但他遗憾的是有数百万儿童目睹了这一幕。"
         }
       },
-      "i18nSourceHash": "48b3b65f2e7a501e"
+      "i18nSourceHash": "48b3b65f2e7a501e",
+      "teams": [
+        "France"
+      ]
     },
     {
       "id": "v-lumen-sounders",
@@ -2344,7 +2426,8 @@
           "explanation": "卢门球场是西雅图音浪队的主场，以其热烈火爆的现场氛围而闻名。"
         }
       },
-      "i18nSourceHash": "21b3470831baa28f"
+      "i18nSourceHash": "21b3470831baa28f",
+      "teams": []
     },
     {
       "id": "t-france-count",
@@ -2461,7 +2544,15 @@
           "explanation": "法国队两次夺冠——1998年在本土，以及2018年在俄罗斯。东道主夺冠并不罕见：乌拉圭（1930年）、意大利（1934年）、英格兰（1966年）、西德（1974年）和阿根廷（1978年）都曾在本土登顶。然而，也有几支东道主球队遭遇了著名的失利——其中包括巴西，他们在1950年决赛中于马拉卡纳球场负于乌拉圭，成为足球史上最大的冷门之一。"
         }
       },
-      "i18nSourceHash": "fd237bb808a798f6"
+      "i18nSourceHash": "fd237bb808a798f6",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "England",
+        "France",
+        "Germany",
+        "Uruguay"
+      ]
     },
     {
       "id": "t-spain-2010",
@@ -2579,7 +2670,10 @@
           "explanation": "西班牙以短传和高控球率为特点的'Tiki-taka'风格主导了2010年的赛事，并由伊涅斯塔在加时赛的制胜进球加冕。"
         }
       },
-      "i18nSourceHash": "83696e49b2337424"
+      "i18nSourceHash": "83696e49b2337424",
+      "teams": [
+        "Spain"
+      ]
     },
     {
       "id": "t-canada-1986",
@@ -2696,7 +2790,11 @@
           "explanation": "加拿大获得了1986年墨西哥赛事的参赛资格，但在小组赛的三场比赛中全部告负。36年后，他们于2022年再次参赛。"
         }
       },
-      "i18nSourceHash": "85356cb05a0d2028"
+      "i18nSourceHash": "85356cb05a0d2028",
+      "teams": [
+        "Canada",
+        "Mexico"
+      ]
     },
     {
       "id": "p-hand-of-god",
@@ -2814,7 +2912,11 @@
           "explanation": "迭戈·马拉多纳在对阵英格兰的比赛中用手将球打进，几分钟后又攻入了'世纪进球'。"
         }
       },
-      "i18nSourceHash": "b17c460eca612030"
+      "i18nSourceHash": "b17c460eca612030",
+      "teams": [
+        "Argentina",
+        "England"
+      ]
     },
     {
       "id": "v-sofi-nfl",
@@ -2931,7 +3033,8 @@
           "explanation": "位于加利福尼亚州英格尔伍德的 SoFi 体育场是洛杉矶公羊队和洛杉矶电光队的共同主场。"
         }
       },
-      "i18nSourceHash": "4b70d49266834205"
+      "i18nSourceHash": "4b70d49266834205",
+      "teams": []
     },
     {
       "id": "p-fastest-goal",
@@ -3049,7 +3152,12 @@
           "explanation": "土耳其的哈坎·苏克在2002年季军争夺战中对阵韩国，开场仅11秒便破门得分。"
         }
       },
-      "i18nSourceHash": "62e421cd28e5efc1"
+      "i18nSourceHash": "62e421cd28e5efc1",
+      "teams": [
+        "Brazil",
+        "Korea Republic",
+        "Türkiye"
+      ]
     },
     {
       "id": "r-points-for-win",
@@ -3166,7 +3274,8 @@
           "explanation": "胜一场得3分，平局得1分，负一场得0分。"
         }
       },
-      "i18nSourceHash": "6bc29ac02d540f52"
+      "i18nSourceHash": "6bc29ac02d540f52",
+      "teams": []
     },
     {
       "id": "r-offside",
@@ -3283,7 +3392,8 @@
           "explanation": "如果一名球员身体的任何部位（手和手臂除外）比球和倒数第二名防守球员都更靠近球门线，则该球员处于越位位置。"
         }
       },
-      "i18nSourceHash": "3cb49038ef31aae0"
+      "i18nSourceHash": "3cb49038ef31aae0",
+      "teams": []
     },
     {
       "id": "r-first-tiebreaker",
@@ -3400,7 +3510,8 @@
           "explanation": "在2026年赛事中，会首先比较积分相同球队之间的相互交锋成绩——这与以往优先比较总净胜球的做法不同。如果相互交锋仍无法分出高下，则依次比较总净胜球、总进球数和公平竞赛分。"
         }
       },
-      "i18nSourceHash": "1603103c692ec541"
+      "i18nSourceHash": "1603103c692ec541",
+      "teams": []
     },
     {
       "id": "p-golden-ball-22",
@@ -3413,7 +3524,12 @@
         "Antoine Griezmann"
       ],
       "answer": 2,
-      "explanation": "Messi won the Golden Ball with 7 goals and 3 assists, leading Argentina to the title."
+      "explanation": "Messi won the Golden Ball with 7 goals and 3 assists, leading Argentina to the title.",
+      "teams": [
+        "Argentina",
+        "Croatia",
+        "France"
+      ]
     },
     {
       "id": "r-red-card-replace",
@@ -3530,7 +3646,8 @@
           "explanation": "被罚下场的球员不能被替换——球队只能少打一人，且该球员至少会被停赛下一场比赛。"
         }
       },
-      "i18nSourceHash": "854449de1e90fddd"
+      "i18nSourceHash": "854449de1e90fddd",
+      "teams": []
     },
     {
       "id": "r-extra-time",
@@ -3647,7 +3764,8 @@
           "explanation": "从32强淘汰赛开始，平局将进行两个15分钟的加时赛，若仍然战平，则通过点球大战决出胜负。"
         }
       },
-      "i18nSourceHash": "11b62c0af206af2d"
+      "i18nSourceHash": "11b62c0af206af2d",
+      "teams": []
     },
     {
       "id": "t-opener-azteca",
@@ -3765,7 +3883,10 @@
           "explanation": "墨西哥城的阿兹特克体育场拉开本届赛事的帷幕——这座球场此前曾两度举办过决赛。"
         }
       },
-      "i18nSourceHash": "dfb4161c4fce864c"
+      "i18nSourceHash": "dfb4161c4fce864c",
+      "teams": [
+        "Mexico"
+      ]
     },
     {
       "id": "p-deschamps-dual",
@@ -3882,7 +4003,10 @@
           "explanation": "迪迪埃·德尚在1998年作为法国队长高举奖杯，20年后又以主教练身份带领球队夺冠。"
         }
       },
-      "i18nSourceHash": "f4fb70c2619571c4"
+      "i18nSourceHash": "f4fb70c2619571c4",
+      "teams": [
+        "France"
+      ]
     },
     {
       "id": "h-back-to-back",
@@ -3999,7 +4123,12 @@
           "explanation": "巴西在1958年和1962年连续夺冠，至今仍是任何国家最后一次成功卫冕。"
         }
       },
-      "i18nSourceHash": "2e3ce57025fd06b7"
+      "i18nSourceHash": "2e3ce57025fd06b7",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "Germany"
+      ]
     },
     {
       "id": "h-1934-italy",
@@ -4116,7 +4245,13 @@
           "explanation": "意大利于1934年在本土夺冠，并在1938年的法国成功卫冕，成为首个连续夺冠的国家。此后巴西在1958年和1962年完成了同样的壮举，法国也在2018年夺冠，本有望在2022年卫冕，却在决赛中点球大战惜败出局。"
         }
       },
-      "i18nSourceHash": "17ee5000c0a18053"
+      "i18nSourceHash": "17ee5000c0a18053",
+      "teams": [
+        "Brazil",
+        "France",
+        "Germany",
+        "Spain"
+      ]
     },
     {
       "id": "h-1966-england",
@@ -4234,7 +4369,11 @@
           "explanation": "英格兰于1966年在本土夺冠，在加时赛中以4比2击败了西德。"
         }
       },
-      "i18nSourceHash": "d10c3228f29f2108"
+      "i18nSourceHash": "d10c3228f29f2108",
+      "teams": [
+        "England",
+        "Germany"
+      ]
     },
     {
       "id": "t-brazil-every-edition",
@@ -4351,7 +4490,12 @@
           "explanation": "自1930年以来，巴西参加了每一届赛事，是唯一保持全勤纪录的国家。"
         }
       },
-      "i18nSourceHash": "e3c8a87f164a1bf4"
+      "i18nSourceHash": "e3c8a87f164a1bf4",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "Germany"
+      ]
     },
     {
       "id": "t-costa-rica-2014",
@@ -4469,7 +4613,14 @@
           "explanation": "哥斯达黎加在D组中力压乌拉圭、意大利和英格兰——全是昔日冠军——以头名晋级，堪称史上最大的小组赛冷门之一。"
         }
       },
-      "i18nSourceHash": "055eababec0e95ad"
+      "i18nSourceHash": "055eababec0e95ad",
+      "teams": [
+        "England",
+        "France",
+        "Germany",
+        "Spain",
+        "Uruguay"
+      ]
     },
     {
       "id": "rec-highest-score",
@@ -4587,7 +4738,14 @@
           "explanation": "奥地利在1954年四分之一决赛中以7–5击败瑞士，全场共打入12球——至今仍是单场比赛的历史最高进球纪录。"
         }
       },
-      "i18nSourceHash": "dc1f8e3c5d472317"
+      "i18nSourceHash": "dc1f8e3c5d472317",
+      "teams": [
+        "Austria",
+        "Brazil",
+        "Germany",
+        "Korea Republic",
+        "Switzerland"
+      ]
     },
     {
       "id": "v-hard-rock-miami",
@@ -4704,7 +4862,8 @@
           "explanation": "位于迈阿密花园市的硬石体育场是迈阿密海豚队的主场，并曾多次举办超级碗比赛。"
         }
       },
-      "i18nSourceHash": "ce360c6060681e3b"
+      "i18nSourceHash": "ce360c6060681e3b",
+      "teams": []
     },
     {
       "id": "t-brazil-titles-count",
@@ -4821,7 +4980,10 @@
           "explanation": "巴西的5次夺冠是所有国家中最多的，而且它是唯一一支参加过每一届赛事的球队。"
         }
       },
-      "i18nSourceHash": "c97e1832ea074d59"
+      "i18nSourceHash": "c97e1832ea074d59",
+      "teams": [
+        "Brazil"
+      ]
     },
     {
       "id": "c-jabulani",
@@ -4939,7 +5101,8 @@
           "explanation": "普天同庆用球在2010年的赛事中使用，因其飞行轨迹难以预测而受到门将和球员的批评。"
         }
       },
-      "i18nSourceHash": "a79add28c9ae6600"
+      "i18nSourceHash": "a79add28c9ae6600",
+      "teams": []
     },
     {
       "id": "h-2010-champion",
@@ -5056,7 +5219,13 @@
           "explanation": "西班牙在加时赛中以1–0战胜荷兰，夺得队史首个冠军。"
         }
       },
-      "i18nSourceHash": "349b199f0d59e68b"
+      "i18nSourceHash": "349b199f0d59e68b",
+      "teams": [
+        "Germany",
+        "Netherlands",
+        "Spain",
+        "Uruguay"
+      ]
     },
     {
       "id": "h-var-debut",
@@ -5173,7 +5342,8 @@
           "explanation": "VAR 于 2018 年在俄罗斯举办的赛事中首次亮相，用于审查进球、点球、红牌以及球员身份误判等情况。"
         }
       },
-      "i18nSourceHash": "5d8287f4fe509f36"
+      "i18nSourceHash": "5d8287f4fe509f36",
+      "teams": []
     },
     {
       "id": "r-var-meaning",
@@ -5290,7 +5460,8 @@
           "explanation": "VAR（视频助理裁判）通过视频画面帮助比赛裁判组对进球、点球、红牌以及认错球员等判罚进行复核。"
         }
       },
-      "i18nSourceHash": "9e27f0cf7071bac1"
+      "i18nSourceHash": "9e27f0cf7071bac1",
+      "teams": []
     },
     {
       "id": "t-uruguay-years",
@@ -5407,7 +5578,11 @@
           "explanation": "乌拉圭在1930年于本土举办的首届赛事中夺冠，又在1950年凭借巴西著名的‘马拉卡纳惨案’再度封王。"
         }
       },
-      "i18nSourceHash": "05067aa5da92ad20"
+      "i18nSourceHash": "05067aa5da92ad20",
+      "teams": [
+        "Brazil",
+        "Uruguay"
+      ]
     },
     {
       "id": "v-metlife-capacity",
@@ -5524,7 +5699,10 @@
           "explanation": "位于新泽西州东拉瑟福德的大都会人寿球场可容纳约82,500名观众。相比之下，赛事史上最大的场馆是举办1950年决赛的马拉卡纳球场，估计容纳了199,854名观众。而有史以来使用过的最小场馆是瑞士的波克特诺伊球场（1954年），仅有10,000个座位。"
         }
       },
-      "i18nSourceHash": "92025468b94ef6ab"
+      "i18nSourceHash": "92025468b94ef6ab",
+      "teams": [
+        "Switzerland"
+      ]
     },
     {
       "id": "h-germany-71-brazil",
@@ -5642,7 +5820,11 @@
           "explanation": "这场令人震惊的7比1发生在贝洛奥里藏特，是这项运动历史上最惊人的比分之一。"
         }
       },
-      "i18nSourceHash": "b382797bf9c7fff5"
+      "i18nSourceHash": "b382797bf9c7fff5",
+      "teams": [
+        "Brazil",
+        "Germany"
+      ]
     },
     {
       "id": "p-youngest-final",
@@ -5759,7 +5941,13 @@
           "explanation": "贝利在1958年对阵瑞典的决赛中梅开二度，当时年仅17岁。第二年轻的是基利安·姆巴佩，他在2018年决赛中进球时年仅19岁。"
         }
       },
-      "i18nSourceHash": "25d5ad2229a7040c"
+      "i18nSourceHash": "25d5ad2229a7040c",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "France",
+        "Sweden"
+      ]
     },
     {
       "id": "p-puskas",
@@ -5877,7 +6065,10 @@
           "explanation": "普斯卡什是匈牙利'黄金之队'的核心，该队闯入了1954年决赛，但尽管是大热门，最终还是输给了西德。"
         }
       },
-      "i18nSourceHash": "8002e9e547ec7474"
+      "i18nSourceHash": "8002e9e547ec7474",
+      "teams": [
+        "Germany"
+      ]
     },
     {
       "id": "rec-nuremberg",
@@ -5995,7 +6186,11 @@
           "explanation": "主裁判瓦伦丁·伊万诺夫在这场史上最火爆的比赛之一中出示了16张黄牌和4张红牌，总计20张。"
         }
       },
-      "i18nSourceHash": "356ddd97f0c83781"
+      "i18nSourceHash": "356ddd97f0c83781",
+      "teams": [
+        "Netherlands",
+        "Portugal"
+      ]
     },
     {
       "id": "c-trophy-weight",
@@ -6112,7 +6307,10 @@
           "explanation": "这座奖杯重6.175公斤，自1974年起开始颁发，此前巴西永久保留了最初的雷米特杯。冠军球队只能在球场上短暂举起真正的奖杯，随后会获得一座镀金青铜复制品留作纪念。原件由管理机构保管，任何国家都无法再次永久保留它。"
         }
       },
-      "i18nSourceHash": "8cb943dd4b715ee4"
+      "i18nSourceHash": "8cb943dd4b715ee4",
+      "teams": [
+        "Brazil"
+      ]
     },
     {
       "id": "p-cr7-five-editions",
@@ -6229,7 +6427,13 @@
           "explanation": "克里斯蒂亚诺·罗纳尔多从2006年到2022年的每一届赛事都有进球——连续五届，这是此前没有任何球员达成过的纪录。其次最长的连续进球纪录为四届，由米罗斯拉夫·克洛泽（2002—2014）和贝利（1958—1970）保持。"
         }
       },
-      "i18nSourceHash": "429e66602c398d15"
+      "i18nSourceHash": "429e66602c398d15",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "Germany",
+        "Portugal"
+      ]
     },
     {
       "id": "p-yashin",
@@ -6346,7 +6550,8 @@
           "explanation": "金球奖是每年颁发给世界最佳足球运动员的奖项，由记者（后来还包括各国国家队队长和主教练）投票评选。绰号‘黑蜘蛛’的苏联门将列夫·雅辛在1963年夺得此奖——至今仍是唯一一位获此殊荣的守门员。"
         }
       },
-      "i18nSourceHash": "f239df00a934e293"
+      "i18nSourceHash": "f239df00a934e293",
+      "teams": []
     },
     {
       "id": "t-host-confederation",
@@ -6463,7 +6668,12 @@
           "explanation": "美国、加拿大和墨西哥都是中北美及加勒比海足球联合会（CONCACAF）的成员。"
         }
       },
-      "i18nSourceHash": "c0e9387e2e2ea800"
+      "i18nSourceHash": "c0e9387e2e2ea800",
+      "teams": [
+        "Canada",
+        "Mexico",
+        "USA"
+      ]
     },
     {
       "id": "rec-goals-per-game",
@@ -6476,7 +6686,13 @@
         "2014 Brazil"
       ],
       "answer": 1,
-      "explanation": "The 1954 tournament averaged 5.38 goals per game across 26 matches — a record that will almost certainly never be broken."
+      "explanation": "The 1954 tournament averaged 5.38 goals per game across 26 matches — a record that will almost certainly never be broken.",
+      "teams": [
+        "Brazil",
+        "Mexico",
+        "Switzerland",
+        "Uruguay"
+      ]
     },
     {
       "id": "t-germany-count",
@@ -6593,7 +6809,10 @@
           "explanation": "德国共夺得四次冠军：分别在1954年、1974年、1990年和2014年。"
         }
       },
-      "i18nSourceHash": "b3a948d8a64c7d9d"
+      "i18nSourceHash": "b3a948d8a64c7d9d",
+      "teams": [
+        "Germany"
+      ]
     },
     {
       "id": "t-senegal-2002",
@@ -6710,7 +6929,12 @@
           "explanation": "塞内加尔在揭幕战中以1比0击败法国——这是赛事历史上最大的冷门之一。"
         }
       },
-      "i18nSourceHash": "a23bb4eb96569b6f"
+      "i18nSourceHash": "a23bb4eb96569b6f",
+      "teams": [
+        "France",
+        "Ghana",
+        "Senegal"
+      ]
     },
     {
       "id": "p-hurst-final",
@@ -6827,7 +7051,13 @@
           "explanation": "杰夫·赫斯特在对阵西德的比赛中为英格兰攻入三球——这一壮举在长达56年间无人能及，直到2022年姆巴佩上演帽子戏法。"
         }
       },
-      "i18nSourceHash": "8bde447732f97429"
+      "i18nSourceHash": "8bde447732f97429",
+      "teams": [
+        "England",
+        "France",
+        "Germany",
+        "Portugal"
+      ]
     },
     {
       "id": "r-who-advances",
@@ -6944,7 +7174,8 @@
           "explanation": "12个小组各前两名（24支）加上8支成绩最好的小组第三名晋级——共32支球队。在32支球队参赛的2022年，只有16支球队晋级16强淘汰赛阶段。"
         }
       },
-      "i18nSourceHash": "dc97afdf78e12680"
+      "i18nSourceHash": "dc97afdf78e12680",
+      "teams": []
     },
     {
       "id": "h-1970-brazil-final",
@@ -7062,7 +7293,11 @@
           "explanation": "巴西在墨西哥城以4–1取胜，被广泛认为是有史以来最伟大的决赛之一。"
         }
       },
-      "i18nSourceHash": "38466c4f8a66542e"
+      "i18nSourceHash": "38466c4f8a66542e",
+      "teams": [
+        "Brazil",
+        "Mexico"
+      ]
     },
     {
       "id": "c-panini",
@@ -7179,7 +7414,10 @@
           "explanation": "意大利公司帕尼尼在1970年墨西哥赛事时首次发行了该赛事的贴纸册，由此开创了一项全球性的收藏传统。"
         }
       },
-      "i18nSourceHash": "57ee8fe0d2074686"
+      "i18nSourceHash": "57ee8fe0d2074686",
+      "teams": [
+        "Mexico"
+      ]
     },
     {
       "id": "rec-oldest-player",
@@ -7192,7 +7430,11 @@
         "Dino Zoff (40)"
       ],
       "answer": 2,
-      "explanation": "Egypt's Essam El Hadary was 45 years and 161 days old when he played against Saudi Arabia at the 2018 tournament."
+      "explanation": "Egypt's Essam El Hadary was 45 years and 161 days old when he played against Saudi Arabia at the 2018 tournament.",
+      "teams": [
+        "Egypt",
+        "Saudi Arabia"
+      ]
     },
     {
       "id": "v-azteca-finals",
@@ -7205,7 +7447,13 @@
         "3"
       ],
       "answer": 2,
-      "explanation": "The Azteca hosted finals in both 1970 (Brazil 4–1 Italy) and 1986 (Argentina 3–2 West Germany)."
+      "explanation": "The Azteca hosted finals in both 1970 (Brazil 4–1 Italy) and 1986 (Argentina 3–2 West Germany).",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "Germany",
+        "Mexico"
+      ]
     },
     {
       "id": "p-cr7-spain",
@@ -7218,7 +7466,14 @@
         "Uruguay"
       ],
       "answer": 1,
-      "explanation": "Ronaldo's hat-trick in a thrilling 3–3 draw with Spain included a stunning late free kick on the opening day of 2018."
+      "explanation": "Ronaldo's hat-trick in a thrilling 3–3 draw with Spain included a stunning late free kick on the opening day of 2018.",
+      "teams": [
+        "IR Iran",
+        "Morocco",
+        "Portugal",
+        "Spain",
+        "Uruguay"
+      ]
     },
     {
       "id": "t-48-format",
@@ -7335,7 +7590,8 @@
           "explanation": "2026年赛事将参赛球队从32支扩大到48支，成为史上规模最大的一届。"
         }
       },
-      "i18nSourceHash": "cb1208c086de6ebf"
+      "i18nSourceHash": "cb1208c086de6ebf",
+      "teams": []
     },
     {
       "id": "v-rose-bowl-94",
@@ -7453,7 +7709,10 @@
           "explanation": "在1994年玫瑰碗球场的决赛中，巴西通过点球大战击败意大利——这是首场以点球大战决出胜负的决赛。"
         }
       },
-      "i18nSourceHash": "27aa322bfcca3cfb"
+      "i18nSourceHash": "27aa322bfcca3cfb",
+      "teams": [
+        "Brazil"
+      ]
     },
     {
       "id": "p-gerd-muller",
@@ -7466,7 +7725,10 @@
         "16"
       ],
       "answer": 2,
-      "explanation": "Müller scored 10 goals in 1970 and 4 in 1974 — 14 in just 13 matches, a stunning strike rate."
+      "explanation": "Müller scored 10 goals in 1970 and 4 in 1974 — 14 in just 13 matches, a stunning strike rate.",
+      "teams": [
+        "Germany"
+      ]
     },
     {
       "id": "p-cafu-finals",
@@ -7583,7 +7845,11 @@
           "explanation": "右后卫卡福是唯一连续三届杀入决赛的球员，其中两次夺冠（1994年和2002年），一次告负（1998年负于法国）。他在2002年担任巴西队队长，职业生涯共代表国家队出场142次，是当时的巴西纪录。他以在右路不知疲倦的奔袭著称，效力AC米兰期间被昵称为“Il Pendolino”（特快列车）。"
         }
       },
-      "i18nSourceHash": "5df9b70a433475d0"
+      "i18nSourceHash": "5df9b70a433475d0",
+      "teams": [
+        "Brazil",
+        "France"
+      ]
     },
     {
       "id": "t-usa-1930",
@@ -7701,7 +7967,11 @@
           "explanation": "美国队在1930年的首届赛事中闯入半决赛，但以1比6不敌阿根廷。"
         }
       },
-      "i18nSourceHash": "695b3f43c572bebc"
+      "i18nSourceHash": "695b3f43c572bebc",
+      "teams": [
+        "Argentina",
+        "USA"
+      ]
     },
     {
       "id": "p-golden-boot-22",
@@ -7714,7 +7984,11 @@
         "Julián Álvarez"
       ],
       "answer": 1,
-      "explanation": "Mbappé scored 8 goals — one more than Messi's 7 — including a hat-trick in the 2022 final. He also won the Silver Ball as the tournament's second-best player behind Messi."
+      "explanation": "Mbappé scored 8 goals — one more than Messi's 7 — including a hat-trick in the 2022 final. He also won the Silver Ball as the tournament's second-best player behind Messi.",
+      "teams": [
+        "Argentina",
+        "France"
+      ]
     },
     {
       "id": "p-james-2014",
@@ -7727,7 +8001,11 @@
         "Carlos Bacca"
       ],
       "answer": 1,
-      "explanation": "James Rodríguez dazzled in 2014, including a stunning volley against Uruguay voted the tournament's best goal."
+      "explanation": "James Rodríguez dazzled in 2014, including a stunning volley against Uruguay voted the tournament's best goal.",
+      "teams": [
+        "Colombia",
+        "Uruguay"
+      ]
     },
     {
       "id": "h-north-korea-1966",
@@ -7740,7 +8018,12 @@
         "Cuba"
       ],
       "answer": 1,
-      "explanation": "North Korea stunned Italy 1–0, one of the biggest upsets in history, before losing 5–3 to Portugal in the quarter-finals."
+      "explanation": "North Korea stunned Italy 1–0, one of the biggest upsets in history, before losing 5–3 to Portugal in the quarter-finals.",
+      "teams": [
+        "Australia",
+        "Korea Republic",
+        "Portugal"
+      ]
     },
     {
       "id": "h-48-expansion",
@@ -7857,7 +8140,8 @@
           "explanation": "本届赛事在2026年从32支球队扩充至48支，新增了16个参赛国和一轮额外的淘汰赛。"
         }
       },
-      "i18nSourceHash": "dba511a245fc1ee1"
+      "i18nSourceHash": "dba511a245fc1ee1",
+      "teams": []
     },
     {
       "id": "h-first-edition",
@@ -7974,7 +8258,12 @@
           "explanation": "乌拉圭主办了1930年的首届赛事，并在主场夺冠。"
         }
       },
-      "i18nSourceHash": "cb68e67402f2a041"
+      "i18nSourceHash": "cb68e67402f2a041",
+      "teams": [
+        "Brazil",
+        "France",
+        "Uruguay"
+      ]
     },
     {
       "id": "h-maracanazo",
@@ -7987,7 +8276,14 @@
         "Spain"
       ],
       "answer": 1,
-      "explanation": "Uruguay beat Brazil 2–1 in the 1950 final group match at the Maracanã, silencing nearly 200,000 fans."
+      "explanation": "Uruguay beat Brazil 2–1 in the 1950 final group match at the Maracanã, silencing nearly 200,000 fans.",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "Spain",
+        "Sweden",
+        "Uruguay"
+      ]
     },
     {
       "id": "rec-most-finals",
@@ -8104,7 +8400,12 @@
           "explanation": "德国曾8次闯入决赛（1954、1966、1974、1982、1986、1990、2002、2014年），其中夺冠四次。其次是巴西，7次进入决赛并5次夺冠——这是所有国家中冠军数量最多的。意大利和阿根廷紧随其后，各进入决赛6次（意大利夺冠4次，阿根廷夺冠3次）。"
         }
       },
-      "i18nSourceHash": "839635539e13b129"
+      "i18nSourceHash": "839635539e13b129",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "Germany"
+      ]
     },
     {
       "id": "r-two-yellows",
@@ -8221,7 +8522,8 @@
           "explanation": "同一场比赛中的第二张黄牌将变成红牌，该球员将无法参加下一场比赛。"
         }
       },
-      "i18nSourceHash": "af4184993a73c40d"
+      "i18nSourceHash": "af4184993a73c40d",
+      "teams": []
     },
     {
       "id": "p-muller-2010",
@@ -8234,7 +8536,12 @@
         "Diego Forlán"
       ],
       "answer": 1,
-      "explanation": "Germany's Thomas Müller won the Golden Boot at age 20 in his first major tournament."
+      "explanation": "Germany's Thomas Müller won the Golden Boot at age 20 in his first major tournament.",
+      "teams": [
+        "Germany",
+        "Spain",
+        "Uruguay"
+      ]
     },
     {
       "id": "v-bc-place-roof",
@@ -8351,7 +8658,10 @@
           "explanation": "温哥华的BC Place球场设有可伸缩顶棚，可确保比赛在任何天气条件下都能照常进行。"
         }
       },
-      "i18nSourceHash": "3719afdc3078b2ef"
+      "i18nSourceHash": "3719afdc3078b2ef",
+      "teams": [
+        "Canada"
+      ]
     },
     {
       "id": "h-korea-2002",
@@ -8364,7 +8674,14 @@
         "Iran"
       ],
       "answer": 1,
-      "explanation": "South Korea reached the semi-finals as co-hosts in 2002, defeating Spain and Italy along the way."
+      "explanation": "South Korea reached the semi-finals as co-hosts in 2002, defeating Spain and Italy along the way.",
+      "teams": [
+        "IR Iran",
+        "Japan",
+        "Korea Republic",
+        "Saudi Arabia",
+        "Spain"
+      ]
     },
     {
       "id": "p-forlan-2010",
@@ -8377,7 +8694,11 @@
         "David Villa"
       ],
       "answer": 2,
-      "explanation": "Uruguay's Diego Forlán won the Golden Ball in 2010, scoring 5 goals as Uruguay reached the semi-finals."
+      "explanation": "Uruguay's Diego Forlán won the Golden Ball in 2010, scoring 5 goals as Uruguay reached the semi-finals.",
+      "teams": [
+        "Spain",
+        "Uruguay"
+      ]
     },
     {
       "id": "c-mexican-wave",
@@ -8390,7 +8711,12 @@
         "1990 Italy"
       ],
       "answer": 2,
-      "explanation": "While the wave existed before, it gained worldwide fame during the 1986 tournament in Mexico, earning the name 'Mexican wave.'"
+      "explanation": "While the wave existed before, it gained worldwide fame during the 1986 tournament in Mexico, earning the name 'Mexican wave.'",
+      "teams": [
+        "Argentina",
+        "Mexico",
+        "Spain"
+      ]
     },
     {
       "id": "p-pele-three",
@@ -8403,7 +8729,13 @@
         "Zinedine Zidane"
       ],
       "answer": 1,
-      "explanation": "Pelé won with Brazil in 1958, 1962 and 1970 — still the only player with three winners' medals."
+      "explanation": "Pelé won with Brazil in 1958, 1962 and 1970 — still the only player with three winners' medals.",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "France",
+        "Germany"
+      ]
     },
     {
       "id": "h-1950-format",
@@ -8416,7 +8748,8 @@
         "A best-of-three series"
       ],
       "answer": 0,
-      "explanation": "The 1950 tournament had a round-robin final group instead of a single knockout final — the only time this format was used."
+      "explanation": "The 1950 tournament had a round-robin final group instead of a single knockout final — the only time this format was used.",
+      "teams": []
     },
     {
       "id": "p-top-scorer-alltime",
@@ -8533,7 +8866,11 @@
           "explanation": "利昂内尔·梅西在Football 2026赛事中超越了米罗斯拉夫·克洛泽长期保持的16球纪录，成为历史最佳射手。"
         }
       },
-      "i18nSourceHash": "f63e6b0f5934dfef"
+      "i18nSourceHash": "f63e6b0f5934dfef",
+      "teams": [
+        "Argentina",
+        "Germany"
+      ]
     },
     {
       "id": "c-tango-ball",
@@ -8546,7 +8883,10 @@
         "1982"
       ],
       "answer": 2,
-      "explanation": "The Adidas Tango debuted at the 1978 tournament in Argentina and its design influenced every match ball until 2006."
+      "explanation": "The Adidas Tango debuted at the 1978 tournament in Argentina and its design influenced every match ball until 2006.",
+      "teams": [
+        "Argentina"
+      ]
     },
     {
       "id": "p-moore-66",
@@ -8559,7 +8899,10 @@
         "Geoff Hurst"
       ],
       "answer": 1,
-      "explanation": "Bobby Moore captained England to their only title in 1966, widely regarded as one of the greatest defenders ever."
+      "explanation": "Bobby Moore captained England to their only title in 1966, widely regarded as one of the greatest defenders ever.",
+      "teams": [
+        "England"
+      ]
     },
     {
       "id": "h-first-televised",
@@ -8572,7 +8915,10 @@
         "1962"
       ],
       "answer": 1,
-      "explanation": "The 1954 tournament in Switzerland was the first to be televised, bringing the event to living rooms across Europe."
+      "explanation": "The 1954 tournament in Switzerland was the first to be televised, bringing the event to living rooms across Europe.",
+      "teams": [
+        "Switzerland"
+      ]
     },
     {
       "id": "h-pickles",
@@ -8585,7 +8931,10 @@
         "A young boy"
       ],
       "answer": 1,
-      "explanation": "The Jules Rimet Trophy was found by a dog named Pickles, who discovered it wrapped in newspaper under a hedge."
+      "explanation": "The Jules Rimet Trophy was found by a dog named Pickles, who discovered it wrapped in newspaper under a hedge.",
+      "teams": [
+        "England"
+      ]
     },
     {
       "id": "h-32-team-era",
@@ -8598,7 +8947,11 @@
         "8"
       ],
       "answer": 2,
-      "explanation": "The 32-team format ran for seven editions from France 1998 through Qatar 2022 before expanding to 48 teams."
+      "explanation": "The 32-team format ran for seven editions from France 1998 through Qatar 2022 before expanding to 48 teams.",
+      "teams": [
+        "France",
+        "Qatar"
+      ]
     },
     {
       "id": "h-miracle-bern",
@@ -8611,7 +8964,12 @@
         "Brazil"
       ],
       "answer": 1,
-      "explanation": "West Germany stunned mighty Hungary 3–2 in the 1954 final despite trailing 2–0 early on."
+      "explanation": "West Germany stunned mighty Hungary 3–2 in the 1954 final despite trailing 2–0 early on.",
+      "teams": [
+        "Brazil",
+        "Germany",
+        "Uruguay"
+      ]
     },
     {
       "id": "p-oldest-scorer",
@@ -8624,7 +8982,8 @@
         "Essam El Hadary"
       ],
       "answer": 1,
-      "explanation": "Cameroon's Roger Milla scored against Russia at the 1994 tournament at 42 years and 39 days old."
+      "explanation": "Cameroon's Roger Milla scored against Russia at the 1994 tournament at 42 years and 39 days old.",
+      "teams": []
     },
     {
       "id": "c-jules-rimet-brazil",
@@ -8637,7 +8996,10 @@
         "Fourth title"
       ],
       "answer": 2,
-      "explanation": "After winning their third title in 1970, Brazil kept the Jules Rimet Trophy permanently, and a new trophy was created for 1974."
+      "explanation": "After winning their third title in 1970, Brazil kept the Jules Rimet Trophy permanently, and a new trophy was created for 1974.",
+      "teams": [
+        "Brazil"
+      ]
     },
     {
       "id": "h-first-shootout",
@@ -8650,7 +9012,11 @@
         "1990"
       ],
       "answer": 1,
-      "explanation": "The first shootout came in 1982 when West Germany beat France in the semi-final after a 3–3 draw."
+      "explanation": "The first shootout came in 1982 when West Germany beat France in the semi-final after a 3–3 draw.",
+      "teams": [
+        "France",
+        "Germany"
+      ]
     },
     {
       "id": "t-mexico-third",
@@ -8663,7 +9029,12 @@
         "1970 and 1994"
       ],
       "answer": 1,
-      "explanation": "Mexico hosted in 1970 (won by Brazil) and 1986 (won by Argentina), making 2026 their record third time."
+      "explanation": "Mexico hosted in 1970 (won by Brazil) and 1986 (won by Argentina), making 2026 their record third time.",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "Mexico"
+      ]
     },
     {
       "id": "rec-most-by-one",
@@ -8676,7 +9047,13 @@
         "Brazil vs Sweden (1950)"
       ],
       "answer": 0,
-      "explanation": "Hungary scored 10 times in their 10–1 thrashing of El Salvador in 1982 — the most by one team in a single match."
+      "explanation": "Hungary scored 10 times in their 10–1 thrashing of El Salvador in 1982 — the most by one team in a single match.",
+      "teams": [
+        "Brazil",
+        "Germany",
+        "Saudi Arabia",
+        "Sweden"
+      ]
     },
     {
       "id": "t-iceland-small",
@@ -8689,7 +9066,12 @@
         "New Zealand"
       ],
       "answer": 1,
-      "explanation": "Iceland, with a population of around 350,000, qualified for the 2018 tournament and drew 1–1 with Argentina in the group stage."
+      "explanation": "Iceland, with a population of around 350,000, qualified for the 2018 tournament and drew 1–1 with Argentina in the group stage.",
+      "teams": [
+        "Argentina",
+        "New Zealand",
+        "Panama"
+      ]
     },
     {
       "id": "h-2022-champion",
@@ -8702,7 +9084,13 @@
         "Brazil"
       ],
       "answer": 1,
-      "explanation": "Argentina beat France on penalties after a 3–3 final — their third title and Lionel Messi's first."
+      "explanation": "Argentina beat France on penalties after a 3–3 final — their third title and Lionel Messi's first.",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "Croatia",
+        "France"
+      ]
     },
     {
       "id": "p-matthaus-apps",
@@ -8715,7 +9103,12 @@
         "Diego Maradona"
       ],
       "answer": 1,
-      "explanation": "Germany's Lothar Matthäus played 25 matches across five editions (1982–1998) before Messi overtook him in 2022."
+      "explanation": "Germany's Lothar Matthäus played 25 matches across five editions (1982–1998) before Messi overtook him in 2022.",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "Germany"
+      ]
     },
     {
       "id": "p-mbappe-final",
@@ -8728,7 +9121,11 @@
         "Ángel Di María"
       ],
       "answer": 1,
-      "explanation": "Kylian Mbappé scored all three of France's goals, but Argentina won the shootout."
+      "explanation": "Kylian Mbappé scored all three of France's goals, but Argentina won the shootout.",
+      "teams": [
+        "Argentina",
+        "France"
+      ]
     },
     {
       "id": "h-cameroon-1990",
@@ -8741,7 +9138,12 @@
         "Senegal"
       ],
       "answer": 2,
-      "explanation": "Cameroon beat reigning champions Argentina in the opening match and reached the quarter-finals, led by 38-year-old Roger Milla."
+      "explanation": "Cameroon beat reigning champions Argentina in the opening match and reached the quarter-finals, led by 38-year-old Roger Milla.",
+      "teams": [
+        "Argentina",
+        "Ghana",
+        "Senegal"
+      ]
     },
     {
       "id": "p-messi-most-matches",
@@ -8754,7 +9156,12 @@
         "Cristiano Ronaldo"
       ],
       "answer": 2,
-      "explanation": "Lionel Messi passed Lothar Matthäus in 2022, reaching 26 career appearances."
+      "explanation": "Lionel Messi passed Lothar Matthäus in 2022, reaching 26 career appearances.",
+      "teams": [
+        "Argentina",
+        "Germany",
+        "Portugal"
+      ]
     },
     {
       "id": "p-fontaine-single",
@@ -8872,7 +9279,12 @@
           "explanation": "法国球员朱斯特·方丹在1958年的赛事中攻入13球——这一纪录至今无人打破。"
         }
       },
-      "i18nSourceHash": "1e6a7a0a6bf1eaa6"
+      "i18nSourceHash": "1e6a7a0a6bf1eaa6",
+      "teams": [
+        "Brazil",
+        "France",
+        "Germany"
+      ]
     },
     {
       "id": "r-kickoff-any",
@@ -8885,7 +9297,8 @@
         "To a teammate in the other half"
       ],
       "answer": 2,
-      "explanation": "Since 2016, the ball can be kicked in any direction at kickoff. Previously it had to move forward."
+      "explanation": "Since 2016, the ball can be kicked in any direction at kickoff. Previously it had to move forward.",
+      "teams": []
     },
     {
       "id": "h-most-titles",
@@ -8898,7 +9311,12 @@
         "Argentina"
       ],
       "answer": 1,
-      "explanation": "Brazil has lifted the trophy 5 times (1958, 1962, 1970, 1994 and 2002) — more than any other nation."
+      "explanation": "Brazil has lifted the trophy 5 times (1958, 1962, 1970, 1994 and 2002) — more than any other nation.",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "Germany"
+      ]
     },
     {
       "id": "c-var-final-2018",
@@ -8911,7 +9329,13 @@
         "Belgium"
       ],
       "answer": 1,
-      "explanation": "France were awarded a penalty after VAR confirmed a handball by Croatia's Ivan Perišić — Antoine Griezmann converted to make it 2–1."
+      "explanation": "France were awarded a penalty after VAR confirmed a handball by Croatia's Ivan Perišić — Antoine Griezmann converted to make it 2–1.",
+      "teams": [
+        "Belgium",
+        "Croatia",
+        "England",
+        "France"
+      ]
     },
     {
       "id": "p-eusebio-66",
@@ -8924,7 +9348,10 @@
         "Rui Costa"
       ],
       "answer": 2,
-      "explanation": "Eusébio's 9 goals made him the top scorer in 1966, leading Portugal to third place on their debut."
+      "explanation": "Eusébio's 9 goals made him the top scorer in 1966, leading Portugal to third place on their debut.",
+      "teams": [
+        "Portugal"
+      ]
     },
     {
       "id": "r-stoppage-time",
@@ -8937,7 +9364,8 @@
         "VAR decides"
       ],
       "answer": 1,
-      "explanation": "The referee adds time for substitutions, injuries, time-wasting, VAR reviews, and other stoppages — there's no fixed amount."
+      "explanation": "The referee adds time for substitutions, injuries, time-wasting, VAR reviews, and other stoppages — there's no fixed amount.",
+      "teams": []
     },
     {
       "id": "c-winter-2022",
@@ -8950,7 +9378,10 @@
         "November–December"
       ],
       "answer": 3,
-      "explanation": "Qatar 2022 was moved to November–December to avoid the extreme summer heat — the first winter edition in the Northern Hemisphere."
+      "explanation": "Qatar 2022 was moved to November–December to avoid the extreme summer heat — the first winter edition in the Northern Hemisphere.",
+      "teams": [
+        "Qatar"
+      ]
     },
     {
       "id": "t-les-bleus",
@@ -8963,7 +9394,12 @@
         "Netherlands"
       ],
       "answer": 1,
-      "explanation": "France's national team is nicknamed 'Les Bleus' (The Blues) after the colour of their home jerseys."
+      "explanation": "France's national team is nicknamed 'Les Bleus' (The Blues) after the colour of their home jerseys.",
+      "teams": [
+        "Belgium",
+        "France",
+        "Netherlands"
+      ]
     },
     {
       "id": "p-lineker-86",
@@ -8976,7 +9412,12 @@
         "Emilio Butragueño"
       ],
       "answer": 1,
-      "explanation": "England's Gary Lineker scored 6 goals, including a hat-trick against Poland, to win the 1986 Golden Boot."
+      "explanation": "England's Gary Lineker scored 6 goals, including a hat-trick against Poland, to win the 1986 Golden Boot.",
+      "teams": [
+        "Argentina",
+        "England",
+        "France"
+      ]
     },
     {
       "id": "v-us-cities",
@@ -9093,7 +9534,10 @@
           "explanation": "美国有十一座城市承办比赛，包括纽约/新泽西、洛杉矶、达拉斯、休斯顿、亚特兰大、迈阿密、西雅图、费城、堪萨斯城、旧金山湾区和波士顿。"
         }
       },
-      "i18nSourceHash": "04c999c0fb428832"
+      "i18nSourceHash": "04c999c0fb428832",
+      "teams": [
+        "USA"
+      ]
     },
     {
       "id": "v-canada-cities",
@@ -9106,7 +9550,10 @@
         "4"
       ],
       "answer": 1,
-      "explanation": "Canada hosts matches in two cities — Vancouver (BC Place) and Toronto (BMO Field)."
+      "explanation": "Canada hosts matches in two cities — Vancouver (BC Place) and Toronto (BMO Field).",
+      "teams": [
+        "Canada"
+      ]
     },
     {
       "id": "t-argentina-count",
@@ -9119,7 +9566,11 @@
         "4"
       ],
       "answer": 2,
-      "explanation": "Argentina has won three titles: 1978, 1986, and most recently 2022 in Qatar."
+      "explanation": "Argentina has won three titles: 1978, 1986, and most recently 2022 in Qatar.",
+      "teams": [
+        "Argentina",
+        "Qatar"
+      ]
     },
     {
       "id": "v-att-dallas",
@@ -9132,7 +9583,8 @@
         "New Orleans Saints"
       ],
       "answer": 1,
-      "explanation": "AT&T Stadium in Arlington, Texas is home to the Dallas Cowboys and can seat over 80,000 for football."
+      "explanation": "AT&T Stadium in Arlington, Texas is home to the Dallas Cowboys and can seat over 80,000 for football.",
+      "teams": []
     },
     {
       "id": "r-penalty-spot",
@@ -9145,7 +9597,8 @@
         "18 yards (16.5 m)"
       ],
       "answer": 1,
-      "explanation": "The penalty spot is 12 yards (approximately 11 metres) from the centre of the goal line."
+      "explanation": "The penalty spot is 12 yards (approximately 11 metres) from the centre of the goal line.",
+      "teams": []
     },
     {
       "id": "r-match-time",
@@ -9158,7 +9611,8 @@
         "120 minutes"
       ],
       "answer": 1,
-      "explanation": "A match is played in two 45-minute halves. Extra time in knockout rounds adds two more 15-minute periods."
+      "explanation": "A match is played in two 45-minute halves. Extra time in knockout rounds adds two more 15-minute periods.",
+      "teams": []
     },
     {
       "id": "v-mexico-cities",
@@ -9275,7 +9729,10 @@
           "explanation": "墨西哥在三座城市承办比赛——墨西哥城（阿兹特克体育场）、瓜达拉哈拉（阿克隆体育场）和蒙特雷（BBVA体育场）。"
         }
       },
-      "i18nSourceHash": "147d17bc1509541a"
+      "i18nSourceHash": "147d17bc1509541a",
+      "teams": [
+        "Mexico"
+      ]
     },
     {
       "id": "p-ronaldo-brazil-15",
@@ -9288,7 +9745,10 @@
         "18"
       ],
       "answer": 2,
-      "explanation": "Ronaldo scored 15 goals across 1998, 2002, and 2006 — including both goals in the 2002 final."
+      "explanation": "Ronaldo scored 15 goals across 1998, 2002, and 2006 — including both goals in the 2002 final.",
+      "teams": [
+        "Brazil"
+      ]
     },
     {
       "id": "r-subs-per-match",
@@ -9301,7 +9761,8 @@
         "6"
       ],
       "answer": 2,
-      "explanation": "Each team may make up to 5 substitutions, using a maximum of 3 stoppages in play plus half-time and extra-time breaks."
+      "explanation": "Each team may make up to 5 substitutions, using a maximum of 3 stoppages in play plus half-time and extra-time breaks.",
+      "teams": []
     },
     {
       "id": "r-goal-kick-score",
@@ -9314,7 +9775,8 @@
         "Only in extra time"
       ],
       "answer": 1,
-      "explanation": "A goal can be scored directly from a goal kick, but only against the opposing team — an own goal from a goal kick results in a corner."
+      "explanation": "A goal can be scored directly from a goal kick, but only against the opposing team — an own goal from a goal kick results in a corner.",
+      "teams": []
     },
     {
       "id": "r-yellow-suspension",
@@ -9327,7 +9789,8 @@
         "They pay a fine"
       ],
       "answer": 1,
-      "explanation": "Two yellows in separate matches leads to a one-match suspension, which is why players on a yellow are sometimes rested."
+      "explanation": "Two yellows in separate matches leads to a one-match suspension, which is why players on a yellow are sometimes rested.",
+      "teams": []
     },
     {
       "id": "rec-youngest-player",
@@ -9340,7 +9803,11 @@
         "Kylian Mbappé"
       ],
       "answer": 1,
-      "explanation": "Northern Ireland's Norman Whiteside was 17 years and 41 days old when he played against Yugoslavia at the 1982 tournament."
+      "explanation": "Northern Ireland's Norman Whiteside was 17 years and 41 days old when he played against Yugoslavia at the 1982 tournament.",
+      "teams": [
+        "Brazil",
+        "France"
+      ]
     },
     {
       "id": "t-total-matches-2026",
@@ -9457,7 +9924,8 @@
           "explanation": "48支球队的赛制意味着共104场比赛，比此前32队时代的64场有所增加。"
         }
       },
-      "i18nSourceHash": "3d137a4b6d566c49"
+      "i18nSourceHash": "3d137a4b6d566c49",
+      "teams": []
     },
     {
       "id": "rec-fastest-red",
@@ -9470,7 +9938,11 @@
         "3 minutes"
       ],
       "answer": 0,
-      "explanation": "José Batista of Uruguay was sent off after just 56 seconds against Scotland in 1986 — the fastest dismissal ever."
+      "explanation": "José Batista of Uruguay was sent off after just 56 seconds against Scotland in 1986 — the fastest dismissal ever.",
+      "teams": [
+        "Scotland",
+        "Uruguay"
+      ]
     },
     {
       "id": "t-final-metlife",
@@ -9587,7 +10059,8 @@
           "explanation": "决赛定于新泽西州东拉瑟福德的大都会人寿体育场举行，就在纽约市郊外。"
         }
       },
-      "i18nSourceHash": "07fdf9343a6e17b3"
+      "i18nSourceHash": "07fdf9343a6e17b3",
+      "teams": []
     },
     {
       "id": "t-italy-count",
@@ -9600,7 +10073,10 @@
         "5"
       ],
       "answer": 2,
-      "explanation": "Italy has won four titles (1934, 1938, 1982, 2006), tied with Germany for the second-most."
+      "explanation": "Italy has won four titles (1934, 1938, 1982, 2006), tied with Germany for the second-most.",
+      "teams": [
+        "Germany"
+      ]
     },
     {
       "id": "h-1994-usa",
@@ -9613,7 +10089,13 @@
         "South Korea"
       ],
       "answer": 1,
-      "explanation": "The USA hosted the 1994 edition, which set all-time attendance records that stood for decades."
+      "explanation": "The USA hosted the 1994 edition, which set all-time attendance records that stood for decades.",
+      "teams": [
+        "Japan",
+        "Korea Republic",
+        "Mexico",
+        "USA"
+      ]
     },
     {
       "id": "r-brace-definition",
@@ -9730,7 +10212,8 @@
           "explanation": "\"brace\"指球员在单场比赛中打进两球。打进三球则被称为\"帽子戏法\"（hat-trick）。"
         }
       },
-      "i18nSourceHash": "0b73551f419802e7"
+      "i18nSourceHash": "0b73551f419802e7",
+      "teams": []
     },
     {
       "id": "p-caps-definition",
@@ -9847,7 +10330,8 @@
           "explanation": "\"cap\"代表球员为国家队出战一场正式比赛。这个术语源自过去的惯例：每踢一场比赛，就为球员颁发一顶实际的帽子。当解说员说某位球员有\"X个cap\"时，意思是这位球员代表国家参加了X场正式国际比赛。"
         }
       },
-      "i18nSourceHash": "b4fb4432187707a1"
+      "i18nSourceHash": "b4fb4432187707a1",
+      "teams": []
     },
     {
       "id": "rec-golden-boot",
@@ -9964,7 +10448,11 @@
           "explanation": "金靴奖颁发给赛事的最佳射手。如果球员进球数相同，则以助攻数作为决胜依据，其次比较出场时间更少者。past获奖者包括哈里·凯恩（2018年，6球）和基利安·姆巴佩（2022年，8球）。"
         }
       },
-      "i18nSourceHash": "5d666dd6cc3f3881"
+      "i18nSourceHash": "5d666dd6cc3f3881",
+      "teams": [
+        "England",
+        "France"
+      ]
     },
     {
       "id": "r-clean-sheet",
@@ -10081,7 +10569,8 @@
           "explanation": "“零封”指的是一种防守成就，即一支球队在整场比赛中阻止对手得分。它是衡量足球防守表现的关键指标。"
         }
       },
-      "i18nSourceHash": "799583c3a6af00e6"
+      "i18nSourceHash": "799583c3a6af00e6",
+      "teams": []
     },
     {
       "id": "tf-brazil-every-edition",
@@ -10177,7 +10666,11 @@
           "explanation": "自1930年以来，巴西参加了每一届比赛，是唯一从未缺席的球队。在此过程中，他们五次夺冠。在参赛次数方面，德国和意大利分别位列第二和第三，德国参加了19届，意大利参加了18届。"
         }
       },
-      "i18nSourceHash": "b0b02617bc035f8f"
+      "i18nSourceHash": "b0b02617bc035f8f",
+      "teams": [
+        "Brazil",
+        "Germany"
+      ]
     },
     {
       "id": "tf-48-teams-2026",
@@ -10273,7 +10766,12 @@
           "explanation": "2026年这届赛事将从32支球队扩充至48支，意味着在美国、墨西哥和加拿大的16座主办城市进行104场比赛。"
         }
       },
-      "i18nSourceHash": "c57ba8c77bcde3cf"
+      "i18nSourceHash": "c57ba8c77bcde3cf",
+      "teams": [
+        "Canada",
+        "Mexico",
+        "USA"
+      ]
     },
     {
       "id": "tf-var-2014",
@@ -10369,7 +10867,10 @@
           "explanation": "VAR 是在2018年俄罗斯举办的赛事中首次亮相的。2014年巴西那届赛事仍然完全依靠场上的裁判。"
         }
       },
-      "i18nSourceHash": "71fe9c940822ed7e"
+      "i18nSourceHash": "71fe9c940822ed7e",
+      "teams": [
+        "Brazil"
+      ]
     },
     {
       "id": "tf-germany-italy-tied",
@@ -10465,7 +10966,10 @@
           "explanation": "其实打平——两国都夺得过四次冠军。德国在1954年、1974年、1990年和2014年夺冠；意大利则在1934年、1938年、1982年和2006年夺冠。"
         }
       },
-      "i18nSourceHash": "745ae448dd0de49a"
+      "i18nSourceHash": "745ae448dd0de49a",
+      "teams": [
+        "Germany"
+      ]
     },
     {
       "id": "tf-klose-16-goals",
@@ -10561,7 +11065,11 @@
           "explanation": "克洛泽代表德国在四届赛事（2002–2014）中打入16球，但莱昂内尔·梅西在Football 2026赛事中超越了这一纪录。"
         }
       },
-      "i18nSourceHash": "ba7ed08c424db616"
+      "i18nSourceHash": "ba7ed08c424db616",
+      "teams": [
+        "Argentina",
+        "Germany"
+      ]
     },
     {
       "id": "tf-2022-penalties",
@@ -10657,7 +11165,11 @@
           "explanation": "加时赛战成3比3后，阿根廷在点球大战中以4比2击败法国。许多人认为这是有史以来最精彩的决赛。"
         }
       },
-      "i18nSourceHash": "cb95dfb4833429d9"
+      "i18nSourceHash": "cb95dfb4833429d9",
+      "teams": [
+        "Argentina",
+        "France"
+      ]
     },
     {
       "id": "tf-host-group-stage",
@@ -10753,7 +11265,10 @@
           "explanation": "南非在其本土举办的2010年赛事中，成为首个（也是迄今唯一一个）在小组赛阶段就被淘汰的东道主。有人说，这是对他们把呜呜祖拉介绍给全世界的惩罚。"
         }
       },
-      "i18nSourceHash": "1eccd911f74a3616"
+      "i18nSourceHash": "1eccd911f74a3616",
+      "teams": [
+        "South Africa"
+      ]
     },
     {
       "id": "tf-france-first-1998",
@@ -10849,7 +11364,11 @@
           "explanation": "法国主办并赢得了1998年赛事，在决赛中以3比0击败巴西。他们在2018年俄罗斯赛事上夺得了第二个冠军。"
         }
       },
-      "i18nSourceHash": "3fd6174adfc9df58"
+      "i18nSourceHash": "3fd6174adfc9df58",
+      "teams": [
+        "Brazil",
+        "France"
+      ]
     },
     {
       "id": "tf-fastest-goal",
@@ -10946,7 +11465,11 @@
           "explanation": "土耳其的哈坎·苏克在2002年对阵韩国的季军争夺战中仅用10.8秒便破门，这是本赛事历史上最快的进球。"
         }
       },
-      "i18nSourceHash": "e882f1a90765fc5c"
+      "i18nSourceHash": "e882f1a90765fc5c",
+      "teams": [
+        "Korea Republic",
+        "Türkiye"
+      ]
     },
     {
       "id": "tf-three-country-host",
@@ -11042,7 +11565,11 @@
           "explanation": "韩国和日本在2002年共同主办，使其成为首届由多个国家联合举办的赛事。Football 2026 更进一步，由三个国家共同主办。"
         }
       },
-      "i18nSourceHash": "44e15224f82b3ab4"
+      "i18nSourceHash": "44e15224f82b3ab4",
+      "teams": [
+        "Japan",
+        "Korea Republic"
+      ]
     },
     {
       "id": "img-pele",
@@ -11161,7 +11688,10 @@
           "explanation": "贝利赢得过三次冠军（1958年、1962年、1970年），并在四届赛事中共打进12球。他被广泛视为有史以来最伟大的球员之一。"
         }
       },
-      "i18nSourceHash": "f6140dd0f7b9a96d"
+      "i18nSourceHash": "f6140dd0f7b9a96d",
+      "teams": [
+        "Brazil"
+      ]
     },
     {
       "id": "img-zidane",
@@ -11280,7 +11810,10 @@
           "explanation": "齐内丁·齐达内带领法国在1998年首次夺冠，并在决赛中梅开二度。他在2006年决赛中头顶马特拉齐的一幕成为足坛最臭名昭著的时刻之一。"
         }
       },
-      "i18nSourceHash": "0a89bc9712a96d9c"
+      "i18nSourceHash": "0a89bc9712a96d9c",
+      "teams": [
+        "France"
+      ]
     },
     {
       "id": "img-ronaldo-brazil",
@@ -11399,7 +11932,10 @@
           "explanation": "罗纳尔多·纳扎里奥在三届赛事（1998年、2002年、2006年）中共打入15球，并在巴西夺冠的2002年以8粒进球荣膺金靴奖。1994年他年仅17岁便入选大名单，但并未上场。"
         }
       },
-      "i18nSourceHash": "3928e0556231ffaf"
+      "i18nSourceHash": "3928e0556231ffaf",
+      "teams": [
+        "Brazil"
+      ]
     },
     {
       "id": "img-messi",
@@ -11518,7 +12054,11 @@
           "explanation": "在他参加的第五届赛事——2022年的比赛中，莱昂内尔·梅西带领阿根廷击败法国夺冠。他打进七粒进球，其中两球来自决赛。"
         }
       },
-      "i18nSourceHash": "b019de94fd942f9b"
+      "i18nSourceHash": "b019de94fd942f9b",
+      "teams": [
+        "Argentina",
+        "France"
+      ]
     },
     {
       "id": "img-cristiano",
@@ -11637,7 +12177,10 @@
           "explanation": "克里斯蒂亚诺·罗纳尔多从2006年到2022年的每一届都有进球，连续五届赛事破门。他保持着男子球员国家队进球最多的纪录。"
         }
       },
-      "i18nSourceHash": "df0ca488c12c16a8"
+      "i18nSourceHash": "df0ca488c12c16a8",
+      "teams": [
+        "Portugal"
+      ]
     },
     {
       "id": "img-mbappe",
@@ -11756,7 +12299,10 @@
           "explanation": "基利安·姆巴佩在2022年决赛中上演帽子戏法，并以八粒进球荣膺金靴奖。早在2018年，他还是个少年时就首次捧得冠军。"
         }
       },
-      "i18nSourceHash": "3594a64c70f7e743"
+      "i18nSourceHash": "3594a64c70f7e743",
+      "teams": [
+        "France"
+      ]
     },
     {
       "id": "img-ronaldinho",
@@ -11875,7 +12421,11 @@
           "explanation": "罗纳尔迪尼奥是巴西2002年夺冠阵容的一员，并在四分之一决赛对阵英格兰时打入一记令人难忘的任意球。他于2005年荣获金球奖。"
         }
       },
-      "i18nSourceHash": "d898e6722d18dc46"
+      "i18nSourceHash": "d898e6722d18dc46",
+      "teams": [
+        "Brazil",
+        "England"
+      ]
     },
     {
       "id": "img-modric",
@@ -11994,7 +12544,10 @@
           "explanation": "卢卡·莫德里奇作为队长带领克罗地亚闯入2018年决赛，并荣获本届赛事最佳球员金球奖。他还在2022年率队获得季军。"
         }
       },
-      "i18nSourceHash": "6b34a6b8ab64b046"
+      "i18nSourceHash": "6b34a6b8ab64b046",
+      "teams": [
+        "Croatia"
+      ]
     },
     {
       "id": "img-neymar",
@@ -12113,7 +12666,10 @@
           "explanation": "内马尔是巴西队史第一射手，在2014年和2022年因伤影响表现后，他将在2026年迎来个人第三次大赛之旅。"
         }
       },
-      "i18nSourceHash": "f92cfe589855ba70"
+      "i18nSourceHash": "f92cfe589855ba70",
+      "teams": [
+        "Brazil"
+      ]
     },
     {
       "id": "img-drogba",
@@ -12232,7 +12788,10 @@
           "explanation": "迪迪埃·德罗巴代表科特迪瓦参加了三届赛事（2006年、2010年、2014年）。人们认为他通过足球帮助促成了科特迪瓦内战的停火。"
         }
       },
-      "i18nSourceHash": "8d4e0947b51663d2"
+      "i18nSourceHash": "8d4e0947b51663d2",
+      "teams": [
+        "Côte d'Ivoire"
+      ]
     },
     {
       "id": "h-1978-host",
@@ -12349,7 +12908,14 @@
           "explanation": "阿根廷举办了1978年这届赛事并夺得冠军，在布宜诺斯艾利斯的决赛中经过加时赛以3比1击败荷兰。由于这届赛事是在豪尔赫·维德拉领导的阿根廷军事独裁统治期间举行的，它至今仍是政治上最具争议的赛事之一。"
         }
       },
-      "i18nSourceHash": "498194b4f8e49ff8"
+      "i18nSourceHash": "498194b4f8e49ff8",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "Colombia",
+        "Netherlands",
+        "USA"
+      ]
     },
     {
       "id": "h-1982-expansion",
@@ -12466,7 +13032,11 @@
           "explanation": "西班牙1982将参赛球队从16支增加到24支，并在半决赛前引入了第二轮小组赛。24支球队的赛制延续了四届（1982-1994年），之后在1998年法国扩大到32支。"
         }
       },
-      "i18nSourceHash": "1eba88d01fab40cb"
+      "i18nSourceHash": "1eba88d01fab40cb",
+      "teams": [
+        "France",
+        "Spain"
+      ]
     },
     {
       "id": "h-battle-santiago",
@@ -12584,7 +13154,14 @@
           "explanation": "1962年东道主智利与意大利的小组赛冲突极为暴力，以至于警察不得不进入球场进行干预。两名意大利球员被罚下场。BBC评论员大卫·科尔曼在介绍这段画面时说出了一句广为流传的话，称其为'最愚蠢、最骇人、最令人作呕、最丢人的足球表演。'"
         }
       },
-      "i18nSourceHash": "db30cd8135e1dabe"
+      "i18nSourceHash": "db30cd8135e1dabe",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "England",
+        "Germany",
+        "Uruguay"
+      ]
     },
     {
       "id": "h-disgrace-gijon",
@@ -12701,7 +13278,15 @@
           "explanation": "在西德早早进球后，两队似乎都不再积极争胜，因为他们都清楚：只要西德小比分获胜，两队就能携手出线，把阿尔及利亚淘汰出局。这一丑闻促成了一项永久性规则改变——自1986年起，每个小组的末轮比赛都在同一时间开球。"
         }
       },
-      "i18nSourceHash": "e310748c28268bca"
+      "i18nSourceHash": "e310748c28268bca",
+      "teams": [
+        "Algeria",
+        "Austria",
+        "France",
+        "Germany",
+        "Netherlands",
+        "Spain"
+      ]
     },
     {
       "id": "h-italia-90-goals",
@@ -12818,7 +13403,8 @@
           "explanation": "意大利90场均仅有2.21个进球，是赛事史上的最低纪录。极端防守的风格促成了多项规则变革，包括将胜场积分由2分改为3分（1994年开始实行），以及禁止门将用手接住队友故意回传球的回传球规则。"
         }
       },
-      "i18nSourceHash": "4b38d0aabd840eec"
+      "i18nSourceHash": "4b38d0aabd840eec",
+      "teams": []
     },
     {
       "id": "h-first-color-broadcast",
@@ -12935,7 +13521,14 @@
           "explanation": "1970年墨西哥赛事是首次在全球进行全彩色电视转播的赛事。这也是那一届的经典画面——巴西鲜艳的黄色球衣、贝利的精湛球技、戈登·班克斯传奇般的扑救——至今仍在足球史上如此鲜活的原因之一。比赛用球“电视之星”（Telstar）专门采用黑白相间的拼块设计，正是为了在电视上更清晰可见。"
         }
       },
-      "i18nSourceHash": "15e0bcd5b7dd90e9"
+      "i18nSourceHash": "15e0bcd5b7dd90e9",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "England",
+        "Germany",
+        "Mexico"
+      ]
     },
     {
       "id": "h-1930-team-count",
@@ -13052,7 +13645,11 @@
           "explanation": "首届赛事仅有13支球队参加，其中只有四个欧洲国家不远万里横渡大西洋前来。许多欧洲国家因海上旅途耗资巨大、耗时漫长而拒绝参赛，这一度险些引发与南美洲之间的外交摩擦。"
         }
       },
-      "i18nSourceHash": "7fa0bde783d19af8"
+      "i18nSourceHash": "7fa0bde783d19af8",
+      "teams": [
+        "USA",
+        "Uruguay"
+      ]
     },
     {
       "id": "p-gordon-banks-save",
@@ -13170,7 +13767,11 @@
           "explanation": "在1970年对阵巴西的小组赛中，英格兰门将戈登·班克斯飞身扑出了佩莱向下顶出的头球，完成了一次令人难以置信的扑救。佩莱本人后来称之为'世纪扑救'。尽管班克斯表现英勇，巴西仍以1比0赢得了比赛，并最终夺得赛事冠军。"
         }
       },
-      "i18nSourceHash": "c68ad50614cd35bb"
+      "i18nSourceHash": "c68ad50614cd35bb",
+      "teams": [
+        "Brazil",
+        "England"
+      ]
     },
     {
       "id": "p-kempes-78",
@@ -13287,7 +13888,11 @@
           "explanation": "马里奥·肯佩斯是1978年本土赛事的明星，打进6球荣获金靴奖。值得一提的是，他在小组赛中颗粒无收——6粒进球全部来自第二阶段和决赛。他在对阵荷兰的决赛中梅开二度，锁定了阿根廷的首个冠军。"
         }
       },
-      "i18nSourceHash": "41e71343d890e82c"
+      "i18nSourceHash": "41e71343d890e82c",
+      "teams": [
+        "Argentina",
+        "Netherlands"
+      ]
     },
     {
       "id": "p-rossi-82-comeback",
@@ -13404,7 +14009,11 @@
           "explanation": "保罗·罗西因卷入假球丑闻被禁赛两年，随后才入选1982年西班牙赛事的阵容。之后他上演了足球史上最非凡的救赎故事之一——对阵巴西时上演帽子戏法，又在半决赛和决赛中接连破门。他最终赢得了金靴奖、金球奖以及赛事冠军。"
         }
       },
-      "i18nSourceHash": "80a723c3c251dff3"
+      "i18nSourceHash": "80a723c3c251dff3",
+      "teams": [
+        "Brazil",
+        "Spain"
+      ]
     },
     {
       "id": "p-zagallo-first-dual",
@@ -13521,7 +14130,13 @@
           "explanation": "巴西的马里奥·扎加洛在1958年和1962年以球员身份夺冠，随后在1970年作为主教练率领巴西问鼎——成为历史上首位实现这一双重荣誉的人。弗朗茨·贝肯鲍尔后来也做到了这一点（1974/1990），随后是迪迪埃·德尚（1998/2018）。约翰·克鲁伊夫虽然是历史上最伟大的球员之一，却从未赢得过这项赛事的冠军。"
         }
       },
-      "i18nSourceHash": "fcd296f89b002090"
+      "i18nSourceHash": "fcd296f89b002090",
+      "teams": [
+        "Brazil",
+        "France",
+        "Germany",
+        "Netherlands"
+      ]
     },
     {
       "id": "p-garrincha-1962",
@@ -13638,7 +14253,10 @@
           "explanation": "绰号为「人民的快乐」（Alegria do Povo）的加林查，在贝利于小组赛第二场比赛中遭遇腹股沟伤病后，成为1962年赛事当之无愧的明星。尽管他因儿时的疾病而双腿长短不一，但他的盘带令人目眩神迷，并在四分之一决赛和半决赛中均有进球。"
         }
       },
-      "i18nSourceHash": "d6b0924263c96489"
+      "i18nSourceHash": "d6b0924263c96489",
+      "teams": [
+        "Brazil"
+      ]
     },
     {
       "id": "p-klose-four-editions",
@@ -13755,7 +14373,10 @@
           "explanation": "克洛泽连续四届赛事都有进球：2002年打入5球，2006年5球，2010年4球，2014年2球。他出生于波兰奥波莱，幼年时移居德国，成为该赛事历史上最高产的射手之一。他标志性的空翻进球庆祝动作也成为经典。"
         }
       },
-      "i18nSourceHash": "cb1e2f2e9a21c19f"
+      "i18nSourceHash": "cb1e2f2e9a21c19f",
+      "teams": [
+        "Germany"
+      ]
     },
     {
       "id": "p-baggio-penalty-94",
@@ -13872,7 +14493,10 @@
           "explanation": "在1994年决赛的点球大战中，罗伯托·巴乔把点球高高射出横梁，使巴西以3比2获胜。这至今仍是足球史上最令人心碎的时刻之一。尽管罚失了这粒点球，巴乔几乎是凭一己之力将意大利带进了决赛，在淘汰赛阶段攻入5球，其中包括对阵尼日利亚时最后时刻的扳平进球。"
         }
       },
-      "i18nSourceHash": "abcfc55abfb466c2"
+      "i18nSourceHash": "abcfc55abfb466c2",
+      "teams": [
+        "Brazil"
+      ]
     },
     {
       "id": "t-west-germany-last",
@@ -13989,7 +14613,11 @@
           "explanation": "西德在1990年意大利举办的赛事中夺冠——这是他们的第三个冠军——仅仅几个月后，德国便于1990年10月实现了统一。统一后的德国队首次以简单的“德国”名义参赛是在1994年的美国赛事上。"
         }
       },
-      "i18nSourceHash": "f3b65b2f1ea2ced2"
+      "i18nSourceHash": "f3b65b2f1ea2ced2",
+      "teams": [
+        "Germany",
+        "USA"
+      ]
     },
     {
       "id": "t-saudi-2022-upset",
@@ -14106,7 +14734,14 @@
           "explanation": "沙特阿拉伯在落后的情况下逆转，以2比1击败了由利昂内尔·梅西领衔的阿根廷，成为赛事史上最令人震惊的结果之一。沙特的两粒进球在下半场开场不久、五分钟之内相继打入。这一天被沙特阿拉伯宣布为全国假日。阿根廷从这场震撼中重整旗鼓，最终夺得了整届赛事的冠军。"
         }
       },
-      "i18nSourceHash": "31a25f118395c643"
+      "i18nSourceHash": "31a25f118395c643",
+      "teams": [
+        "Argentina",
+        "IR Iran",
+        "Qatar",
+        "Saudi Arabia",
+        "Tunisia"
+      ]
     },
     {
       "id": "t-usa-1994-attendance",
@@ -14223,7 +14858,10 @@
           "explanation": "1994年那届赛事吸引了总计超过358万名观众,这一纪录已保持超过30年。得益于使用了巨大的美式橄榄球体育场,场均观众人数接近69,000人。随着美国体育场更加庞大以及比赛场次增至104场(1994年为52场),这一纪录有望在2026年最终被打破。"
         }
       },
-      "i18nSourceHash": "8260cf2c1b2a188b"
+      "i18nSourceHash": "8260cf2c1b2a188b",
+      "teams": [
+        "USA"
+      ]
     },
     {
       "id": "t-north-korea-2010",
@@ -14340,7 +14978,13 @@
           "explanation": "朝鲜的回归十分痛苦：他们以1比2不敌巴西（一度还曾领先！），0比7惨败给葡萄牙，又0比3输给科特迪瓦。0比7负于葡萄牙是现代赛事史上最悬殊的比分之一。他们上一次亮相是1966年那次著名的征程，当时他们曾爆冷淘汰意大利。"
         }
       },
-      "i18nSourceHash": "2b78a8746cbb8bbf"
+      "i18nSourceHash": "2b78a8746cbb8bbf",
+      "teams": [
+        "Brazil",
+        "Côte d'Ivoire",
+        "Korea Republic",
+        "Portugal"
+      ]
     },
     {
       "id": "t-morocco-2022",
@@ -14457,7 +15101,17 @@
           "explanation": "摩洛哥在2022年的征程令人惊叹——他们力压比利时和克罗地亚所在的小组登顶，随后在点球大战中淘汰西班牙，又以1比0击败葡萄牙，最终在半决赛不敌法国。他们成为首支闯入赛事半决赛的非洲球队，也是首支阿拉伯球队，点燃了整个非洲大陆和阿拉伯世界的庆祝热潮。"
         }
       },
-      "i18nSourceHash": "446d95daf1e1119f"
+      "i18nSourceHash": "446d95daf1e1119f",
+      "teams": [
+        "Belgium",
+        "Croatia",
+        "France",
+        "Ghana",
+        "Morocco",
+        "Portugal",
+        "Senegal",
+        "Spain"
+      ]
     },
     {
       "id": "t-most-appearances-no-title",
@@ -14574,7 +15228,13 @@
           "explanation": "墨西哥已参加了18届赛事，是所有从未捧起奖杯的球队中参赛次数最多的。尽管墨西哥多次担任东道主并稳定地从中北美及加勒比海地区（CONCACAF）出线，却深受所谓“第五场比赛”（quinto partido）魔咒的困扰——从1994年到2018年，连续七届赛事都止步于16强。"
         }
       },
-      "i18nSourceHash": "fe4634ddd51e7dce"
+      "i18nSourceHash": "fe4634ddd51e7dce",
+      "teams": [
+        "Belgium",
+        "Mexico",
+        "Netherlands",
+        "Switzerland"
+      ]
     },
     {
       "id": "t-japan-2022-group",
@@ -14691,7 +15351,16 @@
           "explanation": "日本队在E组完成逆转，以2-1战胜德国、2-1战胜西班牙，夺得小组头名并将德国淘汰出局。两场逆转的剧本如出一辙——上半场先以0-1落后，下半场连进两球。日本队的战术灵活性，加上主教练森保一的大胆换人，成为取胜的关键。"
         }
       },
-      "i18nSourceHash": "29382ee99433cf0a"
+      "i18nSourceHash": "29382ee99433cf0a",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "England",
+        "France",
+        "Germany",
+        "Japan",
+        "Spain"
+      ]
     },
     {
       "id": "r-corner-kick-awarded",
@@ -14808,7 +15477,8 @@
           "explanation": "当防守球员在球越过本方球门线前最后触球时，进攻方将在最近的角球弧获得一个角球。如果最后触球的是进攻球员，则防守方获得球门球。角球是一种宝贵的进攻武器——在职业水平上，约有3%的角球能转化为进球。"
         }
       },
-      "i18nSourceHash": "b7972a16d2b0a51f"
+      "i18nSourceHash": "b7972a16d2b0a51f",
+      "teams": []
     },
     {
       "id": "r-throw-in-no-goal",
@@ -14925,7 +15595,8 @@
           "explanation": "界外球不能直接得分。如果界外球抛出后未经其他球员触碰直接进入对方球门，则判球门球。如果直接进入本方球门，则判角球。界外球是足球比赛中唯一用手完成的重新开球方式。"
         }
       },
-      "i18nSourceHash": "5d6521476c9c94b5"
+      "i18nSourceHash": "5d6521476c9c94b5",
+      "teams": []
     },
     {
       "id": "r-keeper-6-seconds",
@@ -15042,7 +15713,8 @@
           "explanation": "第12条规则规定，门将在用手控制球后必须在6秒内将球释放出去。这被普遍认为是足球中执行最不严格的规则——裁判通常会先警告再处罚，违规会判罚间接任意球。门将拖延时间的行为引发了要求更严格执行的呼声。"
         }
       },
-      "i18nSourceHash": "65a0f91eae825014"
+      "i18nSourceHash": "65a0f91eae825014",
+      "teams": []
     },
     {
       "id": "r-advantage-play",
@@ -15160,7 +15832,8 @@
           "explanation": "有利进攻手势——双臂向前并向上伸出——是在告诉球员，裁判看到了犯规，但允许比赛继续进行，因为此时中断比赛反而会让被侵犯的球队吃亏。如果预期的有利局面在几秒钟内没有出现，裁判仍可回过头来判罚最初的任意球。"
         }
       },
-      "i18nSourceHash": "94dbb9849c467f90"
+      "i18nSourceHash": "94dbb9849c467f90",
+      "teams": []
     },
     {
       "id": "r-penalty-rebound",
@@ -15277,7 +15950,8 @@
           "explanation": "在常规比赛和加时赛中，如果点球击中门柱、横梁，或被守门员扑出弹回，皮球仍处于活球状态，包括主罚队员在内的任何球员都可以借此进球。但在点球大战中则没有回弹球：每次罚球一旦皮球停止向前移动、出界，或被守门员明确扑出，便告结束。"
         }
       },
-      "i18nSourceHash": "e433529a16d59bbb"
+      "i18nSourceHash": "e433529a16d59bbb",
+      "teams": []
     },
     {
       "id": "v-guadalajara-culture",
@@ -15394,7 +16068,10 @@
           "explanation": "瓜达拉哈拉是墨西哥哈利斯科州的首府，是马里亚奇音乐和龙舌兰酒（用周边哈利斯科高地种植的蓝色龙舌兰酿造）的文化发源地。作为墨西哥第二大城市，它还在1970年和1986年举办过小组赛阶段的比赛。"
         }
       },
-      "i18nSourceHash": "585c8c9ec3660d35"
+      "i18nSourceHash": "585c8c9ec3660d35",
+      "teams": [
+        "Mexico"
+      ]
     },
     {
       "id": "v-estadio-akron-chivas",
@@ -15511,7 +16188,10 @@
           "explanation": "阿克隆球场是芝华士的主场，这是墨西哥最受喜爱的俱乐部之一，并以唯一一支只起用墨西哥本土出生球员、不引进任何外籍球员的墨西哥主要球队而闻名。这座现代化球场于2010年启用，可容纳约49,850名观众，其灵感源自火山的独特设计令人印象深刻。"
         }
       },
-      "i18nSourceHash": "f9cd2e1383408ec6"
+      "i18nSourceHash": "f9cd2e1383408ec6",
+      "teams": [
+        "Mexico"
+      ]
     },
     {
       "id": "v-gillette-boston",
@@ -15628,7 +16308,10 @@
           "explanation": "吉列体育场位于马萨诸塞州福克斯堡，距波士顿市中心西南约30英里。它可容纳约65,878名观众，同时也是MLS新英格兰革命队的主场。附近的福克斯堡体育场（现已拆除）曾举办1994年那届赛事的比赛；吉列体育场于2002年取而代之。"
         }
       },
-      "i18nSourceHash": "be61730c6ff9b088"
+      "i18nSourceHash": "be61730c6ff9b088",
+      "teams": [
+        "England"
+      ]
     },
     {
       "id": "v-estadio-bbva-monterrey",
@@ -15642,7 +16325,10 @@
       ],
       "answer": 0,
       "explanation": "Estadio BBVA is home to CF Monterrey, nicknamed 'Rayados' (the striped ones), one of Mexico's most successful clubs. The state-of-the-art stadium opened in 2015 and seats around 51,000. Monterrey, Mexico's third-largest city, is also home to rival club UANL Tigres, who play at the nearby Estadio Universitario.",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Mexico"
+      ]
     },
     {
       "id": "rec-salenko-five-goals",
@@ -15760,7 +16446,8 @@
           "explanation": "俄罗斯球员奥列格·萨连科在1994年的赛事中以6比1战胜喀麦隆的比赛里独中5球，这一纪录至今无人打破。令人惊讶的是，尽管萨连科表现神勇，俄罗斯仍在小组赛阶段被淘汰。那一年他与保加利亚的赫里斯托·斯托伊奇科夫并列获得金靴奖，两人均以6球收官。"
         }
       },
-      "i18nSourceHash": "8cf2a9df0e0c43bd"
+      "i18nSourceHash": "8cf2a9df0e0c43bd",
+      "teams": []
     },
     {
       "id": "rec-own-goals-2018",
@@ -15774,7 +16461,8 @@
       ],
       "answer": 0,
       "explanation": "Russia 2018 saw a staggering 12 own goals, more than double the previous record of 6 set in 1998. Faster-moving balls, aggressive high-pressing tactics, and the increased pace of the modern game put defenders under unprecedented pressure. Some of those own goals would have been credited to attackers in earlier eras before tracking technology improved.",
-      "needsReview": true
+      "needsReview": true,
+      "teams": []
     },
     {
       "id": "rec-highest-scoring-final",
@@ -15891,7 +16579,16 @@
           "explanation": "1958年的决赛共打进7球，年仅17岁的贝利梅开二度，瓦瓦也再添两球，巴西以5比2大胜东道主瑞典。这是巴西首次夺冠，宣告了他们作为足球超级强国的崛起。2022年的决赛同样充满戏剧性，打进6球（3比3），但最终需要通过点球大战才决出胜者。"
         }
       },
-      "i18nSourceHash": "50693a0087409494"
+      "i18nSourceHash": "50693a0087409494",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "Croatia",
+        "England",
+        "France",
+        "Germany",
+        "Sweden"
+      ]
     },
     {
       "id": "c-first-mascot-1966",
@@ -15905,7 +16602,13 @@
       ],
       "answer": 0,
       "explanation": "The 1966 tournament in England introduced the tradition of official mascots with a lion named Willie wearing a Union Jack jersey. Every edition since has had its own mascot, from 1970's Juanito (a boy in a sombrero) to 2022's La'eeb (an animated keffiyeh). The tradition has since spread to nearly every major sporting event.",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Argentina",
+        "England",
+        "Germany",
+        "Mexico"
+      ]
     },
     {
       "id": "c-adidas-ball",
@@ -16022,7 +16725,8 @@
           "explanation": "自1970年的特拉斯特（Telstar）以来，阿迪达斯一直供应每一颗官方用球。特拉斯特凭借为提升电视画面可见度而设计的黑白拼块图案成为经典。每届赛事都会推出独特设计的用球——探戈（Tango，1978-1998年代）、普天同庆（Jabulani，2010）、桑巴荣耀（Brazuca，2014）、逐梦之旅（Al Rihla，2022）——这些设计总能在球员和球迷之间引发热烈讨论。"
         }
       },
-      "i18nSourceHash": "6f7acd0cedbcb07a"
+      "i18nSourceHash": "6f7acd0cedbcb07a",
+      "teams": []
     },
     {
       "id": "tf-uruguay-first-host-winner",
@@ -16119,7 +16823,11 @@
           "explanation": "正确！乌拉圭主办了1930年的首届赛事并夺得冠军，在蒙得维的亚的世纪体育场决赛中以4比2击败阿根廷，现场约有93,000名观众。当时乌拉圭人口不足200万，至今仍是赢得该赛事的最小国家之一。"
         }
       },
-      "i18nSourceHash": "8b8282bf8997d76d"
+      "i18nSourceHash": "8b8282bf8997d76d",
+      "teams": [
+        "Argentina",
+        "Uruguay"
+      ]
     },
     {
       "id": "tf-no-cards-1930",
@@ -16215,7 +16923,11 @@
           "explanation": "正确！红黄牌制度直到1970年墨西哥那届赛事才被引入。在此之前，裁判通过口头或手势来传达警告和罚下决定。这套牌制由英格兰裁判肯·阿斯顿（Ken Aston）发明，他在1966年一场格外混乱的比赛后驾车回家途中，从交通信号灯获得了灵感。"
         }
       },
-      "i18nSourceHash": "920c3913f487df98"
+      "i18nSourceHash": "920c3913f487df98",
+      "teams": [
+        "England",
+        "Mexico"
+      ]
     },
     {
       "id": "tf-pele-injured-62",
@@ -16311,7 +17023,10 @@
           "explanation": "正确！贝利在巴西小组赛第二场对阵捷克斯洛伐克的比赛中拉伤了腹股沟肌肉，因此缺席了赛事余下的所有比赛。加林查挺身而出，成为本届赛事的明星球员，带领巴西夺得了队史第二个连冠。这彰显了那个时代巴西足球人才的惊人厚度。"
         }
       },
-      "i18nSourceHash": "e02a306aac3e933f"
+      "i18nSourceHash": "e02a306aac3e933f",
+      "teams": [
+        "Brazil"
+      ]
     },
     {
       "id": "tf-knockout-draw",
@@ -16407,7 +17122,8 @@
           "explanation": "错误！每场淘汰赛都必须决出胜者。如果90分钟战平，将进行30分钟加时赛（两个15分钟半场）。若仍然战平，则通过点球大战决定胜负。只有小组赛阶段的比赛才可能以平局收场。"
         }
       },
-      "i18nSourceHash": "117fcf2ef3113e58"
+      "i18nSourceHash": "117fcf2ef3113e58",
+      "teams": []
     },
     {
       "id": "tf-referee-own-country",
@@ -16503,7 +17219,8 @@
           "explanation": "错误！为确保公正性，裁判员绝不会被指派执法有本国参赛的比赛。通常，裁判员来自与参赛双方球队都不同的洲际足联。裁判委员会会为每场比赛精心挑选并指派裁判，以避免哪怕一丝偏袒的嫌疑。"
         }
       },
-      "i18nSourceHash": "3a92c6ebf8915203"
+      "i18nSourceHash": "3a92c6ebf8915203",
+      "teams": []
     },
     {
       "id": "tf-goalline-tech-2014",
@@ -16516,7 +17233,11 @@
       "answer": 0,
       "explanation": "True! Goal-line technology debuted at Brazil 2014, using high-speed cameras to instantly determine whether the ball fully crossed the line. Its adoption was spurred by several controversial incidents, most notably Frank Lampard's clearly valid goal against Germany in 2010 that was wrongly disallowed — a miss that might have changed the outcome of the match.",
       "type": "true_false",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Brazil",
+        "Germany"
+      ]
     },
     {
       "id": "tf-women-refs-2022",
@@ -16612,7 +17333,12 @@
           "explanation": "正确！2022年那届赛事首次启用女性裁判，创造了历史。法国的斯蒂芬妮·弗拉帕尔成为首位执法男子赛事比赛（哥斯达黎加对阵德国）的女裁判，卢旺达的萨利玛·穆坎桑加和日本的山下良美也在赛事期间担任裁判。"
         }
       },
-      "i18nSourceHash": "7698ee7acdb78fea"
+      "i18nSourceHash": "7698ee7acdb78fea",
+      "teams": [
+        "France",
+        "Germany",
+        "Japan"
+      ]
     },
     {
       "id": "tf-all-confederations-semis",
@@ -16708,7 +17434,13 @@
           "explanation": "错误！六大足联中有五个产生过半决赛球队：欧足联（UEFA，欧洲）、南美足联（CONMEBOL，南美洲）、中北美及加勒比海足联（CONCACAF，1930年的美国）、亚足联（AFC，2002年的韩国）以及非洲足联（CAF，2022年的摩洛哥）。唯一没有半决赛球队的是大洋洲足联（OFC），其足球实力最强的国家澳大利亚已于2006年转入亚洲足联。"
         }
       },
-      "i18nSourceHash": "8eabf5a890b016cc"
+      "i18nSourceHash": "8eabf5a890b016cc",
+      "teams": [
+        "Australia",
+        "Korea Republic",
+        "Morocco",
+        "USA"
+      ]
     },
     {
       "id": "tf-golden-goal-abolished",
@@ -16804,7 +17536,8 @@
           "explanation": "正确！金球制规则规定加时赛中率先进球的球队立即获胜，这一规则在1998年和2002年两届赛事中使用。由于有批评认为该规则使球队在加时赛中过于保守，担心一个失误就会终结比赛，因此该规则于2004年被废除。2006年的赛事则恢复了传统的完整30分钟加时赛模式。"
         }
       },
-      "i18nSourceHash": "8355fbc732eb5aa7"
+      "i18nSourceHash": "8355fbc732eb5aa7",
+      "teams": []
     },
     {
       "id": "tf-added-time-2022",
@@ -16900,7 +17633,12 @@
           "explanation": "正确！2022年赛事的裁判员补时明显多于以往任何一届。在英格兰对阵伊朗的比赛中，上下半场共补时27分钟。这种做法旨在通过计入进球庆祝、换人、VAR回看以及拖延时间等因素，最大限度地延长实际比赛时间。这一趋势在随后的赛事中得以延续。"
         }
       },
-      "i18nSourceHash": "f23849c80fef0021"
+      "i18nSourceHash": "f23849c80fef0021",
+      "teams": [
+        "England",
+        "IR Iran",
+        "Qatar"
+      ]
     },
     {
       "id": "img-maradona",
@@ -17019,7 +17757,11 @@
           "explanation": "迭戈·马拉多纳在1986年率领阿根廷登顶，在四分之一决赛对阵英格兰时打入了足球史上最著名的两粒进球——充满争议的「上帝之手」，以及连过五名后卫、奔袭60米的梦幻单刀，被称为「世纪进球」。他荣膺本届赛事最佳球员金球奖。"
         }
       },
-      "i18nSourceHash": "695d879eb47454dc"
+      "i18nSourceHash": "695d879eb47454dc",
+      "teams": [
+        "Argentina",
+        "England"
+      ]
     },
     {
       "id": "img-beckenbauer",
@@ -17138,7 +17880,10 @@
           "explanation": "弗朗茨·贝肯鲍尔在1974年作为队长率领西德队夺冠，后又在1990年以主教练身份带队登顶，成为继马里奥·扎加洛之后第二位以球员和教练身份双双夺冠的人。绰号'德皇'（The Emperor）的他重新定义了自由人／清道夫这一位置，将防守化作一门优雅的控球艺术。"
         }
       },
-      "i18nSourceHash": "a16a1b2bba86c788"
+      "i18nSourceHash": "a16a1b2bba86c788",
+      "teams": [
+        "Germany"
+      ]
     },
     {
       "id": "img-klose-striker",
@@ -17257,7 +18002,10 @@
           "explanation": "米罗斯拉夫·克洛泽在四届赛事（2002-2014年）中共打入16球，成为该赛事历史上最高产的射手之一。他出生于波兰奥波莱，幼年移居德国，并以公平竞赛精神著称——他曾主动请求裁判取消一粒自己用手打进的进球。他标志性的空翻庆祝动作堪称经典。"
         }
       },
-      "i18nSourceHash": "7d35239a5fe1a381"
+      "i18nSourceHash": "7d35239a5fe1a381",
+      "teams": [
+        "Germany"
+      ]
     },
     {
       "id": "img-cafu-captain",
@@ -17376,7 +18124,10 @@
           "explanation": "卡福（马科斯·埃万杰利斯塔·德·莫拉伊斯）连续三届闯入决赛——1994年（夺冠）、1998年（落败）和2002年（夺冠）——是历史上唯一达成这一壮举的球员。他在2002年担任夺冠队伍的队长，并为巴西出场142次，创下当时的纪录。他以在右路不知疲倦地上下奔跑著称，为现代进攻型边后卫树立了典范。"
         }
       },
-      "i18nSourceHash": "244fcc75c2f2832d"
+      "i18nSourceHash": "244fcc75c2f2832d",
+      "teams": [
+        "Brazil"
+      ]
     },
     {
       "id": "img-buffon",
@@ -17495,7 +18246,10 @@
           "explanation": "吉安路易吉·布冯是意大利2006年夺冠的中流砥柱，整届赛事仅失两球（其中一球是乌龙球，另一球是齐达内主罚的点球）。他参加了五届赛事（1998年至2014年），代表意大利出场176次，创下纪录。他的职业生涯之长令人惊叹：直到40多岁仍在踢职业足球。"
         }
       },
-      "i18nSourceHash": "9d509f0b6d4d1d50"
+      "i18nSourceHash": "9d509f0b6d4d1d50",
+      "teams": [
+        "France"
+      ]
     },
     {
       "id": "h-1938-final",
@@ -17509,7 +18263,11 @@
       ],
       "answer": 0,
       "explanation": "Italy defeated Hungary 4-2 in the 1938 final in Paris, becoming the first nation to successfully defend their title. Italy's Silvio Piola scored twice in the final and finished as one of the tournament's top scorers.",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Brazil",
+        "Sweden"
+      ]
     },
     {
       "id": "h-1962-host",
@@ -17626,7 +18384,12 @@
           "explanation": "智利在经历1960年瓦尔迪维亚大地震后仍承办了1962年那届赛事。这场地震震级达9.5级，是有记录以来最强的地震。智利组委会留下名言：'正因为我们一无所有，所以我们将竭尽全力'，以此保住了主办权。巴西在那届赛事中第二次夺冠。"
         }
       },
-      "i18nSourceHash": "31c824d16af1780a"
+      "i18nSourceHash": "31c824d16af1780a",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "Colombia"
+      ]
     },
     {
       "id": "h-1998-expansion",
@@ -17640,7 +18403,12 @@
       ],
       "answer": 0,
       "explanation": "France 1998 expanded the field from 24 to 32 teams, a format that lasted seven editions through Qatar 2022. The host nation won the tournament, beating Brazil 3-0 in the final with two goals from Zinedine Zidane.",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Brazil",
+        "France",
+        "Qatar"
+      ]
     },
     {
       "id": "h-trophy-stolen-1983",
@@ -17654,7 +18422,13 @@
       ],
       "answer": 0,
       "explanation": "The trophy was stolen from the Brazilian Football Confederation's headquarters in Rio de Janeiro in 1983 and has never been recovered. It was likely melted down for its gold content. The trophy that Brazil displays today is a replica.",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Brazil",
+        "England",
+        "Switzerland",
+        "Uruguay"
+      ]
     },
     {
       "id": "h-1930-inaugural",
@@ -17771,7 +18545,12 @@
           "explanation": "乌拉圭主办了1930年的史上首届赛事，并最终夺冠，在蒙得维的亚举行的决赛中以4比2击败阿根廷。当时仅有13支球队参赛，许多欧洲国家因横渡大西洋的漫长海上旅程而拒绝出席。在此之前，乌拉圭已分别在1924年和1928年奥运会上夺得足球金牌。"
         }
       },
-      "i18nSourceHash": "c53c98819fcbc112"
+      "i18nSourceHash": "c53c98819fcbc112",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "Uruguay"
+      ]
     },
     {
       "id": "p-ronaldo-98-fit",
@@ -17785,7 +18564,11 @@
       ],
       "answer": 0,
       "explanation": "Hours before the 1998 final, Ronaldo suffered a convulsive fit in his hotel room. He was initially left off the teamsheet, then reinstated at the last minute. He played but was a shadow of himself as Brazil lost 3-0 to France. The full details of what happened remain disputed to this day.",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Brazil",
+        "France"
+      ]
     },
     {
       "id": "p-iniesta-winning-goal",
@@ -17903,7 +18686,11 @@
           "explanation": "安德烈斯·伊涅斯塔在2010年决赛第116分钟攻入一球，以1比0击败荷兰。他亮出了内衣上的一行字：'Dani Jarque siempre con nosotros'（达尼·哈尔克永远与我们同在），以纪念前一年因心脏病去世的好友兼西班牙球员同伴。"
         }
       },
-      "i18nSourceHash": "05a3df60b0b0f46b"
+      "i18nSourceHash": "05a3df60b0b0f46b",
+      "teams": [
+        "Netherlands",
+        "Spain"
+      ]
     },
     {
       "id": "p-bergkamp-1998",
@@ -17917,7 +18704,11 @@
       ],
       "answer": 0,
       "explanation": "Dennis Bergkamp's goal in the 89th minute — a sublime first touch to control a 60-yard pass, followed by a delicate flick past the defender and a clinical finish — is widely regarded as one of the greatest goals in tournament history. The Netherlands won 2-1.",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Argentina",
+        "Netherlands"
+      ]
     },
     {
       "id": "p-suker-golden-boot-98",
@@ -18034,7 +18825,10 @@
           "explanation": "达沃·苏克凭借6粒进球荣获金靴奖，而克罗地亚在1998年首次参赛便夺得季军。他在四分之一决赛中将球轻巧地挑过丹麦门将彼得·舒梅切尔头顶的那粒进球，被誉为本届赛事最优雅的进球之一。"
         }
       },
-      "i18nSourceHash": "da49b2e854dd5908"
+      "i18nSourceHash": "da49b2e854dd5908",
+      "teams": [
+        "Croatia"
+      ]
     },
     {
       "id": "t-australia-confederation",
@@ -18048,7 +18842,11 @@
       ],
       "answer": 0,
       "explanation": "Australia switched from the Oceania Football Confederation (OFC) to the Asian Football Confederation (AFC) in 2006. The move gave Australia a more competitive qualifying path and guaranteed direct tournament berths, since OFC only had an intercontinental playoff spot.",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Australia",
+        "USA"
+      ]
     },
     {
       "id": "t-wales-2022",
@@ -18062,7 +18860,10 @@
       ],
       "answer": 0,
       "explanation": "Wales qualified for the 2022 tournament after a 64-year absence, their previous appearance being in 1958 in Sweden. Led by Gareth Bale, they were eliminated in the group stage but their qualification was celebrated as a historic achievement for Welsh football.",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Sweden"
+      ]
     },
     {
       "id": "t-catenaccio",
@@ -18179,7 +18980,12 @@
           "explanation": "意大利成了“链式防守”（catenaccio，意为“门闩”）的代名词，这是一套高度组织化的防守体系，核心是在后防线身后设置一名自由人（清道夫）。这种打法注重零失球和快速反击，帮助意大利赢得了1982年赛事冠军，并影响了世界各地的防守战术。"
         }
       },
-      "i18nSourceHash": "d7842cf3d135dd50"
+      "i18nSourceHash": "d7842cf3d135dd50",
+      "teams": [
+        "England",
+        "Germany",
+        "Spain"
+      ]
     },
     {
       "id": "t-total-football",
@@ -18296,7 +19102,14 @@
           "explanation": "全攻全守战术中，任何一名场上球员都能胜任他人的位置，这一打法在1974年的赛事上惊艳了世界。在约翰·克鲁伊夫的带领下，荷兰队闯入决赛，但以1比2不敌东道主西德。此后，这一理念影响了从萨基到瓜迪奥拉的众多教练。"
         }
       },
-      "i18nSourceHash": "0029f90c824df4f9"
+      "i18nSourceHash": "0029f90c824df4f9",
+      "teams": [
+        "Argentina",
+        "England",
+        "Germany",
+        "Mexico",
+        "Netherlands"
+      ]
     },
     {
       "id": "r-handball-buildup",
@@ -18413,7 +19226,8 @@
           "explanation": "根据现行的足球竞赛规则，如果在进球者的队友无意中用手或手臂触球后立即破门得分，即使该手球并非故意，进球也将被判无效。这条规则的引入是为了消除在进球过程中对于无意手球的判罚模糊性。"
         }
       },
-      "i18nSourceHash": "d6fefd03b2dfd65a"
+      "i18nSourceHash": "d6fefd03b2dfd65a",
+      "teams": []
     },
     {
       "id": "r-drop-ball",
@@ -18530,7 +19344,8 @@
           "explanation": "比赛以坠球的方式重新开始，坠球判给最后触球的一方。球落向一名球员，其他所有球员必须保持至少4米的距离。如果暂停发生在罚球区内，则将球坠向守门员。2019年之前，采用的是双方争抢的坠球方式。"
         }
       },
-      "i18nSourceHash": "09dead6107a30edb"
+      "i18nSourceHash": "09dead6107a30edb",
+      "teams": []
     },
     {
       "id": "r-sin-bin-trial",
@@ -18647,7 +19462,8 @@
           "explanation": "「罚出席」即临时离场，会将受到警告的球员罚出场地一段规定时间（通常为10分钟），类似于橄榄球的做法。这一规则曾在低级别联赛中试行，但尚未在顶级赛事层面采用。支持者认为，它能在不像红牌那样严厉的情况下减少战术犯规。"
         }
       },
-      "i18nSourceHash": "72d3e0cd5638dc29"
+      "i18nSourceHash": "72d3e0cd5638dc29",
+      "teams": []
     },
     {
       "id": "v-nrg-houston",
@@ -18661,7 +19477,8 @@
       ],
       "answer": 0,
       "explanation": "NRG Stadium in Houston seats approximately 72,220 and is home to the Houston Texans. It features a retractable roof, useful for Houston's hot and humid climate. The stadium is part of the NRG Park complex, which also hosts the Houston Livestock Show and Rodeo, the world's largest.",
-      "needsReview": true
+      "needsReview": true,
+      "teams": []
     },
     {
       "id": "v-bmo-toronto",
@@ -18778,7 +19595,10 @@
           "explanation": "多伦多的BMO球场是多伦多FC以及加拿大国家队的主场。该球场最初为2007年U-20赛事而建，此后经过多次扩建，如今可容纳超过3万名观众。为满足容量要求，球场正为Football 2026进行进一步扩建。"
         }
       },
-      "i18nSourceHash": "71485e121e27f099"
+      "i18nSourceHash": "71485e121e27f099",
+      "teams": [
+        "Canada"
+      ]
     },
     {
       "id": "rec-fastest-goal",
@@ -18896,7 +19716,13 @@
           "explanation": "土耳其的哈坎·苏克在2002年对阵韩国的季军争夺战中仅用11秒便攻入一球。这一纪录已保持了二十多年。第二快的进球是克林特·邓普西在2014年代表美国对阵加纳时29秒攻入的。"
         }
       },
-      "i18nSourceHash": "8ec74231fb404c10"
+      "i18nSourceHash": "8ec74231fb404c10",
+      "teams": [
+        "Ghana",
+        "Korea Republic",
+        "Türkiye",
+        "USA"
+      ]
     },
     {
       "id": "rec-oldest-scorer",
@@ -19013,7 +19839,8 @@
           "explanation": "喀麦隆的罗杰·米拉在1994年的赛事中对阵俄罗斯时打入一球，当时他42岁零39天，成为赛事历史上年龄最大的进球者。他原本已经退役，但在38岁时为1990年的赛事复出，并凭借在角旗边的舞蹈庆祝动作成为全球偶像。"
         }
       },
-      "i18nSourceHash": "1288c19c2ac9d416"
+      "i18nSourceHash": "1288c19c2ac9d416",
+      "teams": []
     },
     {
       "id": "c-commentary-gooool",
@@ -19131,7 +19958,10 @@
           "explanation": "拖长的'进球啦——！'呐喊是拉丁美洲足球解说的标志，解说员常常把这个词拖上10到30秒。这一传统可追溯到广播时代，当时持续的呐喊既是庆祝又是信号，确保听众即使在杂音中也能知道有人进球了。"
         }
       },
-      "i18nSourceHash": "d82a9778cae4da22"
+      "i18nSourceHash": "d82a9778cae4da22",
+      "teams": [
+        "USA"
+      ]
     },
     {
       "id": "c-shirt-swap",
@@ -19145,7 +19975,14 @@
       ],
       "answer": 0,
       "explanation": "Jersey swapping became a widely recognized tradition during the 1970 tournament in Mexico, helped by color television broadcasts showing players exchanging shirts. Pelé's shirt exchanges became particularly iconic. The tradition is now a staple of international football, with players often requesting specific opponents' shirts before the match even begins.",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Brazil",
+        "England",
+        "Mexico",
+        "Switzerland",
+        "Uruguay"
+      ]
     },
     {
       "id": "c-vuvuzela-horn",
@@ -19262,7 +20099,12 @@
           "explanation": "呜呜祖拉是一种深受南非球迷喜爱的塑料号角。在2010年南非举办的赛事中，它持续不断的嗡嗡声既被赞誉为正宗的本地文化，也因盖过现场观众的呼喊声和解说声而受到批评。一些转播机构添加了音频滤波器来削弱这种声音。"
         }
       },
-      "i18nSourceHash": "226ad133f79ea7a3"
+      "i18nSourceHash": "226ad133f79ea7a3",
+      "teams": [
+        "Brazil",
+        "Mexico",
+        "South Africa"
+      ]
     },
     {
       "id": "p-klose-record-goals",
@@ -19276,7 +20118,11 @@
       ],
       "answer": 0,
       "explanation": "Germany's Miroslav Klose scored 16 goals across four editions (2002, 2006, 2010, 2014), surpassing Ronaldo's record of 15. His 16th and final goal came in the legendary 7-1 semi-final victory over Brazil in 2014. Klose was also known for his trademark front-flip celebration.",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Brazil",
+        "Germany"
+      ]
     },
     {
       "id": "r-five-subs",
@@ -19290,7 +20136,8 @@
       ],
       "answer": 0,
       "explanation": "The tournament permanently adopted five substitutions per match starting in 2022, following temporary rules introduced during the COVID-19 pandemic. Teams can make their five substitutions in a maximum of three stoppages (plus halftime). This rule helps manage player workload during congested fixture schedules.",
-      "needsReview": true
+      "needsReview": true,
+      "teams": []
     },
     {
       "id": "tf-penalty-final-1994",
@@ -19386,7 +20233,10 @@
           "explanation": "正确！1994年巴西对阵意大利的决赛在加时赛后以0-0结束，成为首场通过点球大战决出胜负的决赛。罗伯托·巴乔那次臭名昭著的射失锁定了巴西队的第四个冠军。这至今仍是足球史上最具戏剧性的时刻之一。"
         }
       },
-      "i18nSourceHash": "722a89dbf14295dc"
+      "i18nSourceHash": "722a89dbf14295dc",
+      "teams": [
+        "Brazil"
+      ]
     },
     {
       "id": "tf-cruyff-never-won",
@@ -19399,7 +20249,12 @@
       "answer": 0,
       "explanation": "True! Despite being widely regarded as one of football's greatest ever players, Cruyff's Netherlands lost the 1974 final 2-1 to West Germany. He controversially chose not to travel to the 1978 tournament in Argentina, reportedly due to a kidnapping attempt on his family the previous year.",
       "type": "true_false",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Argentina",
+        "Germany",
+        "Netherlands"
+      ]
     },
     {
       "id": "tf-yellow-card-final",
@@ -19495,7 +20350,8 @@
           "explanation": "错误！按照惯例，黄牌累积会在四分之一决赛阶段结束后清零，确保没有球员因之前轮次的警告而错过半决赛或决赛。在后续阶段，只有直接红牌才会导致停赛。"
         }
       },
-      "i18nSourceHash": "7fda05c86dd41725"
+      "i18nSourceHash": "7fda05c86dd41725",
+      "teams": []
     },
     {
       "id": "tf-england-penalty-curse",
@@ -19591,7 +20447,11 @@
           "explanation": "正确！英格兰在点球大战中的战绩糟糕得出了名，从1990年到2012年间，在该项赛事和欧洲锦标赛中连续七次落败。这一魔咒终于在2018年俄罗斯举办的那届赛事中被打破，当时英格兰在点球大战中击败了哥伦比亚。"
         }
       },
-      "i18nSourceHash": "f7a187eef2713248"
+      "i18nSourceHash": "f7a187eef2713248",
+      "teams": [
+        "Colombia",
+        "England"
+      ]
     },
     {
       "id": "tf-telstar-ball-tv",
@@ -19604,7 +20464,8 @@
       "answer": 0,
       "explanation": "True! The iconic Telstar ball, introduced at the 1970 tournament, featured black pentagons on a white background specifically to make the ball more visible on black-and-white television screens. The design became so iconic that it remains the universal symbol for football, even though modern match balls use completely different patterns.",
       "type": "true_false",
-      "needsReview": true
+      "needsReview": true,
+      "teams": []
     },
     {
       "id": "tf-offside-own-half",
@@ -19700,7 +20561,8 @@
           "explanation": "正确！越位规则只在对方半场生效。处于本方半场的球员无论防守球员位于何处，都绝不会越位。这正是球队有时把防线压得很高的原因——任何在本方半场且位于球后方的对手都始终不越位。"
         }
       },
-      "i18nSourceHash": "ffe9f78e639aa4a3"
+      "i18nSourceHash": "ffe9f78e639aa4a3",
+      "teams": []
     },
     {
       "id": "tf-goalkeeper-line-penalty",
@@ -19796,7 +20658,8 @@
           "explanation": "正确！主罚点球时，门将必须至少有一只脚触碰球门线或与球门线持平。自2020年起，这条规则在VAR的协助下被严格执行，已导致多次因门将过早移动而重罚点球的情况。"
         }
       },
-      "i18nSourceHash": "773cb40e7b63296b"
+      "i18nSourceHash": "773cb40e7b63296b",
+      "teams": []
     },
     {
       "id": "tf-1966-only-european-host-win",
@@ -19809,7 +20672,11 @@
       "answer": 1,
       "explanation": "False! Italy also won on home soil in 1934, and France won at home in 1998. England 1966 was one of three occasions a European host nation won the tournament at home.",
       "type": "true_false",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "England",
+        "France"
+      ]
     },
     {
       "id": "tf-substitute-rule-1970",
@@ -19822,7 +20689,10 @@
       "answer": 0,
       "explanation": "True! Before 1970, teams could not make substitutions — injured players either continued or their team played short-handed. The 1970 tournament in Mexico was the first to allow two substitutes per team. The allowance increased to three in 1998, and to five from 2022 onward.",
       "type": "true_false",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Mexico"
+      ]
     },
     {
       "id": "tf-own-goal-credited",
@@ -19918,7 +20788,8 @@
           "explanation": "正确！乌龙球会记在皮球进入本方球门前最后触球的球员名下。它不会计入任何进攻球员的进球数。由于比赛节奏加快、逼抢更加凶猛，近几届赛事的乌龙球数量大幅上升。"
         }
       },
-      "i18nSourceHash": "0fe4e1af470879fe"
+      "i18nSourceHash": "0fe4e1af470879fe",
+      "teams": []
     },
     {
       "id": "tf-red-card-shootout",
@@ -20014,7 +20885,8 @@
           "explanation": "错误！被罚下场的球员不能参加点球大战。其球队必须在可用球员更少的情况下主罚点球。如果一支球队有两名球员被罚下，那么他们在开始点球大战时只有九名有资格的主罚球员，而对手则有十一名。"
         }
       },
-      "i18nSourceHash": "1a708c6686b50e35"
+      "i18nSourceHash": "1a708c6686b50e35",
+      "teams": []
     },
     {
       "id": "tf-13-goals-fontaine",
@@ -20111,7 +20983,10 @@
           "explanation": "正确！方丹起初只是替补球员，但其他球员的伤病给了他机会。他出色地抓住了这次机会，仅用6场比赛就攻入13球——这一纪录已保持了超过65年，或许永远无法被打破。他在法国队踢的每一场比赛中都有进球。"
         }
       },
-      "i18nSourceHash": "15f30fc4059aa6a0"
+      "i18nSourceHash": "15f30fc4059aa6a0",
+      "teams": [
+        "France"
+      ]
     },
     {
       "id": "tf-finals-extra-time-before-94",
@@ -20207,7 +21082,13 @@
           "explanation": "错误！1994年之前已有多场决赛进入加时赛，包括1934年（意大利2-1捷克斯洛伐克）、1966年（英格兰4-2西德）和1978年（阿根廷3-1荷兰）。1994年的特别之处在于，那是首场在加时赛后通过点球大战决出胜负的决赛。"
         }
       },
-      "i18nSourceHash": "bd7a5bb11272da4b"
+      "i18nSourceHash": "bd7a5bb11272da4b",
+      "teams": [
+        "Argentina",
+        "England",
+        "Germany",
+        "Netherlands"
+      ]
     },
     {
       "id": "tf-var-four-situations",
@@ -20302,7 +21183,8 @@
           "explanation": "正确！VAR只能针对这四类「清晰明显的错误」或「严重漏判事件」进行回看。「身份误判」是指裁判向错误的球员出示警告或将其罚下——例如，裁判本想给犯规的球员出牌，却误把牌出示给了他的队友（往往是因为球员相互靠得很近，或球衣号码相似）。此时VAR可以介入，帮助辨认真正的犯规者，从而让正确的球员领到黄牌或红牌。裁判可以查看场边监视器以作出最终决定，但VAR不能介入普通的黄牌、界外球判罚、角球或其他常规判罚。"
         }
       },
-      "i18nSourceHash": "13cb5fbe2b81386f"
+      "i18nSourceHash": "13cb5fbe2b81386f",
+      "teams": []
     },
     {
       "id": "tf-trophy-not-solid-gold",
@@ -20399,7 +21281,8 @@
           "explanation": "错误！虽然奖杯由18克拉黄金制成，但并非整体实心黄金。它的底座由孔雀石（一种绿色半宝石）制成，黄金则构成底座之上的主体部分。尽管如此，这座奖杯的重量仍超过6公斤，而它的文化价值更是无价之宝。"
         }
       },
-      "i18nSourceHash": "a1348845befd7c6a"
+      "i18nSourceHash": "a1348845befd7c6a",
+      "teams": []
     },
     {
       "id": "tf-first-goal-lucien-laurent",
@@ -20495,7 +21378,11 @@
           "explanation": "正确！法国球员吕西安·洛朗于1930年7月13日对阵墨西哥的比赛中，打入了赛事历史上的第一粒进球。他在第19分钟接传中凌空抽射破门。洛朗后来回忆道：'大家都很高兴，但我们没意识到自己创造了历史。那只是一个进球而已。'"
         }
       },
-      "i18nSourceHash": "82400a7b6dd5b72b"
+      "i18nSourceHash": "82400a7b6dd5b72b",
+      "teams": [
+        "France",
+        "Mexico"
+      ]
     },
     {
       "id": "tf-ball-must-be-spherical",
@@ -20591,7 +21478,8 @@
           "explanation": "正确！第2条规则明确规定足球“必须是球形的”。此外，它的周长必须在68至70厘米之间，比赛开始时重量在410至450克之间，气压在0.6至1.1个大气压之间。本届赛事使用的每一颗足球都要经过严格的测试，以确保符合这些规格。"
         }
       },
-      "i18nSourceHash": "888f03e0be861922"
+      "i18nSourceHash": "888f03e0be861922",
+      "teams": []
     },
     {
       "id": "tf-coach-red-card",
@@ -20687,7 +21575,8 @@
           "explanation": "正确！自2019年起，教练和其他球队官员也可以像球员一样被出示黄牌和红牌。一旦被罚下，主教练必须离开技术区域（通常是去看台），并且在本场比赛剩余时间内不得与球队进行任何交流。通常由助理教练接手负责战术指挥。"
         }
       },
-      "i18nSourceHash": "6fd5b44d1f2a125a"
+      "i18nSourceHash": "6fd5b44d1f2a125a",
+      "teams": []
     },
     {
       "id": "tf-semi-auto-offside-2022",
@@ -20783,7 +21672,8 @@
           "explanation": "正确！2022年那届赛事首次采用了半自动越位判定技术（SAOT）。安装在球场顶棚下的12台专用追踪摄像头，每秒50次追踪每名球员身体上的29个数据点。再结合球内的传感器，该技术能在几秒内自动生成越位提示，并制作出在球场大屏幕上播放的3D动画。"
         }
       },
-      "i18nSourceHash": "40a4727fb7563052"
+      "i18nSourceHash": "40a4727fb7563052",
+      "teams": []
     },
     {
       "id": "tf-brazil-1950-jersey-change",
@@ -20879,7 +21769,11 @@
           "explanation": "正确！在1950年之前，巴西身穿白色球衣出战。在负于乌拉圭那场毁灭性的'马拉卡纳打击'（Maracanazo）之后，一家全国性报纸举办了设计比赛，征集能够代表巴西国旗的新颜色。最终诞生了带有绿色镶边的标志性黄色球衣——'Canarinha'（小金丝雀）——从此成为巴西的象征。"
         }
       },
-      "i18nSourceHash": "2f1809dc33e81c2a"
+      "i18nSourceHash": "2f1809dc33e81c2a",
+      "teams": [
+        "Brazil",
+        "Uruguay"
+      ]
     },
     {
       "id": "tf-no-host-group-exit",
@@ -20975,7 +21869,11 @@
           "explanation": "错误！南非于2010年成为首个在小组赛阶段被淘汰的东道主，卡塔尔在2022年也步其后尘。尽管东道主历来受益于主场支持和自动晋级资格，但在本土作战并不能保证晋级。"
         }
       },
-      "i18nSourceHash": "96119ae7699200c6"
+      "i18nSourceHash": "96119ae7699200c6",
+      "teams": [
+        "Qatar",
+        "South Africa"
+      ]
     },
     {
       "id": "tf-golden-goal-rule",
@@ -21071,7 +21969,11 @@
           "explanation": "正确！金球规则在1998年和2002年两届赛事中被采用。1998年，法国的洛朗·布兰对阵巴拉圭时打入一粒金球，2002年也有数场比赛以这种方式分出胜负。该规则在2006年赛事前被废除，改为完整进行30分钟的加时赛。"
         }
       },
-      "i18nSourceHash": "983ee1eef203d3fa"
+      "i18nSourceHash": "983ee1eef203d3fa",
+      "teams": [
+        "France",
+        "Paraguay"
+      ]
     },
     {
       "id": "tf-brazil-all-editions",
@@ -21167,7 +22069,12 @@
           "explanation": "正确！自1930年首届赛事以来，巴西参加了每一届比赛——连续出场超过20届。没有其他国家能与之相比。德国缺席过一届（1930年），阿根廷缺席过四届，而意大利在2018年和2022年都未能获得参赛资格。"
         }
       },
-      "i18nSourceHash": "74ef721fffba4ee8"
+      "i18nSourceHash": "74ef721fffba4ee8",
+      "teams": [
+        "Argentina",
+        "Brazil",
+        "Germany"
+      ]
     },
     {
       "id": "tf-three-points-win-1994",
@@ -21263,7 +22170,8 @@
           "explanation": "正确！在1994年之前，一场胜利只值两分。改为胜一场得三分的目的是通过让胜利比平局更有回报，从而鼓励更具进攻性的足球。这一改变被认为减少了那些沉闷、规避风险的小组赛比赛数量。"
         }
       },
-      "i18nSourceHash": "5da18a0a41258723"
+      "i18nSourceHash": "5da18a0a41258723",
+      "teams": []
     },
     {
       "id": "tf-penalty-retake-var",
@@ -21359,7 +22267,8 @@
           "explanation": "正确！自从引入 VAR 以来，门将在罚点球时受到更严格的监控。如果 VAR 发现门将在球员开球前就离开了球门线，且该点球被扑出或罚失，则可以判罚重罚。这在近期的赛事中引发了多次重罚，令门将们十分懊恼。"
         }
       },
-      "i18nSourceHash": "142eee0bbec88b59"
+      "i18nSourceHash": "142eee0bbec88b59",
+      "teams": []
     },
     {
       "id": "img-henry",
@@ -21478,7 +22387,10 @@
           "explanation": "蒂埃里·亨利在1998年以年轻边锋的身份夺得赛事冠军，此后成长为足坛最具杀伤力的前锋之一。他在1998、2002和2006三届赛事中均有进球，是法国队在该赛事中的历史第二射手，仅次于基利安·姆巴佩。他还因在2010年预选赛对阵爱尔兰时的『亨利之手』手球事件而声名狼藉。"
         }
       },
-      "i18nSourceHash": "c0e75d51184add26"
+      "i18nSourceHash": "c0e75d51184add26",
+      "teams": [
+        "France"
+      ]
     },
     {
       "id": "img-iniesta",
@@ -21597,7 +22509,12 @@
           "explanation": "安德烈斯·伊涅斯塔在2010年决赛对阵荷兰的第116分钟攻入全场唯一进球，为西班牙夺得队史首个冠军。他以优雅的球风、出色的视野以及轻松摆脱防守球员的能力著称，并被评为本届赛事第二佳球员，仅次于迭戈·弗兰。"
         }
       },
-      "i18nSourceHash": "a31be483529d9b4c"
+      "i18nSourceHash": "a31be483529d9b4c",
+      "teams": [
+        "Netherlands",
+        "Spain",
+        "Uruguay"
+      ]
     },
     {
       "id": "img-xavi",
@@ -21716,7 +22633,10 @@
           "explanation": "哈维·埃尔南德斯是2010年那届赛事中西班牙传控足球传球体系的节拍器。他的大局观和传球精准度无人能及——他完成的传球次数比赛事中任何其他球员都多。他参加了三届赛事（2002年、2006年、2010年），后来出任巴塞罗那俱乐部主教练。"
         }
       },
-      "i18nSourceHash": "c611d158c6d586ba"
+      "i18nSourceHash": "c611d158c6d586ba",
+      "teams": [
+        "Spain"
+      ]
     },
     {
       "id": "img-roberto-carlos",
@@ -21732,7 +22652,11 @@
       "explanation": "Roberto Carlos was part of Brazil's 2002 winning squad and appeared at three editions (1998, 2002, 2006). His swerving free kick against France in the 1997 Tournoi de France defied physics and became one of the most legendary strikes in football history. His thunderous left foot was among the most feared weapons in the game.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/25th_Laureus_World_Sports_Awards_-_Red_Carpet_-_Roberto_Carlos_-_240422_192822.jpg/500px-25th_Laureus_World_Sports_Awards_-_Red_Carpet_-_Roberto_Carlos_-_240422_192822.jpg",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Brazil",
+        "France"
+      ]
     },
     {
       "id": "img-cannavaro",
@@ -21748,7 +22672,10 @@
       "explanation": "Fabio Cannavaro captained Italy to victory at the 2006 tournament in Germany, putting in a series of commanding defensive performances. His displays earned him the Ballon d'Or in 2006 — only the third defender ever to win it, after Beckenbauer and Matthias Sammer.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Fabio_Cannavaro_in_Tehran%27s_IKA_Airport_%28cropped%29.jpg/500px-Fabio_Cannavaro_in_Tehran%27s_IKA_Airport_%28cropped%29.jpg",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Germany"
+      ]
     },
     {
       "id": "img-maldini",
@@ -21764,7 +22691,10 @@
       "explanation": "Paolo Maldini appeared at four tournaments (1990, 1994, 1998, 2002) and is widely considered one of the greatest defenders in football history. Despite his brilliance, he never won the tournament — Italy lost the 1994 final to Brazil on penalties. He earned 126 caps for Italy over 14 years.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Paolo_Maldini_press_conference_in_Tehran_%28cropped%29.jpg/500px-Paolo_Maldini_press_conference_in_Tehran_%28cropped%29.jpg",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Brazil"
+      ]
     },
     {
       "id": "img-weah",
@@ -21883,7 +22813,8 @@
           "explanation": "乔治·维阿在1995年荣获金球奖，是唯一一位获此殊荣的非洲出生球员。尽管利比里亚从未获得过赛事正赛资格，但维阿在预选赛中发挥了关键作用，在整个非洲足坛备受尊崇。退役后，他于2018年当选利比里亚总统——成为唯一一位成为国家元首的金球奖得主。"
         }
       },
-      "i18nSourceHash": "887a9543ccc22047"
+      "i18nSourceHash": "887a9543ccc22047",
+      "teams": []
     },
     {
       "id": "img-etoo",
@@ -21899,7 +22830,8 @@
       "explanation": "Samuel Eto'o is Cameroon's all-time leading scorer and one of Africa's greatest ever players. He appeared at four editions (1998, 2002, 2010, 2014), scoring at three of them. He was just 17 during his first tournament in 1998, making him one of the youngest players at that edition.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Samuel_Eto%27o_-_001.jpg/500px-Samuel_Eto%27o_-_001.jpg",
-      "needsReview": true
+      "needsReview": true,
+      "teams": []
     },
     {
       "id": "img-donovan",
@@ -22018,7 +22950,11 @@
           "explanation": "兰登·多诺万参加过三届赛事（2002年、2006年、2010年），以57粒进球成为美国男足国家队历史最佳射手。他在2010年对阵阿尔及利亚的补时阶段攻入制胜球，将美国队送入16强，这一进球被视为美国足球史上最具标志性的进球之一。"
         }
       },
-      "i18nSourceHash": "f0a84ee53ec4229e"
+      "i18nSourceHash": "f0a84ee53ec4229e",
+      "teams": [
+        "Algeria",
+        "USA"
+      ]
     },
     {
       "id": "img-tim-howard",
@@ -22137,7 +23073,11 @@
           "explanation": "蒂姆·霍华德在2014年赛事的十六强战中对阵比利时时完成了惊人的16次扑救，这是自有记录以来门将在该赛事单场比赛中的最多扑救次数。尽管他表现英勇，美国队还是在加时赛中以1比2告负。他的表现如此出色，以至于美国国防部长开玩笑地要给他一份工作。"
         }
       },
-      "i18nSourceHash": "2052c65a8619baea"
+      "i18nSourceHash": "2052c65a8619baea",
+      "teams": [
+        "Belgium",
+        "USA"
+      ]
     },
     {
       "id": "img-son",
@@ -22256,7 +23196,10 @@
           "explanation": "孙兴慜曾代表韩国参加2014年、2018年和2022年的赛事。在2022年的赛事中，他戴着一副保护眼眶骨折的面罩上场比赛。他是英超历史上进球最多的亚洲球员，在托特纳姆热刺队攻入超过100粒进球。"
         }
       },
-      "i18nSourceHash": "c97b7050c208aa2b"
+      "i18nSourceHash": "c97b7050c208aa2b",
+      "teams": [
+        "Korea Republic"
+      ]
     },
     {
       "id": "img-mane",
@@ -22272,7 +23215,10 @@
       "explanation": "Sadio Mané was instrumental in winning the 2021 Africa Cup of Nations for Senegal and is one of Africa's greatest modern players. A knee injury ruled him out of the 2022 tournament, but his legacy was already secured through his stellar performances at Liverpool, where he won the Premier League, Champions League, and multiple individual awards.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Sadio_Man%C3%A9_-_Persepolis_F.C._v_Al_Nassr_FC%2C_19_September_2023.jpg/500px-Sadio_Man%C3%A9_-_Persepolis_F.C._v_Al_Nassr_FC%2C_19_September_2023.jpg",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Senegal"
+      ]
     },
     {
       "id": "img-salah",
@@ -22391,7 +23337,10 @@
           "explanation": "穆罕默德·萨拉赫带领埃及打进2018年的赛事，这是埃及28年来首次参赛。尽管带着欧冠决赛留下的肩伤上阵，他仍打入两球——其中包括对阵俄罗斯时的一记点球。他是埃及队史最佳射手，也是英超历史上荣誉最多的非洲球员之一。"
         }
       },
-      "i18nSourceHash": "48ef14170a97c39a"
+      "i18nSourceHash": "48ef14170a97c39a",
+      "teams": [
+        "Egypt"
+      ]
     },
     {
       "id": "img-suker",
@@ -22407,7 +23356,10 @@
       "explanation": "Davor Šuker was the star of Croatia's sensational third-place finish at the 1998 tournament, their first ever appearance. His 6 goals included a brilliant chip over Danish goalkeeper Peter Schmeichel. He later became president of the Croatian Football Federation.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Football_against_poverty_2014_-_Davor_%C5%A0uker_%28cropped%29.jpg/500px-Football_against_poverty_2014_-_Davor_%C5%A0uker_%28cropped%29.jpg",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Croatia"
+      ]
     },
     {
       "id": "img-stoichkov",
@@ -22526,7 +23478,8 @@
           "explanation": "赫里斯托·斯托伊奇科夫在1994年的赛事中攻入6球，与俄罗斯的奥列格·萨连科共享金靴奖。他的左脚任意球极具威胁。就在那一年早些时候，他在效力巴塞罗那期间荣膺金球奖。保加利亚闯入半决赛的征程，至今仍是最伟大的黑马传奇之一。"
         }
       },
-      "i18nSourceHash": "c649ea88bd4388af"
+      "i18nSourceHash": "c649ea88bd4388af",
+      "teams": []
     },
     {
       "id": "img-roger-milla",
@@ -22542,7 +23495,8 @@
       "explanation": "Roger Milla became a global icon at the 1990 tournament, dancing by the corner flag after each goal. He returned in 1994 at age 42 to become the oldest scorer in tournament history. His joyful celebrations introduced the world to African football's flair and helped Cameroon become the first African team to reach the quarter-finals.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Milla2008cropped.jpg/500px-Milla2008cropped.jpg",
-      "needsReview": true
+      "needsReview": true,
+      "teams": []
     },
     {
       "id": "img-casillas",
@@ -22558,7 +23512,11 @@
       "explanation": "Iker Casillas captained Spain to their first ever title in 2010, making a crucial save against Arjen Robben in the final. He appeared at four editions (2002, 2006, 2010, 2014) and was named the tournament's best goalkeeper in 2010. Known as 'San Iker' (Saint Iker), he earned 167 caps for Spain.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Iker_Casillas_Euro_2012_final_01.jpg/500px-Iker_Casillas_Euro_2012_final_01.jpg",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Netherlands",
+        "Spain"
+      ]
     },
     {
       "id": "img-neuer",
@@ -22574,7 +23532,10 @@
       "explanation": "Manuel Neuer redefined goalkeeping at the 2014 tournament with his aggressive sweeper-keeper style, frequently rushing far from his goal to intercept through balls. He won the Golden Glove as the best goalkeeper and was instrumental in Germany's fourth title. His playing style has influenced an entire generation of goalkeepers.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Manuel_Neuer%2C_Germany_national_football_team_%2804%29.jpg/500px-Manuel_Neuer%2C_Germany_national_football_team_%2804%29.jpg",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Germany"
+      ]
     },
     {
       "id": "img-bergkamp",
@@ -22590,7 +23551,11 @@
       "explanation": "Dennis Bergkamp's last-minute winner against Argentina in the 1998 quarter-final — a sublime first touch, flick, and finish — is one of the most replayed goals in football history. Known as 'The Iceman' for his cool composure, he appeared at three editions (1994, 1998, 2006). His fear of flying meant he often missed away matches for his clubs.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Dennis_Bergkamp_2014_%28cropped%29.jpg/500px-Dennis_Bergkamp_2014_%28cropped%29.jpg",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Argentina",
+        "Netherlands"
+      ]
     },
     {
       "id": "img-hagi",
@@ -22606,7 +23571,11 @@
       "explanation": "Gheorghe Hagi appeared at three editions (1990, 1994, 1998) and is Romania's greatest ever player. His stunning long-range goal against Colombia at the 1994 tournament showcased his extraordinary left foot. He helped Romania reach the quarter-finals in 1994, their best-ever result.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Gheorghe_Hagi_1.jpg/500px-Gheorghe_Hagi_1.jpg",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Argentina",
+        "Colombia"
+      ]
     },
     {
       "id": "img-rivaldo",
@@ -22725,7 +23694,11 @@
           "explanation": "里瓦尔多是巴西著名的'3R'攻击组合（与罗纳尔多和罗纳尔迪尼奥）中的一员，他们赢得了2002年那届赛事。他在那届比赛中打进5球，其中包括一记对阵比利时的精彩倒钩射门。他此前曾在1999年荣膺金球奖。"
         }
       },
-      "i18nSourceHash": "ff5b4b0dff239779"
+      "i18nSourceHash": "ff5b4b0dff239779",
+      "teams": [
+        "Belgium",
+        "Brazil"
+      ]
     },
     {
       "id": "img-raul",
@@ -22741,7 +23714,10 @@
       "explanation": "Raúl appeared at the 2002 and 2006 editions but missed the 2010 triumph, having been controversially omitted from the squad by coach Vicente del Bosque. He is Real Madrid's second all-time leading scorer and earned 102 caps for Spain with 44 goals.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Ra%C3%BAl_Gonz%C3%A1lez_in_Real_Madrid_2009.jpg/500px-Ra%C3%BAl_Gonz%C3%A1lez_in_Real_Madrid_2009.jpg",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Spain"
+      ]
     },
     {
       "id": "img-owen",
@@ -22757,7 +23733,11 @@
       "explanation": "Michael Owen announced himself to the world with a stunning solo goal against Argentina at the 1998 tournament, aged just 18. He received the ball in his own half, sprinted past two defenders, and rifled it into the net. He went on to win the Ballon d'Or in 2001 and appeared at the 2002 and 2006 editions as well.",
       "type": "image",
       "media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Michael_Owen_%28Portrait%29.jpg/500px-Michael_Owen_%28Portrait%29.jpg",
-      "needsReview": true
+      "needsReview": true,
+      "teams": [
+        "Argentina",
+        "England"
+      ]
     },
     {
       "id": "img-beckham",
@@ -22876,7 +23856,11 @@
           "explanation": "大卫·贝克汉姆参加过三届赛事（1998年、2002年、2006年）。他在1998年的比赛中因对阵阿根廷被红牌罚下而声名狼藉，成为全国的众矢之的。2002年，他在小组赛中对阵阿根廷打入制胜点球，洗刷了耻辱。他的传中能力和任意球技术堪称史上顶尖。"
         }
       },
-      "i18nSourceHash": "a167f456e191c160"
+      "i18nSourceHash": "a167f456e191c160",
+      "teams": [
+        "Argentina",
+        "England"
+      ]
     },
     {
       "id": "img-zlatan",
@@ -22995,7 +23979,13 @@
           "explanation": "兹拉坦·伊布拉希莫维奇曾代表瑞典出战2002年和2006年的赛事。他以倒钩射门和大胆的球技闻名，为瑞典国家队出场122次，打入62球。他还以用第三人称谈论自己而著称，曾说过：'我没有受伤。我是兹拉坦。'他的职业生涯辗转于意大利、西班牙、法国和英格兰的顶级俱乐部。"
         }
       },
-      "i18nSourceHash": "a225b9bd42ffc35a"
+      "i18nSourceHash": "a225b9bd42ffc35a",
+      "teams": [
+        "England",
+        "France",
+        "Spain",
+        "Sweden"
+      ]
     },
     {
       "id": "img-jabulani-ball",
@@ -23009,7 +23999,8 @@
       ],
       "answer": 1,
       "explanation": "The Jabulani, used at the 2010 tournament, was widely criticized by goalkeepers and players for its erratic aerodynamics and speed, affecting gameplay significantly.",
-      "needsReview": true
+      "needsReview": true,
+      "teams": []
     },
     {
       "id": "img-jabulani-match-ball",
@@ -23023,7 +24014,8 @@
       ],
       "answer": 2,
       "explanation": "The Jabulani was the official ball of the 2010 tournament. Goalkeepers in particular complained about its erratic, unpredictable movement through the air.",
-      "needsReview": true
+      "needsReview": true,
+      "teams": []
     },
     {
       "id": "tf-2026-opening-azteca",
@@ -23120,7 +24112,11 @@
           "explanation": "墨西哥于6月11日在标志性的阿兹特克体育场承办揭幕战，以2比0击败南非。阿兹特克体育场至此已在1970年、1986年和2026年承办过揭幕战。"
         }
       },
-      "i18nSourceHash": "5ceefbbf31e09723"
+      "i18nSourceHash": "5ceefbbf31e09723",
+      "teams": [
+        "Mexico",
+        "South Africa"
+      ]
     },
     {
       "id": "tf-2026-mexico-opening-win",
@@ -23216,7 +24212,11 @@
           "explanation": "2026 年 6 月 11 日，墨西哥在阿兹特克体育场以 2-0 战胜南非，为本届赛事拉开序幕。作为东道主，墨西哥以一场自信的揭幕战表现奠定了基调。"
         }
       },
-      "i18nSourceHash": "a769fe14e9b0d9b4"
+      "i18nSourceHash": "a769fe14e9b0d9b4",
+      "teams": [
+        "Mexico",
+        "South Africa"
+      ]
     },
     {
       "id": "tf-2026-12-groups",
@@ -23313,7 +24313,8 @@
           "explanation": "随着参赛队伍扩大到48支，本届赛事采用12个四队小组（A组至L组），相比此前32队赛制的8个小组有所增加。"
         }
       },
-      "i18nSourceHash": "06cecc68962941b2"
+      "i18nSourceHash": "06cecc68962941b2",
+      "teams": []
     },
     {
       "id": "tf-2026-usa-paraguay",
@@ -23410,7 +24411,11 @@
           "explanation": "美国队在洛杉矶的 SoFi 体育场以 4-1 大胜巴拉圭，为本土举办的赛事赢得开门红，这是自 2006 年以来东道主在揭幕战中取得的最大比分胜利。"
         }
       },
-      "i18nSourceHash": "264d8ea659422eda"
+      "i18nSourceHash": "264d8ea659422eda",
+      "teams": [
+        "Paraguay",
+        "USA"
+      ]
     },
     {
       "id": "tf-2026-germany-curacao",
@@ -23507,7 +24512,13 @@
           "explanation": "德国在休斯敦的NRG体育场以7比1大胜库拉索，是整个小组赛中分差最大的胜利。加拿大以6比0战胜卡塔尔位列第二。"
         }
       },
-      "i18nSourceHash": "748b9fac3c60dbff"
+      "i18nSourceHash": "748b9fac3c60dbff",
+      "teams": [
+        "Canada",
+        "Curaçao",
+        "Germany",
+        "Qatar"
+      ]
     },
     {
       "id": "tf-2026-canada-qatar",
@@ -23604,7 +24615,11 @@
           "explanation": "加拿大在温哥华的BC Place球场以6比0大胜卡塔尔，这是加拿大在该赛事历史上的最大胜利，同时也是卡塔尔在赛事中的最惨败绩。"
         }
       },
-      "i18nSourceHash": "ac711d39b0795e02"
+      "i18nSourceHash": "ac711d39b0795e02",
+      "teams": [
+        "Canada",
+        "Qatar"
+      ]
     },
     {
       "id": "tf-2026-metlife-final",
@@ -23701,7 +24716,8 @@
           "explanation": "位于新泽西州东拉瑟福德、紧邻纽约市的大都会人寿体育场（MetLife Stadium）将于7月19日举办 Football 2026 的决赛。该体育场可容纳超过82,000名观众，是本届赛事最大的场馆之一。"
         }
       },
-      "i18nSourceHash": "e501fc6fe82a4a7b"
+      "i18nSourceHash": "e501fc6fe82a4a7b",
+      "teams": []
     },
     {
       "id": "tf-2026-france-perfect-group",
@@ -23797,7 +24813,15 @@
           "explanation": "法国以全胜积9分的完美战绩位居I组头名，先是3比1击败塞内加尔，随后战胜伊拉克（挪威的比赛结果也帮了忙），接着又以4比1击败挪威，其间共打入10球。法国是与墨西哥和阿根廷并列的三支在小组赛阶段取得全胜战绩的球队之一。"
         }
       },
-      "i18nSourceHash": "c894f89aa09ee11c"
+      "i18nSourceHash": "c894f89aa09ee11c",
+      "teams": [
+        "Argentina",
+        "France",
+        "Iraq",
+        "Mexico",
+        "Norway",
+        "Senegal"
+      ]
     },
     {
       "id": "tf-2026-mexico-zero-conceded",
@@ -23894,7 +24918,13 @@
           "explanation": "墨西哥是小组赛阶段唯一保持零失球完美防守纪录的球队：2比0战胜南非，1比0击败韩国，3比0大胜捷克——一球未失，同时打进六球。"
         }
       },
-      "i18nSourceHash": "1fbc19da8b5403e4"
+      "i18nSourceHash": "1fbc19da8b5403e4",
+      "teams": [
+        "Czechia",
+        "Korea Republic",
+        "Mexico",
+        "South Africa"
+      ]
     },
     {
       "id": "tf-2026-panama-no-goals",
@@ -23990,7 +25020,13 @@
           "explanation": "巴拿马在小组赛三场比赛中均未能取得进球：0比1负于加纳，0比1负于克罗地亚，0比2负于英格兰。他们是Football 2026上唯一一支小组赛未进一球就结束征程的球队。"
         }
       },
-      "i18nSourceHash": "3bd76f4d032b6bc8"
+      "i18nSourceHash": "3bd76f4d032b6bc8",
+      "teams": [
+        "Croatia",
+        "England",
+        "Ghana",
+        "Panama"
+      ]
     },
     {
       "id": "tf-2026-england-croatia",
@@ -24087,7 +25123,11 @@
           "explanation": "英格兰在得克萨斯州阿灵顿的AT&T球场以4比2战胜克罗地亚，为本届赛事拉开精彩序幕。这是小组赛首轮比赛中进球最多的一场。"
         }
       },
-      "i18nSourceHash": "a3a496c6b880731d"
+      "i18nSourceHash": "a3a496c6b880731d",
+      "teams": [
+        "Croatia",
+        "England"
+      ]
     },
     {
       "id": "tf-2026-spain-saudi",
@@ -24184,7 +25224,11 @@
           "explanation": "西班牙在小组赛第二场比赛中于亚特兰大的梅赛德斯-奔驰体育场以4-0完胜沙特阿拉伯，这是小组赛阶段最具说服力的表现之一。"
         }
       },
-      "i18nSourceHash": "d6b9b6583d7c3b03"
+      "i18nSourceHash": "d6b9b6583d7c3b03",
+      "teams": [
+        "Saudi Arabia",
+        "Spain"
+      ]
     },
     {
       "id": "tf-2026-tunisia-winless",
@@ -24280,7 +25324,13 @@
           "explanation": "突尼斯以零积分位列 F 组垫底，1比5负于瑞典，0比4负于日本，1比3负于荷兰。他们仅打进 2 球却丢了 12 球，是小组赛中净胜球最差的球队。"
         }
       },
-      "i18nSourceHash": "551a019c71cdbdae"
+      "i18nSourceHash": "551a019c71cdbdae",
+      "teams": [
+        "Japan",
+        "Netherlands",
+        "Sweden",
+        "Tunisia"
+      ]
     },
     {
       "id": "tf-2026-seven-goalless",
@@ -24376,7 +25426,17 @@
           "explanation": "小组赛阶段共有七场比赛以0-0结束，包括西班牙对佛得角、英格兰对加纳、哥伦比亚对葡萄牙以及比利时对伊朗。尽管平局数量众多，本届赛事场均进球仍接近3球。"
         }
       },
-      "i18nSourceHash": "4b88d52f8355db92"
+      "i18nSourceHash": "4b88d52f8355db92",
+      "teams": [
+        "Belgium",
+        "Cabo Verde",
+        "Colombia",
+        "England",
+        "Ghana",
+        "IR Iran",
+        "Portugal",
+        "Spain"
+      ]
     },
     {
       "id": "tf-2026-round-of-32",
@@ -24472,7 +25532,8 @@
           "explanation": "由于有48支球队参赛、32支球队从小组赛晋级，因此在传统的16强赛之前需要增设32强赛。以往32支球队参赛的赛事都是从小组赛直接进入16强赛。"
         }
       },
-      "i18nSourceHash": "0c1c818b3255fc5b"
+      "i18nSourceHash": "0c1c818b3255fc5b",
+      "teams": []
     },
     {
       "id": "tf-2026-algeria-austria-draw",
@@ -24569,7 +25630,11 @@
           "explanation": "J组阿尔及利亚对阵奥地利的精彩较量在堪萨斯城的箭头球场以3比3收场，这是整个小组赛中唯一一场总进球达六个的平局。"
         }
       },
-      "i18nSourceHash": "88fa8ba01a39b97c"
+      "i18nSourceHash": "88fa8ba01a39b97c",
+      "teams": [
+        "Algeria",
+        "Austria"
+      ]
     },
     {
       "id": "tf-2026-cabo-verde-debut",
@@ -24665,7 +25730,13 @@
           "explanation": "人口约60万的小岛国佛得角历史上首次晋级该项赛事，并被分入H组，与西班牙、乌拉圭和沙特阿拉伯同组。"
         }
       },
-      "i18nSourceHash": "6c19fbbf6bf05c0e"
+      "i18nSourceHash": "6c19fbbf6bf05c0e",
+      "teams": [
+        "Cabo Verde",
+        "Saudi Arabia",
+        "Spain",
+        "Uruguay"
+      ]
     },
     {
       "id": "tf-2026-italy-absent",
@@ -24761,7 +25832,8 @@
           "explanation": "尽管曾四次夺冠，意大利仍无缘Football 2026，继2018年和2022年缺席之后，这已是他们连续第三次预选赛出局。"
         }
       },
-      "i18nSourceHash": "c67701c795beaf00"
+      "i18nSourceHash": "c67701c795beaf00",
+      "teams": []
     },
     {
       "id": "tf-2026-hosts-r32-wins",
@@ -24858,7 +25930,15 @@
           "explanation": "三个东道主全部晋级16强：美国2比0击败波斯尼亚和黑塞哥维那，墨西哥2比0击败厄瓜多尔，加拿大1比0击败南非。"
         }
       },
-      "i18nSourceHash": "fbf456e588fc9efb"
+      "i18nSourceHash": "fbf456e588fc9efb",
+      "teams": [
+        "Bosnia and Herzegovina",
+        "Canada",
+        "Ecuador",
+        "Mexico",
+        "South Africa",
+        "USA"
+      ]
     },
     {
       "id": "tf-2026-norway-return",
@@ -24954,7 +26034,11 @@
           "explanation": "自1998年法国赛事以来,挪威一直未能获得该赛事的参赛资格,缺席长达28年。在埃尔林·哈兰德等球星的带领下,他们强势回归,在I组中位居法国之后排名第二。"
         }
       },
-      "i18nSourceHash": "27c83b7a15e9fc06"
+      "i18nSourceHash": "27c83b7a15e9fc06",
+      "teams": [
+        "France",
+        "Norway"
+      ]
     },
     {
       "id": "tf-2026-brazil-beat-morocco",
@@ -25051,7 +26135,11 @@
           "explanation": "实际上,巴西和摩洛哥在大都会人寿球场(MetLife Stadium)的 C 组首场比赛中以 1-1 战平。摩洛哥顶住了这支五届冠军球队,这一结果为一个竞争激烈的小组定下了基调。"
         }
       },
-      "i18nSourceHash": "b21423538c70e5ad"
+      "i18nSourceHash": "b21423538c70e5ad",
+      "teams": [
+        "Brazil",
+        "Morocco"
+      ]
     },
     {
       "id": "tf-2026-usa-unbeaten-group",
@@ -25147,7 +26235,13 @@
           "explanation": "尽管美国队大胜巴拉圭（4-1）和澳大利亚（2-0），但他们在SoFi体育场的小组赛最后一场以2-3不敌土耳其。不过，他们仍以6分的成绩位居D组头名晋级。"
         }
       },
-      "i18nSourceHash": "1c78b71e7ac479b5"
+      "i18nSourceHash": "1c78b71e7ac479b5",
+      "teams": [
+        "Australia",
+        "Paraguay",
+        "Türkiye",
+        "USA"
+      ]
     },
     {
       "id": "tf-2026-japan-won-group-f",
@@ -25243,7 +26337,13 @@
           "explanation": "荷兰以7分（2胜1平）位居F组第一。日本以5分排名第二。尽管日本4比0大胜突尼斯，但荷兰5比1战胜瑞典成为了关键。"
         }
       },
-      "i18nSourceHash": "34365b3e9afe61ce"
+      "i18nSourceHash": "34365b3e9afe61ce",
+      "teams": [
+        "Japan",
+        "Netherlands",
+        "Sweden",
+        "Tunisia"
+      ]
     },
     {
       "id": "tf-2026-sofi-opening",
@@ -25340,7 +26440,12 @@
           "explanation": "揭幕战是在墨西哥城的阿兹特克体育场（Estadio Azteca）举行的，而非 SoFi 体育场。SoFi 体育场承办了多场小组赛，其中包括美国队对阵巴拉圭的首场比赛。"
         }
       },
-      "i18nSourceHash": "7c56b5f5f898c99a"
+      "i18nSourceHash": "7c56b5f5f898c99a",
+      "teams": [
+        "Mexico",
+        "Paraguay",
+        "USA"
+      ]
     },
     {
       "id": "tf-2026-haiti-first-time",
@@ -25436,7 +26541,11 @@
           "explanation": "海地此前曾参加过1974年在西德举办的赛事，当时在小组赛三场比赛中全部落败。Football 2026 是海地历史上第二次参赛，距首次亮相已过去52年。"
         }
       },
-      "i18nSourceHash": "9de44d96c48992ee"
+      "i18nSourceHash": "9de44d96c48992ee",
+      "teams": [
+        "Germany",
+        "Haiti"
+      ]
     },
     {
       "id": "tf-2026-opener-draw",
@@ -25532,7 +26641,11 @@
           "explanation": "墨西哥在阿兹特克体育场的揭幕战中以2比0战胜南非。上一次揭幕战以平局收场是在2010年，南非1比1战平墨西哥。"
         }
       },
-      "i18nSourceHash": "6942aaca60076cfb"
+      "i18nSourceHash": "6942aaca60076cfb",
+      "teams": [
+        "Mexico",
+        "South Africa"
+      ]
     },
     {
       "id": "tf-2026-uruguay-advanced",
@@ -25628,7 +26741,13 @@
           "explanation": "乌拉圭在H组3场比赛中仅获得2分，在小组赛阶段便遭淘汰（1比1战平沙特阿拉伯，2比2战平佛得角，0比1不敌西班牙）。对于这支两届冠军球队来说，这是一次令人震惊的早早出局。"
         }
       },
-      "i18nSourceHash": "6353708f24a40651"
+      "i18nSourceHash": "6353708f24a40651",
+      "teams": [
+        "Cabo Verde",
+        "Saudi Arabia",
+        "Spain",
+        "Uruguay"
+      ]
     },
     {
       "id": "tf-2026-qatar-advanced",
@@ -25724,7 +26843,13 @@
           "explanation": "卡塔尔以1-1战平瑞士、0-6负于加拿大、1-3不敌波斯尼亚和黑塞哥维那，仅积1分，位列B组末位。"
         }
       },
-      "i18nSourceHash": "1609e989c15f6c00"
+      "i18nSourceHash": "1609e989c15f6c00",
+      "teams": [
+        "Bosnia and Herzegovina",
+        "Canada",
+        "Qatar",
+        "Switzerland"
+      ]
     },
     {
       "id": "tf-2026-usa-all-sofi",
@@ -25821,7 +26946,13 @@
           "explanation": "美国队在SoFi体育场踢了两场比赛（对阵巴拉圭和土耳其），但他们对阵澳大利亚的第二场比赛是在西雅图的Lumen球场进行的。"
         }
       },
-      "i18nSourceHash": "3258dbada4a8e35c"
+      "i18nSourceHash": "3258dbada4a8e35c",
+      "teams": [
+        "Australia",
+        "Paraguay",
+        "Türkiye",
+        "USA"
+      ]
     },
     {
       "id": "tf-2026-curacao-scoreless",
@@ -25917,7 +27048,13 @@
           "explanation": "库拉索在三场小组赛中打进1球——是在1比7负于德国的比赛中。另外两场，他们0比0战平厄瓜多尔，0比2不敌科特迪瓦。"
         }
       },
-      "i18nSourceHash": "c66b54f12bab1102"
+      "i18nSourceHash": "c66b54f12bab1102",
+      "teams": [
+        "Curaçao",
+        "Côte d'Ivoire",
+        "Ecuador",
+        "Germany"
+      ]
     },
     {
       "id": "tf-2026-germany-five-goals",
@@ -26013,7 +27150,13 @@
           "explanation": "德国在小组赛阶段共打进10球——对阵库拉索攻入7球，对阵科特迪瓦攻入2球，对阵厄瓜多尔攻入1球。他们是小组赛阶段进球效率最高的球队之一。"
         }
       },
-      "i18nSourceHash": "ae4c966d7afe6d77"
+      "i18nSourceHash": "ae4c966d7afe6d77",
+      "teams": [
+        "Curaçao",
+        "Côte d'Ivoire",
+        "Ecuador",
+        "Germany"
+      ]
     },
     {
       "id": "tf-2026-argentina-conceded-three",
@@ -26109,7 +27252,14 @@
           "explanation": "阿根廷拥有小组赛阶段最稳固的防线之一，三场比赛仅丢1球（3-0战胜阿尔及利亚，2-0战胜奥地利，3-1战胜约旦）。只有墨西哥（零失球）的防守数据比他们更出色。"
         }
       },
-      "i18nSourceHash": "5c3d26f89f1c72a8"
+      "i18nSourceHash": "5c3d26f89f1c72a8",
+      "teams": [
+        "Algeria",
+        "Argentina",
+        "Austria",
+        "Jordan",
+        "Mexico"
+      ]
     },
     {
       "id": "tf-2026-switzerland-bottom",
@@ -26206,7 +27356,13 @@
           "explanation": "实际上瑞士以 7 分获得 B 组第一（与卡塔尔战平，4-1 击败波斯尼亚，2-1 击败加拿大）。卡塔尔仅积 1 分排名垫底。"
         }
       },
-      "i18nSourceHash": "22ec1105e1f2c46b"
+      "i18nSourceHash": "22ec1105e1f2c46b",
+      "teams": [
+        "Bosnia and Herzegovina",
+        "Canada",
+        "Qatar",
+        "Switzerland"
+      ]
     },
     {
       "id": "tf-2026-england-drew-opener",
@@ -26303,7 +27459,12 @@
           "explanation": "英格兰在得克萨斯州阿灵顿的 AT&T 体育场以 4-2 战胜克罗地亚，赢得了首场比赛。他们的零比零平局出现在对阵加纳的第二场比赛中。"
         }
       },
-      "i18nSourceHash": "6ae0691fdbefd3dd"
+      "i18nSourceHash": "6ae0691fdbefd3dd",
+      "teams": [
+        "Croatia",
+        "England",
+        "Ghana"
+      ]
     },
     {
       "id": "tf-2026-senegal-won-group",
@@ -26400,7 +27561,13 @@
           "explanation": "法国以全胜 9 分的成绩夺得 I 组头名。塞内加尔以 3 分位列小组第三（5-0 击败伊拉克，1-3 不敌法国，2-3 负于挪威），但仍作为成绩最好的小组第三名之一晋级。"
         }
       },
-      "i18nSourceHash": "6cb97a5401b3702a"
+      "i18nSourceHash": "6cb97a5401b3702a",
+      "teams": [
+        "France",
+        "Iraq",
+        "Norway",
+        "Senegal"
+      ]
     },
     {
       "id": "tf-2026-ten-groups",
@@ -26496,7 +27663,8 @@
           "explanation": "Football 2026 采用的是 12 个小组、每组四支球队的赛制（A 组至 L 组），而不是 10 个小组、每组五支球队。48 支球队被分为 12 个小组，各小组前两名以及成绩最好的 8 个小组第三名晋级 32 强淘汰赛。"
         }
       },
-      "i18nSourceHash": "973283dd8ff34750"
+      "i18nSourceHash": "973283dd8ff34750",
+      "teams": []
     },
     {
       "id": "tf-2026-colombia-beat-portugal",
@@ -26593,7 +27761,13 @@
           "explanation": "哥伦比亚和葡萄牙在硬石体育场进行的 K 组末轮比赛中谨慎地以 0-0 战平。凭借此前战胜刚果（金）和乌兹别克斯坦的胜利，哥伦比亚以 7 分（领先葡萄牙的 5 分）夺得小组头名。"
         }
       },
-      "i18nSourceHash": "7b22e190aad09176"
+      "i18nSourceHash": "7b22e190aad09176",
+      "teams": [
+        "Colombia",
+        "Congo DR",
+        "Portugal",
+        "Uzbekistan"
+      ]
     },
     {
       "id": "tf-2026-morocco-eliminated",
@@ -26690,7 +27864,13 @@
           "explanation": "摩洛哥以7分位居C组第二，与巴西同分。他们在与巴西1比1战平、1比0击败苏格兰并以4比2大胜海地后晋级淘汰赛。"
         }
       },
-      "i18nSourceHash": "5fe99549de5067df"
+      "i18nSourceHash": "5fe99549de5067df",
+      "teams": [
+        "Brazil",
+        "Haiti",
+        "Morocco",
+        "Scotland"
+      ]
     },
     {
       "id": "tf-2026-canada-lost-qatar",
@@ -26787,7 +27967,11 @@
           "explanation": "加拿大在温哥华的 BC Place 球场以 6-0 大胜卡塔尔，是本届赛事最悬殊的比分之一。这也是加拿大在该赛事历史上最大比分的胜利。"
         }
       },
-      "i18nSourceHash": "ca788475354e120a"
+      "i18nSourceHash": "ca788475354e120a",
+      "teams": [
+        "Canada",
+        "Qatar"
+      ]
     },
     {
       "id": "tf-2026-curacao-first",
@@ -26883,7 +28067,13 @@
           "explanation": "加勒比岛国库拉索（人口约15万）史上首次获得赛事参赛资格，与德国、科特迪瓦和厄瓜多尔同分在E组。"
         }
       },
-      "i18nSourceHash": "c3b94f2ae2e97ec3"
+      "i18nSourceHash": "c3b94f2ae2e97ec3",
+      "teams": [
+        "Curaçao",
+        "Côte d'Ivoire",
+        "Ecuador",
+        "Germany"
+      ]
     }
   ],
   "pendingTasks": [
