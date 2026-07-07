@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-07 16:59 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-07-07 19:08 UTC by scripts/update-data.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1261,9 +1261,8 @@ window.WC_MATCHES = [
     "venue": "Mercedes-Benz Stadium",
     "city": "Atlanta, GA",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 0,
-    "scoreA": 1,
-    "isLive": true
+    "scoreH": 3,
+    "scoreA": 2
   },
   {
     "n": 96,
@@ -1322,7 +1321,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-12T01:00:00Z",
     "stage": "Quarter-finals",
     "group": null,
-    "home": "To be announced",
+    "home": "Argentina",
     "away": "To be announced",
     "venue": "Arrowhead Stadium",
     "city": "Kansas City, MO",

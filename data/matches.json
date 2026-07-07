@@ -1259,9 +1259,8 @@
     "venue": "Mercedes-Benz Stadium",
     "city": "Atlanta, GA",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 0,
-    "scoreA": 1,
-    "isLive": true
+    "scoreH": 3,
+    "scoreA": 2
   },
   {
     "n": 96,
@@ -1320,7 +1319,7 @@
     "utc": "2026-07-12T01:00:00Z",
     "stage": "Quarter-finals",
     "group": null,
-    "home": "To be announced",
+    "home": "Argentina",
     "away": "To be announced",
     "venue": "Arrowhead Stadium",
     "city": "Kansas City, MO",
