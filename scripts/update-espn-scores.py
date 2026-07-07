@@ -210,6 +210,12 @@ def _match_loser(m: dict) -> str | None:
     return None
 
 
+def _is_finished(m: dict) -> bool:
+    """A match is finished when it has scores and is no longer live."""
+    return (m.get("scoreH") is not None and m.get("scoreA") is not None
+            and not m.get("isLive", False))
+
+
 def propagate_bracket_winners(matches: list) -> int:
     by_n = {m["n"]: m for m in matches}
     resolved = 0
@@ -218,8 +224,8 @@ def propagate_bracket_winners(matches: list) -> int:
         fa, fb = by_n.get(feeder_a), by_n.get(feeder_b)
         if not target or not fa or not fb:
             continue
-        wa = _match_winner(fa)
-        wb = _match_winner(fb)
+        wa = _match_winner(fa) if _is_finished(fa) else None
+        wb = _match_winner(fb) if _is_finished(fb) else None
         if wa and _is_placeholder(target["home"]):
             print(f"  BRACKET: M{target_n} home <- {wa} (winner of M{feeder_a})")
             target["home"] = wa
@@ -233,8 +239,8 @@ def propagate_bracket_winners(matches: list) -> int:
         sa, sb = by_n.get(sf_a), by_n.get(sf_b)
         if not target or not sa or not sb:
             continue
-        la = _match_loser(sa)
-        lb = _match_loser(sb)
+        la = _match_loser(sa) if _is_finished(sa) else None
+        lb = _match_loser(sb) if _is_finished(sb) else None
         if la and _is_placeholder(target["home"]):
             print(f"  BRACKET: M{target_n} home <- {la} (loser of M{sf_a})")
             target["home"] = la
