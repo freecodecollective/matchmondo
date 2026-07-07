@@ -1260,7 +1260,8 @@
     "city": "Atlanta, GA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 3,
-    "scoreA": 2
+    "scoreA": 2,
+    "result": "FT"
   },
   {
     "n": 96,
@@ -1272,8 +1273,9 @@
     "venue": "BC Place",
     "city": "Vancouver, Canada",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 0,
+    "scoreA": 0,
+    "isLive": true
   },
   {
     "n": 97,
