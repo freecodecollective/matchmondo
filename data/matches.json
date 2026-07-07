@@ -1232,7 +1232,8 @@
     "city": "Arlington (Dallas), TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 1
+    "scoreA": 1,
+    "result": "FT"
   },
   {
     "n": 94,
@@ -1244,8 +1245,9 @@
     "venue": "Lumen Field",
     "city": "Seattle, WA",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 1,
+    "scoreA": 3,
+    "isLive": true
   },
   {
     "n": 95,
@@ -1292,7 +1294,7 @@
     "stage": "Quarter-finals",
     "group": null,
     "home": "Spain",
-    "away": "To be announced",
+    "away": "Belgium",
     "venue": "SoFi Stadium",
     "city": "Inglewood (Los Angeles), CA",
     "tv": "FOX · Telemundo (ES)",
