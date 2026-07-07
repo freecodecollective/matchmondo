@@ -1246,7 +1246,8 @@
     "city": "Seattle, WA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 4
+    "scoreA": 4,
+    "result": "FT"
   },
   {
     "n": 95,
@@ -1258,8 +1259,9 @@
     "venue": "Mercedes-Benz Stadium",
     "city": "Atlanta, GA",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 0,
+    "scoreA": 1,
+    "isLive": true
   },
   {
     "n": 96,
