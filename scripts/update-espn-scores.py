@@ -359,6 +359,10 @@ def main():
 
             # Store result type and PK scores for finished matches
             if is_finished:
+                prev_result = matched_m.get("result")
+                prev_pkH = matched_m.get("pkH")
+                prev_pkA = matched_m.get("pkA")
+
                 if status_name == "STATUS_FINAL_PEN":
                     pk_home = int(home.get("shootoutScore", 0))
                     pk_away = int(away.get("shootoutScore", 0))
@@ -372,8 +376,12 @@ def main():
                 elif status_name == "STATUS_FINAL_AET":
                     matched_m["result"] = "AET"
                 elif matched_m["n"] >= 73:
-                    # FT result tag only for knockout matches
                     matched_m["result"] = "FT"
+
+                if (matched_m.get("result") != prev_result
+                        or matched_m.get("pkH") != prev_pkH
+                        or matched_m.get("pkA") != prev_pkA):
+                    patched += 1
 
                 newly_ft.append(int(matched_m["n"]))
 
