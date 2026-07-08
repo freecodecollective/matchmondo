@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-07 22:17 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-07-08 22:43 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1211,7 +1211,7 @@ window.WC_MATCHES = [
   },
   {
     "n": 92,
-    "utc": "2026-07-06T00:00:00Z",
+    "utc": "2026-07-06T01:00:00Z",
     "stage": "Round of 16",
     "group": null,
     "home": "Mexico",
@@ -1277,7 +1277,9 @@ window.WC_MATCHES = [
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
     "scoreA": 0,
-    "isLive": true
+    "result": "PEN",
+    "pkH": 4,
+    "pkA": 3
   },
   {
     "n": 97,
@@ -1324,7 +1326,7 @@ window.WC_MATCHES = [
     "stage": "Quarter-finals",
     "group": null,
     "home": "Argentina",
-    "away": "To be announced",
+    "away": "Switzerland",
     "venue": "Arrowhead Stadium",
     "city": "Kansas City, MO",
     "tv": "FOX · Telemundo (ES)",
