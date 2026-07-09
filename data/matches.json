@@ -1289,9 +1289,9 @@
     "venue": "Gillette Stadium",
     "city": "Foxborough (Boston), MA",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 0,
+    "scoreH": 2,
     "scoreA": 0,
-    "isLive": true
+    "result": "FT"
   },
   {
     "n": 98,
@@ -1337,7 +1337,7 @@
     "utc": "2026-07-14T19:00:00Z",
     "stage": "Semi-finals",
     "group": null,
-    "home": "To be announced",
+    "home": "France",
     "away": "To be announced",
     "venue": "AT&T Stadium",
     "city": "Arlington (Dallas), TX",

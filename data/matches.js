@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-09 21:07 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-07-09 22:43 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1291,9 +1291,9 @@ window.WC_MATCHES = [
     "venue": "Gillette Stadium",
     "city": "Foxborough (Boston), MA",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 0,
+    "scoreH": 2,
     "scoreA": 0,
-    "isLive": true
+    "result": "FT"
   },
   {
     "n": 98,
@@ -1339,7 +1339,7 @@ window.WC_MATCHES = [
     "utc": "2026-07-14T19:00:00Z",
     "stage": "Semi-finals",
     "group": null,
-    "home": "To be announced",
+    "home": "France",
     "away": "To be announced",
     "venue": "AT&T Stadium",
     "city": "Arlington (Dallas), TX",
