@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-10 18:59 UTC by scripts/update-data.py
+// Regenerated 2026-07-10 20:38 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1305,8 +1305,9 @@ window.WC_MATCHES = [
     "venue": "SoFi Stadium",
     "city": "Inglewood (Los Angeles), CA",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 1,
+    "scoreA": 1,
+    "isLive": true
   },
   {
     "n": 99,
