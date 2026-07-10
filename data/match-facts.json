@@ -291,5 +291,23 @@
       "Kevin De Bruyne had played the full 90 minutes in 13 consecutive tournament appearances before being substituted in each of his first four matches at this edition, then dropped entirely for the last-16 against the United States — he is expected to return to the starting XI at Los Angeles Stadium. — *Sports Mole*",
       "**Spain** have progressed from all six major knockout matches under Luis de la Fuente and are on track to become both reigning European and world champions simultaneously for the second time in their history, having first achieved the feat by pairing Euro 2008 with the 2010 title. — *Squawka*"
     ]
+  },
+  "99": {
+    "home": "Norway",
+    "away": "England",
+    "facts": [
+      "**Norway**'s five matches at this tournament have produced 21 goals in total — an average of 4.2 per game — making them the highest-scoring side per match among the remaining eight teams. — *Goal.com*",
+      "Jarell Quansah's two-match suspension, Jordan Henderson's wrist surgery, a doubtful Marc Guehi and Reece James's three-game hamstring absence mean **England** manager Thomas Tuchel has used at least five different right-back solutions across the tournament. — *ESPN*",
+      "**Norway** have never beaten a European opponent in a tournament match; **England** have lost five of their last six knockout matches against European sides at this stage. — *Sports Mole*"
+    ]
+  },
+  "100": {
+    "home": "Argentina",
+    "away": "Switzerland",
+    "facts": [
+      "Lionel Messi missed two penalties in the same tournament edition against Austria and Egypt — the only player in history to do so — yet still became the first player to score in six consecutive knockout matches. — *Opta Analyst*",
+      "**Switzerland** reached the quarter-finals for the first time since 1954 — a wait of 72 years — after beating **Colombia** 4-3 on penalties following a goalless draw, with goalkeeper Gregor Kobel making the decisive stop. — *ESPN*",
+      "**Argentina** became the first team in tournament history to overturn a two-goal deficit from as late as the 78th minute and win in regulation time, completing the comeback against Egypt through Enzo Fernández's 93rd-minute winner. — *ESPN*"
+    ]
   }
 }
