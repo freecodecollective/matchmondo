@@ -1331,9 +1331,9 @@
     "venue": "Arrowhead Stadium",
     "city": "Kansas City, MO",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 0,
-    "scoreA": 0,
-    "isLive": true
+    "scoreH": 3,
+    "scoreA": 1,
+    "result": "AET"
   },
   {
     "n": 101,
@@ -1354,7 +1354,7 @@
     "stage": "Semi-finals",
     "group": null,
     "home": "England",
-    "away": "To be announced",
+    "away": "Argentina",
     "venue": "Mercedes-Benz Stadium",
     "city": "Atlanta, GA",
     "tv": "FOX · Telemundo (ES)",

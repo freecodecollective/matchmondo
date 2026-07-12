@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-12 01:04 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-07-12 04:38 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1333,9 +1333,9 @@ window.WC_MATCHES = [
     "venue": "Arrowhead Stadium",
     "city": "Kansas City, MO",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 0,
-    "scoreA": 0,
-    "isLive": true
+    "scoreH": 3,
+    "scoreA": 1,
+    "result": "AET"
   },
   {
     "n": 101,
@@ -1356,7 +1356,7 @@ window.WC_MATCHES = [
     "stage": "Semi-finals",
     "group": null,
     "home": "England",
-    "away": "To be announced",
+    "away": "Argentina",
     "venue": "Mercedes-Benz Stadium",
     "city": "Atlanta, GA",
     "tv": "FOX · Telemundo (ES)",
