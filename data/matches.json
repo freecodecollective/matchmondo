@@ -1319,7 +1319,7 @@
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
     "scoreA": 2,
-    "isLive": true
+    "result": "AET"
   },
   {
     "n": 100,
@@ -1331,8 +1331,9 @@
     "venue": "Arrowhead Stadium",
     "city": "Kansas City, MO",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 0,
+    "scoreA": 0,
+    "isLive": true
   },
   {
     "n": 101,
@@ -1352,7 +1353,7 @@
     "utc": "2026-07-15T19:00:00Z",
     "stage": "Semi-finals",
     "group": null,
-    "home": "To be announced",
+    "home": "England",
     "away": "To be announced",
     "venue": "Mercedes-Benz Stadium",
     "city": "Atlanta, GA",
