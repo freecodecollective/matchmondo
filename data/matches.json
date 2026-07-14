@@ -1346,8 +1346,8 @@
     "city": "Arlington (Dallas), TX",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 0,
-    "scoreA": 1,
-    "isLive": true
+    "scoreA": 2,
+    "result": "FT"
   },
   {
     "n": 102,
@@ -1367,7 +1367,7 @@
     "utc": "2026-07-18T21:00:00Z",
     "stage": "Third-place Match",
     "group": null,
-    "home": "To be announced",
+    "home": "France",
     "away": "To be announced",
     "venue": "Hard Rock Stadium",
     "city": "Miami Gardens, FL",
@@ -1380,7 +1380,7 @@
     "utc": "2026-07-19T19:00:00Z",
     "stage": "Final",
     "group": null,
-    "home": "To be announced",
+    "home": "Spain",
     "away": "To be announced",
     "venue": "MetLife Stadium",
     "city": "East Rutherford, NJ",
