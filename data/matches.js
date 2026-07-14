@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-14 18:47 UTC by scripts/update-data.py
+// Regenerated 2026-07-14 20:10 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1347,8 +1347,9 @@ window.WC_MATCHES = [
     "venue": "AT&T Stadium",
     "city": "Arlington (Dallas), TX",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 0,
+    "scoreA": 1,
+    "isLive": true
   },
   {
     "n": 102,

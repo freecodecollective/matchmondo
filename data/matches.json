@@ -1345,8 +1345,9 @@
     "venue": "AT&T Stadium",
     "city": "Arlington (Dallas), TX",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": null,
-    "scoreA": null
+    "scoreH": 0,
+    "scoreA": 1,
+    "isLive": true
   },
   {
     "n": 102,
