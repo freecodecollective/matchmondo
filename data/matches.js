@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-15 20:42 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-07-15 21:40 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1362,8 +1362,8 @@ window.WC_MATCHES = [
     "city": "Atlanta, GA",
     "tv": "FOX · Telemundo (ES)",
     "scoreH": 1,
-    "scoreA": 0,
-    "isLive": true
+    "scoreA": 2,
+    "result": "FT"
   },
   {
     "n": 103,
@@ -1371,7 +1371,7 @@ window.WC_MATCHES = [
     "stage": "Third-place Match",
     "group": null,
     "home": "France",
-    "away": "To be announced",
+    "away": "England",
     "venue": "Hard Rock Stadium",
     "city": "Miami Gardens, FL",
     "tv": "FOX · Telemundo (ES)",
@@ -1384,7 +1384,7 @@ window.WC_MATCHES = [
     "stage": "Final",
     "group": null,
     "home": "Spain",
-    "away": "To be announced",
+    "away": "Argentina",
     "venue": "MetLife Stadium",
     "city": "East Rutherford, NJ",
     "tv": "FOX · Telemundo (ES)",
