@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-18 21:26 UTC by scripts/update-espn-scores.py
+// Regenerated 2026-07-18 22:23 UTC by scripts/update-espn-scores.py
 window.WC_MATCHES = [
   {
     "n": 1,
@@ -1375,8 +1375,8 @@ window.WC_MATCHES = [
     "venue": "Hard Rock Stadium",
     "city": "Miami Gardens, FL",
     "tv": "FOX · Telemundo (ES)",
-    "scoreH": 0,
-    "scoreA": 2,
+    "scoreH": 2,
+    "scoreA": 4,
     "isLive": true
   },
   {
