@@ -1,5 +1,5 @@
 // Football 2026 — all matches. Kickoffs in UTC.
-// Regenerated 2026-07-18 09:56 UTC by scripts/update-data.py
+// Regenerated 2026-07-18 11:05 UTC by scripts/update-data.py
 window.WC_MATCHES = [
   {
     "n": 1,
