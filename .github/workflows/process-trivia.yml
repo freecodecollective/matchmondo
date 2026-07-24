@@ -1,8 +1,8 @@
 name: Process trivia tasks
 
 on:
-  schedule:
-    - cron: "* * * * *"
+  # schedule:
+  #   - cron: "* * * * *"
   workflow_dispatch:
 
 permissions:

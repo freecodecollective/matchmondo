@@ -1,8 +1,8 @@
 name: Generate match recaps
 
 on:
-  schedule:
-    - cron: "15 * * * *"   # every hour at :15 (offset from score updates at :00/:15/:30/:45)
+  # schedule:
+  #   - cron: "15 * * * *"   # every hour at :15 (offset from score updates at :00/:15/:30/:45)
   workflow_dispatch:
 
 permissions:
